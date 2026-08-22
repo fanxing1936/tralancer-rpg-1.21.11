@@ -1361,6 +1361,80 @@ Whilst parsing command on line 5: Unknown or incomplete command
 
 ---
 
+# 第十六部分：第六位恶魔 · 利维坦
+
+## 16.1 基底：重锤能用 consumable
+
+查过语言文件，重锤只有 `subtitles.item.mace.smash_air` / `smash_ground`，
+**没有 `.use`** —— 它不像鱼竿和长枪那样自带右键动作，
+所以 `food` + `consumable` 那条路在它身上照常工作（亚巴顿也是重锤，走的同一条）。
+
+编号 `custom_model_data = 1110007`（重锤上第一个空位），
+`consume_seconds = 100110`。
+
+## 16.2 贴图：又是重采样
+
+上传是 128×128、13 色、31% 不透明，`block_factor` 仍然是 1 ——
+不是整数倍放大。沿用第十三部分那套**多数表决**还原，
+候选 16 / 32 / 64 各还原一遍直接看：16 糊成一团，64 只是 32 的加倍，
+**32×32** 是原生网格（和蛇矛一样）。
+
+## 16.3 配色：深蓝领衔，锚金呼应
+
+作者定的代表色是**深蓝**，而贴图本身是**青铜绿 + 金**（一具沉在水里发绿的锚），
+两者并不冲突 —— 前者是武器的强调色与粒子主调，后者是锚的金属。
+最终取四色：
+
+| 名称 | 色值 | 用处 |
+|---|---|---|
+| `ABYSS` | `#123E7C` | 深蓝，代表色 —— 强调色、漩涡主调、碾压爆闪 |
+| `TRENCH` | `#081F42` | 更深，漩涡的喉咙 |
+| `FOAM` | `#7FC8E0` | 浪沫，锚落水的一瞬 |
+| `GOLD` | `#FCAE06` | 取自贴图（占 15%），锚的金属 |
+
+## 16.4 ［沉锚］
+
+右键消耗 **2 级经验**，向前方水平抛出巨锚。
+
+`rotated ~ 0` 把俯仰归零 —— 无论抬头低头，锚都沿水平方向掷出 **8 格**，
+不会因为仰视而飞上天。锚是往下沉的东西，这一条是主题要求的一部分。
+
+锚落处 `summon minecraft:marker` 立一个锚点（marker 不跑 AI，几乎零开销），
+张开半径 **7 格**的漩涡：
+
+* **每刻**把范围内的敌人拖向锚心（`facing entity … feet` + `tp @s ^ ^ ^0.55`），并压上缓慢
+* **每 10 刻**碾压一次，6 点 `minecraft:drown` 伤害 ——
+  刻意对齐生物约 10 刻的无敌帧，打得更密只是浪费
+* 计时归零时锚炸成一片浪花并自我清除
+
+**凌空抛锚沉得更深**：起手时 `if block ~ ~-1 ~ air` 判定脚下悬空，
+漩涡从 100 刻延到 160 刻。这是把重锤"从高处砸下"的本能翻译成锚的语言。
+
+## 16.5 附魔与属性
+
+五条全部能生效（`supported_items` 只管附魔台，见 14.3）：
+
+`density 5` `breach 4` `wind_burst 3` —— 重锤自己的三条；
+`smite 3` 在 `#enchantable/weapon`（含重锤）里；
+**`impaling 5`** 名义上属于三叉戟，但它的效果是通用的 `minecraft:damage`，
+条件只看目标是否 `#sensitive_to_impaling` —— 挂在重锤上照样对水生生物加伤，
+是这套主题里最贴切的一条。
+
+属性上给了它**锚的重量与巨兽的体魄**：伤害 +13、攻速 −3.3（全包最慢）、
+移速 ×0.8、**最大生命 ×1.2**（六把恶魔武器里唯一给正向生命的）、
+安全落地距离 ×2 —— 从高处砸下来不伤自己，正好配合凌空抛锚。
+
+## 16.6 验证
+
+* 无头 1.21.11：进度 1611 → **1612**，`give/extra` 解析通过
+  （重锤 + `impaling` + `wind_burst` + 全部组件合法）
+* 锚的全链路实测：`leviathan_drop` 生成 marker → 计分板读到
+  `Marker has 85 [rpg_levi_time]`（设 100，已倒数）→ `pull` / `crush` /
+  `leviathan` 逐个执行干净 → 计时归零自我清除
+* 材质包对客户端 jar 校验：`no problems found`（242 个文件）
+
+---
+
 # 重建方式
 
 ```bash
@@ -1372,10 +1446,12 @@ bash "_tools/rp_build.sh"
 ```
 
 数据包流程：`migrate.py` → `optimize.py` + `opt_spawn.py` + `opt_misc.py`
-　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py` + `add_lucifer.py`
+　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
+　　　　　→ `add_lucifer.py` + `add_leviathan.py`
 　　　　　→ `retype_longinus.py` → `opt_index.py` + `opt_guard.py` → `validate.py` → `hotspots.py`
 材质包流程：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`
-　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py` + `add_lucifer.py`
+　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
+　　　　　→ `add_lucifer.py` + `add_leviathan.py`
 　　　　　→ `retype_longinus.py` → `fix_display.py`
 　　　　　→ `rp_validate.py`
 打包与安装：`package.py --install`（写回 1.21.11 实例的 resourcepacks 与各存档）

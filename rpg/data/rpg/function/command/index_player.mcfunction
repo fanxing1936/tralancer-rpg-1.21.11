@@ -48,6 +48,7 @@ tag @s remove rpg.h.truth_tag1
 tag @s remove rpg.h.jachin_tag1
 tag @s remove rpg.h.boaz_tag1
 tag @s remove rpg.h.lucifer_tag1
+tag @s remove rpg.h.leviathan_tag1
 tag @s remove rpg.o.jachin_tag1
 tag @s remove rpg.o.boaz_tag1
 tag @s remove rpg.e.chest_absorption_tag1
@@ -112,6 +113,7 @@ execute if items entity @s weapon.mainhand *[minecraft:custom_data~{truth_tag:1b
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{jachin_tag:1b}] run tag @s add rpg.h.jachin_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{boaz_tag:1b}] run tag @s add rpg.h.boaz_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lucifer_tag:1b}] run tag @s add rpg.h.lucifer_tag1
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{leviathan_tag:1b}] run tag @s add rpg.h.leviathan_tag1
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{jachin_tag:1b}] run tag @s add rpg.o.jachin_tag1
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{boaz_tag:1b}] run tag @s add rpg.o.boaz_tag1
 execute if items entity @s armor.chest *[minecraft:custom_data~{absorption_tag:1b}] run tag @s add rpg.e.chest_absorption_tag1

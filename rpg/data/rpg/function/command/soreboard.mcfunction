@@ -137,3 +137,5 @@ scoreboard objectives add rpg_boaz_stack dummy
 scoreboard objectives add rpg_luci_sin dummy
 scoreboard objectives add rpg_luci_cd dummy
 scoreboard objectives add rpg_luci_use dummy
+scoreboard objectives add rpg_levi_time dummy
+scoreboard objectives add rpg_levi_beat dummy

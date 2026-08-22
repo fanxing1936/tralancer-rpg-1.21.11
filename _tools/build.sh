@@ -15,6 +15,7 @@ python add_items.py ../resourcepack ../rpg
 python add_skills.py ../rpg
 python add_twins.py  ../resourcepack ../rpg
 python add_lucifer.py ../resourcepack ../rpg
+python add_leviathan.py ../resourcepack ../rpg
 python retype_longinus.py ../resourcepack ../rpg
 python make_boxes.py ../rpg
 echo

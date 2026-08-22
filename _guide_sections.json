@@ -1700,6 +1700,96 @@
    "trim": null,
    "potion_contents": null,
    "_new": true
+  },
+  {
+   "item": "mace",
+   "name": "利维坦",
+   "rarity": "恶魔",
+   "name_colour": "aqua",
+   "lore": [
+    "+------------------+",
+    "深渊里的曲行蛇 以铁为干草的巨兽",
+    "它使深海翻滚如锅 海之魔神利维坦",
+    "+------------------+",
+    "🪓主动技能[沉锚]",
+    "右键消耗2级经验抛出巨锚，锚落处涌起漩涡",
+    "漩涡将敌人拖向锚心并持续碾压；凌空抛锚沉得更深",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "density": 5,
+    "breach": 4,
+    "wind_burst": 3,
+    "impaling": 5,
+    "smite": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 13,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3.3,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": -0.2,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "safe_fall_distance",
+     "amount": 2,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "max_health",
+     "amount": 0.2,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "devil_tag",
+    "leviathan_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "leviathan_tag": 1,
+    "sword_tag": 1,
+    "devil_tag": 1
+   },
+   "cmd": 1110007.0,
+   "unbreakable": true,
+   "consumable": 100110,
+   "components": [
+    "attribute_modifiers",
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "food",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
   }
  ],
  "armour": [

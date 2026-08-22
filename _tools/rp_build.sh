@@ -12,6 +12,7 @@ python add_items.py   ../resourcepack ../rpg
 python add_skills.py  ../rpg
 python add_twins.py   ../resourcepack ../rpg
 python add_lucifer.py ../resourcepack ../rpg
+python add_leviathan.py ../resourcepack ../rpg
 python retype_longinus.py ../resourcepack ../rpg
 # last, so every hand transform in the pack has exactly one owner
 python fix_display.py ../resourcepack
