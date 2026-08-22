@@ -4046,18 +4046,22 @@
    "enchantments": {},
    "modifiers": [],
    "tags": [
+    "add_weapon_tag",
     "sweep_tag"
    ],
    "custom_data": {
-    "sweep_tag": 1
+    "sweep_tag": 1,
+    "add_weapon_tag": 1
    },
    "cmd": 1110001.0,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 1000000,
    "components": [
+    "consumable",
     "custom_data",
     "custom_model_data",
     "custom_name",
+    "food",
     "lore"
    ],
    "dyed_color": null,
@@ -4081,18 +4085,22 @@
    "enchantments": {},
    "modifiers": [],
    "tags": [
+    "add_weapon_tag",
     "wind_tag"
    ],
    "custom_data": {
-    "wind_tag": 1
+    "wind_tag": 1,
+    "add_weapon_tag": 1
    },
    "cmd": 1110001.0,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 2000000,
    "components": [
+    "consumable",
     "custom_data",
     "custom_model_data",
     "custom_name",
+    "food",
     "lore"
    ],
    "dyed_color": null,
@@ -4116,18 +4124,22 @@
    "enchantments": {},
    "modifiers": [],
    "tags": [
+    "add_weapon_tag",
     "flame_tag"
    ],
    "custom_data": {
-    "flame_tag": 1
+    "flame_tag": 1,
+    "add_weapon_tag": 1
    },
    "cmd": 1110001.0,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 3000000,
    "components": [
+    "consumable",
     "custom_data",
     "custom_model_data",
     "custom_name",
+    "food",
     "lore"
    ],
    "dyed_color": null,
@@ -4256,6 +4268,264 @@
     "custom_data",
     "custom_name",
     "damage_resistant",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "枯萎",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🪓被动技能[枯萎]",
+    "攻击时有1/4的概率使目标凋零5秒",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "wilt_tag"
+   ],
+   "custom_data": {
+    "wilt_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "裂甲",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🪓被动技能[裂甲]",
+    "攻击时破开护甲，目标虚弱且暴露6秒",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "sunder_tag"
+   ],
+   "custom_data": {
+    "sunder_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "逆潮",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[胸甲]上",
+    "+------------------+",
+    "🛡被动技能[逆潮]",
+    "生命低于30%时回涌，再生与抗性各6秒",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "ebb_tag"
+   ],
+   "custom_data": {
+    "ebb_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "钉影",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[弓]上",
+    "+------------------+",
+    "🏹被动技能[钉影]",
+    "箭矢命中后将目标钉在原地2.5秒",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "pin_tag"
+   ],
+   "custom_data": {
+    "pin_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符石",
+   "rarity": "寒潮",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的符石",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🔱镶嵌技能[寒潮]",
+    "长按/右键蓄力掀起环形寒潮",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "tide_tag"
+   ],
+   "custom_data": {
+    "tide_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 4000000,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符石",
+   "rarity": "震地",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的符石",
+    "镶嵌于[重锤]上",
+    "+------------------+",
+    "🔱镶嵌技能[震地]",
+    "长按/右键蓄力砸地，震飞四周",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "quake_tag"
+   ],
+   "custom_data": {
+    "quake_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 5000000,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符石",
+   "rarity": "噬影",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的符石",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🔱镶嵌技能[噬影]",
+    "长按/右键蓄力遁入影中，自敌后重创",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "shade_tag"
+   ],
+   "custom_data": {
+    "shade_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 7000000,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "food",
     "lore"
    ],
    "dyed_color": null,

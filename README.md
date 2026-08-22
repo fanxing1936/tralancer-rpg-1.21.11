@@ -26,6 +26,18 @@
 | `_orig/` `_orig_rp/` | 原始 1.21 数据包 / 材质包备份，未改动 |
 | `_tools/` | 迁移、优化、校验、打包、无头测试脚本 |
 
+## 地图
+
+配套的 **1.21.11 地图**（WorldPainter 灰度图地形，已装好本数据包）体积较大，
+所以放在 [**Releases**](https://github.com/fanxing1936/tralancer-rpg-1.21.11/releases) 里而不是仓库树内。
+
+下载后解压到 `.minecraft/saves/`，进游戏即可 —— 数据包已经在里面，计分板会自动建好。
+
+原图是 1.21 存档，用 `_tools/world_upgrade.py` 走真实 1.21.11 服务器的
+`--forceUpgrade` 全量转换（262144 个区块逐个过 DataFixerUpper，
+不是进游戏后边走边转），`level.dat` 与抽样区块的 DataVersion 均为 **4671**。
+分发前已移除作者的 `playerdata` / `advancements` / `stats`，玩家从头开始。
+
 ## 安装
 
 1. 数据包放进存档的 `datapacks/`，材质包放进 `resourcepacks/` 并在游戏里启用。

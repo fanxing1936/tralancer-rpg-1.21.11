@@ -308,7 +308,7 @@ def build():
 <li><a href="#s2"><span class="num">II</span>核心系统</a></li>
 <li><a href="#s3"><span class="num">III</span>武器图鉴</a></li>
 <li><a href="#s4"><span class="num">IV</span>护甲图鉴</a></li>
-<li><a href="#s5"><span class="num">V</span>符文与晶石</a></li>
+<li><a href="#s5"><span class="num">V</span>符文与符石</a></li>
 <li><a href="#s6"><span class="num">VI</span>药剂与材料</a></li>
 <li><a href="#s7"><span class="num">VII</span>掉落总表</a></li>
 <li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
@@ -382,7 +382,7 @@ def build():
 
     # V runes -------------------------------------------------------------
     a('''<section class="plate" id="s5">
-<div class="plate-h"><span class="num">V</span><h2>符文与晶石</h2><span class="sub">12 符文 · 6 晶石</span></div>
+<div class="plate-h"><span class="num">V</span><h2>符文与符石</h2><span class="sub">''' + str(n_of("runes")) + ''' 刻印 · ''' + str(n_of("stones")) + ''' 晶石</span></div>
 <p><strong>镶嵌符文</strong>（下界石英）按镶嵌部位分为剑用、胸甲用、弓弩用三类，提供触发型被动；带「镶嵌技能」字样的<strong>符石</strong>提供长按右键释放的主动技能。<strong>属性晶石</strong>（锻造模板）则是直接手持生效的百分比加成。</p>
 <div class="grid">''' + F["runes"] + '</div>')
     a('<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:40px 0 16px">属性晶石</h3>')

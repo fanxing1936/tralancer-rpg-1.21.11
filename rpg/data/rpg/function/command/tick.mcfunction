@@ -20,6 +20,7 @@ function rpg:item/bow/legend/burn/burn
 function rpg:item/bow/legend/hunter/hunter
 
 function rpg:item/extra/skills
+function rpg:item/rune/runes
 
 
 

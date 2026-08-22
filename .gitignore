@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# the 1.21.11 map ships as a Release asset, not in the tree (932 MB raw)
+_world/

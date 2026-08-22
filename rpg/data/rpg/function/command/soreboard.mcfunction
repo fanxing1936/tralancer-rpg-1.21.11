@@ -142,3 +142,8 @@ scoreboard objectives add rpg_levi_beat dummy
 scoreboard objectives add rpg_levi_hp dummy
 scoreboard objectives add rpg_levi_charge dummy
 scoreboard objectives add rpg_levi_hold dummy
+scoreboard objectives add rpg_rune_roll dummy
+scoreboard objectives add rpg_rune_ebb dummy
+scoreboard objectives add rpg_tide dummy
+scoreboard objectives add rpg_quake dummy
+scoreboard objectives add rpg_shade dummy

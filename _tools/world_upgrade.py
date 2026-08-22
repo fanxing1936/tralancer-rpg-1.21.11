@@ -51,8 +51,17 @@ def data_version(level_dat):
     import gzip
     import struct
     d = gzip.open(level_dat, "rb").read()
-    i = d.find(b"DataVersion")
-    return struct.unpack(">i", d[i + 11:i + 15])[0] if i > 0 else None
+    # level.dat carries more than one DataVersion: an older one survives inside
+    # the nested Version compound, and reporting the *first* match made a
+    # finished upgrade look like it had done nothing.  Take the highest.
+    out, i = [], 0
+    while True:
+        i = d.find(b"DataVersion", i)
+        if i < 0:
+            break
+        out.append(struct.unpack(">i", d[i + 11:i + 15])[0])
+        i += 1
+    return max(out) if out else None
 
 
 def run(args, feed=None, limit=3600):
