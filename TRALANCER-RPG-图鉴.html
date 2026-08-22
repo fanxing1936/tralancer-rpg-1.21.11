@@ -120,6 +120,13 @@ code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px;
 }
 .tools button:hover{color:var(--ink)}
 .tools button[aria-pressed="true"]{color:var(--ground); background:var(--ink); border-color:var(--ink)}
+/* the bar doubles as the rarity legend: each button wears its own tier colour */
+.tools button[data-f="holy"]{color:var(--r-holy)}
+.tools button[data-f="devil"]{color:var(--r-devil)}
+.tools button[data-f="lgd"]{color:var(--r-lgd)}
+.tools button[data-f="legend"]{color:var(--r-legend)}
+.tools button[data-f="epic"]{color:var(--r-epic)}
+.tools button[aria-pressed="true"][data-f]{color:var(--ground)}
 .tools input{
   font-family:"Noto Serif SC",serif; font-size:13.5px; color:var(--ink);
   background:var(--surface); border:1px solid var(--rule); padding:6px 12px;
@@ -281,12 +288,16 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 </div>
 </section>
 <section class="plate" id="s3">
-<div class="plate-h"><span class="num">III</span><h2>武器图鉴</h2><span class="sub">17 件</span></div>
-<p>稀有度由高到低：<strong>神圣 · 恶魔 · 传说 · 史诗</strong>。标记「主动技能」的武器需要<strong>长按右键</strong>发动（物品带 <code>consumable</code> 组件，动作与进食相同）；「被动技能」在命中敌人时按概率自动触发。属性中的百分比为乘算加成。</p>
+<div class="plate-h"><span class="num">III</span><h2>武器图鉴</h2><span class="sub">26 件</span></div>
+<p>稀有度由高到低：<strong>神圣 · 恶魔 · 限定传说 · 传说 · 史诗</strong>。
+标记「主动技能」的武器<strong>长按右键</strong>发动：多数物品靠 <code>food</code> + <code>consumable</code> 组件借用进食动作，
+而两把<strong>长枪</strong>（朗基努斯之枪、路西法）用的是长枪自带的蓄力动作，因此保留原本的突刺手感。
+「被动技能」在命中敌人时按概率自动触发。属性中的百分比为乘算加成。</p>
 <div class="tools" role="group" aria-label="按稀有度筛选">
 <button type="button" data-f="all" aria-pressed="true">全部</button>
 <button type="button" data-f="holy" aria-pressed="false">神圣</button>
 <button type="button" data-f="devil" aria-pressed="false">恶魔</button>
+<button type="button" data-f="lgd" aria-pressed="false">限定传说</button>
 <button type="button" data-f="legend" aria-pressed="false">传说</button>
 <button type="button" data-f="epic" aria-pressed="false">史诗</button>
 <input type="search" id="q" placeholder="搜索名称或技能…" aria-label="搜索武器">
