@@ -36,6 +36,9 @@ HEAD = u"""<title>破碎大陆</title>
   --r-holy:#FF3300; --r-devil:#DC6A62; --r-legend:#D9A02B; --r-lgd:#FFD700;
   --r-epic:#A275DE; --r-brave:#57C6D6; --r-none:#93897C;
   --shadow:0 1px 0 rgba(0,0,0,.5);
+  /* ornament only -- classical porphyry as the ground for a cameo */
+  --porphyry:#43181C;
+  --gilt:#C9A227; --gilt-dim:#8A7429;
 }
 
 *{box-sizing:border-box}
@@ -159,6 +162,107 @@ code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px;
 .sins li{background:var(--ground); padding:12px 15px; font-size:14px}
 .sins .who{display:block; font-weight:700; color:var(--ink); margin-bottom:3px}
 .sins .what{color:var(--muted); font-size:12.5px}
+
+/* ======================================================================
+   新古典主义装饰层
+   希腊回纹饰带、浮雕徽章、月桂分隔、廊柱凹槽、四角挂线。
+   全部是 CSS 与内联 SVG，不引外部资源；只装饰版面家具，不碰卡片。
+   ====================================================================== */
+
+/* 回纹饰带：上下两道细线，中间的齿一上一下交错半个周期 —— 希腊回纹的简化 */
+.plate{position:relative}
+.plate::before{
+  content:""; display:block; height:12px; margin-bottom:30px; opacity:.55;
+  background-image:
+    repeating-linear-gradient(90deg, var(--gilt-dim) 0 1px, transparent 1px 15px),
+    repeating-linear-gradient(90deg, var(--gilt-dim) 0 1px, transparent 1px 15px),
+    linear-gradient(var(--gilt-dim), var(--gilt-dim)),
+    linear-gradient(var(--gilt-dim), var(--gilt-dim));
+  background-size:15px 5px, 15px 5px, 100% 1px, 100% 1px;
+  background-position:0 0, 7px 7px, 0 0, 0 11px;
+  background-repeat:repeat-x, repeat-x, no-repeat, no-repeat;
+}
+#s1.plate::before{margin-top:8px}
+
+/* 四角挂线：像装裱好的铜版画 */
+.plate::after{
+  /* insets kept at 0 so the marks can never widen the page */
+  content:""; position:absolute; inset:34px 0 -18px 0;
+  pointer-events:none; z-index:-1;
+  background-image:
+    linear-gradient(var(--gilt-dim),var(--gilt-dim)), linear-gradient(var(--gilt-dim),var(--gilt-dim)),
+    linear-gradient(var(--gilt-dim),var(--gilt-dim)), linear-gradient(var(--gilt-dim),var(--gilt-dim)),
+    linear-gradient(var(--gilt-dim),var(--gilt-dim)), linear-gradient(var(--gilt-dim),var(--gilt-dim)),
+    linear-gradient(var(--gilt-dim),var(--gilt-dim)), linear-gradient(var(--gilt-dim),var(--gilt-dim));
+  background-size:14px 1px, 1px 14px, 14px 1px, 1px 14px,
+                  14px 1px, 1px 14px, 14px 1px, 1px 14px;
+  background-position:left top, left top, right top, right top,
+                      left bottom, left bottom, right bottom, right bottom;
+  background-repeat:no-repeat; opacity:.34;
+}
+
+/* 罗马数字改成浮雕徽章：斑岩底、金环，外面再套一圈镶口 */
+.plate-h{align-items:center}
+.plate-h .num{
+  flex:0 0 auto; width:36px; height:36px; border-radius:50%;
+  display:grid; place-items:center;
+  font-family:"Cinzel",serif; font-size:11px; letter-spacing:.06em;
+  color:var(--gilt); border:1px solid var(--gilt-dim);
+  background:
+    radial-gradient(circle at 36% 30%, rgba(201,162,39,.18), transparent 60%),
+    var(--porphyry);
+  box-shadow:0 0 0 3px var(--ground), 0 0 0 4px rgba(201,162,39,.24);
+}
+.plate-h h2{letter-spacing:.06em}
+
+/* 月桂分隔：两枝对生的桂叶，中间一颗小珠，两侧引出细线 */
+.laurel{
+  display:flex; align-items:center; gap:16px; margin:40px 0;
+  color:var(--gilt-dim);
+}
+.laurel::before, .laurel::after{
+  content:""; flex:1; height:1px;
+  background:linear-gradient(90deg, transparent, currentColor);
+  opacity:.5;
+}
+.laurel::after{background:linear-gradient(270deg, transparent, currentColor)}
+.laurel svg{flex:0 0 auto; display:block}
+
+/* 导航栏做成廊柱：竖向凹槽 */
+@media (min-width:1120px){
+  .rail{
+    background-image:repeating-linear-gradient(90deg,
+      transparent 0 6px, rgba(201,162,39,.07) 6px 7px, transparent 7px 13px);
+    background-position:right top; background-repeat:no-repeat;
+    background-size:13px 100%;
+    padding-right:22px;
+  }
+}
+
+/* 报头：题铭式的细线框，与徽章同一语汇 */
+.mast{position:relative}
+.mast .eyebrow{letter-spacing:.34em}
+.mast h1 .cn{letter-spacing:.3em}
+
+/* 卷首大写：世界观每一卷的首字放大成阴刻起首 */
+.book > h4{position:relative}
+.book > h3{
+  display:inline-block; padding:3px 11px 2px;
+  border:1px solid var(--gilt-dim); border-radius:1px;
+  background:var(--porphyry); color:var(--gilt);
+}
+
+/* 页脚也收在一道回纹里 */
+footer{position:relative; padding-top:30px}
+footer::before{
+  content:""; position:absolute; left:0; right:0; top:0; height:6px; opacity:.5;
+  background-image:
+    repeating-linear-gradient(90deg, var(--gilt-dim) 0 1px, transparent 1px 15px),
+    linear-gradient(var(--gilt-dim), var(--gilt-dim));
+  background-size:15px 5px, 100% 1px;
+  background-position:0 1px, 0 0;
+  background-repeat:repeat-x, no-repeat;
+}
 
 /* ---- filter bar ---- */
 .tools{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:26px}
@@ -300,6 +404,7 @@ def build():
 <span class="chip">资源包格式 <b>75.0</b></span>
 <span class="chip">命名空间 <b>rpg</b></span>
 </div>
+<div class="laurel" aria-hidden="true"><svg width="86" height="18" viewBox="0 0 86 18" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M43 3v12"/><circle cx="43" cy="9" r="2.4" fill="currentColor" stroke="none"/><path d="M40 9C33 9 27 6 22 2"/><path d="M40 9C33 9 27 12 22 16"/><path d="M46 9c7 0 13-3 18-7"/><path d="M46 9c7 0 13 3 18 7"/><path d="M33 5c-1.6-1.8-1.4-3.6.4-4.6 1 1.9.6 3.6-.4 4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M27 3c-1.7-1.6-1.7-3.4 0-4.6 1.2 1.8 1 3.5 0 4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M33 13c-1.6 1.8-1.4 3.6.4 4.6 1-1.9.6-3.6-.4-4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M27 15c-1.7 1.6-1.7 3.4 0 4.6 1.2-1.8 1-3.5 0-4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M53 5c1.6-1.8 1.4-3.6-.4-4.6-1 1.9-.6 3.6.4 4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M59 3c1.7-1.6 1.7-3.4 0-4.6-1.2 1.8-1 3.5 0 4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M53 13c1.6 1.8 1.4 3.6-.4 4.6-1-1.9-.6-3.6.4-4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M59 15c1.7 1.6 1.7 3.4 0 4.6-1.2-1.8-1-3.5 0-4.6z" fill="currentColor" stroke="none" opacity=".85"/></svg></div>
 </header>''')
 
     a('<div class="layout">')
@@ -486,6 +591,7 @@ def build():
 这是关于光、混沌、堕落、救赎与人的书；<br>是关于权与力如何分离，又如何在末后的日子重新相遇的见证。</p>
 <p class="byline">世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）</p>
 </div>
+<div class="laurel" aria-hidden="true"><svg width="86" height="18" viewBox="0 0 86 18" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M43 3v12"/><circle cx="43" cy="9" r="2.4" fill="currentColor" stroke="none"/><path d="M40 9C33 9 27 6 22 2"/><path d="M40 9C33 9 27 12 22 16"/><path d="M46 9c7 0 13-3 18-7"/><path d="M46 9c7 0 13 3 18 7"/><path d="M33 5c-1.6-1.8-1.4-3.6.4-4.6 1 1.9.6 3.6-.4 4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M27 3c-1.7-1.6-1.7-3.4 0-4.6 1.2 1.8 1 3.5 0 4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M33 13c-1.6 1.8-1.4 3.6.4 4.6 1-1.9.6-3.6-.4-4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M27 15c-1.7 1.6-1.7 3.4 0 4.6 1.2-1.8 1-3.5 0-4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M53 5c1.6-1.8 1.4-3.6-.4-4.6-1 1.9-.6 3.6.4 4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M59 3c1.7-1.6 1.7-3.4 0-4.6-1.2 1.8-1 3.5 0 4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M53 13c1.6 1.8 1.4 3.6-.4 4.6-1-1.9-.6-3.6.4-4.6z" fill="currentColor" stroke="none" opacity=".85"/><path d="M59 15c1.7 1.6 1.7 3.4 0 4.6-1.2-1.8-1-3.5 0-4.6z" fill="currentColor" stroke="none" opacity=".85"/></svg></div>
 <div class="book"><h3>卷一</h3><h4>创世书</h4><p class="cap">第一章　起初</p><p>起初，世界尚未有形，地是空虚混沌，黑暗覆在深渊之上。</p><blockquote class="verse">地是空虚混沌，渊面黑暗。<cite>——《创世记 1:2》</cite></blockquote><p>上帝在混沌中立定自己的权柄，其名为<strong>真实与虚妄</strong>：祂所称为真实的，就成为世界；祂所弃绝的，就归入黑暗。天堂从混沌中升起，天使被造，作祂意志的手。</p><p>但混沌深处有一物没有被创造，也没有被消灭。它没有形体，也没有王座，却与上帝相对而立——它不是另一个神，而是<strong>污染的可能</strong>。后来，人称它为<strong>敌基督</strong>。</p><p class="cap">第二章　七日</p><p>光与黑暗分开，穹苍立定，旱地显露，日月众星掌管节令，海与天充满活物。第六日，上帝照自己的意志造人，使人承受<strong>神性的火种</strong>；第七日止息，分别为圣。</p><blockquote class="verse">神看着一切所造的都甚好。<cite>——《创世记 1:31》</cite></blockquote></div><div class="book"><h3>卷二</h3><h4>伊甸书</h4><p class="cap">第一章　王冠与王国</p><p>生命树有十个源质，树根扎在<strong>王国</strong>，树冠伸入<strong>王冠</strong>。王国是肉身、土地与现实；王冠最接近上帝。人在王国出生，却被造得可以走到王冠。</p><p>道路之中有一个隐藏的节点，名为 <strong>Da’at</strong>。那里藏着未被允许的知识——既能通往真实，也能使真实破碎。</p><p class="cap">第二章　金苹果</p><p>敌基督没有以自己的形体显现，只在分别善恶树上留下一枚金色的果实。</p><blockquote class="verse">你们便如神能知道善恶。<cite>——《创世记 3:5》</cite></blockquote><p>那果子不是寻常的果子，而是人类获得的<strong>第一份魔力</strong>。人因此拥有人性，也拥有欲望、自我与自私。于是人从王冠坠落，跌入王国。</p><p>从那日起，人类一代一代下坠。可是下坠也留下了<strong>自由意志</strong>——只有拥有自我的人，才能选择重新向上。</p></div><div class="book"><h3>卷三</h3><h4>权柄书</h4><p class="cap">第一章　权与力</p><p>上帝的权柄分为<strong>权</strong>与<strong>力</strong>。权能够定义道路、授予资格、命名真实；力能够执行命令，使道路在世界中显现。</p><p>圣父掌管中枢，圣子承受救赎之力，圣灵持守权柄并监察圣子。三位同出一源。</p><blockquote class="verse">圣哉！圣哉！圣哉！万军之耶和华。<cite>——《以赛亚书 6:3》</cite></blockquote><p><strong>圣力</strong>是未被污染的权柄，<strong>魔力</strong>是被敌基督侵染后的权柄——二者并非两种创造，而是同一权柄的两种状态。圣器名为 <strong>Kli Qodesh</strong>，魔器名为 <strong>Kli Tum’ah</strong>。</p><p class="cap">第二章　弥赛亚</p><p>凡承担救世之责的人都被称为弥赛亚。摩西承受律法之权，大卫承受王权之印；他们是弥赛亚，却不是圣子。</p><p>圣子若没有圣灵，只能成为执行神迹的刀；圣灵若没有圣子，只能成为无人执行的命令。直到末后的日子，他们将在伊甸园相遇，使权与力重新合一。</p></div><div class="book"><h3>卷四</h3><h4>堕天书</h4><p class="cap">第一章　晨星坠落</p><p>路西法原是天堂中最接近上帝的天使之一。他看见权柄的光，也看见天使只是权柄的延伸，于是在心中说：<em>“为何我只能承受命令，而不能成为命令的源头？”</em></p><p>敌基督侵染了他，使他第一次拥有独立的自我。他召集三分之一的天使升向王冠。</p><blockquote class="verse">在天上就有了争战。<cite>——《启示录 12:7》</cite></blockquote><p>人类称那日为<strong>第一次神陨之战</strong>；天堂称之为第一次堕落之战；路西法称之为第一次自由之战。米迦勒得胜，三分之一的星辰坠落，天使的圣力被污染，成为恶魔。</p><p><strong>路西法是他曾经是谁，撒旦是他选择成为谁。</strong></p><p class="cap">第二章　地狱与无底坑</p><p>被撕裂的天堂坠入世界的阴影，成为地狱——恶魔的乐园，也是恶魔的囚笼。撒旦被锁在最深处的<strong>无底坑</strong>里；无底坑没有底，正如污染没有尽头。火山口是它在人间留下的楔子。</p><blockquote class="verse">那一千年完了，撒但必从监牢里被释放。<cite>——《启示录 20:7》</cite></blockquote></div><div class="book"><h3>卷五</h3><h4>魔神书</h4><p class="cap">第一章　七宗罪</p><p>撒旦坐在地狱王座上，王座之下有七位领主。七位领主各有一件<strong>罪器</strong>——罪的形体，也是污染的刀刃。</p><ul class="sins">
 <li><span class="who">路西法</span><span class="what">傲慢</span></li>
 <li><span class="who">利维坦</span><span class="what">嫉妒</span></li>

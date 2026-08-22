@@ -465,19 +465,25 @@ def fix_broken_stones():
 
 
 def carry_components_on_inlay():
-    """`com/add` copied lore and custom_data but not food/consumable, so an
-    inlaid stone could never make its weapon right-clickable."""
-    p = os.path.join(FUNC, "command/com/add.mcfunction")
-    s = io.open(p, encoding="utf-8").read()
+    """Copy food/consumable across when a stone is inlaid.
+
+    This has to go into `rpg:command/com`'s 符石附着 section, **not** into
+    `rpg:command/com/add` -- that file is a leftover and nothing calls it.  The
+    live path is the section here, which opt_guard folds into com/g6 later in
+    the build.  Without these two lines an inlaid weapon never becomes
+    right-clickable and the stone's using_item advancement can never fire.
+    """
+    path = os.path.join(FUNC, "command/com.mcfunction")
+    s = io.open(path, encoding="utf-8").read()
     if "minecraft:consumable set from" in s:
         return False
     mark = ("execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run "
             "data modify entity @s Item.components.minecraft:custom_data merge from "
             "entity @e[limit=1,distance=..1,type=minecraft:item,tag=rpg.i.add_weapon_tag1] "
             "Item.components.minecraft:custom_data")
+    if mark not in s:
+        return False
     extra = "\n".join([
-        "# 符石还要把 food / consumable 带过去，否则镶嵌完的武器仍然不能右键，",
-        "# 那条 using_item 进度也就永远不会响 —— 原本三块符石失效的一半原因。",
         "execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s if data entity "
         "@e[limit=1,distance=..1,type=minecraft:item,tag=rpg.i.add_weapon_tag1] "
         "Item.components.minecraft:consumable run data modify entity @s "
@@ -491,8 +497,8 @@ def carry_components_on_inlay():
         "@e[limit=1,distance=..1,type=minecraft:item,tag=rpg.i.add_weapon_tag1] "
         "Item.components.minecraft:consumable",
     ])
-    s = s.replace(mark, mark + "\n" + extra)
-    io.open(p, "w", encoding="utf-8", newline="\n").write(s)
+    io.open(path, "w", encoding="utf-8", newline="\n").write(
+        s.replace(mark, mark + "\n" + extra))
     return True
 
 
