@@ -50,21 +50,42 @@ def tint(w, h, rgba, hexa):
     black -> accent -> white ramp, so the artwork's highlights and shadows
     survive and only the colour changes.
     """
-    tr, tg, tb = (int(hexa[1:3], 16), int(hexa[3:5], 16), int(hexa[5:7], 16))
+    # Normalise every accent into one muted band before it is used.  Scaling
+    # saturation *relatively* left pure primaries (dark_red #AA0000, green
+    # #55FF55) still shouting while everything else went quiet, so instead the
+    # hue is kept and both saturation and lightness are clamped to fixed
+    # values -- nineteen runes then sit in the same tonal family.
+    import colorsys
+    hue, _l, sat = colorsys.rgb_to_hls(int(hexa[1:3], 16) / 255.0,
+                                       int(hexa[3:5], 16) / 255.0,
+                                       int(hexa[5:7], 16) / 255.0)
+    # Clamping lightness to a constant made the near-grey accents (white and
+    # gray) land on the same tone, so a little of the original lightness is
+    # carried through -- enough to keep every rune distinguishable while the
+    # whole set stays inside the muted band.
+    base_l = 0.26 + 0.16 * _l
+    ar, ag, ab = [c * 255.0 for c in
+                  colorsys.hls_to_rgb(hue, base_l, min(sat, 0.34))]
+    hr, hg, hb = [c * 255.0 for c in
+                  colorsys.hls_to_rgb(hue, base_l + 0.28, min(sat, 0.30))]
+
     out = bytearray(rgba)
     for i in range(w * h):
         o = i * 4
         if not out[o + 3]:
             continue
         lum = (0.299 * out[o] + 0.587 * out[o + 1] + 0.114 * out[o + 2]) / 255.0
+        # Muted on purpose.  Running the ramp all the way to pure white made
+        # every rune look like neon; the accent is darkened and the highlight
+        # only travels part of the way up, so they read as inked stone.
         if lum <= 0.5:
-            k = lum / 0.5
-            r, g, b = tr * k, tg * k, tb * k
+            k = 0.25 + 0.75 * (lum / 0.5)
+            r, g, b = ar * k, ag * k, ab * k
         else:
             k = (lum - 0.5) / 0.5
-            r = tr + (255 - tr) * k
-            g = tg + (255 - tg) * k
-            b = tb + (255 - tb) * k
+            r = ar + (hr - ar) * k
+            g = ag + (hg - ag) * k
+            b = ab + (hb - ab) * k
         out[o], out[o + 1], out[o + 2] = int(r), int(g), int(b)
     return bytes(out)
 

@@ -4,3 +4,7 @@ execute as @a[tag=rpg.h.forge_tag1,scores={rpg_forge=24}] at @s run function rpg
 execute as @a[tag=rpg.h.forge_tag1,scores={rpg_forge=16}] at @s run function rpg:item/epic/forge_ring2
 execute as @a[tag=rpg.h.forge_tag1,scores={rpg_forge=8}] at @s run function rpg:item/epic/forge_ring3
 execute as @a[scores={rpg_forge=1..}] run scoreboard players remove @s rpg_forge 1
+
+# 松手即散：trigger 每刻把 hold 顶回 3，这里每刻扣 1，停手就清空蓄力
+execute as @a[scores={rpg_forge_hold=1..}] run scoreboard players remove @s rpg_forge_hold 1
+scoreboard players set @a[scores={rpg_forge_hold=..0,rpg_forge_chg=1..}] rpg_forge_chg 0

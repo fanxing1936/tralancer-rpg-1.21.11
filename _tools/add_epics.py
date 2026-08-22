@@ -34,25 +34,30 @@ ART = os.path.join(os.path.dirname(os.path.abspath(__file__)), "epic_art")
 
 NATIVE = 32
 FORGE_CONSUME = 100120        # first free consume_seconds
+SAW_CONSUME = 100130
+FORGE_CHARGE = 30             # ticks of hold before the slam lands
+FORGE_HOLD = 3                # grace ticks for "still holding"
+SAW_LIFE = 60                 # the saw runs three seconds
+
 
 RULE = '["",{"text":"+------------------+","italic":false,"color":"white"}]'
 
 # name -> (source sprite, base item, custom_model_data, display parent)
 WEAPONS = [
-    dict(key="forge", art="568568", item="mace", cmd=1110021,
-         parent="rpg:item/huge_sword_handheld",
-         name="熔火之锤", tier="限定传说", tier_colour="#FFD700", name_colour="gold",
+    dict(key="forge", art="568568", item="netherite_axe", cmd=1110021,
+         parent="rpg:item/sword_handheld",
+         name="熔火之锤", tier="传说", tier_colour="gold", name_colour="red",
          icon="🔱", kind="主动技能", skill="熔流",
          flavour=("锻炉裂开的那一日", " 铁匠把山的心脏装进了锤头"),
-         text=("右键消耗2级经验砸地，热浪由内向外三重扩散",
+         text=("长按右键蓄力1.5秒砸地，热浪由内向外三重扩散",
                "每一圈都点燃并推开当中的敌人")),
     dict(key="dawn", art="568486", item="netherite_sword", cmd=1110022,
          parent="rpg:item/sword_handheld",
-         name="破晓", tier="传说", tier_colour="gold", name_colour="yellow",
-         icon="🗡", kind="被动技能", skill="曦光",
-         flavour=("夜里最深的时刻", " 与天亮只隔着一线"),
-         text=("攻击亡灵时重创并点燃",
-               "攻击其余生物则以强光致盲")),
+         name="熔岩链锯", tier="限定传说", tier_colour="#FFD700", name_colour="gold",
+         icon="🗡", kind="主动技能", skill="熔锯",
+         flavour=("[切割链锯]烧红了它的锯齿", " 从此它咬下去的地方会流"),
+         text=("右键起锯，三秒内连切六轮",
+               "每一轮都在身前召出熔岩獠牙")),
     dict(key="chime", art="568583", item="netherite_axe", cmd=1110023,
          parent="rpg:item/sword_handheld",
          name="晶啸", tier="史诗", tier_colour="dark_purple", name_colour="light_purple",
@@ -193,10 +198,15 @@ ATTRS = {
               '{type:"block_interaction_range",amount:1,operation:add_value,slot:mainhand,id:"rpg:epic/chime/2"}'),
 }
 
-CONSUMABLE = ('food={nutrition:0,saturation:0f,can_always_eat:1b},'
-              'consumable={consume_seconds:%df,animation:"eat",'
-              'sound:"minecraft:entity.generic.eat",has_consume_particles:true,'
-              'on_consume_effects:[]},' % FORGE_CONSUME)
+def _consumable(cs):
+    return ('food={nutrition:0,saturation:0f,can_always_eat:1b},'
+            'consumable={consume_seconds:%df,animation:"eat",'
+            'sound:"minecraft:entity.generic.eat",has_consume_particles:true,'
+            'on_consume_effects:[]},' % cs)
+
+
+CONSUMABLE = _consumable(FORGE_CONSUME)
+SAW_CONSUMABLE = _consumable(SAW_CONSUME)
 
 
 def give(w):
@@ -213,7 +223,8 @@ def give(w):
             "lore=[" + ",".join(lore) + "],"
             "enchantments=" + ENCH[w["key"]] + ","
             "attribute_modifiers=[" + ATTRS[w["key"]] + "],"
-            + (CONSUMABLE if w["key"] == "forge" else "") +
+            + (CONSUMABLE if w["key"] == "forge"
+               else SAW_CONSUMABLE if w["key"] == "dawn" else "") +
             "unbreakable={},"
             'tooltip_display={hidden_components:["minecraft:unbreakable"]},'
             "custom_model_data={floats:[%d.0f]}," % w["cmd"] +
@@ -240,16 +251,34 @@ GOLD, DEEPRED, AZURE = 16575098, 8005632, 416663          # 破晓 #FCEA7A #7A28
 STEEL, PALE, AMETHYST = 5004652, 11121336, 4066619        # 晶啸 #4C5D6C #A9B2B8 #3E0D3B
 
 FORGE_TRIGGER = """\
-# 熔火之锤［熔流］—— 由 rpg:advancement/item/forge 在右键使用时触发。
+# 熔火之锤［熔流］—— 由 rpg:advancement/item/forge 触发。
+#
+# `using_item` 在按住右键期间每刻都响，所以这里攒蓄力，攒满 {CHARGE} 刻才砸下去。
+# 注意用的是无条件 `add`：选择器里的 scores 判定要求记分项**已经有值**，
+# 第一次使用时它并不存在，条件恒假，计数器就永远起不来。
 advancement revoke @s only rpg:item/forge
-execute if entity @s[level=..1] run playsound minecraft:entity.villager.no player @s
-execute if entity @s[level=2..] run function rpg:item/epic/forge_cast
+scoreboard players set @s rpg_forge_hold {HOLD}
+scoreboard players add @s rpg_forge_chg 1
+
+execute at @s run particle lava ~ ~0.3 ~ 0.45 0.1 0.45 0 2
+execute at @s if entity @s[scores={{rpg_forge_chg=12..}}] run particle dust_color_transition{{from_color:{SCORCH},to_color:{EMBER},scale:2}} ~ ~0.9 ~ 0.5 0.7 0.5 0.03 8
+execute at @s if entity @s[scores={{rpg_forge_chg=22..}}] run particle flame ~ ~1.3 ~ 0.5 0.6 0.5 0.02 10
+execute if entity @s[scores={{rpg_forge_chg=..11}}] run title @s actionbar ["",{{"text":"熔流 ","color":"gold"}},{{"text":"▮▯▯ ","color":"dark_red"}},{{"text":"起火","color":"gray"}}]
+execute if entity @s[scores={{rpg_forge_chg=12..21}}] run title @s actionbar ["",{{"text":"熔流 ","color":"gold"}},{{"text":"▮▮▯ ","color":"red"}},{{"text":"炽白","color":"gray"}}]
+execute if entity @s[scores={{rpg_forge_chg=22..{CHARGE_1}}}] run title @s actionbar ["",{{"text":"熔流 ","color":"gold"}},{{"text":"▮▮▮ ","color":"yellow"}},{{"text":"将落","color":"gray"}}]
+execute if entity @s[scores={{rpg_forge_chg={CHARGE}..}}] run title @s actionbar ["",{{"text":"熔　流","color":"gold","bold":true}}]
+execute at @s if entity @s[scores={{rpg_forge_chg=1}}] run playsound minecraft:block.lava.ambient player @s ~ ~ ~ 1 0.7
+execute at @s if entity @s[scores={{rpg_forge_chg=12}}] run playsound minecraft:block.lava.ambient player @s ~ ~ ~ 1 1.1
+execute at @s if entity @s[scores={{rpg_forge_chg=22}}] run playsound minecraft:block.lava.ambient player @s ~ ~ ~ 1 1.5
+
+# 精确判等，之后计数继续越过阈值，所以按住不放只砸一次
+execute if entity @s[scores={{rpg_forge_chg={CHARGE}}}] run function rpg:item/epic/forge_cast
 """
 
 FORGE_CAST = """\
 # 砸地。热浪不是一片持续的场，而是三次定时脉冲 ——
 # 计数器一到零整段就结束，没有任何东西留在场上每刻跑。
-xp add @s -2 levels
+scoreboard players set @s rpg_forge_chg 0
 scoreboard players set @s rpg_forge 24
 particle minecraft:flash{{color:{EMBER}}} ~ ~0.6 ~ 0 0 0 0 1
 particle lava ~ ~0.3 ~ 0.6 0.1 0.6 0 30
@@ -264,6 +293,10 @@ execute as @a[tag=rpg.h.forge_tag1,scores={{rpg_forge=24}}] at @s run function r
 execute as @a[tag=rpg.h.forge_tag1,scores={{rpg_forge=16}}] at @s run function rpg:item/epic/forge_ring2
 execute as @a[tag=rpg.h.forge_tag1,scores={{rpg_forge=8}}] at @s run function rpg:item/epic/forge_ring3
 execute as @a[scores={{rpg_forge=1..}}] run scoreboard players remove @s rpg_forge 1
+
+# 松手即散：trigger 每刻把 hold 顶回 {HOLD}，这里每刻扣 1，停手就清空蓄力
+execute as @a[scores={{rpg_forge_hold=1..}}] run scoreboard players remove @s rpg_forge_hold 1
+scoreboard players set @a[scores={{rpg_forge_hold=..0,rpg_forge_chg=1..}}] rpg_forge_chg 0
 """
 
 
@@ -286,17 +319,43 @@ effect give @s minecraft:fire_resistance 1 0 true
 execute at @s run particle minecraft:flash{{color:{CINDER}}} ~ ~1 ~ 0 0 0 0 1
 """
 
-DAWN = """\
-# 破晓［曦光］—— 对亡灵是白昼，对其余是刺目的强光。
-# 走 rpg.hurt + on attacker，不新增任何全场遍历。
-execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[tag=rpg.h.dawn_tag1] run tag @s add rpg.epic.dawn
-execute as @e[tag=rpg.hurt,type=#minecraft:undead] at @s if entity @a[tag=rpg.epic.dawn,distance=..8] run damage @s 6 minecraft:magic by @a[tag=rpg.epic.dawn,limit=1,sort=nearest]
-execute as @e[tag=rpg.hurt,type=#minecraft:undead] at @s if entity @a[tag=rpg.epic.dawn,distance=..8] run particle dust_color_transition{{from_color:{GOLD},to_color:{DEEPRED},scale:2}} ~ ~1 ~ 0.35 0.5 0.35 0.06 26
-execute as @e[tag=rpg.hurt,type=#minecraft:undead] at @s if entity @a[tag=rpg.epic.dawn,distance=..8] run particle minecraft:flash{{color:{GOLD}}} ~ ~1 ~ 0 0 0 0 1
-execute as @e[tag=rpg.hurt,type=#minecraft:undead] at @s if entity @a[tag=rpg.epic.dawn,distance=..8] run playsound minecraft:item.firecharge.use hostile @a[distance=..16] ~ ~ ~ 0.7 1.5
-execute as @e[tag=rpg.hurt,type=!#minecraft:undead] at @s if entity @a[tag=rpg.epic.dawn,distance=..8] run effect give @s minecraft:blindness 4 0 true
-execute as @e[tag=rpg.hurt,type=!#minecraft:undead] at @s if entity @a[tag=rpg.epic.dawn,distance=..8] run particle end_rod ~ ~1.2 ~ 0.3 0.4 0.3 0.03 14
-tag @a[tag=rpg.epic.dawn] remove rpg.epic.dawn
+SAW_TRIGGER = """\
+# 熔岩链锯［熔锯］—— 右键起锯。与藤蔓之鞭同一形状：
+# 起手只挂一个倒计时，之后每刻由 saw 函数按节拍落刀。
+advancement revoke @s only rpg:item/lavasaw
+execute if entity @s[scores={{rpg_saw=1..}}] run return 0
+scoreboard players set @s rpg_saw {LIFE}
+particle lava ~ ~1 ~ 0.4 0.4 0.4 0 12
+playsound minecraft:block.respawn_anchor.charge player @a[distance=..18] ~ ~ ~ 1 1.4
+playsound minecraft:entity.blaze.ambient player @a[distance=..18] ~ ~ ~ 0.8 1.8
+"""
+
+SAW = """\
+# 熔锯：{LIFE} 刻内切六轮，每轮间隔 10 刻 ——
+# 生物受伤后约有 10 刻无敌帧，切得更密只是浪费。
+execute as @a[tag=rpg.h.dawn_tag1,scores={{rpg_saw=50}}] at @s run function rpg:item/epic/saw_cut
+execute as @a[tag=rpg.h.dawn_tag1,scores={{rpg_saw=40}}] at @s run function rpg:item/epic/saw_cut
+execute as @a[tag=rpg.h.dawn_tag1,scores={{rpg_saw=30}}] at @s run function rpg:item/epic/saw_cut
+execute as @a[tag=rpg.h.dawn_tag1,scores={{rpg_saw=20}}] at @s run function rpg:item/epic/saw_cut
+execute as @a[tag=rpg.h.dawn_tag1,scores={{rpg_saw=10}}] at @s run function rpg:item/epic/saw_cut
+execute as @a[tag=rpg.h.dawn_tag1,scores={{rpg_saw=1}}] at @s run function rpg:item/epic/saw_cut
+execute as @a[tag=rpg.h.dawn_tag1,scores={{rpg_saw=1..}}] at @s run particle dust_color_transition{{from_color:{GOLD},to_color:{DEEPRED},scale:1}} ~ ~1 ~ 0.3 0.3 0.3 0.02 3
+execute as @a[scores={{rpg_saw=1..}}] run scoreboard players remove @s rpg_saw 1
+"""
+
+SAW_CUT = """\
+# 一轮切割：身前召出熔岩獠牙，锯齿咬过 3.5 格。
+# 獠牙沿用[切割链锯]的做法（放大、发光的 evoker_fangs），只是烧红了。
+execute anchored eyes positioned ^ ^ ^2 run summon minecraft:evoker_fangs ~ ~-1 ~ {{Warmup:0,Tags:["rpg.saw.fang"],attributes:[{{id:"scale",base:2.2f}}]}}
+execute as @e[tag=rpg.saw.fang] run data modify entity @s Owner set from entity @p[tag=rpg.h.dawn_tag1] UUID
+tag @e[tag=rpg.saw.fang] remove rpg.saw.fang
+particle trial_spawner_detection ~ ~1.2 ~ 0.5 0.5 0.5 0.1 12
+particle lava ~ ~0.8 ~ 0.5 0.4 0.5 0 8
+particle dust_color_transition{{from_color:{EMBER},to_color:{DEEPRED},scale:2}} ~ ~1 ~ 0.6 0.5 0.6 0.06 26
+playsound minecraft:entity.blaze.burn player @a[distance=..18] ~ ~ ~ 1 0.8
+playsound minecraft:item.axe.scrape player @a[distance=..18] ~ ~ ~ 1 1.6
+execute as @e[distance=0.1..3.5,type=!player,type=!minecraft:item,type=!minecraft:experience_orb] at @s run damage @s 5 minecraft:player_attack by @p[tag=rpg.h.dawn_tag1]
+execute as @e[distance=0.1..3.5,type=!player,type=!minecraft:item,type=!minecraft:experience_orb] at @s run effect give @s minecraft:glowing 3 0 true
 """
 
 CHIME = """\
@@ -317,28 +376,38 @@ execute as @e[distance=0.1..3,type=!player,type=!minecraft:item,type=!minecraft:
 ROOT = """\
 # 三件新武器的每刻入口。每条都先过握持判定 ——
 # 没人拿着时整段跳过，空闲一刻只剩三次标签检查。
-execute if entity @a[tag=rpg.h.dawn_tag1] run function rpg:item/epic/dawn
+execute if entity @a[tag=rpg.h.dawn_tag1] run function rpg:item/epic/saw
 execute if entity @a[tag=rpg.h.chime_tag1] run function rpg:item/epic/chime
 execute if entity @a[tag=rpg.h.forge_tag1] run function rpg:item/epic/forge
 """
 
-ARGS = dict(EMBER=EMBER, CINDER=CINDER, SCORCH=SCORCH,
+ARGS = dict(CHARGE=FORGE_CHARGE, CHARGE_1=FORGE_CHARGE - 1, HOLD=FORGE_HOLD,
+            LIFE=SAW_LIFE,
+            EMBER=EMBER, CINDER=CINDER, SCORCH=SCORCH,
             GOLD=GOLD, DEEPRED=DEEPRED, AZURE=AZURE,
             STEEL=STEEL, PALE=PALE, AMETHYST=AMETHYST)
 
 
 def build_functions():
-    wf("item/epic/forge_trigger.mcfunction", FORGE_TRIGGER)
+    wf("item/epic/forge_trigger.mcfunction", FORGE_TRIGGER.format(**ARGS))
     wf("item/epic/forge_cast.mcfunction", FORGE_CAST.format(**ARGS))
     wf("item/epic/forge.mcfunction", FORGE_TICK.format(**ARGS))
     for n, (r, c, pitch) in enumerate(((3, 40, "0.8"), (5, 60, "1.1"), (7, 80, "1.4")), 1):
         wf("item/epic/forge_ring%d.mcfunction" % n, forge_ring(r, c, pitch).format(**ARGS))
     wf("item/epic/forge_push.mcfunction", FORGE_PUSH.format(**ARGS))
-    wf("item/epic/dawn.mcfunction", DAWN.format(**ARGS))
+    wf("item/epic/saw_trigger.mcfunction", SAW_TRIGGER.format(**ARGS))
+    wf("item/epic/saw.mcfunction", SAW.format(**ARGS))
+    wf("item/epic/saw_cut.mcfunction", SAW_CUT.format(**ARGS))
     wf("item/epic/chime.mcfunction", CHIME.format(**ARGS))
     wf("item/epic/chime_wave.mcfunction", CHIME_WAVE.format(**ARGS))
     wf("item/epic/epics.mcfunction", ROOT)
 
+    wj(os.path.join(ADV, "lavasaw.json"), {
+        "criteria": {"requirement": {
+            "trigger": "minecraft:using_item",
+            "conditions": {"item": {
+                "predicates": {"minecraft:custom_data": "{dawn_tag:1b}"}}}}},
+        "rewards": {"function": "rpg:item/epic/saw_trigger"}})
     wj(os.path.join(ADV, "forge.json"), {
         "criteria": {"requirement": {
             "trigger": "minecraft:using_item",
@@ -357,11 +426,14 @@ def build_functions():
 def add_objectives():
     p = os.path.join(FUNC, "command/soreboard.mcfunction")
     s = io.open(p, encoding="utf-8").read()
-    if "rpg_forge" in s:
+    add = [n for n in ("rpg_forge", "rpg_forge_chg", "rpg_forge_hold", "rpg_saw")
+           if n not in s]
+    if not add:
         return []
     io.open(p, "w", encoding="utf-8", newline="\n").write(
-        s.rstrip("\n") + "\nscoreboard objectives add rpg_forge dummy\n")
-    return ["rpg_forge"]
+        s.rstrip("\n") + "\n"
+        + "\n".join("scoreboard objectives add %s dummy" % n for n in add) + "\n")
+    return add
 
 
 def register_index():

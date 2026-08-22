@@ -148,3 +148,6 @@ scoreboard objectives add rpg_tide dummy
 scoreboard objectives add rpg_quake dummy
 scoreboard objectives add rpg_shade dummy
 scoreboard objectives add rpg_forge dummy
+scoreboard objectives add rpg_forge_chg dummy
+scoreboard objectives add rpg_forge_hold dummy
+scoreboard objectives add rpg_saw dummy

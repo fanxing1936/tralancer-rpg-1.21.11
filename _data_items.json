@@ -5315,16 +5315,16 @@
    "potion_contents": null
   },
   {
-   "item": "mace",
+   "item": "netherite_axe",
    "name": "熔火之锤",
-   "rarity": "限定传说",
-   "name_colour": "gold",
+   "rarity": "传说",
+   "name_colour": "red",
    "lore": [
     "+------------------+",
     "锻炉裂开的那一日 铁匠把山的心脏装进了锤头",
     "+------------------+",
     "🔱主动技能[熔流]",
-    "右键消耗2级经验砸地，热浪由内向外三重扩散",
+    "长按右键蓄力1.5秒砸地，热浪由内向外三重扩散",
     "每一圈都点燃并推开当中的敌人",
     "+------------------+"
    ],
@@ -5390,16 +5390,16 @@
   },
   {
    "item": "netherite_sword",
-   "name": "破晓",
-   "rarity": "传说",
-   "name_colour": "yellow",
+   "name": "熔岩链锯",
+   "rarity": "限定传说",
+   "name_colour": "gold",
    "lore": [
     "+------------------+",
-    "夜里最深的时刻 与天亮只隔着一线",
+    "[切割链锯]烧红了它的锯齿 从此它咬下去的地方会流",
     "+------------------+",
-    "🗡被动技能[曦光]",
-    "攻击亡灵时重创并点燃",
-    "攻击其余生物则以强光致盲",
+    "🗡主动技能[熔锯]",
+    "右键起锯，三秒内连切六轮",
+    "每一轮都在身前召出熔岩獠牙",
     "+------------------+"
    ],
    "enchantments": {
@@ -5439,13 +5439,15 @@
    },
    "cmd": 1110022.0,
    "unbreakable": true,
-   "consumable": null,
+   "consumable": 100130,
    "components": [
     "attribute_modifiers",
+    "consumable",
     "custom_data",
     "custom_model_data",
     "custom_name",
     "enchantments",
+    "food",
     "lore",
     "tooltip_display",
     "unbreakable"
