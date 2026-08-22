@@ -11,7 +11,12 @@ execute as @e[scores={rpg_vine_lash=20}] run tag @s add rpg.vine.strike
 execute as @e[scores={rpg_vine_lash=10}] run tag @s add rpg.vine.strike
 execute as @e[scores={rpg_vine_lash=1}] run tag @s add rpg.vine.strike
 
-execute if entity @e[tag=rpg.vine.strike] run function rpg:item/extra/vine/g0
+execute as @e[tag=rpg.vine.strike] at @s run particle minecraft:tinted_leaves{color:12835692} ~ ~0.9 ~ 0.45 0.55 0.45 0.02 24
+execute as @e[tag=rpg.vine.strike] at @s run particle crit ~ ~0.9 ~ 0.3 0.35 0.3 0.12 10
+execute as @e[tag=rpg.vine.strike] at @s run particle sweep_attack ~ ~0.9 ~ 0.2 0.2 0.2 0 1
+execute as @e[tag=rpg.vine.strike] at @s if entity @a[tag=rpg.h.vine_tag1,distance=..20] run damage @s 2 minecraft:player_attack by @a[tag=rpg.h.vine_tag1,limit=1,sort=nearest]
+execute as @e[tag=rpg.vine.strike] at @s unless entity @a[tag=rpg.h.vine_tag1,distance=..20] run damage @s 2 minecraft:player_attack
+execute as @e[tag=rpg.vine.strike] at @s run title @a[tag=rpg.h.vine_tag1,limit=1,sort=nearest,distance=..20] actionbar ["",{"text":"缠绕","color":"green","bold":true},{"text":" 鞭击命中","color":"white"}]
 
 # 音调逐鞭升高，一耳就能听出打到第几鞭
 execute as @e[scores={rpg_vine_lash=50}] at @s run playsound minecraft:entity.player.attack.sweep player @a[distance=..16] ~ ~ ~ 1 0.8

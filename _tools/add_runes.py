@@ -31,7 +31,152 @@ import json
 import os
 import sys
 
+import png_tool as P
+
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
+RP = sys.argv[2] if len(sys.argv) > 2 else "../resourcepack"
+RPG_MODELS = os.path.join(RP, "assets/rpg/models/item")
+RPG_TEX = os.path.join(RP, "assets/rpg/textures/item")
+MC_ITEMS = os.path.join(RP, "assets/minecraft/items")
+
+# 1110001 / 1110002 / 1110003 are the pack's own; start above them
+CMD0 = 1110011
+
+
+def tint(w, h, rgba, hexa):
+    """Recolour a sprite onto one hue, keeping its shading.
+
+    Each pixel's luminance is preserved and used to walk a
+    black -> accent -> white ramp, so the artwork's highlights and shadows
+    survive and only the colour changes.
+    """
+    tr, tg, tb = (int(hexa[1:3], 16), int(hexa[3:5], 16), int(hexa[5:7], 16))
+    out = bytearray(rgba)
+    for i in range(w * h):
+        o = i * 4
+        if not out[o + 3]:
+            continue
+        lum = (0.299 * out[o] + 0.587 * out[o + 1] + 0.114 * out[o + 2]) / 255.0
+        if lum <= 0.5:
+            k = lum / 0.5
+            r, g, b = tr * k, tg * k, tb * k
+        else:
+            k = (lum - 0.5) / 0.5
+            r = tr + (255 - tr) * k
+            g = tg + (255 - tg) * k
+            b = tb + (255 - tb) * k
+        out[o], out[o + 1], out[o + 2] = int(r), int(g), int(b)
+    return bytes(out)
+
+
+# Minecraft's named colours, so an original rune's own accent can drive its tint
+NAMED = {
+    "black": "#000000", "dark_blue": "#0000AA", "dark_green": "#00AA00",
+    "dark_aqua": "#00AAAA", "dark_red": "#AA0000", "dark_purple": "#AA00AA",
+    "gold": "#FFAA00", "gray": "#AAAAAA", "dark_gray": "#555555",
+    "blue": "#5555FF", "green": "#55FF55", "aqua": "#55FFFF", "red": "#FF5555",
+    "light_purple": "#FF55FF", "yellow": "#FFFF55", "white": "#FFFFFF",
+}
+
+# the twelve that shipped sharing two sprites: (name, kind)
+ORIGINALS = [
+    ("泣血", "rune"), ("重击", "rune"), ("幽深", "rune"), ("萤火", "rune"),
+    ("守护", "rune"), ("不屈", "rune"), ("共死", "rune"), ("黑炎", "rune"),
+    ("连发", "rune"),
+    ("剑气", "stone"), ("风暴", "stone"), ("烈焰", "stone"),
+]
+
+
+def retint_originals(base):
+    """Read each original's own accent out of its give line, tint its sprite to
+    match, and point its custom_model_data at the new model."""
+    import re
+    s = io.open(GIVE, encoding="utf-8").read()
+    lines = s.split("\n")
+    cmd = CMD0 + len(RUNES) + len(STONES)
+    done = 0
+    for i, line in enumerate(lines):
+        if "镶嵌符" not in line:
+            continue
+        m = re.search(r'\{"text":"\[([^\]"]+)\]","italic":false,"bold":true,'
+                      r'"color":"([^"]+)"\},\{"text":"镶嵌符([文石])"', line)
+        if not m:
+            continue
+        name, colour, kind_cn = m.group(1), m.group(2), m.group(3)
+        if not any(name == n for n, _ in ORIGINALS):
+            continue
+        kind = "rune" if kind_cn == "文" else "stone"
+        hexa = NAMED.get(colour, colour)
+        if not hexa.startswith("#") or len(hexa) != 7:
+            continue
+        key = "orig%d" % cmd
+        w, h, rgba = base[kind]
+        P.write(os.path.join(RPG_TEX, "rune_%s.png" % key), w, h, tint(w, h, rgba, hexa))
+        wj(os.path.join(RPG_MODELS, "rune_%s.json" % key),
+           {"parent": "minecraft:item/generated",
+            "textures": {"layer0": "rpg:item/rune_" + key}})
+        lines[i] = re.sub(r"custom_model_data=\{floats:\[[0-9.]+f\]\}",
+                          "custom_model_data={floats:[%d.0f]}" % cmd, line)
+        _register_quartz(cmd, "rune_" + key)
+        cmd += 1
+        done += 1
+    if done:
+        io.open(GIVE, "w", encoding="utf-8", newline="\n").write("\n".join(lines))
+    return done
+
+
+_QUARTZ_PENDING = []
+
+
+def _register_quartz(cmd, model):
+    _QUARTZ_PENDING.append((cmd, model))
+
+
+def _flush_quartz():
+    path = os.path.join(MC_ITEMS, "quartz.json")
+    doc = json.load(io.open(path, encoding="utf-8"))
+    entries = doc["model"]["entries"]
+    for cmd, model in _QUARTZ_PENDING:
+        entries[:] = [e for e in entries if e["threshold"] != cmd]
+        entries.append({"threshold": cmd,
+                        "model": {"type": "minecraft:model",
+                                  "model": "rpg:item/" + model}})
+    entries.sort(key=lambda e: e["threshold"])
+    wj(path, doc)
+
+
+def build_art():
+    """符文 borrow the scroll art, 符石 the stone art -- each in its own colour."""
+    base = {}
+    for kind, model in (("rune", "amethyst_shard"), ("stone", "quartz")):
+        doc = json.load(io.open(os.path.join(RPG_MODELS, model + ".json"),
+                                encoding="utf-8"))
+        tex = doc["textures"]["layer0"].split(":")[-1]
+        base[kind] = P.read(os.path.join(RP, "assets/rpg/textures", tex + ".png"))
+
+    made = 0
+    for kind, items in (("rune", RUNES), ("stone", STONES)):
+        w, h, rgba = base[kind]
+        for it in items:
+            name = "rune_" + it["key"]
+            P.write(os.path.join(RPG_TEX, name + ".png"), w, h,
+                    tint(w, h, rgba, it["hexa"]))
+            wj(os.path.join(RPG_MODELS, name + ".json"),
+               {"parent": "minecraft:item/generated",
+                "textures": {"layer0": "rpg:item/" + name}})
+            made += 1
+
+    path = os.path.join(MC_ITEMS, "quartz.json")
+    doc = json.load(io.open(path, encoding="utf-8"))
+    entries = doc["model"]["entries"]
+    for it in RUNES + STONES:
+        entries[:] = [e for e in entries if e["threshold"] != it["cmd"]]
+        entries.append({"threshold": it["cmd"],
+                        "model": {"type": "minecraft:model",
+                                  "model": "rpg:item/rune_" + it["key"]}})
+    entries.sort(key=lambda e: e["threshold"])
+    wj(path, doc)
+    return made, base
 FUNC = os.path.join(DP, "data/rpg/function")
 ADV = os.path.join(DP, "data/rpg/advancement/item")
 GIVE = os.path.join(FUNC, "command/give/item.mcfunction")
@@ -74,13 +219,13 @@ CONSUMABLE = ('food={{nutrition:0,saturation:0f,can_always_eat:1b}},'
 # 被动符文 -- inlaid onto a weapon, they just add a flag the tick path reads
 # ---------------------------------------------------------------------------
 RUNES = [
-    dict(key="wilt", name="枯萎", colour="dark_gray", icon="🪓", part="剑",
+    dict(key="wilt", name="枯萎", colour="dark_gray", hexa="#5A6152", icon="🪓", part="剑",
          text="攻击时有1/4的概率使目标凋零5秒"),
-    dict(key="sunder", name="裂甲", colour="#C0A080", icon="🪓", part="剑",
+    dict(key="sunder", name="裂甲", colour="#C0A080", hexa="#C0A080", icon="🪓", part="剑",
          text="攻击时破开护甲，目标虚弱且暴露6秒"),
-    dict(key="ebb", name="逆潮", colour="#4FA8C8", icon="🛡", part="胸甲",
+    dict(key="ebb", name="逆潮", colour="#4FA8C8", hexa="#4FA8C8", icon="🛡", part="胸甲",
          text="生命低于30%时回涌，再生与抗性各6秒"),
-    dict(key="pin", name="钉影", colour="#7A6BA8", icon="🏹", part="弓",
+    dict(key="pin", name="钉影", colour="#7A6BA8", hexa="#7A6BA8", icon="🏹", part="弓",
          text="箭矢命中后将目标钉在原地2.5秒"),
 ]
 
@@ -88,11 +233,11 @@ RUNES = [
 # 主动符石 -- inlaid, then charged by holding right-click
 # ---------------------------------------------------------------------------
 STONES = [
-    dict(key="tide", name="寒潮", colour="#7FC8E0", part="剑", cs=4000000,
+    dict(key="tide", name="寒潮", colour="#7FC8E0", hexa="#7FC8E0", part="剑", cs=4000000,
          charge=45, text="长按/右键蓄力掀起环形寒潮"),
-    dict(key="quake", name="震地", colour="#B98A44", part="重锤", cs=5000000,
+    dict(key="quake", name="震地", colour="#B98A44", hexa="#B98A44", part="重锤", cs=5000000,
          charge=55, text="长按/右键蓄力砸地，震飞四周"),
-    dict(key="shade", name="噬影", colour="#6B4FA0", part="剑", cs=7000000,
+    dict(key="shade", name="噬影", colour="#6B4FA0", hexa="#6B4FA0", part="剑", cs=7000000,
          charge=40, text="长按/右键蓄力遁入影中，自敌后重创"),
 ]
 
@@ -113,6 +258,7 @@ def give_rune(r):
                     seg("[%s]" % r["name"], r["colour"], True)),
                 row(seg(r["text"])),
                 RULE]) + "],"
+            "custom_model_data={floats:[%d.0f]}," % r["cmd"] +
             "custom_data={%s_tag:1b,add_weapon_tag:1b}]" % r["key"])
 
 
@@ -130,6 +276,7 @@ def give_stone(s):
                 row(seg(s["text"])),
                 RULE]) + "],"
             + CONSUMABLE.format(cs=s["cs"]) +
+            "custom_model_data={floats:[%d.0f]}," % s["cmd"] +
             "custom_data={%s_tag:1b,add_weapon_tag:1b}]" % s["key"])
 
 
@@ -430,6 +577,9 @@ def register_index():
 
 
 def main():
+    for n, it in enumerate(RUNES + STONES):
+        it["cmd"] = CMD0 + n
+    art, base = build_art()
     fixed = fix_broken_stones()
     carried = carry_components_on_inlay()
     guarded = guard_original_triggers()
@@ -437,10 +587,14 @@ def main():
     build_functions()
     idx = register_index()
     obj = add_objectives()
-    print("runes: %d new items (%d 符文 + %d 符石)" % (n, len(RUNES), len(STONES)))
+    retinted = retint_originals(base)
+    _flush_quartz()
+    print("runes: %d new items (%d 符文 + %d 符石), %d tinted sprites"
+          % (n, len(RUNES), len(STONES), art))
     print("runes: repaired %d original stones, inlay carries components: %s, "
           "holder-guarded %d triggers" % (fixed, carried, guarded))
     print("runes: index flags +%d, objectives %s" % (idx, obj or "-"))
+    print("runes: retinted %d original sprites" % retinted)
 
 
 if __name__ == "__main__":

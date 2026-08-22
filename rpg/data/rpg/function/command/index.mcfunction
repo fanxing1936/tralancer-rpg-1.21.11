@@ -8,3 +8,46 @@ execute as @e[type=minecraft:item] run function rpg:command/index_item
 ## damage detection
 tag @e[tag=rpg.hurt] remove rpg.hurt
 execute as @a at @s run function rpg:command/damage_scan
+
+tag @a remove rpg.h.jachin_tag1
+tag @a remove rpg.h.boaz_tag1
+tag @a remove rpg.h.lucifer_tag1
+tag @a remove rpg.h.leviathan_tag1
+tag @a remove rpg.h.wilt_tag1
+tag @a remove rpg.h.sunder_tag1
+tag @a remove rpg.h.ebb_tag1
+tag @a remove rpg.h.pin_tag1
+tag @a remove rpg.h.tide_tag1
+tag @a remove rpg.h.quake_tag1
+tag @a remove rpg.h.shade_tag1
+tag @a remove rpg.h.forge_tag1
+tag @a remove rpg.h.dawn_tag1
+tag @a remove rpg.h.chime_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{deep_seek_tag:1b}] run tag @s add rpg.h.deep_seek_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{mischief_tag:1b}] run tag @s add rpg.h.mischief_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{rift_tag:1b}] run tag @s add rpg.h.rift_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{vine_tag:1b}] run tag @s add rpg.h.vine_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{truth_tag:1b}] run tag @s add rpg.h.truth_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{jachin_tag:1b}] run tag @s add rpg.h.jachin_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{boaz_tag:1b}] run tag @s add rpg.h.boaz_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{lucifer_tag:1b}] run tag @s add rpg.h.lucifer_tag1
+
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{leviathan_tag:1b}] run tag @s add rpg.h.leviathan_tag1
+
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{wilt_tag:1b}] run tag @s add rpg.h.wilt_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{sunder_tag:1b}] run tag @s add rpg.h.sunder_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{ebb_tag:1b}] run tag @s add rpg.h.ebb_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{pin_tag:1b}] run tag @s add rpg.h.pin_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{tide_tag:1b}] run tag @s add rpg.h.tide_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{quake_tag:1b}] run tag @s add rpg.h.quake_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{shade_tag:1b}] run tag @s add rpg.h.shade_tag1
+
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{forge_tag:1b}] run tag @s add rpg.h.forge_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{dawn_tag:1b}] run tag @s add rpg.h.dawn_tag1
+execute as @a if items entity @s weapon.mainhand *[minecraft:custom_data~{chime_tag:1b}] run tag @s add rpg.h.chime_tag1
+
+## off-hand item flags
+tag @a remove rpg.o.jachin_tag1
+tag @a remove rpg.o.boaz_tag1
+execute as @a if items entity @s weapon.offhand *[minecraft:custom_data~{jachin_tag:1b}] run tag @s add rpg.o.jachin_tag1
+execute as @a if items entity @s weapon.offhand *[minecraft:custom_data~{boaz_tag:1b}] run tag @s add rpg.o.boaz_tag1

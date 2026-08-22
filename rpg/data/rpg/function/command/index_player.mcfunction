@@ -56,6 +56,9 @@ tag @s remove rpg.h.pin_tag1
 tag @s remove rpg.h.tide_tag1
 tag @s remove rpg.h.quake_tag1
 tag @s remove rpg.h.shade_tag1
+tag @s remove rpg.h.forge_tag1
+tag @s remove rpg.h.dawn_tag1
+tag @s remove rpg.h.chime_tag1
 tag @s remove rpg.o.jachin_tag1
 tag @s remove rpg.o.boaz_tag1
 tag @s remove rpg.e.chest_absorption_tag1
@@ -128,6 +131,9 @@ execute if items entity @s weapon.mainhand *[minecraft:custom_data~{pin_tag:1b}]
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{tide_tag:1b}] run tag @s add rpg.h.tide_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{quake_tag:1b}] run tag @s add rpg.h.quake_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{shade_tag:1b}] run tag @s add rpg.h.shade_tag1
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{forge_tag:1b}] run tag @s add rpg.h.forge_tag1
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{dawn_tag:1b}] run tag @s add rpg.h.dawn_tag1
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{chime_tag:1b}] run tag @s add rpg.h.chime_tag1
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{jachin_tag:1b}] run tag @s add rpg.o.jachin_tag1
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{boaz_tag:1b}] run tag @s add rpg.o.boaz_tag1
 execute if items entity @s armor.chest *[minecraft:custom_data~{absorption_tag:1b}] run tag @s add rpg.e.chest_absorption_tag1

@@ -1791,6 +1791,213 @@
    "trim": null,
    "potion_contents": null,
    "_new": true
+  },
+  {
+   "item": "mace",
+   "name": "熔火之锤",
+   "rarity": "限定传说",
+   "name_colour": "gold",
+   "lore": [
+    "+------------------+",
+    "锻炉裂开的那一日 铁匠把山的心脏装进了锤头",
+    "+------------------+",
+    "🔱主动技能[熔流]",
+    "右键消耗2级经验砸地，热浪由内向外三重扩散",
+    "每一圈都点燃并推开当中的敌人",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "fire_aspect": 3,
+    "density": 4,
+    "breach": 3,
+    "smite": 3,
+    "unbreaking": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 11,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3.1,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "safe_fall_distance",
+     "amount": 1.5,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "burning_time",
+     "amount": -0.5,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "forge_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "forge_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110021.0,
+   "unbreakable": true,
+   "consumable": 100120,
+   "components": [
+    "attribute_modifiers",
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "food",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "netherite_sword",
+   "name": "破晓",
+   "rarity": "传说",
+   "name_colour": "yellow",
+   "lore": [
+    "+------------------+",
+    "夜里最深的时刻 与天亮只隔着一线",
+    "+------------------+",
+    "🗡被动技能[曦光]",
+    "攻击亡灵时重创并点燃",
+    "攻击其余生物则以强光致盲",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "smite": 5,
+    "sharpness": 4,
+    "fire_aspect": 2,
+    "looting": 3,
+    "sweeping_edge": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 9,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.2,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": 0.05,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "dawn_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "dawn_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110022.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "netherite_axe",
+   "name": "晶啸",
+   "rarity": "史诗",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "紫晶在斧刃里长了三百年 它记得每一次挥击",
+    "+------------------+",
+    "🪓被动技能[共振]",
+    "命中时晶体共鸣，震荡波及目标周围的敌人",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "sharpness": 4,
+    "efficiency": 3,
+    "looting": 2,
+    "unbreaking": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 7,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.6,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "block_interaction_range",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "chime_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "chime_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110023.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
   }
  ],
  "armour": [
@@ -3157,7 +3364,7 @@
     "damage_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110002.0,
+   "cmd": 1110018.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
@@ -3194,7 +3401,7 @@
     "blow_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110002.0,
+   "cmd": 1110019.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
@@ -3231,7 +3438,7 @@
     "deep_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110002.0,
+   "cmd": 1110020.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
@@ -3268,7 +3475,7 @@
     "ink_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110002.0,
+   "cmd": 1110021.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
@@ -3305,7 +3512,7 @@
     "absorption_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110002.0,
+   "cmd": 1110022.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
@@ -3342,7 +3549,7 @@
     "health_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110002.0,
+   "cmd": 1110023.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
@@ -3379,7 +3586,7 @@
     "boom_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110002.0,
+   "cmd": 1110024.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
@@ -3416,7 +3623,7 @@
     "dark_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110002.0,
+   "cmd": 1110025.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
@@ -3453,7 +3660,7 @@
     "projectiles_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110002.0,
+   "cmd": 1110026.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
@@ -3490,7 +3697,7 @@
     "sweep_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110001.0,
+   "cmd": 1110027.0,
    "unbreakable": false,
    "consumable": 1000000,
    "components": [
@@ -3529,7 +3736,7 @@
     "wind_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110001.0,
+   "cmd": 1110028.0,
    "unbreakable": false,
    "consumable": 2000000,
    "components": [
@@ -3568,7 +3775,7 @@
     "flame_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": 1110001.0,
+   "cmd": 1110029.0,
    "unbreakable": false,
    "consumable": 3000000,
    "components": [
@@ -3607,11 +3814,12 @@
     "wilt_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": null,
+   "cmd": 1110011.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
     "custom_data",
+    "custom_model_data",
     "custom_name",
     "lore"
    ],
@@ -3643,11 +3851,12 @@
     "sunder_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": null,
+   "cmd": 1110012.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
     "custom_data",
+    "custom_model_data",
     "custom_name",
     "lore"
    ],
@@ -3679,11 +3888,12 @@
     "ebb_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": null,
+   "cmd": 1110013.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
     "custom_data",
+    "custom_model_data",
     "custom_name",
     "lore"
    ],
@@ -3715,11 +3925,12 @@
     "pin_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": null,
+   "cmd": 1110014.0,
    "unbreakable": false,
    "consumable": null,
    "components": [
     "custom_data",
+    "custom_model_data",
     "custom_name",
     "lore"
    ],
@@ -3751,12 +3962,13 @@
     "tide_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": null,
+   "cmd": 1110015.0,
    "unbreakable": false,
    "consumable": 4000000,
    "components": [
     "consumable",
     "custom_data",
+    "custom_model_data",
     "custom_name",
     "food",
     "lore"
@@ -3789,12 +4001,13 @@
     "quake_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": null,
+   "cmd": 1110016.0,
    "unbreakable": false,
    "consumable": 5000000,
    "components": [
     "consumable",
     "custom_data",
+    "custom_model_data",
     "custom_name",
     "food",
     "lore"
@@ -3827,12 +4040,13 @@
     "shade_tag": 1,
     "add_weapon_tag": 1
    },
-   "cmd": null,
+   "cmd": 1110017.0,
    "unbreakable": false,
    "consumable": 7000000,
    "components": [
     "consumable",
     "custom_data",
+    "custom_model_data",
     "custom_name",
     "food",
     "lore"

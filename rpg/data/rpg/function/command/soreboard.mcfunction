@@ -147,3 +147,4 @@ scoreboard objectives add rpg_rune_ebb dummy
 scoreboard objectives add rpg_tide dummy
 scoreboard objectives add rpg_quake dummy
 scoreboard objectives add rpg_shade dummy
+scoreboard objectives add rpg_forge dummy
