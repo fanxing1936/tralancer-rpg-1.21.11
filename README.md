@@ -66,13 +66,15 @@ python _tools/package.py --install
 验证手段：`_tools/server_test.py` 会用客户端 jar 起一个真实的 1.21.11 无头服务器加载数据包，
 `validate.py` / `rp_validate.py` 对着同一个 jar 校验两个包。
 
-## 致谢
+## 作者与致谢
 
-原始 RPG 内容、全部美术与世界观设定：**仓库作者**。
+| | |
+|---|---|
+| **仓库作者** | 原始 RPG 内容、全部美术、世界观设定与整体方向 |
+| **ChatGPT**（OpenAI） | 《破碎大陆》世界观叙事文案 —— [`LORE.md`](LORE.md) 的圣经体行文 |
+| **Claude**（Anthropic） | 1.21.11 迁移、性能重构、图鉴生成，以及路西法、利维坦、圣殿双柱等新增内容的实现与验证 |
 
-1.21.11 迁移、性能重构、图鉴生成、以及路西法与圣殿双柱等新增内容：
-与 **Claude**（Anthropic）结对完成 —— 逐轮讨论、实现、在真实服务器上验证。
+世界观由作者设定、ChatGPT 落笔成文，再由 Claude 整合进图鉴与数据包；
+每一处实现判断、踩过的坑与修正都记在 [`ENGINEERING.md`](ENGINEERING.md) 里。
 
-过程中的每一个判断、每一处踩坑与修正，都记在 [`ENGINEERING.md`](ENGINEERING.md) 里。
-
-感谢这段合作。
+感谢这段三方的合作。
