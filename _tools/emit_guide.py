@@ -129,6 +129,37 @@ code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px;
 .sys p{margin:0; color:var(--muted); font-size:14.5px}
 .sys ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:14px}
 
+/* ---- 破碎大陆 ---- */
+.scroll-h{text-align:center; margin:0 0 40px; padding-bottom:30px; border-bottom:1px solid var(--rule)}
+.scroll-h .heb{font-size:30px; line-height:1.5; color:var(--gold-soft); direction:rtl; margin:0 0 8px}
+.scroll-h .rom{font-family:"Cinzel",serif; font-size:13px; letter-spacing:.3em; color:var(--muted); margin:0 0 14px}
+.scroll-h .say{font-size:15px; color:var(--ink); font-style:italic; line-height:1.9; max-width:60ch; margin:0 auto}
+.book{margin:0 0 8px; border-top:1px solid var(--rule); padding-top:26px}
+.book:first-of-type{border-top:none; padding-top:0}
+.book > h3{
+  font-family:"Cinzel",serif; font-size:12px; letter-spacing:.24em; color:var(--gold-soft);
+  margin:0 0 4px; font-weight:400;
+}
+.book > h4{margin:0 0 16px; font-size:21px; font-weight:700; color:var(--ink); letter-spacing:.04em}
+.book p{margin:0 0 13px; font-size:14.5px; line-height:1.95; color:var(--muted)}
+.book p strong{color:var(--ink); font-weight:600}
+.book .cap{
+  font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.1em;
+  color:var(--muted); margin:22px 0 8px; opacity:.85;
+}
+.verse{
+  margin:18px 0; padding:2px 0 2px 18px; border-left:2px solid var(--gold-soft);
+  font-size:14px; color:var(--ink); font-style:italic; line-height:1.85;
+}
+.verse cite{display:block; margin-top:5px; font-style:normal; font-size:11.5px;
+  letter-spacing:.06em; color:var(--muted)}
+.sins{list-style:none; margin:16px 0 0; padding:0; display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:1px;
+  background:var(--rule); border:1px solid var(--rule)}
+.sins li{background:var(--ground); padding:12px 15px; font-size:14px}
+.sins .who{display:block; font-weight:700; color:var(--ink); margin-bottom:3px}
+.sins .what{color:var(--muted); font-size:12.5px}
+
 /* ---- filter bar ---- */
 .tools{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:26px}
 .tools button{
@@ -278,10 +309,9 @@ def build():
 <li><a href="#s5"><span class="num">V</span>符文与晶石</a></li>
 <li><a href="#s6"><span class="num">VI</span>药剂与材料</a></li>
 <li><a href="#s7"><span class="num">VII</span>掉落图鉴</a></li>
-<li><a href="#s8"><span class="num">VIII</span>新增装备</a></li>
-<li><a href="#s9"><span class="num">IX</span>生物图鉴</a></li>
-<li><a href="#s10"><span class="num">X</span>剧情章节</a></li>
-<li><a href="#s11"><span class="num">XI</span>指令速查</a></li>
+<li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
+<li><a href="#s10"><span class="num">IX</span>破碎大陆</a></li>
+<li><a href="#s11"><span class="num">X</span>指令速查</a></li>
 </ol></nav>''')
 
     a('<main>')
@@ -336,7 +366,11 @@ def build():
 <button type="button" data-f="epic" aria-pressed="false">史诗</button>
 <input type="search" id="q" placeholder="搜索名称或技能…" aria-label="搜索武器">
 </div>
-<div class="grid" id="wgrid">''' + F["weapons"] + '</div></section>')
+<div class="grid" id="wgrid">''' + F["weapons"] + '''</div>
+
+<h3 class="sub-h">随机掉落武器<span class="rolls">属性与附魔每次掉落重新掷点</span></h3>
+<p>下面这些不是固定装备，而是从战利品表里滚出来的：同一把武器每次掉落的属性都落在标注的区间内，附魔条数固定但内容随机。它们同样参与洗练、镶嵌与武器升级。</p>
+<div class="grid">''' + F["loot_epic"] + '''</div></section>''')
 
     # IV armour -----------------------------------------------------------
     a('''<section class="plate" id="s4">
@@ -363,36 +397,19 @@ def build():
 
     # VII loot ------------------------------------------------------------
     a('''<section class="plate" id="s7">
-<div class="plate-h"><span class="num">VII</span><h2>掉落图鉴</h2><span class="sub">116 件随机装备</span></div>
+<div class="plate-h"><span class="num">VII</span><h2>掉落总表</h2><span class="sub">权重 · 区间 · 来源</span></div>
 <p>前面几节是 <code>give</code> 指令里写死的固定装备；这一节是<strong>战利品表</strong>里的东西——怪物身上穿的、试炼刷怪笼吐出来的、宝库开出来的。它们的属性不是定值，而是每次生成时在一个<strong>区间内随机</strong>，附魔也是随机抽取的，所以同名的两把武器数值可能完全不同。</p>
 <h3 class="sub-h">试炼精英武器 · rpg:trial/epic_sword<span class="rolls">6 选 1</span></h3>
 <p style="margin:0 0 18px">锻造台用<b>传说冶炼石</b>产出的就是这张表。六件都带技能，且技能标签与固定武器共用同一套处理逻辑。</p>
-<div class="grid">''' + F["loot_epic"] + '''</div>
 ''' + F["loot_trial"] + F["loot_drops"] + F["loot_reward"] + '''
 <div class="note"><b>怎么读这些数字：</b>「权重」是同一个池子里被抽中的相对概率；「随机属性范围」是该词条实际会落在的区间，
 生成时在区间内均匀取值；「随机附魔 ×N」表示从全部可用附魔里随机抽 N 次，等级也随机。
 耐久损耗一栏说明掉落时装备已经是残破状态。</div>
 </section>''')
 
-    # VIII new items --------------------------------------------------------
-    a('''<section class="plate" id="s8">
-<div class="plate-h"><span class="num">VIII</span><h2>新锻装备</h2><span class="sub">7 件 · 出处一览</span></div>
-<p>材质包里原本有五套<strong>做好了却从未被引用</strong>的武器贴图（弩两套、弓一套、钓竿一套、剑一套，含全部拉弓/装填/抛竿分帧），
-另有两把后补的圣殿双柱。七件装备把它们全部接了上去，格式与既有装备完全一致：稀有度前缀、两行诗、技能栏、属性、附魔、模型编号、技能标签。</p>
-<p><strong>技能全部为原创</strong>，没有一件照搬既有效果；实现上仍然走同一套每刻标签索引，
-所以新增的每刻命令极少。拿到手后同样能参与洗练、镶嵌、附魔与武器升级。</p>
-<p>它们的完整卡片<strong>已并入上面的武器篇</strong>（卡名后带「新锻」标记），此处只列出处对照。</p>
-''' + F["extra"] + '''
-<div class="note"><b>取得方式：</b><code>/function rpg:command/give/extra</code>。
-仍有两张贴图没有用上：<code>rpg:item/baby_crossbows</code>（稚弩的双弩备用图）与
-<code>rpg:item/mojang_banner_pattern</code>（旗帜图案，需要额外注册 <code>banner_pattern</code> 才能生效）。<br>
-材质包另外注册了一种自定义盔甲纹饰材质 <code>holy</code>，本页所有护甲图标均按游戏内的调色板合成，
-染色、纹饰与药水颜色都与实际渲染一致。</div>
-</section>''')
-
     # VII bestiary --------------------------------------------------------
     a('''<section class="plate" id="s9">
-<div class="plate-h"><span class="num">IX</span><h2>生物图鉴</h2><span class="sub">4 大阵营</span></div>
+<div class="plate-h"><span class="num">VIII</span><h2>生物图鉴</h2><span class="sub">4 大阵营</span></div>
 <p>普通僵尸、骷髅、苦力怕在出生瞬间会被数据包重新洗牌：随机换装本包的战利品护甲，并有几率直接替换成下方的强化变种。成建制的军团则由对应函数整队召唤。</p>
 
 <h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">溺尸军团 · rpg:entities/drowned</h3>
@@ -458,26 +475,31 @@ def build():
 
     # VIII chapters -------------------------------------------------------
     a('''<section class="plate" id="s10">
-<div class="plate-h"><span class="num">X</span><h2>剧情章节</h2><span class="sub">进度树 rpg:events</span></div>
-<p>十二段剧情以原版<strong>进度</strong>的形式呈现，标题页背景为裂纹深板岩砖。每一章都由「使用物品」触发解锁，构成一条从启示录到登临神座的线性叙事。</p>
-<ol class="chapters">
-<li><span class="ch">序章</span><div><h3>启示录</h3><p>那一千年完了，撒旦必被从监牢里释放，出来要迷惑四方的列国，那是歌革和玛各，他们聚集起来，他们的人数多如海沙</p></div></li>
-<li><span class="ch">第一章</span><div><h3>旧日遗民</h3><p>所有的闪米特人无不盼望弥赛亚的归来，盼望着他从高天之上降下，拯救世人</p></div></li>
-<li><span class="ch">第二章</span><div><h3>生命之树</h3><p>当旧日的子民走过十个原质，二十二个神之途径，必将坐在终末的王座上，以纯净的雷光涤荡大地，祓除不臣</p></div></li>
-<li><span class="ch">第三章</span><div><h3>真理之冠</h3><p>传说终结那场旧日帝国的战争，正是由那五个家族发起的，他们举起反抗的旌旗，向着高天上的王座，证明着蝼蚁的强大</p></div></li>
-<li><span class="ch">第四章</span><div><h3>风暴之息</h3><p>曾经，摩西在西奈山上接受神启，承接了上帝的权柄。如今，权柄傍落自尘世，自风暴的尽头，等待它的主人取回遗失的权柄</p></div></li>
-<li><span class="ch">第五章</span><div><h3>莫比乌斯之环</h3><p>命运早已既定，千年前人类选择走出伊甸，千年后人类也将会为他的先祖偿还罪孽</p></div></li>
-<li><span class="ch">第六章</span><div><h3>百年战争</h3><p>撒旦从地狱里爬了出来，这场持续百年的战争，是时候画上真正的休止符了</p></div></li>
-<li><span class="ch">第七章</span><div><h3>罪与罚</h3><p>罪人的罪孽早已存在，但审判的高歌却从未到来，神早已长眠，无神的国度如同无人怜爱的幼儿</p></div></li>
-<li><span class="ch">第八章</span><div><h3>元素之海</h3><p>在一切的起点，上帝将权柄化为元素海，祂象征着虚妄。当虚妄与真实的权柄交织，世界自此中孕育</p></div></li>
-<li><span class="ch">第九章</span><div><h3>登临神座</h3><p>最后的弥赛亚啊，您已经走完了卡巴拉生命之树，伊甸中心的荆棘王座即将见证他新的主人。现在，与亚当开启神战吧，神注定只有一个</p></div></li>
-<li><span class="ch">最终章</span><div><h3>世界，我们</h3><p>一路上的颠沛流离，都会在一切的重点迎来祂盛大的结局。葬于玫瑰丛的少年，王座之上，再无半点天真</p></div></li>
-</ol>
+<div class="plate-h"><span class="num">IX</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
+
+<div class="scroll-h">
+<p class="heb">אֶרֶץ הַשְּׁבָרִים</p>
+<p class="rom">ERETZ HA-SHEVARIM &nbsp;·&nbsp; 碎片之地</p>
+<p class="say">这是破碎大陆的见证：世界曾经完整，后来因神陨、堕天与权柄的分裂而成为碎片。<br>
+这是关于光、混沌、堕落、救赎与人的书；<br>是关于权与力如何分离，又如何在末后的日子重新相遇的见证。</p>
+</div>
+<div class="book"><h3>卷一</h3><h4>创世书</h4><p class="cap">第一章　起初</p><p>起初，世界尚未有形，地是空虚混沌，黑暗覆在深渊之上。</p><blockquote class="verse">地是空虚混沌，渊面黑暗。<cite>——《创世记 1:2》</cite></blockquote><p>上帝在混沌中立定自己的权柄，其名为<strong>真实与虚妄</strong>：祂所称为真实的，就成为世界；祂所弃绝的，就归入黑暗。天堂从混沌中升起，天使被造，作祂意志的手。</p><p>但混沌深处有一物没有被创造，也没有被消灭。它没有形体，也没有王座，却与上帝相对而立——它不是另一个神，而是<strong>污染的可能</strong>。后来，人称它为<strong>敌基督</strong>。</p><p class="cap">第二章　七日</p><p>光与黑暗分开，穹苍立定，旱地显露，日月众星掌管节令，海与天充满活物。第六日，上帝照自己的意志造人，使人承受<strong>神性的火种</strong>；第七日止息，分别为圣。</p><blockquote class="verse">神看着一切所造的都甚好。<cite>——《创世记 1:31》</cite></blockquote></div><div class="book"><h3>卷二</h3><h4>伊甸书</h4><p class="cap">第一章　王冠与王国</p><p>生命树有十个源质，树根扎在<strong>王国</strong>，树冠伸入<strong>王冠</strong>。王国是肉身、土地与现实；王冠最接近上帝。人在王国出生，却被造得可以走到王冠。</p><p>道路之中有一个隐藏的节点，名为 <strong>Da’at</strong>。那里藏着未被允许的知识——既能通往真实，也能使真实破碎。</p><p class="cap">第二章　金苹果</p><p>敌基督没有以自己的形体显现，只在分别善恶树上留下一枚金色的果实。</p><blockquote class="verse">你们便如神能知道善恶。<cite>——《创世记 3:5》</cite></blockquote><p>那果子不是寻常的果子，而是人类获得的<strong>第一份魔力</strong>。人因此拥有人性，也拥有欲望、自我与自私。于是人从王冠坠落，跌入王国。</p><p>从那日起，人类一代一代下坠。可是下坠也留下了<strong>自由意志</strong>——只有拥有自我的人，才能选择重新向上。</p></div><div class="book"><h3>卷三</h3><h4>权柄书</h4><p class="cap">第一章　权与力</p><p>上帝的权柄分为<strong>权</strong>与<strong>力</strong>。权能够定义道路、授予资格、命名真实；力能够执行命令，使道路在世界中显现。</p><p>圣父掌管中枢，圣子承受救赎之力，圣灵持守权柄并监察圣子。三位同出一源。</p><blockquote class="verse">圣哉！圣哉！圣哉！万军之耶和华。<cite>——《以赛亚书 6:3》</cite></blockquote><p><strong>圣力</strong>是未被污染的权柄，<strong>魔力</strong>是被敌基督侵染后的权柄——二者并非两种创造，而是同一权柄的两种状态。圣器名为 <strong>Kli Qodesh</strong>，魔器名为 <strong>Kli Tum’ah</strong>。</p><p class="cap">第二章　弥赛亚</p><p>凡承担救世之责的人都被称为弥赛亚。摩西承受律法之权，大卫承受王权之印；他们是弥赛亚，却不是圣子。</p><p>圣子若没有圣灵，只能成为执行神迹的刀；圣灵若没有圣子，只能成为无人执行的命令。直到末后的日子，他们将在伊甸园相遇，使权与力重新合一。</p></div><div class="book"><h3>卷四</h3><h4>堕天书</h4><p class="cap">第一章　晨星坠落</p><p>路西法原是天堂中最接近上帝的天使之一。他看见权柄的光，也看见天使只是权柄的延伸，于是在心中说：<em>“为何我只能承受命令，而不能成为命令的源头？”</em></p><p>敌基督侵染了他，使他第一次拥有独立的自我。他召集三分之一的天使升向王冠。</p><blockquote class="verse">在天上就有了争战。<cite>——《启示录 12:7》</cite></blockquote><p>人类称那日为<strong>第一次神陨之战</strong>；天堂称之为第一次堕落之战；路西法称之为第一次自由之战。米迦勒得胜，三分之一的星辰坠落，天使的圣力被污染，成为恶魔。</p><p><strong>路西法是他曾经是谁，撒旦是他选择成为谁。</strong></p><p class="cap">第二章　地狱与无底坑</p><p>被撕裂的天堂坠入世界的阴影，成为地狱——恶魔的乐园，也是恶魔的囚笼。撒旦被锁在最深处的<strong>无底坑</strong>里；无底坑没有底，正如污染没有尽头。火山口是它在人间留下的楔子。</p><blockquote class="verse">那一千年完了，撒但必从监牢里被释放。<cite>——《启示录 20:7》</cite></blockquote></div><div class="book"><h3>卷五</h3><h4>魔神书</h4><p class="cap">第一章　七宗罪</p><p>撒旦坐在地狱王座上，王座之下有七位领主。七位领主各有一件<strong>罪器</strong>——罪的形体，也是污染的刀刃。</p><ul class="sins">
+<li><span class="who">路西法</span><span class="what">傲慢</span></li>
+<li><span class="who">利维坦</span><span class="what">嫉妒</span></li>
+<li><span class="who">贝利尔</span><span class="what">放纵与色欲</span></li>
+<li><span class="who">别西卜</span><span class="what">暴食</span></li>
+<li><span class="who">萨麦尔</span><span class="what">暴怒</span></li>
+<li><span class="who">亚巴顿</span><span class="what">虚无与怠惰</span></li>
+<li><span class="who">玛门</span><span class="what">贪婪</span></li>
+</ul><p>边缘者若杀死恶魔，罪器便凝结为<strong>罪遗武器</strong>。然而夺取罪器的人也夺取了罪的影子——<strong>使用越久，越接近原本的主人</strong>。</p><p class="cap">第二章　七十二柱</p><p>所罗门王是人类历史中第一个被正式记录的边缘者。他以王冠、戒指与符印进入深渊，与七十二位魔神立约——不创造，不消灭，只将它们命名、分类并封入七十二根柱中。</p><p>七十二柱成为历史封印，也成为教廷后来的军械库。每一个正式边缘者都被分配一根柱位和一位魔神：边缘者借用魔神的力，魔神借契约进入边缘者的心。<strong>边缘者若失去自我，柱中的魔神便可以夺取他的身体。</strong></p></div><div class="book"><h3>卷六</h3><h4>百年战争书</h4><p class="cap">第一章　空缺者</p><p>一百多年以前，后方城市开始出现<strong>没有死亡的死者</strong>。他们仍有姓名、面孔与记忆，却失去了人的情感——像空屋一样活着。</p><p>恶魔不是从城门外来，而是从邻人的声音、教会的档案、官员的命令和家庭的餐桌中渗入人间。</p><blockquote class="verse">我们并不是与属血气的争战。<cite>——《以弗所书 6:12》</cite></blockquote><p>主角在空缺者事件中看见教廷正在隐藏真相，也看见负责驱魔的人已经成为污染的一部分。教廷给他两个选择：加入边缘者体系，或作为污染源被处死。</p><p><strong>他没有被神选中，他是为了活下去而成为武器。</strong></p><p class="cap">第二章　后方与圣座</p><p>他逐渐发现：父母之死与教廷有关；边缘者不是被保护的人，而是可以被消耗的军械；圣器正在吸收圣徒与士兵的生命；战争也被用来延长统治。教廷宣布他为异端。</p><p class="cap">第三章　逃往前线</p><p>他逃往东南大岛——那里有奥尔曼苏丹国的军队、教廷的堡垒、阿尔比恩的贸易殖民地，以及被神陨之战烧焦的土地。与此同时，七十二柱的封印开始松动。</p><p class="cap">第四章　撒旦出坑</p><p>一千年的封印结束，无底坑打开，撒旦从火山口重返人间。主角使用七罪魔器，魔化一步步加深：手臂硬化，犄角生长，意识被罪欲撕裂，他即将失去自己的名字。</p><p>但在魔化的尽头，他看见污染深处仍有一段没有被抹去的圣性。<strong>负与负相乘，污染发生反转</strong>——从魔中诞生极致的圣，这条道路名为<strong>逆圣化</strong>。</p></div><div class="book"><h3>卷七</h3><h4>人的国度</h4><p class="cap">第一章　伊甸园</p><p>撒旦倒下以后，主角进入伊甸园，圣灵在那里等待他：权与力本是同一权柄的两面，二者相合才能重新形成上帝完整的权柄。</p><p>但他看见神的教条曾经保护人类，也曾经囚禁人类；看见撒旦反抗神，却没有真正摆脱污染；看见人类虽从王冠坠落，却因此获得了自己的意志。<strong>于是他不再请求成为新的神。</strong></p><p class="cap">第二章　人的革命</p><p>他的敌人不再是撒旦，不再是七宗罪，也不再是地狱的恶魔——而是那些借神之名阻挡历史的人，是把圣力据为己有的教廷，是以战争维持权力的贵族。</p><p>他举起的不是天堂的旗，也不是地狱的旗，而是<strong>人类革命的旗帜</strong>。</p><blockquote class="verse">你们必晓得真理，真理必叫你们得以自由。<cite>——《约翰福音 8:32》</cite></blockquote><p>第七日，上帝曾为世界安息。而在<strong>人的第七日</strong>，世界不再属于神，也不再属于魔。</p><p><strong>世界属于人。</strong></p></div>
+<div class="note"><b>末后的见证：</b>圣力是权柄未被污染的声音，魔力是权柄被污染后的回响。
+圣器承载神的力，魔器承载堕落的影。人类走过了王国，穿过了深渊，攀上了王冠，也看见了伊甸园——
+人类已经知道神的答案，所以人类终于可以写下自己的答案。</div>
 </section>''')
 
     # IX commands ---------------------------------------------------------
     a('''<section class="plate" id="s11">
-<div class="plate-h"><span class="num">XI</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
+<div class="plate-h"><span class="num">X</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
 <div class="tw"><table>
 <thead><tr><th>指令</th><th>作用</th></tr></thead>
 <tbody>

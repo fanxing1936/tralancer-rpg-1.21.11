@@ -140,18 +140,17 @@ def card(it, show_tags=True):
             heading, label = label, ""
             base = "%s · %s" % (it["name"], cn_item(it["item"]))
 
-    fresh = ' data-new="1"' if it.get("_new") else ""
-    bits = ['<article class="card r-%s" data-rarity="%s" data-name="%s"%s>' %
+    # 新锻 gear is ordinary gear -- it carries the same tags, rarities and skill
+    # format, so it gets no badge and no separate shelf.
+    bits = ['<article class="card r-%s" data-rarity="%s" data-name="%s">' %
             (cls, cls, esc(it["name"] + " " + (rar or "") + " " +
-                          (sk["name"] if sk else "") + (" 新锻" if fresh else "")),
-             fresh)]
+                           (sk["name"] if sk else "")))]
     bits.append('<header class="card-h">')
     bits.append(icons.item_img(it, heading))
     bits.append('<div class="card-id">')
     if label:
         bits.append('<span class="tier">%s</span>' % esc(label))
-    bits.append('<h3>%s%s</h3>'
-                % (esc(heading), '<span class="new">新锻</span>' if fresh else ""))
+    bits.append('<h3>%s</h3>' % esc(heading))
     bits.append('<p class="base">%s</p>' % esc(base))
     bits.append("</div></header>")
 
@@ -279,7 +278,6 @@ def main():
         "stones": "\n".join(card(x, show_tags=False) for x in stones),
         "mats": "\n".join(card(x) for x in mats),
         "ench": "、".join(ench_list),
-        "extra": roster(extra),
     }
     io.open("../_guide_fragments.json", "w", encoding="utf-8", newline="\n").write(
         json.dumps(frag, ensure_ascii=False))

@@ -23,4 +23,4 @@ playsound minecraft:item.mace.smash_air player @a[distance=..24] ~ ~ ~ 1 0.7
 execute at @s rotated ~ 0 positioned ^ ^ ^8 run function rpg:item/extra/leviathan_drop
 tag @s remove rpg.levi.airborne
 tag @s remove rpg.levi.cast
-scoreboard players reset @s rpg_levi_charge
+scoreboard players set @s rpg_levi_charge 0
