@@ -1632,6 +1632,43 @@ execute if entity @s[scores={rpg_levi_charge=..30}] run scoreboard players add @
 
 ---
 
+# 第二十部分：署名、页首与固定深色
+
+## 20.1 页首与署名
+
+页首从「BRAND / 布兰德·宿命之途」换成
+「Shevarim / אֶרֶץ הַשְּׁבָרִים / 破碎大陆 · 碎片之地」，导语取自世界观开篇的见证；
+装备数量改为从 `_guide_sections.json` 现算（原本写死的「三十余件」早已过时）。
+
+世界观原文入库为 `LORE.md`，README 与图鉴给出链接。
+作者一栏改成三方对照：设定归作者，《破碎大陆》的叙事文案由 **ChatGPT**（OpenAI）落笔，
+迁移／优化／图鉴生成由 **Claude**（Anthropic）完成。
+署名同时出现在 README、`LORE.md` 卷首、图鉴的世界观节与页脚。
+
+## 20.2 固定深色
+
+图鉴原本是随viewer切换的三态配色（浅色 `:root` + `prefers-color-scheme` +
+`[data-theme]`）。现在**这套深色就是设计本身**，不再是对读者设置的响应：
+
+* 令牌全部落在裸 `:root` 上，**删掉浅色调色板、`prefers-color-scheme` 块与
+  `[data-theme="dark"]` 块** —— 没有任何一条规则能把它翻成浅底
+* 加 `color-scheme: dark`，让滚动条、搜索框光标这些浏览器自身的部件也跟着走
+* `html` 与 `body` 都显式刷上 `--ground`，
+  这样过度滚动的回弹、或视口高于内容时，背后不会露白
+
+验证方式是把浏览器**强制切到浅色**再量计算样式：
+
+```
+browserPrefersLight : true
+body background     : rgb(18, 16, 15)   ← #12100F
+color-scheme        : dark
+再补盖 data-theme="light" : rgb(18, 16, 15)  ← 仍然不变
+```
+
+三种状态（系统浅色、系统深色、viewer 显式选浅色）下都锁在深色。
+
+---
+
 # 重建方式
 
 ```bash
