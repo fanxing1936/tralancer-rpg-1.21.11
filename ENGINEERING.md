@@ -1268,7 +1268,28 @@ tag @e[tag=rpg.spawn.new] remove rpg.spawn.new
 和索引那次不同（索引是纯粹的标记设置，语义上可证等价），
 这里涉及顺序、条件与副作用，需要单独一轮改 + 验证。要做的话跟我说。
 
-## 14.6 验证
+## 14.6 一次取齐：潜影盒
+
+`rpg:command/give/*` 一件件发，109 件装备能把背包塞爆好几轮。
+`make_boxes.py` 把这四个函数直接打包成 `rpg:command/give/box` ——
+一条命令给出 6 只潜影盒（武器红 ×2、道具蓝 ×2、升级材料黄 ×1、新锻装备绿 ×1），
+每盒最多 27 件。
+
+唯一的实质工作是语法搬家。give 命令写成 `id[custom_name=...,lore=[...]]`，
+而潜影盒 `container` 条目里同样的数据是**按命名空间 id 索引的映射**：
+
+```
+{slot:0,item:{id:"minecraft:netherite_spear",count:1,
+  components:{"minecraft:custom_name":...,"minecraft:lore":[...]}}}
+```
+
+`snbt.py` 本来就会解析方括号那种写法，所以每个值是**原样重新 dump 到全名键下**的
+—— 值本身没有被重新序列化，盒里的物品和逐件 give 出来的完全一致。
+
+（`weapon.mcfunction` 里有一条是 `give @s`（那个 vault 方块）而不是 `give @a`，
+打包器两种都收，否则会漏掉一件。）
+
+## 14.7 验证
 
 * 无头 1.21.11：`give/weapon`（含改型后的朗基努斯长枪 + `lunge:3`）与
   `give/extra` 解析通过，`spawn/*_batch` 三个全部执行干净，零报错
