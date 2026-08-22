@@ -1299,6 +1299,68 @@ tag @e[tag=rpg.spawn.new] remove rpg.spawn.new
 
 ---
 
+# 第十五部分：命中那一刻的卡顿
+
+## 15.1 循环内外翻 —— 但只翻能证明等价的
+
+`legend1` 那一族的 `g*` 块里，**每一行都以同一个 `execute as @e[tag=rpg.hurt]` 开头**，
+所以有东西挨打的那一刻，全实体表被"每行扫一遍"。
+
+折成一次遍历（`execute as @e[tag=rpg.hurt] run function <body>`，
+body 内一律对 `@s` 操作）就是第九部分对索引用过的同一招。
+但这里**不能无条件照搬**：它把逐行遍历（对每行、对每个实体）换成了
+逐实体遍历（对每个实体、对每行）。这两种顺序只在一种情况下不等价 ——
+**后面的行写了前面的行会读的状态**。一次横扫打中两只怪时，
+第二只会看到第一只把分数改过之后的值。
+
+所以每个块先做一次**反向依赖检查**：
+
+* 收集每行的**读**（`scores={...}`、`if score` 里的记分项，`tag=` 里的标签）
+  与**写**（`scoreboard players set|add|remove|reset`、`tag @… add|remove`）
+* 只有当**没有任何一行写了更早的行读过的东西**时才折叠
+
+没有反向依赖 ⇒ 两种遍历顺序可交换 ⇒ 折叠是保行为的。
+
+结果：
+
+```
+inverted blocks: 13  (117 lines -> 13 walks, 104 fewer)
+left alone (would change behaviour):
+  legend1/g2   15 lines  -- writes ashes that an earlier line reads
+  legend1/g8   31 lines  -- writes sakura_step that an earlier line reads
+```
+
+`g8` 正是我手推时判断有风险的那个（樱怒的 `sakura_step` 状态机），
+静态检查独立得出了同样的结论。这两块**原样保留** ——
+宁可留着开销，也不把战斗逻辑悄悄改出 bug。
+
+命中那一刻：**612 → 508 次全场遍历**，选择器开销 3520 → 3104。
+
+## 15.2 一个被 validate.py 漏掉的错误
+
+第一版折叠把整个 `execute as @e[tag=rpg.hurt] ` 前缀都剥掉了，
+于是行首变成 `at @s on attacker ...` —— **少了 `execute` 这个词，根本不是命令**。
+
+`validate.py` 报的是 `no problems found`，而无头服务器直接给出：
+
+```
+Failed to load function rpg:item/sword/legend/legend1/g5_body
+Whilst parsing command on line 5: Unknown or incomplete command
+```
+
+这正是那套无头验证存在的理由 —— 静态校验只看组件与引用，
+真正的命令语法只有游戏自己说了算。剥离改成保留 `execute`
+（若剩下的只是 `run <cmd>` 则直接输出 `<cmd>`），重跑即干净。
+
+## 15.3 顺带：限定传说
+
+`[l·legend]` 半中半英，而且在两把武器上是**两种颜色**（`#ffcc33` 与 `#D84E4E`）。
+统一成 **`[限定传说]`**，颜色 `#FFD700` 金黄 ——
+比普通传说的原版 `gold`（#FFAA00）亮一档，两者仍分得开。
+图鉴里也给了它独立的品质档 `--r-lgd`（浅色主题用压暗的 `#8A6B00`）。
+
+---
+
 # 重建方式
 
 ```bash

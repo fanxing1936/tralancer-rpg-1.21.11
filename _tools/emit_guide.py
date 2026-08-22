@@ -15,7 +15,7 @@ HEAD = u"""<title>布兰德·宿命之途</title>
   --ground:#E6E1D6; --surface:#F3EFE6; --sunk:#DCD6C8;
   --ink:#241F1B; --muted:#6B6258; --rule:#CFC7B8;
   --gold:#8A6D12; --gold-soft:#B79A3E;
-  --r-holy:#CC2900; --r-devil:#8E2A22; --r-legend:#8A5E0A;
+  --r-holy:#CC2900; --r-devil:#8E2A22; --r-legend:#8A5E0A; --r-lgd:#8A6B00;
   --r-epic:#5B3796; --r-brave:#0F5C66; --r-none:#6B6258;
   --shadow:0 1px 0 rgba(36,31,27,.06);
 }
@@ -24,7 +24,7 @@ HEAD = u"""<title>布兰德·宿命之途</title>
     --ground:#12100F; --surface:#1B1816; --sunk:#0C0B0A;
     --ink:#E9E3D5; --muted:#93897C; --rule:#302A25;
     --gold:#C9A227; --gold-soft:#8A7429;
-    --r-holy:#FF3300; --r-devil:#DC6A62; --r-legend:#D9A02B;
+    --r-holy:#FF3300; --r-devil:#DC6A62; --r-legend:#D9A02B; --r-lgd:#FFD700;
     --r-epic:#A275DE; --r-brave:#57C6D6; --r-none:#93897C;
     --shadow:0 1px 0 rgba(0,0,0,.5);
   }
@@ -33,7 +33,7 @@ HEAD = u"""<title>布兰德·宿命之途</title>
   --ground:#12100F; --surface:#1B1816; --sunk:#0C0B0A;
   --ink:#E9E3D5; --muted:#93897C; --rule:#302A25;
   --gold:#C9A227; --gold-soft:#8A7429;
-  --r-holy:#FF3300; --r-devil:#DC6A62; --r-legend:#D9A02B;
+  --r-holy:#FF3300; --r-devil:#DC6A62; --r-legend:#D9A02B; --r-lgd:#FFD700;
   --r-epic:#A275DE; --r-brave:#57C6D6; --r-none:#93897C;
   --shadow:0 1px 0 rgba(0,0,0,.5);
 }
@@ -144,6 +144,7 @@ code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px;
 }
 .card.r-holy{--tier:var(--r-holy)} .card.r-devil{--tier:var(--r-devil)}
 .card.r-legend{--tier:var(--r-legend)} .card.r-epic{--tier:var(--r-epic)}
+.card.r-lgd{--tier:var(--r-lgd)}
 .card.r-brave{--tier:var(--r-brave)}
 .card[hidden]{display:none}
 .card-h{display:flex; gap:13px; align-items:flex-start; margin-bottom:11px}

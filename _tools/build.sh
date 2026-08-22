@@ -21,6 +21,7 @@ echo
 echo "== 2b. guard the empty-tag entity walks =="
 python opt_index.py ../rpg
 python opt_guard.py ../rpg
+python opt_invert.py ../rpg
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg

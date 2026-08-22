@@ -19,7 +19,8 @@ RARITY = {
     "传说": ("legend", "传说"), "史诗": ("epic", "史诗"),
     "勇者": ("brave", "勇者"),
     # a couple of items spell the top tier out in latin
-    "l·legend": ("legend", "传说"), "legend": ("legend", "传说"),
+    "限定传说": ("lgd", "限定传说"),
+    "l·legend": ("lgd", "限定传说"), "legend": ("legend", "传说"),
 }
 # names that repeat across a whole family -- the bracket label is what actually
 # tells two of them apart, so it becomes the heading instead of the tier chip

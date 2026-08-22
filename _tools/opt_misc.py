@@ -5,6 +5,8 @@ import io
 import os
 import sys
 
+GOLD_HEX = "#FFD700"
+
 ROOT = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 
 HEALTH = os.path.join(ROOT, "data", "rpg", "function", "entities",
@@ -47,6 +49,29 @@ def fix_belial_devil_tag():
     return n
 
 
+def fix_limited_legend():
+    """`[l·legend]` was half English and shipped in two different colours
+    (#ffcc33 on one weapon, #D84E4E on the other).  It becomes 限定传说 in a
+    single gold, one step brighter than the plain 传说 tier's vanilla `gold`
+    so the two stay distinguishable."""
+    import glob
+    n = 0
+    for path in glob.glob(os.path.join(
+            ROOT, "data/rpg/function/command/give/*.mcfunction")):
+        s = io.open(path, encoding="utf-8").read()
+        before = s
+        for colour in ('"italic":false,"bold":true,"color":"#ffcc33"',
+                       '"italic":false,"color":"#D84E4E","bold":true'):
+            s = s.replace('{"text":"[l·legend]",' + colour + "}",
+                          '{"text":"[限定传说]","italic":false,'
+                          '"color":"%s","bold":true}' % GOLD_HEX)
+        if s != before:
+            io.open(path, "w", encoding="utf-8", newline="\n").write(s)
+            n += before.count("[l·legend]")
+    return n
+
+
 if __name__ == "__main__":
     print("magic-circle proximity guards added: %d" % guard_magic_circle())
+    print("limited-legend prefix normalised: %d" % fix_limited_legend())
     print("belial devil_tag added: %d" % fix_belial_devil_tag())
