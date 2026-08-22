@@ -5,57 +5,7 @@ execute if entity @e[type=minecraft:item,tag=rpg.i.gold_tag1] run function rpg:c
 execute if entity @e[type=minecraft:item,tag=rpg.i.enchant_tag1] run function rpg:command/com/g1
 
 ##洗练
-execute as @e[type=minecraft:item,tag=rpg.i.sword_tag1] at @s store result score @s weapon_xilian run data get entity @s Item.components.minecraft:custom_data.xilian
-execute as @e[type=minecraft:item,tag=rpg.i.diamond_tag1] at @s if entity @e[scores={weapon_xilian=..9},distance=..1,type=minecraft:item,tag=rpg.i.sword_tag1] at @s run particle minecraft:glow ~0.25 ~0.5 ~0.25 -0.5 -1 -0.5 1 100
-execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] run item modify entity @s contents rpg:command/xilian_sword
-execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result score @s random run random value 1..5
-execute as @e[scores={random=1},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 0.9 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-execute as @e[scores={random=2},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 1 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-execute as @e[scores={random=3},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 1.05 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-execute as @e[scores={random=4},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 1.1 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-execute as @e[scores={random=5},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 1.15 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-scoreboard players reset * random
-execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result score @s random run random value 1..5
-execute as @e[scores={random=1},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.0085 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[scores={random=2},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.009 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[scores={random=3},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.0095 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[scores={random=4},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.01 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[scores={random=5},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.0105 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[type=minecraft:item,tag=rpg.i.diamond_tag1] at @s if entity @e[scores={weapon_xilian=..9},distance=..1,type=minecraft:item,tag=rpg.i.sword_tag1] at @s run playsound minecraft:item.totem.use player @a[distance=..5]
-execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] run scoreboard players add @s weapon_xilian 1
-execute as @e[scores={weapon_xilian=..10},type=minecraft:item,tag=rpg.i.sword_tag1] at @s store result entity @s Item.components.minecraft:custom_data.xilian int 1 run scoreboard players get @s weapon_xilian
-execute as @e[type=minecraft:item,tag=rpg.i.diamond_tag1] at @s if entity @e[scores={weapon_xilian=..10},distance=..1,type=minecraft:item,tag=rpg.i.sword_tag1] at @s run kill @s
-scoreboard players reset * random
-
-
-
-
-
-
-
-
-execute as @e[type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s store result score @s weapon_xilian run data get entity @s Item.components.minecraft:custom_data.xilian
-execute as @e[type=minecraft:item,tag=rpg.i.diamond_tag1] at @s if entity @e[scores={weapon_xilian=..9},distance=..1,type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s run particle minecraft:glow ~0.25 ~0.5 ~0.25 -0.5 -1 -0.5 1 100
-execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] run item modify entity @s contents rpg:command/xilian_chestplate
-execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result score @s random run random value 1..5
-execute as @e[scores={random=1},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 0.9 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-execute as @e[scores={random=2},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 1 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-execute as @e[scores={random=3},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 1.05 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-execute as @e[scores={random=4},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 1.1 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-execute as @e[scores={random=5},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount double 1.15 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[0].amount 1.05
-scoreboard players reset * random
-execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result score @s random run random value 1..5
-execute as @e[scores={random=1},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.0085 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[scores={random=2},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.009 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[scores={random=3},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.0095 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[scores={random=4},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.01 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[scores={random=5},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] store result entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount double 0.0105 run data get entity @s Item.components.minecraft:attribute_modifiers.modifiers[1].amount 90
-execute as @e[type=minecraft:item,tag=rpg.i.diamond_tag1] at @s if entity @e[scores={weapon_xilian=..9},distance=..1,type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s run playsound minecraft:item.totem.use player @a[distance=..5]
-execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.chestplate_tag1] if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] at @s run scoreboard players add @s weapon_xilian 1
-execute as @e[scores={weapon_xilian=..10},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s store result entity @s Item.components.minecraft:custom_data.xilian int 1 run scoreboard players get @s weapon_xilian
-execute as @e[type=minecraft:item,tag=rpg.i.diamond_tag1] at @s if entity @e[scores={weapon_xilian=..10},distance=..1,type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s run kill @s
-scoreboard players reset * random
-
+execute if entity @e[type=minecraft:item,tag=rpg.i.diamond_tag1] run function rpg:command/com/xilian
 
 ##锻造
 execute if entity @e[type=minecraft:item,tag=rpg.i.echo_tag1] run function rpg:command/com/g2
@@ -103,35 +53,8 @@ execute as @e at @s on attacker if entity @s[scores={weapon_attack=0..},tag=rpg.
 scoreboard players reset * weapon_attack
 
 ##武器分支
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run particle minecraft:totem_of_undying ~0.25 ~0.5 ~0.25 -0.5 -1 -0.5 5 100
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tree1] run item modify entity @s contents rpg:command/holy
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run playsound minecraft:item.totem.use player @a[distance=..5]
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run kill @s
+execute if entity @e[type=minecraft:item,tag=rpg.i.weapon_tag1] run function rpg:command/com/branch
 
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree2] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run particle minecraft:totem_of_undying ~0.25 ~0.5 ~0.25 -0.5 -1 -0.5 5 100
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tree2] run item modify entity @s contents rpg:command/holy2
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree2] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run playsound minecraft:item.totem.use player @a[distance=..5]
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree2] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run kill @s
-
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree3] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run particle minecraft:totem_of_undying ~0.25 ~0.5 ~0.25 -0.5 -1 -0.5 5 100
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tree3] run item modify entity @s contents rpg:command/holy3
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree3] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run playsound minecraft:item.totem.use player @a[distance=..5]
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree3] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run kill @s
-
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree4] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run particle minecraft:totem_of_undying ~0.25 ~0.5 ~0.25 -0.5 -1 -0.5 5 100
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tree4] run item modify entity @s contents rpg:command/devil
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree4] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run playsound minecraft:item.totem.use player @a[distance=..5]
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree4] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run kill @s
-
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree5] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run particle minecraft:totem_of_undying ~0.25 ~0.5 ~0.25 -0.5 -1 -0.5 5 100
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tree5] run item modify entity @s contents rpg:command/devil2
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree5] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run playsound minecraft:item.totem.use player @a[distance=..5]
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree5] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run kill @s
-
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree6] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run particle minecraft:totem_of_undying ~0.25 ~0.5 ~0.25 -0.5 -1 -0.5 5 100
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tree6] run item modify entity @s contents rpg:command/devil3
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree6] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run playsound minecraft:item.totem.use player @a[distance=..5]
-execute as @e[type=minecraft:item,tag=rpg.i.weapon_tree6] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run kill @s
 ##显示名称
 execute as @e[type=minecraft:item,name=1] at @s run data modify entity @s CustomNameVisible set value 1b
 execute as @e[type=minecraft:item,name=1] at @s run data modify entity @s CustomName set from entity @s Item.components.minecraft:custom_name

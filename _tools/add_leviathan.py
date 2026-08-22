@@ -50,6 +50,8 @@ RADIUS = 7             # whirlpool radius
 BEAT = 10              # ticks between crushes -- matches mob invulnerability
 LIFE = 100             # whirlpool duration; deeper when thrown airborne
 LIFE_DEEP = 160
+COST = 10            # 每次施放献出的生命，直接扣，不走 damage
+UNLUCK = 10          # 不幸持续秒数
 
 ART = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                    "leviathan_art", "leviathan.png")
@@ -159,9 +161,12 @@ def build_texture():
 
 
 def build_models():
-    # the pack's heavy two-hander transform -- an anchor should swing like one
+    # huge_sword_handheld is scaled 2.06 for a thin diagonal greatsword; the
+    # anchor fills its whole 32x32 sprite, so at that scale it swamps the hand.
+    # sword_handheld (1.195) is the pack's best-tuned transform and the size a
+    # one-handed mace actually wants.
     wj(os.path.join(RPG_MODELS, "leviathan.json"),
-       {"parent": "rpg:item/huge_sword_handheld",
+       {"parent": "rpg:item/sword_handheld",
         "textures": {"layer0": "rpg:item/leviathan"}})
 
     path = os.path.join(MC_ITEMS, BASE + ".json")
@@ -200,8 +205,10 @@ LEVIATHAN = ("give @a %s[" % BASE +
                  row(seg("它使深海翻滚如锅"), seg(" 海之魔神利维坦", DEVIL, True)),
                  RULE,
                  row(seg("🪓主动技能"), seg("[沉锚]", DEVIL, True)),
-                 row(seg("右键消耗2级经验抛出巨锚，锚落处涌起漩涡")),
+                 row(seg("右键抛出巨锚，锚落处涌起漩涡")),
                  row(seg("漩涡将敌人拖向锚心并持续碾压；凌空抛锚沉得更深")),
+                 row(seg("代价：每次献出"), seg("10点生命", DEVIL, True),
+                     seg("，并背负"), seg("10秒不幸", DEVIL, True)),
                  RULE]) + "],"
              # all five work on a mace: breach/density/wind_burst are its own,
              # smite is #enchantable/weapon, and impaling's damage effect is
@@ -257,16 +264,27 @@ def build_advancement():
 # 沉锚 -- the skill
 # ---------------------------------------------------------------------------
 TRIGGER = """\
-# 利维坦［沉锚］—— 由 rpg:advancement/item/leviathan 在右键使用时触发
+# 利维坦［沉锚］—— 由 rpg:advancement/item/leviathan 在右键使用时触发。
+# 代价是血而不是经验，所以先量一次生命：不够就拒绝，而不是把人送走。
+# （包里其余主动技能在付不起代价时也是这个反应，一声 villager.no。）
 advancement revoke @s only rpg:item/leviathan
-execute if entity @s[level=..1] run playsound minecraft:entity.villager.no player @s
-execute if entity @s[level=2..] run function rpg:item/extra/leviathan_cast
+execute store result score @s rpg_levi_hp run data get entity @s Health
+execute if entity @s[scores={{rpg_levi_hp=..{COST}}}] run playsound minecraft:entity.villager.no player @s
+execute if entity @s[scores={{rpg_levi_hp={COST_1}..}}] run function rpg:item/extra/leviathan_cast
 """
 
 CAST = """\
 # 抛锚。`rotated ~ 0` 把俯仰归零，所以锚永远沿水平方向掷出 {THROW} 格，
 # 不会因为抬头而飞上天 —— 锚是往下沉的东西。
-xp add @s -2 levels
+# 血税：直接改写生命值，而不是 `damage`。
+# `damage` 要过约 10 刻的无敌帧 —— 连点右键时代价会被整个吞掉，等于白嫖；
+# 直接写 Health 则绕过护甲、抗性与无敌帧，每一次都实收 {COST} 点。
+# 命中前已经在 trigger 里确认过生命高于 {COST}，所以不会把自己写死。
+scoreboard players remove @s rpg_levi_hp {COST}
+execute store result entity @s Health float 1 run scoreboard players get @s rpg_levi_hp
+effect give @s minecraft:unluck {UNLUCK} 0 true
+particle damage_indicator ~ ~1 ~ 0.3 0.4 0.3 0.2 12
+playsound minecraft:entity.player.hurt_drown player @s ~ ~ ~ 1 0.7
 tag @s add rpg.levi.cast
 # 凌空抛锚沉得更深：脚下悬空就是"从高处砸下"，与重锤的本能一致
 execute at @s if block ~ ~-1 ~ air run tag @s add rpg.levi.airborne
@@ -297,9 +315,11 @@ playsound minecraft:entity.generic.splash hostile @a[distance=..24] ~ ~ ~ 1 0.6
 
 PULL = """\
 # 每刻：把 {RADIUS} 格内的一切拖向锚心，并铺开漩涡的水纹。
-particle dust_color_transition{{from_color:{TRENCH},to_color:{ABYSS},scale:2}} ~ ~0.3 ~ {RADIUS_F} 0.25 {RADIUS_F} 0.02 26
-particle bubble_column_up ~ ~ ~ 0.8 0.1 0.8 0.03 6
-particle dust_color_transition{{from_color:{ABYSS},to_color:{GOLD},scale:1}} ~ ~1.4 ~ 0.2 0.5 0.2 0.02 4
+# 漩涡要转满 5~8 秒，所以每刻的粒子必须省着用：
+# 原本每刻 36 粒 × 100 刻 ≈ 3600 粒，客户端明显吃不消。现在每刻 13 粒。
+particle dust_color_transition{{from_color:{TRENCH},to_color:{ABYSS},scale:2}} ~ ~0.3 ~ {RADIUS_F} 0.25 {RADIUS_F} 0.02 9
+particle bubble_column_up ~ ~ ~ 0.8 0.1 0.8 0.03 3
+particle dust_color_transition{{from_color:{ABYSS},to_color:{GOLD},scale:1}} ~ ~1.4 ~ 0.2 0.5 0.2 0.02 1
 execute as @e[distance=1.2..{RADIUS},type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker] at @s facing entity @e[tag=rpg.levi.anchor,limit=1,sort=nearest] feet run tp @s ^ ^ ^0.55
 execute as @e[distance=..{RADIUS},type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker] run effect give @s minecraft:slowness 2 2 true
 """
@@ -308,10 +328,10 @@ CRUSH = """\
 # 每 {BEAT} 刻碾一次：生物受伤后约有 {BEAT} 刻无敌帧，打得更密只是浪费。
 scoreboard players set @s rpg_levi_beat {BEAT}
 particle minecraft:flash{{color:{ABYSS}}} ~ ~0.8 ~ 0 0 0 0 1
-particle splash ~ ~0.5 ~ 1 0.3 1 0.3 30
+particle splash ~ ~0.5 ~ 1 0.3 1 0.3 14
 playsound minecraft:entity.player.attack.crit hostile @a[distance=..20] ~ ~ ~ 1 0.6
 execute as @e[distance=..{RADIUS},type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker] at @s run damage @s 6 minecraft:drown
-execute as @e[distance=..{RADIUS},type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker] at @s run particle dust_color_transition{{from_color:{FOAM},to_color:{TRENCH},scale:2}} ~ ~1 ~ 0.3 0.5 0.3 0.05 18
+execute as @e[distance=..{RADIUS},type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker] at @s run particle dust_color_transition{{from_color:{FOAM},to_color:{TRENCH},scale:2}} ~ ~1 ~ 0.3 0.5 0.3 0.05 10
 """
 
 TICK = """\
@@ -326,12 +346,13 @@ execute as @e[tag=rpg.levi.anchor,scores={{rpg_levi_time=..0}}] run kill @s
 """
 
 ARGS = dict(ABYSS=ABYSS, TRENCH=TRENCH, FOAM=FOAM, GOLD=GOLD,
+            COST=COST, COST_1=COST + 1, UNLUCK=UNLUCK,
             THROW=THROW, RADIUS=RADIUS, RADIUS_F="%.1f" % (RADIUS * 0.5),
             BEAT=BEAT, LIFE=LIFE, LIFE_DEEP=LIFE_DEEP)
 
 
 def build_functions():
-    wf("item/extra/leviathan_trigger.mcfunction", TRIGGER)
+    wf("item/extra/leviathan_trigger.mcfunction", TRIGGER.format(**ARGS))
     wf("item/extra/leviathan_cast.mcfunction", CAST.format(**ARGS))
     wf("item/extra/leviathan_drop.mcfunction", DROP.format(**ARGS))
     wf("item/extra/leviathan_pull.mcfunction", PULL.format(**ARGS))
@@ -344,7 +365,8 @@ def build_functions():
         "execute if entity @a[tag=rpg.h.leviathan_tag1] "
         "run function rpg:item/extra/leviathan\n"
         "execute unless entity @a[tag=rpg.h.leviathan_tag1] "
-        "if entity @e[tag=rpg.levi.anchor] run function rpg:item/extra/leviathan\n")
+        "if entity @e[type=minecraft:marker,tag=rpg.levi.anchor] "
+        "run function rpg:item/extra/leviathan\n")
     if "item/extra/leviathan" not in s:
         io.open(path, "w", encoding="utf-8", newline="\n").write(
             s.rstrip("\n") + "\n" + dispatch)
@@ -353,7 +375,8 @@ def build_functions():
 def add_objectives():
     path = os.path.join(FUNC, "command/soreboard.mcfunction")
     s = io.open(path, encoding="utf-8").read()
-    add = [n for n in ("rpg_levi_time", "rpg_levi_beat") if n not in s]
+    add = [n for n in ("rpg_levi_time", "rpg_levi_beat", "rpg_levi_hp")
+           if n not in s]
     if add:
         io.open(path, "w", encoding="utf-8", newline="\n").write(
             s.rstrip("\n") + "\n"

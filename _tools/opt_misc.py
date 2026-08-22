@@ -71,7 +71,58 @@ def fix_limited_legend():
     return n
 
 
+# section heading -> the item flag nothing in it can act without
+COM_GATES = [
+    # 洗练 reforges a dropped weapon when a reforge stone lies on it.  34 of its
+    # 42 commands name the stone outright; the rest only read a counter that
+    # feeds them, so with no stone on the ground the whole section is inert.
+    ("##洗练", "rpg.i.diamond_tag1", "xilian"),
+    # 武器分支: every single line requires the weapon flag.
+    ("##武器分支", "rpg.i.weapon_tag1", "branch"),
+]
+
+
+def guard_com_sections():
+    """rpg:command/com runs unguarded every tick.  Two of its sections are
+    forging logic that can only matter while the relevant item is lying on the
+    ground -- hoist each behind one `type=minecraft:item` lookup (indexed, so
+    it costs a list probe rather than a walk) and move the body to its own
+    function."""
+    path = os.path.join(ROOT, "data/rpg/function/command/com.mcfunction")
+    lines = io.open(path, encoding="utf-8").read().split("\n")
+    sdir = os.path.join(ROOT, "data/rpg/function/command/com")
+    if not os.path.isdir(sdir):
+        os.makedirs(sdir)
+
+    moved = 0
+    for head, tag, name in COM_GATES:
+        try:
+            a = next(i for i, l in enumerate(lines) if l.strip() == head)
+        except StopIteration:
+            continue
+        b = next((i for i in range(a + 1, len(lines))
+                  if lines[i].strip().startswith("##")), len(lines))
+        body = lines[a + 1:b]
+        if not any(l.strip() and not l.strip().startswith("#") for l in body):
+            continue
+        with io.open(os.path.join(sdir, name + ".mcfunction"), "w",
+                     encoding="utf-8", newline="\n") as fh:
+            fh.write("# 由 opt_misc.guard_com_sections 从 rpg:command/com 提出。\n"
+                     "# 整段只在 %s 落在地上时才有意义，所以上层用一次\n"
+                     "# type=minecraft:item 的带类型查找把它挡住 —— 行内容原样保留。\n"
+                     % tag)
+            fh.write("\n".join(body).strip("\n") + "\n")
+        lines[a + 1:b] = [
+            "execute if entity @e[type=minecraft:item,tag=%s] "
+            "run function rpg:command/com/%s" % (tag, name), ""]
+        moved += 1
+    if moved:
+        io.open(path, "w", encoding="utf-8", newline="\n").write("\n".join(lines))
+    return moved
+
+
 if __name__ == "__main__":
     print("magic-circle proximity guards added: %d" % guard_magic_circle())
+    print("com sections gated: %d" % guard_com_sections())
     print("limited-legend prefix normalised: %d" % fix_limited_legend())
     print("belial devil_tag added: %d" % fix_belial_devil_tag())

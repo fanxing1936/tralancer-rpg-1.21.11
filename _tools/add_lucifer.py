@@ -410,8 +410,9 @@ def build_functions():
     dispatch = (
         "execute if entity @a[tag=rpg.h.lucifer_tag1] "
         "run function rpg:item/extra/lucifer\n"
-        "execute unless entity @a[tag=rpg.h.lucifer_tag1] "
-        "if entity @e[tag=rpg.luci.sin] run function rpg:item/extra/lucifer\n")
+        # 原罪落在任意生物上，没有类型可先筛；它只持续十秒，
+        # 握持判定已经覆盖，不值得每刻为它全场扫一遍
+        "")
     if "item/extra/lucifer" not in s:
         io.open(path, "w", encoding="utf-8", newline="\n").write(
             s.rstrip("\n") + "\n" + dispatch)

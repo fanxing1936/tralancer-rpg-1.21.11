@@ -1,3 +1,6 @@
+# 由 opt_misc.guard_com_sections 从 rpg:command/com 提出。
+# 整段只在 rpg.i.diamond_tag1 落在地上时才有意义，所以上层用一次
+# type=minecraft:item 的带类型查找把它挡住 —— 行内容原样保留。
 execute as @e[type=minecraft:item,tag=rpg.i.sword_tag1] at @s store result score @s weapon_xilian run data get entity @s Item.components.minecraft:custom_data.xilian
 execute as @e[type=minecraft:item,tag=rpg.i.diamond_tag1] at @s if entity @e[scores={weapon_xilian=..9},distance=..1,type=minecraft:item,tag=rpg.i.sword_tag1] at @s run particle minecraft:glow ~0.25 ~0.5 ~0.25 -0.5 -1 -0.5 1 100
 execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.sword_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.diamond_tag1] run item modify entity @s contents rpg:command/xilian_sword
@@ -48,5 +51,3 @@ execute as @e[scores={weapon_xilian=..9},type=minecraft:item,tag=rpg.i.chestplat
 execute as @e[scores={weapon_xilian=..10},type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s store result entity @s Item.components.minecraft:custom_data.xilian int 1 run scoreboard players get @s weapon_xilian
 execute as @e[type=minecraft:item,tag=rpg.i.diamond_tag1] at @s if entity @e[scores={weapon_xilian=..10},distance=..1,type=minecraft:item,tag=rpg.i.chestplate_tag1] at @s run kill @s
 scoreboard players reset * random
-
-
