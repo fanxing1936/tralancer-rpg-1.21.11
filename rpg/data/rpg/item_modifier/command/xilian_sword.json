@@ -1,0 +1,52 @@
+[
+  {
+    "function": "set_attributes",
+    "modifiers": [
+      {
+        "attribute": "attack_damage",
+        "id": "add_attack_damage",
+        "operation": "add_value",
+        "slot": "mainhand",
+        "amount": {
+          "type": "uniform",
+          "min": -2,
+          "max": 3
+        }
+      },
+      {
+        "attribute": "attack_speed",
+        "id": "add_attack_speed",
+        "operation": "add_value",
+        "slot": "mainhand",
+        "amount": {
+          "type": "uniform",
+          "min": -0.2,
+          "max": 0.2
+        }
+      }
+    ],
+    "replace": false
+  },
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      [
+        {
+          "nbt": "Item.components.minecraft:lore[4]",
+          "entity": "@s",
+          "interpret": true
+        },
+        {
+          "text": "🌊",
+          "color": "aqua",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "mode": "replace_section",
+    "entity": "this",
+    "offset": 4,
+    "size": 1
+  }
+]

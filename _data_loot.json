@@ -1,0 +1,4409 @@
+{
+ "rpg:armor/boots": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_boots",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "坚固的[靴子]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_boots",
+     "weight": 1,
+     "name": "[barve]的金靴子",
+     "lore": [
+      "+------------------+",
+      "金色的[护具]",
+      "金闪闪得[好帅]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_boots",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "勇者收藏的[靴子]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_boots",
+     "weight": 1,
+     "name": "[epic]钻石靴子",
+     "lore": [
+      "+------------------+",
+      "珍贵材料打造的[装备]",
+      "装备里的[耐用王]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_boots",
+     "weight": 1,
+     "name": "[uncommon]的坚硬铁战靴",
+     "lore": [
+      "+------------------+",
+      "破旧的[铁战靴]",
+      "好像还很[坚固]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:leather_boots",
+     "weight": 1,
+     "name": "[uncommon]的破旧皮革靴子",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[装备]",
+      "但效果还[不错？]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0,
+        0.05
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_boots",
+     "weight": 1,
+     "name": "[uncommon]的藏品",
+     "lore": [
+      "+------------------+",
+      "普通的[装备]",
+      "怪物的[藏品]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_boots",
+     "weight": 1,
+     "name": "[brave]破损靴子",
+     "lore": [
+      "+------------------+",
+      "怪物的[遗物]",
+      "不错的[靴子]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        2,
+        3
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_boots",
+     "weight": 1,
+     "name": "[epic]硬质靴子",
+     "lore": [
+      "+------------------+",
+      "好硬的[铁战靴]",
+      "太坚固了[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:armor/bow": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:bow",
+     "weight": 1,
+     "name": "[uncommon]的弓",
+     "lore": [
+      "+------------------+",
+      "普通的[弓]",
+      "或许是不错的[武器]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "bow_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:crossbow",
+     "weight": 1,
+     "name": "[uncommon]的弩",
+     "lore": [
+      "+------------------+",
+      "普通的[弩]",
+      "或许是不错的[武器]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "bow_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:bow",
+     "weight": 1,
+     "name": "[uncommon]的弓",
+     "lore": [
+      "+------------------+",
+      "普通的[弓]",
+      "或许是不错的[武器]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "bow_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:bow",
+     "weight": 1,
+     "name": "[brave]精制长弓",
+     "lore": [
+      "+------------------+",
+      "千锤百炼的[武器]",
+      "百发百中的[弓箭]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "bow_tag": 1
+     },
+     "damage": [
+      0.4,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:armor/chestplate": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_chestplate",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "坚固的[胸甲]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_chestplate",
+     "weight": 1,
+     "name": "[barve]的金甲",
+     "lore": [
+      "+------------------+",
+      "金色的[盔甲]",
+      "金闪闪得[好帅]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_chestplate",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "尸壳收藏的[胸甲]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_chestplate",
+     "weight": 1,
+     "name": "[epic]钻石胸甲",
+     "lore": [
+      "+------------------+",
+      "珍贵材料打造的[装备]",
+      "装备里的[耐用王]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_chestplate",
+     "weight": 1,
+     "name": "[uncommon]的坚硬铁甲",
+     "lore": [
+      "+------------------+",
+      "破旧的[铁甲]",
+      "好像还很[坚固]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:leather_chestplate",
+     "weight": 1,
+     "name": "[uncommon]的破旧皮革胸甲",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[装备]",
+      "但效果还[不错？]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0,
+        0.05
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_chestplate",
+     "weight": 1,
+     "name": "[uncommon]的藏品",
+     "lore": [
+      "+------------------+",
+      "普通的[装备]",
+      "怪物的[藏品]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_chestplate",
+     "weight": 1,
+     "name": "[brave]破损甲",
+     "lore": [
+      "+------------------+",
+      "僵尸的[遗物]",
+      "不错的[胸甲]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        2,
+        3
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_chestplate",
+     "weight": 1,
+     "name": "[epic]硬甲",
+     "lore": [
+      "+------------------+",
+      "好硬的[铁甲]",
+      "太坚固了[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:armor/helmet": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_helmet",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "坚固的[头盔]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_helmet",
+     "weight": 1,
+     "name": "[barve]的金盔",
+     "lore": [
+      "+------------------+",
+      "金色的[护具]",
+      "金闪闪得[好帅]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_helmet",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "勇者收藏的[头盔]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_helmet",
+     "weight": 1,
+     "name": "[epic]钻石头盔",
+     "lore": [
+      "+------------------+",
+      "珍贵材料打造的[装备]",
+      "装备里的[耐用王]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_helmet",
+     "weight": 1,
+     "name": "[uncommon]的坚硬铁盔",
+     "lore": [
+      "+------------------+",
+      "破旧的[铁盔]",
+      "好像还很[坚固]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:leather_helmet",
+     "weight": 1,
+     "name": "[uncommon]的破旧皮革头盔",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[装备]",
+      "但效果还[不错？]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0,
+        0.05
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_helmet",
+     "weight": 1,
+     "name": "[uncommon]的藏品",
+     "lore": [
+      "+------------------+",
+      "普通的[装备]",
+      "怪物的[藏品]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_helmet",
+     "weight": 1,
+     "name": "[brave]破损盔",
+     "lore": [
+      "+------------------+",
+      "怪物的[遗物]",
+      "不错的[头盔]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        2,
+        3
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_helmet",
+     "weight": 1,
+     "name": "[epic]硬盔",
+     "lore": [
+      "+------------------+",
+      "好硬的[铁盔]",
+      "太坚固了[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:armor/leggings": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_leggings",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "坚固的[护膝]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_leggings",
+     "weight": 1,
+     "name": "[barve]的金护膝",
+     "lore": [
+      "+------------------+",
+      "金色的[护具]",
+      "金闪闪得[好帅]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_leggings",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "勇者收藏的[护膝]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_leggings",
+     "weight": 1,
+     "name": "[epic]钻石护膝",
+     "lore": [
+      "+------------------+",
+      "珍贵材料打造的[装备]",
+      "装备里的[耐用王]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_leggings",
+     "weight": 1,
+     "name": "[uncommon]的坚硬铁护腿",
+     "lore": [
+      "+------------------+",
+      "破旧的[铁护腿]",
+      "好像还很[坚固]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:leather_leggings",
+     "weight": 1,
+     "name": "[uncommon]的破旧皮革护膝",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[装备]",
+      "但效果还[不错？]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0,
+        0.05
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_leggings",
+     "weight": 1,
+     "name": "[uncommon]的藏品",
+     "lore": [
+      "+------------------+",
+      "普通的[装备]",
+      "怪物的[藏品]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_leggings",
+     "weight": 1,
+     "name": "[brave]破损护膝",
+     "lore": [
+      "+------------------+",
+      "怪物的[遗物]",
+      "不错的[护膝]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        2,
+        3
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_leggings",
+     "weight": 1,
+     "name": "[epic]硬质护膝",
+     "lore": [
+      "+------------------+",
+      "好硬的[铁护腿]",
+      "太坚固了[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:armor/sword": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_sword",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "锐利的[剑]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        6,
+        8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_sword",
+     "weight": 1,
+     "name": "[barve]的金剑",
+     "lore": [
+      "+------------------+",
+      "一把精制的[金剑]",
+      "能够作为一把趁手的[武器]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.4,
+        -2.0
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_sword",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "尸壳收藏的[武器]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_sword",
+     "weight": 1,
+     "name": "[epic]钻石剑！",
+     "lore": [
+      "+------------------+",
+      "千锤百炼的[武器]",
+      "上等的[刀刃]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        8,
+        11
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.2,
+        -1.8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:stone_sword",
+     "weight": 1,
+     "name": "[uncommon]的破损石剑",
+     "lore": [
+      "+------------------+",
+      "破旧但锋利的[剑]",
+      "依旧[锐利]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        4,
+        8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:wooden_sword",
+     "weight": 1,
+     "name": "[uncommon]捡到的剑",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[武器]",
+      "但足够[迅速]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.6,
+        -2.0
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:stone_sword",
+     "weight": 1,
+     "name": "[uncommon]的普通石剑",
+     "lore": [
+      "+------------------+",
+      "普通的[铁剑]",
+      "冒险者[必备]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_sword",
+     "weight": 1,
+     "name": "[brave]磨损的铁剑",
+     "lore": [
+      "+------------------+",
+      "僵尸的[遗物]",
+      "不错的[刀刃]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        6,
+        9
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.4,
+        -2.0
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_sword",
+     "weight": 1,
+     "name": "[epic]锋利的铁剑",
+     "lore": [
+      "+------------------+",
+      "锋利的[铁剑]",
+      "他真的很锋利[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        8,
+        11
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.2,
+        -1.8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": [
+      0.2,
+      0.8
+     ],
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:loot/loot": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:nether_star",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "loot_trigger": 2
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:loot/loot_ominous": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:nether_star",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "loot_trigger": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/boots": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_boots",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "坚固的[靴子]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_boots",
+     "weight": 1,
+     "name": "[barve]的金靴子",
+     "lore": [
+      "+------------------+",
+      "金色的[护具]",
+      "金闪闪得[好帅]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_boots",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "勇者收藏的[靴子]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_boots",
+     "weight": 1,
+     "name": "[epic]钻石靴子",
+     "lore": [
+      "+------------------+",
+      "珍贵材料打造的[装备]",
+      "装备里的[耐用王]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_boots",
+     "weight": 1,
+     "name": "[uncommon]的坚硬铁战靴",
+     "lore": [
+      "+------------------+",
+      "破旧的[铁战靴]",
+      "好像还很[坚固]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:leather_boots",
+     "weight": 1,
+     "name": "[uncommon]的破旧皮革靴子",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[装备]",
+      "但效果还[不错？]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0,
+        0.05
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_boots",
+     "weight": 1,
+     "name": "[uncommon]的藏品",
+     "lore": [
+      "+------------------+",
+      "普通的[装备]",
+      "怪物的[藏品]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_boots",
+     "weight": 1,
+     "name": "[brave]破损靴子",
+     "lore": [
+      "+------------------+",
+      "怪物的[遗物]",
+      "不错的[靴子]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        2,
+        3
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_boots",
+     "weight": 1,
+     "name": "[epic]硬质靴子",
+     "lore": [
+      "+------------------+",
+      "好硬的[铁战靴]",
+      "太坚固了[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "feet",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/bow": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:bow",
+     "weight": 1,
+     "name": "[uncommon]的弓",
+     "lore": [
+      "+------------------+",
+      "普通的[弓]",
+      "或许是不错的[武器]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "bow_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:crossbow",
+     "weight": 1,
+     "name": "[uncommon]的弩",
+     "lore": [
+      "+------------------+",
+      "普通的[弩]",
+      "或许是不错的[武器]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "bow_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:bow",
+     "weight": 1,
+     "name": "[uncommon]的弓",
+     "lore": [
+      "+------------------+",
+      "普通的[弓]",
+      "或许是不错的[武器]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "bow_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:bow",
+     "weight": 1,
+     "name": "[brave]精制长弓",
+     "lore": [
+      "+------------------+",
+      "千锤百炼的[武器]",
+      "百发百中的[弓箭]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "bow_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/chestplate": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_chestplate",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "坚固的[胸甲]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_chestplate",
+     "weight": 1,
+     "name": "[barve]的金甲",
+     "lore": [
+      "+------------------+",
+      "金色的[盔甲]",
+      "金闪闪得[好帅]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_chestplate",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "尸壳收藏的[胸甲]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_chestplate",
+     "weight": 1,
+     "name": "[epic]钻石胸甲",
+     "lore": [
+      "+------------------+",
+      "珍贵材料打造的[装备]",
+      "装备里的[耐用王]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_chestplate",
+     "weight": 1,
+     "name": "[uncommon]的坚硬铁甲",
+     "lore": [
+      "+------------------+",
+      "破旧的[铁甲]",
+      "好像还很[坚固]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:leather_chestplate",
+     "weight": 1,
+     "name": "[uncommon]的破旧皮革胸甲",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[装备]",
+      "但效果还[不错？]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0,
+        0.05
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_chestplate",
+     "weight": 1,
+     "name": "[uncommon]的藏品",
+     "lore": [
+      "+------------------+",
+      "普通的[装备]",
+      "怪物的[藏品]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_chestplate",
+     "weight": 1,
+     "name": "[brave]破损甲",
+     "lore": [
+      "+------------------+",
+      "僵尸的[遗物]",
+      "不错的[胸甲]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        2,
+        3
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_chestplate",
+     "weight": 1,
+     "name": "[epic]硬甲",
+     "lore": [
+      "+------------------+",
+      "好硬的[铁甲]",
+      "太坚固了[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "chest",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/epic_sword": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:netherite_sword",
+     "weight": 1,
+     "name": "[epic]血煞弯刀",
+     "lore": [
+      "+------------------+",
+      "骑兵的佩刀",
+      "沾染血煞依旧锐利",
+      "+------------------+",
+      "🪓被动技能[灼日]",
+      "攻击时附带灼烧且自身抗火",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        6,
+        9.5
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.8,
+        -1.8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1,
+      "sun_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110009.0
+       ]
+      }
+     }
+    },
+    {
+     "item": "minecraft:netherite_sword",
+     "weight": 1,
+     "name": "[legend]严寒风暴",
+     "lore": [
+      "+------------------+",
+      "千年不化的冰霜",
+      "极寒的风暴中孕育的古剑",
+      "+------------------+",
+      "🪓被动技能[霜降]",
+      "攻击时附带极寒效果",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        9,
+        12
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.8,
+        -1.8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1,
+      "ice_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110010.0
+       ]
+      }
+     }
+    },
+    {
+     "item": "minecraft:netherite_axe",
+     "weight": 1,
+     "name": "[legend]珊瑚突刺",
+     "lore": [
+      "+------------------+",
+      "海底升腾的巨浪",
+      "海洋最深处的呐喊",
+      "+------------------+",
+      "🗡主动技能[涡流]",
+      "右键召唤涡流突刺对手",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        6,
+        11
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.8,
+        -1.8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1,
+      "sea_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100070.0,
+       "animation": "eat",
+       "sound": "minecraft:entity.generic.eat",
+       "has_consume_particles": true,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110005.0
+       ]
+      }
+     }
+    },
+    {
+     "item": "minecraft:netherite_axe",
+     "weight": 1,
+     "name": "[epic]珊瑚冲击",
+     "lore": [
+      "+------------------+",
+      "沸腾海水的浇筑",
+      "来自的珊瑚古刀",
+      "+------------------+",
+      "🪓被动技能[潮水]",
+      "攻击附带发光效果",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        6,
+        9
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1,
+      "sea_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110006.0
+       ]
+      }
+     }
+    },
+    {
+     "item": "minecraft:mace",
+     "weight": 1,
+     "name": "[epic]三叉钢刀",
+     "lore": [
+      "+------------------+",
+      "哨兵坚守的岗位",
+      "御敌的重器",
+      "+------------------+",
+      "🪓被动技能[猛击]",
+      "造成伤害后获得1s抗性",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        9,
+        10
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -3.4,
+        -2.8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1,
+      "steel_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110005.0
+       ]
+      }
+     }
+    },
+    {
+     "item": "minecraft:mace",
+     "weight": 1,
+     "name": "[legend]极寒之镰",
+     "lore": [
+      "+------------------+",
+      "高山消融后的冰雪",
+      "观察者们的镰刀",
+      "+------------------+",
+      "🗡主动技能[极寒]",
+      "右键击飞5m内的敌人",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        10,
+        13
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -3.5,
+        -2.8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1,
+      "ice_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110006.0
+       ]
+      },
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100060.0,
+       "animation": "eat",
+       "sound": "minecraft:entity.generic.eat",
+       "has_consume_particles": true,
+       "on_consume_effects": []
+      }
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/helmet": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_helmet",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "坚固的[头盔]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_helmet",
+     "weight": 1,
+     "name": "[barve]的金盔",
+     "lore": [
+      "+------------------+",
+      "金色的[护具]",
+      "金闪闪得[好帅]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_helmet",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "勇者收藏的[头盔]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_helmet",
+     "weight": 1,
+     "name": "[epic]钻石头盔",
+     "lore": [
+      "+------------------+",
+      "珍贵材料打造的[装备]",
+      "装备里的[耐用王]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_helmet",
+     "weight": 1,
+     "name": "[uncommon]的坚硬铁盔",
+     "lore": [
+      "+------------------+",
+      "破旧的[铁盔]",
+      "好像还很[坚固]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:leather_helmet",
+     "weight": 1,
+     "name": "[uncommon]的破旧皮革头盔",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[装备]",
+      "但效果还[不错？]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0,
+        0.05
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_helmet",
+     "weight": 1,
+     "name": "[uncommon]的藏品",
+     "lore": [
+      "+------------------+",
+      "普通的[装备]",
+      "怪物的[藏品]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_helmet",
+     "weight": 1,
+     "name": "[brave]破损盔",
+     "lore": [
+      "+------------------+",
+      "怪物的[遗物]",
+      "不错的[头盔]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        2,
+        3
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_helmet",
+     "weight": 1,
+     "name": "[epic]硬盔",
+     "lore": [
+      "+------------------+",
+      "好硬的[铁盔]",
+      "太坚固了[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "head",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/leggings": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_leggings",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "坚固的[护膝]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_leggings",
+     "weight": 1,
+     "name": "[barve]的金护膝",
+     "lore": [
+      "+------------------+",
+      "金色的[护具]",
+      "金闪闪得[好帅]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_leggings",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "勇者收藏的[护膝]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_leggings",
+     "weight": 1,
+     "name": "[epic]钻石护膝",
+     "lore": [
+      "+------------------+",
+      "珍贵材料打造的[装备]",
+      "装备里的[耐用王]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_leggings",
+     "weight": 1,
+     "name": "[uncommon]的坚硬铁护腿",
+     "lore": [
+      "+------------------+",
+      "破旧的[铁护腿]",
+      "好像还很[坚固]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        1,
+        3
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:leather_leggings",
+     "weight": 1,
+     "name": "[uncommon]的破旧皮革护膝",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[装备]",
+      "但效果还[不错？]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0,
+        0.05
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_leggings",
+     "weight": 1,
+     "name": "[uncommon]的藏品",
+     "lore": [
+      "+------------------+",
+      "普通的[装备]",
+      "怪物的[藏品]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_leggings",
+     "weight": 1,
+     "name": "[brave]破损护膝",
+     "lore": [
+      "+------------------+",
+      "怪物的[遗物]",
+      "不错的[护膝]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        2,
+        3
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0,
+        0.07
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_leggings",
+     "weight": 1,
+     "name": "[epic]硬质护膝",
+     "lore": [
+      "+------------------+",
+      "好硬的[铁护腿]",
+      "太坚固了[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "armor_toughness",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        2,
+        4
+       ]
+      },
+      {
+       "attr": "knockback_resistance",
+       "op": "add_value",
+       "slot": "legs",
+       "range": [
+        0.05,
+        0.1
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "chestplate_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/sword": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:iron_sword",
+     "weight": 1,
+     "name": "[barve]的遗物",
+     "lore": [
+      "+------------------+",
+      "锐利的[剑]",
+      "旅人的[遗品]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        6,
+        8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_sword",
+     "weight": 1,
+     "name": "[barve]的金剑",
+     "lore": [
+      "+------------------+",
+      "一把精制的[金剑]",
+      "能够作为一把趁手的[武器]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.4,
+        -2.0
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:golden_sword",
+     "weight": 1,
+     "name": "[barve]的战利品",
+     "lore": [
+      "+------------------+",
+      "尸壳收藏的[武器]",
+      "看起来不错[？]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond_sword",
+     "weight": 1,
+     "name": "[epic]钻石剑！",
+     "lore": [
+      "+------------------+",
+      "千锤百炼的[武器]",
+      "上等的[刀刃]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        8,
+        11
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.2,
+        -1.8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:stone_sword",
+     "weight": 1,
+     "name": "[uncommon]的破损石剑",
+     "lore": [
+      "+------------------+",
+      "破旧但锋利的[剑]",
+      "依旧[锐利]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        4,
+        8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:wooden_sword",
+     "weight": 1,
+     "name": "[uncommon]捡到的剑",
+     "lore": [
+      "+------------------+",
+      "已经磨损的[武器]",
+      "但足够[迅速]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.6,
+        -2.0
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:stone_sword",
+     "weight": 1,
+     "name": "[uncommon]的普通石剑",
+     "lore": [
+      "+------------------+",
+      "普通的[铁剑]",
+      "冒险者[必备]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_sword",
+     "weight": 1,
+     "name": "[brave]磨损的铁剑",
+     "lore": [
+      "+------------------+",
+      "僵尸的[遗物]",
+      "不错的[刀刃]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        6,
+        9
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.4,
+        -2.0
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:iron_sword",
+     "weight": 1,
+     "name": "[epic]锋利的铁剑",
+     "lore": [
+      "+------------------+",
+      "锋利的[铁剑]",
+      "他真的很锋利[！！！]",
+      "+------------------+"
+     ],
+     "attrs": [
+      {
+       "attr": "attack_damage",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        8,
+        11
+       ]
+      },
+      {
+       "attr": "attack_speed",
+       "op": "add_value",
+       "slot": "mainhand",
+       "range": [
+        -2.2,
+        -1.8
+       ]
+      }
+     ],
+     "ench": [
+      "任意附魔",
+      "任意附魔",
+      "任意附魔"
+     ],
+     "tags": {
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/trial": [
+  {
+   "rolls": [
+    2,
+    2
+   ],
+   "entries": [
+    {
+     "item": "minecraft:cooked_beef",
+     "weight": 15,
+     "name": "[food]压缩肉干",
+     "lore": [
+      "+------------------+",
+      "战场上的[硬通货]",
+      "美味的[佳肴]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      1,
+      4
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 20,
+     "name": "[currency]货币",
+     "lore": [
+      "+------------------+",
+      "广泛流通的[货币]",
+      "上等阶级的[入场券]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      5,
+      10
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:arrow",
+     "weight": 10,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      5,
+      15
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "trial_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "trial_tag": 2
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:trial_key",
+     "weight": 3,
+     "name": "[legend]试炼之匙",
+     "lore": [
+      "+------------------+",
+      "开辟神启的[钥匙]",
+      "唤出传奇的[宝具]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:totem_of_undying",
+     "weight": 5,
+     "name": "[legend]不死图腾",
+     "lore": [
+      "+------------------+",
+      "世界顶点的[宝具]",
+      "可以实现一切...甚至[复活]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "→ rpg:trial/bow",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/sword",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/chestplate",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/helmet",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/boots",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/leggings",
+     "weight": 11,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/trial_ominous": [
+  {
+   "rolls": [
+    3,
+    3
+   ],
+   "entries": [
+    {
+     "item": "minecraft:cooked_beef",
+     "weight": 15,
+     "name": "[food]压缩肉干",
+     "lore": [
+      "+------------------+",
+      "战场上的[硬通货]",
+      "美味的[佳肴]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      1,
+      4
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 30,
+     "name": "[currency]货币",
+     "lore": [
+      "+------------------+",
+      "广泛流通的[货币]",
+      "上等阶级的[入场券]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      5,
+      10
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:arrow",
+     "weight": 10,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      5,
+      15
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "trial_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:ominous_trial_key",
+     "weight": 1,
+     "name": "[legend]灾厄试炼之匙",
+     "lore": [
+      "+------------------+",
+      "开辟神启的[钥匙]",
+      "唤出传奇的[宝具]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "trial_tag": 2
+     },
+     "damage": null,
+     "count": null,
+     "components": {}
+    },
+    {
+     "item": "minecraft:totem_of_undying",
+     "weight": 2,
+     "name": "[legend]不死图腾",
+     "lore": [
+      "+------------------+",
+      "世界顶点的[宝具]",
+      "可以实现一切...甚至[复活]",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      1,
+      1
+     ],
+     "components": {}
+    },
+    {
+     "item": "→ rpg:trial/bow",
+     "weight": 2,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/sword",
+     "weight": 2,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/chestplate",
+     "weight": 2,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/helmet",
+     "weight": 2,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/boots",
+     "weight": 2,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/leggings",
+     "weight": 2,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/valuable": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:gold_ingot",
+     "weight": 5,
+     "name": "[🧪]黄金",
+     "lore": [
+      "+------------------+",
+      "上等的[金属]",
+      " 可用于强化装备",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "gold_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      3
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond",
+     "weight": 5,
+     "name": "[🧪]钻石",
+     "lore": [
+      "+------------------+",
+      "珍贵的[玉石]",
+      " 可用于洗练装备",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "diamond_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      3
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:trial/valuable_ominous": [
+  {
+   "rolls": [
+    2,
+    2
+   ],
+   "entries": [
+    {
+     "item": "minecraft:gold_ingot",
+     "weight": 5,
+     "name": "[🧪]黄金",
+     "lore": [
+      "+------------------+",
+      "上等的[金属]",
+      " 可用于强化装备",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "gold_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      3
+     ],
+     "components": {}
+    },
+    {
+     "item": "minecraft:diamond",
+     "weight": 5,
+     "name": "[🧪]钻石",
+     "lore": [
+      "+------------------+",
+      "珍贵的[玉石]",
+      " 可用于洗练装备",
+      "+------------------+"
+     ],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "diamond_tag": 1
+     },
+     "damage": null,
+     "count": [
+      1,
+      3
+     ],
+     "components": {}
+    }
+   ],
+   "conditions": 0
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:item/netherite_sword"
+  },
+  "overrides":[
+    {
+      "predicate":{
+        "custom_model_data":1110001
+      },
+      "model":"rpg:item/chainsaw_sword"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110002
+      },
+      "model":"rpg:item/king_sword"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110003
+      },
+      "model":"rpg:item/warrior_sword"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110004
+      },
+      "model":"rpg:item/long_stick"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110005
+      },
+      "model":"rpg:item/sakura_sword"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110006
+      },
+      "model":"rpg:item/venom_glaive"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110007
+      },
+      "model":"rpg:item/katana"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110008
+      },
+      "model":"rpg:item/eternal_knife"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110009
+      },
+      "model":"rpg:item/cutlass"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110010
+      },
+      "model":"rpg:item/frost_slayer"
+    }
+  ]
+}
+

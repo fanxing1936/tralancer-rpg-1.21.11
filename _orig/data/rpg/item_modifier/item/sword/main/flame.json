@@ -1,0 +1,24 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:food": {
+        "nutrition": 0,
+        "saturation": 0,
+        "can_always_eat": true,
+        "eat_seconds": 3000000
+      }
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      ["",{"text":"+------------------+","italic":false,"color":"white"}],
+      ["",{"text":"🔱镶嵌技能","color":"white","italic":false},{"text":"[烈焰]","italic":false,"color":"red","bold":true}],
+      ["",{"text":"右键/长按消耗一级经验释放火焰弹","color":"white","italic":false}]
+    ],
+    "mode":"replace_section",
+    "offset":0,
+    "size":3
+  }
+]

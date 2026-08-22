@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:blade_pottery_sherd",
+      "count": 1
+    },
+    "title": [
+      {
+        "text": "第六章",
+        "color": "gold",
+        "bold": true,
+        "extra": [
+          {
+            "text": "——百年战争",
+            "color": "aqua",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "description": [
+      {
+        "text": "撒旦从地狱里爬了出来，这场持续百年的战争，是时候画上真正的休止符了",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rpg:events/five",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item"
+    }
+  }
+}

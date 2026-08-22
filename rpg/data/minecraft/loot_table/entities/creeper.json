@@ -1,0 +1,92 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gunpowder",
+          "functions": [
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "苦力怕的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[核心]",
+                    "italic": false,
+                    "color": "dark_gray",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "他们为此而",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[活]",
+                    "italic": false,
+                    "color": "dark_gray",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[item]",
+                  "italic": false,
+                  "color": "dark_gray",
+                  "bold": true
+                },
+                {
+                  "text": "火药",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

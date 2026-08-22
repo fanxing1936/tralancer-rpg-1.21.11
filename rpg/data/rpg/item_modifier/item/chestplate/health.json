@@ -1,0 +1,44 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      [
+        "",
+        {
+          "text": "⭐被动技能",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "[不屈]",
+          "italic": false,
+          "color": "gold",
+          "bold": true
+        }
+      ],
+      [
+        "",
+        {
+          "text": "血量低于3时获得力量三",
+          "color": "white",
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "+------------------+",
+          "italic": false,
+          "color": "white"
+        }
+      ]
+    ],
+    "mode": "append"
+  },
+  {
+    "function": "set_custom_data",
+    "tag": {
+      "health_tag": 1
+    }
+  }
+]

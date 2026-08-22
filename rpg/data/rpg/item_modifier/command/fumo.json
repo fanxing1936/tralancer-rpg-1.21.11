@@ -1,0 +1,27 @@
+[
+  {
+    "function": "enchant_randomly"
+  },
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      [
+        "",
+        {
+          "text": "🧪镀金",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "[已镀金]",
+          "italic": false,
+          "color": "gold",
+          "bold": true
+        }
+      ]
+    ],
+    "mode": "replace_section",
+    "offset": 5,
+    "size": 1
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      [
+        "",
+        {
+          "text": "+------------------+",
+          "color": "white",
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "⚗装备等级",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "weapon_level_",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ],
+      [
+        "",
+        {
+          "text": "⚗装备经验",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "weapon_exp",
+            "name": "@s",
+            "italic": false
+          }
+        },
+        {
+          "text": "/",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "weapon_exp_max",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ]
+    ],
+    "mode": "replace_section",
+    "offset": 9,
+    "entity": "this",
+    "size": 3
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/totem_of_undying"
+  },
+  "overrides":[
+    {
+      "predicate":{
+        "custom_model_data":1110001
+      },
+      "model":"rpg:item/rooted_poppy"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110002
+      },
+      "model":"rpg:item/s"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110003
+      },
+      "model":"rpg:item/a"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110004
+      },
+      "model":"rpg:item/b"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110005
+      },
+      "model":"rpg:item/c"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110006
+      },
+      "model":"rpg:item/d"
+    }
+  ]
+}

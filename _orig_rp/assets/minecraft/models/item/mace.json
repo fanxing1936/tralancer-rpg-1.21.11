@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:item/handheld_mace",
+  "textures": {
+    "layer0": "minecraft:item/mace"
+  },
+  "overrides":[
+    {
+      "predicate":{
+        "custom_model_data":1110001
+      },
+      "model":"rpg:item/venom_glaive"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110002
+      },
+      "model":"rpg:item/jailors_scythe"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110003
+      },
+      "model":"rpg:item/king_sword"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110004
+      },
+      "model":"rpg:item/long_stick"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110005
+      },
+      "model":"rpg:item/whispering_spear"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110006
+      },
+      "model":"rpg:item/frost_scythe"
+    }
+  ]
+}

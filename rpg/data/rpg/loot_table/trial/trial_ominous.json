@@ -1,0 +1,409 @@
+{
+  "pools": [
+    {
+      "rolls": 3,
+      "bonus_rolls": 0.5,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cooked_beef",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[food]",
+                  "italic": false,
+                  "color": "#663333",
+                  "bold": true
+                },
+                {
+                  "text": "压缩肉干",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 1,
+                "max": 4
+              }
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "战场上的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[硬通货]",
+                    "italic": false,
+                    "color": "#663333",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "美味的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[佳肴]",
+                    "italic": false,
+                    "color": "#663333",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_gold",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[currency]",
+                  "italic": false,
+                  "color": "gold",
+                  "bold": true
+                },
+                {
+                  "text": "货币",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 5,
+                "max": 10
+              }
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "广泛流通的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[货币]",
+                    "italic": false,
+                    "color": "gold",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "上等阶级的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[入场券]",
+                    "italic": false,
+                    "color": "gold",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 5,
+                "max": 15
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_gold",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "trial_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ominous_trial_key",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[legend]",
+                  "italic": false,
+                  "color": "gold",
+                  "bold": true
+                },
+                {
+                  "text": "灾厄试炼之匙",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "开辟神启的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[钥匙]",
+                    "italic": false,
+                    "color": "gold",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "唤出传奇的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[宝具]",
+                    "italic": false,
+                    "color": "gold",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_gold",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "trial_tag": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:totem_of_undying",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[legend]",
+                  "italic": false,
+                  "color": "gold",
+                  "bold": true
+                },
+                {
+                  "text": "不死图腾",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 1,
+                "max": 1
+              }
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "世界顶点的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[宝具]",
+                    "italic": false,
+                    "color": "gold",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "可以实现一切...甚至",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[复活]",
+                    "italic": false,
+                    "color": "gold",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "value": "rpg:trial/bow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "value": "rpg:trial/sword"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "value": "rpg:trial/chestplate"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "value": "rpg:trial/helmet"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "value": "rpg:trial/boots"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "value": "rpg:trial/leggings"
+        }
+      ]
+    }
+  ]
+}

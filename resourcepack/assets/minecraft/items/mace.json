@@ -1,0 +1,48 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/mace"
+    },
+    "entries": [
+      {
+        "threshold": 1110001,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/venom_glaive"
+        }
+      },
+      {
+        "threshold": 1110002,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/jailors_scythe"
+        }
+      },
+      {
+        "threshold": 1110004,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/long_stick"
+        }
+      },
+      {
+        "threshold": 1110005,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/whispering_spear"
+        }
+      },
+      {
+        "threshold": 1110006,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/frost_scythe"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        ["",{"text":"+------装备属性------+","italic":false,"color":"white"}],
+        ["",{"text":"🔱镶嵌技能","color":"white","italic":false},{"text":"[无]","italic":false,"color":"gray","bold":true}],
+        ["",{"text":"技能空","color":"white","italic":false}],
+        ["",{"text":"+------------------+","italic":false,"color":"white"}],
+        ["",{"text":"🧪洗练","color":"white","italic":false}],
+        ["",{"text":"🧪镀金","color":"white","italic":false},{"text":"[未镀金]","italic":false,"color":"gray","bold":false}],
+        ["",{"text":"+------------------+","color":"white","italic":false}],
+        ["",{"text":"⚗盔甲韧性","color":"white","italic":false},{"text":"：","color":"white","italic":false},{"color":"white","italic":false,"score":{"objective":"player_armor_toughness_","name":"@s","italic":false}},{"text":".","color":"white","italic":false},{"color":"white","italic":false,"score":{"objective":"player_armor_toughness","name":"@s","italic":false}}],
+        ["",{"text":"⚗护甲值","color":"white","italic":false},{"text":"：","color":"white","italic":false},{"color":"white","italic":false,"score":{"objective":"player_armor_","name":"@s","italic":false}},{"text":".","color":"white","italic":false},{"color":"white","italic":false,"score":{"objective":"player_armor","name":"@s","italic":false}}],
+        ["",{"text":"+------------------+","color":"white","italic":false}],
+        ["",{"text":"⚗装备等级","color":"white","italic":false},{"text":"：","color":"white","italic":false},{"nbt":"Item.components.minecraft:custom_data.level","entity":"@s","interpret":true}],
+        ["",{"text":"⚗装备经验","color":"white","italic":false},{"text":"：","color":"white","italic":false},{"nbt":"Item.components.minecraft:custom_data.exp","entity":"@s","interpret":true},{"text":"/","color":"white","italic":false},{"nbt":"Item.components.minecraft:custom_data.exp_max","entity":"@s","interpret":true}]
+ 
+
+      ],
+      "mode":"insert",
+      "offset":0,
+      "entity":"this"
+    },
+    {
+      "function":"set_custom_data",
+      "tag":{"weapon_tag":1,"level":1,"exp_max":30,"exp":0}
+    }
+  ]
+  

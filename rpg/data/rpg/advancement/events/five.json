@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:flow_pottery_sherd",
+      "count": 1
+    },
+    "title": [
+      {
+        "text": "第五章",
+        "color": "gold",
+        "bold": true,
+        "extra": [
+          {
+            "text": "——莫比乌斯之环",
+            "color": "aqua",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "description": [
+      {
+        "text": "命运早已既定，千年前人类选择走出伊甸，千年后人类也将会为他的先祖偿还罪孽",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rpg:events/four",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item"
+    }
+  }
+}

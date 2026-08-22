@@ -1,0 +1,995 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_helmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "坚固的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[头盔]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "旅人的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[遗品]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[barve]",
+                  "italic": false,
+                  "color": "dark_aqua",
+                  "bold": true
+                },
+                {
+                  "selector": "@s",
+                  "italic": false
+                },
+                {
+                  "text": "的遗物",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "chestplate_tag": 1
+              }
+            },
+            {
+              "function": "set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "armor_toughness",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 1,
+                    "max": 3
+                  }
+                }
+              ],
+              "replace": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_helmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "金色的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[护具]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "金闪闪得",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[好帅]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[barve]",
+                  "italic": false,
+                  "color": "dark_aqua",
+                  "bold": true
+                },
+                {
+                  "selector": "@s",
+                  "italic": false
+                },
+                {
+                  "text": "的金盔",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "knockback_resistance",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 0,
+                    "max": 0.07
+                  }
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "chestplate_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_helmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "勇者收藏的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[头盔]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "看起来不错",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[？]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[barve]",
+                  "italic": false,
+                  "color": "dark_aqua",
+                  "bold": true
+                },
+                {
+                  "selector": "@p",
+                  "italic": false
+                },
+                {
+                  "text": "的战利品",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "chestplate_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_helmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 1,
+                "max": 1
+              }
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "珍贵材料打造的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[装备]",
+                    "italic": false,
+                    "color": "dark_purple",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "装备里的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[耐用王]",
+                    "italic": false,
+                    "color": "dark_purple",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[epic]",
+                  "italic": false,
+                  "color": "dark_purple",
+                  "bold": true
+                },
+                {
+                  "text": "钻石头盔",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "armor_toughness",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 2,
+                    "max": 4
+                  }
+                },
+                {
+                  "attribute": "knockback_resistance",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 0.05,
+                    "max": 0.1
+                  }
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "chestplate_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_helmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "破旧的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[铁盔]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "好像还很",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[坚固]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[uncommon]",
+                  "italic": false,
+                  "color": "green",
+                  "bold": true
+                },
+                {
+                  "selector": "@p",
+                  "italic": false
+                },
+                {
+                  "text": "的坚硬铁盔",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "chestplate_tag": 1
+              }
+            },
+            {
+              "function": "set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "armor_toughness",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 1,
+                    "max": 3
+                  }
+                }
+              ],
+              "replace": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_helmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "已经磨损的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[装备]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "但效果还",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[不错？]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[uncommon]",
+                  "italic": false,
+                  "color": "green",
+                  "bold": true
+                },
+                {
+                  "selector": "@p",
+                  "italic": false
+                },
+                {
+                  "text": "的破旧皮革头盔",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "knockback_resistance",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 0,
+                    "max": 0.05
+                  }
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "chestplate_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_helmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "普通的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[装备]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "怪物的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[藏品]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[uncommon]",
+                  "italic": false,
+                  "color": "green",
+                  "bold": true
+                },
+                {
+                  "selector": "@s",
+                  "italic": false
+                },
+                {
+                  "text": "的藏品",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "chestplate_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_helmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 1,
+                "max": 1
+              }
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "怪物的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[遗物]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "不错的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[头盔]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[brave]",
+                  "italic": false,
+                  "color": "dark_aqua",
+                  "bold": true
+                },
+                {
+                  "text": "破损盔",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "armor_toughness",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 2,
+                    "max": 3
+                  }
+                },
+                {
+                  "attribute": "knockback_resistance",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 0,
+                    "max": 0.07
+                  }
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "chestplate_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_helmet",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 1,
+                "max": 1
+              }
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "好硬的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[铁盔]",
+                    "italic": false,
+                    "color": "dark_purple",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "太坚固了",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[！！！]",
+                    "italic": false,
+                    "color": "dark_purple",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[epic]",
+                  "italic": false,
+                  "color": "dark_purple",
+                  "bold": true
+                },
+                {
+                  "text": "硬盔",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "armor_toughness",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 2,
+                    "max": 4
+                  }
+                },
+                {
+                  "attribute": "knockback_resistance",
+                  "id": "armor.helmet",
+                  "operation": "add_value",
+                  "slot": "head",
+                  "amount": {
+                    "type": "uniform",
+                    "min": 0.05,
+                    "max": 0.1
+                  }
+                }
+              ],
+              "replace": false
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "chestplate_tag": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

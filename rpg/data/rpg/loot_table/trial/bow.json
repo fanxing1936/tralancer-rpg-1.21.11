@@ -1,0 +1,372 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "普通的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[弓]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "或许是不错的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[武器]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[uncommon]",
+                  "italic": false,
+                  "color": "green",
+                  "bold": true
+                },
+                {
+                  "selector": "@p",
+                  "italic": false
+                },
+                {
+                  "text": "的弓",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "bow_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crossbow",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "普通的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[弩]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "或许是不错的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[武器]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[uncommon]",
+                  "italic": false,
+                  "color": "green",
+                  "bold": true
+                },
+                {
+                  "selector": "@p",
+                  "italic": false
+                },
+                {
+                  "text": "的弩",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "bow_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "普通的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[弓]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "或许是不错的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[武器]",
+                    "italic": false,
+                    "color": "green",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[uncommon]",
+                  "italic": false,
+                  "color": "green",
+                  "bold": true
+                },
+                {
+                  "selector": "@p",
+                  "italic": false
+                },
+                {
+                  "text": "的弓",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "bow_tag": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 1,
+                "max": 1
+              }
+            },
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "千锤百炼的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[武器]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "百发百中的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[弓箭]",
+                    "italic": false,
+                    "color": "dark_aqua",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[brave]",
+                  "italic": false,
+                  "color": "dark_aqua",
+                  "bold": true
+                },
+                {
+                  "text": "精制长弓",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "enchant_randomly"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "bow_tag": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

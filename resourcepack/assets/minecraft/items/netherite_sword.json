@@ -1,0 +1,104 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/netherite_sword"
+    },
+    "entries": [
+      {
+        "threshold": 1110001,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/chainsaw_sword"
+        }
+      },
+      {
+        "threshold": 1110002,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/king_sword"
+        }
+      },
+      {
+        "threshold": 1110003,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/warrior_sword"
+        }
+      },
+      {
+        "threshold": 1110004,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/long_stick"
+        }
+      },
+      {
+        "threshold": 1110005,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/sakura_sword"
+        }
+      },
+      {
+        "threshold": 1110006,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/venom_glaive"
+        }
+      },
+      {
+        "threshold": 1110007,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/katana"
+        }
+      },
+      {
+        "threshold": 1110008,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/eternal_knife"
+        }
+      },
+      {
+        "threshold": 1110009,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/cutlass"
+        }
+      },
+      {
+        "threshold": 1110010,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/frost_slayer"
+        }
+      },
+      {
+        "threshold": 1110011,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/truthseeker"
+        }
+      },
+      {
+        "threshold": 1110012,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/jachin"
+        }
+      },
+      {
+        "threshold": 1110013,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/boaz"
+        }
+      }
+    ]
+  }
+}

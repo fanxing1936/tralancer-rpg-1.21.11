@@ -1,0 +1,2 @@
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{skull_tag:1b}}}}] at @s if entity @s[nbt=!{SelectedItem:{components:{"minecraft:custom_data":{player_tag:1b}}}}] run item modify entity @s weapon.mainhand rpg:command/player
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{player_tag:1b}}}}] at @s run item modify entity @s weapon.mainhand rpg:command/player_value

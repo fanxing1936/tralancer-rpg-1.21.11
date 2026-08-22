@@ -1,0 +1,39 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:friend_pottery_sherd",
+        "count": 1
+      },
+      "title": [
+        {
+          "text": "最终章",
+          "color": "gold",
+          "bold": true,
+          "extra": [
+            {
+              "text": "——世界，我们",
+              "color": "aqua",
+              "bold": false
+            }
+          ]
+        }
+      ],
+      "description": [
+        {
+          "text": "一路上的颠沛流离，都会在一切的重点迎来祂盛大的结局。葬于玫瑰丛的少年，王座之上，再无半点天真",
+          "color": "white"
+        }
+      ],
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "rpg:events/nine",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item"
+      }
+    }
+  }
+  

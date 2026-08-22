@@ -1,0 +1,44 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      [
+        "",
+        {
+          "text": "⭐被动技能",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "[黑炎]",
+          "italic": false,
+          "color": "dark_purple",
+          "bold": true
+        }
+      ],
+      [
+        "",
+        {
+          "text": "弓箭附带黑炎",
+          "color": "white",
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "+------------------+",
+          "italic": false,
+          "color": "white"
+        }
+      ]
+    ],
+    "mode": "append"
+  },
+  {
+    "function": "set_custom_data",
+    "tag": {
+      "dark_tag": 1
+    }
+  }
+]

@@ -1,0 +1,9 @@
+forceload add ~ ~
+summon zombie ~2 ~ ~ {Tags:["vtest"],Health:40,attributes:[{id:"max_health",base:40f}]}
+function rpg:command/damage_scan
+damage @e[tag=vtest,limit=1] 7 minecraft:magic
+function rpg:command/damage_scan
+scoreboard players get @e[tag=vtest,limit=1] damage_action
+scoreboard players get @e[tag=vtest,limit=1] damage_timing
+kill @e[tag=vtest]
+forceload remove all

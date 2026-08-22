@@ -1,0 +1,44 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      [
+        "",
+        {
+          "text": "⭐被动技能",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "[泣血]",
+          "italic": false,
+          "color": "dark_red",
+          "bold": true
+        }
+      ],
+      [
+        "",
+        {
+          "text": "攻击时有1/5的概率吸取4滴血量",
+          "color": "white",
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "+------------------+",
+          "italic": false,
+          "color": "white"
+        }
+      ]
+    ],
+    "mode": "append"
+  },
+  {
+    "function": "set_custom_data",
+    "tag": {
+      "damage_tag": 1
+    }
+  }
+]

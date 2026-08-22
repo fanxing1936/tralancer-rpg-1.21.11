@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:skull_pottery_sherd",
+      "count": 1
+    },
+    "title": [
+      {
+        "text": "序章",
+        "color": "gold",
+        "bold": true,
+        "extra": [
+          {
+            "text": "——启示录",
+            "color": "aqua",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "description": [
+      {
+        "text": "那一千年完了，撒旦必被从监牢里释放，出来要迷惑四方的列国，那是歌革和玛各，他们聚集起来，他们的人数多如海沙",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rpg:events/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:rotten_flesh",
+          "functions": [
+            {
+              "function": "set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "僵尸的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[遗物]",
+                    "italic": false,
+                    "color": "dark_gray",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "作为他们存在过的",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "[证据]",
+                    "italic": false,
+                    "color": "dark_gray",
+                    "bold": true
+                  }
+                ],
+                [
+                  "",
+                  {
+                    "text": "+------------------+",
+                    "italic": false,
+                    "color": "white"
+                  }
+                ]
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "set_name",
+              "entity": "this",
+              "name": [
+                "",
+                {
+                  "text": "[item]",
+                  "italic": false,
+                  "color": "dark_gray",
+                  "bold": true
+                },
+                {
+                  "text": "腐肉",
+                  "italic": false
+                }
+              ],
+              "target": "custom_name"
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "type": "uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

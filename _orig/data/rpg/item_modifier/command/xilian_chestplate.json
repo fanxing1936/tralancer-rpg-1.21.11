@@ -1,0 +1,42 @@
+[
+    {
+        "function":"set_attributes",
+        "modifiers":[
+            {
+                "attribute":"generic.armor_toughness",
+                "id":"add_chestplate",
+                "operation":"add_value",
+                "slot":"armor",
+                "amount":{
+                    "type":"uniform",
+                    "min":-1,
+                    "max":2
+                }
+            },
+            {
+                "attribute":"generic.armor",
+                "id":"add_chestplate",
+                "operation":"add_value",
+                "slot":"armor",
+                "amount":{
+                    "type":"uniform",
+                    "min":-1,
+                    "max":3
+                }
+            }
+        ],
+        "replace":false
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            [{"nbt":"Item.components.minecraft:lore[4]","entity":"@s","interpret":true},{"text":"🌊","color":"aqua","italic":false,"bold":false}]
+        ],
+        "mode":"replace_section",
+        "entity":"this",
+
+        "offset":4,
+        "size":1
+    }
+
+]

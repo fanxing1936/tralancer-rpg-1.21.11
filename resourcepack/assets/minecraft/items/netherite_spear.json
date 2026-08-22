@@ -1,0 +1,81 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "fallback": {
+      "type": "minecraft:select",
+      "cases": [
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_spear"
+          },
+          "when": [
+            "gui",
+            "ground",
+            "fixed",
+            "on_shelf"
+          ]
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "minecraft:item/netherite_spear_in_hand"
+      },
+      "property": "minecraft:display_context"
+    },
+    "entries": [
+      {
+        "threshold": 1110003,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "gui",
+                "ground",
+                "fixed",
+                "on_shelf"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "rpg:item/king_sword"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "rpg:item/king_sword_in_hand"
+          }
+        }
+      },
+      {
+        "threshold": 1110014,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "gui",
+                "ground",
+                "fixed",
+                "on_shelf"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "rpg:item/lucifer"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "rpg:item/lucifer_in_hand"
+          }
+        }
+      }
+    ]
+  },
+  "swap_animation_scale": 1.95
+}

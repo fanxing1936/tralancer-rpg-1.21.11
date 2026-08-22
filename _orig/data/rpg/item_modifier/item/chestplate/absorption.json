@@ -1,0 +1,17 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        ["",{"text":"⭐被动技能","color":"white","italic":false},{"text":"[守护]","italic":false,"color":"yellow","bold":true}],
+        ["",{"text":"被攻击时有1/5的概率获得4点护盾","color":"white","italic":false}],
+        ["",{"text":"+------------------+","italic":false,"color":"white"}]
+
+      ],
+      "mode":"append"
+    },
+    {
+      "function":"set_custom_data",
+      "tag":{"absorption_tag":1}
+    }
+  ]
+  

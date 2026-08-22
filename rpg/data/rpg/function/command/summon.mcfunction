@@ -1,0 +1,2 @@
+summon minecraft:evoker ~ ~ ~ {SpellTicks:0,Health:1000,Silent:1b,Tags:["devil","boss"],active_effects:[{id:speed,duration:-1,amplifier:1,show_particles:0b}],attributes:[{id:"max_health",base:1000f},{id:"armor",base:15f},{id:"scale",base:1.2f},{id:"knockback_resistance",base:0.5f}]}
+summon vindicator ~ ~ ~ {Johnny:1,Health:100,Silent:1b,Tags:["devil"],active_effects:[{id:speed,duration:-1,amplifier:1,show_particles:0b}],attributes:[{id:attack_knockback,base:2f},{id:"max_health",base:100f}]}

@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:item/netherite_axe"
+  },
+  "overrides":[
+    {
+      "predicate":{
+        "custom_model_data":1110001
+      },
+      "model":"rpg:item/chill_gale_knife"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110002
+      },
+      "model":"rpg:item/resolute_tempest_knife"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110003
+      },
+      "model":"rpg:item/nightmares_bite"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110004
+      },
+      "model":"rpg:item/feather"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110005
+      },
+      "model":"rpg:item/sponge_striker"
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110006
+      },
+      "model":"rpg:item/coral_blade"
+    }
+  ]
+}

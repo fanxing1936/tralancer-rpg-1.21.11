@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:shelter_pottery_sherd",
+      "count": 1
+    },
+    "title": [
+      {
+        "text": "第二章",
+        "color": "gold",
+        "bold": true,
+        "extra": [
+          {
+            "text": "——生命之树",
+            "color": "aqua",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "description": [
+      {
+        "text": "当旧日的子民走过十个原质，二十二个神之途径，必将坐在终末的王座上，以纯净的雷光涤荡大地，祓除不臣",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rpg:events/one",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item"
+    }
+  }
+}

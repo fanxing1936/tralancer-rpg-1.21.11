@@ -1,0 +1,39 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:plenty_pottery_sherd",
+        "count": 1
+      },
+      "title": [
+        {
+          "text": "第九章",
+          "color": "gold",
+          "bold": true,
+          "extra": [
+            {
+              "text": "——登临神座",
+              "color": "aqua",
+              "bold": false
+            }
+          ]
+        }
+      ],
+      "description": [
+        {
+          "text": "最后的弥赛亚啊，您已经走完了卡巴拉生命之树，伊甸中心的荆棘王座即将见证他新的主人。现在，与亚当开启神战吧，神注定只有一个",
+          "color": "white"
+        }
+      ],
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "rpg:events/eight",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item"
+      }
+    }
+  }
+  

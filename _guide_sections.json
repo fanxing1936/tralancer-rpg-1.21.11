@@ -1,0 +1,3966 @@
+{
+ "weapons": [
+  {
+   "item": "bow",
+   "name": "利维坦之歌",
+   "rarity": "传说",
+   "name_colour": "aqua",
+   "lore": [
+    "+------------------+",
+    "[第六天]",
+    "有擎天的巨兽从[高天]傍落",
+    "+------------------+",
+    "🏹被动技能[潮涌]",
+    "消耗3级经验射出潮涌之箭",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "infinity": 1,
+    "piercing": 3,
+    "power": 5,
+    "punch": 2
+   },
+   "modifiers": [
+    {
+     "attr": "oxygen_bonus",
+     "amount": 4,
+     "op": "add_value",
+     "slot": "any"
+    }
+   ],
+   "tags": [
+    "bow_tag",
+    "bubble_tag"
+   ],
+   "custom_data": {
+    "bubble_tag": 1,
+    "bow_tag": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "diamond_sword",
+   "name": "无垠星空",
+   "rarity": "传说",
+   "name_colour": "green",
+   "lore": [
+    "+------------------+",
+    "人类第一次对星空的[探索]",
+    "源于仰望[星空]",
+    "+------------------+",
+    "🪓被动技能[梵星]",
+    "攻击时有3/5的概率附带[星之剑]",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "knockback": 2,
+    "sharpness": 5,
+    "sweeping_edge": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 10,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.2,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "safe_fall_distance",
+     "amount": 10,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "gravity",
+     "amount": -0.04,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "saber_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "saber_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "damage_resistant",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_sword",
+   "name": "漆黑之日",
+   "rarity": "史诗",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "蕴含[黑暗]的古刀",
+    "将斩断无尽的[夜空]",
+    "+------------------+",
+    "🗡主动技能[漆黑之刃]",
+    "对5米内的所有生物释放斩击",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "looting": 3,
+    "smite": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 8,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.4,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 0,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "night_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "night_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110003.0,
+   "unbreakable": false,
+   "consumable": 100010,
+   "components": [
+    "attribute_modifiers",
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_sword",
+   "name": "切割链锯",
+   "rarity": "史诗",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "斩断[一切]...",
+    "这才是人类科技的[结晶]",
+    "+------------------+",
+    "🪓被动技能[血痂]",
+    "攻击时附带连续切割效果",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "fire_aspect": 1,
+    "sweeping_edge": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 10,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 0,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "chainsaw_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "chainsaw_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_sword",
+   "name": "樱怒之日",
+   "rarity": "l·legend",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "How many roads must a man walk down,",
+    "before you call him a man.",
+    "+------------------+",
+    "🪓被动技能[落樱]",
+    "消耗1/4生命获得短时间全方位增幅",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "bane_of_arthropods": 2,
+    "knockback": 2,
+    "sharpness": 4,
+    "sweeping_edge": 4,
+    "smite": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 12,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -1.8,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "max_health",
+     "amount": -0.25,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 0,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "sakura_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "sakura_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110005.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "crossbow",
+   "name": "薪炎之傲",
+   "rarity": "传说",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "从地狱烧至[高天]的火焰",
+    "将[燃尽]整个世界",
+    "+------------------+",
+    "🏹被动技能[不熄]",
+    "在箭矢命中后召唤火矢",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "flame": 3,
+    "piercing": 4,
+    "power": 5
+   },
+   "modifiers": [
+    {
+     "attr": "burning_time",
+     "amount": -5,
+     "op": "add_value",
+     "slot": "any"
+    }
+   ],
+   "tags": [
+    "bow_tag",
+    "burn_tag"
+   ],
+   "custom_data": {
+    "burn_tag": 1,
+    "bow_tag": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "mace",
+   "name": "风之回响",
+   "rarity": "传说",
+   "name_colour": "green",
+   "lore": [
+    "+------------------+",
+    "It is better to chase after the wind",
+    "than to wait for it to come.",
+    "+------------------+",
+    "🗡主动技能[狂风]",
+    "向前方释放三道龙卷风",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "breach": 3,
+    "density": 4,
+    "wind_burst": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 12,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3.4,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "safe_fall_distance",
+     "amount": 0.75,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "jump_strength",
+     "amount": 0.75,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": -0.25,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "sword_tag",
+    "typhoon_tag"
+   ],
+   "custom_data": {
+    "typhoon_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": 100020,
+   "components": [
+    "attribute_modifiers",
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "food",
+    "lore",
+    "rarity"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_axe",
+   "name": "高山之啸",
+   "rarity": "传说",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "山川[融化]...",
+    "大地露出了他的[屋脊]",
+    "+------------------+",
+    "🪓被动技能[怒嚎]",
+    "攻击百分比伤害",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "knockback": 3,
+    "sharpness": 3,
+    "smite": 2
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 4,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -0.675,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "montain_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "montain_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_axe",
+   "name": "大地之脊",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "冰雪[消融]...",
+    "大地的呼啸将涤荡[世界]",
+    "+------------------+",
+    "🪓被动技能[消融]",
+    "副手手持时增加攻击伤害",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "knockback": 1,
+    "sharpness": 2
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 9,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_damage",
+     "amount": 4,
+     "op": "add_value",
+     "slot": "offhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "offhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "offhand"
+    }
+   ],
+   "tags": [
+    "montain_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "montain_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "mace",
+   "name": "如意金箍棒",
+   "rarity": "l·legend",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "今日欢呼孙大圣",
+    "只缘妖雾又重来",
+    "+------------------+",
+    "🗡主动技能[神通]",
+    "右键武器可召唤筋斗云",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "knockback": 3,
+    "breach": 3,
+    "density": 3,
+    "wind_burst": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 12,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3.4,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "jump_strength",
+     "amount": 2,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "safe_fall_distance",
+     "amount": 2,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "sword_tag",
+    "wukong_tag"
+   ],
+   "custom_data": {
+    "wukong_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110004.0,
+   "unbreakable": false,
+   "consumable": 240820,
+   "components": [
+    "attribute_modifiers",
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_axe",
+   "name": "剧毒之牙",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "雕刻自丛林巨蟒的牙齿",
+    "蕴含剧毒的威势",
+    "+------------------+",
+    "🪓被动技能[淬毒]",
+    "攻击时持续流血",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "knockback": 2,
+    "looting": 2,
+    "smite": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 6,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3.0,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_damage",
+     "amount": 0.5,
+     "op": "add_multiplied_base",
+     "slot": "offhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": 0.5,
+     "op": "add_multiplied_base",
+     "slot": "offhand"
+    }
+   ],
+   "tags": [
+    "potion_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "potion_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110003.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_axe",
+   "name": "风骨",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "六十年激扬文字",
+    "三十年一语不发",
+    "+------------------+",
+    "🪓被动技能[着意]",
+    "拥有黑白两种攻击方式"
+   ],
+   "enchantments": {
+    "sweeping_edge": 3,
+    "thorns": 2
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 8,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.2,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "pen_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "sword_tag": 1,
+    "pen_tag": 1
+   },
+   "cmd": 1110004.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "mace",
+   "name": "亚巴顿",
+   "rarity": "恶魔",
+   "name_colour": "aqua",
+   "lore": [
+    "+------------------+",
+    "无底坑的使者 疫病之王 死之暗天使",
+    "地狱的魔神 恶魔亚巴顿",
+    "+------------------+",
+    "🪓被动技能[收割]",
+    "攻击时附带灵魂收割",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "sharpness": 2,
+    "smite": 5,
+    "thorns": 3,
+    "breach": 3,
+    "density": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 11,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3.2,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "jump_strength",
+     "amount": 1.25,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "safe_fall_distance",
+     "amount": 1.25,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": -0.25,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "devil_tag",
+    "soul_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "soul_tag": 1,
+    "sword_tag": 1,
+    "devil_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_sword",
+   "name": "别西卜",
+   "rarity": "恶魔",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "威严的贤者 地狱的宰相 ",
+    "七十二柱魔神之首 鬼王别西卜",
+    "+------------------+",
+    "🗡主动技能[余烬]",
+    "释放灰烬并追加刀罡",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "bane_of_arthropods": 3,
+    "knockback": 2,
+    "looting": 2,
+    "smite": 3,
+    "sweeping_edge": 5
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 10,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.2,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 0,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": 0.05,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "ashes_tag",
+    "devil_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "ashes_tag": 1,
+    "sword_tag": 1,
+    "devil_tag": 1
+   },
+   "cmd": 1110007.0,
+   "unbreakable": true,
+   "consumable": 100040,
+   "components": [
+    "attribute_modifiers",
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "food",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "crossbow",
+   "name": "萨麦尔",
+   "rarity": "恶魔",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "堕落的死亡天使",
+    "有毒的光辉使者，萨麦尔",
+    "+------------------+",
+    "🏹被动技能[毒药]",
+    "射出箭矢附带剧毒",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "infinity": 1,
+    "piercing": 4,
+    "power": 3,
+    "punch": 2,
+    "quick_charge": 3
+   },
+   "modifiers": [
+    {
+     "attr": "luck",
+     "amount": -0.5,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "bow_tag",
+    "devil_tag",
+    "hunter_tag"
+   ],
+   "custom_data": {
+    "bow_tag": 1,
+    "hunter_tag": 1,
+    "devil_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_sword",
+   "name": "贝利尔",
+   "rarity": "恶魔",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "卑劣的天之副君主，暗之军团的大统领",
+    "叛天的首谋首恶，堕天使贝利尔",
+    "+------------------+",
+    "🗡主动技能[朝拜]",
+    "让范围7格的所有生物停止活动",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "bane_of_arthropods": 4,
+    "knockback": 2,
+    "looting": 2,
+    "smite": 4,
+    "sweeping_edge": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 13,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -0.6,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "max_health",
+     "amount": -0.4,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "blil_tag",
+    "devil_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "blil_tag": 1,
+    "sword_tag": 1,
+    "devil_tag": 1
+   },
+   "cmd": 1110008.0,
+   "unbreakable": true,
+   "consumable": 100050,
+   "components": [
+    "attribute_modifiers",
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "food",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_spear",
+   "name": "朗基努斯之枪",
+   "rarity": "神圣",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "他们咆哮，他们厮杀",
+    "这是王与王的战争，唯有死亡才能终止",
+    "+------------------+",
+    "🗡主动技能[王座]",
+    "吸引被标记的敌人并追加斩杀",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "fire_aspect": 3,
+    "knockback": 2,
+    "thorns": 2,
+    "breach": 4,
+    "density": 4
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 12,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3.2,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": -0.2,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "power_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "power_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110003.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "iron_axe",
+   "name": "教条战斧",
+   "rarity": "勇者",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "教会炼制的武器",
+    "配发给每一位浮士德",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "looting": 1
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 9,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3.1,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "axe_tag",
+    "iron_axe",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "sword_tag": 1,
+    "axe_tag": 1,
+    "iron_axe": 0
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "crossbow",
+   "name": "蔚蓝追寻者",
+   "rarity": "传说",
+   "name_colour": "aqua",
+   "lore": [
+    "+------------------+",
+    "[深海]之下沉睡的弩",
+    "循着潮声[追寻]猎物",
+    "+------------------+",
+    "🏹被动技能[深潜]",
+    "命中后将目标拽入深渊并锚定",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "piercing": 4,
+    "power": 4,
+    "quick_charge": 3,
+    "unbreaking": 3
+   },
+   "modifiers": [
+    {
+     "attr": "oxygen_bonus",
+     "amount": 4,
+     "op": "add_value",
+     "slot": "any"
+    }
+   ],
+   "tags": [
+    "bow_tag",
+    "deep_seek_tag"
+   ],
+   "custom_data": {
+    "deep_seek_tag": 1,
+    "bow_tag": 1
+   },
+   "cmd": 1110003.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "crossbow",
+   "name": "稚弩",
+   "rarity": "史诗",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "孩童手中的[玩具]",
+    "却淬着大人的[恶意]",
+    "+------------------+",
+    "🏹被动技能[顽劣]",
+    "命中后令目标眩晕脱力并现形",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "quick_charge": 4,
+    "multishot": 1,
+    "piercing": 2
+   },
+   "modifiers": [
+    {
+     "attr": "movement_speed",
+     "amount": 0.05,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "bow_tag",
+    "mischief_tag"
+   ],
+   "custom_data": {
+    "mischief_tag": 1,
+    "bow_tag": 1
+   },
+   "cmd": 1110004.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "bow",
+   "name": "疾风迸发之弓",
+   "rarity": "传说",
+   "name_colour": "yellow",
+   "lore": [
+    "+------------------+",
+    "风自[裂隙]中迸发",
+    "每一箭都是一场[风暴]",
+    "+------------------+",
+    "🏹被动技能[裂空]",
+    "命中处炸开风隙掀飞三格内敌人",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "power": 5,
+    "punch": 2,
+    "infinity": 1,
+    "unbreaking": 3
+   },
+   "modifiers": [
+    {
+     "attr": "movement_speed",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "bow_tag",
+    "rift_tag"
+   ],
+   "custom_data": {
+    "rift_tag": 1,
+    "bow_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "fishing_rod",
+   "name": "藤蔓之鞭",
+   "rarity": "史诗",
+   "name_colour": "green",
+   "lore": [
+    "+------------------+",
+    "自丛林深处[垂落]",
+    "缠绕即是[死亡]",
+    "+------------------+",
+    "🗡主动技能[缠绕]",
+    "右键甩鞭消耗1级经验拽近敌人并连抽六鞭",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "unbreaking": 3,
+    "lure": 3,
+    "luck_of_the_sea": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 5,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -1.5,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 2,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "sword_tag",
+    "vine_tag"
+   ],
+   "custom_data": {
+    "vine_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "netherite_sword",
+   "name": "求真之刃",
+   "rarity": "史诗",
+   "name_colour": "red",
+   "lore": [
+    "+------------------+",
+    "刺穿谎言的[利刃]",
+    "唯有[真实]无法被斩断",
+    "+------------------+",
+    "🪓被动技能[洞悉]",
+    "命中使目标显形残血时追加真实伤害",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "sharpness": 4,
+    "looting": 2,
+    "sweeping_edge": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 9,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.4,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "sword_tag",
+    "truth_tag"
+   ],
+   "custom_data": {
+    "truth_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110011.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "netherite_sword",
+   "name": "雅斤",
+   "rarity": "传说",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "所罗门圣殿右侧的[石柱]",
+    "其名为[他必坚立]",
+    "+------------------+",
+    "🗡主动技能[称量]",
+    "消耗1级经验称量周围敌人，残血者显出亏欠",
+    "与[波阿斯]双持时范围与判决同时加重",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "sharpness": 5,
+    "sweeping_edge": 3,
+    "looting": 2,
+    "unbreaking": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 11,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.6,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_damage",
+     "amount": 6,
+     "op": "add_value",
+     "slot": "offhand"
+    }
+   ],
+   "tags": [
+    "jachin_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "jachin_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110012.0,
+   "unbreakable": true,
+   "consumable": 100080,
+   "components": [
+    "attribute_modifiers",
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "food",
+    "lore",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "netherite_sword",
+   "name": "波阿斯",
+   "rarity": "传说",
+   "name_colour": "aqua",
+   "lore": [
+    "+------------------+",
+    "所罗门圣殿左侧的[石柱]",
+    "其名为[力量在他]",
+    "+------------------+",
+    "🪓被动技能[承力]",
+    "每第三次命中造成一次强化打击",
+    "与[雅斤]双持时改为每两次",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "smite": 4,
+    "knockback": 2,
+    "unbreaking": 3,
+    "looting": 2
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 9,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.2,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_knockback",
+     "amount": 0.5,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_damage",
+     "amount": 5,
+     "op": "add_value",
+     "slot": "offhand"
+    }
+   ],
+   "tags": [
+    "boaz_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "boaz_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110013.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "netherite_spear",
+   "name": "路西法",
+   "rarity": "恶魔",
+   "name_colour": "aqua",
+   "lore": [
+    "+------------------+",
+    "明亮之星 早晨之子",
+    "伊甸园里盘绕的蛇 众罪之始路西法",
+    "+------------------+",
+    "🗡主动技能[原罪]",
+    "蓄力沿视线刺出蛇矛，幻魔者尖牙同路破土",
+    "贯穿者种下原罪：受伤加重，并向近旁蔓延",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "sharpness": 4,
+    "bane_of_arthropods": 5,
+    "looting": 3,
+    "knockback": 1,
+    "lunge": 2
+   },
+   "modifiers": [
+    {
+     "attr": "entity_interaction_range",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "block_interaction_range",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_damage",
+     "amount": 12,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.9,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": 0.06,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "max_health",
+     "amount": -0.15,
+     "op": "add_multiplied_base",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "devil_tag",
+    "lucifer_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "lucifer_tag": 1,
+    "sword_tag": 1,
+    "devil_tag": 1
+   },
+   "cmd": 1110014.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  }
+ ],
+ "armour": [
+  {
+   "item": "leather_helmet",
+   "name": "圣荆棘冠",
+   "rarity": "神圣",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "唯有在痛苦的泥潭中舔舐伤口",
+    "才能在绝望的残骸下扯破阴霾",
+    "+------------------+",
+    "被动技能[救赎]",
+    "自身伤害减少10%，护甲值增加50%",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 1,
+    "fire_protection": 2,
+    "projectile_protection": 2,
+    "protection": 5,
+    "thorns": 3
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 0.5,
+     "op": "add_multiplied_base",
+     "slot": "head"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "head"
+    },
+    {
+     "attr": "attack_damage",
+     "amount": -0.1,
+     "op": "add_multiplied_base",
+     "slot": "head"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": 1.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "dyed_color",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim",
+    "unbreakable"
+   ],
+   "dyed_color": 16724736,
+   "trim": {
+    "pattern": "flow",
+    "material": "netherite"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "leather_chestplate",
+   "name": "都灵裹尸布",
+   "rarity": "神圣",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "永不妥协",
+    "永不言弃",
+    "+------------------+",
+    "被动技能[重生]",
+    "增加50%血量和10%速度",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 1,
+    "fire_protection": 2,
+    "projectile_protection": 2,
+    "protection": 5,
+    "thorns": 3
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 13,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 5,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "max_health",
+     "amount": 0.5,
+     "op": "add_multiplied_base",
+     "slot": "chest"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "chest"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": 1.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "dyed_color",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim",
+    "unbreakable"
+   ],
+   "dyed_color": 16724736,
+   "trim": {
+    "pattern": "silence",
+    "material": "netherite"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "chainmail_chestplate",
+   "name": "森焱之甲胄",
+   "rarity": "传说",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "唯有[不息]的烈火",
+    "方能铸造[奇迹]",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "fire_protection": 2,
+    "protection": 2
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 7,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "knockback_resistance",
+     "amount": 0.1,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "max_absorption",
+     "amount": 1,
+     "op": "add_multiplied_base",
+     "slot": "any"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": -1.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "silence",
+    "material": "redstone"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_leggings",
+   "name": "森焱之膝",
+   "rarity": "传说",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "唯有[不息]的烈火",
+    "方能铸造[奇迹]",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "fire_protection": 3,
+    "protection": 2
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 6,
+     "op": "add_value",
+     "slot": "legs"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "legs"
+    },
+    {
+     "attr": "knockback_resistance",
+     "amount": 0.1,
+     "op": "add_value",
+     "slot": "legs"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": -1.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "silence",
+    "material": "redstone"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "leather_boots",
+   "name": "森焱之靴",
+   "rarity": "传说",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "唯有[不息]的烈火",
+    "方能铸造[奇迹]",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "fire_protection": 4,
+    "protection": 3,
+    "thorns": 3
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "feet"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "feet"
+    },
+    {
+     "attr": "knockback_resistance",
+     "amount": 0.1,
+     "op": "add_value",
+     "slot": "feet"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": -1.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "dyed_color",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": 11546150,
+   "trim": {
+    "pattern": "silence",
+    "material": "netherite"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "chainmail_helmet",
+   "name": "森焱之盔",
+   "rarity": "传说",
+   "name_colour": "light_purple",
+   "lore": [
+    "+------------------+",
+    "唯有[不息]的烈火",
+    "方能铸造[奇迹]",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "fire_protection": 3,
+    "protection": 3
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "head"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "head"
+    },
+    {
+     "attr": "knockback_resistance",
+     "amount": 0.1,
+     "op": "add_value",
+     "slot": "head"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": -1.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "vex",
+    "material": "redstone"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "chainmail_chestplate",
+   "name": "王者重装",
+   "rarity": "传说",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "Deniqueubierit",
+    "sanguisagladioregis",
+    "+------------------+",
+    "🛡被动技能[枢光]",
+    "增加50%生命值",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 1,
+    "fire_protection": 1,
+    "protection": 2
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 8,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 4,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "knockback_resistance",
+     "amount": 0.1,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "max_health",
+     "amount": 0.5,
+     "op": "add_multiplied_base",
+     "slot": "chest"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "silence",
+    "material": "gold"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_leggings",
+   "name": "不朽之膝",
+   "rarity": "传说",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "Deniqueubierit",
+    "sanguisagladioregis",
+    "+------------------+",
+    "🛡被动技能[不朽]",
+    "增加50%伤害吸收",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 2,
+    "fire_protection": 2,
+    "protection": 3
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 5,
+     "op": "add_value",
+     "slot": "legs"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 4,
+     "op": "add_value",
+     "slot": "legs"
+    },
+    {
+     "attr": "knockback_resistance",
+     "amount": 0.1,
+     "op": "add_value",
+     "slot": "legs"
+    },
+    {
+     "attr": "max_absorption",
+     "amount": 0.5,
+     "op": "add_multiplied_base",
+     "slot": "legs"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "silence",
+    "material": "quartz"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_boots",
+   "name": "执行者长靴",
+   "rarity": "传说",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "Deniqueubierit",
+    "sanguisagladioregis",
+    "+------------------+",
+    "🛡被动技能[效率]",
+    "增加10%移动速度",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 2,
+    "fire_protection": 2,
+    "protection": 4,
+    "thorns": 2
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 4,
+     "op": "add_value",
+     "slot": "feet"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "feet"
+    },
+    {
+     "attr": "knockback_resistance",
+     "amount": 0.1,
+     "op": "add_value",
+     "slot": "feet"
+    },
+    {
+     "attr": "movement_speed",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "feet"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "silence",
+    "material": "gold"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "leather_helmet",
+   "name": "荆棘王冠",
+   "rarity": "传说",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "Deniqueubierit",
+    "sanguisagladioregis",
+    "+------------------+",
+    "🛡被动技能[荆棘]",
+    "荆棘附魔提升至4级",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 2,
+    "fire_protection": 2,
+    "protection": 4,
+    "thorns": 4
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 4,
+     "op": "add_value",
+     "slot": "head"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "head"
+    },
+    {
+     "attr": "knockback_resistance",
+     "amount": 0.1,
+     "op": "add_value",
+     "slot": "head"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "dyed_color",
+    "enchantments",
+    "lore",
+    "max_damage",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": 16383998,
+   "trim": {
+    "pattern": "coast",
+    "material": "gold"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_chestplate",
+   "name": "冰霜甲胄",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "玄铁打造的[装甲]",
+    "附带透骨的[寒气]",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 1,
+    "protection": 2
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 7.5,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "chest"
+    },
+    {
+     "attr": "max_health",
+     "amount": 0.2,
+     "op": "add_multiplied_base",
+     "slot": "chest"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "bolt",
+    "material": "diamond"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "diamond_helmet",
+   "name": "冰霜战盔",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "玄铁打造的[装甲]",
+    "附带透骨的[寒气]",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 2,
+    "protection": 2
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "head"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 2,
+     "op": "add_value",
+     "slot": "head"
+    },
+    {
+     "attr": "max_health",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "head"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "flow",
+    "material": "diamond"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "iron_leggings",
+   "name": "冰霜髀褌",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "玄铁打造的[装甲]",
+    "附带透骨的[寒气]",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 3,
+    "protection": 2
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 6,
+     "op": "add_value",
+     "slot": "legs"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 2,
+     "op": "add_value",
+     "slot": "legs"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "silence",
+    "material": "diamond"
+   },
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_boots",
+   "name": "冰霜长靴",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "玄铁打造的[装甲]",
+    "附带透骨的[寒气]",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "blast_protection": 2,
+    "protection": 2
+   },
+   "modifiers": [
+    {
+     "attr": "armor",
+     "amount": 3,
+     "op": "add_value",
+     "slot": "feet"
+    },
+    {
+     "attr": "armor_toughness",
+     "amount": 2,
+     "op": "add_value",
+     "slot": "feet"
+    }
+   ],
+   "tags": [
+    "chestplate_tag"
+   ],
+   "custom_data": {
+    "chestplate_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "trim"
+   ],
+   "dyed_color": null,
+   "trim": {
+    "pattern": "dune",
+    "material": "diamond"
+   },
+   "potion_contents": null
+  }
+ ],
+ "consum": [
+  {
+   "item": "allay_spawn_egg",
+   "name": "替死人偶",
+   "rarity": "传说",
+   "name_colour": "yellow",
+   "lore": [
+    "+------------------+",
+    "可以抵挡恶魔的人偶",
+    "恶魔攻击其会使祂显形",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "entity_data",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "lingering_potion",
+   "name": "圣水",
+   "rarity": "勇者",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "上帝赐福过的水",
+    "完美无瑕",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "enchantment_glint_override",
+    "lore",
+    "potion_contents",
+    "tooltip_display"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 3866074,
+    "custom_effects": [
+     {
+      "id": "luck",
+      "duration": 4,
+      "amplifier": 1,
+      "show_icon": 0
+     }
+    ]
+   }
+  },
+  {
+   "item": "nether_star",
+   "name": "天启星",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "能指引恶魔的繁星",
+    "审判罪恶",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 6000001,
+   "components": [
+    "consumable",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "player_head",
+   "name": "玩家面板",
+   "rarity": "introduce",
+   "name_colour": null,
+   "lore": [],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "skull_tag"
+   ],
+   "custom_data": {
+    "skull_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "splash_potion",
+   "name": "精血药水",
+   "rarity": "勇者",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "精血炼制的药水",
+    "快速回血",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "lore",
+    "potion_contents"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 16728576,
+    "custom_effects": [
+     {
+      "id": "instant_health",
+      "duration": 1,
+      "amplifier": 1
+     }
+    ]
+   }
+  },
+  {
+   "item": "splash_potion",
+   "name": "复生药水",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "秘制的配方",
+    "获得大幅回血",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "lore",
+    "potion_contents"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 16722944,
+    "custom_effects": [
+     {
+      "id": "instant_health",
+      "duration": 1,
+      "amplifier": 3
+     }
+    ]
+   }
+  },
+  {
+   "item": "splash_potion",
+   "name": "护盾药水",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "守护他人的力量",
+    "获得伤害吸收护盾",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "lore",
+    "potion_contents"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 16763904,
+    "custom_effects": [
+     {
+      "id": "absorption",
+      "duration": 1200,
+      "amplifier": 4
+     }
+    ]
+   }
+  },
+  {
+   "item": "lingering_potion",
+   "name": "衰败药水",
+   "rarity": "勇者",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "恶毒的魔药",
+    "投掷造成凋零效果",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "lore",
+    "potion_contents"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 4673362,
+    "custom_effects": [
+     {
+      "id": "wither",
+      "duration": 120,
+      "amplifier": 2
+     }
+    ]
+   }
+  },
+  {
+   "item": "potion",
+   "name": "血战药水",
+   "rarity": "传说",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "放手一搏吧！！！别顾虑太多",
+    "扣除6滴血量并获得力量三",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "lore",
+    "potion_contents"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 16755200,
+    "custom_effects": [
+     {
+      "id": "wither",
+      "duration": 80,
+      "amplifier": 4
+     },
+     {
+      "id": "strength",
+      "duration": 600,
+      "amplifier": 2
+     }
+    ]
+   }
+  },
+  {
+   "item": "potion",
+   "name": "动物朋友",
+   "rarity": "勇者",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "这个世界不光属于我们",
+    "还属于我和我的动物朋友，芝士雪豹",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "lore",
+    "potion_contents"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 63450,
+    "custom_effects": [
+     {
+      "id": "conduit_power",
+      "duration": 600,
+      "amplifier": 1
+     },
+     {
+      "id": "dolphins_grace",
+      "duration": 600,
+      "amplifier": 1
+     }
+    ]
+   }
+  },
+  {
+   "item": "splash_potion",
+   "name": "疲惫药水",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "放大敌人的弱点",
+    "恶魔亲自炼制的邪恶药水",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "lore",
+    "potion_contents"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 7733497,
+    "custom_effects": [
+     {
+      "id": "darkness",
+      "duration": 600,
+      "amplifier": 1
+     },
+     {
+      "id": "nausea",
+      "duration": 600,
+      "amplifier": 1
+     },
+     {
+      "id": "slowness",
+      "duration": 600,
+      "amplifier": 2
+     }
+    ]
+   }
+  },
+  {
+   "item": "potion",
+   "name": "体能药水",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "强化体能的神秘魔药",
+    "劝诫人们强健身体",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "lore",
+    "potion_contents"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 5107200,
+    "custom_effects": [
+     {
+      "id": "speed",
+      "duration": 600,
+      "amplifier": 1
+     },
+     {
+      "id": "jump_boost",
+      "duration": 600,
+      "amplifier": 1
+     }
+    ]
+   }
+  }
+ ],
+ "runes": [
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "泣血",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🪓被动技能[泣血]",
+    "攻击时有1/5的概率吸取4点血量",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "damage_tag"
+   ],
+   "custom_data": {
+    "damage_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "重击",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🪓被动技能[重击]",
+    "攻击有1/3的概率持续造成10点伤害",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "blow_tag"
+   ],
+   "custom_data": {
+    "blow_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "幽深",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🪓被动技能[幽深]",
+    "攻击时有1/5的概率给予敌人黑暗效果",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "deep_tag"
+   ],
+   "custom_data": {
+    "deep_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "萤火",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🪓被动技能[萤火]",
+    "攻击时有1/5的概率标记敌人并重击",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "ink_tag"
+   ],
+   "custom_data": {
+    "ink_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "守护",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[胸甲]上",
+    "+------------------+",
+    "🛡被动技能[守护]",
+    "受击时有1/5的概率获得四点护盾",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "absorption_tag",
+    "add_weapon_tag"
+   ],
+   "custom_data": {
+    "absorption_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "不屈",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[胸甲]上",
+    "+------------------+",
+    "🛡被动技能[不屈]",
+    "血量低于3点时获得力量三",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "health_tag"
+   ],
+   "custom_data": {
+    "health_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "共死",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[胸甲]上",
+    "+------------------+",
+    "🛡被动技能[共死]",
+    "血量低于3点时自爆",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "boom_tag"
+   ],
+   "custom_data": {
+    "boom_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "黑炎",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[弓/弩]上",
+    "+------------------+",
+    "🏹被动技能[黑炎]",
+    "箭矢附带黑炎",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "dark_tag"
+   ],
+   "custom_data": {
+    "dark_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符文",
+   "rarity": "连发",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的卷轴",
+    "镶嵌于[弓/弩]上",
+    "+------------------+",
+    "🏹被动技能[连发]",
+    "射击时连续发射箭矢",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "add_weapon_tag",
+    "projectiles_tag"
+   ],
+   "custom_data": {
+    "projectiles_tag": 1,
+    "add_weapon_tag": 1
+   },
+   "cmd": 1110002.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符石",
+   "rarity": "剑气",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的符石",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🔱镶嵌技能[钢刃]",
+    "长按/右键蓄力释放剑气",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "sweep_tag"
+   ],
+   "custom_data": {
+    "sweep_tag": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符石",
+   "rarity": "风暴",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的符石",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🔱镶嵌技能[风暴]",
+    "长按/右键消耗一级经验释放风弹",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "wind_tag"
+   ],
+   "custom_data": {
+    "wind_tag": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "quartz",
+   "name": "镶嵌符石",
+   "rarity": "烈焰",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含[法力]的符石",
+    "镶嵌于[剑]上",
+    "+------------------+",
+    "🔱镶嵌技能[烈焰]",
+    "长按/右键消耗一级经验释放烈焰弹",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "flame_tag"
+   ],
+   "custom_data": {
+    "flame_tag": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  }
+ ],
+ "stones": [
+  {
+   "item": "silence_armor_trim_smithing_template",
+   "name": "力量之石",
+   "rarity": "勇者",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "蕴含力量的石头",
+    "+10%攻击伤害",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "hand"
+    }
+   ],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "rib_armor_trim_smithing_template",
+   "name": "肃杀之石",
+   "rarity": "勇者",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "肃杀的石头",
+    "+10%攻击速度",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [
+    {
+     "attr": "attack_speed",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "hand"
+    }
+   ],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "raiser_armor_trim_smithing_template",
+   "name": "守护之石",
+   "rarity": "勇者",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "护卫他人的石头",
+    "+10%最大生命值",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [
+    {
+     "attr": "max_health",
+     "amount": 0.1,
+     "op": "add_multiplied_base",
+     "slot": "hand"
+    }
+   ],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "snout_armor_trim_smithing_template",
+   "name": "明辨之石",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "慧眼识珠，明辨是非之石",
+    "+1交互距离",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [
+    {
+     "attr": "entity_interaction_range",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "hand"
+    }
+   ],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "coast_armor_trim_smithing_template",
+   "name": "急奔之石",
+   "rarity": "史诗",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "爆发强烈速度的玉石",
+    "+20%速度",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [
+    {
+     "attr": "movement_speed",
+     "amount": 0.2,
+     "op": "add_multiplied_base",
+     "slot": "hand"
+    }
+   ],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "wild_armor_trim_smithing_template",
+   "name": "万钧之石",
+   "rarity": "传说",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "力战万钧的晶石，不朽的瑰宝",
+    "+25%攻击伤害",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 0.25,
+     "op": "add_multiplied_base",
+     "slot": "hand"
+    }
+   ],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  }
+ ],
+ "mats": [
+  {
+   "item": "quartz",
+   "name": "铸造之石",
+   "rarity": "传说",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "升级武器的晶石",
+    "增加100点武器经验值",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "level_item"
+   ],
+   "custom_data": {
+    "level_item": 1
+   },
+   "cmd": 1110003.0,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:raw_gold",
+   "name": "货币",
+   "rarity": "currency",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "广泛流通的[货币]",
+    "上等阶级的[入场券]",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [],
+   "custom_data": {},
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:gold_ingot",
+   "name": "黄金",
+   "rarity": "item",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "上等的[物品]",
+    "好用的材料",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "gold_tag"
+   ],
+   "custom_data": {
+    "gold_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "diamond",
+   "name": "钻石",
+   "rarity": "item",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "珍贵的[材料]",
+    "大家都喜欢",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "diamond_tag"
+   ],
+   "custom_data": {
+    "diamond_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "wooden_sword",
+   "name": "剑胚",
+   "rarity": "🗡",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "锻造装备的原材料",
+    "天然的武器",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "embryo_tag"
+   ],
+   "custom_data": {
+    "embryo_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "damage_resistant",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "raw_iron",
+   "name": "生铁",
+   "rarity": "🗡",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "锻造装备的原材料",
+    "未经处理的矿石",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "fec_tag"
+   ],
+   "custom_data": {
+    "fec_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "damage_resistant",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "echo_shard",
+   "name": "传说冶炼石",
+   "rarity": "🗡",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "锻造装备的原材料",
+    "决定成品的矿石",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "echo_tag"
+   ],
+   "custom_data": {
+    "echo_tag": 2
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "damage_resistant",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "echo_shard",
+   "name": "冶炼石",
+   "rarity": "🗡",
+   "name_colour": null,
+   "lore": [
+    "+------------------+",
+    "锻造装备的原材料",
+    "决定成品的矿石",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "echo_tag"
+   ],
+   "custom_data": {
+    "echo_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "damage_resistant",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  }
+ ],
+ "ench_list": [
+  "亡灵杀手 3",
+  "亡灵杀手 4",
+  "亡灵杀手 5",
+  "保护 3",
+  "保护 4",
+  "力量 3",
+  "力量 4",
+  "力量 5",
+  "横扫之刃 2",
+  "横扫之刃 3",
+  "穿透 3",
+  "穿透 4",
+  "耐久 2",
+  "耐久 3",
+  "耐久 4",
+  "耐久 5",
+  "节肢杀手 3",
+  "节肢杀手 4",
+  "节肢杀手 5",
+  "荆棘 2",
+  "荆棘 3",
+  "锋利 3",
+  "锋利 4",
+  "锋利 5"
+ ]
+}

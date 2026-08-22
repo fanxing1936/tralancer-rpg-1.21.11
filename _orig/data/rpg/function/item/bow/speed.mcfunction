@@ -1,0 +1,9 @@
+execute as @e[type=minecraft:arrow,tag=!bow] on origin if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{bow_tag:1b}}}}] at @s as @e[type=minecraft:arrow,distance=..2] at @s store result entity @s Motion[0] double 1 run data get entity @s Motion[0] 2
+execute as @e[type=minecraft:arrow,tag=!bow] on origin if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{bow_tag:1b}}}}] at @s as @e[type=minecraft:arrow,distance=..2] at @s store result entity @s Motion[1] double 1 run data get entity @s Motion[1] 2
+execute as @e[type=minecraft:arrow,tag=!bow] on origin if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{bow_tag:1b}}}}] at @s as @e[type=minecraft:arrow,distance=..2] at @s store result entity @s Motion[2] double 1 run data get entity @s Motion[2] 2
+
+execute as @e[type=minecraft:arrow] on origin if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{bow_tag:1b}}}}] at @s run tag @e[type=arrow,distance=0..2] add bow
+execute as @e[tag=bow] at @s run particle dust_color_transition{from_color:[0.69,0.0,0.34],to_color:[0.26,0.64,0.93],scale:3} ~0.1 ~0.1 ~0.1 -0.2 -0.2 -0.2 0.2 10
+execute as @e[tag=bow] at @s if entity @e[distance=0.1..2] unless entity @e[nbt={SelectedItem:{components:{"minecraft:custom_data":{bow_tag:1b}}}},distance=..2] run particle squid_ink ~0.5 ~0.5 ~0.5 -1 -1 -1 0.5 50
+execute as @e[tag=bow] at @s if entity @e[distance=0.1..2] unless entity @e[nbt={SelectedItem:{components:{"minecraft:custom_data":{bow_tag:1b}}}},distance=..2] run particle dust_color_transition{from_color:[0.69,0.0,0.34],to_color:[0.26,0.64,0.93],scale:3} ~0.5 ~0.5 ~0.5 -1 -1 -1 0.5 50
+execute as @e[tag=bow] at @s if entity @e[distance=0.1..2] unless entity @e[nbt={SelectedItem:{components:{"minecraft:custom_data":{bow_tag:1b}}}},distance=..2] run summon minecraft:creeper ~ ~1 ~ {"ExplosionRadius":3,"Fuse":0}

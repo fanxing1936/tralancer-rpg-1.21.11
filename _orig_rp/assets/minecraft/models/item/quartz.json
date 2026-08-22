@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/quartz"
+  }
+  ,
+  "overrides":[
+    {
+      "predicate":{
+        "custom_model_data":1110001
+      },
+      "model":"rpg:item/quartz"
+      
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110002
+      },
+      "model":"rpg:item/amethyst_shard"
+      
+    },
+    {
+      "predicate":{
+        "custom_model_data":1110003
+      },
+      "model":"rpg:item/netherite_upgrade_smithing_template"
+      
+    }
+  ]
+}

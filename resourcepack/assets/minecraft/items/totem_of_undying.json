@@ -1,0 +1,55 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/totem_of_undying"
+    },
+    "entries": [
+      {
+        "threshold": 1110001,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/rooted_poppy"
+        }
+      },
+      {
+        "threshold": 1110002,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/s"
+        }
+      },
+      {
+        "threshold": 1110003,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/a"
+        }
+      },
+      {
+        "threshold": 1110004,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/b"
+        }
+      },
+      {
+        "threshold": 1110005,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/c"
+        }
+      },
+      {
+        "threshold": 1110006,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/d"
+        }
+      }
+    ]
+  }
+}

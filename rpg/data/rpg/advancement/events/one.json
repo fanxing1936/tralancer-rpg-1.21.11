@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:mourner_pottery_sherd",
+      "count": 1
+    },
+    "title": [
+      {
+        "text": "第一章",
+        "color": "gold",
+        "bold": true,
+        "extra": [
+          {
+            "text": "——旧日遗民",
+            "color": "aqua",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "description": [
+      {
+        "text": "所有的闪米特人无不盼望弥赛亚的归来，盼望着他从高天之上降下，拯救世人",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rpg:events/begin",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item"
+    }
+  }
+}

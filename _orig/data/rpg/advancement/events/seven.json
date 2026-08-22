@@ -1,0 +1,39 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:burn_pottery_sherd",
+        "count": 1
+      },
+      "title": [
+        {
+          "text": "第七章",
+          "color": "gold",
+          "bold": true,
+          "extra": [
+            {
+              "text": "——罪与罚",
+              "color": "aqua",
+              "bold": false
+            }
+          ]
+        }
+      ],
+      "description": [
+        {
+          "text": "罪人的罪孽早已存在，但审判的高歌却从未到来，神早已长眠，无神的国度如同无人怜爱的幼儿。但今日，弥赛亚自高天上降落，以高悬与苍空的达摩克里斯，洗涤一切罪孽",
+          "color": "white"
+        }
+      ],
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "rpg:events/six",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item"
+      }
+    }
+  }
+  

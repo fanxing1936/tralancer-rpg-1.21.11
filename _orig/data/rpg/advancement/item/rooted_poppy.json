@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:used_totem",
+        "conditions": {
+          "item": {
+            "components": {
+              "minecraft:custom_model_data":1110001
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "rpg:item/equipment/rooted_poppy"
+    }
+  }
+  

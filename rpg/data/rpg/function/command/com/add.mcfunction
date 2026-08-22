@@ -1,0 +1,9 @@
+##符石附着
+execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run data modify entity @s Item.components.minecraft:lore append from entity @e[limit=1,distance=..1,type=minecraft:item,tag=rpg.i.add_weapon_tag1] Item.components.minecraft:lore[-3]
+execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run data modify entity @s Item.components.minecraft:lore append from entity @e[limit=1,distance=..1,type=minecraft:item,tag=rpg.i.add_weapon_tag1] Item.components.minecraft:lore[-2]
+execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run data modify entity @s Item.components.minecraft:lore append from entity @e[limit=1,distance=..1,type=minecraft:item,tag=rpg.i.add_weapon_tag1] Item.components.minecraft:lore[-1]
+execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s run data modify entity @s Item.components.minecraft:custom_data merge from entity @e[limit=1,distance=..1,type=minecraft:item,tag=rpg.i.add_weapon_tag1] Item.components.minecraft:custom_data
+execute as @e[type=minecraft:item,nbt={Item:{components:{"minecraft:custom_data":{add_weapon_tag:1b,weapon_tag:1b}}}}] at @s run data remove entity @s Item.components.minecraft:custom_data.add_weapon_tag
+execute as @e[type=minecraft:item,tag=rpg.i.weapon_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.add_weapon_tag1] run playsound minecraft:block.anvil.use player @a[distance=..5]
+execute as @e[type=minecraft:item,tag=rpg.i.add_weapon_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] run particle minecraft:firework ~0.25 ~0.5 ~0.25 -0.5 0 -0.5 0.3 100
+execute as @e[type=minecraft:item,tag=rpg.i.add_weapon_tag1] at @s if entity @e[distance=..1,type=minecraft:item,tag=rpg.i.weapon_tag1] run kill @s

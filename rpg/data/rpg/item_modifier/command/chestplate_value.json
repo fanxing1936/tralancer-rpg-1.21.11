@@ -1,0 +1,91 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      [
+        "",
+        {
+          "text": "+------------------+",
+          "color": "white",
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "⚗盔甲韧性",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "player_armor_toughness_",
+            "name": "@s",
+            "italic": false
+          }
+        },
+        {
+          "text": ".",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "player_armor_toughness",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ],
+      [
+        "",
+        {
+          "text": "⚗护甲值",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "player_armor_",
+            "name": "@s",
+            "italic": false
+          }
+        },
+        {
+          "text": ".",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "player_armor",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ]
+    ],
+    "mode": "replace_section",
+    "offset": 6,
+    "entity": "this",
+    "size": 3
+  }
+]

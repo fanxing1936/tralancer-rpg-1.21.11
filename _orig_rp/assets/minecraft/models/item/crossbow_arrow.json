@@ -1,0 +1,20 @@
+{
+    "parent": "item/crossbow",
+    "textures": {
+        "layer0": "item/crossbow_arrow"
+    },
+    "overrides":[
+      {
+        "predicate":{
+          "custom_model_data":1110001
+        },
+        "model":"rpg:item/crossbow_arrow"
+      },
+      {
+        "predicate":{
+          "custom_model_data":1110002
+        },
+        "model":"rpg:item/soul_hunter/crossbow_arrow"
+      }
+    ]
+}

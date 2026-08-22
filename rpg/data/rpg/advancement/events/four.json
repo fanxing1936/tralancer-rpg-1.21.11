@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:guster_pottery_sherd",
+      "count": 1
+    },
+    "title": [
+      {
+        "text": "第四章",
+        "color": "gold",
+        "bold": true,
+        "extra": [
+          {
+            "text": "——风暴之息",
+            "color": "aqua",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "description": [
+      {
+        "text": "曾经，摩西在西奈山上接受神启，承接了上帝的权柄。如今，权柄傍落自尘世，自风暴的尽头，等待它的主人取回遗失的权柄",
+        "color": "white"
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rpg:events/three",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item"
+    }
+  }
+}

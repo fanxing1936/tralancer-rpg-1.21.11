@@ -1,0 +1,242 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      [
+        "",
+        {
+          "text": "+------个人介绍------+",
+          "italic": false,
+          "color": "white"
+        }
+      ],
+      [
+        "",
+        {
+          "text": "🔱玩家姓名：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "selector": "@p",
+          "italic": false,
+          "color": "gold",
+          "bold": true
+        }
+      ],
+      [
+        "",
+        {
+          "text": "🧪玩家等级",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "gold",
+          "italic": false,
+          "score": {
+            "objective": "player_level",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ],
+      [
+        "",
+        {
+          "text": "+------个人属性------+",
+          "italic": false,
+          "color": "white"
+        }
+      ],
+      [
+        "",
+        {
+          "text": "❤玩家血量",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "health",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ],
+      [
+        "",
+        {
+          "text": "🪓攻击速度",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "player_attack_speed_",
+            "name": "@s",
+            "italic": false
+          }
+        },
+        {
+          "text": ".",
+          "color": "gold",
+          "italic": false
+        },
+        {
+          "color": "gold",
+          "italic": false,
+          "score": {
+            "objective": "player_attack_speed",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ],
+      [
+        "",
+        {
+          "text": "🗡攻击伤害",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "player_attack_damage_",
+            "name": "@s",
+            "italic": false
+          }
+        },
+        {
+          "text": ".",
+          "color": "gold",
+          "italic": false
+        },
+        {
+          "color": "gold",
+          "italic": false,
+          "score": {
+            "objective": "player_attack_damage",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ],
+      [
+        "",
+        {
+          "text": "🛡盔甲韧性",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "player_armor_toughness_",
+            "name": "@s",
+            "italic": false
+          }
+        },
+        {
+          "text": ".",
+          "color": "gold",
+          "italic": false
+        },
+        {
+          "color": "gold",
+          "italic": false,
+          "score": {
+            "objective": "player_armor_toughness",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ],
+      [
+        "",
+        {
+          "text": "🎣护甲值",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": "：",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "color": "white",
+          "italic": false,
+          "score": {
+            "objective": "player_armor_",
+            "name": "@s",
+            "italic": false
+          }
+        },
+        {
+          "text": ".",
+          "color": "gold",
+          "italic": false
+        },
+        {
+          "color": "gold",
+          "italic": false,
+          "score": {
+            "objective": "player_armor",
+            "name": "@s",
+            "italic": false
+          }
+        }
+      ],
+      [
+        "",
+        {
+          "text": "+------------------+",
+          "color": "white",
+          "italic": false
+        }
+      ]
+    ],
+    "mode": "insert",
+    "offset": 0,
+    "entity": "this"
+  },
+  {
+    "function": "set_custom_data",
+    "tag": {
+      "player_tag": 1
+    }
+  }
+]

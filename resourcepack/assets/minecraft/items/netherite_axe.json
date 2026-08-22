@@ -1,0 +1,55 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/netherite_axe"
+    },
+    "entries": [
+      {
+        "threshold": 1110001,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/chill_gale_knife"
+        }
+      },
+      {
+        "threshold": 1110002,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/resolute_tempest_knife"
+        }
+      },
+      {
+        "threshold": 1110003,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/nightmares_bite"
+        }
+      },
+      {
+        "threshold": 1110004,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/feather"
+        }
+      },
+      {
+        "threshold": 1110005,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/sponge_striker"
+        }
+      },
+      {
+        "threshold": 1110006,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/coral_blade"
+        }
+      }
+    ]
+  }
+}

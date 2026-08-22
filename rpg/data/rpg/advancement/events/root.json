@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:ender_eye",
+      "count": 2
+    },
+    "title": [
+      {
+        "text": "布兰德",
+        "color": "gold",
+        "bold": true,
+        "extra": [
+          {
+            "text": "——宿命之途",
+            "color": "aqua",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "description": [
+      {
+        "text": "“How many roads must a man walk down,Before you call him a man.”（一个男人要走过多少路，才能被称为真正的男子汉）",
+        "color": "white"
+      }
+    ],
+    "background": "rpg:gui/advancements/backgrounds/cracked_deepslate_bricks",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "": {
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "rewards": {}
+}

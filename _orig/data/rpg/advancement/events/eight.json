@@ -1,0 +1,39 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:explorer_pottery_sherd",
+        "count": 1
+      },
+      "title": [
+        {
+          "text": "第八章",
+          "color": "gold",
+          "bold": true,
+          "extra": [
+            {
+              "text": "——元素之海",
+              "color": "aqua",
+              "bold": false
+            }
+          ]
+        }
+      ],
+      "description": [
+        {
+          "text": "在一切的起点，上帝将权柄化为元素海，祂象征着虚妄。当虚妄与真实的权柄交织，世界自此中孕育",
+          "color": "white"
+        }
+      ],
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "rpg:events/seven",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item"
+      }
+    }
+  }
+  

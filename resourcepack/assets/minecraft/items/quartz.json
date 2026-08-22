@@ -1,0 +1,34 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/quartz"
+    },
+    "entries": [
+      {
+        "threshold": 1110001,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/quartz"
+        }
+      },
+      {
+        "threshold": 1110002,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/amethyst_shard"
+        }
+      },
+      {
+        "threshold": 1110003,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/netherite_upgrade_smithing_template"
+        }
+      }
+    ]
+  }
+}

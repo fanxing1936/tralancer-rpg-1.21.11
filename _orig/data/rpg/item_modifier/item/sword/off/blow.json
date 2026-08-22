@@ -1,0 +1,17 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        ["",{"text":"⭐被动技能","color":"white","italic":false},{"text":"[重击]","italic":false,"color":"white","bold":true}],
+        ["",{"text":"攻击时有1/3的概率造成7点持续伤害","color":"white","italic":false}],
+        ["",{"text":"+------------------+","italic":false,"color":"white"}]
+
+      ],
+      "mode":"append"
+    },
+    {
+      "function":"set_custom_data",
+      "tag":{"blow_tag":1}
+    }
+  ]
+  

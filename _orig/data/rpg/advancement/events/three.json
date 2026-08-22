@@ -1,0 +1,39 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:arms_up_pottery_sherd",
+        "count": 1
+      },
+      "title": [
+        {
+          "text": "第三章",
+          "color": "gold",
+          "bold": true,
+          "extra": [
+            {
+              "text": "——真理之冠",
+              "color": "aqua",
+              "bold": false
+            }
+          ]
+        }
+      ],
+      "description": [
+        {
+          "text": "传说终结那场旧日帝国的战争，正是由那五个家族发起的，他们举起反抗的旌旗，向着高天上的王座，证明着蝼蚁的强大",
+          "color": "white"
+        }
+      ],
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "rpg:events/two",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item"
+      }
+    }
+  }
+  
