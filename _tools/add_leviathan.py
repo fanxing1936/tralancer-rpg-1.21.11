@@ -52,6 +52,8 @@ LIFE = 100             # whirlpool duration; deeper when thrown airborne
 LIFE_DEEP = 160
 COST = 10            # 每次施放献出的生命，直接扣，不走 damage
 UNLUCK = 10          # 不幸持续秒数
+CHARGE = 30          # 蓄力所需刻数（1.5 秒）
+HOLD = 3             # 判定"还按着"的宽限刻数
 
 ART = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                    "leviathan_art", "leviathan.png")
@@ -205,7 +207,7 @@ LEVIATHAN = ("give @a %s[" % BASE +
                  row(seg("它使深海翻滚如锅"), seg(" 海之魔神利维坦", DEVIL, True)),
                  RULE,
                  row(seg("🪓主动技能"), seg("[沉锚]", DEVIL, True)),
-                 row(seg("右键抛出巨锚，锚落处涌起漩涡")),
+                 row(seg("长按右键蓄力1.5秒抛出巨锚，锚落处涌起漩涡")),
                  row(seg("漩涡将敌人拖向锚心并持续碾压；凌空抛锚沉得更深")),
                  row(seg("代价：每次献出"), seg("10点生命", DEVIL, True),
                      seg("，并背负"), seg("10秒不幸", DEVIL, True)),
@@ -264,24 +266,55 @@ def build_advancement():
 # 沉锚 -- the skill
 # ---------------------------------------------------------------------------
 TRIGGER = """\
-# 利维坦［沉锚］—— 由 rpg:advancement/item/leviathan 在右键使用时触发。
-# 代价是血而不是经验，所以先量一次生命：不够就拒绝，而不是把人送走。
-# （包里其余主动技能在付不起代价时也是这个反应，一声 villager.no。）
+# 利维坦［沉锚］—— 由 rpg:advancement/item/leviathan 触发。
+#
+# `minecraft:using_item` 在按住右键期间**每刻都会响**，这正是蓄力需要的节拍：
+# 每响一次攒一格，攒满 {CHARGE} 刻（{SECONDS} 秒）才真正抛锚。
+# （包里的［王座］也是靠这个把 power_step 一格格加上去的。）
+#
+# 松手怎么判？trigger 每刻把 hold 设回 {HOLD}，而每刻函数里递减它 ——
+# 一旦停手，hold 会在 {HOLD} 刻内归零，蓄力随之清空。
 advancement revoke @s only rpg:item/leviathan
+scoreboard players set @s rpg_levi_hold {HOLD}
+execute if entity @s[scores={{rpg_levi_charge=..{CHARGE}}}] run scoreboard players add @s rpg_levi_charge 1
+
+# 蓄力反馈：海水从脚下往上聚，越接近满蓄越急
+execute at @s run particle bubble_column_up ~ ~0.1 ~ 0.4 0.1 0.4 0.02 2
+execute at @s if entity @s[scores={{rpg_levi_charge=10..}}] run particle dust_color_transition{{from_color:{TRENCH},to_color:{ABYSS},scale:1}} ~ ~0.9 ~ 0.45 0.7 0.45 0.02 3
+execute at @s if entity @s[scores={{rpg_levi_charge=20..}}] run particle dust_color_transition{{from_color:{ABYSS},to_color:{FOAM},scale:1}} ~ ~1.2 ~ 0.5 0.8 0.5 0.03 4
+execute at @s if entity @s[scores={{rpg_levi_charge=1}}] run playsound minecraft:block.chain.place player @s ~ ~ ~ 1 0.6
+execute at @s if entity @s[scores={{rpg_levi_charge=10}}] run playsound minecraft:block.chain.place player @s ~ ~ ~ 1 0.9
+execute at @s if entity @s[scores={{rpg_levi_charge=20}}] run playsound minecraft:block.chain.place player @s ~ ~ ~ 1 1.3
+
+# 满蓄的那一刻抛出去。之后 charge 会继续 +1 越过 {CHARGE}，
+# 所以这条精确判等只会命中一次，按住不放不会连抛。
+execute at @s if entity @s[scores={{rpg_levi_charge={CHARGE}}}] run playsound minecraft:entity.elder_guardian.curse player @a[distance=..20] ~ ~ ~ 0.7 1.6
+execute if entity @s[scores={{rpg_levi_charge={CHARGE}}}] run function rpg:item/extra/leviathan_fire
+"""
+
+FIRE = """\
+# 满蓄。代价在这里结算：付不起就散掉，不硬扣。
 execute store result score @s rpg_levi_hp run data get entity @s Health
 execute if entity @s[scores={{rpg_levi_hp=..{COST}}}] run playsound minecraft:entity.villager.no player @s
+execute if entity @s[scores={{rpg_levi_hp=..{COST}}}] at @s run particle smoke ~ ~1 ~ 0.3 0.3 0.3 0.01 12
+execute if entity @s[scores={{rpg_levi_hp=..{COST}}}] run scoreboard players reset @s rpg_levi_charge
 execute if entity @s[scores={{rpg_levi_hp={COST_1}..}}] run function rpg:item/extra/leviathan_cast
 """
 
 CAST = """\
 # 抛锚。`rotated ~ 0` 把俯仰归零，所以锚永远沿水平方向掷出 {THROW} 格，
 # 不会因为抬头而飞上天 —— 锚是往下沉的东西。
-# 血税：直接改写生命值，而不是 `damage`。
-# `damage` 要过约 10 刻的无敌帧 —— 连点右键时代价会被整个吞掉，等于白嫖；
-# 直接写 Health 则绕过护甲、抗性与无敌帧，每一次都实收 {COST} 点。
-# 命中前已经在 trigger 里确认过生命高于 {COST}，所以不会把自己写死。
-scoreboard players remove @s rpg_levi_hp {COST}
-execute store result entity @s Health float 1 run scoreboard players get @s rpg_levi_hp
+# 血税。原本想直接改写 Health 来绕过无敌帧，但**玩家 NBT 是只读的** ——
+# `execute store result entity @s Health` 对玩家不会生效（能解析，运行时静默失败），
+# 所以那一版扣血根本没扣到。
+#
+# 改用 `damage`，伤害类型选 `minecraft:starve`：它是唯一同时位于
+# `#bypasses_armor` 与 `#bypasses_effects` 的类型，所以护甲、保护附魔、
+# 抗性提升一概不减免，每次实收 {COST} 点。
+# 它仍然要过约 10 刻的无敌帧 —— 但技能现在需要蓄力 {CHARGE} 刻，
+# 两次施放之间必然超过无敌帧，这个顾虑随蓄力一起消失了。
+# 生命已在 leviathan_fire 里确认高于 {COST}，所以扣不死自己。
+damage @s {COST} minecraft:starve
 effect give @s minecraft:unluck {UNLUCK} 0 true
 particle damage_indicator ~ ~1 ~ 0.3 0.4 0.3 0.2 12
 playsound minecraft:entity.player.hurt_drown player @s ~ ~ ~ 1 0.7
@@ -294,6 +327,7 @@ playsound minecraft:item.mace.smash_air player @a[distance=..24] ~ ~ ~ 1 0.7
 execute at @s rotated ~ 0 positioned ^ ^ ^{THROW} run function rpg:item/extra/leviathan_drop
 tag @s remove rpg.levi.airborne
 tag @s remove rpg.levi.cast
+scoreboard players reset @s rpg_levi_charge
 """
 
 DROP = """\
@@ -343,16 +377,23 @@ execute as @e[tag=rpg.levi.anchor,scores={{rpg_levi_beat=..0}}] at @s run functi
 execute as @e[tag=rpg.levi.anchor,scores={{rpg_levi_time=1..}}] run scoreboard players remove @s rpg_levi_time 1
 execute as @e[tag=rpg.levi.anchor,scores={{rpg_levi_time=..0}}] at @s run particle splash ~ ~0.4 ~ 1 0.3 1 0.3 40
 execute as @e[tag=rpg.levi.anchor,scores={{rpg_levi_time=..0}}] run kill @s
+
+# 松手即散。trigger 每刻把 hold 顶回 {HOLD}，这里每刻扣 1 ——
+# 只要停手 {HOLD} 刻，蓄力就清零，没法靠连点攒。
+execute as @a[scores={{rpg_levi_hold=1..}}] run scoreboard players remove @s rpg_levi_hold 1
+scoreboard players reset @a[scores={{rpg_levi_hold=..0,rpg_levi_charge=1..}}] rpg_levi_charge
 """
 
 ARGS = dict(ABYSS=ABYSS, TRENCH=TRENCH, FOAM=FOAM, GOLD=GOLD,
             COST=COST, COST_1=COST + 1, UNLUCK=UNLUCK,
+            CHARGE=CHARGE, HOLD=HOLD, SECONDS="%.1f" % (CHARGE / 20.0),
             THROW=THROW, RADIUS=RADIUS, RADIUS_F="%.1f" % (RADIUS * 0.5),
             BEAT=BEAT, LIFE=LIFE, LIFE_DEEP=LIFE_DEEP)
 
 
 def build_functions():
     wf("item/extra/leviathan_trigger.mcfunction", TRIGGER.format(**ARGS))
+    wf("item/extra/leviathan_fire.mcfunction", FIRE.format(**ARGS))
     wf("item/extra/leviathan_cast.mcfunction", CAST.format(**ARGS))
     wf("item/extra/leviathan_drop.mcfunction", DROP.format(**ARGS))
     wf("item/extra/leviathan_pull.mcfunction", PULL.format(**ARGS))
@@ -375,8 +416,8 @@ def build_functions():
 def add_objectives():
     path = os.path.join(FUNC, "command/soreboard.mcfunction")
     s = io.open(path, encoding="utf-8").read()
-    add = [n for n in ("rpg_levi_time", "rpg_levi_beat", "rpg_levi_hp")
-           if n not in s]
+    add = [n for n in ("rpg_levi_time", "rpg_levi_beat", "rpg_levi_hp",
+                       "rpg_levi_charge", "rpg_levi_hold") if n not in s]
     if add:
         io.open(path, "w", encoding="utf-8", newline="\n").write(
             s.rstrip("\n") + "\n"
