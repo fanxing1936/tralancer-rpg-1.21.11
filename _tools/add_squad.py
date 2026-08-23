@@ -94,7 +94,7 @@ def member_nbt():
     drop_chances.mainhand 拉满：人没了，武器还你。
     """
     return (
-        '{Tags:["rpg.squad","rpg.sq.new"],'
+        '{Tags:["rpg.squad","rpg.merc","rpg.sq.new"],'
         'IsBaby:0b,'
         'PersistenceRequired:1b,'
         'CustomNameVisible:1b,'
@@ -110,6 +110,20 @@ def member_nbt():
         '{id:"movement_speed",base:0f},'
         '{id:"knockback_resistance",base:0.3f}],'
         'drop_chances:{mainhand:1f}}' % STEEL)
+
+
+def free_nbt():
+    """一名**待雇**佣兵。
+
+    和在编的同一副身板，区别只在标签与名字：他没有 rpg.squad，所以不属于
+    任何队伍，也不会被 lead 捞进去 —— 站着等价钱而已。
+    rpg.merc 是伞标签，在编与待雇都带，专门给"新生僵尸重新配装"那条流水线
+    排除用（尸壳属于 #minecraft:zombies）。
+    """
+    return member_nbt().replace(
+        '{Tags:["rpg.squad","rpg.merc","rpg.sq.new"],',
+        '{Tags:["rpg.sq.free","rpg.merc"],').replace(
+        '"text":"佣兵"', '"text":"待雇佣兵"')
 
 
 # ---------------------------------------------------------------------------
@@ -230,15 +244,39 @@ particle happy_villager ~ ~1.6 ~ 0.2 0.2 0.2 0 4
 # ---------------------------------------------------------------------------
 HIRE = """\
 # 募兵旗 —— 由 rpg:item/squad_hire 在长按右键时触发。
+#
+# 两步：身边没有待雇者就先招一个来（不花钱），有待雇者才是真的雇佣。
+# 「只有对未雇佣的佣兵才会雇佣」——雇的是**眼前这个人**，不是凭空变一个出来。
 advancement revoke @s only rpg:item/squad_hire
 execute if entity @s[scores={rpg_sq_t=1..}] run return 0
 scoreboard players set @s rpg_sq_t %(LOCK)d
 
 # 头一次募兵先领一个队伍编号。多人下认人全靠它，不靠"最近的玩家"。
 execute unless score @s rpg_squad = @s rpg_squad run function rpg:squad/enroll
-
-# 数一数现有几个人
 scoreboard players operation #sq rpg_squad = @s rpg_squad
+
+execute if entity @e[type=minecraft:husk,tag=rpg.sq.free,distance=..%(NEAR)d,limit=1] run return run function rpg:squad/enlist
+function rpg:squad/post
+"""
+
+POST = """\
+# 招一个待雇者到场。他不属于任何人：不跟随、不出手，就站在那儿等价钱。
+execute at @s anchored eyes positioned ^ ^ ^2 run function rpg:squad/post_at
+title @s actionbar ["",{"text":"待雇佣兵已到场","color":"%(GOLD)s"},{"text":"　再次长按雇下他","color":"gray","italic":true}]
+playsound minecraft:entity.villager.trade player @s ~ ~ ~ 1 0.9
+"""
+
+POST_AT = """\
+summon minecraft:husk ~ ~ ~ %(NBT)s
+particle happy_villager ~ ~1 ~ 0.4 0.6 0.4 0.05 24
+particle end_rod ~ ~1 ~ 0.3 0.5 0.3 0.02 12
+"""
+
+ENLIST = """\
+# 眼前有一个待雇者。数一数已经有几个人，再看钱够不够。
+#
+# 每一条都用 `return run`：不用的话，命中 hire0 之后人数变成 1，
+# 下一行 `if n=1` 也会成立 —— 一次按下会把四档全跑一遍，只扣第一档的钱。
 scoreboard players set #cnt rpg_squad 0
 execute as @e[type=minecraft:husk,tag=rpg.squad] if score @s rpg_squad = #sq rpg_squad run scoreboard players add #cnt rpg_squad 1
 scoreboard players operation @s rpg_sq_n = #cnt rpg_squad
@@ -247,6 +285,26 @@ execute if entity @s[scores={rpg_sq_n=%(CAP)d..}] run return run function rpg:sq
 # 手上有多少钱。`clear ... 0` 是**只数不拿**，原版惯用写法。
 execute store result score @s rpg_sq_have run clear @s %(CUR)s 0
 %(BRANCH)s
+"""
+
+SIGN_ON = """\
+# 钱付了，把眼前那个待雇者收编。
+execute as @e[type=minecraft:husk,tag=rpg.sq.free,distance=..%(NEAR)d,limit=1,sort=nearest] run function rpg:squad/sign_one
+title @s actionbar ["",{"text":"佣兵已入队","color":"%(GOLD)s"}]
+playsound minecraft:entity.villager.yes player @s ~ ~ ~ 1 1
+playsound minecraft:block.anvil_use player @a[distance=..12] ~ ~ ~ 0.6 1.4
+"""
+
+SIGN_ONE = """\
+# 待雇 -> 在编。
+tag @s remove rpg.sq.free
+tag @s add rpg.squad
+scoreboard players operation @s rpg_squad = #sq rpg_squad
+scoreboard players set @s rpg_sq_mode 0
+scoreboard players set @s rpg_sq_cd 0
+data modify entity @s CustomName set value [{"text":"佣兵","color":"%(STEEL)s"}]
+particle happy_villager ~ ~1.6 ~ 0.3 0.3 0.3 0.1 30
+particle end_rod ~ ~1 ~ 0.3 0.5 0.3 0.03 16
 """
 
 ENROLL = """\
@@ -260,7 +318,7 @@ HIRE_N = """\
 # 第 %(N)d 名，价钱 %(PRICE)d 枚。
 execute if entity @s[scores={rpg_sq_have=..%(SHORT)d}] run return run function rpg:squad/poor
 clear @s %(CUR)s %(PRICE)d
-function rpg:squad/spawn
+function rpg:squad/sign_on
 """
 
 POOR = """\
@@ -304,8 +362,49 @@ execute if entity @s[scores={rpg_sq_t=1..}] run return 0
 scoreboard players set @s rpg_sq_t %(LOCK)d
 execute unless score @s rpg_squad = @s rpg_squad run return run function rpg:squad/no_squad
 scoreboard players operation #sq rpg_squad = @s rpg_squad
+# 三个动作靠「潜行」与「副手空不空」分开。
+#
+# 配装原本走 player_interacted_with_entity（右键佣兵），但那个触发器只在
+# 交互**被消费**时才响 —— 原版全部七个用例都是真的做成了一件事（刷、喂、
+# 拴、修、引诱），而用剑右键一只尸壳在原版里什么都不做。所以那条路不响。
+# 改走副手 + using_item，与包里其余主动物品同一条路。
+execute if predicate rpg:sneaking if items entity @s weapon.offhand * run return run function rpg:squad/fire_near
 execute if predicate rpg:sneaking run return run function rpg:squad/stance
+execute if items entity @s weapon.offhand * run return run function rpg:squad/handover
 function rpg:squad/aim
+"""
+
+HANDOVER = """\
+# 把副手那件交给最近的自己人。
+tag @s add rpg.sq.boss
+execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..8,limit=1,sort=nearest] if score @s rpg_squad = #sq rpg_squad at @s run function rpg:squad/give_weapon
+execute unless entity @e[type=minecraft:husk,tag=rpg.squad,distance=..8] run function rpg:squad/none_near
+tag @s remove rpg.sq.boss
+"""
+
+GIVE_WEAPON = """\
+# @s 是佣兵，rpg.sq.boss 是雇主。他原本拿的掉在地上 —— 那就是取回的方式。
+execute if items entity @s weapon.mainhand * run function rpg:squad/drop_weapon
+item replace entity @s weapon.mainhand from entity @a[tag=rpg.sq.boss,limit=1] weapon.offhand
+item replace entity @a[tag=rpg.sq.boss,limit=1] weapon.offhand with air
+particle enchant ~ ~1.4 ~ 0.3 0.4 0.3 0.6 24
+playsound minecraft:item.armor.equip_iron player @a[distance=..12] ~ ~ ~ 1 1.1
+title @a[tag=rpg.sq.boss,limit=1] actionbar ["",{"text":"已配装","color":"%(GOLD)s"}]
+"""
+
+FIRE_NEAR = """\
+# 潜行 + 副手有东西 = 解雇最近的自己人。
+tag @s add rpg.sq.boss
+tag @s add rpg.sq.firing
+execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..8,limit=1,sort=nearest] if score @s rpg_squad = #sq rpg_squad at @s run function rpg:squad/dismiss
+execute unless entity @e[type=minecraft:husk,tag=rpg.squad,distance=..8] run function rpg:squad/none_near
+tag @s remove rpg.sq.firing
+tag @s remove rpg.sq.boss
+"""
+
+NONE_NEAR = """\
+title @s actionbar ["",{"text":"身边没有自己的佣兵","italic":true,"color":"gray"}]
+playsound minecraft:entity.villager.no player @s ~ ~ ~ 1 1.2
 """
 
 NO_SQUAD = """\
@@ -460,12 +559,18 @@ def build_functions():
     branch = []
     for n in range(CAP):
         price = COST * (n + 1)
+        # return run：不加的话命中一档之后人数变了，下一档也会成立
         branch.append("execute if entity @s[scores={rpg_sq_n=%d}] "
-                      "run function rpg:squad/hire%d" % (n, n))
+                      "run return run function rpg:squad/hire%d" % (n, n))
         wf("squad/hire%d.mcfunction" % n,
            HIRE_N % {"N": n + 1, "PRICE": price, "SHORT": price - 1, "CUR": CUR})
-    wf("squad/hire.mcfunction",
-       HIRE % {"LOCK": LOCK, "CAP": CAP, "CUR": CUR, "BRANCH": "\n".join(branch)})
+    wf("squad/hire.mcfunction", HIRE % {"LOCK": LOCK, "NEAR": 6})
+    wf("squad/post.mcfunction", POST % {"GOLD": GOLD})
+    wf("squad/post_at.mcfunction", POST_AT % {"NBT": free_nbt()})
+    wf("squad/enlist.mcfunction",
+       ENLIST % {"CAP": CAP, "CUR": CUR, "BRANCH": "\n".join(branch)})
+    wf("squad/sign_on.mcfunction", SIGN_ON % {"NEAR": 6, "GOLD": GOLD})
+    wf("squad/sign_one.mcfunction", SIGN_ONE % {"STEEL": STEEL})
     wf("squad/enroll.mcfunction", ENROLL)
     wf("squad/poor.mcfunction", POOR)
     wf("squad/full.mcfunction", FULL)
@@ -474,6 +579,10 @@ def build_functions():
 
     wf("squad/order.mcfunction", ORDER % {"LOCK": LOCK})
     wf("squad/no_squad.mcfunction", NO_SQUAD)
+    wf("squad/handover.mcfunction", HANDOVER)
+    wf("squad/give_weapon.mcfunction", GIVE_WEAPON % {"GOLD": GOLD})
+    wf("squad/fire_near.mcfunction", FIRE_NEAR)
+    wf("squad/none_near.mcfunction", NONE_NEAR)
     wf("squad/stance.mcfunction", STANCE)
     wf("squad/say_follow.mcfunction", SAY_FOLLOW % {"GOLD": GOLD})
     wf("squad/say_hold.mcfunction", SAY_HOLD % {"STEEL": STEEL})
@@ -485,7 +594,6 @@ def build_functions():
     wf("squad/mark_one.mcfunction", MARK_ONE)
     wf("squad/miss.mcfunction", MISS)
 
-    wf("squad/equip.mcfunction", EQUIP % {"LOCK": LOCK})
     wf("squad/on_member.mcfunction", ON_MEMBER)
     wf("squad/take_weapon.mcfunction", TAKE_WEAPON % {"GOLD": GOLD})
     wf("squad/drop_weapon.mcfunction", DROP_WEAPON)
@@ -509,14 +617,10 @@ def build_functions():
                     "minecraft:custom_data": data}}}}},
             "rewards": {"function": fn}})
 
-    wj(os.path.join(ADV, "squad_equip.json"), {
-        "criteria": {"requirement": {
-            "trigger": "minecraft:player_interacted_with_entity",
-            "conditions": {"entity": [
-                {"condition": "minecraft:entity_properties", "entity": "this",
-                 "predicate": {"type": "minecraft:husk",
-                               "nbt": "{Tags:[\"rpg.squad\"]}"}}]}}},
-        "rewards": {"function": "rpg:squad/equip"}})
+    # 原本这里有个 squad_equip 进度（右键佣兵配装）。删掉了：
+    # player_interacted_with_entity 只在交互**被消费**时才响，而尸壳在原版里
+    # 右键没有任何行为 —— 对它永远不响；可对**会被消费**的交互却会响，
+    # 比如拿拴绳右键，那会把拴绳"装备"给佣兵。配装改走副手 + 指挥旗。
 
     # 解雇退款：一半雇金，按最便宜的一档算
     wj(os.path.join(DP, "data/rpg/loot_table/squad/refund.json"), {
@@ -550,9 +654,9 @@ def guard_spawn_batch():
         return 0
     old = "tag @e[type=#minecraft:zombies,tag=!zombie,limit=4] add rpg.spawn.new"
     assert old in s, "zombie_batch 不是预期的形状"
-    new = ("# tag=!rpg.squad：佣兵也是尸壳，但他们是雇来的，不该被当作\n"
+    new = ("# tag=!rpg.merc：佣兵也是尸壳，但他们是雇来的（含还没雇的待雇者），\n"
            "# 新出生的野怪重掷装备、更不该被替换成强化变种。\n"
-           "tag @e[type=#minecraft:zombies,tag=!zombie,tag=!rpg.squad,limit=4] "
+           "tag @e[type=#minecraft:zombies,tag=!zombie,tag=!rpg.merc,limit=4] "
            "add rpg.spawn.new")
     io.open(p, "w", encoding="utf-8", newline="\n").write(s.replace(old, new))
     return 1
@@ -594,11 +698,12 @@ def build_give():
                  RULE,
                  row(seg("⚔指挥", "white", True), seg("　长按右键", STEEL)),
                  row(seg("　指着谁打谁：全队压上，目标倒下即归队", "gray")),
+                 row(seg("⚔配装", "white", True), seg("　副手拿武器 + 长按右键", STEEL)),
+                 row(seg("　交给最近的佣兵；他原本拿的掉在地上", "gray")),
                  row(seg("⚔姿态", "white", True), seg("　潜行 + 长按右键", STEEL)),
                  row(seg("　跟随 ⇄ 驻守", "gray")),
-                 RULE,
-                 row(seg("右键佣兵可为其配装；空手右键取回武器", "gray")),
-                 row(seg("潜行右键佣兵可将其解雇", "gray")),
+                 row(seg("⚔解雇", "white", True), seg("　潜行 + 副手拿物品 + 长按", STEEL)),
+                 row(seg("　装备掉地，退回一半雇金", "gray")),
                  RULE]) + "],"
              "banner_patterns=[{pattern:\"minecraft:border\",color:\"black\"},"
              "{pattern:\"minecraft:straight_cross\",color:\"white\"}],"
