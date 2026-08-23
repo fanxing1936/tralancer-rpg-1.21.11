@@ -1871,6 +1871,36 @@
    "conditions": 0
   }
  ],
+ "rpg:squad/refund": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      4,
+      4
+     ],
+     "components": {
+      "minecraft:custom_data": {
+       "currency_tag": true
+      }
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
  "rpg:trial/boots": [
   {
    "rolls": [

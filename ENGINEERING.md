@@ -2470,6 +2470,132 @@ execute as @e[scores={absorption=0..},tag=X] at @s run ...
 
 ---
 
+# 29. 佣兵小队：让敌对生物听话
+
+一个独立分支：花钱雇人，给他们配刀，指哪打哪。不与罪器、契约、驱魔任何一条
+耦合 —— 玩家可以完全不碰前面那些体系，只带着一队人打。
+
+## 29.1 唯一能从根上断掉的地方
+
+要用尸壳的模型就得用尸壳这个实体，而尸壳是**敌对生物**：它自带
+`NearestAttackableTargetGoal`，会主动打玩家和村民。而原版命令**没有任何办法
+清除一个生物的当前目标** —— `Target` 不在可写 NBT 里，`AngryAt` 只对中立生物
+有效。所以"让它别打老板"这件事**没法在事后补救**。
+
+那种"打之前判断一下是不是自己人"的写法，总会有漏网的一刻。唯一能从根上断掉的
+地方是**索敌半径**：
+
+```
+attributes:[{id:"follow_range",base:0}]
+```
+
+先做了对照实验才敢往下写：
+
+| | 结果 |
+|---|---|
+| 普通生物 + 一个村民 | 当场砍死（`Villager was slain by ...`） |
+| `follow_range: 0` + 一个村民 | 放着不管，村民满血 **20.0f** |
+
+它永远不会自己选中任何东西，**因此也永远不可能误伤雇主**。这条安全性是
+**结构性**的，不是判定兜出来的。
+
+代价是它也不会自己打该打的人。于是移动与攻击全部由数据包驱动。
+
+## 29.2 让它站住，然后自己开车
+
+`movement_speed: 0` —— 让它自己的 AI 推不动它，省得和我们的位移打架。
+（`NoAI` 不行：那样连重力都没了，人会浮在空中。）
+
+位移用 `tp` 而不是 `Motion`：`Motion` 要先把朝向换算成 xz 分量，而沿
+`^ ^ ^` 走一步不需要任何三角函数。
+
+```
+tp @s ~ ~ ~ facing entity <目标>
+execute at @s rotated ~ 0 positioned ^ ^ ^0.22 if block ~ ~ ~ #minecraft:replaceable run tp @s ~ ~ ~
+```
+
+`rotated ~ 0` 把俯仰归零 —— 不然朝着高处的目标会走上天。客户端的走路动画是按
+**位置变化**算的，所以 tp 出来的佣兵看起来仍然在走路。实测三刻走了 0.66 格，
+正好是 3 × 0.22。
+
+## 29.3 配武器不需要任何数值表
+
+伤害读的是佣兵**自己的 `attack_damage` 属性**，而这个属性天然含手持武器：
+
+```
+空手                4.0
+塞一把下界合金剑     11.0
+```
+
+所以"给佣兵配武器"这件事不需要维护任何武器数值表 —— 你把本包**任何一把**
+自定义武器塞给他，他就按那把武器的数值打，包括以后新加的。
+
+`damage` 的数值吃不了记分板，所以走**宏**（本包第一次用）：
+
+```
+execute store result storage rpg:squad atk int 1 run attribute @s minecraft:attack_damage get
+function rpg:squad/strike_do with storage rpg:squad
+```
+
+```
+$execute as @e[tag=rpg.sq.mark,...] run damage @s $(atk) minecraft:mob_attack by @e[tag=rpg.sq.striker,limit=1]
+```
+
+实测村民 20.0 → 16.0，与属性值一致。
+
+## 29.4 换成尸壳带来的两件事
+
+作者中途把卫道士换成了尸壳。尸壳省了一件事（**不怕阳光**，白天不自燃），
+但多带来两件，都不是改个 id 能了事的：
+
+**其一：它属于 `#minecraft:zombies`。** 本包每刻会给新出生的僵尸类重掷全套
+战利品装备，还有几率直接替换成强化变种。不排除的话，刚雇来的人转头就被系统
+当野怪重新配了装。已在 `zombie_batch` 那一行按标签摘出去。
+
+**其二：尸壳泡在水里会转化成普通僵尸。** 而转化是**换一个实体** ——
+标签与记分板一起没了，队员就这么凭空消失。所以佣兵不下水：踩到水立刻召回。
+
+## 29.5 一个自己制造的静默故障
+
+第一版 `squad/step` 服务器直接拒绝加载：
+
+```
+Whilst parsing command on line 6: Expected double at position 36: ...oned ^ ^ ^<--[HERE]
+```
+
+原因是**变量名撞了**：常量 `STEP = "0.22"` 在文件后面被同名的模板
+`STEP = """..."""` 覆盖，于是 `positioned ^ ^ ^%(STEP)s` 展开成了整段模板文本，
+命令里只剩 `^ ^ ^` 后面跟着一个 `#`。
+
+`validate.py` 放过了它 —— 它不检查 `positioned` 的参数类型。又是服务器抓到的。
+常量改名 `STRIDE`，并顺手全包扫了一遍有没有别的模板没展开干净。
+
+## 29.6 多人从第一行就在考虑
+
+前两部分刚把全包过了一遍多人适配，这一套是在那之后写的，所以从一开始就按
+多人写：
+
+* 每个雇主有一个 `rpg_squad` 编号，队员携带同一个编号。**认人靠编号比对，
+  不靠"最近的玩家"**
+* 雇主在自己那一段里临时挂 `rpg.sq.boss`，队员据此找人 —— 靠的是第 28 部分
+  那条不变量：命令执行是单线程的，同一刻只可能有一个玩家挂着它
+* 每刻只有**一条**玩家作用域判定；真正的遍历在雇主自己的函数里
+* 一支队伍最多只有一个标记目标，所以"目标还在不在"在雇主那一层问一次就够，
+  不必每个队员各开一次全表走查；剩下必须看距离的两条都限了上界
+
+## 29.7 开销与验证
+
+* **每多一个玩家的固定开销仍是 1 次全表走查/刻** —— 小队加的是一个
+  *带标签判定*的入口（19 → 20 个），没雇人的玩家一条也进不去
+* 空闲 275 → **283 次遍历**（多出来的是 `hotspots` 把标签守卫后的分支
+  一并计入了静态模型；真正每刻新增的是一次选择器判定）
+* 无头 1.21.11，服务器零抱怨，整条链路走真实的 `lead` 路径验过：
+  召出佣兵 ✓、不被配装流水线抓走 ✓、不自主攻击村民（满血 20.0f）✓、
+  三刻推进 0.66 格 ✓、宏伤害 20.0 → 16.0 ✓、
+  配剑后攻击力 4 → 11 ✓、目标死亡后自动归队 ✓、退款战利品表产出正确 ✓
+
+---
+
 # 重建方式
 
 ```bash
@@ -2483,7 +2609,8 @@ bash "_tools/rp_build.sh"
 数据包流程：`migrate.py` → `optimize.py` + `opt_spawn.py` + `opt_misc.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
 　　　　　→ `add_lucifer.py` + `add_leviathan.py`
-　　　　　→ `add_runes.py` + `add_epics.py` + `add_exorcism.py` + `add_pact.py`
+　　　　　→ `add_runes.py` + `add_epics.py` + `add_exorcism.py`
+　　　　　→ `add_pact.py` + `add_squad.py`
 　　　　　→ `retype_longinus.py` + `make_boxes.py` + `fix_display.py`
 　　　　　→ `opt_mp.py` → `opt_index.py` + `opt_type.py` + `opt_guard.py` + `opt_invert.py`
 　　　　　→ `validate.py` → `hotspots.py`

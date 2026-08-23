@@ -332,8 +332,9 @@ def build():
 <li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
 <li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
 <li><a href="#s12"><span class="num">X</span>七十二柱契约</a></li>
-<li><a href="#s10"><span class="num">XI</span>破碎大陆</a></li>
-<li><a href="#s11"><span class="num">XII</span>指令速查</a></li>
+<li><a href="#s13"><span class="num">XI</span>佣兵小队</a></li>
+<li><a href="#s10"><span class="num">XII</span>破碎大陆</a></li>
+<li><a href="#s11"><span class="num">XIII</span>指令速查</a></li>
 </ol></nav>''')
 
     a('<main>')
@@ -586,9 +587,49 @@ def build():
 六位领主各有一件罪遗武器，玛门没有。第七柱的契约填上了它：贪婪不制造东西，它只让已有的东西变多。</div>
 </section>''')
 
+    # XI squad --------------------------------------------------------------
+    a('''<section class="plate" id="s13">
+<div class="plate-h"><span class="num">XI</span><h2>佣兵小队</h2><span class="sub">花钱雇人 · 配刀 · 指哪打哪</span></div>
+<p>一个<strong>独立分支</strong>，不与罪器、契约、驱魔任何一条耦合。你可以完全不碰前面那些体系，只带着一队人打。</p>
+
+<div class="sys">
+<div><h3>募兵旗</h3><p class="how">长按右键 · 白色旗帜</p><p>雇一名佣兵，用<b>［货币］</b>（粗金）支付。上限 <b>4</b> 人，价钱逐人递增：<b>8 / 16 / 24 / 32</b> 枚，全队共 80 枚。</p></div>
+<div><h3>指挥旗</h3><p class="how">长按右键 · 红色旗帜</p><p>沿视线找出 24 格内第一个目标并标记，全队压上；目标倒下即自动归队。<b>潜行 + 长按</b>切换<b>跟随 ⇄ 驻守</b>。</p></div>
+<div><h3>配装</h3><p class="how">手持武器右键佣兵</p><p>把手里那件塞给他，他原本拿的掉在地上。<b>空手右键</b>取回武器。佣兵战死时武器<b>必定掉落</b>。</p></div>
+<div><h3>解雇</h3><p class="how">潜行右键佣兵</p><p>人散去，装备掉地，退回 4 枚货币。</p></div>
+</div>
+
+<h3 class="sub-h">佣兵<span class="rolls">尸壳 · 白天不自燃</span></h3>
+<div class="tw"><table>
+<thead><tr><th>属性</th><th>数值</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>生命</td><td class="num">40</td><td>—</td></tr>
+<tr><td>护甲</td><td class="num">4</td><td>—</td></tr>
+<tr><td>攻击</td><td class="num">4</td><td>写死，不随世界难度浮动；<b>手持武器的加成直接叠上去</b></td></tr>
+<tr><td>攻击间隔</td><td class="num">13 刻</td><td>生物受伤后约有 10 刻无敌帧，砍得更密只是浪费</td></tr>
+<tr><td>索敌半径</td><td class="num">0</td><td><b>永不主动出手</b>，见下</td></tr>
+<tr><td>归队距离</td><td class="num">34 格</td><td>掉队即刻拉回雇主身边</td></tr>
+</tbody></table></div>
+
+<div class="note"><b>为什么佣兵永远不会误伤你。</b>尸壳是敌对生物，自带主动索敌，而原版命令
+<b>没有任何办法清除一个生物的当前目标</b>。所以这里不是"打之前判断一下是不是自己人"——
+那种写法总有漏网的一刻。唯一能从根上断掉的地方是<b>索敌半径</b>：把 <code>follow_range</code> 设成 <code>0</code>，
+它就永远不会自己选中任何东西。安全性是<b>结构性</b>的，不靠判定去兜。
+代价是它也不会自己打该打的人——于是移动与攻击全部由数据包驱动。</div>
+
+<div class="note"><b>配武器不需要任何数值表。</b>伤害读的是佣兵<b>自己的 <code>attack_damage</code> 属性</b>，
+而这个属性天然含手持武器（实测：空手 4，塞一把下界合金剑变 11）。
+所以你把本包<b>任何一把</b>自定义武器塞给他，他就按那把武器的数值打，包括后续新加的。</div>
+
+<div class="note"><b>两条尸壳专属的注意。</b>其一，尸壳属于 <code>#minecraft:zombies</code>，
+本包每刻会给新出生的僵尸类重掷装备甚至替换成强化变种——佣兵已在那条流水线上按标签排除。
+其二，<b>佣兵不下水</b>：尸壳泡水会转化成普通僵尸，而转化是换一个实体，标签与记分板一起没了，
+人就凭空消失；所以踩到水会立刻召回雇主身边。</div>
+</section>''')
+
     # VIII chapters -------------------------------------------------------
     a('''<section class="plate" id="s10">
-<div class="plate-h"><span class="num">XI</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
+<div class="plate-h"><span class="num">XII</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
 
 <div class="scroll-h">
 <p class="heb">אֶרֶץ הַשְּׁבָרִים</p>
@@ -613,7 +654,7 @@ def build():
 
     # IX commands ---------------------------------------------------------
     a('''<section class="plate" id="s11">
-<div class="plate-h"><span class="num">XII</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
+<div class="plate-h"><span class="num">XIII</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
 <div class="tw"><table>
 <thead><tr><th>指令</th><th>作用</th></tr></thead>
 <tbody>

@@ -171,4 +171,12 @@ scoreboard objectives add rpg_pact_cd dummy
 scoreboard objectives add rpg_pact_t dummy
 scoreboard players set #pact_full rpg_hud 300
 scoreboard players set #two rpg_pact 2
+scoreboard objectives add rpg_squad dummy
+scoreboard objectives add rpg_sq_mode dummy
+scoreboard objectives add rpg_sq_cd dummy
+scoreboard objectives add rpg_sq_t dummy
+scoreboard objectives add rpg_sq_n dummy
+scoreboard objectives add rpg_sq_have dummy
+scoreboard objectives add rpg_sq_aim dummy
+scoreboard objectives add rpg_sq_stance dummy
 scoreboard objectives add rpg_inv dummy

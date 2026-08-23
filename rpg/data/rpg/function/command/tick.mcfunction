@@ -23,6 +23,7 @@ function rpg:item/extra/skills
 function rpg:item/rune/runes
 function rpg:item/epic/epics
 function rpg:exorcism
+function rpg:squad/squad
 
 
 

@@ -3661,6 +3661,89 @@
    "trim": null,
    "potion_contents": null,
    "_new": true
+  },
+  {
+   "item": "white_banner",
+   "name": "募兵旗",
+   "rarity": "佣兵",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "插在哪里，哪里就是营地",
+    "长按右键雇一名佣兵",
+    "+------------------+",
+    "⚔募兵　上限 4 人",
+    "　价钱逐人递增：8 / 16 / 24 / 32 枚货币",
+    "　佣兵永不主动出手，也永远不会误伤你",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "squad_hire"
+   ],
+   "custom_data": {
+    "squad_hire": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100130,
+   "components": [
+    "banner_patterns",
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "red_banner",
+   "name": "指挥旗",
+   "rarity": "佣兵",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "举起它，队伍就看你的手势",
+    "+------------------+",
+    "⚔指挥　长按右键",
+    "　指着谁打谁：全队压上，目标倒下即归队",
+    "⚔姿态　潜行 + 长按右键",
+    "　跟随 ⇄ 驻守",
+    "+------------------+",
+    "右键佣兵可为其配装；空手右键取回武器",
+    "潜行右键佣兵可将其解雇",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "squad_order"
+   ],
+   "custom_data": {
+    "squad_order": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100131,
+   "components": [
+    "banner_patterns",
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
   }
  ],
  "runes": [
@@ -4632,12 +4715,17 @@
    ],
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "currency_tag"
+   ],
+   "custom_data": {
+    "currency_tag": 1
+   },
    "cmd": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore"
    ],
