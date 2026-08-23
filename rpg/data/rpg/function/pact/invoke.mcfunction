@@ -1,5 +1,10 @@
 # 已有柱位。手里必须是**自己那一本已立约的书** —— 攥着别柱的书没有用。
 execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{pact_signed:1b}] run return run function rpg:pact/reissue
+
+# 站在一支**燃着的**驱魔图腾旁边举起这本书，不是动用力量，而是毁约。
+# 这是逆圣化之外的第二条解约途径 —— 详见 rpg:pact/renounce。
+execute if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,distance=..6] run return run function rpg:pact/renounce
+
 execute if entity @s[scores={rpg_pact_cd=1..}] run return run function rpg:pact/cooling
 
 scoreboard players set @s rpg_pact_cd 300

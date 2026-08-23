@@ -10,5 +10,5 @@ playsound minecraft:block.beacon.deactivate player @a[distance=..28] ~ ~ ~ 1 1.1
 execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..6] at @s run function rpg:rite/free
 execute as @e[distance=0.1..6,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,type=!minecraft:villager] at @s run damage @s 6 minecraft:magic
 execute as @e[distance=0.1..6,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,type=!minecraft:villager] at @s run data merge entity @s {Motion:[0d,0.6d,0d]}
-title @a[distance=..10] actionbar ["",{"text":"图腾已尽","color":"gray","italic":true}]
+execute as @a[distance=..10] run function rpg:hud/m4
 kill @s

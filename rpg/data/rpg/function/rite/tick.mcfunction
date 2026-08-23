@@ -6,7 +6,7 @@
 
 # 熄着的图腾等一朵圣水云。滞留药水落地留下的 area_effect_cloud 就是"浇上了"，
 # 喷溅型落地即散，什么都留不下，所以驱魔圣水做成滞留型。
-execute as @e[type=minecraft:item_display,tag=rpg.totem,tag=!rpg.totem.lit] at @s if entity @e[type=minecraft:area_effect_cloud,distance=..3] run function rpg:rite/light
+execute as @e[type=minecraft:item_display,tag=rpg.totem,tag=!rpg.totem.lit] at @s if entity @e[type=minecraft:area_effect_cloud,tag=rpg.holy_water,distance=..3] run function rpg:rite/light
 
 # 点着的图腾走自己的节拍
 execute as @e[type=minecraft:item_display,tag=rpg.totem.lit] at @s run function rpg:rite/beat

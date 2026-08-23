@@ -1,2 +1,2 @@
-title @s actionbar ["",{"text":"你还没有小队","italic":true,"color":"gray"}]
+function rpg:hud/m10
 playsound minecraft:entity.villager.no player @s ~ ~ ~ 1 1.2

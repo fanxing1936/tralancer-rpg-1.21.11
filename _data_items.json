@@ -2082,12 +2082,17 @@
    ],
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "holy_weapon_tag"
+   ],
+   "custom_data": {
+    "holy_weapon_tag": 1
+   },
    "cmd": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "entity_data",
     "lore"
@@ -2109,12 +2114,17 @@
    ],
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "holy_weapon_tag"
+   ],
+   "custom_data": {
+    "holy_weapon_tag": 1
+   },
    "cmd": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "enchantment_glint_override",
     "lore",
@@ -2148,13 +2158,18 @@
    ],
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "holy_weapon_tag"
+   ],
+   "custom_data": {
+    "holy_weapon_tag": 1
+   },
    "cmd": null,
    "unbreakable": false,
    "consumable": 6000001,
    "components": [
     "consumable",
+    "custom_data",
     "custom_name",
     "food",
     "lore",
@@ -4552,7 +4567,7 @@
    "lore": [
     "+------------------+",
     "以[圣座]之木刻成",
-    "右键地面立起，再以驱魔圣水浇之",
+    "长按右键立起，再以驱魔圣水浇之",
     "+------------------+",
     "🔱仪式[驱魔]",
     "点燃后每隔两秒净化一次，效力逐次递减",
@@ -4566,18 +4581,23 @@
    "enchantments": {},
    "modifiers": [],
    "tags": [
+    "holy_weapon_tag",
     "totem_tag"
    ],
    "custom_data": {
+    "holy_weapon_tag": 1,
     "totem_tag": 1
    },
    "cmd": null,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 100140,
    "components": [
+    "consumable",
     "custom_data",
     "custom_name",
-    "lore"
+    "food",
+    "lore",
+    "max_stack_size"
    ],
    "dyed_color": null,
    "trim": null,
@@ -4597,9 +4617,11 @@
    "enchantments": {},
    "modifiers": [],
    "tags": [
+    "holy_weapon_tag",
     "rite_tag"
    ],
    "custom_data": {
+    "holy_weapon_tag": 1,
     "rite_tag": 1
    },
    "cmd": null,

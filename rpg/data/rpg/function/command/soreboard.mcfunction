@@ -179,4 +179,6 @@ scoreboard objectives add rpg_sq_n dummy
 scoreboard objectives add rpg_sq_have dummy
 scoreboard objectives add rpg_sq_aim dummy
 scoreboard objectives add rpg_sq_stance dummy
+scoreboard objectives add rpg_hud_m dummy
+scoreboard objectives add rpg_hud_mt dummy
 scoreboard objectives add rpg_inv dummy

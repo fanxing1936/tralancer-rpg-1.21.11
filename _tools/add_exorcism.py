@@ -383,6 +383,12 @@ RITE_TRIGGER = """\
 # 图腾本体用 item_display：没有 AI、没有碰撞，只是一件立在那儿的东西。
 advancement revoke @s only rpg:item/rite
 execute if entity @s[scores={rpg_rite=1..}] run return 0
+
+# 手里必须真的是驱魔图腾。item_used_on_block 天生promiscuous ——
+# "对方块使用物品"把**放方块**也算在内，所以正确性不该全押在进度的断言上，
+# 这里再验一道。
+execute unless items entity @s weapon.mainhand minecraft:totem_of_undying[minecraft:custom_data~{totem_tag:1b}] run return 0
+
 scoreboard players set @s rpg_rite 10
 clear @s minecraft:totem_of_undying[minecraft:custom_data~{totem_tag:1b}] 1
 execute at @s anchored eyes positioned ^ ^ ^2 run function rpg:rite/place
@@ -620,7 +626,7 @@ def build_give():
              "lore=[" + ",".join([
                  RULE,
                  row(seg("以"), seg("[圣座]", "#FFD700", True), seg("之木刻成")),
-                 row(seg("右键地面立起，再以驱魔圣水浇之")),
+                 row(seg("长按右键立起，再以驱魔圣水浇之")),
                  RULE,
                  row(seg("🔱仪式", "white", True), seg("[驱魔]", "#FFD700", True)),
                  row(seg("点燃后每隔两秒净化一次，效力逐次递减")),
@@ -630,6 +636,14 @@ def build_give():
                  row(seg("魔化满值者在场时点燃，仪式转为反转")),
                  row(seg("站定十秒熬过灼烧，魔化尽去，留下圣痕")),
                  RULE]) + "],"
+             # 不死图腾本身没有任何右键行为，所以得先给它一个「使用」动作，
+             # using_item 才有东西可响。consume_seconds 取一个大到永远吃不完的
+             # 数，与包里其余主动物品同一套写法。
+             "food={nutrition:0,saturation:0f,can_always_eat:1b},"
+             'consumable={consume_seconds:100140f,animation:"block",'
+             'sound:"minecraft:block.respawn_anchor.charge",'
+             "has_consume_particles:false,on_consume_effects:[]},"
+             "max_stack_size=1,"
              "custom_data={totem_tag:1b}]")
     # 必须是滞留型：喷溅药水落地即散，图腾没有任何东西可以感知；
     # 滞留药水会留下 area_effect_cloud，那才是"浇上了"的凭据。
@@ -722,11 +736,16 @@ def build_functions():
 
     wf("exorcism.mcfunction", ROOT % {"EVERY": SPREAD_EVERY})
 
+    # 走 using_item 而不是 item_used_on_block。后者有两个坑，而且是同一个
+    # 根因的两面：它没有 `item` 字段（物品判定得塞进 location 的 match_tool），
+    # 写错就等于没有条件，放任何方块都会触发；而它又只在交互**成功**时才响，
+    # 不死图腾没有 useOn 行为，右击方块直接 PASS —— 拿着正主反而不响。
+    # using_item 只认正在使用的那件物品，与包里其余主动物品同一条路。
     wj(os.path.join(ADV, "rite.json"), {
         "criteria": {"requirement": {
-            "trigger": "minecraft:item_used_on_block",
-            "conditions": {
-                "item": {"predicates": {"minecraft:custom_data": "{totem_tag:1b}"}}}}},
+            "trigger": "minecraft:using_item",
+            "conditions": {"item": {"predicates": {
+                "minecraft:custom_data": "{totem_tag:1b}"}}}}},
         "rewards": {"function": "rpg:rite/trigger"}})
 
     # 击杀空缺者 —— 生物死掉那一刻，原版只有这一个口子能通知到数据包。

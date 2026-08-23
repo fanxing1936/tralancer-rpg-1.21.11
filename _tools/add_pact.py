@@ -290,6 +290,11 @@ tellraw @s ["",{"text":"◆ ","color":"%(COLOUR)s"},{"text":"魔神借契约进�
 INVOKE = """\
 # 已有柱位。手里必须是**自己那一本已立约的书** —— 攥着别柱的书没有用。
 execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{pact_signed:1b}] run return run function rpg:pact/reissue
+
+# 站在一支**燃着的**驱魔图腾旁边举起这本书，不是动用力量，而是毁约。
+# 这是逆圣化之外的第二条解约途径 —— 详见 rpg:pact/renounce。
+execute if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,distance=..%(R)d] run return run function rpg:pact/renounce
+
 execute if entity @s[scores={rpg_pact_cd=1..}] run return run function rpg:pact/cooling
 
 scoreboard players set @s rpg_pact_cd %(CD)d
@@ -305,6 +310,43 @@ REISSUE = """# 手里这本没盖过印。死一次把书掉了是常事 —— 
 %(BRANCH)s
 function rpg:pact/wrong_book
 """
+
+RENOUNCE = """\
+# 毁约。
+#
+# 契约本来只有逆圣化一条出路，而逆圣化要求魔化先推到 100 ——
+# 对签错柱位的人那不是出路，是死胡同。所以给它第二条：
+# 借驱魔仪式的火烧断它。仪式本来就是烧污染的，成本也实打实
+# （一支图腾加一瓶圣水）。
+#
+# 顺序要紧：先把书退回未立约，再 break —— break 会清掉柱位编号，
+# 清掉之后就认不出该退成哪一本了。
+%(UNSIGN)s
+function rpg:pact/break
+
+# 柱中的东西不会白白松手。
+scoreboard players add @s rpg_taint %(BACKLASH)d
+execute if entity @s[scores={rpg_taint=%(MAXP)d..}] run scoreboard players set @s rpg_taint %(MAX)d
+effect give @s minecraft:wither 10 1
+effect give @s minecraft:blindness 4 0
+
+particle minecraft:flash{color:16777200} ~ ~1 ~ 0 0 0 0 1
+particle end_rod ~ ~1 ~ 0.6 0.8 0.6 0.25 120
+particle sculk_charge_pop ~ ~1 ~ 0.5 0.7 0.5 0.12 80
+playsound minecraft:block.beacon.deactivate master @a[distance=..32] ~ ~ ~ 1 0.6
+playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 0.7
+title @s times 10 60 20
+title @s title ["",{"text":"契 约 已 断","italic":false,"color":"gold","bold":true}]
+title @s subtitle ["",{"text":"柱位空了出来，代价留在你身上","italic":false,"color":"gray"}]
+
+# 图腾把自己烧尽了
+kill @e[type=minecraft:item_display,tag=rpg.totem.lit,distance=..%(R)d,limit=1,sort=nearest]
+"""
+
+UNSIGN_ONE = """\
+item replace entity @s weapon.mainhand with %(ITEM)s
+"""
+
 
 WRONG_BOOK = """\
 # 攥着另一柱的书。柱位是排他的 —— 一个人只能挂在一根柱子上。
@@ -347,6 +389,8 @@ def item_snbt(p, signed):
                 seg("封入柱中的名", "gray"))]
     if signed:
         lore.append(row(seg("长按右键动用柱中之力（冷却 %d 秒）" % (CD // 20), "gray")))
+        lore.append(row(seg("在燃着的驱魔图腾旁长按则", "gray"),
+                        seg("毁约", "#FF3300", True)))
     else:
         lore.append(row(seg("长按右键签下契约", "gray")))
     lore += [RULE,
@@ -430,7 +474,21 @@ def build_functions():
     inv = ["execute if entity @s[scores={rpg_pact=%d}] run function rpg:pact/p%d"
            % (p["n"], p["n"]) for p in PILLARS]
     wf("pact/invoke.mcfunction",
-       INVOKE % {"CD": CD, "TAINT": USE_TAINT, "BRANCH": "\n".join(inv)})
+       INVOKE % {"CD": CD, "TAINT": USE_TAINT, "R": ex.RITE_R,
+                 "BRANCH": "\n".join(inv)})
+
+    # 毁约：先把书退回未立约（break 会清掉柱位编号，之后就认不出该退成哪本），
+    # 再撤掉恩赐与枷锁。
+    unsign = []
+    for q in PILLARS:
+        unsign.append("execute if entity @s[scores={rpg_pact=%d}] "
+                      "run function rpg:pact/unsign%d" % (q["n"], q["n"]))
+        wf("pact/unsign%d.mcfunction" % q["n"],
+           UNSIGN_ONE % {"ITEM": item_snbt(q, False)})
+    wf("pact/renounce.mcfunction",
+       RENOUNCE % {"UNSIGN": "\n".join(unsign), "BACKLASH": 20,
+                   "MAX": ex.TAINT_MAX, "MAXP": ex.TAINT_MAX + 1,
+                   "R": ex.RITE_R})
     wf("pact/trigger.mcfunction", TRIGGER % {"LOCK": LOCK})
     reissue = ["execute if entity @s[scores={rpg_pact=%d}] "
                "if items entity @s weapon.mainhand *[minecraft:custom_data~{pact:%d}] "

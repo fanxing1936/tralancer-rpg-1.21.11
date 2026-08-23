@@ -4,6 +4,8 @@ scoreboard players set @s rpg_taint_t 0
 # 圣痕期间沾不上任何东西 —— 反转过的人，脏不了。
 execute if entity @s[scores={rpg_holy=1..}] run return 0
 
+# 替死人偶要按「这一轮实际沾了多少」来还，所以先记一笔。
+scoreboard players operation #t0 rpg_hud = @s rpg_taint
 execute if entity @s[tag=rpg.h.devil_tag1] run scoreboard players add @s rpg_taint 2
 execute if entity @s[tag=rpg.h.devil_weapon_tag1] run scoreboard players add @s rpg_taint 1
 # 立约本身就是代价 —— 柱中的东西一直在往里渗。贪婪那一柱渗得更快。
@@ -12,6 +14,11 @@ execute if entity @s[tag=rpg.pact,scores={rpg_pact=7}] run scoreboard players ad
 execute if entity @s[tag=rpg.h.holy_weapon_tag1] run scoreboard players remove @s rpg_taint 1
 execute if entity @s[scores={rpg_taint=101..}] run scoreboard players set @s rpg_taint 100
 execute if entity @s[scores={rpg_taint=..-1}] run scoreboard players set @s rpg_taint 0
+
+# 身边立着替死人偶的话，这一轮沾上的由它承受。
+scoreboard players operation #t1 rpg_hud = @s rpg_taint
+scoreboard players operation #t1 rpg_hud -= #t0 rpg_hud
+execute if score #t1 rpg_hud matches 1.. if entity @e[type=minecraft:allay,tag=rpg.doll,distance=..16,limit=1] run function rpg:taint/doll
 
 # 分档外显。低档只是身上泛起暗纹，越深越明显。
 execute if entity @s[scores={rpg_taint=31..60}] at @s run particle dust{color:[0.32,0.16,0.42],scale:1} ~ ~1 ~ 0.35 0.6 0.35 0.01 4

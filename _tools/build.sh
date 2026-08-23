@@ -23,8 +23,12 @@ python add_epics.py ../resourcepack ../rpg
 python add_exorcism.py ../rpg
 python add_pact.py ../rpg
 python add_squad.py ../rpg
+# 把包里原有的三件驱魔道具（替死人偶／圣水／天启星）接进驱魔体系
+python add_holy_items.py ../rpg
 python retype_longinus.py ../resourcepack ../rpg
 python make_boxes.py ../rpg
+# 把所有直接写 actionbar 的地方收回统一 HUD（它只有一行，谁最后写谁赢）
+python opt_actionbar.py ../rpg
 # 上面这些生成器同样会往 ../resourcepack 写手持变换，而它们写的是作者
 # 原本的非等比缩放。rp_build.sh 末尾跑 fix_display 就是为了这个 ——
 # 这里不跑，单独重建数据包就会把刀刃的剪切和副手反握又装回去。
@@ -42,6 +46,8 @@ python opt_invert.py ../rpg
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg
+# 拿原版当字典，比对进度触发器的条件字段名（写错是完全静默的）
+python check_adv.py ../rpg
 echo
 echo "== 4. per-tick profile =="
 python profile_tick.py ../rpg

@@ -1,2 +1,2 @@
-title @s actionbar ["",{"text":"钱不够","italic":true,"color":"red"}]
+function rpg:hud/m11
 playsound minecraft:entity.villager.no player @s ~ ~ ~ 1 0.9

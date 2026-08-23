@@ -5,16 +5,20 @@
 # 先把占用计时器坐实。scores= 只认已经存在的分数，没有这一行，
 # 从没蓄过力的玩家过不了下面 rpg_hud_t=..0 那一关，状态条永远不显示。
 scoreboard players add @s rpg_hud_t 0
+scoreboard players add @s rpg_hud_mt 0
 
-execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=1}] run function rpg:hud/s1
-execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=2}] run function rpg:hud/s2
-execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=3}] run function rpg:hud/s3
-execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=4}] run function rpg:hud/s4
-execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=5}] run function rpg:hud/s5
+# 一次性提示压过所有条，只活 40 刻；它一过期，条自己就回来。
+execute if entity @s[scores={rpg_hud_mt=1..}] run function rpg:hud/msg_tick
+
+execute if entity @s[scores={rpg_hud_mt=..0,rpg_hud_t=1..,rpg_hud=1}] run function rpg:hud/s1
+execute if entity @s[scores={rpg_hud_mt=..0,rpg_hud_t=1..,rpg_hud=2}] run function rpg:hud/s2
+execute if entity @s[scores={rpg_hud_mt=..0,rpg_hud_t=1..,rpg_hud=3}] run function rpg:hud/s3
+execute if entity @s[scores={rpg_hud_mt=..0,rpg_hud_t=1..,rpg_hud=4}] run function rpg:hud/s4
+execute if entity @s[scores={rpg_hud_mt=..0,rpg_hud_t=1..,rpg_hud=5}] run function rpg:hud/s5
 
 # 没有技能占用时才轮到状态条。圣痕会把魔化压成 0 并挡住一切沾染，
 # 所以这两条天然互斥，不必再互相排除。
-execute if entity @s[scores={rpg_hud_t=..0,rpg_holy=1..}] run function rpg:hud/holy
-execute if entity @s[scores={rpg_hud_t=..0,rpg_taint=1..}] run function rpg:hud/taint
+execute if entity @s[scores={rpg_hud_mt=..0,rpg_hud_t=..0,rpg_holy=1..}] run function rpg:hud/holy
+execute if entity @s[scores={rpg_hud_mt=..0,rpg_hud_t=..0,rpg_taint=1..}] run function rpg:hud/taint
 
 execute if entity @s[scores={rpg_hud_t=1..}] run scoreboard players remove @s rpg_hud_t 1

@@ -7,4 +7,4 @@ effect clear @s minecraft:fire_resistance
 effect clear @s minecraft:absorption
 particle end_rod ~ ~1 ~ 0.4 0.7 0.4 0.06 40
 playsound minecraft:block.beacon.deactivate master @s ~ ~ ~ 0.8 1.2
-title @s actionbar ["",{"text":"圣痕淡去","italic":true,"color":"gray"}]
+function rpg:hud/m17
