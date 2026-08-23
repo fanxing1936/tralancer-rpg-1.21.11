@@ -618,7 +618,11 @@ LORD = """\
 
 LORD_ONE = """\
 # %(WHO)s。契约不是租约：借过的力，最后会自己来取回去。
-summon minecraft:wither_skeleton ~ ~1 ~ %(NBT)s
+#
+# 底子与无名者那只一样：卫道士 + devil 标签（隐身与烟雾由包里
+# 已有的恶魔 boss 那一套负责），三十秒后自己散掉。
+summon minecraft:vindicator ~ ~1 ~ %(NBT)s
+function rpg:taint/advent_life
 particle dust{color:[%(RGB)s],scale:3} ~ ~1.2 ~ 0.8 1 0.8 0.05 70
 playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..48] ~ ~ ~ 1 0.5
 """

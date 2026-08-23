@@ -10,5 +10,8 @@ scoreboard players set @s rpg_sq_t 10
 execute unless score @s rpg_squad = @s rpg_squad run function rpg:squad/enroll
 scoreboard players operation #sq rpg_squad = @s rpg_squad
 
+# 潜行 = 给身边的在编佣兵升一级（原本这个组合是空着的）
+execute if predicate rpg:sneaking run return run function rpg:squad/upgrade
+
 execute if entity @e[type=minecraft:husk,tag=rpg.sq.free,distance=..6,limit=1] run return run function rpg:squad/enlist
 function rpg:squad/post

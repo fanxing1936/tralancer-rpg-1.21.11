@@ -545,9 +545,12 @@ def build():
 <div class="note"><b>不受控的挥砍只打非玩家生物。</b>多人服里不该由堕落替你决定去打谁——
 伤害仍然记在<b>你</b>头上，但目标不会是别的玩家。</div>
 
-<h3 class="sub-h">降临<span class="rolls">堕落走满</span></h3>
+<h3 class="sub-h">降临<span class="rolls">堕落走满 · 它只待 30 秒</span></h3>
 <p>有东西从这个人身上<strong>挣了出来</strong>：地面炸开，一位<b>[DEVIL]</b> 落到他面前——
-<b>140 生命 / 12 护甲 / 11 攻击 / 48 格索敌</b>，手持下界合金剑，全程发光。</p>
+<b>120 生命 / 11 攻击 / 48 格索敌</b>，见谁打谁。</p>
+<div class="note"><b>你看不见它。</b>它和本包原有的恶魔 boss 是同一族——挂着同一个 <code>devil</code> 标签，
+于是自动继承那一套：<b>常驻隐身</b>、周身不断渗出的黑烟与墨。你只能靠烟找它。
+它<b>只待 30 秒</b>，时间一到自己散掉——不是被你打退的。三十秒里你打不打得动它，是另一回事。</div>
 <div class="sys">
 <div><h3>挣出来的是谁</h3><p class="how">看你签的是哪一柱</p><p>身上有契约，来的就是<b>那一位领主</b>，名牌与粒子都是他的本色；
 没签过约的人，来的是一位<b>无名者</b>。契约不是租约——借过的力，最后会自己来取回去。</p></div>
@@ -669,9 +672,10 @@ def build():
     trow = "".join(
         '<tr><td><b style="color:%s">%s</b></td><td>%s</td>'
         '<td class="num">%d</td><td class="num">%d</td><td class="num">%d</td>'
-        '<td class="num">%d</td><td class="num">%d%%</td></tr>'
-        % (t["colour"], t["key"], t["gear"], t["hp"], t["armor"],
-           t["total"], t["price"], t["w"])
+        '<td class="num">%d</td><td class="num">%d</td>'
+        '<td class="num">%d%%</td></tr>'
+        % (t["colour"], t["key"], t["gear"], t["hp"], t["armor_real"],
+           t["tough"], t["total"], t["price"], t["w"])
         for t in Q["tiers"])
     cheap, dear = Q["tiers"][0], Q["tiers"][-1]
 
@@ -683,10 +687,13 @@ def build():
 <p>佣兵分五等。<strong>甲、纹饰、基础数值与价钱全由等级定下</strong>，招人时当场掷一次点——
 你看着名牌决定雇不雇，这才叫募兵。等级<b>不能升</b>：想要好的，就继续招。</p>
 <div class="tw"><table>
-<thead><tr><th>等级</th><th>装备</th><th>生命</th><th>护甲</th><th>攻击<span class="rolls">含起手剑</span></th><th>价钱</th><th>掷中概率</th></tr></thead>
+<thead><tr><th>等级</th><th>装备</th><th>生命</th><th>护甲<span class="rolls">含整套甲</span></th><th>韧性</th><th>攻击<span class="rolls">含起手剑</span></th><th>价钱</th><th>掷中概率</th></tr></thead>
 <tbody>''' + trow + '''</tbody></table></div>
 <div class="note"><b>纹饰就是等级的徽记。</b>二等起每一等都带一套固定的盔甲纹饰（海岸／守护／沉寂／尖塔），
 隔着老远也认得出你带的是什么队。<b>盔甲不可替换、战死也不掉</b>——它属于等级，不属于个人。</div>
+<div class="note"><b>护甲那一列为什么到 30 就不涨了。</b>原版护甲值的上限就是 <b>30</b>，超出的部分会被直接截掉。
+所以高两等的差距主要落在<b>韧性</b>上（上限 20，不撞顶）——它按比例削减每一次伤害中能被护甲挡下的部分，
+面对高伤害的一击尤其明显。早先的数值把四等与五等都推过了 30，两者的护甲实际一模一样，等级是白分的。</div>
 
 <h3 class="sub-h">名牌下方那块信息板<span class="rolls">跟着人走</span></h3>
 <p>每名佣兵头顶挂着一块 <code>text_display</code>，两行：装备与纹饰在上，<b>❤ 生命　⛊ 护甲　⚔ 攻击</b>在下。
@@ -701,7 +708,8 @@ def build():
 <div><h3>指挥旗 · 指哪打哪</h3><p class="how">长按右键 · 副手空着</p><p>沿视线找出 ''' + str(Q["sight"]) + ''' 格内第一个目标并标记，全队压上；目标倒下即自动归队。</p></div>
 <div><h3>配装</h3><p class="how">副手拿武器 + 长按指挥旗</p><p><b>只有武器归你管。</b>交给最近的佣兵，他原本拿的<b>掉在地上</b>——那就是取回的方式。
 你塞什么他就按什么打（伤害读的是他自己的攻击力属性，天然含手持武器），信息板上的 ⚔ 当场重算。佣兵战死时武器<b>必定掉落</b>。</p></div>
-<div><h3>姿态与解雇</h3><p class="how">潜行 + 长按指挥旗</p><p><b>副手空着</b>切换<b>跟随 ⇄ 驻守</b>；<b>副手拿着东西</b>则解雇最近的佣兵，武器掉地。</p></div>
+<div><h3>姿态与解雇</h3><p class="how">潜行 + 长按指挥旗</p><p><b>副手空着</b>切换<b>跟随 ⇄ 驻守</b>；<b>副手拿着东西</b>则解雇最近的佣兵，武器掉地，
+并<b>按他的等级退回一半雇金</b>（4 / 10 / 20 / 40 / 80 枚）。</p></div>
 </div>
 
 <div class="note"><b>价钱是概率的对价。</b>一等 ''' + str(cheap["price"]) + ''' 枚就能带走，五等要 ''' + str(dear["price"]) + ''' 枚——

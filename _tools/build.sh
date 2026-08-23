@@ -28,6 +28,8 @@ python add_mammon.py ../rpg ../resourcepack
 # 把包里原有的三件驱魔道具（替死人偶／圣水／天启星）接进驱魔体系
 python add_holy_items.py ../rpg
 python retype_longinus.py ../resourcepack ../rpg
+# 游戏内的玩法总览书。数值读 _squad.json / _pact.json，与图鉴同源
+python add_book.py ../rpg
 python make_boxes.py ../rpg
 # 把所有直接写 actionbar 的地方收回统一 HUD（它只有一行，谁最后写谁赢）
 python opt_actionbar.py ../rpg
@@ -35,6 +37,8 @@ python opt_actionbar.py ../rpg
 # 原本的非等比缩放。rp_build.sh 末尾跑 fix_display 就是为了这个 ——
 # 这里不跑，单独重建数据包就会把刀刃的剪切和副手反握又装回去。
 python fix_display.py ../resourcepack
+# 还没画好的贴图先拿原版的逐字节顶上 —— 已存在的文件一律不碰
+python art_placeholder.py ../resourcepack
 echo
 echo "== 2b. guard the empty-tag entity walks =="
 # 多人适配：单人下看不出来的归属错、全局标签互踩，以及按人数放大的遍历

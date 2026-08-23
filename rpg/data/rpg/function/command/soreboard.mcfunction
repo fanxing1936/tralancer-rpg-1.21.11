@@ -185,6 +185,7 @@ scoreboard objectives add rpg_sq_stance dummy
 scoreboard objectives add rpg_sq_tier dummy
 scoreboard objectives add rpg_sq_roll dummy
 scoreboard objectives add rpg_sq_fr dummy
+scoreboard objectives add rpg_sq_slot dummy
 scoreboard objectives add rpg_mam dummy
 scoreboard objectives add rpg_mam_c dummy
 scoreboard objectives add rpg_mam_win dummy

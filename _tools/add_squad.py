@@ -71,7 +71,18 @@ STRIDE = "0.22"          # 每刻迈出多远（别叫 STEP：下面有个同名
 LEASH = 34               # 掉队多远直接归队
 SIGHT = 24               # 指挥旗的射程（格）
 RAY_STEP_LEN = 0.5       # 射线的取点间隔。1 格太疏，小生物会从两点之间漏过去
-RAY_R = "0.7"            # 每个取点的命中半径。原来是 1.3 —— 那是根 2.6 格粗的管子
+
+# 命中半径随距离张开 —— 人的瞄准误差是角度上的，不是距离上的。
+# 近处收紧（不误抓脚边的东西），远处放宽。24 格处约 1.6 格，合 3.8 度。
+RAY_R0 = 0.5             # 起步半径
+RAY_RK = 0.045           # 每格张开多少
+MARK_R = "2.0"           # 认准那一下用的半径。到得了这里说明锥内已经有东西，
+                         # 这里只是从同一个点上挑最近的，宽一点无妨
+
+# 队形。按入队编号分开：停多远，以及从哪个方向靠过来。
+# 四个人都 facing 雇主照直走的话，会停在同一个点上挤成一团。
+SLOT_DIST = [2.6, 3.4, 4.2, 5.0]
+SLOT_YAW = [0, 28, -28, 56]
 
 # 指挥旗能指谁。射线与标记两处共用这一份 —— 分开写迟早改漏一处。
 #
@@ -103,7 +114,7 @@ CUR = 'minecraft:raw_gold[minecraft:custom_data~{currency_tag:1b}]'
 
 OBJECTIVES = ["rpg_squad", "rpg_sq_mode", "rpg_sq_cd", "rpg_sq_t",
               "rpg_sq_n", "rpg_sq_have", "rpg_sq_aim", "rpg_sq_stance",
-              "rpg_sq_tier", "rpg_sq_roll", "rpg_sq_fr"]
+              "rpg_sq_tier", "rpg_sq_roll", "rpg_sq_fr", "rpg_sq_slot"]
 
 RULE = ex.RULE
 seg, row, wf, wj = ex.seg, ex.row, ex.wf, ex.wj
@@ -203,6 +214,24 @@ def _armour(t):
              ("legs", "leggings"), ("feet", "boots"))
     return ",".join('%s:{id:"minecraft:%s_%s",count:1%s}'
                     % (slot, t["mat"], piece, trim) for slot, piece in slots)
+
+
+def upgrade_armour(t):
+    """升级时把整套甲换掉。
+
+    `item replace` 一件一件来 —— 升级只动等级的东西，手上那把是玩家
+    自己配的武器，一个字都不碰。起手剑同理：升级不退还、也不重发，
+    他手上是什么就还是什么。
+    """
+    trim = ""
+    if t["trim"]:
+        trim = ('[minecraft:trim={pattern:"minecraft:%s",material:"minecraft:%s"}]'
+                % t["trim"])
+    slots = (("armor.head", "helmet"), ("armor.chest", "chestplate"),
+             ("armor.legs", "leggings"), ("armor.feet", "boots"))
+    return "\n".join(
+        "item replace entity @s %s with minecraft:%s_%s%s"
+        % (slot, t["mat"], piece, trim) for slot, piece in slots)
 
 
 def gear_text(t):
@@ -330,19 +359,23 @@ FOLLOW = """\
 # 标签和记分板一起没了，队员就这么凭空消失。所以佣兵不下水。
 execute if block ~ ~ ~ water unless entity @a[tag=rpg.sq.boss,distance=..3] run tp @s @a[tag=rpg.sq.boss,limit=1]
 execute if entity @a[tag=rpg.sq.boss,distance=%(LEASH)d..] run tp @s @a[tag=rpg.sq.boss,limit=1]
-execute if entity @a[tag=rpg.sq.boss,distance=3..] run function rpg:squad/walk_boss
+%(SLOTS)s
 """
 
 WALK_BOSS = """\
-# 朝雇主走一步。
+# 朝雇主走一步 —— 但不是照直走。
+#
+# 先转向雇主（人一直看着他，这样才像跟班），再把**执行朝向**偏 %(YAW)d 度
+# 迈那一步：人就会绕到侧面去，而不是和别人挤在同一条线上。
+# 偏航只影响这一步的方向，不动实体自己的朝向 —— 不需要任何三角函数。
 tp @s ~ ~ ~ facing entity @a[tag=rpg.sq.boss,limit=1]
-execute at @s run function rpg:squad/step
+execute at @s rotated ~%(YAW)d 0 run function rpg:squad/step
 """
 
 WALK_AIM = """\
-# 朝目标走一步。
+# 朝目标走一步，同样按编号错开，免得四个人叠在目标同一侧。
 tp @s ~ ~ ~ facing entity @e[tag=rpg.sq.mark,limit=1,sort=nearest,distance=..128]
-execute at @s run function rpg:squad/step
+execute at @s rotated ~%(YAW)d 0 run function rpg:squad/step
 """
 
 STEP = """\
@@ -412,6 +445,9 @@ scoreboard players set @s rpg_sq_t %(LOCK)d
 # 头一次募兵先领一个队伍编号。多人下认人全靠它，不靠"最近的玩家"。
 execute unless score @s rpg_squad = @s rpg_squad run function rpg:squad/enroll
 scoreboard players operation #sq rpg_squad = @s rpg_squad
+
+# 潜行 = 给身边的在编佣兵升一级（原本这个组合是空着的）
+execute if predicate rpg:sneaking run return run function rpg:squad/upgrade
 
 execute if entity @e[type=minecraft:husk,tag=rpg.sq.free,distance=..%(NEAR)d,limit=1] run return run function rpg:squad/enlist
 function rpg:squad/post
@@ -505,10 +541,55 @@ tag @s add rpg.squad
 scoreboard players operation @s rpg_squad = #sq rpg_squad
 scoreboard players set @s rpg_sq_mode 0
 scoreboard players set @s rpg_sq_cd 0
+# 队里的编号。站位按它分开 —— 不然四个人会停在同一个点上。
+scoreboard players operation @s rpg_sq_slot = #cnt rpg_squad
 %(RENAME)s
 function rpg:squad/board
 particle happy_villager ~ ~1.6 ~ 0.3 0.3 0.3 0.1 30
 particle end_rod ~ ~1 ~ 0.3 0.5 0.3 0.03 16
+"""
+
+UPGRADE = """\
+# 升级。潜行 + 募兵旗，对着身边的在编佣兵。
+#
+# 和掷点各有各的位置：掷点便宜但看运气，升级**确定**，所以按目标等级的
+# **全价**收 —— 你买的是"这一次一定成"。
+execute unless entity @e[type=minecraft:husk,tag=rpg.squad,distance=..%(NEAR)d] run return run function rpg:squad/none_near
+scoreboard players set #tier rpg_squad 0
+execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..%(NEAR)d,limit=1,sort=nearest] run scoreboard players operation #tier rpg_squad = @s rpg_sq_tier
+execute if score #tier rpg_squad matches %(TOP)d.. run return run function rpg:squad/up_max
+execute store result score @s rpg_sq_have run clear @s %(CUR)s 0
+%(BRANCH)s
+"""
+
+UP_ONE = """\
+# 升到 %(KEY)s：%(PRICE)d 枚。
+execute if entity @s[scores={rpg_sq_have=..%(SHORT)d}] run return run function rpg:squad/poor
+clear @s %(CUR)s %(PRICE)d
+execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..%(NEAR)d,limit=1,sort=nearest] run function rpg:squad/up_do%(N)d
+title @s actionbar ["",{"text":"已晋升 · %(KEY)s","italic":false,"color":"%(COLOUR)s","bold":true}]
+"""
+
+UP_DO = """\
+# 换一身。等级的东西全部重写：数值、甲、纹饰、名牌，外加一把该等的起手剑。
+# 手上那把是玩家自己配的，**不动** —— 武器归玩家，甲归等级。
+scoreboard players set @s rpg_sq_tier %(N)d
+attribute @s minecraft:max_health base set %(HP)d
+attribute @s minecraft:armor base set %(ARMOR)d
+attribute @s minecraft:armor_toughness base set %(TOUGH)d
+attribute @s minecraft:attack_damage base set %(ATK)d
+%(ARMOUR)s
+data modify entity @s CustomName set value %(PLATE)s
+scoreboard players set @s rpg_sq_fr 0
+tag @s add rpg.sq.fresh
+execute at @s run particle happy_villager ~ ~1.6 ~ 0.4 0.5 0.4 0.1 40
+execute at @s run particle end_rod ~ ~1 ~ 0.3 0.6 0.3 0.05 24
+execute at @s run playsound minecraft:entity.player.levelup player @a[distance=..16] ~ ~ ~ 1 1.2
+"""
+
+UP_MAX = """\
+title @s actionbar ["",{"text":"他已经是 MYTHOS 了","italic":true,"color":"%(GOLD)s"}]
+playsound minecraft:entity.villager.no player @s ~ ~ ~ 0.7 1.4
 """
 
 ENROLL = """\
@@ -641,11 +722,13 @@ RAY = """\
 function rpg:squad/miss
 """
 
-RAY_STEP = ("execute positioned ^ ^ ^%(D)s unless block ~ ~ ~ #minecraft:replaceable "
-            "run return run function rpg:squad/miss\n"
-            "execute positioned ^ ^ ^%(D)s if entity @e[distance=..%(R)s,"
+# 先查实体、再查方块。反过来的话，瞄着站在地上的怪时射线只要蹭到地面
+# 就当场判 miss —— 贴着墙、站在坑里、半身没在草里的目标全都指不中。
+RAY_STEP = ("execute positioned ^ ^ ^%(D)s if entity @e[distance=..%(R)s,"
             "%(T)s,limit=1] "
-            "run return run function rpg:squad/mark")
+            "run return run function rpg:squad/mark\n"
+            "execute positioned ^ ^ ^%(D)s unless block ~ ~ ~ #minecraft:replaceable "
+            "run return run function rpg:squad/miss")
 
 MARK = """\
 # 找到了。标记目标，全队转入交战。
@@ -739,9 +822,29 @@ def build_functions():
     wf("squad/squad.mcfunction", ROOT)
     wf("squad/lead.mcfunction", LEAD % {"LEASH": LEASH})
     wf("squad/member.mcfunction", MEMBER)
-    wf("squad/follow.mcfunction", FOLLOW % {"LEASH": LEASH})
-    wf("squad/walk_boss.mcfunction", WALK_BOSS)
-    wf("squad/walk_aim.mcfunction", WALK_AIM)
+    # 队形：每个编号一条支线，停多远与从哪边靠都不同。
+    slots = []
+    for i in range(CAP):
+        slots.append(
+            "execute if entity @s[scores={rpg_sq_slot=%d}] "
+            "if entity @a[tag=rpg.sq.boss,distance=%s..] "
+            "run return run function rpg:squad/walk_boss%d"
+            % (i, SLOT_DIST[i], i))
+        wf("squad/walk_boss%d.mcfunction" % i, WALK_BOSS % {"YAW": SLOT_YAW[i]})
+        wf("squad/walk_aim%d.mcfunction" % i, WALK_AIM % {"YAW": SLOT_YAW[i]})
+    # 没发到编号的（老存档里的人）按 0 号走，不至于站着不动
+    slots.append("execute unless score @s rpg_sq_slot = @s rpg_sq_slot "
+                 "if entity @a[tag=rpg.sq.boss,distance=%s..] "
+                 "run function rpg:squad/walk_boss0" % SLOT_DIST[0])
+    wf("squad/follow.mcfunction",
+       FOLLOW % {"LEASH": LEASH, "SLOTS": "\n".join(slots)})
+
+    aims = ["execute if entity @s[scores={rpg_sq_slot=%d}] "
+            "run return run function rpg:squad/walk_aim%d" % (i, i)
+            for i in range(CAP)]
+    aims.append("function rpg:squad/walk_aim0")
+    wf("squad/walk_aim.mcfunction", "\n".join(
+        ["# 按编号错开地压上去。没编号的走 0 号。"] + aims))
     wf("squad/step.mcfunction", STEP % {"STRIDE": STRIDE})
     wf("squad/engage.mcfunction", ENGAGE % {"REACH": REACH})
     wf("squad/strike.mcfunction", STRIKE % {"SWING": SWING})
@@ -792,6 +895,24 @@ def build_functions():
     wf("squad/no_squad.mcfunction", NO_SQUAD)
     wf("squad/sweep.mcfunction", SWEEP)
     wf("squad/sweep_one.mcfunction", SWEEP_ONE)
+
+    # 升级链。升到 N 等付 N 等的全价 —— 确定的东西比碰运气贵。
+    ups = []
+    for t in TIERS[1:]:
+        ups.append("execute if score #tier rpg_squad matches %d "
+                   "run return run function rpg:squad/up%d"
+                   % (t["n"] - 1, t["n"]))
+        wf("squad/up%d.mcfunction" % t["n"], UP_ONE % {
+            "KEY": t["key"], "PRICE": t["price"], "SHORT": t["price"] - 1,
+            "CUR": CUR, "NEAR": 6, "N": t["n"], "COLOUR": t["colour"]})
+        wf("squad/up_do%d.mcfunction" % t["n"], UP_DO % {
+            "N": t["n"], "HP": t["hp"], "ARMOR": t["armor"],
+            "TOUGH": t["tough"], "ATK": t["atk"],
+            "ARMOUR": upgrade_armour(t), "PLATE": plate(t, False)})
+    wf("squad/upgrade.mcfunction", UPGRADE % {
+        "NEAR": 6, "CUR": CUR, "TOP": TIERS[-1]["n"],
+        "BRANCH": "\n".join(ups)})
+    wf("squad/up_max.mcfunction", UP_MAX % {"GOLD": GOLD})
     wf("squad/fresh.mcfunction", FRESH % {"N": 6})
     wf("squad/handover.mcfunction", HANDOVER)
     wf("squad/give_weapon.mcfunction", GIVE_WEAPON % {"GOLD": GOLD})
@@ -805,11 +926,13 @@ def build_functions():
     # 步长 0.5：1 格的间隔会让小生物从两个取点之间漏过去。
     # 只在按下指挥旗那一刻跑一次，不是每刻 —— 多一倍的取点不进每刻开销。
     dists = [i * RAY_STEP_LEN for i in range(1, int(SIGHT / RAY_STEP_LEN) + 1)]
-    steps = "\n".join(RAY_STEP % {"D": ("%g" % d), "R": RAY_R, "T": TARGET}
-                      for d in dists)
+    steps = "\n".join(
+        RAY_STEP % {"D": ("%g" % d),
+                    "R": ("%.2f" % (RAY_R0 + RAY_RK * d)), "T": TARGET}
+        for d in dists)
     wf("squad/ray.mcfunction",
        RAY % {"SIGHT": SIGHT, "LEN": ("%g" % RAY_STEP_LEN), "STEPS": steps})
-    wf("squad/mark.mcfunction", MARK % {"R": RAY_R, "T": TARGET})
+    wf("squad/mark.mcfunction", MARK % {"R": MARK_R, "T": TARGET})
     build_ignore_tag()
     wf("squad/mark_one.mcfunction", MARK_ONE)
     wf("squad/miss.mcfunction", MISS)

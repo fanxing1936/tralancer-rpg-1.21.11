@@ -41,7 +41,8 @@ DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 RP = sys.argv[2] if len(sys.argv) > 2 else "../resourcepack"
 FUNC = os.path.join(DP, "data/rpg/function")
 ADV = os.path.join(DP, "data/rpg/advancement/item")
-GIVE = os.path.join(FUNC, "command/give/weapon.mcfunction")
+# 放进 extra —— 那就是「新锻装备」那个盒子，利维坦与路西法也在里面。
+GIVE = os.path.join(FUNC, "command/give/extra.mcfunction")
 
 # ---------------------------------------------------------------------------
 # 常数
@@ -102,7 +103,15 @@ def item_snbt():
         'operation:add_value,id:"rpg:mammon/greed"}],'
         "custom_model_data={floats:[%d.0f]}," % CMD +
         "unbreakable={},"
-        "custom_data={bow_tag:1b,hunter_tag:1b,devil_tag:1b,mammon_tag:1b},"
+        # 只留 devil_tag（魔化按罪器计数）与 mammon_tag（这把弓自己的触发）。
+        #
+        # **不要**加 bow_tag 或 hunter_tag。我起初照着萨麦尔的弩抄了过来，
+        # 以为那是"罪器一家"的标记 —— 它们不是：
+        # * bow_tag 是包里爆裂弓的开关（item/bow/speed）：它给每支箭打标、
+        #   把速度翻倍，并在命中时召一只苦力怕；
+        # * hunter_tag 是猎手弓那一套。
+        # 翻倍的箭速还会跑出认箭半径，于是 settle 收不到，买断也跟着乱。
+        "custom_data={devil_tag:1b,mammon_tag:1b},"
         'tooltip_display={hidden_components:["minecraft:unbreakable"]}]')
 
 
