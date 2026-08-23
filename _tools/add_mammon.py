@@ -96,7 +96,7 @@ def item_snbt():
     ]
     return (
         "bow["
-        "custom_name=" + row(seg("[DEVIL]", ACCENT, True), seg("玛门")) + ","
+        "custom_name=" + row(seg("[DEVIL]", ACCENT, True), seg("玛门", "aqua")) + ","
         "lore=[" + ",".join(lore) + "],"
         "enchantments={power:5,punch:2,flame:1,unbreaking:3},"
         'attribute_modifiers=[{type:"luck",amount:1,slot:mainhand,'

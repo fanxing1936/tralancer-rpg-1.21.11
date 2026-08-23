@@ -20,7 +20,7 @@ python add_lucifer.py ../resourcepack ../rpg
 python add_leviathan.py ../resourcepack ../rpg
 python add_runes.py ../rpg ../resourcepack
 python add_epics.py ../resourcepack ../rpg
-python add_exorcism.py ../rpg
+python add_exorcism.py ../rpg ../resourcepack
 python add_pact.py ../rpg ../resourcepack
 python add_squad.py ../rpg
 # 玛门：七宗罪的最后一件罪器（弓）。要在 add_pact 之后 —— 税与买断都认柱位
@@ -37,6 +37,8 @@ python opt_actionbar.py ../rpg
 # 原本的非等比缩放。rp_build.sh 末尾跑 fix_display 就是为了这个 ——
 # 这里不跑，单独重建数据包就会把刀刃的剪切和副手反握又装回去。
 python fix_display.py ../resourcepack
+# 作者原图裁成图标该有的尺寸（弓的四阶段共用一个裁剪框）
+python import_art.py "F:/筑梦 MCBE/新建文件夹" ../resourcepack
 # 还没画好的贴图先拿原版的逐字节顶上 —— 已存在的文件一律不碰
 python art_placeholder.py ../resourcepack
 echo

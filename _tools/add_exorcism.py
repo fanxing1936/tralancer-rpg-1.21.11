@@ -33,6 +33,9 @@ ADV = os.path.join(DP, "data/rpg/advancement/item")
 GIVE = os.path.join(FUNC, "command/give/item.mcfunction")
 
 TAINT_MAX = 100
+
+# 驱魔图腾的模型位。totem_of_undying 上 1110001..1110006 已被占用。
+TOTEM_CMD = 1110007
 SEGMENTS = 10            # 进度条的格数
 HUD_TTL = 3              # 技能占用 HUD 的时效（刻）
 
@@ -609,7 +612,7 @@ execute at @s anchored eyes positioned ^ ^ ^2 run function rpg:rite/place
 
 RITE_PLACE = """\
 # 图腾落地。此刻它还是熄的 —— 要等圣水浇上去。
-summon minecraft:item_display ~ ~ ~ {Tags:["rpg.totem"],item:{id:"minecraft:totem_of_undying",count:1},transformation:{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f]},billboard:"vertical",brightness:{sky:15,block:15}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.totem"],item:{id:"minecraft:totem_of_undying",count:1,components:{"minecraft:custom_model_data":{floats:[%(TCMD)d.0f]}}},transformation:{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f]},billboard:"vertical",brightness:{sky:15,block:15}}
 particle dust{color:[0.95,0.86,0.45],scale:1} ~ ~0.6 ~ 0.3 0.4 0.3 0.02 20
 playsound minecraft:block.respawn_anchor.set_spawn player @a[distance=..16] ~ ~ ~ 1 1.4
 title @a[distance=..6] actionbar ["",{"text":"图腾已立","color":"gold"},{"text":"　以驱魔圣水浇之","color":"gray","italic":true}]
@@ -860,6 +863,7 @@ def build_give():
              'sound:"minecraft:block.respawn_anchor.charge",'
              "has_consume_particles:false,on_consume_effects:[]},"
              "max_stack_size=1,"
+             "custom_model_data={floats:[%d.0f]}," % TOTEM_CMD +
              "custom_data={totem_tag:1b}]")
     # 必须是滞留型：喷溅药水落地即散，图腾没有任何东西可以感知；
     # 滞留药水会留下 area_effect_cloud，那才是"浇上了"的凭据。
@@ -906,7 +910,7 @@ def build_functions():
 
     # ---- 仪式 ----
     wf("rite/trigger.mcfunction", RITE_TRIGGER)
-    wf("rite/place.mcfunction", RITE_PLACE)
+    wf("rite/place.mcfunction", RITE_PLACE % {"TCMD": TOTEM_CMD})
     wf("rite/tick.mcfunction", RITE_TICK)
     wf("rite/light.mcfunction",
        RITE_LIGHT % {"LIT": LIT, "INV_R": INV_R, "MAX": TAINT_MAX})
@@ -1136,6 +1140,28 @@ def build_fall():
            {"condition": "minecraft:random_chance", "chance": round(1.0 / odds, 3)})
 
 
+def build_totem_art(rp):
+    """图腾的模型分派。贴图由 import_art 从作者的原图裁好。"""
+    md = os.path.join(rp, "assets/rpg/models/item")
+    if not os.path.isdir(md):
+        os.makedirs(md)
+    wj(os.path.join(md, "exorcism_totem.json"),
+       {"parent": "item/generated",
+        "textures": {"layer0": "rpg:item/exorcism_totem"}})
+
+    p = os.path.join(rp, "assets/minecraft/items/totem_of_undying.json")
+    doc = json.load(io.open(p, encoding="utf-8"))
+    entries = doc["model"]["entries"]
+    if any(e["threshold"] == TOTEM_CMD for e in entries):
+        return 0
+    entries.append({"threshold": TOTEM_CMD,
+                    "model": {"type": "minecraft:model",
+                              "model": "rpg:item/exorcism_totem"}})
+    entries.sort(key=lambda e: e["threshold"])
+    wj(p, doc)
+    return 1
+
+
 def add_objectives():
     p = os.path.join(FUNC, "command/soreboard.mcfunction")
     s = io.open(p, encoding="utf-8").read()
@@ -1148,12 +1174,15 @@ def add_objectives():
 
 
 def main():
+    rp = sys.argv[2] if len(sys.argv) > 2 else "../resourcepack"
     obj = add_objectives()
     n = build_functions()
     routed = route_actionbars()
     gave = build_give()
     print("exorcism: HUD %d branches, actionbar writers routed: %d" % (n, routed))
-    print("exorcism: give +%d, objectives %s" % (gave, obj or "-"))
+    art = build_totem_art(rp)
+    print("exorcism: give +%d, objectives %s, 图腾模型 +%d"
+          % (gave, obj or "-", art))
 
 
 if __name__ == "__main__":

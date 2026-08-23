@@ -4652,12 +4652,13 @@
     "holy_weapon_tag": 1,
     "totem_tag": 1
    },
-   "cmd": null,
+   "cmd": 1110007.0,
    "unbreakable": false,
    "consumable": 100140,
    "components": [
     "consumable",
     "custom_data",
+    "custom_model_data",
     "custom_name",
     "food",
     "lore",
@@ -6145,7 +6146,7 @@
    "item": "bow",
    "name": "玛门",
    "rarity": "恶魔",
-   "name_colour": "white",
+   "name_colour": "aqua",
    "lore": [
     "+------------------+",
     "堕落的财富之主",
