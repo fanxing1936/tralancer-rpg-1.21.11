@@ -1,4 +1,4 @@
-# 缠绕 的蓄力条，10 格。
+# 缠绕 的进度条，10 格。
 execute if entity @s[scores={rpg_hud_p=0}] run title @s actionbar ["",{"text":"缠　绕 ","italic":false,"color":"dark_green"},{"text":"▱▱▱▱▱▱▱▱▱▱","italic":false,"color":"dark_gray"},{"text":"  0%","italic":false,"color":"gray"}]
 execute if entity @s[scores={rpg_hud_p=1}] run title @s actionbar ["",{"text":"缠　绕 ","italic":false,"color":"dark_green"},{"text":"▰","italic":false,"color":"green"},{"text":"▱▱▱▱▱▱▱▱▱","italic":false,"color":"dark_gray"},{"text":"  10%","italic":false,"color":"gray"}]
 execute if entity @s[scores={rpg_hud_p=2}] run title @s actionbar ["",{"text":"缠　绕 ","italic":false,"color":"dark_green"},{"text":"▰▰","italic":false,"color":"green"},{"text":"▱▱▱▱▱▱▱▱","italic":false,"color":"dark_gray"},{"text":"  20%","italic":false,"color":"gray"}]

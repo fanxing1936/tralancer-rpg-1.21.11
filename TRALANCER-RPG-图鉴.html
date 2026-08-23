@@ -285,8 +285,9 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 <li><a href="#s6"><span class="num">VI</span>药剂与材料</a></li>
 <li><a href="#s7"><span class="num">VII</span>掉落总表</a></li>
 <li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
-<li><a href="#s10"><span class="num">IX</span>破碎大陆</a></li>
-<li><a href="#s11"><span class="num">X</span>指令速查</a></li>
+<li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
+<li><a href="#s10"><span class="num">X</span>破碎大陆</a></li>
+<li><a href="#s11"><span class="num">XI</span>指令速查</a></li>
 </ol></nav>
 <main>
 <section class="plate" id="s1">
@@ -517,11 +518,66 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 <tr><td>僵尸类出生</td><td class="num">1/20</td><td>巨型僵尸（100 生命、体型 ×3）</td></tr>
 <tr><td>苦力怕出生</td><td class="num">1/10</td><td>高压苦力怕（30 生命、体型 ×1.3、爆炸威力 5）</td></tr>
 <tr><td>苦力怕出生</td><td class="num">3/10</td><td>迷你苦力怕（10 生命、体型 ×0.5、引信 10 刻）</td></tr>
+
 <tr><td>骷髅 / 僵尸出生</td><td>必定</td><td>全身装备重掷为本包的 <code>rpg:armor/*</code> 战利品</td></tr>
 </tbody></table></div>
 </section>
+<section class="plate" id="s8">
+<div class="plate-h"><span class="num">IX</span><h2>驱魔体系</h2><span class="sub">魔化值 · 空缺者 · 仪式 · 逆圣化</span></div>
+<p>包里一直有一条圣／魔轴：圣器与罪遗武器各自带着 <code>holy_weapon_tag</code> 与 <code>devil_weapon_tag</code>。
+从这一版起它有了长期后果——<strong>握着魔器的人会慢慢变成它的主人</strong>。
+魔化值不显示在侧边栏，而是屏幕下方那条进度条，与利维坦、熔火之锤的蓄力条共用同一个位置（蓄力时蓄力条优先，松手后自己回来）。</p>
+
+<h3 class="sub-h">魔化值<span class="rolls">每 2 秒结算一次 · 上限 100</span></h3>
+<p>手持恶魔本体武器 <b>+2</b>／罪遗武器 <b>+1</b>；手持圣器 <b>−1</b>，两者同时握着会互相抵消。攻击空缺者 <b>+6</b>，杀死空缺者 <b>+8</b>。</p>
+<div class="tw"><table>
+<thead><tr><th>区间</th><th>状态</th><th>表现</th></tr></thead>
+<tbody>
+<tr><td>0–30</td><td>尚可自持</td><td>无</td></tr>
+<tr><td>31–60</td><td>侵蚀渐深</td><td>身上泛起暗紫色纹路</td></tr>
+<tr><td>61–90</td><td>近乎失守</td><td>暗红纹路加深，伴幽匿之魂</td></tr>
+<tr><td>91–100</td><td>濒临魔化</td><td>常驻<b>力量 I</b>；但手持圣器会持续灼伤（每 2 秒 2 点魔法伤害）</td></tr>
+</tbody></table></div>
+<div class="note"><b>魔化只有一个出口。</b>把它压下去要靠驱魔仪式；把它推到顶，则通向<b>逆圣化</b>——两条路都从同一支图腾开始。</div>
+
+<h3 class="sub-h">空缺者<span class="rolls">约六分之一的村民</span></h3>
+<p>外表与常人无异的空壳。平时和普通村民毫无分别，<strong>只有当持圣器的人走进 16 格内才会显形</strong>（发光 + 幽匿之魂粒子）。它不是靶子——放着不管会烂开，动手打反而更糟。</p>
+<div class="sys">
+<div><h3>蔓延</h3><p class="how">每 20 秒一拍 · 1/4 概率 · 8 格内</p><p>未被驱除的空缺者会把邻近村民也变成空壳。一个村子若无人过问，会慢慢整片烂掉。</p></div>
+<div><h3>撕壳</h3><p class="how">被圣器照住 3 秒，或挨第一次打</p><p>伪装撑不住，壳裂开，放出两只<b>空壳碎片</b>（凋灵怪，12 生命 / 4 攻击，30 秒后自行消散）；空壳本身获得速度 II 逃窜。</p></div>
+<div><h3>附身转移</h3><p class="how">杀死空缺者时</p><p>躯体死了，里面的东西<b>跳到 16 格内最近的村民身上</b>。若附近再无可用躯体，它会赤裸地留在原地，化作三只<b>无处可去者</b>（16 生命 / 5 攻击）。<br><b>剑解决不了它</b>——这正是驱魔存在的理由。</p></div>
+</div>
+
+<h3 class="sub-h">驱魔仪式<span class="rolls">驱魔图腾 + 驱魔圣水</span></h3>
+<p>手持<b>驱魔图腾</b>右击地面立起（本体是 <code>item_display</code>，没有 AI、没有碰撞）。此刻它还是熄的——要用<b>驱魔圣水</b>浇上去才点燃。
+圣水必须是<strong>滞留型</strong>：喷溅型落地即散，图腾没有任何东西可以感知；滞留药水留下的 <code>area_effect_cloud</code> 才是「浇上了」的凭据。</p>
+<div class="tw"><table>
+<thead><tr><th>时刻</th><th>净化量</th><th>图腾尺寸</th><th>作用</th></tr></thead>
+<tbody>
+<tr><td>第 1 拍（10 秒）</td><td>−12</td><td>1.00</td><td rowspan="5">半径 <b>6</b> 格内：玩家扣减魔化值，空缺者被驱出（村民留下、掉落 24 经验、附近碎片一并收走）</td></tr>
+<tr><td>第 2 拍（8 秒）</td><td>−10</td><td>0.88</td></tr>
+<tr><td>第 3 拍（6 秒）</td><td>−8</td><td>0.74</td></tr>
+<tr><td>第 4 拍（4 秒）</td><td>−6</td><td>0.58</td></tr>
+<tr><td>第 5 拍（2 秒）</td><td>−4</td><td>0.40</td></tr>
+<tr><td>燃尽</td><td>—</td><td>炸开</td><td>范围内空缺者一并驱出，敌意生物受 6 点魔法伤害并被震开</td></tr>
+</tbody></table></div>
+
+<h3 class="sub-h">逆圣化<span class="rolls">魔化 = 100 时点燃图腾</span></h3>
+<p>魔化到顶那一刻会有一次提示。<strong>此时若有满魔化者站在图腾 7 格内，仪式不再净化，而是引燃。</strong></p>
+<blockquote class="verse">但在魔化的尽头，他看见污染深处仍有一段没有被抹去的圣性。负与负相乘，污染发生反转。<cite>——卷六《百年战争书》</cite></blockquote>
+<p>图腾朝着受术者烧十秒，五道灼烧共 <b>19 点</b>魔法伤害（3 / 3 / 4 / 4 / 5），每道附带缓慢 III，光从暗红一路走到纯白。
+<strong>人必须站在 7 格内熬完</strong>——走开或者倒下，仪式当场作废。</p>
+<div class="tw"><table>
+<thead><tr><th>结果</th><th>代价 / 回报</th></tr></thead>
+<tbody>
+<tr><td><b>熬过去</b></td><td>魔化归零，获得<b>圣痕</b> 3 分钟：力量 II、抗性提升 I、生命恢复 I、防火、伤害吸收 II；期间<b>沾不上任何魔化</b>，且 6 格内的空缺者会被自动驱出——本人就是一场行走的仪式。</td></tr>
+<tr><td><b>没熬住</b></td><td>图腾碎裂，魔化一点没少，另加凋零 5 秒 + 失明 3 秒。</td></tr>
+</tbody></table></div>
+<div class="note"><b>关于自定义模型：</b>原版数据包<b>无法</b>为生物添加自定义模型——生物模型写死在客户端里，资源包只能替换<b>已有</b>实体的贴图与模型。
+驱魔图腾用的是 <code>item_display</code>：把一件物品当作可缩放、可旋转的展示实体摆在世界里，这是 1.19.4 之后原版唯一的「自定义模型」路子，本包的图腾缩放动画就是这么做的。</div>
+</section>
 <section class="plate" id="s10">
-<div class="plate-h"><span class="num">IX</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
+<div class="plate-h"><span class="num">X</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
 
 <div class="scroll-h">
 <p class="heb">אֶרֶץ הַשְּׁבָרִים</p>
@@ -544,7 +600,7 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 人类已经知道神的答案，所以人类终于可以写下自己的答案。</div>
 </section>
 <section class="plate" id="s11">
-<div class="plate-h"><span class="num">X</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
+<div class="plate-h"><span class="num">XI</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
 <div class="tw"><table>
 <thead><tr><th>指令</th><th>作用</th></tr></thead>
 <tbody>

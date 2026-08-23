@@ -7,3 +7,8 @@ execute if entity @a[tag=rpg.h.holy_weapon_tag1] run function rpg:vacant/vacant
 execute unless entity @a[tag=rpg.h.holy_weapon_tag1] if entity @e[type=minecraft:villager,tag=rpg.vacant,tag=rpg.hurt,limit=1] run function rpg:vacant/vacant
 execute if entity @e[type=minecraft:item_display,tag=rpg.totem,limit=1] run function rpg:rite/tick
 execute as @a[scores={rpg_rite=1..}] run scoreboard players remove @s rpg_rite 1
+
+# 蔓延的节拍器。没有比一次记分板比较更便宜的守卫 ——
+# 先数够 400 刻，再去找村民。
+scoreboard players add #spread rpg_vac 1
+execute if score #spread rpg_vac matches 400.. run function rpg:vacant/spread

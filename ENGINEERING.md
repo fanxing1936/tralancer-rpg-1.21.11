@@ -2000,6 +2000,162 @@ execute if entity @s[scores={rpg_hud_t=1..}] run scoreboard players remove @s rp
 
 ---
 
+# 26. 逆圣化，以及长出牙齿的空缺者
+
+第 25 部分把驱魔体系立了起来，但它有一个结构性的缺口：**魔化值只有下行压力，
+没有上行诱惑，而且没有终点。** 你只能被动沾染、主动洗掉；游戏从没有哪一刻
+邀请你选择堕落，满值也只是给个力量 I。而世界观的核心恰恰是一场交易。
+
+这一部分补的就是这个：给仪表盘一个终点（逆圣化），给驱魔一个非做不可的理由
+（有牙的空缺者）。
+
+## 26.1 逆圣化：同一支图腾，另一种烧法
+
+卷六写着「负与负相乘，污染发生反转」。实现上没有另起炉灶 —— 复用驱魔图腾，
+在点燃那一刻分岔：
+
+```
+execute if entity @a[distance=..7,scores={rpg_taint=100}] run function rpg:rite/light_inv
+execute unless entity @a[distance=..7,scores={rpg_taint=100}] run function rpg:rite/light_pure
+```
+
+熄着的图腾等的是一朵 `area_effect_cloud`（所以圣水必须是滞留型），点燃时看一眼
+旁边站着谁。有满魔化者在场，图腾就不再朝外净化，而是朝着那个人烧：五道灼烧
+共 19 点魔法伤害，每道附带缓慢 III，光从暗红一路走到纯白。**人必须站在 7 格内
+熬完** —— 走开或者倒下，仪式当场作废。
+
+失败判定要连余下的节拍一起掐掉，否则后面几条会对着一个已经 `kill` 掉的 `@s`
+继续跑：
+
+```
+execute unless entity @a[tag=rpg.inv.subject,distance=..7] run return run function rpg:rite/inv_fail
+```
+
+`return run` 是 1.20.2 之后的写法，它把被调函数的返回值当作**本函数**的返回值 ——
+一行同时完成「执行失败流程」和「本函数到此为止」。
+
+## 26.2 蓄力条反着算
+
+反转要看的是「熬过去多少」，而图腾的 `rpg_totem` 是**倒着**数的。分数在图腾身上，
+条画在玩家身上，两边不是同一个作用域，所以先把图腾的读数落到一个假名玩家上：
+
+```
+scoreboard players operation #inv_now rpg_hud = @s rpg_totem      # as 图腾
+...
+scoreboard players operation @s rpg_hud_p = #inv_full rpg_hud     # as 受术者
+scoreboard players operation @s rpg_hud_p -= #inv_now rpg_hud
+```
+
+图腾烧掉的那部分，才是受术者已经撑住的部分。渲染仍旧走第 25 部分那条唯一出口，
+只是多了一个占用编号（4 号：逆圣化），所以它天然压过魔化条，也不会和沉锚、
+熔流打架。
+
+## 26.3 圣痕：一次给足，不要每刻续
+
+成功的回报是 3 分钟的圣痕。第一版写成每刻 `effect give ... 3 0 true` 续四五个
+效果 —— 能用，但每刻五条命令白烧三分钟。改成授予那一下就按整段时长给足
+（`effect give @s minecraft:strength 180 1 true`），此后每刻只剩计时、光晕和清场。
+
+清场那一条最初是「守卫 + 被守卫的行」：
+
+```
+execute if entity @e[type=villager,tag=rpg.vacant,distance=..6,limit=1] run function rpg:taint/holy_purge
+```
+
+但守卫和它守的那行开的是**同一次走查**。守卫在这里一分钱也没省，反而在真有空壳
+时把这次扫描付了两遍，还多一次函数调用。一行就够：
+
+```
+execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..6] at @s run function rpg:rite/free
+```
+
+守卫的价值在于「用便宜的判定挡住昂贵的一段」；当被挡的只有一行、而且那一行的
+代价和守卫本身相等时，它就是纯粹的负担。
+
+## 26.4 空缺者：三颗牙
+
+原本的空缺者只有 8 行 —— 持圣器靠近会发光，杀掉加 6 点魔化，仅此而已。驱不驱
+都行，于是没人驱。三处改动让它变成必须处理的东西：
+
+* **蔓延**　每 400 刻一拍，随机挑**一个**空缺者向 8 格内伸手，1/4 命中。一个村子
+  若无人过问会慢慢整片烂掉。节拍器用记分板而不是实体判定守 ——
+  `scoreboard players add` 加一次比任何选择器都便宜。
+* **撕壳**　被圣器照住 60 刻，或者挨第一次打，伪装就撑不住：放出两只凋灵怪，
+  空壳本身获得速度 II 逃窜。两条路径汇到同一个 `vacant/tear`，用 `rpg.vac.torn`
+  防重入。
+* **附身转移**　杀死它，空壳**跳到 16 格内最近的村民身上**。附近再无躯体可用时，
+  那东西赤裸地留在原地，化作三只「无处可去者」。**剑解决不了它** —— 这正是
+  驱魔存在的理由。
+
+转移需要在生物死亡那一刻拿到通知，而原版数据包只有一个口子：进度触发器
+`minecraft:player_killed_entity`。实体谓词能不能按标签匹配是个问号，所以把它
+单独抄成一个 predicate 文件在服务器上验了一遍：
+
+```
+execute as @e[type=villager,tag=rpg.vacant] if predicate rpg:probe_vac run say MATCHED
+execute as @e[type=villager,tag=!rpg.vacant] if predicate rpg:probe_vac run say WRONGLY MATCHED
+```
+
+第一条打印，第二条不打印 —— `nbt` 谓词对 `Tags` 列表做的是**子集**匹配，可用。
+
+## 26.5 两个 1.21.9 的坑
+
+**其一：`LifeTicks` 改名了。** 凋灵怪的寿命字段在 1.21.9 之后是 `life_ticks`。
+写错了不会报错 —— 服务器照常召唤，只是那一段 NBT 被静静丢掉，碎片变成永久存在。
+`data get` 回来是「Found no elements matching LifeTicks」才露馅：
+
+```
+summon minecraft:vex 0 100 0 {life_ticks:600}
+data get entity @e[type=vex,limit=1] life_ticks   ->  586
+```
+
+顺手把包里其余实体专有字段也验了：`Value`（经验球）、`Warmup`（唤魔者尖牙）、
+`Motion`、`Health` 全部仍是大驼峰。改名是逐个字段挑的，不是全表改。
+
+**其二：`scores=` 只认已经存在的分数。** 这是本项目第三次踩它。HUD 的状态条
+挂在 `rpg_hud_t=..0` 上，而 `rpg_hud_t` 只有蓄力技能才会写。结果是：**一个从没
+用过蓄力武器的玩家，魔化条永远不显示** —— 第 25 部分交付时就带着这个洞，只是
+测试者恰好都先摸过利维坦。一行补上：
+
+```
+scoreboard players add @s rpg_hud_t 0
+```
+
+`add 0` 会把不存在的分数落成 0，是「确保这个分数有值」的最省写法。
+
+## 26.6 build.sh 不该不管手持变换
+
+提交前 `git status` 里躺着一个没人动过的文件：`twin_handheld.json` 从等比缩放
+1.195 退回了作者原本的 `[1.46, 0.85, 0.85]` —— 正是当初报过两次的刀刃剪切。
+
+原因是流程分家了。`add_twins` / `add_lucifer` / `add_leviathan` / `add_epics` /
+`retype_longinus` 这几个生成器**同时**往数据包和材质包写，而 `fix_display.py`
+只挂在 `rp_build.sh` 末尾。于是单独跑一次 `build.sh`，手持变换就被悄悄还原。
+把它也接到 `build.sh` 末尾即可（`fix_display` 是幂等的：对已经等比的数值再解一次，
+解出来还是同一组）。
+
+教训不在这一个文件上：**凡是被两条流程共同写入的产物，修正必须挂在每一条流程的
+末尾，而不是其中一条。**
+
+## 26.7 开销与验证
+
+* 空闲 1005 → **1094 命令 / 288 → 288 次遍历**。遍历没有增加 —— 命令数的涨幅
+  几乎全在 `hotspots` 的静态模型里：它读不出记分板的值，只好把逆圣化条、圣痕条
+  这些分数守卫后面的分支一并计入。实际每刻新增的工作是 6 条（HUD 三条、
+  魔化一条、蔓延节拍器两条）
+* 最坏情形 1587 → 1776，但那是仪式、碎片、四种进度条同时开火的假想值，
+  实际互斥
+* 函数 279 → 278（`holy_purge` 合并掉了）；进度 34 → 35
+* 无头 1.21.11 实测，服务器零抱怨，四条路径逐条验过：谓词按标签匹配 ✓、
+  附身转移把空壳搬到邻居身上（两个村民先后自报 vacant）✓、
+  照够 60 刻撕壳并放出碎片、`rite/free` 顺手收走碎片 ✓、
+  受术者不在场时 `return run` 让图腾自毁 ✓、圣痕光环净化空壳且计时正常递减 ✓
+* 图鉴补上第 IX 节「驱魔体系」：魔化四档、空缺者三颗牙、仪式五拍的净化量与
+  图腾尺寸、逆圣化的成败两栏。卷六早就写着逆圣化，此前却没有任何地方告诉玩家
+  它怎么触发
+
+---
+
 # 重建方式
 
 ```bash
@@ -2013,10 +2169,12 @@ bash "_tools/rp_build.sh"
 数据包流程：`migrate.py` → `optimize.py` + `opt_spawn.py` + `opt_misc.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
 　　　　　→ `add_lucifer.py` + `add_leviathan.py`
-　　　　　→ `retype_longinus.py` → `opt_index.py` + `opt_guard.py` → `validate.py` → `hotspots.py`
+　　　　　→ `add_runes.py` + `add_epics.py` + `add_exorcism.py`
+　　　　　→ `retype_longinus.py` + `make_boxes.py` + `fix_display.py`
+　　　　　→ `opt_index.py` + `opt_guard.py` + `opt_invert.py` → `validate.py` → `hotspots.py`
 材质包流程：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
-　　　　　→ `add_lucifer.py` + `add_leviathan.py`
+　　　　　→ `add_lucifer.py` + `add_leviathan.py` + `add_runes.py` + `add_epics.py`
 　　　　　→ `retype_longinus.py` → `fix_display.py`
 　　　　　→ `rp_validate.py`
 打包与安装：`package.py --install`（写回 1.21.11 实例的 resourcepacks 与各存档）

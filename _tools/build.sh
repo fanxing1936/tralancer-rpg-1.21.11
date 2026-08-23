@@ -21,6 +21,10 @@ python add_epics.py ../resourcepack ../rpg
 python add_exorcism.py ../rpg
 python retype_longinus.py ../resourcepack ../rpg
 python make_boxes.py ../rpg
+# 上面这些生成器同样会往 ../resourcepack 写手持变换，而它们写的是作者
+# 原本的非等比缩放。rp_build.sh 末尾跑 fix_display 就是为了这个 ——
+# 这里不跑，单独重建数据包就会把刀刃的剪切和副手反握又装回去。
+python fix_display.py ../resourcepack
 echo
 echo "== 2b. guard the empty-tag entity walks =="
 python opt_index.py ../rpg

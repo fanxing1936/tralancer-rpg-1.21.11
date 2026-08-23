@@ -23,10 +23,6 @@ execute at @s if entity @s[scores={rpg_levi_charge=20..}] run particle splash ~ 
 execute at @s if entity @s[scores={rpg_levi_charge=25..}] run particle dust_color_transition{from_color:8374496,to_color:16559622,scale:3} ~ ~1.9 ~ 0.5 0.45 0.5 0.06 16
 
 # 进度条直接写在快捷栏上方，蓄到哪一档一目了然
-execute if entity @s[scores={rpg_levi_charge=..9}] run title @s actionbar ["",{"text":"沉锚 ","color":"dark_aqua"},{"text":"▮▯▯ ","color":"blue"},{"text":"起链","color":"gray"}]
-execute if entity @s[scores={rpg_levi_charge=10..19}] run title @s actionbar ["",{"text":"沉锚 ","color":"dark_aqua"},{"text":"▮▮▯ ","color":"aqua"},{"text":"海涌","color":"gray"}]
-execute if entity @s[scores={rpg_levi_charge=20..29}] run title @s actionbar ["",{"text":"沉锚 ","color":"dark_aqua"},{"text":"▮▮▮ ","color":"white"},{"text":"将满","color":"gray"}]
-execute if entity @s[scores={rpg_levi_charge=30..}] run title @s actionbar ["",{"text":"沉　锚","color":"gold","bold":true}]
 
 execute at @s if entity @s[scores={rpg_levi_charge=1}] run playsound minecraft:block.chain.place player @s ~ ~ ~ 1 0.6
 execute at @s if entity @s[scores={rpg_levi_charge=10}] run playsound minecraft:block.chain.place player @s ~ ~ ~ 1 0.9
@@ -36,3 +32,12 @@ execute at @s if entity @s[scores={rpg_levi_charge=20}] run playsound minecraft:
 # 所以这条精确判等只会命中一次，按住不放不会连抛。
 execute at @s if entity @s[scores={rpg_levi_charge=30}] run playsound minecraft:entity.elder_guardian.curse player @a[distance=..20] ~ ~ ~ 0.8 1.6
 execute if entity @s[scores={rpg_levi_charge=30}] run function rpg:item/extra/leviathan_fire
+
+
+# 交给统一 HUD 渲染：声明占用，并把进度换算成 10 格
+scoreboard players set @s rpg_hud 1
+scoreboard players set @s rpg_hud_t 3
+scoreboard players operation @s rpg_hud_p = @s rpg_levi_charge
+scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud
+scoreboard players operation @s rpg_hud_p /= #hud_full rpg_hud
+execute if entity @s[scores={rpg_hud_p=10..}] run scoreboard players set @s rpg_hud_p 10

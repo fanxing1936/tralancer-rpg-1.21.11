@@ -1,4 +1,4 @@
-# 熔流 的蓄力条，10 格。
+# 熔流 的进度条，10 格。
 execute if entity @s[scores={rpg_hud_p=0}] run title @s actionbar ["",{"text":"熔　流 ","italic":false,"color":"gold"},{"text":"▱▱▱▱▱▱▱▱▱▱","italic":false,"color":"dark_gray"},{"text":"  0%","italic":false,"color":"gray"}]
 execute if entity @s[scores={rpg_hud_p=1}] run title @s actionbar ["",{"text":"熔　流 ","italic":false,"color":"gold"},{"text":"▰","italic":false,"color":"yellow"},{"text":"▱▱▱▱▱▱▱▱▱","italic":false,"color":"dark_gray"},{"text":"  10%","italic":false,"color":"gray"}]
 execute if entity @s[scores={rpg_hud_p=2}] run title @s actionbar ["",{"text":"熔　流 ","italic":false,"color":"gold"},{"text":"▰▰","italic":false,"color":"yellow"},{"text":"▱▱▱▱▱▱▱▱","italic":false,"color":"dark_gray"},{"text":"  20%","italic":false,"color":"gray"}]

@@ -1,18 +1,25 @@
 # -*- coding: utf-8 -*-
-"""驱魔体系：魔化值、统一 HUD、空缺者、驱魔仪式。
+"""驱魔体系：魔化值、统一 HUD、空缺者、驱魔仪式、逆圣化。
 
-三件事互相咬合：
+几件事互相咬合：
 
 * **魔化值** 让包里那条早就存在却只驱动粒子的圣/魔轴（`holy_weapon_tag` /
   `devil_weapon_tag`）第一次有了长期后果 —— 握着魔器会慢慢变成它的主人。
 * **空缺者** 给驱魔一个可驱之物：外表与常人无异的空壳，只有持圣器时才显形。
+  它不是靶子 —— 放着不管会蔓延，被识破会撕壳，被杀死会转移。
 * **驱魔仪式** 是处置手段，也是唯一能把魔化值压下去的办法。
+* **逆圣化** 是魔化值的终点。满值时点燃图腾，仪式不再净化而是引燃：
+  熬过去，负与负相乘，污染反转成圣痕。
 
 HUD 是这一版的架构重点。屏幕下方那条 actionbar 全局只有一份，
 原本利维坦、熔火之锤、藤蔓之鞭各自直接往上写，谁最后写谁赢 —— 会互相打架。
 现在改成**唯一出口**：技能只更新自己的分数并挂一个短时效的占用声明，
-`rpg:hud/hud` 每刻按优先级挑一条渲染。蓄力条永远压过魔化条，
-蓄力一结束魔化条自己回来。
+`rpg:hud/hud` 每刻按优先级挑一条渲染。蓄力条永远压过状态条，
+蓄力一结束状态条自己回来。
+
+模板一律走 `%` 取值而不是 `str.format`：命令里全是 `{}`（NBT、scores=、
+粒子参数），用 format 就得把每一个花括号写成双份，抄错一个只有服务器
+才会告诉你。`%` 不碰花括号。
 """
 
 import io
@@ -26,19 +33,29 @@ ADV = os.path.join(DP, "data/rpg/advancement/item")
 GIVE = os.path.join(FUNC, "command/give/item.mcfunction")
 
 TAINT_MAX = 100
-SEGMENTS = 10            # 魔化条的格数
+SEGMENTS = 10            # 进度条的格数
 HUD_TTL = 3              # 技能占用 HUD 的时效（刻）
 
 # HUD 占用编号
-HUD_ANCHOR, HUD_FORGE, HUD_VINE = 1, 2, 3
+HUD_ANCHOR, HUD_FORGE, HUD_VINE, HUD_INVERT = 1, 2, 3, 4
 
 LIT = 200                # 图腾点燃后的总时长（刻）
 PULSES = [(200, 12, "1.0"), (160, 10, "0.88"), (120, 8, "0.74"),
           (80, 6, "0.58"), (40, 4, "0.40")]   # 刻 / 净化量 / 缩放
+# 逆圣化的五道灼烧：刻 / 伤害 / 缩放。图腾越烧越小，光越烧越白。
+BURNS = [(200, 3, "1.0"), (160, 3, "0.86"), (120, 4, "0.70"),
+         (80, 4, "0.54"), (40, 5, "0.36")]
 RITE_R = 6               # 作用半径
+INV_R = 7                # 逆圣化必须站住的半径
+
+HOLY_TICKS = 3600        # 圣痕持续 3 分钟
+TEAR_AT = 60             # 被圣器照住多久，壳会裂开（刻）
+SPREAD_EVERY = 400       # 蔓延的节拍（刻）
+SPREAD_ODDS = 4          # 每拍 1/N 的概率向外伸手
 
 OBJECTIVES = ["rpg_taint", "rpg_hud", "rpg_hud_p", "rpg_hud_t",
-              "rpg_taint_t", "rpg_vac", "rpg_rite", "rpg_totem"]
+              "rpg_taint_t", "rpg_vac", "rpg_rite", "rpg_totem",
+              "rpg_holy", "rpg_vac_x"]
 
 RULE = '["",{"text":"+------------------+","italic":false,"color":"white"}]'
 
@@ -95,23 +112,30 @@ def build_hud():
 
     渲染一条进度条要按格数分支，全摊在一个函数里就是一百多条命令，
     而它每刻、每个玩家都要过一遍 —— 空闲时全部落空，纯属浪费。
-    所以拆成一层调度 + 每种条各自一个函数：空闲一刻只评估四条落空的判定
+    所以拆成一层调度 + 每种条各自一个函数：空闲一刻只评估几条落空的判定
     加一次递减，真正的分支只在该显示的时候才进去。
     """
     skills = [(HUD_ANCHOR, "沉　锚", "dark_aqua", "aqua"),
               (HUD_FORGE, "熔　流", "gold", "yellow"),
-              (HUD_VINE, "缠　绕", "dark_green", "green")]
+              (HUD_VINE, "缠　绕", "dark_green", "green"),
+              (HUD_INVERT, "逆圣化", "dark_red", "gold")]
 
     # ---- 调度层 ----
     top = ["# 屏幕下方唯一的 actionbar 出口。技能不再各写各的 —— 它们只更新",
            "# rpg_hud / rpg_hud_p 并把 rpg_hud_t 顶到 %d，这里按优先级挑一条渲染。" % HUD_TTL,
-           "# 蓄力条永远压过魔化条；蓄力一结束，魔化条自己就回来了。",
+           "# 蓄力条永远压过状态条；蓄力一结束，状态条自己就回来了。",
+           "",
+           "# 先把占用计时器坐实。scores= 只认已经存在的分数，没有这一行，",
+           "# 从没蓄过力的玩家过不了下面 rpg_hud_t=..0 那一关，状态条永远不显示。",
+           "scoreboard players add @s rpg_hud_t 0",
            ""]
     for hid, label, _dim, _lit in skills:
         top.append("execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=%d}] "
                    "run function rpg:hud/s%d" % (hid, hid))
     top += ["",
-            "# 没有技能占用、且确实有魔化时，才轮到魔化条",
+            "# 没有技能占用时才轮到状态条。圣痕会把魔化压成 0 并挡住一切沾染，",
+            "# 所以这两条天然互斥，不必再互相排除。",
+            "execute if entity @s[scores={rpg_hud_t=..0,rpg_holy=1..}] run function rpg:hud/holy",
             "execute if entity @s[scores={rpg_hud_t=..0,rpg_taint=1..}] run function rpg:hud/taint",
             "",
             "execute if entity @s[scores={rpg_hud_t=1..}] run scoreboard players remove @s rpg_hud_t 1"]
@@ -121,7 +145,7 @@ def build_hud():
 
     # ---- 每个技能一条 ----
     for hid, label, dim, lit in skills:
-        body = ["# %s 的蓄力条，%d 格。" % (label.replace("　", ""), SEGMENTS)]
+        body = ["# %s 的进度条，%d 格。" % (label.replace("　", ""), SEGMENTS)]
         for n in range(SEGMENTS + 1):
             comp = row(seg(label + " ", dim), *bar(n, SEGMENTS, lit),
                        seg("  %d%%" % (n * 100 // SEGMENTS), "gray"))
@@ -152,6 +176,19 @@ def build_hud():
         wf("hud/t%d.mcfunction" % i, "\n".join(body))
         total += len(body)
 
+    # ---- 圣痕条：魔化条的反面，同一个位置 ----
+    body = ["# 圣痕条。逆圣化之后剩下的时间 —— 它走完，人就落回凡人。",
+            "scoreboard players operation @s rpg_hud_p = @s rpg_holy",
+            "scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud",
+            "scoreboard players operation @s rpg_hud_p /= #holy_full rpg_hud"]
+    for n in range(SEGMENTS + 1):
+        comp = row(seg("圣痕 ", "yellow"), *bar(n, SEGMENTS, "gold"),
+                   seg("  逆圣化", "gold"))
+        body.append("execute if entity @s[scores={rpg_hud_p=%d}] run title @s actionbar %s"
+                    % (n, comp))
+    wf("hud/holy.mcfunction", "\n".join(body))
+    total += len(body)
+
     return total
 
 
@@ -162,28 +199,72 @@ TAINT = """\
 # 魔化：握着魔器慢慢沾染，握着圣器慢慢洗去。
 # 每 40 刻结算一次 —— 逐刻结算既没必要也白费开销。
 scoreboard players add @s rpg_taint_t 1
-execute if entity @s[scores={{rpg_taint_t=40..}}] run function rpg:taint/step
+execute if entity @s[scores={rpg_taint_t=40..}] run function rpg:taint/step
+execute if entity @s[scores={rpg_holy=1..}] run function rpg:taint/holy
 """
 
 TAINT_STEP = """\
 # 一次结算。魔器加、圣器减，两者都握着时互相抵消。
 scoreboard players set @s rpg_taint_t 0
+
+# 圣痕期间沾不上任何东西 —— 反转过的人，脏不了。
+execute if entity @s[scores={rpg_holy=1..}] run return 0
+
 execute if entity @s[tag=rpg.h.devil_tag1] run scoreboard players add @s rpg_taint 2
 execute if entity @s[tag=rpg.h.devil_weapon_tag1] run scoreboard players add @s rpg_taint 1
 execute if entity @s[tag=rpg.h.holy_weapon_tag1] run scoreboard players remove @s rpg_taint 1
-execute if entity @s[scores={{rpg_taint={MAXP}..}}] run scoreboard players set @s rpg_taint {MAX}
-execute if entity @s[scores={{rpg_taint=..-1}}] run scoreboard players set @s rpg_taint 0
+execute if entity @s[scores={rpg_taint=%(MAXP)d..}] run scoreboard players set @s rpg_taint %(MAX)d
+execute if entity @s[scores={rpg_taint=..-1}] run scoreboard players set @s rpg_taint 0
 
 # 分档外显。低档只是身上泛起暗纹，越深越明显。
-execute if entity @s[scores={{rpg_taint=31..60}}] at @s run particle dust{{color:[0.32,0.16,0.42],scale:1}} ~ ~1 ~ 0.35 0.6 0.35 0.01 4
-execute if entity @s[scores={{rpg_taint=61..90}}] at @s run particle dust{{color:[0.45,0.10,0.14],scale:2}} ~ ~1 ~ 0.4 0.7 0.4 0.02 8
-execute if entity @s[scores={{rpg_taint=61..90}}] at @s run particle sculk_soul ~ ~1.2 ~ 0.3 0.5 0.3 0.01 2
+execute if entity @s[scores={rpg_taint=31..60}] at @s run particle dust{color:[0.32,0.16,0.42],scale:1} ~ ~1 ~ 0.35 0.6 0.35 0.01 4
+execute if entity @s[scores={rpg_taint=61..90}] at @s run particle dust{color:[0.45,0.10,0.14],scale:2} ~ ~1 ~ 0.4 0.7 0.4 0.02 8
+execute if entity @s[scores={rpg_taint=61..90}] at @s run particle sculk_soul ~ ~1.2 ~ 0.3 0.5 0.3 0.01 2
 
-# 濒临魔化：力量上来了，但圣性之物开始灼手，也更怕魔法伤害。
-execute if entity @s[scores={{rpg_taint=91..}}] run effect give @s minecraft:strength 3 0 true
-execute if entity @s[scores={{rpg_taint=91..}}] at @s run particle soul_fire_flame ~ ~1 ~ 0.4 0.7 0.4 0.01 6
-execute if entity @s[scores={{rpg_taint=91..}},tag=rpg.h.holy_weapon_tag1] run damage @s 2 minecraft:magic
-execute if entity @s[scores={{rpg_taint=91..}},tag=rpg.h.holy_weapon_tag1] run playsound minecraft:block.lava.extinguish player @s ~ ~ ~ 1 1.6
+# 濒临魔化：力量上来了，但圣性之物开始灼手。
+execute if entity @s[scores={rpg_taint=91..}] run effect give @s minecraft:strength 3 0 true
+execute if entity @s[scores={rpg_taint=91..}] at @s run particle soul_fire_flame ~ ~1 ~ 0.4 0.7 0.4 0.01 6
+execute if entity @s[scores={rpg_taint=91..},tag=rpg.h.holy_weapon_tag1] run damage @s 2 minecraft:magic
+execute if entity @s[scores={rpg_taint=91..},tag=rpg.h.holy_weapon_tag1] run playsound minecraft:block.lava.extinguish player @s ~ ~ ~ 1 1.6
+
+# 满值只报一次 —— 否则每两秒弹一遍标题，没人受得了。
+execute if entity @s[scores={rpg_taint=%(MAX)d},tag=!rpg.taint.full] run function rpg:taint/full
+execute if entity @s[scores={rpg_taint=..%(NEAR)d},tag=rpg.taint.full] run tag @s remove rpg.taint.full
+"""
+
+TAINT_FULL = """\
+# 魔化到顶。这一刻不是死路 —— 是唯一的岔路口。
+tag @s add rpg.taint.full
+title @s times 10 60 20
+title @s title ["",{"text":"魔 化 已 满","italic":false,"color":"dark_red","bold":true}]
+title @s subtitle ["",{"text":"立起驱魔图腾，浇上圣水 —— 反转","italic":false,"color":"gold"}]
+playsound minecraft:entity.wither.spawn master @s ~ ~ ~ 0.5 1.8
+execute at @s run particle sculk_charge_pop ~ ~1.2 ~ 0.4 0.6 0.4 0.05 30
+"""
+
+TAINT_HOLY = """\
+# 圣痕。逆圣化留下的那段时间：走到哪儿，空壳就散到哪儿。
+# 属性增益在授予那一下就按整段时长给足了，这里只管计时、光晕和清场。
+scoreboard players remove @s rpg_holy 1
+particle end_rod ~ ~1.1 ~ 0.35 0.7 0.35 0.01 3
+particle dust{color:[1.0,0.97,0.80],scale:1} ~ ~1 ~ 0.4 0.8 0.4 0.01 2
+# 走到哪儿，空壳就散到哪儿 —— 本人就是一场行走的仪式。
+# 这一行自己就是那次走查，前面再加一道同样的守卫只会白扫一遍。
+execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..6] at @s run function rpg:rite/free
+execute if entity @s[scores={rpg_holy=..0}] run function rpg:taint/holy_end
+"""
+
+TAINT_HOLY_END = """\
+# 圣痕淡去，人落回凡人。
+scoreboard players set @s rpg_holy 0
+effect clear @s minecraft:strength
+effect clear @s minecraft:resistance
+effect clear @s minecraft:regeneration
+effect clear @s minecraft:fire_resistance
+effect clear @s minecraft:absorption
+particle end_rod ~ ~1 ~ 0.4 0.7 0.4 0.06 40
+playsound minecraft:block.beacon.deactivate master @s ~ ~ ~ 0.8 1.2
+title @s actionbar ["",{"text":"圣痕淡去","italic":true,"color":"gray"}]
 """
 
 
@@ -201,14 +282,96 @@ tag @e[tag=rpg.vac.new] remove rpg.vac.new
 """
 
 VACANT = """\
-# 空缺者的显形与代价。
-# 只有附近有人持圣器时才现形 —— 平时它和普通村民毫无分别。
-execute as @e[type=minecraft:villager,tag=rpg.vacant] at @s if entity @a[tag=rpg.h.holy_weapon_tag1,distance=..16] run effect give @s minecraft:glowing 2 0 true
-execute as @e[type=minecraft:villager,tag=rpg.vacant] at @s if entity @a[tag=rpg.h.holy_weapon_tag1,distance=..16] run particle sculk_soul ~ ~1.4 ~ 0.2 0.3 0.2 0.01 2
+# 空缺者的显形与反扑。两条走查，都带类型。
+execute as @e[type=minecraft:villager,tag=rpg.vacant] at @s if entity @a[tag=rpg.h.holy_weapon_tag1,distance=..16] run function rpg:vacant/reveal
+execute as @e[type=minecraft:villager,tag=rpg.vacant,tag=rpg.hurt] at @s run function rpg:vacant/lash
+"""
 
-# 杀掉空缺者不算驱魔 —— 罪落在动手的人身上。
-execute as @e[type=minecraft:villager,tag=rpg.vacant,tag=rpg.hurt] at @s on attacker run scoreboard players add @s rpg_taint 6
-execute as @e[type=minecraft:villager,tag=rpg.vacant,tag=rpg.hurt] at @s on attacker run title @s actionbar ["",{"text":"你打碎的只是空壳","italic":true,"color":"dark_gray"}]
+VACANT_REVEAL = """\
+# 被圣器照住。平时它和普通村民毫无分别，此刻藏不住了 ——
+# 而照得越久，壳越撑不住。
+effect give @s minecraft:glowing 2 0 true
+particle sculk_soul ~ ~1.4 ~ 0.2 0.3 0.2 0.01 2
+scoreboard players add @s rpg_vac_x 1
+execute if entity @s[scores={rpg_vac_x=%(TEAR)d..},tag=!rpg.vac.torn] run function rpg:vacant/tear
+"""
+
+VACANT_LASH = """\
+# 打它没有用 —— 罪落在动手的人身上，壳还会因此裂开。
+execute on attacker run scoreboard players add @s rpg_taint 6
+execute on attacker run title @s actionbar ["",{"text":"你打碎的只是空壳","italic":true,"color":"dark_gray"}]
+execute if entity @s[tag=!rpg.vac.torn] run function rpg:vacant/tear
+"""
+
+VACANT_TEAR = """\
+# 壳裂开了。村民还站在那儿，但里面的东西跑了出来。
+tag @s add rpg.vac.torn
+effect give @s minecraft:speed 30 1 true
+particle sculk_charge_pop ~ ~1.2 ~ 0.4 0.5 0.4 0.1 30
+particle soul ~ ~1.2 ~ 0.3 0.4 0.3 0.05 20
+playsound minecraft:entity.warden.sonic_boom hostile @a[distance=..24] ~ ~ ~ 0.7 1.8
+summon minecraft:vex ~ ~1 ~ {life_ticks:600,Tags:["rpg.vac.shard"],CustomName:[{"text":"空壳碎片","color":"dark_purple"}],Health:12f,attributes:[{id:"max_health",base:12f},{id:"attack_damage",base:4f},{id:"scale",base:0.75f}]}
+summon minecraft:vex ~ ~1 ~ {life_ticks:600,Tags:["rpg.vac.shard"],CustomName:[{"text":"空壳碎片","color":"dark_purple"}],Health:12f,attributes:[{id:"max_health",base:12f},{id:"attack_damage",base:4f},{id:"scale",base:0.75f}]}
+title @a[distance=..12] actionbar ["",{"text":"壳裂开了","italic":true,"color":"dark_purple"}]
+"""
+
+VACANT_SPREAD = """\
+# 蔓延。放着不管，一个村子会慢慢烂掉。
+# 每 %(EVERY)d 刻一拍，一拍只挑一个空缺者向外伸手 —— 绝不整场扫村民。
+scoreboard players set #spread rpg_vac 0
+execute as @e[type=minecraft:villager,tag=rpg.vacant,limit=1,sort=random] at @s run function rpg:vacant/creep
+"""
+
+VACANT_CREEP = """\
+# 伸手不一定够得着。
+execute store result score @s rpg_vac run random value 1..%(ODDS)d
+execute if entity @s[scores={rpg_vac=1}] run function rpg:vacant/creep_do
+"""
+
+VACANT_CREEP_DO = """\
+particle sculk_soul ~ ~1.2 ~ 0.3 0.4 0.3 0.03 12
+execute as @e[type=minecraft:villager,tag=!rpg.vacant,distance=..8,limit=1,sort=nearest] at @s run function rpg:vacant/take
+"""
+
+VACANT_TAKE = """\
+# 又空了一个。
+tag @s add rpg.vacant
+tag @s add rpg.vac.seen
+scoreboard players set @s rpg_vac_x 0
+particle sculk_charge_pop ~ ~1.2 ~ 0.3 0.4 0.3 0.05 16
+particle soul ~ ~1.2 ~ 0.2 0.3 0.2 0.02 8
+playsound minecraft:block.sculk_shrieker.shriek hostile @a[distance=..20] ~ ~ ~ 0.6 1.4
+"""
+
+VACANT_TRANSFER = """\
+# 你杀死了一个空缺者 —— 由 rpg:item/vac_kill 在击杀那一刻触发。
+# 但空壳不会因为躯体死掉就消失：它跳到最近的人身上。
+# 这正是驱魔存在的理由 —— 剑解决不了它。
+advancement revoke @s only rpg:item/vac_kill
+scoreboard players add @s rpg_taint 8
+execute at @s run particle soul ~ ~1 ~ 0.5 0.6 0.5 0.08 40
+execute at @s run playsound minecraft:entity.vex.death hostile @a[distance=..24] ~ ~ ~ 1 0.6
+execute at @s if entity @e[type=minecraft:villager,tag=!rpg.vacant,distance=..16,limit=1] run function rpg:vacant/jump
+execute at @s unless entity @e[type=minecraft:villager,tag=!rpg.vacant,distance=..16,limit=1] run function rpg:vacant/loose
+"""
+
+VACANT_JUMP = """\
+# 换了一具躯体，仅此而已。
+execute as @e[type=minecraft:villager,tag=!rpg.vacant,distance=..16,limit=1,sort=nearest] at @s run function rpg:vacant/take
+title @s times 10 50 20
+title @s title ["",{"text":"它没有死","italic":false,"color":"dark_purple","bold":true}]
+title @s subtitle ["",{"text":"空壳换了一个人","italic":false,"color":"gray"}]
+"""
+
+VACANT_LOOSE = """\
+# 附近没有第二具躯体可用。那东西只好赤裸地留在原地。
+execute at @s run particle sculk_charge_pop ~ ~1 ~ 0.6 0.6 0.6 0.15 60
+execute at @s run playsound minecraft:entity.warden.roar hostile @a[distance=..28] ~ ~ ~ 0.8 1.4
+execute at @s run summon minecraft:vex ~ ~1 ~ {life_ticks:900,Tags:["rpg.vac.shard"],CustomName:[{"text":"无处可去者","color":"dark_purple"}],Health:16f,attributes:[{id:"max_health",base:16f},{id:"attack_damage",base:5f}]}
+execute at @s run summon minecraft:vex ~ ~1 ~ {life_ticks:900,Tags:["rpg.vac.shard"],CustomName:[{"text":"无处可去者","color":"dark_purple"}],Health:16f,attributes:[{id:"max_health",base:16f},{id:"attack_damage",base:5f}]}
+execute at @s run summon minecraft:vex ~ ~1 ~ {life_ticks:900,Tags:["rpg.vac.shard"],CustomName:[{"text":"无处可去者","color":"dark_purple"}],Health:16f,attributes:[{id:"max_health",base:16f},{id:"attack_damage",base:5f}]}
+title @s times 10 50 20
+title @s title ["",{"text":"无 处 可 去","italic":false,"color":"dark_purple","bold":true}]
 """
 
 
@@ -219,86 +382,208 @@ RITE_TRIGGER = """\
 # 立图腾 —— 由 rpg:item/rite 在「以驱魔图腾右击方块」时触发。
 # 图腾本体用 item_display：没有 AI、没有碰撞，只是一件立在那儿的东西。
 advancement revoke @s only rpg:item/rite
-execute if entity @s[scores={{rpg_rite=1..}}] run return 0
+execute if entity @s[scores={rpg_rite=1..}] run return 0
 scoreboard players set @s rpg_rite 10
-clear @s minecraft:totem_of_undying[minecraft:custom_data~{{totem_tag:1b}}] 1
+clear @s minecraft:totem_of_undying[minecraft:custom_data~{totem_tag:1b}] 1
 execute at @s anchored eyes positioned ^ ^ ^2 run function rpg:rite/place
 """
 
 RITE_PLACE = """\
 # 图腾落地。此刻它还是熄的 —— 要等圣水浇上去。
-summon minecraft:item_display ~ ~ ~ {{Tags:["rpg.totem"],item:{{id:"minecraft:totem_of_undying",count:1}},transformation:{{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f]}},billboard:"vertical",brightness:{{sky:15,block:15}}}}
-particle dust{{color:[0.95,0.86,0.45],scale:1}} ~ ~0.6 ~ 0.3 0.4 0.3 0.02 20
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.totem"],item:{id:"minecraft:totem_of_undying",count:1},transformation:{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f]},billboard:"vertical",brightness:{sky:15,block:15}}
+particle dust{color:[0.95,0.86,0.45],scale:1} ~ ~0.6 ~ 0.3 0.4 0.3 0.02 20
 playsound minecraft:block.respawn_anchor.set_spawn player @a[distance=..16] ~ ~ ~ 1 1.4
-title @a[distance=..6] actionbar ["",{{"text":"图腾已立","color":"gold"}},{{"text":"　以驱魔圣水浇之","color":"gray","italic":true}}]
+title @a[distance=..6] actionbar ["",{"text":"图腾已立","color":"gold"},{"text":"　以驱魔圣水浇之","color":"gray","italic":true}]
 """
 
 RITE_TICK = """\
-# 图腾的一生：等圣水、点燃、递减、炸开。
+# 图腾的一生：等圣水、点燃、按拍推进、收场。
 # 由 rpg:exorcism 守卫调用 —— 场上没有图腾时整段跳过。
+#
+# 只有两条走查，都带类型。节拍不在这里展开：一支图腾一次调用，
+# 剩下的分支全在 @s 上做 —— 那是自身作用域，不必再走一遍世界。
 
 # 熄着的图腾等一朵圣水云。滞留药水落地留下的 area_effect_cloud 就是"浇上了"，
 # 喷溅型落地即散，什么都留不下，所以驱魔圣水做成滞留型。
 execute as @e[type=minecraft:item_display,tag=rpg.totem,tag=!rpg.totem.lit] at @s if entity @e[type=minecraft:area_effect_cloud,distance=..3] run function rpg:rite/light
 
-# 点着的图腾按拍净化，一拍比一拍弱
-{PULSE_LINES}
-
-# 烧到头就炸
-execute as @e[tag=rpg.totem.lit,scores={{rpg_totem=..0}}] at @s run function rpg:rite/burst
-
-execute as @e[tag=rpg.totem.lit] at @s run particle dust{{color:[0.98,0.92,0.62],scale:1}} ~ ~0.7 ~ 0.22 0.3 0.22 0.01 2
-execute as @e[tag=rpg.totem.lit,scores={{rpg_totem=1..}}] run scoreboard players remove @s rpg_totem 1
+# 点着的图腾走自己的节拍
+execute as @e[type=minecraft:item_display,tag=rpg.totem.lit] at @s run function rpg:rite/beat
 """
 
 RITE_LIGHT = """\
-# 圣水浇上，图腾点燃。
+# 圣水浇上，图腾点燃。烧法取决于旁边站着谁 ——
+# 一个魔化到顶的人在场，仪式就不再是净化，而是反转。
 tag @s add rpg.totem.lit
-scoreboard players set @s rpg_totem {LIT}
-particle end_rod ~ ~0.6 ~ 0.4 0.5 0.4 0.05 60
-particle dust{{color:[1.0,0.98,0.86],scale:2}} ~ ~0.8 ~ 0.5 0.6 0.5 0.04 80
-particle minecraft:flash{{color:16777200}} ~ ~0.8 ~ 0 0 0 0 1
-playsound minecraft:block.beacon.activate player @a[distance=..24] ~ ~ ~ 1 1.2
+scoreboard players set @s rpg_totem %(LIT)d
 playsound minecraft:item.bottle.empty player @a[distance=..16] ~ ~ ~ 1 0.8
-title @a[distance=..8] actionbar ["",{{"text":"驱　魔","color":"gold","bold":true}},{{"text":"　图腾开始燃尽","color":"gray"}}]
+execute if entity @a[distance=..%(INV_R)d,scores={rpg_taint=%(MAX)d}] run function rpg:rite/light_inv
+execute unless entity @a[distance=..%(INV_R)d,scores={rpg_taint=%(MAX)d}] run function rpg:rite/light_pure
+"""
+
+RITE_LIGHT_PURE = """\
+particle end_rod ~ ~0.6 ~ 0.4 0.5 0.4 0.05 60
+particle dust{color:[1.0,0.98,0.86],scale:2} ~ ~0.8 ~ 0.5 0.6 0.5 0.04 80
+particle minecraft:flash{color:16777200} ~ ~0.8 ~ 0 0 0 0 1
+playsound minecraft:block.beacon.activate player @a[distance=..24] ~ ~ ~ 1 1.2
+title @a[distance=..8] actionbar ["",{"text":"驱　魔","color":"gold","bold":true},{"text":"　图腾开始燃尽","color":"gray"}]
+"""
+
+RITE_LIGHT_INV = """\
+# 逆圣化点燃。图腾这次不往外净化 —— 它朝着那个人烧。
+tag @s add rpg.totem.inv
+tag @a[distance=..%(INV_R)d,scores={rpg_taint=%(MAX)d}] add rpg.inv.subject
+particle minecraft:flash{color:6684672} ~ ~0.8 ~ 0 0 0 0 1
+particle sculk_charge_pop ~ ~0.8 ~ 0.6 0.6 0.6 0.1 80
+particle dust{color:[0.42,0.06,0.10],scale:3} ~ ~0.8 ~ 0.6 0.7 0.6 0.03 90
+playsound minecraft:entity.wither.spawn master @a[distance=..40] ~ ~ ~ 1 0.7
+playsound minecraft:block.end_portal.spawn master @a[distance=..40] ~ ~ ~ 0.6 1.6
+title @a[tag=rpg.inv.subject] times 10 50 20
+title @a[tag=rpg.inv.subject] title ["",{"text":"逆 圣 化","italic":false,"color":"dark_red","bold":true}]
+title @a[tag=rpg.inv.subject] subtitle ["",{"text":"负与负相乘，站住别走","italic":false,"color":"gold"}]
+"""
+
+RITE_BEAT = """\
+# 一支图腾一拍。净化与反转两套节拍，从这里分开。
+execute if entity @s[tag=rpg.totem.inv] run function rpg:rite/beat_inv
+execute unless entity @s[tag=rpg.totem.inv] run function rpg:rite/beat_pure
+"""
+
+RITE_BEAT_PURE = """\
+# 净化的节拍：一拍比一拍弱。
+%(PULSES)s
+particle dust{color:[0.98,0.92,0.62],scale:1} ~ ~0.7 ~ 0.22 0.3 0.22 0.01 2
+execute if entity @s[scores={rpg_totem=1..}] run scoreboard players remove @s rpg_totem 1
+execute if entity @s[scores={rpg_totem=..0}] run function rpg:rite/burst
+"""
+
+RITE_BEAT_INV = """\
+# 反转的节拍：图腾朝着受术者烧，一拍比一拍狠。
+# 人必须站在圈里熬完 —— 走开或者倒下，仪式当场作废。
+# return run：失败要连这支图腾余下的节拍一起掐掉，否则后面几条会对着
+# 一个已经 kill 掉的 @s 继续跑。
+execute unless entity @a[tag=rpg.inv.subject,distance=..%(INV_R)d] run return run function rpg:rite/inv_fail
+scoreboard players operation #inv_now rpg_hud = @s rpg_totem
+execute as @a[tag=rpg.inv.subject,distance=..%(INV_R)d] run function rpg:rite/inv_hud
+%(BURNS)s
+particle soul_fire_flame ~ ~0.8 ~ 0.45 0.55 0.45 0.02 3
+particle dust{color:[0.42,0.06,0.10],scale:2} ~ ~0.8 ~ 0.5 0.6 0.5 0.01 2
+execute if entity @s[scores={rpg_totem=1..}] run scoreboard players remove @s rpg_totem 1
+execute if entity @s[scores={rpg_totem=..0}] run function rpg:rite/inv_burst
+"""
+
+RITE_INV_HUD = """\
+# 交给统一 HUD 渲染。反转要看的是"熬过去多少"，所以进度反着算：
+# 图腾烧掉的那部分，才是受术者已经撑住的部分。
+scoreboard players set @s rpg_hud %(HID)d
+scoreboard players set @s rpg_hud_t %(TTL)d
+scoreboard players operation @s rpg_hud_p = #inv_full rpg_hud
+scoreboard players operation @s rpg_hud_p -= #inv_now rpg_hud
+scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud
+scoreboard players operation @s rpg_hud_p /= #inv_full rpg_hud
 """
 
 RITE_PULSE = """\
 # 一拍净化。图腾每燃尽一分，效力就弱一分 —— 净化量由调用处给。
-particle end_rod ~ ~0.5 ~ {R_HALF} 0.2 {R_HALF} 0.04 70
-particle dust{{color:[1.0,0.98,0.86],scale:2}} ~ ~0.8 ~ {R_HALF} 0.4 {R_HALF} 0.03 60
+particle end_rod ~ ~0.5 ~ %(R_HALF)s 0.2 %(R_HALF)s 0.04 70
+particle dust{color:[1.0,0.98,0.86],scale:2} ~ ~0.8 ~ %(R_HALF)s 0.4 %(R_HALF)s 0.03 60
 playsound minecraft:block.conduit.ambient player @a[distance=..20] ~ ~ ~ 1 1.3
-execute as @a[distance=..{R}] run scoreboard players remove @s rpg_taint {AMOUNT}
-execute as @a[distance=..{R},scores={{rpg_taint=..-1}}] run scoreboard players set @s rpg_taint 0
-execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..{R}] at @s run function rpg:rite/free
+execute as @a[distance=..%(R)d] run scoreboard players remove @s rpg_taint %(AMOUNT)d
+execute as @a[distance=..%(R)d,scores={rpg_taint=..-1}] run scoreboard players set @s rpg_taint 0
+execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..%(R)d] at @s run function rpg:rite/free
 # 图腾随着燃尽一点点缩小
-data merge entity @s {{transformation:{{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[{SCALE}f,{SCALE}f,{SCALE}f],right_rotation:[0f,0f,0f,1f]}}}}
+data merge entity @s {transformation:{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[%(SCALE)sf,%(SCALE)sf,%(SCALE)sf],right_rotation:[0f,0f,0f,1f]}}
+"""
+
+RITE_BURN = """\
+# 反转的第 %(N)d 道。灼烧越来越烈，光却越来越白 —— 那是它正在翻面。
+particle minecraft:flash{color:%(FLASH)d} ~ ~0.9 ~ 0 0 0 0 1
+particle end_rod ~ ~0.7 ~ 0.5 0.4 0.5 %(SPD)s %(CNT)d
+particle dust{color:[%(DR)s,%(DG)s,%(DB)s],scale:2} ~ ~0.8 ~ 0.6 0.5 0.6 0.03 %(CNT)d
+playsound minecraft:block.respawn_anchor.charge master @a[distance=..24] ~ ~ ~ 1 %(PITCH)s
+execute as @a[tag=rpg.inv.subject,distance=..%(R)d] run damage @s %(DMG)d minecraft:magic
+execute as @a[tag=rpg.inv.subject,distance=..%(R)d] run effect give @s minecraft:slowness 3 2 true
+execute as @a[tag=rpg.inv.subject,distance=..%(R)d] at @s run particle soul_fire_flame ~ ~1 ~ 0.4 0.8 0.4 0.06 40
+data merge entity @s {transformation:{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[%(SCALE)sf,%(SCALE)sf,%(SCALE)sf],right_rotation:[0f,0f,0f,1f]}}
 """
 
 RITE_BURST = """\
 # 燃尽。图腾炸开 —— 最后一下把余威全部吐出来。
 particle explosion ~ ~0.6 ~ 0.6 0.3 0.6 0 6
 particle end_rod ~ ~0.6 ~ 1.2 0.6 1.2 0.35 140
-particle dust{{color:[1.0,0.94,0.70],scale:3}} ~ ~0.8 ~ 1 0.6 1 0.2 120
-particle minecraft:flash{{color:16777200}} ~ ~1 ~ 0 0 0 0 1
+particle dust{color:[1.0,0.94,0.70],scale:3} ~ ~0.8 ~ 1 0.6 1 0.2 120
+particle minecraft:flash{color:16777200} ~ ~1 ~ 0 0 0 0 1
 playsound minecraft:entity.generic.explode player @a[distance=..28] ~ ~ ~ 1 1.4
 playsound minecraft:block.beacon.deactivate player @a[distance=..28] ~ ~ ~ 1 1.1
 
 # 最后一击：范围内的空缺者一并驱出，敌意生物被震开
-execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..{R}] at @s run function rpg:rite/free
-execute as @e[distance=0.1..{R},type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,type=!minecraft:villager] at @s run damage @s 6 minecraft:magic
-execute as @e[distance=0.1..{R},type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,type=!minecraft:villager] at @s run data merge entity @s {{Motion:[0d,0.6d,0d]}}
-title @a[distance=..10] actionbar ["",{{"text":"图腾已尽","color":"gray","italic":true}}]
+execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..%(R)d] at @s run function rpg:rite/free
+execute as @e[distance=0.1..%(R)d,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,type=!minecraft:villager] at @s run damage @s 6 minecraft:magic
+execute as @e[distance=0.1..%(R)d,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,type=!minecraft:villager] at @s run data merge entity @s {Motion:[0d,0.6d,0d]}
+title @a[distance=..10] actionbar ["",{"text":"图腾已尽","color":"gray","italic":true}]
 kill @s
 """
 
+RITE_INV_BURST = """\
+# 反转完成。魔化没有被洗掉 —— 它被烧穿了，从另一面出来。
+particle minecraft:flash{color:16777215} ~ ~1 ~ 0 0 0 0 1
+particle end_rod ~ ~0.8 ~ 1.4 0.8 1.4 0.5 220
+particle dust{color:[1.0,0.99,0.92],scale:4} ~ ~1 ~ 1.2 0.8 1.2 0.25 180
+particle totem_of_undying ~ ~1 ~ 0.8 0.8 0.8 0.4 120
+playsound minecraft:item.totem.use master @a[distance=..48] ~ ~ ~ 1 1
+playsound minecraft:block.beacon.power_select master @a[distance=..48] ~ ~ ~ 1 0.8
+execute as @a[tag=rpg.inv.subject,distance=..%(R)d] run function rpg:rite/inv_grant
+kill @s
+"""
+
+RITE_INV_GRANT = """\
+# 圣痕落定。增益一次性按整段时长给足，之后每刻只剩计时和光晕。
+tag @s remove rpg.inv.subject
+tag @s remove rpg.taint.full
+scoreboard players set @s rpg_taint 0
+scoreboard players set @s rpg_holy %(HOLY)d
+effect give @s minecraft:instant_health 1 2 true
+effect give @s minecraft:strength %(SEC)d 1 true
+effect give @s minecraft:resistance %(SEC)d 0 true
+effect give @s minecraft:regeneration %(SEC)d 0 true
+effect give @s minecraft:fire_resistance %(SEC)d 0 true
+effect give @s minecraft:absorption %(SEC)d 1 true
+title @s times 10 70 20
+title @s title ["",{"text":"圣 痕","italic":false,"color":"gold","bold":true}]
+title @s subtitle ["",{"text":"负与负相乘，污染发生反转","italic":false,"color":"yellow"}]
+"""
+
+RITE_INV_FAIL = """\
+# 人走了，或者人倒了。图腾自己碎掉，罪一点没少。
+particle large_smoke ~ ~0.7 ~ 0.5 0.5 0.5 0.05 60
+particle campfire_signal_smoke ~ ~0.8 ~ 0.3 0.3 0.3 0.02 20
+playsound minecraft:block.glass.break master @a[distance=..24] ~ ~ ~ 1 0.6
+playsound minecraft:entity.blaze.death master @a[distance=..24] ~ ~ ~ 0.8 0.5
+execute as @a[tag=rpg.inv.subject] run function rpg:rite/inv_abort
+kill @s
+"""
+
+RITE_INV_ABORT = """\
+# 反噬。没熬住的人，得把没烧完的那部分自己吞下去。
+tag @s remove rpg.inv.subject
+effect give @s minecraft:wither 5 0
+effect give @s minecraft:blindness 3 0
+playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 0.6
+title @s times 10 50 20
+title @s title ["",{"text":"反 转 失 败","italic":false,"color":"dark_red","bold":true}]
+title @s subtitle ["",{"text":"污染未曾松手","italic":false,"color":"gray"}]
+"""
+
 RITE_FREE = """\
-# 空壳散去。村民留下，罪从他身上剥离。
+# 空壳散去。村民留下，罪从他身上剥离；跑出来的碎片一并收走。
 tag @s remove rpg.vacant
+tag @s remove rpg.vac.torn
+scoreboard players set @s rpg_vac_x 0
 particle sculk_soul ~ ~1 ~ 0.3 0.5 0.3 0.06 40
 particle end_rod ~ ~1 ~ 0.3 0.5 0.3 0.03 24
 playsound minecraft:entity.evoker.celebrate hostile @a[distance=..20] ~ ~ ~ 1 1.3
 effect give @s minecraft:glowing 4 0 true
+kill @e[type=minecraft:vex,tag=rpg.vac.shard,distance=..12]
 execute as @a[distance=..8] run scoreboard players remove @s rpg_taint 5
 execute at @s run summon minecraft:experience_orb ~ ~1 ~ {Value:24}
 """
@@ -317,6 +602,11 @@ execute if entity @a[tag=rpg.h.holy_weapon_tag1] run function rpg:vacant/vacant
 execute unless entity @a[tag=rpg.h.holy_weapon_tag1] if entity @e[type=minecraft:villager,tag=rpg.vacant,tag=rpg.hurt,limit=1] run function rpg:vacant/vacant
 execute if entity @e[type=minecraft:item_display,tag=rpg.totem,limit=1] run function rpg:rite/tick
 execute as @a[scores={rpg_rite=1..}] run scoreboard players remove @s rpg_rite 1
+
+# 蔓延的节拍器。没有比一次记分板比较更便宜的守卫 ——
+# 先数够 %(EVERY)d 刻，再去找村民。
+scoreboard players add #spread rpg_vac 1
+execute if score #spread rpg_vac matches %(EVERY)d.. run function rpg:vacant/spread
 """
 
 
@@ -335,6 +625,10 @@ def build_give():
                  row(seg("🔱仪式", "white", True), seg("[驱魔]", "#FFD700", True)),
                  row(seg("点燃后每隔两秒净化一次，效力逐次递减")),
                  row(seg("燃尽时炸开，驱出范围内所有空缺者")),
+                 RULE,
+                 row(seg("🔱逆圣化", "white", True), seg("[满魔化]", "#FF3300", True)),
+                 row(seg("魔化满值者在场时点燃，仪式转为反转")),
+                 row(seg("站定十秒熬过灼烧，魔化尽去，留下圣痕")),
                  RULE]) + "],"
              "custom_data={totem_tag:1b}]")
     # 必须是滞留型：喷溅药水落地即散，图腾没有任何东西可以感知；
@@ -356,24 +650,77 @@ def build_give():
 
 def build_functions():
     n = build_hud()
-    wf("taint/taint.mcfunction", TAINT.format())
-    wf("taint/step.mcfunction", TAINT_STEP.format(MAX=TAINT_MAX, MAXP=TAINT_MAX + 1))
+
+    # ---- 魔化 ----
+    wf("taint/taint.mcfunction", TAINT)
+    wf("taint/step.mcfunction",
+       TAINT_STEP % {"MAX": TAINT_MAX, "MAXP": TAINT_MAX + 1, "NEAR": TAINT_MAX - 1})
+    wf("taint/full.mcfunction", TAINT_FULL)
+    wf("taint/holy.mcfunction", TAINT_HOLY)
+    wf("taint/holy_end.mcfunction", TAINT_HOLY_END)
+
+    # ---- 空缺者 ----
     wf("vacant/mark.mcfunction", VACANT_MARK)
     wf("vacant/vacant.mcfunction", VACANT)
-    wf("rite/trigger.mcfunction", RITE_TRIGGER.format())
-    wf("rite/place.mcfunction", RITE_PLACE.format())
+    wf("vacant/reveal.mcfunction", VACANT_REVEAL % {"TEAR": TEAR_AT})
+    wf("vacant/lash.mcfunction", VACANT_LASH)
+    wf("vacant/tear.mcfunction", VACANT_TEAR)
+    wf("vacant/spread.mcfunction", VACANT_SPREAD % {"EVERY": SPREAD_EVERY})
+    wf("vacant/creep.mcfunction", VACANT_CREEP % {"ODDS": SPREAD_ODDS})
+    wf("vacant/creep_do.mcfunction", VACANT_CREEP_DO)
+    wf("vacant/take.mcfunction", VACANT_TAKE)
+    wf("vacant/transfer.mcfunction", VACANT_TRANSFER)
+    wf("vacant/jump.mcfunction", VACANT_JUMP)
+    wf("vacant/loose.mcfunction", VACANT_LOOSE)
+
+    # ---- 仪式 ----
+    wf("rite/trigger.mcfunction", RITE_TRIGGER)
+    wf("rite/place.mcfunction", RITE_PLACE)
+    wf("rite/tick.mcfunction", RITE_TICK)
+    wf("rite/light.mcfunction",
+       RITE_LIGHT % {"LIT": LIT, "INV_R": INV_R, "MAX": TAINT_MAX})
+    wf("rite/light_pure.mcfunction", RITE_LIGHT_PURE)
+    wf("rite/light_inv.mcfunction",
+       RITE_LIGHT_INV % {"INV_R": INV_R, "MAX": TAINT_MAX})
+    wf("rite/beat.mcfunction", RITE_BEAT)
+
     pulses = []
     for i, (at, amount, scale) in enumerate(PULSES, 1):
-        pulses.append("execute as @e[tag=rpg.totem.lit,scores={rpg_totem=%d}] at @s "
+        pulses.append("execute if entity @s[scores={rpg_totem=%d}] "
                       "run function rpg:rite/p%d" % (at, i))
         wf("rite/p%d.mcfunction" % i,
-           RITE_PULSE.format(R=RITE_R, R_HALF="%.1f" % (RITE_R * 0.5),
-                             AMOUNT=amount, SCALE=scale))
-    wf("rite/tick.mcfunction", RITE_TICK.format(PULSE_LINES="\n".join(pulses)))
-    wf("rite/light.mcfunction", RITE_LIGHT.format(LIT=LIT))
-    wf("rite/burst.mcfunction", RITE_BURST.format(R=RITE_R))
+           RITE_PULSE % {"R": RITE_R, "R_HALF": "%.1f" % (RITE_R * 0.5),
+                         "AMOUNT": amount, "SCALE": scale})
+    wf("rite/beat_pure.mcfunction", RITE_BEAT_PURE % {"PULSES": "\n".join(pulses)})
+
+    # 反转的五道：光从暗红一路走到纯白，声音一道比一道高。
+    tints = [(0.42, 0.06, 0.10), (0.58, 0.14, 0.12), (0.76, 0.34, 0.16),
+             (0.92, 0.62, 0.28), (1.00, 0.94, 0.72)]
+    flashes = [0x4A0A0E, 0x7A1C14, 0xC05A22, 0xE8A64A, 0xFFF4C0]
+    burns = []
+    for i, (at, dmg, scale) in enumerate(BURNS, 1):
+        burns.append("execute if entity @s[scores={rpg_totem=%d}] "
+                     "run function rpg:rite/v%d" % (at, i))
+        r, g, b = tints[i - 1]
+        wf("rite/v%d.mcfunction" % i,
+           RITE_BURN % {"N": i, "R": INV_R, "DMG": dmg, "SCALE": scale,
+                        "FLASH": flashes[i - 1], "DR": r, "DG": g, "DB": b,
+                        "CNT": 40 + i * 20, "SPD": "%.2f" % (0.05 + i * 0.03),
+                        "PITCH": "%.2f" % (0.6 + i * 0.22)})
+    wf("rite/beat_inv.mcfunction",
+       RITE_BEAT_INV % {"INV_R": INV_R, "BURNS": "\n".join(burns)})
+    wf("rite/inv_hud.mcfunction",
+       RITE_INV_HUD % {"HID": HUD_INVERT, "TTL": HUD_TTL})
+
+    wf("rite/burst.mcfunction", RITE_BURST % {"R": RITE_R})
+    wf("rite/inv_burst.mcfunction", RITE_INV_BURST % {"R": INV_R})
+    wf("rite/inv_grant.mcfunction",
+       RITE_INV_GRANT % {"HOLY": HOLY_TICKS, "SEC": HOLY_TICKS // 20})
+    wf("rite/inv_fail.mcfunction", RITE_INV_FAIL)
+    wf("rite/inv_abort.mcfunction", RITE_INV_ABORT)
     wf("rite/free.mcfunction", RITE_FREE)
-    wf("exorcism.mcfunction", ROOT)
+
+    wf("exorcism.mcfunction", ROOT % {"EVERY": SPREAD_EVERY})
 
     wj(os.path.join(ADV, "rite.json"), {
         "criteria": {"requirement": {
@@ -381,6 +728,17 @@ def build_functions():
             "conditions": {
                 "item": {"predicates": {"minecraft:custom_data": "{totem_tag:1b}"}}}}},
         "rewards": {"function": "rpg:rite/trigger"}})
+
+    # 击杀空缺者 —— 生物死掉那一刻，原版只有这一个口子能通知到数据包。
+    wj(os.path.join(ADV, "vac_kill.json"), {
+        "criteria": {"requirement": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": [{"condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {"type": "minecraft:villager",
+                                          "nbt": "{Tags:[\"rpg.vacant\"]}"}}]}}},
+        "rewards": {"function": "rpg:vacant/transfer"}})
 
     tick = os.path.join(FUNC, "command/tick.mcfunction")
     s = io.open(tick, encoding="utf-8").read()
@@ -433,7 +791,7 @@ def route_actionbars():
             io.open(p, "w", encoding="utf-8", newline="\n").write("\n".join(out) + "\n")
             edits += 1
 
-    # 换算用的两个常量
+    # 换算用的常量
     p = os.path.join(FUNC, "command/soreboard.mcfunction")
     s = io.open(p, encoding="utf-8").read()
     if "#hud_seg" not in s:
@@ -441,7 +799,9 @@ def route_actionbars():
             s.rstrip("\n")
             + "\nscoreboard players set #hud_seg rpg_hud %d" % SEGMENTS
             + "\nscoreboard players set #hud_full rpg_hud 30"
-            + "\nscoreboard players set #taint_max rpg_hud %d\n" % TAINT_MAX)
+            + "\nscoreboard players set #taint_max rpg_hud %d" % TAINT_MAX
+            + "\nscoreboard players set #inv_full rpg_hud %d" % LIT
+            + "\nscoreboard players set #holy_full rpg_hud %d\n" % HOLY_TICKS)
     return edits
 
 
