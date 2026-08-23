@@ -18,6 +18,7 @@ python add_lucifer.py ../resourcepack ../rpg
 python add_leviathan.py ../resourcepack ../rpg
 python add_runes.py ../rpg ../resourcepack
 python add_epics.py ../resourcepack ../rpg
+python add_exorcism.py ../rpg
 python retype_longinus.py ../resourcepack ../rpg
 python make_boxes.py ../rpg
 echo

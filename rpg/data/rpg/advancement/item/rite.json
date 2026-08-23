@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{rite_tag:1b}"
+          }
+        },
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:soul_lantern"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:rite/trigger"
+  }
+}

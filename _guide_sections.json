@@ -4512,6 +4512,52 @@
    "dyed_color": null,
    "trim": null,
    "potion_contents": null
+  },
+  {
+   "item": "splash_potion",
+   "name": "驱魔圣水",
+   "rarity": "驱魔",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "自[圣座]取来的水",
+    "以此水右击灵魂灯笼起阵",
+    "+------------------+",
+    "🔱仪式[驱魔]",
+    "四正方向各三格需各置一盏灵魂灯笼",
+    "成阵可洗去魔化，并驱出阵中的空缺者",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rite_tag"
+   ],
+   "custom_data": {
+    "rite_tag": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "potion_contents",
+    "tooltip_display"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 16777200,
+    "custom_effects": [
+     {
+      "id": "minecraft:water_breathing",
+      "duration": 200,
+      "amplifier": 0
+     }
+    ]
+   }
   }
  ],
  "ench_list": [

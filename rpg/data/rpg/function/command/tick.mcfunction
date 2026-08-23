@@ -22,6 +22,7 @@ function rpg:item/bow/legend/hunter/hunter
 function rpg:item/extra/skills
 function rpg:item/rune/runes
 function rpg:item/epic/epics
+function rpg:exorcism
 
 
 
