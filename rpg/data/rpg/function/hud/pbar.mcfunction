@@ -1,0 +1,17 @@
+# 契约冷却条。与魔化并排显示 —— 它是状态，不是蓄力。
+scoreboard players set @s rpg_hud_on 1
+scoreboard players operation @s rpg_hud_p = #pact_full rpg_hud
+scoreboard players operation @s rpg_hud_p -= @s rpg_pact_cd
+scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud
+scoreboard players operation @s rpg_hud_p /= #pact_full rpg_hud
+execute if entity @s[scores={rpg_hud_p=0}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▱▱▱▱▱","italic":false,"color":"dark_gray"}]'
+execute if entity @s[scores={rpg_hud_p=1}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰","italic":false,"color":"#D4AF37"},{"text":"▱▱▱▱","italic":false,"color":"dark_gray"}]'
+execute if entity @s[scores={rpg_hud_p=2}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰▰","italic":false,"color":"#D4AF37"},{"text":"▱▱▱","italic":false,"color":"dark_gray"}]'
+execute if entity @s[scores={rpg_hud_p=3}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰▰▰","italic":false,"color":"#D4AF37"},{"text":"▱▱","italic":false,"color":"dark_gray"}]'
+execute if entity @s[scores={rpg_hud_p=4}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰▰▰▰","italic":false,"color":"#D4AF37"},{"text":"▱","italic":false,"color":"dark_gray"}]'
+execute if entity @s[scores={rpg_hud_p=5}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰▰▰▰▰","italic":false,"color":"#D4AF37"}]'
+execute if entity @s[scores={rpg_hud_p=6}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰▰▰▰▰▰","italic":false,"color":"#D4AF37"},{"text":"","italic":false,"color":"dark_gray"}]'
+execute if entity @s[scores={rpg_hud_p=7}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰▰▰▰▰▰▰","italic":false,"color":"#D4AF37"},{"text":"","italic":false,"color":"dark_gray"}]'
+execute if entity @s[scores={rpg_hud_p=8}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰▰▰▰▰▰▰▰","italic":false,"color":"#D4AF37"},{"text":"","italic":false,"color":"dark_gray"}]'
+execute if entity @s[scores={rpg_hud_p=9}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰▰▰▰▰▰▰▰▰","italic":false,"color":"#D4AF37"},{"text":"","italic":false,"color":"dark_gray"}]'
+execute if entity @s[scores={rpg_hud_p=10}] run data modify storage rpg:hud b set value '["",{"text":"　│　","italic":false,"color":"dark_gray"},{"text":"契约 ","italic":false,"color":"dark_gray"},{"text":"▰▰▰▰▰▰▰▰▰▰","italic":false,"color":"#D4AF37"},{"text":"","italic":false,"color":"dark_gray"}]'

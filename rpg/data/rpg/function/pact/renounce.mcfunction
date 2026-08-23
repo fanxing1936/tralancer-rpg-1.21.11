@@ -5,16 +5,7 @@
 # 借驱魔仪式的火烧断它。仪式本来就是烧污染的，成本也实打实
 # （一支图腾加一瓶圣水）。
 #
-# 顺序要紧：先把书退回未立约，再 break —— break 会清掉柱位编号，
-# 清掉之后就认不出该退成哪一本了。
-execute if entity @s[scores={rpg_pact=1}] run function rpg:pact/unsign1
-execute if entity @s[scores={rpg_pact=2}] run function rpg:pact/unsign2
-execute if entity @s[scores={rpg_pact=3}] run function rpg:pact/unsign3
-execute if entity @s[scores={rpg_pact=4}] run function rpg:pact/unsign4
-execute if entity @s[scores={rpg_pact=5}] run function rpg:pact/unsign5
-execute if entity @s[scores={rpg_pact=6}] run function rpg:pact/unsign6
-execute if entity @s[scores={rpg_pact=7}] run function rpg:pact/unsign7
-function rpg:pact/break
+function rpg:pact/burn
 
 # 柱中的东西不会白白松手。
 scoreboard players add @s rpg_taint 20

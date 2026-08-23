@@ -55,7 +55,7 @@ SPREAD_ODDS = 4          # 每拍 1/N 的概率向外伸手
 
 OBJECTIVES = ["rpg_taint", "rpg_hud", "rpg_hud_p", "rpg_hud_t",
               "rpg_taint_t", "rpg_vac", "rpg_rite", "rpg_totem",
-              "rpg_holy", "rpg_vac_x"]
+              "rpg_holy", "rpg_vac_x", "rpg_hud_on"]
 
 RULE = '["",{"text":"+------------------+","italic":false,"color":"white"}]'
 
@@ -133,10 +133,9 @@ def build_hud():
         top.append("execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=%d}] "
                    "run function rpg:hud/s%d" % (hid, hid))
     top += ["",
-            "# 没有技能占用时才轮到状态条。圣痕会把魔化压成 0 并挡住一切沾染，",
-            "# 所以这两条天然互斥，不必再互相排除。",
-            "execute if entity @s[scores={rpg_hud_t=..0,rpg_holy=1..}] run function rpg:hud/holy",
-            "execute if entity @s[scores={rpg_hud_t=..0,rpg_taint=1..}] run function rpg:hud/taint",
+            "# 没有技能占用时才轮到持续状态行。魔化（或圣痕）与契约冷却在那一行里",
+            "# **并排**显示 —— 它们都是状态，不该互相顶掉。",
+            "execute if entity @s[scores={rpg_hud_t=..0}] run function rpg:hud/status",
             "",
             "execute if entity @s[scores={rpg_hud_t=1..}] run scoreboard players remove @s rpg_hud_t 1"]
     wf("hud/hud.mcfunction", "\n".join(top))
@@ -167,27 +166,71 @@ def build_hud():
     total += len(disp)
 
     for i, (_lo, _hi, colour, word) in enumerate(TAINT_TIERS, 1):
-        body = ["# 魔化条 · %s" % word]
+        body = ["# 魔化条 · %s" % word,
+                "# 存进 storage 而不是直接写 actionbar —— 那一行还要和契约冷却",
+                "# 并排显示，最后由 rpg:hud/render 一条宏拼起来。",
+                "scoreboard players set @s rpg_hud_on 1"]
         for n in range(SEGMENTS + 1):
             comp = row(seg("魔化 ", "dark_gray"), *bar(n, SEGMENTS, colour),
                        seg("  " + word, colour))
-            body.append("execute if entity @s[scores={rpg_hud_p=%d}] run title @s actionbar %s"
-                        % (n, comp))
+            body.append("execute if entity @s[scores={rpg_hud_p=%d}] "
+                        "run data modify storage rpg:hud a set value '%s'" % (n, comp))
         wf("hud/t%d.mcfunction" % i, "\n".join(body))
         total += len(body)
 
     # ---- 圣痕条：魔化条的反面，同一个位置 ----
     body = ["# 圣痕条。逆圣化之后剩下的时间 —— 它走完，人就落回凡人。",
+            "scoreboard players set @s rpg_hud_on 1",
             "scoreboard players operation @s rpg_hud_p = @s rpg_holy",
             "scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud",
             "scoreboard players operation @s rpg_hud_p /= #holy_full rpg_hud"]
     for n in range(SEGMENTS + 1):
         comp = row(seg("圣痕 ", "yellow"), *bar(n, SEGMENTS, "gold"),
                    seg("  逆圣化", "gold"))
-        body.append("execute if entity @s[scores={rpg_hud_p=%d}] run title @s actionbar %s"
-                    % (n, comp))
+        body.append("execute if entity @s[scores={rpg_hud_p=%d}] "
+                    "run data modify storage rpg:hud a set value '%s'" % (n, comp))
     wf("hud/holy.mcfunction", "\n".join(body))
     total += len(body)
+
+    # ---- 契约冷却：状态，不是蓄力 ----
+    #
+    # 原本它挂在蓄力条那一档（占用编号 5），于是每用一次柱中之力，
+    # 魔化条就被顶掉整整 15 秒。它和魔化一样是持续状态，该并排而不是互相抢。
+    body = ["# 契约冷却条。与魔化并排显示 —— 它是状态，不是蓄力。",
+            "scoreboard players set @s rpg_hud_on 1",
+            "scoreboard players operation @s rpg_hud_p = #pact_full rpg_hud",
+            "scoreboard players operation @s rpg_hud_p -= @s rpg_pact_cd",
+            "scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud",
+            "scoreboard players operation @s rpg_hud_p /= #pact_full rpg_hud"]
+    for n in range(SEGMENTS + 1):
+        comp = row(seg("　│　", "dark_gray"), seg("契约 ", "dark_gray"),
+                   *bar(n, SEGMENTS // 2, "#D4AF37"))
+        body.append("execute if entity @s[scores={rpg_hud_p=%d}] "
+                    "run data modify storage rpg:hud b set value '%s'" % (n, comp))
+    wf("hud/pbar.mcfunction", "\n".join(body))
+    total += len(body)
+
+    # ---- 一行两半，拼起来 ----
+    wf("hud/status.mcfunction", "\n".join([
+        "# 屏幕下方的持续状态行：魔化（或圣痕）在左，契约冷却在右。",
+        "#",
+        "# 命令拼不了字符串，所以两半各自按分数选好自己那段存进 storage，",
+        "# 最后由一条宏拼成一行。storage 是全局的，但整个计算与渲染",
+        "# 发生在同一个玩家的同步执行里，中间插不进别人。",
+        "scoreboard players set @s rpg_hud_on 0",
+        "data modify storage rpg:hud a set value '{\"text\":\"\"}'",
+        "data modify storage rpg:hud b set value '{\"text\":\"\"}'",
+        "execute if entity @s[scores={rpg_holy=1..}] run function rpg:hud/holy",
+        "execute if entity @s[scores={rpg_taint=1..}] run function rpg:hud/taint",
+        "execute if entity @s[scores={rpg_pact_cd=1..}] run function rpg:hud/pbar",
+        "execute if entity @s[scores={rpg_hud_on=1}] "
+        "run function rpg:hud/render with storage rpg:hud"]))
+
+    wf("hud/render.mcfunction",
+       "# 唯一真正写 actionbar 的那一行。两半都是完整的文本组件，\n"
+       "# 空的那半是 {\"text\":\"\"}，所以拼起来永远合法。\n"
+       "$title @s actionbar [\"\",$(a),$(b)]")
+    total += 2
 
     return total
 

@@ -267,6 +267,63 @@ def merge_and_prefix():
     return merged, renamed
 
 
+# [HOLY] 品质：本来就是圣物，却没有标记
+HOLY_QUALITY = re.compile(r'"text":"\[HOLY\]"')
+
+# 圣器可以在这些槽位上生效。护甲拿在手里才算数是荒谬的 —— 它该穿着算。
+HOLY_SLOTS = ("weapon.mainhand", "weapon.offhand",
+              "armor.head", "armor.chest", "armor.legs", "armor.feet")
+
+
+def holy_quality_and_worn():
+    """给 [HOLY] 品质补标记，并让"圣器在身"包含穿戴。
+
+    另开 `rpg.holy` 而不是扩写 `rpg.h.holy_weapon_tag1`：后者的语义是
+    "手里握着"，神圣分支的命中特效读的就是它 —— 混进穿戴的话，
+    戴着圣冠打人也会冒圣光。
+    """
+    marked = 0
+    for rel in ("command/give/item.mcfunction", "command/give/weapon.mcfunction",
+                "command/give/extra.mcfunction"):
+        q = os.path.join(FUNC, rel)
+        if not os.path.isfile(q):
+            continue
+        out, touched = [], False
+        for line in io.open(q, encoding="utf-8").read().split("\n"):
+            m = GIVE_LINE.match(line.strip())
+            if not m or "holy_weapon_tag" in line or not HOLY_QUALITY.search(line):
+                out.append(line)
+                continue
+            head, comps, tail = m.group(1), m.group(2), m.group(3)
+            if "custom_data={" in comps:
+                comps = comps.replace("custom_data={", "custom_data={holy_weapon_tag:1b,", 1)
+            else:
+                comps = comps + ",custom_data={holy_weapon_tag:1b}"
+            out.append(head + comps + tail)
+            touched = True
+            marked += 1
+        if touched:
+            io.open(q, "w", encoding="utf-8", newline="\n").write("\n".join(out))
+
+    # index_player 是 opt_index 那一步才生成的，所以「穿戴也算」那半边
+    # 挪去了 opt_holy.py，跑在它后面。
+
+    # ---- 驱魔体系改读 rpg.holy ----
+    swapped = 0
+    for rel in ("taint/step.mcfunction", "vacant/vacant.mcfunction",
+                "exorcism.mcfunction"):
+        q = os.path.join(FUNC, rel)
+        if not os.path.isfile(q):
+            continue
+        t = io.open(q, encoding="utf-8").read()
+        if "rpg.h.holy_weapon_tag1" not in t:
+            continue
+        swapped += t.count("rpg.h.holy_weapon_tag1")
+        io.open(q, "w", encoding="utf-8", newline="\n").write(
+            t.replace("rpg.h.holy_weapon_tag1", "rpg.holy"))
+    return marked, swapped
+
+
 def build_functions():
     # ---- 人偶 ----
     wf("doll/doll.mcfunction", DOLL_TICK)
@@ -392,11 +449,14 @@ def main():
     d = patch_star()
     e = wire_tick()
     g, h = merge_and_prefix()
+    i, j = holy_quality_and_worn()
     f = flag_holy_items()
     print("holy items: doll tagged x%d, taint hook %d, rite gate %d, "
           "star extended %d, tick +%d, marked as holy x%d" % (a, b, c, d, e, f))
     print("holy items: old 圣水 lines merged away x%d, re-prefixed as 驱魔 x%d"
           % (g, h))
+    print("holy items: [HOLY] quality marked x%d, exorcism now reads rpg.holy "
+          "(worn counts) x%d" % (i, j))
 
 
 if __name__ == "__main__":

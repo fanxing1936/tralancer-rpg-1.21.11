@@ -38,6 +38,8 @@ echo "== 2b. guard the empty-tag entity walks =="
 # 多人适配：单人下看不出来的归属错、全局标签互踩，以及按人数放大的遍历
 python opt_mp.py ../rpg
 python opt_index.py ../rpg
+# 「圣器在身」：主手、副手、四个护甲槽任一满足（必须在 opt_index 之后）
+python opt_holy.py ../rpg
 python opt_type.py ../rpg
 python opt_guard.py ../rpg
 # 把与 @s 无关的存在性判定从 as @e 循环里提出来（O(n²) -> O(n)）

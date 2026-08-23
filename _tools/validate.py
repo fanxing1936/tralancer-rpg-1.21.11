@@ -125,7 +125,10 @@ for dirpath, _d, files in os.walk(ROOT):
                     if not st or st.startswith("#"):
                         continue
                     where = "%s:%d" % (r, ln)
-                    scan_nbt(line, where)
+                    # 宏行（$ 开头）里的 $(name) 要到运行时才替换，
+                    # 静态解析括号必然失败 —— 跳过语法扫描，只留引用检查。
+                    if not st.startswith("$"):
+                        scan_nbt(line, where)
                     for name, pat in LEGACY.items():
                         if re.search(pat, line) and "entity.generic." not in line:
                             problems.append("%s: legacy %s" % (where, name))

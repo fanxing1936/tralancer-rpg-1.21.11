@@ -1122,10 +1122,12 @@
     }
    ],
    "tags": [
+    "holy_weapon_tag",
     "power_tag",
     "sword_tag"
    ],
    "custom_data": {
+    "holy_weapon_tag": 1,
     "power_tag": 1,
     "sword_tag": 1
    },
@@ -2045,9 +2047,11 @@
     }
    ],
    "tags": [
-    "chestplate_tag"
+    "chestplate_tag",
+    "holy_weapon_tag"
    ],
    "custom_data": {
+    "holy_weapon_tag": 1,
     "chestplate_tag": 1
    },
    "cmd": 1.0,
@@ -2120,9 +2124,11 @@
     }
    ],
    "tags": [
-    "chestplate_tag"
+    "chestplate_tag",
+    "holy_weapon_tag"
    ],
    "custom_data": {
+    "holy_weapon_tag": 1,
     "chestplate_tag": 1
    },
    "cmd": 1.0,
@@ -3575,7 +3581,8 @@
    "lore": [
     "+------------------+",
     "插在哪里，哪里就是营地",
-    "长按右键雇一名佣兵",
+    "长按右键：身边没人时召出一名待雇佣兵",
+    "　对着待雇者再长按一次，才是雇下他",
     "+------------------+",
     "⚔募兵　上限 4 人",
     "　价钱逐人递增：8 / 16 / 24 / 32 枚货币",

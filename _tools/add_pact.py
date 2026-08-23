@@ -311,6 +311,15 @@ REISSUE = """# 手里这本没盖过印。死一次把书掉了是常事 —— 
 function rpg:pact/wrong_book
 """
 
+BURN = """\
+# 退书 + 解约。逆圣化与毁约两条路共用这一段。
+#
+# 顺序要紧：先把书退回未立约，再 break —— break 会清掉柱位编号，
+# 清掉之后就认不出该退成哪一本了。
+%(UNSIGN)s
+function rpg:pact/break
+"""
+
 RENOUNCE = """\
 # 毁约。
 #
@@ -319,10 +328,7 @@ RENOUNCE = """\
 # 借驱魔仪式的火烧断它。仪式本来就是烧污染的，成本也实打实
 # （一支图腾加一瓶圣水）。
 #
-# 顺序要紧：先把书退回未立约，再 break —— break 会清掉柱位编号，
-# 清掉之后就认不出该退成哪一本了。
-%(UNSIGN)s
-function rpg:pact/break
+function rpg:pact/burn
 
 # 柱中的东西不会白白松手。
 scoreboard players add @s rpg_taint %(BACKLASH)d
@@ -344,7 +350,12 @@ kill @e[type=minecraft:item_display,tag=rpg.totem.lit,distance=..%(R)d,limit=1,s
 """
 
 UNSIGN_ONE = """\
-item replace entity @s weapon.mainhand with %(ITEM)s
+# 从背包里把已立约的那本收走，发回一本未立约的。
+#
+# 不用 `item replace weapon.mainhand`：毁约是举着书触发的，书确实在手里；
+# 但逆圣化那条路玩家多半**没拿着书**，照抄过去会把手里那件东西顶掉。
+clear @s minecraft:enchanted_book[minecraft:custom_data~{pact_signed:1b,pact:%(N)d}]
+give @s %(ITEM)s
 """
 
 
@@ -360,14 +371,12 @@ playsound minecraft:block.note_block.bass player @s ~ ~ ~ 0.6 0.5
 """
 
 CD_TICK = """\
-# 冷却递减，顺带把剩余量画到屏幕下方那条唯一的 actionbar 上。
+# 冷却递减，仅此而已。
+#
+# 原本这里还会把 rpg_hud 占成蓄力档 —— 那意味着每用一次柱中之力，
+# 魔化条就被顶掉整整 15 秒。契约冷却和魔化一样是**持续状态**，
+# 现在两者由 rpg:hud/status 并排画在同一行里，谁也不顶谁。
 scoreboard players remove @s rpg_pact_cd 1
-scoreboard players set @s rpg_hud %(HID)d
-scoreboard players set @s rpg_hud_t 3
-scoreboard players operation @s rpg_hud_p = #pact_full rpg_hud
-scoreboard players operation @s rpg_hud_p -= @s rpg_pact_cd
-scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud
-scoreboard players operation @s rpg_hud_p /= #pact_full rpg_hud
 """
 
 # 逆圣化会把契约一并烧断 —— 反转烧掉的是污染的一切，柱位也在其中。
@@ -484,9 +493,10 @@ def build_functions():
         unsign.append("execute if entity @s[scores={rpg_pact=%d}] "
                       "run function rpg:pact/unsign%d" % (q["n"], q["n"]))
         wf("pact/unsign%d.mcfunction" % q["n"],
-           UNSIGN_ONE % {"ITEM": item_snbt(q, False)})
+           UNSIGN_ONE % {"N": q["n"], "ITEM": item_snbt(q, False)})
+    wf("pact/burn.mcfunction", BURN % {"UNSIGN": "\n".join(unsign)})
     wf("pact/renounce.mcfunction",
-       RENOUNCE % {"UNSIGN": "\n".join(unsign), "BACKLASH": 20,
+       RENOUNCE % {"BACKLASH": 20,
                    "MAX": ex.TAINT_MAX, "MAXP": ex.TAINT_MAX + 1,
                    "R": ex.RITE_R})
     wf("pact/trigger.mcfunction", TRIGGER % {"LOCK": LOCK})
@@ -497,7 +507,7 @@ def build_functions():
     wf("pact/reissue.mcfunction", REISSUE % {"BRANCH": "\n".join(reissue)})
     wf("pact/wrong_book.mcfunction", WRONG_BOOK)
     wf("pact/cooling.mcfunction", COOLING)
-    wf("pact/cd.mcfunction", CD_TICK % {"HID": HUD_PACT})
+    wf("pact/cd.mcfunction", CD_TICK)
     wf("pact/mammon.mcfunction", MAMMON_TICK)
     wf("pact/samael.mcfunction", SAMAEL_TICK)
 
@@ -519,6 +529,11 @@ def build_functions():
 
 
 def build_hud_bar():
+    """（已废弃）契约冷却现在与魔化并排画在状态行里，不再占蓄力档。"""
+    return
+
+
+def _build_hud_bar_unused():
     """给契约冷却加一条 HUD，编号接在驱魔那四个后面。
 
     条的拼装直接借 add_exorcism 的 helper —— 同一套字符、同一套配色，
@@ -582,11 +597,13 @@ def wire_taint():
     # 逆圣化把污染整个烧穿，柱位也在其中
     q = os.path.join(FUNC, "rite/inv_grant.mcfunction")
     t = io.open(q, encoding="utf-8").read()
-    if "rpg:pact/break" not in t:
+    if "rpg:pact/burn" not in t:
         t = t.replace("scoreboard players set @s rpg_taint 0",
                       "scoreboard players set @s rpg_taint 0\n"
-                      "# 反转烧掉的是污染的一切 —— 柱位也在其中。这是唯一的解约途径。\n"
-                      "execute if entity @s[tag=rpg.pact] run function rpg:pact/break")
+                      "# 反转烧掉的是污染的一切 —— 柱位也在其中。\n"
+                      "# 走 burn 而不是 break：光清标记的话，玩家手里会留着一本\n"
+                      "# 「已立约」的空壳 —— 看着还在契约中，实际什么也没有。\n"
+                      "execute if entity @s[tag=rpg.pact] run function rpg:pact/burn")
         io.open(q, "w", encoding="utf-8", newline="\n").write(t)
     return 1
 

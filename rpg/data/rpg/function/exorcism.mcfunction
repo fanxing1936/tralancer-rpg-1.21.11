@@ -3,8 +3,8 @@
 execute as @a at @s run function rpg:taint/taint
 execute as @a run function rpg:hud/hud
 execute if entity @e[type=minecraft:villager,tag=!rpg.vac.seen,limit=1] run function rpg:vacant/mark
-execute if entity @a[tag=rpg.h.holy_weapon_tag1] run function rpg:vacant/vacant
-execute unless entity @a[tag=rpg.h.holy_weapon_tag1] if entity @e[type=minecraft:villager,tag=rpg.vacant,tag=rpg.hurt,limit=1] run function rpg:vacant/vacant
+execute if entity @a[tag=rpg.holy] run function rpg:vacant/vacant
+execute unless entity @a[tag=rpg.holy] if entity @e[type=minecraft:villager,tag=rpg.vacant,tag=rpg.hurt,limit=1] run function rpg:vacant/vacant
 execute if entity @e[type=minecraft:item_display,tag=rpg.totem,limit=1] run function rpg:rite/tick
 execute as @a[scores={rpg_rite=1..}] run scoreboard players remove @s rpg_rite 1
 

@@ -679,7 +679,9 @@ def build_give():
             "lore=[" + ",".join([
                 RULE,
                 row(seg("插在哪里，", "gray"), seg("哪里就是营地", GOLD)),
-                row(seg("长按右键雇一名佣兵", "gray")),
+                row(seg("长按右键：身边没人时", "gray"),
+                    seg("召出一名待雇佣兵", GOLD, True)),
+                row(seg("　对着待雇者再长按一次，才是雇下他", "gray")),
                 RULE,
                 row(seg("⚔募兵", "white", True), seg("　上限 %d 人" % CAP, STEEL)),
                 row(seg("　价钱逐人递增：%s 枚货币"

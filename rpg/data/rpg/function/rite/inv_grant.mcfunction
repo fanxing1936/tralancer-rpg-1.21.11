@@ -3,8 +3,10 @@ tag @s remove rpg.inv.subject
 scoreboard players set @s rpg_inv 0
 tag @s remove rpg.taint.full
 scoreboard players set @s rpg_taint 0
-# 反转烧掉的是污染的一切 —— 柱位也在其中。这是唯一的解约途径。
-execute if entity @s[tag=rpg.pact] run function rpg:pact/break
+# 反转烧掉的是污染的一切 —— 柱位也在其中。
+# 走 burn 而不是 break：光清标记的话，玩家手里会留着一本
+# 「已立约」的空壳 —— 看着还在契约中，实际什么也没有。
+execute if entity @s[tag=rpg.pact] run function rpg:pact/burn
 scoreboard players set @s rpg_holy 3600
 effect give @s minecraft:instant_health 1 2 true
 effect give @s minecraft:strength 180 1 true

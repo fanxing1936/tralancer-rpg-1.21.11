@@ -75,6 +75,7 @@ tag @s remove rpg.e.legs_weapon_tag1
 tag @s remove rpg.e.offhand_power_tag1
 tag @s remove rpg.e.offhand_sakura_tag1
 
+tag @s remove rpg.holy
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{ashes_tag:1b}] run tag @s add rpg.h.ashes_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{axe_tag:1b}] run tag @s add rpg.h.axe_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{blil_tag:1b}] run tag @s add rpg.h.blil_tag1
@@ -149,3 +150,13 @@ execute if items entity @s armor.legs *[minecraft:custom_data~{chestplate_tag:1b
 execute if items entity @s armor.legs *[minecraft:custom_data~{weapon_tag:1b}] run tag @s add rpg.e.legs_weapon_tag1
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{power_tag:1b}] run tag @s add rpg.e.offhand_power_tag1
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{sakura_tag:1b}] run tag @s add rpg.e.offhand_sakura_tag1
+
+# 圣器在身。与 rpg.h.holy_weapon_tag1 分开：那个的语义是「手里握着」，
+# 神圣分支的命中特效读的是它；而驱魔体系问的是「身上有没有圣性之物」，
+# 护甲当然应该穿着算。
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s armor.head *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s armor.chest *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s armor.legs *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s armor.feet *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy

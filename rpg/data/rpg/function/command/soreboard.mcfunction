@@ -161,6 +161,7 @@ scoreboard objectives add rpg_rite dummy
 scoreboard objectives add rpg_totem dummy
 scoreboard objectives add rpg_holy dummy
 scoreboard objectives add rpg_vac_x dummy
+scoreboard objectives add rpg_hud_on dummy
 scoreboard players set #hud_seg rpg_hud 10
 scoreboard players set #hud_full rpg_hud 30
 scoreboard players set #taint_max rpg_hud 100
