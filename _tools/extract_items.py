@@ -119,6 +119,10 @@ def describe(item_id, c):
         "rarity": rarity,
         "name_colour": parts[-1][1] if parts else None,
         "lore": lore,
+        # 基础物品 id。图鉴用它分武器/护甲 —— 早先分类看的是 custom_data 里的
+        # bow_tag/sword_tag，可那些是**玩法开关**（bow_tag 会给箭加速并召苦力怕），
+        # 一旦某件武器出于玩法原因不该带那个开关，它就会从武器图鉴里消失。
+        "id": item_id,
         "enchantments": c.get("enchantments") or {},
         "modifiers": mods,
         "tags": sorted((c.get("custom_data") or {}).keys()),

@@ -248,7 +248,16 @@ def main():
         x["_new"] = True
     w = w + extra
 
-    weapons = [x for x in w if any(t in x["tags"] for t in ("sword_tag", "bow_tag"))]
+    # 按**基础物品**分武器，不按 custom_data 里的开关。
+    #
+    # 原来看的是 sword_tag / bow_tag，而 bow_tag 同时是爆裂弓那套玩法的开关
+    # （给箭加速、命中召苦力怕）。玛门的弓因为不该带那个开关而被摘掉标记，
+    # 结果整件武器从武器图鉴里掉进了消耗品 —— 分类不该依赖玩法开关。
+    WEAPON_IDS = ("sword", "axe", "bow", "crossbow", "spear",
+                  "mace", "trident", "shovel", "pickaxe", "hoe")
+    weapons = [x for x in w
+               if any(t in x["tags"] for t in ("sword_tag", "bow_tag"))
+               or any((x.get("id") or "").endswith(k) for k in WEAPON_IDS)]
     armour = [x for x in w if "chestplate_tag" in x["tags"]]
     consum = [x for x in w if x not in weapons and x not in armour and x["name"]]
     runes = [x for x in it if "add_weapon_tag" in x["tags"] or
