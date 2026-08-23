@@ -112,12 +112,12 @@ def main():
                     % (n, comp))
     ex.wf("hud/msg.mcfunction", "\n".join(body))
 
-    ex.wf("hud/msg_tick.mcfunction",
-          "# 提示每刻掉一格寿命，掉完条自己就回来了。\n"
-          "scoreboard players remove @s rpg_hud_mt 1\n"
-          "function rpg:hud/msg")
 
-    # 调度层：提示压过一切，并且所有条都要让位
+    # 调度层：蓄力 > 提示 > 状态
+    #
+    # 上一版把提示排在最高，于是一条小提示会把**正在蓄力的武器进度条**
+    # 压掉两秒 —— 蓄力到一半条突然消失。蓄力条是正在进行的动作的实时反馈，
+    # 它必须压过一切；提示晚两秒看到没关系。
     p = os.path.join(FUNC, "hud/hud.mcfunction")
     s = io.open(p, encoding="utf-8").read()
     if "rpg_hud_mt" not in s:
@@ -126,14 +126,22 @@ def main():
             "scoreboard players add @s rpg_hud_t 0\n"
             "scoreboard players add @s rpg_hud_mt 0\n"
             "\n"
-            "# 一次性提示压过所有条，只活 %d 刻；它一过期，条自己就回来。\n"
-            "execute if entity @s[scores={rpg_hud_mt=1..}] run function rpg:hud/msg_tick"
-            % TTL)
-        # 每一条**渲染**分支都加上"没有提示占着"这个前提。
-        # 只改跳去渲染函数的那些行 —— 末尾那条寿命递减必须照常跑，
-        # 否则提示占着的两秒里蓄力条不老化，提示一散就残留一条过期的条。
-        s = re.sub(r"(scores=\{)(rpg_hud_t=[^\]]*\] run function rpg:hud/)",
-                   r"\1rpg_hud_mt=..0,\2", s)
+            "# 提示的寿命照常递减，哪怕这一刻正被蓄力条压着 ——\n"
+            "# 否则蓄力一结束，会弹出一条早就该消失的提示。\n"
+            "execute if entity @s[scores={rpg_hud_mt=1..}] "
+            "run scoreboard players remove @s rpg_hud_mt 1")
+
+        # 提示插在蓄力条之后、状态行之前；只有状态行需要让位给提示
+        status = ("execute if entity @s[scores={rpg_hud_t=..0}] "
+                  "run function rpg:hud/status")
+        assert status in s, "hud/hud 里找不到状态行"
+        s = s.replace(status,
+                      "\n# 没有蓄力占着的时候，才轮到一次性提示（%d 刻）\n"
+                      "execute if entity @s[scores={rpg_hud_t=..0,rpg_hud_mt=1..}] "
+                      "run function rpg:hud/msg\n"
+                      "\n# 提示也没有，才是持续状态行\n"
+                      "execute if entity @s[scores={rpg_hud_t=..0,rpg_hud_mt=..0}] "
+                      "run function rpg:hud/status" % TTL, 1)
         io.open(p, "w", encoding="utf-8", newline="\n").write(s)
 
     # 两个新记分项

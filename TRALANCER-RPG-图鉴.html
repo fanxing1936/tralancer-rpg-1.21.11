@@ -537,7 +537,13 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 <div class="plate-h"><span class="num">IX</span><h2>驱魔体系</h2><span class="sub">魔化值 · 空缺者 · 仪式 · 逆圣化</span></div>
 <p>包里一直有一条圣／魔轴：圣器与罪遗武器各自带着 <code>holy_weapon_tag</code> 与 <code>devil_weapon_tag</code>。
 从这一版起它有了长期后果——<strong>握着魔器的人会慢慢变成它的主人</strong>。
-魔化值不显示在侧边栏，而是屏幕下方那条进度条，与利维坦、熔火之锤的蓄力条共用同一个位置（蓄力时蓄力条优先，松手后自己回来）。</p>
+魔化值不显示在侧边栏，而是屏幕下方那条 actionbar。</p>
+<div class="note"><b>屏幕下方只有一行，所以全包只留一个出口。</b>武器蓄力条、一次性小提示、魔化与契约冷却
+都走同一条 <code>rpg:hud/hud</code>，按三档优先级挑：
+<br>① <b>蓄力条</b>（沉锚／熔流／缠绕／逆圣化）——它是<b>正在进行的动作</b>的实时反馈，压过一切；
+<br>② <b>一次性提示</b>（配装、入队、钱不够…）——2 秒，晚看到没关系；
+<br>③ <b>持续状态</b>——魔化（或圣痕）与契约冷却<b>并排</b>画在同一行，两者都是状态，不该互相顶掉。
+<br>三者互不覆盖：蓄力结束、提示过期，下一档自己就回来了。</div>
 
 <h3 class="sub-h">魔化值<span class="rolls">每 2 秒结算一次 · 上限 100</span></h3>
 <p>手持恶魔本体武器 <b>+2</b>／罪遗武器 <b>+1</b>；手持圣器 <b>−1</b>，两者同时握着会互相抵消。攻击空缺者 <b>+6</b>，杀死空缺者 <b>+8</b>。</p>
