@@ -105,13 +105,16 @@ def item_snbt():
         "unbreakable={},"
         # 只留 devil_tag（魔化按罪器计数）与 mammon_tag（这把弓自己的触发）。
         #
-        # **不要**加 bow_tag 或 hunter_tag。我起初照着萨麦尔的弩抄了过来，
-        # 以为那是"罪器一家"的标记 —— 它们不是：
-        # * bow_tag 是包里爆裂弓的开关（item/bow/speed）：它给每支箭打标、
-        #   把速度翻倍，并在命中时召一只苦力怕；
-        # * hunter_tag 是猎手弓那一套。
-        # 翻倍的箭速还会跑出认箭半径，于是 settle 收不到，买断也跟着乱。
-        "custom_data={devil_tag:1b,mammon_tag:1b},"
+        # bow_tag 在这个包里身兼两职：它既是「武器注册」的开关
+        # （com/weapon 靠它把武器接进符文／磨刀石／分支那一套），
+        # 又是**爆裂弓玩法**的开关（item/bow/speed：给箭加速、命中召苦力怕）。
+        #
+        # 两件事挤在一个标记上，所以不能简单地取舍：去掉它，玛门就不算武器；
+        # 留着它，每支箭都召一只苦力怕。解法是把玩法那一半单独摘出来 ——
+        # 见 carve_out()：让 speed.mcfunction 跳过玛门。
+        #
+        # hunter_tag 则是纯玩法（猎手弓那一套），玛门不需要，已经去掉。
+        "custom_data={bow_tag:1b,devil_tag:1b,mammon_tag:1b},"
         'tooltip_display={hidden_components:["minecraft:unbreakable"]}]')
 
 
@@ -401,6 +404,32 @@ def build_advancement():
         "rewards": {"function": "rpg:mammon/draw"}})
 
 
+def carve_out():
+    """把玛门从「爆裂弓」那套玩法里摘出来。
+
+    bow_tag 身兼武器注册与爆裂弓两职。玛门需要前者（否则它不算武器，
+    符文与磨刀石都认不了它），但绝不要后者 —— 那会让每支箭都召一只苦力怕，
+    顺带把箭速翻倍、跑出认箭半径，买断也跟着失灵。
+
+    所以不动 bow_tag 本身，只在爆裂弓那条路上加一道「除了玛门」。
+    判定用手上那件东西而不是索引标签：mammon_tag 没有进 index_player，
+    而这几行只在有箭在飞时才走，多一次物品判定不值一提。
+    """
+    p = os.path.join(FUNC, "item/bow/speed.mcfunction")
+    if not os.path.isfile(p):
+        return 0
+    s = io.open(p, encoding="utf-8").read()
+    if "mammon_tag" in s:
+        return 0
+    guard = ("if entity @s[tag=rpg.h.bow_tag1] "
+             "unless items entity @s weapon.mainhand "
+             "*[minecraft:custom_data~{mammon_tag:1b}]")
+    out = s.replace("if entity @s[tag=rpg.h.bow_tag1]", guard)
+    n = out.count("mammon_tag")
+    io.open(p, "w", encoding="utf-8", newline="\n").write(out)
+    return n
+
+
 def wire_tick():
     p = os.path.join(FUNC, "exorcism.mcfunction")
     s = io.open(p, encoding="utf-8").read()
@@ -489,10 +518,11 @@ def main():
     n = build_functions()
     build_advancement()
     ticked = wire_tick()
+    carved = carve_out()
     gave = build_give()
     models = build_models()
-    print("mammon: %d functions, give +%d, tick +%d, models +%d"
-          % (n, gave, ticked, models))
+    print("mammon: %d functions, give +%d, tick +%d, models +%d, "
+          "爆裂弓避让 %d 处" % (n, gave, ticked, models, carved))
     print("mammon: objectives %s" % (obj or "-"))
 
 

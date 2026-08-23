@@ -44,7 +44,36 @@ def t(text, colour=None, bold=False, italic=False):
 
 
 def page(*parts):
-    return json.dumps(list(parts), ensure_ascii=False, separators=(",", ":"))
+    """一页 = 一个文本组件列表。原样返回，序列化留到最后。"""
+    return list(parts)
+
+
+def esc(v):
+    """SNBT 的双引号字符串。
+
+    真正的换行必须写成 `\\n` 两个字符：mcfunction 是按行读的，
+    塞一个真换行进去，这条命令当场断成两截。
+    """
+    return (v.replace(BS, BS * 2)
+             .replace('"', BS + '"')
+             .replace(chr(10), BS + "n"))
+
+
+def snbt(v):
+    """把组件转成 SNBT。
+
+    1.21.5 之后文本组件在物品里是**以 NBT 存的**，写成 JSON 字符串会被
+    当作字面文字 —— 那正是书页显示成一堆源码的原因。
+    """
+    if isinstance(v, bool):
+        return "true" if v else "false"
+    if isinstance(v, str):
+        return '"' + esc(v) + '"'
+    if isinstance(v, list):
+        return "[" + ",".join(snbt(x) for x in v) + "]"
+    if isinstance(v, dict):
+        return "{" + ",".join(k + ":" + snbt(x) for k, x in v.items()) + "}"
+    return str(v)
 
 
 def head(n, name):
@@ -252,13 +281,12 @@ SQ = chr(39)          # 单引号
 def item_snbt():
     """整本书的 SNBT。
 
-    这里**不能**用 % 格式化：书页里有 "4%" 这样的字面百分号，
-    一格式化就炸。全程字符串拼接。
+    不用 % 格式化：书页里有 "4%" 这样的字面百分号。
+    也不用 json.dumps：见 snbt() —— 页面必须是 NBT，不是 JSON 字符串。
     """
-    pages = ",".join("'" + pg.replace(BS, BS * 2).replace(SQ, BS + SQ) + "'"
-                     for pg in build_pages())
-    name = ('[{"text":"《' + TITLE + '》","italic":false,'
-            '"color":"' + B + '","bold":true}]')
+    pages = ",".join(snbt(pg) for pg in build_pages())
+    name = snbt([{"text": "\u300a" + TITLE + "\u300b",
+                  "italic": False, "color": B, "bold": True}])
     return ("written_book[minecraft:written_book_content={"
             'title:"' + TITLE + '",author:"' + AUTHOR + '",'
             "resolved:true,pages:[" + pages + "]},"
