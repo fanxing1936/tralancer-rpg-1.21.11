@@ -44,7 +44,8 @@ POOL_R = 4           # 圣水池子的半径
 POOL_BEAT = 20       # 池子的结算节拍（刻）
 STAR_R = 32          # 天启星照多远
 
-# 两瓶水的 custom_color：本包原有的圣水，与驱魔仪式专用的驱魔圣水
+# 圣水的 custom_color。两瓶已经合并成一瓶（驱魔圣水，16777200），
+# 但旧那瓶的颜色仍然留着 —— 存档里已经有的不该突然失效。
 HOLY_COLOURS = (3866074, 16777200)
 
 
@@ -223,6 +224,49 @@ def flag_holy_items():
     return n
 
 
+# 归入驱魔一族的旧物品：名字 -> 新的前缀标签
+RITE_PREFIX = {"替死人偶": "[驱魔]", "天启星": "[驱魔]"}
+
+# 旧「圣水」的辨认方式：[brave] 前缀 + 名字恰好是「圣水」
+OLD_WATER = re.compile(r'"text":"\[brave\]".{0,80}?"text":"圣水"')
+
+TIER_TOKEN = re.compile(r'\{"text":"\[[^"]*\]"[^}]*\}')
+
+
+def merge_and_prefix():
+    """合并两瓶圣水，并把其余驱魔道具改挂 [驱魔] 前缀。
+
+    功能上这四件是同一套东西（显形、净化、仪式），却散在三个稀有度里；
+    而两瓶圣水本身就是重复的。归成一族，图鉴那边才好单开一节。
+    """
+    merged = renamed = 0
+    for rel in ("command/give/item.mcfunction", "command/give/weapon.mcfunction",
+                "command/give/extra.mcfunction"):
+        q = os.path.join(FUNC, rel)
+        if not os.path.isfile(q):
+            continue
+        out, touched = [], False
+        for line in io.open(q, encoding="utf-8").read().split("\n"):
+            # 旧圣水整行删掉 —— 驱魔圣水已经把它的活全接了
+            if OLD_WATER.search(line):
+                merged += 1
+                touched = True
+                continue
+            hit = next((k for k in RITE_PREFIX if '"text":"%s"' % k in line), None)
+            if hit and "[驱魔]" not in line:
+                new = TIER_TOKEN.sub(
+                    '{"text":"[驱魔]","italic":false,"color":"#FFD700","bold":true}',
+                    line, count=1)
+                if new != line:
+                    line = new
+                    renamed += 1
+                    touched = True
+            out.append(line)
+        if touched:
+            io.open(q, "w", encoding="utf-8", newline="\n").write("\n".join(out))
+    return merged, renamed
+
+
 def build_functions():
     # ---- 人偶 ----
     wf("doll/doll.mcfunction", DOLL_TICK)
@@ -347,9 +391,12 @@ def main():
     c = patch_rite_tick()
     d = patch_star()
     e = wire_tick()
+    g, h = merge_and_prefix()
     f = flag_holy_items()
     print("holy items: doll tagged x%d, taint hook %d, rite gate %d, "
           "star extended %d, tick +%d, marked as holy x%d" % (a, b, c, d, e, f))
+    print("holy items: old 圣水 lines merged away x%d, re-prefixed as 驱魔 x%d"
+          % (g, h))
 
 
 if __name__ == "__main__":

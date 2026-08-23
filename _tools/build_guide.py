@@ -18,6 +18,9 @@ RARITY = {
     "神圣": ("holy", "神圣"), "恶魔": ("devil", "恶魔"),
     "传说": ("legend", "传说"), "史诗": ("epic", "史诗"),
     "勇者": ("brave", "勇者"),
+    # 驱魔道具自成一族：功能上是同一套东西（显形、净化、仪式），
+    # 不该散在勇者／传说／史诗三档里
+    "驱魔": ("rite", "驱魔"),
     # a couple of items spell the top tier out in latin
     "限定传说": ("lgd", "限定传说"),
     "l·legend": ("lgd", "限定传说"), "legend": ("legend", "传说"),
@@ -255,16 +258,22 @@ def main():
             and "enchant_tag" not in x["tags"]]
     ench = [x for x in it if "enchant_tag" in x["tags"]]
 
-    print("weapons %d  armour %d  consumables %d  runes %d  stones %d  materials %d  whetstones %d"
+    # 驱魔道具从药剂与材料里摘出来，单独一节
+    rite = [x for x in consum + mats if x["rarity"] == "驱魔"]
+    consum = [x for x in consum if x not in rite]
+    mats = [x for x in mats if x not in rite]
+
+    print("weapons %d  armour %d  consumables %d  runes %d  stones %d  "
+          "materials %d  rite %d  whetstones %d"
           % (len(weapons), len(armour), len(consum), len(runes), len(stones),
-             len(mats), len(ench)))
+             len(mats), len(rite), len(ench)))
 
     ench_list = sorted(set(
         "%s %s" % (ENCH_CN.get(k, k), v)
         for x in ench for k, v in x["enchantments"].items()))
 
     json.dump({"weapons": weapons, "armour": armour, "consum": consum,
-               "runes": runes, "stones": stones, "mats": mats,
+               "runes": runes, "stones": stones, "mats": mats, "rite": rite,
                "ench_list": ench_list},
               io.open("../_guide_sections.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
@@ -277,6 +286,7 @@ def main():
         "runes": "\n".join(card(x) for x in runes),
         "stones": "\n".join(card(x, show_tags=False) for x in stones),
         "mats": "\n".join(card(x) for x in mats),
+        "rite": "\n".join(card(x, show_tags=False) for x in rite),
         "ench": "、".join(ench_list),
     }
     io.open("../_guide_fragments.json", "w", encoding="utf-8", newline="\n").write(

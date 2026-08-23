@@ -51,6 +51,7 @@ HEAD = u"""<title>破碎大陆</title>
   --gold:#C9A227; --gold-soft:#8A7429;
   --r-holy:#FF3300; --r-devil:#DC6A62; --r-legend:#D9A02B; --r-lgd:#FFD700;
   --r-epic:#A275DE; --r-brave:#57C6D6; --r-none:#93897C;
+  --r-rite:#E4C24A;
   --shadow:0 1px 0 rgba(0,0,0,.5);
 }
 
@@ -210,6 +211,7 @@ code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px;
 .card.r-legend{--tier:var(--r-legend)} .card.r-epic{--tier:var(--r-epic)}
 .card.r-lgd{--tier:var(--r-lgd)}
 .card.r-brave{--tier:var(--r-brave)}
+.card.r-rite{--tier:var(--r-rite)}
 .card[hidden]{display:none}
 .card-h{display:flex; gap:13px; align-items:flex-start; margin-bottom:11px}
 .card-id{min-width:0}
@@ -331,10 +333,11 @@ def build():
 <li><a href="#s7"><span class="num">VII</span>掉落总表</a></li>
 <li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
 <li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
-<li><a href="#s12"><span class="num">X</span>七十二柱契约</a></li>
-<li><a href="#s13"><span class="num">XI</span>佣兵小队</a></li>
-<li><a href="#s10"><span class="num">XII</span>破碎大陆</a></li>
-<li><a href="#s11"><span class="num">XIII</span>指令速查</a></li>
+<li><a href="#s14"><span class="num">X</span>驱魔道具</a></li>
+<li><a href="#s12"><span class="num">XI</span>七十二柱契约</a></li>
+<li><a href="#s13"><span class="num">XII</span>佣兵小队</a></li>
+<li><a href="#s10"><span class="num">XIII</span>破碎大陆</a></li>
+<li><a href="#s11"><span class="num">XIV</span>指令速查</a></li>
 </ol></nav>''')
 
     a('<main>')
@@ -527,18 +530,6 @@ def build():
 <div><h3>附身转移</h3><p class="how">杀死空缺者时</p><p>躯体死了，里面的东西<b>跳到 16 格内最近的村民身上</b>。若附近再无可用躯体，它会赤裸地留在原地，化作三只<b>无处可去者</b>（16 生命 / 5 攻击）。<br><b>剑解决不了它</b>——这正是驱魔存在的理由。</p></div>
 </div>
 
-<h3 class="sub-h">三件驱魔道具<span class="rolls">替死人偶 · 圣水 · 天启星</span></h3>
-<div class="sys">
-<div><h3>替死人偶</h3><p class="how">放置即生效</p><p>立着的时候，<b>12 格内的空缺者不必持圣器也会显形</b>——这就是它 Lore 里说的「使祂显形」。
-更重要的是<b>替死</b>：16 格内的你每一轮沾上的魔化，改由人偶承受，它一次吃一点，<b>吃满 10 点就碎</b>。全包唯一能挡住魔化的东西。</p></div>
-<div><h3>圣水</h3><p class="how">投掷（滞留型）</p><p>落地那汪水每秒洗掉 <b>1</b> 点魔化，并灼烧 4 格内的空壳——被浇过的壳<b>裂得快得多</b>。
-它也是点燃驱魔图腾的合法引火之物。</p></div>
-<div><h3>天启星</h3><p class="how">长按右键 · 一次性</p><p>照亮 <b>32</b> 格内的一切：恶魔、空壳、以及<b>魔化 31 以上的人</b>全部现形。
-空壳额外挨 6 点伤害并大幅加速裂壳。「指引恶魔的繁星，审判罪恶」。</p></div>
-<div><h3>为什么它们要紧</h3><p class="how">在此之前空缺者是隐形的</p><p>「持圣器」原本<b>只有</b>神圣分支武器能满足——也就是说在拿到唱片并改造武器之前，
-空缺者全程看不见，整套体系像是没生效。这三件补上了可获得的圣器来源。</p></div>
-</div>
-
 <h3 class="sub-h">驱魔仪式<span class="rolls">驱魔图腾 + 驱魔圣水</span></h3>
 <p>手持<b>驱魔图腾</b><b>长按右键</b>立起（本体是 <code>item_display</code>，没有 AI、没有碰撞）。此刻它还是熄的——要用<b>驱魔圣水</b>浇上去才点燃。
 圣水必须是<strong>滞留型</strong>：喷溅型落地即散，图腾没有任何东西可以感知；滞留药水留下的 <code>area_effect_cloud</code> 才是「浇上了」的凭据。</p>
@@ -568,6 +559,33 @@ def build():
 驱魔图腾用的是 <code>item_display</code>：把一件物品当作可缩放、可旋转的展示实体摆在世界里，这是 1.19.4 之后原版唯一的「自定义模型」路子，本包的图腾缩放动画就是这么做的。</div>
 </section>''')
 
+    # X rite kit -------------------------------------------------------------
+    a('''<section class="plate" id="s14">
+<div class="plate-h"><span class="num">X</span><h2>驱魔道具</h2><span class="sub">四件 · 自成一族</span></div>
+<p>这四件功能上是同一套东西——<strong>显形、净化、仪式</strong>——所以从药剂与材料里摘了出来，单列一族。
+它们也是全包<strong>可获得的「圣器」来源</strong>：手里握着其中任何一件，空缺者就会在 16 格内显形，魔化也会缓慢消退。</p>
+
+<div class="note"><b>为什么这件事要紧。</b>「持圣器」这个前提原本<b>只有神圣分支武器</b>能满足——也就是说在拿到神圣唱片、
+改造过武器之前，空缺者<b>全程隐形</b>：蔓延、撕壳、附身转移全都在照常运转，你却一个也看不见，整套驱魔体系像是没生效。
+这一族补上了可获得的来源。<br>
+代价是对称的：魔化一旦到 <b>91 以上</b>，握着圣器<b>会灼手</b>（每 2 秒 2 点魔法伤害）。</div>
+
+<div class="sys">
+<div><h3>驱魔图腾</h3><p class="how">长按右键立起</p><p>仪式的主体。立起后要用驱魔圣水浇上才点燃；点燃后每两秒净化一次，效力逐次递减，燃尽时炸开。
+魔化满值者在场时点燃，仪式转为<b>逆圣化</b>。也是<b>毁约</b>的场所——在它燃着时长按已立约的契约之书即可解约。</p></div>
+<div><h3>驱魔圣水</h3><p class="how">投掷 · 滞留型</p><p>必须是滞留型：喷溅型落地即散，图腾没有任何东西可以感知。
+落地那汪水每秒洗掉 <b>1</b> 点魔化，并灼烧 4 格内的空壳——被浇过的壳<b>裂得快得多</b>。<br>
+<span class="dim">原本的「圣水」已并入此物；旧瓶子仍然可用。</span></p></div>
+<div><h3>替死人偶</h3><p class="how">放置即生效</p><p>立着的时候，<b>12 格内的空缺者不必持圣器也会显形</b>——这就是它 Lore 里说的「恶魔攻击其会使祂显形」。
+更要紧的是<b>替死</b>：16 格内的你每一轮沾上的魔化，改由人偶承受，一次吃一点，<b>吃满 10 点就碎</b>。
+全包唯一能<b>挡住</b>魔化的东西。</p></div>
+<div><h3>天启星</h3><p class="how">长按右键 · 一次性</p><p>照亮 <b>32</b> 格内的一切：恶魔、空壳、以及<b>魔化 31 以上的人</b>全部现形。
+空壳额外挨 6 点伤害并大幅加速裂壳。「能指引恶魔的繁星，审判罪恶」。</p></div>
+</div>
+
+<div class="grid">''' + F["rite"] + '''</div>
+</section>''')
+
     # X pacts ---------------------------------------------------------------
     P = json.load(io.open("../_pact.json", encoding="utf-8"))
     prow = []
@@ -581,7 +599,7 @@ def build():
             % (q["n"], on_dark(q["colour"]), q["who"], q["sin"], q["boon"],
                q["power"], q["power_text"], q["bane"]))
     a('''<section class="plate" id="s12">
-<div class="plate-h"><span class="num">X</span><h2>七十二柱契约</h2><span class="sub">七位领主 · 一本书</span></div>
+<div class="plate-h"><span class="num">XI</span><h2>七十二柱契约</h2><span class="sub">七位领主 · 一本书</span></div>
 <p>上一节的<strong>逆圣化</strong>是走出污染的路；这一节是走进去的路，而且是<strong>你自己选的</strong>。</p>
 <blockquote class="verse">每一个正式边缘者都被分配一根柱位和一位魔神：边缘者借用魔神的力，魔神借契约进入边缘者的心。<cite>——卷五《魔神书》</cite></blockquote>
 <p>契约是一本书。<strong>长按右键签下</strong>，柱位当场绑定，恩赐与枷锁一并生效，书也随之变成「已立约」的样子。
@@ -606,7 +624,7 @@ def build():
 
     # XI squad --------------------------------------------------------------
     a('''<section class="plate" id="s13">
-<div class="plate-h"><span class="num">XI</span><h2>佣兵小队</h2><span class="sub">花钱雇人 · 配刀 · 指哪打哪</span></div>
+<div class="plate-h"><span class="num">XII</span><h2>佣兵小队</h2><span class="sub">花钱雇人 · 配刀 · 指哪打哪</span></div>
 <p>一个<strong>独立分支</strong>，不与罪器、契约、驱魔任何一条耦合。你可以完全不碰前面那些体系，只带着一队人打。</p>
 
 <div class="sys">
@@ -650,7 +668,7 @@ def build():
 
     # VIII chapters -------------------------------------------------------
     a('''<section class="plate" id="s10">
-<div class="plate-h"><span class="num">XII</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
+<div class="plate-h"><span class="num">XIII</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
 
 <div class="scroll-h">
 <p class="heb">אֶרֶץ הַשְּׁבָרִים</p>
@@ -675,7 +693,7 @@ def build():
 
     # IX commands ---------------------------------------------------------
     a('''<section class="plate" id="s11">
-<div class="plate-h"><span class="num">XIII</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
+<div class="plate-h"><span class="num">XIV</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
 <div class="tw"><table>
 <thead><tr><th>指令</th><th>作用</th></tr></thead>
 <tbody>

@@ -17,6 +17,7 @@
   --gold:#C9A227; --gold-soft:#8A7429;
   --r-holy:#FF3300; --r-devil:#DC6A62; --r-legend:#D9A02B; --r-lgd:#FFD700;
   --r-epic:#A275DE; --r-brave:#57C6D6; --r-none:#93897C;
+  --r-rite:#E4C24A;
   --shadow:0 1px 0 rgba(0,0,0,.5);
 }
 
@@ -176,6 +177,7 @@ code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px;
 .card.r-legend{--tier:var(--r-legend)} .card.r-epic{--tier:var(--r-epic)}
 .card.r-lgd{--tier:var(--r-lgd)}
 .card.r-brave{--tier:var(--r-brave)}
+.card.r-rite{--tier:var(--r-rite)}
 .card[hidden]{display:none}
 .card-h{display:flex; gap:13px; align-items:flex-start; margin-bottom:11px}
 .card-id{min-width:0}
@@ -288,10 +290,11 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 <li><a href="#s7"><span class="num">VII</span>掉落总表</a></li>
 <li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
 <li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
-<li><a href="#s12"><span class="num">X</span>七十二柱契约</a></li>
-<li><a href="#s13"><span class="num">XI</span>佣兵小队</a></li>
-<li><a href="#s10"><span class="num">XII</span>破碎大陆</a></li>
-<li><a href="#s11"><span class="num">XIII</span>指令速查</a></li>
+<li><a href="#s14"><span class="num">X</span>驱魔道具</a></li>
+<li><a href="#s12"><span class="num">XI</span>七十二柱契约</a></li>
+<li><a href="#s13"><span class="num">XII</span>佣兵小队</a></li>
+<li><a href="#s10"><span class="num">XIII</span>破碎大陆</a></li>
+<li><a href="#s11"><span class="num">XIV</span>指令速查</a></li>
 </ol></nav>
 <main>
 <section class="plate" id="s1">
@@ -426,10 +429,7 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 <article class="card r-legend" data-rarity="legend" data-name="万钧之石 传说 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA5ElEQVR42p2RsQrCMBRF+yl+gHPBUSgubgFHF3ddnHQVsZu7Y7/CX+gfdXtyAhde0saigctN2tyT95KqKoz20Ro6HY9W/ToU7rrO/gL5MK45kKZpvoPY5ENe53uw63Nnm7CMKgJ82R7AWhB8BAkh2OL1jpoK4wofLutpAJu2fW+3YYgOzLdAEA/7VQogrFMIAZAACQKA8KgCAQTJq5ALkFTAJH50EAJ5Czwh++q6Tk9nof4E8EHWwAEgAMnlAfC3ixSUimHfgsIKqSWc/7MAuQeo9NGzTUFwTkD56bOAfAikGy+FP0j+f622Mdj4AAAAAElFTkSuQmCC" alt="万钧之石" loading="lazy" decoding="async"><div class="card-id"><span class="tier">传说</span><h3>万钧之石</h3><p class="base">锻造模板·wild</p></div></header><p class="flavour">力战万钧的晶石，不朽的瑰宝　+25%攻击伤害</p><dl class="stats"><dt>属性</dt><dd>攻击伤害 +25%<span class="slot">hand</span></dd></dl></article></div></section>
 <section class="plate" id="s6">
 <div class="plate-h"><span class="num">VI</span><h2>药剂与材料</h2><span class="sub">12 药剂 · 8 材料</span></div>
-<div class="grid"><article class="card r-legend" data-rarity="legend" data-name="替死人偶 传说 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxUlEQVR42mNgQAPGjVv/gzCx4hiKZvz5j9MArHIwk0HYasIZggaA1CDrgUuEvoFIgmhkBcgYWQ2KRQaZc8CChifegzFIwuclRBEIg9ggMZg8SC1ID4oTQQIam1/ANX/4jzAAhG0ffAfLgdRg1YzsVJBmdANgtsLUoBgC4sSffYJiO0gDyFYQBrFhXoSpxeoKEEZ2MjKGGQhThzMdoGuEYZDfsfqfGANATifaAJAiXJpBaQCvAbCwACmEaSJJM3qAomOGQQkAWBCdfwuFe2EAAAAASUVORK5CYII=" alt="替死人偶" loading="lazy" decoding="async"><div class="card-id"><span class="tier">传说</span><h3>替死人偶</h3><p class="base">悦灵刷怪蛋</p></div></header><p class="flavour">可以抵挡恶魔的人偶　恶魔攻击其会使祂显形</p></article>
-<article class="card r-brave" data-rarity="brave" data-name="圣水 勇者 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAjElEQVR42mNgGAW0BVdyPf8j0ySD6eZi/688/f4fRJOsefP5N//x8fE7HWir1d9b/0GalGc0g7FYUsh/ogwBaYYpBhmic3gFGMMMie0/9J+gASDFMAPUVkxEMYSgATBnwzQpTqoD091rL/xXXdJL2ACQApBTYYaANIHYIAOI8gK6ISRrRjYEHdMktQIAjl6iyBpTsuQAAAAASUVORK5CYII=" alt="圣水" loading="lazy" decoding="async"><div class="card-id"><span class="tier">勇者</span><h3>圣水</h3><p class="base">滞留药水</p></div></header><p class="flavour">上帝赐福过的水　完美无瑕</p></article>
-<article class="card r-epic" data-rarity="epic" data-name="天启星 史诗 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAjUlEQVR42mNgGPQgZcKE/xRp7liy5H9odvZ/sjXfevSIPENABuw8efL/3/8rwDTRBoA0wmw/fe0a2AAQDXMFXoNgGkE2gjQhGwDCIHGc3kH2M0gTDF+6xPD/waNyOJ8oQ2AuANEgzSAappFggML8iRwGyLYSHZgghbBYICsakV1BdmKCGUKWZmRDaJrZAFy16kez8FdiAAAAAElFTkSuQmCC" alt="天启星" loading="lazy" decoding="async"><div class="card-id"><span class="tier">史诗</span><h3>天启星</h3><p class="base">下界之星</p></div></header><p class="flavour">能指引恶魔的繁星　审判罪恶</p><dl class="stats"><dt>其他</dt><dd>右键长按发动</dd></dl></article>
-<article class="card r-none" data-rarity="none" data-name="玩家面板 introduce "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAArklEQVR42mMwVhH8j4zttUTxYpg6bTleMGag2AAVCY7/IEzIIHRxGJ9yA2BOmZ3sCcabK+PAeHtzNhjD+KuKIsEYps5EVQiMKTcAJgBTANOArhEdw/RRbgBMAAaCbDvBGF0hTBwGYPKUG4DuBRjOcjBAwUSHAckGTIi0/w/C/XF2YOypKgDG5U6mKNhJlguMYeoagy3BmHIDpiTY/QdhmABMIcwgdD5MHcwgig0AAGroBF/Lf/+BAAAAAElFTkSuQmCC" alt="introduce" loading="lazy" decoding="async"><div class="card-id"><h3>introduce</h3><p class="base">玩家面板 · 玩家头颅</p></div></header></article>
+<div class="grid"><article class="card r-none" data-rarity="none" data-name="玩家面板 introduce "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAArklEQVR42mMwVhH8j4zttUTxYpg6bTleMGag2AAVCY7/IEzIIHRxGJ9yA2BOmZ3sCcabK+PAeHtzNhjD+KuKIsEYps5EVQiMKTcAJgBTANOArhEdw/RRbgBMAAaCbDvBGF0hTBwGYPKUG4DuBRjOcjBAwUSHAckGTIi0/w/C/XF2YOypKgDG5U6mKNhJlguMYeoagy3BmHIDpiTY/QdhmABMIcwgdD5MHcwgig0AAGroBF/Lf/+BAAAAAElFTkSuQmCC" alt="introduce" loading="lazy" decoding="async"><div class="card-id"><h3>introduce</h3><p class="base">玩家面板 · 玩家头颅</p></div></header></article>
 <article class="card r-brave" data-rarity="brave" data-name="精血药水 勇者 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAlUlEQVR42mNgGFLgSq7nfxCmSPNKd1XSDYjtP/R/urkYWDPJBmw+/wauAWQICJOlGcQmSfOVp9//4zKMKM3/nRj+gzTNUmcA42RJCJ8ozTDFIEOOGkEwzBBQgBI0AKQYZsAqHVRDCBoAczZM0xQ1CN299sL/ZVpEGgByKswQkCYQG2QAUV6AJRyYISRrRjYEHdMkgwEAUmCrlQPHEZwAAAAASUVORK5CYII=" alt="精血药水" loading="lazy" decoding="async"><div class="card-id"><span class="tier">勇者</span><h3>精血药水</h3><p class="base">喷溅药水</p></div></header><p class="flavour">精血炼制的药水　快速回血</p></article>
 <article class="card r-epic" data-rarity="epic" data-name="复生药水 史诗 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAlUlEQVR42mNgGFLgSq7nfxCmSPNKd1XSDYjtP/R/urkYWDPJBmw+/wauAWQICJOlGcQmSfOVp9//4zKMKM3/dRj+gzTNkmIA42RBCJ8ozTDFIEOOKkIwzBBQgBI0AKQYZsAqWVRDCBoAczZM0xRJCN299sL/ZTJEGgByKswQkCYQG2QAUV6AJRyYISRrRjYEHdMkgwEAElyp2VIglsYAAAAASUVORK5CYII=" alt="复生药水" loading="lazy" decoding="async"><div class="card-id"><span class="tier">史诗</span><h3>复生药水</h3><p class="base">喷溅药水</p></div></header><p class="flavour">秘制的配方　获得大幅回血</p></article>
 <article class="card r-epic" data-rarity="epic" data-name="护盾药水 史诗 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAlUlEQVR42mNgGFLgSq7nfxCmSPNKd1XSDYjtP/R/urkYWDPJBmw+/wauAWQICJOlGcQmSfOVp9//4zKMKM3/zzD8B2maVc0Axsn+ED5RmmGKQYYcnQvBMENAAUrQAJBimAGrOlANIWgAzNkwTVPKIHT32gv/l7UQaQDIqTBDQJpAbJABRHkBlnBghpCsGdkQdEyTDAYAsMG2raTJBcAAAAAASUVORK5CYII=" alt="护盾药水" loading="lazy" decoding="async"><div class="card-id"><span class="tier">史诗</span><h3>护盾药水</h3><p class="base">喷溅药水</p></div></header><p class="flavour">守护他人的力量　获得伤害吸收护盾</p></article>
@@ -455,9 +455,7 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 <article class="card r-none" data-rarity="none" data-name="剑胚 🗡 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAi0lEQVR42mNgIAOYawr8h2GyNJdGKP5vS1X7ryDB9Z9szSCaJAOGgGZsoQriRzpLEmczSLG7mQjcEGTNIJooZ8M0gRSDaJCtRGtGNgCEQa4hSTM2r5Cs2dNM9H+GnxxYIyxQiTYEpLkzXf2/hhw3WANII8wggqEPwiCbYZqRAcwggn4m2b/oNpBrAAAJGoK0tmB2uwAAAABJRU5ErkJggg==" alt="🗡" loading="lazy" decoding="async"><div class="card-id"><h3>🗡</h3><p class="base">剑胚 · 木剑</p></div></header><p class="flavour">锻造装备的原材料　天然的武器</p><dl class="stats"><dt>标签</dt><dd><code>embryo_tag</code></dd></dl></article>
 <article class="card r-none" data-rarity="none" data-name="生铁 🗡 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuUlEQVR42q2RvQ2DMBSEWYeeJmKGlBGLIGUFqjQZBGULj0BFT5EuNaB70qHzD05QsHSyfbz7eLaL4qzRXC9LqEPhoX8u8+hMk3vZ/mcYCiz8eXszQJizMBhWiBCVgIWdRQB88EAS0nAEqavSzP5xN7GA+669mbCmHwFghEUK4NlZAyUBUPj31PPCR24DaKupEC9TjxoBFKJhhCg+KWuzXcCjTwCPSvgGIESl/t6leoDcUMjh8LcO/x4rQxSuFyNrSowAAAAASUVORK5CYII=" alt="🗡" loading="lazy" decoding="async"><div class="card-id"><h3>🗡</h3><p class="base">生铁 · 粗铁</p></div></header><p class="flavour">锻造装备的原材料　未经处理的矿石</p><dl class="stats"><dt>标签</dt><dd><code>fec_tag</code></dd></dl></article>
 <article class="card r-none" data-rarity="none" data-name="传说冶炼石 🗡 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAj0lEQVR42mNgoBZg1TL6D8Jka2Z2DPjPFZDwX1BaEYxJNgCkGYQZJk2FG0SyC0CaNe+/Jt0QkEKQIWANUM0gA+FipBgAY4MMoNgQmEtAmFdInLAhIEUwv8PChCxDYC4BaYLRMG+RbAjMO8iYaENgLkB2BchLRBmAHiYgjJzQSDIEpAnZBUSHBbIh6JhquRgAp+2VTK4V4i4AAAAASUVORK5CYII=" alt="🗡" loading="lazy" decoding="async"><div class="card-id"><h3>🗡</h3><p class="base">传说冶炼石 · 回响碎片</p></div></header><p class="flavour">锻造装备的原材料　决定成品的矿石</p><dl class="stats"><dt>标签</dt><dd><code>echo_tag</code></dd></dl></article>
-<article class="card r-none" data-rarity="none" data-name="冶炼石 🗡 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAj0lEQVR42mNgoBZg1TL6D8Jka2Z2DPjPFZDwX1BaEYxJNgCkGYQZJk2FG0SyC0CaNe+/Jt0QkEKQIWANUM0gA+FipBgAY4MMoNgQmEtAmFdInLAhIEUwv8PChCxDYC4BaYLRMG+RbAjMO8iYaENgLkB2BchLRBmAHiYgjJzQSDIEpAnZBUSHBbIh6JhquRgAp+2VTK4V4i4AAAAASUVORK5CYII=" alt="🗡" loading="lazy" decoding="async"><div class="card-id"><h3>🗡</h3><p class="base">冶炼石 · 回响碎片</p></div></header><p class="flavour">锻造装备的原材料　决定成品的矿石</p><dl class="stats"><dt>标签</dt><dd><code>echo_tag</code></dd></dl></article>
-<article class="card r-none" data-rarity="none" data-name="驱魔图腾 驱魔 🔱仪式[驱魔]"><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAqUlEQVR42mNgoAVYEK38HxsmWvOr2y1YMVGGtDrwgxX//f0OjH+8WwrGIDGQHFEGXFweC8YwjTA+0QaAbHZ8Vg/XCOMTbQBIMcNuN7gXYHyiDTja7oThBZAYTgPQowtmCCz0YZpxRiss6mABhWwrzDUwQ2B8DNeABGC2gJwO8z/MFSBNMNfhDQtk1yBjvGGA7hJcSZkoA5ATEywMiLYdlwFEp0JsgUoo0AB0xECCYrmyOwAAAABJRU5ErkJggg==" alt="驱魔图腾" loading="lazy" decoding="async"><div class="card-id"><span class="tier">驱魔</span><h3>驱魔图腾</h3><p class="base">不死图腾</p></div></header><p class="flavour">以[圣座]之木刻成　长按右键立起，再以驱魔圣水浇之</p><div class="skill"><span class="skill-kind">技能</span><span class="skill-name">🔱仪式[驱魔]</span><p>点燃后每隔两秒净化一次，效力逐次递减 燃尽时炸开，驱出范围内所有空缺者</p></div><dl class="stats"><dt>其他</dt><dd>右键长按发动</dd><dt>标签</dt><dd><code>holy_weapon_tag totem_tag</code></dd></dl></article>
-<article class="card r-none" data-rarity="none" data-name="驱魔圣水 驱魔 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAjUlEQVR42mNgGAW0BVdyPf8j0ySD6eZi/688/f4fRJOsefP5N//x8fE7HWjr//8f/oM0zZo1AYyTk2P/E2UISDNMMciQo0d3gjHMkNj+Q/8JGgBSDDNg1aoFKIYQNADmbJimKVO6wXT32gv/ly2bQ9gAkAKQU2GGgDSB2CADiPICuiEka0Y2BB3TJLUCAKvMtJcYELy8AAAAAElFTkSuQmCC" alt="驱魔圣水" loading="lazy" decoding="async"><div class="card-id"><span class="tier">驱魔</span><h3>驱魔圣水</h3><p class="base">滞留药水</p></div></header><p class="flavour">自[圣座]取来的水　浇在驱魔图腾上以点燃仪式</p><dl class="stats"><dt>标签</dt><dd><code>holy_weapon_tag rite_tag</code></dd></dl></article></div>
+<article class="card r-none" data-rarity="none" data-name="冶炼石 🗡 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAj0lEQVR42mNgoBZg1TL6D8Jka2Z2DPjPFZDwX1BaEYxJNgCkGYQZJk2FG0SyC0CaNe+/Jt0QkEKQIWANUM0gA+FipBgAY4MMoNgQmEtAmFdInLAhIEUwv8PChCxDYC4BaYLRMG+RbAjMO8iYaENgLkB2BchLRBmAHiYgjJzQSDIEpAnZBUSHBbIh6JhquRgAp+2VTK4V4i4AAAAASUVORK5CYII=" alt="🗡" loading="lazy" decoding="async"><div class="card-id"><h3>🗡</h3><p class="base">冶炼石 · 回响碎片</p></div></header><p class="flavour">锻造装备的原材料　决定成品的矿石</p><dl class="stats"><dt>标签</dt><dd><code>echo_tag</code></dd></dl></article></div>
 <div class="note"><b>试金石（紫水晶碎片）共 24 种，</b>丢在武器旁即可把附魔写入武器：亡灵杀手 3、亡灵杀手 4、亡灵杀手 5、保护 3、保护 4、力量 3、力量 4、力量 5、横扫之刃 2、横扫之刃 3、穿透 3、穿透 4、耐久 2、耐久 3、耐久 4、耐久 5、节肢杀手 3、节肢杀手 4、节肢杀手 5、荆棘 2、荆棘 3、锋利 3、锋利 4、锋利 5。</div>
 </section>
 <section class="plate" id="s7">
@@ -564,18 +562,6 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 <div><h3>附身转移</h3><p class="how">杀死空缺者时</p><p>躯体死了，里面的东西<b>跳到 16 格内最近的村民身上</b>。若附近再无可用躯体，它会赤裸地留在原地，化作三只<b>无处可去者</b>（16 生命 / 5 攻击）。<br><b>剑解决不了它</b>——这正是驱魔存在的理由。</p></div>
 </div>
 
-<h3 class="sub-h">三件驱魔道具<span class="rolls">替死人偶 · 圣水 · 天启星</span></h3>
-<div class="sys">
-<div><h3>替死人偶</h3><p class="how">放置即生效</p><p>立着的时候，<b>12 格内的空缺者不必持圣器也会显形</b>——这就是它 Lore 里说的「使祂显形」。
-更重要的是<b>替死</b>：16 格内的你每一轮沾上的魔化，改由人偶承受，它一次吃一点，<b>吃满 10 点就碎</b>。全包唯一能挡住魔化的东西。</p></div>
-<div><h3>圣水</h3><p class="how">投掷（滞留型）</p><p>落地那汪水每秒洗掉 <b>1</b> 点魔化，并灼烧 4 格内的空壳——被浇过的壳<b>裂得快得多</b>。
-它也是点燃驱魔图腾的合法引火之物。</p></div>
-<div><h3>天启星</h3><p class="how">长按右键 · 一次性</p><p>照亮 <b>32</b> 格内的一切：恶魔、空壳、以及<b>魔化 31 以上的人</b>全部现形。
-空壳额外挨 6 点伤害并大幅加速裂壳。「指引恶魔的繁星，审判罪恶」。</p></div>
-<div><h3>为什么它们要紧</h3><p class="how">在此之前空缺者是隐形的</p><p>「持圣器」原本<b>只有</b>神圣分支武器能满足——也就是说在拿到唱片并改造武器之前，
-空缺者全程看不见，整套体系像是没生效。这三件补上了可获得的圣器来源。</p></div>
-</div>
-
 <h3 class="sub-h">驱魔仪式<span class="rolls">驱魔图腾 + 驱魔圣水</span></h3>
 <p>手持<b>驱魔图腾</b><b>长按右键</b>立起（本体是 <code>item_display</code>，没有 AI、没有碰撞）。此刻它还是熄的——要用<b>驱魔圣水</b>浇上去才点燃。
 圣水必须是<strong>滞留型</strong>：喷溅型落地即散，图腾没有任何东西可以感知；滞留药水留下的 <code>area_effect_cloud</code> 才是「浇上了」的凭据。</p>
@@ -604,8 +590,36 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 <div class="note"><b>关于自定义模型：</b>原版数据包<b>无法</b>为生物添加自定义模型——生物模型写死在客户端里，资源包只能替换<b>已有</b>实体的贴图与模型。
 驱魔图腾用的是 <code>item_display</code>：把一件物品当作可缩放、可旋转的展示实体摆在世界里，这是 1.19.4 之后原版唯一的「自定义模型」路子，本包的图腾缩放动画就是这么做的。</div>
 </section>
+<section class="plate" id="s14">
+<div class="plate-h"><span class="num">X</span><h2>驱魔道具</h2><span class="sub">四件 · 自成一族</span></div>
+<p>这四件功能上是同一套东西——<strong>显形、净化、仪式</strong>——所以从药剂与材料里摘了出来，单列一族。
+它们也是全包<strong>可获得的「圣器」来源</strong>：手里握着其中任何一件，空缺者就会在 16 格内显形，魔化也会缓慢消退。</p>
+
+<div class="note"><b>为什么这件事要紧。</b>「持圣器」这个前提原本<b>只有神圣分支武器</b>能满足——也就是说在拿到神圣唱片、
+改造过武器之前，空缺者<b>全程隐形</b>：蔓延、撕壳、附身转移全都在照常运转，你却一个也看不见，整套驱魔体系像是没生效。
+这一族补上了可获得的来源。<br>
+代价是对称的：魔化一旦到 <b>91 以上</b>，握着圣器<b>会灼手</b>（每 2 秒 2 点魔法伤害）。</div>
+
+<div class="sys">
+<div><h3>驱魔图腾</h3><p class="how">长按右键立起</p><p>仪式的主体。立起后要用驱魔圣水浇上才点燃；点燃后每两秒净化一次，效力逐次递减，燃尽时炸开。
+魔化满值者在场时点燃，仪式转为<b>逆圣化</b>。也是<b>毁约</b>的场所——在它燃着时长按已立约的契约之书即可解约。</p></div>
+<div><h3>驱魔圣水</h3><p class="how">投掷 · 滞留型</p><p>必须是滞留型：喷溅型落地即散，图腾没有任何东西可以感知。
+落地那汪水每秒洗掉 <b>1</b> 点魔化，并灼烧 4 格内的空壳——被浇过的壳<b>裂得快得多</b>。<br>
+<span class="dim">原本的「圣水」已并入此物；旧瓶子仍然可用。</span></p></div>
+<div><h3>替死人偶</h3><p class="how">放置即生效</p><p>立着的时候，<b>12 格内的空缺者不必持圣器也会显形</b>——这就是它 Lore 里说的「恶魔攻击其会使祂显形」。
+更要紧的是<b>替死</b>：16 格内的你每一轮沾上的魔化，改由人偶承受，一次吃一点，<b>吃满 10 点就碎</b>。
+全包唯一能<b>挡住</b>魔化的东西。</p></div>
+<div><h3>天启星</h3><p class="how">长按右键 · 一次性</p><p>照亮 <b>32</b> 格内的一切：恶魔、空壳、以及<b>魔化 31 以上的人</b>全部现形。
+空壳额外挨 6 点伤害并大幅加速裂壳。「能指引恶魔的繁星，审判罪恶」。</p></div>
+</div>
+
+<div class="grid"><article class="card r-rite" data-rarity="rite" data-name="替死人偶 驱魔 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxUlEQVR42mNgQAPGjVv/gzCx4hiKZvz5j9MArHIwk0HYasIZggaA1CDrgUuEvoFIgmhkBcgYWQ2KRQaZc8CChifegzFIwuclRBEIg9ggMZg8SC1ID4oTQQIam1/ANX/4jzAAhG0ffAfLgdRg1YzsVJBmdANgtsLUoBgC4sSffYJiO0gDyFYQBrFhXoSpxeoKEEZ2MjKGGQhThzMdoGuEYZDfsfqfGANATifaAJAiXJpBaQCvAbCwACmEaSJJM3qAomOGQQkAWBCdfwuFe2EAAAAASUVORK5CYII=" alt="替死人偶" loading="lazy" decoding="async"><div class="card-id"><span class="tier">驱魔</span><h3>替死人偶</h3><p class="base">悦灵刷怪蛋</p></div></header><p class="flavour">可以抵挡恶魔的人偶　恶魔攻击其会使祂显形</p></article>
+<article class="card r-rite" data-rarity="rite" data-name="天启星 驱魔 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAjUlEQVR42mNgGPQgZcKE/xRp7liy5H9odvZ/sjXfevSIPENABuw8efL/3/8rwDTRBoA0wmw/fe0a2AAQDXMFXoNgGkE2gjQhGwDCIHGc3kH2M0gTDF+6xPD/waNyOJ8oQ2AuANEgzSAappFggML8iRwGyLYSHZgghbBYICsakV1BdmKCGUKWZmRDaJrZAFy16kez8FdiAAAAAElFTkSuQmCC" alt="天启星" loading="lazy" decoding="async"><div class="card-id"><span class="tier">驱魔</span><h3>天启星</h3><p class="base">下界之星</p></div></header><p class="flavour">能指引恶魔的繁星　审判罪恶</p><dl class="stats"><dt>其他</dt><dd>右键长按发动</dd></dl></article>
+<article class="card r-rite" data-rarity="rite" data-name="驱魔图腾 驱魔 🔱仪式[驱魔]"><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAqUlEQVR42mNgoAVYEK38HxsmWvOr2y1YMVGGtDrwgxX//f0OjH+8WwrGIDGQHFEGXFweC8YwjTA+0QaAbHZ8Vg/XCOMTbQBIMcNuN7gXYHyiDTja7oThBZAYTgPQowtmCCz0YZpxRiss6mABhWwrzDUwQ2B8DNeABGC2gJwO8z/MFSBNMNfhDQtk1yBjvGGA7hJcSZkoA5ATEywMiLYdlwFEp0JsgUoo0AB0xECCYrmyOwAAAABJRU5ErkJggg==" alt="驱魔图腾" loading="lazy" decoding="async"><div class="card-id"><span class="tier">驱魔</span><h3>驱魔图腾</h3><p class="base">不死图腾</p></div></header><p class="flavour">以[圣座]之木刻成　长按右键立起，再以驱魔圣水浇之</p><div class="skill"><span class="skill-kind">技能</span><span class="skill-name">🔱仪式[驱魔]</span><p>点燃后每隔两秒净化一次，效力逐次递减 燃尽时炸开，驱出范围内所有空缺者</p></div><dl class="stats"><dt>其他</dt><dd>右键长按发动</dd></dl></article>
+<article class="card r-rite" data-rarity="rite" data-name="驱魔圣水 驱魔 "><header class="card-h"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAjUlEQVR42mNgGAW0BVdyPf8j0ySD6eZi/688/f4fRJOsefP5N//x8fE7HWjr//8f/oM0zZo1AYyTk2P/E2UISDNMMciQo0d3gjHMkNj+Q/8JGgBSDDNg1aoFKIYQNADmbJimKVO6wXT32gv/ly2bQ9gAkAKQU2GGgDSB2CADiPICuiEka0Y2BB3TJLUCAKvMtJcYELy8AAAAAElFTkSuQmCC" alt="驱魔圣水" loading="lazy" decoding="async"><div class="card-id"><span class="tier">驱魔</span><h3>驱魔圣水</h3><p class="base">滞留药水</p></div></header><p class="flavour">自[圣座]取来的水　浇在驱魔图腾上以点燃仪式</p></article></div>
+</section>
 <section class="plate" id="s12">
-<div class="plate-h"><span class="num">X</span><h2>七十二柱契约</h2><span class="sub">七位领主 · 一本书</span></div>
+<div class="plate-h"><span class="num">XI</span><h2>七十二柱契约</h2><span class="sub">七位领主 · 一本书</span></div>
 <p>上一节的<strong>逆圣化</strong>是走出污染的路；这一节是走进去的路，而且是<strong>你自己选的</strong>。</p>
 <blockquote class="verse">每一个正式边缘者都被分配一根柱位和一位魔神：边缘者借用魔神的力，魔神借契约进入边缘者的心。<cite>——卷五《魔神书》</cite></blockquote>
 <p>契约是一本书。<strong>长按右键签下</strong>，柱位当场绑定，恩赐与枷锁一并生效，书也随之变成「已立约」的样子。
@@ -628,7 +642,7 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 六位领主各有一件罪遗武器，玛门没有。第七柱的契约填上了它：贪婪不制造东西，它只让已有的东西变多。</div>
 </section>
 <section class="plate" id="s13">
-<div class="plate-h"><span class="num">XI</span><h2>佣兵小队</h2><span class="sub">花钱雇人 · 配刀 · 指哪打哪</span></div>
+<div class="plate-h"><span class="num">XII</span><h2>佣兵小队</h2><span class="sub">花钱雇人 · 配刀 · 指哪打哪</span></div>
 <p>一个<strong>独立分支</strong>，不与罪器、契约、驱魔任何一条耦合。你可以完全不碰前面那些体系，只带着一队人打。</p>
 
 <div class="sys">
@@ -670,7 +684,7 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 人就凭空消失；所以踩到水会立刻召回雇主身边。</div>
 </section>
 <section class="plate" id="s10">
-<div class="plate-h"><span class="num">XII</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
+<div class="plate-h"><span class="num">XIII</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
 
 <div class="scroll-h">
 <p class="heb">אֶרֶץ הַשְּׁבָרִים</p>
@@ -693,7 +707,7 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 人类已经知道神的答案，所以人类终于可以写下自己的答案。</div>
 </section>
 <section class="plate" id="s11">
-<div class="plate-h"><span class="num">XIII</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
+<div class="plate-h"><span class="num">XIV</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
 <div class="tw"><table>
 <thead><tr><th>指令</th><th>作用</th></tr></thead>
 <tbody>

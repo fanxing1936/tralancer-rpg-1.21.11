@@ -2072,7 +2072,7 @@
   {
    "item": "allay_spawn_egg",
    "name": "替死人偶",
-   "rarity": "传说",
+   "rarity": "驱魔",
    "name_colour": "yellow",
    "lore": [
     "+------------------+",
@@ -2102,53 +2102,9 @@
    "potion_contents": null
   },
   {
-   "item": "lingering_potion",
-   "name": "圣水",
-   "rarity": "勇者",
-   "name_colour": null,
-   "lore": [
-    "+------------------+",
-    "上帝赐福过的水",
-    "完美无瑕",
-    "+------------------+"
-   ],
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "holy_weapon_tag"
-   ],
-   "custom_data": {
-    "holy_weapon_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantment_glint_override",
-    "lore",
-    "potion_contents",
-    "tooltip_display"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": {
-    "custom_color": 3866074,
-    "custom_effects": [
-     {
-      "id": "luck",
-      "duration": 4,
-      "amplifier": 1,
-      "show_icon": 0
-     }
-    ]
-   }
-  },
-  {
    "item": "nether_star",
    "name": "天启星",
-   "rarity": "史诗",
+   "rarity": "驱魔",
    "name_colour": null,
    "lore": [
     "+------------------+",
