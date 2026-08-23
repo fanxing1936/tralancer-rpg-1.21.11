@@ -16,6 +16,10 @@ execute if score #spread rpg_vac matches 400.. run function rpg:vacant/spread
 # 七十二柱契约。三条全是玩家作用域（玩家表很短），
 # 而且各自带着柱位判定 —— 没签那一柱的人连函数都不会进。
 execute as @a[scores={rpg_pact_cd=1..}] run function rpg:pact/cd
-execute as @a[tag=rpg.pact,scores={rpg_pact=5}] at @s run function rpg:pact/samael
+execute if entity @a[tag=rpg.pact,scores={rpg_pact=5},limit=1] run function rpg:pact/samael
 execute as @a[tag=rpg.pact,scores={rpg_pact=7}] at @s run function rpg:pact/mammon
 execute as @a[scores={rpg_pact_t=1..}] run scoreboard players remove @s rpg_pact_t 1
+
+# 逆圣化受术者标签的寿命。两条都是玩家作用域，没在做仪式的人一条也进不去。
+execute as @a[scores={rpg_inv=1..}] run scoreboard players remove @s rpg_inv 1
+execute as @a[tag=rpg.inv.subject,scores={rpg_inv=..0}] run function rpg:rite/inv_abort

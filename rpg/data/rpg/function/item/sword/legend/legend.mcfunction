@@ -237,14 +237,14 @@ scoreboard players reset * sakura
 
 
 
-execute as @e[tag=sakura_tag] at @s run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~0.1 ~0.1 ~0.1 -0.2 -0.2 -0.2 0.2 10
-execute as @e[tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~1.5 ~ ~1.5 -3 -0.1 -3 0.2 200
-execute as @e[tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,"Fuse":0}
-execute as @e[tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run kill @s
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~0.1 ~0.1 ~0.1 -0.2 -0.2 -0.2 0.2 10
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~1.5 ~ ~1.5 -3 -0.1 -3 0.2 200
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,"Fuse":0}
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run kill @s
 
-execute as @e[tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~1.5 ~ ~1.5 -3 -0.1 -3 0.2 200
-execute as @e[tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,"Fuse":0}
-execute as @e[tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run kill @s
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~1.5 ~ ~1.5 -3 -0.1 -3 0.2 200
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,"Fuse":0}
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run kill @s
 
 ##亚巴顿
 execute as @e at @s on attacker if entity @s[scores={soul=0..},tag=rpg.h.soul_tag1] store result score @e[limit=1,sort=nearest] random run random value 1..5

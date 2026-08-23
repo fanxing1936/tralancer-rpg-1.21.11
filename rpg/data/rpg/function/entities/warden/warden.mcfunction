@@ -20,26 +20,26 @@ scoreboard players reset * random
 execute if entity @e[tag=devil,tag=boss] run function rpg:entities/warden/warden/g2
 
 ##二阶段
-execute as @e[tag=devil2,tag=boss] at @s if score @s devil matches 400.. run scoreboard players set @s devil 0
-scoreboard players add @e[tag=devil2,tag=boss] devil 1
+execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 400.. run scoreboard players set @s devil 0
+scoreboard players add @e[type=minecraft:vindicator,tag=devil2,tag=boss] devil 1
 execute as @a[scores={devil_hurt=0..}] at @s on attacker if entity @s[tag=devil2] run particle large_smoke ~0.5 ~1.5 ~0.5 -1 -1 -1 0.1 10
 execute as @a[scores={devil_hurt=0..}] at @s on attacker if entity @s[tag=devil2] run particle sweep_attack ~0.5 ~1.5 ~0.5 -1 -1 -1 0.1 10
 execute as @a[scores={devil_hurt=0..}] at @s on attacker if entity @s[tag=devil2,tag=boss] run effect give @e[limit=1] minecraft:wither 5 3 true
 scoreboard players reset * devil_hurt
 
-execute as @e[tag=devil2] at @s if entity @e[type=minecraft:area_effect_cloud,limit=1,distance=..2] run effect give @s minecraft:instant_damage 1 1 true
-execute as @e[tag=devil2] at @s if entity @e[type=minecraft:area_effect_cloud,limit=1,distance=..2] run particle trial_spawner_detection_ominous ~0.2 ~1.2 ~0.2 -0.4 -0.4 -0.4 0 10
+execute as @e[type=minecraft:vindicator,tag=devil2] at @s if entity @e[type=minecraft:area_effect_cloud,limit=1,distance=..2] run effect give @s minecraft:instant_damage 1 1 true
+execute as @e[type=minecraft:vindicator,tag=devil2] at @s if entity @e[type=minecraft:area_effect_cloud,limit=1,distance=..2] run particle trial_spawner_detection_ominous ~0.2 ~1.2 ~0.2 -0.4 -0.4 -0.4 0 10
 
 
-execute if entity @e[tag=devil2,tag=boss] run function rpg:entities/warden/warden/g3
+execute if entity @e[type=minecraft:vindicator,tag=devil2,tag=boss] run function rpg:entities/warden/warden/g3
 
 
 execute as @e[name=devil_attack,type=armor_stand] anchored eyes at @s run particle minecraft:sweep_attack ~0.5 ~1.2 ~0.5 -1 -1 -1 0 20 force
 execute as @e[name=devil_attack,type=armor_stand] anchored eyes at @s run particle large_smoke ~0.5 ~1.2 ~0.5 -1 -1 -1 0.2 20 force
 execute as @e[name=devil_attack,type=armor_stand] anchored feet at @s run tp @s ^ ^ ^1  
 execute as @e[name=devil_attack,type=armor_stand] anchored feet at @s run damage @e[limit=1,sort=nearest,distance=0.1..3,tag=ashes] 20 minecraft:outside_border
-execute as @e[name=devil_attack,type=armor_stand] anchored feet at @s unless entity @e[distance=..50,tag=devil2] run kill 
+execute as @e[name=devil_attack,type=armor_stand] anchored feet at @s unless entity @e[type=minecraft:vindicator,distance=..50,tag=devil2] run kill 
 
 
-execute if entity @e[tag=devil2,tag=boss] run function rpg:entities/warden/warden/g4
+execute if entity @e[type=minecraft:vindicator,tag=devil2,tag=boss] run function rpg:entities/warden/warden/g4
 

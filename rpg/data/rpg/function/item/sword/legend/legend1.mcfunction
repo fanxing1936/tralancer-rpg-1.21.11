@@ -107,7 +107,7 @@ scoreboard players reset * sakura
 
 
 
-execute if entity @e[tag=sakura_tag] run function rpg:item/sword/legend/legend1/g9
+execute if entity @e[type=minecraft:spectral_arrow,tag=sakura_tag] run function rpg:item/sword/legend/legend1/g9
 
 ##亚巴顿
 execute if entity @e[tag=rpg.hurt] run function rpg:item/sword/legend/legend1/g10

@@ -28,7 +28,10 @@ python make_boxes.py ../rpg
 python fix_display.py ../resourcepack
 echo
 echo "== 2b. guard the empty-tag entity walks =="
+# 多人适配：单人下看不出来的归属错、全局标签互踩，以及按人数放大的遍历
+python opt_mp.py ../rpg
 python opt_index.py ../rpg
+python opt_type.py ../rpg
 python opt_guard.py ../rpg
 python opt_invert.py ../rpg
 echo

@@ -2283,6 +2283,126 @@ execute if score #gild rpg_pact matches 1..32 run function rpg:pact/p7_double
 
 ---
 
+# 28. 多人适配：单人把三类错藏成了同一件事
+
+这个包一直是在单人里写、在单人里测的。而单人恰好把三类完全不同的错误
+**混成了同一件事**，所以它们全都藏得很好：
+
+* **`@a` 就是"我"。** 只有一个玩家在线时，`@a[tag=...,limit=1,sort=nearest]`
+  读起来就是"施法者"。两个人在线，它可能解析成**另一个人**。
+* **一个标签就是一个开关。** 在同一次函数调用里生死的标签没问题；一旦跨刻
+  存活，两个玩家就可能同时挂着它，此时任何不带距离的 `@a[tag=...]` 会一起打到。
+* **`bossbar ... players @s` 是赋值，不是追加。** 写在 `execute as @a` 后面，
+  每个玩家轮流把名单覆盖成自己。
+
+外加一类卡顿：`execute as @a` 后面挂的一切，在 N 人服上要付 N 遍。
+
+先写了 `mp_audit.py` —— 只报告不改写，因为每一处都需要人来判断当初的意图。
+
+## 28.1 审计工具自己先踩了一个坑
+
+审计第一版把 `damage_scan` 判成"已走索引，无需担心"。错的：它的选择器是
+`@e[type=!#rpg:no_damage_track,...]` —— **否定**类型过滤。实体类型索引只能
+回答"给我所有僵尸"，回答不了"给我所有不是这些的"；后者仍然要把盒子里每个
+实体都访问一遍才知道要跳过谁。
+
+```python
+WALK  = re.compile(r"@e\[(?![^\]]*\btype=(?!!))[^\]]*\]")
+TYPED = re.compile(r"@e\[[^\]]*\btype=(?!!)[^\]]*\]")
+```
+
+改完分类，最贵的那条立刻浮出来。
+
+## 28.2 damage_scan：每人三次全表走查
+
+它挂在 `execute as @a at @s` 后面，而三行各自开一次那个否定过滤的选择器 ——
+**五个人在线就是每刻十五次全表走查**，全包最贵的一条按人数放大的路径。
+
+三行的先后依赖全在**同一个实体身上**（先记血量、再对齐基准、再比对），
+所以把循环翻过来，一次遍历、逐实体把三件事做完，结果逐字相同。
+`opt_invert` 当初因为"有回写又有回读"保守地放过了它，但那个依赖是实体内的，
+翻转恰好保留。
+
+单人无头实测（`rpg.hurt` 每刻会被 `command/index` 抹掉，所以整个
+"快照 → 打一下 → 重扫 → 断言"必须塞进同一刻）：
+
+* 打了一下的实体被标记 ✓
+* **刚出现的实体不被标记** ✓ —— 这条同样重要，它正是当年读档卡顿的修复
+
+## 28.3 逆圣化：一处失败掐掉全世界
+
+`rpg.inv.subject` 跨刻存活，而 `inv_fail` 里写的是不带距离的
+`@a[tag=rpg.inv.subject]` —— **甲的图腾失败，会把地图另一头乙的仪式一起判掉。**
+
+同一个标签还有第二个毛病：受术者若死在圈外，标签留在身上没人来摘，
+下一场仪式的判定会被这个幽灵干扰。所以除了限距，再配一份寿命
+（图腾总长 200 刻，给 220 刻），过期自动收场。两条都是玩家作用域，
+没在做仪式的人一条也进不去。
+
+## 28.4 熔岩链锯的獠牙认错主人
+
+```
+execute as @e[tag=rpg.saw.fang] run data modify entity @s Owner set from entity @p[tag=rpg.h.dawn_tag1] UUID
+```
+
+两处都是单人下看不出来的：`@e[tag=rpg.saw.fang]` 不带距离也不带类型，会把
+**另一个玩家**刚召出来的獠牙一起改主人、连标签一起摘掉，对方那一轮当场断掉；
+`@p[tag=rpg.h.dawn_tag1]` 取的是"离目标最近的持锯者"，两个人都拿着锯时，
+伤害记到站得更近的那一个头上。
+
+改法是包里已有的惯用形：挂一个**只在本次调用里存活**的施法者标签。
+这里有一条支撑全部归属逻辑的不变量值得写下来：
+
+> Minecraft 的命令执行是单线程的，一个函数跑完才轮到下一个。所以一个
+> **在同一次调用里增删**的标签，另一个玩家的执行永远观察不到 ——
+> `@a[tag=rpg.xxx.cast,limit=1]` 因此是精确的，而不是"碰巧最近的那个"。
+
+按这条重新审了一遍，`rpg.luci.cast` / `rpg.pact.cast` / `rpg.levi.cast`
+全部合规；真正越界的只有链锯那两行。
+
+## 28.5 Boss 血条：三个人在场只有一个看得见
+
+```
+execute as @a[distance=..20] at @s run bossbar set minecraft:devil players @s
+```
+
+`bossbar ... players` 是**赋值**。逐个玩家写，等于每人轮流把整份名单覆盖成
+自己，最后只有一个人看得见血条。一次设整组即可，顺带少跑 N−1 条命令。
+
+**而且血条在全新服务器上根本不存在。** `command/bossbar.mcfunction` 建了
+`minecraft:devil`，但**没有任何地方调用它** —— 作者本机存档里它之所以在，
+是因为当年手敲过一次，而 bossbar 存在 level.dat 里。换一个全新的服务器存档，
+Boss 一出场每条 `bossbar set` 都会报"没有这个 bossbar"。挂进 load 标签解决。
+
+这个 bug 只有在**全新存档**上才会出现，所以本机怎么测都测不出来。
+
+## 28.6 顺手：把标签选择器的类型补回去
+
+`@e[tag=rpg.levi.anchor]` 要走一遍全实体表，`@e[type=minecraft:marker,
+tag=rpg.levi.anchor]` 走类型索引。语义相同，代价差一个数量级 ——
+而类型本来就写在召唤它们的那条 `summon` 里，不必手填。
+
+`opt_type.py` 收集每个标签的来源，只对**从未**被 `tag ... add` 写过、
+且所有召唤点类型一致的标签补类型（否则这个标签可能挂在任何实体上，
+补类型会改语义）。67 处选择器因此从全表走查变成索引查询。
+
+这不是多人专属的优化，但它和多人直接相关：全表走查的代价随世界里的实体数
+增长，而实体数正是随在线人数增长的东西。
+
+## 28.7 开销与验证
+
+* **每多一个玩家的固定开销：1 次全表走查/刻**（原来是 3 次）。
+  无条件的按人数入口只有四个，其中三个零走查；另有 19 个带柱位/分数判定的
+  入口，每人每刻只付一次选择器判定，不做那件事就不进函数体
+* 空闲遍历 292 → **275**；最坏情形 578 → **525**（`opt_type` 的功劳）
+* 多人修正 12 处，选择器补类型 67 处
+* 无头 1.21.11：服务器零抱怨（只剩一个离线环境取不到 Mojang 公钥的网络报错，
+  与包无关）。单刻断言两条全过；血条在全新存档上被正确建出（max 1000）
+
+一句话总结这一章：**单人测不出多人的错，因为单人下那些错全都长得像正确。**
+
+---
+
 # 重建方式
 
 ```bash
@@ -2298,7 +2418,8 @@ bash "_tools/rp_build.sh"
 　　　　　→ `add_lucifer.py` + `add_leviathan.py`
 　　　　　→ `add_runes.py` + `add_epics.py` + `add_exorcism.py` + `add_pact.py`
 　　　　　→ `retype_longinus.py` + `make_boxes.py` + `fix_display.py`
-　　　　　→ `opt_index.py` + `opt_guard.py` + `opt_invert.py` → `validate.py` → `hotspots.py`
+　　　　　→ `opt_mp.py` → `opt_index.py` + `opt_type.py` + `opt_guard.py` + `opt_invert.py`
+　　　　　→ `validate.py` → `hotspots.py`
 材质包流程：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
 　　　　　→ `add_lucifer.py` + `add_leviathan.py` + `add_runes.py` + `add_epics.py`
@@ -2310,6 +2431,7 @@ bash "_tools/rp_build.sh"
 贴图裁剪：`fix_art.py <材质包>`　新装备与技能：`add_items.py` / `add_skills.py`
 闲置贴图反查：`unused_textures.py <材质包>`
 无头实测：`server_test.py`（数据包）、`launch_test.py`（材质包）
+多人审计：`mp_audit.py <数据包>`（只报告不改写）
 
 实机测试（会开一个 854×480 的临时客户端窗口，几十秒后自动关闭）：
 

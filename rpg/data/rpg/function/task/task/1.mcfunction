@@ -13,9 +13,9 @@ execute as @s[scores={task=2}] at @s run summon vindicator ~8 ~ ~-6 {Johnny:1,Ta
 execute as @s[scores={task=2}] at @s run summon vindicator ~-9 ~ ~-7 {Johnny:1,Tags:["dev"],equipment:{head:{id:wither_skeleton_skull,components:{enchantments:{knockback:1}},count:1},mainhand:{id:netherite_sword,components:{custom_model_data:{floats:[1110008.0f]}},count:1}},drop_chances:{feet:0f,legs:0f,chest:0f,head:0f,mainhand:0f}}
 execute as @s[scores={task=2}] at @s run summon vindicator ~8 ~ ~5 {Johnny:1,Tags:["dev"],equipment:{head:{id:wither_skeleton_skull,components:{enchantments:{knockback:1}},count:1},mainhand:{id:netherite_sword,components:{custom_model_data:{floats:[1110008.0f]}},count:1}},drop_chances:{feet:0f,legs:0f,chest:0f,head:0f,mainhand:0f}}
 execute as @s[scores={task=2}] at @s run summon vindicator ~-5 ~ ~9 {Johnny:1,Tags:["dev"],equipment:{head:{id:wither_skeleton_skull,components:{enchantments:{knockback:1}},count:1},mainhand:{id:netherite_sword,components:{custom_model_data:{floats:[1110008.0f]}},count:1}},drop_chances:{feet:0f,legs:0f,chest:0f,head:0f,mainhand:0f}}
-execute as @s[scores={task=3}] at @s at @e[tag=dev,distance=..6] run summon lightning_bolt
-execute as @s[scores={task=3}] at @s at @e[tag=dev,distance=..6] run particle sculk_soul ~0.25 ~1.2 ~0.25 -0.5 -1 -0.5 0.1 50
-execute as @s[scores={task=3}] at @s as @e[tag=dev,distance=..6] at @s run kill 
+execute as @s[scores={task=3}] at @s at @e[type=minecraft:vindicator,tag=dev,distance=..6] run summon lightning_bolt
+execute as @s[scores={task=3}] at @s at @e[type=minecraft:vindicator,tag=dev,distance=..6] run particle sculk_soul ~0.25 ~1.2 ~0.25 -0.5 -1 -0.5 0.1 50
+execute as @s[scores={task=3}] at @s as @e[type=minecraft:vindicator,tag=dev,distance=..6] at @s run kill 
 execute as @s[scores={task=3}] at @s run title @s title ["",{"text":"任务目标","color":"white"},{"text":" 弑神","color":"#ff3300","bold":true}]
 execute as @s[scores={task=3}] at @s run title @s subtitle ["",{"text":"TASK OBJECTIVE ： KILLING GOD","bold":true}]
 
