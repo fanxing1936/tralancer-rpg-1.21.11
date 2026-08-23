@@ -59,7 +59,8 @@ SPREAD_ODDS = 4          # 每拍 1/N 的概率向外伸手
 
 OBJECTIVES = ["rpg_taint", "rpg_hud", "rpg_hud_p", "rpg_hud_t",
               "rpg_taint_t", "rpg_vac", "rpg_rite", "rpg_totem",
-              "rpg_holy", "rpg_vac_x", "rpg_hud_on", "rpg_fall"]
+              "rpg_holy", "rpg_vac_x", "rpg_hud_on", "rpg_fall",
+              "rpg_dm_cd", "rpg_dm_lord"]
 
 # ---------------------------------------------------------------------------
 # 堕落
@@ -75,6 +76,8 @@ DEMON_HP = 120
 DEMON_ATK = 11
 DEMON_SEE = 48
 DEMON_LIFE = 600         # 30 秒后自己散掉 —— 作者指定
+DEMON_CD = 70            # 出手间隔（刻）。30 秒里大约能放八次
+DEMON_R = 12             # 多远之内有人才出手
 
 # 下限 / 上限 / 攻击加成 / 颜色 / 档名
 FALL_TIERS = [
@@ -444,9 +447,38 @@ tag @e[tag=rpg.advent.new] remove rpg.advent.new
 """
 
 ADVENT_TICK = """\
-# 降临者的寿命。场上没有这样的东西时，上层那道守卫会整段跳过。
+# 降临者的一刻：寿命，以及他自己那一手。
+# 场上没有这样的东西时，上层那道守卫会整段跳过。
 scoreboard players remove @s rpg_fall 1
-execute if entity @s[scores={rpg_fall=..0}] at @s run function rpg:taint/advent_gone
+execute if entity @s[scores={rpg_fall=..0}] at @s run return run function rpg:taint/advent_gone
+
+# 出手。scores= 只认已经存在的分数，所以先把冷却坐实。
+scoreboard players add @s rpg_dm_cd 0
+execute if entity @s[scores={rpg_dm_cd=1..}] run return run scoreboard players remove @s rpg_dm_cd 1
+execute at @s if entity @a[distance=..%(R)d,gamemode=!spectator,gamemode=!creative] run function rpg:taint/cast
+"""
+
+DEMON_CAST = """\
+# 该他出手了。先上锁再分流 —— 归属靠这个标签认人，
+# 命令是单线程的，同一刻不可能有第二个降临者挂着它。
+scoreboard players set @s rpg_dm_cd %(CD)d
+tag @s add rpg.dm.cast
+function rpg:taint/skill
+tag @s remove rpg.dm.cast
+"""
+
+# 这一行由 add_pact 改写成七柱分流 —— 那边才认识柱位。
+SKILL_NONE = """\
+# 无名者。没有名字的东西不会什么花样，只会一把把地掏。
+particle sculk_soul ~ ~1 ~ 2 1 2 0.1 60
+particle large_smoke ~ ~1 ~ 1.5 1 1.5 0.05 40
+playsound minecraft:entity.warden.roar hostile @a[distance=..32] ~ ~ ~ 1 1.4
+execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk_none_hit
+"""
+
+SKILL_NONE_HIT = """\
+damage @s 6 minecraft:magic by @e[tag=rpg.dm.cast,limit=1]
+effect give @s minecraft:blindness 3 0 true
 """
 
 ADVENT_GONE = """\
@@ -1131,7 +1163,10 @@ def build_fall():
     wf("taint/lord.mcfunction",
        LORD_NONE % {"NBT": demon_nbt("无名者", "#3D0000", "dark_gray")})
     wf("taint/advent_life.mcfunction", ADVENT_LIFE % {"LIFE": DEMON_LIFE})
-    wf("taint/advent_tick.mcfunction", ADVENT_TICK)
+    wf("taint/advent_tick.mcfunction", ADVENT_TICK % {"R": DEMON_R})
+    wf("taint/cast.mcfunction", DEMON_CAST % {"CD": DEMON_CD})
+    wf("taint/skill.mcfunction", SKILL_NONE)
+    wf("taint/sk_none_hit.mcfunction", SKILL_NONE_HIT)
     wf("taint/advent_gone.mcfunction", ADVENT_GONE)
 
     # 掷点的赔率。档越深，失控越频繁。

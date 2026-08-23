@@ -23,13 +23,20 @@ class Str(Node):
         self.val = val
 
     def dump(self):
+        """重新写回 SNBT。
+
+        只转义引号，**不碰反斜杠** —— 因为解析那头把所有反斜杠序列都
+        原样留在了 val 里（见下面的 _string）。两头对称，来回一趟才不会走样。
+
+        原本这里见到反斜杠就加一个，而解析时 `\n` 是被整段留下的，
+        于是 `\n` 每过一次 make_boxes 就变成 `\\n` ——
+        盒子里那本手册满页都是字面的反斜杠 n。手册是包里第一件带转义的物品，
+        所以这个来回不对称一直没被发现。
+        """
         q = self.q
         out = [q]
         for ch in self.val:
-            if ch == q or ch == "\\":
-                out.append("\\" + ch)
-            else:
-                out.append(ch)
+            out.append("\\" + ch if ch == q else ch)
         out.append(q)
         return "".join(out)
 
@@ -164,11 +171,12 @@ class Parser:
             ch = self.s[self.i]
             if ch == "\\":
                 nxt = self.s[self.i + 1] if self.i + 1 < len(self.s) else ""
-                if nxt in ('"', "'", "\\"):
+                if nxt in ('"', "'"):
                     out.append(nxt)
                     self.i += 2
                     continue
-                # keep unknown escapes verbatim (\n, \uXXXX, ...)
+                # 其余一律原样留着 —— 包括 `\\`。
+                # 反斜杠不在这里还原、dump 那头也不再加，两边才对称。
                 out.append(ch)
                 out.append(nxt)
                 self.i += 2

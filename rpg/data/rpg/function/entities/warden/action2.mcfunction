@@ -1,5 +1,5 @@
-execute as @a[distance=..20] at @s run title @s title {"text":"\\ue201\\ue202\\ue203"}
-execute as @a[distance=..20] at @s run title @s subtitle ["",{"text":"地狱的宰相","color":"#999999","bold":true},{"text":"\\uE009"}," 别西卜"]
+execute as @a[distance=..20] at @s run title @s title {"text":"\ue201\ue202\ue203"}
+execute as @a[distance=..20] at @s run title @s subtitle ["",{"text":"地狱的宰相","color":"#999999","bold":true},{"text":"\uE009"}," 别西卜"]
 execute as @a[distance=..20] at @s run effect give @s minecraft:blindness 5 10 true
 execute as @a[distance=..20] at @s run playsound minecraft:boss1 player @s
 execute as @a[distance=..20] at @s run playsound minecraft:entity.generic.explode player @s
@@ -8,4 +8,4 @@ summon vindicator ~ ~ ~ {Johnny:1,Health:1000,Tags:["devil2","boss"],attributes:
 # 轮流把名单覆盖成自己，最后只有一个人看得见血条。一次设整组。
 bossbar set minecraft:devil players @a[distance=..20]
 bossbar set minecraft:devil color blue
-bossbar set minecraft:devil name {"text":"\\ue201\\ue202\\ue203"}
+bossbar set minecraft:devil name {"text":"\ue201\ue202\ue203"}

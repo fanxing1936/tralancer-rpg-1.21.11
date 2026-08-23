@@ -622,10 +622,110 @@ LORD_ONE = """\
 # 底子与无名者那只一样：卫道士 + devil 标签（隐身与烟雾由包里
 # 已有的恶魔 boss 那一套负责），三十秒后自己散掉。
 summon minecraft:vindicator ~ ~1 ~ %(NBT)s
+# 记下他是哪一位 —— 出手时按这个分流。要在 advent_life 之前，
+# 那一步会把 rpg.advent.new 摘掉。
+scoreboard players set @e[tag=rpg.advent.new] rpg_dm_lord %(N)d
 function rpg:taint/advent_life
 particle dust{color:[%(RGB)s],scale:3} ~ ~1.2 ~ 0.8 1 0.8 0.05 70
 playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..48] ~ ~ ~ 1 0.5
 """
+
+
+# ---------------------------------------------------------------------------
+# 降临者那一手
+# ---------------------------------------------------------------------------
+# 取自各自的罪器与柱中之力 —— 借的是同一位魔神的力，挣出来之后
+# 表现理应还是那一套。归属统一读 @e[tag=rpg.dm.cast]。
+BY = 'by @e[tag=rpg.dm.cast,limit=1]'
+PLAYERS = '@a[distance=..%d,gamemode=!spectator,gamemode=!creative]'
+
+SKILLS = {
+    1: ("""\
+# 路西法［原罪］—— 蛇矛沿视线破土，尖牙同路。
+data modify storage rpg:demon uuid set from entity @s UUID
+playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..32] ~ ~ ~ 1 0.7
+particle dust{color:[0.0,0.29,0.11],scale:2} ~ ~1 ~ 0.6 0.8 0.6 0.05 40
+execute at @s anchored eyes facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run function rpg:taint/sk1_line with storage rpg:demon
+""", {
+        # 尖牙必须认主 —— 不认主的尖牙连召它出来的那位一起咬。
+        # Owner 只能写字面 UUID，命令里取不到，所以整段走宏。
+        "sk1_line": "$" + "\n$".join(
+            "execute positioned ^ ^ ^%d run summon minecraft:evoker_fangs "
+            "~ ~ ~ {Warmup:%d,Owner:$(uuid)}" % (d, d * 2)
+            for d in range(1, 9))}),
+
+    2: ("""\
+# 利维坦［沉锚］—— 锚落处涌起漩涡，把人拖向锚心。
+playsound minecraft:entity.elder_guardian.curse hostile @a[distance=..32] ~ ~ ~ 1 0.6
+particle bubble_column_up ~ ~0.5 ~ 2 0.5 2 0.4 80
+particle dust{color:[0.11,0.31,0.45],scale:3} ~ ~1 ~ 2 1 2 0.05 60
+execute as %(P8)s at @s facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^1.2
+execute as %(P8)s run damage @s 5 minecraft:magic %(BY)s
+""", {}),
+
+    3: ("""\
+# 亚巴顿［收割］—— 周身爆发，每收一个回一颗心。
+playsound minecraft:entity.wither.shoot hostile @a[distance=..32] ~ ~ ~ 1 0.5
+particle sculk_charge_pop ~ ~1 ~ 3 1 3 0.1 90
+execute as %(P6)s run function rpg:taint/sk3_reap
+""", {
+        "sk3_reap": """\
+damage @s 7 minecraft:magic %(BY)s
+particle soul ~ ~1 ~ 0.3 0.5 0.3 0.05 20
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
+"""}),
+
+    4: ("""\
+# 别西卜［余烬］—— 前方喷灰，吸进去的人饿得站不住。
+playsound minecraft:entity.blaze.shoot hostile @a[distance=..32] ~ ~ ~ 1 0.5
+execute at @s anchored eyes facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run function rpg:taint/sk4_cone
+""", {
+        "sk4_cone": "\n".join(
+            "execute positioned ^ ^ ^%d run particle ash ~ ~ ~ 1 1 1 0.1 40\n"
+            "execute positioned ^ ^ ^%d run particle lava ~ ~ ~ 0.6 0.6 0.6 0 6\n"
+            "execute positioned ^ ^ ^%d as @a[distance=..3,gamemode=!spectator,"
+            "gamemode=!creative] run function rpg:taint/sk4_hit" % (d, d, d)
+            for d in range(1, 7))}),
+
+    5: ("""\
+# 萨麦尔［毒雾］—— 剧毒与凋零并存。
+playsound minecraft:entity.witch.throw hostile @a[distance=..32] ~ ~ ~ 1 0.6
+particle dust_color_transition{from_color:[0.69,0.0,0.34],to_color:[0.24,0.0,0.12],scale:3} ~ ~1 ~ 3 1.2 3 0.06 100
+execute as %(P7)s run function rpg:taint/sk5_hit
+""", {
+        "sk5_hit": """\
+effect give @s minecraft:poison 10 1 true
+effect give @s minecraft:wither 6 0 true
+damage @s 3 minecraft:magic %(BY)s
+"""}),
+
+    6: ("""\
+# 贝利尔［朝拜］—— 七格之内，全都得低头。
+playsound minecraft:entity.evoker.prepare_summon hostile @a[distance=..32] ~ ~ ~ 1 0.6
+particle dust_color_transition{from_color:[0.4,0.0,0.6],to_color:[0.0,0.0,0.0],scale:2} ~ ~1 ~ 3 1.2 3 0.06 90
+execute as %(P7)s run function rpg:taint/sk6_kneel
+""", {
+        "sk6_kneel": """\
+effect give @s minecraft:slowness 3 3 true
+effect give @s minecraft:weakness 3 1 true
+effect give @s minecraft:mining_fatigue 3 1 true
+damage @s 4 minecraft:magic %(BY)s
+"""}),
+
+    7: ("""\
+# 玛门［点金］—— 他不打你，他从你身上抽。抽多少，自己补多少。
+playsound minecraft:block.amethyst_block.chime hostile @a[distance=..32] ~ ~ ~ 1 1.4
+particle wax_on ~ ~1 ~ 3 1 3 0.1 80
+particle end_rod ~ ~1 ~ 2 1 2 0.05 40
+execute as %(P8)s run function rpg:taint/sk7_take
+""", {
+        "sk7_take": """\
+xp add @s -20 points
+damage @s 3 minecraft:magic %(BY)s
+particle wax_on ~ ~1 ~ 0.3 0.5 0.3 0.05 16
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
+"""}),
+}
 
 
 def _rgb(hex_colour):
@@ -638,14 +738,40 @@ def wire_lords():
     branch, none = [], io.open(
         os.path.join(FUNC, "taint/lord.mcfunction"), encoding="utf-8").read()
     none = "\n".join(l for l in none.split("\n") if l and not l.startswith("#"))
+    sk = []
+    subs = {"BY": BY, "P6": PLAYERS % 6, "P7": PLAYERS % 7, "P8": PLAYERS % 8}
     for p in PILLARS:
         branch.append("execute if score #lord rpg_fall matches %d "
                       "run return run function rpg:taint/lord%d" % (p["n"], p["n"]))
         wf("taint/lord%d.mcfunction" % p["n"], LORD_ONE % {
-            "WHO": p["who"], "RGB": _rgb(p["colour"]),
+            "WHO": p["who"], "RGB": _rgb(p["colour"]), "N": p["n"],
             "NBT": ex.demon_nbt(p["who"], p["colour"], p["lit"])})
+
+        # 他那一手
+        body, extra = SKILLS[p["n"]]
+        sk.append("execute if entity @s[scores={rpg_dm_lord=%d}] "
+                  "run return run function rpg:taint/sk%d" % (p["n"], p["n"]))
+        wf("taint/sk%d.mcfunction" % p["n"], body % subs)
+        for name, text in extra.items():
+            wf("taint/%s.mcfunction" % name, text % subs)
+
+    # 别西卜那道锥形的命中段，六个取点共用一份
+    wf("taint/sk4_hit.mcfunction",
+       "damage @s 5 minecraft:magic %(BY)s\n"
+       "effect give @s minecraft:hunger 8 1 true\n"
+       "effect give @s minecraft:slowness 2 0 true\n" % subs)
+
     wf("taint/lord.mcfunction",
        LORD % {"BRANCH": "\n".join(branch), "NONE": none})
+    # add_exorcism 只写得出无名者那一手；这里改写成七柱分流，
+    # 最后一行仍然落回无名者（没签过约的人招出来的就是他）。
+    old_none = io.open(os.path.join(FUNC, "taint/skill.mcfunction"),
+                       encoding="utf-8").read()
+    old_none = "\n".join(l for l in old_none.split("\n")
+                          if l and not l.startswith("#"))
+    wf("taint/skill.mcfunction",
+       "# 谁在出手 —— 看他是哪一柱挣出来的。没有柱位的落到最后一行。\n"
+       + "\n".join(sk) + "\n" + old_none)
     return len(PILLARS)
 
 
