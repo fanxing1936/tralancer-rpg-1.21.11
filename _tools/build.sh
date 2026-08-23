@@ -10,6 +10,8 @@ echo
 echo "== 2. tick-path optimisation =="
 python optimize.py  ../rpg
 python opt_spawn.py ../rpg
+# 变种召唤的滚雪球：召出来的变种没打已处理标记，下一刻又被重掷一遍
+python opt_cascade.py ../rpg
 python opt_misc.py  ../rpg
 python add_items.py ../resourcepack ../rpg
 python add_skills.py ../rpg
@@ -34,6 +36,8 @@ python opt_mp.py ../rpg
 python opt_index.py ../rpg
 python opt_type.py ../rpg
 python opt_guard.py ../rpg
+# 把与 @s 无关的存在性判定从 as @e 循环里提出来（O(n²) -> O(n)）
+python opt_hoist.py ../rpg
 python opt_invert.py ../rpg
 echo
 echo "== 3. validation =="

@@ -1,6 +1,5 @@
 execute if entity @e[tag=devil] run function rpg:entities/warden/warden/g0
-execute as @e on attacker if entity @e[tag=devil] at @s run effect clear @s minecraft:invisibility
-execute as @e on attacker if entity @e[tag=devil] at @s run effect give @s minecraft:glowing 1 1 true
+execute if entity @e[tag=devil,limit=1] run function rpg:entities/warden/warden/h1
 
 execute as @e[tag=devil] at @s if score @s devil matches 200.. run scoreboard players set @s devil 0
 scoreboard players add @e[tag=devil] devil 1
