@@ -69,12 +69,41 @@ SWING = 13               # 攻击间隔（刻）—— 生物受伤后约 10 刻
 REACH = "3.4"            # 够得着的距离
 STRIDE = "0.22"          # 每刻迈出多远（别叫 STEP：下面有个同名模板）
 LEASH = 34               # 掉队多远直接归队
-SIGHT = 24               # 指挥旗的射线长度
+SIGHT = 24               # 指挥旗的射程（格）
+RAY_STEP_LEN = 0.5       # 射线的取点间隔。1 格太疏，小生物会从两点之间漏过去
+RAY_R = "0.7"            # 每个取点的命中半径。原来是 1.3 —— 那是根 2.6 格粗的管子
+
+# 指挥旗能指谁。射线与标记两处共用这一份 —— 分开写迟早改漏一处。
+#
+# 类型走 rpg:sq_ignore 标签（见 build_ignore_tag）；剩下三条是自己人：
+# rpg.merc 在编与待雇都带，rpg.sq.board 是骑在佣兵头上的那块信息板 ——
+# 不挡掉的话，往队友那边一指，标中的就是自家名牌。
+TARGET = ("type=!#rpg:sq_ignore,"
+          "tag=!rpg.squad,tag=!rpg.merc,tag=!rpg.sq.board,tag=!rpg.doll")
+
+# 不该被指挥旗当成敌人的实体类型。一律 required:false ——
+# 原版哪天改名或删掉某一个，整张标签也不会因此加载失败。
+IGNORE_TYPES = [
+    "#minecraft:impact_projectiles", "#minecraft:boat", "#minecraft:chest_boat",
+    "minecraft:player",
+    "minecraft:item", "minecraft:experience_orb", "minecraft:area_effect_cloud",
+    "minecraft:item_display", "minecraft:text_display", "minecraft:block_display",
+    "minecraft:marker", "minecraft:interaction", "minecraft:armor_stand",
+    "minecraft:painting", "minecraft:item_frame", "minecraft:glow_item_frame",
+    "minecraft:leash_knot", "minecraft:lightning_bolt", "minecraft:falling_block",
+    "minecraft:tnt", "minecraft:end_crystal", "minecraft:fishing_bobber",
+    "minecraft:eye_of_ender", "minecraft:firework_rocket", "minecraft:evoker_fangs",
+    "minecraft:ominous_item_spawner", "minecraft:minecart",
+    "minecraft:chest_minecart", "minecraft:furnace_minecart",
+    "minecraft:hopper_minecart", "minecraft:spawner_minecart",
+    "minecraft:tnt_minecart", "minecraft:command_block_minecart",
+]
 
 CUR = 'minecraft:raw_gold[minecraft:custom_data~{currency_tag:1b}]'
 
 OBJECTIVES = ["rpg_squad", "rpg_sq_mode", "rpg_sq_cd", "rpg_sq_t",
-              "rpg_sq_n", "rpg_sq_have", "rpg_sq_aim", "rpg_sq_stance"]
+              "rpg_sq_n", "rpg_sq_have", "rpg_sq_aim", "rpg_sq_stance",
+              "rpg_sq_tier", "rpg_sq_roll", "rpg_sq_fr"]
 
 RULE = ex.RULE
 seg, row, wf, wj = ex.seg, ex.row, ex.wf, ex.wj
@@ -127,6 +156,102 @@ def free_nbt():
 
 
 # ---------------------------------------------------------------------------
+# 五等佣兵
+# ---------------------------------------------------------------------------
+# 名字取自作者指定的序列（HAIKU 即作者写的 hakui，按 Claude 的模型名读）。
+#
+# atk 是**基础**攻击，不是玩家看到的数字：剑给生物的加成实测为
+# 木3 / 石4 / 铁5 / 钻6 / 下界合金7，所以 atk = 目标总攻击 − 起手剑加成。
+# 名牌下方显示的是读属性得到的**当前**值，换了武器会跟着变。
+# 整套盔甲各自加多少护甲点。原版护甲上限 30，所以图鉴报的是
+# min(30, 基础 + 整套) —— 那才是玩家在信息板上看到的数。
+SET_ARMOR = {"leather": 7, "chainmail": 12, "iron": 15,
+             "diamond": 20, "netherite": 20}
+
+SWORD_BONUS = {"wooden": 3, "stone": 4, "iron": 5, "diamond": 6, "netherite": 7}
+
+TIERS = [
+    dict(n=1, key="HAIKU",  colour="gray",    w=40, cut=40,
+         hp=30,  armor=1,  tough=0, atk=1, sword="wooden",    mat="leather",
+         trim=None,                   gear="皮革",     price=8),
+    dict(n=2, key="SONNET", colour="#57C6D6", w=28, cut=68,
+         hp=40,  armor=2,  tough=0, atk=2, sword="stone",     mat="chainmail",
+         trim=("coast", "copper"),    gear="锁链",     price=20),
+    dict(n=3, key="OPUS",   colour="#A275DE", w=18, cut=86,
+         hp=55,  armor=5,  tough=2, atk=3, sword="iron",      mat="iron",
+         trim=("ward", "iron"),       gear="铁",       price=40),
+    dict(n=4, key="FABLE",  colour="#D9A02B", w=10, cut=96,
+         hp=75,  armor=5,  tough=5, atk=5, sword="diamond",   mat="diamond",
+         trim=("silence", "gold"),    gear="钻石",     price=80),
+    dict(n=5, key="MYTHOS", colour="#FFD700", w=4,  cut=100,
+         hp=100, armor=10, tough=8, atk=8, sword="netherite", mat="netherite",
+         trim=("spire", "netherite"), gear="下界合金", price=160),
+]
+
+TRIM_CN = {"coast": "海岸", "ward": "守护", "silence": "沉寂", "spire": "尖塔"}
+
+TAG_Y = "0.7"        # 信息板相对骑乘位的高度（想贴近名牌就调这个）
+
+
+def _armour(t):
+    """一整套甲，带纹饰。盔甲属于等级、不可替换 —— 纹饰就是等级的徽记。"""
+    trim = ""
+    if t["trim"]:
+        trim = (',components:{"minecraft:trim":{pattern:"minecraft:%s",'
+                'material:"minecraft:%s"}}' % t["trim"])
+    slots = (("head", "helmet"), ("chest", "chestplate"),
+             ("legs", "leggings"), ("feet", "boots"))
+    return ",".join('%s:{id:"minecraft:%s_%s",count:1%s}'
+                    % (slot, t["mat"], piece, trim) for slot, piece in slots)
+
+
+def gear_text(t):
+    return t["gear"] + (("　·　%s纹饰" % TRIM_CN[t["trim"][0]]) if t["trim"] else "")
+
+
+def plate(t, free):
+    """名牌本身：佣兵 · MYTHOS。"""
+    return ('[{"text":"%s · ","color":"gray"},'
+            '{"text":"%s","color":"%s","bold":true}]'
+            % ("待雇" if free else "佣兵", t["key"], t["colour"]))
+
+
+def tier_nbt(t, free):
+    """一名佣兵。
+
+    Silent:1b —— 作者要求佣兵不出声。
+    drop_chances：武器掉、盔甲不掉 —— 武器是玩家塞进去的投入，盔甲属于等级。
+    """
+    return (
+        '{Tags:["%s","rpg.merc","rpg.sq.new"],'
+        'IsBaby:0b,Silent:1b,PersistenceRequired:1b,CustomNameVisible:1b,'
+        'CustomName:%s,Health:%df,'
+        'attributes:['
+        '{id:"max_health",base:%df},'
+        '{id:"attack_damage",base:%df},'
+        '{id:"armor",base:%df},'
+        '{id:"armor_toughness",base:%df},'
+        '{id:"follow_range",base:0f},'
+        '{id:"movement_speed",base:0f},'
+        '{id:"knockback_resistance",base:0.3f}],'
+        'equipment:{mainhand:{id:"minecraft:%s_sword",count:1},%s},'
+        'drop_chances:{mainhand:1f,head:0f,chest:0f,legs:0f,feet:0f}}'
+        % ("rpg.sq.free" if free else "rpg.squad", plate(t, free),
+           t["hp"], t["hp"], t["atk"], t["armor"], t["tough"],
+           t["sword"], _armour(t)))
+
+
+def board_nbt():
+    """信息板。文本一律由 rpg:squad/board 现算现写，这里只搭壳子。"""
+    return ('{Tags:["rpg.sq.board","rpg.sq.newboard"],'
+            'billboard:"center",alignment:"center",see_through:0b,'
+            'background:1610612736,'
+            'transformation:{translation:[0f,%sf,0f],left_rotation:[0f,0f,0f,1f],'
+            'scale:[0.55f,0.55f,0.55f],right_rotation:[0f,0f,0f,1f]},'
+            'text:[{"text":""}]}' % TAG_Y)
+
+
+# ---------------------------------------------------------------------------
 # 每刻
 # ---------------------------------------------------------------------------
 ROOT = """\
@@ -134,6 +259,40 @@ ROOT = """\
 # 只有一条玩家作用域判定；真正的遍历在雇主自己那一段里，而且限距。
 execute as @a[tag=rpg.sq.lead] at @s run function rpg:squad/lead
 execute as @a[scores={rpg_sq_t=1..}] run scoreboard players remove @s rpg_sq_t 1
+
+# 佣兵没了，骑在他身上的信息板会掉下来 —— 收走。带类型且限距，很便宜。
+execute if entity @e[type=minecraft:text_display,tag=rpg.sq.board,limit=1] run function rpg:squad/sweep
+
+# 刚到场的人，等装备的属性生效之后再画一次信息板。
+execute if entity @e[type=minecraft:husk,tag=rpg.sq.fresh,limit=1] run function rpg:squad/fresh
+"""
+
+FRESH = """# 刚到场那几刻反复补画。
+#
+# 装备带来的属性修饰符不是在 summon 那一刻就位的 —— 实测刚生出来读 armor
+# 得到的是没算装备的基数。到底几刻才稳没有保证，所以干脆连画 %(N)d 刻再收手：
+# 这段开销只在有人刚到场时存在，平时那道存在性判定直接落空。
+execute as @e[type=minecraft:husk,tag=rpg.sq.fresh] run function rpg:squad/board
+execute as @e[type=minecraft:husk,tag=rpg.sq.fresh] run scoreboard players add @s rpg_sq_fr 1
+tag @e[type=minecraft:husk,tag=rpg.sq.fresh,scores={rpg_sq_fr=%(N)d..}] remove rpg.sq.fresh
+"""
+
+SWEEP = """\
+# 收走没主人的信息板。
+#
+# 原本用 `distance=..1.5` 判断「附近还有没有佣兵」—— 那是错的：
+# 板是**骑**在佣兵身上的，骑乘位比脚下高一截，这个距离量出来够不着，
+# 结果板刚生出来就被自己人扫掉，五等佣兵的名牌下方一直是空的。
+#
+# 改成问它「还骑着东西吗」。骑着就有 vehicle；主人一死，乘客当场被甩下来，
+# vehicle 就没了。精确，而且与距离无关。
+execute as @e[type=minecraft:text_display,tag=rpg.sq.board] run function rpg:squad/sweep_one
+"""
+
+SWEEP_ONE = """\
+scoreboard players set #ride rpg_squad 0
+execute on vehicle run scoreboard players set #ride rpg_squad 1
+execute if score #ride rpg_squad matches 0 run kill @s
 """
 
 LEAD = """\
@@ -216,7 +375,6 @@ function rpg:squad/strike_do with storage rpg:squad
 tag @s remove rpg.sq.striker
 particle sweep_attack ~ ~1 ~ 0.2 0.2 0.2 0 1
 playsound minecraft:entity.player.attack.sweep hostile @a[distance=..16] ~ ~ ~ 0.7 1.1
-playsound minecraft:entity.husk.ambient hostile @a[distance=..16] ~ ~ ~ 0.5 0.8
 """
 
 STRIKE_DO = """\
@@ -260,17 +418,52 @@ function rpg:squad/post
 """
 
 POST = """\
-# 招一个待雇者到场。他不属于任何人：不跟随、不出手，就站在那儿等价钱。
-execute at @s anchored eyes positioned ^ ^ ^2 run function rpg:squad/post_at
-title @s actionbar ["",{"text":"待雇佣兵已到场","color":"%(GOLD)s"},{"text":"　再次长按雇下他","color":"gray","italic":true}]
+# 招一个待雇者到场，等级当场掷点 —— 甲、纹饰、基础数值与价钱全由这一掷定下。
+# 掷完你看着名牌决定雇不雇，这才叫募兵。
+execute store result score @s rpg_sq_roll run random value 1..100
+%(ROLL)s
 playsound minecraft:entity.villager.trade player @s ~ ~ ~ 1 0.9
+"""
+
+POST_ONE = """\
+# %(KEY)s —— %(GEAR)s甲，❤%(HP)d ⛊%(ARMOR)d，价钱 %(PRICE)d 枚
+execute at @s anchored eyes positioned ^ ^ ^2 run function rpg:squad/post%(N)d_at
+title @s actionbar ["",{"text":"待雇 · %(KEY)s","color":"%(COLOUR)s","bold":true},{"text":"　%(PRICE)d 枚　再次长按雇下他","color":"gray","italic":true}]
 """
 
 POST_AT = """\
 summon minecraft:husk ~ ~ ~ %(NBT)s
+summon minecraft:text_display ~ ~ ~ %(BOARD)s
+execute as @e[type=minecraft:husk,tag=rpg.sq.new] run scoreboard players set @s rpg_sq_tier %(N)d
+# 信息板骑在他身上 —— 跟着走，不必每刻 tp，也就没有一刻的延迟
+execute as @e[type=minecraft:text_display,tag=rpg.sq.newboard] run ride @s mount @e[type=minecraft:husk,tag=rpg.sq.new,limit=1,sort=nearest]
+tag @e[tag=rpg.sq.newboard] remove rpg.sq.newboard
+# 信息板**下一刻**再画。装备是随 summon 一起给的，而它带来的属性修饰符
+# 这一刻还没挂上 —— 现在读 armor 会少一截（实测 20，下一刻才是 30）。
+tag @e[type=minecraft:husk,tag=rpg.sq.new] add rpg.sq.fresh
+tag @e[type=minecraft:husk,tag=rpg.sq.new] remove rpg.sq.new
 particle happy_villager ~ ~1 ~ 0.4 0.6 0.4 0.05 24
 particle end_rod ~ ~1 ~ 0.3 0.5 0.3 0.02 12
 """
+
+BOARD = """\
+# 名牌**下方**那块信息板。实体名牌只渲染一行，换行符不生效，
+# 所以另挂一个 text_display 骑在身上。
+#
+# 三个数都是**现读的属性**，不是写死的 —— 换了武器攻击数字跟着变。
+%(GEAR)s
+execute store result storage rpg:squad hp int 1 run attribute @s minecraft:max_health get
+execute store result storage rpg:squad ar int 1 run attribute @s minecraft:armor get
+execute store result storage rpg:squad atk int 1 run attribute @s minecraft:attack_damage get
+function rpg:squad/board_do with storage rpg:squad
+"""
+
+BOARD_DO = """\
+# 宏展开的那一行。信息板是骑在佣兵身上的那个 text_display。
+$execute on passengers run data modify entity @s text set value ["",{"text":"$(gear)","color":"gray"},{"text":"\\n"},{"text":"❤ $(hp)","color":"red"},{"text":"　⛊ $(ar)","color":"#8FA1B3"},{"text":"　⚔ $(atk)","color":"#D4AF37"}]
+"""
+
+
 
 ENLIST = """\
 # 眼前有一个待雇者。数一数已经有几个人，再看钱够不够。
@@ -282,9 +475,19 @@ execute as @e[type=minecraft:husk,tag=rpg.squad] if score @s rpg_squad = #sq rpg
 scoreboard players operation @s rpg_sq_n = #cnt rpg_squad
 execute if entity @s[scores={rpg_sq_n=%(CAP)d..}] run return run function rpg:squad/full
 
+scoreboard players set #tier rpg_squad 0
+execute as @e[type=minecraft:husk,tag=rpg.sq.free,distance=..%(NEAR)d,limit=1,sort=nearest] run scoreboard players operation #tier rpg_squad = @s rpg_sq_tier
+
 # 手上有多少钱。`clear ... 0` 是**只数不拿**，原版惯用写法。
 execute store result score @s rpg_sq_have run clear @s %(CUR)s 0
 %(BRANCH)s
+"""
+
+BUY_ONE = """\
+# %(KEY)s：%(PRICE)d 枚。
+execute if entity @s[scores={rpg_sq_have=..%(SHORT)d}] run return run function rpg:squad/poor
+clear @s %(CUR)s %(PRICE)d
+function rpg:squad/sign_on
 """
 
 SIGN_ON = """\
@@ -302,7 +505,8 @@ tag @s add rpg.squad
 scoreboard players operation @s rpg_squad = #sq rpg_squad
 scoreboard players set @s rpg_sq_mode 0
 scoreboard players set @s rpg_sq_cd 0
-data modify entity @s CustomName set value [{"text":"佣兵","color":"%(STEEL)s"}]
+%(RENAME)s
+function rpg:squad/board
 particle happy_villager ~ ~1.6 ~ 0.3 0.3 0.3 0.1 30
 particle end_rod ~ ~1 ~ 0.3 0.5 0.3 0.03 16
 """
@@ -314,12 +518,6 @@ scoreboard players set @s rpg_sq_stance 0
 tag @s add rpg.sq.lead
 """
 
-HIRE_N = """\
-# 第 %(N)d 名，价钱 %(PRICE)d 枚。
-execute if entity @s[scores={rpg_sq_have=..%(SHORT)d}] run return run function rpg:squad/poor
-clear @s %(CUR)s %(PRICE)d
-function rpg:squad/sign_on
-"""
 
 POOR = """\
 title @s actionbar ["",{"text":"钱不够","italic":true,"color":"red"}]
@@ -331,24 +529,7 @@ title @s actionbar ["",{"text":"小队已满员","italic":true,"color":"gray"}]
 playsound minecraft:entity.villager.no player @s ~ ~ ~ 1 1.2
 """
 
-SPAWN = """\
-# 在雇主身前两格把人召出来。
-execute at @s anchored eyes positioned ^ ^ ^2 run function rpg:squad/spawn_at
-scoreboard players add @s rpg_sq_n 1
-title @s actionbar ["",{"text":"佣兵已入队","color":"%(GOLD)s"}]
-playsound minecraft:entity.villager.yes player @s ~ ~ ~ 1 1
-playsound minecraft:block.anvil_use player @a[distance=..12] ~ ~ ~ 0.6 1.4
-"""
 
-SPAWN_AT = """\
-summon minecraft:husk ~ ~ ~ %(NBT)s
-execute as @e[type=minecraft:husk,tag=rpg.sq.new] run scoreboard players operation @s rpg_squad = #sq rpg_squad
-execute as @e[type=minecraft:husk,tag=rpg.sq.new] run scoreboard players set @s rpg_sq_mode 0
-execute as @e[type=minecraft:husk,tag=rpg.sq.new] run scoreboard players set @s rpg_sq_cd 0
-tag @e[type=minecraft:husk,tag=rpg.sq.new] remove rpg.sq.new
-particle happy_villager ~ ~1 ~ 0.4 0.6 0.4 0.05 30
-particle end_rod ~ ~1 ~ 0.3 0.5 0.3 0.02 16
-"""
 
 
 # ---------------------------------------------------------------------------
@@ -390,6 +571,8 @@ item replace entity @a[tag=rpg.sq.boss,limit=1] weapon.offhand with air
 particle enchant ~ ~1.4 ~ 0.3 0.4 0.3 0.6 24
 playsound minecraft:item.armor.equip_iron player @a[distance=..12] ~ ~ ~ 1 1.1
 title @a[tag=rpg.sq.boss,limit=1] actionbar ["",{"text":"已配装","color":"%(GOLD)s"}]
+# 攻击数字是现读的属性，换完武器要重画一次信息板
+function rpg:squad/board
 """
 
 FIRE_NEAR = """\
@@ -452,21 +635,21 @@ scoreboard players reset @s rpg_sq_aim
 """
 
 RAY = """\
-# 视线上的 %(SIGHT)d 段。`positioned ^ ^ ^N` 取点，命中即 return，不用递归。
+# 视线上的 %(SIGHT)d 格，每 %(LEN)s 格取一个点。`positioned ^ ^ ^N` 取点，
+# 命中即 return，不用递归。取点间隔比命中半径小 —— 否则小生物会从两点之间漏过去。
 %(STEPS)s
 function rpg:squad/miss
 """
 
-RAY_STEP = ("execute positioned ^ ^ ^%(D)d unless block ~ ~ ~ #minecraft:replaceable "
+RAY_STEP = ("execute positioned ^ ^ ^%(D)s unless block ~ ~ ~ #minecraft:replaceable "
             "run return run function rpg:squad/miss\n"
-            "execute positioned ^ ^ ^%(D)d if entity @e[distance=..1.3,"
-            "type=!player,type=!minecraft:item,type=!minecraft:experience_orb,"
-            "type=!minecraft:item_display,tag=!rpg.squad,limit=1] "
+            "execute positioned ^ ^ ^%(D)s if entity @e[distance=..%(R)s,"
+            "%(T)s,limit=1] "
             "run return run function rpg:squad/mark")
 
 MARK = """\
 # 找到了。标记目标，全队转入交战。
-execute as @e[distance=..1.3,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,tag=!rpg.squad,limit=1,sort=nearest] run function rpg:squad/mark_one
+execute as @e[distance=..%(R)s,%(T)s,limit=1,sort=nearest] run function rpg:squad/mark_one
 execute as @e[type=minecraft:husk,tag=rpg.squad] if score @s rpg_squad = #sq rpg_squad run scoreboard players set @s rpg_sq_mode 2
 particle crit ~ ~ ~ 0.3 0.3 0.3 0.2 20
 playsound minecraft:entity.husk.ambient hostile @a[distance=..20] ~ ~ ~ 1 0.7
@@ -536,10 +719,20 @@ DISMISS = """\
 execute if items entity @s weapon.mainhand *[] run function rpg:squad/drop_weapon
 execute at @s run particle poof ~ ~1 ~ 0.4 0.6 0.4 0.05 40
 execute at @s run playsound minecraft:entity.husk.death hostile @a[distance=..16] ~ ~ ~ 0.7 1.2
-execute at @s run loot spawn ~ ~1 ~ loot rpg:squad/refund
+%(REFUND)s
 title @a[tag=rpg.sq.boss,limit=1] actionbar ["",{"text":"已解雇","italic":true,"color":"gray"}]
 kill @s
 """
+
+
+def build_ignore_tag():
+    """指挥旗的类型黑名单。
+
+    写成实体类型标签而不是一长串 `type=!...`：选择器里那串要在两个地方
+    各抄一遍，迟早改漏一处；标签只有一份。
+    """
+    wj(os.path.join(DP, "data/rpg/tags/entity_type/sq_ignore.json"),
+       {"values": [{"id": t, "required": False} for t in IGNORE_TYPES]})
 
 
 def build_functions():
@@ -556,29 +749,50 @@ def build_functions():
     wf("squad/set_mark.mcfunction", SET_MARK)
     wf("squad/stand_down.mcfunction", STAND_DOWN)
 
-    branch = []
-    for n in range(CAP):
-        price = COST * (n + 1)
-        # return run：不加的话命中一档之后人数变了，下一档也会成立
-        branch.append("execute if entity @s[scores={rpg_sq_n=%d}] "
-                      "run return run function rpg:squad/hire%d" % (n, n))
-        wf("squad/hire%d.mcfunction" % n,
-           HIRE_N % {"N": n + 1, "PRICE": price, "SHORT": price - 1, "CUR": CUR})
+    # ---- 五等：招募掷点、按等级定价、按等级换名牌 ----
+    roll, buy, rename, gear = [], [], [], []
+    lo = 1
+    for t in TIERS:
+        roll.append("execute if score @s rpg_sq_roll matches %d..%d "
+                    "run return run function rpg:squad/post%d" % (lo, t["cut"], t["n"]))
+        lo = t["cut"] + 1
+        wf("squad/post%d.mcfunction" % t["n"], POST_ONE % {
+            "N": t["n"], "KEY": t["key"], "COLOUR": t["colour"],
+            "GEAR": t["gear"], "HP": t["hp"], "ARMOR": t["armor"],
+            "PRICE": t["price"]})
+        wf("squad/post%d_at.mcfunction" % t["n"], POST_AT % {
+            "N": t["n"], "NBT": tier_nbt(t, True), "BOARD": board_nbt()})
+
+        buy.append("execute if score #tier rpg_squad matches %d "
+                   "run return run function rpg:squad/buy%d" % (t["n"], t["n"]))
+        wf("squad/buy%d.mcfunction" % t["n"], BUY_ONE % {
+            "KEY": t["key"], "PRICE": t["price"],
+            "SHORT": t["price"] - 1, "CUR": CUR})
+
+        rename.append("execute if entity @s[scores={rpg_sq_tier=%d}] "
+                      "run data modify entity @s CustomName set value %s"
+                      % (t["n"], plate(t, False)))
+        gear.append("execute if entity @s[scores={rpg_sq_tier=%d}] "
+                    "run data modify storage rpg:squad gear set value '%s'"
+                    % (t["n"], gear_text(t)))
+
     wf("squad/hire.mcfunction", HIRE % {"LOCK": LOCK, "NEAR": 6})
-    wf("squad/post.mcfunction", POST % {"GOLD": GOLD})
-    wf("squad/post_at.mcfunction", POST_AT % {"NBT": free_nbt()})
+    wf("squad/post.mcfunction", POST % {"ROLL": "\n".join(roll)})
     wf("squad/enlist.mcfunction",
-       ENLIST % {"CAP": CAP, "CUR": CUR, "BRANCH": "\n".join(branch)})
+       ENLIST % {"CAP": CAP, "CUR": CUR, "NEAR": 6, "BRANCH": "\n".join(buy)})
     wf("squad/sign_on.mcfunction", SIGN_ON % {"NEAR": 6, "GOLD": GOLD})
-    wf("squad/sign_one.mcfunction", SIGN_ONE % {"STEEL": STEEL})
+    wf("squad/sign_one.mcfunction", SIGN_ONE % {"RENAME": "\n".join(rename)})
+    wf("squad/board.mcfunction", BOARD % {"GEAR": "\n".join(gear)})
+    wf("squad/board_do.mcfunction", BOARD_DO)
     wf("squad/enroll.mcfunction", ENROLL)
     wf("squad/poor.mcfunction", POOR)
     wf("squad/full.mcfunction", FULL)
-    wf("squad/spawn.mcfunction", SPAWN % {"GOLD": GOLD})
-    wf("squad/spawn_at.mcfunction", SPAWN_AT % {"NBT": member_nbt()})
 
     wf("squad/order.mcfunction", ORDER % {"LOCK": LOCK})
     wf("squad/no_squad.mcfunction", NO_SQUAD)
+    wf("squad/sweep.mcfunction", SWEEP)
+    wf("squad/sweep_one.mcfunction", SWEEP_ONE)
+    wf("squad/fresh.mcfunction", FRESH % {"N": 6})
     wf("squad/handover.mcfunction", HANDOVER)
     wf("squad/give_weapon.mcfunction", GIVE_WEAPON % {"GOLD": GOLD})
     wf("squad/fire_near.mcfunction", FIRE_NEAR)
@@ -588,16 +802,26 @@ def build_functions():
     wf("squad/say_hold.mcfunction", SAY_HOLD % {"STEEL": STEEL})
     wf("squad/aim.mcfunction", AIM)
     wf("squad/unaim.mcfunction", UNAIM)
-    steps = "\n".join(RAY_STEP % {"D": d} for d in range(1, SIGHT + 1))
-    wf("squad/ray.mcfunction", RAY % {"SIGHT": SIGHT, "STEPS": steps})
-    wf("squad/mark.mcfunction", MARK)
+    # 步长 0.5：1 格的间隔会让小生物从两个取点之间漏过去。
+    # 只在按下指挥旗那一刻跑一次，不是每刻 —— 多一倍的取点不进每刻开销。
+    dists = [i * RAY_STEP_LEN for i in range(1, int(SIGHT / RAY_STEP_LEN) + 1)]
+    steps = "\n".join(RAY_STEP % {"D": ("%g" % d), "R": RAY_R, "T": TARGET}
+                      for d in dists)
+    wf("squad/ray.mcfunction",
+       RAY % {"SIGHT": SIGHT, "LEN": ("%g" % RAY_STEP_LEN), "STEPS": steps})
+    wf("squad/mark.mcfunction", MARK % {"R": RAY_R, "T": TARGET})
+    build_ignore_tag()
     wf("squad/mark_one.mcfunction", MARK_ONE)
     wf("squad/miss.mcfunction", MISS)
 
     wf("squad/on_member.mcfunction", ON_MEMBER)
     wf("squad/take_weapon.mcfunction", TAKE_WEAPON % {"GOLD": GOLD})
     wf("squad/drop_weapon.mcfunction", DROP_WEAPON)
-    wf("squad/dismiss.mcfunction", DISMISS)
+    refund = "\n".join(
+        "execute at @s if entity @s[scores={rpg_sq_tier=%d}] "
+        "run loot spawn ~ ~1 ~ loot rpg:squad/refund%d" % (t["n"], t["n"])
+        for t in TIERS)
+    wf("squad/dismiss.mcfunction", DISMISS % {"REFUND": refund})
 
     # 潜行判定。指挥旗那次问的是玩家自己，配装那次问的是身上挂着 boss 标签的人。
     wj(os.path.join(PRED, "sneaking.json"),
@@ -622,16 +846,20 @@ def build_functions():
     # 右键没有任何行为 —— 对它永远不响；可对**会被消费**的交互却会响，
     # 比如拿拴绳右键，那会把拴绳"装备"给佣兵。配装改走副手 + 指挥旗。
 
-    # 解雇退款：一半雇金，按最便宜的一档算
-    wj(os.path.join(DP, "data/rpg/loot_table/squad/refund.json"), {
-        "type": "minecraft:generic",
-        "pools": [{"rolls": 1, "entries": [
-            {"type": "minecraft:item", "name": "minecraft:raw_gold",
-             "functions": [
-                 {"function": "minecraft:set_count",
-                  "count": COST // 2},
-                 {"function": "minecraft:set_components",
-                  "components": {"minecraft:custom_data": {"currency_tag": True}}}]}]}]})
+    # 解雇退款：各退该等雇价的一半。一等一张表 ——
+    # 掉落表里的数量只能是字面量，没法读记分板。
+    for t in TIERS:
+        wj(os.path.join(DP,
+                        "data/rpg/loot_table/squad/refund%d.json" % t["n"]), {
+            "type": "minecraft:generic",
+            "pools": [{"rolls": 1, "entries": [
+                {"type": "minecraft:item", "name": "minecraft:raw_gold",
+                 "functions": [
+                     {"function": "minecraft:set_count",
+                      "count": t["price"] // 2},
+                     {"function": "minecraft:set_components",
+                      "components": {
+                          "minecraft:custom_data": {"currency_tag": True}}}]}]}]})
 
     tick = os.path.join(FUNC, "command/tick.mcfunction")
     s = io.open(tick, encoding="utf-8").read()
@@ -737,6 +965,23 @@ def tag_currency():
     return n
 
 
+def dump_for_guide():
+    """把五等交给图鉴，免得两边各写一份、迟早写歪。
+
+    与 add_pact 的 _pact.json 同一套路：数值只在这个文件里有一份。
+    """
+    wj(os.path.join(DP, "..", "_squad.json"),
+       {"cap": CAP, "sight": SIGHT, "leash": LEASH, "cd": 13,
+        "tiers": [{"n": t["n"], "key": t["key"], "colour": t["colour"],
+                   "w": t["w"], "hp": t["hp"], "armor": t["armor"],
+                   "atk": t["atk"], "sword": t["sword"], "gear": gear_text(t),
+                   "tough": t["tough"],
+                   "armor_real": min(30, t["armor"] + SET_ARMOR[t["mat"]]),
+                   "price": t["price"],
+                   "total": t["atk"] + SWORD_BONUS[t["sword"]]}
+                  for t in TIERS]})
+
+
 def add_objectives():
     p = os.path.join(FUNC, "command/soreboard.mcfunction")
     s = io.open(p, encoding="utf-8").read()
@@ -752,6 +997,7 @@ def main():
     obj = add_objectives()
     build_functions()
     gave = build_give()
+    dump_for_guide()
     cur = tag_currency()
     batch = guard_spawn_batch()
     print("squad: cap %d (husk), give +%d, currency tagged %d, spawn-batch guarded %d"

@@ -1,0 +1,4 @@
+# 萨麦尔。契约不是租约：借过的力，最后会自己来取回去。
+summon minecraft:wither_skeleton ~ ~1 ~ {Tags:["rpg.advent","rpg.demon","devil","rpg.advent.new"],Johnny:1,Silent:1b,PersistenceRequired:1b,CustomName:[{"text":"[DEVIL]","color":"#7B241C","bold":true,"italic":false},{"text":"萨麦尔","color":"red","italic":false}],Health:120f,active_effects:[{id:"invisibility",duration:-1,amplifier:0,show_particles:0b},{id:"speed",duration:-1,amplifier:1,show_particles:0b}],attributes:[{id:"max_health",base:120f},{id:"attack_damage",base:11f},{id:"attack_knockback",base:2f},{id:"armor",base:8f},{id:"follow_range",base:48f},{id:"knockback_resistance",base:0.5f}],drop_chances:{mainhand:0f}}
+particle dust{color:[0.48,0.14,0.11],scale:3} ~ ~1.2 ~ 0.8 1 0.8 0.05 70
+playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..48] ~ ~ ~ 1 0.5

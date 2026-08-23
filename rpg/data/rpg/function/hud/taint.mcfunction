@@ -1,3 +1,5 @@
+execute if entity @s[tag=rpg.taint.full] run return run function rpg:hud/tfall
+
 # 先把魔化换算成格数，再按档分流 —— 每档的颜色与措辞不同。
 scoreboard players operation @s rpg_hud_p = @s rpg_taint
 scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud

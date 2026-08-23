@@ -10,4 +10,3 @@ function rpg:squad/strike_do with storage rpg:squad
 tag @s remove rpg.sq.striker
 particle sweep_attack ~ ~1 ~ 0.2 0.2 0.2 0 1
 playsound minecraft:entity.player.attack.sweep hostile @a[distance=..16] ~ ~ ~ 0.7 1.1
-playsound minecraft:entity.husk.ambient hostile @a[distance=..16] ~ ~ ~ 0.5 0.8

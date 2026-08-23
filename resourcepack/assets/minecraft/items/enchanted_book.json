@@ -1,0 +1,62 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/enchanted_book"
+    },
+    "entries": [
+      {
+        "threshold": 1110031,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/pact_lucifer"
+        }
+      },
+      {
+        "threshold": 1110032,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/pact_leviathan"
+        }
+      },
+      {
+        "threshold": 1110033,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/pact_abaddon"
+        }
+      },
+      {
+        "threshold": 1110034,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/pact_beelzebub"
+        }
+      },
+      {
+        "threshold": 1110035,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/pact_samael"
+        }
+      },
+      {
+        "threshold": 1110036,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/pact_belial"
+        }
+      },
+      {
+        "threshold": 1110037,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/pact_mammon"
+        }
+      }
+    ]
+  }
+}

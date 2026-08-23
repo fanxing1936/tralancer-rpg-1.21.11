@@ -1871,7 +1871,7 @@
    "conditions": 0
   }
  ],
- "rpg:squad/refund": [
+ "rpg:squad/refund1": [
   {
    "rolls": [
     1,
@@ -1890,6 +1890,126 @@
      "count": [
       4,
       4
+     ],
+     "components": {
+      "minecraft:custom_data": {
+       "currency_tag": true
+      }
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:squad/refund2": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      10,
+      10
+     ],
+     "components": {
+      "minecraft:custom_data": {
+       "currency_tag": true
+      }
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:squad/refund3": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      20,
+      20
+     ],
+     "components": {
+      "minecraft:custom_data": {
+       "currency_tag": true
+      }
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:squad/refund4": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      40,
+      40
+     ],
+     "components": {
+      "minecraft:custom_data": {
+       "currency_tag": true
+      }
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:squad/refund5": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:raw_gold",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": [
+      80,
+      80
      ],
      "components": {
       "minecraft:custom_data": {

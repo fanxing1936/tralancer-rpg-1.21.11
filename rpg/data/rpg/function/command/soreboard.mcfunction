@@ -162,9 +162,11 @@ scoreboard objectives add rpg_totem dummy
 scoreboard objectives add rpg_holy dummy
 scoreboard objectives add rpg_vac_x dummy
 scoreboard objectives add rpg_hud_on dummy
+scoreboard objectives add rpg_fall dummy
 scoreboard players set #hud_seg rpg_hud 10
 scoreboard players set #hud_full rpg_hud 30
 scoreboard players set #taint_max rpg_hud 100
+scoreboard players set #fall_max rpg_hud 60
 scoreboard players set #inv_full rpg_hud 200
 scoreboard players set #holy_full rpg_hud 3600
 scoreboard objectives add rpg_pact dummy
@@ -180,6 +182,14 @@ scoreboard objectives add rpg_sq_n dummy
 scoreboard objectives add rpg_sq_have dummy
 scoreboard objectives add rpg_sq_aim dummy
 scoreboard objectives add rpg_sq_stance dummy
+scoreboard objectives add rpg_sq_tier dummy
+scoreboard objectives add rpg_sq_roll dummy
+scoreboard objectives add rpg_sq_fr dummy
+scoreboard objectives add rpg_mam dummy
+scoreboard objectives add rpg_mam_c dummy
+scoreboard objectives add rpg_mam_win dummy
+scoreboard objectives add rpg_mam_dw dummy
+scoreboard players set #mam_full rpg_hud 40
 scoreboard objectives add rpg_hud_m dummy
 scoreboard objectives add rpg_hud_mt dummy
 scoreboard objectives add rpg_inv dummy

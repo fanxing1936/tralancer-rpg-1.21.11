@@ -1,6 +1,6 @@
 execute as @e at @s on attacker if entity @s[scores={saber=0..},tag=rpg.h.saber_tag1] store result score @s random run random value 1..10
 execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run effect give @e[limit=1,sort=nearest] wither 10 40 true
-execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":2,"Fuse":0}
+execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":2,ignited:1b}
 execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] positioned ~ ~2 ~ run function rpg:item/sword/legend/saber/flame
 execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run effect give @s resistance 5 10 false
 execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run particle dust_color_transition{from_color:[1.0,0.36,0.83],to_color:[1.0,1.0,1.0],scale:1} ~0.5 ~1.5 ~0.5 -1 -1 -1 1 20

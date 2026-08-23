@@ -21,8 +21,10 @@ python add_leviathan.py ../resourcepack ../rpg
 python add_runes.py ../rpg ../resourcepack
 python add_epics.py ../resourcepack ../rpg
 python add_exorcism.py ../rpg
-python add_pact.py ../rpg
+python add_pact.py ../rpg ../resourcepack
 python add_squad.py ../rpg
+# 玛门：七宗罪的最后一件罪器（弓）。要在 add_pact 之后 —— 税与买断都认柱位
+python add_mammon.py ../rpg ../resourcepack
 # 把包里原有的三件驱魔道具（替死人偶／圣水／天启星）接进驱魔体系
 python add_holy_items.py ../rpg
 python retype_longinus.py ../resourcepack ../rpg

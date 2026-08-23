@@ -38,6 +38,7 @@ HUD_TTL = 3              # 技能占用 HUD 的时效（刻）
 
 # HUD 占用编号
 HUD_ANCHOR, HUD_FORGE, HUD_VINE, HUD_INVERT = 1, 2, 3, 4
+HUD_MAMMON = 5           # 玛门的弓：满弓之后继续攒，攒满就是买断
 
 LIT = 200                # 图腾点燃后的总时长（刻）
 PULSES = [(200, 12, "1.0"), (160, 10, "0.88"), (120, 8, "0.74"),
@@ -55,7 +56,30 @@ SPREAD_ODDS = 4          # 每拍 1/N 的概率向外伸手
 
 OBJECTIVES = ["rpg_taint", "rpg_hud", "rpg_hud_p", "rpg_hud_t",
               "rpg_taint_t", "rpg_vac", "rpg_rite", "rpg_totem",
-              "rpg_holy", "rpg_vac_x", "rpg_hud_on"]
+              "rpg_holy", "rpg_vac_x", "rpg_hud_on", "rpg_fall"]
+
+# ---------------------------------------------------------------------------
+# 堕落
+# ---------------------------------------------------------------------------
+# 满魔化之后的下坡路。走完就有东西从人身上挣出来。
+#
+# 拍子借魔化那口时钟（40 刻一拍），过半之后一拍两步 —— 堕落自己会加速。
+# 所以 60 步不是 120 秒，是 90 秒。
+FALL_MAX = 60
+
+# 降临出来的那位。底子与特效沿用包里已有的恶魔 boss（见 demon_nbt）。
+DEMON_HP = 120
+DEMON_ATK = 11
+DEMON_SEE = 48
+DEMON_LIFE = 600         # 30 秒后自己散掉 —— 作者指定
+
+# 下限 / 上限 / 攻击加成 / 颜色 / 档名
+FALL_TIERS = [
+    (1,  15, 1,  "gray",        "躁　动"),
+    (16, 30, 3,  "dark_purple", "侵　蚀"),
+    (31, 45, 6,  "red",         "夺　舍"),
+    (46, 59, 10, "dark_red",    "临　界"),
+]
 
 RULE = '["",{"text":"+------------------+","italic":false,"color":"white"}]'
 
@@ -118,7 +142,8 @@ def build_hud():
     skills = [(HUD_ANCHOR, "沉　锚", "dark_aqua", "aqua"),
               (HUD_FORGE, "熔　流", "gold", "yellow"),
               (HUD_VINE, "缠　绕", "dark_green", "green"),
-              (HUD_INVERT, "逆圣化", "dark_red", "gold")]
+              (HUD_INVERT, "逆圣化", "dark_red", "gold"),
+              (HUD_MAMMON, "买　断", "#7A5C00", "#FFD700")]
 
     # ---- 调度层 ----
     top = ["# 屏幕下方唯一的 actionbar 出口。技能不再各写各的 —— 它们只更新",
@@ -162,6 +187,10 @@ def build_hud():
     for i, (lo, hi, colour, word) in enumerate(TAINT_TIERS, 1):
         disp.append("execute if entity @s[scores={rpg_taint=%d..%d}] run function rpg:hud/t%d"
                     % (max(lo, 1), hi, i))
+    # 堕落开始之后这条位置改画堕落：魔化已经钉死在满值，没什么可看的了。
+    disp.insert(0, "execute if entity @s[tag=rpg.taint.full] "
+                   "run return run function rpg:hud/tfall")
+    disp.insert(1, "")
     wf("hud/taint.mcfunction", "\n".join(disp))
     total += len(disp)
 
@@ -177,6 +206,20 @@ def build_hud():
                         "run data modify storage rpg:hud a set value '%s'" % (n, comp))
         wf("hud/t%d.mcfunction" % i, "\n".join(body))
         total += len(body)
+
+    # ---- 堕落条：魔化满了之后顶替它 ----
+    body = ["# 堕落条。魔化钉死在满值之后，这条位置改报还剩多久。",
+            "scoreboard players set @s rpg_hud_on 1",
+            "scoreboard players operation @s rpg_hud_p = @s rpg_fall",
+            "scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud",
+            "scoreboard players operation @s rpg_hud_p /= #fall_max rpg_hud"]
+    for n in range(SEGMENTS + 1):
+        comp = row(seg("堕落 ", "dark_red"), *bar(n, SEGMENTS, "dark_red", "#3D2226"),
+                   seg("  降临将至", "dark_red"))
+        body.append("execute if entity @s[scores={rpg_hud_p=%d}] "
+                    "run data modify storage rpg:hud a set value '%s'" % (n, comp))
+    wf("hud/tfall.mcfunction", "\n".join(body))
+    total += len(body)
 
     # ---- 圣痕条：魔化条的反面，同一个位置 ----
     body = ["# 圣痕条。逆圣化之后剩下的时间 —— 它走完，人就落回凡人。",
@@ -273,16 +316,143 @@ execute if entity @s[scores={rpg_taint=91..},tag=rpg.h.holy_weapon_tag1] run pla
 # 满值只报一次 —— 否则每两秒弹一遍标题，没人受得了。
 execute if entity @s[scores={rpg_taint=%(MAX)d},tag=!rpg.taint.full] run function rpg:taint/full
 execute if entity @s[scores={rpg_taint=..%(NEAR)d},tag=rpg.taint.full] run tag @s remove rpg.taint.full
+
+# 到顶之后每一拍都往下掉一步。借的是同一口时钟，不另起。
+execute if entity @s[tag=rpg.taint.full] run function rpg:taint/fall
 """
 
 TAINT_FULL = """\
-# 魔化到顶。这一刻不是死路 —— 是唯一的岔路口。
+# 魔化到顶。这里**不给出路** —— 逆圣化还在，但不再有人告诉你它存在。
 tag @s add rpg.taint.full
-title @s times 10 60 20
-title @s title ["",{"text":"魔 化 已 满","italic":false,"color":"dark_red","bold":true}]
-title @s subtitle ["",{"text":"立起驱魔图腾，浇上圣水 —— 反转","italic":false,"color":"gold"}]
-playsound minecraft:entity.wither.spawn master @s ~ ~ ~ 0.5 1.8
+scoreboard players set @s rpg_fall 0
+title @s times 10 70 25
+title @s title ["",{"text":"堕 落 开 始","italic":false,"color":"dark_red","bold":true}]
+title @s subtitle ["",{"text":"你手上的力量正在变大 —— 那不是你的","italic":false,"color":"dark_gray","italic":true}]
+playsound minecraft:entity.wither.spawn master @s ~ ~ ~ 0.6 1.6
+playsound minecraft:entity.warden.heartbeat master @s ~ ~ ~ 1 0.5
 execute at @s run particle sculk_charge_pop ~ ~1.2 ~ 0.4 0.6 0.4 0.05 30
+"""
+
+# ---------------------------------------------------------------------------
+# 堕落的每一拍
+# ---------------------------------------------------------------------------
+FALL = """\
+# 一拍堕落。过半之后一拍两步 —— 越往下掉得越快。
+scoreboard players add @s rpg_fall 1
+execute if entity @s[scores={rpg_fall=%(HALF)d..}] run scoreboard players add @s rpg_fall 1
+
+# 走满了。return run：不加的话下面还会按最后一档再堆一次攻击。
+execute if entity @s[scores={rpg_fall=%(MAX)d..}] at @s run return run function rpg:taint/advent
+
+# 攻击加成整段重写。先摘再挂 —— 同一个 id 挂两次是会叠的。
+attribute @s minecraft:attack_damage modifier remove rpg:fall
+%(TIERS)s
+"""
+
+FALL_TIER = """\
+# %(WORD)s —— 攻击 +%(ATK)d
+attribute @s minecraft:attack_damage modifier add rpg:fall %(ATK)d add_value
+execute at @s run particle dust{color:[%(RGB)s],scale:%(SCALE)s} ~ ~1 ~ 0.4 0.7 0.4 0.02 %(CNT)d
+%(BODY)s
+"""
+
+# 「不可控」的那些手段。掷点用 random，一拍一掷。
+FALL_YANK = """\
+# 视角被扯一下。rotate 的角度只能是字面量，所以掷完点走一条宏。
+execute store result storage rpg:fall yaw int 1 run random value -%(A)d..%(A)d
+execute store result storage rpg:fall pit int 1 run random value -%(B)d..%(B)d
+function rpg:taint/yank with storage rpg:fall
+"""
+
+FALL_YANK_DO = """\
+# 相对旋转用 tp 而不是 rotate：两者都行，tp 的相对角度更早就有，稳。
+$tp @s ~ ~ ~ ~$(yaw) ~$(pit)
+"""
+
+FALL_SWING = """\
+# 不受控的一次挥砍。打的是身边的非玩家生物 —— 多人服里不该由堕落
+# 替你决定去打谁。归属仍然记在本人头上：命令是单线程执行的，
+# 这个标签在别人眼里从来不存在。
+tag @s add rpg.fall.cast
+execute at @s as @e[distance=..4.5,limit=1,sort=random,type=!minecraft:player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,type=!minecraft:text_display,type=!minecraft:marker] at @s run function rpg:taint/swing
+tag @s remove rpg.fall.cast
+"""
+
+FALL_SWING_DO = """\
+damage @s %(DMG)d minecraft:magic by @a[tag=rpg.fall.cast,limit=1]
+particle sweep_attack ~ ~1 ~ 0.2 0.2 0.2 0 2
+playsound minecraft:entity.player.attack.sweep hostile @a[distance=..16] ~ ~ ~ 0.8 0.6
+"""
+
+# ---------------------------------------------------------------------------
+# 降临
+# ---------------------------------------------------------------------------
+ADVENT = """\
+# 走完了。有东西从这个人身上挣了出来。
+tag @s remove rpg.taint.full
+scoreboard players set @s rpg_fall 0
+attribute @s minecraft:attack_damage modifier remove rpg:fall
+
+# 掏空之后并不干净 —— 还剩这么多，下一轮从这里重新爬。
+scoreboard players set @s rpg_taint %(LEFT)d
+scoreboard players set @s rpg_taint_t 0
+
+title @s times 10 80 30
+title @s title ["",{"text":"降　临","italic":false,"color":"dark_red","bold":true}]
+title @s subtitle ["",{"text":"它不再需要借你的手了","italic":false,"color":"gray","italic":true}]
+effect give @s minecraft:weakness 12 1 true
+effect give @s minecraft:slowness 12 1 true
+effect give @s minecraft:nausea 10 0 true
+effect give @s minecraft:blindness 3 0 true
+damage @s 8 minecraft:magic
+
+# 认主：签了哪一柱，挣出来的就是哪一位。没签的话是个无名的东西。
+scoreboard players set #lord rpg_fall 0
+execute if entity @s[tag=rpg.pact] run scoreboard players operation #lord rpg_fall = @s rpg_pact
+execute at @s run function rpg:taint/advent_at
+"""
+
+ADVENT_AT = """\
+particle explosion ~ ~1 ~ 0 0 0 0 1
+particle sculk_soul ~ ~1 ~ 0.6 1 0.6 0.08 80
+particle dust{color:[0.35,0.0,0.05],scale:3} ~ ~1 ~ 0.8 1.2 0.8 0.05 90
+particle explosion_emitter ~ ~1 ~ 0 0 0 0 1
+playsound minecraft:entity.wither.spawn hostile @a[distance=..48] ~ ~ ~ 1 0.6
+playsound minecraft:entity.evoker.prepare_summon hostile @a[distance=..48] ~ ~ ~ 1 0.5
+playsound minecraft:entity.warden.sonic_boom hostile @a[distance=..48] ~ ~ ~ 0.8 0.7
+
+# 这一行由 add_pact 改写成七柱分流 —— 那边才认识柱位。
+function rpg:taint/lord
+"""
+
+# 没有契约的人招出来的东西。add_pact 会在它前面补上七位领主。
+LORD_NONE = """\
+# 无名者。没签过契约的人，身上挣出来的东西连名字都没有。
+summon minecraft:vindicator ~ ~1 ~ %(NBT)s
+function rpg:taint/advent_life
+"""
+
+# 降临的恶魔只待 30 秒。用记分板倒数 —— LifeTicks 那类字段只有特定实体才有，
+# 而且 1.21.9 还改过名（LifeTicks -> life_ticks），不值得赌。
+ADVENT_LIFE = """\
+# 刚落地的那位开始倒数。标签在这一刻只可能挂在他一个身上。
+execute as @e[tag=rpg.advent.new] run scoreboard players set @s rpg_fall %(LIFE)d
+tag @e[tag=rpg.advent.new] remove rpg.advent.new
+"""
+
+ADVENT_TICK = """\
+# 降临者的寿命。场上没有这样的东西时，上层那道守卫会整段跳过。
+scoreboard players remove @s rpg_fall 1
+execute if entity @s[scores={rpg_fall=..0}] at @s run function rpg:taint/advent_gone
+"""
+
+ADVENT_GONE = """\
+# 时候到了，它自己散掉 —— 不是被你打退的。
+particle sculk_soul ~ ~1 ~ 0.5 0.9 0.5 0.08 60
+particle large_smoke ~ ~1 ~ 0.4 0.8 0.4 0.05 40
+particle squid_ink ~ ~1 ~ 0.4 0.8 0.4 0.05 30
+playsound minecraft:entity.evoker.death hostile @a[distance=..32] ~ ~ ~ 1 0.6
+kill @s
 """
 
 TAINT_HOLY = """\
@@ -590,6 +760,9 @@ RITE_INV_GRANT = """\
 tag @s remove rpg.inv.subject
 tag @s remove rpg.taint.full
 scoreboard players set @s rpg_taint 0
+# 堕落连同它堆起来的那点攻击一起作废 —— 反转是真的把人拽回来了。
+scoreboard players set @s rpg_fall 0
+attribute @s minecraft:attack_damage modifier remove rpg:fall
 scoreboard players set @s rpg_holy %(HOLY)d
 effect give @s minecraft:instant_health 1 2 true
 effect give @s minecraft:strength %(SEC)d 1 true
@@ -713,6 +886,7 @@ def build_functions():
     wf("taint/step.mcfunction",
        TAINT_STEP % {"MAX": TAINT_MAX, "MAXP": TAINT_MAX + 1, "NEAR": TAINT_MAX - 1})
     wf("taint/full.mcfunction", TAINT_FULL)
+    build_fall()
     wf("taint/holy.mcfunction", TAINT_HOLY)
     wf("taint/holy_end.mcfunction", TAINT_HOLY_END)
 
@@ -777,7 +951,12 @@ def build_functions():
     wf("rite/inv_abort.mcfunction", RITE_INV_ABORT)
     wf("rite/free.mcfunction", RITE_FREE)
 
-    wf("exorcism.mcfunction", ROOT % {"EVERY": SPREAD_EVERY})
+    root = ROOT % {"EVERY": SPREAD_EVERY}
+    root += ("\n# 降临者的 30 秒寿命。带类型且过守卫 —— 场上没有就整段跳过。\n"
+             "execute if entity @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] "
+             "run execute as @e[type=minecraft:vindicator,tag=rpg.advent] "
+             "run function rpg:taint/advent_tick\n")
+    wf("exorcism.mcfunction", root)
 
     # 走 using_item 而不是 item_used_on_block。后者有两个坑，而且是同一个
     # 根因的两面：它没有 `item` 字段（物品判定得塞进 location 的 match_tool），
@@ -862,9 +1041,99 @@ def route_actionbars():
             + "\nscoreboard players set #hud_seg rpg_hud %d" % SEGMENTS
             + "\nscoreboard players set #hud_full rpg_hud 30"
             + "\nscoreboard players set #taint_max rpg_hud %d" % TAINT_MAX
+            + "\nscoreboard players set #fall_max rpg_hud %d" % FALL_MAX
             + "\nscoreboard players set #inv_full rpg_hud %d" % LIT
             + "\nscoreboard players set #holy_full rpg_hud %d\n" % HOLY_TICKS)
     return edits
+
+
+def demon_nbt(name, accent, colour):
+    """降临出来的那位。
+
+    底子、姿态、特效全部沿用包里已有的恶魔 boss（`command/summon.mcfunction`
+    里那只卫道士），不另起一套：
+
+    * **卫道士**，`Johnny:1` —— 见谁打谁，不挑人；
+    * **`devil` 标签**是关键。`entities/warden/warden/g0` 已经在为
+      `@e[tag=devil]` 每刻续隐身、喷 large_smoke 与 squid_ink ——
+      挂上这个标签，"保持隐身 + 那身烟"就自动到位，一行都不用抄。
+    * `active_effects` 是 1.21.11 的正确字段名（作者原本的代码里就是它，
+      老的 `ActiveEffects` 会被静默丢掉）。
+
+    名牌仍用罪器那一套 [DEVIL] 前缀 —— 虽然隐身，被打时的伤害提示与
+    死亡消息里还是认得出是哪一位。
+    """
+    return (
+        '{Tags:["rpg.advent","rpg.demon","devil","rpg.advent.new"],'
+        'Johnny:1,Silent:1b,PersistenceRequired:1b,'
+        'CustomName:[{"text":"[DEVIL]","color":"%s","bold":true,"italic":false},'
+        '{"text":"%s","color":"%s","italic":false}],'
+        'Health:%df,'
+        'active_effects:[{id:"invisibility",duration:-1,amplifier:0,'
+        'show_particles:0b},{id:"speed",duration:-1,amplifier:1,'
+        'show_particles:0b}],'
+        'attributes:['
+        '{id:"max_health",base:%df},'
+        '{id:"attack_damage",base:%df},'
+        '{id:"attack_knockback",base:2f},'
+        '{id:"armor",base:8f},'
+        '{id:"follow_range",base:%df},'
+        '{id:"knockback_resistance",base:0.5f}],'
+        'drop_chances:{mainhand:0f}}'
+        % (accent, name, colour, DEMON_HP, DEMON_HP, DEMON_ATK, DEMON_SEE))
+
+
+def build_fall():
+    """堕落的每一档，加上降临。"""
+    half = FALL_MAX // 2 + 1
+
+    tiers = []
+    for i, (lo, hi, atk, colour, word) in enumerate(FALL_TIERS, 1):
+        tiers.append("execute if entity @s[scores={rpg_fall=%d..%d}] "
+                     "run return run function rpg:taint/f%d" % (lo, hi, i))
+
+        # 越往下，人越不听自己使唤
+        body = []
+        if i >= 2:
+            body += ["effect give @s minecraft:nausea %d 0 true" % (2 + i),
+                     "execute if predicate rpg:fall%d run function rpg:taint/yank_roll" % i]
+        if i >= 3:
+            body += ["# 脚步忽快忽慢 —— 不是你在走",
+                     "execute if predicate rpg:fall%d run effect give @s minecraft:slowness 2 1 true" % i,
+                     "execute unless predicate rpg:fall%d run effect give @s minecraft:speed 2 1 true" % i]
+        if i >= 4:
+            body += ["execute if predicate rpg:fall%d run effect give @s minecraft:darkness 3 0 true" % i,
+                     "playsound minecraft:entity.warden.heartbeat master @s ~ ~ ~ 1 0.6",
+                     "# 最深一档：手自己动起来",
+                     "execute if predicate rpg:fall%d run function rpg:taint/swing_roll" % i]
+        else:
+            body.append("playsound minecraft:entity.wither.ambient master @s ~ ~ ~ 0.%d 0.5" % (i + 2))
+
+        rgb = {"gray": "0.45,0.45,0.48", "dark_purple": "0.32,0.10,0.42",
+               "red": "0.62,0.09,0.12", "dark_red": "0.38,0.0,0.04"}[colour]
+        wf("taint/f%d.mcfunction" % i, FALL_TIER % {
+            "WORD": word.replace("\u3000", ""), "ATK": atk, "RGB": rgb,
+            "SCALE": "%.1f" % (1 + i * 0.4), "CNT": 4 + i * 4,
+            "BODY": "\n".join(body)})
+
+    wf("taint/fall.mcfunction",
+       FALL % {"HALF": half, "MAX": FALL_MAX, "TIERS": "\n".join(tiers)})
+    wf("taint/yank_roll.mcfunction", FALL_YANK % {"A": 80, "B": 25})
+    wf("taint/yank.mcfunction", FALL_YANK_DO)
+    wf("taint/swing_roll.mcfunction", FALL_SWING)
+    wf("taint/swing.mcfunction", FALL_SWING_DO % {"DMG": 5})
+    wf("taint/advent.mcfunction", ADVENT % {"LEFT": 40})
+    wf("taint/advent_at.mcfunction", ADVENT_AT)
+    wf("taint/lord.mcfunction",
+       LORD_NONE % {"NBT": demon_nbt("无名者", "#3D0000", "dark_gray")})
+    wf("taint/advent_life.mcfunction", ADVENT_LIFE % {"LIFE": DEMON_LIFE})
+    wf("taint/advent_tick.mcfunction", ADVENT_TICK)
+    wf("taint/advent_gone.mcfunction", ADVENT_GONE)
+
+    # 掷点的赔率。档越深，失控越频繁。
+    for i, odds in ((2, 4), (3, 3), (4, 2)):
+        wj(os.path.join(DP, "data/rpg/predicate/fall%d.json" % i),
+           {"condition": "minecraft:random_chance", "chance": round(1.0 / odds, 3)})
 
 
 def add_objectives():

@@ -15,6 +15,7 @@ execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=1}] run function rpg:hud/s1
 execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=2}] run function rpg:hud/s2
 execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=3}] run function rpg:hud/s3
 execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=4}] run function rpg:hud/s4
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=5}] run function rpg:hud/s5
 
 # 没有技能占用时才轮到持续状态行。魔化（或圣痕）与契约冷却在那一行里
 # **并排**显示 —— 它们都是状态，不该互相顶掉。

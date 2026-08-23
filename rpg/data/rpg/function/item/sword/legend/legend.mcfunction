@@ -103,7 +103,7 @@ execute as @s[scores={level=1..}] at @s run scoreboard players add @s night 1
 execute if entity @s[tag=rpg.h.sakura_tag1] as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run particle dust_color_transition{from_color:[1.0,0.47,0.47],to_color:[1,1,1],scale:1} ~0.5 ~0.5 ~0.5 -1 -1 -1 0.2 500
 execute unless entity @s[tag=rpg.h.sakura_tag1] as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~0.5 ~0.5 ~0.5 -1 -1 -1 0.2 500
 execute as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run particle sweep_attack ~0.5 ~1.5 ~0.5 -1 -1 -1 0 100
-execute as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":1,"Fuse":0}
+execute as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":1,ignited:1b}
 execute as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run kill @e[type=#minecraft:arrows,distance=..3]
 execute as @s[scores={level=1..,night=20..}] at @s run playsound minecraft:entity.ender_dragon.shoot player @s
 execute as @s[scores={level=1..,night=20..}] at @s anchored eyes run xp add @s -3 points
@@ -147,7 +147,7 @@ scoreboard players reset * potion
 ##无垠星空
 execute as @e at @s on attacker if entity @s[scores={saber=0..},tag=rpg.h.saber_tag1] store result score @s random run random value 1..10
 execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run effect give @e[limit=1,sort=nearest] wither 10 40 true
-execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":2,"Fuse":0}
+execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":2,ignited:1b}
 execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] positioned ~ ~2 ~ run function rpg:item/sword/legend/saber/flame
 execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run effect give @s resistance 5 10 false
 execute as @e at @s on attacker if entity @s[scores={saber=0..,random=1},tag=rpg.h.saber_tag1] run particle dust_color_transition{from_color:[1.0,0.36,0.83],to_color:[1.0,1.0,1.0],scale:1} ~0.5 ~1.5 ~0.5 -1 -1 -1 1 20
@@ -198,7 +198,7 @@ execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=3},t
 
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run particle dust_color_transition{from_color:[1.0,0.47,0.47],to_color:[1.0,1.0,1.0],scale:3} ~0.5 ~1.5 ~0.5 -1 -1 -1 1 20
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run particle sweep_attack ~0.5 ~1.5 ~0.5 -1 -1 -1 1 20
-execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":1,"Fuse":0}
+execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":1,ignited:1b}
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run summon minecraft:lightning_bolt
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run effect give @s minecraft:resistance 1 255 true
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run effect give @s minecraft:instant_health 1 3 true
@@ -239,11 +239,11 @@ scoreboard players reset * sakura
 
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~0.1 ~0.1 ~0.1 -0.2 -0.2 -0.2 0.2 10
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~1.5 ~ ~1.5 -3 -0.1 -3 0.2 200
-execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,"Fuse":0}
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,ignited:1b}
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run kill @s
 
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~1.5 ~ ~1.5 -3 -0.1 -3 0.2 200
-execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,"Fuse":0}
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,ignited:1b}
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run kill @s
 
 ##亚巴顿
@@ -286,7 +286,7 @@ execute as @e[name=typhoon_atk,type=armor_stand] anchored feet at @s unless enti
 ##悟空
 execute as @e at @s on attacker if entity @s[scores={wukong=0..},tag=rpg.h.wukong_tag1] store result score @s random run random value 1..5
 execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run effect give @e[limit=1,sort=nearest] wither 5 10 true
-execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":5,"Fuse":0}
+execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":5,ignited:1b}
 execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run effect give @s resistance 5 10 false
 execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run particle gust_emitter_small ~0.5 ~1.5 ~0.5 -1 -1 -1 1 10
 execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run function rpg:item/sword/legend/wukong/particle

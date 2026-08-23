@@ -34,3 +34,6 @@ execute if entity @s[scores={rpg_taint=91..},tag=rpg.holy] run playsound minecra
 # 满值只报一次 —— 否则每两秒弹一遍标题，没人受得了。
 execute if entity @s[scores={rpg_taint=100},tag=!rpg.taint.full] run function rpg:taint/full
 execute if entity @s[scores={rpg_taint=..99},tag=rpg.taint.full] run tag @s remove rpg.taint.full
+
+# 到顶之后每一拍都往下掉一步。借的是同一口时钟，不另起。
+execute if entity @s[tag=rpg.taint.full] run function rpg:taint/fall

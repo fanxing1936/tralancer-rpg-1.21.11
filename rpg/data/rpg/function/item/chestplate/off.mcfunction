@@ -4,7 +4,7 @@ execute as @e[scores={absorption=0..,random=1},tag=rpg.e.chest_absorption_tag1] 
 scoreboard players reset * random
 scoreboard players reset * absorption
 
-execute as @e[scores={boom=1..3},tag=rpg.e.chest_boom_tag1] at @s run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":5,"Fuse":0}
+execute as @e[scores={boom=1..3},tag=rpg.e.chest_boom_tag1] at @s run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":5,ignited:1b}
 execute as @e[scores={boom=1..3},tag=rpg.e.chest_boom_tag1] at @s run particle explosion ~1 ~1.5 ~1 -2 -2 -2 1 50 force
 execute as @e[scores={boom=1..3},tag=rpg.e.chest_boom_tag1] at @s run kill
 

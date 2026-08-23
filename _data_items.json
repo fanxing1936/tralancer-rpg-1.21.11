@@ -2530,6 +2530,70 @@
    "dyed_color": null,
    "trim": null,
    "potion_contents": null
+  },
+  {
+   "item": "bow",
+   "name": "玛门",
+   "rarity": "恶魔",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "堕落的财富之主",
+    "称量众生的秤，玛门",
+    "+------------------+",
+    "🏹被动技能[三箭齐发]",
+    "一次射出三根，多出的两根凭空而来",
+    "+------------------+",
+    "🏹被动技能[什一税]",
+    "每射一箭，玛门都要从你身上取走一样",
+    "+------------------+",
+    "🏹主动技能[买断]",
+    "满弓后继续持弓，射出一击金箭",
+    "必定收费 —— 贪婪不赊账",
+    "+------------------+"
+   ],
+   "enchantments": {
+    "power": 5,
+    "punch": 2,
+    "flame": 1,
+    "unbreaking": 3
+   },
+   "modifiers": [
+    {
+     "attr": "luck",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "mainhand"
+    }
+   ],
+   "tags": [
+    "bow_tag",
+    "devil_tag",
+    "hunter_tag",
+    "mammon_tag"
+   ],
+   "custom_data": {
+    "bow_tag": 1,
+    "hunter_tag": 1,
+    "devil_tag": 1,
+    "mammon_tag": 1
+   },
+   "cmd": 1110003.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
   }
  ],
  "command/give/item.mcfunction": [

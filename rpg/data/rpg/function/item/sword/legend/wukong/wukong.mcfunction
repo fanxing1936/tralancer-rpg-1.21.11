@@ -1,6 +1,6 @@
 execute as @e at @s on attacker if entity @s[scores={wukong=0..},tag=rpg.h.wukong_tag1] store result score @s random run random value 1..5
 execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run effect give @e[limit=1,sort=nearest] wither 5 10 true
-execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":5,"Fuse":0}
+execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run summon minecraft:creeper ~ ~ ~ {"ExplosionRadius":5,ignited:1b}
 execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run effect give @s resistance 5 10 false
 execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run particle gust_emitter_small ~0.5 ~1.5 ~0.5 -1 -1 -1 1 10
 execute as @e at @s on attacker if entity @s[scores={wukong=0..,random=1},tag=rpg.h.wukong_tag1] run function rpg:item/sword/legend/wukong/particle

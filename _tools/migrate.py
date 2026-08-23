@@ -4,6 +4,7 @@
 import io
 import json
 import os
+import re
 import sys
 
 import transform as T
@@ -71,6 +72,36 @@ def do_json(path):
             fh.write(new)
 
 
+CREEPER_RE = re.compile(r'"?Fuse"?\s*:\s*0\b')
+
+
+def fix_creeper_fuse(root):
+    """`Fuse:0` 在 1.21.11 是死名字 —— 本该当场引爆的苦力怕会站着不动。
+
+    实测：苦力怕的 NBT 里既没有 `Fuse` 也没有 `fuse`，写进 summon 会被
+    静默丢掉。现在让它立刻炸的字段是 `ignited:1b`（实测带它召出来的
+    苦力怕两刻之内就消失了）。
+
+    只改 `Fuse:0` —— 那是「立刻炸」的写法。别处非零的引信留给作者自己定。
+    """
+    hit = 0
+    for base, _d, files in os.walk(root):
+        for f in files:
+            if not f.endswith(".mcfunction"):
+                continue
+            p = os.path.join(base, f)
+            s = io.open(p, encoding="utf-8").read()
+            if not CREEPER_RE.search(s):
+                continue
+            t = CREEPER_RE.sub("ignited:1b", s)
+            if t != s:
+                io.open(p, "w", encoding="utf-8", newline="\n").write(t)
+                hit += 1
+    if hit:
+        print("creeper Fuse:0 -> ignited:1b in %d file(s)" % hit)
+    return hit
+
+
 def main():
     for dirpath, _dirnames, filenames in os.walk(ROOT):
         for fn in filenames:
@@ -81,6 +112,8 @@ def main():
                 continue
             elif fn.endswith(".json"):
                 do_json(path)
+
+    fix_creeper_fuse(ROOT)
 
     with io.open(os.path.join(ROOT, "pack.mcmeta"), "w",
                  encoding="utf-8", newline="\n") as fh:

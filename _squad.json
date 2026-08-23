@@ -1,0 +1,83 @@
+{
+  "cap": 4,
+  "sight": 24,
+  "leash": 34,
+  "cd": 13,
+  "tiers": [
+    {
+      "n": 1,
+      "key": "HAIKU",
+      "colour": "gray",
+      "w": 40,
+      "hp": 30,
+      "armor": 1,
+      "atk": 1,
+      "sword": "wooden",
+      "gear": "皮革",
+      "tough": 0,
+      "armor_real": 8,
+      "price": 8,
+      "total": 4
+    },
+    {
+      "n": 2,
+      "key": "SONNET",
+      "colour": "#57C6D6",
+      "w": 28,
+      "hp": 40,
+      "armor": 2,
+      "atk": 2,
+      "sword": "stone",
+      "gear": "锁链　·　海岸纹饰",
+      "tough": 0,
+      "armor_real": 14,
+      "price": 20,
+      "total": 6
+    },
+    {
+      "n": 3,
+      "key": "OPUS",
+      "colour": "#A275DE",
+      "w": 18,
+      "hp": 55,
+      "armor": 5,
+      "atk": 3,
+      "sword": "iron",
+      "gear": "铁　·　守护纹饰",
+      "tough": 2,
+      "armor_real": 20,
+      "price": 40,
+      "total": 8
+    },
+    {
+      "n": 4,
+      "key": "FABLE",
+      "colour": "#D9A02B",
+      "w": 10,
+      "hp": 75,
+      "armor": 5,
+      "atk": 5,
+      "sword": "diamond",
+      "gear": "钻石　·　沉寂纹饰",
+      "tough": 5,
+      "armor_real": 25,
+      "price": 80,
+      "total": 11
+    },
+    {
+      "n": 5,
+      "key": "MYTHOS",
+      "colour": "#FFD700",
+      "w": 4,
+      "hp": 100,
+      "armor": 10,
+      "atk": 8,
+      "sword": "netherite",
+      "gear": "下界合金　·　尖塔纹饰",
+      "tough": 8,
+      "armor_real": 30,
+      "price": 160,
+      "total": 15
+    }
+  ]
+}

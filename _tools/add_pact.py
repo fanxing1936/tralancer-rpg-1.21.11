@@ -32,6 +32,7 @@ import sys
 import add_exorcism as ex          # 复用 HUD 的段落拼装与写文件
 
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
+RP = sys.argv[2] if len(sys.argv) > 2 else "../resourcepack"
 FUNC = os.path.join(DP, "data/rpg/function")
 ADV = os.path.join(DP, "data/rpg/advancement/item")
 GIVE = os.path.join(FUNC, "command/give/extra.mcfunction")
@@ -175,7 +176,7 @@ execute positioned ^ ^ ^%(D)d as @e[distance=..3,type=!player,type=!minecraft:it
 # 5 萨麦尔［毒雾］
 P5 = """\
 # 毒雾：有毒的光辉使者，吐出来的东西也带光。
-particle dust{color:[0.36,0.62,0.16],scale:2} ~ ~1 ~ 0.4 0.4 0.4 0.02 30
+particle dust{color:[0.69,0.0,0.34],scale:2} ~ ~1 ~ 0.4 0.4 0.4 0.02 30
 playsound minecraft:entity.witch.throw hostile @a[distance=..24] ~ ~ ~ 1 0.6
 playsound minecraft:entity.spider.hurt hostile @a[distance=..24] ~ ~ ~ 0.8 0.5
 execute at @s anchored eyes run function rpg:pact/p5_fog
@@ -186,7 +187,7 @@ P5_FOG = """\
 """
 
 P5_STEP = """\
-execute positioned ^ ^ ^%(D)d run particle dust{color:[0.36,0.62,0.16],scale:2} ~ ~ ~ 0.9 0.9 0.9 0.03 26
+execute positioned ^ ^ ^%(D)d run particle dust_color_transition{from_color:[0.69,0.0,0.34],to_color:[0.24,0.0,0.12],scale:2} ~ ~ ~ 0.9 0.9 0.9 0.03 26
 execute positioned ^ ^ ^%(D)d run particle sneeze ~ ~ ~ 0.7 0.7 0.7 0.02 10
 execute positioned ^ ^ ^%(D)d as @e[distance=..2.6,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display] at @s run effect give @s minecraft:poison 10 2 true
 execute positioned ^ ^ ^%(D)d as @e[distance=..2.6,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display] at @s run effect give @s minecraft:wither 6 1 true
@@ -244,7 +245,7 @@ execute as @e[type=minecraft:item,distance=0.6..6,nbt={PickupDelay:0s}] at @s fa
 SAMAEL_TICK = """\
 # 暴怒的毒。走 rpg.hurt + on attacker，与包里其余被动同一形状。
 execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[tag=rpg.pact,scores={rpg_pact=5}] run effect give @e[distance=..1,limit=1] minecraft:poison 6 1 true
-execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[tag=rpg.pact,scores={rpg_pact=5}] run particle dust{color:[0.36,0.62,0.16],scale:1} ~ ~1 ~ 0.3 0.4 0.3 0.02 8
+execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[tag=rpg.pact,scores={rpg_pact=5}] run particle dust{color:[0.69,0.0,0.34],scale:1} ~ ~1 ~ 0.3 0.4 0.3 0.02 8
 """
 
 
@@ -608,6 +609,80 @@ def wire_taint():
     return 1
 
 
+LORD = """\
+# 从这个人身上挣出来的是谁 —— 看他签的是哪一柱。
+# 没签过的人交给最后那一行的无名者。
+%(BRANCH)s
+%(NONE)s
+"""
+
+LORD_ONE = """\
+# %(WHO)s。契约不是租约：借过的力，最后会自己来取回去。
+summon minecraft:wither_skeleton ~ ~1 ~ %(NBT)s
+particle dust{color:[%(RGB)s],scale:3} ~ ~1.2 ~ 0.8 1 0.8 0.05 70
+playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..48] ~ ~ ~ 1 0.5
+"""
+
+
+def _rgb(hex_colour):
+    h = hex_colour.lstrip("#")
+    return ",".join("%.2f" % (int(h[i:i + 2], 16) / 255.0) for i in (0, 2, 4))
+
+
+def wire_lords():
+    """降临的分流。add_exorcism 只写得出无名者 —— 它不认识柱位。"""
+    branch, none = [], io.open(
+        os.path.join(FUNC, "taint/lord.mcfunction"), encoding="utf-8").read()
+    none = "\n".join(l for l in none.split("\n") if l and not l.startswith("#"))
+    for p in PILLARS:
+        branch.append("execute if score #lord rpg_fall matches %d "
+                      "run return run function rpg:taint/lord%d" % (p["n"], p["n"]))
+        wf("taint/lord%d.mcfunction" % p["n"], LORD_ONE % {
+            "WHO": p["who"], "RGB": _rgb(p["colour"]),
+            "NBT": ex.demon_nbt(p["who"], p["colour"], p["lit"])})
+    wf("taint/lord.mcfunction",
+       LORD % {"BRANCH": "\n".join(branch), "NONE": none})
+    return len(PILLARS)
+
+
+# 七位领主的贴图文件名。按柱位顺序 —— 作者的图放进对应文件即可生效。
+SLUG = {1: "lucifer", 2: "leviathan", 3: "abaddon", 4: "beelzebub",
+        5: "samael", 6: "belial", 7: "mammon"}
+
+
+def build_art(rp):
+    """把七本书接进 enchanted_book 的模型分派。
+
+    书的 custom_model_data 早就按柱位排好了（CMD0 + N - 1），缺的只是
+    材质包这一头。这里补上：一个 range_dispatch，七个门槛，
+    外加七个只有两行的模型文件。贴图一放进去就生效，数据包一个字不用改。
+
+    没有贴图时会显示成缺失材质的紫黑格 —— 这是刻意的：比悄悄退回原版
+    附魔书的样子好，至少一眼看得出"这里还差一张图"。
+    """
+    md = os.path.join(rp, "assets/rpg/models/item")
+    if not os.path.isdir(md):
+        os.makedirs(md)
+    for q in PILLARS:
+        ex.wj(os.path.join(md, "pact_%s.json" % SLUG[q["n"]]),
+              {"parent": "item/generated",
+               "textures": {"layer0": "rpg:item/pact_%s" % SLUG[q["n"]]}})
+
+    p = os.path.join(rp, "assets/minecraft/items/enchanted_book.json")
+    entries = [{"threshold": CMD0 + q["n"] - 1,
+                "model": {"type": "minecraft:model",
+                          "model": "rpg:item/pact_%s" % SLUG[q["n"]]}}
+               for q in PILLARS]
+    ex.wj(p, {"model": {
+        "type": "minecraft:range_dispatch",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "fallback": {"type": "minecraft:model",
+                     "model": "minecraft:item/enchanted_book"},
+        "entries": entries}})
+    return len(entries)
+
+
 def build_give():
     s = io.open(GIVE, encoding="utf-8").read()
     if "之柱" in s:
@@ -648,11 +723,13 @@ def main():
     build_hud_bar()
     ticked = wire_tick()
     wire_taint()
+    lords = wire_lords()
     gave = build_give()
+    art = build_art(RP)
     dump_for_guide()
-    print("pact: %d pillars, %d functions, give +%d, tick +%d"
-          % (len(PILLARS), n, gave, ticked))
-    print("pact: objectives %s" % (obj or "-"))
+    print("pact: %d pillars, %d functions, give +%d, tick +%d, lords %d"
+          % (len(PILLARS), n, gave, ticked, lords))
+    print("pact: objectives %s, 书的模型分派 %d 档" % (obj or "-", art))
 
 
 if __name__ == "__main__":

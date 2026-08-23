@@ -14,7 +14,7 @@ execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=3},t
 
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run particle dust_color_transition{from_color:[1.0,0.47,0.47],to_color:[1.0,1.0,1.0],scale:3} ~0.5 ~1.5 ~0.5 -1 -1 -1 1 50
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run particle sweep_attack ~0.5 ~1.5 ~0.5 -1 -1 -1 1 50
-execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":1,"Fuse":0}
+execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":1,ignited:1b}
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run summon minecraft:lightning_bolt
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run effect give @s minecraft:resistance 1 255 true
 execute as @e at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run effect give @s minecraft:instant_health 1 3 true
@@ -55,9 +55,9 @@ scoreboard players reset * sakura
 
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~0.1 ~0.1 ~0.1 -0.2 -0.2 -0.2 0.2 10
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~1.5 ~ ~1.5 -3 -0.1 -3 0.2 200
-execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,"Fuse":0}
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,ignited:1b}
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s unless block ~ ~-0.1 ~ air run kill @s
 
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~1.5 ~ ~1.5 -3 -0.1 -3 0.2 200
-execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,"Fuse":0}
+execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":3,ignited:1b}
 execute as @e[type=minecraft:spectral_arrow,tag=sakura_tag] at @s if entity @e[distance=0.2..0.4] run kill @s

@@ -7,6 +7,7 @@ import json
 
 F = json.load(io.open("../_guide_fragments.json", encoding="utf-8"))
 S = json.load(io.open("../_guide_sections.json", encoding="utf-8"))
+Q = json.load(io.open("../_squad.json", encoding="utf-8"))
 
 
 def on_dark(hexcol):
@@ -502,7 +503,7 @@ def build():
 
     # IX exorcism ---------------------------------------------------------
     a('''<section class="plate" id="s8">
-<div class="plate-h"><span class="num">IX</span><h2>驱魔体系</h2><span class="sub">魔化值 · 空缺者 · 仪式 · 逆圣化</span></div>
+<div class="plate-h"><span class="num">IX</span><h2>驱魔体系</h2><span class="sub">魔化值 · 堕落 · 空缺者 · 仪式 · 逆圣化</span></div>
 <p>包里一直有一条圣／魔轴：圣器与罪遗武器各自带着 <code>holy_weapon_tag</code> 与 <code>devil_weapon_tag</code>。
 从这一版起它有了长期后果——<strong>握着魔器的人会慢慢变成它的主人</strong>。
 魔化值不显示在侧边栏，而是屏幕下方那条 actionbar。</p>
@@ -523,7 +524,36 @@ def build():
 <tr><td>61–90</td><td>近乎失守</td><td>暗红纹路加深，伴幽匿之魂</td></tr>
 <tr><td>91–100</td><td>濒临魔化</td><td>常驻<b>力量 I</b>；但手持圣器会持续灼伤（每 2 秒 2 点魔法伤害）</td></tr>
 </tbody></table></div>
-<div class="note"><b>魔化只有一个出口。</b>把它压下去要靠驱魔仪式；把它推到顶，则通向<b>逆圣化</b>——两条路都从同一支图腾开始。</div>
+<div class="note"><b>魔化没有安全的上限。</b>把它压下去要靠驱魔仪式。<b>推到顶不会有人来救你</b>——
+到 100 的那一刻屏幕上只写四个字「堕落开始」，此后每两秒往下掉一步。
+逆圣化仍然是出路，但从这一版起<b>它不再被提示</b>：你得自己记得图腾在哪。</div>
+
+<h3 class="sub-h">堕落<span class="rolls">魔化到顶之后 · 每 2 秒一步 · 共 60 步</span></h3>
+<blockquote class="verse">他起初只是觉得手比从前重。<cite>——卷六《百年战争书》</cite></blockquote>
+<p>魔化钉在 100 之后，屏幕下方那条<b>魔化条换成堕落条</b>，开始倒数。
+一路上<strong>你的攻击越来越高，而你越来越不是你</strong>——这就是全部的交易。
+过半之后一步变两步，所以后半程比前半程快：整段约 <b>90 秒</b>。</p>
+<div class="tw"><table>
+<thead><tr><th>阶段</th><th>攻击加成</th><th>你身上发生什么</th></tr></thead>
+<tbody>
+<tr><td>躁动<span class="rolls"> 1–15</span></td><td class="num">+1</td><td>暗纹浮起，远处有东西在应声</td></tr>
+<tr><td>侵蚀<span class="rolls"> 16–30</span></td><td class="num">+3</td><td>反胃；<b>视角开始被扯动</b></td></tr>
+<tr><td>夺舍<span class="rolls"> 31–45</span></td><td class="num">+6</td><td>脚步忽快忽慢——不是你在走</td></tr>
+<tr><td>临界<span class="rolls"> 46–59</span></td><td class="num">+10</td><td>黑视闪烁、心跳声；<b>手会自己挥出去</b>，砍向身边的生物</td></tr>
+<tr><td><b>降临</b><span class="rolls"> 60</span></td><td>—</td><td>见下</td></tr>
+</tbody></table></div>
+<div class="note"><b>不受控的挥砍只打非玩家生物。</b>多人服里不该由堕落替你决定去打谁——
+伤害仍然记在<b>你</b>头上，但目标不会是别的玩家。</div>
+
+<h3 class="sub-h">降临<span class="rolls">堕落走满</span></h3>
+<p>有东西从这个人身上<strong>挣了出来</strong>：地面炸开，一位<b>[DEVIL]</b> 落到他面前——
+<b>140 生命 / 12 护甲 / 11 攻击 / 48 格索敌</b>，手持下界合金剑，全程发光。</p>
+<div class="sys">
+<div><h3>挣出来的是谁</h3><p class="how">看你签的是哪一柱</p><p>身上有契约，来的就是<b>那一位领主</b>，名牌与粒子都是他的本色；
+没签过约的人，来的是一位<b>无名者</b>。契约不是租约——借过的力，最后会自己来取回去。</p></div>
+<div><h3>你付出什么</h3><p class="how">当场结算</p><p>魔化回落到 <b>40</b>（不是零：掏空之后并不干净），堕落归零、攻击加成一并作废，
+另受 8 点魔法伤害与虚弱／缓慢／反胃 12 秒。然后你要和它单独相处。</p></div>
+</div>
 
 <h3 class="sub-h">空缺者<span class="rolls">约六分之一的村民</span></h3>
 <p>外表与常人无异的空壳。平时和普通村民毫无分别，<strong>只有当持圣器的人走进 16 格内才会显形</strong>（发光 + 幽匿之魂粒子）。它不是靶子——放着不管会烂开，动手打反而更糟。</p>
@@ -553,7 +583,9 @@ def build():
 </tbody></table></div>
 
 <h3 class="sub-h">逆圣化<span class="rolls">魔化 = 100 时点燃图腾</span></h3>
-<p>魔化到顶那一刻会有一次提示。<strong>此时若有满魔化者站在图腾 7 格内，仪式不再净化，而是引燃。</strong></p>
+<p><strong>满魔化者站在图腾 7 格内点燃，仪式不再净化，而是引燃。</strong>
+它是堕落唯一的刹车——但<b>没有任何提示会告诉你这条路存在</b>，
+而你正一边变强一边失去自己。这就是它现在的分量。</p>
 <blockquote class="verse">但在魔化的尽头，他看见污染深处仍有一段没有被抹去的圣性。负与负相乘，污染发生反转。<cite>——卷六《百年战争书》</cite></blockquote>
 <p>图腾朝着受术者烧十秒，五道灼烧共 <b>19 点</b>魔法伤害（3 / 3 / 4 / 4 / 5），每道附带缓慢 III，光从暗红一路走到纯白。
 <strong>人必须站在 7 格内熬完</strong>——走开或者倒下，仪式当场作废。</p>
@@ -627,37 +659,72 @@ def build():
 <div class="note"><b>关于贴图：</b>七本书暂时沿用原版附魔书的外观，
 <code>custom_model_data</code> 已按柱位排好（''' + str(P["cmd0"]) + '''–''' + str(P["cmd0"] + 6) + '''）。
 美术补上时只要在材质包里给 <code>enchanted_book</code> 加一段 <code>range_dispatch</code>，数据包这边一个字都不用改。</div>
-<div class="note"><b>玛门补齐了第七宗罪。</b>卷五的七宗罪表里，贪婪那一格此前是空的——
-六位领主各有一件罪遗武器，玛门没有。第七柱的契约填上了它：贪婪不制造东西，它只让已有的东西变多。</div>
+<div class="note"><b>第七宗罪已经补齐。</b>卷五的七宗罪表里，贪婪那一格曾经是空的——
+六位领主各有一件罪遗武器，玛门没有。现在它有了：<b>［DEVIL］玛门</b>，一把弓（见卷 III）。
+柱位与罪器是<b>连着的</b>——签下第七柱之后，那把弓不再从你口袋里掏东西，它改从<b>魂</b>上收；
+而它的［买断］金箭会顺带触发柱位自己的［点金］。同一位魔神，两副面孔。</div>
 </section>''')
 
-    # XI squad --------------------------------------------------------------
+    # XII squad -------------------------------------------------------------
+    trow = "".join(
+        '<tr><td><b style="color:%s">%s</b></td><td>%s</td>'
+        '<td class="num">%d</td><td class="num">%d</td><td class="num">%d</td>'
+        '<td class="num">%d</td><td class="num">%d%%</td></tr>'
+        % (t["colour"], t["key"], t["gear"], t["hp"], t["armor"],
+           t["total"], t["price"], t["w"])
+        for t in Q["tiers"])
+    cheap, dear = Q["tiers"][0], Q["tiers"][-1]
+
     a('''<section class="plate" id="s13">
-<div class="plate-h"><span class="num">XII</span><h2>佣兵小队</h2><span class="sub">花钱雇人 · 配刀 · 指哪打哪</span></div>
+<div class="plate-h"><span class="num">XII</span><h2>佣兵小队</h2><span class="sub">五等 · 掷点募兵 · 指哪打哪</span></div>
 <p>一个<strong>独立分支</strong>，不与罪器、契约、驱魔任何一条耦合。你可以完全不碰前面那些体系，只带着一队人打。</p>
 
+<h3 class="sub-h">五等<span class="rolls">招到谁，是掷出来的</span></h3>
+<p>佣兵分五等。<strong>甲、纹饰、基础数值与价钱全由等级定下</strong>，招人时当场掷一次点——
+你看着名牌决定雇不雇，这才叫募兵。等级<b>不能升</b>：想要好的，就继续招。</p>
+<div class="tw"><table>
+<thead><tr><th>等级</th><th>装备</th><th>生命</th><th>护甲</th><th>攻击<span class="rolls">含起手剑</span></th><th>价钱</th><th>掷中概率</th></tr></thead>
+<tbody>''' + trow + '''</tbody></table></div>
+<div class="note"><b>纹饰就是等级的徽记。</b>二等起每一等都带一套固定的盔甲纹饰（海岸／守护／沉寂／尖塔），
+隔着老远也认得出你带的是什么队。<b>盔甲不可替换、战死也不掉</b>——它属于等级，不属于个人。</div>
+
+<h3 class="sub-h">名牌下方那块信息板<span class="rolls">跟着人走</span></h3>
+<p>每名佣兵头顶挂着一块 <code>text_display</code>，两行：装备与纹饰在上，<b>❤ 生命　⛊ 护甲　⚔ 攻击</b>在下。
+三个数都是<strong>现读的属性</strong>，不是写死的——给他换一把剑，⚔ 立刻跟着变。</p>
+<div class="note"><b>为什么是骑乘而不是每刻传送。</b>实体名牌只渲染一行，换行符不生效，所以只能另挂一个展示实体。
+让它<b>骑在佣兵身上</b>，位置由原版每刻同步，既不欠一次 <code>tp</code> 的开销，也没有跟随时慢一刻的抖动。</div>
+
 <div class="sys">
-<div><h3>募兵旗 · 两步</h3><p class="how">长按右键 · 白色旗帜</p><p>身边没有待雇者时，先<b>招一名「待雇佣兵」到场</b>（不花钱，他中立站着）。
+<div><h3>募兵旗 · 两步</h3><p class="how">长按右键 · 白色旗帜</p><p>身边没有待雇者时，先<b>招一名待雇者到场</b>（不花钱，中立站着，名牌写<b>待雇 · 等级</b>）。
 身边有待雇者时再长按，才是真的<b>雇下他</b>——雇的是眼前这个人，不是凭空变一个出来。
-上限 <b>4</b> 人，价钱逐人递增：<b>8 / 16 / 24 / 32</b> 枚<b>［货币］</b>（粗金），全队共 80 枚。</p></div>
-<div><h3>指挥旗 · 指哪打哪</h3><p class="how">长按右键 · 副手空着</p><p>沿视线找出 24 格内第一个目标并标记，全队压上；目标倒下即自动归队。</p></div>
-<div><h3>配装</h3><p class="how">副手拿武器 + 长按指挥旗</p><p>交给最近的佣兵，他原本拿的<b>掉在地上</b>——那就是取回的方式。
-你塞什么他就按什么打（伤害读的是他自己的攻击力属性，天然含手持武器）。佣兵战死时武器<b>必定掉落</b>。</p></div>
-<div><h3>姿态与解雇</h3><p class="how">潜行 + 长按指挥旗</p><p><b>副手空着</b>切换<b>跟随 ⇄ 驻守</b>；<b>副手拿着东西</b>则解雇最近的佣兵，装备掉地并退回 4 枚货币。</p></div>
+不满意就走开重招。上限 <b>''' + str(Q["cap"]) + '''</b> 人。</p></div>
+<div><h3>指挥旗 · 指哪打哪</h3><p class="how">长按右键 · 副手空着</p><p>沿视线找出 ''' + str(Q["sight"]) + ''' 格内第一个目标并标记，全队压上；目标倒下即自动归队。</p></div>
+<div><h3>配装</h3><p class="how">副手拿武器 + 长按指挥旗</p><p><b>只有武器归你管。</b>交给最近的佣兵，他原本拿的<b>掉在地上</b>——那就是取回的方式。
+你塞什么他就按什么打（伤害读的是他自己的攻击力属性，天然含手持武器），信息板上的 ⚔ 当场重算。佣兵战死时武器<b>必定掉落</b>。</p></div>
+<div><h3>姿态与解雇</h3><p class="how">潜行 + 长按指挥旗</p><p><b>副手空着</b>切换<b>跟随 ⇄ 驻守</b>；<b>副手拿着东西</b>则解雇最近的佣兵，武器掉地。</p></div>
 </div>
 
-<h3 class="sub-h">佣兵<span class="rolls">尸壳 · 白天不自燃</span></h3>
+<div class="note"><b>价钱是概率的对价。</b>一等 ''' + str(cheap["price"]) + ''' 枚就能带走，五等要 ''' + str(dear["price"]) + ''' 枚——
+但五等只有 ''' + str(dear["w"]) + '''% 的机会出现，钱多也未必招得到。<b>［货币］</b>是粗金。</p></div>
+
+<h3 class="sub-h">佣兵<span class="rolls">尸壳 · 白天不自燃 · 全程静音</span></h3>
 <div class="tw"><table>
 <thead><tr><th>属性</th><th>数值</th><th>说明</th></tr></thead>
 <tbody>
-<tr><td>生命</td><td class="num">40</td><td>—</td></tr>
-<tr><td>护甲</td><td class="num">4</td><td>—</td></tr>
-<tr><td>攻击</td><td class="num">4</td><td>写死，不随世界难度浮动；<b>手持武器的加成直接叠上去</b></td></tr>
-<tr><td>攻击间隔</td><td class="num">13 刻</td><td>生物受伤后约有 10 刻无敌帧，砍得更密只是浪费</td></tr>
+<tr><td>生命 / 护甲 / 攻击</td><td>随等级</td><td>见上表；攻击栏已含起手剑，<b>换武器即变</b></td></tr>
+<tr><td>攻击间隔</td><td class="num">''' + str(Q["cd"]) + ''' 刻</td><td>生物受伤后约有 10 刻无敌帧，砍得更密只是浪费</td></tr>
 <tr><td>待雇状态</td><td>—</td><td>未雇佣的佣兵不跟随、不出手，也不占队伍名额</td></tr>
 <tr><td>索敌半径</td><td class="num">0</td><td><b>永不主动出手</b>，见下</td></tr>
-<tr><td>归队距离</td><td class="num">34 格</td><td>掉队即刻拉回雇主身边</td></tr>
+<tr><td>归队距离</td><td class="num">''' + str(Q["leash"]) + ''' 格</td><td>掉队即刻拉回雇主身边</td></tr>
+<tr><td>音效</td><td>—</td><td><code>Silent</code>：一队尸壳跟着你走，不该一路嚎</td></tr>
 </tbody></table></div>
+
+<div class="note"><b>指挥旗指的就是你看的那个。</b>射线每 <b>0.5</b> 格取一个点、命中半径 <b>0.7</b>，
+并且用一张实体类型标签把<b>不该当敌人的东西</b>整批挡在外面——
+掉落物、经验球、展示实体、盔甲架、船、矿车、画、拴绳结、区域效果云（圣水池就是它）、各类抛射物，
+以及<b>自家人</b>：在编佣兵、待雇者、替死人偶，还有骑在佣兵头顶的那块信息板。
+早先的版本半径是 1.3、排除表只有四项——那不是一条线，是一根直径 2.6 格的管子，
+往队友那边一指，标中的多半是自家佣兵的名牌。</div>
 
 <div class="note"><b>为什么佣兵永远不会误伤你。</b>尸壳是敌对生物，自带主动索敌，而原版命令
 <b>没有任何办法清除一个生物的当前目标</b>。所以这里不是"打之前判断一下是不是自己人"——

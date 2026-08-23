@@ -7,6 +7,9 @@ scoreboard players set @s rpg_taint 0
 # 走 burn 而不是 break：光清标记的话，玩家手里会留着一本
 # 「已立约」的空壳 —— 看着还在契约中，实际什么也没有。
 execute if entity @s[tag=rpg.pact] run function rpg:pact/burn
+# 堕落连同它堆起来的那点攻击一起作废 —— 反转是真的把人拽回来了。
+scoreboard players set @s rpg_fall 0
+attribute @s minecraft:attack_damage modifier remove rpg:fall
 scoreboard players set @s rpg_holy 3600
 effect give @s minecraft:instant_health 1 2 true
 effect give @s minecraft:strength 180 1 true

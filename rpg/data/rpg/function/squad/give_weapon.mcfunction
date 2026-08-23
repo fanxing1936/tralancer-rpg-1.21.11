@@ -4,4 +4,6 @@ item replace entity @s weapon.mainhand from entity @a[tag=rpg.sq.boss,limit=1] w
 item replace entity @a[tag=rpg.sq.boss,limit=1] weapon.offhand with air
 particle enchant ~ ~1.4 ~ 0.3 0.4 0.3 0.6 24
 playsound minecraft:item.armor.equip_iron player @a[distance=..12] ~ ~ ~ 1 1.1
-execute as @a[tag=rpg.sq.boss,limit=1] run function rpg:hud/m9
+execute as @a[tag=rpg.sq.boss,limit=1] run function rpg:hud/m18
+# 攻击数字是现读的属性，换完武器要重画一次信息板
+function rpg:squad/board
