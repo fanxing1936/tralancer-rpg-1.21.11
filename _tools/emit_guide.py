@@ -1,11 +1,27 @@
 # -*- coding: utf-8 -*-
 """Assemble the codex page from the generated card fragments."""
 
+import colorsys
 import io
 import json
 
 F = json.load(io.open("../_guide_fragments.json", encoding="utf-8"))
 S = json.load(io.open("../_guide_sections.json", encoding="utf-8"))
+
+
+def on_dark(hexcol):
+    """把物品用的强调色搬到这张深色页面上。
+
+    罪器的强调色是给 Minecraft 的深色 tooltip 挑的，路西法那支
+    #00491c 在这里几乎是黑的。保住色相、抬亮度、收一点饱和度 ——
+    七柱各自的身份还在，字却读得出来。
+    """
+    r, g, b = (int(hexcol.lstrip("#")[i:i + 2], 16) / 255.0 for i in (0, 2, 4))
+    hue, _l, sat = colorsys.rgb_to_hls(r, g, b)
+    # 近乎中性的来源要留住中性 —— 硬抬饱和度会把亚巴顿的'虚无'染成蓝色
+    sat = 0.08 if sat < 0.12 else min(max(sat, 0.30), 0.48)
+    r, g, b = colorsys.hls_to_rgb(hue, 0.62, sat)
+    return "#%02X%02X%02X" % (int(r * 255), int(g * 255), int(b * 255))
 
 
 def n_of(key):
@@ -273,6 +289,8 @@ td .sm{display:block; color:var(--muted); font-size:12.5px; margin-top:2px}
   margin:34px 0 14px; text-transform:none}
 .sub-h .rolls{margin-left:auto; font-size:11px; color:var(--gold-soft)}
 .plate .sub-h:first-of-type{margin-top:8px}
+.dim{color:var(--muted); font-size:12.5px}
+.bane{color:#B4636B}
 .note{border:1px solid var(--rule); border-left:2px solid var(--gold-soft); background:var(--surface); padding:16px 20px; margin-top:26px; font-size:14.5px; color:var(--muted)}
 .note b{color:var(--ink); font-weight:500}
 footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font-size:12.5px; color:var(--muted); font-family:"JetBrains Mono",monospace}
@@ -313,8 +331,9 @@ def build():
 <li><a href="#s7"><span class="num">VII</span>掉落总表</a></li>
 <li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
 <li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
-<li><a href="#s10"><span class="num">X</span>破碎大陆</a></li>
-<li><a href="#s11"><span class="num">XI</span>指令速查</a></li>
+<li><a href="#s12"><span class="num">X</span>七十二柱契约</a></li>
+<li><a href="#s10"><span class="num">XI</span>破碎大陆</a></li>
+<li><a href="#s11"><span class="num">XII</span>指令速查</a></li>
 </ol></nav>''')
 
     a('<main>')
@@ -533,9 +552,43 @@ def build():
 驱魔图腾用的是 <code>item_display</code>：把一件物品当作可缩放、可旋转的展示实体摆在世界里，这是 1.19.4 之后原版唯一的「自定义模型」路子，本包的图腾缩放动画就是这么做的。</div>
 </section>''')
 
+    # X pacts ---------------------------------------------------------------
+    P = json.load(io.open("../_pact.json", encoding="utf-8"))
+    prow = []
+    for q in P["pillars"]:
+        prow.append(
+            '<tr><td class="num">%d</td>'
+            '<td><b style="color:%s">%s</b><br><span class="dim">%s</span></td>'
+            '<td>%s</td>'
+            '<td><b>［%s］</b><br><span class="dim">%s</span></td>'
+            '<td class="bane">%s</td></tr>'
+            % (q["n"], on_dark(q["colour"]), q["who"], q["sin"], q["boon"],
+               q["power"], q["power_text"], q["bane"]))
+    a('''<section class="plate" id="s12">
+<div class="plate-h"><span class="num">X</span><h2>七十二柱契约</h2><span class="sub">七位领主 · 一本书</span></div>
+<p>上一节的<strong>逆圣化</strong>是走出污染的路；这一节是走进去的路，而且是<strong>你自己选的</strong>。</p>
+<blockquote class="verse">每一个正式边缘者都被分配一根柱位和一位魔神：边缘者借用魔神的力，魔神借契约进入边缘者的心。<cite>——卷五《魔神书》</cite></blockquote>
+<p>契约是一本书。<strong>长按右键签下</strong>，柱位当场绑定，恩赐与枷锁一并生效，书也随之变成「已立约」的样子。
+此后再长按右键，就是<strong>动用柱中之力</strong>——冷却 ''' + str(P["cd_seconds"]) + ''' 秒，每次再添 ''' + str(P["use_taint"]) + ''' 点魔化。</p>
+<div class="sys">
+<div><h3>柱位是排他的</h3><p class="how">一个人只挂在一根柱子上</p><p>已立约后，攥着别柱的书没有任何作用。想换柱位，先得把身上这一份解掉。</p></div>
+<div><h3>唯一的解约途径</h3><p class="how">逆圣化</p><p>反转烧掉的是污染的一切，柱位也在其中。除此之外，签下去就是签下去了。</p></div>
+<div><h3>力量借的是原件</h3><p class="how">与罪器同一套施法路径</p><p>路西法的蛇矛与尖牙、利维坦的落锚，契约调用的就是罪器本身那几个函数——同一位魔神的力，表现理应一模一样。</p></div>
+<div><h3>常驻代价</h3><p class="how">每 2 秒结算一次</p><p>立约本身就在渗：魔化每次结算额外 +1，与手中魔器的沾染叠加。<b>贪婪</b>那一柱渗得更快，翻倍。</p></div>
+</div>
+<div class="tw"><table>
+<thead><tr><th>柱</th><th>魔神 · 罪</th><th>恩赐</th><th>力量</th><th>枷锁</th></tr></thead>
+<tbody>''' + "".join(prow) + '''</tbody></table></div>
+<div class="note"><b>关于贴图：</b>七本书暂时沿用原版附魔书的外观，
+<code>custom_model_data</code> 已按柱位排好（''' + str(P["cmd0"]) + '''–''' + str(P["cmd0"] + 6) + '''）。
+美术补上时只要在材质包里给 <code>enchanted_book</code> 加一段 <code>range_dispatch</code>，数据包这边一个字都不用改。</div>
+<div class="note"><b>玛门补齐了第七宗罪。</b>卷五的七宗罪表里，贪婪那一格此前是空的——
+六位领主各有一件罪遗武器，玛门没有。第七柱的契约填上了它：贪婪不制造东西，它只让已有的东西变多。</div>
+</section>''')
+
     # VIII chapters -------------------------------------------------------
     a('''<section class="plate" id="s10">
-<div class="plate-h"><span class="num">X</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
+<div class="plate-h"><span class="num">XI</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
 
 <div class="scroll-h">
 <p class="heb">אֶרֶץ הַשְּׁבָרִים</p>
@@ -560,7 +613,7 @@ def build():
 
     # IX commands ---------------------------------------------------------
     a('''<section class="plate" id="s11">
-<div class="plate-h"><span class="num">XI</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
+<div class="plate-h"><span class="num">XII</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
 <div class="tw"><table>
 <thead><tr><th>指令</th><th>作用</th></tr></thead>
 <tbody>

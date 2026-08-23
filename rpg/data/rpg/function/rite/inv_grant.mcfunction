@@ -2,6 +2,8 @@
 tag @s remove rpg.inv.subject
 tag @s remove rpg.taint.full
 scoreboard players set @s rpg_taint 0
+# 反转烧掉的是污染的一切 —— 柱位也在其中。这是唯一的解约途径。
+execute if entity @s[tag=rpg.pact] run function rpg:pact/break
 scoreboard players set @s rpg_holy 3600
 effect give @s minecraft:instant_health 1 2 true
 effect give @s minecraft:strength 180 1 true

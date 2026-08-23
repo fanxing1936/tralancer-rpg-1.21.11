@@ -12,3 +12,10 @@ execute as @a[scores={rpg_rite=1..}] run scoreboard players remove @s rpg_rite 1
 # 先数够 400 刻，再去找村民。
 scoreboard players add #spread rpg_vac 1
 execute if score #spread rpg_vac matches 400.. run function rpg:vacant/spread
+
+# 七十二柱契约。三条全是玩家作用域（玩家表很短），
+# 而且各自带着柱位判定 —— 没签那一柱的人连函数都不会进。
+execute as @a[scores={rpg_pact_cd=1..}] run function rpg:pact/cd
+execute as @a[tag=rpg.pact,scores={rpg_pact=5}] at @s run function rpg:pact/samael
+execute as @a[tag=rpg.pact,scores={rpg_pact=7}] at @s run function rpg:pact/mammon
+execute as @a[scores={rpg_pact_t=1..}] run scoreboard players remove @s rpg_pact_t 1

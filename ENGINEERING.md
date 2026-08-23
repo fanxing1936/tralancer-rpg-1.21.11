@@ -2156,6 +2156,133 @@ scoreboard players add @s rpg_hud_t 0
 
 ---
 
+# 27. 七十二柱契约：一本书，两种行为
+
+第 26 部分把魔化值的两端补齐了 —— 底下有驱魔，顶上有逆圣化。但整条曲线仍然
+是**被动**的：你只会不小心沾上，然后想办法洗掉。卷五写着「边缘者借用魔神的力，
+魔神借契约进入边缘者的心」，而包里没有任何东西**邀请你选择堕落**。
+
+契约补的就是这一步。它是一本书。
+
+## 27.1 一本书，两种行为
+
+`minecraft:using_item` 在按住右键期间**每刻都会响**。签约和动用都该是一次性的，
+所以先用一个八刻的短锁去抖，再按有没有柱位分岔：
+
+```
+execute if entity @s[scores={rpg_pact_t=1..}] run return 0
+scoreboard players set @s rpg_pact_t 8
+execute unless entity @s[tag=rpg.pact] run function rpg:pact/sign
+execute if entity @s[tag=rpg.pact] run function rpg:pact/invoke
+```
+
+手里这本是哪一柱，靠 `if items` 读 —— 只看主手那一件，不翻背包：
+
+```
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{pact:3}] run function rpg:pact/sign3
+```
+
+`*[...]` 这种「任意物品 + 组件断言」的写法在服务器上单独验过：对第三柱命中、
+对第四柱不命中、`unless ... {pact_signed:1b}` 能正确识别未盖印的书。
+
+## 27.2 力量借的是原件，不是仿制品
+
+契约借的就是同一位魔神的力，表现理应一模一样。所以路西法那一柱直接调罪器
+自己的施法路径：
+
+```
+tag @s add rpg.luci.cast
+execute at @s anchored eyes run function rpg:item/extra/lucifer_lance
+execute at @s rotated ~ 0 run function rpg:item/extra/lucifer_fangs
+tag @s remove rpg.luci.cast
+```
+
+`lucifer_lance` 的伤害归属读的是 `@a[tag=rpg.luci.cast]` —— 把这个标签临时挂上，
+它就能脱离武器独立跑。利维坦的落锚同理（血税不收：契约的代价是魔化，不是生命）。
+只有那些和武器状态机缠死、没法独立调用的（亚巴顿的收割、别西卜的余烬、
+萨麦尔的毒），才在契约这边另写一份同味道的。
+
+## 27.3 恩赐与枷锁：写一次，长期生效
+
+七柱各有一份恩赐和一份枷锁。第一反应是逐刻 `effect give`，但这类长期修正根本
+不该按刻烧 —— 属性修饰符写一次就留在玩家身上：
+
+```
+attribute @s minecraft:max_health modifier add rpg:pact/3/boon0 6 add_value
+attribute @s minecraft:max_health modifier remove rpg:pact/3/boon0
+```
+
+（资源路径里带 `/` 与数字都合法，服务器实测 20 → 26 → 20 干净往返。）
+所以七柱里有五柱的常驻部分**每刻零开销**。只有两柱必须逐刻看：萨麦尔的攻击附毒
+走 `rpg.hurt` + `on attacker`，玛门的拾取吸附要扫掉落物 —— 这两条各自挂在
+自己柱位的分数判定后面，没签那一柱的人连函数都不会进。
+
+玛门那条是全包第二个 NBT 匹配选择器（`nbt={PickupDelay:0s}`，用来放过刚扔出去的
+东西）。NBT 选择器是最贵的一种，但它的候选集已经被 `type=minecraft:item` 和
+6 格半径压得很小，而且只有签了第七柱的人才会付。
+
+## 27.4 签完约不松手，力量就自己放出去了
+
+八刻的锁意味着按住不放会**再响一次**。第二响时玩家已经有了柱位，于是走 invoke ——
+签约当场把力量放了出去，还顺带扣了 3 点魔化。
+
+修法不是把锁加长（那只是把窗口推远），而是**签约当场把冷却拉满**：柱中之力
+得先与人相合。这一改顺带填掉了一处 `scores=` 空值陷阱 —— `rpg_pact_cd` 从签约
+那一刻起就有值了，不必再指望第一次 invoke 去创建它。
+
+## 27.5 书丢了就再也用不了
+
+死一次把书掉了是常事。柱位记在玩家身上，书却没了 —— 重新拿一本空白的同柱之书，
+`invoke` 只认 `pact_signed`，于是直接判成「攥错了书」，人就卡死在这儿。
+
+加一条**重新盖印**：柱位对得上就地补签（`sign%d` 本身就是幂等的，属性先撤再加），
+对不上才是真的攥错了。
+
+```
+execute if entity @s[scores={rpg_pact=3}] if items entity @s weapon.mainhand *[minecraft:custom_data~{pact:3}] run return run function rpg:pact/sign3
+```
+
+## 27.6 玛门补上了第七宗罪
+
+卷五的七宗罪表里，贪婪那一格一直是空的 —— 六位领主各有一件罪遗武器，玛门没有。
+第七柱的契约填上了它：贪婪不制造东西，它只让已有的东西变多（8 格内掉落物尽数
+翻倍）。翻倍的做法是把整堆的数量读出来乘二写回去，比逐件复制便宜得多：
+
+```
+execute store result score #gild rpg_pact run data get entity @s Item.count
+execute if score #gild rpg_pact matches 1..32 run function rpg:pact/p7_double
+```
+
+只处理 32 及以下的堆 —— 再多翻倍就越过 64 的堆叠上限了。实测 5 → 10。
+
+## 27.7 图鉴：从同一份数据长出来
+
+第 X 节的七柱表不是手写的。`add_pact.py` 把七柱连同冷却、魔化代价、
+`custom_model_data` 区段一起吐成 `_pact.json`，`emit_guide.py` 读回去渲染 ——
+调一个数值，页面自己跟着走，这和 `n_of()` 当初解决的是同一个漂移问题。
+
+顺带一个配色问题：罪器的强调色是给 Minecraft 的**深色 tooltip** 挑的，
+路西法那支 `#00491c` 搬到图鉴的深色底上几乎是黑的。于是加了一层 `on_dark()`：
+保住色相、把亮度抬到 0.62、饱和度收在 0.30–0.48。第一版还把七柱染重了两组
+（别西卜与玛门同为黄、亚巴顿与利维坦同为蓝），改源色相分开，并给近乎中性的
+来源留一条例外 —— 硬抬饱和度会把亚巴顿的「虚无」染成蓝色。
+
+## 27.8 开销与验证
+
+* 空闲 1094 → **1122 命令 / 288 → 292 次遍历**。新增的四条根命令全是玩家作用域，
+  且各自带柱位判定；多出来的遍历是 `hotspots` 把两条柱位专属的 tick 一并计入了
+  静态模型（它读不出记分板）
+* 函数 278 → **316**，进度 35 → **36**
+* 无头 1.21.11 实测，服务器零抱怨。整条签约链在替身身上跑通：
+  柱位落到 3 ✓、冷却起手即 300 ✓、最大生命 20 → 26 ✓、书被盖印 ✓、
+  毁约后 26 → 20 且柱位归零 ✓；七道力量逐个跑过，`give/extra` 与
+  `give/box` 全部合法
+* 贴图暂缺，七本书沿用原版附魔书外观。`custom_model_data` 已按柱位排好
+  （1110031–1110037），美术补上时只要在材质包给 `enchanted_book` 加一段
+  `range_dispatch`，数据包一个字都不用改
+
+---
+
 # 重建方式
 
 ```bash
@@ -2169,7 +2296,7 @@ bash "_tools/rp_build.sh"
 数据包流程：`migrate.py` → `optimize.py` + `opt_spawn.py` + `opt_misc.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
 　　　　　→ `add_lucifer.py` + `add_leviathan.py`
-　　　　　→ `add_runes.py` + `add_epics.py` + `add_exorcism.py`
+　　　　　→ `add_runes.py` + `add_epics.py` + `add_exorcism.py` + `add_pact.py`
 　　　　　→ `retype_longinus.py` + `make_boxes.py` + `fix_display.py`
 　　　　　→ `opt_index.py` + `opt_guard.py` + `opt_invert.py` → `validate.py` → `hotspots.py`
 材质包流程：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`

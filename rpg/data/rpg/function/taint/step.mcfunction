@@ -6,6 +6,9 @@ execute if entity @s[scores={rpg_holy=1..}] run return 0
 
 execute if entity @s[tag=rpg.h.devil_tag1] run scoreboard players add @s rpg_taint 2
 execute if entity @s[tag=rpg.h.devil_weapon_tag1] run scoreboard players add @s rpg_taint 1
+# 立约本身就是代价 —— 柱中的东西一直在往里渗。贪婪那一柱渗得更快。
+execute if entity @s[tag=rpg.pact] run scoreboard players add @s rpg_taint 1
+execute if entity @s[tag=rpg.pact,scores={rpg_pact=7}] run scoreboard players add @s rpg_taint 1
 execute if entity @s[tag=rpg.h.holy_weapon_tag1] run scoreboard players remove @s rpg_taint 1
 execute if entity @s[scores={rpg_taint=101..}] run scoreboard players set @s rpg_taint 100
 execute if entity @s[scores={rpg_taint=..-1}] run scoreboard players set @s rpg_taint 0

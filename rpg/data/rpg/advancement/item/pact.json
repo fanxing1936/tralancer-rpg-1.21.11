@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{pact_tag:1b}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:pact/trigger"
+  }
+}

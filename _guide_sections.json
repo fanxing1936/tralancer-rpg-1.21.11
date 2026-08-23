@@ -3339,6 +3339,328 @@
      }
     ]
    }
+  },
+  {
+   "item": "enchanted_book",
+   "name": "路西法之柱",
+   "rarity": "契约",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "七十二柱之一，所罗门封入柱中的名",
+    "长按右键签下契约",
+    "+------------------+",
+    "🜏恩赐　攻击伤害 +2.5",
+    "🜏力量[原罪]",
+    "　沿视线刺出蛇矛，幻魔者尖牙同路破土；贯穿者受伤加重并向近旁蔓延",
+    "🜏枷锁　击退抗性 −0.25（更容易被打飞）",
+    "+------------------+",
+    "契约期间持续沾染魔化",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact",
+    "pact_tag"
+   ],
+   "custom_data": {
+    "pact_tag": 1,
+    "pact": 1
+   },
+   "cmd": 1110031.0,
+   "unbreakable": false,
+   "consumable": 100120,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "enchanted_book",
+   "name": "利维坦之柱",
+   "rarity": "契约",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "七十二柱之一，所罗门封入柱中的名",
+    "长按右键签下契约",
+    "+------------------+",
+    "🜏恩赐　移动速度 +8%",
+    "🜏力量[沉锚]",
+    "　向前方抛出巨锚，锚落处涌起漩涡，将敌人拖向锚心并持续碾压",
+    "🜏枷锁　最大生命 −4",
+    "+------------------+",
+    "契约期间持续沾染魔化",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact",
+    "pact_tag"
+   ],
+   "custom_data": {
+    "pact_tag": 1,
+    "pact": 2
+   },
+   "cmd": 1110032.0,
+   "unbreakable": false,
+   "consumable": 100120,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "enchanted_book",
+   "name": "亚巴顿之柱",
+   "rarity": "契约",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "七十二柱之一，所罗门封入柱中的名",
+    "长按右键签下契约",
+    "+------------------+",
+    "🜏恩赐　最大生命 +6",
+    "🜏力量[收割]",
+    "　周身 6 格爆发灵魂收割，每收割一个目标回复 1 颗心",
+    "🜏枷锁　移动速度 −12%",
+    "+------------------+",
+    "契约期间持续沾染魔化",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact",
+    "pact_tag"
+   ],
+   "custom_data": {
+    "pact_tag": 1,
+    "pact": 3
+   },
+   "cmd": 1110033.0,
+   "unbreakable": false,
+   "consumable": 100120,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "enchanted_book",
+   "name": "别西卜之柱",
+   "rarity": "契约",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "七十二柱之一，所罗门封入柱中的名",
+    "长按右键签下契约",
+    "+------------------+",
+    "🜏恩赐　攻击速度 +12%",
+    "🜏力量[余烬]",
+    "　向前方喷出灰烬，追加三段刀罡",
+    "🜏枷锁　护甲 −3",
+    "+------------------+",
+    "契约期间持续沾染魔化",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact",
+    "pact_tag"
+   ],
+   "custom_data": {
+    "pact_tag": 1,
+    "pact": 4
+   },
+   "cmd": 1110034.0,
+   "unbreakable": false,
+   "consumable": 100120,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "enchanted_book",
+   "name": "萨麦尔之柱",
+   "rarity": "契约",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "七十二柱之一，所罗门封入柱中的名",
+    "长按右键签下契约",
+    "+------------------+",
+    "🜏恩赐　攻击伤害 +1.5，且攻击附带剧毒",
+    "🜏力量[毒雾]",
+    "　前方 7 格喷出毒雾，中者剧毒与凋零并存",
+    "🜏枷锁　最大生命 −2",
+    "+------------------+",
+    "契约期间持续沾染魔化",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact",
+    "pact_tag"
+   ],
+   "custom_data": {
+    "pact_tag": 1,
+    "pact": 5
+   },
+   "cmd": 1110035.0,
+   "unbreakable": false,
+   "consumable": 100120,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "enchanted_book",
+   "name": "贝利尔之柱",
+   "rarity": "契约",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "七十二柱之一，所罗门封入柱中的名",
+    "长按右键签下契约",
+    "+------------------+",
+    "🜏恩赐　护甲 +2",
+    "🜏力量[朝拜]",
+    "　7 格内所有生物停止活动，并受一次冲击",
+    "🜏枷锁　攻击伤害 −1",
+    "+------------------+",
+    "契约期间持续沾染魔化",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact",
+    "pact_tag"
+   ],
+   "custom_data": {
+    "pact_tag": 1,
+    "pact": 6
+   },
+   "cmd": 1110036.0,
+   "unbreakable": false,
+   "consumable": 100120,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "enchanted_book",
+   "name": "玛门之柱",
+   "rarity": "契约",
+   "name_colour": "white",
+   "lore": [
+    "+------------------+",
+    "七十二柱之一，所罗门封入柱中的名",
+    "长按右键签下契约",
+    "+------------------+",
+    "🜏恩赐　6 格内的掉落物自动吸附到身边",
+    "🜏力量[点金]",
+    "　8 格内的掉落物尽数翻倍，并吐出经验",
+    "🜏枷锁　魔化沾染速度翻倍",
+    "+------------------+",
+    "契约期间持续沾染魔化",
+    "+------------------+"
+   ],
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact",
+    "pact_tag"
+   ],
+   "custom_data": {
+    "pact_tag": 1,
+    "pact": 7
+   },
+   "cmd": 1110037.0,
+   "unbreakable": false,
+   "consumable": 100120,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
   }
  ],
  "runes": [

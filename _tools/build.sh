@@ -19,6 +19,7 @@ python add_leviathan.py ../resourcepack ../rpg
 python add_runes.py ../rpg ../resourcepack
 python add_epics.py ../resourcepack ../rpg
 python add_exorcism.py ../rpg
+python add_pact.py ../rpg
 python retype_longinus.py ../resourcepack ../rpg
 python make_boxes.py ../rpg
 # 上面这些生成器同样会往 ../resourcepack 写手持变换，而它们写的是作者

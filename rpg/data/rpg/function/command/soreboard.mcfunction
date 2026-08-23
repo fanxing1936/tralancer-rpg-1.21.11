@@ -166,3 +166,8 @@ scoreboard players set #hud_full rpg_hud 30
 scoreboard players set #taint_max rpg_hud 100
 scoreboard players set #inv_full rpg_hud 200
 scoreboard players set #holy_full rpg_hud 3600
+scoreboard objectives add rpg_pact dummy
+scoreboard objectives add rpg_pact_cd dummy
+scoreboard objectives add rpg_pact_t dummy
+scoreboard players set #pact_full rpg_hud 300
+scoreboard players set #two rpg_pact 2
