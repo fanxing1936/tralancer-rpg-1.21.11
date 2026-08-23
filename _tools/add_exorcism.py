@@ -32,8 +32,13 @@ HUD_TTL = 3              # 技能占用 HUD 的时效（刻）
 # HUD 占用编号
 HUD_ANCHOR, HUD_FORGE, HUD_VINE = 1, 2, 3
 
+LIT = 200                # 图腾点燃后的总时长（刻）
+PULSES = [(200, 12, "1.0"), (160, 10, "0.88"), (120, 8, "0.74"),
+          (80, 6, "0.58"), (40, 4, "0.40")]   # 刻 / 净化量 / 缩放
+RITE_R = 6               # 作用半径
+
 OBJECTIVES = ["rpg_taint", "rpg_hud", "rpg_hud_p", "rpg_hud_t",
-              "rpg_taint_t", "rpg_vac", "rpg_rite"]
+              "rpg_taint_t", "rpg_vac", "rpg_rite", "rpg_totem"]
 
 RULE = '["",{"text":"+------------------+","italic":false,"color":"white"}]'
 
@@ -211,45 +216,80 @@ execute as @e[type=minecraft:villager,tag=rpg.vacant,tag=rpg.hurt] at @s on atta
 # 驱魔仪式
 # ---------------------------------------------------------------------------
 RITE_TRIGGER = """\
-# 驱魔仪式 —— 由 rpg:item/rite 在「以圣水右击灵魂灯笼」时触发。
-# 阵型：以被点的灵魂灯笼为心，四正方向各三格处再各有一盏。
+# 立图腾 —— 由 rpg:item/rite 在「以驱魔图腾右击方块」时触发。
+# 图腾本体用 item_display：没有 AI、没有碰撞，只是一件立在那儿的东西。
 advancement revoke @s only rpg:item/rite
-execute if entity @s[scores={rpg_rite=1..}] run return 0
-execute at @s run function rpg:rite/check
+execute if entity @s[scores={{rpg_rite=1..}}] run return 0
+scoreboard players set @s rpg_rite 10
+clear @s minecraft:totem_of_undying[minecraft:custom_data~{{totem_tag:1b}}] 1
+execute at @s anchored eyes positioned ^ ^ ^2 run function rpg:rite/place
 """
 
-RITE_CHECK = """\
-# 验阵。四盏都在才算数，缺一不成。
-scoreboard players set @s rpg_rite 60
-execute unless block ~3 ~ ~ minecraft:soul_lantern run function rpg:rite/fail
-execute unless block ~-3 ~ ~ minecraft:soul_lantern run function rpg:rite/fail
-execute unless block ~ ~ ~3 minecraft:soul_lantern run function rpg:rite/fail
-execute unless block ~ ~ ~-3 minecraft:soul_lantern run function rpg:rite/fail
-execute if block ~3 ~ ~ minecraft:soul_lantern if block ~-3 ~ ~ minecraft:soul_lantern if block ~ ~ ~3 minecraft:soul_lantern if block ~ ~ ~-3 minecraft:soul_lantern run function rpg:rite/purge
+RITE_PLACE = """\
+# 图腾落地。此刻它还是熄的 —— 要等圣水浇上去。
+summon minecraft:item_display ~ ~ ~ {{Tags:["rpg.totem"],item:{{id:"minecraft:totem_of_undying",count:1}},transformation:{{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f]}},billboard:"vertical",brightness:{{sky:15,block:15}}}}
+particle dust{{color:[0.95,0.86,0.45],scale:1}} ~ ~0.6 ~ 0.3 0.4 0.3 0.02 20
+playsound minecraft:block.respawn_anchor.set_spawn player @a[distance=..16] ~ ~ ~ 1 1.4
+title @a[distance=..6] actionbar ["",{{"text":"图腾已立","color":"gold"}},{{"text":"　以驱魔圣水浇之","color":"gray","italic":true}}]
 """
 
-RITE_FAIL = """\
-particle smoke ~ ~1 ~ 0.3 0.3 0.3 0.02 12
-playsound minecraft:entity.villager.no player @s ~ ~ ~ 1 0.8
-title @s actionbar ["",{"text":"阵不成 ","color":"dark_gray"},{"text":"四方各三格需各置一盏灵魂灯笼","color":"gray","italic":true}]
+RITE_TICK = """\
+# 图腾的一生：等圣水、点燃、递减、炸开。
+# 由 rpg:exorcism 守卫调用 —— 场上没有图腾时整段跳过。
+
+# 熄着的图腾等一朵圣水云。滞留药水落地留下的 area_effect_cloud 就是"浇上了"，
+# 喷溅型落地即散，什么都留不下，所以驱魔圣水做成滞留型。
+execute as @e[type=minecraft:item_display,tag=rpg.totem,tag=!rpg.totem.lit] at @s if entity @e[type=minecraft:area_effect_cloud,distance=..3] run function rpg:rite/light
+
+# 点着的图腾按拍净化，一拍比一拍弱
+{PULSE_LINES}
+
+# 烧到头就炸
+execute as @e[tag=rpg.totem.lit,scores={{rpg_totem=..0}}] at @s run function rpg:rite/burst
+
+execute as @e[tag=rpg.totem.lit] at @s run particle dust{{color:[0.98,0.92,0.62],scale:1}} ~ ~0.7 ~ 0.22 0.3 0.22 0.01 2
+execute as @e[tag=rpg.totem.lit,scores={{rpg_totem=1..}}] run scoreboard players remove @s rpg_totem 1
 """
 
-RITE_PURGE = """\
-# 净化。圣光沿四方连线走一圈，然后收束到阵心。
-particle end_rod ~ ~0.3 ~ 3 0.1 3 0.02 90
-particle dust{color:[1.0,0.98,0.86],scale:2} ~ ~1 ~ 2.6 0.6 2.6 0.04 120
-particle minecraft:flash{color:16777200} ~ ~1 ~ 0 0 0 0 1
+RITE_LIGHT = """\
+# 圣水浇上，图腾点燃。
+tag @s add rpg.totem.lit
+scoreboard players set @s rpg_totem {LIT}
+particle end_rod ~ ~0.6 ~ 0.4 0.5 0.4 0.05 60
+particle dust{{color:[1.0,0.98,0.86],scale:2}} ~ ~0.8 ~ 0.5 0.6 0.5 0.04 80
+particle minecraft:flash{{color:16777200}} ~ ~0.8 ~ 0 0 0 0 1
 playsound minecraft:block.beacon.activate player @a[distance=..24] ~ ~ ~ 1 1.2
-playsound minecraft:block.conduit.deactivate player @a[distance=..24] ~ ~ ~ 1 1.4
+playsound minecraft:item.bottle.empty player @a[distance=..16] ~ ~ ~ 1 0.8
+title @a[distance=..8] actionbar ["",{{"text":"驱　魔","color":"gold","bold":true}},{{"text":"　图腾开始燃尽","color":"gray"}}]
+"""
 
-# 一、洗去施术者自己的魔化
-execute as @a[distance=..4] run scoreboard players remove @s rpg_taint 25
-execute as @a[distance=..4,scores={rpg_taint=..-1}] run scoreboard players set @s rpg_taint 0
-execute as @a[distance=..4] run effect give @s minecraft:regeneration 6 0 true
-execute as @a[distance=..4] run title @s actionbar ["",{"text":"驱　魔","color":"gold","bold":true},{"text":"　魔化已被洗去一分","color":"gray"}]
+RITE_PULSE = """\
+# 一拍净化。图腾每燃尽一分，效力就弱一分 —— 净化量由调用处给。
+particle end_rod ~ ~0.5 ~ {R_HALF} 0.2 {R_HALF} 0.04 70
+particle dust{{color:[1.0,0.98,0.86],scale:2}} ~ ~0.8 ~ {R_HALF} 0.4 {R_HALF} 0.03 60
+playsound minecraft:block.conduit.ambient player @a[distance=..20] ~ ~ ~ 1 1.3
+execute as @a[distance=..{R}] run scoreboard players remove @s rpg_taint {AMOUNT}
+execute as @a[distance=..{R},scores={{rpg_taint=..-1}}] run scoreboard players set @s rpg_taint 0
+execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..{R}] at @s run function rpg:rite/free
+# 图腾随着燃尽一点点缩小
+data merge entity @s {{transformation:{{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[{SCALE}f,{SCALE}f,{SCALE}f],right_rotation:[0f,0f,0f,1f]}}}}
+"""
 
-# 二、驱出阵内的空缺者：空壳散去，人回来
-execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..6] at @s run function rpg:rite/free
+RITE_BURST = """\
+# 燃尽。图腾炸开 —— 最后一下把余威全部吐出来。
+particle explosion ~ ~0.6 ~ 0.6 0.3 0.6 0 6
+particle end_rod ~ ~0.6 ~ 1.2 0.6 1.2 0.35 140
+particle dust{{color:[1.0,0.94,0.70],scale:3}} ~ ~0.8 ~ 1 0.6 1 0.2 120
+particle minecraft:flash{{color:16777200}} ~ ~1 ~ 0 0 0 0 1
+playsound minecraft:entity.generic.explode player @a[distance=..28] ~ ~ ~ 1 1.4
+playsound minecraft:block.beacon.deactivate player @a[distance=..28] ~ ~ ~ 1 1.1
+
+# 最后一击：范围内的空缺者一并驱出，敌意生物被震开
+execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..{R}] at @s run function rpg:rite/free
+execute as @e[distance=0.1..{R},type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,type=!minecraft:villager] at @s run damage @s 6 minecraft:magic
+execute as @e[distance=0.1..{R},type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:item_display,type=!minecraft:villager] at @s run data merge entity @s {{Motion:[0d,0.6d,0d]}}
+title @a[distance=..10] actionbar ["",{{"text":"图腾已尽","color":"gray","italic":true}}]
+kill @s
 """
 
 RITE_FREE = """\
@@ -275,32 +315,43 @@ execute as @a run function rpg:hud/hud
 execute if entity @e[type=minecraft:villager,tag=!rpg.vac.seen,limit=1] run function rpg:vacant/mark
 execute if entity @a[tag=rpg.h.holy_weapon_tag1] run function rpg:vacant/vacant
 execute unless entity @a[tag=rpg.h.holy_weapon_tag1] if entity @e[type=minecraft:villager,tag=rpg.vacant,tag=rpg.hurt,limit=1] run function rpg:vacant/vacant
+execute if entity @e[type=minecraft:item_display,tag=rpg.totem,limit=1] run function rpg:rite/tick
 execute as @a[scores={rpg_rite=1..}] run scoreboard players remove @s rpg_rite 1
 """
 
 
 def build_give():
-    """一件仪式用的圣水：右击灵魂灯笼起阵。"""
+    """两件东西：立起来的图腾，和浇上去的圣水。"""
     s = io.open(GIVE, encoding="utf-8").read()
-    if "驱魔圣水" in s:
+    if "驱魔图腾" in s:
         return 0
-    item = ("give @a splash_potion["
-            "custom_name=" + row(seg("[驱魔]", "#FFD700", True), seg("驱魔圣水", "white")) + ","
-            "lore=[" + ",".join([
-                RULE,
-                row(seg("自"), seg("[圣座]", "#FFD700", True), seg("取来的水")),
-                row(seg("以此水右击灵魂灯笼起阵")),
-                RULE,
-                row(seg("🔱仪式", "white", True), seg("[驱魔]", "#FFD700", True)),
-                row(seg("四正方向各三格需各置一盏灵魂灯笼")),
-                row(seg("成阵可洗去魔化，并驱出阵中的空缺者")),
-                RULE]) + "],"
-            'potion_contents={custom_color:16777200,custom_effects:[{id:"minecraft:water_breathing",duration:200,amplifier:0}]},'
-            'tooltip_display={hidden_components:["minecraft:potion_contents"]},'
-            "custom_data={rite_tag:1b}]")
+    totem = ("give @a totem_of_undying["
+             "custom_name=" + row(seg("[驱魔]", "#FFD700", True), seg("驱魔图腾", "white")) + ","
+             "lore=[" + ",".join([
+                 RULE,
+                 row(seg("以"), seg("[圣座]", "#FFD700", True), seg("之木刻成")),
+                 row(seg("右键地面立起，再以驱魔圣水浇之")),
+                 RULE,
+                 row(seg("🔱仪式", "white", True), seg("[驱魔]", "#FFD700", True)),
+                 row(seg("点燃后每隔两秒净化一次，效力逐次递减")),
+                 row(seg("燃尽时炸开，驱出范围内所有空缺者")),
+                 RULE]) + "],"
+             "custom_data={totem_tag:1b}]")
+    # 必须是滞留型：喷溅药水落地即散，图腾没有任何东西可以感知；
+    # 滞留药水会留下 area_effect_cloud，那才是"浇上了"的凭据。
+    water = ("give @a lingering_potion["
+             "custom_name=" + row(seg("[驱魔]", "#FFD700", True), seg("驱魔圣水", "white")) + ","
+             "lore=[" + ",".join([
+                 RULE,
+                 row(seg("自"), seg("[圣座]", "#FFD700", True), seg("取来的水")),
+                 row(seg("浇在驱魔图腾上以点燃仪式")),
+                 RULE]) + "],"
+             'potion_contents={custom_color:16777200,custom_effects:[{id:"minecraft:water_breathing",duration:100,amplifier:0}]},'
+             'tooltip_display={hidden_components:["minecraft:potion_contents"]},'
+             "custom_data={rite_tag:1b}]")
     io.open(GIVE, "w", encoding="utf-8", newline="\n").write(
-        s.rstrip("\n") + "\n\n##驱魔仪式\n" + item + "\n")
-    return 1
+        s.rstrip("\n") + "\n\n##驱魔仪式\n" + totem + "\n" + water + "\n")
+    return 2
 
 
 def build_functions():
@@ -309,10 +360,18 @@ def build_functions():
     wf("taint/step.mcfunction", TAINT_STEP.format(MAX=TAINT_MAX, MAXP=TAINT_MAX + 1))
     wf("vacant/mark.mcfunction", VACANT_MARK)
     wf("vacant/vacant.mcfunction", VACANT)
-    wf("rite/trigger.mcfunction", RITE_TRIGGER)
-    wf("rite/check.mcfunction", RITE_CHECK)
-    wf("rite/fail.mcfunction", RITE_FAIL)
-    wf("rite/purge.mcfunction", RITE_PURGE)
+    wf("rite/trigger.mcfunction", RITE_TRIGGER.format())
+    wf("rite/place.mcfunction", RITE_PLACE.format())
+    pulses = []
+    for i, (at, amount, scale) in enumerate(PULSES, 1):
+        pulses.append("execute as @e[tag=rpg.totem.lit,scores={rpg_totem=%d}] at @s "
+                      "run function rpg:rite/p%d" % (at, i))
+        wf("rite/p%d.mcfunction" % i,
+           RITE_PULSE.format(R=RITE_R, R_HALF="%.1f" % (RITE_R * 0.5),
+                             AMOUNT=amount, SCALE=scale))
+    wf("rite/tick.mcfunction", RITE_TICK.format(PULSE_LINES="\n".join(pulses)))
+    wf("rite/light.mcfunction", RITE_LIGHT.format(LIT=LIT))
+    wf("rite/burst.mcfunction", RITE_BURST.format(R=RITE_R))
     wf("rite/free.mcfunction", RITE_FREE)
     wf("exorcism.mcfunction", ROOT)
 
@@ -320,9 +379,7 @@ def build_functions():
         "criteria": {"requirement": {
             "trigger": "minecraft:item_used_on_block",
             "conditions": {
-                "item": {"predicates": {"minecraft:custom_data": "{rite_tag:1b}"}},
-                "location": [{"condition": "minecraft:block_state_property",
-                              "block": "minecraft:soul_lantern"}]}}},
+                "item": {"predicates": {"minecraft:custom_data": "{totem_tag:1b}"}}}}},
         "rewards": {"function": "rpg:rite/trigger"}})
 
     tick = os.path.join(FUNC, "command/tick.mcfunction")

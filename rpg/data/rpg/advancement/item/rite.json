@@ -5,15 +5,9 @@
       "conditions": {
         "item": {
           "predicates": {
-            "minecraft:custom_data": "{rite_tag:1b}"
+            "minecraft:custom_data": "{totem_tag:1b}"
           }
-        },
-        "location": [
-          {
-            "condition": "minecraft:block_state_property",
-            "block": "minecraft:soul_lantern"
-          }
-        ]
+        }
       }
     }
   },
