@@ -21,6 +21,7 @@
 
 import io
 import os
+import re
 import sys
 
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
@@ -257,6 +258,47 @@ def fix_bossbar_load():
     fixes.append(("minecraft/load", "Boss 血条在全新存档上也会被建出来"))
 
 
+# ---------------------------------------------------------------------------
+# 8. `as @e ... if entity @s[...]` —— 先把全世界绑一遍，再逐个问要不要
+# ---------------------------------------------------------------------------
+# `item/chestplate/off` 是 command/tick 调的**第一个**函数，里面八行长这样：
+#
+#     execute as @e at @s if entity @s[scores={absorption=0..},tag=X] run ...
+#
+# `@e` 不带任何过滤 = 世界上每一个已加载实体。对每一个都要 `as` 绑定、
+# `at` 重定位，然后再跑一次嵌套 execute 去问"你是不是我要找的"。
+# 把条件折回选择器里，筛选发生在遍历本身，八分之七的实体连上下文都不用建：
+#
+#     execute as @e[scores={absorption=0..},tag=X] at @s run ...
+#
+# 语义完全相同 —— 两种写法筛的是同一批实体。折完之后相邻几行开的是同一个
+# 选择器，opt_invert 还能把它们再并成一次遍历。
+#
+# 这不算多人专属问题，但多人直接把它放大：人越多，已加载区块越多，
+# 世界上的实体也就越多，而这八行的代价正比于那个数字。
+FOLD = re.compile(r"^execute as @e (at @s )?if entity @s\[([^\]]*)\] (.*)$")
+
+
+def fix_bare_walks():
+    changed = 0
+    for rel in ("item/chestplate/off.mcfunction",):
+        out = []
+        for line in read(rel).split("\n"):
+            m = FOLD.match(line.strip())
+            if not m:
+                out.append(line)
+                continue
+            at, filt, rest = m.group(1) or "", m.group(2), m.group(3)
+            line = "execute as @e[%s] %s%s" % (filt, at, rest)
+            out.append(line.replace("at @s at @s ", "at @s "))
+            changed += 1
+        if changed:
+            write(rel, "\n".join(out))
+    if changed:
+        fixes.append(("item/chestplate/off",
+                      "%d 行全世界绑定 → 折进选择器，交给 opt_invert 再并" % changed))
+
+
 def main():
     fix_damage_scan()
     fix_samael()
@@ -265,6 +307,7 @@ def main():
     fix_chime()
     fix_bossbar()
     fix_bossbar_load()
+    fix_bare_walks()
     print("multiplayer: %d fixes" % len(fixes))
     for rel, why in fixes:
         print("  %-30s %s" % (rel, why))

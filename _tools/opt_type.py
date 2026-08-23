@@ -38,32 +38,84 @@ def walk():
                 yield os.path.join(root, f)
 
 
+def strip_passengers(line):
+    """把 `Passengers:[ ... ]` 整段挖掉。
+
+    `summon` 捕到的是**坐骑**的类型，而 Passengers 里那些 Tags 长在**骑手**
+    身上。包里的溺尸骑士正是这个形状：
+
+        summon horse ~ ~ ~ {... Passengers:[{id:drowned, Tags:["king_tag"] ...}]}
+
+    不挖掉的话，king_tag 会被记成 horse，重写出来的
+    `@e[type=minecraft:horse,tag=king_tag]` **一个实体都匹配不到** ——
+    语法合法，validate 与服务器都不会吭声，功能却静悄悄地没了。
+
+    这里选择保守：挖掉整段，让里面的标签一律算作"来路不明"，于是不会被收窄。
+    也可以去解析骑手自己的 `id:`，但嵌套骑乘会让这件事变复杂 ——
+    而在一个自动批量重写器里，多省几处遍历远不如"绝不改错"值钱。
+
+    返回 (挖干净的那一行, 被挖走的骑手块列表)。
+    """
+    out, ridden, i = [], [], 0
+    while True:
+        m = re.search(r"Passengers:\[", line[i:])
+        if not m:
+            out.append(line[i:])
+            return "".join(out), ridden
+        start = i + m.start()
+        out.append(line[i:start])
+        j, depth = i + m.end() - 1, 0
+        while j < len(line):
+            if line[j] == "[":
+                depth += 1
+            elif line[j] == "]":
+                depth -= 1
+                if depth == 0:
+                    break
+            j += 1
+        ridden.append(line[start:j + 1])
+        i = j + 1
+        if j >= len(line):                    # 括号没闭合，剩下的整段丢弃
+            return "".join(out), ridden
+
+
 def collect():
-    """标签 -> 召唤它的实体类型集合；以及被 `tag ... add` 写过的标签。"""
+    """标签 -> 召唤它的实体类型集合；以及所有"来路不明"的标签。
+
+    来路不明有两种：被 `tag ... add` 挂上去的（可能落在任何实体上），
+    以及出现在 `Passengers:` 里的。后者单靠挖掉还不够安全 ——
+    假如同一个标签既直接召唤在 A 类型上、又作为 B 类型的骑手出现，
+    挖掉之后只看得见 A，收窄成 A 就会漏掉所有 B。
+    所以凡是在骑手块里露过面的标签，一律不收窄。
+    """
     from_summon = {}
-    from_command = set()
+    unknown = set()
     for p in walk():
         text = io.open(p, encoding="utf-8").read()
         for line in text.split("\n"):
             if line.lstrip().startswith("#"):
                 continue
-            for m in SUMMON.finditer(line):
+            outer, ridden = strip_passengers(line)
+            for m in SUMMON.finditer(outer):
                 etype, rest = m.group(1), m.group(2)
                 for tm in TAGS_NBT.finditer(rest):
                     for t in re.findall(r'"([^"]+)"', tm.group(1)):
                         from_summon.setdefault(t, set()).add(etype)
+            for chunk in ridden:
+                for tm in TAGS_NBT.finditer(chunk):
+                    unknown.update(re.findall(r'"([^"]+)"', tm.group(1)))
             for m in TAG_ADD.finditer(line):
-                from_command.add(m.group(1))
-    return from_summon, from_command
+                unknown.add(m.group(1))
+    return from_summon, unknown
 
 
 def main():
-    from_summon, from_command = collect()
+    from_summon, unknown = collect()
 
     safe = {}
     for tag, types in sorted(from_summon.items()):
-        if tag in from_command:
-            continue            # 也可能被挂到任意实体上，补类型会改语义
+        if tag in unknown:
+            continue            # 可能落在任何实体上，补类型会改语义
         if len(types) != 1:
             continue            # 同一个标签召唤出不止一种实体
         safe[tag] = types.pop()
