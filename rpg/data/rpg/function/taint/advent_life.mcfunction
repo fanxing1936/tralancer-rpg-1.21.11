@@ -6,4 +6,5 @@
 execute as @e[type=minecraft:vindicator,tag=rpg.advent.new] run scoreboard players set @s rpg_fall 600
 execute if score #boss rpg_fall matches 1 as @e[type=minecraft:vindicator,tag=rpg.advent.new] run scoreboard players set @s rpg_fall 2400
 scoreboard players set #boss rpg_fall 0
+tag @e[type=minecraft:vindicator,tag=rpg.advent.new] add rpg.advent.timed
 tag @e[type=minecraft:vindicator,tag=rpg.advent.new] remove rpg.advent.new

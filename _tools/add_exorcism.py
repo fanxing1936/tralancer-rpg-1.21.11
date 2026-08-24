@@ -450,12 +450,22 @@ ADVENT_LIFE = """\
 execute as @e[tag=rpg.advent.new] run scoreboard players set @s rpg_fall %(LIFE)d
 execute if score #boss rpg_fall matches 1 as @e[tag=rpg.advent.new] run scoreboard players set @s rpg_fall %(BOSS)d
 scoreboard players set #boss rpg_fall 0
+tag @e[tag=rpg.advent.new] add rpg.advent.timed
 tag @e[tag=rpg.advent.new] remove rpg.advent.new
 """
 
 ADVENT_TICK = """\
 # 降临者的一刻：寿命，以及他自己那一手。
 # 场上没有这样的东西时，上层那道守卫会整段跳过。
+
+# 没上过发条的先上发条 —— **不要**把它当成过期。
+#
+# 寿命是 advent_life 给的；任何一条召唤路径漏掉那一步（手抄一条 summon、
+# 旧存档里遗留的实体、别处复制过去的 NBT……），它一进这里 rpg_fall 就是 0，
+# 于是当场被自己人清掉 —— 表现就是"召唤出来立刻死"。
+# 这一行把那条路堵死：认不出发条，就补一个，而不是判死刑。
+execute if entity @s[tag=!rpg.advent.timed] run function rpg:taint/advent_arm
+
 scoreboard players remove @s rpg_fall 1
 execute if entity @s[scores={rpg_fall=..0}] at @s run return run function rpg:taint/advent_gone
 
@@ -486,6 +496,13 @@ execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function 
 SKILL_NONE_HIT = """\
 damage @s 6 minecraft:magic by @e[tag=rpg.dm.cast,limit=1]
 effect give @s minecraft:blindness 3 0 true
+"""
+
+ADVENT_ARM = """\
+# 补发条。已经有寿命的不动（正规路径给的 600 / 2400 都算数），
+# 只有真的没有才按默认值补。
+tag @s add rpg.advent.timed
+execute unless score @s rpg_fall matches 1.. run scoreboard players set @s rpg_fall %(LIFE)d
 """
 
 ADVENT_GONE = """\
@@ -1235,6 +1252,7 @@ def build_fall():
     wf("taint/cast.mcfunction", DEMON_CAST % {"CD": DEMON_CD})
     wf("taint/skill.mcfunction", SKILL_NONE)
     wf_holy("taint/sk_none_hit.mcfunction", SKILL_NONE_HIT)
+    wf("taint/advent_arm.mcfunction", ADVENT_ARM % {"LIFE": DEMON_LIFE})
     wf("taint/advent_gone.mcfunction", ADVENT_GONE)
 
     # 掷点的赔率。档越深，失控越频繁。

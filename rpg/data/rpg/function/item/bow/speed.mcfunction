@@ -6,4 +6,4 @@ execute as @e[type=minecraft:arrow] on origin if entity @s[tag=rpg.h.bow_tag1] u
 execute as @e[tag=bow] at @s run particle dust_color_transition{from_color:[0.69,0.0,0.34],to_color:[0.26,0.64,0.93],scale:3} ~0.1 ~0.1 ~0.1 -0.2 -0.2 -0.2 0.2 10
 execute as @e[tag=bow] at @s if entity @e[distance=0.1..2] unless entity @a[tag=rpg.h.bow_tag1,distance=..2] run particle squid_ink ~0.5 ~0.5 ~0.5 -1 -1 -1 0.5 50
 execute as @e[tag=bow] at @s if entity @e[distance=0.1..2] unless entity @a[tag=rpg.h.bow_tag1,distance=..2] run particle dust_color_transition{from_color:[0.69,0.0,0.34],to_color:[0.26,0.64,0.93],scale:3} ~0.5 ~0.5 ~0.5 -1 -1 -1 0.5 50
-execute as @e[tag=bow] at @s if entity @e[distance=0.1..2] unless entity @a[tag=rpg.h.bow_tag1,distance=..2] run summon minecraft:creeper ~ ~1 ~ {"ExplosionRadius":3,ignited:1b}
+execute as @e[tag=bow] at @s if entity @e[distance=0.1..2] unless entity @a[tag=rpg.h.bow_tag1,distance=..2] run summon minecraft:tnt ~ ~1 ~ {fuse:0s,explosion_power:3.0f}

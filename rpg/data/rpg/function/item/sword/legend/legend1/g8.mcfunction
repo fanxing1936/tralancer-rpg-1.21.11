@@ -15,7 +15,7 @@ execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[scores={sakura=0..,sa
 
 execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run particle dust_color_transition{from_color:[1.0,0.47,0.47],to_color:[1.0,1.0,1.0],scale:3} ~0.5 ~1.5 ~0.5 -1 -1 -1 1 20
 execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run particle sweep_attack ~0.5 ~1.5 ~0.5 -1 -1 -1 1 20
-execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run summon minecraft:creeper ~ ~ ~ {Silent:1b,"ExplosionRadius":1,ignited:1b}
+execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run summon minecraft:tnt ~ ~ ~ {fuse:0s,explosion_power:1.0f,Silent:1b}
 execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run summon minecraft:lightning_bolt
 execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run effect give @s minecraft:resistance 1 255 true
 execute as @e[tag=rpg.hurt] at @s on attacker if entity @s[scores={sakura=0..,sakura_step=4},tag=rpg.h.sakura_tag1] run effect give @s minecraft:instant_health 1 3 true

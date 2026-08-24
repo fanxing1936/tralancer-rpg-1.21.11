@@ -15,6 +15,9 @@ python opt_cascade.py ../rpg
 python opt_misc.py  ../rpg
 # 苦力怕的变种体系整段摘掉（作者决定）——苦力怕就是原版苦力怕
 python drop_creeper_variants.py ../rpg
+# 攻击用的爆炸改成真正瞬发：苦力怕换成 fuse:0 的 TNT
+# （ignited 只是点燃引信，还要鼓 1.5 秒；fuse:0 的 TNT 同刻就没了）
+python instant_boom.py ../rpg
 python add_items.py ../resourcepack ../rpg
 python add_skills.py ../rpg
 python add_twins.py  ../resourcepack ../rpg
