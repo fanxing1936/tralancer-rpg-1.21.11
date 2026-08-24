@@ -1,5 +1,5 @@
-# 路西法［原罪］—— 蛇矛沿视线破土，尖牙同路。
-data modify storage rpg:demon uuid set from entity @s UUID
-playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..32] ~ ~ ~ 1 0.7
-particle dust{color:[0.0,0.29,0.11],scale:2} ~ ~1 ~ 0.6 0.8 0.6 0.05 40
-execute at @s anchored eyes facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run function rpg:taint/sk1_line with storage rpg:demon
+# 三招掷一招 —— 同一位打两次不会长得一样。
+execute store result score #pick rpg_fall run random value 1..3
+execute if score #pick rpg_fall matches 1 run return run function rpg:taint/sk1_1
+execute if score #pick rpg_fall matches 2 run return run function rpg:taint/sk1_2
+execute if score #pick rpg_fall matches 3 run return run function rpg:taint/sk1_3

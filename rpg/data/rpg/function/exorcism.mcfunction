@@ -13,6 +13,9 @@ execute as @a[scores={rpg_rite=1..}] run scoreboard players remove @s rpg_rite 1
 scoreboard players add #spread rpg_vac 1
 execute if score #spread rpg_vac matches 400.. run function rpg:vacant/spread
 
+# 死亡探针。场上没有标记就整段跳过。
+execute if entity @e[type=minecraft:marker,tag=rpg.demon.soul,limit=1] run execute as @e[type=minecraft:marker,tag=rpg.demon.soul] run function rpg:taint/demon_soul
+
 # 降临者的 30 秒寿命。带类型且过守卫 —— 场上没有就整段跳过。
 execute if entity @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] run execute as @e[type=minecraft:vindicator,tag=rpg.advent] run function rpg:taint/advent_tick
 

@@ -1,4 +1,5 @@
-# 亚巴顿［收割］—— 周身爆发，每收一个回一颗心。
-playsound minecraft:entity.wither.shoot hostile @a[distance=..32] ~ ~ ~ 1 0.5
-particle sculk_charge_pop ~ ~1 ~ 3 1 3 0.1 90
-execute as @a[distance=..6,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk3_reap
+# 三招掷一招 —— 同一位打两次不会长得一样。
+execute store result score #pick rpg_fall run random value 1..3
+execute if score #pick rpg_fall matches 1 run return run function rpg:taint/sk3_1
+execute if score #pick rpg_fall matches 2 run return run function rpg:taint/sk3_2
+execute if score #pick rpg_fall matches 3 run return run function rpg:taint/sk3_3

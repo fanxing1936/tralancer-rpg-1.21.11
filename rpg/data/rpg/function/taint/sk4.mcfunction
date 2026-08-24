@@ -1,3 +1,5 @@
-# 别西卜［余烬］—— 前方喷灰，吸进去的人饿得站不住。
-playsound minecraft:entity.blaze.shoot hostile @a[distance=..32] ~ ~ ~ 1 0.5
-execute at @s anchored eyes facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run function rpg:taint/sk4_cone
+# 三招掷一招 —— 同一位打两次不会长得一样。
+execute store result score #pick rpg_fall run random value 1..3
+execute if score #pick rpg_fall matches 1 run return run function rpg:taint/sk4_1
+execute if score #pick rpg_fall matches 2 run return run function rpg:taint/sk4_2
+execute if score #pick rpg_fall matches 3 run return run function rpg:taint/sk4_3

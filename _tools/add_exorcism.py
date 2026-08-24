@@ -77,6 +77,7 @@ DEMON_ATK = 11
 DEMON_SEE = 48
 DEMON_LIFE = 600         # 30 秒后自己散掉 —— 作者指定
 BOSS_LIFE = 2400         # 空缺者那条路招出来的是来打架的，给两分钟
+DEMON_BOOM = 4           # 死亡爆炸的威力（原版 TNT 是 4）
 DEMON_CD = 70            # 出手间隔（刻）。30 秒里大约能放八次
 DEMON_R = 12             # 多远之内有人才出手
 
@@ -485,6 +486,24 @@ tag @s remove rpg.dm.cast
 """
 
 # 这一行由 add_pact 改写成七柱分流 —— 那边才认识柱位。
+DEMON_SOUL = """\
+# 探针还骑在主人身上吗？骑着就有 vehicle；主人一死，它被当场甩下来。
+scoreboard players set #ride rpg_fall 0
+execute on vehicle run scoreboard players set #ride rpg_fall 1
+execute if score #ride rpg_fall matches 0 at @s run function rpg:taint/demon_boom
+"""
+
+DEMON_BOOM_FX = """\
+# 死亡爆炸。fuse:0 的 TNT 是同刻就炸的 —— 苦力怕点了火还要鼓 1.5 秒。
+# 探针骑在乘客位上，比脚下高两格 —— 往下压一点，炸在身上而不是头顶
+particle explosion_emitter ~ ~-1.2 ~ 0 0 0 0 1
+particle sculk_soul ~ ~0.5 ~ 1 1 1 0.2 80
+particle large_smoke ~ ~0.5 ~ 1 1 1 0.1 50
+playsound minecraft:entity.wither.death hostile @a[distance=..48] ~ ~ ~ 1 0.7
+summon minecraft:tnt ~ ~-1.2 ~ {fuse:0s,explosion_power:%(POW)d.0f}
+kill @s
+"""
+
 SKILL_NONE = """\
 # 无名者。没有名字的东西不会什么花样，只会一把把地掏。
 particle sculk_soul ~ ~1 ~ 2 1 2 0.1 60
@@ -507,6 +526,9 @@ execute unless score @s rpg_fall matches 1.. run scoreboard players set @s rpg_f
 
 ADVENT_GONE = """\
 # 时候到了，它自己散掉 —— 不是被你打退的。
+#
+# 先把探针一起收走：自己散掉的**不炸**，炸的只有被打死的。
+execute on passengers run kill @s
 particle sculk_soul ~ ~1 ~ 0.5 0.9 0.5 0.08 60
 particle large_smoke ~ ~1 ~ 0.4 0.8 0.4 0.05 40
 particle squid_ink ~ ~1 ~ 0.4 0.8 0.4 0.05 30
@@ -1023,6 +1045,10 @@ def build_functions():
     wf("rite/free.mcfunction", RITE_FREE)
 
     root = ROOT % {"EVERY": SPREAD_EVERY}
+    root += ("\n# 死亡探针。场上没有标记就整段跳过。\n"
+             "execute if entity @e[type=minecraft:marker,tag=rpg.demon.soul,limit=1] "
+             "run execute as @e[type=minecraft:marker,tag=rpg.demon.soul] "
+             "run function rpg:taint/demon_soul\n")
     root += ("\n# 降临者的 30 秒寿命。带类型且过守卫 —— 场上没有就整段跳过。\n"
              "execute if entity @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] "
              "run execute as @e[type=minecraft:vindicator,tag=rpg.advent] "
@@ -1199,7 +1225,11 @@ def demon_nbt(name, accent, colour):
         '{id:"armor",base:8f},'
         '{id:"follow_range",base:%df},'
         '{id:"knockback_resistance",base:0.5f}],'
-        'drop_chances:{mainhand:0f}}'
+        'drop_chances:{mainhand:0f},'
+        # 挂一个乘客当"死亡探针"：实体死了就没了，没法在它身上挂死后动作，
+        # 但乘客会被当场甩下来 —— 于是"没有 vehicle 的标记"就等于"主人刚死"。
+        # 与佣兵信息板同一招。
+        'Passengers:[{id:"minecraft:marker",Tags:["rpg.demon.soul"]}]}'
         % (accent, name, colour, DEMON_HP, DEMON_HP, DEMON_ATK, DEMON_SEE))
 
 
@@ -1254,6 +1284,8 @@ def build_fall():
     wf_holy("taint/sk_none_hit.mcfunction", SKILL_NONE_HIT)
     wf("taint/advent_arm.mcfunction", ADVENT_ARM % {"LIFE": DEMON_LIFE})
     wf("taint/advent_gone.mcfunction", ADVENT_GONE)
+    wf("taint/demon_soul.mcfunction", DEMON_SOUL)
+    wf("taint/demon_boom.mcfunction", DEMON_BOOM_FX % {"POW": DEMON_BOOM})
 
     # 掷点的赔率。档越深，失控越频繁。
     for i, odds in ((2, 4), (3, 3), (4, 2)):

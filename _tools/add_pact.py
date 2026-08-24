@@ -640,22 +640,44 @@ BY = 'by @e[tag=rpg.dm.cast,limit=1]'
 PLAYERS = '@a[distance=..%d,gamemode=!spectator,gamemode=!creative]'
 
 SKILLS = {
-    1: ("""\
-# 路西法［原罪］—— 蛇矛沿视线破土，尖牙同路。
+    # ---------------- 路西法 · 傲慢 ----------------
+    1: [
+        ("""\
+# 原罪 —— 蛇矛沿视线破土，尖牙同路。
 data modify storage rpg:demon uuid set from entity @s UUID
 playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..32] ~ ~ ~ 1 0.7
 particle dust{color:[0.0,0.29,0.11],scale:2} ~ ~1 ~ 0.6 0.8 0.6 0.05 40
 execute at @s anchored eyes facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run function rpg:taint/sk1_line with storage rpg:demon
-""", {
-        # 尖牙必须认主 —— 不认主的尖牙连召它出来的那位一起咬。
-        # Owner 只能写字面 UUID，命令里取不到，所以整段走宏。
-        "sk1_line": "$" + "\n$".join(
+""", {"sk1_line": "$" + "\n$".join(
             "execute positioned ^ ^ ^%d run summon minecraft:evoker_fangs "
             "~ ~ ~ {Warmup:%d,Owner:$(uuid)}" % (d, d * 2)
             for d in range(1, 9))}),
 
-    2: ("""\
-# 利维坦［沉锚］—— 锚落处涌起漩涡，把人拖向锚心。
+        ("""\
+# 蛇矛 —— 一记贯穿，连着把人钉退。
+playsound minecraft:entity.breeze.shoot hostile @a[distance=..32] ~ ~ ~ 1 0.6
+execute at @s anchored eyes facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run function rpg:taint/sk1b_thrust
+""", {"sk1b_thrust": "\n".join(
+            "execute positioned ^ ^ ^%d run particle dust{color:[0.0,0.29,0.11],scale:2} ~ ~ ~ 0.2 0.2 0.2 0 6\n"
+            "execute positioned ^ ^ ^%d run particle crit ~ ~ ~ 0.2 0.2 0.2 0.1 8\n"
+            "execute positioned ^ ^ ^%d as @a[distance=..2,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk1b_hit"
+            % (d, d, d) for d in range(1, 10))}),
+
+        ("""\
+# 高踞 —— 傲慢把人举起来，再让他自己摔下去。
+playsound minecraft:entity.illusioner.prepare_blindness hostile @a[distance=..32] ~ ~ ~ 1 0.6
+particle end_rod ~ ~1 ~ 3 1 3 0.1 60
+execute as %(P8)s run function rpg:taint/sk1c_lift
+""", {"sk1c_lift": """\
+effect give @s minecraft:levitation 3 1 true
+damage @s 3 minecraft:magic %(BY)s
+"""}),
+    ],
+
+    # ---------------- 利维坦 · 嫉妒 ----------------
+    2: [
+        ("""\
+# 沉锚 —— 锚落处涌起漩涡，把人拖向锚心。
 playsound minecraft:entity.elder_guardian.curse hostile @a[distance=..32] ~ ~ ~ 1 0.6
 particle bubble_column_up ~ ~0.5 ~ 2 0.5 2 0.4 80
 particle dust{color:[0.11,0.31,0.45],scale:3} ~ ~1 ~ 2 1 2 0.05 60
@@ -663,68 +685,223 @@ execute as %(P8)s at @s facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s
 execute as %(P8)s run damage @s 5 minecraft:magic %(BY)s
 """, {}),
 
-    3: ("""\
-# 亚巴顿［收割］—— 周身爆发，每收一个回一颗心。
+        ("""\
+# 溺没 —— 深海的规矩：在这儿，你不会呼吸。
+playsound minecraft:entity.drowned.ambient_water hostile @a[distance=..32] ~ ~ ~ 1 0.5
+particle bubble ~ ~1 ~ 3 1.2 3 0.2 120
+execute as %(P8)s run function rpg:taint/sk2b_drown
+""", {"sk2b_drown": """\
+effect give @s minecraft:slowness 6 2 true
+effect give @s minecraft:mining_fatigue 6 2 true
+damage @s 4 minecraft:drown %(BY)s
+"""}),
+
+        ("""\
+# 嫉羡 —— 你身上那些好东西，他也想要。
+playsound minecraft:entity.elder_guardian.hurt hostile @a[distance=..32] ~ ~ ~ 1 1.2
+particle witch ~ ~1 ~ 3 1 3 0.3 80
+execute as %(P8)s run function rpg:taint/sk2c_envy
+""", {"sk2c_envy": """\
+# 把你身上的增益全部抹掉 —— 他见不得你比他好。
+effect clear @s minecraft:strength
+effect clear @s minecraft:speed
+effect clear @s minecraft:resistance
+effect clear @s minecraft:regeneration
+effect clear @s minecraft:absorption
+effect clear @s minecraft:fire_resistance
+damage @s 3 minecraft:magic %(BY)s
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:speed 6 1 true
+"""}),
+    ],
+
+    # ---------------- 亚巴顿 · 怠惰 ----------------
+    3: [
+        ("""\
+# 收割 —— 周身爆发，每收一个回一颗心。
 playsound minecraft:entity.wither.shoot hostile @a[distance=..32] ~ ~ ~ 1 0.5
 particle sculk_charge_pop ~ ~1 ~ 3 1 3 0.1 90
 execute as %(P6)s run function rpg:taint/sk3_reap
-""", {
-        "sk3_reap": """\
+""", {"sk3_reap": """\
 damage @s 7 minecraft:magic %(BY)s
 particle soul ~ ~1 ~ 0.3 0.5 0.3 0.05 20
 effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
 """}),
 
-    4: ("""\
-# 别西卜［余烬］—— 前方喷灰，吸进去的人饿得站不住。
+        ("""\
+# 沉眠 —— 怠惰不杀你，它只让你抬不起手。
+playsound minecraft:entity.warden.heartbeat hostile @a[distance=..32] ~ ~ ~ 1 0.5
+particle sculk_soul ~ ~1 ~ 3 1 3 0.05 70
+execute as %(P7)s run function rpg:taint/sk3b_sleep
+""", {"sk3b_sleep": """\
+effect give @s minecraft:slowness 8 3 true
+effect give @s minecraft:mining_fatigue 8 2 true
+effect give @s minecraft:weakness 8 1 true
+damage @s 2 minecraft:magic %(BY)s
+"""}),
+
+        ("""\
+# 深渊之口 —— 地底下那张嘴张开了。
+playsound minecraft:entity.warden.sonic_boom hostile @a[distance=..32] ~ ~ ~ 1 0.8
+particle sonic_boom ~ ~1 ~ 0 0 0 0 3
+particle sculk_charge_pop ~ ~0.2 ~ 4 0.3 4 0.2 120
+execute as %(P8)s at @s facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^2
+execute as %(P8)s run function rpg:taint/sk3c_maw
+""", {"sk3c_maw": """\
+effect give @s minecraft:wither 6 1 true
+damage @s 6 minecraft:magic %(BY)s
+"""}),
+    ],
+
+    # ---------------- 别西卜 · 暴食 ----------------
+    4: [
+        ("""\
+# 余烬 —— 前方喷灰，吸进去的人饿得站不住。
 playsound minecraft:entity.blaze.shoot hostile @a[distance=..32] ~ ~ ~ 1 0.5
 execute at @s anchored eyes facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run function rpg:taint/sk4_cone
-""", {
-        "sk4_cone": "\n".join(
+""", {"sk4_cone": "\n".join(
             "execute positioned ^ ^ ^%d run particle ash ~ ~ ~ 1 1 1 0.1 40\n"
             "execute positioned ^ ^ ^%d run particle lava ~ ~ ~ 0.6 0.6 0.6 0 6\n"
             "execute positioned ^ ^ ^%d as @a[distance=..3,gamemode=!spectator,"
             "gamemode=!creative] run function rpg:taint/sk4_hit" % (d, d, d)
             for d in range(1, 7))}),
 
-    5: ("""\
-# 萨麦尔［毒雾］—— 剧毒与凋零并存。
+        ("""\
+# 吞噬 —— 他吃的是你那一顿。
+playsound minecraft:entity.generic.eat hostile @a[distance=..32] ~ ~ ~ 1 0.6
+playsound minecraft:entity.player.burp hostile @a[distance=..24] ~ ~ ~ 1 0.7
+particle item_slime ~ ~1 ~ 2 1 2 0.2 60
+execute as %(P7)s run function rpg:taint/sk4b_devour
+""", {"sk4b_devour": """\
+effect give @s minecraft:hunger 14 3 true
+effect give @s minecraft:weakness 8 1 true
+damage @s 4 minecraft:magic %(BY)s
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 1 true
+"""}),
+
+        ("""\
+# 蝇群 —— 苍蝇王名副其实。
+playsound minecraft:entity.bee.loop_aggressive hostile @a[distance=..32] ~ ~ ~ 1 0.5
+particle mycelium ~ ~1 ~ 2 1 2 0.3 80
+execute at @s run function rpg:taint/sk4c_swarm
+""", {"sk4c_swarm": "\n".join(
+            ['summon minecraft:vex ~ ~1 ~ {life_ticks:400,Tags:["rpg.demon.fly"],'
+             'CustomName:[{"text":"蝇","color":"#5A6B1E"}],Health:10f,'
+             'attributes:[{id:"max_health",base:10f},{id:"attack_damage",base:4f}]}'] * 3)}),
+    ],
+
+    # ---------------- 萨麦尔 · 暴怒 ----------------
+    5: [
+        ("""\
+# 毒雾 —— 剧毒与凋零并存。
 playsound minecraft:entity.witch.throw hostile @a[distance=..32] ~ ~ ~ 1 0.6
 particle dust_color_transition{from_color:[0.69,0.0,0.34],to_color:[0.24,0.0,0.12],scale:3} ~ ~1 ~ 3 1.2 3 0.06 100
 execute as %(P7)s run function rpg:taint/sk5_hit
-""", {
-        "sk5_hit": """\
+""", {"sk5_hit": """\
 effect give @s minecraft:poison 10 1 true
 effect give @s minecraft:wither 6 0 true
 damage @s 3 minecraft:magic %(BY)s
 """}),
 
-    6: ("""\
-# 贝利尔［朝拜］—— 七格之内，全都得低头。
+        ("""\
+# 怒斩 —— 暴怒不讲章法，它只是冲上来。
+playsound minecraft:entity.ravager.roar hostile @a[distance=..32] ~ ~ ~ 1 1.2
+particle crit ~ ~1 ~ 1 1 1 0.4 60
+execute at @s facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run tp @s ^ ^ ^4
+execute as %(P6)s run function rpg:taint/sk5b_slash
+""", {"sk5b_slash": """\
+damage @s 9 minecraft:magic %(BY)s
+effect give @s minecraft:poison 8 1 true
+particle sweep_attack ~ ~1 ~ 0.4 0.4 0.4 0 4
+"""}),
+
+        ("""\
+# 死亡低语 —— 死亡天使开口，不必碰到你。
+playsound minecraft:entity.wither.spawn hostile @a[distance=..32] ~ ~ ~ 0.8 1.6
+particle soul_fire_flame ~ ~1 ~ 3 1 3 0.05 80
+execute as %(P8)s run function rpg:taint/sk5c_whisper
+""", {"sk5c_whisper": """\
+damage @s 5 minecraft:magic %(BY)s
+effect give @s minecraft:wither 10 2 true
+"""}),
+    ],
+
+    # ---------------- 贝利尔 · 色欲 ----------------
+    6: [
+        ("""\
+# 朝拜 —— 七格之内，全都得低头。
 playsound minecraft:entity.evoker.prepare_summon hostile @a[distance=..32] ~ ~ ~ 1 0.6
 particle dust_color_transition{from_color:[0.4,0.0,0.6],to_color:[0.0,0.0,0.0],scale:2} ~ ~1 ~ 3 1.2 3 0.06 90
 execute as %(P7)s run function rpg:taint/sk6_kneel
-""", {
-        "sk6_kneel": """\
+""", {"sk6_kneel": """\
 effect give @s minecraft:slowness 3 3 true
 effect give @s minecraft:weakness 3 1 true
 effect give @s minecraft:mining_fatigue 3 1 true
 damage @s 4 minecraft:magic %(BY)s
 """}),
 
-    7: ("""\
-# 玛门［点金］—— 他不打你，他从你身上抽。抽多少，自己补多少。
+        ("""\
+# 迷乱 —— 你分不清哪边是他。
+playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..32] ~ ~ ~ 1 0.7
+particle portal ~ ~1 ~ 3 1 3 0.6 120
+execute as %(P8)s run function rpg:taint/sk6b_daze
+""", {"sk6b_daze": """\
+effect give @s minecraft:nausea 8 0 true
+effect give @s minecraft:levitation 1 0 true
+damage @s 3 minecraft:magic %(BY)s
+"""}),
+
+        ("""\
+# 献身 —— 他要的从来不是你的命，是你的血。
+playsound minecraft:entity.vex.charge hostile @a[distance=..32] ~ ~ ~ 1 0.6
+particle dust{color:[0.36,0.17,0.44],scale:2} ~ ~1 ~ 3 1 3 0.1 90
+execute as %(P7)s run function rpg:taint/sk6c_drain
+""", {"sk6c_drain": """\
+damage @s 6 minecraft:magic %(BY)s
+particle damage_indicator ~ ~1 ~ 0.3 0.3 0.3 0.1 10
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 1 true
+"""}),
+    ],
+
+    # ---------------- 玛门 · 贪婪 ----------------
+    7: [
+        ("""\
+# 点金 —— 他不打你，他从你身上抽。
 playsound minecraft:block.amethyst_block.chime hostile @a[distance=..32] ~ ~ ~ 1 1.4
 particle wax_on ~ ~1 ~ 3 1 3 0.1 80
 particle end_rod ~ ~1 ~ 2 1 2 0.05 40
 execute as %(P8)s run function rpg:taint/sk7_take
-""", {
-        "sk7_take": """\
+""", {"sk7_take": """\
 xp add @s -20 points
 damage @s 3 minecraft:magic %(BY)s
 particle wax_on ~ ~1 ~ 0.3 0.5 0.3 0.05 16
 effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
 """}),
+
+        ("""\
+# 夺财 —— 掉在地上的也是他的。
+playsound minecraft:entity.item.pickup hostile @a[distance=..32] ~ ~ ~ 1 0.6
+particle wax_off ~ ~1 ~ 4 1 4 0.2 100
+execute at @s as @e[type=minecraft:item,distance=..10] run function rpg:taint/sk7b_seize
+execute as %(P8)s run damage @s 3 minecraft:magic %(BY)s
+""", {"sk7b_seize": """\
+# 周围的掉落物直接被吞掉，连带给他补一口。
+particle wax_on ~ ~0.3 ~ 0.2 0.2 0.2 0.05 8
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
+kill @s
+"""}),
+
+        ("""\
+# 重金一击 —— 一次结清。
+playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..32] ~ ~ ~ 1 0.7
+playsound minecraft:entity.player.levelup hostile @a[distance=..24] ~ ~ ~ 0.8 0.6
+particle flash{color:16777200} ~ ~1 ~ 0 0 0 0 1
+particle end_rod ~ ~1 ~ 1 1 1 0.4 60
+execute as @a[distance=..5,limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk7c_settle
+""", {"sk7c_settle": """\
+damage @s 12 minecraft:magic %(BY)s
+xp add @s -40 points
+"""}),
+    ],
 }
 
 
@@ -747,20 +924,33 @@ def wire_lords():
             "WHO": p["who"], "RGB": _rgb(p["colour"]), "N": p["n"],
             "NBT": ex.demon_nbt(p["who"], p["colour"], p["lit"])})
 
-        # 他那一手
-        body, extra = SKILLS[p["n"]]
+        # 他那三招。skN 只负责掷点，真正的招式在 skN_1/2/3。
         sk.append("execute if entity @s[scores={rpg_dm_lord=%d}] "
                   "run return run function rpg:taint/sk%d" % (p["n"], p["n"]))
-        wf("taint/sk%d.mcfunction" % p["n"], body % subs)
-        for name, text in extra.items():
-            # 走 wf_holy：带 debuff 的会自动派生"对方有圣器"的那一版
-            ex.wf_holy("taint/%s.mcfunction" % name, text % subs)
+        pick = ["# 三招掷一招 —— 同一位打两次不会长得一样。",
+                "execute store result score #pick rpg_fall run random value 1..%d"
+                % len(SKILLS[p["n"]])]
+        for i, (body, extra) in enumerate(SKILLS[p["n"]], 1):
+            pick.append("execute if score #pick rpg_fall matches %d "
+                        "run return run function rpg:taint/sk%d_%d"
+                        % (i, p["n"], i))
+            wf("taint/sk%d_%d.mcfunction" % (p["n"], i), body % subs)
+            for name, text in extra.items():
+                # 走 wf_holy：带 debuff 的会自动派生"对方有圣器"的那一版
+                ex.wf_holy("taint/%s.mcfunction" % name, text % subs)
+        wf("taint/sk%d.mcfunction" % p["n"], "\n".join(pick))
 
+    # 别西卜那道锥形的命中段，六个取点共用一份
     # 别西卜那道锥形的命中段，六个取点共用一份
     ex.wf_holy("taint/sk4_hit.mcfunction",
        "damage @s 5 minecraft:magic %(BY)s\n"
        "effect give @s minecraft:hunger 8 1 true\n"
        "effect give @s minecraft:slowness 2 0 true\n" % subs)
+
+    # 路西法贯穿那一路的命中段，九个取点共用一份
+    ex.wf_holy("taint/sk1b_hit.mcfunction",
+       "damage @s 8 minecraft:magic %(BY)s\n"
+       "effect give @s minecraft:slowness 3 1 true\n" % subs)
 
     wf("taint/lord.mcfunction",
        LORD % {"BRANCH": "\n".join(branch), "NONE": none})
