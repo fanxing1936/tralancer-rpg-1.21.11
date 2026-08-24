@@ -437,7 +437,7 @@ def build():
     # VII bestiary --------------------------------------------------------
     a('''<section class="plate" id="s9">
 <div class="plate-h"><span class="num">VIII</span><h2>生物图鉴</h2><span class="sub">4 大阵营</span></div>
-<p>普通僵尸、骷髅、苦力怕在出生瞬间会被数据包重新洗牌：随机换装本包的战利品护甲，并有几率直接替换成下方的强化变种。成建制的军团则由对应函数整队召唤。</p>
+<p>普通僵尸与骷髅在出生瞬间会被数据包重新洗牌：随机换装本包的战利品护甲，并有几率直接替换成下方的强化变种。成建制的军团则由对应函数整队召唤。<br><b>苦力怕不在其列</b>——它的变种体系已整段移除，苦力怕就是原版苦力怕。</p>
 
 <h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">溺尸军团 · rpg:entities/drowned</h3>
 <div class="tw"><table>
@@ -494,8 +494,6 @@ def build():
 <tr><td>僵尸类出生</td><td class="num">1/20</td><td>抱婴僵尸 / 僵尸村民（40 生命、护甲 5）</td></tr>
 <tr><td>僵尸类出生</td><td class="num">2/20</td><td>五层僵尸叠罗汉</td></tr>
 <tr><td>僵尸类出生</td><td class="num">1/20</td><td>巨型僵尸（100 生命、体型 ×3）</td></tr>
-<tr><td>苦力怕出生</td><td class="num">1/10</td><td>高压苦力怕（30 生命、体型 ×1.3、爆炸威力 5）</td></tr>
-<tr><td>苦力怕出生</td><td class="num">3/10</td><td>迷你苦力怕（10 生命、体型 ×0.5、引信 10 刻）</td></tr>
 
 <tr><td>骷髅 / 僵尸出生</td><td>必定</td><td>全身装备重掷为本包的 <code>rpg:armor/*</code> 战利品</td></tr>
 </tbody></table></div>

@@ -8,10 +8,8 @@
 
 现在让它在构建期就暴露：凡是召唤苦力怕的地方，都必须带 `ignited:1b`。
 
-**唯一的例外**是 `command/spawn/creeper.mcfunction` —— 那不是攻击，
-那是世界里自然生成的苦力怕被换成变种（带电的大只、或三只小快的）。
-它们本来就该在世界里走动；给它们点上引信，等于每一只苦力怕
-一出生就在原地炸个坑。所以那个文件整体豁免。
+自然生成的变种表原本是唯一的例外（那是世界里的苦力怕，不是武器效果），
+但它已经整段删掉了 —— 所以现在没有例外：包里每一处召唤都得引爆。
 """
 import io
 import os
@@ -21,8 +19,9 @@ import sys
 ROOT = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 FUNC = os.path.join(ROOT, "data/rpg/function")
 
-# 自然生成的变种表：它们是世界里的苦力怕，不是武器效果
-EXEMPT = ("command/spawn/creeper.mcfunction",)
+# 苦力怕的变种体系已经整段删掉（见 drop_creeper_variants.py），
+# 所以现在包里**每一处**苦力怕召唤都是武器／技能效果，一律必须当场引爆。
+EXEMPT = ()
 
 SUMMON = re.compile(r"summon\s+(?:minecraft:)?creeper\b[^\n]*")
 

@@ -13,6 +13,8 @@ python opt_spawn.py ../rpg
 # 变种召唤的滚雪球：召出来的变种没打已处理标记，下一刻又被重掷一遍
 python opt_cascade.py ../rpg
 python opt_misc.py  ../rpg
+# 苦力怕的变种体系整段摘掉（作者决定）——苦力怕就是原版苦力怕
+python drop_creeper_variants.py ../rpg
 python add_items.py ../resourcepack ../rpg
 python add_skills.py ../rpg
 python add_twins.py  ../resourcepack ../rpg

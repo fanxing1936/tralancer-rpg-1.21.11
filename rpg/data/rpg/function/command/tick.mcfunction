@@ -47,5 +47,4 @@ execute if entity @e[type=#minecraft:skeletons,tag=!skeleton,limit=1] run functi
 
 execute if entity @e[type=#minecraft:zombies,tag=!zombie,limit=1] run function rpg:command/spawn/zombie_batch
 
-execute if entity @e[type=minecraft:creeper,tag=!creeper,limit=1] run function rpg:command/spawn/creeper_batch
 
