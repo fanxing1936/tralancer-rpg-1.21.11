@@ -753,10 +753,11 @@ def wire_lords():
                   "run return run function rpg:taint/sk%d" % (p["n"], p["n"]))
         wf("taint/sk%d.mcfunction" % p["n"], body % subs)
         for name, text in extra.items():
-            wf("taint/%s.mcfunction" % name, text % subs)
+            # 走 wf_holy：带 debuff 的会自动派生"对方有圣器"的那一版
+            ex.wf_holy("taint/%s.mcfunction" % name, text % subs)
 
     # 别西卜那道锥形的命中段，六个取点共用一份
-    wf("taint/sk4_hit.mcfunction",
+    ex.wf_holy("taint/sk4_hit.mcfunction",
        "damage @s 5 minecraft:magic %(BY)s\n"
        "effect give @s minecraft:hunger 8 1 true\n"
        "effect give @s minecraft:slowness 2 0 true\n" % subs)

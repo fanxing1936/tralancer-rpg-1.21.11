@@ -155,8 +155,20 @@ execute if items entity @s weapon.offhand *[minecraft:custom_data~{sakura_tag:1b
 # 神圣分支的命中特效读的是它；而驱魔体系问的是「身上有没有圣性之物」，
 # 护甲当然应该穿着算。
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{holy_weapon_tag:2b}] run tag @s add rpg.holy
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{holy_weapon_tag:3b}] run tag @s add rpg.holy
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{holy_weapon_tag:2b}] run tag @s add rpg.holy
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{holy_weapon_tag:3b}] run tag @s add rpg.holy
 execute if items entity @s armor.head *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s armor.head *[minecraft:custom_data~{holy_weapon_tag:2b}] run tag @s add rpg.holy
+execute if items entity @s armor.head *[minecraft:custom_data~{holy_weapon_tag:3b}] run tag @s add rpg.holy
 execute if items entity @s armor.chest *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s armor.chest *[minecraft:custom_data~{holy_weapon_tag:2b}] run tag @s add rpg.holy
+execute if items entity @s armor.chest *[minecraft:custom_data~{holy_weapon_tag:3b}] run tag @s add rpg.holy
 execute if items entity @s armor.legs *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s armor.legs *[minecraft:custom_data~{holy_weapon_tag:2b}] run tag @s add rpg.holy
+execute if items entity @s armor.legs *[minecraft:custom_data~{holy_weapon_tag:3b}] run tag @s add rpg.holy
 execute if items entity @s armor.feet *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
+execute if items entity @s armor.feet *[minecraft:custom_data~{holy_weapon_tag:2b}] run tag @s add rpg.holy
+execute if items entity @s armor.feet *[minecraft:custom_data~{holy_weapon_tag:3b}] run tag @s add rpg.holy

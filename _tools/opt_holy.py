@@ -26,6 +26,14 @@ FUNC = os.path.join(DP, "data/rpg/function")
 SLOTS = ("weapon.mainhand", "weapon.offhand",
          "armor.head", "armor.chest", "armor.legs", "armor.feet")
 
+# 神圣分支有**三级**：item_modifier 的 holy / holy2 / holy3 分别写
+# holy_weapon_tag 1b / 2b / 3b（实测确认是 byte）。
+# 原来这里只判 1b —— 于是武器升到二三级之后反而不算圣器了，正好反过来。
+#
+# 槽位组 `armor.*` 在 `if items entity` 里匹配不到（实测），
+# 所以六个槽位各写三条。都是直接读槽位、不搜实体，很便宜。
+LEVELS = (1, 2, 3)
+
 
 def main():
     p = os.path.join(FUNC, "command/index_player.mcfunction")
@@ -49,11 +57,12 @@ def main():
         "# 护甲当然应该穿着算。\n"
         + "\n".join(
             "execute if items entity @s %s "
-            "*[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy"
-            % slot for slot in SLOTS)
+            "*[minecraft:custom_data~{holy_weapon_tag:%db}] run tag @s add rpg.holy"
+            % (slot, lv) for slot in SLOTS for lv in LEVELS)
         + "\n")
     io.open(p, "w", encoding="utf-8", newline="\n").write(s)
-    print("holy worn: rpg.holy set from %d slot(s) (held + worn)" % len(SLOTS))
+    print("holy worn: rpg.holy set from %d slot(s) x %d level(s) (held + worn)"
+          % (len(SLOTS), len(LEVELS)))
 
 
 if __name__ == "__main__":

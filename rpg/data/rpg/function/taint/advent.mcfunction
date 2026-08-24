@@ -13,7 +13,7 @@ title @s subtitle ["",{"text":"它不再需要借你的手了","italic":false,"c
 effect give @s minecraft:weakness 12 1 true
 effect give @s minecraft:slowness 12 1 true
 effect give @s minecraft:nausea 10 0 true
-effect give @s minecraft:blindness 3 0 true
+execute unless entity @s[tag=rpg.holy] run effect give @s minecraft:blindness 3 0 true
 damage @s 8 minecraft:magic
 
 # 认主：签了哪一柱，挣出来的就是哪一位。没签的话是个无名的东西。

@@ -409,7 +409,7 @@ title @s subtitle ["",{"text":"它不再需要借你的手了","italic":false,"c
 effect give @s minecraft:weakness 12 1 true
 effect give @s minecraft:slowness 12 1 true
 effect give @s minecraft:nausea 10 0 true
-effect give @s minecraft:blindness 3 0 true
+execute unless entity @s[tag=rpg.holy] run effect give @s minecraft:blindness 3 0 true
 damage @s 8 minecraft:magic
 
 # 认主：签了哪一柱，挣出来的就是哪一位。没签的话是个无名的东西。
@@ -1083,6 +1083,55 @@ def route_actionbars():
     return edits
 
 
+# 恶魔蒙不住带圣器的人。黑暗与失明整条去掉，其余 debuff 折半。
+BLIND = ("blindness", "darkness")
+
+
+def holy_variant(text):
+    """派生出"对方带着圣器"的那一版。
+
+    只动 `effect give`：黑暗与失明删掉，其余秒数折半（最少 1）。
+    伤害与粒子原样保留 —— 圣器挡的是看不见，不是打不疼。
+    """
+    out = []
+    for line in text.split("\n"):
+        parts = line.split()
+        # 只动落在**玩家自己**头上的那些。有些技能里的 effect give 是
+        # 恶魔给自己回血（收割、点金），那与护体无关，不能碰。
+        if (len(parts) >= 6 and parts[0] == "effect" and parts[1] == "give"
+                and parts[2] == "@s"):
+            eff = parts[3].split(":")[-1]
+            if eff in BLIND:
+                continue
+            try:
+                parts[4] = str(max(1, int(parts[4]) // 2))
+                line = " ".join(parts)
+            except ValueError:
+                pass
+        out.append(line)
+    return "\n".join(out)
+
+
+def wf_holy(rel, text):
+    """写一对：原版，外加带圣器时走的那一版。
+
+    没有任何 debuff 的函数不派生 —— 那种情况下两版一模一样。
+    """
+    # 变换之后和原文一样，就说明这个函数根本没有落在玩家身上的 debuff ——
+    # 那就不必派生，也不必多一道判定。
+    if holy_variant(text) == text:
+        wf(rel, text)
+        return
+    name = rel[:-len(".mcfunction")]
+    wf(name + "_holy.mcfunction",
+       "# 对方身上带着圣器：黑暗与失明落不下来，其余 debuff 减半。\n"
+       + holy_variant(text))
+    wf(rel,
+       "# 身上带着圣器的人走另一条 —— 见 " + name.split("/")[-1] + "_holy。\n"
+       "execute if entity @s[tag=rpg.holy] run return run function rpg:"
+       + name + "_holy\n" + text)
+
+
 def demon_nbt(name, accent, colour):
     """降临出来的那位。
 
@@ -1166,7 +1215,7 @@ def build_fall():
     wf("taint/advent_tick.mcfunction", ADVENT_TICK % {"R": DEMON_R})
     wf("taint/cast.mcfunction", DEMON_CAST % {"CD": DEMON_CD})
     wf("taint/skill.mcfunction", SKILL_NONE)
-    wf("taint/sk_none_hit.mcfunction", SKILL_NONE_HIT)
+    wf_holy("taint/sk_none_hit.mcfunction", SKILL_NONE_HIT)
     wf("taint/advent_gone.mcfunction", ADVENT_GONE)
 
     # 掷点的赔率。档越深，失控越频繁。
