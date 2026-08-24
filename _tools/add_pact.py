@@ -814,6 +814,40 @@ def build_art(rp):
     return len(entries)
 
 
+SUMMON_HEAD = """\
+# 八位恶魔的召唤入口，手动招唤用。
+#
+# **整份跑下去会把八位一起招出来** —— 通常你只想要其中一行，
+# 把那一行复制到聊天栏（记得带 /）即可。
+#
+# 为什么不是裸的 summon：恶魔的寿命是由 rpg:taint/advent_life 给的，
+# 只 summon 不走那一步，rpg_fall 停在 0，下一刻就被判过期清掉 ——
+# 手动招出来的会瞬间消失。lordN 这一条是完整入口：
+# 召唤 + 记下他是谁（技能按这个分流）+ 给寿命。
+#
+# 每条前面把 #boss 拨上，所以手动招出来的按**两分钟**算，
+# 而不是降临那只"来收账的"三十秒。
+#
+# 他们都挂着 devil 标签，于是自动继承包里恶魔 boss 那一套：
+# 常驻隐身、周身黑烟与墨。
+"""
+
+
+def build_summon_list():
+    """八位的召唤入口写成一份，作者手动招唤用。"""
+    lines = [SUMMON_HEAD]
+    for q in PILLARS:
+        lines.append("# %s · %s　　［%s］" % (q["who"], q["sin"], q["power"]))
+        lines.append("scoreboard players set #boss rpg_fall 1")
+        lines.append("function rpg:taint/lord%d" % q["n"])
+        lines.append("")
+    lines.append("# 无名者（没签过契约的人招出来的那一位）")
+    lines.append("scoreboard players set #boss rpg_fall 1")
+    lines.append("function rpg:taint/lord")
+    return wf("command/summon_devil.mcfunction", "\n".join(lines)) \
+        or len(PILLARS) + 1
+
+
 def build_give():
     s = io.open(GIVE, encoding="utf-8").read()
     if "之柱" in s:
@@ -855,11 +889,12 @@ def main():
     ticked = wire_tick()
     wire_taint()
     lords = wire_lords()
+    listed = build_summon_list()
     gave = build_give()
     art = build_art(RP)
     dump_for_guide()
-    print("pact: %d pillars, %d functions, give +%d, tick +%d, lords %d"
-          % (len(PILLARS), n, gave, ticked, lords))
+    print("pact: %d pillars, %d functions, give +%d, tick +%d, lords %d, "
+          "召唤清单 %d 位" % (len(PILLARS), n, gave, ticked, lords, listed))
     print("pact: objectives %s, 书的模型分派 %d 档" % (obj or "-", art))
 
 

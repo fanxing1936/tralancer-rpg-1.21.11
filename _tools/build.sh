@@ -58,6 +58,8 @@ echo "== 3. validation =="
 python validate.py  ../rpg
 # 拿原版当字典，比对进度触发器的条件字段名（写错是完全静默的）
 python check_adv.py ../rpg
+# 攻击用的苦力怕必须当场引爆 —— Fuse:0 在 1.21.11 是死字段，静默失效
+python check_creeper.py ../rpg
 echo
 echo "== 4. per-tick profile =="
 python profile_tick.py ../rpg

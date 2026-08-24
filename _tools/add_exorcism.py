@@ -76,6 +76,7 @@ DEMON_HP = 120
 DEMON_ATK = 11
 DEMON_SEE = 48
 DEMON_LIFE = 600         # 30 秒后自己散掉 —— 作者指定
+BOSS_LIFE = 2400         # 空缺者那条路招出来的是来打架的，给两分钟
 DEMON_CD = 70            # 出手间隔（刻）。30 秒里大约能放八次
 DEMON_R = 12             # 多远之内有人才出手
 
@@ -442,7 +443,13 @@ function rpg:taint/advent_life
 # 而且 1.21.9 还改过名（LifeTicks -> life_ticks），不值得赌。
 ADVENT_LIFE = """\
 # 刚落地的那位开始倒数。标签在这一刻只可能挂在他一个身上。
+#
+# `#boss` 是一次性的开关：空缺者那条路在召唤前把它拨上，
+# 于是同一套召唤能招出"来收账的"（30 秒）和"来打架的"（2 分钟）两种，
+# 而不必写两份 NBT —— 两份迟早会写歪。
 execute as @e[tag=rpg.advent.new] run scoreboard players set @s rpg_fall %(LIFE)d
+execute if score #boss rpg_fall matches 1 as @e[tag=rpg.advent.new] run scoreboard players set @s rpg_fall %(BOSS)d
+scoreboard players set #boss rpg_fall 0
 tag @e[tag=rpg.advent.new] remove rpg.advent.new
 """
 
@@ -612,6 +619,17 @@ title @s subtitle ["",{"text":"空壳换了一个人","italic":false,"color":"gr
 """
 
 VACANT_LOOSE = """\
+# 无处可去的东西不再散成碎片 —— 它自己找了一副躯体。
+#
+# @s 是那个动手的人。签了哪一柱，来的就是哪一位；没签过的是无名者 ——
+# 与降临同一套分流，只是这一只是来打架的，所以寿命另算。
+scoreboard players set #boss rpg_fall 1
+scoreboard players set #lord rpg_fall 0
+execute if entity @s[tag=rpg.pact] run scoreboard players operation #lord rpg_fall = @s rpg_pact
+execute at @s run function rpg:taint/lord
+"""
+
+_VACANT_LOOSE_OLD = """\
 # 附近没有第二具躯体可用。那东西只好赤裸地留在原地。
 execute at @s run particle sculk_charge_pop ~ ~1 ~ 0.6 0.6 0.6 0.15 60
 execute at @s run playsound minecraft:entity.warden.roar hostile @a[distance=..28] ~ ~ ~ 0.8 1.4
@@ -1211,7 +1229,8 @@ def build_fall():
     wf("taint/advent_at.mcfunction", ADVENT_AT)
     wf("taint/lord.mcfunction",
        LORD_NONE % {"NBT": demon_nbt("无名者", "#3D0000", "dark_gray")})
-    wf("taint/advent_life.mcfunction", ADVENT_LIFE % {"LIFE": DEMON_LIFE})
+    wf("taint/advent_life.mcfunction",
+       ADVENT_LIFE % {"LIFE": DEMON_LIFE, "BOSS": BOSS_LIFE})
     wf("taint/advent_tick.mcfunction", ADVENT_TICK % {"R": DEMON_R})
     wf("taint/cast.mcfunction", DEMON_CAST % {"CD": DEMON_CD})
     wf("taint/skill.mcfunction", SKILL_NONE)
