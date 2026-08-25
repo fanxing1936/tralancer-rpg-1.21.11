@@ -46,6 +46,9 @@ def divine_section():
     beam = new["beam"]
     field = new["field"]
     borrow = new["borrow"]
+    authority_regen = new["authority_regeneration"]
+    judgment = new["judgment"]
+    gift = new["gift"]
     rite = D["ritual"]
     compat = D["ritual_compatibility"]
     seph_rows = "".join(
@@ -77,8 +80,8 @@ def divine_section():
 </div>
 
 <h3 class="sub-h">新约<span class="rolls">权柄见证 · 双式权能 · 七罪赦免</span></h3>
-<p>签下新约时，现有七柱契约会被解除，魔化清零；此后魔化条由 <strong>权柄完整度 {new["authority_max"]}/{new["authority_max"]}</strong> 取代。
-新约使持有者免疫失明与黑暗。三种主动共用同一个<strong>上位契约回响冷却</strong>，因此不能把三条冷却彼此并行。</p>
+<p>签下新约时，现有七柱契约会被解除，魔化清零；此后魔化条由 <strong>权柄完整度 {new["authority_max"]}/{new["authority_max"]}</strong> 取代，
+每 <b>{authority_regen["interval_seconds"]}</b> 秒恢复 <b>{authority_regen["points"]}</b> 点。新约使持有者免疫失明与黑暗。创世净光、伊甸敕界与赦免共用同一个<strong>上位契约回响冷却</strong>；权柄消耗技不占用这条冷却。</p>
 <div class="tw"><table>
 <thead><tr><th>输入</th><th>权能</th><th>真实冷却</th><th>效果</th></tr></thead><tbody>
 <tr><td><b>{beam["input"]}</b><br><span class="dim">已立约的新约</span></td><td><b>［{beam["ability"]}］</b></td><td class="num">{beam["cooldown_seconds"]} 秒</td><td>向前延伸 <b>{beam["range"]}</b> 格，对光路附近恶魔造成 <b>{beam["damage_percent_max_health"]}% 最大生命值 + {beam["base_damage"]} 点基础伤害</b>，并施加发光 {beam["glowing_seconds"]} 秒、虚弱 {beam["weakness_seconds"]} 秒。</td></tr>
@@ -86,16 +89,22 @@ def divine_section():
 <tr><td><b>{borrow["input"]}</b><br><span class="dim">无需签下七柱契约</span></td><td><b>［{borrow["ability"]}］</b></td><td class="num">{borrow["cooldown_seconds"]} 秒</td><td>直接调用对应七罪契约书的原本力量，不绑定柱位、不增加魔化，也不附带契约枷锁；七本书均可作为权能媒介。</td></tr>
 </tbody></table></div>
 
+<h3 class="sub-h">权柄分授<span class="rolls">玩家面板 · 契约与权柄</span></h3>
+<div class="sys">
+<div><h3>［{judgment["ability"]}］</h3><p class="how">消耗 {judgment["authority_cost"]} 权柄 · 覆印 {judgment["arm_seconds"]} 秒</p><p>强化下一次命中恶魔的攻击：先剥离其增益，再附加 <b>{judgment["damage_percent_max_health"]}% 最大生命值 + {judgment["base_damage"]} 点基础伤害</b>；目标生命不高于 <b>{judgment["execute_at_or_below_percent"]}%</b> 时直接斩杀。普通目标不会浪费覆印。</p></div>
+<div><h3>［{gift["ability"]}］</h3><p class="how">消耗 {gift["authority_cost"]} 权柄 · 最近同伴 {gift["radius"]} 格</p><p>净化最近一名其他玩家的六类负面状态，立即疗愈，并给予生命恢复 II {gift["regeneration_seconds"]} 秒、伤害吸收 II {gift["absorption_seconds"]} 秒与抗性 I {gift["resistance_seconds"]} 秒。范围内无人时不消耗权柄。</p></div>
+</div>
+
 <h3 class="sub-h">与四阶段驱魔的兼容<span class="rolls">不跳调查 · 不跳裁决</span></h3>
 <div class="note"><b>七罪领主的仪式保护线仍然生效。</b>真名调查阶段会保留 <b>{compat["inquest_health_floor"]}/{compat["inquest_health_max"]}</b> 生命底线，
-旧约的斩杀判定也不能借此跳过真名调查或最终裁决。领主进入法阵绑定阶段后，三种上位契约攻击不再直接伤害它，
-而是分别为法阵补充稳定度：<b>十诫净界 +{compat["bound_stability"]["十诫净界"]}</b>、<b>创世净光 +{compat["bound_stability"]["创世净光"]}</b>、<b>伊甸敕界 +{compat["bound_stability"]["伊甸敕界"]}</b>。
+旧约与圣裁的斩杀判定都不能借此跳过真名调查或最终裁决。领主进入法阵绑定阶段后，四种上位契约攻击不再直接伤害它，
+而是分别为法阵补充稳定度：<b>十诫净界 +{compat["bound_stability"]["十诫净界"]}</b>、<b>创世净光 +{compat["bound_stability"]["创世净光"]}</b>、<b>伊甸敕界 +{compat["bound_stability"]["伊甸敕界"]}</b>、<b>终末圣裁 +{compat["bound_stability"]["终末圣裁"]}</b>。
 普通恶魔、罪仆与蝇群不享受这层仪式保护，仍承受真实百分比伤害。</div>
 
 <h3 class="sub-h">解约与统一 UI<span class="rolls">旧约／新约规则相同</span></h3>
 <div class="sys">
 <div><h3>解除上位契约</h3><p class="how">燃着的驱魔图腾 {rite["renounce_radius"]} 格内 · 已立约之书长按</p><p>旧约和新约都可这样解除：上位契约状态清空，书退回未立约，附近一支燃烧图腾随之消耗。它与七柱毁约不是同一套惩罚，不额外增加魔化或凋零。</p></div>
-<div><h3>状态与冷却</h3><p class="how">屏幕下方唯一 Actionbar 出口</p><p>新约生效时，持续状态把「魔化／圣痕」位置换成<strong>权柄完整度</strong>；施放后同一行显示「旧约 · 十诫净界」「新约 · 创世净光」「新约 · 伊甸敕界」或「新约 · 赦免」及剩余冷却。一次性施法提示仍只停留 2 秒。</p></div>
+<div><h3>状态与冷却</h3><p class="how">屏幕下方唯一 Actionbar 出口</p><p>新约生效时，持续状态把「魔化／圣痕」位置换成<strong>权柄完整度</strong>；共享冷却仍用七罪契约的五格样式。终末圣裁的覆印、命中与圣子恩赐使用同一行短提示，不与持续 HUD 争抢出口。</p></div>
 </div>
 
 <div class="grid">{F.get("divine", "")}</div>

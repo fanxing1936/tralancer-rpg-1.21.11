@@ -18,6 +18,14 @@ execute in minecraft:overworld if data entity @e[tag=rpg.qa.new,limit=1] {Health
 execute in minecraft:overworld run summon minecraft:vindicator 12 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.field"],Health:100f,attributes:[{id:"minecraft:max_health",base:100f},{id:"minecraft:armor",base:20f}]}
 execute in minecraft:overworld as @e[tag=rpg.qa.field,limit=1] at @s run function rpg:divine/damage/field_target
 execute in minecraft:overworld if data entity @e[tag=rpg.qa.field,limit=1] {Health:75f} run say DIVINE_EDEN_FIELD_DAMAGE_PASS
+execute in minecraft:overworld run summon minecraft:vindicator 14 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.judgment"],Health:100f,attributes:[{id:"minecraft:max_health",base:100f},{id:"minecraft:armor",base:20f}]}
+execute in minecraft:overworld run effect give @e[tag=rpg.qa.judgment,limit=1] minecraft:regeneration 30 4 true
+execute in minecraft:overworld run effect give @e[tag=rpg.qa.judgment,limit=1] minecraft:resistance 30 4 true
+execute in minecraft:overworld as @e[tag=rpg.qa.judgment,limit=1] at @s run function rpg:divine/judgment/strike
+execute in minecraft:overworld if data entity @e[tag=rpg.qa.judgment,limit=1] {Health:70f} unless entity @e[tag=rpg.qa.judgment,limit=1,nbt={active_effects:[{id:"minecraft:regeneration"}]}] run say DIVINE_JUDGMENT_DAMAGE_PURIFY_PASS
+execute in minecraft:overworld run summon minecraft:vindicator 18 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.judgment_execute"],Health:20f,attributes:[{id:"minecraft:max_health",base:100f},{id:"minecraft:armor",base:20f}]}
+execute in minecraft:overworld as @e[tag=rpg.qa.judgment_execute,limit=1] at @s run function rpg:divine/judgment/strike
+execute in minecraft:overworld unless entity @e[tag=rpg.qa.judgment_execute] run say DIVINE_JUDGMENT_EXECUTION_PASS
 execute in minecraft:overworld run summon minecraft:vindicator 16 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.stage1"],Health:700f,attributes:[{id:"minecraft:max_health",base:700f},{id:"minecraft:armor",base:20f}]}
 scoreboard players set @e[tag=rpg.qa.stage1,limit=1] rpg_ex_stage 1
 execute in minecraft:overworld as @e[tag=rpg.qa.stage1,limit=1] at @s run function rpg:divine/damage/new_target
@@ -36,6 +44,8 @@ scoreboard players set @e[tag=rpg.qa.bound,limit=1] rpg_rite_id 91
 scoreboard players set @e[tag=rpg.qa.bound,limit=1] rpg_ex_stage 2
 execute in minecraft:overworld as @e[tag=rpg.qa.bound,limit=1] at @s run function rpg:divine/damage/new_target
 execute in minecraft:overworld if score @e[tag=rpg.qa.anchor,limit=1] rpg_ex_stab matches 65 if data entity @e[tag=rpg.qa.bound,limit=1] {Health:420f} run say DIVINE_BOUND_STABILITY_ROUTE_PASS
+execute in minecraft:overworld as @e[tag=rpg.qa.bound,limit=1] at @s run function rpg:divine/judgment/strike
+execute in minecraft:overworld if score @e[tag=rpg.qa.anchor,limit=1] rpg_ex_stab matches 85 if data entity @e[tag=rpg.qa.bound,limit=1] {Health:420f} run say DIVINE_JUDGMENT_BOUND_ROUTE_PASS
 execute in minecraft:overworld run summon minecraft:marker 8 80 0 {Tags:["rpg.lt.gathering","rpg.qa.divine","rpg.qa.gather","rpg.qa.tree"]}
 scoreboard players set @e[tag=rpg.qa.tree,limit=1] rpg_lt_gather 0
 execute in minecraft:overworld run summon minecraft:item_display 12 80 0 {Tags:["rpg.ritual.life_tree.prop","rpg.qa.divine","rpg.qa.gather"]}

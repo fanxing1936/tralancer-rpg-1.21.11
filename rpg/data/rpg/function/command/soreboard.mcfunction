@@ -287,6 +287,8 @@ scoreboard objectives add rpg_lt_div_max dummy
 scoreboard objectives add rpg_lt_div_t dummy
 scoreboard objectives add rpg_lt_regen dummy
 scoreboard objectives add rpg_lt_auth dummy
+scoreboard objectives add rpg_lt_auth_t dummy
+scoreboard objectives add rpg_lt_judge dummy
 scoreboard objectives add rpg_lt_hp dummy
 scoreboard objectives add rpg_lt_max dummy
 scoreboard objectives add rpg_lt_owner dummy

@@ -98,7 +98,8 @@ def tag_values(document):
 score = read("command/soreboard.mcfunction")
 for name in (
         "rpg_lt_divine", "rpg_lt_div_cd", "rpg_lt_div_max", "rpg_lt_div_t",
-        "rpg_lt_regen", "rpg_lt_auth", "rpg_lt_hp", "rpg_lt_max",
+        "rpg_lt_regen", "rpg_lt_auth", "rpg_lt_auth_t", "rpg_lt_judge",
+        "rpg_lt_hp", "rpg_lt_max",
         "rpg_lt_owner", "rpg_lt_gather", "rpg_lt_claim", "rpg_lt_migrate"):
     if "scoreboard objectives add %s dummy" % name not in score:
         problem("missing objective: " + name)
@@ -106,7 +107,8 @@ if "scoreboard players set #hud_mini rpg_hud 5" not in score:
     problem("five-slot HUD constant is not initialized: #hud_mini rpg_hud 5")
 
 runtime = read("exorcism.mcfunction")
-for needle in ("function rpg:divine/player_tick", "function rpg:divine/gather/step"):
+for needle in ("function rpg:divine/player_tick", "function rpg:divine/judgment/scan",
+               "function rpg:divine/gather/step"):
     require(runtime, needle, "runtime lacks: " + needle)
 if "function rpg:ritual/life_tree/covenant_tick" in runtime:
     problem("retired all-round blessing is still active")
@@ -198,6 +200,7 @@ target_routes = (
     ("divine/damage/old_target.mcfunction", "old", 20),
     ("divine/damage/new_target.mcfunction", "beam", 25),
     ("divine/damage/field_target.mcfunction", "field", 15),
+    ("divine/judgment/strike.mcfunction", "judgment", 20),
 )
 for target_rel, _ritual_name, _gain in target_routes:
     target = read(target_rel)
@@ -215,7 +218,7 @@ if not execute_lines or any("unless score @s rpg_ex_stage matches 1" not in line
 
 
 # -------------------------------------------------------------------------
-# A bound boss converts all three divine attacks into ritual stability.
+# A bound boss converts all four divine attacks into ritual stability.
 
 for target_rel, ritual_name, gain in target_routes:
     target = read(target_rel)
@@ -268,11 +271,18 @@ for needle in ("distance=..10", "rpg_lt_hp <=", "#five rpg_lt_max",
     require(old_power, needle, "Old Covenant power lacks: " + needle)
 
 new_dispatch = read("divine/invoke_new.mcfunction")
-crouch_lines = [line for line in active_lines(new_dispatch)
-                if 'Pose:"CROUCHING"' in line]
-if (len(crouch_lines) != 1 or "return run function rpg:divine/invoke_new_field"
-        not in crouch_lines[0]):
-    problem("New Covenant crouch dispatch is malformed")
+predicate_line = ("execute if predicate rpg:sneaking run return run function "
+                  "rpg:divine/invoke_new_field")
+require(new_dispatch, predicate_line,
+        "New Covenant crouch dispatch does not use the stable sneaking predicate")
+if 'Pose:"CROUCHING"' in new_dispatch:
+    problem("New Covenant still relies on the broken Pose NBT crouch test")
+try:
+    sneaking = read_json(os.path.join(DP, "data/rpg/predicate"), "sneaking.json")
+    if sneaking.get("predicate", {}).get("flags", {}).get("is_sneaking") is not True:
+        problem("rpg:sneaking predicate does not test is_sneaking=true")
+except Exception as exc:
+    problem("missing/invalid rpg:sneaking predicate: " + str(exc))
 require(new_dispatch, "function rpg:divine/invoke_new_beam",
         "New Covenant lacks the normal Creation Light branch")
 
@@ -407,8 +417,50 @@ new_tick = read("divine/new_tick.mcfunction")
 for effect in ("blindness", "darkness"):
     if "effect clear @s minecraft:" + effect not in new_tick:
         problem("New Covenant does not prevent " + effect)
-if "rpg_lt_auth 100" not in new_tick or "rpg_taint 0" not in new_tick:
-    problem("New Covenant does not replace corruption with authority")
+if "rpg_lt_auth_t matches 40.." not in new_tick or "rpg_taint 0" not in new_tick:
+    problem("New Covenant authority regeneration or corruption replacement is malformed")
+if "scoreboard players set @s rpg_lt_auth 100" in active_lines(new_tick):
+    problem("New Covenant refills authority every tick, making authority costs meaningless")
+sign_new = read("divine/sign_new.mcfunction")
+if "scoreboard players set @s rpg_lt_auth 100" not in sign_new:
+    problem("signing New Covenant does not initialize authority to 100")
+
+arm = read("divine/judgment/arm.mcfunction")
+strike = read("divine/judgment/strike.mcfunction")
+scan = read("divine/judgment/scan.mcfunction")
+for needle in ("rpg_lt_auth matches 25..", "scoreboard players remove @s rpg_lt_auth 25",
+               "scoreboard players set @s rpg_lt_judge 600"):
+    require(arm, needle, "Final Judgment arming lacks: " + needle)
+for needle in ("tag=rpg.hurt", "tag=rpg.demon", "rpg.demon.minion", "rpg.demon.fly"):
+    require(scan, needle, "Final Judgment hit scan lacks: " + needle)
+for needle in ("rpg_lt_hp <= @s rpg_lt_max", "#five rpg_lt_max",
+               "scoreboard players add @s rpg_lt_max 1000", "minecraft:regeneration",
+               "function rpg:divine/damage/execute"):
+    require(strike, needle, "Final Judgment strike lacks: " + needle)
+
+gift = read("divine/gift.mcfunction")
+receive = read("divine/gift/receive.mcfunction")
+for needle in ("rpg_lt_auth matches 35..", "scoreboard players remove @s rpg_lt_auth 35",
+               "distance=..12", "function rpg:divine/gift/receive"):
+    require(gift, needle, "Son's Gift lacks: " + needle)
+for needle in ("minecraft:instant_health", "minecraft:regeneration",
+               "minecraft:absorption", "minecraft:resistance"):
+    require(receive, needle, "Son's Gift healing lacks: " + needle)
+
+panel_tick = read("panel/tick.mcfunction")
+panel_pact = read("panel/pact.mcfunction")
+for value, function in ((9, "rpg:divine/judgment/arm"), (10, "rpg:divine/gift")):
+    require(panel_tick, "rpg_panel matches %d run function %s" % (value, function),
+            "player panel lacks authority dispatch %d" % value)
+    require(panel_pact, "/trigger rpg_panel set %d" % value,
+            "covenant panel lacks authority button %d" % value)
+for rel in ("divine/authority/no_covenant.mcfunction",
+            "divine/authority/insufficient.mcfunction",
+            "divine/judgment/already_armed.mcfunction",
+            "divine/gift.mcfunction", "divine/gift/no_target.mcfunction",
+            "divine/gift/receive.mcfunction", "panel/pact.mcfunction"):
+    if '"italic":true' in read(rel):
+        problem("new authority UI contains off-style italic text: " + rel)
 
 pact = read("pact/trigger.mcfunction")
 borrow = read("divine/borrow.mcfunction")

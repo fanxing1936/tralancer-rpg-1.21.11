@@ -31,6 +31,10 @@
   },
   "new": {
     "authority_max": 100,
+    "authority_regeneration": {
+      "points": 1,
+      "interval_seconds": 2
+    },
     "beam": {
       "ability": "创世净光",
       "input": "普通长按",
@@ -60,6 +64,26 @@
       "pillars": 7,
       "adds_taint": false,
       "applies_bane": false
+    },
+    "judgment": {
+      "ability": "终末圣裁",
+      "input": "玩家面板 · 契约与权柄",
+      "authority_cost": 25,
+      "arm_seconds": 30,
+      "damage_percent_max_health": 20,
+      "base_damage": 10,
+      "execute_at_or_below_percent": 20,
+      "purifies_beneficial_effects": true
+    },
+    "gift": {
+      "ability": "圣子恩赐",
+      "input": "玩家面板 · 契约与权柄",
+      "authority_cost": 35,
+      "radius": 12,
+      "targets_nearest_other_player": true,
+      "regeneration_seconds": 10,
+      "absorption_seconds": 20,
+      "resistance_seconds": 8
     }
   },
   "ritual_compatibility": {
@@ -68,7 +92,8 @@
     "bound_stability": {
       "十诫净界": 20,
       "创世净光": 25,
-      "伊甸敕界": 15
+      "伊甸敕界": 15,
+      "终末圣裁": 20
     }
   }
 }

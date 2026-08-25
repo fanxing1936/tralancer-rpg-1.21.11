@@ -2,6 +2,8 @@
 # 魔化与 HUD 是玩家侧的，走 @a 一次；空缺者那一支带类型且过守卫。
 # 上位契约玩家状态先于魔化与 HUD 结算。
 execute as @a at @s run function rpg:divine/player_tick
+# 终末圣裁只读取本刻已经存在的受击标记，不新增伤害扫描。
+execute if entity @a[scores={rpg_lt_judge=1..},limit=1] run function rpg:divine/judgment/scan
 execute as @a at @s run function rpg:taint/taint
 execute as @a run function rpg:hud/hud
 execute if entity @e[type=minecraft:villager,tag=!rpg.vac.seen,limit=1] run function rpg:vacant/mark

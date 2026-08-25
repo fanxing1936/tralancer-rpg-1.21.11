@@ -67,8 +67,8 @@ def write_json(root, rel, value):
         handle.write("\n")
 
 
-def comp(text, color="white", bold=False):
-    return ui.comp(text, color, bold)
+def comp(text, color="white", bold=False, **extra):
+    return ui.comp(text, color, bold, **extra)
 
 
 def row(*parts):
@@ -120,6 +120,7 @@ def covenant_lore_rows(kind, signed):
     else:
         rows += [
             [ui.label("权柄"), comp("　魔化由权柄完整度取代", NEW_LIGHT)],
+            [comp("　权柄每 2 秒恢复 1 点，可在玩家面板中消耗", ui.DARK_GRAY)],
             [ui.label("力量"), comp("[创世净光]", NEW_COLOUR, True)],
             [comp("　对前方恶魔造成 25% 最大生命值伤害", ui.GRAY)],
             [comp("　并追加 15 点基础伤害与审判印记", ui.GRAY)],
@@ -129,6 +130,10 @@ def covenant_lore_rows(kind, signed):
             [ui.label("神佑"), comp("　免疫失明与黑暗", NEW_LIGHT)],
             [ui.label("赦免"), comp("　可无副作用动用七罪契约之力", OLD_LIGHT)],
             [comp("　手持七罪契约书使用（冷却 15 秒）", ui.DARK_GRAY)],
+            [ui.label("圣裁"), comp("　消耗 25 权柄强化下一次对恶魔的攻击", NEW_LIGHT)],
+            [comp("　净化目标并附加 20% 最大生命值与 10 点伤害", ui.GRAY)],
+            [comp("　生命不高于 20% 时直接斩杀；覆印保留 30 秒", ui.DARK_GRAY)],
+            [ui.label("恩赐"), comp("　消耗 35 权柄救治 12 格内最近的同伴", OLD_LIGHT)],
         ]
     rows.append([comp(ui.RULE_TEXT, ui.WHITE)])
     if signed:
@@ -199,7 +204,7 @@ def cross_item():
 def patch_objectives_and_tick():
     rel = "command/soreboard.mcfunction"
     names = ("rpg_lt_divine", "rpg_lt_div_cd", "rpg_lt_div_max", "rpg_lt_div_t", "rpg_lt_regen",
-             "rpg_lt_auth", "rpg_lt_hp", "rpg_lt_max", "rpg_lt_owner",
+             "rpg_lt_auth", "rpg_lt_auth_t", "rpg_lt_judge", "rpg_lt_hp", "rpg_lt_max", "rpg_lt_owner",
              "rpg_lt_gather", "rpg_lt_claim", "rpg_lt_migrate")
     src = "\n".join(line for line in read(rel).splitlines()
                     if not any(name in line for name in names)).rstrip()
@@ -214,13 +219,17 @@ def patch_objectives_and_tick():
     rel = "exorcism.mcfunction"
     src = "\n".join(line for line in read(rel).splitlines()
                     if "rpg:divine/player_tick" not in line and
+                    "rpg:divine/judgment/scan" not in line and
                     "上位契约玩家状态" not in line and
+                    "终末圣裁只读取" not in line and
                     "rpg:divine/gather/step" not in line and
                     "Daath 汇聚动画" not in line)
     anchor = "execute as @a at @s run function rpg:taint/taint"
     src = src.replace(anchor,
                       "# 上位契约玩家状态先于魔化与 HUD 结算。\n"
-                      "execute as @a at @s run function rpg:divine/player_tick\n" + anchor)
+                      "execute as @a at @s run function rpg:divine/player_tick\n"
+                      "# 终末圣裁只读取本刻已经存在的受击标记，不新增伤害扫描。\n"
+                      "execute if entity @a[scores={rpg_lt_judge=1..},limit=1] run function rpg:divine/judgment/scan\n" + anchor)
     src += ("\n\n# Daath 汇聚动画：只有正在转化的生命之树才进入。\n"
             "execute if entity @e[type=minecraft:marker,tag=rpg.lt.gathering,limit=1] "
             "run function rpg:divine/gather/step\n")
@@ -264,6 +273,8 @@ tellraw @s %s
     write("divine/sign_new.mcfunction", """execute if entity @s[tag=rpg.pact] run function rpg:pact/burn
 scoreboard players set @s rpg_lt_divine 2
 scoreboard players set @s rpg_lt_auth 100
+scoreboard players set @s rpg_lt_auth_t 0
+scoreboard players set @s rpg_lt_judge 0
 scoreboard players set @s rpg_taint 0
 tag @s remove rpg.taint.full
 tag @s remove rpg.divine.old
@@ -366,7 +377,7 @@ def build_new_power_and_borrow():
                 % (scale, x, z))
 
     write("divine/invoke_new.mcfunction", """# 新约双式：常态为创世净光，潜行为伊甸敕界。
-execute if entity @s[nbt={Pose:"CROUCHING"}] run return run function rpg:divine/invoke_new_field
+execute if predicate rpg:sneaking run return run function rpg:divine/invoke_new_field
 function rpg:divine/invoke_new_beam
 """)
     write("divine/invoke_new_beam.mcfunction", """scoreboard players set @s rpg_lt_div_cd 400
@@ -452,6 +463,115 @@ function rpg:hud/m62
     write(rel, src)
 
 
+def build_authority_powers():
+    """Spend New Covenant authority on judgment or another player's life."""
+    write("divine/judgment/arm.mcfunction", """execute unless score @s rpg_lt_divine matches 2 run return run function rpg:divine/authority/no_covenant
+execute if score @s rpg_lt_judge matches 1.. run return run function rpg:divine/judgment/already_armed
+execute unless score @s rpg_lt_auth matches 25.. run return run function rpg:divine/authority/insufficient
+scoreboard players remove @s rpg_lt_auth 25
+scoreboard players set @s rpg_lt_auth_t 0
+scoreboard players set @s rpg_lt_judge 600
+particle dust_color_transition{from_color:[0.38,0.85,0.91],to_color:[1.0,0.95,0.66],scale:1.5} ~ ~1 ~ 0.45 0.75 0.45 0.04 36 force
+particle minecraft:end_rod ~ ~1 ~ 0.35 0.65 0.35 0.03 24 force
+playsound minecraft:block.beacon.power_select player @s ~ ~ ~ 0.8 1.55
+function rpg:hud/m63
+""")
+    write("divine/judgment/already_armed.mcfunction", """tellraw @s %s
+playsound minecraft:block.note_block.bass player @s ~ ~ ~ 0.45 0.75
+""" % row(comp("[终末圣裁] ", NEW_COLOUR, True),
+              comp("圣裁已覆于下一击，无需重复消耗权柄。", ui.GRAY)))
+    write("divine/authority/no_covenant.mcfunction", """tellraw @s %s
+playsound minecraft:block.note_block.bass player @s ~ ~ ~ 0.45 0.65
+""" % row(comp("[权柄] ", NEW_COLOUR, True),
+              comp("唯有已立下新约者能够动用此项权能。", ui.GRAY)))
+    write("divine/authority/insufficient.mcfunction", """tellraw @s %s
+playsound minecraft:block.note_block.bass player @s ~ ~ ~ 0.45 0.6
+""" % row(comp("[权柄] ", NEW_COLOUR, True),
+              comp("权柄完整度不足，见证尚未齐备。", ui.GRAY)))
+
+    write("divine/judgment/scan.mcfunction", """execute as @e[tag=rpg.hurt,tag=rpg.demon] at @s run function rpg:divine/judgment/victim
+execute as @e[tag=rpg.hurt,tag=rpg.demon.minion,tag=!rpg.demon] at @s run function rpg:divine/judgment/victim
+execute as @e[tag=rpg.hurt,tag=rpg.demon.fly,tag=!rpg.demon,tag=!rpg.demon.minion] at @s run function rpg:divine/judgment/victim
+""")
+    write("divine/judgment/victim.mcfunction", """tag @s add rpg.divine.judgment.target
+execute on attacker if entity @s[type=minecraft:player,scores={rpg_lt_divine=2,rpg_lt_judge=1..}] at @s run function rpg:divine/judgment/cast
+tag @s remove rpg.divine.judgment.target
+""")
+    write("divine/judgment/cast.mcfunction", """scoreboard players set @s rpg_lt_judge 0
+tag @s add rpg.divine.cast
+execute as @e[tag=rpg.divine.judgment.target,distance=..8,sort=nearest,limit=1] at @s run function rpg:divine/judgment/strike
+tag @s remove rpg.divine.cast
+playsound minecraft:entity.lightning_bolt.impact player @s ~ ~ ~ 0.75 1.75
+function rpg:hud/m65
+""")
+    write("divine/judgment/strike.mcfunction", """execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/judgment
+effect clear @s minecraft:regeneration
+effect clear @s minecraft:resistance
+effect clear @s minecraft:absorption
+effect clear @s minecraft:strength
+effect clear @s minecraft:speed
+effect clear @s minecraft:invisibility
+effect clear @s minecraft:fire_resistance
+effect give @s minecraft:glowing 10 0 true
+effect give @s minecraft:weakness 8 1 true
+execute store result score @s rpg_lt_hp run data get entity @s Health 100
+execute store result score @s rpg_lt_max run attribute @s minecraft:max_health get 100
+scoreboard players operation @s rpg_lt_max /= #five rpg_lt_max
+execute unless score @s rpg_ex_stage matches 1 if score @s rpg_lt_hp <= @s rpg_lt_max run return run function rpg:divine/damage/execute
+execute store result score @s rpg_lt_max run attribute @s minecraft:max_health get 100
+scoreboard players operation @s rpg_lt_max /= #five rpg_lt_max
+scoreboard players add @s rpg_lt_max 1000
+execute if score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_stage1
+execute unless score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_score
+particle minecraft:flash{color:15594751} ~ ~1 ~ 0 0 0 0 1 force
+particle dust_color_transition{from_color:[0.38,0.85,0.91],to_color:[1.0,0.95,0.66],scale:2.0} ~ ~1 ~ 0.65 0.85 0.65 0.08 48 force
+particle minecraft:enchanted_hit ~ ~1 ~ 0.5 0.7 0.5 0.12 36 force
+""")
+
+    write("divine/gift.mcfunction", """execute unless score @s rpg_lt_divine matches 2 run return run function rpg:divine/authority/no_covenant
+execute unless score @s rpg_lt_auth matches 35.. run return run function rpg:divine/authority/insufficient
+tag @a remove rpg.divine.gift.target
+tag @s add rpg.divine.gift.giver
+execute unless entity @a[tag=!rpg.divine.gift.giver,gamemode=!spectator,distance=..12,limit=1] run return run function rpg:divine/gift/no_target
+tag @a[tag=!rpg.divine.gift.giver,gamemode=!spectator,distance=..12,sort=nearest,limit=1] add rpg.divine.gift.target
+scoreboard players remove @s rpg_lt_auth 35
+scoreboard players set @s rpg_lt_auth_t 0
+execute as @a[tag=rpg.divine.gift.target,limit=1] at @s run function rpg:divine/gift/receive
+tellraw @s %s
+particle minecraft:end_rod ~ ~1 ~ 0.5 0.8 0.5 0.05 28 force
+playsound minecraft:block.beacon.activate player @s ~ ~ ~ 0.8 1.75
+function rpg:hud/m64
+tag @a[tag=rpg.divine.gift.target] remove rpg.divine.gift.target
+tag @s remove rpg.divine.gift.giver
+""" % row(comp("[圣子恩赐] ", OLD_LIGHT, True),
+              comp("生命已在", ui.GRAY),
+              {"selector": "@a[tag=rpg.divine.gift.target,limit=1]",
+               "color": NEW_LIGHT, "italic": False},
+              comp("身上续行。", ui.GRAY)))
+    write("divine/gift/no_target.mcfunction", """tag @s remove rpg.divine.gift.giver
+tellraw @s %s
+playsound minecraft:block.note_block.bass player @s ~ ~ ~ 0.45 0.7
+""" % row(comp("[圣子恩赐] ", OLD_LIGHT, True),
+              comp("十二格内没有可承受恩赐的同伴；权柄未被消耗。", ui.GRAY)))
+    write("divine/gift/receive.mcfunction", """effect clear @s minecraft:blindness
+effect clear @s minecraft:darkness
+effect clear @s minecraft:wither
+effect clear @s minecraft:poison
+effect clear @s minecraft:slowness
+effect clear @s minecraft:weakness
+effect give @s minecraft:instant_health 1 1 true
+effect give @s minecraft:regeneration 10 1 true
+effect give @s minecraft:absorption 20 1 true
+effect give @s minecraft:resistance 8 0 true
+particle minecraft:flash{color:16774312} ~ ~1 ~ 0 0 0 0 1 force
+particle minecraft:heart ~ ~1.1 ~ 0.55 0.75 0.55 0.12 24 force
+particle minecraft:totem_of_undying ~ ~1 ~ 0.65 0.85 0.65 0.08 42 force
+playsound minecraft:item.totem.use player @s ~ ~ ~ 0.65 1.35
+tellraw @s %s
+""" % row(comp("[圣子恩赐] ", OLD_LIGHT, True),
+              comp("他者为你分授生命；伤痕与污秽正在退去。", ui.GRAY)))
+
+
 def build_damage_type_and_ritual_compat():
     """Make percentage damage exact and meaningful in every exorcism phase."""
     write_json(DP, "data/rpg/damage_type/divine_light.json", {
@@ -501,6 +621,7 @@ execute at @s as @a[tag=rpg.divine.cast,distance=..24,sort=nearest,limit=1] run 
     ritual_route("old", 20, 3, "[0.83,0.69,0.22]", 16771482, 1.15)
     ritual_route("beam", 25, 4, "[0.38,0.85,0.91]", 8641023, 1.55)
     ritual_route("field", 15, 2, "[0.91,0.96,1.0]", 6482395, 1.35)
+    ritual_route("judgment", 20, 3, "[0.38,0.85,0.91]", 15594751, 1.70)
 
 
 def build_player_tick_hud_and_renounce():
@@ -510,6 +631,8 @@ scoreboard players add @s rpg_lt_div_max 0
 scoreboard players add @s rpg_lt_div_t 0
 scoreboard players add @s rpg_lt_regen 0
 scoreboard players add @s rpg_lt_auth 0
+scoreboard players add @s rpg_lt_auth_t 0
+scoreboard players add @s rpg_lt_judge 0
 scoreboard players add @s rpg_lt_claim 0
 scoreboard players add @s rpg_lt_migrate 0
 execute if score @s rpg_lt_div_cd matches 1.. if score @s rpg_lt_div_max matches ..0 if score @s rpg_lt_divine matches 1 run scoreboard players set @s rpg_lt_div_max 600
@@ -517,6 +640,8 @@ execute if score @s rpg_lt_div_cd matches 1.. if score @s rpg_lt_div_max matches
 execute if score @s rpg_lt_div_cd matches 1.. run scoreboard players remove @s rpg_lt_div_cd 1
 execute unless score @s rpg_lt_div_cd matches 1.. run scoreboard players set @s rpg_lt_div_max 0
 execute if score @s rpg_lt_div_t matches 1.. run scoreboard players remove @s rpg_lt_div_t 1
+execute unless score @s rpg_lt_divine matches 2 run scoreboard players set @s rpg_lt_auth_t 0
+execute unless score @s rpg_lt_divine matches 2 run scoreboard players set @s rpg_lt_judge 0
 execute if score @s rpg_lt_divine matches 1 run function rpg:divine/old_tick
 execute if score @s rpg_lt_divine matches 2 run function rpg:divine/new_tick
 execute if score @s rpg_lt_migrate matches 0 if score @s rpg_lt_covenant matches 1.. run function rpg:divine/migrate_legacy
@@ -525,7 +650,13 @@ execute if score @s rpg_lt_migrate matches 0 if score @s rpg_lt_covenant matches
 execute if score @s rpg_lt_regen matches 400.. run effect give @s minecraft:regeneration 1 0 true
 execute if score @s rpg_lt_regen matches 400.. run scoreboard players set @s rpg_lt_regen 0
 """)
-    write("divine/new_tick.mcfunction", """scoreboard players set @s rpg_lt_auth 100
+    write("divine/new_tick.mcfunction", """execute if score @s rpg_lt_auth matches ..-1 run scoreboard players set @s rpg_lt_auth 0
+execute if score @s rpg_lt_auth matches 101.. run scoreboard players set @s rpg_lt_auth 100
+execute if score @s rpg_lt_auth matches ..99 run scoreboard players add @s rpg_lt_auth_t 1
+execute if score @s rpg_lt_auth_t matches 40.. if score @s rpg_lt_auth matches ..99 run scoreboard players add @s rpg_lt_auth 1
+execute if score @s rpg_lt_auth_t matches 40.. run scoreboard players set @s rpg_lt_auth_t 0
+execute if score @s rpg_lt_auth matches 100.. run scoreboard players set @s rpg_lt_auth_t 0
+execute if score @s rpg_lt_judge matches 1.. run scoreboard players remove @s rpg_lt_judge 1
 scoreboard players set @s rpg_taint 0
 tag @s remove rpg.taint.full
 effect clear @s minecraft:blindness
@@ -551,6 +682,8 @@ scoreboard players set @s rpg_lt_divine 0
 scoreboard players set @s rpg_lt_div_cd 0
 scoreboard players set @s rpg_lt_div_max 0
 scoreboard players set @s rpg_lt_auth 0
+scoreboard players set @s rpg_lt_auth_t 0
+scoreboard players set @s rpg_lt_judge 0
 tag @s remove rpg.divine.old
 tag @s remove rpg.divine.new
 kill @e[type=minecraft:item_display,tag=rpg.totem.lit,distance=..6,limit=1,sort=nearest]
@@ -655,6 +788,12 @@ function rpg:hud/divine_beam
                 comp("　伊甸在脚下重开", NEW_LIGHT), comp(" ✦", ui.WHITE)),
         62: row(comp("[赦免]", NEW_COLOUR, True),
                 comp("　柱中之力未留下魔化", ui.GRAY), comp(" ✦", OLD_LIGHT)),
+        63: row(comp("[终末圣裁]", NEW_COLOUR, True),
+                comp("　权柄已覆于下一击", NEW_LIGHT), comp(" ✦", OLD_LIGHT)),
+        64: row(comp("[圣子恩赐]", OLD_LIGHT, True),
+                comp("　生命在他者身上续行", NEW_LIGHT), comp(" ✦", ui.WHITE)),
+        65: row(comp("[终末圣裁]", NEW_COLOUR, True),
+                comp("　罪秽在审判中消散", OLD_LIGHT), comp(" ✦", ui.WHITE)),
     }
     msg_src = "\n".join(
         line for line in read("hud/msg.mcfunction").splitlines()
@@ -731,10 +870,36 @@ function rpg:hud/divine_beam
             {"score": {"name": "@s", "objective": "rpg_lt_auth"},
              "color": NEW_LIGHT, "italic": False},
             comp(" / 100", ui.DARK_GRAY)),
+        "execute if score @s rpg_lt_divine matches 2 if score @s rpg_lt_judge matches 1.. run tellraw @s " +
+        row(comp("圣裁状态：", ui.GRAY), comp("已覆印 · 等待下一次恶魔命中", OLD_LIGHT, True)),
+        "execute if score @s rpg_lt_divine matches 2 run tellraw @s " +
+        row(comp("[终末圣裁]", NEW_COLOUR, True,
+                 click_event={"action": "run_command", "command": "/trigger rpg_panel set 9"}),
+            comp("　25 权柄 · 强化下一次对恶魔的攻击", ui.GRAY)),
+        "execute if score @s rpg_lt_divine matches 2 run tellraw @s " +
+        row(comp("[圣子恩赐]", OLD_LIGHT, True,
+                 click_event={"action": "run_command", "command": "/trigger rpg_panel set 10"}),
+            comp("　35 权柄 · 救治十二格内最近同伴", ui.GRAY)),
     ]
     # The section header belongs at the top, before either meter.
     panel_lines = divine_lines + panel_lines
     write(rel, "\n".join(panel_lines))
+
+    rel = "panel/tick.mcfunction"
+    tick_lines = [line for line in read(rel).splitlines()
+                  if "rpg_panel matches 9" not in line and
+                  "rpg_panel matches 10" not in line]
+    reset = "execute if score @s rpg_panel matches 1.. run scoreboard players set @s rpg_panel 0"
+    dispatch = [
+        "execute if score @s rpg_panel matches 9 run function rpg:divine/judgment/arm",
+        "execute if score @s rpg_panel matches 10 run function rpg:divine/gift",
+    ]
+    out = []
+    for line in tick_lines:
+        if line == reset:
+            out.extend(dispatch)
+        out.append(line)
+    write(rel, "\n".join(out))
 
 
 def build_tree_rewards_and_cross():
@@ -898,6 +1063,7 @@ def main():
     build_advancement_and_trigger()
     build_old_power()
     build_new_power_and_borrow()
+    build_authority_powers()
     build_damage_type_and_ritual_compat()
     build_player_tick_hud_and_renounce()
     build_tree_rewards_and_cross()
