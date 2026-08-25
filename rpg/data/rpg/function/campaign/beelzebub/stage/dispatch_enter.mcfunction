@@ -1,0 +1,11 @@
+execute if score @s rpg_ch1_stage matches 0 run function rpg:campaign/beelzebub/stage/0_enter
+execute if score @s rpg_ch1_stage matches 1 run function rpg:campaign/beelzebub/stage/1_enter
+execute if score @s rpg_ch1_stage matches 2 run function rpg:campaign/beelzebub/stage/2_enter
+execute if score @s rpg_ch1_stage matches 3 run function rpg:campaign/beelzebub/stage/3_enter
+execute if score @s rpg_ch1_stage matches 4 run function rpg:campaign/beelzebub/stage/4_enter
+execute if score @s rpg_ch1_stage matches 5 run function rpg:campaign/beelzebub/stage/5_enter
+execute if score @s rpg_ch1_stage matches 6 run function rpg:campaign/beelzebub/stage/6_enter
+execute if score @s rpg_ch1_stage matches 7 run function rpg:campaign/beelzebub/stage/7_enter
+execute if score @s rpg_ch1_stage matches 8 run function rpg:campaign/beelzebub/stage/8_enter
+execute if score @s rpg_ch1_stage matches 9 run function rpg:campaign/beelzebub/stage/9_enter
+execute if score @s rpg_ch1_stage matches 10 run function rpg:campaign/beelzebub/stage/10_enter

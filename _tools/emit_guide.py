@@ -9,6 +9,7 @@ F = json.load(io.open("../_guide_fragments.json", encoding="utf-8"))
 S = json.load(io.open("../_guide_sections.json", encoding="utf-8"))
 Q = json.load(io.open("../_squad.json", encoding="utf-8"))
 D = json.load(io.open("../_divine.json", encoding="utf-8"))
+C = json.load(io.open("../_campaign_beelzebub.json", encoding="utf-8"))
 
 
 def on_dark(hexcol):
@@ -108,6 +109,39 @@ def divine_section():
 </div>
 
 <div class="grid">{F.get("divine", "")}</div>
+</section>'''
+
+
+def campaign_section():
+    """Chapter I player guide; narrative canon lives in the campaign markdown."""
+    flow = "".join(
+        '<li><span class="num">%02d</span><b>%s</b></li>' % (i, label)
+        for i, label in enumerate(C["flow"], 1))
+    return f'''<section class="plate" id="s16">
+<div class="plate-h"><span class="num">CH.I</span><h2>第一章 · 空缺者</h2><span class="sub">别西卜驱魔战役 · 30–60 分钟</span></div>
+<blockquote class="verse">前线吃人，后方负责忘记那些被吃掉的人。<cite>——维斯珀城空缺者档案</cite></blockquote>
+<p>玩家以临时教廷辅员身份进入战争后方的<strong>维斯珀城</strong>。已经下葬的人仍会回家，记得姓名与亲属，却失去了情感与作为人的主体。军需系统侵吞粮食，教廷删除饥饿死者的名字，<strong style="color:#B5D957">别西卜</strong>则以第七粮仓为核心，把这种制度性的暴食变成覆盖城市的寄生仪式。</p>
+
+<h3 class="sub-h">完整任务链<span class="rolls">调查、五职罪仆、700 生命领主、四阶段驱魔</span></h3>
+<ol class="campaign-flow">{flow}</ol>
+
+<div class="sys">
+<div><h3>调查与真名</h3><p class="how">环境罪证形成假说 · 三种招式完成确证</p><p>余烬、蝇茧与腐败祭品会把调查指向别西卜并揭示弱点媒介；正式真名仍要求携带圣器，亲历五种招式中任意三种不同见证。重复看同一招不会推进。</p></div>
+<div><h3>五席未满</h3><p class="how">桀派 · 布提斯 · 巴钦 · 塞列欧斯 · 布松</p><p>先锋封路、猎手追踪、祭司运送空缺者、咒术者制造家庭幻象、处刑者回收见证。它们不是五个换色近战怪，而是一套互相补位的猎杀编制。</p></div>
+<div><h3>万蝇腐宴</h3><p class="how">700 生命 · 镇压 → 镇魔 → 固阵 → 裁决</p><p>六成生命处锁血；真名与点燃图腾完成绑定；腐败媒介、银钉、告解铃、净罪香和粉笔把稳定度推进到 100，最后选择消灭、放逐、封印或契约。</p></div>
+<div><h3>不是失败结局</h3><p class="how">四种裁决都有效 · 教廷故意删去见证人印</p><p>判词只能裁决教廷承认存在的卡西安空壳。别西卜借缺页逃脱，玩家只获得所选路线的裁决残响；完整罪器、核心与真实契约不会在本章错误掉落。</p></div>
+</div>
+
+<h3 class="sub-h">边缘者的起点<span class="rolls">救人不是被选中，而是主动选择</span></h3>
+<p>教廷准备处决全部知情者。玩家第一次释放属于自己的魔力，救下仍能说出姓名、恐惧与个人记忆的<strong>米拉·维恩</strong>。审判官随即给出两个选择：作为污染源被处决，或签下终身征召的边缘者入院令。</p>
+<div class="note"><b>章节完成：</b>取得边缘者临时入院令与裁决残响，在登记台选择<strong>审判／守护／秘仪</strong>完成第一次强化，并解锁高阶预调查档案<strong>「王冠失窃案｜路西法」</strong>。重演可以补看其他裁决记录，但首通阅历、实体残响、入院令与职业强化都不会重复发放。</div>
+
+<h3 class="sub-h">入口与恢复<span class="rolls">共享队伍进度 · 个人永久档案</span></h3>
+<div class="tw"><table><thead><tr><th>入口</th><th>作用</th></tr></thead><tbody>
+<tr><td class="num">玩家面板 → 第一章·空缺者</td><td>查看案件状态、接受或继续当前章节。</td></tr>
+<tr><td class="num">/function rpg:campaign/beelzebub/start</td><td>管理员／测试入口；在通过地形校验的安全区域创建章节实例。</td></tr>
+<tr><td class="num">/function rpg:campaign/beelzebub/abort</td><td>仅清理当前章节实例；永久调查、首通与职业档案不回滚。</td></tr>
+</tbody></table></div>
 </section>'''
 
 HEAD = u"""<title>破碎大陆</title>
@@ -211,6 +245,10 @@ a{color:var(--gold)}
 .steps h3{margin:0 0 4px; font-size:16.5px; font-weight:500}
 .steps p{margin:0; color:var(--muted); font-size:14.5px}
 .steps .opt{font-family:"Cinzel",serif; font-size:10px; letter-spacing:.18em; color:var(--muted); border:1px solid var(--rule); padding:2px 7px; margin-left:9px; vertical-align:2px}
+.campaign-flow{list-style:none; margin:0 0 28px; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); border:1px solid var(--rule); background:var(--sunk)}
+.campaign-flow li{position:relative; min-height:70px; padding:13px 30px 13px 15px; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); display:flex; gap:10px; align-items:center}
+.campaign-flow li:not(:last-child)::after{content:"→"; position:absolute; right:9px; color:#718B28}
+.campaign-flow .num{color:#B5D957; min-width:23px}.campaign-flow b{font-size:13px; font-weight:500;color:var(--ink)}
 code, pre{font-family:"JetBrains Mono",monospace}
 code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px; color:var(--ink)}
 .cmd{display:block; margin-top:9px; background:var(--sunk); border-left:2px solid var(--gold-soft); padding:9px 13px; font-size:13px; overflow-x:auto; white-space:pre}
@@ -415,6 +453,7 @@ def build():
 <li><a href="#s7"><span class="num">VII</span>掉落总表</a></li>
 <li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
 <li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
+<li><a href="#s16"><span class="num">CH.I</span>第一章·空缺者</a></li>
 <li><a href="#s14"><span class="num">X</span>驱魔道具</a></li>
 <li><a href="#s12"><span class="num">XI</span>七十二柱契约</a></li>
 <li><a href="#s15"><span class="num">XII</span>卡巴拉上位契约</a></li>
@@ -765,6 +804,9 @@ def build():
 驱魔图腾用的是 <code>item_display</code>：把一件物品当作可缩放、可旋转的展示实体摆在世界里，这是 1.19.4 之后原版唯一的「自定义模型」路子，本包的图腾缩放动画就是这么做的。</div>
 </section>''')
 
+    # Campaign Chapter I ----------------------------------------------------
+    a(campaign_section())
+
     # X rite kit -------------------------------------------------------------
     a('''<section class="plate" id="s14">
 <div class="plate-h"><span class="num">X</span><h2>驱魔道具</h2><span class="sub">基础四件 · 七种仪式工具</span></div>
@@ -967,6 +1009,8 @@ def build():
 <tr><td class="num">/function rpg:command/give/item</td><td>发放符文、晶石与锻造材料</td></tr>
 <tr><td class="num">/function rpg:command/give/weapon_up_item</td><td>发放六张武器分支唱片</td></tr>
 <tr><td class="num">''' + D["test_give_command"] + '''</td><td>向执行者发放卡巴拉血契、十源质与真·十字架<span class="sm">仅测试／管理入口</span></td></tr>
+<tr><td class="num">/function rpg:campaign/beelzebub/start</td><td>接受并创建第一章「空缺者」战役<span class="sm">玩家面板也可进入</span></td></tr>
+<tr><td class="num">/function rpg:campaign/beelzebub/abort</td><td>安全中止当前第一章实例<span class="sm">永久档案不回滚</span></td></tr>
 <tr><td class="num">/function rpg:command/setblock</td><td>在脚下布置试炼刷怪笼与宝库</td></tr>
 <tr><td class="num">/function rpg:command/summon</td><td>在脚下召唤恶魔 BOSS 与护卫</td></tr>
 <tr><td class="num">/function rpg:entities/drowned/king</td><td>召唤溺尸王与近卫</td></tr>
@@ -977,7 +1021,7 @@ def build():
 <div class="note"><b>每刻运行的函数</b>由 <code>#minecraft:tick</code> 驱动，依次为 <code>rpg:command/index</code>（标志索引与伤害检测）→ <code>rpg:command/tick</code>（合成、试炼、等级）→ <code>rpg:item/sword/legend/legend1</code>（武器技能）→ <code>rpg:entities/warden/warden</code>（BOSS 战）→ <code>rpg:command/tick_end</code>。正常游玩无需手动调用。</div>
 </section>''')
 
-    a('<footer>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
+    a('<footer>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）　·　第一章战役制作与验证：Codex（OpenAI）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
     a('</main></div></div>')
 
     a('''<script>

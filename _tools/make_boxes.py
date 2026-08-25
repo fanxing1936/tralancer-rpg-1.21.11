@@ -39,6 +39,8 @@ EXORCISM_GLOBS = [
     "inquest/give/page?.mcfunction",
     "inquest/give/relic?.mcfunction",
     "inquest/give/core?.mcfunction",
+    "campaign/beelzebub/give/pending_page.mcfunction",
+    "campaign/beelzebub/reward/*.mcfunction",
 ]
 
 # key -> box colour, visible label. Order is the hand-out order.
@@ -109,6 +111,10 @@ def category(source, item, block):
 
     if source.startswith("inquest/give/page"):
         return "page"
+    if source == "campaign/beelzebub/give/pending_page.mcfunction":
+        return "page"
+    if source.startswith("campaign/beelzebub/reward/"):
+        return "verdict"
     if source.startswith("inquest/give/relic") or source.startswith("inquest/give/core"):
         return "verdict"
     if source.startswith("inquest/give/"):

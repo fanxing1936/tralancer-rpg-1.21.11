@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:poisonous_potato"
+    },
+    "title": [
+      {
+        "text": "第一章 · 空缺者",
+        "color": "#B8A98B",
+        "bold": true,
+        "italic": false
+      }
+    ],
+    "description": [
+      {
+        "text": "别西卜逃脱，而你被教廷登记为边缘者",
+        "color": "gray",
+        "italic": false
+      }
+    ],
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "story": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

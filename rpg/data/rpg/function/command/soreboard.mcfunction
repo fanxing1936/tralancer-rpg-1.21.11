@@ -300,3 +300,25 @@ scoreboard players set #four rpg_lt_max 4
 scoreboard players set #five rpg_lt_max 5
 scoreboard players set #twenty rpg_lt_max 20
 scoreboard players set #hundred rpg_lt_max 100
+
+scoreboard objectives add rpg_ch1_id dummy
+scoreboard objectives add rpg_ch1_stage dummy
+scoreboard objectives add rpg_ch1_sub dummy
+scoreboard objectives add rpg_ch1_time dummy
+scoreboard objectives add rpg_ch1_obj dummy
+scoreboard objectives add rpg_ch1_choice dummy
+scoreboard objectives add rpg_ch1_done dummy
+scoreboard objectives add rpg_ch1_next dummy
+scoreboard objectives add rpg_ch1_replay dummy
+scoreboard objectives add rpg_ch1_reward dummy
+scoreboard objectives add rpg_ch1_fail dummy
+scoreboard objectives add rpg_ch1_seen dummy
+scoreboard objectives add rpg_ch1_safe dummy
+scoreboard objectives add rpg_ch1_yaw dummy
+scoreboard objectives add rpg_ch1_guard dummy
+scoreboard objectives add rpg_ch1_roster dummy
+scoreboard objectives add rpg_ch1_empty dummy
+scoreboard objectives add rpg_ch1_hp dummy
+scoreboard objectives add rpg_ch1_rescue dummy
+scoreboard objectives add rpg_ch1_verdict dummy
+scoreboard objectives add rpg_ch1_session dummy

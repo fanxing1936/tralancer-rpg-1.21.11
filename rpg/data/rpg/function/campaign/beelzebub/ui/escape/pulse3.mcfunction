@@ -1,0 +1,2 @@
+execute as @e[type=minecraft:marker,tag=rpg.ch1.ui.escape,limit=1] at @s if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run particle minecraft:large_smoke ~ ~ ~ 1.1 0.45 1.1 0.03 16 normal
+execute as @e[type=minecraft:marker,tag=rpg.ch1.ui.escape,limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run kill @s

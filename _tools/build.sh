@@ -91,6 +91,14 @@ python polish_recent_ui.py ../rpg
 # 十源质先授旧约；真·十字架置于 Daath 后汇聚成新约，并接入上位契约状态与纹理。
 # 必须晚于面板/UI 生成器，确保权柄完整度是最终 HUD 语义。
 python add_divine_covenants.py ../rpg ../resourcepack
+# 世界观第一章：空缺者事件、所罗门罪仆、别西卜 700 生命 Boss、
+# 真名调查、完整四阶段驱魔、裁决逃脱与边缘者入院尾声。
+# 必须晚于上位契约和玩家面板，才能复用最终接口并追加章节入口；
+# 又必须早于领取箱，让四种裁决残响与边缘者档案自动进入分类。
+python add_beelzebub_campaign.py ../rpg
+# 专属美术/UI规整层：章节色板、动态 Bossbar、关键 Title、Display 可读性、
+# 裁决档案与双层 HUD 兼容。必须在章节生成后运行。
+python polish_beelzebub_campaign_ui.py ../rpg ../resourcepack
 # 全量领取箱必须在所有 give 生成器之后运行，才能收齐驱魔工具、真名残页
 # 与裁决奖励，并将旧目录中的物品按语义重新分类。
 python make_boxes.py ../rpg
@@ -107,6 +115,8 @@ python check_demon_minions.py ../rpg
 python check_life_tree_particles.py ../rpg
 python check_kabbalah_covenant.py ../rpg
 python check_divine_covenants.py ../rpg ../resourcepack
+python check_beelzebub_campaign.py ../rpg
+python check_beelzebub_campaign_ui.py ../rpg ../resourcepack
 # 攻击瞬爆不得回流成苦力怕或 fuse:0 TNT（后者会破坏地形）
 python check_creeper.py ../rpg
 echo

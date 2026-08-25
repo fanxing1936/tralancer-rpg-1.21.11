@@ -3075,6 +3075,88 @@ command damage 没有原版爆炸的方块暴露度采样，因此这里采用�
 按玩法标签去重并生成独立卡片；`emit_guide.py` 再读取 `_divine.json` 生成流程、技能与
 仪式兼容表。完整重建仍只需 `bash _tools/guide_build.sh`，不能直接手改最终 HTML。
 
+## 34. 第一章《空缺者》：别西卜驱魔战役
+
+### 34.1 叙事先于实现
+
+本章先在 `BEELZEBUB-CAMPAIGN-CHAPTER-1.md` 固定完整剧情，再构造关卡和状态机。
+章节不是一串已有系统的演示指令，而是卷六“空缺者”真正可玩的起源事件：军需与教廷
+侵吞后方粮食、删除饥饿死者姓名；别西卜再以第七粮仓、焚尸灰、配给牌和卡西安的教廷
+权限建立城市级寄生仪式，使失去现实共同见证的死者成为空缺者。
+
+四种裁决必须都有效，但都只能命中卡西安空壳。原因不是玩家失败，而是教廷主动删去
+“见证人印”：完整判词会让受害者姓名和粮秣罪证重新显现。玩家最终救下米拉，第一次
+释放未经许可的魔力，被塞维拉登记为边缘者；随后完成审判／守护／秘仪首次强化并解锁
+高阶预调查“王冠失窃案｜路西法”。
+
+### 34.2 薄章节层与权威系统复用
+
+章节层只拥有任务实例、成员资格、场景、检查点、一次性奖励与叙事演出。战斗事实必须
+继续来自现有系统：别西卜使用 `rpg:taint/lord4` 的 700 生命领主；五职罪仆使用
+`rpg:minion/summon/beelzebub/*`；真名见证调用 `rpg:inquest/clue/4_n`；媒介与器具
+使用 canonical give / right-click 入口；Boss 四阶段继续读取 `rpg_ex_stage`、
+`rpg_ex_stab` 与 `rpg_rite_id`，不能另造一份平行仪式。
+
+环境余烬、蝇茧与腐败祭品只建立真名假说和弱点结论。正式真名仍要求玩家携带圣器，
+在 Boss 第一阶段亲历五招中的任意三种不同见证；这样剧情与既有真名事实源完全一致。
+
+### 34.3 身份、多人和结算边界
+
+章节实体不能用“最近实体”或全局 `limit=1` 猜归属。实例控制器、接受任务的玩家、
+空缺者、场景点位、五职罪仆、别西卜与仪式锚点共享显式章节 ID；裁决分流还必须比较
+`rpg_rite_id`。普通驱魔仪式即使与章节战场相邻，也不能被章节结局劫持。
+
+队伍资格在接受／加入时固定，路过的玩家不自动取得首通阅历、入院令或残响。世界任务
+进度由控制器共享，真名与职业档案按玩家保存。重演可以补看另外三种裁决记录，但实体
+残响、首通阅历、入院令和首次强化全部幂等。中止与清理只作用于相同章节 ID。
+
+### 34.4 文档、美术与验证源
+
+`_campaign_beelzebub.json` 是网页与文档校验所用的章节项目数据；九幕最短 45、最长
+60 分钟，完整覆盖用户指定的十一段流程。`_campaign_beelzebub_art_ui.md` 记录逐幕色板、
+display、Bossbar、双层 HUD、物品 Lore 与性能预算。`emit_guide.py` 生成图鉴的独立
+“CH.I”页面，`add_book.py` 把玩家必须知道的入口、真名、四阶段、缺页结局和成长写进
+游戏内手记。`check_beelzebub_campaign_docs.py` 同时核对剧情、JSON、网页源、最终 HTML、
+README、LORE 与游戏内手记，防止只更新其中一处。
+
+### 34.5 十一阶段状态机与恢复
+
+最终章节以 `rpg_ch1_stage=0..10` 串联序幕、三异常、真实空缺者、2／2／1 三波罪仆、
+顺序腐蝇追踪、环境假说、器具准备、700 生命 Boss 与四阶段驱魔、裁决逃脱、米拉人格
+见证、边缘者登记。调查点需要连续观察，街战包含三分钟见证人捕获窗口与连续 40 刻救援，
+尾声必须听完米拉四项人格陈述并在 12 格内主动救人；职业道路未选择前不得结算章节。
+
+成员在接受／显式加入时锁定，罪仆最大生命按 1／2／3／4+ 人使用
+1.00／1.25／1.50／1.75 倍，Boss 始终 700。Stage 3 与 Stage 7 在在线固定成员全部死亡
+或旁观满 200 刻后回到本阶段检查点；全员离线只暂停。章节 ID 另附随机会话凭证，阻止
+旧 ID 在新实例中碰撞。结章清理在线同 ID 成员；离线玩家再次上线时由 orphan scrub
+移除临时标签，永久完成、边缘者、裁决与奖励档案不受影响。
+
+Boss 前只发不能投入法阵的“待确证残页”。三种不同权能被固定成员亲历后，才清除待确证
+版本并发放 canonical `page4`。裁决入口同时核对成员、章节 ID、会话凭证与仪式 ID；四个
+裁决各自播放独立演出，再汇入“别西卜逃脱”共同结尾。玩家的最近裁决可在重演中更新，
+实体残响、60 点阅历、入院令与成就仍由 guard-first 事务保证只发一次。
+
+### 34.6 美术层与性能边界
+
+章节规整层不改写 11 个 Stage Tick 或 `complete_player`，只由独立控制器守卫挂接表现。
+最终共有 28 条场景道具生成命令，单场最多 6 条；四裁决独立入口均先于共同逃脱，逃脱
+使用 2／4／6 刻三段尾迹，总粒子 180。所有 Title、声音与 Display 都按固定成员和章节
+ID 路由；Actionbar 只使用既有统一 HUD。771 项 UI 检查与二次生成 164 文件哈希验证
+确认规整层幂等且没有覆盖玩法逻辑。
+
+### 34.7 发布验收
+
+正式流水线按 `rp_build.sh` → `build.sh` → `guide_build.sh` 执行。最终产物包含 1613 个
+函数、68 个战利品表、27 个物品修饰器、44 个进度；潜影盒目录为 14 盒、188 种唯一
+物品，待确证残页归入真名档案类，全包 give 覆盖为 missing=0／extra=0。静态数据包、
+资源包、章节核心、UI、文档和多人审计均通过。
+
+真实 1.21.11 专用服务端随后加载整包，确认没有函数解析失败，并实召唤出 700 生命的
+章节别西卜。200 Tick Sprint 在包含章节场景、两名首波罪仆与 Boss 的无玩家探针中为
+1434 ticks/s（0.70 ms/tick）；这只证明脚本预算，不替代单人首通、单人重演和四人队伍的
+30–60 分钟实玩计时。后续平衡调整应记录三组完成时间，不应以强制空等补足时长。
+
 ---
 
 # 重建方式
@@ -3102,10 +3184,12 @@ bash "_tools/build.sh"
 　　　　　　→ `add_ritual_phase2.py` + `add_demon_minions.py`
 　　　　　　→ `add_life_tree_particles.py` + `add_kabbalah_covenant.py`
 　　　　　　→ `add_player_panel.py` + `polish_recent_ui.py`
-　　　　　　→ `add_divine_covenants.py` + `make_boxes.py` + `polish_demon_names.py`
+　　　　　　→ `add_divine_covenants.py` + `add_beelzebub_campaign.py`
+　　　　　　→ `polish_beelzebub_campaign_ui.py` + `make_boxes.py` + `polish_demon_names.py`
 　　　　　　→ `validate.py` + `check_adv.py` + `check_ritual_phase2.py`
 　　　　　　→ `check_demon_minions.py` + `check_life_tree_particles.py`
 　　　　　　→ `check_kabbalah_covenant.py` + `check_divine_covenants.py`
+　　　　　　→ `check_beelzebub_campaign.py` + `check_beelzebub_campaign_ui.py`
 　　　　　　→ `check_creeper.py` → `profile_tick.py`
 材质包流程（先跑）：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`

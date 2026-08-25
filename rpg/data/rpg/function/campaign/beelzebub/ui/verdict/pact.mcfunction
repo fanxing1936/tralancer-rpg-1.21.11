@@ -1,0 +1,7 @@
+execute as @a[tag=rpg.ch1.member,tag=rpg.ch1.current] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run title @s times 5 18 8
+execute as @a[tag=rpg.ch1.member,tag=rpg.ch1.current] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run title @s title ["",{"text":"判词 · 契约","color":"#D596F2","bold":true,"italic":false}]
+execute as @a[tag=rpg.ch1.member,tag=rpg.ch1.current] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run title @s subtitle ["",{"text":"胃之印冒充领主签名","color":"#E4EA9B","bold":false,"italic":false}]
+execute as @a[tag=rpg.ch1.member,tag=rpg.ch1.current] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 0.70 0.68
+summon minecraft:item_display ~0.00 ~0.12 ~0.00 {Tags:["rpg.ch1.scene","rpg.ch1.ui.prop","rpg.ch1.verdict.prop","rpg.ch1.ui.new"],item:{id:"minecraft:writable_book",count:1},item_display:"fixed",view_range:0.30f,shadow_radius:0.18f,shadow_strength:0.55f,transformation:{translation:[0f,0f,0f],scale:[0.62f,0.62f,0.62f],left_rotation:[0f,0f,0.0872f,0.9962f],right_rotation:[0f,0f,0f,1f]}}
+scoreboard players operation @e[type=minecraft:item_display,tag=rpg.ch1.ui.new,sort=nearest,limit=1,distance=..3] rpg_ch1_id = @s rpg_ch1_id
+tag @e[type=minecraft:item_display,tag=rpg.ch1.ui.new,sort=nearest,limit=1,distance=..3] remove rpg.ch1.ui.new

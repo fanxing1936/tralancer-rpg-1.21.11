@@ -1,3 +1,4 @@
+execute if entity @s[tag=rpg.ch1.rite] if score @s rpg_ch1_id = @e[type=minecraft:vindicator,tag=rpg.ch1.boss,tag=rpg.exorcism.bound,distance=..14,sort=nearest,limit=1] rpg_ch1_id if score @s rpg_rite_id = @e[type=minecraft:vindicator,tag=rpg.ch1.boss,tag=rpg.exorcism.bound,distance=..14,sort=nearest,limit=1] rpg_rite_id run return run function rpg:campaign/beelzebub/verdict/pact
 tag @s add rpg.rite.anchor.active
 execute as @e[type=minecraft:vindicator,tag=rpg.exorcism.bound,distance=..14] if score @s rpg_rite_id = @e[type=minecraft:item_display,tag=rpg.rite.anchor.active,limit=1] rpg_rite_id run function rpg:inquest/outcome/pact_boss
 tellraw @a[distance=..20,gamemode=!spectator] ["",{"text":"[裁决·契约] ","color":"#D596F2","bold":true,"italic":false},{"text":"恶魔以柱之书留下力量；接受者增加 25 魔化。","color":"gray","italic":false}]

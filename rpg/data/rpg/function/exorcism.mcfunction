@@ -58,3 +58,9 @@ execute as @a[scores={rpg_lt_usecd=1..}] run scoreboard players remove @s rpg_lt
 
 # Daath 汇聚动画：只有正在转化的生命之树才进入。
 execute if entity @e[type=minecraft:marker,tag=rpg.lt.gathering,limit=1] run function rpg:divine/gather/step
+
+
+# 第一章：仅在控制器存在时进入一次有界状态机。
+execute if entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] run execute as @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] at @s run function rpg:campaign/beelzebub/tick
+
+execute if entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] run execute as @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] at @s run function rpg:campaign/beelzebub/ui/tick

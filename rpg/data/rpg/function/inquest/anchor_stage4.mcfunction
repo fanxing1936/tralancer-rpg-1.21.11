@@ -1,3 +1,4 @@
+execute if entity @s[tag=rpg.ch1.rite] run return run function rpg:campaign/beelzebub/rite/stage4
 scoreboard players remove @s rpg_ex_time 1
 particle end_rod ~ ~0.9 ~ 0.9 0.55 0.9 0.05 5 force
 particle soul_fire_flame ~ ~0.7 ~ 0.65 0.4 0.65 0.04 3 force
