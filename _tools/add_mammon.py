@@ -168,9 +168,11 @@ execute if entity @s[scores={rpg_mam_win=..0}] run scoreboard players set @s rpg
 
 ARROW = """\
 # 一支还没认过的箭。是不是我射的？`on origin` 会把 @s 换成射手。
-tag @s add rpg.mam.seen
 scoreboard players set #mine rpg_mam 0
 execute on origin if entity @s[tag=rpg.mam.shooter] run scoreboard players set #mine rpg_mam 1
+# 只能由真正的射手把它标成已处理。多人时，甲的 watch 会先扫到乙的箭；
+# 若先打 seen 再验 origin，乙轮到自己时就永远看不到这支箭了。
+execute if score #mine rpg_mam matches 1 run tag @s add rpg.mam.seen
 execute if score #mine rpg_mam matches 1 run function rpg:mammon/shot
 """
 
@@ -331,7 +333,7 @@ playsound minecraft:entity.wither.ambient player @s ~ ~ ~ 0.6 1.4
 # ---------------------------------------------------------------------------
 BUYOUT = """\
 # 买断。它不掷点 —— 贪婪不赊账，这一箭的价钱是写死的。
-title @s actionbar ["",{"text":"[买断]","italic":false,"color":"%(A)s","bold":true},{"text":"　金箭离弦","italic":false,"color":"%(L)s"}]
+title @s actionbar ["",{"text":"[买断]","italic":false,"color":"%(A)s","bold":true},{"text":"　金箭离弦","italic":false,"color":"%(L)s"},{"text":" ✦","italic":false,"color":"#FFF2A8"}]
 playsound minecraft:block.amethyst_block.resonate player @s ~ ~ ~ 1 0.8
 playsound minecraft:entity.player.levelup player @s ~ ~ ~ 0.7 0.6
 execute at @s anchored eyes run particle wax_on ^ ^ ^1 0.3 0.3 0.3 0.1 40

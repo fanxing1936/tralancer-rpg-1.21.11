@@ -1,9 +1,3 @@
-# 加上握持判定：原本没有这一条，攒满任何一块符石都会把三种效果一起放出。
-execute as @a[tag=rpg.h.sweep_tag1,scores={sweep=50..}] anchored feet at @s run summon armor_stand ^ ^ ^2 {Invisible:1b,CustomName:[{"text":"sweep_atk"}],Invulnerable:1b}
-execute as @a[tag=rpg.h.sweep_tag1,scores={sweep=50..}] anchored eyes at @s run playsound minecraft:entity.player.attack.crit player @s
-execute as @e[name=sweep_atk,type=armor_stand] at @s run tp @s ~ ~ ~ facing entity @p[scores={sweep=50..}]
-execute as @a[tag=rpg.h.sweep_tag1,scores={sweep=50..}] anchored eyes at @s run scoreboard players set @s sweep 0
-execute as @e[name=sweep_atk,type=armor_stand] anchored eyes at @s run particle sweep_attack ~0.25 ~0.5 ~0.25 -0.5 -0.5 -0.5 1 20
 
-execute as @e[name=sweep_atk,type=armor_stand] anchored feet at @s run tp @s ^ ^ ^-1  
-execute as @e[name=sweep_atk,type=armor_stand] anchored feet at @s run effect give @e[distance=0.1..1.5] wither 5 10 true
+# 每位玩家只读自己的蓄力、经验和主手；不再生成靠 @p 猜主人的盔甲架。
+execute as @a[scores={sweep=50..}] if items entity @s weapon.mainhand *[minecraft:custom_data~{sweep_tag:1b}] run function rpg:item/legacy_advanced/rune/sweep_release

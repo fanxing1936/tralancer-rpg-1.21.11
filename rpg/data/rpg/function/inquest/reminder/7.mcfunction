@@ -1,0 +1,1 @@
+tellraw @s ["",{"text":"[调查档案] ","color":"#DAA520","bold":true,"italic":false},{"text":"玛门","color":"#B7950B","bold":true,"italic":false},{"text":"的真名已确证；向燃烧图腾投入","color":"gray","italic":false},{"text":"金锭 · 自愿之金","color":"white","bold":true,"italic":false},{"text":"。","color":"gray","italic":false}]

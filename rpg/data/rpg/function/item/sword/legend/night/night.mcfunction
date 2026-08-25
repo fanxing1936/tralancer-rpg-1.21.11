@@ -1,12 +1,15 @@
+# 旧主动技现代化：using_item 每刻推进一格，满 30 刻只触发一次。
 advancement revoke @s only rpg:item/night
-execute as @s at @s if entity @s[tag=rpg.h.sakura_tag1] run particle enchant ~0.5 ~0.5 ~0.5 -1 -1 -1 0.2 10
-execute as @s at @s unless entity @s[tag=rpg.h.sakura_tag1] run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~0.5 ~0.5 ~0.5 -1 -1 -1 0.2 10
-execute as @s[scores={level=1..}] at @s run scoreboard players add @s night 1
-execute if entity @s[tag=rpg.h.sakura_tag1] as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run particle dust_color_transition{from_color:[1.0,0.47,0.47],to_color:[1,1,1],scale:1} ~0.5 ~0.5 ~0.5 -1 -1 -1 0.2 500
-execute unless entity @s[tag=rpg.h.sakura_tag1] as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run particle dust_color_transition{from_color:[0.4,0.0,1.0],scale:1,to_color:[0.0,0.0,0.0]} ~0.5 ~0.5 ~0.5 -1 -1 -1 0.2 500
-execute as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run particle sweep_attack ~0.5 ~1.5 ~0.5 -1 -1 -1 0 100
-execute as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run summon minecraft:tnt ~ ~ ~ {fuse:0s,explosion_power:1.0f,Silent:1b}
-execute as @s[scores={level=1..,night=20..}] at @e[distance=0.1..5] run kill @e[type=#minecraft:arrows,distance=..3]
-execute as @s[scores={level=1..,night=20..}] at @s run playsound minecraft:entity.ender_dragon.shoot player @s
-execute as @s[scores={level=1..,night=20..}] at @s anchored eyes run xp add @s -3 points
-execute as @s[scores={night=20..}] at @s run scoreboard players set @s night 0
+execute if entity @s[tag=rpg.h.night_tag1] run scoreboard players set @s rpg_night_hold 3
+execute if entity @s[tag=rpg.h.night_tag1,scores={rpg_night_chg=..29}] run scoreboard players add @s rpg_night_chg 1
+execute at @s if entity @s[tag=rpg.h.night_tag1] run particle minecraft:dust_color_transition{from_color:[0.4,0.0,1.0],to_color:[0.0,0.0,0.0],scale:1.4} ~ ~1 ~ 0.35 0.5 0.35 0.03 8
+execute at @s if entity @s[tag=rpg.h.night_tag1,scores={rpg_night_chg=1}] run playsound minecraft:block.respawn_anchor.charge player @s ~ ~ ~ 0.7 0.7
+execute at @s if entity @s[tag=rpg.h.night_tag1,scores={rpg_night_chg=15}] run playsound minecraft:block.respawn_anchor.charge player @s ~ ~ ~ 0.8 1.1
+execute at @s if entity @s[tag=rpg.h.night_tag1,scores={rpg_night_chg=25}] run playsound minecraft:block.respawn_anchor.charge player @s ~ ~ ~ 0.9 1.5
+execute if entity @s[tag=rpg.h.night_tag1,scores={rpg_night_chg=30}] run function rpg:item/legacy/night_cast
+execute if entity @s[tag=rpg.h.night_tag1] run scoreboard players set @s rpg_hud 6
+execute if entity @s[tag=rpg.h.night_tag1] run scoreboard players set @s rpg_hud_t 3
+execute if entity @s[tag=rpg.h.night_tag1] run scoreboard players operation @s rpg_hud_p = @s rpg_night_chg
+execute if entity @s[tag=rpg.h.night_tag1] run scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud
+execute if entity @s[tag=rpg.h.night_tag1] run scoreboard players operation @s rpg_hud_p /= #hud_full rpg_hud
+execute if entity @s[scores={rpg_hud_p=10..}] run scoreboard players set @s rpg_hud_p 10

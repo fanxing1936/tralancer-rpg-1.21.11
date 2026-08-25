@@ -19,20 +19,22 @@
 留在玩家身上，每刻零开销。只有萨麦尔的攻击附毒和玛门的拾取吸附必须逐刻看，
 这两条各自挂在自己柱位的分数判定后面，没签那一柱就完全不进去。
 
-贴图暂缺，先用原版附魔书。custom_model_data 已经按柱位排好
-（1110031–1110037），等美术补上时只要在材质包里加 range_dispatch 即可，
-数据包这边一个字都不用动。
+七本契约书各有一张风格化纹理；原图保存在 `_tools/pact_art`，构建时复制到
+材质包。custom_model_data 按柱位排为 1110031–1110037，并由同一份柱位表生成
+range_dispatch，避免重建材质包后只剩占位图。
 """
 
 import io
 import json
 import os
+import shutil
 import sys
 
 import add_exorcism as ex          # 复用 HUD 的段落拼装与写文件
 
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 RP = sys.argv[2] if len(sys.argv) > 2 else "../resourcepack"
+ART = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pact_art")
 FUNC = os.path.join(DP, "data/rpg/function")
 ADV = os.path.join(DP, "data/rpg/advancement/item")
 GIVE = os.path.join(FUNC, "command/give/extra.mcfunction")
@@ -43,7 +45,8 @@ USE_TAINT = 3            # 每次动用柱中之力添的魔化
 LOCK = 8                 # 触发去抖（刻）—— using_item 按住期间每刻都响
 HUD_PACT = 5             # HUD 占用编号，接在驱魔那四个后面
 
-OBJECTIVES = ["rpg_pact", "rpg_pact_cd", "rpg_pact_t"]
+OBJECTIVES = ["rpg_pact", "rpg_pact_cd", "rpg_pact_t",
+              "rpg_hud_dm", "rpg_hud_dmt"]
 
 RULE = ex.RULE
 seg, row = ex.seg, ex.row
@@ -59,7 +62,7 @@ def wf(rel, text):
 # name / 罪 / 主色 / 恩赐文案 / 力量名 / 力量文案 / 枷锁文案
 # boon / bane 是 (属性, 数值, 运算) 列表，签约时写进去，毁约时原样撤掉
 PILLARS = [
-    dict(n=1, who="路西法", sin="傲慢", colour="#00491c", lit="green",
+    dict(n=1, who="路西法", sin="傲慢", colour="#00491C", lit="green",
          boon="攻击伤害 +2.5",
          power="原罪", power_text="沿视线刺出蛇矛，幻魔者尖牙同路破土；贯穿者受伤加重并向近旁蔓延",
          bane="击退抗性 −0.25（更容易被打飞）",
@@ -534,6 +537,37 @@ def build_hud_bar():
     return
 
 
+def build_hud_identity():
+    """从 PILLARS 生成 actionbar 的契约对象段。
+
+    七柱的名字、罪与颜色只在这里有一个事实来源。驱魔 HUD 只预留第二段并
+    调用 `rpg:hud/pact`，不复制这张表；以后改柱名或代表色会自动同步。
+    """
+    status_p = os.path.join(FUNC, "hud/status.mcfunction")
+    render_p = os.path.join(FUNC, "hud/render.mcfunction")
+    status = io.open(status_p, encoding="utf-8").read()
+    render = io.open(render_p, encoding="utf-8").read()
+    assert "function rpg:hud/pact" in status, "统一 HUD 没有预留契约对象段"
+    assert "storage rpg:hud b" in status and "$(b)" in render, \
+        "统一 HUD 的契约对象 storage 段不完整"
+
+    dispatch = [
+        "# 当前契约对象。身份是持续状态，即使力量已经冷却也一直显示。",
+        "scoreboard players set @s rpg_hud_on 1",
+    ]
+    for p in PILLARS:
+        dispatch.append(
+            "execute if entity @s[scores={rpg_pact=%d}] run function rpg:hud/pact%d"
+            % (p["n"], p["n"]))
+        comp = row(seg("　│　契约 ", "dark_gray"),
+                   seg(p["who"], p["lit"], True),
+                   seg(" · " + p["sin"], p["lit"]))
+        wf("hud/pact%d.mcfunction" % p["n"],
+           "data modify storage rpg:hud b set value '%s'" % comp)
+    wf("hud/pact.mcfunction", "\n".join(dispatch))
+    return len(PILLARS) + len(dispatch)
+
+
 def _build_hud_bar_unused():
     """给契约冷却加一条 HUD，编号接在驱魔那四个后面。
 
@@ -620,7 +654,7 @@ LORD_ONE = """\
 # %(WHO)s。契约不是租约：借过的力，最后会自己来取回去。
 #
 # 底子与无名者那只一样：卫道士 + devil 标签（隐身与烟雾由包里
-# 已有的恶魔 boss 那一套负责），三十秒后自己散掉。
+# 已有的恶魔 boss 那一套负责），最多十分钟后自己散掉。
 summon minecraft:vindicator ~ ~1 ~ %(NBT)s
 # 记下他是哪一位 —— 出手时按这个分流。要在 advent_life 之前，
 # 那一步会把 rpg.advent.new 摘掉。
@@ -672,6 +706,31 @@ execute as %(P8)s run function rpg:taint/sk1c_lift
 effect give @s minecraft:levitation 3 1 true
 damage @s 3 minecraft:magic %(BY)s
 """}),
+
+        ("""\
+# 失坠 —— 王冠之下不许任何人保有自己的高度。
+playsound minecraft:entity.phantom.flap hostile @a[distance=..32] ~ ~ ~ 1 0.55
+playsound minecraft:entity.ender_dragon.flap hostile @a[distance=..32] ~ ~ ~ 0.7 1.45
+particle dragon_breath ~ ~1.5 ~ 3 1.2 3 0.08 72
+particle dust_color_transition{from_color:[0.19,0.85,0.49],to_color:[0.0,0.18,0.07],scale:2.2} ~ ~1 ~ 3 1 3 0.04 54
+execute as %(P8)s run function rpg:taint/sk1d_fall
+""", {"sk1d_fall": """\
+effect give @s minecraft:levitation 2 1 true
+effect give @s minecraft:weakness 5 1 true
+damage @s 5 minecraft:magic %(BY)s
+"""}),
+
+        ("""\
+# 王座回绝 —— 靠得太近的人会被王座本身拒斥。
+playsound minecraft:block.beacon.deactivate hostile @a[distance=..32] ~ ~ ~ 1 0.55
+particle end_rod ~ ~1.5 ~ 2.5 1.2 2.5 0.08 72
+particle enchanted_hit ~ ~1 ~ 3 1 3 0.15 64
+execute as %(P6)s at @s run function rpg:taint/sk1e_reject
+""", {"sk1e_reject": """\
+execute facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^-3
+damage @s 6 minecraft:magic %(BY)s
+effect give @s minecraft:slowness 4 1 true
+"""}),
     ],
 
     # ---------------- 利维坦 · 嫉妒 ----------------
@@ -712,6 +771,34 @@ effect clear @s minecraft:fire_resistance
 damage @s 3 minecraft:magic %(BY)s
 effect give @e[tag=rpg.dm.cast,limit=1] minecraft:speed 6 1 true
 """}),
+
+        ("""\
+# 逆潮 —— 近者被推离，远者被卷近，所有距离都由他重写。
+playsound minecraft:entity.generic.splash hostile @a[distance=..32] ~ ~ ~ 1.2 0.65
+playsound minecraft:block.conduit.attack.target hostile @a[distance=..32] ~ ~ ~ 0.8 0.7
+particle nautilus ~ ~1 ~ 4 1.2 4 0.12 96
+particle bubble_column_up ~ ~0.4 ~ 4 0.5 4 0.35 110
+execute as @a[distance=..4,gamemode=!spectator,gamemode=!creative] at @s run function rpg:taint/sk2d_out
+execute as @a[distance=4.01..10,gamemode=!spectator,gamemode=!creative] at @s run function rpg:taint/sk2d_in
+""", {"sk2d_out": """\
+execute facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^-2.4
+damage @s 4 minecraft:drown %(BY)s
+""", "sk2d_in": """\
+execute facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^2.4
+damage @s 4 minecraft:drown %(BY)s
+"""}),
+
+        ("""\
+# 海渊重压 —— 不需要海水，深度本身压在骨头上。
+playsound minecraft:entity.elder_guardian.curse hostile @a[distance=..32] ~ ~ ~ 1 0.42
+particle bubble_pop ~ ~1 ~ 4 1.4 4 0.18 120
+particle dust_color_transition{from_color:[0.24,0.66,0.91],to_color:[0.02,0.09,0.18],scale:2.5} ~ ~1 ~ 4 1 4 0.04 72
+execute as %(P10)s run function rpg:taint/sk2e_pressure
+""", {"sk2e_pressure": """\
+effect give @s minecraft:slowness 6 3 true
+effect give @s minecraft:mining_fatigue 6 2 true
+damage @s 7 minecraft:drown %(BY)s
+"""}),
     ],
 
     # ---------------- 亚巴顿 · 怠惰 ----------------
@@ -750,6 +837,32 @@ execute as %(P8)s run function rpg:taint/sk3c_maw
 effect give @s minecraft:wither 6 1 true
 damage @s 6 minecraft:magic %(BY)s
 """}),
+
+        ("""\
+# 停摆 —— 不眠之钟的反面，连一刻都不再向前。
+playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..32] ~ ~ ~ 1 0.35
+playsound minecraft:entity.warden.heartbeat hostile @a[distance=..32] ~ ~ ~ 1 0.42
+particle sculk_soul ~ ~1 ~ 4 1 4 0.04 82
+particle dust{color:[0.58,0.58,0.61],scale:2.2} ~ ~1 ~ 4 1 4 0.04 64
+execute as %(P10)s run function rpg:taint/sk3d_still
+""", {"sk3d_still": """\
+effect give @s minecraft:slowness 3 255 true
+effect give @s minecraft:weakness 6 2 true
+damage @s 4 minecraft:magic %(BY)s
+"""}),
+
+        ("""\
+# 死寂 —— 无底坑吞掉声音，也吞掉继续抵抗的力气。
+playsound minecraft:entity.warden.roar hostile @a[distance=..32] ~ ~ ~ 0.7 0.45
+particle soul ~ ~1 ~ 4 1.4 4 0.06 92
+particle reverse_portal ~ ~1 ~ 4 1 4 0.18 78
+execute as %(P8)s run function rpg:taint/sk3e_silence
+""", {"sk3e_silence": """\
+effect give @s minecraft:darkness 6 0 true
+effect give @s minecraft:mining_fatigue 8 3 true
+effect give @s minecraft:wither 5 0 true
+damage @s 5 minecraft:magic %(BY)s
+"""}),
     ],
 
     # ---------------- 别西卜 · 暴食 ----------------
@@ -786,7 +899,33 @@ execute at @s run function rpg:taint/sk4c_swarm
 """, {"sk4c_swarm": "\n".join(
             ['summon minecraft:vex ~ ~1 ~ {life_ticks:400,Tags:["rpg.demon.fly"],'
              'CustomName:[{"text":"蝇","color":"#5A6B1E"}],Health:10f,'
-             'attributes:[{id:"max_health",base:10f},{id:"attack_damage",base:4f}]}'] * 3)}),
+              'attributes:[{id:"max_health",base:10f},{id:"attack_damage",base:4f}]}'] * 3)}),
+
+        ("""\
+# 腐宴 —— 宴席先腐烂，宾客才知道自己已经坐在盘中。
+playsound minecraft:entity.generic.eat hostile @a[distance=..32] ~ ~ ~ 1 0.45
+playsound minecraft:block.composter.fill_success hostile @a[distance=..28] ~ ~ ~ 1 0.55
+particle spore_blossom_air ~ ~1.4 ~ 4 1.5 4 0.08 105
+particle mycelium ~ ~0.8 ~ 4 1 4 0.16 92
+execute as %(P8)s run function rpg:taint/sk4d_feast
+""", {"sk4d_feast": """\
+effect give @s minecraft:hunger 12 4 true
+effect give @s minecraft:nausea 7 0 true
+effect give @s minecraft:poison 6 1 true
+damage @s 4 minecraft:magic %(BY)s
+"""}),
+
+        ("""\
+# 饥啮 —— 万千张口只追最近的一份血肉。
+playsound minecraft:entity.fox.bite hostile @a[distance=..32] ~ ~ ~ 1 0.7
+particle ash ~ ~1 ~ 2.5 1 2.5 0.14 84
+particle damage_indicator ~ ~1 ~ 2 0.8 2 0.08 36
+execute as @a[distance=..10,limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk4e_bite
+""", {"sk4e_bite": """\
+effect give @s minecraft:hunger 10 3 true
+damage @s 11 minecraft:magic %(BY)s
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 1 true
+"""}),
     ],
 
     # ---------------- 萨麦尔 · 暴怒 ----------------
@@ -822,6 +961,32 @@ execute as %(P8)s run function rpg:taint/sk5c_whisper
 """, {"sk5c_whisper": """\
 damage @s 5 minecraft:magic %(BY)s
 effect give @s minecraft:wither 10 2 true
+"""}),
+
+        ("""\
+# 血猎 —— 他循着最近的血气突入，不给伤者喘息。
+playsound minecraft:entity.vex.charge hostile @a[distance=..32] ~ ~ ~ 1 0.55
+playsound minecraft:entity.ravager.roar hostile @a[distance=..32] ~ ~ ~ 0.8 1.15
+particle dust_color_transition{from_color:[0.89,0.30,0.30],to_color:[0.24,0.0,0.04],scale:2.6} ~ ~1 ~ 3 1 3 0.06 92
+execute at @s facing entity @a[distance=..12,limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run tp @s ^ ^ ^5
+execute as %(P5)s run function rpg:taint/sk5d_hunt
+""", {"sk5d_hunt": """\
+effect give @s minecraft:glowing 6 0 true
+effect give @s minecraft:poison 7 1 true
+damage @s 8 minecraft:magic %(BY)s
+"""}),
+
+        ("""\
+# 怒潮 —— 暴怒从中心炸开，把所有人赶出他的呼吸。
+playsound minecraft:item.mace.smash_ground_heavy hostile @a[distance=..32] ~ ~ ~ 1 0.7
+particle sweep_attack ~ ~1 ~ 3 1 3 0 26
+particle crit ~ ~1 ~ 4 1 4 0.22 96
+particle dust{color:[0.89,0.30,0.30],scale:2.4} ~ ~1 ~ 4 1 4 0.05 72
+execute as %(P8)s at @s run function rpg:taint/sk5e_surge
+""", {"sk5e_surge": """\
+execute facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^-2.8
+effect give @s minecraft:poison 6 1 true
+damage @s 7 minecraft:magic %(BY)s
 """}),
     ],
 
@@ -859,6 +1024,32 @@ execute as %(P7)s run function rpg:taint/sk6c_drain
 damage @s 6 minecraft:magic %(BY)s
 particle damage_indicator ~ ~1 ~ 0.3 0.3 0.3 0.1 10
 effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 1 true
+"""}),
+
+        ("""\
+# 顾盼 —— 一个眼神就把所有人的视线强行转向王座。
+playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..32] ~ ~ ~ 1 0.65
+particle witch ~ ~1.4 ~ 4 1.4 4 0.18 105
+particle dust_color_transition{from_color:[0.75,0.42,0.91],to_color:[0.12,0.0,0.18],scale:2.4} ~ ~1 ~ 4 1 4 0.05 72
+execute as %(P8)s run function rpg:taint/sk6d_gaze
+""", {"sk6d_gaze": """\
+tp @s ~ ~ ~ facing entity @e[tag=rpg.dm.cast,limit=1] eyes
+effect give @s minecraft:nausea 6 0 true
+effect give @s minecraft:weakness 5 1 true
+damage @s 3 minecraft:magic %(BY)s
+"""}),
+
+        ("""\
+# 欲障 —— 紫幕落下，真实与渴望只剩一层薄纱。
+playsound minecraft:block.respawn_anchor.ambient hostile @a[distance=..32] ~ ~ ~ 1 0.55
+particle portal ~ ~1 ~ 4 1.5 4 0.55 120
+particle reverse_portal ~ ~1 ~ 3.5 1.2 3.5 0.25 84
+execute as %(P10)s run function rpg:taint/sk6e_veil
+""", {"sk6e_veil": """\
+effect give @s minecraft:darkness 6 0 true
+effect give @s minecraft:slowness 6 2 true
+effect give @s minecraft:glowing 6 0 true
+damage @s 5 minecraft:magic %(BY)s
 """}),
     ],
 
@@ -901,8 +1092,279 @@ execute as @a[distance=..5,limit=1,sort=nearest,gamemode=!spectator,gamemode=!cr
 damage @s 12 minecraft:magic %(BY)s
 xp add @s -40 points
 """}),
+
+        ("""\
+# 复利 —— 每一息都在增长的账，最后从经验与血里一起扣。
+playsound minecraft:block.vault.reject_rewarded_player hostile @a[distance=..32] ~ ~ ~ 1 0.7
+particle wax_on ~ ~1 ~ 4 1 4 0.12 92
+particle trial_omen ~ ~1 ~ 3 1 3 0.08 64
+execute as %(P10)s run function rpg:taint/sk7d_interest
+""", {"sk7d_interest": """\
+xp add @s -15 points
+effect give @s minecraft:weakness 6 1 true
+damage @s 6 minecraft:magic %(BY)s
+"""}),
+
+        ("""\
+# 金牢 —— 黄金不是奖赏，是把脚钉在账本上的铆钉。
+playsound minecraft:block.anvil.land hostile @a[distance=..32] ~ ~ ~ 0.8 1.35
+playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..32] ~ ~ ~ 1 0.75
+particle end_rod ~ ~1 ~ 3 1 3 0.08 72
+particle wax_on ~ ~0.5 ~ 3 0.5 3 0.12 88
+execute as %(P7)s run function rpg:taint/sk7e_prison
+""", {"sk7e_prison": """\
+effect give @s minecraft:slowness 3 255 true
+effect give @s minecraft:glowing 6 0 true
+damage @s 5 minecraft:magic %(BY)s
+"""}),
     ],
 }
+
+
+# 恶魔战斗提示不借用 Minecraft 的 16 色名：七柱本色有些很暗，直接拿来
+# 写聊天提示也不能直接用近黑本色，所以这里保留相同色相，单独给出可读的
+# 亮色、柔色和高光。提示走双层 Actionbar 的上层，下层战斗状态仍可同时显示。
+DEMON_UI = {
+    1: dict(who="路西法", main="#31D97C", soft="#A9F5CE", glint="#E8FFF3",
+            skills=[("原罪", "蛇矛破土"), ("蛇矛", "贯穿罪痕"), ("高踞", "众生俯首"),
+                    ("失坠", "荣耀折翼"), ("王座回绝", "近身者皆退")],
+            ultimate="万蛇加冕", ult_text="傲慢者立于万蛇之上"),
+    2: dict(who="利维坦", main="#3DA9E8", soft="#A9DDF5", glint="#E8F8FF",
+            skills=[("沉锚", "深潮回卷"), ("溺没", "剥夺呼吸"), ("嫉羡", "恩赐尽褫"),
+                    ("逆潮", "远近皆失其位"), ("海渊重压", "深度压骨")],
+            ultimate="妒海沉城", ult_text="深海正拖拽整片陆地"),
+    3: dict(who="亚巴顿", main="#92929B", soft="#D1D1D8", glint="#F0F0F4",
+            skills=[("收割", "灵魂归仓"), ("沉眠", "四肢封缄"), ("深渊之口", "地脉噬人"),
+                    ("停摆", "此刻不再前行"), ("死寂", "无底坑吞声")],
+            ultimate="终末收割", ult_text="所有灵魂都将归于静止"),
+    4: dict(who="别西卜", main="#B7C84B", soft="#E4EA9B", glint="#FFF6C7",
+            skills=[("余烬", "灰烬噬肺"), ("吞噬", "血肉为宴"), ("蝇群", "饥群出巢"),
+                    ("腐宴", "宾客皆在盘中"), ("饥啮", "万口追血肉")],
+            ultimate="万蝇饕宴", ult_text="饥饿张开了千万张口"),
+    5: dict(who="萨麦尔", main="#E44D4D", soft="#FF9B83", glint="#FFE0D5",
+            skills=[("毒雾", "腐血漫延"), ("怒斩", "暴怒近身"), ("死亡低语", "终声索命"),
+                    ("血猎", "循伤者而至"), ("怒潮", "赤环逐众")],
+            ultimate="血怒天罚", ult_text="死亡天使循血而至"),
+    6: dict(who="贝利尔", main="#C06BE8", soft="#E0A9F5", glint="#FFE8FA",
+            skills=[("朝拜", "众生低首"), ("迷乱", "感官倒悬"), ("献身", "献血予王"),
+                    ("顾盼", "万目归于王座"), ("欲障", "紫幕覆真形")],
+            ultimate="紫宴朝圣", ult_text="你的意志正在向他跪下"),
+    7: dict(who="玛门", main="#E2B93B", soft="#FFE08A", glint="#FFF5C7",
+            skills=[("点金", "性命折价"), ("夺财", "万物归库"), ("重金一击", "一次结清"),
+                    ("复利", "血与经验同偿"), ("金牢", "黄金钉足")],
+            ultimate="黄金终审", ult_text="灵魂与财富一并结算"),
+}
+
+NONE_UI = dict(who="无名者", main="#D23B47", soft="#AAA5AE", glint="#ECE9EF",
+               skills=[("蚀界", "名字也会被黑暗吞掉")],
+               ultimate="无名蚀界", ult_text="黑暗正抹去一切称谓")
+
+
+def combat_notices():
+    """固定顺序的恶魔提示；数据包编号与资源包私用字符共用这一份。"""
+    out = []
+    for n in range(1, 8):
+        ui = DEMON_UI[n]
+        for name, phrase in ui["skills"]:
+            out.append({"key": (ui["who"], name, phrase, False),
+                        "ui": ui, "name": name, "phrase": phrase,
+                        "ultimate": False})
+    name, phrase = NONE_UI["skills"][0]
+    out.append({"key": (NONE_UI["who"], name, phrase, False),
+                "ui": NONE_UI, "name": name, "phrase": phrase,
+                "ultimate": False})
+    for n in range(1, 8):
+        ui = DEMON_UI[n]
+        out.append({"key": (ui["who"], ui["ultimate"], ui["ult_text"], True),
+                    "ui": ui, "name": ui["ultimate"],
+                    "phrase": ui["ult_text"], "ultimate": True})
+    out.append({"key": (NONE_UI["who"], NONE_UI["ultimate"],
+                         NONE_UI["ult_text"], True),
+                "ui": NONE_UI, "name": NONE_UI["ultimate"],
+                "phrase": NONE_UI["ult_text"], "ultimate": True})
+    assert len(out) == 44
+    return out
+
+
+def notice_text(q):
+    """资源包烘字用的三段纯文本；颜色仍读同一份 ui 三色。"""
+    head = "[%s%s]" % (q["ui"]["who"], " · 罪约" if q["ultimate"] else "")
+    return (head, "　%s · %s" % (q["name"], q["phrase"]),
+            " ◆" if q["ultimate"] else " ✦")
+
+
+def _notice(ui, name, phrase, ultimate=False, radius=14):
+    """把提示号写进独立上层槽；中央 HUD 把它叠在 Actionbar 状态行上方。"""
+    key = (ui["who"], name, phrase, bool(ultimate))
+    keys = [q["key"] for q in combat_notices()]
+    if key not in keys:
+        raise AssertionError("unregistered demon notice: %r" % (key,))
+    number = keys.index(key) + 1
+    return ("execute at @s as @a[distance=..%d,gamemode=!spectator,gamemode=!creative] "
+            "run function rpg:hud/demon/m%d" % (radius, number))
+
+
+def build_demon_hud():
+    """生成双层 Actionbar 的消息槽、合成分流与固定提示渲染器。"""
+    notices = combat_notices()
+    render = ["# 上层恶魔提示 + 下层持久状态，同一 Actionbar 合成。"]
+    solo = ["# 没有下层状态时，上层提示自己居中。"]
+    for i, _q in enumerate(notices, 1):
+        wf("hud/demon/m%d.mcfunction" % i,
+           "scoreboard players set @s rpg_hud_dm %d\n"
+           "scoreboard players set @s rpg_hud_dmt 50" % i)
+        render.append("execute if entity @s[scores={rpg_hud_dm=%d}] "
+                      "run return run function rpg:hud/demon/r%d with storage rpg:hud" %
+                      (i, i))
+        solo.append("execute if entity @s[scores={rpg_hud_dm=%d}] "
+                    "run return run function rpg:hud/demon/s%d" % (i, i))
+
+        # F000/F1xx/F2xx are outside vanilla 1.21.11 Unifont PUA's occupied
+        # glyphs; E4xx/E5xx/E6xx otherwise render vanilla symbols/tofu first.
+        top = chr(0xF000 + i - 1) + chr(0xF040 + i - 1)
+        back = chr(0xF100 + i - 1)
+        forward = chr(0xF200 + i - 1)
+        top_comp = json.dumps({"text": top, "font": "rpg:combat_prompt",
+                               "italic": False, "color": "white"},
+                              ensure_ascii=True, separators=(",", ":"))
+        back_comp = json.dumps({"text": back, "font": "rpg:combat_prompt"},
+                               ensure_ascii=True, separators=(",", ":"))
+        fwd_comp = json.dumps({"text": forward, "font": "rpg:combat_prompt"},
+                              ensure_ascii=True, separators=(",", ":"))
+        wf("hud/demon/r%d.mcfunction" % i,
+           "$title @s actionbar [\"\",%s,%s,$(a),$(b),$(c)]" %
+           (top_comp, back_comp))
+        wf("hud/demon/s%d.mcfunction" % i,
+           "title @s actionbar [\"\",%s,%s,%s]" %
+           (top_comp, back_comp, fwd_comp))
+    wf("hud/demon/render.mcfunction", "\n".join(render))
+    wf("hud/demon/solo.mcfunction", "\n".join(solo))
+    return len(notices)
+
+
+# 每位恶魔的罪约只做实体伤害、状态、传送与表现，不召唤爆炸物、不修改地形。
+# hit 段走 wf_holy，持圣器者会继承现有的缩短/削弱规则。
+ULTIMATES = {
+    1: ("""# 万蛇加冕 —— 三圈蛇牙从王冠下同时破土。
+data modify storage rpg:demon uuid set from entity @s UUID
+function rpg:taint/ult1_fangs with storage rpg:demon
+particle dust_color_transition{from_color:[0.19,0.85,0.49],to_color:[0.0,0.18,0.07],scale:3} ~ ~1 ~ 5 1 5 0.04 150 force
+particle end_rod ~ ~2 ~ 2.5 1.5 2.5 0.05 75 force
+particle flash{color:3266940} ~ ~2 ~ 0 0 0 0 1 force
+particle dragon_breath ~ ~1 ~ 4 1 4 0.08 110 force
+particle enchanted_hit ~ ~1 ~ 4 1 4 0.12 90 force
+playsound minecraft:entity.evoker.prepare_attack hostile @a[distance=..32] ~ ~ ~ 1.2 0.55
+playsound minecraft:entity.ender_dragon.growl hostile @a[distance=..40] ~ ~ ~ 0.8 0.7
+execute as %(P10)s run function rpg:taint/ult1_hit
+""", """effect give @s minecraft:levitation 2 1 true
+damage @s 18 minecraft:magic %(BY)s
+"""),
+    2: ("""# 妒海沉城 —— 深潮将十二格内的一切拖向海眼。
+particle bubble_column_up ~ ~0.5 ~ 5 1 5 0.55 220 force
+particle dust_color_transition{from_color:[0.24,0.66,0.91],to_color:[0.02,0.09,0.18],scale:3} ~ ~1 ~ 5 1 5 0.05 150 force
+particle flash{color:4041192} ~ ~1 ~ 0 0 0 0 1 force
+particle nautilus ~ ~1 ~ 5 1.5 5 0.14 120 force
+particle splash ~ ~0.7 ~ 5 1 5 0.25 160 force
+playsound minecraft:entity.elder_guardian.curse hostile @a[distance=..36] ~ ~ ~ 1.25 0.45
+playsound minecraft:entity.generic.splash hostile @a[distance=..36] ~ ~ ~ 1.4 0.55
+execute as %(P12)s run function rpg:taint/ult2_hit
+""", """execute at @s facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^3
+effect give @s minecraft:slowness 8 3 true
+effect give @s minecraft:mining_fatigue 8 2 true
+damage @s 17 minecraft:drown %(BY)s
+"""),
+    3: ("""# 终末收割 —— 灵魂被一并割下，每一枚都反哺收割者。
+particle sculk_charge_pop ~ ~1 ~ 5 1 5 0.14 180 force
+particle soul ~ ~1 ~ 4 1.5 4 0.08 130 force
+particle sonic_boom ~ ~1 ~ 0 0 0 0 4 force
+particle flash{color:9605787} ~ ~1 ~ 0 0 0 0 1 force
+particle reverse_portal ~ ~1 ~ 4 1.5 4 0.3 130 force
+particle soul_fire_flame ~ ~1 ~ 4 1 4 0.08 95 force
+playsound minecraft:entity.warden.sonic_boom hostile @a[distance=..36] ~ ~ ~ 1.1 0.65
+playsound minecraft:entity.wither.spawn hostile @a[distance=..40] ~ ~ ~ 0.7 0.55
+execute as %(P10)s run function rpg:taint/ult3_hit
+""", """effect give @s minecraft:wither 8 1 true
+damage @s 20 minecraft:magic %(BY)s
+particle soul ~ ~1 ~ 0.35 0.5 0.35 0.06 24 force
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
+"""),
+    4: ("""# 万蝇饕宴 —— 灰烬遮天，饥群从宴席中孵化。
+particle ash ~ ~1 ~ 5 2 5 0.15 240 force
+particle mycelium ~ ~1 ~ 4 1.5 4 0.18 170 force
+particle dust_color_transition{from_color:[0.72,0.78,0.29],to_color:[0.14,0.17,0.03],scale:2.6} ~ ~1 ~ 4 1 4 0.05 130 force
+particle flash{color:12044363} ~ ~1 ~ 0 0 0 0 1 force
+particle large_smoke ~ ~1 ~ 5 1.5 5 0.14 150 force
+particle spore_blossom_air ~ ~2 ~ 5 2 5 0.08 120 force
+playsound minecraft:entity.bee.loop_aggressive hostile @a[distance=..36] ~ ~ ~ 1.25 0.45
+playsound minecraft:entity.ravager.roar hostile @a[distance=..40] ~ ~ ~ 0.65 0.55
+function rpg:taint/ult4_swarm
+execute as %(P10)s run function rpg:taint/ult4_hit
+""", """effect give @s minecraft:hunger 14 4 true
+effect give @s minecraft:weakness 8 1 true
+damage @s 18 minecraft:magic %(BY)s
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
+"""),
+    5: ("""# 血怒天罚 —— 死亡天使沿最近的血气突入人群。
+execute at @s facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run tp @s ^ ^ ^5
+particle flash{color:15158613} ~ ~1 ~ 0 0 0 0 1 force
+particle dust_color_transition{from_color:[0.89,0.30,0.30],to_color:[0.24,0.0,0.04],scale:3} ~ ~1 ~ 4 1.2 4 0.06 180 force
+particle sweep_attack ~ ~1 ~ 3 0.8 3 0 34 force
+particle trial_omen ~ ~1 ~ 4 1 4 0.1 110 force
+particle crit ~ ~1 ~ 4 1 4 0.22 130 force
+playsound minecraft:entity.ravager.roar hostile @a[distance=..36] ~ ~ ~ 1.2 0.8
+playsound minecraft:entity.ender_dragon.growl hostile @a[distance=..40] ~ ~ ~ 0.8 1.15
+execute as %(P8)s run function rpg:taint/ult5_hit
+""", """effect give @s minecraft:poison 10 2 true
+effect give @s minecraft:wither 7 1 true
+damage @s 22 minecraft:magic %(BY)s
+"""),
+    6: ("""# 紫宴朝圣 —— 意志被拖向宴席中央，再献出自己的血。
+particle portal ~ ~1 ~ 5 1.5 5 0.65 240 force
+particle dust_color_transition{from_color:[0.75,0.42,0.91],to_color:[0.12,0.0,0.18],scale:3} ~ ~1 ~ 4 1 4 0.06 150 force
+particle flash{color:12610536} ~ ~1 ~ 0 0 0 0 1 force
+particle witch ~ ~1 ~ 5 1.5 5 0.18 150 force
+particle reverse_portal ~ ~1 ~ 4 1 4 0.28 120 force
+playsound minecraft:entity.evoker.prepare_summon hostile @a[distance=..36] ~ ~ ~ 1.2 0.5
+playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..36] ~ ~ ~ 1.1 0.55
+execute as %(P10)s run function rpg:taint/ult6_hit
+""", """execute at @s facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^2.5
+effect give @s minecraft:slowness 7 4 true
+effect give @s minecraft:weakness 7 2 true
+effect give @s minecraft:nausea 8 0 true
+damage @s 17 minecraft:magic %(BY)s
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
+"""),
+    7: ("""# 黄金终审 —— 场上的财富、经验与性命在同一刻结算。
+particle wax_on ~ ~1 ~ 5 1.5 5 0.16 210 force
+particle end_rod ~ ~1 ~ 4 1 4 0.08 130 force
+particle flash{color:16765754} ~ ~1 ~ 0 0 0 0 1 force
+particle firework ~ ~1 ~ 5 1.5 5 0.18 160 force
+particle totem_of_undying ~ ~1 ~ 4 1 4 0.16 120 force
+playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..36] ~ ~ ~ 1.2 0.55
+playsound minecraft:entity.player.levelup hostile @a[distance=..36] ~ ~ ~ 1.1 0.45
+execute at @s as @e[type=minecraft:item,distance=..12] at @s run function rpg:taint/ult7_seize
+execute as %(P10)s run function rpg:taint/ult7_hit
+""", """xp add @s -80 points
+effect give @s minecraft:slowness 5 2 true
+damage @s 24 minecraft:magic %(BY)s
+"""),
+}
+
+ULT_NONE = ("""# 无名蚀界 —— 无名者没有柱位，只把周围的一切称谓抹黑。
+particle squid_ink ~ ~1 ~ 5 1.5 5 0.18 210 force
+particle sculk_soul ~ ~1 ~ 4 1 4 0.09 120 force
+particle dust_color_transition{from_color:[0.82,0.23,0.28],to_color:[0.0,0.0,0.0],scale:3} ~ ~1 ~ 4 1 4 0.05 130 force
+particle flash{color:13777735} ~ ~1 ~ 0 0 0 0 1 force
+particle trial_omen ~ ~1 ~ 4 1 4 0.1 100 force
+particle reverse_portal ~ ~1 ~ 4 1.5 4 0.3 130 force
+playsound minecraft:entity.warden.roar hostile @a[distance=..36] ~ ~ ~ 1.1 0.55
+playsound minecraft:entity.wither.spawn hostile @a[distance=..40] ~ ~ ~ 0.7 0.45
+execute as %(P10)s run function rpg:taint/ult0_hit
+""", """effect give @s minecraft:darkness 8 0 true
+effect give @s minecraft:blindness 4 0 true
+effect give @s minecraft:wither 7 1 true
+damage @s 18 minecraft:magic %(BY)s
+""")
 
 
 def _rgb(hex_colour):
@@ -912,35 +1374,86 @@ def _rgb(hex_colour):
 
 def wire_lords():
     """降临的分流。add_exorcism 只写得出无名者 —— 它不认识柱位。"""
-    branch, none = [], io.open(
-        os.path.join(FUNC, "taint/lord.mcfunction"), encoding="utf-8").read()
-    none = "\n".join(l for l in none.split("\n") if l and not l.startswith("#"))
+    # fallback 必须从固定模板重建。若读取上一次生成的 lord/skill 再把非注释行
+    # 当 fallback，单独重跑 add_pact 会把七条分流吞进去并再追加一遍，文件每次
+    # 增长七条；完整 build 因 add_exorcism 先覆盖而碰巧藏住了这个幂等缺陷。
+    none_src = ex.LORD_NONE % {
+        "NBT": ex.demon_nbt("无名者", "#3D0000", "dark_gray")}
+    branch = []
+    none = "\n".join(l for l in none_src.split("\n")
+                     if l and not l.startswith("#"))
     sk = []
-    subs = {"BY": BY, "P6": PLAYERS % 6, "P7": PLAYERS % 7, "P8": PLAYERS % 8}
+    ult_warn, ult_charge, ult_cast = [], [], []
+    subs = {"BY": BY, "P5": PLAYERS % 5, "P6": PLAYERS % 6, "P7": PLAYERS % 7,
+            "P8": PLAYERS % 8, "P10": PLAYERS % 10, "P12": PLAYERS % 12}
+    charge_fx = {
+        1: "particle end_rod ~ ~2 ~ 0.45 0.7 0.45 0.02 3 force",
+        2: "particle bubble_column_up ~ ~0.4 ~ 0.6 0.2 0.6 0.16 5 force",
+        3: "particle soul ~ ~1 ~ 0.55 0.7 0.55 0.03 4 force",
+        4: "particle mycelium ~ ~1 ~ 0.65 0.65 0.65 0.08 5 force",
+        5: "particle damage_indicator ~ ~1 ~ 0.55 0.65 0.55 0.04 4 force",
+        6: "particle portal ~ ~1 ~ 0.65 0.7 0.65 0.18 5 force",
+        7: "particle wax_on ~ ~1 ~ 0.6 0.7 0.6 0.04 4 force",
+    }
     for p in PILLARS:
+        ui = DEMON_UI[p["n"]]
         branch.append("execute if score #lord rpg_fall matches %d "
                       "run return run function rpg:taint/lord%d" % (p["n"], p["n"]))
         wf("taint/lord%d.mcfunction" % p["n"], LORD_ONE % {
             "WHO": p["who"], "RGB": _rgb(p["colour"]), "N": p["n"],
             "NBT": ex.demon_nbt(p["who"], p["colour"], p["lit"])})
 
-        # 他那三招。skN 只负责掷点，真正的招式在 skN_1/2/3。
+        # 他那五招。skN 只负责掷点，真正的招式在 skN_1..5。
         sk.append("execute if entity @s[scores={rpg_dm_lord=%d}] "
                   "run return run function rpg:taint/sk%d" % (p["n"], p["n"]))
-        pick = ["# 三招掷一招 —— 同一位打两次不会长得一样。",
+        pick = ["# 五招掷一招，并记住上一招；若撞号则顺延一格，避免连续重复。",
                 "execute store result score #pick rpg_fall run random value 1..%d"
-                % len(SKILLS[p["n"]])]
+                % len(SKILLS[p["n"]]),
+                "execute if score #pick rpg_fall = @s rpg_dm_last run scoreboard players add #pick rpg_fall 1",
+                "execute if score #pick rpg_fall matches %d.. run scoreboard players set #pick rpg_fall 1"
+                % (len(SKILLS[p["n"]]) + 1),
+                "scoreboard players operation @s rpg_dm_last = #pick rpg_fall"]
         for i, (body, extra) in enumerate(SKILLS[p["n"]], 1):
             pick.append("execute if score #pick rpg_fall matches %d "
                         "run return run function rpg:taint/sk%d_%d"
                         % (i, p["n"], i))
-            wf("taint/sk%d_%d.mcfunction" % (p["n"], i), body % subs)
+            skill_name, skill_text = ui["skills"][i - 1]
+            wf("taint/sk%d_%d.mcfunction" % (p["n"], i),
+               _notice(ui, skill_name, skill_text) + "\n" + body % subs)
             for name, text in extra.items():
                 # 走 wf_holy：带 debuff 的会自动派生"对方有圣器"的那一版
                 ex.wf_holy("taint/%s.mcfunction" % name, text % subs)
         wf("taint/sk%d.mcfunction" % p["n"], "\n".join(pick))
 
-    # 别西卜那道锥形的命中段，六个取点共用一份
+        # 罪约三路分流：warn 只出现一次，charge 每刻只画少量聚拢粒子，
+        # ultimate 才结算伤害。全部按实体自己的 lord 分数判断。
+        ult_warn.append("execute if entity @s[scores={rpg_dm_lord=%d}] "
+                        "run return run function rpg:taint/ult%d_warn" %
+                        (p["n"], p["n"]))
+        ult_charge.append("execute if entity @s[scores={rpg_dm_lord=%d}] "
+                          "run return run function rpg:taint/ult%d_charge" %
+                          (p["n"], p["n"]))
+        ult_cast.append("execute if entity @s[scores={rpg_dm_lord=%d}] "
+                        "run return run function rpg:taint/ult%d" %
+                        (p["n"], p["n"]))
+        rgb = _rgb(ui["main"])
+        flash = int(ui["main"].lstrip("#"), 16)
+        wf("taint/ult%d_warn.mcfunction" % p["n"],
+           _notice(ui, ui["ultimate"], ui["ult_text"], True, 18) + "\n" +
+           "particle dust{color:[%s],scale:2.6} ~ ~1 ~ 1.4 1 1.4 0.04 42 force\n" % rgb +
+           "playsound minecraft:block.trial_spawner.ominous_activate hostile "
+           "@a[distance=..32] ~ ~ ~ 1 0.65")
+        wf("taint/ult%d_charge.mcfunction" % p["n"],
+           "particle dust{color:[%s],scale:1.7} ~ ~1 ~ 0.55 0.75 0.55 0.02 3 force\n%s\n"
+           "execute if score @s rpg_dm_ult matches 20 run particle flash{color:%d} ~ ~1 ~ 0 0 0 0 1 force\n"
+           "execute if score @s rpg_dm_ult matches 20 run playsound minecraft:block.respawn_anchor.charge hostile @a[distance=..32] ~ ~ ~ 0.9 0.65\n"
+           "execute if score @s rpg_dm_ult matches 10 run particle dust{color:[%s],scale:3.2} ~ ~1 ~ 2.2 1.2 2.2 0.08 85 force\n"
+           "execute if score @s rpg_dm_ult matches 10 run playsound minecraft:block.respawn_anchor.charge hostile @a[distance=..32] ~ ~ ~ 1.1 1.1" %
+           (rgb, charge_fx[p["n"]], flash, rgb))
+        ult_body, ult_hit = ULTIMATES[p["n"]]
+        wf("taint/ult%d.mcfunction" % p["n"], ult_body % subs)
+        ex.wf_holy("taint/ult%d_hit.mcfunction" % p["n"], ult_hit % subs)
+
     # 别西卜那道锥形的命中段，六个取点共用一份
     ex.wf_holy("taint/sk4_hit.mcfunction",
        "damage @s 5 minecraft:magic %(BY)s\n"
@@ -956,13 +1469,74 @@ def wire_lords():
        LORD % {"BRANCH": "\n".join(branch), "NONE": none})
     # add_exorcism 只写得出无名者那一手；这里改写成七柱分流，
     # 最后一行仍然落回无名者（没签过约的人招出来的就是他）。
-    old_none = io.open(os.path.join(FUNC, "taint/skill.mcfunction"),
-                       encoding="utf-8").read()
-    old_none = "\n".join(l for l in old_none.split("\n")
+    old_none = "\n".join(l for l in ex.SKILL_NONE.split("\n")
                           if l and not l.startswith("#"))
     wf("taint/skill.mcfunction",
        "# 谁在出手 —— 看他是哪一柱挣出来的。没有柱位的落到最后一行。\n"
-       + "\n".join(sk) + "\n" + old_none)
+       + "\n".join(sk) + "\n" +
+       _notice(NONE_UI, NONE_UI["skills"][0][0], NONE_UI["skills"][0][1]) +
+       "\n" + old_none)
+
+    # 无名者的提示、蓄势与结算是七柱分流的 fallback。
+    none_rgb = _rgb(NONE_UI["main"])
+    wf("taint/ult0_warn.mcfunction",
+       _notice(NONE_UI, NONE_UI["ultimate"], NONE_UI["ult_text"], True, 18) + "\n" +
+       "particle dust{color:[%s],scale:2.6} ~ ~1 ~ 1.4 1 1.4 0.04 42 force\n" % none_rgb +
+       "playsound minecraft:block.trial_spawner.ominous_activate hostile "
+       "@a[distance=..32] ~ ~ ~ 1 0.45")
+    wf("taint/ult0_charge.mcfunction",
+       "particle dust{color:[%s],scale:1.7} ~ ~1 ~ 0.55 0.75 0.55 0.02 3 force\n"
+       "particle squid_ink ~ ~1 ~ 0.55 0.65 0.55 0.04 4 force\n"
+       "execute if score @s rpg_dm_ult matches 20 run particle flash{color:13777735} ~ ~1 ~ 0 0 0 0 1 force\n"
+       "execute if score @s rpg_dm_ult matches 20 run playsound minecraft:block.respawn_anchor.charge hostile @a[distance=..32] ~ ~ ~ 0.9 0.55\n"
+       "execute if score @s rpg_dm_ult matches 10 run particle dust{color:[%s],scale:3.2} ~ ~1 ~ 2.2 1.2 2.2 0.08 85 force\n"
+       "execute if score @s rpg_dm_ult matches 10 run playsound minecraft:block.respawn_anchor.charge hostile @a[distance=..32] ~ ~ ~ 1.1 0.9" %
+       (none_rgb, none_rgb))
+    none_body, none_hit = ULT_NONE
+    wf("taint/ult0.mcfunction", none_body % subs)
+    ex.wf_holy("taint/ult0_hit.mcfunction", none_hit % subs)
+
+    wf("taint/ult_start.mcfunction", """# 每第四次出手进入三十刻罪约蓄势。
+scoreboard players set @s rpg_dm_casts 0
+scoreboard players set @s rpg_dm_ult 30
+function rpg:taint/ult_warn
+""")
+    wf("taint/ult_tick.mcfunction", """# 罪约蓄势期间由恶魔自己的计时器推进，多只同时存在也互不覆盖。
+function rpg:taint/ult_charge
+scoreboard players remove @s rpg_dm_ult 1
+execute if entity @s[scores={rpg_dm_ult=..0}] run function rpg:taint/ult_resolve
+""")
+    wf("taint/ult_resolve.mcfunction", """# 结算期间临时挂归属标签，复用普通招式的精确伤害来源。
+tag @s add rpg.dm.cast
+function rpg:taint/ultimate
+tag @s remove rpg.dm.cast
+""")
+    wf("taint/ult_warn.mcfunction",
+       "# 罪约预警。没有柱位即无名者。\n" + "\n".join(ult_warn) +
+       "\nfunction rpg:taint/ult0_warn")
+    wf("taint/ult_charge.mcfunction",
+       "# 罪约蓄势表现。没有柱位即无名者。\n" + "\n".join(ult_charge) +
+       "\nfunction rpg:taint/ult0_charge")
+    wf("taint/ultimate.mcfunction",
+       "# 罪约结算。没有柱位即无名者。\n" + "\n".join(ult_cast) +
+       "\nfunction rpg:taint/ult0")
+
+    # 路西法的三圈蛇牙使用本体 UUID；不会误伤自己的主人归属。
+    fang_pos = []
+    for r in (2, 4, 6):
+        for x, z in ((r, 0), (-r, 0), (0, r), (0, -r),
+                     (r, r), (r, -r), (-r, r), (-r, -r)):
+            fang_pos.append("$summon minecraft:evoker_fangs ~%d ~ ~%d "
+                            "{Warmup:%d,Owner:$(uuid)}" % (x, z, r * 2))
+    wf("taint/ult1_fangs.mcfunction", "\n".join(fang_pos))
+    wf("taint/ult4_swarm.mcfunction", "\n".join(
+       ['summon minecraft:vex ~ ~1 ~ {life_ticks:300,Tags:["rpg.demon.fly"],'
+        'CustomName:[{"text":"饥蝇","color":"#B7C84B"}],Health:10f,'
+        'attributes:[{id:"max_health",base:10f},{id:"attack_damage",base:4f}]}'] * 4))
+    wf("taint/ult7_seize.mcfunction", """particle wax_on ~ ~0.3 ~ 0.25 0.25 0.25 0.04 10 force
+effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
+kill @s
+""")
     return len(PILLARS)
 
 
@@ -972,22 +1546,26 @@ SLUG = {1: "lucifer", 2: "leviathan", 3: "abaddon", 4: "beelzebub",
 
 
 def build_art(rp):
-    """把七本书接进 enchanted_book 的模型分派。
+    """恢复七张原图，并把七本书接进 enchanted_book 的模型分派。
 
     书的 custom_model_data 早就按柱位排好了（CMD0 + N - 1），缺的只是
-    材质包这一头。这里补上：一个 range_dispatch，七个门槛，
-    外加七个只有两行的模型文件。贴图一放进去就生效，数据包一个字不用改。
-
-    没有贴图时会显示成缺失材质的紫黑格 —— 这是刻意的：比悄悄退回原版
-    附魔书的样子好，至少一眼看得出"这里还差一张图"。
+    材质包这一头。这里补上：七张由项目保管的风格化纹理、一个
+    range_dispatch、七个门槛，以及七个模型文件。
     """
+    td = os.path.join(rp, "assets/rpg/textures/item")
     md = os.path.join(rp, "assets/rpg/models/item")
-    if not os.path.isdir(md):
-        os.makedirs(md)
+    for d in (td, md):
+        if not os.path.isdir(d):
+            os.makedirs(d)
     for q in PILLARS:
-        ex.wj(os.path.join(md, "pact_%s.json" % SLUG[q["n"]]),
+        slug = SLUG[q["n"]]
+        art = os.path.join(ART, "pact_%s.png" % slug)
+        if not os.path.isfile(art):
+            raise RuntimeError("missing authored pact texture: %s" % art)
+        shutil.copyfile(art, os.path.join(td, "pact_%s.png" % slug))
+        ex.wj(os.path.join(md, "pact_%s.json" % slug),
               {"parent": "item/generated",
-               "textures": {"layer0": "rpg:item/pact_%s" % SLUG[q["n"]]}})
+               "textures": {"layer0": "rpg:item/pact_%s" % slug}})
 
     p = os.path.join(rp, "assets/minecraft/items/enchanted_book.json")
     entries = [{"threshold": CMD0 + q["n"] - 1,
@@ -1015,8 +1593,8 @@ SUMMON_HEAD = """\
 # 手动招出来的会瞬间消失。lordN 这一条是完整入口：
 # 召唤 + 记下他是谁（技能按这个分流）+ 给寿命。
 #
-# 每条前面把 #boss 拨上，所以手动招出来的按**两分钟**算，
-# 而不是降临那只"来收账的"三十秒。
+# 每条前面把 #boss 拨上；完整真名调查版本统一按**十分钟**算，
+# 而不是旧版降临那只短暂的"来收账者"。
 #
 # 他们都挂着 devil 标签，于是自动继承包里恶魔 boss 那一套：
 # 常驻隐身、周身黑烟与墨。
@@ -1076,9 +1654,11 @@ def main():
     obj = add_objectives()
     n = build_functions()
     build_hud_bar()
+    hud = build_hud_identity()
     ticked = wire_tick()
     wire_taint()
     lords = wire_lords()
+    demon_hud = build_demon_hud()
     listed = build_summon_list()
     gave = build_give()
     art = build_art(RP)
@@ -1086,6 +1666,8 @@ def main():
     print("pact: %d pillars, %d functions, give +%d, tick +%d, lords %d, "
           "召唤清单 %d 位" % (len(PILLARS), n, gave, ticked, lords, listed))
     print("pact: objectives %s, 书的模型分派 %d 档" % (obj or "-", art))
+    print("pact: actionbar 契约对象 %d 位，%d 行" % (len(PILLARS), hud))
+    print("pact: 双层 actionbar 恶魔提示 %d 条" % demon_hud)
 
 
 if __name__ == "__main__":

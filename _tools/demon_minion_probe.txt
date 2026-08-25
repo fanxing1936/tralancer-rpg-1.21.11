@@ -1,0 +1,37 @@
+# 35 柱魔神动态探针；真实 1.21.11 服务端逐条执行。
+execute in minecraft:overworld run kill @e[tag=rpg.qa.minion]
+execute in minecraft:overworld run kill @e[tag=rpg.demon.minion]
+execute in minecraft:overworld run summon minecraft:marker 0 80 0 {Tags:["rpg.qa.minion"]}
+scoreboard players set @e[type=minecraft:marker,tag=rpg.qa.minion,limit=1] rpg_dm_lord 1
+scoreboard players set @e[type=minecraft:marker,tag=rpg.qa.minion,limit=1] rpg_mn_slot 0
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.minion,limit=1] at @s run function rpg:minion/phase2_summon
+execute if entity @e[type=minecraft:vindicator,tag=rpg.demon.minion,scores={rpg_mn_lord=1,rpg_mn_role=1},limit=1] run say MINION_PHASE2_VANGUARD_PASS
+scoreboard players set @e[type=minecraft:marker,tag=rpg.qa.minion,limit=1] rpg_mn_slot 0
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.minion,limit=1] at @s run function rpg:minion/phase2_summon
+scoreboard players set #count rpg_mn_tick 0
+execute as @e[tag=rpg.demon.minion] run scoreboard players add #count rpg_mn_tick 1
+execute if score #count rpg_mn_tick matches 1 run say MINION_PHASE2_LIVING_ROLE_CAP_PASS
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.minion,limit=1] at @s run function rpg:minion/phase2_summon
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.minion,limit=1] at @s run function rpg:minion/phase2_summon
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.minion,limit=1] at @s run function rpg:minion/phase2_summon
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.minion,limit=1] at @s run function rpg:minion/phase2_summon
+scoreboard players set #count rpg_mn_tick 0
+execute as @e[tag=rpg.demon.minion,scores={rpg_mn_lord=1}] run scoreboard players add #count rpg_mn_tick 1
+execute if score #count rpg_mn_tick matches 5 if entity @e[type=minecraft:pillager,tag=rpg.demon.minion,scores={rpg_mn_role=2},limit=1] if entity @e[type=minecraft:evoker,tag=rpg.demon.minion,scores={rpg_mn_role=3},limit=1] if entity @e[type=minecraft:illusioner,tag=rpg.demon.minion,scores={rpg_mn_role=4},limit=1] run say MINION_PHASE2_FIVE_ROLES_PASS
+execute if data entity @e[type=minecraft:evoker,tag=rpg.demon.minion,scores={rpg_mn_role=3},limit=1] {NoAI:1b} run say MINION_RITUALIST_BOUNDED_AI_PASS
+execute in minecraft:overworld run kill @e[tag=rpg.qa.minion]
+scoreboard players set @e[tag=rpg.demon.minion,scores={rpg_mn_role=5},limit=1] rpg_mn_cd 0
+execute in minecraft:overworld as @e[tag=rpg.demon.minion,scores={rpg_mn_role=5},limit=1] at @s run function rpg:minion/ability_dispatch
+execute if entity @e[tag=rpg.demon.minion,scores={rpg_mn_cd=65..75},limit=1] run say MINION_DISTINCT_ABILITY_PASS
+scoreboard players set #clock rpg_mn_tick 9
+function rpg:minion/tick
+execute if score #clock rpg_mn_tick matches 0 run say MINION_TEN_TICK_BATCH_PASS
+tick sprint 200
+execute if entity @e[tag=rpg.demon.minion,scores={rpg_mn_lord=1},limit=1] run say MINION_INDEPENDENT_SURVIVAL_PASS
+execute in minecraft:overworld run kill @e[tag=rpg.demon.minion]
+execute in minecraft:overworld positioned 0 80 0 run function rpg:minion/summon/mammon/all
+scoreboard players set #count rpg_mn_tick 0
+execute as @e[tag=rpg.demon.minion,scores={rpg_mn_lord=7}] run scoreboard players add #count rpg_mn_tick 1
+execute if score #count rpg_mn_tick matches 5 if entity @e[tag=rpg.demon.minion,scores={rpg_mn_lord=7,rpg_mn_role=5},limit=1] run say MINION_MANUAL_ALL_PASS
+execute in minecraft:overworld run kill @e[tag=rpg.demon.minion]
+say MINION_DYNAMIC_PROBE_PASS

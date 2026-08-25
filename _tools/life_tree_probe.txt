@@ -1,0 +1,37 @@
+# 生命之树粒子阵动态与性能探针；真实 1.21.11 服务端逐条执行。
+execute in minecraft:overworld run kill @e[type=minecraft:marker,tag=rpg.ritual.life_tree]
+tick sprint 200
+tick sprint 1000
+execute in minecraft:overworld run summon minecraft:marker 0 80 0 {Tags:["rpg.ritual.life_tree","rpg.qa.life_tree"],Rotation:[45f,0f]}
+scoreboard players set @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] rpg_lt_fill 0
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s run function rpg:ritual/life_tree/draw
+execute if entity @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] if data entity @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] {Rotation:[45f,0f]} run say LIFE_TREE_DRAW_ORIENTATION_PASS
+tick freeze
+scoreboard players set #life_tree rpg_lt_tick 9
+function rpg:ritual/life_tree/tick
+execute if score #life_tree rpg_lt_tick matches 0 run say LIFE_TREE_TEN_TICK_REFRESH_PASS
+tick unfreeze
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^0.000 ^0.06 ^-3.600 run function rpg:ritual/life_tree/offer/1
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^1.450 ^0.06 ^-2.550 run function rpg:ritual/life_tree/offer/2
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^-1.450 ^0.06 ^-2.550 run function rpg:ritual/life_tree/offer/3
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^1.450 ^0.06 ^-0.860 run function rpg:ritual/life_tree/offer/4
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^-1.450 ^0.06 ^-0.860 run function rpg:ritual/life_tree/offer/5
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^0.000 ^0.06 ^0.000 run function rpg:ritual/life_tree/offer/6
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^1.450 ^0.06 ^1.280 run function rpg:ritual/life_tree/offer/7
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^-1.450 ^0.06 ^1.280 run function rpg:ritual/life_tree/offer/8
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^0.000 ^0.06 ^2.430 run function rpg:ritual/life_tree/offer/9
+execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] at @s positioned ^0.000 ^0.06 ^3.860 run function rpg:ritual/life_tree/offer/10
+scoreboard players set #count rpg_lt_fill 0
+execute as @e[type=minecraft:item_display,tag=rpg.ritual.life_tree.prop] run scoreboard players add #count rpg_lt_fill 1
+execute if score #count rpg_lt_fill matches 10 if entity @e[type=minecraft:marker,tag=rpg.qa.life_tree,tag=rpg.lt.complete,scores={rpg_lt_fill=10},limit=1] run say KABBALAH_TEN_SEPHIROTH_COMPLETE_PASS
+scoreboard players set #new_covenant rpg_lt_bless 39
+function rpg:ritual/life_tree/covenant_tick
+execute if score #new_covenant rpg_lt_bless matches 0 run say KABBALAH_BLESSING_BATCH_PASS
+execute in minecraft:overworld run loot spawn 0 81 0 loot rpg:ritual/life_tree/new_covenant
+execute in minecraft:overworld if data entity @e[type=minecraft:item,x=0,y=81,z=0,distance=..2,limit=1] {Item:{id:"minecraft:enchanted_book",components:{"minecraft:custom_data":{rpg_new_covenant:1b}}}} run say KABBALAH_NEW_COVENANT_LOOT_PASS
+tick sprint 1000
+execute if entity @e[type=minecraft:marker,tag=rpg.qa.life_tree,limit=1] run say LIFE_TREE_PERSISTENCE_PASS
+function rpg:ritual/life_tree/clear_all
+execute in minecraft:overworld run kill @e[type=minecraft:item,x=0,y=81,z=0,distance=..3]
+execute unless entity @e[type=minecraft:marker,tag=rpg.ritual.life_tree] unless entity @e[type=minecraft:item_display,tag=rpg.ritual.life_tree.prop] run say LIFE_TREE_CLEAR_PASS
+say LIFE_TREE_DYNAMIC_PROBE_PASS

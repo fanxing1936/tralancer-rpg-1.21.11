@@ -8,6 +8,7 @@ import json
 F = json.load(io.open("../_guide_fragments.json", encoding="utf-8"))
 S = json.load(io.open("../_guide_sections.json", encoding="utf-8"))
 Q = json.load(io.open("../_squad.json", encoding="utf-8"))
+D = json.load(io.open("../_divine.json", encoding="utf-8"))
 
 
 def on_dark(hexcol):
@@ -33,6 +34,73 @@ def n_of(key):
 def n_rarity(key, *names):
     return sum(1 for x in (S.get(key) or []) if x.get("rarity") in names)
 
+
+def divine_section():
+    """Player-facing Kabbalah and divine-covenant chapter.
+
+    Numeric values live in _divine.json so the web guide has one reviewable
+    project-data source instead of scattering cooldowns through prose.
+    """
+    old = D["old"]
+    new = D["new"]
+    beam = new["beam"]
+    field = new["field"]
+    borrow = new["borrow"]
+    rite = D["ritual"]
+    compat = D["ritual_compatibility"]
+    seph_rows = "".join(
+        '<tr><td class="num">%02d</td><td><b>%s</b></td><td class="dim">%s</td></tr>'
+        % (x["n"], x["name"], x["latin"])
+        for x in D["sephiroth"])
+
+    return f'''<section class="plate" id="s15">
+<div class="plate-h"><span class="num">XII</span><h2>卡巴拉上位契约</h2><span class="sub">生命之树 · 十源质 · 旧约与新约</span></div>
+<p>七十二柱是人与魔神的交易；上位契约是人与上帝的见证。流程从<strong>卡巴拉血契</strong>展开的生命之树开始，
+十个源质归位后先显化<strong>旧约</strong>；再以<strong>真·十字架</strong>完成 Daath（Da’at）节点，才会把整棵树收束为<strong>新约</strong>。</p>
+
+<div class="sys">
+<div><h3>Ⅰ · 展开生命之树</h3><p class="how">卡巴拉血契 · 普通长按</p><p>法阵会依照使用者朝向铺开；血契本身不会被消耗。请留出完整空地，十个有名称的圆心和中央 Daath 都是后续交互点。</p></div>
+<div><h3>Ⅱ · 十源质归位</h3><p class="how">站入同名圆心 · 手持对应源质长按</p><p>错误位置或重复嵌入不会消耗物品。十枚全部归位后，生命之树完成，玩家自动获得唯一奖励<strong>旧约</strong>；同一玩家只领取一次。</p></div>
+<div><h3>Ⅲ · Daath 的见证</h3><p class="how">十源质已齐 · Daath 节点 · 真·十字架长按</p><p>十个圆心上的见证向十字架汇聚，随后法阵、源质与十字架一并收束。玩家持有的旧约被回收，并得到<strong>新约</strong>。</p></div>
+<div><h3>测试／管理发放</h3><p class="how">整套仪式物品</p><p><code>{D["test_give_command"]}</code> 会给执行者血契、十源质与真·十字架。当前项目没有为这套物品另写生存掉落或配方，因此这条只作为测试入口，不代表自然获得方式。</p></div>
+</div>
+
+<h3 class="sub-h">十源质<span class="rolls">十环全部完成才显化旧约</span></h3>
+<div class="tw"><table>
+<thead><tr><th>序</th><th>源质</th><th>拉丁转写</th></tr></thead>
+<tbody>{seph_rows}</tbody></table></div>
+
+<h3 class="sub-h">旧约<span class="rolls">律法见证 · 十诫净界</span></h3>
+<div class="sys">
+<div><h3>立约</h3><p class="how">未立约的旧约 · 长按</p><p>书会变成「已立约」状态。每 <b>{old["passive_interval_seconds"]}</b> 秒自动获得 <b>{old["regeneration_seconds"]}</b> 秒生命恢复 {old["regeneration_level"]}；每轮魔化结算再抵消 <b>{old["taint_reduction_per_batch"]}</b> 点积累。</p></div>
+<div><h3>［{old["ability"]}］</h3><p class="how">已立约的旧约 · 长按 · 冷却 {old["cooldown_seconds"]} 秒</p><p>净化半径 <b>{old["radius"]}</b> 格内的恶魔，造成其最大生命值 <b>{old["damage_percent_max_health"]}%</b> 的伤害；当前生命不高于 <b>{old["execute_at_or_below_percent"]}%</b> 时直接斩杀。</p></div>
+</div>
+
+<h3 class="sub-h">新约<span class="rolls">权柄见证 · 双式权能 · 七罪赦免</span></h3>
+<p>签下新约时，现有七柱契约会被解除，魔化清零；此后魔化条由 <strong>权柄完整度 {new["authority_max"]}/{new["authority_max"]}</strong> 取代。
+新约使持有者免疫失明与黑暗。三种主动共用同一个<strong>上位契约回响冷却</strong>，因此不能把三条冷却彼此并行。</p>
+<div class="tw"><table>
+<thead><tr><th>输入</th><th>权能</th><th>真实冷却</th><th>效果</th></tr></thead><tbody>
+<tr><td><b>{beam["input"]}</b><br><span class="dim">已立约的新约</span></td><td><b>［{beam["ability"]}］</b></td><td class="num">{beam["cooldown_seconds"]} 秒</td><td>向前延伸 <b>{beam["range"]}</b> 格，对光路附近恶魔造成 <b>{beam["damage_percent_max_health"]}% 最大生命值 + {beam["base_damage"]} 点基础伤害</b>，并施加发光 {beam["glowing_seconds"]} 秒、虚弱 {beam["weakness_seconds"]} 秒。</td></tr>
+<tr><td><b>{field["input"]}</b><br><span class="dim">已立约的新约</span></td><td><b>［{field["ability"]}］</b></td><td class="num">{field["cooldown_seconds"]} 秒</td><td>展开半径 <b>{field["radius"]}</b> 格的净化领域。恶魔承受 <b>{field["damage_percent_max_health"]}% 最大生命值 + {field["base_damage"]} 点基础伤害</b>，并获{'、'.join(field["enemy_effects"])}；范围玩家清除{'、'.join(field["clears"])}，获得{'、'.join(field["ally_effects"])}。</td></tr>
+<tr><td><b>{borrow["input"]}</b><br><span class="dim">无需签下七柱契约</span></td><td><b>［{borrow["ability"]}］</b></td><td class="num">{borrow["cooldown_seconds"]} 秒</td><td>直接调用对应七罪契约书的原本力量，不绑定柱位、不增加魔化，也不附带契约枷锁；七本书均可作为权能媒介。</td></tr>
+</tbody></table></div>
+
+<h3 class="sub-h">与四阶段驱魔的兼容<span class="rolls">不跳调查 · 不跳裁决</span></h3>
+<div class="note"><b>七罪领主的仪式保护线仍然生效。</b>真名调查阶段会保留 <b>{compat["inquest_health_floor"]}/{compat["inquest_health_max"]}</b> 生命底线，
+旧约的斩杀判定也不能借此跳过真名调查或最终裁决。领主进入法阵绑定阶段后，三种上位契约攻击不再直接伤害它，
+而是分别为法阵补充稳定度：<b>十诫净界 +{compat["bound_stability"]["十诫净界"]}</b>、<b>创世净光 +{compat["bound_stability"]["创世净光"]}</b>、<b>伊甸敕界 +{compat["bound_stability"]["伊甸敕界"]}</b>。
+普通恶魔、罪仆与蝇群不享受这层仪式保护，仍承受真实百分比伤害。</div>
+
+<h3 class="sub-h">解约与统一 UI<span class="rolls">旧约／新约规则相同</span></h3>
+<div class="sys">
+<div><h3>解除上位契约</h3><p class="how">燃着的驱魔图腾 {rite["renounce_radius"]} 格内 · 已立约之书长按</p><p>旧约和新约都可这样解除：上位契约状态清空，书退回未立约，附近一支燃烧图腾随之消耗。它与七柱毁约不是同一套惩罚，不额外增加魔化或凋零。</p></div>
+<div><h3>状态与冷却</h3><p class="how">屏幕下方唯一 Actionbar 出口</p><p>新约生效时，持续状态把「魔化／圣痕」位置换成<strong>权柄完整度</strong>；施放后同一行显示「旧约 · 十诫净界」「新约 · 创世净光」「新约 · 伊甸敕界」或「新约 · 赦免」及剩余冷却。一次性施法提示仍只停留 2 秒。</p></div>
+</div>
+
+<div class="grid">{F.get("divine", "")}</div>
+</section>'''
+
 HEAD = u"""<title>破碎大陆</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,6 +121,8 @@ HEAD = u"""<title>破碎大陆</title>
   --r-holy:#FF3300; --r-devil:#DC6A62; --r-legend:#D9A02B; --r-lgd:#FFD700;
   --r-epic:#A275DE; --r-brave:#57C6D6; --r-none:#93897C;
   --r-rite:#E4C24A;
+  --r-ritual:#D596F2; --r-sephirah:#D596F2;
+  --r-covenant:#D4AF37; --r-authority:#62D9E8;
   --shadow:0 1px 0 rgba(0,0,0,.5);
 }
 
@@ -213,6 +283,8 @@ code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px;
 .card.r-lgd{--tier:var(--r-lgd)}
 .card.r-brave{--tier:var(--r-brave)}
 .card.r-rite{--tier:var(--r-rite)}
+.card.r-ritual{--tier:var(--r-ritual)} .card.r-sephirah{--tier:var(--r-sephirah)}
+.card.r-covenant{--tier:var(--r-covenant)} .card.r-authority{--tier:var(--r-authority)}
 .card[hidden]{display:none}
 .card-h{display:flex; gap:13px; align-items:flex-start; margin-bottom:11px}
 .card-id{min-width:0}
@@ -336,9 +408,10 @@ def build():
 <li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
 <li><a href="#s14"><span class="num">X</span>驱魔道具</a></li>
 <li><a href="#s12"><span class="num">XI</span>七十二柱契约</a></li>
-<li><a href="#s13"><span class="num">XII</span>佣兵小队</a></li>
-<li><a href="#s10"><span class="num">XIII</span>破碎大陆</a></li>
-<li><a href="#s11"><span class="num">XIV</span>指令速查</a></li>
+<li><a href="#s15"><span class="num">XII</span>卡巴拉上位契约</a></li>
+<li><a href="#s13"><span class="num">XIII</span>佣兵小队</a></li>
+<li><a href="#s10"><span class="num">XIV</span>破碎大陆</a></li>
+<li><a href="#s11"><span class="num">XV</span>指令速查</a></li>
 </ol></nav>''')
 
     a('<main>')
@@ -372,7 +445,7 @@ def build():
 <div><h3>锻造</h3><p class="how">冶炼石 + 生铁 + 剑胚 · 灵魂火上方</p><p>三件材料同时丢在<b>灵魂火</b>上即可锻造出随机武器。普通<b>冶炼石</b>产出 <code>rpg:trial/sword</code>，<b>传说冶炼石</b>产出 <code>rpg:trial/epic_sword</code>，成功后灵魂火熄灭。</p></div>
 <div><h3>武器升级</h3><p class="how">武器 + 铸造之石 · 地面 1 格内</p><p>铸造之石一次提供 100 点武器经验。武器每升一级，攻击伤害 +1%、攻击速度 +0.97%，等级与经验实时显示在 Lore 第 9–11 行。</p></div>
 <div><h3>武器分支</h3><p class="how">武器 + 音乐唱片 · 地面 1 格内</p><p>六张唱片把武器导向<b>神圣</b>（信仰／存续／不屈）或<b>恶魔</b>（恶念／睚眦／傲慢）分支，为武器加上对应的词缀与攻击特效，唱片消耗。</p></div>
-<div><h3>玩家面板</h3><p class="how">手持玩家头颅</p><p>手持「玩家面板」头颅时，Lore 会实时刷新玩家等级、血量、攻击速度、攻击伤害、盔甲韧性与护甲值。</p></div>
+<div><h3>玩家面板</h3><p class="how">切换到「玩家面板」头颅</p><p>面板 Lore 会实时刷新等级、生命、攻击、攻速、护甲、韧性、驱魔等级、阅历、侵蚀（或权柄完整度）与契约序列。切换到面板时会打开可点击功能页，可直接查看驱魔师档案、七柱真名调查、契约与侵蚀、佣兵小队，或切换个人 HUD；切走再切回即可重开。立下新约后，入口动态切为「契约·权柄」，页标题切为「契约与权柄」，「当前侵蚀」行则换成 <b>0–100 的权柄完整度</b>并标明「新约 · 权柄」。</p></div>
 <div><h3>试炼与宝库</h3><p class="how">不祥试炼刷怪笼 · 宝库</p><p>刷怪笼进入冷却时触发奖励流程；宝库钥匙掉落走 <code>rpg:loot/loot</code>（普通）与 <code>loot_ominous</code>（不祥），产出下界之星形态的战利品凭证，落地后再兑换成实际物品。</p></div>
 </div>
 </section>''')
@@ -505,11 +578,11 @@ def build():
 <p>包里一直有一条圣／魔轴：圣器与罪遗武器各自带着 <code>holy_weapon_tag</code> 与 <code>devil_weapon_tag</code>。
 从这一版起它有了长期后果——<strong>握着魔器的人会慢慢变成它的主人</strong>。
 魔化值不显示在侧边栏，而是屏幕下方那条 actionbar。</p>
-<div class="note"><b>屏幕下方只有一行，所以全包只留一个出口。</b>武器蓄力条、一次性小提示、魔化与契约冷却
+<div class="note"><b>屏幕下方只有一行，所以全包只留一个出口。</b>驱魔稳定度、武器蓄力条、一次性小提示、魔化／权柄与契约冷却
 都走同一条 <code>rpg:hud/hud</code>，按三档优先级挑：
-<br>① <b>蓄力条</b>（沉锚／熔流／缠绕／逆圣化）——它是<b>正在进行的动作</b>的实时反馈，压过一切；
+<br>① <b>正在进行的动作</b>（驱魔法阵稳定度，或沉锚／熔流／缠绕／逆圣化等蓄力条）——实时反馈压过一切；
 <br>② <b>一次性提示</b>（配装、入队、钱不够…）——2 秒，晚看到没关系；
-<br>③ <b>持续状态</b>——魔化（或圣痕）与契约冷却<b>并排</b>画在同一行，两者都是状态，不该互相顶掉。
+<br>③ <b>持续状态</b>——魔化（或圣痕、新约的权柄完整度）、<b>当前七柱契约对象</b>、七柱冷却与上位契约技能冷却并排画在同一行；对象即使冷却结束也一直保留。
 <br>三者互不覆盖：蓄力结束、提示过期，下一档自己就回来了。</div>
 
 <h3 class="sub-h">魔化值<span class="rolls">每 2 秒结算一次 · 上限 100</span></h3>
@@ -543,29 +616,87 @@ def build():
 <div class="note"><b>不受控的挥砍只打非玩家生物。</b>多人服里不该由堕落替你决定去打谁——
 伤害仍然记在<b>你</b>头上，但目标不会是别的玩家。</div>
 
-<h3 class="sub-h">降临<span class="rolls">堕落走满 · 它只待 30 秒</span></h3>
+<h3 class="sub-h">降临<span class="rolls">堕落走满 · 最多停留 10 分钟</span></h3>
 <p>有东西从这个人身上<strong>挣了出来</strong>：地面炸开，一位<b>[DEVIL]</b> 落到他面前——
-<b>120 生命 / 11 攻击 / 48 格索敌</b>，见谁打谁。</p>
+<b>700 生命 / 11 攻击 / 48 格索敌</b>，见谁打谁。</p>
 <div class="note"><b>你看不见它。</b>它和本包原有的恶魔 boss 是同一族——挂着同一个 <code>devil</code> 标签，
 于是自动继承那一套：<b>常驻隐身</b>、周身不断渗出的黑烟与墨。你只能靠烟找它。
-它<b>只待 30 秒</b>，时间一到自己散掉——不是被你打退的。三十秒里你打不打得动它，是另一回事。</div>
-<p>而且<strong>各出各的手，而且每位三招</strong>。招式不是另编的，取自他自己的<b>罪器与柱中之力</b>——
+它最多停留<b>10 分钟</b>；进入显形仪式后倒计时暂停，给完整宣判留下时间。</div>
+<p>而且<strong>各出各的手，而且每位五招</strong>。招式不是另编的，取自他自己的<b>罪器与柱中之力</b>——
 借的是同一位魔神的力，从人身上挣出来之后，表现理应还是那一套。每 <b>3.5 秒</b>出手一次，12 格内有人才出手，
-<b>三招掷一招</b>——同一位打两次不会长得一样。</p>
+<b>五招掷一招</b>，并记住上一招；随机撞号时自动顺延，所以不会连续重复。每次出招，双层 Actionbar 的上层会以该恶魔的本色宣告<b>恶魔名、招式名与短预警</b>；下层的堕落、契约与蓄力状态仍可同时显示。</p>
+<div class="note"><b>第四次出手立下罪约。</b>它不会混在五招随机池里：先用专属配色与警报声<b>蓄势 1.5 秒</b>，蓄势期间停止普通攻击，再结算范围效果。
+计数与蓄势都保存在恶魔自己身上，因此多只恶魔同时存在也不会串招；所有罪约均<b>不破坏地形</b>。</div>
 <div class="tw"><table>
-<thead><tr><th>降临者</th><th>三招</th></tr></thead>
+<thead><tr><th>降临者</th><th>五招</th><th>罪约</th></tr></thead>
 <tbody>
-<tr><td><b>路西法</b><span class="rolls"> 傲慢</span></td><td><b>［原罪］</b>沿视线破土，八颗尖牙同路（认主，不咬自己）<br><b>［蛇矛］</b>一记贯穿，连着把人钉退<br><b>［高踞］</b>把人举起来，再让他自己摔下去</td></tr>
-<tr><td><b>利维坦</b><span class="rolls"> 嫉妒</span></td><td><b>［沉锚］</b>漩涡把人拖向他并碾一次<br><b>［溺没］</b>在这儿你不会呼吸：窒息伤害 + 缓慢挖掘疲劳<br><b>［嫉羡］</b><b>抹掉你身上所有增益</b>，自己拿走速度</td></tr>
-<tr><td><b>亚巴顿</b><span class="rolls"> 怠惰</span></td><td><b>［收割］</b>周身爆发，每收一个他回一颗心<br><b>［沉眠］</b>缓慢 IV、挖掘疲劳 III、虚弱 II<br><b>［深渊之口］</b>把人拽到面前，附凋零</td></tr>
-<tr><td><b>别西卜</b><span class="rolls"> 暴食</span></td><td><b>［余烬］</b>灰烬锥，附饥饿<br><b>［吞噬］</b>吃掉你那一顿：饥饿 IV，他自己回血<br><b>［蝇群］</b>放出三只<b>蝇</b>（20 秒后自散）</td></tr>
-<tr><td><b>萨麦尔</b><span class="rolls"> 暴怒</span></td><td><b>［毒雾］</b>剧毒与凋零并存<br><b>［怒斩］</b>直接冲到你面前，一记重斩<br><b>［死亡低语］</b>不必碰到你，凋零 III</td></tr>
-<tr><td><b>贝利尔</b><span class="rolls"> 色欲</span></td><td><b>［朝拜］</b>七格内全都低头<br><b>［迷乱］</b>反胃 + 短暂失衡<br><b>［献身］</b><b>抽你的血补自己</b></td></tr>
-<tr><td><b>玛门</b><span class="rolls"> 贪婪</span></td><td><b>［点金］</b>抽你的经验补自己<br><b>［夺财］</b><b>吞掉周围十格内所有掉落物</b>，每吞一件回一口<br><b>［重金一击］</b>一次结清：12 点伤害 + 扣 40 点经验</td></tr>
-<tr><td><b>无名者</b><span class="rolls"> 无契约</span></td><td>没有名字的东西不会花样，只会一把把地掏：伤害 + 失明</td></tr>
+<tr><td><b>路西法</b><span class="rolls"> 傲慢</span></td><td><b>［原罪］</b>沿视线破土，八颗尖牙同路<br><b>［蛇矛］</b>贯穿并钉退<br><b>［高踞］</b>升空摔落<br><b>［失坠］</b>群体折翼升空<br><b>［王座回绝］</b>斥退近身者</td><td><b>［万蛇加冕］</b><br>三圈蛇牙破土，范围伤害并升空</td></tr>
+<tr><td><b>利维坦</b><span class="rolls"> 嫉妒</span></td><td><b>［沉锚］</b>漩涡拖拽<br><b>［溺没］</b>窒息与压制<br><b>［嫉羡］</b>褫夺增益<br><b>［逆潮］</b>近者推离、远者卷近<br><b>［海渊重压］</b>十格深压</td><td><b>［妒海沉城］</b><br>十二格深潮回卷，拖拽、窒息并封住脚步</td></tr>
+<tr><td><b>亚巴顿</b><span class="rolls"> 怠惰</span></td><td><b>［收割］</b>伤害并回血<br><b>［沉眠］</b>多重迟滞<br><b>［深渊之口］</b>拖拽凋零<br><b>［停摆］</b>短暂完全定身<br><b>［死寂］</b>黑暗、疲劳与凋零</td><td><b>［终末收割］</b><br>十格灵魂收割，凋零目标并逐个反哺</td></tr>
+<tr><td><b>别西卜</b><span class="rolls"> 暴食</span></td><td><b>［余烬］</b>灰烬饥饿<br><b>［吞噬］</b>吸血<br><b>［蝇群］</b>放出三只饥蝇<br><b>［腐宴］</b>群体腐坏<br><b>［饥啮］</b>重咬最近目标</td><td><b>［万蝇饕宴］</b><br>黄绿灰幕覆盖战场，群体饥饿并孵出饥蝇</td></tr>
+<tr><td><b>萨麦尔</b><span class="rolls"> 暴怒</span></td><td><b>［毒雾］</b>剧毒凋零<br><b>［怒斩］</b>突进重斩<br><b>［死亡低语］</b>远距凋零<br><b>［血猎］</b>循血突入<br><b>［怒潮］</b>赤环斥退</td><td><b>［血怒天罚］</b><br>循血突进后爆发血红环斩，剧毒与凋零并落</td></tr>
+<tr><td><b>贝利尔</b><span class="rolls"> 色欲</span></td><td><b>［朝拜］</b>强制低首<br><b>［迷乱］</b>感官倒悬<br><b>［献身］</b>抽血自愈<br><b>［顾盼］</b>强转所有视线<br><b>［欲障］</b>紫幕压制</td><td><b>［紫宴朝圣］</b><br>将意志拖向宴席中央，压制、迷乱并吸血</td></tr>
+<tr><td><b>玛门</b><span class="rolls"> 贪婪</span></td><td><b>［点金］</b>经验抽取<br><b>［夺财］</b>吞掉落物<br><b>［重金一击］</b>重伤结算<br><b>［复利］</b>群体经验血税<br><b>［金牢］</b>黄金定身</td><td><b>［黄金终审］</b><br>吞尽十二格掉落物，重创并扣除 80 点经验</td></tr>
+<tr><td><b>无名者</b><span class="rolls"> 无契约</span></td><td>没有名字的东西不会花样，只会一把把地掏：伤害 + 失明</td><td><b>［无名蚀界］</b><br>暗红黑蚀覆盖十格，施加黑暗、失明与凋零</td></tr>
 </tbody></table></div>
-<div class="note"><b>它死的时候会炸。</b>被打死的降临者当场爆开（威力等同一发 TNT）——站得太近，赢了也会挨一下。
-<br><b>自己散掉的那一只不炸</b>：时间到了它只是消失。炸的只有被你打死的。</div>
+<h3 class="sub-h">真名调查与四阶段驱魔<span class="rolls">七柱领主 · 三证齐全</span></h3>
+<p>恶魔在招式提示里喊出的名字只是<b>自报之名</b>，不能直接写进仪式判词。玩家必须携带圣器，
+亲眼见证同一领主<b>五种招式中的任意三种</b>；每一种只记一次罪证，三证齐全后，真名与弱点媒介永久记入该玩家的调查档案。</p>
+<div class="note"><b>真名档案会跨战斗保留。</b>再次召唤已经调查完成的领主时，会直接提示已确证真名，这是存档进度而不是跳过见证。若只想重新测试调查流程，可由该玩家执行 <code>/function rpg:inquest/reset_self</code>；它只清空执行者自己的七柱调查记录。</div>
+<div class="tw"><table>
+<thead><tr><th>领主</th><th>弱点媒介</th><th>调查所得</th></tr></thead><tbody>
+<tr><td>路西法</td><td>羽毛 · 谦卑之羽</td><td>傲慢无法承受自愿的低伏</td></tr>
+<tr><td>利维坦</td><td>海晶砂 · 无主之潮</td><td>嫉妒惧怕不属于任何人的馈赠</td></tr>
+<tr><td>亚巴顿</td><td>时钟 · 不眠之钟</td><td>怠惰畏惧持续前行的时间</td></tr>
+<tr><td>别西卜</td><td>毒马铃薯 · 腐宴残食</td><td>暴食无法吞下已经腐败的宴席</td></tr>
+<tr><td>萨麦尔</td><td>雪球 · 熄怒之雪</td><td>暴怒会被不还手的寒意冷却</td></tr>
+<tr><td>贝利尔</td><td>紫水晶碎片 · 清醒之镜</td><td>色欲惧怕不被幻象改写的映照</td></tr>
+<tr><td>玛门</td><td>金锭 · 自愿之金</td><td>贪婪无法夺走主动舍弃之物</td></tr>
+</tbody></table></div>
+<div class="sys">
+<div><h3>Ⅰ · 镇压</h3><p class="how">生命降到 420 / 700</p><p>领主锁血并获得完全抗性；它仍会出招，尚未收齐的罪证可以继续观察。</p></div>
+<div><h3>Ⅱ · 镇魔</h3><p class="how">真名已知者 · 靠近燃烧图腾</p><p>领主进入 Boss 二阶段并被法阵钉在中心，不再受攻击、爆炸或技能击退。开幕冲击波会把十格内玩家送到距中心十格的位置，短暂预警后七罪领域覆盖阵外战场。</p></div>
+<div><h3>Ⅲ · 固阵</h3><p class="how">稳定度 50 → 100</p><p>稳定度常驻 Actionbar。攻击被压制的领主每次提高 2 点；靠近五格后右键布下对应媒介、残页、圣钉、净罪香或粉笔可大幅提高。恶魔出招和挣脱会持续降低。</p></div>
+<div><h3>Ⅳ · 裁决</h3><p class="how">稳定度达到 100 · 15 秒内选择</p><p>点击聊天栏中的消灭、放逐、封印或契约；无人选择时默认放逐。稳定度归零或法阵失败时不会重置战斗，而会强制进入消灭步骤。</p></div>
+</div>
+<h3 class="sub-h">七罪压场轮换<span class="rolls">每位 3 套 · 共 21 套</span></h3>
+<div class="note"><b>每套罪域都是三段式 AOE。</b>落域先造成一次范围伤害，随后发生二次震荡，最终以高亮粒子、命中反馈和爆裂音效完成终末爆发。法阵中心四格仍是唯一完整庇护区。</div>
+<div class="tw"><table><thead><tr><th>领主</th><th>压场一</th><th>压场二</th><th>压场三</th></tr></thead><tbody>
+<tr><td>路西法</td><td>王冠坠落：升空、虚弱</td><td>蛇庭敕令：蛇牙、毒与迟滞</td><td>高座拒斥：震离法阵、公开标记</td></tr>
+<tr><td>利维坦</td><td>妒海沉城：深度迟滞</td><td>逆潮回卷：位置逆流</td><td>海渊重压：黑暗、溺伤</td></tr>
+<tr><td>亚巴顿</td><td>无刻停摆：行动封锁</td><td>死寂收割：凋零、虚弱</td><td>深渊张口：黑暗、升空</td></tr>
+<tr><td>别西卜</td><td>腐宴开席：饥饿、中毒</td><td>万蝇蔽日：失明、虚弱</td><td>饥啮回廊：反胃、咬伤</td></tr>
+<tr><td>萨麦尔</td><td>怒潮焚界：焚烧</td><td>血猎标记：发光、凋零</td><td>暴怒裂阵：震退近阵者</td></tr>
+<tr><td>贝利尔</td><td>紫宴朝圣：迷乱、失明</td><td>顾盼夺心：魅惑离阵</td><td>欲障迷宫：黑暗、浮空</td></tr>
+<tr><td>玛门</td><td>黄金牢城：定身</td><td>复利追征：经验税</td><td>什一血税：生命税</td></tr>
+</tbody></table></div>
+<div class="note"><b>普通武器不能跳过仪式。</b>七柱领主在 420 生命处进入镇魔二阶段；法阵超时、被移除或稳定度归零，都会直接写下“消灭”，领主以 700 生命狂暴复苏。
+成功逐离会先收走死亡探针，因此不会触发恶魔的临死冲击，也不会破坏地形。</div>
+<h3 class="sub-h">恶魔反仪式<span class="rolls">稳定度 50 起步 · 100 裁决 · 0 强制消灭</span></h3>
+<div class="tw"><table><thead><tr><th>罪性</th><th>反仪式</th><th>处置</th></tr></thead><tbody>
+<tr><td>路西法 · 傲慢</td><td>制造三个可攻击名号，误击伪名损失稳定度</td><td>攻击真正的“路西法”</td></tr>
+<tr><td>利维坦 · 嫉妒</td><td>复制最近玩家主副手与四件护甲</td><td>十秒内击破妒影</td></tr>
+<tr><td>亚巴顿 · 怠惰</td><td>直接拖损稳定度并施加缓慢、挖掘疲劳</td><td>净罪香清除，继续攻击或布置器物固阵</td></tr>
+<tr><td>别西卜 · 暴食</td><td>吞掉六格内七种弱点媒介之一，恢复至 455 生命</td><td>不要把备用媒介留在地上</td></tr>
+<tr><td>萨麦尔 · 暴怒</td><td>击碎法阵边缘、震开守阵者</td><td>提前投入银质圣钉可完整抵消一次</td></tr>
+<tr><td>贝利尔 · 色欲</td><td>魅惑守阵者离开中心并施加反胃</td><td>圣钉降低位移，迅速回阵</td></tr>
+<tr><td>玛门 · 贪婪</td><td>暂停仪式十秒索要 3 级经验、4 心或 1 金锭</td><td>点击一种赎金；逾期扣除 25 稳定度</td></tr>
+</tbody></table></div>
+<h3 class="sub-h">四种裁决<span class="rolls">同一领主 · 四类回报</span></h3>
+<div class="sys">
+<div><h3>消灭</h3><p class="how">最高战斗难度</p><p>解除仪式锁血，恶魔以 <b>700</b> 生命狂暴复苏；最终掉落对应<b>武器核心</b>，奖励 25 阅历。稳定度归零也会被迫走入此路线。</p></div>
+<div><h3>放逐</h3><p class="how">完整仪式</p><p>直接逐离，参与者获得经验、净去 10 魔化；裁决者奖励 20 阅历。</p></div>
+<div><h3>封印</h3><p class="how">消耗封魔灯</p><p>得到对应封印遗物并增加 5 魔化。携带时每十分钟检定一次，平均约一小时发生一次逃逸。</p></div>
+<div><h3>契约</h3><p class="how">保留柱中之力</p><p>得到对应未立约的柱之书与罪遗武器，并增加 25 魔化；签约规则仍按契约章节执行。</p></div>
+</div>
+<h3 class="sub-h">驱魔师成长<span class="rolls">独立阅历 · 五级 · 三路线</span></h3>
+<p>新罪证 +4、真名确证 +8、正确弱点 +6、解决反仪式 +2～3、裁决 +15～25。等级阈值为 <b>0 / 40 / 100 / 180 / 280</b>。
+切换到<b>玩家面板</b>，点击「驱魔师档案」即可查看阶位、阅历与仪式槽，并选择职业路线。</p>
+<div class="sys">
+<div><h3>审判</h3><p class="how">识破 · 打断 · 处决</p><p>优先获得告解铃与压制粉笔；高阶审判者主动选择消灭时，狂暴恶魔从 640 而非 700 生命复苏。</p></div>
+<div><h3>守护</h3><p class="how">固阵 · 减损 · 封印</p><p>优先获得银质圣钉与守御粉笔；二级起只要守在十格内，每次稳定度损失都会额外减免 4 点。</p></div>
+<div><h3>秘仪</h3><p class="how">净化 · 加速 · 通晓</p><p>优先获得净罪香与疾行粉笔；四级起本人守阵时，宣判每刻额外推进一次。</p></div>
+</div>
 <div class="note"><b>签谁的约，就要挨谁的打。</b>这是契约那一节最后一句话的兑现——
 你借他的力时省下的那些代价，他会亲自来收。
 <br>但<b>手里或身上有圣器</b>时，他蒙不住你的眼：黑暗与失明落不下来，其余 debuff 减半（见卷 IX）。</div>
@@ -583,16 +714,15 @@ def build():
 <br>② <b>神圣品质</b>的武具：<b>朗基努斯之枪</b>、<b>圣荆棘冠</b>、<b>都灵裹尸布</b>；
 <br>③ 任何加过<b>神圣分支</b>的武器（丢神圣唱片给武器）——<b>一、二、三级都算</b>。
 <br>身上带着圣器时魔化会缓慢消退；但魔化一旦到 <b>91 以上</b>，圣器<b>会灼手</b>。</div>
-<div class="note"><b>圣器还能挡住降临者的手段。</b>身上带着圣器时：
-<br>· <b>黑暗与失明落不下来</b>——恶魔蒙不住你的眼；
+<div class="note"><b>圣器还能护住视野。</b>身上带着圣器时：
+<br>· 任何来源的<b>黑暗与失明都无法停留</b>，拿起或穿上圣器时，已经存在的效果也会立刻散去；
 <br>· 其余 debuff（中毒、凋零、饥饿、缓慢、虚弱、挖掘疲劳）<b>时间减半</b>；
 <br>· <b>伤害不变</b>——圣器挡的是"看不见"，不是"打不疼"。
-<br>这一条是<b>自动派生</b>的：恶魔的每一招只要往玩家身上加 debuff，构建时就会
-自动生成一份"对方带着圣器"的版本，所以以后新加的招式不会漏判。</div>
+<br>视野免疫在每刻结算的最后统一执行；恶魔其余 debuff 则<b>自动派生</b>圣器版本，所以以后新加的招式不会漏判。</div>
 <div class="sys">
 <div><h3>蔓延</h3><p class="how">每 20 秒一拍 · 1/4 概率 · 8 格内</p><p>未被驱除的空缺者会把邻近村民也变成空壳。一个村子若无人过问，会慢慢整片烂掉。</p></div>
 <div><h3>撕壳</h3><p class="how">被圣器照住 3 秒，或挨第一次打</p><p>伪装撑不住，壳裂开，放出两只<b>空壳碎片</b>（凋灵怪，12 生命 / 4 攻击，30 秒后自行消散）；空壳本身获得速度 II 逃窜。</p></div>
-<div><h3>附身转移</h3><p class="how">杀死空缺者时</p><p>躯体死了，里面的东西<b>跳到 16 格内最近的村民身上</b>。<br><b>剑解决不了它</b>——这正是驱魔存在的理由。</p></div><div><h3>无处可去</h3><p class="how">杀死空缺者 · 附近再无躯体</p><p>它不再散成碎片，而是<b>自己找了一副躯体</b>：<strong>恶魔当场降临，一场硬仗开始</strong>。<br>你签了哪一柱，来的就是<b>那一位领主</b>（没签过的是无名者）——与卷九「降临」同一位，同一套招式。<br>不同的是它<b>待两分钟</b>，不是三十秒：这一只不是来收账的，是来打架的。</p></div>
+<div><h3>附身转移</h3><p class="how">杀死空缺者时</p><p>躯体死了，里面的东西<b>跳到 16 格内最近的村民身上</b>。<br><b>剑解决不了它</b>——这正是驱魔存在的理由。</p></div><div><h3>无处可去</h3><p class="how">杀死空缺者 · 附近再无躯体</p><p>它不再散成碎片，而是<b>自己找了一副躯体</b>：<strong>恶魔当场降临，一场硬仗开始</strong>。<br>七位领主中<b>随机降临一位</b>，与动手玩家签下的契约无关——这是空缺者招来的东西，不是玩家柱位的回声。<br>它最多停留<b>十分钟</b>，并进入同一套真名调查与四阶段驱魔。</p></div>
 </div>
 
 <h3 class="sub-h">驱魔仪式<span class="rolls">驱魔图腾 + 驱魔圣水</span></h3>
@@ -628,8 +758,8 @@ def build():
 
     # X rite kit -------------------------------------------------------------
     a('''<section class="plate" id="s14">
-<div class="plate-h"><span class="num">X</span><h2>驱魔道具</h2><span class="sub">四件 · 自成一族</span></div>
-<p>这四件功能上是同一套东西——<strong>显形、净化、仪式</strong>——所以从药剂与材料里摘了出来，单列一族。
+<div class="plate-h"><span class="num">X</span><h2>驱魔道具</h2><span class="sub">基础四件 · 七种仪式工具</span></div>
+<p>这些道具组成同一套<strong>显形、净化、仪式与封印</strong>工具链，因此从普通药剂与材料里摘出，单列一族。
 它们也是最容易到手的<strong>「圣器」</strong>：<b>手持或穿戴</b>任何一件圣器，空缺者就会在 16 格内显形，魔化也会缓慢消退。
 神圣品质的<b>朗基努斯之枪</b>、<b>圣荆棘冠</b>、<b>都灵裹尸布</b>同样算圣器——后两件<b>穿在身上</b>即可。</p>
 
@@ -651,10 +781,25 @@ def build():
 空壳额外挨 6 点伤害并大幅加速裂壳。「能指引恶魔的繁星，审判罪恶」。</p></div>
 </div>
 
+<h3 class="sub-h">仪式工具<span class="rolls">职业晋阶自动发放</span></h3>
+<div class="sys">
+<div><h3>真名残页</h3><p class="how">法阵五格内主手右键 · 不消耗</p><p>每位领主各一页。首次展开对应残页恢复 10 稳定度，纸页在使用者脚边贴地显现。</p></div>
+<div><h3>弱点媒介</h3><p class="how">对应领主 · 法阵五格内主手右键</p><p>七种媒介均有仪式版本，布下后恢复 25 稳定度。旧式丢入法阵仍兼容；右键在阵外不会消耗。</p></div>
+<div><h3>银质圣钉</h3><p class="how">法阵五格内主手右键 · 落点立钉</p><p>恢复 20 稳定度并固定边界；完整抵消萨麦尔下一次破阵，同时降低贝利尔的魅惑位移。</p></div>
+<div><h3>告解铃</h3><p class="how">主手右键 · 15 秒冷却 · 阵旁立铃</p><p>立刻打断伪名、妒影或赎金，恢复 12 稳定度。代价是敲铃者发光、虚弱，恶魔获得力量与速度。</p></div>
+<div><h3>净罪香</h3><p class="how">法阵五格内主手右键 · 落点燃香</p><p>清除六格内缓慢、虚弱、失明、黑暗与反胃，恢复 15 稳定度。</p></div>
+<div><h3>封魔灯</h3><p class="how">裁决阶段 · 法阵五格内主手右键</p><p>右键即消耗灯盏并选择封印，生成对应领主的封印遗物；灯影在仪式结束后停留六秒。</p></div>
+<div><h3>守御粉笔</h3><p class="how">法阵五格内主手右键</p><p>首次刻写恢复 10 稳定度，并降低后续稳定度损失。</p></div>
+<div><h3>压制粉笔</h3><p class="how">法阵五格内主手右键</p><p>首次刻写恢复 10 稳定度，每轮反仪式间隔延长四秒。</p></div>
+<div><h3>疾行粉笔</h3><p class="how">法阵五格内主手右键</p><p>首次刻写恢复 10 稳定度，被压制领主每次受击额外多恢复 1 点。</p></div>
+</div>
+<div class="note"><b>槽位与浓缩圣水。</b>普通法阵有一个粉笔槽位；附近存在五级驱魔师时有两个。
+四级自动解锁<b>浓缩驱魔圣水</b>，它能点燃图腾，并让圣水池每拍净化 2 点魔化。仪式物品均支持靠近后右键布置，并在使用者脚边留下贴地器物；旧式丢入仍兼容，摆件随所属法阵结束自动清理。</div>
+
 <div class="grid">''' + F["rite"] + '''</div>
 </section>''')
 
-    # X pacts ---------------------------------------------------------------
+    # XI pacts --------------------------------------------------------------
     P = json.load(io.open("../_pact.json", encoding="utf-8"))
     prow = []
     for q in P["pillars"]:
@@ -692,7 +837,9 @@ def build():
 而它的［买断］金箭会顺带触发柱位自己的［点金］。同一位魔神，两副面孔。</div>
 </section>''')
 
-    # XII squad -------------------------------------------------------------
+    a(divine_section())
+
+    # XIII squad ------------------------------------------------------------
     trow = "".join(
         '<tr><td><b style="color:%s">%s</b></td><td>%s</td>'
         '<td class="num">%d</td><td class="num">%d</td><td class="num">%d</td>'
@@ -704,7 +851,7 @@ def build():
     cheap, dear = Q["tiers"][0], Q["tiers"][-1]
 
     a('''<section class="plate" id="s13">
-<div class="plate-h"><span class="num">XII</span><h2>佣兵小队</h2><span class="sub">五等 · 掷点募兵 · 指哪打哪</span></div>
+<div class="plate-h"><span class="num">XIII</span><h2>佣兵小队</h2><span class="sub">五等 · 掷点募兵 · 指哪打哪</span></div>
 <p>一个<strong>独立分支</strong>，不与罪器、契约、驱魔任何一条耦合。你可以完全不碰前面那些体系，只带着一队人打。</p>
 
 <h3 class="sub-h">五等<span class="rolls">招到谁，是掷出来的</span></h3>
@@ -774,9 +921,9 @@ def build():
 人就凭空消失；所以踩到水会立刻召回雇主身边。</div>
 </section>''')
 
-    # VIII chapters -------------------------------------------------------
+    # XIV chapters --------------------------------------------------------
     a('''<section class="plate" id="s10">
-<div class="plate-h"><span class="num">XIII</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
+<div class="plate-h"><span class="num">XIV</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
 
 <div class="scroll-h">
 <p class="heb">אֶרֶץ הַשְּׁבָרִים</p>
@@ -799,9 +946,9 @@ def build():
 人类已经知道神的答案，所以人类终于可以写下自己的答案。</div>
 </section>''')
 
-    # IX commands ---------------------------------------------------------
+    # XV commands ---------------------------------------------------------
     a('''<section class="plate" id="s11">
-<div class="plate-h"><span class="num">XIV</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
+<div class="plate-h"><span class="num">XV</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
 <div class="tw"><table>
 <thead><tr><th>指令</th><th>作用</th></tr></thead>
 <tbody>
@@ -810,6 +957,7 @@ def build():
 <tr><td class="num">/function rpg:command/give/weapon</td><td>发放全部武器、护甲与药剂</td></tr>
 <tr><td class="num">/function rpg:command/give/item</td><td>发放符文、晶石与锻造材料</td></tr>
 <tr><td class="num">/function rpg:command/give/weapon_up_item</td><td>发放六张武器分支唱片</td></tr>
+<tr><td class="num">''' + D["test_give_command"] + '''</td><td>向执行者发放卡巴拉血契、十源质与真·十字架<span class="sm">仅测试／管理入口</span></td></tr>
 <tr><td class="num">/function rpg:command/setblock</td><td>在脚下布置试炼刷怪笼与宝库</td></tr>
 <tr><td class="num">/function rpg:command/summon</td><td>在脚下召唤恶魔 BOSS 与护卫</td></tr>
 <tr><td class="num">/function rpg:entities/drowned/king</td><td>召唤溺尸王与近卫</td></tr>

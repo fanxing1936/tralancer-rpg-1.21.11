@@ -135,6 +135,25 @@ def unbounded_player_picks():
     return out
 
 
+def nearest_player_uses():
+    """Every `@p` is a multiplayer ownership decision until proven otherwise.
+
+    Some are intentional (for example a world event choosing its nearest
+    recipient), but `@p` inside a weapon or pact function very often means the
+    author lost the original @s after switching execution to a projectile or
+    victim.  Keep these in a separate, short list so they cannot hide among
+    hundreds of ordinary @a traversals.
+    """
+    out = []
+    for name in all_funcs():
+        for i, line in enumerate(body(name).split("\n"), 1):
+            if line.strip().startswith("#"):
+                continue
+            for m in re.finditer(r"@p(?:\[[^\]]*\])?", line):
+                out.append((name, i, m.group(0), line.strip()[:120]))
+    return out
+
+
 def shared_scratch():
     """Fake-player scores written from a player-scoped context.
 
@@ -245,6 +264,15 @@ def main():
     rows = unbounded_player_picks()
     for name, i, sel, line in rows[:40]:
         print("  %-46s:%-4d %s" % (name, i, sel))
+    print("  ... %d total" % len(rows))
+
+    print()
+    print("=" * 78)
+    print("2b. @p nearest-player ownership decisions")
+    print("=" * 78)
+    rows = nearest_player_uses()
+    for name, i, sel, line in rows[:60]:
+        print("  %-46s:%-4d %-42s %s" % (name, i, sel, line))
     print("  ... %d total" % len(rows))
 
     print()

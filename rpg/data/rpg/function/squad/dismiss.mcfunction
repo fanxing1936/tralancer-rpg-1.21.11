@@ -7,5 +7,5 @@ execute at @s if entity @s[scores={rpg_sq_tier=2}] run loot spawn ~ ~1 ~ loot rp
 execute at @s if entity @s[scores={rpg_sq_tier=3}] run loot spawn ~ ~1 ~ loot rpg:squad/refund3
 execute at @s if entity @s[scores={rpg_sq_tier=4}] run loot spawn ~ ~1 ~ loot rpg:squad/refund4
 execute at @s if entity @s[scores={rpg_sq_tier=5}] run loot spawn ~ ~1 ~ loot rpg:squad/refund5
-execute as @a[tag=rpg.sq.boss,limit=1] run function rpg:hud/m16
+execute as @a[tag=rpg.sq.boss,limit=1] run function rpg:hud/m35
 kill @s

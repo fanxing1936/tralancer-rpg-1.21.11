@@ -5,5 +5,5 @@ particle dust{color:[1.0,0.99,0.92],scale:4} ~ ~1 ~ 1.2 0.8 1.2 0.25 180
 particle totem_of_undying ~ ~1 ~ 0.8 0.8 0.8 0.4 120
 playsound minecraft:item.totem.use master @a[distance=..48] ~ ~ ~ 1 1
 playsound minecraft:block.beacon.power_select master @a[distance=..48] ~ ~ ~ 1 0.8
-execute as @a[tag=rpg.inv.subject,distance=..7] run function rpg:rite/inv_grant
+execute as @a[tag=rpg.inv.subject,distance=..7] if score @s rpg_inv_id = #inv_id rpg_inv_id run function rpg:rite/inv_grant
 kill @s

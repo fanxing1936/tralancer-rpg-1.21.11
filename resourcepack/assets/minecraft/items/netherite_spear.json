@@ -51,6 +51,31 @@
         }
       },
       {
+        "threshold": 1110004,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "gui",
+                "ground",
+                "fixed",
+                "on_shelf"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "rpg:item/long_stick"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "rpg:item/long_stick_in_hand"
+          }
+        }
+      },
+      {
         "threshold": 1110014,
         "model": {
           "type": "minecraft:select",

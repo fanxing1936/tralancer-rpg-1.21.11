@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{rpg_divine_pact:1b}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:divine/trigger"
+  }
+}

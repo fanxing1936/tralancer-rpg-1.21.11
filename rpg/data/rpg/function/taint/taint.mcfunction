@@ -3,3 +3,4 @@
 scoreboard players add @s rpg_taint_t 1
 execute if entity @s[scores={rpg_taint_t=40..}] run function rpg:taint/step
 execute if entity @s[scores={rpg_holy=1..}] run function rpg:taint/holy
+function rpg:inquest/player_tick

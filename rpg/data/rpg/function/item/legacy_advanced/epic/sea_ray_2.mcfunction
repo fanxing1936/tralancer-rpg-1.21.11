@@ -1,0 +1,3 @@
+particle dust_color_transition{from_color:[1.0,0.38,0.92],to_color:[1.0,0.78,0.0],scale:2} ~ ~ ~ 0.12 0.12 0.12 0.02 4 force
+execute if entity @e[distance=..0.75,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker,type=!minecraft:armor_stand,limit=1,sort=nearest] run damage @e[distance=..0.75,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker,type=!minecraft:armor_stand,limit=1,sort=nearest] 9 minecraft:drown by @s
+execute unless entity @e[distance=..0.75,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker,type=!minecraft:armor_stand,limit=1,sort=nearest] if block ~ ~ ~ minecraft:air positioned ^ ^ ^1 run function rpg:item/legacy_advanced/epic/sea_ray_3

@@ -136,9 +136,11 @@ def main():
             i += 1
     if WORLD:
         game += ["--quickPlayPath", os.path.join(RUNDIR, "quickplay.json"),
-                 "--quickPlaySingleplayer", WORLD]
+                 # jopt-simple optional args must use --option=value; as two
+                 # tokens the world name is parsed as a stray positional arg.
+                 "--quickPlaySingleplayer=" + WORLD]
     print("game args: %s" % " ".join(game))
-    cmd = [JAVA] + jvm + ["-Xmx2G"] + [doc["mainClass"]] + game
+    cmd = [JAVA] + jvm + ["-Xmx" + os.environ.get("MC_CLIENT_XMX", "2G")] + [doc["mainClass"]] + game
 
     print("launching 1.21.11 (Fabric)...")
     proc = subprocess.Popen(cmd, cwd=RUNDIR,
@@ -156,7 +158,7 @@ def main():
             marker = ("Time elapsed" if WORLD else "textures/atlas/items.png-atlas")
             if "Created: " in txt and marker in txt:
                 ready = True
-                time.sleep(8)
+                time.sleep(int(os.environ.get("MC_CAPTURE_DELAY", "8")))
                 break
     if proc.poll() is None:
         proc.terminate()

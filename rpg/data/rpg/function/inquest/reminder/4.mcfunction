@@ -1,0 +1,1 @@
+tellraw @s ["",{"text":"[调查档案] ","color":"#DAA520","bold":true,"italic":false},{"text":"别西卜","color":"#5A6B1E","bold":true,"italic":false},{"text":"的真名已确证；向燃烧图腾投入","color":"gray","italic":false},{"text":"毒马铃薯 · 腐宴残食","color":"white","bold":true,"italic":false},{"text":"。","color":"gray","italic":false}]

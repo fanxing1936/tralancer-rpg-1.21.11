@@ -1,0 +1,12 @@
+tick freeze
+execute in minecraft:overworld run kill @e[tag=rpg.qa.gatherdiag]
+execute in minecraft:overworld run summon minecraft:marker 8 80 0 {Tags:["rpg.lt.gathering","rpg.qa.gatherdiag"]}
+scoreboard players set @e[tag=rpg.qa.gatherdiag,type=minecraft:marker,limit=1] rpg_lt_gather 23
+execute in minecraft:overworld run summon minecraft:item_display 12 80 0 {Tags:["rpg.ritual.life_tree.prop","rpg.qa.gatherdiag"]}
+execute in minecraft:overworld run summon minecraft:item_display 8 80 -1.58 {Tags:["rpg.ritual.life_tree.cross","rpg.qa.gatherdiag"]}
+function rpg:divine/gather/step
+execute if entity @e[tag=rpg.qa.gatherdiag,type=minecraft:marker] run say GATHER_DIAG_MARKER_REMAINS
+execute if entity @e[tag=rpg.qa.gatherdiag,type=minecraft:item_display] run say GATHER_DIAG_DISPLAY_REMAINS
+execute unless entity @e[tag=rpg.qa.gatherdiag] run say GATHER_DIAG_FINISH_PASS
+execute in minecraft:overworld run kill @e[tag=rpg.qa.gatherdiag]
+tick unfreeze

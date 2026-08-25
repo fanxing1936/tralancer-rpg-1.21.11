@@ -1,0 +1,15 @@
+# 最坏人工场景：七柱五职共三十五名活动罪仆。
+execute in minecraft:overworld run kill @e[tag=rpg.demon.minion]
+gamerule send_command_feedback false
+tick sprint 200
+execute in minecraft:overworld positioned -30 80 0 run function rpg:minion/summon/lucifer/all
+execute in minecraft:overworld positioned -20 80 0 run function rpg:minion/summon/leviathan/all
+execute in minecraft:overworld positioned -10 80 0 run function rpg:minion/summon/abaddon/all
+execute in minecraft:overworld positioned 0 80 0 run function rpg:minion/summon/beelzebub/all
+execute in minecraft:overworld positioned 10 80 0 run function rpg:minion/summon/samael/all
+execute in minecraft:overworld positioned 20 80 0 run function rpg:minion/summon/belial/all
+execute in minecraft:overworld positioned 30 80 0 run function rpg:minion/summon/mammon/all
+say MINION_PERF_35_SUMMONED
+tick sprint 200
+execute in minecraft:overworld run kill @e[tag=rpg.demon.minion]
+say MINION_PERF_PROBE_PASS

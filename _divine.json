@@ -1,0 +1,74 @@
+{
+  "test_give_command": "/function rpg:ritual/life_tree/give/all",
+  "ritual": {
+    "node": "Daath",
+    "renounce_radius": 6,
+    "renounce_consumes_lit_totem": true,
+    "old_reward_once_per_player": true
+  },
+  "sephiroth": [
+    {"n": 1, "name": "王冠", "latin": "Kether"},
+    {"n": 2, "name": "智慧", "latin": "Chokmah"},
+    {"n": 3, "name": "理解", "latin": "Binah"},
+    {"n": 4, "name": "慈悲", "latin": "Chesed"},
+    {"n": 5, "name": "严厉", "latin": "Geburah"},
+    {"n": 6, "name": "美丽", "latin": "Tiphareth"},
+    {"n": 7, "name": "胜利", "latin": "Netzach"},
+    {"n": 8, "name": "光辉", "latin": "Hod"},
+    {"n": 9, "name": "基础", "latin": "Yesod"},
+    {"n": 10, "name": "王国", "latin": "Malkuth"}
+  ],
+  "old": {
+    "passive_interval_seconds": 20,
+    "regeneration_seconds": 1,
+    "regeneration_level": 1,
+    "taint_reduction_per_batch": 2,
+    "ability": "十诫净界",
+    "cooldown_seconds": 30,
+    "radius": 10,
+    "damage_percent_max_health": 20,
+    "execute_at_or_below_percent": 25
+  },
+  "new": {
+    "authority_max": 100,
+    "beam": {
+      "ability": "创世净光",
+      "input": "普通长按",
+      "cooldown_seconds": 20,
+      "range": 20,
+      "hit_radius": 2.5,
+      "damage_percent_max_health": 25,
+      "base_damage": 15,
+      "glowing_seconds": 8,
+      "weakness_seconds": 6
+    },
+    "field": {
+      "ability": "伊甸敕界",
+      "input": "潜行长按",
+      "cooldown_seconds": 30,
+      "radius": 8,
+      "damage_percent_max_health": 15,
+      "base_damage": 10,
+      "enemy_effects": ["缓慢 III（8 秒）", "虚弱 II（8 秒）", "发光（8 秒）"],
+      "clears": ["失明", "黑暗", "凋零", "中毒", "缓慢", "虚弱"],
+      "ally_effects": ["生命恢复 II（6 秒）", "抗性 I（6 秒）", "伤害吸收 II（6 秒）"]
+    },
+    "borrow": {
+      "ability": "赦免",
+      "input": "使用任意七罪契约书",
+      "cooldown_seconds": 15,
+      "pillars": 7,
+      "adds_taint": false,
+      "applies_bane": false
+    }
+  },
+  "ritual_compatibility": {
+    "inquest_health_floor": 175,
+    "inquest_health_max": 700,
+    "bound_stability": {
+      "十诫净界": 20,
+      "创世净光": 25,
+      "伊甸敕界": 15
+    }
+  }
+}

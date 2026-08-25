@@ -1,5 +1,5 @@
 # 买断。它不掷点 —— 贪婪不赊账，这一箭的价钱是写死的。
-function rpg:hud/m3
+function rpg:hud/m22
 playsound minecraft:block.amethyst_block.resonate player @s ~ ~ ~ 1 0.8
 playsound minecraft:entity.player.levelup player @s ~ ~ ~ 0.7 0.6
 execute at @s anchored eyes run particle wax_on ^ ^ ^1 0.3 0.3 0.3 0.1 40

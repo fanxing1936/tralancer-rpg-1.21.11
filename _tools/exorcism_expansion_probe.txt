@@ -1,0 +1,19 @@
+# 七反仪式、工具、职业阈值与消灭结局状态探针。
+function rpg:qa/exp_setup
+function rpg:qa/counter_probe
+scoreboard players get @e[tag=rpg.qa.anchor,limit=1] rpg_ex_stab
+scoreboard players get @e[tag=rpg.qa.anchor,limit=1] rpg_ex_time
+scoreboard players get @e[tag=rpg.qa.anchor,limit=1] rpg_ex_kind
+scoreboard players get @e[tag=rpg.qa.anchor,limit=1] rpg_ex_ransom
+data get entity @e[tag=rpg.qa.boss,limit=1] Health
+data get entity @e[type=minecraft:item,tag=rpg.qa.exp,limit=1] Item.count
+function rpg:qa/tool_probe
+tag @e[tag=rpg.qa.anchor,limit=1] list
+scoreboard players get @e[tag=rpg.qa.anchor,limit=1] rpg_ex_slots
+function rpg:qa/career_probe
+scoreboard players get @e[tag=rpg.qa.career,limit=1] rpg_ex_lvl
+function rpg:qa/eliminate_probe
+scoreboard players get @e[tag=rpg.qa.boss,limit=1] rpg_ex_stage
+data get entity @e[tag=rpg.qa.boss,limit=1] Health
+tag @e[tag=rpg.qa.soul,limit=1] list
+kill @e[tag=rpg.qa.exp]

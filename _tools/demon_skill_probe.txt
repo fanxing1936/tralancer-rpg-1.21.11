@@ -1,0 +1,12 @@
+# 在同一服务器刻内调用全部新增技能，避免无玩家环境中的自然卸载干扰探针。
+function rpg:qa/demon_skills
+scoreboard players get @e[type=minecraft:vindicator,tag=rpg.qa1,limit=1] rpg_dm_last
+scoreboard players get @e[type=minecraft:vindicator,tag=rpg.qa1,limit=1] rpg_case1
+tag @e[type=minecraft:vindicator,tag=rpg.qa1,limit=1] list
+kill @e[type=minecraft:vindicator,tag=rpg.qa1]
+kill @e[type=minecraft:vindicator,tag=rpg.qa2]
+kill @e[type=minecraft:vindicator,tag=rpg.qa3]
+kill @e[type=minecraft:vindicator,tag=rpg.qa4]
+kill @e[type=minecraft:vindicator,tag=rpg.qa5]
+kill @e[type=minecraft:vindicator,tag=rpg.qa6]
+kill @e[type=minecraft:vindicator,tag=rpg.qa7]

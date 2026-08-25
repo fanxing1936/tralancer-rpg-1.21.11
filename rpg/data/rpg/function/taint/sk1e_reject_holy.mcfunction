@@ -1,0 +1,4 @@
+# 对方身上带着圣器：黑暗与失明落不下来，其余 debuff 减半。
+execute facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^-3
+damage @s 6 minecraft:magic by @e[tag=rpg.dm.cast,limit=1]
+effect give @s minecraft:slowness 2 1 true

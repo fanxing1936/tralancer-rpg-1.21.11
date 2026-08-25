@@ -1,5 +1,6 @@
 #!/bin/sh
-# Regenerate the codex from the data pack's own item / loot / entity data.
+# Regenerate the codex from pack item / loot data and reviewed system JSON
+# (_pact.json, _squad.json, _divine.json).
 set -e
 cd "$(dirname "$0")"
 python extract_items.py   ../rpg

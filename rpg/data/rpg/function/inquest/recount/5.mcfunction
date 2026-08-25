@@ -1,0 +1,7 @@
+# 罪证标签才是事实来源；分数只是显示缓存，不能继承旧测试残值。
+scoreboard players set @s rpg_case5 0
+execute if entity @s[tag=rpg.clue.5.1] run scoreboard players add @s rpg_case5 1
+execute if entity @s[tag=rpg.clue.5.2] run scoreboard players add @s rpg_case5 1
+execute if entity @s[tag=rpg.clue.5.3] run scoreboard players add @s rpg_case5 1
+execute if entity @s[tag=rpg.clue.5.4] run scoreboard players add @s rpg_case5 1
+execute if entity @s[tag=rpg.clue.5.5] run scoreboard players add @s rpg_case5 1

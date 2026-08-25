@@ -15,8 +15,7 @@ python opt_cascade.py ../rpg
 python opt_misc.py  ../rpg
 # 苦力怕的变种体系整段摘掉（作者决定）——苦力怕就是原版苦力怕
 python drop_creeper_variants.py ../rpg
-# 攻击用的爆炸改成真正瞬发：苦力怕换成 fuse:0 的 TNT
-# （ignited 只是点燃引信，还要鼓 1.5 秒；fuse:0 的 TNT 同刻就没了）
+# 攻击瞬爆改成粒子、声音与分段伤害：同刻结算，但不生成 TNT、不破坏地形
 python instant_boom.py ../rpg
 python add_items.py ../resourcepack ../rpg
 python add_skills.py ../rpg
@@ -27,15 +26,23 @@ python add_runes.py ../rpg ../resourcepack
 python add_epics.py ../resourcepack ../rpg
 python add_exorcism.py ../rpg ../resourcepack
 python add_pact.py ../rpg ../resourcepack
+python build_combat_prompt_font.py ../resourcepack
 python add_squad.py ../rpg
 # 玛门：七宗罪的最后一件罪器（弓）。要在 add_pact 之后 —— 税与买断都认柱位
 python add_mammon.py ../rpg ../resourcepack
 # 把包里原有的三件驱魔道具（替死人偶／圣水／天启星）接进驱魔体系
 python add_holy_items.py ../rpg
 python retype_longinus.py ../resourcepack ../rpg
+# 如意金箍棒同样迁到原生下界合金枪，并保留独立 GUI／手持模型。
+python retype_wukong.py ../resourcepack ../rpg
+# 更新前旧武器的首批现代化：统一命中入口、玩家独立状态与 HUD 反馈。
+# 必须早于 opt_actionbar，让新增提示也进入唯一 actionbar 出口。
+python modernize_legacy_weapons.py ../rpg
+# 高复杂度旧武器：随机连段、教条战斧纹饰与 flame/sweep/wind 镶嵌。
+# 紧随首批迁移，避免两份生成器互相覆盖；仍早于统一 actionbar 收编。
+python modernize_legacy_advanced.py ../rpg
 # 游戏内的玩法总览书。数值读 _squad.json / _pact.json，与图鉴同源
 python add_book.py ../rpg
-python make_boxes.py ../rpg
 # 把所有直接写 actionbar 的地方收回统一 HUD（它只有一行，谁最后写谁赢）
 python opt_actionbar.py ../rpg
 # 上面这些生成器同样会往 ../resourcepack 写手持变换，而它们写的是作者
@@ -58,12 +65,49 @@ python opt_guard.py ../rpg
 # 把与 @s 无关的存在性判定从 as @e 循环里提出来（O(n²) -> O(n)）
 python opt_hoist.py ../rpg
 python opt_invert.py ../rpg
+# Boss 战与全域真实热路径：必须在 guard/invert 生成 g0..g4 后收尾。
+python opt_runtime_hotpaths.py ../rpg
+# 七柱真名调查与四阶段驱魔必须在热路径收尾后接入：这样既能复用最终的
+# advent_tick / rite/beat 结构，也不会被后续优化脚本重新覆盖。
+python add_true_name_rite.py ../rpg
+# 在真名与四阶段基础上接入反仪式、分支裁决、职业成长与圣物工具。
+# 必须最后运行，避免前面的生成器覆盖法阵状态机。
+python add_exorcism_expansion.py ../rpg
+# 压制后的 Boss 二阶段：稳定度争夺、压场开幕与仪式器物右键布置。
+python add_ritual_phase2.py ../rpg
+# 七罪普通罪仆：灾厄村民模型、每柱独立支援技、召唤上限、寿命与掉落生态。
+# 必须晚于二阶段生成器，才能挂接最终 advent/exorcism 热路径。
+python add_demon_minions.py ../rpg
+# 参考图比例的贴地生命之树：十一圆、二十二路径、十刻粒子刷新。
+# 晚于驱魔热路径生成，确保锚点守卫不会被前序脚本覆盖。
+python add_life_tree_particles.py ../rpg
+# 花朵盾徽血契展开法阵，十色染料归位十源质；奖励由后续上位契约阶段接管。
+python add_kabbalah_covenant.py ../rpg
+# 玩家面板最后汇总驱魔档案、真名调查、契约、佣兵与个人 HUD 控制。
+# 必须在驱魔扩展之后，才能读取完整目标与状态机。
+python add_player_panel.py ../rpg
+# 统一近期驱魔、仪式与面板的分隔线、层级、配色和非斜体文本规范。
+python polish_recent_ui.py ../rpg
+# 十源质先授旧约；真·十字架置于 Daath 后汇聚成新约，并接入上位契约状态与纹理。
+# 必须晚于面板/UI 生成器，确保权柄完整度是最终 HUD 语义。
+python add_divine_covenants.py ../rpg ../resourcepack
+# 全量领取箱必须在所有 give 生成器之后运行，才能收齐驱魔工具、真名残页
+# 与裁决奖励，并将旧目录中的物品按语义重新分类。
+python make_boxes.py ../rpg
+# 所有生成器（尤其领取箱）完成后再统一七罪姓名色与物品名字重：这样箱内
+# 副本、散装 give、Boss 名牌、调查/裁决/面板会共享同一套最终规范。
+python polish_demon_names.py ../rpg
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg
 # 拿原版当字典，比对进度触发器的条件字段名（写错是完全静默的）
 python check_adv.py ../rpg
-# 攻击用的苦力怕必须当场引爆 —— Fuse:0 在 1.21.11 是死字段，静默失效
+python check_ritual_phase2.py ../rpg
+python check_demon_minions.py ../rpg
+python check_life_tree_particles.py ../rpg
+python check_kabbalah_covenant.py ../rpg
+python check_divine_covenants.py ../rpg ../resourcepack
+# 攻击瞬爆不得回流成苦力怕或 fuse:0 TNT（后者会破坏地形）
 python check_creeper.py ../rpg
 echo
 echo "== 4. per-tick profile =="

@@ -1,0 +1,7 @@
+tellraw @s ["",{"text":"+---------- 操作速查 ----------+","color":"#AAB4C3","italic":false,"bold":true}]
+tellraw @s ["",{"text":"面板：切换到玩家面板自动打开；切走再切回可重开。","color":"gray","italic":false}]
+tellraw @s ["",{"text":"真名：携带圣器，见证同一恶魔三种不同招式。","color":"gray","italic":false}]
+tellraw @s ["",{"text":"仪式：点燃图腾 → 投入媒介 → 宣读真名 → 选择裁决。","color":"gray","italic":false}]
+tellraw @s ["",{"text":"告解铃可打断反仪式；圣钉、粉笔与净罪香投入法阵生效。","color":"gray","italic":false}]
+tellraw @s ["",{"text":"所有面板按钮仅作用于点击者，不要求管理员权限。","color":"dark_gray","italic":false}]
+tellraw @s ["",{"text":"[返回面板]","color":"#D4AF37","italic":false,"bold":true,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 8"}}]

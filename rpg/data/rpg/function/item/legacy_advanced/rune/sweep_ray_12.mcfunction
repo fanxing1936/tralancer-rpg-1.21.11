@@ -1,0 +1,2 @@
+particle sweep_attack ~ ~ ~ 0.12 0.12 0.12 0.02 3 force
+execute if entity @e[distance=..0.75,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker,type=!minecraft:armor_stand,limit=1,sort=nearest] run damage @e[distance=..0.75,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker,type=!minecraft:armor_stand,limit=1,sort=nearest] 13 minecraft:player_attack by @s

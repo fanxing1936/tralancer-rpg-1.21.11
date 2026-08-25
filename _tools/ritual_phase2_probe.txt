@@ -1,0 +1,72 @@
+# 二阶段状态机动态探针；由 server_test.py 在真实 1.21.11 服务端逐条执行。
+execute in minecraft:overworld run kill @e[tag=rpg.qa.phase2]
+execute in minecraft:overworld run summon minecraft:item_display 0 80 0 {Tags:["rpg.rite.anchor","rpg.qa.phase2"],item:{id:"minecraft:totem_of_undying",count:1}}
+execute in minecraft:overworld run summon minecraft:vindicator 0 80 2 {Tags:["rpg.exorcism.bound","rpg.exorcism.visible","rpg.qa.phase2","rpg.health700"],Health:420f,attributes:[{id:"minecraft:max_health",base:700f}]}
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_rite_id 777
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] rpg_rite_id 777
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_stage 2
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] rpg_ex_stage 2
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_dm_lord 1
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] rpg_dm_lord 1
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_totem 2400
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_stab 50
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_phase 0
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_counter 100
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_struggle 100
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_slots 2
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_toolcd 0
+execute in minecraft:overworld as @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/shockwave
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/1_1
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/1_2
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/1_3
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/2_1
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/2_2
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/2_3
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/3_1
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/3_2
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/3_3
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/4_1
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/4_2
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/4_3
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/5_1
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/5_2
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/5_3
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/6_1
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/6_2
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/6_3
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/7_1
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/7_2
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure/7_3
+say PHASE2_21_PRESSURE_VARIANTS_PASS
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_wave_kind 11
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_wave 13
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/wave_tick
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_wave 2
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/wave_tick
+execute in minecraft:overworld if entity @e[type=minecraft:item_display,tag=rpg.qa.phase2,scores={rpg_ex_wave=1,rpg_ex_wave_kind=11}] run say PHASE2_TRIPLE_WAVE_AOE_PASS
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/phase2/pressure
+execute in minecraft:overworld if entity @e[type=minecraft:item_display,tag=rpg.qa.phase2,scores={rpg_ex_stab=40}] run say PHASE2_PRESSURE_COST_PASS
+execute in minecraft:overworld run data merge entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] {Health:410f}
+execute in minecraft:overworld as @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/bound_tick
+execute in minecraft:overworld if entity @e[type=minecraft:item_display,tag=rpg.qa.phase2,scores={rpg_ex_stab=42}] if data entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] {Health:420f} run say PHASE2_ATTACK_STABILITY_PASS
+execute in minecraft:overworld run data merge entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] {Motion:[1d,0d,1d]}
+execute in minecraft:overworld as @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/bound_tick
+execute in minecraft:overworld positioned 0 80 0 if entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,tag=rpg.rite.locked,distance=..0.1] if data entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] {NoAI:1b,Motion:[0.0d,0.0d,0.0d]} run say PHASE2_BOSS_CENTRE_LOCK_PASS
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/right_click/medium1
+execute in minecraft:overworld if entity @e[type=minecraft:item_display,tag=rpg.qa.phase2,tag=rpg.rite.medium,scores={rpg_ex_stab=67}] if entity @e[type=minecraft:item_display,tag=rpg.rite.prop.medium,limit=1] run say PHASE2_RIGHTCLICK_MEDIUM_PASS
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_stab 100
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/anchor_tick
+execute in minecraft:overworld if entity @e[type=minecraft:item_display,tag=rpg.qa.phase2,scores={rpg_ex_stage=4,rpg_ex_stab=100}] if entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,scores={rpg_ex_stage=4}] run say PHASE2_100_VERDICT_PASS
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_stage 2
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] rpg_ex_stage 2
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] rpg_ex_stab 0
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.phase2,limit=1] at @s run function rpg:inquest/anchor_tick
+execute in minecraft:overworld unless entity @e[type=minecraft:item_display,tag=rpg.qa.phase2] run say PHASE2_ZERO_ANCHOR_GONE_PASS
+execute in minecraft:overworld if entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,scores={rpg_ex_stage=5}] run say PHASE2_ZERO_STAGE5_PASS
+execute in minecraft:overworld if entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,tag=!rpg.rite.locked] run say PHASE2_ZERO_LOCK_TAG_RELEASE_PASS
+execute in minecraft:overworld if data entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] {Health:700f} run say PHASE2_ZERO_HEALTH700_PASS
+execute in minecraft:overworld unless data entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] {NoAI:1b} run say PHASE2_ZERO_AI_RELEASE_PASS
+execute in minecraft:overworld unless entity @e[type=minecraft:item_display,tag=rpg.qa.phase2] if entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,tag=!rpg.rite.locked,scores={rpg_ex_stage=5}] if data entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] {Health:700f} unless data entity @e[type=minecraft:vindicator,tag=rpg.qa.phase2,limit=1] {NoAI:1b} run say PHASE2_ZERO_FORCE_ELIMINATE_PASS
+execute in minecraft:overworld run kill @e[tag=rpg.qa.phase2]
+execute in minecraft:overworld run kill @e[type=minecraft:item_display,tag=rpg.rite.prop]
+tick sprint 200

@@ -51,23 +51,28 @@ def fix_belial_devil_tag():
 
 def fix_limited_legend():
     """`[l·legend]` was half English and shipped in two different colours
-    (#ffcc33 on one weapon, #D84E4E on the other).  It becomes 限定传说 in a
-    single gold, one step brighter than the plain 传说 tier's vanilla `gold`
-    so the two stay distinguishable."""
+    (#ffcc33 on one weapon, #D84E4E on the other).  Normalise the item-name
+    prefix to the compact English `[LTD]` in a single gold, one step brighter
+    than the plain 传说 tier's vanilla `gold` so the two stay distinguishable."""
     import glob
     n = 0
     for path in glob.glob(os.path.join(
-            ROOT, "data/rpg/function/command/give/*.mcfunction")):
+            ROOT, "data/rpg/function/**/*.mcfunction"), recursive=True):
         s = io.open(path, encoding="utf-8").read()
         before = s
         for colour in ('"italic":false,"bold":true,"color":"#ffcc33"',
                        '"italic":false,"color":"#D84E4E","bold":true'):
             s = s.replace('{"text":"[l·legend]",' + colour + "}",
-                          '{"text":"[限定传说]","italic":false,'
+                          '{"text":"[LTD]","italic":false,'
                           '"color":"%s","bold":true}' % GOLD_HEX)
+        # migrate.py parses some embedded item stacks and may reorder the text
+        # component's keys.  The visible label is still safe to normalise even
+        # when the surrounding component is no longer byte-identical.
+        s = s.replace("[l·legend]", "[LTD]")
+        s = s.replace('"text":"[限定传说]"', '"text":"[LTD]"')
         if s != before:
             io.open(path, "w", encoding="utf-8", newline="\n").write(s)
-            n += before.count("[l·legend]")
+            n += before.count("[l·legend]") + before.count("[限定传说]")
     return n
 
 

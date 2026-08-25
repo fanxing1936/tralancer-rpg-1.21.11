@@ -21,9 +21,13 @@ RARITY = {
     # 驱魔道具自成一族：功能上是同一套东西（显形、净化、仪式），
     # 不该散在勇者／传说／史诗三档里
     "驱魔": ("rite", "驱魔"),
+    "秘仪": ("ritual", "秘仪"),
+    "源质": ("sephirah", "源质"),
+    "契约": ("covenant", "契约"),
     # a couple of items spell the top tier out in latin
     "限定传说": ("lgd", "限定传说"),
-    "l·legend": ("lgd", "限定传说"), "legend": ("legend", "传说"),
+    "l·legend": ("lgd", "限定传说"), "ltd": ("lgd", "限定传说"),
+    "legend": ("legend", "传说"),
 }
 # names that repeat across a whole family -- the bracket label is what actually
 # tells two of them apart, so it becomes the heading instead of the tier chip
@@ -134,6 +138,8 @@ def esc(s):
 def card(it, show_tags=True):
     rar = it["rarity"]
     cls, label = RARITY.get(rar, ("none", rar or ""))
+    if "rpg_divine_new" in it.get("custom_data", {}):
+        cls = "authority"
     flavour, skill = split_lore(it["lore"])
     sk = parse_skill(skill)
 
@@ -246,7 +252,21 @@ def main():
     # pools here and only carries a "新锻" marker to stay findable.
     for x in extra:
         x["_new"] = True
-    w = w + extra
+
+    # 卡巴拉仪式物不是药剂，也不是普通锻造材料。把它们从 extra 的
+    # 通用池中摘出，单独交给神约章节；真·十字架会被两个发放目录同时
+    # 收录，因此还要按玩法标签去重，避免图鉴出现两张完全相同的卡。
+    divine_keys = ("rpg_kabbalah_contract", "rpg_sephirah", "rpg_true_cross",
+                   "rpg_divine_old", "rpg_divine_new")
+    divine, seen_divine = [], set()
+    for x in extra:
+        if not any(k in x["custom_data"] for k in divine_keys):
+            continue
+        ident = (x["item"], x["name"], tuple(sorted(x["custom_data"].items())))
+        if ident not in seen_divine:
+            divine.append(x)
+            seen_divine.add(ident)
+    w = w + [x for x in extra if x not in divine]
 
     # 按**基础物品**分武器，不按 custom_data 里的开关。
     #
@@ -273,9 +293,9 @@ def main():
     mats = [x for x in mats if x not in rite]
 
     print("weapons %d  armour %d  consumables %d  runes %d  stones %d  "
-          "materials %d  rite %d  whetstones %d"
+          "materials %d  rite %d  divine %d  whetstones %d"
           % (len(weapons), len(armour), len(consum), len(runes), len(stones),
-             len(mats), len(rite), len(ench)))
+             len(mats), len(rite), len(divine), len(ench)))
 
     ench_list = sorted(set(
         "%s %s" % (ENCH_CN.get(k, k), v)
@@ -283,6 +303,7 @@ def main():
 
     json.dump({"weapons": weapons, "armour": armour, "consum": consum,
                "runes": runes, "stones": stones, "mats": mats, "rite": rite,
+               "divine": divine,
                "ench_list": ench_list},
               io.open("../_guide_sections.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
@@ -296,6 +317,7 @@ def main():
         "stones": "\n".join(card(x, show_tags=False) for x in stones),
         "mats": "\n".join(card(x) for x in mats),
         "rite": "\n".join(card(x, show_tags=False) for x in rite),
+        "divine": "\n".join(card(x, show_tags=False) for x in divine),
         "ench": "、".join(ench_list),
     }
     io.open("../_guide_fragments.json", "w", encoding="utf-8", newline="\n").write(

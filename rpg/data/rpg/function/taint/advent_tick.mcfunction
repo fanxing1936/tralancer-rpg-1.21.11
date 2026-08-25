@@ -8,11 +8,17 @@
 # 于是当场被自己人清掉 —— 表现就是"召唤出来立刻死"。
 # 这一行把那条路堵死：认不出发条，就补一个，而不是判死刑。
 execute if entity @s[tag=!rpg.advent.timed] run function rpg:taint/advent_arm
+function rpg:inquest/boss_tick
+execute if entity @s[scores={rpg_ex_stage=2..4}] run return 0
 
 scoreboard players remove @s rpg_fall 1
 execute if entity @s[scores={rpg_fall=..0}] at @s run return run function rpg:taint/advent_gone
 
 # 出手。scores= 只认已经存在的分数，所以先把冷却坐实。
+# 罪约蓄势时只走 ult_tick：寿命仍照常流逝，但普通冷却与招式都暂停，
+# 不会在预警期间夹进另一招。
+scoreboard players add @s rpg_dm_ult 0
+execute at @s if entity @s[scores={rpg_dm_ult=1..}] run return run function rpg:taint/ult_tick
 scoreboard players add @s rpg_dm_cd 0
 execute if entity @s[scores={rpg_dm_cd=1..}] run return run scoreboard players remove @s rpg_dm_cd 1
 execute at @s if entity @a[distance=..12,gamemode=!spectator,gamemode=!creative] run function rpg:taint/cast

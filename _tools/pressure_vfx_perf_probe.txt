@@ -1,0 +1,23 @@
+# 压场重制性能对照：空场冲刺后触发一套完整三段罪域，再次冲刺。
+execute in minecraft:overworld run kill @e[tag=rpg.qa.vfxperf]
+execute in minecraft:overworld run kill @e[tag=rpg.rite.pressure]
+tick sprint 200
+execute in minecraft:overworld run summon minecraft:item_display 0 80 0 {Tags:["rpg.rite.anchor","rpg.qa.vfxperf"],item:{id:"minecraft:totem_of_undying",count:1}}
+execute in minecraft:overworld run summon minecraft:vindicator 0 80 0 {Tags:["rpg.exorcism.bound","rpg.exorcism.visible","rpg.qa.vfxperf","rpg.health700"],Health:420f,attributes:[{id:"minecraft:max_health",base:700f}]}
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] rpg_rite_id 778
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.qa.vfxperf,limit=1] rpg_rite_id 778
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] rpg_ex_stage 2
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.qa.vfxperf,limit=1] rpg_ex_stage 2
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] rpg_dm_lord 1
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.qa.vfxperf,limit=1] rpg_dm_lord 1
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] rpg_totem 2400
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] rpg_ex_stab 50
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] rpg_ex_phase 0
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] rpg_ex_pressure 999
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] rpg_ex_counter 999
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] rpg_ex_struggle 999
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.qa.vfxperf,limit=1] at @s run function rpg:inquest/phase2/pressure/1_1
+tick sprint 200
+execute in minecraft:overworld run kill @e[tag=rpg.qa.vfxperf]
+execute in minecraft:overworld run kill @e[tag=rpg.rite.pressure]
+say PHASE2_VFX_PERF_PROBE_PASS

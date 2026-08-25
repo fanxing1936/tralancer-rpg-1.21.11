@@ -77,7 +77,7 @@ def main():
               "function rpg:entities/warden/warden",
               "function rpg:command/tick_end",
               "gamerule send_command_feedback true",
-              "execute in minecraft:overworld run forceload add 0 100"]
+              "execute in minecraft:overworld run forceload add 0 0"]
     extra = os.environ.get("MC_PROBE_FILE")
     if extra and os.path.isfile(extra):
         probes += [l.strip() for l in io.open(extra, encoding="utf-8")
@@ -92,7 +92,10 @@ def main():
                 proc.stdin.flush()
             except Exception:
                 pass
-            time.sleep(0.7)
+            # A sprint runs asynchronously; leave enough time for its result
+            # before issuing the next probe so benchmark samples do not mix.
+            sprint_wait = float(os.environ.get("MC_SPRINT_WAIT", "5"))
+            time.sleep(sprint_wait if c.startswith("tick sprint ") else 0.7)
         # drain to EOF -- the console replies were buffered while we typed
         while True:
             line = proc.stdout.readline()

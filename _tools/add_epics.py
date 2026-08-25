@@ -53,7 +53,7 @@ WEAPONS = [
                "每一圈都点燃并推开当中的敌人")),
     dict(key="dawn", art="568486", item="netherite_sword", cmd=1110022,
          parent="rpg:item/sword_handheld",
-         name="熔岩链锯", tier="限定传说", tier_colour="#FFD700", name_colour="gold",
+         name="熔岩链锯", tier="LTD", tier_colour="#FFD700", name_colour="gold",
          icon="🗡", kind="主动技能", skill="熔锯",
          flavour=("[切割链锯]烧红了它的锯齿", " 从此它咬下去的地方会流"),
          text=("右键起锯，三秒内连切六轮",

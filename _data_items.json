@@ -4,14 +4,14 @@
    "item": "bow",
    "name": "利维坦之歌",
    "rarity": "传说",
-   "name_colour": "aqua",
+   "name_colour": "#1B4F72",
    "lore": [
     "+------------------+",
     "[第六天]",
     "有擎天的巨兽从[高天]傍落",
     "+------------------+",
     "🏹被动技能[潮涌]",
-    "消耗3级经验射出潮涌之箭",
+    "箭矢命中时托起敌人并使其显形",
     "+------------------+"
    ],
    "id": "bow",
@@ -63,7 +63,7 @@
     "源于仰望[星空]",
     "+------------------+",
     "🪓被动技能[梵星]",
-    "攻击时有3/5的概率附带[星之剑]",
+    "命中削弱敌人，四成概率唤出[星之剑]",
     "+------------------+"
    ],
    "id": "diamond_sword",
@@ -132,7 +132,7 @@
     "将斩断无尽的[夜空]",
     "+------------------+",
     "🗡主动技能[漆黑之刃]",
-    "对5米内的所有生物释放斩击",
+    "连击推进四幕；蓄力1.5秒斩击5格并扫箭",
     "+------------------+"
    ],
    "id": "netherite_sword",
@@ -196,7 +196,7 @@
     "这才是人类科技的[结晶]",
     "+------------------+",
     "🪓被动技能[血痂]",
-    "攻击时附带连续切割效果",
+    "命中撕开血痂，追加切割并使其虚弱",
     "+------------------+"
    ],
    "id": "netherite_sword",
@@ -250,7 +250,7 @@
   {
    "item": "netherite_sword",
    "name": "樱怒之日",
-   "rarity": "限定传说",
+   "rarity": "LTD",
    "name_colour": "white",
    "lore": [
     "+------------------+",
@@ -258,7 +258,7 @@
     "before you call him a man.",
     "+------------------+",
     "🪓被动技能[落樱]",
-    "消耗1/4生命获得短时间全方位增幅",
+    "连续命中推进四景，第四击引雷并自护",
     "+------------------+"
    ],
    "id": "netherite_sword",
@@ -329,7 +329,7 @@
     "将[燃尽]整个世界",
     "+------------------+",
     "🏹被动技能[不熄]",
-    "在箭矢命中后召唤火矢",
+    "箭矢命中灼烧5秒并追加火焰伤害",
     "+------------------+"
    ],
    "id": "crossbow",
@@ -380,7 +380,7 @@
     "than to wait for it to come.",
     "+------------------+",
     "🗡主动技能[狂风]",
-    "向前方释放三道龙卷风",
+    "长按蓄力1.5秒，向前卷起三道风路",
     "+------------------+"
    ],
    "id": "mace",
@@ -464,7 +464,7 @@
     "大地露出了他的[屋脊]",
     "+------------------+",
     "🪓被动技能[怒嚎]",
-    "攻击百分比伤害",
+    "重击震裂目标，追加伤害并压低脚步",
     "+------------------+"
    ],
    "id": "netherite_axe",
@@ -527,7 +527,7 @@
     "大地的呼啸将涤荡[世界]",
     "+------------------+",
     "🪓被动技能[消融]",
-    "副手手持时增加攻击伤害",
+    "主手命中震裂敌人，副手持有时强化攻击",
     "+------------------+"
    ],
    "id": "netherite_axe",
@@ -597,9 +597,9 @@
    "potion_contents": null
   },
   {
-   "item": "mace",
+   "item": "netherite_spear",
    "name": "如意金箍棒",
-   "rarity": "限定传说",
+   "rarity": "LTD",
    "name_colour": null,
    "lore": [
     "+------------------+",
@@ -607,11 +607,12 @@
     "只缘妖雾又重来",
     "+------------------+",
     "🗡主动技能[神通]",
-    "右键武器可召唤筋斗云",
+    "右键唤来筋斗云；命中时随机施展神通",
     "+------------------+"
    ],
-   "id": "mace",
+   "id": "netherite_spear",
    "enchantments": {
+    "lunge": 3,
     "knockback": 3,
     "breach": 3,
     "density": 3,
@@ -659,15 +660,13 @@
    },
    "cmd": 1110004.0,
    "unbreakable": false,
-   "consumable": 240820,
+   "consumable": null,
    "components": [
     "attribute_modifiers",
-    "consumable",
     "custom_data",
     "custom_model_data",
     "custom_name",
     "enchantments",
-    "food",
     "lore"
    ],
    "dyed_color": null,
@@ -685,7 +684,7 @@
     "蕴含剧毒的威势",
     "+------------------+",
     "🪓被动技能[淬毒]",
-    "攻击时持续流血",
+    "命中淬毒，第三次引爆积蓄的蛇毒",
     "+------------------+"
    ],
    "id": "netherite_axe",
@@ -754,7 +753,7 @@
     "三十年一语不发",
     "+------------------+",
     "🪓被动技能[着意]",
-    "拥有黑白两种攻击方式"
+    "黑式破敌，白式回生，每次命中轮转"
    ],
    "id": "netherite_axe",
    "enchantments": {
@@ -802,14 +801,14 @@
    "item": "mace",
    "name": "亚巴顿",
    "rarity": "恶魔",
-   "name_colour": "aqua",
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "无底坑的使者 疫病之王 死之暗天使",
     "地狱的魔神 恶魔亚巴顿",
     "+------------------+",
     "🪓被动技能[收割]",
-    "攻击时附带灵魂收割",
+    "命中收割灵魂，附加凋零与灵魂创伤",
     "+------------------+"
    ],
    "id": "mace",
@@ -889,14 +888,14 @@
    "item": "netherite_sword",
    "name": "别西卜",
    "rarity": "恶魔",
-   "name_colour": null,
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "威严的贤者 地狱的宰相 ",
     "七十二柱魔神之首 鬼王别西卜",
     "+------------------+",
     "🗡主动技能[余烬]",
-    "释放灰烬并追加刀罡",
+    "长按蓄力1.5秒，向前斩出三重灰烬刀罡",
     "+------------------+"
    ],
    "id": "netherite_sword",
@@ -966,14 +965,14 @@
    "item": "crossbow",
    "name": "萨麦尔",
    "rarity": "恶魔",
-   "name_colour": null,
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "堕落的死亡天使",
     "有毒的光辉使者，萨麦尔",
     "+------------------+",
     "🏹被动技能[毒药]",
-    "射出箭矢附带剧毒",
+    "射箭自损1心；命中毒爆3.5格敌人",
     "+------------------+"
    ],
    "id": "crossbow",
@@ -1023,14 +1022,14 @@
    "item": "netherite_sword",
    "name": "贝利尔",
    "rarity": "恶魔",
-   "name_colour": null,
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "卑劣的天之副君主，暗之军团的大统领",
     "叛天的首谋首恶，堕天使贝利尔",
     "+------------------+",
     "🗡主动技能[朝拜]",
-    "让范围7格的所有生物停止活动",
+    "右键使7格敌人迟缓虚弱3秒；冷却1.5秒",
     "+------------------+"
    ],
    "id": "netherite_sword",
@@ -1101,11 +1100,12 @@
     "这是王与王的战争，唯有死亡才能终止",
     "+------------------+",
     "🗡主动技能[王座]",
-    "吸引被标记的敌人并追加斩杀",
+    "命中标记6秒；蓄力1.5秒处决14格内印记",
     "+------------------+"
    ],
    "id": "netherite_spear",
    "enchantments": {
+    "lunge": 3,
     "fire_aspect": 3,
     "knockback": 2,
     "thorns": 2,
@@ -2178,24 +2178,28 @@
   {
    "item": "player_head",
    "name": "玩家面板",
-   "rarity": "introduce",
-   "name_colour": null,
+   "rarity": "档案",
+   "name_colour": "#FFF2A8",
    "lore": [],
    "id": "player_head",
    "enchantments": {},
    "modifiers": [],
    "tags": [
+    "rpg_panel",
     "skull_tag"
    ],
    "custom_data": {
-    "skull_tag": 1
+    "skull_tag": 1,
+    "rpg_panel": 1
    },
    "cmd": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
     "custom_data",
-    "custom_name"
+    "custom_name",
+    "enchantment_glint_override",
+    "max_stack_size"
    ],
    "dyed_color": null,
    "trim": null,
@@ -2531,6 +2535,11 @@
     "+------------------+",
     "教会炼制的武器",
     "配发给每一位浮士德",
+    "+------------------+",
+    "🪓纹饰技能[教条]",
+    "纹饰决定命中效果：钻石缓速、黄金火伤",
+    "石英凋零、合金致盲、铜虚弱、青金显形、紫晶浮空",
+    "铁增抗、红石疗愈、绿宝石加速",
     "+------------------+"
    ],
    "id": "iron_axe",
@@ -4109,7 +4118,7 @@
     "镶嵌于[剑]上",
     "+------------------+",
     "🔱镶嵌技能[钢刃]",
-    "长按/右键蓄力释放剑气",
+    "长按蓄力2.5秒，释放12格钢刃剑气",
     "+------------------+"
    ],
    "id": "quartz",
@@ -4149,7 +4158,7 @@
     "镶嵌于[剑]上",
     "+------------------+",
     "🔱镶嵌技能[风暴]",
-    "长按/右键消耗一级经验释放风弹",
+    "长按蓄力2.5秒，消耗1级经验释放风弹",
     "+------------------+"
    ],
    "id": "quartz",
@@ -4189,7 +4198,7 @@
     "镶嵌于[剑]上",
     "+------------------+",
     "🔱镶嵌技能[烈焰]",
-    "长按/右键消耗一级经验释放烈焰弹",
+    "长按蓄力2.5秒，消耗1级经验释放烈焰",
     "+------------------+"
    ],
    "id": "quartz",
@@ -4838,7 +4847,7 @@
    "item": "music_disc_11",
    "name": "恶念之源",
    "rarity": "恶魔",
-   "name_colour": null,
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "地狱之门终将关闭",
@@ -4870,7 +4879,7 @@
    "item": "music_disc_stal",
    "name": "睚眦之源",
    "rarity": "恶魔",
-   "name_colour": null,
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "地狱之门终将关闭",
@@ -4902,7 +4911,7 @@
    "item": "music_disc_5",
    "name": "傲慢之源",
    "rarity": "恶魔",
-   "name_colour": null,
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "地狱之门终将关闭",
@@ -5351,7 +5360,7 @@
    "item": "netherite_spear",
    "name": "路西法",
    "rarity": "恶魔",
-   "name_colour": "aqua",
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "明亮之星 早晨之子",
@@ -5439,7 +5448,7 @@
    "item": "mace",
    "name": "利维坦",
    "rarity": "恶魔",
-   "name_colour": "aqua",
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "深渊里的曲行蛇 以铁为干草的巨兽",
@@ -5604,7 +5613,7 @@
   {
    "item": "netherite_sword",
    "name": "熔岩链锯",
-   "rarity": "限定传说",
+   "rarity": "LTD",
    "name_colour": "gold",
    "lore": [
     "+------------------+",
@@ -5739,7 +5748,7 @@
    "item": "enchanted_book",
    "name": "路西法之柱",
    "rarity": "契约",
-   "name_colour": "white",
+   "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
@@ -5785,7 +5794,7 @@
    "item": "enchanted_book",
    "name": "利维坦之柱",
    "rarity": "契约",
-   "name_colour": "white",
+   "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
@@ -5831,7 +5840,7 @@
    "item": "enchanted_book",
    "name": "亚巴顿之柱",
    "rarity": "契约",
-   "name_colour": "white",
+   "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
@@ -5877,7 +5886,7 @@
    "item": "enchanted_book",
    "name": "别西卜之柱",
    "rarity": "契约",
-   "name_colour": "white",
+   "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
@@ -5923,7 +5932,7 @@
    "item": "enchanted_book",
    "name": "萨麦尔之柱",
    "rarity": "契约",
-   "name_colour": "white",
+   "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
@@ -5969,7 +5978,7 @@
    "item": "enchanted_book",
    "name": "贝利尔之柱",
    "rarity": "契约",
-   "name_colour": "white",
+   "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
@@ -6015,7 +6024,7 @@
    "item": "enchanted_book",
    "name": "玛门之柱",
    "rarity": "契约",
-   "name_colour": "white",
+   "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
@@ -6146,7 +6155,7 @@
    "item": "bow",
    "name": "玛门",
    "rarity": "恶魔",
-   "name_colour": "aqua",
+   "name_colour": "#55FFFF",
    "lore": [
     "+------------------+",
     "堕落的财富之主",
@@ -6200,6 +6209,567 @@
     "lore",
     "tooltip_display",
     "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:flower_banner_pattern",
+   "name": "卡巴拉血契",
+   "rarity": "秘仪",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "以花之纹章为钥，展开卡巴拉生命之树",
+    "长按右键依照朝向铺开法阵",
+    "🔱秘仪[生命之树]",
+    "　将十枚源质嵌入各自对应的圆心",
+    "　十源质归位后，『旧约』显于人间",
+    "　血契不会在展开法阵时消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:flower_banner_pattern",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_contract",
+    "rpg_kabbalah_use"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_kabbalah_contract": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:white_dye",
+   "name": "01 · 王冠",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 1 源质",
+    "长按右键嵌入 [王冠] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:white_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 1
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:light_gray_dye",
+   "name": "02 · 智慧",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 2 源质",
+    "长按右键嵌入 [智慧] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:light_gray_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 2
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:black_dye",
+   "name": "03 · 理解",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 3 源质",
+    "长按右键嵌入 [理解] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:black_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 3
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:blue_dye",
+   "name": "04 · 慈悲",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 4 源质",
+    "长按右键嵌入 [慈悲] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:blue_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 4
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:red_dye",
+   "name": "05 · 严厉",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 5 源质",
+    "长按右键嵌入 [严厉] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:red_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 5
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:yellow_dye",
+   "name": "06 · 美丽",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 6 源质",
+    "长按右键嵌入 [美丽] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:yellow_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 6
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:green_dye",
+   "name": "07 · 胜利",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 7 源质",
+    "长按右键嵌入 [胜利] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:green_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 7
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:orange_dye",
+   "name": "08 · 光辉",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 8 源质",
+    "长按右键嵌入 [光辉] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:orange_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 8
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:purple_dye",
+   "name": "09 · 基础",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 9 源质",
+    "长按右键嵌入 [基础] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:purple_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 9
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:brown_dye",
+   "name": "10 · 王国",
+   "rarity": "源质",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "卡巴拉生命之树的第 10 源质",
+    "长按右键嵌入 [王国] 圆心",
+    "错误位置或已归位时不会消耗",
+    "+------------------+"
+   ],
+   "id": "minecraft:brown_dye",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_sephirah"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_sephirah": 10
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:enchanted_book",
+   "name": "旧约",
+   "rarity": "契约",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "十源质归位后，显于人间的上半部律法",
+    "长按右键与上帝立约",
+    "+------------------+",
+    "🜏恩赐　每 20 秒获得 1 秒生命恢复 I",
+    "🜏力量[十诫净界]",
+    "　净化 10 格内所有恶魔，造成 20% 最大生命值伤害",
+    "　生命不高于 25% 的恶魔直接斩杀",
+    "🜏律法　每轮魔化结算抵消 2 点",
+    "+------------------+",
+    "立约前不会消耗此书",
+    "+------------------+"
+   ],
+   "id": "minecraft:enchanted_book",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_divine_old",
+    "rpg_divine_pact"
+   ],
+   "custom_data": {
+    "rpg_divine_pact": 1,
+    "rpg_divine_old": 1
+   },
+   "cmd": 1110038.0,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:enchanted_book",
+   "name": "新约",
+   "rarity": "契约",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "十源质与真·十字架归一后的权柄见证",
+    "长按右键与上帝立约",
+    "+------------------+",
+    "🜏权柄　魔化由权柄完整度取代",
+    "🜏力量[创世净光]",
+    "　对前方恶魔造成 25% 最大生命值伤害",
+    "　并追加 15 点基础伤害与审判印记",
+    "🜏敕界[伊甸敕界]",
+    "　潜行长按展开 8 格敕界，造成 15% 最大生命值伤害",
+    "　并追加 10 点伤害；净化、恢复并庇护范围内同伴",
+    "🜏神佑　免疫失明与黑暗",
+    "🜏赦免　可无副作用动用七罪契约之力",
+    "　手持七罪契约书使用（冷却 15 秒）",
+    "+------------------+",
+    "立约前不会消耗此书",
+    "+------------------+"
+   ],
+   "id": "minecraft:enchanted_book",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_divine_new",
+    "rpg_divine_pact"
+   ],
+   "custom_data": {
+    "rpg_divine_pact": 1,
+    "rpg_divine_new": 1
+   },
+   "cmd": 1110039.0,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:iron_nugget",
+   "name": "真·十字架",
+   "rarity": "秘仪",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "生命之树的第十一件见证",
+    "十源质归位后，站入 [Daath] 圆心长按右键",
+    "十源质将汇入真·十字架，并显化『新约』",
+    "+------------------+"
+   ],
+   "id": "minecraft:iron_nugget",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_kabbalah_use",
+    "rpg_true_cross"
+   ],
+   "custom_data": {
+    "rpg_kabbalah_use": 1,
+    "rpg_true_cross": 1
+   },
+   "cmd": 1110001.0,
+   "unbreakable": false,
+   "consumable": 100180,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
    ],
    "dyed_color": null,
    "trim": null,

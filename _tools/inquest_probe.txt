@@ -1,0 +1,21 @@
+# 七柱生命、镇压、图腾绑定、弱点媒介与阶段状态的专用服务端探针。
+execute in minecraft:overworld positioned 0 80 0 run function rpg:taint/lord1
+data get entity @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] Health
+attribute @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] minecraft:max_health base get
+data merge entity @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] {Health:420f}
+execute as @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] at @s run function rpg:inquest/boss_tick
+scoreboard players get @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] rpg_ex_stage
+execute in minecraft:overworld run summon minecraft:item_display 0 80 1 {Tags:["rpg.totem","rpg.totem.lit"]}
+execute as @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] at @s run function rpg:inquest/bind/1
+scoreboard players get @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] rpg_ex_stage
+scoreboard players get @e[type=minecraft:item_display,tag=rpg.rite.anchor,limit=1] rpg_ex_stage
+execute in minecraft:overworld run summon minecraft:item 0 80 1 {Item:{id:"minecraft:feather",count:2}}
+execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,limit=1] at @s run function rpg:inquest/anchor_tick
+scoreboard players get @e[type=minecraft:item_display,tag=rpg.rite.anchor,limit=1] rpg_ex_stage
+data get entity @e[type=minecraft:item,limit=1,sort=nearest] Item.count
+execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,limit=1] at @s run function rpg:inquest/start_banish
+scoreboard players get @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] rpg_ex_stage
+scoreboard players get @e[type=minecraft:item_display,tag=rpg.rite.anchor,limit=1] rpg_ex_stage
+kill @e[type=minecraft:vindicator,tag=rpg.advent]
+kill @e[type=minecraft:item_display,tag=rpg.rite.anchor]
+kill @e[type=minecraft:item,distance=..128]

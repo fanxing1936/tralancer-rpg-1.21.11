@@ -1,0 +1,10 @@
+# 玩家面板与近期驱魔 UI 的真实服务端加载探针。
+function rpg:panel/open
+function rpg:panel/inquest
+function rpg:panel/pact
+function rpg:panel/squad
+function rpg:panel/hud_toggle
+function rpg:panel/help
+function rpg:inquest/career
+function rpg:inquest/start_verdict
+scoreboard objectives list

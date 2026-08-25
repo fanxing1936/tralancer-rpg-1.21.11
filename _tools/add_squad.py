@@ -554,19 +554,26 @@ UPGRADE = """\
 #
 # 和掷点各有各的位置：掷点便宜但看运气，升级**确定**，所以按目标等级的
 # **全价**收 —— 你买的是"这一次一定成"。
-execute unless entity @e[type=minecraft:husk,tag=rpg.squad,distance=..%(NEAR)d] run return run function rpg:squad/none_near
+# 选择器不能直接比较实体与雇主的队伍编号，所以先把这一队的近身候选人挂上
+# 只在本次同步调用里存活的 pick，然后再从中取最近的一个。不能先 limit=1
+# 再验编号：另一个玩家的佣兵站得更近时，会把自己的人挡掉。
+tag @s add rpg.sq.boss
+execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..%(NEAR)d] if score @s rpg_squad = #sq rpg_squad run tag @s add rpg.sq.pick
+execute unless entity @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..%(NEAR)d] run function rpg:squad/none_near
 scoreboard players set #tier rpg_squad 0
-execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..%(NEAR)d,limit=1,sort=nearest] run scoreboard players operation #tier rpg_squad = @s rpg_sq_tier
-execute if score #tier rpg_squad matches %(TOP)d.. run return run function rpg:squad/up_max
+execute as @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..%(NEAR)d,limit=1,sort=nearest] run scoreboard players operation #tier rpg_squad = @s rpg_sq_tier
+execute if score #tier rpg_squad matches %(TOP)d.. run function rpg:squad/up_max
 execute store result score @s rpg_sq_have run clear @s %(CUR)s 0
 %(BRANCH)s
+tag @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..%(NEAR)d] remove rpg.sq.pick
+tag @s remove rpg.sq.boss
 """
 
 UP_ONE = """\
 # 升到 %(KEY)s：%(PRICE)d 枚。
 execute if entity @s[scores={rpg_sq_have=..%(SHORT)d}] run return run function rpg:squad/poor
 clear @s %(CUR)s %(PRICE)d
-execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..%(NEAR)d,limit=1,sort=nearest] run function rpg:squad/up_do%(N)d
+execute as @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..%(NEAR)d,limit=1,sort=nearest] run function rpg:squad/up_do%(N)d
 title @s actionbar ["",{"text":"已晋升 · %(KEY)s","italic":false,"color":"%(COLOUR)s","bold":true}]
 """
 
@@ -639,8 +646,10 @@ function rpg:squad/aim
 HANDOVER = """\
 # 把副手那件交给最近的自己人。
 tag @s add rpg.sq.boss
-execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..8,limit=1,sort=nearest] if score @s rpg_squad = #sq rpg_squad at @s run function rpg:squad/give_weapon
-execute unless entity @e[type=minecraft:husk,tag=rpg.squad,distance=..8] run function rpg:squad/none_near
+execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..8] if score @s rpg_squad = #sq rpg_squad run tag @s add rpg.sq.pick
+execute unless entity @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..8] run function rpg:squad/none_near
+execute as @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..8,limit=1,sort=nearest] at @s run function rpg:squad/give_weapon
+tag @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..8] remove rpg.sq.pick
 tag @s remove rpg.sq.boss
 """
 
@@ -660,8 +669,10 @@ FIRE_NEAR = """\
 # 潜行 + 副手有东西 = 解雇最近的自己人。
 tag @s add rpg.sq.boss
 tag @s add rpg.sq.firing
-execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..8,limit=1,sort=nearest] if score @s rpg_squad = #sq rpg_squad at @s run function rpg:squad/dismiss
-execute unless entity @e[type=minecraft:husk,tag=rpg.squad,distance=..8] run function rpg:squad/none_near
+execute as @e[type=minecraft:husk,tag=rpg.squad,distance=..8] if score @s rpg_squad = #sq rpg_squad run tag @s add rpg.sq.pick
+execute unless entity @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..8] run function rpg:squad/none_near
+execute as @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..8,limit=1,sort=nearest] at @s run function rpg:squad/dismiss
+tag @e[type=minecraft:husk,tag=rpg.sq.pick,distance=..8] remove rpg.sq.pick
 tag @s remove rpg.sq.firing
 tag @s remove rpg.sq.boss
 """
@@ -900,7 +911,7 @@ def build_functions():
     ups = []
     for t in TIERS[1:]:
         ups.append("execute if score #tier rpg_squad matches %d "
-                   "run return run function rpg:squad/up%d"
+                   "run function rpg:squad/up%d"
                    % (t["n"] - 1, t["n"]))
         wf("squad/up%d.mcfunction" % t["n"], UP_ONE % {
             "KEY": t["key"], "PRICE": t["price"], "SHORT": t["price"] - 1,

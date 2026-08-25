@@ -60,7 +60,8 @@ SPREAD_ODDS = 4          # 每拍 1/N 的概率向外伸手
 OBJECTIVES = ["rpg_taint", "rpg_hud", "rpg_hud_p", "rpg_hud_t",
               "rpg_taint_t", "rpg_vac", "rpg_rite", "rpg_totem",
               "rpg_holy", "rpg_vac_x", "rpg_hud_on", "rpg_fall",
-              "rpg_dm_cd", "rpg_dm_lord"]
+              "rpg_dm_cd", "rpg_dm_lord", "rpg_dm_casts", "rpg_dm_ult",
+              "rpg_dm_last"]
 
 # ---------------------------------------------------------------------------
 # 堕落
@@ -72,13 +73,13 @@ OBJECTIVES = ["rpg_taint", "rpg_hud", "rpg_hud_p", "rpg_hud_t",
 FALL_MAX = 60
 
 # 降临出来的那位。底子与特效沿用包里已有的恶魔 boss（见 demon_nbt）。
-DEMON_HP = 120
+DEMON_HP = 700
 DEMON_ATK = 11
 DEMON_SEE = 48
-DEMON_LIFE = 600         # 30 秒后自己散掉 —— 作者指定
-BOSS_LIFE = 2400         # 空缺者那条路招出来的是来打架的，给两分钟
-DEMON_BOOM = 4           # 死亡爆炸的威力（原版 TNT 是 4）
-DEMON_CD = 70            # 出手间隔（刻）。30 秒里大约能放八次
+DEMON_LIFE = 12000       # 真名调查与四阶段仪式需要完整战斗窗口：十分钟
+BOSS_LIFE = 12000        # 空缺者放出的领主同样进入完整驱魔流程
+DEMON_BOOM = 4           # 死亡伪爆炸档位（无地形破坏）
+DEMON_CD = 70            # 出手间隔（刻）；调查阶段有足够时间见证三种不同招式
 DEMON_R = 12             # 多远之内有人才出手
 
 # 下限 / 上限 / 攻击加成 / 颜色 / 档名
@@ -161,6 +162,8 @@ def build_hud():
            "# 先把占用计时器坐实。scores= 只认已经存在的分数，没有这一行，",
            "# 从没蓄过力的玩家过不了下面 rpg_hud_t=..0 那一关，状态条永远不显示。",
            "scoreboard players add @s rpg_hud_t 0",
+           "scoreboard players add @s rpg_hud_dmt 0",
+           "execute if entity @s[scores={rpg_hud_dmt=1..}] run scoreboard players remove @s rpg_hud_dmt 1",
            ""]
     for hid, label, _dim, _lit in skills:
         top.append("execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=%d}] "
@@ -247,40 +250,47 @@ def build_hud():
     #
     # 原本它挂在蓄力条那一档（占用编号 5），于是每用一次柱中之力，
     # 魔化条就被顶掉整整 15 秒。它和魔化一样是持续状态，该并排而不是互相抢。
-    body = ["# 契约冷却条。与魔化并排显示 —— 它是状态，不是蓄力。",
+    body = ["# 契约冷却条。契约对象由 add_pact 从七柱同一份数据生成；",
+            "# 这里只负责第三槽的七柱回响；第四槽由上位契约生成器接管。",
             "scoreboard players set @s rpg_hud_on 1",
             "scoreboard players operation @s rpg_hud_p = #pact_full rpg_hud",
             "scoreboard players operation @s rpg_hud_p -= @s rpg_pact_cd",
-            "scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud",
+            "scoreboard players operation @s rpg_hud_p *= #hud_mini rpg_hud",
             "scoreboard players operation @s rpg_hud_p /= #pact_full rpg_hud"]
-    for n in range(SEGMENTS + 1):
-        comp = row(seg("　│　", "dark_gray"), seg("契约 ", "dark_gray"),
+    for n in range(SEGMENTS // 2 + 1):
+        comp = row(seg("　", "dark_gray"),
                    *bar(n, SEGMENTS // 2, "#D4AF37"))
         body.append("execute if entity @s[scores={rpg_hud_p=%d}] "
-                    "run data modify storage rpg:hud b set value '%s'" % (n, comp))
+                    "run data modify storage rpg:hud c set value '%s'" % (n, comp))
     wf("hud/pbar.mcfunction", "\n".join(body))
     total += len(body)
 
     # ---- 一行两半，拼起来 ----
     wf("hud/status.mcfunction", "\n".join([
-        "# 屏幕下方的持续状态行：魔化（或圣痕）在左，契约冷却在右。",
+        "# 屏幕下方的持续状态行：魔化（或圣痕）、契约对象、七柱冷却、上位契约冷却四槽。",
         "#",
-        "# 命令拼不了字符串，所以两半各自按分数选好自己那段存进 storage，",
+        "# 命令拼不了字符串，所以四槽各自选好文本存进 storage，",
         "# 最后由一条宏拼成一行。storage 是全局的，但整个计算与渲染",
         "# 发生在同一个玩家的同步执行里，中间插不进别人。",
         "scoreboard players set @s rpg_hud_on 0",
         "data modify storage rpg:hud a set value '{\"text\":\"\"}'",
         "data modify storage rpg:hud b set value '{\"text\":\"\"}'",
+        "data modify storage rpg:hud c set value '{\"text\":\"\"}'",
         "execute if entity @s[scores={rpg_holy=1..}] run function rpg:hud/holy",
         "execute if entity @s[scores={rpg_taint=1..}] run function rpg:hud/taint",
+        "execute if entity @s[scores={rpg_pact=1..7}] run function rpg:hud/pact",
         "execute if entity @s[scores={rpg_pact_cd=1..}] run function rpg:hud/pbar",
-        "execute if entity @s[scores={rpg_hud_on=1}] "
-        "run function rpg:hud/render with storage rpg:hud"]))
+        "execute if entity @s[scores={rpg_hud_on=1,rpg_hud_dmt=1..}] "
+        "run function rpg:hud/demon/render with storage rpg:hud",
+        "execute if entity @s[scores={rpg_hud_on=1,rpg_hud_dmt=0}] "
+        "run function rpg:hud/render with storage rpg:hud",
+        "execute if entity @s[scores={rpg_hud_on=0,rpg_hud_dmt=1..}] "
+        "run function rpg:hud/demon/solo"]))
 
     wf("hud/render.mcfunction",
-       "# 唯一真正写 actionbar 的那一行。两半都是完整的文本组件，\n"
-       "# 空的那半是 {\"text\":\"\"}，所以拼起来永远合法。\n"
-       "$title @s actionbar [\"\",$(a),$(b)]")
+       "# 没有上层提示时，画原来那一行。四槽都是完整的文本组件，\n"
+       "# 空段是 {\"text\":\"\"}，所以拼起来永远合法。\n"
+       "$title @s actionbar [\"\",$(a),$(b),$(c)]")
     total += 2
 
     return total
@@ -440,14 +450,14 @@ summon minecraft:vindicator ~ ~1 ~ %(NBT)s
 function rpg:taint/advent_life
 """
 
-# 降临的恶魔只待 30 秒。用记分板倒数 —— LifeTicks 那类字段只有特定实体才有，
+# 降临的恶魔最多停留十分钟。用记分板倒数 —— LifeTicks 那类字段只有特定实体才有，
 # 而且 1.21.9 还改过名（LifeTicks -> life_ticks），不值得赌。
 ADVENT_LIFE = """\
 # 刚落地的那位开始倒数。标签在这一刻只可能挂在他一个身上。
 #
 # `#boss` 是一次性的开关：空缺者那条路在召唤前把它拨上，
-# 于是同一套召唤能招出"来收账的"（30 秒）和"来打架的"（2 分钟）两种，
-# 而不必写两份 NBT —— 两份迟早会写歪。
+# 两条来源现在都需要容纳真名调查和完整仪式，因此统一使用十分钟窗口；仍由
+# 同一套发条负责，避免两份 NBT 迟早写歪。
 execute as @e[tag=rpg.advent.new] run scoreboard players set @s rpg_fall %(LIFE)d
 execute if score #boss rpg_fall matches 1 as @e[tag=rpg.advent.new] run scoreboard players set @s rpg_fall %(BOSS)d
 scoreboard players set #boss rpg_fall 0
@@ -471,6 +481,10 @@ scoreboard players remove @s rpg_fall 1
 execute if entity @s[scores={rpg_fall=..0}] at @s run return run function rpg:taint/advent_gone
 
 # 出手。scores= 只认已经存在的分数，所以先把冷却坐实。
+# 罪约蓄势时只走 ult_tick：寿命仍照常流逝，但普通冷却与招式都暂停，
+# 不会在预警期间夹进另一招。
+scoreboard players add @s rpg_dm_ult 0
+execute at @s if entity @s[scores={rpg_dm_ult=1..}] run return run function rpg:taint/ult_tick
 scoreboard players add @s rpg_dm_cd 0
 execute if entity @s[scores={rpg_dm_cd=1..}] run return run scoreboard players remove @s rpg_dm_cd 1
 execute at @s if entity @a[distance=..%(R)d,gamemode=!spectator,gamemode=!creative] run function rpg:taint/cast
@@ -480,6 +494,10 @@ DEMON_CAST = """\
 # 该他出手了。先上锁再分流 —— 归属靠这个标签认人，
 # 命令是单线程的，同一刻不可能有第二个降临者挂着它。
 scoreboard players set @s rpg_dm_cd %(CD)d
+# 每第四次出手改为罪约。计数跟着实体走，多只恶魔互不借拍；
+# ult_start 会清零并进入自己的蓄势阶段。
+scoreboard players add @s rpg_dm_casts 1
+execute if entity @s[scores={rpg_dm_casts=4..}] run return run function rpg:taint/ult_start
 tag @s add rpg.dm.cast
 function rpg:taint/skill
 tag @s remove rpg.dm.cast
@@ -494,13 +512,12 @@ execute if score #ride rpg_fall matches 0 at @s run function rpg:taint/demon_boo
 """
 
 DEMON_BOOM_FX = """\
-# 死亡爆炸。fuse:0 的 TNT 是同刻就炸的 —— 苦力怕点了火还要鼓 1.5 秒。
-# 探针骑在乘客位上，比脚下高两格 —— 往下压一点，炸在身上而不是头顶
-particle explosion_emitter ~ ~-1.2 ~ 0 0 0 0 1
+# 死亡伪爆炸。探针骑在乘客位上，比脚下高两格 —— 往下压一点，
+# 在降临者身上结算表现与伤害；不生成 TNT，也不修改任何方块。
 particle sculk_soul ~ ~0.5 ~ 1 1 1 0.2 80
 particle large_smoke ~ ~0.5 ~ 1 1 1 0.1 50
 playsound minecraft:entity.wither.death hostile @a[distance=..48] ~ ~ ~ 1 0.7
-summon minecraft:tnt ~ ~-1.2 ~ {fuse:0s,explosion_power:%(POW)d.0f}
+execute positioned ~ ~-1.2 ~ run function rpg:effect/pseudo_explosion/p%(POW)d
 kill @s
 """
 
@@ -518,7 +535,7 @@ effect give @s minecraft:blindness 3 0 true
 """
 
 ADVENT_ARM = """\
-# 补发条。已经有寿命的不动（正规路径给的 600 / 2400 都算数），
+# 补发条。已经有寿命的不动（正规路径给的 12000 算数），
 # 只有真的没有才按默认值补。
 tag @s add rpg.advent.timed
 execute unless score @s rpg_fall matches 1.. run scoreboard players set @s rpg_fall %(LIFE)d
@@ -658,13 +675,12 @@ title @s subtitle ["",{"text":"空壳换了一个人","italic":false,"color":"gr
 """
 
 VACANT_LOOSE = """\
-# 无处可去的东西不再散成碎片 —— 它自己找了一副躯体。
+# 无处可去的东西不再散成碎片 —— 它随机招来一位领主作为躯体。
 #
-# @s 是那个动手的人。签了哪一柱，来的就是哪一位；没签过的是无名者 ——
-# 与降临同一套分流，只是这一只是来打架的，所以寿命另算。
+# 这条恶魔属于空缺者，不属于动手的人；玩家签了谁都不影响掷点。
+# 仍复用降临的七柱分流，只是这一只是来打架的，所以寿命另算。
 scoreboard players set #boss rpg_fall 1
-scoreboard players set #lord rpg_fall 0
-execute if entity @s[tag=rpg.pact] run scoreboard players operation #lord rpg_fall = @s rpg_pact
+execute store result score #lord rpg_fall run random value 1..7
 execute at @s run function rpg:taint/lord
 """
 
@@ -1049,9 +1065,9 @@ def build_functions():
              "execute if entity @e[type=minecraft:marker,tag=rpg.demon.soul,limit=1] "
              "run execute as @e[type=minecraft:marker,tag=rpg.demon.soul] "
              "run function rpg:taint/demon_soul\n")
-    root += ("\n# 降临者的 30 秒寿命。带类型且过守卫 —— 场上没有就整段跳过。\n"
+    root += ("\n# 降临者的十分钟寿命。带类型且过守卫 —— 场上没有就整段跳过。\n"
              "execute if entity @e[type=minecraft:vindicator,tag=rpg.advent,limit=1] "
-             "run execute as @e[type=minecraft:vindicator,tag=rpg.advent] "
+             "run execute as @e[type=minecraft:vindicator,tag=rpg.advent] at @s "
              "run function rpg:taint/advent_tick\n")
     wf("exorcism.mcfunction", root)
 
@@ -1132,15 +1148,19 @@ def route_actionbars():
     # 换算用的常量
     p = os.path.join(FUNC, "command/soreboard.mcfunction")
     s = io.open(p, encoding="utf-8").read()
-    if "#hud_seg" not in s:
+    constants = (
+        ("#hud_seg", SEGMENTS), ("#hud_mini", SEGMENTS // 2),
+        ("#hud_full", 30), ("#taint_max", TAINT_MAX),
+        ("#fall_max", FALL_MAX), ("#inv_full", LIT),
+        ("#holy_full", HOLY_TICKS),
+    )
+    added = []
+    for holder, value in constants:
+        if holder not in s:
+            added.append("scoreboard players set %s rpg_hud %d" % (holder, value))
+    if added:
         io.open(p, "w", encoding="utf-8", newline="\n").write(
-            s.rstrip("\n")
-            + "\nscoreboard players set #hud_seg rpg_hud %d" % SEGMENTS
-            + "\nscoreboard players set #hud_full rpg_hud 30"
-            + "\nscoreboard players set #taint_max rpg_hud %d" % TAINT_MAX
-            + "\nscoreboard players set #fall_max rpg_hud %d" % FALL_MAX
-            + "\nscoreboard players set #inv_full rpg_hud %d" % LIT
-            + "\nscoreboard players set #holy_full rpg_hud %d\n" % HOLY_TICKS)
+            s.rstrip("\n") + "\n" + "\n".join(added) + "\n")
     return edits
 
 
@@ -1210,7 +1230,7 @@ def demon_nbt(name, accent, colour):
     死亡消息里还是认得出是哪一位。
     """
     return (
-        '{Tags:["rpg.advent","rpg.demon","devil","rpg.advent.new"],'
+        '{Tags:["rpg.advent","rpg.demon","devil","rpg.advent.new","rpg.health700"],'
         'Johnny:1,Silent:1b,PersistenceRequired:1b,'
         'CustomName:[{"text":"[DEVIL]","color":"%s","bold":true,"italic":false},'
         '{"text":"%s","color":"%s","italic":false}],'

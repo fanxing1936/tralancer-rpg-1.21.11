@@ -1,0 +1,13 @@
+# 仪式摆件：生成、法阵绑定清理、封魔灯延时消散。
+execute in minecraft:overworld run summon minecraft:item_display 0 100 0 {Tags:["rpg.rite.anchor","rpg.test.anchor"]}
+scoreboard players set @e[type=minecraft:item_display,tag=rpg.test.anchor,limit=1] rpg_rite_id 991
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.test.anchor,limit=1] at @s run function rpg:inquest/tool/place/nail
+execute if entity @e[type=minecraft:item_display,tag=rpg.rite.prop.nail,scores={rpg_prop_t=1..900}] run say PROP_NAIL_SPAWN_PASS
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.test.anchor,limit=1] at @s run function rpg:inquest/tool/cleanup
+execute unless entity @e[type=minecraft:item_display,tag=rpg.rite.prop.nail] run say PROP_BOUND_CLEANUP_PASS
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.test.anchor,limit=1] at @s run function rpg:inquest/tool/place/lantern
+execute in minecraft:overworld as @e[type=minecraft:item_display,tag=rpg.test.anchor,limit=1] at @s run function rpg:inquest/tool/cleanup
+execute if entity @e[type=minecraft:item_display,tag=rpg.rite.prop.lantern,scores={rpg_prop_t=1..120}] run say PROP_LANTERN_LINGER_PASS
+kill @e[type=minecraft:item_display,tag=rpg.test.anchor]
+tick sprint 121
+execute unless entity @e[type=minecraft:item_display,tag=rpg.rite.prop.lantern] run say PROP_LANTERN_EXPIRE_PASS

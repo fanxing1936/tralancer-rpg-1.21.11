@@ -127,6 +127,9 @@ scoreboard objectives add entity_base_health dummy
 scoreboard objectives add damage_timing dummy
 scoreboard objectives add damage_action dummy
 
+# 伪爆炸：Boss 与二阶段侍从的稳定归属
+scoreboard objectives add rpg_boom_id dummy
+
 ##新增装备技能
 scoreboard objectives add truth minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add rpg_vine_lash dummy
@@ -165,7 +168,11 @@ scoreboard objectives add rpg_hud_on dummy
 scoreboard objectives add rpg_fall dummy
 scoreboard objectives add rpg_dm_cd dummy
 scoreboard objectives add rpg_dm_lord dummy
+scoreboard objectives add rpg_dm_casts dummy
+scoreboard objectives add rpg_dm_ult dummy
+scoreboard objectives add rpg_dm_last dummy
 scoreboard players set #hud_seg rpg_hud 10
+scoreboard players set #hud_mini rpg_hud 5
 scoreboard players set #hud_full rpg_hud 30
 scoreboard players set #taint_max rpg_hud 100
 scoreboard players set #fall_max rpg_hud 60
@@ -174,6 +181,8 @@ scoreboard players set #holy_full rpg_hud 3600
 scoreboard objectives add rpg_pact dummy
 scoreboard objectives add rpg_pact_cd dummy
 scoreboard objectives add rpg_pact_t dummy
+scoreboard objectives add rpg_hud_dm dummy
+scoreboard objectives add rpg_hud_dmt dummy
 scoreboard players set #pact_full rpg_hud 300
 scoreboard players set #two rpg_pact 2
 scoreboard objectives add rpg_squad dummy
@@ -193,6 +202,99 @@ scoreboard objectives add rpg_mam_c dummy
 scoreboard objectives add rpg_mam_win dummy
 scoreboard objectives add rpg_mam_dw dummy
 scoreboard players set #mam_full rpg_hud 40
+
+# 老武器现代化：状态全部归玩家，不再 reset * 互踩
+scoreboard objectives add rpg_leg_cd dummy
+scoreboard objectives add rpg_pen_mode dummy
+scoreboard objectives add rpg_venom dummy
+scoreboard objectives add rpg_night_chg dummy
+scoreboard objectives add rpg_night_hold dummy
+scoreboard objectives add rpg_ashes_chg dummy
+scoreboard objectives add rpg_ashes_hold dummy
+scoreboard objectives add rpg_wind_chg dummy
+scoreboard objectives add rpg_wind_hold dummy
+scoreboard objectives add rpg_throne_chg dummy
+scoreboard objectives add rpg_throne_hold dummy
+scoreboard objectives add rpg_throne_mark dummy
+scoreboard objectives add rpg_throne_owner dummy
+scoreboard objectives add rpg_legacy_uid dummy
+scoreboard objectives add rpg_blil_cd dummy
+# 旧镶嵌的 0..50 蓄力映射到十段 HUD。
+scoreboard players set #rune5 rpg_hud_p 5
 scoreboard objectives add rpg_hud_m dummy
 scoreboard objectives add rpg_hud_mt dummy
 scoreboard objectives add rpg_inv dummy
+scoreboard objectives add rpg_inv_id dummy
+scoreboard objectives add rpg_boss_slot dummy
+scoreboard objectives add rpg_boss_fx dummy
+scoreboard objectives add rpg_proj_t dummy
+scoreboard objectives add rpg_hp_level dummy
+scoreboard objectives add rpg_com_clock dummy
+scoreboard objectives add rpg_ex_stage dummy
+scoreboard objectives add rpg_ex_time dummy
+scoreboard objectives add rpg_ex_hp dummy
+scoreboard objectives add rpg_ex_tmp dummy
+scoreboard objectives add rpg_rite_id dummy
+scoreboard objectives add rpg_case1 dummy
+scoreboard objectives add rpg_case2 dummy
+scoreboard objectives add rpg_case3 dummy
+scoreboard objectives add rpg_case4 dummy
+scoreboard objectives add rpg_case5 dummy
+scoreboard objectives add rpg_case6 dummy
+scoreboard objectives add rpg_case7 dummy
+scoreboard objectives add rpg_ex_stab dummy
+scoreboard objectives add rpg_ex_counter dummy
+scoreboard objectives add rpg_ex_kind dummy
+scoreboard objectives add rpg_ex_ctime dummy
+scoreboard objectives add rpg_ex_ransom dummy
+scoreboard objectives add rpg_ex_slots dummy
+scoreboard objectives add rpg_ex_toolcd dummy
+scoreboard objectives add rpg_ex_choice trigger
+scoreboard objectives add rpg_panel trigger
+scoreboard objectives add rpg_ex_xp dummy
+scoreboard objectives add rpg_ex_lvl dummy
+scoreboard objectives add rpg_ex_path dummy
+scoreboard objectives add rpg_ex_seen dummy
+scoreboard objectives add rpg_ex_prev dummy
+scoreboard objectives add rpg_ex_use minecraft.used:minecraft.goat_horn
+scoreboard objectives add rpg_seal_t dummy
+scoreboard objectives add rpg_seal_roll dummy
+scoreboard objectives add rpg_seal_i dummy
+scoreboard objectives add rpg_prop_t dummy
+scoreboard objectives add rpg_ex_phase dummy
+scoreboard objectives add rpg_ex_pressure dummy
+scoreboard objectives add rpg_ex_pressure_roll dummy
+scoreboard objectives add rpg_ex_wave dummy
+scoreboard objectives add rpg_ex_wave_kind dummy
+scoreboard objectives add rpg_ex_struggle dummy
+scoreboard objectives add rpg_ex_hitcd dummy
+scoreboard objectives add rpg_ex_usecd dummy
+scoreboard objectives add rpg_ex_hud dummy
+scoreboard objectives add rpg_ex_hud_t dummy
+scoreboard objectives add rpg_mn_lord dummy
+scoreboard objectives add rpg_mn_role dummy
+scoreboard objectives add rpg_mn_cd dummy
+scoreboard objectives add rpg_mn_tick dummy
+scoreboard objectives add rpg_mn_slot dummy
+scoreboard objectives add rpg_lt_tick dummy
+scoreboard objectives add rpg_lt_fill dummy
+scoreboard objectives add rpg_lt_usecd dummy
+scoreboard objectives add rpg_lt_covenant dummy
+scoreboard objectives add rpg_lt_bless dummy
+scoreboard objectives add rpg_lt_divine dummy
+scoreboard objectives add rpg_lt_div_cd dummy
+scoreboard objectives add rpg_lt_div_max dummy
+scoreboard objectives add rpg_lt_div_t dummy
+scoreboard objectives add rpg_lt_regen dummy
+scoreboard objectives add rpg_lt_auth dummy
+scoreboard objectives add rpg_lt_hp dummy
+scoreboard objectives add rpg_lt_max dummy
+scoreboard objectives add rpg_lt_owner dummy
+scoreboard objectives add rpg_lt_gather dummy
+scoreboard objectives add rpg_lt_claim dummy
+scoreboard objectives add rpg_lt_migrate dummy
+scoreboard players set #three rpg_lt_max 3
+scoreboard players set #four rpg_lt_max 4
+scoreboard players set #five rpg_lt_max 5
+scoreboard players set #twenty rpg_lt_max 20
+scoreboard players set #hundred rpg_lt_max 100

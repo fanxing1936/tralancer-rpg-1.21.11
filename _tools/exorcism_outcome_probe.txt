@@ -1,0 +1,4 @@
+function rpg:qa/outcome_banish
+function rpg:qa/outcome_seal
+function rpg:qa/outcome_pact
+kill @e[tag=rpg.qa.exp]

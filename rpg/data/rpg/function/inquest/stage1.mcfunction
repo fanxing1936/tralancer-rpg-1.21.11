@@ -1,0 +1,12 @@
+# 调查阶段允许真实伤害；175 HP（700 的 25%）为仪式保护线。
+execute store result score @s rpg_ex_hp run data get entity @s Health 100
+execute if score @s rpg_ex_hp matches ..17499 run data merge entity @s {Health:175f}
+effect give @s minecraft:resistance 2 0 true
+particle dust{color:[0.95,0.82,0.32],scale:0.8} ~ ~1 ~ 0.35 0.7 0.35 0.01 1 normal
+execute if score @s rpg_dm_lord matches 1 if entity @a[tag=rpg.name.1,distance=..10,gamemode=!spectator] if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.totem.inv,tag=!rpg.rite.anchor,distance=..8,limit=1] run return run function rpg:inquest/bind/1
+execute if score @s rpg_dm_lord matches 2 if entity @a[tag=rpg.name.2,distance=..10,gamemode=!spectator] if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.totem.inv,tag=!rpg.rite.anchor,distance=..8,limit=1] run return run function rpg:inquest/bind/2
+execute if score @s rpg_dm_lord matches 3 if entity @a[tag=rpg.name.3,distance=..10,gamemode=!spectator] if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.totem.inv,tag=!rpg.rite.anchor,distance=..8,limit=1] run return run function rpg:inquest/bind/3
+execute if score @s rpg_dm_lord matches 4 if entity @a[tag=rpg.name.4,distance=..10,gamemode=!spectator] if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.totem.inv,tag=!rpg.rite.anchor,distance=..8,limit=1] run return run function rpg:inquest/bind/4
+execute if score @s rpg_dm_lord matches 5 if entity @a[tag=rpg.name.5,distance=..10,gamemode=!spectator] if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.totem.inv,tag=!rpg.rite.anchor,distance=..8,limit=1] run return run function rpg:inquest/bind/5
+execute if score @s rpg_dm_lord matches 6 if entity @a[tag=rpg.name.6,distance=..10,gamemode=!spectator] if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.totem.inv,tag=!rpg.rite.anchor,distance=..8,limit=1] run return run function rpg:inquest/bind/6
+execute if score @s rpg_dm_lord matches 7 if entity @a[tag=rpg.name.7,distance=..10,gamemode=!spectator] if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.totem.inv,tag=!rpg.rite.anchor,distance=..8,limit=1] run return run function rpg:inquest/bind/7

@@ -1,15 +1,10 @@
 # -*- coding: utf-8 -*-
-"""构建期检查：攻击用的苦力怕必须当场引爆。
+"""构建期检查：攻击瞬爆必须是无地形破坏的伪爆炸。
 
-这一类错误是**完全静默**的。`Fuse:0` 在 1.21.11 已经不是字段了（实测：
-苦力怕的 NBT 里既没有 `Fuse` 也没有 `fuse`，写进 summon 会被直接丢掉），
-于是本该当场炸开的苦力怕变成普通苦力怕，站在原地追着人跑 ——
-服务器不报错，validate 也看不出来，只有在游戏里才发现。
-
-现在让它在构建期就暴露：凡是召唤苦力怕的地方，都必须带 `ignited:1b`。
-
-自然生成的变种表原本是唯一的例外（那是世界里的苦力怕，不是武器效果），
-但它已经整段删掉了 —— 所以现在没有例外：包里每一处召唤都得引爆。
+自然苦力怕变种已由 ``drop_creeper_variants.py`` 删除；其余旧 ``Fuse:0``
+召唤都应由 ``instant_boom.py`` 变成粒子、声音与 command damage。这里同时
+阻止旧苦力怕写法和 ``fuse:0``/``explosion_power`` TNT 回流。普通非零引信
+TNT、TNT 矿车与玩家放置方块不在检查范围内。
 """
 import io
 import os
@@ -19,11 +14,9 @@ import sys
 ROOT = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 FUNC = os.path.join(ROOT, "data/rpg/function")
 
-# 苦力怕的变种体系已经整段删掉（见 drop_creeper_variants.py），
-# 所以现在包里**每一处**苦力怕召唤都是武器／技能效果，一律必须当场引爆。
-EXEMPT = ()
-
-SUMMON = re.compile(r"summon\s+(?:minecraft:)?creeper\b[^\n]*")
+SUMMON_CREEPER = re.compile(r"summon\s+(?:minecraft:)?creeper\b[^\n]*")
+INSTANT_TNT = re.compile(
+    r"summon\s+(?:minecraft:)?tnt\b[^\n]*fuse\s*:\s*0(?:s|b|S|B)?\b")
 
 
 def main():
@@ -34,19 +27,28 @@ def main():
                 continue
             p = os.path.join(base, f)
             rel = os.path.relpath(p, FUNC).replace("\\", "/")
-            if rel in EXEMPT:
-                continue
             for i, line in enumerate(io.open(p, encoding="utf-8"), 1):
-                for m in SUMMON.finditer(line):
-                    if "ignited" not in m.group(0):
-                        bad.append("%s:%d" % (rel, i))
+                if SUMMON_CREEPER.search(line):
+                    bad.append("%s:%d legacy creeper" % (rel, i))
+                if INSTANT_TNT.search(line):
+                    bad.append("%s:%d terrain-breaking instant TNT" % (rel, i))
 
     if bad:
-        print("creeper check: %d 处召唤没有 ignited:1b（会站着不炸）" % len(bad))
+        print("pseudo boom check: %d 处仍会生成真实爆炸实体" % len(bad))
         for b in bad:
             print("  " + b)
         return 1
-    print("creeper check: 攻击用的苦力怕全部当场引爆")
+    fx = os.path.join(FUNC, "effect/pseudo_explosion/p4.mcfunction")
+    if not os.path.isfile(fx):
+        print("pseudo boom check: 缺少伪爆炸函数")
+        return 1
+    body = io.open(fx, encoding="utf-8").read()
+    if ("damage @s" not in body or "explosion_emitter" not in body or
+            re.search(r"\b(?:setblock|fill|summon\s+(?:minecraft:)?(?:tnt|creeper))\b",
+                      body)):
+        print("pseudo boom check: 伪爆炸函数缺少伤害/表现或会修改世界")
+        return 1
+    print("pseudo boom check: 全部攻击瞬爆无爆炸实体、无地形破坏")
     return 0
 
 

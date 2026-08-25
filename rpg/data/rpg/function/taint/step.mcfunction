@@ -13,6 +13,8 @@ execute if entity @s[tag=rpg.pact] run scoreboard players add @s rpg_taint 1
 execute if entity @s[tag=rpg.pact,scores={rpg_pact=7}] run scoreboard players add @s rpg_taint 1
 execute if entity @s[tag=rpg.holy] run scoreboard players remove @s rpg_taint 1
 execute if entity @s[scores={rpg_taint=101..}] run scoreboard players set @s rpg_taint 100
+# 旧约以律法抵消每次结算中的两点魔化。
+execute if score @s rpg_lt_divine matches 1 run scoreboard players remove @s rpg_taint 2
 execute if entity @s[scores={rpg_taint=..-1}] run scoreboard players set @s rpg_taint 0
 
 # 身边立着替死人偶的话，这一轮沾上的由它承受。

@@ -1,0 +1,6 @@
+function rpg:qa/exp_setup
+function rpg:qa/tool_probe
+tag @e[tag=rpg.qa.anchor,limit=1] list
+scoreboard players get @e[tag=rpg.qa.anchor,limit=1] rpg_ex_slots
+data get entity @e[type=minecraft:item,nbt={Item:{id:"minecraft:light_blue_dye"}},limit=1] Item.count
+kill @e[tag=rpg.qa.exp]

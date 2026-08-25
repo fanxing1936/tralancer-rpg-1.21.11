@@ -159,5 +159,8 @@ if problems:
     print("\n%d problems:" % len(problems))
     for p in problems[:80]:
         print("  " + p)
+    # build.sh uses `set -e`; validation must therefore return failure, not
+    # merely print a red-looking report and let packaging continue.
+    sys.exit(1)
 else:
     print("\nno problems found")

@@ -16,6 +16,8 @@ Two things had to change with it:
   and no cooldown is wanted here (unlike 路西法, whose skill fires once).
 * **The model.**  `king_sword` hung off `huge_sword_handheld`; on a spear base
   it follows vanilla's shape instead, with a mirrored in-hand sprite.
+* **The lunge.**  The holy spear is authored with Lunge III, using the native
+  1.21.11 spear jab movement rather than a duplicate command-based dash.
 """
 
 import io
@@ -38,6 +40,7 @@ JAR = r"F:/筑梦 MCBE/HMCL启动器/新建文件夹/versions/1.21.11-Fabric/1.2
 CMD = 1110003
 BASE = "netherite_spear"
 ART = "king_sword"
+LUNGE = 3
 
 # The original five are kept as they were.  `supported_items` only gates the
 # enchanting table and the anvil -- writing an enchantment straight into the
@@ -86,24 +89,37 @@ def strip_component(line, name):
             j += 1
     if j < len(line) and line[j] == ",":
         j += 1
+    elif i > 0 and line[i - 1] == ",":
+        i -= 1
     return line[:i] + line[j:]
+
+
+def add_lunge(line):
+    if "lunge:" in line:
+        return line
+    marker = "enchantments={"
+    assert marker in line, "Longinus item has no enchantments component"
+    return line.replace(marker, marker + "lunge:%d," % LUNGE, 1)
 
 
 def convert_give():
     path = os.path.join(FUNC, "command/give/weapon.mcfunction")
     s = io.open(path, encoding="utf-8").read()
-    out, hits = [], 0
+    out, hits, found = [], 0, 0
     for line in s.split("\n"):
-        if "朗基努斯之枪" not in line or not line.startswith("give @a mace["):
+        if "朗基努斯之枪" not in line:
             out.append(line)
             continue
-        line = "give @a %s[" % BASE + line[len("give @a mace["):]
+        found += 1
+        if line.startswith("give @a mace["):
+            line = "give @a %s[" % BASE + line[len("give @a mace["):]
+            hits += 1
+        assert line.startswith("give @a %s[" % BASE), "unexpected Longinus base item"
         line = strip_component(line, "food")
         line = strip_component(line, "consumable")
-        out.append(line)
-        hits += 1
-    if hits:
-        io.open(path, "w", encoding="utf-8", newline="\n").write("\n".join(out))
+        out.append(add_lunge(line))
+    assert found == 1, "Longinus give card is not unique"
+    io.open(path, "w", encoding="utf-8", newline="\n").write("\n".join(out))
     return hits
 
 
@@ -186,8 +202,8 @@ def main():
     hits = convert_give()
     convert_advancement()
     dropped = convert_models()
-    print("longinus: give rewritten=%d  mace branch dropped=%d  base=%s cmd=%d"
-          % (hits, dropped, BASE, CMD))
+    print("longinus: give rewritten=%d  mace branch dropped=%d  base=%s cmd=%d lunge=%d"
+          % (hits, dropped, BASE, CMD, LUNGE))
 
 
 if __name__ == "__main__":

@@ -16,6 +16,8 @@ python add_leviathan.py ../resourcepack ../rpg
 python add_runes.py ../rpg ../resourcepack
 python add_epics.py ../resourcepack ../rpg
 python retype_longinus.py ../resourcepack ../rpg
+python retype_wukong.py ../resourcepack ../rpg
+python build_combat_prompt_font.py ../resourcepack
 # last, so every hand transform in the pack has exactly one owner
 python fix_display.py ../resourcepack
 echo

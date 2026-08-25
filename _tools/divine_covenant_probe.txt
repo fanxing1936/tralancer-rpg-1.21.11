@@ -1,0 +1,71 @@
+# Divine-covenant dynamic probe for a real 1.21.11 dedicated server.
+tick freeze
+execute in minecraft:overworld run kill @e[tag=rpg.qa.divine]
+execute in minecraft:overworld run loot spawn 0 81 0 loot rpg:ritual/life_tree/old_covenant
+execute in minecraft:overworld as @e[type=minecraft:item,x=0,y=81,z=0,distance=..2] if data entity @s {Item:{id:"minecraft:enchanted_book",components:{"minecraft:custom_data":{rpg_divine_pact:1b,rpg_divine_old:1b}}}} run say DIVINE_OLD_COVENANT_LOOT_PASS
+execute in minecraft:overworld run loot spawn 4 81 0 loot rpg:ritual/life_tree/new_covenant
+execute in minecraft:overworld as @e[type=minecraft:item,x=4,y=81,z=0,distance=..1] if data entity @s {Item:{id:"minecraft:enchanted_book",components:{"minecraft:custom_data":{rpg_divine_pact:1b,rpg_divine_new:1b}}}} run say DIVINE_NEW_COVENANT_LOOT_PASS
+execute in minecraft:overworld run summon minecraft:vindicator 0 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.old"],Health:100f,attributes:[{id:"minecraft:max_health",base:100f},{id:"minecraft:armor",base:0f}]}
+execute in minecraft:overworld as @e[tag=rpg.qa.old,limit=1] at @s run function rpg:divine/damage/old_target
+execute in minecraft:overworld if data entity @e[tag=rpg.qa.old,limit=1] {Health:80f} run say DIVINE_OLD_PERCENT_DAMAGE_PASS
+execute in minecraft:overworld run summon minecraft:vindicator 4 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.execute"],Health:25f,attributes:[{id:"minecraft:max_health",base:100f},{id:"minecraft:armor",base:0f}]}
+execute in minecraft:overworld as @e[tag=rpg.qa.execute,limit=1] at @s run function rpg:divine/damage/old_target
+execute in minecraft:overworld unless entity @e[tag=rpg.qa.execute] run say DIVINE_OLD_EXECUTION_PASS
+execute in minecraft:overworld run summon minecraft:vindicator 8 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.new"],Health:100f,attributes:[{id:"minecraft:max_health",base:100f},{id:"minecraft:armor",base:0f}]}
+execute in minecraft:overworld run effect give @e[tag=rpg.qa.new,limit=1] minecraft:resistance 30 4 true
+execute in minecraft:overworld as @e[tag=rpg.qa.new,limit=1] at @s run function rpg:divine/damage/new_target
+execute in minecraft:overworld if data entity @e[tag=rpg.qa.new,limit=1] {Health:60f} run say DIVINE_NEW_PERCENT_PLUS_BASE_PASS
+execute in minecraft:overworld run summon minecraft:vindicator 12 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.field"],Health:100f,attributes:[{id:"minecraft:max_health",base:100f},{id:"minecraft:armor",base:20f}]}
+execute in minecraft:overworld as @e[tag=rpg.qa.field,limit=1] at @s run function rpg:divine/damage/field_target
+execute in minecraft:overworld if data entity @e[tag=rpg.qa.field,limit=1] {Health:75f} run say DIVINE_EDEN_FIELD_DAMAGE_PASS
+execute in minecraft:overworld run summon minecraft:vindicator 16 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.stage1"],Health:700f,attributes:[{id:"minecraft:max_health",base:700f},{id:"minecraft:armor",base:20f}]}
+scoreboard players set @e[tag=rpg.qa.stage1,limit=1] rpg_ex_stage 1
+execute in minecraft:overworld as @e[tag=rpg.qa.stage1,limit=1] at @s run function rpg:divine/damage/new_target
+execute in minecraft:overworld as @e[tag=rpg.qa.stage1,limit=1] at @s run function rpg:inquest/stage1
+execute in minecraft:overworld if data entity @e[tag=rpg.qa.stage1,limit=1] {Health:510f} run say DIVINE_STAGE1_VISIBLE_DAMAGE_PASS
+execute in minecraft:overworld run summon minecraft:vindicator 20 80 4 {Tags:["rpg.demon","rpg.qa.divine","rpg.qa.floor"],Health:180f,attributes:[{id:"minecraft:max_health",base:700f},{id:"minecraft:armor",base:20f}]}
+scoreboard players set @e[tag=rpg.qa.floor,limit=1] rpg_ex_stage 1
+execute in minecraft:overworld as @e[tag=rpg.qa.floor,limit=1] at @s run function rpg:divine/damage/new_target
+execute in minecraft:overworld as @e[tag=rpg.qa.floor,limit=1] at @s run function rpg:inquest/stage1
+execute in minecraft:overworld if data entity @e[tag=rpg.qa.floor,limit=1] {Health:175f} run say DIVINE_STAGE1_25_PERCENT_FLOOR_PASS
+execute in minecraft:overworld run summon minecraft:item_display 24 80 0 {Tags:["rpg.rite.anchor","rpg.qa.divine","rpg.qa.anchor"]}
+scoreboard players set @e[tag=rpg.qa.anchor,limit=1] rpg_rite_id 91
+scoreboard players set @e[tag=rpg.qa.anchor,limit=1] rpg_ex_stab 40
+execute in minecraft:overworld run summon minecraft:vindicator 24 80 4 {Tags:["rpg.demon","rpg.exorcism.bound","rpg.qa.divine","rpg.qa.bound"],Health:420f,attributes:[{id:"minecraft:max_health",base:700f},{id:"minecraft:armor",base:20f}]}
+scoreboard players set @e[tag=rpg.qa.bound,limit=1] rpg_rite_id 91
+scoreboard players set @e[tag=rpg.qa.bound,limit=1] rpg_ex_stage 2
+execute in minecraft:overworld as @e[tag=rpg.qa.bound,limit=1] at @s run function rpg:divine/damage/new_target
+execute in minecraft:overworld if score @e[tag=rpg.qa.anchor,limit=1] rpg_ex_stab matches 65 if data entity @e[tag=rpg.qa.bound,limit=1] {Health:420f} run say DIVINE_BOUND_STABILITY_ROUTE_PASS
+execute in minecraft:overworld run summon minecraft:marker 8 80 0 {Tags:["rpg.lt.gathering","rpg.qa.divine","rpg.qa.gather","rpg.qa.tree"]}
+scoreboard players set @e[tag=rpg.qa.tree,limit=1] rpg_lt_gather 0
+execute in minecraft:overworld run summon minecraft:item_display 12 80 0 {Tags:["rpg.ritual.life_tree.prop","rpg.qa.divine","rpg.qa.gather"]}
+execute in minecraft:overworld run summon minecraft:item_display 8 80 -1.58 {Tags:["rpg.ritual.life_tree.cross","rpg.qa.divine","rpg.qa.gather"]}
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+function rpg:divine/gather/step
+execute in minecraft:overworld unless entity @e[tag=rpg.qa.gather] run say DIVINE_DAATH_GATHER_PASS
+execute in minecraft:overworld run kill @e[tag=rpg.qa.divine]
+execute in minecraft:overworld run kill @e[type=minecraft:item,x=-4,y=78,z=-4,dx=16,dy=8,dz=12]
+tick unfreeze
+say DIVINE_COVENANT_DYNAMIC_PROBE_DONE

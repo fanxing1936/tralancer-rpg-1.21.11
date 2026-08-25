@@ -1,207 +1,296 @@
 [
   {
+    "function": "minecraft:set_name",
+    "name": [
+      "",
+      {
+        "text": "[档案]",
+        "color": "#D4AF37",
+        "italic": false,
+        "bold": true
+      },
+      {
+        "text": "玩家面板",
+        "color": "#FFF2A8",
+        "italic": false,
+        "bold": true
+      }
+    ],
+    "entity": "this"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:max_stack_size": 1
+    }
+  },
+  {
     "function": "minecraft:set_lore",
     "lore": [
       [
         "",
         {
-          "text": "🧪玩家等级",
-          "color": "white",
+          "text": "+-------- 玩家档案 --------+",
+          "color": "#D4AF37",
+          "italic": false,
+          "bold": true
+        }
+      ],
+      [
+        "",
+        {
+          "text": "执档者：",
+          "color": "gray",
           "italic": false
         },
         {
-          "text": "：",
-          "color": "white",
+          "selector": "@s",
+          "color": "#FFF2A8",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "等级 ",
+          "color": "gray",
           "italic": false
         },
         {
+          "score": {
+            "name": "@s",
+            "objective": "player_level"
+          },
           "color": "gold",
-          "italic": false,
+          "italic": false
+        },
+        {
+          "text": "　生命 ",
+          "color": "gray",
+          "italic": false
+        },
+        {
           "score": {
-            "objective": "player_level",
             "name": "@s",
-            "italic": false
-          }
+            "objective": "health"
+          },
+          "color": "#FF806B",
+          "italic": false
         }
       ],
       [
         "",
         {
-          "text": "+------个人属性------+",
-          "italic": false,
-          "color": "white"
-        }
-      ],
-      [
-        "",
-        {
-          "text": "❤玩家血量",
-          "color": "white",
+          "text": "攻击 ",
+          "color": "gray",
           "italic": false
         },
         {
-          "text": "：",
-          "color": "white",
-          "italic": false
-        },
-        {
-          "color": "white",
-          "italic": false,
           "score": {
-            "objective": "health",
             "name": "@s",
-            "italic": false
-          }
-        }
-      ],
-      [
-        "",
-        {
-          "text": "🪓攻击速度",
+            "objective": "player_attack_damage_"
+          },
           "color": "white",
           "italic": false
-        },
-        {
-          "text": "：",
-          "color": "white",
-          "italic": false
-        },
-        {
-          "color": "white",
-          "italic": false,
-          "score": {
-            "objective": "player_attack_speed_",
-            "name": "@s",
-            "italic": false
-          }
         },
         {
           "text": ".",
+          "color": "dark_gray",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "@s",
+            "objective": "player_attack_damage"
+          },
           "color": "white",
           "italic": false
         },
         {
-          "color": "white",
-          "italic": false,
+          "text": "　攻速 ",
+          "color": "gray",
+          "italic": false
+        },
+        {
           "score": {
-            "objective": "player_attack_speed",
             "name": "@s",
-            "italic": false
-          }
+            "objective": "player_attack_speed_"
+          },
+          "color": "white",
+          "italic": false
+        },
+        {
+          "text": ".",
+          "color": "dark_gray",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "@s",
+            "objective": "player_attack_speed"
+          },
+          "color": "white",
+          "italic": false
         }
       ],
       [
         "",
         {
-          "text": "🗡攻击伤害",
-          "color": "white",
+          "text": "护甲 ",
+          "color": "gray",
           "italic": false
         },
         {
-          "text": "：",
-          "color": "white",
-          "italic": false
-        },
-        {
-          "color": "white",
-          "italic": false,
           "score": {
-            "objective": "player_attack_damage_",
             "name": "@s",
-            "italic": false
-          }
+            "objective": "player_armor_"
+          },
+          "color": "#8FC7FF",
+          "italic": false
         },
         {
           "text": ".",
-          "color": "white",
+          "color": "dark_gray",
           "italic": false
         },
         {
-          "color": "white",
-          "italic": false,
           "score": {
-            "objective": "player_attack_damage",
             "name": "@s",
-            "italic": false
-          }
+            "objective": "player_armor"
+          },
+          "color": "#8FC7FF",
+          "italic": false
+        },
+        {
+          "text": "　韧性 ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "@s",
+            "objective": "player_armor_toughness_"
+          },
+          "color": "#8FC7FF",
+          "italic": false
+        },
+        {
+          "text": ".",
+          "color": "dark_gray",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "@s",
+            "objective": "player_armor_toughness"
+          },
+          "color": "#8FC7FF",
+          "italic": false
         }
       ],
       [
         "",
         {
-          "text": "🛡盔甲韧性",
-          "color": "white",
-          "italic": false
-        },
-        {
-          "text": "：",
-          "color": "white",
-          "italic": false
-        },
-        {
-          "color": "white",
+          "text": "+------- 驱魔师档案 -------+",
+          "color": "#FFF2A8",
           "italic": false,
-          "score": {
-            "objective": "player_armor_toughness_",
-            "name": "@s",
-            "italic": false
-          }
-        },
-        {
-          "text": ".",
-          "color": "white",
-          "italic": false
-        },
-        {
-          "color": "white",
-          "italic": false,
-          "score": {
-            "objective": "player_armor_toughness",
-            "name": "@s",
-            "italic": false
-          }
+          "bold": true
         }
       ],
       [
         "",
         {
-          "text": "🎣护甲值",
-          "color": "white",
+          "text": "驱魔等级 ",
+          "color": "gray",
           "italic": false
         },
         {
-          "text": "：",
-          "color": "white",
-          "italic": false
-        },
-        {
-          "color": "white",
-          "italic": false,
           "score": {
-            "objective": "player_armor_",
             "name": "@s",
-            "italic": false
-          }
-        },
-        {
-          "text": ".",
-          "color": "white",
+            "objective": "rpg_ex_lvl"
+          },
+          "color": "#FFF2A8",
           "italic": false
         },
         {
-          "color": "white",
-          "italic": false,
+          "text": "　阅历 ",
+          "color": "gray",
+          "italic": false
+        },
+        {
           "score": {
-            "objective": "player_armor",
             "name": "@s",
-            "italic": false
-          }
+            "objective": "rpg_ex_xp"
+          },
+          "color": "#FFD85A",
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "侵蚀 ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "@s",
+            "objective": "rpg_taint"
+          },
+          "color": "#D596F2",
+          "italic": false
+        },
+        {
+          "text": " / 100　契约序列 ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "@s",
+            "objective": "rpg_pact"
+          },
+          "color": "#D596F2",
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "切换至此物品：打开可点击功能页",
+          "color": "#AAB4C3",
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "切走再切回即可重新打开",
+          "color": "dark_gray",
+          "italic": false
+        }
+      ],
+      [
+        "",
+        {
+          "text": "+-------- 玩家档案 --------+",
+          "color": "#D4AF37",
+          "italic": false,
+          "bold": true
         }
       ]
     ],
-    "mode": "replace_section",
-    "offset": 2,
-    "entity": "this",
-    "size": 7
+    "mode": "replace_all",
+    "entity": "this"
+  },
+  {
+    "function": "set_custom_data",
+    "tag": {
+      "player_tag": 1,
+      "rpg_panel": 1
+    }
   }
 ]

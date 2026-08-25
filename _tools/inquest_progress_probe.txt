@@ -1,0 +1,14 @@
+# 伪造旧缓存 99，确认真实标签重算为 1；随后第二证为 2、第三证才揭示真名，最后重置归零。
+function rpg:qa/inquest_step1
+scoreboard players get @e[tag=rpg.qa.progress,limit=1] rpg_case1
+tag @e[tag=rpg.qa.progress,limit=1] list
+function rpg:qa/inquest_step2
+scoreboard players get @e[tag=rpg.qa.progress,limit=1] rpg_case1
+tag @e[tag=rpg.qa.progress,limit=1] list
+function rpg:qa/inquest_step3
+scoreboard players get @e[tag=rpg.qa.progress,limit=1] rpg_case1
+tag @e[tag=rpg.qa.progress,limit=1] list
+function rpg:qa/inquest_reset
+scoreboard players get @e[tag=rpg.qa.progress,limit=1] rpg_case1
+tag @e[tag=rpg.qa.progress,limit=1] list
+kill @e[tag=rpg.qa.progress]

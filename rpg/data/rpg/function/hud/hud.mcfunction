@@ -1,3 +1,12 @@
+# 玩家面板的个人 HUD 开关：状态仍正常结算，只跳过屏幕绘制。
+execute if entity @s[tag=rpg.panel.hud_off] run scoreboard players add @s rpg_hud_t 0
+execute if entity @s[tag=rpg.panel.hud_off] run scoreboard players add @s rpg_hud_mt 0
+execute if entity @s[tag=rpg.panel.hud_off] run scoreboard players add @s rpg_hud_dmt 0
+execute if entity @s[tag=rpg.panel.hud_off,scores={rpg_hud_t=1..}] run scoreboard players remove @s rpg_hud_t 1
+execute if entity @s[tag=rpg.panel.hud_off,scores={rpg_hud_mt=1..}] run scoreboard players remove @s rpg_hud_mt 1
+execute if entity @s[tag=rpg.panel.hud_off,scores={rpg_hud_dmt=1..}] run scoreboard players remove @s rpg_hud_dmt 1
+execute if entity @s[tag=rpg.panel.hud_off] run return 0
+
 # 屏幕下方唯一的 actionbar 出口。技能不再各写各的 —— 它们只更新
 # rpg_hud / rpg_hud_p 并把 rpg_hud_t 顶到 3，这里按优先级挑一条渲染。
 # 蓄力条永远压过状态条；蓄力一结束，状态条自己就回来了。
@@ -10,12 +19,27 @@ scoreboard players add @s rpg_hud_mt 0
 # 提示的寿命照常递减，哪怕这一刻正被蓄力条压着 ——
 # 否则蓄力一结束，会弹出一条早就该消失的提示。
 execute if entity @s[scores={rpg_hud_mt=1..}] run scoreboard players remove @s rpg_hud_mt 1
+scoreboard players add @s rpg_hud_dmt 0
+execute if entity @s[scores={rpg_hud_dmt=1..}] run scoreboard players remove @s rpg_hud_dmt 1
+
+execute if entity @s[scores={rpg_ex_hud_t=1..}] run return run function rpg:inquest/hud/actionbar
 
 execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=1}] run function rpg:hud/s1
 execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=2}] run function rpg:hud/s2
 execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=3}] run function rpg:hud/s3
 execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=4}] run function rpg:hud/s4
 execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=5}] run function rpg:hud/s5
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=6}] run function rpg:hud/s6
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=7}] run function rpg:hud/s7
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=8}] run function rpg:hud/s8
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=9}] run function rpg:hud/s9
+
+# legacy-advanced HUD
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=10}] run function rpg:hud/s10
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=11}] run function rpg:hud/s11
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=12}] run function rpg:hud/s12
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=13}] run function rpg:hud/s13
+execute if entity @s[scores={rpg_hud_t=1..,rpg_hud=14}] run function rpg:hud/s14
 
 # 没有技能占用时才轮到持续状态行。魔化（或圣痕）与契约冷却在那一行里
 # **并排**显示 —— 它们都是状态，不该互相顶掉。
