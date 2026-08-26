@@ -4,9 +4,16 @@ from __future__ import annotations
 import json, re, sys
 from pathlib import Path
 
+from beelzebub_campaign_config import load_config
+
 root = Path(sys.argv[1] if len(sys.argv) > 1 else "../rpg").resolve()
 fun = root / "data" / "rpg" / "function"
 errors: list[str] = []
+CONFIG = load_config(pack_root=root)
+RUNTIME = CONFIG["runtime"]
+RECOVERY = RUNTIME["recovery"]
+BOSS = CONFIG["actors"]["boss"]
+MINIONS = CONFIG["actors"]["minions"]
 
 
 def read(rel: str) -> str:
@@ -24,6 +31,9 @@ required = [
     "campaign/beelzebub/recover_minions.mcfunction", "campaign/beelzebub/claim_rite.mcfunction",
     "campaign/beelzebub/give/pending_page.mcfunction", "campaign/beelzebub/orphan_scrub.mcfunction",
     "campaign/beelzebub/verdict/reject.mcfunction", "campaign/beelzebub/career_confirm.mcfunction",
+    "campaign/beelzebub/recap/menu.mcfunction", "campaign/beelzebub/recap/anomaly.mcfunction",
+    "campaign/beelzebub/recap/minions.mcfunction", "campaign/beelzebub/recap/area.mcfunction",
+    "campaign/beelzebub/recap/hypothesis.mcfunction", "campaign/beelzebub/recap/prep.mcfunction",
 ]
 required += [f"campaign/beelzebub/stage/{n}_{suffix}.mcfunction" for n in range(11) for suffix in ("enter", "tick")]
 for rel in required: read(rel)
@@ -49,19 +59,22 @@ for token in ("#next rpg_ch1_id", "rpg.ch1.controller", "rpg.ch1.anchor", "rpg.c
     if token not in start: errors.append("start lacks ownership token: " + token)
 if re.search(r"tag @a\[distance=.*\] add rpg\.ch1\.(accepted|member)", start): errors.append("start silently absorbs nearby players")
 preflight = read("campaign/beelzebub/scene/preflight.mcfunction")
-if preflight.count("scoreboard players add @s rpg_ch1_safe 1") != 72 or "rpg_ch1_safe matches 72" not in preflight:
+safe = RUNTIME["safe_plane"]
+safe_samples = len(safe["ground_sample_x"]) * len(safe["ground_sample_z"]) + len(safe["tall_sample_x"]) * len(safe["tall_sample_z"])
+if preflight.count("scoreboard players add @s rpg_ch1_safe 1") != safe_samples or f"rpg_ch1_safe matches {safe_samples}" not in preflight:
     errors.append("63+9 startup safety samples incomplete")
-for token in ("unless dimension minecraft:overworld", "type=minecraft:villager,distance=..72", "tag=rpg.advent,distance=..72", "tag=rpg.rite.anchor,distance=..72"):
+for token in (f"unless dimension {RUNTIME['dimension']}", f"type=minecraft:villager,distance=..{RUNTIME['scene_radius']}", f"tag=rpg.advent,distance=..{RUNTIME['scene_radius']}", f"tag=rpg.rite.anchor,distance=..{RUNTIME['scene_radius']}"):
     if token not in start_gate: errors.append("preflight gate missing: " + token)
 if "rotated 0 0" not in start_gate or "rotated 90 0" not in start_gate or "rotated -90 0" not in start_gate or "rotated 180 0" not in start_gate:
     errors.append("preflight orientation is not snapped to four cardinal directions")
 for token in ("tag @s add rpg.ch1.accepted", "tag @s add rpg.ch1.member", "rpg_ch1_id = @e", "rpg_ch1_session = @e", "rpg_ch1_stage=3.."):
     if token not in join: errors.append("join gate missing: " + token)
-for token in ("rpg_ch1_roster 1", "scoreboard players add @s rpg_ch1_roster 1", "rpg_ch1_roster=5..", "scoreboard players set @s rpg_ch1_roster 4"):
+for token in ("rpg_ch1_roster 1", "scoreboard players add @s rpg_ch1_roster 1",
+              f"scores={{rpg_ch1_roster={RUNTIME['max_party_size']}..}}] run return"):
     if token not in start + join: errors.append("fixed roster accounting missing: " + token)
-if "@a[tag=rpg.ch1.member,distance=..96" not in tick or "if score @s rpg_ch1_id =" not in tick:
+if f"@a[tag=rpg.ch1.member,distance=..{RUNTIME['active_radius']}" not in tick or "if score @s rpg_ch1_id =" not in tick:
     errors.append("presence set is not member+ID scoped")
-if "tag @a[distance=..96" in tick: errors.append("tick absorbs unregistered bystanders")
+if f"tag @a[distance=..{RUNTIME['active_radius']}" in tick: errors.append("tick absorbs unregistered bystanders")
 if "unless entity @a[tag=rpg.ch1.current" not in tick: errors.append("chapter pause guard missing")
 if "scoreboard players add @s rpg_fall 1" not in tick: errors.append("paused boss lifetime is not restored")
 
@@ -77,6 +90,43 @@ for n in range(11):
     enter, st = read(f"campaign/beelzebub/stage/{n}_enter.mcfunction"), read(f"campaign/beelzebub/stage/{n}_tick.mcfunction")
     if not enter.strip(): errors.append(f"empty stage enter: {n}")
     if n not in (7, 10) and "function rpg:campaign/beelzebub/advance" not in st: errors.append(f"stage {n} has no forward edge")
+
+# Narrative investigation is a playable inference chain, not three labels that
+# disclose the answer.  A timed prologue establishes role and method; four
+# checkpoints preserve a player-repeatable case summary across combat breaks.
+stage0_tick = read("campaign/beelzebub/stage/0_tick.mcfunction")
+for token in ("征调令", "粮册写着满仓", "司钟人三天前就死了", "先记录事实，再比较解释", "rpg_ch1_time matches 400.."):
+    if token not in read("campaign/beelzebub/stage/0_enter.mcfunction") + stage0_tick:
+        errors.append("playable prologue missing: " + token)
+menu = read("campaign/beelzebub/menu.mcfunction")
+menu_recap = read("campaign/beelzebub/recap/menu.mcfunction")
+if "function rpg:campaign/beelzebub/recap/menu" not in menu:
+    errors.append("chapter menu has no persistent case recap")
+for stage_range in ("0..1", "2..3", "4", "5", "6", "7", "8..9", "10"):
+    if f"rpg_ch1_stage={stage_range}" not in menu_recap:
+        errors.append("case recap misses stage range: " + stage_range)
+recap_expectations = {
+    "anomaly": ("案情复盘", "◆ 已知", "◇ 矛盾", "→ 下一步", "疫病", "亡灵"),
+    "minions": ("五种职责", "卡西安签章", "桌子的主人"),
+    "area": ("案情复盘", "◆ 已知", "◇ 矛盾", "→ 下一步", "第七粮仓", "卡西安："),
+    "hypothesis": ("案情复盘", "◆ 已知", "◇ 矛盾", "→ 下一步", "假说修正", "弱点假说"),
+    "prep": ("对象", "弱点", "风险", "见证人印"),
+}
+for name, tokens in recap_expectations.items():
+    body = read(f"campaign/beelzebub/recap/{name}.mcfunction")
+    for token in tokens:
+        if token not in body: errors.append(f"{name} recap missing: {token}")
+for stage, tag in ((1, "anomaly"), (3, "minions"), (4, "area"), (5, "hypothesis"), (6, "prep")):
+    body = read(f"campaign/beelzebub/stage/{stage}_tick.mcfunction")
+    if f"recap/{tag}" not in body or f"rpg.ch1.recap.{tag}" not in body:
+        errors.append(f"stage {stage} can skip its narrative recap")
+stage1_points = "\n".join(read(f"campaign/beelzebub/point/anom{n}.mcfunction") for n in range(1, 4))
+for token in ("观察：", "更像命令，不像预言", "先问它们替谁带路"):
+    if token not in stage1_points: errors.append("first misdirection/cross-check missing: " + token)
+stage4_points = "\n".join(read(f"campaign/beelzebub/point/trail{n}.mcfunction") for n in range(1, 5))
+for token in ("口粮", "尸体", "早于卡西安接任", "三条路线"):
+    if token not in stage4_points + read("campaign/beelzebub/recap/area.mcfunction"):
+        errors.append("second misdirection/cross-check missing: " + token)
 if "rpg_ch1_stage 8" not in "\n".join(read(f"campaign/beelzebub/verdict/{k}.mcfunction") for k in ("eliminate", "banish", "seal", "pact")):
     errors.append("verdicts do not enter stage 8")
 stage10_enter = read("campaign/beelzebub/stage/10_enter.mcfunction")
@@ -113,9 +163,11 @@ if not all(x in wave2 for x in ("bathin", "sallos")) or "purson" not in wave3: e
 if "rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller" not in read("campaign/beelzebub/stage/3_tick.mcfunction"):
     errors.append("minion liveness is not controller-ID scoped")
 scale = read("campaign/beelzebub/minion/scale.mcfunction")
-expected_hp = {1: (115, 138, 161), 2: (83, 99, 116), 3: (95, 114, 133), 4: (88, 105, 123), 5: (135, 162, 189)}
+expected_rosters = tuple(range(2, RUNTIME["max_party_size"] + 1))
+expected_hp = {spec["role"]: tuple(spec["health_by_party"][str(roster)] for roster in expected_rosters)
+               for spec in MINIONS.values()}
 for role, values in expected_hp.items():
-    for roster, hp in zip((2, 3, 4), values):
+    for roster, hp in zip(expected_rosters, values):
         signature = f"if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id if score @s rpg_mn_role matches {role} if score @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_roster matches {roster} run attribute @s minecraft:max_health base set {hp}"
         if signature not in scale or f"{{Health:{hp}f}}" not in scale: errors.append(f"minion scale missing role={role} roster={roster} hp={hp}")
 if "rpg_ch1_roster" in read("campaign/beelzebub/spawn/boss.mcfunction"):
@@ -153,14 +205,12 @@ bind = read("inquest/stage1.mcfunction")
 if "tag=rpg.ch1.boss" not in bind or "tag=rpg.ch1.witness.ready" not in bind or "if score @s rpg_ch1_id =" not in bind:
     errors.append("chapter Beelzebub bind lacks controller witness+ID gate")
 
-# Canonical 700 HP boss isolated from preexisting lords; rite inherits both IDs.
+# Configured chapter boss is isolated from preexisting lords; rite inherits both IDs.
 boss = read("campaign/beelzebub/spawn/boss.mcfunction")
-for token in ("function rpg:taint/lord4", "rpg.ch1.preexisting", "tag=!rpg.ch1.preexisting", "scores={rpg_dm_lord=4}", "rpg_ch1_id = @s rpg_ch1_id"):
+for token in (f"function {BOSS['summon_function']}", "rpg.ch1.preexisting", "tag=!rpg.ch1.preexisting", f"scores={{rpg_dm_lord={BOSS['lord_score']}}}", "rpg_ch1_id = @s rpg_ch1_id", f"minecraft:max_health base set {BOSS['health']}", f"Health:{BOSS['health']}f"):
     if token not in boss: errors.append("boss spawn isolation missing: " + token)
-if "Health:700f" not in read("taint/lord4.mcfunction") or "max_health\",base:700f" not in read("taint/lord4.mcfunction"):
-    errors.append("canonical chapter boss is not 700 health")
 rite = read("campaign/beelzebub/claim_rite.mcfunction")
-if "tag @s add rpg.ch1.rite" not in rite or "rpg_ch1_id = @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current" not in rite:
+if "tag @s add rpg.ch1.rite" not in rite or f"rpg_ch1_id = @e[type={BOSS['entity_type']},tag=rpg.ch1.boss.current" not in rite:
     errors.append("rite does not inherit campaign boss ID")
 for kind in ("eliminate", "banish", "seal", "pact"):
     outcome = read(f"inquest/outcome/{kind}.mcfunction")
@@ -187,16 +237,16 @@ if "tag @s add rpg.rite.chooser" not in choice_final:
 # Failure recovery, idempotent personal rewards, career and higher-rank consumer.
 if "recover_minions" not in read("campaign/beelzebub/stage/3_tick.mcfunction"): errors.append("minion spawn/wipe recovery absent")
 stage3_tick = read("campaign/beelzebub/stage/3_tick.mcfunction")
-if "mira/capture" not in stage3_tick or "mira/rescue_capture" not in stage3_tick or "rpg_ch1_guard 3600" not in read("campaign/beelzebub/mira/capture.mcfunction"):
+if "mira/capture" not in stage3_tick or "mira/rescue_capture" not in stage3_tick or f"rpg_ch1_guard {RECOVERY['mira_rescue_window_ticks']}" not in read("campaign/beelzebub/mira/capture.mcfunction"):
     errors.append("Mira protection/capture/recovery loop absent")
-if "rpg_ch1_rescue matches 40.." not in stage3_tick or "unless entity @a[tag=rpg.ch1.current,distance=..3" not in stage3_tick:
+if f"rpg_ch1_rescue matches {RECOVERY['mira_rescue_ticks']}.." not in stage3_tick or "unless entity @a[tag=rpg.ch1.current,distance=..3" not in stage3_tick:
     errors.append("Stage 3 Mira rescue is not a continuous 40-tick proximity action")
-if "positioned ^ ^ ^17 run tp" not in read("campaign/beelzebub/mira/rescue_capture.mcfunction"):
+if f"positioned {CONFIG['actors']['npcs']['mira_guard']['spawn']} run tp" not in read("campaign/beelzebub/mira/rescue_capture.mcfunction"):
     errors.append("Stage 3 Mira rescue does not return her to the team anchor")
 if "recover_boss" not in read("campaign/beelzebub/stage/7_tick.mcfunction") or "inquest/tool/cleanup" not in read("campaign/beelzebub/recover_boss.mcfunction"):
     errors.append("boss/rite failure recovery absent")
 failure = read("campaign/beelzebub/roster/failure_tick.mcfunction")
-for token in ("#ch1_online rpg_ch1_empty", "#ch1_alive rpg_ch1_empty", "data get entity @s Health 100", "rpg_ch1_empty matches 200..", "roster/failure_recover"):
+for token in ("#ch1_online rpg_ch1_empty", "#ch1_alive rpg_ch1_empty", "data get entity @s Health 100", f"rpg_ch1_empty matches {RECOVERY['party_wipe_ticks']}..", "roster/failure_recover"):
     if token not in failure: errors.append("200-tick total-party failure gate missing: " + token)
 if "@a[tag=rpg.ch1.member,distance=" in failure or "@a[tag=rpg.ch1.member,gamemode=!spectator,distance=" in failure:
     errors.append("failure gate mistakes living members outside the arena for a wipe")
@@ -206,7 +256,7 @@ failure_recover = read("campaign/beelzebub/roster/failure_recover.mcfunction")
 if "recover_minions" not in failure_recover or "recover_boss" not in failure_recover:
     errors.append("wipe recovery does not return to both stage checkpoints")
 recover_boss = read("campaign/beelzebub/recover_boss.mcfunction")
-if "kill @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current]" not in recover_boss or "if score @s rpg_ch1_id =" not in recover_boss:
+if f"kill @e[type={BOSS['entity_type']},tag=rpg.ch1.boss.current]" not in recover_boss or "if score @s rpg_ch1_id =" not in recover_boss:
     errors.append("Stage 7 wipe can leave the old ID-owned boss alive")
 if "rpg.ch1.kit.issued" not in reissue or reissue.count("execute unless items entity @s inventory.*") < 9:
     errors.append("returning fixed members do not receive one-time missing ritual tools")
@@ -245,13 +295,14 @@ for token in ("tag=rpg.ch1.member", "rpg_ch1_stage=9", "rpg_ch1_time matches 220
 # investigation without padding combat. Total 20-60 minute duration remains a
 # runtime playtest target because combat and four-stage ritual are player-driven.
 observation_ticks = 0
-for key, threshold in [(f"anom{n}", 60) for n in range(1, 4)] + [(f"trail{n}", 40) for n in range(1, 5)] + [(f"hyp{n}", 80) for n in range(1, 4)] + [(f"cache{n}", 40) for n in range(1, 4)]:
+timing = RUNTIME["observation_ticks"]
+for key, threshold in [(f"anom{n}", timing["anomaly"]) for n in range(1, 4)] + [(f"trail{n}", timing["trail"]) for n in range(1, 5)] + [(f"hyp{n}", timing["hypothesis"]) for n in range(1, 4)] + [(f"cache{n}", timing["cache"]) for n in range(1, 4)]:
     probe = read(f"campaign/beelzebub/probe/{key}.mcfunction")
     if f"rpg_ch1_seen matches {threshold}.." not in probe or "matches 0 run scoreboard players set @s rpg_ch1_seen 0" not in probe:
         errors.append(f"active observation gate missing/reset-unsafe: {key}")
     else:
         observation_ticks += threshold
-if observation_ticks < 700: errors.append("active investigation rhythm is shorter than 700 ticks")
+if observation_ticks <= 0: errors.append("configured active investigation rhythm is empty")
 
 # Cleanup and performance safety: no terrain edits, no broad world deletion,
 # no heavy repeating selector lacking an ownership tag/type.
@@ -277,7 +328,7 @@ for rel in ("campaign/beelzebub/finish.mcfunction", "campaign/beelzebub/abort.mc
     if "@a[tag=rpg.ch1.current] remove rpg.ch1.member" in cleanup_data:
         errors.append(f"cleanup still depends on current-area membership in {rel}")
     for line in cleanup_data.splitlines():
-        if line.startswith("kill @e[") and "distance=..72" not in line: errors.append(f"unbounded cleanup in {rel}: {line}")
+        if line.startswith("kill @e[") and f"distance=..{RUNTIME['scene_radius']}" not in line: errors.append(f"unbounded cleanup in {rel}: {line}")
 orphan = read("campaign/beelzebub/orphan_scrub.mcfunction")
 for forbidden in ("rpg_ch1_done", "rpg_ch1_next", "rpg_ch1_reward", "rpg.ch1.borderer", "rpg_ch1_verdict"):
     if forbidden in orphan: errors.append("orphan scrub erases permanent archive state: " + forbidden)

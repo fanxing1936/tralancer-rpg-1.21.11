@@ -7,7 +7,7 @@ execute if score @s rpg_ch1_stage matches 3 run function rpg:campaign/beelzebub/
 execute if score @s rpg_ch1_stage matches 7 run function rpg:campaign/beelzebub/roster/failure_tick
 execute unless entity @a[tag=rpg.ch1.current,distance=..128,gamemode=!spectator] as @e[type=minecraft:vindicator,tag=rpg.ch1.boss] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run scoreboard players add @s rpg_fall 1
 execute as @e[type=minecraft:vindicator,tag=rpg.ch1.boss,scores={rpg_fall=12001..}] run scoreboard players set @s rpg_fall 12000
-execute unless entity @a[tag=rpg.ch1.current,distance=..128,gamemode=!spectator] run return 0
+execute unless entity @a[tag=rpg.ch1.current,distance=..96,gamemode=!spectator] run return 0
 scoreboard players add @s rpg_ch1_time 1
 execute if score @s rpg_ch1_time matches 24001.. run scoreboard players set @s rpg_ch1_time 24000
 execute if score @s rpg_ch1_stage matches 0 run function rpg:campaign/beelzebub/stage/0_tick

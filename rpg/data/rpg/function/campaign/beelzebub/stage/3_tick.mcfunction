@@ -10,8 +10,9 @@ execute if entity @s[tag=rpg.ch1.mira.captured] at @e[type=minecraft:villager,ta
 execute if entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_rescue matches 40.. run function rpg:campaign/beelzebub/mira/rescue_capture
 execute if entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_guard matches ..0 run function rpg:campaign/beelzebub/recover_minions
 execute if score @s rpg_ch1_sub matches 1 if score @s rpg_ch1_obj matches ..1 if score @s rpg_ch1_time matches 100.. run function rpg:campaign/beelzebub/recover_minions
-execute if score @s rpg_ch1_sub matches 2 if score @s rpg_ch1_obj matches ..3 if score @s rpg_ch1_time matches 100.. run function rpg:campaign/beelzebub/recover_minions
-execute if score @s rpg_ch1_sub matches 3 if score @s rpg_ch1_obj matches ..4 if score @s rpg_ch1_time matches 100.. run function rpg:campaign/beelzebub/recover_minions
 execute unless entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_sub matches 1 if score @s rpg_ch1_obj matches 2.. unless entity @e[tag=rpg.ch1.minion.current,limit=1] run function rpg:campaign/beelzebub/minion/wave2
+execute if score @s rpg_ch1_sub matches 2 if score @s rpg_ch1_obj matches ..3 if score @s rpg_ch1_time matches 100.. run function rpg:campaign/beelzebub/recover_minions
 execute unless entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_sub matches 2 if score @s rpg_ch1_obj matches 4.. unless entity @e[tag=rpg.ch1.minion.current,limit=1] run function rpg:campaign/beelzebub/minion/wave3
-execute unless entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_sub matches 3 if score @s rpg_ch1_obj matches 5.. unless entity @e[tag=rpg.ch1.minion.current,limit=1] run function rpg:campaign/beelzebub/advance
+execute if score @s rpg_ch1_sub matches 3 if score @s rpg_ch1_obj matches ..4 if score @s rpg_ch1_time matches 100.. run function rpg:campaign/beelzebub/recover_minions
+execute unless entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_sub matches 3 if score @s rpg_ch1_obj matches 5.. unless entity @e[tag=rpg.ch1.minion.current,limit=1] unless entity @s[tag=rpg.ch1.recap.minions] run function rpg:campaign/beelzebub/recap/minions
+execute unless entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_sub matches 3 if score @s rpg_ch1_obj matches 5.. unless entity @e[tag=rpg.ch1.minion.current,limit=1] if entity @s[tag=rpg.ch1.recap.minions] if score @s rpg_ch1_time matches 100.. run function rpg:campaign/beelzebub/advance

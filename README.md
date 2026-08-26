@@ -24,6 +24,8 @@
 | `LORE.md` | **《破碎大陆》世界观全文**（圣经体叙事，七卷） |
 | `BEELZEBUB-CAMPAIGN-CHAPTER-1.md` | **第一章《空缺者》完整战役剧情**（角色、对白、四裁决、失败恢复与第二章钩子） |
 | `_campaign_beelzebub_level.md` / `_campaign_beelzebub_art_ui.md` | 第一章逐幕关卡、多人、检查点、性能与美术/UI制作规格 |
+| `_campaign_beelzebub_config.json` / `BEELZEBUB-CAMPAIGN-CONFIG.md` | 第一章物品、Boss、NPC、罪仆、相对坐标、数值与调试入口的统一配置及说明 |
+| `CHAPTER-PRODUCTION-PLAYBOOK.md` | 后续 RPG 章节可直接复用的剧情、关卡、配置、UI、测试与发布手册 |
 | `ENGINEERING.md` | **持续维护的完整工程日志**（含每一处改动的原因与验证） |
 | `_orig/` `_orig_rp/` | 原始 1.21 数据包 / 材质包备份，未改动 |
 | `_tools/` | 迁移、优化、校验、打包、无头测试脚本 |
@@ -88,9 +90,10 @@
 ```mcfunction
 /function rpg:campaign/beelzebub/start
 /function rpg:campaign/beelzebub/abort
+/function rpg:campaign/beelzebub/debug/menu
 ```
 
-完整剧情见 [`BEELZEBUB-CAMPAIGN-CHAPTER-1.md`](BEELZEBUB-CAMPAIGN-CHAPTER-1.md)。
+完整剧情见 [`BEELZEBUB-CAMPAIGN-CHAPTER-1.md`](BEELZEBUB-CAMPAIGN-CHAPTER-1.md)。第一章所有可领取物品引用、Boss、NPC、五名罪仆、24 个相对生成位置、场地半径、调查读条、恢复窗口和多人血量集中在 `_campaign_beelzebub_config.json`；修改后重新构建即可生效。调试菜单可补发全部章节物品、按配置生成 Boss／罪仆、列出坐标并安全跳转 Stage 0–10，不会写入永久通关进度。
 
 ## 卡巴拉生命之树与上位契约
 

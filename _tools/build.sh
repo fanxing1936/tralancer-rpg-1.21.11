@@ -95,6 +95,7 @@ python add_divine_covenants.py ../rpg ../resourcepack
 # 真名调查、完整四阶段驱魔、裁决逃脱与边缘者入院尾声。
 # 必须晚于上位契约和玩家面板，才能复用最终接口并追加章节入口；
 # 又必须早于领取箱，让四种裁决残响与边缘者档案自动进入分类。
+python beelzebub_campaign_config.py
 python add_beelzebub_campaign.py ../rpg
 # 专属美术/UI规整层：章节色板、动态 Bossbar、关键 Title、Display 可读性、
 # 裁决档案与双层 HUD 兼容。必须在章节生成后运行。
@@ -117,6 +118,8 @@ python check_kabbalah_covenant.py ../rpg
 python check_divine_covenants.py ../rpg ../resourcepack
 python check_beelzebub_campaign.py ../rpg
 python check_beelzebub_campaign_ui.py ../rpg ../resourcepack
+python check_beelzebub_campaign_config.py ../rpg --require-wired
+python check_beelzebub_narrative_ui.py ../rpg --story-contract
 # 攻击瞬爆不得回流成苦力怕或 fuse:0 TNT（后者会破坏地形）
 python check_creeper.py ../rpg
 echo

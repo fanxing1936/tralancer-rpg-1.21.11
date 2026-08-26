@@ -15,18 +15,36 @@ import re
 import sys
 from pathlib import Path
 
+from beelzebub_campaign_config import item_index, load_config
+
 
 DP = Path(sys.argv[1] if len(sys.argv) > 1 else "../rpg").resolve()
 RP = Path(sys.argv[2] if len(sys.argv) > 2 else "../resourcepack").resolve()
 FUN = DP / "data" / "rpg" / "function"
+CONFIG = load_config()
+SCENE_POINTS = CONFIG["scene_points"]
+ACTORS = CONFIG["actors"]
+PALETTE = CONFIG["visual"]["palette"]
+RUNTIME = CONFIG["runtime"]
+ITEMS = item_index(CONFIG)
+BOSS_TYPE = ACTORS["boss"]["entity_type"]
 
-WHITE, GRAY, DARK = "#FFFFFF", "gray", "dark_gray"
-CHAPTER, ASH = "#B8A98B", "#706B5E"
-CHURCH, HOLY_LIGHT = "#D4AF37", "#FFF2A8"
-CYAN, RITUAL = "#62D9E8", "#D596F2"
-DANGER, SEAL_RED = "#FF806B", "#8B2500"
-BEEL, BEEL_LIGHT = "#5A6B1E", "#B5D957"
-BEEL_COMBAT, BEEL_SOFT, BEEL_GLINT = "#B7C84B", "#E4EA9B", "#FFF6C7"
+WHITE, GRAY, DARK = PALETTE["white"], "gray", "dark_gray"
+CHAPTER, ASH = PALETTE["chapter"], PALETTE["ash"]
+CHURCH, HOLY_LIGHT = PALETTE["church"], PALETTE["witness"]
+CYAN, RITUAL = PALETTE["seal"], PALETTE["pact"]
+DANGER, SEAL_RED = PALETTE["danger_ui"], PALETTE["danger"]
+BEEL, BEEL_LIGHT = PALETTE["beelzebub"], PALETTE["beelzebub_light"]
+BEEL_COMBAT, BEEL_SOFT, BEEL_GLINT = PALETTE["beelzebub_combat"], PALETTE["beelzebub_soft"], PALETTE["beelzebub_glint"]
+
+
+def scene_position(group: str, key: str) -> str:
+    return SCENE_POINTS[group][key]["spawn"]
+
+
+def actor_position(group: str, key: str | None = None) -> str:
+    actor = ACTORS[group] if key is None else ACTORS[group][key]
+    return actor["spawn"]
 
 
 def fpath(rel: str) -> Path:
@@ -95,14 +113,14 @@ def write_ui_runtime() -> None:
         for n in range(11)))
 
     static_stages = {
-        0: ("yellow", "序幕｜第十三声钟", CHAPTER),
+        0: ("yellow", "楔子｜第十三声钟", CHAPTER),
         2: ("yellow", "辨认空缺者｜以圣器照见异常", CHAPTER),
         8: ("red", "裁决落空｜见证人印缺失", DANGER),
         9: ("red", "尾声｜救下米拉 · 见证人", DANGER),
         10: ("yellow", "第一章完成｜登记为教廷边缘者", CHURCH),
     }
     titles = {
-        0: ("第一章", CHAPTER, "空缺者", ASH),
+        0: ("楔子", CHAPTER, "第十三声钟", ASH),
         2: ("异常显形", CYAN, "她记得姓名，却失去了自己", ASH),
         7: ("万蝇腐宴", BEEL_COMBAT, "别西卜 · 暴食", BEEL_SOFT),
         9: ("最后的见证人", HOLY_LIGHT, "米拉还记得自己的名字", CHAPTER),
@@ -139,12 +157,12 @@ def write_ui_runtime() -> None:
 
     battle = [
         "bossbar set rpg:chapter1 color green",
-        "execute as @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current,scores={rpg_ex_stage=0},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 name " + row(comp("驱魔·一｜权能见证 ", BEEL_COMBAT, True), score("@e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1]", "rpg_ch1_seen", BEEL_GLINT), comp(" / 3", DARK)),
-        "execute as @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current,scores={rpg_ex_stage=1},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 color yellow",
-        "execute as @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current,scores={rpg_ex_stage=1},limit=1] at @s if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id unless entity @a[tag=rpg.ch1.member,tag=rpg.ch1.current,tag=rpg.name.4,distance=..10,gamemode=!spectator] unless entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.rite.anchor,distance=..8,limit=1] run bossbar set rpg:chapter1 name " + row(comp("驱魔·二｜◇ 真名　◇ 图腾", CHURCH, True)),
-        "execute as @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current,scores={rpg_ex_stage=1},limit=1] at @s if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id if entity @a[tag=rpg.ch1.member,tag=rpg.ch1.current,tag=rpg.name.4,distance=..10,gamemode=!spectator] unless entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.rite.anchor,distance=..8,limit=1] run bossbar set rpg:chapter1 name " + row(comp("驱魔·二｜◆ 真名　◇ 图腾", CHURCH, True)),
-        "execute as @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current,scores={rpg_ex_stage=1},limit=1] at @s if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id unless entity @a[tag=rpg.ch1.member,tag=rpg.ch1.current,tag=rpg.name.4,distance=..10,gamemode=!spectator] if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.rite.anchor,distance=..8,limit=1] run bossbar set rpg:chapter1 name " + row(comp("驱魔·二｜◇ 真名　◆ 图腾", CHURCH, True)),
-        "execute as @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current,scores={rpg_ex_stage=1},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id unless entity @e[type=minecraft:marker,tag=rpg.ch1.controller,tag=rpg.ch1.ui.phase2,limit=1] run function rpg:campaign/beelzebub/ui/title/phase2",
+        f"execute as @e[type={BOSS_TYPE},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=0}},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 name " + row(comp("驱魔·一｜权能见证 ", BEEL_COMBAT, True), score("@e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1]", "rpg_ch1_seen", BEEL_GLINT), comp(" / 3", DARK)),
+        f"execute as @e[type={BOSS_TYPE},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=1}},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 color yellow",
+        f"execute as @e[type={BOSS_TYPE},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=1}},limit=1] at @s if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id unless entity @a[tag=rpg.ch1.member,tag=rpg.ch1.current,tag=rpg.name.4,distance=..10,gamemode=!spectator] unless entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.rite.anchor,distance=..8,limit=1] run bossbar set rpg:chapter1 name " + row(comp("驱魔·二｜◇ 真名　◇ 图腾", CHURCH, True)),
+        f"execute as @e[type={BOSS_TYPE},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=1}},limit=1] at @s if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id if entity @a[tag=rpg.ch1.member,tag=rpg.ch1.current,tag=rpg.name.4,distance=..10,gamemode=!spectator] unless entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.rite.anchor,distance=..8,limit=1] run bossbar set rpg:chapter1 name " + row(comp("驱魔·二｜◆ 真名　◇ 图腾", CHURCH, True)),
+        f"execute as @e[type={BOSS_TYPE},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=1}},limit=1] at @s if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id unless entity @a[tag=rpg.ch1.member,tag=rpg.ch1.current,tag=rpg.name.4,distance=..10,gamemode=!spectator] if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.rite.anchor,distance=..8,limit=1] run bossbar set rpg:chapter1 name " + row(comp("驱魔·二｜◇ 真名　◆ 图腾", CHURCH, True)),
+        f"execute as @e[type={BOSS_TYPE},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=1}},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id unless entity @e[type=minecraft:marker,tag=rpg.ch1.controller,tag=rpg.ch1.ui.phase2,limit=1] run function rpg:campaign/beelzebub/ui/title/phase2",
         "execute as @e[type=minecraft:item_display,tag=rpg.ch1.rite,scores={rpg_ex_stage=2},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 color blue",
         "execute as @e[type=minecraft:item_display,tag=rpg.ch1.rite,scores={rpg_ex_stage=2},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 name " + row(comp("驱魔·三｜稳定度 ", CYAN, True), score("@s", "rpg_ex_stab", CYAN), comp(" / 100", DARK)),
         "execute as @e[type=minecraft:item_display,tag=rpg.ch1.rite,scores={rpg_ex_stage=2},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id unless entity @e[type=minecraft:marker,tag=rpg.ch1.controller,tag=rpg.ch1.ui.phase3,limit=1] run function rpg:campaign/beelzebub/ui/title/phase3",
@@ -186,7 +204,7 @@ def write_ui_runtime() -> None:
         "execute if score @s rpg_ch1_choice matches 3 run function rpg:campaign/beelzebub/ui/title/verdict_seal",
         "execute if score @s rpg_ch1_choice matches 4 run function rpg:campaign/beelzebub/ui/title/verdict_pact",
     ]))
-    for kind, color in (("eliminate", "#FF6B5E"), ("banish", CHURCH),
+    for kind, color in (("eliminate", PALETTE["eliminate"]), ("banish", CHURCH),
                         ("seal", CYAN), ("pact", RITUAL)):
         write("campaign/beelzebub/ui/title/verdict_%s.mcfunction" % kind,
               "\n".join(title_commands("裁决落空", color, "别西卜已离席", ASH)))
@@ -198,7 +216,7 @@ def write_ui_runtime() -> None:
     # immediately before the unchanged common escape.  The common result title
     # waits 12 ticks, so these route signatures remain readable.
     verdict_ui = {
-        "eliminate": ("判词 · 消灭", "#FF6B5E", "断刃斩入饕宴空壳",
+        "eliminate": ("判词 · 消灭", PALETTE["eliminate"], "断刃斩入饕宴空壳",
                       "iron_sword", "minecraft:block.anvil.land", "1.25"),
         "banish": ("判词 · 放逐", CHURCH, "金环送走饥饿之影",
                     "echo_shard", "minecraft:entity.enderman.teleport", "0.82"),
@@ -333,31 +351,31 @@ def _inline_text_display_component(line: str) -> str:
 def owned_prop(local: str, command: str, entity_type: str) -> list[str]:
     return [
         "execute positioned %s run %s" % (local, command),
-        "scoreboard players operation @e[type=minecraft:%s,tag=rpg.ch1.ui.new,sort=nearest,limit=1,distance=..72] rpg_ch1_id = @s rpg_ch1_id" % entity_type,
-        "tag @e[type=minecraft:%s,tag=rpg.ch1.ui.new,sort=nearest,limit=1,distance=..72] remove rpg.ch1.ui.new" % entity_type,
+        "scoreboard players operation @e[type=minecraft:%s,tag=rpg.ch1.ui.new,sort=nearest,limit=1,distance=..%s] rpg_ch1_id = @s rpg_ch1_id" % (entity_type, RUNTIME["scene_radius"]),
+        "tag @e[type=minecraft:%s,tag=rpg.ch1.ui.new,sort=nearest,limit=1,distance=..%s] remove rpg.ch1.ui.new" % (entity_type, RUNTIME["scene_radius"]),
     ]
 
 
 def write_scene_props() -> None:
     write("campaign/beelzebub/ui/scene/clear.mcfunction", "\n".join([
-        "tag @e[type=minecraft:item_display,tag=rpg.ch1.ui.prop,distance=..72] remove rpg.ch1.ui.current",
-        "execute as @e[type=minecraft:item_display,tag=rpg.ch1.ui.prop,distance=..72] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run tag @s add rpg.ch1.ui.current",
-        "execute as @e[type=minecraft:item_display,tag=rpg.ch1.ui.current,distance=..72] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run kill @s",
-        "tag @e[type=minecraft:block_display,tag=rpg.ch1.ui.prop,distance=..72] remove rpg.ch1.ui.current",
-        "execute as @e[type=minecraft:block_display,tag=rpg.ch1.ui.prop,distance=..72] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run tag @s add rpg.ch1.ui.current",
-        "execute as @e[type=minecraft:block_display,tag=rpg.ch1.ui.current,distance=..72] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run kill @s",
+        f"tag @e[type=minecraft:item_display,tag=rpg.ch1.ui.prop,distance=..{RUNTIME['scene_radius']}] remove rpg.ch1.ui.current",
+        f"execute as @e[type=minecraft:item_display,tag=rpg.ch1.ui.prop,distance=..{RUNTIME['scene_radius']}] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run tag @s add rpg.ch1.ui.current",
+        f"execute as @e[type=minecraft:item_display,tag=rpg.ch1.ui.current,distance=..{RUNTIME['scene_radius']}] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run kill @s",
+        f"tag @e[type=minecraft:block_display,tag=rpg.ch1.ui.prop,distance=..{RUNTIME['scene_radius']}] remove rpg.ch1.ui.current",
+        f"execute as @e[type=minecraft:block_display,tag=rpg.ch1.ui.prop,distance=..{RUNTIME['scene_radius']}] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run tag @s add rpg.ch1.ui.current",
+        f"execute as @e[type=minecraft:block_display,tag=rpg.ch1.ui.current,distance=..{RUNTIME['scene_radius']}] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run kill @s",
     ]))
 
     stage1 = ["function rpg:campaign/beelzebub/ui/scene/clear"]
-    stage1 += owned_prop("^6 ^ ^5", item_display("anom1", "bowl"), "item_display")
-    stage1 += owned_prop("^6 ^ ^5", item_display("anom1", "bread", .34, .11, .08, .40), "item_display")
-    stage1 += owned_prop("^-7 ^ ^9", item_display("anom2", "paper", scale=.70), "item_display")
-    stage1 += owned_prop("^1 ^ ^15", item_display("anom3", "gunpowder"), "item_display")
-    stage1 += owned_prop("^1 ^ ^15", item_display("anom3", "phantom_membrane", .28, .10, .03, .34), "item_display")
+    stage1 += owned_prop(scene_position("anomaly", "anom1"), item_display("anom1", "bowl"), "item_display")
+    stage1 += owned_prop(scene_position("anomaly", "anom1"), item_display("anom1", "bread", .34, .11, .08, .40), "item_display")
+    stage1 += owned_prop(scene_position("anomaly", "anom2"), item_display("anom2", "paper", scale=.70), "item_display")
+    stage1 += owned_prop(scene_position("anomaly", "anom3"), item_display("anom3", "gunpowder"), "item_display")
+    stage1 += owned_prop(scene_position("anomaly", "anom3"), item_display("anom3", "phantom_membrane", .28, .10, .03, .34), "item_display")
     write("campaign/beelzebub/ui/scene/stage1.mcfunction", "\n".join(stage1))
 
     trail_items = {1: "wheat_seeds", 2: "gray_dye", 3: "name_tag", 4: "bowl"}
-    trail_pos = {1: "^ ^ ^12", 2: "^ ^ ^20", 3: "^ ^ ^28", 4: "^ ^ ^36"}
+    trail_pos = {n: scene_position("trail", "trail%d" % n) for n in range(1, 5)}
     for n in range(1, 5):
         lines = ["function rpg:campaign/beelzebub/ui/scene/clear"] if n == 1 else []
         lines += owned_prop(trail_pos[n], item_display("trail%d" % n,
@@ -367,9 +385,9 @@ def write_scene_props() -> None:
 
     stage5 = ["function rpg:campaign/beelzebub/ui/scene/clear"]
     for local, key, items in (
-        ("^-7 ^ ^31", "hyp1", ("gunpowder", "paper")),
-        ("^7 ^ ^33", "hyp2", ("slime_ball", "phantom_membrane")),
-        ("^ ^ ^39", "hyp3", ("poisonous_potato",)),
+        (scene_position("hypothesis", "hyp1"), "hyp1", ("gunpowder", "paper")),
+        (scene_position("hypothesis", "hyp2"), "hyp2", ("slime_ball", "phantom_membrane")),
+        (scene_position("hypothesis", "hyp3"), "hyp3", ("poisonous_potato",)),
     ):
         for index, item in enumerate(items):
             stage5 += owned_prop(local, item_display(key, item, .27 * index,
@@ -379,9 +397,9 @@ def write_scene_props() -> None:
     write("campaign/beelzebub/ui/scene/stage5.mcfunction", "\n".join(stage5))
 
     stage6 = ["function rpg:campaign/beelzebub/ui/scene/clear"]
-    for local, key, item in (("^-10 ^ ^35", "cache1", "paper"),
-                             ("^10 ^ ^35", "cache2", "totem_of_undying"),
-                             ("^ ^ ^42", "cache3", "bell")):
+    for local, key, item in ((scene_position("cache", "cache1"), "cache1", "paper"),
+                             (scene_position("cache", "cache2"), "cache2", "totem_of_undying"),
+                             (scene_position("cache", "cache3"), "cache3", "bell")):
         stage6 += owned_prop(local, block_display(key, "barrel"), "block_display")
         stage6 += owned_prop(local, item_display(key, item, 0, .90, 0, .34), "item_display")
     write("campaign/beelzebub/ui/scene/stage6.mcfunction", "\n".join(stage6))
@@ -391,7 +409,7 @@ def write_scene_props() -> None:
     for choice, item in {1: "iron_sword", 2: "echo_shard", 3: "soul_lantern", 4: "writable_book"}.items():
         stage8 += ["execute if score @s rpg_ch1_choice matches %d run %s" %
                    (choice, line) for line in owned_prop(
-                       "^ ^ ^40", item_display("verdict", item, scale=.62), "item_display")]
+                       actor_position("boss"), item_display("verdict", item, scale=.62), "item_display")]
     write("campaign/beelzebub/ui/scene/stage8.mcfunction", "\n".join(stage8))
 
     hooks = {
@@ -426,14 +444,14 @@ def normalise_existing_displays() -> None:
     for target in fpath("campaign/beelzebub").rglob("*.mcfunction"):
         body = target.read_text(encoding="utf-8")
         body = body.replace("see_through:1b", "see_through:0b")
-        body = re.sub(r"view_range:0\.65f", "view_range:0.30f", body)
+        body = re.sub(r"view_range:[0-9.]+f", f"view_range:{CONFIG['visual']['label_view_range']}f", body)
         lines = []
         for line in body.splitlines():
             if "summon minecraft:text_display" in line:
-                line = line.replace('\\"color\\":\\"#5A6B1E\\"',
-                                    '\\"color\\":\\"#B5D957\\"')
-                line = line.replace('color:"#5A6B1E"', 'color:"#B5D957"')
-                line = line.replace("color:'#5A6B1E'", "color:'#B5D957'")
+                line = line.replace(f'\\"color\\":\\"{BEEL}\\"',
+                                    f'\\"color\\":\\"{BEEL_LIGHT}\\"')
+                line = line.replace(f'color:"{BEEL}"', f'color:"{BEEL_LIGHT}"')
+                line = line.replace(f"color:'{BEEL}'", f"color:'{BEEL_LIGHT}'")
                 line = _inline_text_display_component(line)
             lines.append(line)
         target.write_text("\n".join(lines).rstrip("\n") + "\n",
@@ -452,27 +470,42 @@ def lore_value(lines: list[tuple[str, str]]) -> str:
     return json.dumps(rows, ensure_ascii=False, separators=(",", ":"))
 
 
+def generated_rel(item: dict) -> str:
+    namespace, rel = item["give_function"].split(":", 1)
+    if namespace != "rpg":
+        raise RuntimeError("Chapter I generated item functions must use the rpg namespace")
+    return rel + ".mcfunction"
+
+
+def custom_data_value(item: dict) -> str:
+    prefix = "minecraft:custom_data~"
+    if not item["match"].startswith(prefix):
+        raise RuntimeError("Chapter I generated items require a custom-data match")
+    return item["match"][len(prefix):]
+
+
 def polish_items_and_true_name() -> None:
     verdicts = {
-        "eliminate": ("断刃", "#FF6B5E", "nether_star",
+        "eliminate": ("断刃", PALETTE["eliminate"],
                       [("你选择了消灭。", GRAY), ("刀锋只斩中腐宴空壳", ASH)]),
-        "banish": ("逐影", CHURCH, "echo_shard",
+        "banish": ("逐影", CHURCH,
                     [("你选择了放逐。", GRAY), ("归去的只是饥饿之影", ASH)]),
-        "seal": ("空灯", CYAN, "soul_lantern",
+        "seal": ("空灯", CYAN,
                   [("你选择了封印。", GRAY), ("灯芯未收下领主灵魂", ASH)]),
-        "pact": ("伪约", RITUAL, "written_book",
+        "pact": ("伪约", RITUAL,
                   [("你选择了契约。", GRAY), ("胃之印冒充领主签名", ASH)]),
     }
-    for kind, (label, color, model, specific) in verdicts.items():
+    for kind, (label, color, specific) in verdicts.items():
+        item = ITEMS[f"{kind}_resonance"]
         name = reward_name("[裁决残响]", color, "别西卜 · " + label, BEEL_LIGHT)
         lore = lore_value(specific + [
             ("裁决未完成 · 领主逃脱", BEEL_LIGHT),
             ("第一章首通纪念", CHAPTER), ("非完整领主掉落", DARK)])
-        write("campaign/beelzebub/reward/%s.mcfunction" % kind,
-              "give @s minecraft:paper[custom_name=%s,lore=%s,"
+        write(generated_rel(item),
+              "give @s %s[custom_name=%s,lore=%s,"
               "enchantment_glint_override=true,max_stack_size=1,"
-              "item_model=\"minecraft:%s\",custom_data={rpg_ch1_reward:1b,"
-              "rpg_ch1_%s:1b}]" % (name, lore, model, kind))
+              "item_model=\"%s\",custom_data=%s]" %
+              (item["base_item"], name, lore, item["item_model"], custom_data_value(item)))
 
     dossier = reward_name("[教廷档案]", CHURCH,
                           "边缘者临时入院令", HOLY_LIGHT)
@@ -480,11 +513,13 @@ def polish_items_and_true_name() -> None:
         ("编号 · VAC-01-BZB", CHAPTER), ("对象 · 未许可施术者", GRAY),
         ("事由 · 救援真实见证人", GRAY), ("处置 · 编入驱魔院", SEAL_RED),
         ("状态 · 终身监视", SEAL_RED), ("权限 · 高阶预调查", BEEL_LIGHT)])
-    write("campaign/beelzebub/reward/dossier.mcfunction",
-          "give @s minecraft:paper[custom_name=%s,lore=%s,"
+    dossier_item = ITEMS["borderer_dossier"]
+    write(generated_rel(dossier_item),
+          "give @s %s[custom_name=%s,lore=%s,"
           "enchantment_glint_override=true,max_stack_size=1,"
-          "item_model=\"minecraft:filled_map\",custom_data={rpg_ch1_dossier:1b}]" %
-          (dossier, dossier_lore))
+          "item_model=\"%s\",custom_data=%s]" %
+          (dossier_item["base_item"], dossier, dossier_lore,
+           dossier_item["item_model"], custom_data_value(dossier_item)))
 
     write("inquest/reveal/4.mcfunction", "\n".join([
         "tag @s add rpg.name.4", "scoreboard players set @s rpg_case4 3",
@@ -497,13 +532,13 @@ def polish_items_and_true_name() -> None:
         "tellraw @s " + row(comp("◆ ", CYAN),
                              comp("暴食无法吞下已经腐败的宴席。", GRAY)),
         "playsound minecraft:block.beacon.activate player @s ~ ~ ~ 1 1.35",
-        "scoreboard players add @s rpg_ex_xp 8", "function rpg:inquest/give/page4",
+        "scoreboard players add @s rpg_ex_xp 8", f"function {ITEMS['confirmed_name_page']['give_function']}",
     ]))
     for n in range(1, 6):
         rel = "inquest/clue/4_%d.mcfunction" % n
         if fpath(rel).is_file():
             body = read(rel)
-            body = re.sub(r'("text":"别西卜 · ","color":"#5A6B1E",)"bold":true,',
+            body = re.sub(rf'("text":"别西卜 · ","color":"{re.escape(BEEL)}",)"bold":true,',
                           r'\1"bold":false,', body)
             write(rel, body)
 

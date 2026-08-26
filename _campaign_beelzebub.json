@@ -3,6 +3,31 @@
   "title": "第一章 · 空缺者",
   "subtitle": "别西卜驱魔战役",
   "duration_minutes": [30, 60],
+  "runtime_config": {
+    "source": "_campaign_beelzebub_config.json",
+    "scope": "章节物品、Boss、NPC、罪仆、全部相对生成位置、数值与调试入口",
+    "rebuild_required": true,
+    "debug_menu": "rpg:campaign/beelzebub/debug/menu"
+  },
+  "prologue": {
+    "name": "第十三声钟",
+    "player_role": "持战时征调令进入维斯珀的临时教廷辅员",
+    "dramatic_question": "为什么粮册满仓、墓地增员，而死者仍会回家",
+    "method": "先记录事实，再比较解释；单一异常不能证明恶魔"
+  },
+  "investigation": {
+    "loop": ["观察事实", "保留竞争解释", "交叉验证", "阶段复盘"],
+    "misdirections": [
+      "疫病或亡灵能够解释个别异常，却无法解释明日处决名单",
+      "卡西安签章证明其主动参与，却无法解释早于其接任的寄生记录"
+    ],
+    "cross_validation": [
+      "餐桌记录 + 死亡登记 + 钟楼检材",
+      "口粮线 + 尸体线 + 灭口线",
+      "炉灰检材 + 蝇茧剖面 + 拒食残渣"
+    ],
+    "chapter_summary": "塞维拉下令删证，卡西安执行清洗，别西卜借空缺进食；三者同时成立"
+  },
   "palette": {
     "chapter": "#B8A98B",
     "church": "#D4AF37",

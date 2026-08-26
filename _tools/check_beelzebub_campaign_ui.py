@@ -8,9 +8,13 @@ import re
 import sys
 from pathlib import Path
 
+from beelzebub_campaign_config import load_config
+
 
 DP = Path(sys.argv[1] if len(sys.argv) > 1 else "../rpg").resolve()
 RP = Path(sys.argv[2] if len(sys.argv) > 2 else "../resourcepack").resolve()
+CONFIG = load_config(pack_root=DP)
+BOSS_TYPE = CONFIG["actors"]["boss"]["entity_type"]
 FUN = DP / "data" / "rpg" / "function"
 CAMPAIGN = FUN / "campaign" / "beelzebub"
 UI = CAMPAIGN / "ui"

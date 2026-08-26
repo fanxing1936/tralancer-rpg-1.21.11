@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "config_id": "beelzebub_chapter_1",
+  "description": "第一章《空缺者》的唯一玩法配置源；修改后重新运行数据包构建即可生成新的章节实例。",
+  "runtime": {
+    "dimension": "minecraft:overworld",
+    "max_party_size": 4,
+    "join_lock_stage": 3,
+    "active_radius": 96,
+    "scene_radius": 72,
+    "boss_claim_radius": 8,
+    "rite_bind_radius": 14,
+    "witness_radius": 18,
+    "investigate_radius": 2.8,
+    "safe_plane": {
+      "headroom": 5,
+      "ground_sample_x": [-18, -12, -6, 0, 6, 12, 18],
+      "ground_sample_z": [-6, 2, 10, 18, 26, 34, 42, 50, 58],
+      "tall_sample_x": [-12, 0, 12],
+      "tall_sample_z": [32, 44, 56],
+      "forbidden_ground": [
+        "minecraft:air",
+        "minecraft:cave_air",
+        "minecraft:void_air",
+        "minecraft:water",
+        "minecraft:lava",
+        "minecraft:powder_snow",
+        "minecraft:fire",
+        "minecraft:soul_fire",
+        "minecraft:magma_block",
+        "minecraft:campfire",
+        "minecraft:soul_campfire",
+        "minecraft:cactus",
+        "minecraft:sweet_berry_bush",
+        "minecraft:wither_rose",
+        "minecraft:pointed_dripstone"
+      ]
+    },
+    "observation_ticks": {
+      "anomaly": 60,
+      "trail": 40,
+      "hypothesis": 80,
+      "cache": 40
+    },
+    "recap_hold_ticks": 100,
+    "recovery": {
+      "party_wipe_ticks": 200,
+      "mira_capture_ticks": 120,
+      "mira_rescue_ticks": 40,
+      "mira_rescue_window_ticks": 3600,
+      "boss_missing_ticks": 100
+    }
+  },
+  "visual": {
+    "label_y": 1.15,
+    "label_view_range": 0.30,
+    "palette": {
+      "chapter": "#B8A98B",
+      "church": "#D4AF37",
+      "beelzebub": "#5A6B1E",
+      "beelzebub_light": "#B5D957",
+      "ash": "#706B5E",
+      "danger": "#8B2500",
+      "witness": "#FFF2A8",
+      "seal": "#62D9E8",
+      "pact": "#D596F2",
+      "eliminate": "#FF6B5E",
+      "danger_ui": "#FF806B",
+      "panel": "#8FC7FF",
+      "next_hunt": "#C9B5FF",
+      "beelzebub_combat": "#B7C84B",
+      "beelzebub_soft": "#E4EA9B",
+      "beelzebub_glint": "#FFF6C7",
+      "white": "#FFFFFF"
+    }
+  },
+  "items": {
+    "investigation": {
+      "exorcism_totem": {
+        "base_item": "minecraft:totem_of_undying",
+        "match": "minecraft:custom_data~{totem_tag:1b}",
+        "give_function": "rpg:campaign/beelzebub/give/totem",
+        "source": "command/give/item.mcfunction",
+        "generated": true
+      },
+      "pending_name_page": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_ch1_pending_page:1b}",
+        "give_function": "rpg:campaign/beelzebub/give/pending_page",
+        "item_model": "minecraft:paper",
+        "generated": true
+      },
+      "confirmed_name_page": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_rite_page:1b,rpg_lord:4}",
+        "give_function": "rpg:inquest/give/page4"
+      }
+    },
+    "media": {
+      "beelzebub_medium": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_medium:4b}",
+        "give_function": "rpg:inquest/give/medium4"
+      }
+    },
+    "ritual_tools": {
+      "strong_holy_water": {
+        "base_item": "minecraft:lingering_potion",
+        "match": "minecraft:custom_data~{rpg_strong_water:1b}",
+        "give_function": "rpg:inquest/give/strong_water"
+      },
+      "silver_nail": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_nail:1b}",
+        "give_function": "rpg:inquest/give/nail"
+      },
+      "confession_bell": {
+        "base_item": "minecraft:goat_horn",
+        "match": "minecraft:custom_data~{rpg_bell:1b}",
+        "give_function": "rpg:inquest/give/bell"
+      },
+      "purification_censer": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_incense:1b}",
+        "give_function": "rpg:inquest/give/incense"
+      },
+      "ritual_chalk_defense": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_chalk:1b}",
+        "give_function": "rpg:inquest/give/chalk1"
+      },
+      "demon_sealing_lamp": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_lantern:1b}",
+        "give_function": "rpg:inquest/give/lantern"
+      }
+    },
+    "rewards": {
+      "borderer_dossier": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_ch1_dossier:1b}",
+        "give_function": "rpg:campaign/beelzebub/reward/dossier",
+        "item_model": "minecraft:filled_map",
+        "generated": true
+      },
+      "eliminate_resonance": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_ch1_reward:1b,rpg_ch1_eliminate:1b}",
+        "give_function": "rpg:campaign/beelzebub/reward/eliminate",
+        "item_model": "minecraft:nether_star",
+        "generated": true
+      },
+      "banish_resonance": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_ch1_reward:1b,rpg_ch1_banish:1b}",
+        "give_function": "rpg:campaign/beelzebub/reward/banish",
+        "item_model": "minecraft:echo_shard",
+        "generated": true
+      },
+      "seal_resonance": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_ch1_reward:1b,rpg_ch1_seal:1b}",
+        "give_function": "rpg:campaign/beelzebub/reward/seal",
+        "item_model": "minecraft:soul_lantern",
+        "generated": true
+      },
+      "pact_resonance": {
+        "base_item": "minecraft:paper",
+        "match": "minecraft:custom_data~{rpg_ch1_reward:1b,rpg_ch1_pact:1b}",
+        "give_function": "rpg:campaign/beelzebub/reward/pact",
+        "item_model": "minecraft:written_book",
+        "generated": true
+      }
+    }
+  },
+  "actors": {
+    "controller": {
+      "entity_type": "minecraft:marker",
+      "spawn": "^ ^ ^",
+      "tags": ["rpg.ch1.controller", "rpg.ch1.anchor", "rpg.ch1.scene"]
+    },
+    "npcs": {
+      "vacant_mother": {
+        "entity_type": "minecraft:villager",
+        "spawn": "^ ^ ^19",
+        "display_name": "回家的母亲",
+        "tags": ["rpg.ch1.scene", "rpg.ch1.vacant", "rpg.ch1.vacant.safe", "rpg.vac.seen", "rpg.vacant"]
+      },
+      "mira_guard": {
+        "entity_type": "minecraft:villager",
+        "spawn": "^ ^ ^17",
+        "display_name": "米拉 · 见证人",
+        "tags": ["rpg.ch1.scene", "rpg.ch1.actor", "rpg.ch1.mira", "rpg.vac.seen"]
+      },
+      "mira_captured": {
+        "spawn": "^ ^ ^35",
+        "position_only": true
+      },
+      "mira_testimony": {
+        "entity_type": "minecraft:villager",
+        "spawn": "^ ^ ^8",
+        "display_name": "米拉 · 真实见证人",
+        "tags": ["rpg.ch1.scene", "rpg.ch1.witness", "rpg.vac.seen"]
+      }
+    },
+    "boss": {
+      "id": "beelzebub",
+      "display_name": "别西卜",
+      "lord_score": 4,
+      "entity_type": "minecraft:vindicator",
+      "spawn": "^ ^ ^40",
+      "summon_function": "rpg:taint/lord4",
+      "health": 700
+    },
+    "minions": {
+      "zepar": {
+        "display_name": "桀派",
+        "role": 1,
+        "duty": "封路",
+        "entity_type": "minecraft:vindicator",
+        "wave": 1,
+        "spawn": "^8 ^ ^18",
+        "summon_function": "rpg:minion/summon/beelzebub/zepar",
+        "health_by_party": {"2": 115, "3": 138, "4": 161}
+      },
+      "botis": {
+        "display_name": "布提斯",
+        "role": 2,
+        "duty": "追猎",
+        "entity_type": "minecraft:pillager",
+        "wave": 1,
+        "spawn": "^-8 ^ ^18",
+        "summon_function": "rpg:minion/summon/beelzebub/botis",
+        "health_by_party": {"2": 83, "3": 99, "4": 116}
+      },
+      "bathin": {
+        "display_name": "巴钦",
+        "role": 3,
+        "duty": "转运",
+        "entity_type": "minecraft:evoker",
+        "wave": 2,
+        "spawn": "^12 ^ ^26",
+        "summon_function": "rpg:minion/summon/beelzebub/bathin",
+        "health_by_party": {"2": 95, "3": 114, "4": 133}
+      },
+      "sallos": {
+        "display_name": "塞列欧斯",
+        "role": 4,
+        "duty": "伪记忆",
+        "entity_type": "minecraft:illusioner",
+        "wave": 2,
+        "spawn": "^-12 ^ ^26",
+        "summon_function": "rpg:minion/summon/beelzebub/sallos",
+        "health_by_party": {"2": 88, "3": 105, "4": 123}
+      },
+      "purson": {
+        "display_name": "布松",
+        "role": 5,
+        "duty": "处刑",
+        "entity_type": "minecraft:vindicator",
+        "wave": 3,
+        "spawn": "^ ^ ^30",
+        "summon_function": "rpg:minion/summon/beelzebub/purson",
+        "health_by_party": {"2": 135, "3": 162, "4": 189}
+      }
+    }
+  },
+  "scene_points": {
+    "anomaly": {
+      "anom1": {"spawn": "^6 ^ ^5", "label": "餐桌记录 · A", "color": "ash"},
+      "anom2": {"spawn": "^-7 ^ ^9", "label": "死亡登记 · B", "color": "church"},
+      "anom3": {"spawn": "^1 ^ ^15", "label": "钟楼检材 · C", "color": "beelzebub"}
+    },
+    "trail": {
+      "trail1": {"spawn": "^ ^ ^12", "label": "散落口粮袋 · 甲", "color": "beelzebub_light"},
+      "trail2": {"spawn": "^ ^ ^20", "label": "带血车辙 · 乙", "color": "beelzebub_light"},
+      "trail3": {"spawn": "^ ^ ^28", "label": "重合配给牌 · 丙", "color": "beelzebub_light"},
+      "trail4": {"spawn": "^ ^ ^36", "label": "第七粮仓封条 · 丁", "color": "beelzebub_light"}
+    },
+    "hypothesis": {
+      "hyp1": {"spawn": "^-7 ^ ^31", "label": "炉灰检材 · 火灾？", "color": "ash"},
+      "hyp2": {"spawn": "^7 ^ ^33", "label": "蝇茧剖面 · 疫病？", "color": "beelzebub_light"},
+      "hyp3": {"spawn": "^ ^ ^39", "label": "拒食残渣 · 弱点？", "color": "beelzebub"}
+    },
+    "cache": {
+      "cache1": {"spawn": "^-10 ^ ^35", "label": "封印档案箱", "color": "church"},
+      "cache2": {"spawn": "^10 ^ ^35", "label": "圣器保管箱", "color": "witness"},
+      "cache3": {"spawn": "^ ^ ^42", "label": "裁决器具箱", "color": "seal"}
+    }
+  },
+  "cache_loadouts": {
+    "cache1": ["pending_name_page", "beelzebub_medium"],
+    "cache2": ["exorcism_totem", "strong_holy_water", "silver_nail"],
+    "cache3": ["confession_bell", "purification_censer", "ritual_chalk_defense", "demon_sealing_lamp"]
+  },
+  "debug": {
+    "enabled": true,
+    "operator_only": true,
+    "origin_policy": "执行 start/debug_start 的玩家脚下为原点，朝向自动吸附到四个正方向",
+    "function_namespace": "rpg:campaign/beelzebub/debug",
+    "entry_points": {
+      "menu": "rpg:campaign/beelzebub/debug/menu",
+      "start": "rpg:campaign/beelzebub/debug/start",
+      "give_all_items": "rpg:campaign/beelzebub/debug/give_all_items",
+      "spawn_boss": "rpg:campaign/beelzebub/debug/spawn_boss",
+      "spawn_all_minions": "rpg:campaign/beelzebub/debug/spawn_all_minions",
+      "list_positions": "rpg:campaign/beelzebub/debug/list_positions"
+    },
+    "stage_jump_targets": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  "integration": {
+    "generator": "_tools/add_beelzebub_campaign.py",
+    "loader_module": "_tools/beelzebub_campaign_config.py",
+    "generated_manifest": "data/rpg/chapter/beelzebub_config.json",
+    "required_consumers": [
+      "runtime",
+      "visual.palette",
+      "items",
+      "actors",
+      "scene_points",
+      "cache_loadouts",
+      "debug"
+    ]
+  }
+}

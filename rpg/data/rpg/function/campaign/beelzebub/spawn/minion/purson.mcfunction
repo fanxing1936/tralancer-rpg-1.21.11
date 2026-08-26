@@ -2,6 +2,7 @@ tag @e[type=minecraft:vindicator,tag=rpg.demon.minion.lord4,scores={rpg_mn_role=
 function rpg:minion/summon/beelzebub/purson
 tag @e[type=minecraft:vindicator,tag=rpg.demon.minion.lord4,tag=!rpg.ch1.preexisting,scores={rpg_mn_role=5},distance=..4,sort=nearest,limit=1] add rpg.ch1.minion.new
 scoreboard players operation @e[tag=rpg.ch1.minion.new,limit=1] rpg_ch1_id = @s rpg_ch1_id
+data modify entity @e[tag=rpg.ch1.minion.new,limit=1] CustomName set value ["",{"text":"布松","color":"#B5D957","bold":true,"italic":false}]
 tag @e[tag=rpg.ch1.minion.new,limit=1] add rpg.ch1.minion
 execute if entity @e[tag=rpg.ch1.minion.new,limit=1] run scoreboard players add @s rpg_ch1_obj 1
 execute as @e[tag=rpg.ch1.minion.new,limit=1] run function rpg:campaign/beelzebub/minion/scale

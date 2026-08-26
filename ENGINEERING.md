@@ -3157,6 +3157,25 @@ ID 路由；Actionbar 只使用既有统一 HUD。771 项 UI 检查与二次生�
 1434 ticks/s（0.70 ms/tick）；这只证明脚本预算，不替代单人首通、单人重演和四人队伍的
 30–60 分钟实玩计时。后续平衡调整应记录三组完成时间，不应以强制空等补足时长。
 
+### 34.8 叙事循环、统一配置与调试台
+
+第一章调查从“走到标签即得到答案”改为四步循环：观察事实、保留竞争解释、交叉验证、
+阶段复盘。楔子先并置满仓粮册、增加的墓地与回家的死者；第一层误导让疫病／亡灵暂时
+成立，第二层误导让卡西安看似是全部源头。口粮、尸体、灭口三条路线与早于卡西安接任
+的记录完成纠偏。四次固定案情复盘都使用“已知／矛盾／下一步”三行结构，章节面板还会
+按 Stage 返回当前案件梗概，使玩家在 Boss 前后都能复述因果链。
+
+`_campaign_beelzebub_config.json` 是本章玩法配置的唯一源，生成器与独立美术层共同读取。
+它覆盖 15 类物品入口、章节控制器、NPC、别西卜、五名罪仆、24 个本地坐标、场地与作用
+半径、调查读条、恢复窗口、Boss／多人罪仆血量及器具箱内容。构建时会把带 SHA-256 的
+摘要写入 `data/rpg/chapter/beelzebub_config.json`；严格校验同时比较配置、生成函数、UI
+道具位置与调试入口，避免“配置文件已改、实际包仍是旧坐标”。
+
+管理员可执行 `rpg:campaign/beelzebub/debug/menu`，以当前位置开案、补发所有章节物品、
+按配置坐标生成 Boss／五罪仆、列出语义坐标，或安全跳转 Stage 0–10。阶段跳转会按章节
+ID 清理临时场景、Boss、罪仆和法阵，并给控制器添加 `rpg.ch1.debug.no_commit`；即使预览
+Stage 10 且玩家已有职业路线，正式结算、奖励、阅历、成就和下一章权限也会被锁止。
+
 ---
 
 # 重建方式
@@ -3190,6 +3209,7 @@ bash "_tools/build.sh"
 　　　　　　→ `check_demon_minions.py` + `check_life_tree_particles.py`
 　　　　　　→ `check_kabbalah_covenant.py` + `check_divine_covenants.py`
 　　　　　　→ `check_beelzebub_campaign.py` + `check_beelzebub_campaign_ui.py`
+　　　　　　→ `check_beelzebub_campaign_config.py` + `check_beelzebub_narrative_ui.py`
 　　　　　　→ `check_creeper.py` → `profile_tick.py`
 材质包流程（先跑）：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`

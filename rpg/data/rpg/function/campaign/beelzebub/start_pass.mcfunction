@@ -1,7 +1,7 @@
 execute if entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] run return run tellraw @s ["",{"text":"[第一章] 已有调查实例；请从档案选择加入。","color":"#8B2500","bold":false,"italic":false}]
 scoreboard players add #next rpg_ch1_id 1
 execute if score #next rpg_ch1_id matches ..0 run scoreboard players set #next rpg_ch1_id 1
-summon minecraft:marker ~ ~ ~ {Tags:["rpg.ch1.controller","rpg.ch1.anchor","rpg.ch1.scene","rpg.ch1.new"]}
+execute positioned ^ ^ ^ run summon minecraft:marker ~ ~ ~ {Tags:["rpg.ch1.controller","rpg.ch1.anchor","rpg.ch1.scene","rpg.ch1.new"]}
 execute if score @s rpg_ch1_yaw matches 0 run data merge entity @e[type=minecraft:marker,tag=rpg.ch1.new,sort=nearest,limit=1,distance=..2] {Rotation:[0f,0f]}
 execute if score @s rpg_ch1_yaw matches 1 run data merge entity @e[type=minecraft:marker,tag=rpg.ch1.new,sort=nearest,limit=1,distance=..2] {Rotation:[90f,0f]}
 execute if score @s rpg_ch1_yaw matches 2 run data merge entity @e[type=minecraft:marker,tag=rpg.ch1.new,sort=nearest,limit=1,distance=..2] {Rotation:[-90f,0f]}
