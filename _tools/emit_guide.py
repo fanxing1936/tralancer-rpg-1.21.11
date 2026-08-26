@@ -5,6 +5,8 @@ import colorsys
 import io
 import json
 
+from debug_commands import ALL_COMMANDS, render_html as render_debug_commands
+
 F = json.load(io.open("../_guide_fragments.json", encoding="utf-8"))
 S = json.load(io.open("../_guide_sections.json", encoding="utf-8"))
 Q = json.load(io.open("../_squad.json", encoding="utf-8"))
@@ -402,6 +404,22 @@ thead th{
   color:var(--muted); font-weight:500; background:var(--surface);
 }
 tbody tr:last-child td{border-bottom:none}
+.debug-table code{white-space:nowrap}
+.debug-table .risk{display:block; width:max-content; margin-top:7px; padding:1px 7px; border:1px solid var(--rule); border-radius:2px; font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.06em}
+.debug-table .risk-safe{color:#8FB8A0; border-color:#31473A; background:#142019}
+.debug-table .risk-warn{color:#E4C24A; border-color:#594C22; background:#211C0E}
+.debug-table .risk-danger{color:#FF806B; border-color:#6A2D26; background:#25100D}
+.debug-lords{border:1px solid var(--rule); background:var(--sunk)}
+.debug-lords>p{margin:0; padding:11px 16px; border-bottom:1px solid var(--rule)}
+.debug-lord{border-bottom:1px solid var(--rule)}
+.debug-lord:last-child{border-bottom:0}
+.debug-lord summary{cursor:pointer; display:flex; justify-content:space-between; gap:16px; padding:12px 16px; color:var(--ink); background:var(--surface); list-style:none}
+.debug-lord summary::-webkit-details-marker{display:none}
+.debug-lord summary:before{content:"＋"; color:var(--gold); margin-right:2px}
+.debug-lord[open] summary:before{content:"－"}
+.debug-lord summary b{margin-right:auto}
+.debug-lord summary span{color:var(--muted); font-family:"JetBrains Mono",monospace; font-size:11px}
+.debug-lord .tw{border:0; border-top:1px solid var(--rule)}
 td.num{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums; color:var(--ink)}
 td .nm{font-weight:700}
 td .sm{display:block; color:var(--muted); font-size:12.5px; margin-top:2px}
@@ -452,7 +470,7 @@ def build():
 
     a('<div class="layout">')
     a('''<nav class="rail" aria-label="目录"><ol>
-<li><a href="#s1"><span class="num">I</span>起始配置</a></li>
+<li><a href="#s1"><span class="num">I</span>安装与调试</a></li>
 <li><a href="#s2"><span class="num">II</span>核心系统</a></li>
 <li><a href="#s3"><span class="num">III</span>武器图鉴</a></li>
 <li><a href="#s4"><span class="num">IV</span>护甲图鉴</a></li>
@@ -467,19 +485,19 @@ def build():
 <li><a href="#s15"><span class="num">XII</span>卡巴拉上位契约</a></li>
 <li><a href="#s13"><span class="num">XIII</span>佣兵小队</a></li>
 <li><a href="#s10"><span class="num">XIV</span>破碎大陆</a></li>
-<li><a href="#s11"><span class="num">XV</span>指令速查</a></li>
+<li><a href="#s11"><span class="num">XV</span>调试指令</a></li>
 </ol></nav>''')
 
     a('<main>')
 
     # I setup -------------------------------------------------------------
     a('''<section class="plate" id="s1">
-<div class="plate-h"><span class="num">I</span><h2>起始配置</h2><span class="sub">按顺序执行一次</span></div>
-<p>数据包本体不会自动初始化。开新档、或第一次把数据包装进已有存档后，<strong>必须先建好计分板</strong>，否则所有武器技能、等级、洗练都不会触发。以下步骤在游戏内以管理员身份执行。</p>
+<div class="plate-h"><span class="num">I</span><h2>安装与调试</h2><span class="sub">自动初始化 · 管理入口集中归档</span></div>
+<p>数据包会通过 <code>#minecraft:load</code> 自动注册计分板并创建 Bossbar。正常安装无需手动初始化；下面两条初始化函数保留为<strong>故障恢复与独立测试入口</strong>。其他会生成物品、实体或方块的步骤仍需管理员主动执行。</p>
 <ol class="steps">
 <li><div><h3>确认版本与前置</h3><p>客户端为 <code>1.21.11</code>；数据包放进 <code>存档/datapacks/</code>，材质包放进 <code>.minecraft/resourcepacks/</code> 并在选项里启用。材质包提供全部自定义武器模型，不装的话武器会显示成原版外观。</p></div></li>
-<li><div><h3>建立计分板</h3><p>注册全部 60 余个计分项：武器技能触发器、等级、洗练计数、随机数等。<strong>这一步是所有功能的前提。</strong></p><code class="cmd">/function rpg:command/soreboard</code></div></li>
-<li><div><h3>建立 BOSS 血条</h3><p>创建恶魔 BOSS 的血量显示条 <code>minecraft:devil</code>，红色、六段式、上限 1000。</p><code class="cmd">/function rpg:command/bossbar</code></div></li>
+<li><div><h3>补建计分板<span class="opt">仅恢复</span></h3><p>正常由加载标签自动注册。只有控制台确认计分项缺失、或单独拆出函数测试时才手动执行。</p><code class="cmd">/function rpg:command/soreboard</code></div></li>
+<li><div><h3>补建 BOSS 血条<span class="opt">仅恢复</span></h3><p>正常由加载标签自动创建四个恶魔 Bossbar 槽位；重复执行会收到“已存在”提示。</p><code class="cmd">/function rpg:command/bossbar</code></div></li>
 <li><div><h3>创建掠夺者队伍<span class="opt">必要</span></h3><p>风袭卫道士系列怪物出生时会加入 <code>green</code> 队伍；队伍不存在时服务端每次召唤都会报错。</p><code class="cmd">/team add green</code></div></li>
 <li><div><h3>发放起始装备<span class="opt">可选</span></h3><p>三个发放函数会把对应类别的全部物品发给<strong>所有在线玩家</strong>，建议在创造模式测试区使用。</p><code class="cmd">/function rpg:command/give/weapon      # 武器、护甲、药剂
 /function rpg:command/give/item        # 符文、晶石、锻造材料
@@ -487,6 +505,9 @@ def build():
 <li><div><h3>布置试炼与宝库<span class="opt">可选</span></h3><p>在脚下生成一组不祥试炼刷怪笼与宝库，掉落表指向本包的 <code>rpg:trial/*</code> 与 <code>rpg:loot/*</code>。站在要放置的位置执行。</p><code class="cmd">/function rpg:command/setblock</code></div></li>
 <li><div><h3>召唤恶魔 BOSS<span class="opt">可选</span></h3><p>在脚下生成 1000 点生命的恶魔（唤魔者本体 + 卫道士护卫）。战斗全程由 <code>rpg:entities/warden/warden</code> 每刻驱动。</p><code class="cmd">/function rpg:command/summon</code></div></li>
 </ol>
+<div class="note"><b>完整调试手册：</b>本页末尾的<a href="#debug-catalog">调试指令总表</a>收录 <b>''' + str(len(ALL_COMMANDS)) + '''</b> 个公开入口，逐条标明执行者、前置条件、影响范围与风险。推荐先用 <code>/function rpg:command/give/box</code> 领取分类潜影盒；第一章统一从 <code>/function rpg:campaign/beelzebub/debug/menu</code> 进入。</div>
+<div class="note"><b>公共入口边界：</b><code>*_worker</code>、每刻 tick、伤害结算、UI 刷新与阶段内部函数不是调试接口。它们依赖调用上下文，手动执行容易留下半成品状态，因此未列入可复制命令。</div>
+<div class="note"><b>独立文档：</b><code>DEBUG-COMMANDS.md</code> 与本介绍页由同一清单生成，适合在编辑器中检索、复制或随工程一起归档。</div>
 <div class="note"><b>玩家等级：</b>玩家的经验等级即角色等级。等级每提升一档，最大生命值会按 64/32/16/8/4/2/1 的分段自动加成，并播放升级特效——无需任何额外操作。</div>
 </section>''')
 
@@ -1007,25 +1028,10 @@ def build():
 
     # XV commands ---------------------------------------------------------
     a('''<section class="plate" id="s11">
-<div class="plate-h"><span class="num">XV</span><h2>指令速查</h2><span class="sub">rpg 命名空间</span></div>
-<div class="tw"><table>
-<thead><tr><th>指令</th><th>作用</th></tr></thead>
-<tbody>
-<tr><td class="num">/function rpg:command/soreboard</td><td>注册全部计分板<span class="sm">首次安装必须执行</span></td></tr>
-<tr><td class="num">/function rpg:command/bossbar</td><td>创建恶魔 BOSS 血条</td></tr>
-<tr><td class="num">/function rpg:command/give/weapon</td><td>发放全部武器、护甲与药剂</td></tr>
-<tr><td class="num">/function rpg:command/give/item</td><td>发放符文、晶石与锻造材料</td></tr>
-<tr><td class="num">/function rpg:command/give/weapon_up_item</td><td>发放六张武器分支唱片</td></tr>
-<tr><td class="num">''' + D["test_give_command"] + '''</td><td>向执行者发放卡巴拉血契、十源质与真·十字架<span class="sm">仅测试／管理入口</span></td></tr>
-<tr><td class="num">/function rpg:campaign/beelzebub/start</td><td>接受并创建第一章「空缺者」战役<span class="sm">玩家面板也可进入</span></td></tr>
-<tr><td class="num">/function rpg:campaign/beelzebub/abort</td><td>安全中止当前第一章实例<span class="sm">永久档案不回滚</span></td></tr>
-<tr><td class="num">/function rpg:command/setblock</td><td>在脚下布置试炼刷怪笼与宝库</td></tr>
-<tr><td class="num">/function rpg:command/summon</td><td>在脚下召唤恶魔 BOSS 与护卫</td></tr>
-<tr><td class="num">/function rpg:entities/drowned/king</td><td>召唤溺尸王与近卫</td></tr>
-<tr><td class="num">/function rpg:entities/piglin/king</td><td>召唤猪灵巨人与近卫</td></tr>
-<tr><td class="num">/function rpg:entities/illager/wind_vindicator</td><td>召唤风袭掠夺者小队</td></tr>
-<tr><td class="num">/team add green</td><td>创建风袭掠夺者所属队伍</td></tr>
-</tbody></table></div>
+<div class="plate-h" id="debug-catalog"><span class="num">XV</span><h2>调试指令总表</h2><span class="sub">''' + str(len(ALL_COMMANDS)) + ''' 个公开入口 · rpg 命名空间</span></div>
+<p>以下命令均经过工程路径核对，可直接复制。默认需要开启作弊或拥有管理员权限；含 <code>@s</code> 的函数必须由目标玩家本人执行。风险标记不是装饰：<strong>群体发放</strong>会影响所有在线玩家，<strong>持久实体</strong>不会在离场后自动消失，<strong>全局清理</strong>会作用于当前维度全部目标。</p>
+<div class="note"><b>推荐顺序：</b>首次测试先确认计分板与 Bossbar 已由加载标签建立，再补建 green 队伍；需要全套内容时使用分类潜影盒。章节联调从第一章调试台进入，阶段跳转只用于预览，不会写入永久首通和奖励。</div>
+''' + render_debug_commands() + '''
 <div class="note"><b>每刻运行的函数</b>由 <code>#minecraft:tick</code> 驱动，依次为 <code>rpg:command/index</code>（标志索引与伤害检测）→ <code>rpg:command/tick</code>（合成、试炼、等级）→ <code>rpg:item/sword/legend/legend1</code>（武器技能）→ <code>rpg:entities/warden/warden</code>（BOSS 战）→ <code>rpg:command/tick_end</code>。正常游玩无需手动调用。</div>
 </section>''')
 

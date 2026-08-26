@@ -7,7 +7,9 @@ python extract_items.py   ../rpg
 python extract_loot.py    ../rpg
 python build_guide.py
 python build_loot_frag.py
+python write_debug_commands.py
 python emit_guide.py
+python check_debug_commands.py
 python check_beelzebub_campaign_docs.py
 python check_beelzebub_campaign_config.py ../rpg --require-wired
 python check_beelzebub_narrative_ui.py ../rpg --story-contract

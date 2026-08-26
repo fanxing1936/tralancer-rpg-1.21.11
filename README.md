@@ -21,6 +21,7 @@
 | `rpg-datapack-1.21.11.zip` | 数据包 zip（同内容，方便分发） |
 | `rpg-resourcepack-1.21.11.zip` | 材质包 zip |
 | `TRALANCER-RPG-图鉴.html` | **图鉴**，双击即可打开 |
+| `DEBUG-COMMANDS.md` | **完整调试指令手册**（公开入口、前置条件、影响范围与风险） |
 | `LORE.md` | **《破碎大陆》世界观全文**（圣经体叙事，七卷） |
 | `BEELZEBUB-CAMPAIGN-CHAPTER-1.md` | **第一章《空缺者》完整战役剧情**（角色、对白、四裁决、失败恢复与第二章钩子） |
 | `_campaign_beelzebub_level.md` / `_campaign_beelzebub_art_ui.md` | 第一章逐幕关卡、多人、检查点、性能与美术/UI制作规格 |
