@@ -276,6 +276,8 @@ scoreboard objectives add rpg_mn_role dummy
 scoreboard objectives add rpg_mn_cd dummy
 scoreboard objectives add rpg_mn_tick dummy
 scoreboard objectives add rpg_mn_slot dummy
+scoreboard objectives add rpg_mn_owner dummy
+scoreboard objectives add rpg_mn_cast dummy
 scoreboard objectives add rpg_lt_tick dummy
 scoreboard objectives add rpg_lt_fill dummy
 scoreboard objectives add rpg_lt_usecd dummy

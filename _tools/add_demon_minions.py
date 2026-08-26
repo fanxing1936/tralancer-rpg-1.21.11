@@ -45,7 +45,72 @@ ROLES = {
     5: {"name": "处刑者", "entity": "vindicator", "health": 108, "attack": 11, "armor": 8, "speed": 0.33, "weapon": "minecraft:iron_axe", "cd": 75, "material": "minecraft:redstone"},
 }
 
-OBJECTIVES = ("rpg_mn_lord", "rpg_mn_role", "rpg_mn_cd", "rpg_mn_tick", "rpg_mn_slot")
+# Each spirit owns a named combat language.  The five tuple positions are the
+# stable roles above; effects are interpreted by the role-specific executor in
+# build_ability().  This keeps the ecology readable without creating 35 hot
+# loops or relying on vanilla illager spell AI.
+SKILLS = {
+    1: [
+        ("王冠护持", "傲慢为同柱披上王权", "resistance", "glowing", 0),
+        ("罪痕标定", "锁定最近的见证者并令其失重", "levitation", "glowing", 2),
+        ("晨星赐福", "以虚假的冠冕修复同柱", "resistance", "absorption", 0),
+        ("失坠敕令", "压低周围凡人的力量与动作", "weakness", "mining_fatigue", 1),
+        ("王座裁落", "在近身处落下傲慢的裁决", "levitation", "weakness", 7),
+    ],
+    2: [
+        ("妒潮护幕", "嫉妒复制最坚固的鳞片", "absorption", "resistance", 0),
+        ("寒潮猎印", "暗潮缠住最近的脚步", "slowness", "weakness", 2),
+        ("回潮再生", "偷取生命的形状赐予同柱", "regeneration", "speed", 0),
+        ("海渊重压", "倒影令众人迟滞而失明", "slowness", "darkness", 1),
+        ("沉锚碾落", "深海之口咬住近身猎物", "slowness", "weakness", 7),
+    ],
+    3: [
+        ("死寂护幕", "死亡为同柱封上一层墓石", "resistance", "absorption", 0),
+        ("疫矢猎印", "骨哨令最近的活物腐败", "poison", "glowing", 3),
+        ("灵魂归仓", "葬歌将残躯重新缝合", "regeneration", "resistance", 0),
+        ("深渊低语", "坟土吞没声音与视野", "darkness", "slowness", 2),
+        ("刈魂", "丧钟为近身者预告终点", "wither", "slowness", 8),
+    ],
+    4: [
+        ("腐宴护壳", "饕宴残渣凝成带刺甲壳", "absorption", "resistance", 0),
+        ("饥印", "腐蝇锁定最近且最鲜活的胃", "hunger", "glowing", 2),
+        ("吞食反哺", "以腐宴喂养受伤的同柱", "regeneration", "absorption", 0),
+        ("蝇幕蚀志", "腐败气息令众人饥饿作呕", "hunger", "nausea", 2),
+        ("饥啮", "饥饿在近身处同时张口", "hunger", "weakness", 7),
+    ],
+    5: [
+        ("怒血共鸣", "暴怒将伤口锻成力量", "strength", "resistance", 0),
+        ("血猎标记", "猎手沿血光咬住最近目标", "glowing", "weakness", 3),
+        ("狂血灌注", "战吼迫使同柱继续厮杀", "regeneration", "strength", 0),
+        ("死亡低语", "怒火扰乱周围的判断", "nausea", "weakness", 2),
+        ("怒斩", "最短的距离只容得下一次斩击", "weakness", "glowing", 9),
+    ],
+    6: [
+        ("紫宴护幕", "静止本身成为同柱的护甲", "resistance", "absorption", 0),
+        ("魅视缚足", "睡意攀上最近目标的四肢", "slowness", "mining_fatigue", 2),
+        ("献身回流", "不愿行动的躯体拒绝死亡", "regeneration", "resistance", 0),
+        ("感官倒悬", "沉重梦境封住周围的动作", "slowness", "darkness", 1),
+        ("强制朝拜", "越想挣扎，镰刃便越沉重", "mining_fatigue", "weakness", 7),
+    ],
+    7: [
+        ("金契护体", "财富替同柱承受第一道伤口", "absorption", "resistance", 0),
+        ("债印", "金光记下最近目标的欠款", "glowing", "weakness", 2),
+        ("复利回偿", "未来的代价修补现在的身体", "regeneration", "absorption", 0),
+        ("重税", "无形债契拖慢所有偿还者", "mining_fatigue", "weakness", 1),
+        ("一次结清", "金色刃口收走近身者的抵押", "weakness", "slowness", 8),
+    ],
+}
+
+ROLE_SOUNDS = {
+    1: "minecraft:item.shield.block",
+    2: "minecraft:item.crossbow.shoot",
+    3: "minecraft:block.enchantment_table.use",
+    4: "minecraft:entity.evoker.cast_spell",
+    5: "minecraft:entity.player.attack.strong",
+}
+
+OBJECTIVES = ("rpg_mn_lord", "rpg_mn_role", "rpg_mn_cd", "rpg_mn_tick", "rpg_mn_slot",
+              "rpg_mn_owner", "rpg_mn_cast")
 
 
 def fpath(rel):
@@ -141,9 +206,12 @@ def tellraw_summon(lord, role, spirit):
 
 def build_summons():
     phase = [
-        "# 二阶段每次压力轮换一个职责；存活的同柱同职不会重复出现。",
+        "# 二阶段每次压力轮换一个职责；以 rpg_rite_id 精确隔离同法阵存活者。",
         "scoreboard players add @s rpg_mn_slot 1",
         "execute if score @s rpg_mn_slot matches 6.. run scoreboard players set @s rpg_mn_slot 1",
+        "tag @e[tag=rpg.demon.minion] remove rpg.demon.minion.owned",
+        "tag @s add rpg.rite.anchor.current",
+        "execute as @e[tag=rpg.demon.minion] if score @s rpg_mn_owner = @e[type=minecraft:item_display,tag=rpg.rite.anchor.current,limit=1] rpg_rite_id run tag @s add rpg.demon.minion.owned",
     ]
     for lord_index, lord in LORDS.items():
         all_lines = ["# %s麾下五职；手动调用时不检查 Boss 与人口上限。" % lord["lord"]]
@@ -155,7 +223,14 @@ def build_summons():
                 "summon minecraft:%s ~ ~ ~ %s" % (role["entity"], summon_snbt(lord_index, role_index, lord, role, spirit)),
                 "scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_lord %d" % lord_index,
                 "scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_role %d" % role_index,
-                "scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_cd %d" % (role["cd"] // 2),
+                "scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_owner 0",
+                "execute if entity @s[type=minecraft:item_display,tag=rpg.rite.anchor] run scoreboard players operation @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_owner = @s rpg_rite_id",
+                "execute if entity @s[type=minecraft:item_display,tag=rpg.ch1.rite] run scoreboard players operation @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_ch1_id = @s rpg_ch1_id",
+                "execute if entity @s[type=minecraft:item_display,tag=rpg.ch1.rite] run tag @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] add rpg.ch1.minion",
+                # Deterministic first-cast staggering prevents seven cohorts
+                # summoned together from producing a single particle/sound spike.
+                "scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_cd %d" % (role["cd"] // 2 + (lord_index - 1) * 7 + role_index * 3),
+                "scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_cast 0",
                 "tag @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] remove rpg.demon.minion.new",
                 "particle %s ~ ~1 ~ 0.55 0.75 0.55 0.035 18" % lord["particle"],
                 "particle soul ~ ~1 ~ 0.35 0.65 0.35 0.025 10",
@@ -165,10 +240,14 @@ def build_summons():
             write(rel, "\n".join(lines))
             all_lines.append("function rpg:minion/summon/%s/%s" % (lord["slug"], spirit[0]))
             phase.append(
-                "execute if score @s rpg_dm_lord matches %d if score @s rpg_mn_slot matches %d unless entity @e[tag=rpg.demon.minion,scores={rpg_mn_lord=%d,rpg_mn_role=%d},distance=..36,limit=1] run function rpg:minion/summon/%s/%s"
+                "execute if score @s rpg_dm_lord matches %d if score @s rpg_mn_slot matches %d unless entity @e[tag=rpg.demon.minion,tag=rpg.demon.minion.owned,scores={rpg_mn_lord=%d,rpg_mn_role=%d},limit=1] run function rpg:minion/summon/%s/%s"
                 % (lord_index, role_index, lord_index, role_index, lord["slug"], spirit[0])
             )
         write("minion/summon/%s/all.mcfunction" % lord["slug"], "\n".join(all_lines))
+    phase += [
+        "tag @s remove rpg.rite.anchor.current",
+        "tag @e[tag=rpg.demon.minion.owned] remove rpg.demon.minion.owned",
+    ]
     write("minion/phase2_summon.mcfunction", "\n".join(phase))
 
 
@@ -187,66 +266,139 @@ def player_effect(effect, seconds, amplifier, radius):
     return "effect give @a[distance=..%d,gamemode=!spectator,gamemode=!creative] minecraft:%s %d %d true" % (radius, effect, seconds, amplifier)
 
 
+def target_effect(effect, seconds, amplifier, radius):
+    return "effect give @a[distance=..%d,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] minecraft:%s %d %d true" % (radius, effect, seconds, amplifier)
+
+
+def cast_notice(lord, role_index, role, spirit, skill, cue):
+    component = [
+        "",
+        {"text": "[罪仆术式] ", "color": lord["base"], "bold": True, "italic": False},
+        {"text": spirit[1] + " · ", "color": lord["light"], "bold": False, "italic": False},
+        {"text": skill, "color": lord["light"], "bold": True, "italic": False},
+        {"text": "｜" + role["name"], "color": "gray", "bold": False, "italic": False},
+        {"text": "　" + cue, "color": "dark_gray", "bold": False, "italic": False},
+    ]
+    radius = {1: 12, 2: 10, 3: 14, 4: 8, 5: 4}[role_index]
+    return "tellraw @a[distance=..%d,gamemode=!spectator] " % radius + json.dumps(component, ensure_ascii=False, separators=(",", ":"))
+
+
+def ring(particle, radius):
+    points = ((radius, 0), (-radius, 0), (0, radius), (0, -radius),
+              (radius * 0.7, radius * 0.7), (-radius * 0.7, radius * 0.7),
+              (radius * 0.7, -radius * 0.7), (-radius * 0.7, -radius * 0.7))
+    return ["particle %s ~%g ~0.18 ~%g 0 0 0 0 1" % (particle, x, z) for x, z in points]
+
+
+def telegraph_geometry(lord_index, role_index, lord):
+    lines = [transition(lord_index, 4)]
+    if role_index == 1:
+        lines.append("particle enchant ~ ~1 ~ 0.72 0.18 0.72 0.025 8")
+    elif role_index == 2:
+        lines.append("execute at @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] run particle crit ~ ~1 ~ 0.28 0.55 0.28 0.035 8")
+        lines.append(target_effect("glowing", 1, 0, 10))
+    elif role_index == 3:
+        target = "@e[tag=rpg.demon.minion,scores={rpg_mn_lord=%d},distance=0.1..10,sort=nearest,limit=1]" % lord_index
+        for step in (1, 2, 3, 4):
+            lines.append("execute facing entity %s eyes run particle end_rod ^ ^1 ^%d 0.05 0.05 0.05 0.01 2" % (target, step))
+    elif role_index == 4:
+        lines += ring(lord["particle"], 8)
+    else:
+        lines += ring("crit", 4)
+    return lines
+
+
 def build_runtime_and_abilities():
     write("minion/tick.mcfunction", """# 35 种罪仆共用十刻节拍，场上无罪仆时不会进入本系统。
 scoreboard players add #clock rpg_mn_tick 1
 execute if score #clock rpg_mn_tick matches 10.. run function rpg:minion/beat
 """)
     write("minion/beat.mcfunction", """scoreboard players set #clock rpg_mn_tick 0
+scoreboard players set #casts rpg_mn_tick 0
 execute as @e[tag=rpg.demon.minion] at @s run function rpg:minion/entity_tick
 """)
-    write("minion/entity_tick.mcfunction", """execute if entity @s[scores={rpg_mn_cd=1..}] run scoreboard players remove @s rpg_mn_cd 10
-execute unless entity @a[distance=..12,gamemode=!spectator,gamemode=!creative,limit=1] run return 0
-execute if entity @s[scores={rpg_mn_cd=..0}] run function rpg:minion/ability_dispatch
+    write("minion/entity_tick.mcfunction", """execute if entity @s[tag=rpg.demon.minion.casting,scores={rpg_mn_cast=1..}] run scoreboard players remove @s rpg_mn_cast 10
+execute if entity @s[tag=rpg.demon.minion.casting,scores={rpg_mn_cast=..0}] run return run function rpg:minion/resolve_dispatch
+execute if entity @s[tag=rpg.demon.minion.casting] run return 0
+execute if entity @s[scores={rpg_mn_cd=1..}] run scoreboard players remove @s rpg_mn_cd 10
+execute if entity @s[scores={rpg_mn_role=3}] unless entity @a[distance=..14,gamemode=!spectator,gamemode=!creative,limit=1] run return 0
+execute unless entity @s[scores={rpg_mn_role=3}] unless entity @a[distance=..12,gamemode=!spectator,gamemode=!creative,limit=1] run return 0
+execute if score #casts rpg_mn_tick matches ..1 if entity @s[scores={rpg_mn_cd=..0}] run function rpg:minion/ability_dispatch
 """)
     dispatch = ["# 柱位与职责共同决定独立能力。"]
+    resolve = ["# 蓄势结束后按柱位与职责结算；随后清除施法态。"]
     for lord_index, lord in LORDS.items():
         for role_index, spirit in enumerate(lord["spirits"], 1):
             dispatch.append("execute if entity @s[scores={rpg_mn_lord=%d,rpg_mn_role=%d}] run return run function rpg:minion/ability/%s_%d" % (lord_index, role_index, lord["slug"], role_index))
+            resolve.append("execute if entity @s[scores={rpg_mn_lord=%d,rpg_mn_role=%d}] run return run function rpg:minion/ability/resolve/%s_%d" % (lord_index, role_index, lord["slug"], role_index))
             build_ability(lord_index, role_index, lord, ROLES[role_index], spirit)
     write("minion/ability_dispatch.mcfunction", "\n".join(dispatch))
+    write("minion/resolve_dispatch.mcfunction", "\n".join(resolve))
 
 
 def build_ability(lord_index, role_index, lord, role, spirit):
+    skill, cue, primary, secondary, damage = SKILLS[lord_index][role_index - 1]
+    cooldown = role["cd"] + (lord_index - 1) * 4
+    windup = 10 if role_index in (1, 5) else 20
     lines = [
-        "# %s · %s（%s）" % (spirit[1], role["name"], lord["lord"]),
-        "scoreboard players set @s rpg_mn_cd %d" % role["cd"],
-        transition(lord_index),
-        "particle %s ~ ~1 ~ 0.45 0.65 0.45 0.025 10" % lord["particle"],
+        "# %s · %s（%s）：%s" % (spirit[1], role["name"], lord["lord"], skill),
+        "scoreboard players add #casts rpg_mn_tick 1",
+        "scoreboard players set @s rpg_mn_cd %d" % cooldown,
+        "scoreboard players set @s rpg_mn_cast %d" % windup,
+        "tag @s add rpg.demon.minion.casting",
+        cast_notice(lord, role_index, role, spirit, skill, cue),
         "playsound %s hostile @a[distance=..20] ~ ~ ~ 0.35 1.12" % lord["sound"],
+        "playsound %s hostile @a[distance=..14] ~ ~ ~ 0.28 0.92" % ROLE_SOUNDS[role_index],
+    ] + telegraph_geometry(lord_index, role_index, lord)
+    resolve = [
+        "# %s：延迟结算；单次总粒子预算不超过 28。" % skill,
+        "tag @s remove rpg.demon.minion.casting",
+        "scoreboard players set @s rpg_mn_cast 0",
+        "particle %s ~ ~1 ~ 0.38 0.55 0.38 0.025 2" % lord["particle"],
+        "playsound %s hostile @a[distance=..14] ~ ~ ~ 0.32 1.05" % ROLE_SOUNDS[role_index],
     ]
     if role_index == 1:
-        buff = ("resistance", "absorption", "resistance", "absorption", "strength", "resistance", "absorption")[lord_index - 1]
-        lines += [
-            "effect give @e[tag=rpg.advent,scores={rpg_dm_lord=%d},distance=..12,limit=1] minecraft:%s 4 0 true" % (lord_index, buff),
-            "effect give @e[tag=rpg.demon.minion,scores={rpg_mn_lord=%d},distance=..8] minecraft:%s 4 0 true" % (lord_index, buff),
-            "particle enchant ~ ~1 ~ 0.8 0.7 0.8 0.04 12",
+        resolve += [
+            "effect give @e[tag=rpg.advent,scores={rpg_dm_lord=%d},distance=..12,limit=1] minecraft:%s 4 0 true" % (lord_index, primary),
+            "effect give @e[tag=rpg.demon.minion,scores={rpg_mn_lord=%d},distance=..8] minecraft:%s 4 0 true" % (lord_index, primary),
+            "effect give @e[tag=rpg.demon.minion,scores={rpg_mn_lord=%d},distance=..8] minecraft:%s 3 0 true" % (lord_index, secondary),
+            "particle enchant ~ ~1 ~ 0.8 0.7 0.8 0.04 10",
         ]
     elif role_index == 2:
-        effect = ("glowing", "slowness", "poison", "hunger", "glowing", "slowness", "weakness")[lord_index - 1]
-        lines += [player_effect(effect, 4, 0, 10), "particle crit ~ ~1 ~ 0.8 0.6 0.8 0.05 12"]
+        resolve += [
+            "tag @s add rpg.demon.minion.caster",
+            target_effect(primary, 4, 0, 10), target_effect(secondary, 3, 0, 10),
+            "execute as @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] run damage @s %d minecraft:magic by @e[tag=rpg.demon.minion.caster,distance=..12,sort=nearest,limit=1]" % damage,
+            "execute at @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] run particle crit ~ ~1 ~ 0.35 0.55 0.35 0.05 10",
+            "tag @s remove rpg.demon.minion.caster",
+        ]
     elif role_index == 3:
-        secondary = ("resistance", "speed", "regeneration", "absorption", "strength", "resistance", "absorption")[lord_index - 1]
-        lines += [
+        resolve += [
             "effect give @e[tag=rpg.advent,scores={rpg_dm_lord=%d},distance=..14,limit=1] minecraft:instant_health 1 0 true" % lord_index,
             "effect give @e[tag=rpg.demon.minion,scores={rpg_mn_lord=%d},distance=..10] minecraft:regeneration 4 0 true" % lord_index,
-            "effect give @e[tag=rpg.demon.minion,scores={rpg_mn_lord=%d},distance=..10] minecraft:%s 4 0 true" % (lord_index, secondary),
-            "particle heart ~ ~1.4 ~ 0.75 0.6 0.75 0.03 9",
+            "effect give @e[tag=rpg.demon.minion,scores={rpg_mn_lord=%d},distance=..10] minecraft:%s 4 0 true" % (lord_index, primary),
+            "effect give @e[tag=rpg.demon.minion,scores={rpg_mn_lord=%d},distance=..10] minecraft:%s 3 0 true" % (lord_index, secondary),
+            "particle heart ~ ~1.4 ~ 0.75 0.6 0.75 0.03 10",
         ]
     elif role_index == 4:
-        effects = (("levitation", "weakness"), ("slowness", "mining_fatigue"), ("poison", "darkness"), ("hunger", "weakness"), ("nausea", "weakness"), ("slowness", "weakness"), ("mining_fatigue", "weakness"))[lord_index - 1]
-        lines += [player_effect(effects[0], 3, 0, 8), player_effect(effects[1], 4, 0, 8), "particle reverse_portal ~ ~1 ~ 0.85 0.75 0.85 0.04 15"]
+        resolve += [
+            "tag @s add rpg.demon.minion.caster",
+            player_effect(primary, 3, 0, 8), player_effect(secondary, 4, 0, 8),
+            "execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run damage @s %d minecraft:magic by @e[tag=rpg.demon.minion.caster,distance=..10,sort=nearest,limit=1]" % damage,
+            "tag @s remove rpg.demon.minion.caster",
+            "particle reverse_portal ~ ~1 ~ 0.85 0.75 0.85 0.04 10",
+        ]
     else:
-        damage = (5, 5, 6, 5, 7, 5, 6)[lord_index - 1]
-        rider = ("weakness", "slowness", "poison", "hunger", "glowing", "mining_fatigue", "weakness")[lord_index - 1]
-        lines += [
+        resolve += [
             "tag @s add rpg.demon.minion.caster",
             "execute as @a[distance=..4,gamemode=!spectator,gamemode=!creative] run damage @s %d minecraft:magic by @e[tag=rpg.demon.minion.caster,distance=..8,limit=1]" % damage,
-            player_effect(rider, 3, 0, 4),
+            player_effect(primary, 3, 0, 4), player_effect(secondary, 3, 0, 4),
+            "effect give @s minecraft:regeneration 3 0 true",
             "tag @s remove rpg.demon.minion.caster",
             "particle sweep_attack ~ ~1 ~ 0.9 0.5 0.9 0.04 10",
         ]
     write("minion/ability/%s_%d.mcfunction" % (lord["slug"], role_index), "\n".join(lines))
+    write("minion/ability/resolve/%s_%d.mcfunction" % (lord["slug"], role_index), "\n".join(resolve))
 
 
 def build_rewards():
