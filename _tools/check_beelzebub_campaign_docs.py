@@ -32,12 +32,12 @@ if len(stages) != 9:
 else:
     low = sum(x["minutes"][0] for x in stages)
     high = sum(x["minutes"][1] for x in stages)
-    if low < 30 or high > 60:
-        errors.append("chapter timing escapes requested 30-60 minutes: %d-%d" % (low, high))
+    if low < 50 or high > 75:
+        errors.append("chapter timing escapes expanded 50-75 minute target: %d-%d" % (low, high))
 
 story = text("BEELZEBUB-CAMPAIGN-CHAPTER-1.md")
 for phrase in (
-    "第十三声钟", "调查叙事与解谜结构", "第一层误导", "第二层误导", "四次阶段复盘",
+    "第十三声钟", "调查叙事与解谜结构", "第一层误导", "第二层误导", "三项可失败、可恢复的推理解谜", "四次阶段复盘",
     "米拉·维恩", "伊莱亚·沃斯", "执事卡西安", "审判官塞维拉",
     "桀派", "布提斯", "巴钦", "塞列欧斯", "布松",
     "环境假说 + 三种不可重复招式见证", "第一阶段：镇压", "第二阶段：镇魔",
@@ -104,7 +104,7 @@ for phrase in ("别西卜", "Actionbar", "Bossbar", "粒子", "验收"):
         errors.append("art/UI specification missing: " + phrase)
 
 config_doc = text("BEELZEBUB-CAMPAIGN-CONFIG.md")
-for phrase in ("_campaign_beelzebub_config.json", "24 个相对位置", "debug/menu", "stage/<0..10>"):
+for phrase in ("_campaign_beelzebub_config.json", "33 个相对位置", "debug/menu", "stage/<0..10>"):
     if phrase not in config_doc:
         errors.append("campaign config documentation missing: " + phrase)
 
@@ -117,4 +117,4 @@ if errors:
     for error in errors:
         print("- " + error)
     raise SystemExit(1)
-print("Chapter I documentation check OK: 11-step flow, 45-60 minute canon, web and README")
+print("Chapter I documentation check OK: 11-step flow, 50-75 minute canon, web and README")

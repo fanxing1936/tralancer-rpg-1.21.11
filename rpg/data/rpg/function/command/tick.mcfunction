@@ -41,10 +41,3 @@ function rpg:level/player
 
 
 #生物检测
-
-execute if entity @e[type=#minecraft:skeletons,tag=!skeleton,limit=1] run function rpg:command/spawn/skeleton_batch
-
-
-execute if entity @e[type=#minecraft:zombies,tag=!zombie,limit=1] run function rpg:command/spawn/zombie_batch
-
-

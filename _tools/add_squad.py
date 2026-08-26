@@ -1011,6 +1011,11 @@ def guard_spawn_batch():
     不排除的话，刚雇来的人转头就被系统当野怪处理掉了。
     """
     p = os.path.join(FUNC, "command/spawn/zombie_batch.mcfunction")
+    # The legacy zombie variant pipeline is optional and may be retired.  The
+    # squad itself does not depend on it; there is simply nothing to exclude
+    # mercenary husks from when the batch no longer exists.
+    if not os.path.isfile(p):
+        return 0
     s = io.open(p, encoding="utf-8").read()
     if "rpg.squad" in s:
         return 0

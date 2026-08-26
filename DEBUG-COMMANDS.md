@@ -1,6 +1,6 @@
 # TRALANCER RPG 调试指令手册
 
-> 共 89 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
+> 共 85 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
 
 所有命令默认需要开启作弊或拥有管理员权限。带 `@s` 的入口必须由目标玩家自己执行；命令方块或服务器控制台不会自动获得玩家上下文。
 
@@ -14,7 +14,6 @@
 |---|---|---|
 | `/function rpg:command/soreboard` | 手动补建／修复全部计分项。 | 正常由 #minecraft:load 自动执行；仅在初始化异常或独立函数测试时手动调用。 影响：全存档；标记：恢复入口。 |
 | `/function rpg:command/bossbar` | 手动补建四槽恶魔 Boss 血条。 | 正常由 #minecraft:load 自动执行；重复执行会出现已存在提示。 影响：全存档；标记：恢复入口。 |
-| `/team add green` | 创建风袭掠夺者使用的 green 队伍。 | 管理员；召唤风袭小队前至少执行一次。 影响：全存档；标记：初始化。 |
 
 ## 测试物品发放
 
@@ -58,9 +57,6 @@
 | `/function rpg:taint/lord5` | 在执行位置召唤七罪领主：萨麦尔（700 生命）。 | 预先初始化计分板和 Bossbar；不会自动建立驱魔法阵，十分钟后会自行消散。 影响：临时 Boss；标记：生成战斗。 |
 | `/function rpg:taint/lord6` | 在执行位置召唤七罪领主：贝利尔（700 生命）。 | 预先初始化计分板和 Bossbar；不会自动建立驱魔法阵，十分钟后会自行消散。 影响：临时 Boss；标记：生成战斗。 |
 | `/function rpg:taint/lord7` | 在执行位置召唤七罪领主：玛门（700 生命）。 | 预先初始化计分板和 Bossbar；不会自动建立驱魔法阵，十分钟后会自行消散。 影响：临时 Boss；标记：生成战斗。 |
-| `/function rpg:entities/drowned/king` | 召唤溺尸王、骑乘体、巨人与近卫。 | 在预定战场执行；一次生成整支编队。 影响：持久实体；标记：生成军团。 |
-| `/function rpg:entities/piglin/king` | 召唤猪灵王、骑乘体、巨人与近卫。 | 在预定战场执行；一次生成整支编队。 影响：持久实体；标记：生成军团。 |
-| `/function rpg:entities/illager/wind_vindicator` | 召唤完整风袭掠夺者小队。 | 必须先执行 /team add green；全队未声明永久，远离后可能自然消失。 影响：战斗实体；标记：生成军团。 |
 
 ## 七柱罪仆
 
@@ -128,7 +124,7 @@
 | `/function rpg:campaign/beelzebub/debug/stage/0` | 跳转到 Stage 0「楔子｜第十三声钟」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
 | `/function rpg:campaign/beelzebub/debug/stage/1` | 跳转到 Stage 1「发现异常｜取得 3 份相互矛盾的记录」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
 | `/function rpg:campaign/beelzebub/debug/stage/2` | 跳转到 Stage 2「会回家的死者｜以圣器照见空缺」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/3` | 跳转到 Stage 3「五席未满｜第1轮 · 封路与追猎」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
+| `/function rpg:campaign/beelzebub/debug/stage/3` | 跳转到 Stage 3「见证人封锁线｜听完简报后迎战」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
 | `/function rpg:campaign/beelzebub/debug/stage/4` | 跳转到 Stage 4「确认活动区域｜让三条运输记录彼此指认」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
 | `/function rpg:campaign/beelzebub/debug/stage/5` | 跳转到 Stage 5「调查真名与弱点｜排除 2 个错误答案」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
 | `/function rpg:campaign/beelzebub/debug/stage/6` | 跳转到 Stage 6「被撕去的判词｜准备 3 组仪式器具」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |

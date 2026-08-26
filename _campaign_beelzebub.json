@@ -2,7 +2,7 @@
   "id": "beelzebub_vacant_city",
   "title": "第一章 · 空缺者",
   "subtitle": "别西卜驱魔战役",
-  "duration_minutes": [30, 60],
+  "duration_minutes": [50, 75],
   "runtime_config": {
     "source": "_campaign_beelzebub_config.json",
     "scope": "章节物品、Boss、NPC、罪仆、全部相对生成位置、数值与调试入口",
@@ -28,6 +28,12 @@
     ],
     "chapter_summary": "塞维拉下令删证，卡西安执行清洗，别西卜借空缺进食；三者同时成立"
   },
+  "gameplay_puzzles": [
+    "路线密文：按慈济所车辙、处决名册、第七粮仓重排因果",
+    "假说审判：排除疫病复生与人为盗粮，保留暴食寄生",
+    "仪式校准：银质圣钉、别西卜媒介、待确证残页分别归入三槽"
+  ],
+  "dialogue_policy": "关键对白只在敌人未生成、波次清空或Boss登场前播放；战斗中只保留机制提示",
   "palette": {
     "chapter": "#B8A98B",
     "church": "#D4AF37",
@@ -52,10 +58,10 @@
   "stages": [
     {"id": 0, "name": "第十三声钟", "minutes": [3, 4]},
     {"id": 1, "name": "会回家的死者", "minutes": [5, 6]},
-    {"id": 2, "name": "五席未满", "minutes": [6, 8]},
-    {"id": 3, "name": "粮仓没有粮食", "minutes": [3, 5]},
-    {"id": 4, "name": "真名不在嘴里", "minutes": [5, 7]},
-    {"id": 5, "name": "被撕去的判词", "minutes": [3, 4]},
+    {"id": 2, "name": "五席未满", "minutes": [8, 10]},
+    {"id": 3, "name": "粮仓没有粮食", "minutes": [6, 9]},
+    {"id": 4, "name": "真名不在嘴里", "minutes": [7, 10]},
+    {"id": 5, "name": "被撕去的判词", "minutes": [6, 8]},
     {"id": 6, "name": "万蝇腐宴", "minutes": [12, 16]},
     {"id": 7, "name": "四种不完整的裁决", "minutes": [3, 4]},
     {"id": 8, "name": "活着的人必须有名字", "minutes": [5, 6]}

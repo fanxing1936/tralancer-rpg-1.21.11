@@ -3166,7 +3166,7 @@ ID 路由；Actionbar 只使用既有统一 HUD。771 项 UI 检查与二次生�
 按 Stage 返回当前案件梗概，使玩家在 Boss 前后都能复述因果链。
 
 `_campaign_beelzebub_config.json` 是本章玩法配置的唯一源，生成器与独立美术层共同读取。
-它覆盖 15 类物品入口、章节控制器、NPC、别西卜、五名罪仆、24 个本地坐标、场地与作用
+它覆盖 15 类物品入口、章节控制器、NPC、别西卜、五名罪仆、33 个本地坐标、场地与作用
 半径、调查读条、恢复窗口、Boss／多人罪仆血量及器具箱内容。构建时会把带 SHA-256 的
 摘要写入 `data/rpg/chapter/beelzebub_config.json`；严格校验同时比较配置、生成函数、UI
 道具位置与调试入口，避免“配置文件已改、实际包仍是旧坐标”。
@@ -3179,13 +3179,13 @@ Stage 10 且玩家已有职业路线，正式结算、奖励、阅历、成就�
 ## 35. 调试指令公共接口与介绍页
 
 调试文档不再手写一张容易漂移的十余行速查表。`_tools/debug_commands.py` 现在作为公共
-人工入口的单一目录，生成 `DEBUG-COMMANDS.md` 与图鉴“调试指令总表”；当前共收录 89
-条初始化、发放、重置、Boss／军团、七柱罪仆和第一章命令。每条均记录前置条件、影响
+人工入口的单一目录，生成 `DEBUG-COMMANDS.md` 与图鉴“调试指令总表”；当前共收录 85
+条初始化、发放、重置、Boss、七柱罪仆和第一章命令。每条均记录前置条件、影响
 范围与风险，尤其明确 `give @a` 的群体发放、罪仆永久存活、第一章五罪仆可重复叠加、
 生命之树全维度清理，以及 `summon_devil` 第八位受 `#lord` 分数影响的事实。
 
 介绍页的安装说明同步纠正为真实加载逻辑：计分板与四槽 Bossbar 已由
-`#minecraft:load` 自动建立，手动函数只作恢复入口；`green` 队伍仍需管理员创建。
+`#minecraft:load` 自动建立，手动函数只作恢复入口。
 Stage 0–10 的说明直接对齐运行时状态机，而非误用 11 步剧情流程。七柱共 42 条罪仆
 命令按柱位折叠，风险徽标区分安全、警告与危险，避免只读入口和全局清理显示成同一级。
 
@@ -3194,6 +3194,23 @@ Stage 0–10 的说明直接对齐运行时状态机，而非误用 11 步剧情
 一致、群体发放注解、自动加载声明、运行时 Stage 标题，以及 Markdown／HTML 的逐条
 覆盖和行数。该检查把调试目录作为公共 API 合约：新增稳定人工入口时，必须同时登记
 用途与副作用，否则构建失败。
+
+## 36. 第一章谜题扩写、对白安全窗与旧生物体系退役
+
+第一章在原有调查链中增加三段可重试谜题：路线证据排序、排除式假说板，以及三槽仪式
+校准。三者都由控制器 ID 隔离状态，错误答案只清理当前谜题进度，并生成带所属 ID 的
+限时“食名蝇”；阶段、线索和背包物品不会回滚。所有交互点与敌人出现点都进入
+`_campaign_beelzebub_config.json`，可配置场景位置由 24 个扩展至 33 个。
+
+战斗与关键对白改用明确的 `sub` 子状态隔离。第三阶段先播放简报，再开启三轮罪仆；
+每轮清空后进入安全复盘窗，下一轮只在倒计时结束后生成。第七阶段先完整播放 Boss
+登场对白，再由独立的 `boss/begin` 开战。战斗子状态只保留短促战况提示，防止叙事被
+伤害、粒子和技能提示遮盖。Bossbar 也按同一子状态切换，谜题标题不会被阶段 UI 覆盖。
+
+僵尸、骷髅变种、风袭掠夺者、溺尸军团和猪灵军团已从生成源码、运行时入口、公开调试
+命令及图鉴中退役。`drop_legacy_mob_factions.py` 固定在生成链末端清除旧树，避免上游
+生成器复活内容；`check_retired_mob_content.py` 则检查文件、tick 引用、公开命令与文档
+残留。这样旧生态的删除是可重建约束，而不是只对当前产物的一次性手工删除。
 
 ---
 
@@ -3221,15 +3238,16 @@ bash "_tools/build.sh"
 　　　　　　→ `add_true_name_rite.py` + `add_exorcism_expansion.py`
 　　　　　　→ `add_ritual_phase2.py` + `add_demon_minions.py`
 　　　　　　→ `add_life_tree_particles.py` + `add_kabbalah_covenant.py`
-　　　　　　→ `add_player_panel.py` + `polish_recent_ui.py`
-　　　　　　→ `add_divine_covenants.py` + `add_beelzebub_campaign.py`
-　　　　　　→ `polish_beelzebub_campaign_ui.py` + `make_boxes.py` + `polish_demon_names.py`
+　　　　　→ `add_player_panel.py` + `polish_recent_ui.py`
+　　　　　→ `add_divine_covenants.py` + `add_beelzebub_campaign.py`
+　　　　　→ `polish_beelzebub_campaign_ui.py` + `make_boxes.py` + `polish_demon_names.py`
+　　　　　→ `drop_legacy_mob_factions.py`
 　　　　　　→ `validate.py` + `check_adv.py` + `check_ritual_phase2.py`
 　　　　　　→ `check_demon_minions.py` + `check_life_tree_particles.py`
 　　　　　　→ `check_kabbalah_covenant.py` + `check_divine_covenants.py`
 　　　　　　→ `check_beelzebub_campaign.py` + `check_beelzebub_campaign_ui.py`
 　　　　　　→ `check_beelzebub_campaign_config.py` + `check_beelzebub_narrative_ui.py`
-　　　　　　→ `check_creeper.py` → `profile_tick.py`
+　　　　　→ `check_retired_mob_content.py` + `check_creeper.py` → `profile_tick.py`
 材质包流程（先跑）：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
 　　　　　→ `add_lucifer.py` + `add_leviathan.py` + `add_runes.py` + `add_epics.py`

@@ -23,7 +23,7 @@ STAGES = [
     "楔子｜第十三声钟",
     "发现异常｜取得 3 份相互矛盾的记录",
     "会回家的死者｜以圣器照见空缺",
-    "五席未满｜第1轮 · 封路与追猎",
+    "见证人封锁线｜听完简报后迎战",
     "确认活动区域｜让三条运输记录彼此指认",
     "调查真名与弱点｜排除 2 个错误答案",
     "被撕去的判词｜准备 3 组仪式器具",
@@ -36,7 +36,6 @@ STAGES = [
 SYSTEM = [
     command("/function rpg:command/soreboard", "手动补建／修复全部计分项。", "正常由 #minecraft:load 自动执行；仅在初始化异常或独立函数测试时手动调用。", "全存档", "恢复入口"),
     command("/function rpg:command/bossbar", "手动补建四槽恶魔 Boss 血条。", "正常由 #minecraft:load 自动执行；重复执行会出现已存在提示。", "全存档", "恢复入口"),
-    command("/team add green", "创建风袭掠夺者使用的 green 队伍。", "管理员；召唤风袭小队前至少执行一次。", "全存档", "初始化"),
 ]
 
 GIVE = [
@@ -65,9 +64,6 @@ BOSSES = [
 for lord_id, lord_name, lord_no, _minions in LORDS:
     BOSSES.append(command(f"/function rpg:taint/lord{lord_no}", f"在执行位置召唤七罪领主：{lord_name}（700 生命）。", "预先初始化计分板和 Bossbar；不会自动建立驱魔法阵，十分钟后会自行消散。", "临时 Boss", "生成战斗"))
 BOSSES.extend([
-    command("/function rpg:entities/drowned/king", "召唤溺尸王、骑乘体、巨人与近卫。", "在预定战场执行；一次生成整支编队。", "持久实体", "生成军团"),
-    command("/function rpg:entities/piglin/king", "召唤猪灵王、骑乘体、巨人与近卫。", "在预定战场执行；一次生成整支编队。", "持久实体", "生成军团"),
-    command("/function rpg:entities/illager/wind_vindicator", "召唤完整风袭掠夺者小队。", "必须先执行 /team add green；全队未声明永久，远离后可能自然消失。", "战斗实体", "生成军团"),
 ])
 
 MINIONS = []

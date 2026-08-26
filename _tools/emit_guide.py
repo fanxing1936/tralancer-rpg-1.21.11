@@ -120,7 +120,7 @@ def campaign_section():
         '<li><span class="num">%02d</span><b>%s</b></li>' % (i, label)
         for i, label in enumerate(C["flow"], 1))
     return f'''<section class="plate" id="s16">
-<div class="plate-h"><span class="num">CH.I</span><h2>第一章 · 空缺者</h2><span class="sub">别西卜驱魔战役 · 30–60 分钟</span></div>
+<div class="plate-h"><span class="num">CH.I</span><h2>第一章 · 空缺者</h2><span class="sub">别西卜驱魔战役 · 50–70 分钟</span></div>
 <blockquote class="verse">前线吃人，后方负责忘记那些被吃掉的人。<cite>——维斯珀城空缺者档案</cite></blockquote>
 <p>玩家以临时教廷辅员身份进入战争后方的<strong>维斯珀城</strong>。已经下葬的人仍会回家，记得姓名与亲属，却失去了情感与作为人的主体。军需系统侵吞粮食，教廷删除饥饿死者的名字，<strong style="color:#B5D957">别西卜</strong>则以第七粮仓为核心，把这种制度性的暴食变成覆盖城市的寄生仪式。</p>
 
@@ -131,8 +131,8 @@ def campaign_section():
 <ol class="campaign-flow">{flow}</ol>
 
 <div class="sys">
-<div><h3>调查与真名</h3><p class="how">观察 → 竞争解释 → 交叉验证 → 复盘</p><p>餐桌、死亡登记与钟灰先让“疫病／亡灵”成立，再用处决日期排除它们；卡西安签章随后制造第二层误导，早于其接任的配给记录证明他是执行者而非全部源头。炉灰、蝇茧与拒食残渣最终交叉指向别西卜和腐败弱点。</p></div>
-<div><h3>五席未满</h3><p class="how">桀派 · 布提斯 · 巴钦 · 塞列欧斯 · 布松</p><p>先锋以腐宴护壳封路，猎手用饥印追踪，司祭吞食反哺同柱，咒使展开八格蝇幕，处刑者以四格饥啮收尾。五种命名术式都会先显露柱位色与危险边界，再结算控制、续命或伤害；它们是一套互相补位的猎杀编制，而不是五个换色近战怪。</p></div>
+<div><h3>调查与推理</h3><p class="how">观察 → 路线排序 → 假说排除 → 仪式校准</p><p>基础调查仍遵循“观察 → 竞争解释 → 交叉验证 → 复盘”，随后必须完成三类主动判断：按车辙、名册、粮仓重排因果；排除疫病与盗粮伪解；再把银钉、腐败媒介、待确证残页放入正确语义槽。错误会化为短战斗，击败回响后恢复完整谜面，不清空已取得线索。</p></div>
+<div><h3>五席未满</h3><p class="how">安全对白 → 战斗 → 战间复盘 → 下一波</p><p>三波罪仆不再与关键对白同时出现：米拉简报结束后才开战，每轮清空后先分析证物并显示下一轮倒计时。Boss 登场也遵循相同规则，战斗期间只保留技能和仪式即时提示。</p></div>
 <div><h3>万蝇腐宴</h3><p class="how">700 生命 · 镇压 → 镇魔 → 固阵 → 裁决</p><p>六成生命处锁血；真名与点燃图腾完成绑定；腐败媒介、银钉、告解铃、净罪香和粉笔把稳定度推进到 100，最后选择消灭、放逐、封印或契约。</p></div>
 <div><h3>不是失败结局</h3><p class="how">四种裁决都有效 · 教廷故意删去见证人印</p><p>判词只能裁决教廷承认存在的卡西安空壳。别西卜借缺页逃脱，玩家只获得所选路线的裁决残响；完整罪器、核心与真实契约不会在本章错误掉落。</p></div>
 </div>
@@ -150,7 +150,7 @@ def campaign_section():
 <tr><td class="num">/function rpg:campaign/beelzebub/abort</td><td>仅清理当前章节实例；永久调查、首通与职业档案不回滚。</td></tr>
 <tr><td class="num">/function rpg:campaign/beelzebub/debug/menu</td><td>管理员调试台：补发全部章节物品、按配置生成 Boss／罪仆、列出相对坐标并跳转 Stage 0–10；不写永久通关进度。</td></tr>
 </tbody></table></div>
-<div class="note"><b>统一配置：</b><code>_campaign_beelzebub_config.json</code> 集中管理本章 15 类物品引用、Boss、NPC、五名罪仆、24 个相对生成位置、场地与作用半径、调查读条、恢复窗口和多人血量。修改后重新构建数据包即可生效；生成包内的摘要会校验当前配置，防止误装旧版本。</div>
+<div class="note"><b>统一配置：</b><code>_campaign_beelzebub_config.json</code> 集中管理本章 15 类物品引用、Boss、NPC、五名罪仆、33 个相对生成位置、场地与作用半径、调查／谜题读条、恢复窗口和多人血量。修改后重新构建数据包即可生效；生成包内的摘要会校验当前配置，防止误装旧版本。</div>
 <div class="note"><b>后续章节制作：</b><code>CHAPTER-PRODUCTION-PLAYBOOK.md</code> 已整理第一章的剧情、解谜、状态机、配置、UI、独立终审与发布经验，可作为下一章的直接开工清单。</div>
 </section>'''
 
@@ -459,7 +459,7 @@ def build():
 <h1>Shevarim<span class="heb">אֶרֶץ הַשְּׁבָרִים</span><span class="cn">破碎大陆 · 碎片之地</span></h1>
 <p class="lede">这是破碎大陆的见证：世界曾经完整，后来因<strong>神陨</strong>、<strong>堕天</strong>与<strong>权柄的分裂</strong>而成为碎片。</p>
 <p class="lede sub">这是关于光、混沌、堕落、救赎与人的书；<br>是关于<strong>权</strong>与<strong>力</strong>如何分离，又如何在末后的日子重新相遇的见证。</p>
-<p class="lede meta">承载这段见证的是一套 Minecraft 生存 RPG 数据包：''' + str(n_of("weapons")) + ''' 件带主动／被动技能的武具（含<strong>六位魔神</strong>的罪遗武器）、''' + str(n_of("armour")) + ''' 件护甲、可洗练可镶嵌可升级的装备体系，以及成建制的溺尸与猪灵军团。</p>
+<p class="lede meta">承载这段见证的是一套 Minecraft 生存 RPG 数据包：''' + str(n_of("weapons")) + ''' 件带主动／被动技能的武具（含<strong>六位魔神</strong>的罪遗武器）、''' + str(n_of("armour")) + ''' 件护甲、可洗练可镶嵌可升级的装备体系，以及七宗罪领主与所罗门罪仆生态。</p>
 <div class="chips">
 <span class="chip">Minecraft <b>1.21.11</b></span>
 <span class="chip">数据包格式 <b>94.1</b></span>
@@ -498,7 +498,6 @@ def build():
 <li><div><h3>确认版本与前置</h3><p>客户端为 <code>1.21.11</code>；数据包放进 <code>存档/datapacks/</code>，材质包放进 <code>.minecraft/resourcepacks/</code> 并在选项里启用。材质包提供全部自定义武器模型，不装的话武器会显示成原版外观。</p></div></li>
 <li><div><h3>补建计分板<span class="opt">仅恢复</span></h3><p>正常由加载标签自动注册。只有控制台确认计分项缺失、或单独拆出函数测试时才手动执行。</p><code class="cmd">/function rpg:command/soreboard</code></div></li>
 <li><div><h3>补建 BOSS 血条<span class="opt">仅恢复</span></h3><p>正常由加载标签自动创建四个恶魔 Bossbar 槽位；重复执行会收到“已存在”提示。</p><code class="cmd">/function rpg:command/bossbar</code></div></li>
-<li><div><h3>创建掠夺者队伍<span class="opt">必要</span></h3><p>风袭卫道士系列怪物出生时会加入 <code>green</code> 队伍；队伍不存在时服务端每次召唤都会报错。</p><code class="cmd">/team add green</code></div></li>
 <li><div><h3>发放起始装备<span class="opt">可选</span></h3><p>三个发放函数会把对应类别的全部物品发给<strong>所有在线玩家</strong>，建议在创造模式测试区使用。</p><code class="cmd">/function rpg:command/give/weapon      # 武器、护甲、药剂
 /function rpg:command/give/item        # 符文、晶石、锻造材料
 /function rpg:command/give/weapon_up_item  # 武器分支唱片</code></div></li>
@@ -586,32 +585,8 @@ def build():
 
     # VII bestiary --------------------------------------------------------
     a('''<section class="plate" id="s9">
-<div class="plate-h"><span class="num">VIII</span><h2>生物图鉴</h2><span class="sub">4 大阵营</span></div>
-<p>普通僵尸与骷髅在出生瞬间会被数据包重新洗牌：随机换装本包的战利品护甲，并有几率直接替换成下方的强化变种。成建制的军团则由对应函数整队召唤。<br><b>苦力怕不在其列</b>——它的变种体系已整段移除，苦力怕就是原版苦力怕。</p>
-
-<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">溺尸军团 · rpg:entities/drowned</h3>
-<div class="tw"><table>
-<thead><tr><th>单位</th><th>生命</th><th>攻击</th><th>速度</th><th>装备与特征</th></tr></thead>
-<tbody>
-<tr class="boss"><td><span class="nm">溺尸王</span><span class="sm">骑乘 399 点生命的战马</span></td><td class="num">1000</td><td class="num">17</td><td class="num">0.40</td><td>三叉戟 + 盾牌，下界合金胸甲与护腿，攻速 4、击退 2、交互距离 7，体型 ×1.2</td></tr>
-<tr><td><span class="nm">溺尸巨人</span></td><td class="num">900</td><td class="num">10</td><td class="num">0.30</td><td>体型 ×3，交互距离 10，全身下界合金</td></tr>
-<tr><td><span class="nm">溺尸执行官</span><span class="sm">骑乘披甲战马</span></td><td class="num">700</td><td class="num">13</td><td class="num">0.30</td><td>三叉戟 + 花纹盾，横扫比例 1.0</td></tr>
-<tr><td><span class="nm">溺尸骑士</span><span class="sm">骑乘披甲战马</span></td><td class="num">500</td><td class="num">10</td><td class="num">0.30</td><td>钻石剑 + 三叉戟，击退 1.2</td></tr>
-<tr><td><span class="nm">溺尸剑士</span></td><td class="num">400</td><td class="num">13</td><td class="num">0.30</td><td>钻石剑 + 三叉戟，横扫比例 1.0</td></tr>
-<tr><td><span class="nm">溺尸盾斧</span></td><td class="num">400</td><td class="num">13</td><td class="num">0.30</td><td>钻石斧 + 盾牌</td></tr>
-<tr><td><span class="nm">溺尸士兵</span></td><td class="num">100</td><td class="num">7</td><td class="num">0.20</td><td>下界合金胸甲，成群出现</td></tr>
-</tbody></table></div>
-
-<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">猪灵军团 · rpg:entities/piglin</h3>
-<div class="tw"><table>
-<thead><tr><th>单位</th><th>生命</th><th>攻击</th><th>速度</th><th>装备与特征</th></tr></thead>
-<tbody>
-<tr class="boss"><td><span class="nm">猪灵巨人</span></td><td class="num">700</td><td class="num">15</td><td class="num">0.40</td><td>体型 ×3，横扫比例 1.2，击退 1.5，方块交互距离 10</td></tr>
-<tr><td><span class="nm">猪灵骑士</span><span class="sm">骑乘 200 点生命的炽足兽</span></td><td class="num">500</td><td class="num">10</td><td class="num">0.40</td><td>金剑 + 盾牌</td></tr>
-<tr><td><span class="nm">猪灵剑士</span></td><td class="num">300</td><td class="num">13</td><td class="num">0.40</td><td>双持金剑</td></tr>
-<tr><td><span class="nm">猪灵盾斧</span></td><td class="num">300</td><td class="num">13</td><td class="num">0.40</td><td>金斧 + 盾牌</td></tr>
-<tr><td><span class="nm">猪灵士兵</span></td><td class="num">100</td><td class="num">7</td><td class="num">0.30</td><td>下界合金胸甲</td></tr>
-</tbody></table></div>
+<div class="plate-h"><span class="num">VIII</span><h2>生物图鉴</h2><span class="sub">领主 · 罪仆生态</span></div>
+<p>僵尸、骷髅、苦力怕与溺尸保持原版生成和装备逻辑；旧版强化变种、风袭掠夺者、溺尸军团与猪灵军团已经完整退役。当前自定义生物内容集中在七宗罪领主、驱魔战役和所罗门罪仆生态。</p>
 
 <h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">恶魔 · rpg:entities/warden</h3>
 <div class="tw"><table>
@@ -622,31 +597,6 @@ def build():
 <tr><td><span class="nm">恶魔护卫</span></td><td class="num">100</td><td>随从</td><td>Johnny 卫道士，击退 2、速度加成</td></tr>
 </tbody></table></div>
 
-<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">风袭掠夺者 · rpg:entities/illager</h3>
-<div class="tw"><table>
-<thead><tr><th>单位</th><th>生命</th><th>特征</th></tr></thead>
-<tbody>
-<tr><td><span class="nm">风袭唤魔者</span></td><td class="num">50</td><td>手持风弹与旗帜，附带风矢充能与发光</td></tr>
-<tr><td><span class="nm">风袭幻术师</span></td><td class="num">50</td><td>双持弓</td></tr>
-<tr><td><span class="nm">风袭卫道士</span></td><td class="num">40</td><td>手持重锤；另有骑乘尸马（30 点生命）的版本</td></tr>
-<tr><td><span class="nm">风袭掠夺者</span></td><td class="num">30</td><td>弩 + 旗帜</td></tr>
-<tr><td><span class="nm">恼鬼</span></td><td class="num">—</td><td>体型 ×2，手持重锤</td></tr>
-</tbody></table></div>
-
-<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">强化的普通怪物 · rpg:command/spawn</h3>
-<div class="tw"><table>
-<thead><tr><th>触发</th><th>几率</th><th>结果</th></tr></thead>
-<tbody>
-<tr><td>骷髅类出生</td><td class="num">1/20</td><td>流浪者（30 生命，锁链装备）</td></tr>
-<tr><td>骷髅类出生</td><td class="num">1/20</td><td>骷髅骑兵（骷髅骑骷髅马，铁质装备）</td></tr>
-<tr><td>骷髅类出生</td><td class="num">1/20</td><td>凋灵骷髅（40 生命，下界合金剑与全套盔甲）</td></tr>
-<tr><td>僵尸类出生</td><td class="num">1/20</td><td>铁剑僵尸（50 生命、攻击 4、体型 ×1.1）</td></tr>
-<tr><td>僵尸类出生</td><td class="num">1/20</td><td>抱婴僵尸 / 僵尸村民（40 生命、护甲 5）</td></tr>
-<tr><td>僵尸类出生</td><td class="num">2/20</td><td>五层僵尸叠罗汉</td></tr>
-<tr><td>僵尸类出生</td><td class="num">1/20</td><td>巨型僵尸（100 生命、体型 ×3）</td></tr>
-
-<tr><td>骷髅 / 僵尸出生</td><td>必定</td><td>全身装备重掷为本包的 <code>rpg:armor/*</code> 战利品</td></tr>
-</tbody></table></div>
 </section>''')
 
     # IX exorcism ---------------------------------------------------------

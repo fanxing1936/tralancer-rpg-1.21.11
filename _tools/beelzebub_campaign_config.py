@@ -117,7 +117,7 @@ def validate(config: dict[str, Any], pack_root: Path | None = None) -> list[str]
     for key in ("active_radius", "scene_radius", "boss_claim_radius", "rite_bind_radius", "witness_radius", "investigate_radius"):
         _expect(isinstance(runtime.get(key), (int, float)) and runtime[key] > 0, f"runtime.{key} must be positive", errors)
     timing = runtime.get("observation_ticks", {})
-    for key in ("anomaly", "trail", "hypothesis", "cache"):
+    for key in ("anomaly", "trail", "hypothesis", "cache", "puzzle"):
         _expect(isinstance(timing.get(key), int) and timing[key] > 0,
                 f"runtime.observation_ticks.{key} must be a positive integer", errors)
     _expect(isinstance(runtime.get("recap_hold_ticks"), int) and runtime["recap_hold_ticks"] >= 40,
@@ -203,7 +203,15 @@ def validate(config: dict[str, Any], pack_root: Path | None = None) -> list[str]
             "controller.entity_type is an internal marker invariant", errors)
     _expect(len(actor_ids) == len(set(actor_ids)), "actor identifiers are not unique", errors)
 
-    expected_points = {"anomaly": 3, "trail": 4, "hypothesis": 3, "cache": 3}
+    expected_points = {
+        "anomaly": 3,
+        "trail": 4,
+        "hypothesis": 3,
+        "cache": 3,
+        "route_cipher": 3,
+        "hypothesis_board": 3,
+        "ritual_calibration": 3,
+    }
     point_keys: list[str] = []
     for group, expected_count in expected_points.items():
         points = config["scene_points"].get(group, {})

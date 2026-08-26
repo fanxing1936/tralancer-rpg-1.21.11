@@ -26,7 +26,7 @@ import re
 import sys
 
 
-DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
+DP = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else "../rpg")
 FUNC = os.path.join(DP, "data", "rpg", "function")
 
 

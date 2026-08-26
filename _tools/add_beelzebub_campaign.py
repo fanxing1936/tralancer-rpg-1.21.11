@@ -311,7 +311,7 @@ def write_start_and_controller():
         f"execute unless entity @a[tag=rpg.ch1.current,distance=..{RUNTIME['active_radius']},gamemode=!spectator] run return 0",
         "scoreboard players add @s rpg_ch1_time 1", "execute if score @s rpg_ch1_time matches 24001.. run scoreboard players set @s rpg_ch1_time 24000",
     ] + dispatch))
-    write("campaign/beelzebub/advance.mcfunction", "\n".join(["scoreboard players add @s rpg_ch1_stage 1", "scoreboard players set @s rpg_ch1_time 0", "scoreboard players set @s rpg_ch1_obj 0", "function rpg:campaign/beelzebub/stage/dispatch_enter"]))
+    write("campaign/beelzebub/advance.mcfunction", "\n".join(["scoreboard players add @s rpg_ch1_stage 1", "scoreboard players set @s rpg_ch1_time 0", "scoreboard players set @s rpg_ch1_obj 0", "scoreboard players set @s rpg_ch1_sub 0", "scoreboard players set @s rpg_ch1_choice 0", "function rpg:campaign/beelzebub/stage/dispatch_enter"]))
     write("campaign/beelzebub/stage/dispatch_enter.mcfunction", "\n".join(f"execute if score @s rpg_ch1_stage matches {n} run function rpg:campaign/beelzebub/stage/{n}_enter" for n in range(11)))
     write("campaign/beelzebub/roster/failure_tick.mcfunction", "\n".join([
         "scoreboard players set #ch1_online rpg_ch1_empty 0",
@@ -396,6 +396,39 @@ def write_point_probe(key, message, extra=None):
         tell("@a[tag=rpg.ch1.current,distance=..24]", c("[调查] ", CHAPTER, True), c(message, GRAY)),
     ] + (extra or []) + [f"kill @e[type=minecraft:text_display,tag=rpg.ch1.{key}.label,distance=..2]", "kill @e[type=minecraft:marker,tag=rpg.ch1.point.active,distance=..0.1]"]
     write(f"campaign/beelzebub/point/{key}.mcfunction", "\n".join(commands))
+
+
+def write_choice_probe(key, resolver):
+    """Create a held-position choice that resolves as the ID-owned controller."""
+    threshold = RUNTIME["observation_ticks"]["puzzle"]
+    write(f"campaign/beelzebub/probe/{key}.mcfunction", "\n".join([
+        "scoreboard players set #ch1_point_ok rpg_ch1_seen 0",
+        "tag @s add rpg.ch1.point.active",
+        f"execute as @a[tag=rpg.ch1.current,distance=..{RUNTIME['investigate_radius']},sort=nearest,limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.point.active,limit=1] rpg_ch1_id run scoreboard players set #ch1_point_ok rpg_ch1_seen 1",
+        "execute if score #ch1_point_ok rpg_ch1_seen matches 1 run scoreboard players add @s rpg_ch1_seen 1",
+        "execute if score #ch1_point_ok rpg_ch1_seen matches 0 run scoreboard players set @s rpg_ch1_seen 0",
+        f"execute if score @s rpg_ch1_seen matches {threshold // 2} run playsound minecraft:block.amethyst_block.chime player @a[tag=rpg.ch1.current,distance=..8] ~ ~ ~ 0.35 1.25",
+        f"execute if score @s rpg_ch1_seen matches {threshold}.. as @a[tag=rpg.ch1.current,distance=..{RUNTIME['investigate_radius']},sort=nearest,limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.point.active,limit=1] rpg_ch1_id run return run function rpg:campaign/beelzebub/choice/{key}",
+        "tag @s remove rpg.ch1.point.active",
+    ]))
+    write(f"campaign/beelzebub/choice/{key}.mcfunction", "\n".join([
+        "tag @s add rpg.ch1.choice.player",
+        f"execute as @e[type=minecraft:marker,tag=rpg.ch1.controller,distance=..{RUNTIME['scene_radius']},limit=1] if score @s rpg_ch1_id = @a[tag=rpg.ch1.choice.player,limit=1] rpg_ch1_id at @s run function rpg:campaign/beelzebub/{resolver}",
+        "tag @s remove rpg.ch1.choice.player",
+    ]))
+
+
+def puzzle_spawn_lines(local_positions, label):
+    lines = []
+    for index, local in enumerate(local_positions, 1):
+        lines += [
+            f"execute positioned {local} run summon minecraft:vex ~ ~1 ~ {{Tags:[\"rpg.ch1.scene\",\"rpg.ch1.puzzle.enemy\",\"rpg.ch1.puzzle.enemy.current\",\"rpg.ch1.puzzle.new\"],life_ticks:1200,CustomName:" + row(c(f"食名蝇 · {label}{index}", BEEL_LIGHT)) + "}",
+            "scoreboard players operation @e[type=minecraft:vex,tag=rpg.ch1.puzzle.new,sort=nearest,limit=1] rpg_ch1_id = @s rpg_ch1_id",
+            "attribute @e[type=minecraft:vex,tag=rpg.ch1.puzzle.new,sort=nearest,limit=1] minecraft:max_health base set 18",
+            "data merge entity @e[type=minecraft:vex,tag=rpg.ch1.puzzle.new,sort=nearest,limit=1] {Health:18f}",
+            "tag @e[type=minecraft:vex,tag=rpg.ch1.puzzle.new,sort=nearest,limit=1] remove rpg.ch1.puzzle.new",
+        ]
+    return lines
 
 
 def write_stage0_2():
@@ -483,17 +516,11 @@ def write_minions():
 
     mira = ACTORS["npcs"]["mira_guard"]
     mira_tags = ",".join(f'"{tag}"' for tag in [*mira["tags"], "rpg.ch1.new"])
-    lines = ["bossbar set rpg:chapter1 value 20", "bossbar set rpg:chapter1 name " + row(c(wave_label(first_wave), BEEL, True)), "scoreboard players set @s rpg_ch1_obj 0", f"scoreboard players set @s rpg_ch1_sub {first_wave}", "scoreboard players set @s rpg_ch1_guard 0",
+    lines = ["bossbar set rpg:chapter1 value 20", "bossbar set rpg:chapter1 name " + row(c("见证人封锁线｜听完简报后迎战", WITNESS, True)), "scoreboard players set @s rpg_ch1_obj 0", "scoreboard players set @s rpg_ch1_sub 0", "scoreboard players set @s rpg_ch1_guard 0",
              f"execute unless entity @e[type={mira['entity_type']},tag=rpg.ch1.mira,distance=..40,limit=1] positioned {mira['spawn']} run summon {mira['entity_type']} ~ ~ ~ {{Tags:[{mira_tags}],NoAI:1b,Invulnerable:1b,PersistenceRequired:1b,CustomName:" + row(c(mira["display_name"], WITNESS)) + "}",
              f"scoreboard players operation @e[type={mira['entity_type']},tag=rpg.ch1.new,sort=nearest,limit=1,distance=..40] rpg_ch1_id = @s rpg_ch1_id", f"tag @e[type={mira['entity_type']},tag=rpg.ch1.new] remove rpg.ch1.new",
              f"execute positioned {mira['spawn']} run tp @e[type={mira['entity_type']},tag=rpg.ch1.mira,distance=..{RUNTIME['scene_radius']},sort=nearest,limit=1] ~ ~ ~",
-             tell("@a[tag=rpg.ch1.current]", c("米拉：", WITNESS, True), c("我偷下三页名册。它们追的不是我，是还能把死者叫回名字的人。", GRAY))]
-    if waves[first_wave]:
-        lines.append(tell("@a[tag=rpg.ch1.current]", c(MINIONS[waves[first_wave][0]]["display_name"] + "：", BEEL, True), c("宴席不接待没有登记的客人。", GRAY)))
-    if len(waves[first_wave]) > 1:
-        lines.append(tell("@a[tag=rpg.ch1.current]", c(MINIONS[waves[first_wave][1]]["display_name"] + "：", BEEL, True), c("名册在他们身上。先封街，再取回。", GRAY)))
-    for name in waves[first_wave]:
-        lines.append(f"execute positioned {MINIONS[name]['spawn']} run function rpg:campaign/beelzebub/spawn/minion/{name}")
+             tell("@a[tag=rpg.ch1.current]", c("[安全对白] ", CHAPTER, True), c("敌人尚未入场；阅读简报后会有明确的战斗提示。", GRAY))]
     write("campaign/beelzebub/stage/3_enter.mcfunction", "\n".join(lines))
     for _, name, role in roles:
         spec = MINIONS[name]
@@ -530,6 +557,10 @@ def write_minions():
         f"execute if entity @s[tag=rpg.ch1.mira.captured] at @e[type={mira['entity_type']},tag=rpg.ch1.mira.current,limit=1] unless entity @a[tag=rpg.ch1.current,distance=..3,limit=1] run scoreboard players set @s rpg_ch1_rescue 0",
         f"execute if entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_rescue matches {RECOVERY['mira_rescue_ticks']}.. run function rpg:campaign/beelzebub/mira/rescue_capture",
         "execute if entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_guard matches ..0 run function rpg:campaign/beelzebub/recover_minions",
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 40 run tellraw @a[tag=rpg.ch1.current] " + row(c("米拉：", WITNESS, True), c("我偷下三页名册。它们追的不是我，是还能把死者叫回名字的人。", GRAY)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 100 run tellraw @a[tag=rpg.ch1.current] " + row(c("伊莱亚：", CHURCH, True), c("五个罪仆各守一种职责。先认清封锁与索敌，再保护米拉。", GRAY)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 160 run tellraw @a[tag=rpg.ch1.current] " + row(c("[战斗即将开始] ", DANGER, True), c("第一轮：封锁、索敌。", GRAY)),
+        f"execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 220.. run function rpg:campaign/beelzebub/minion/wave{first_wave}",
     ]
     cumulative = 0
     for index, wave in enumerate(wave_ids):
@@ -537,32 +568,43 @@ def write_minions():
         stage3_tick.append(f"execute if score @s rpg_ch1_sub matches {wave} if score @s rpg_ch1_obj matches ..{cumulative - 1} if score @s rpg_ch1_time matches {RECOVERY['boss_missing_ticks']}.. run function rpg:campaign/beelzebub/recover_minions")
         if index + 1 < len(wave_ids):
             next_wave = wave_ids[index + 1]
-            stage3_tick.append(f"execute unless entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_sub matches {wave} if score @s rpg_ch1_obj matches {cumulative}.. unless entity @e[tag=rpg.ch1.minion.current,limit=1] run function rpg:campaign/beelzebub/minion/wave{next_wave}")
+            stage3_tick.append(f"execute unless entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_sub matches {wave} if score @s rpg_ch1_obj matches {cumulative}.. unless entity @e[tag=rpg.ch1.minion.current,limit=1] run function rpg:campaign/beelzebub/minion/intermission{next_wave}")
     total_minions = len(MINIONS)
     stage3_tick += [
         f"execute unless entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_sub matches {final_wave} if score @s rpg_ch1_obj matches {total_minions}.. unless entity @e[tag=rpg.ch1.minion.current,limit=1] unless entity @s[tag=rpg.ch1.recap.minions] run function rpg:campaign/beelzebub/recap/minions",
         f"execute unless entity @s[tag=rpg.ch1.mira.captured] if score @s rpg_ch1_sub matches {final_wave} if score @s rpg_ch1_obj matches {total_minions}.. unless entity @e[tag=rpg.ch1.minion.current,limit=1] if entity @s[tag=rpg.ch1.recap.minions] if score @s rpg_ch1_time matches {RUNTIME['recap_hold_ticks']}.. run function rpg:campaign/beelzebub/advance",
     ]
     write("campaign/beelzebub/stage/3_tick.mcfunction", "\n".join(stage3_tick))
-    for wave in wave_ids[1:]:
+    intermission_text = {
+        2: (("虚假的家人：", ASH, "回来吃饭吧。战争已经结束了。"),
+            ("伊莱亚：", CHURCH, "夺回的转运单盖着卡西安的印。只记作‘参与’，不要急着写成‘源头’。")),
+        3: ((MINIONS[waves[final_wave][0]]["display_name"] + "：", BEEL, "见证不是事实。活下来的见证才是。"),
+            ("米拉：", WITNESS, "处决令早于疫病。它们不是止灾，是来让灾情没人能说出口。")),
+    }
+    for wave in wave_ids:
         wave_lines = [
             f"scoreboard players set @s rpg_ch1_sub {wave}", "scoreboard players set @s rpg_ch1_time 0",
             "bossbar set rpg:chapter1 name " + row(c(wave_label(wave), BEEL, True)),
+            tell("@a[tag=rpg.ch1.current]", c("[战斗开始] ", DANGER, True), c(f"第 {wave} 轮罪仆越过封锁线；守住见证人。", GRAY)),
         ]
         for name in waves[wave]:
             wave_lines.append(f"execute positioned {MINIONS[name]['spawn']} run function rpg:campaign/beelzebub/spawn/minion/{name}")
-        if wave == final_wave:
-            speaker = MINIONS[waves[wave][0]]["display_name"] + "："
-            wave_lines += [
-                tell("@a[tag=rpg.ch1.current]", c(speaker, BEEL, True), c("见证不是事实。活下来的见证才是。", GRAY)),
-                tell("@a[tag=rpg.ch1.current]", c("米拉：", WITNESS, True), c("处决令早于所谓疫病。它们不是来止灾，是来让灾情没人能说出口。", GRAY)),
-            ]
-        else:
-            wave_lines += [
-                tell("@a[tag=rpg.ch1.current]", c("虚假的家人：", ASH, True), c("回来吃饭吧。战争已经结束了。", GRAY)),
-                tell("@a[tag=rpg.ch1.current]", c("伊莱亚：", CHURCH, True), c("夺回的转运单盖着卡西安的印。先记作‘参与’，不要急着写成‘源头’。", GRAY)),
-            ]
         write(f"campaign/beelzebub/minion/wave{wave}.mcfunction", "\n".join(wave_lines))
+        if wave != first_wave:
+            line1, line2 = intermission_text[wave]
+            state = 10 + wave
+            write(f"campaign/beelzebub/minion/intermission{wave}.mcfunction", "\n".join([
+                f"scoreboard players set @s rpg_ch1_sub {state}", "scoreboard players set @s rpg_ch1_time 0",
+                "bossbar set rpg:chapter1 name " + row(c("战间复盘｜敌人暂未入场", CHAPTER, True)),
+                tell("@a[tag=rpg.ch1.current]", c("[安全对白] ", CHAPTER, True), c("下一轮将在对白结束后开始。", GRAY)),
+            ]))
+            stage3_tick += [
+                f"execute if score @s rpg_ch1_sub matches {state} if score @s rpg_ch1_time matches 40 run tellraw @a[tag=rpg.ch1.current] " + row(c(line1[0], line1[1], True), c(line1[2], GRAY)),
+                f"execute if score @s rpg_ch1_sub matches {state} if score @s rpg_ch1_time matches 110 run tellraw @a[tag=rpg.ch1.current] " + row(c(line2[0], line2[1], True), c(line2[2], GRAY)),
+                f"execute if score @s rpg_ch1_sub matches {state} if score @s rpg_ch1_time matches 170 run tellraw @a[tag=rpg.ch1.current] " + row(c("[战斗即将开始] ", DANGER, True), c(f"第 {wave} 轮将在 3 秒后入场。", GRAY)),
+                f"execute if score @s rpg_ch1_sub matches {state} if score @s rpg_ch1_time matches 230.. run function rpg:campaign/beelzebub/minion/wave{wave}",
+            ]
+    write("campaign/beelzebub/stage/3_tick.mcfunction", "\n".join(stage3_tick))
     write("campaign/beelzebub/recap/minions.mcfunction", "\n".join([
         "tag @s add rpg.ch1.recap.minions", "scoreboard players set @s rpg_ch1_time 0",
         tell("@a[tag=rpg.ch1.current]", c("+------ 案情复盘 · 五席 ------+", CHAPTER, True)),
@@ -597,8 +639,12 @@ def write_tracking_inquest_prep():
     lines += owned_spawn(first_trail["spawn"], "trail1", first_trail["label"], palette_color(CONFIG, first_trail["color"]))
     write("campaign/beelzebub/stage/4_enter.mcfunction", "\n".join(lines))
     write("campaign/beelzebub/stage/4_tick.mcfunction", "\n".join([f"execute as @e[type=minecraft:marker,tag=rpg.ch1.trail{n}] at @s run function rpg:campaign/beelzebub/probe/trail{n}" for n in range(1, 5)] + [
-        "execute if score @s rpg_ch1_obj matches 4.. unless entity @s[tag=rpg.ch1.recap.area] run function rpg:campaign/beelzebub/recap/area",
-        f"execute if score @s rpg_ch1_obj matches 4.. if entity @s[tag=rpg.ch1.recap.area] if score @s rpg_ch1_time matches {RUNTIME['recap_hold_ticks']}.. run function rpg:campaign/beelzebub/advance",
+        "function rpg:campaign/beelzebub/puzzle/refresh_enemies",
+        "execute if score @s rpg_ch1_obj matches 4.. if score @s rpg_ch1_sub matches 0 run function rpg:campaign/beelzebub/route/activate",
+        *[f"execute if score @s rpg_ch1_sub matches 1 unless entity @e[tag=rpg.ch1.puzzle.enemy.current,limit=1] as @e[type=minecraft:marker,tag=rpg.ch1.route{n}] at @s run function rpg:campaign/beelzebub/probe/route{n}" for n in range(1, 4)],
+        "execute if score @s rpg_ch1_sub matches 1 if entity @s[tag=rpg.ch1.puzzle.wait.route] unless entity @e[tag=rpg.ch1.puzzle.enemy.current,limit=1] run function rpg:campaign/beelzebub/route/respawn",
+        "execute if score @s rpg_ch1_sub matches 2 unless entity @s[tag=rpg.ch1.recap.area] run function rpg:campaign/beelzebub/recap/area",
+        f"execute if score @s rpg_ch1_sub matches 2 if entity @s[tag=rpg.ch1.recap.area] if score @s rpg_ch1_time matches {RUNTIME['recap_hold_ticks']}.. run function rpg:campaign/beelzebub/advance",
     ]))
     trails = (
         "口粮袋封签完整，袋底只有虫翅；粮食在登记后被取走。",
@@ -620,6 +666,49 @@ def write_tracking_inquest_prep():
         if n > 1:
             point = scene("trail", f"trail{n}")
             write(f"campaign/beelzebub/spawn/trail{n}.mcfunction", "\n".join(owned_spawn(point["spawn"], f"trail{n}", point["label"], palette_color(CONFIG, point["color"]))))
+    write("campaign/beelzebub/puzzle/refresh_enemies.mcfunction", "\n".join([
+        "tag @e[tag=rpg.ch1.puzzle.enemy] remove rpg.ch1.puzzle.enemy.current",
+        "execute as @e[tag=rpg.ch1.puzzle.enemy] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run tag @s add rpg.ch1.puzzle.enemy.current",
+        f"kill @e[tag=rpg.ch1.puzzle.enemy.current,distance={RUNTIME['scene_radius'] + 0.01}..]",
+    ]))
+    route_spawn = []
+    for key in ("route1", "route2", "route3"):
+        point = scene("route_cipher", key)
+        route_spawn += owned_spawn(point["spawn"], key, point["label"], palette_color(CONFIG, point["color"]))
+        write_choice_probe(key, f"route/resolve_{key}")
+    write("campaign/beelzebub/route/spawn_choices.mcfunction", "\n".join(route_spawn))
+    write("campaign/beelzebub/route/activate.mcfunction", "\n".join([
+        "scoreboard players set @s rpg_ch1_sub 1", "scoreboard players set @s rpg_ch1_choice 0", "scoreboard players set @s rpg_ch1_time 0",
+        "bossbar set rpg:chapter1 name " + row(c("路线密文｜按因果顺序重排三份记录", CHAPTER, True)),
+        tell("@a[tag=rpg.ch1.current]", c("[路线密文] ", CHAPTER, True), c("按‘行动起点 → 被害者名册 → 最终目的地’依次踏入三枚证物。错误排序会唤来食名蝇。", GRAY)),
+        "function rpg:campaign/beelzebub/route/spawn_choices",
+    ]))
+    expected = {"route1": 1, "route2": 0, "route3": 2}
+    step_labels = {"route1": "处决名册", "route2": "慈济所车辙", "route3": "第七粮仓"}
+    for key, step in expected.items():
+        write(f"campaign/beelzebub/route/resolve_{key}.mcfunction", "\n".join([
+            f"execute if score @s rpg_ch1_choice matches {step} run return run function rpg:campaign/beelzebub/route/correct_{key}",
+            "function rpg:campaign/beelzebub/route/wrong",
+        ]))
+        correct = [
+            f"kill @e[type=minecraft:text_display,tag=rpg.ch1.{key}.label,distance=..{RUNTIME['scene_radius']}]",
+            f"kill @e[type=minecraft:marker,tag=rpg.ch1.{key},distance=..{RUNTIME['scene_radius']}]",
+            "scoreboard players add @s rpg_ch1_choice 1",
+            tell("@a[tag=rpg.ch1.current]", c("[排序成立] ", SEAL, True), c(step_labels[key], GRAY)),
+        ]
+        if key == "route3":
+            correct += ["scoreboard players set @s rpg_ch1_sub 2", "scoreboard players set @s rpg_ch1_time 0", tell("@a[tag=rpg.ch1.current]", c("[密文解开] ", CHAPTER, True), c("车辙从慈济所出发，以处决名册挑选货物，最终汇入第七粮仓。", GRAY))]
+        write(f"campaign/beelzebub/route/correct_{key}.mcfunction", "\n".join(correct))
+    route_kill = [f"kill @e[type=minecraft:marker,tag=rpg.ch1.route{n},distance=..{RUNTIME['scene_radius']}]" for n in range(1, 4)] + [f"kill @e[type=minecraft:text_display,tag=rpg.ch1.route{n}.label,distance=..{RUNTIME['scene_radius']}]" for n in range(1, 4)]
+    write("campaign/beelzebub/route/wrong.mcfunction", "\n".join(route_kill + [
+        "scoreboard players set @s rpg_ch1_choice 0", "tag @s add rpg.ch1.puzzle.wait.route", "scoreboard players add @s rpg_ch1_fail 1",
+        tell("@a[tag=rpg.ch1.current]", c("[伪序反噬] ", DANGER, True), c("错误因果唤来食名蝇；击败它们后重新排序。", GRAY)),
+    ] + puzzle_spawn_lines((scene("route_cipher", "route1")["spawn"], scene("route_cipher", "route3")["spawn"]), "伪序")))
+    write("campaign/beelzebub/route/respawn.mcfunction", "\n".join([
+        "tag @s remove rpg.ch1.puzzle.wait.route", "scoreboard players set @s rpg_ch1_choice 0",
+        tell("@a[tag=rpg.ch1.current]", c("[安全复盘] ", CHAPTER, True), c("战斗结束。三份记录已重新展开，可以继续推理。", GRAY)),
+        "function rpg:campaign/beelzebub/route/spawn_choices",
+    ]))
     write("campaign/beelzebub/recap/area.mcfunction", "\n".join([
         "tag @s add rpg.ch1.recap.area", "scoreboard players set @s rpg_ch1_time 0",
         tell("@a[tag=rpg.ch1.current]", c("+------ 案情复盘 · 三线 ------+", CHAPTER, True)),
@@ -639,8 +728,12 @@ def write_tracking_inquest_prep():
         lines += owned_spawn(point["spawn"], key, point["label"], palette_color(CONFIG, point["color"]))
     write("campaign/beelzebub/stage/5_enter.mcfunction", "\n".join(lines))
     write("campaign/beelzebub/stage/5_tick.mcfunction", "\n".join([f"execute as @e[type=minecraft:marker,tag=rpg.ch1.hyp{n}] at @s run function rpg:campaign/beelzebub/probe/hyp{n}" for n in range(1, 4)] + [
-        "execute if score @s rpg_ch1_obj matches 3.. unless entity @s[tag=rpg.ch1.recap.hypothesis] run function rpg:campaign/beelzebub/recap/hypothesis",
-        f"execute if score @s rpg_ch1_obj matches 3.. if entity @s[tag=rpg.ch1.recap.hypothesis] if score @s rpg_ch1_time matches {RUNTIME['recap_hold_ticks']}.. run function rpg:campaign/beelzebub/advance",
+        "function rpg:campaign/beelzebub/puzzle/refresh_enemies",
+        "execute if score @s rpg_ch1_obj matches 3.. if score @s rpg_ch1_sub matches 0 run function rpg:campaign/beelzebub/hypothesis_board/activate",
+        *[f"execute if score @s rpg_ch1_sub matches 1 unless entity @e[tag=rpg.ch1.puzzle.enemy.current,limit=1] as @e[type=minecraft:marker,tag=rpg.ch1.theory{n}] at @s run function rpg:campaign/beelzebub/probe/theory{n}" for n in range(1, 4)],
+        "execute if score @s rpg_ch1_sub matches 1 if entity @s[tag=rpg.ch1.puzzle.wait.theory] unless entity @e[tag=rpg.ch1.puzzle.enemy.current,limit=1] run function rpg:campaign/beelzebub/hypothesis_board/respawn",
+        "execute if score @s rpg_ch1_sub matches 2 unless entity @s[tag=rpg.ch1.recap.hypothesis] run function rpg:campaign/beelzebub/recap/hypothesis",
+        f"execute if score @s rpg_ch1_sub matches 2 if entity @s[tag=rpg.ch1.recap.hypothesis] if score @s rpg_ch1_time matches {RUNTIME['recap_hold_ticks']}.. run function rpg:campaign/beelzebub/advance",
     ]))
     hypotheses = (
         ("炉灰中没有灼烧骨骼，只有带牙印的餐盘灰；排除普通焚尸。", "伊莱亚：火灾说不能成立。灰是‘吃剩后’出现，不是燃烧后。"),
@@ -667,6 +760,46 @@ def write_tracking_inquest_prep():
         tell("@a[tag=rpg.ch1.current]", c("[弱点假说] ", CHURCH, True), c("已经自行腐败、失去宴席价值之物。", GRAY)),
     ]))
 
+    theory_spawn = []
+    for key in ("theory1", "theory2", "theory3"):
+        point = scene("hypothesis_board", key)
+        theory_spawn += owned_spawn(point["spawn"], key, point["label"], palette_color(CONFIG, point["color"]))
+        write_choice_probe(key, f"hypothesis_board/resolve_{key}")
+    write("campaign/beelzebub/hypothesis_board/spawn_choices.mcfunction", "\n".join(theory_spawn))
+    write("campaign/beelzebub/hypothesis_board/activate.mcfunction", "\n".join([
+        "scoreboard players set @s rpg_ch1_sub 1", "scoreboard players set @s rpg_ch1_time 0",
+        "tag @s remove rpg.ch1.theory.1", "tag @s remove rpg.ch1.theory.2",
+        "bossbar set rpg:chapter1 name " + row(c("假说审判｜找出并排除两个伪解", CHAPTER, True)),
+        tell("@a[tag=rpg.ch1.current]", c("[假说审判] ", CHAPTER, True), c("踏入两个无法同时解释全部证物的伪解；不要把仍需验证的‘暴食寄生’提前排除。", GRAY)),
+        "function rpg:campaign/beelzebub/hypothesis_board/spawn_choices",
+    ]))
+    for n, name in ((1, "疫病复生"), (2, "人为盗粮")):
+        write(f"campaign/beelzebub/hypothesis_board/resolve_theory{n}.mcfunction", f"function rpg:campaign/beelzebub/hypothesis_board/reject{n}")
+        write(f"campaign/beelzebub/hypothesis_board/reject{n}.mcfunction", "\n".join([
+            f"tag @s add rpg.ch1.theory.{n}",
+            f"kill @e[type=minecraft:text_display,tag=rpg.ch1.theory{n}.label,distance=..{RUNTIME['scene_radius']}]",
+            f"kill @e[type=minecraft:marker,tag=rpg.ch1.theory{n},distance=..{RUNTIME['scene_radius']}]",
+            tell("@a[tag=rpg.ch1.current]", c("[伪解排除] ", SEAL, True), c(name, GRAY)),
+            "function rpg:campaign/beelzebub/hypothesis_board/check_complete",
+        ]))
+    write("campaign/beelzebub/hypothesis_board/resolve_theory3.mcfunction", "function rpg:campaign/beelzebub/hypothesis_board/wrong")
+    write("campaign/beelzebub/hypothesis_board/check_complete.mcfunction", "\n".join([
+        "execute unless entity @s[tag=rpg.ch1.theory.1] run return 0", "execute unless entity @s[tag=rpg.ch1.theory.2] run return 0",
+        "kill @e[type=minecraft:marker,tag=rpg.ch1.theory3,distance=..72]", "kill @e[type=minecraft:text_display,tag=rpg.ch1.theory3.label,distance=..72]",
+        "scoreboard players set @s rpg_ch1_sub 2", "scoreboard players set @s rpg_ch1_time 0",
+        tell("@a[tag=rpg.ch1.current]", c("[假说保留] ", BEEL_LIGHT, True), c("暴食寄生是唯一未被证物反驳的解释，但仍必须在 Boss 战亲历权能才能确证真名。", GRAY)),
+    ]))
+    theory_kill = [f"kill @e[type=minecraft:marker,tag=rpg.ch1.theory{n},distance=..{RUNTIME['scene_radius']}]" for n in range(1, 4)] + [f"kill @e[type=minecraft:text_display,tag=rpg.ch1.theory{n}.label,distance=..{RUNTIME['scene_radius']}]" for n in range(1, 4)]
+    write("campaign/beelzebub/hypothesis_board/wrong.mcfunction", "\n".join(theory_kill + [
+        "tag @s remove rpg.ch1.theory.1", "tag @s remove rpg.ch1.theory.2", "tag @s add rpg.ch1.puzzle.wait.theory", "scoreboard players add @s rpg_ch1_fail 1",
+        tell("@a[tag=rpg.ch1.current]", c("[伪证反噬] ", DANGER, True), c("你提前排除了核心假说。击败具象化的伪证后重新审判。", GRAY)),
+    ] + puzzle_spawn_lines(tuple(scene("hypothesis_board", f"theory{n}")["spawn"] for n in range(1, 4)), "伪证")))
+    write("campaign/beelzebub/hypothesis_board/respawn.mcfunction", "\n".join([
+        "tag @s remove rpg.ch1.puzzle.wait.theory",
+        tell("@a[tag=rpg.ch1.current]", c("[安全复盘] ", CHAPTER, True), c("伪证已经消散；三项假说重新展开。", GRAY)),
+        "function rpg:campaign/beelzebub/hypothesis_board/spawn_choices",
+    ]))
+
     lines = ["bossbar set rpg:chapter1 value 49", "bossbar set rpg:chapter1 name " + row(c("被撕去的判词｜准备 3 组仪式器具", CHURCH, True))]
     for key in ("cache1", "cache2", "cache3"):
         point = scene("cache", key)
@@ -676,8 +809,12 @@ def write_tracking_inquest_prep():
         tell("@a[tag=rpg.ch1.current]", c("米拉：", WITNESS, True), c("先拿齐东西。等我们知道缺的是什么，再决定要不要相信它。", GRAY)),
     ]))
     write("campaign/beelzebub/stage/6_tick.mcfunction", "\n".join([f"execute as @e[type=minecraft:marker,tag=rpg.ch1.cache{n}] at @s run function rpg:campaign/beelzebub/probe/cache{n}" for n in range(1, 4)] + [
-        "execute if score @s rpg_ch1_obj matches 3.. unless entity @s[tag=rpg.ch1.recap.prep] run function rpg:campaign/beelzebub/recap/prep",
-        f"execute if score @s rpg_ch1_obj matches 3.. if entity @s[tag=rpg.ch1.recap.prep] if score @s rpg_ch1_time matches {RUNTIME['recap_hold_ticks']}.. run function rpg:campaign/beelzebub/advance",
+        "function rpg:campaign/beelzebub/puzzle/refresh_enemies",
+        "execute if score @s rpg_ch1_obj matches 3.. if score @s rpg_ch1_sub matches 0 run function rpg:campaign/beelzebub/calibration/activate",
+        *[f"execute if score @s rpg_ch1_sub matches 1 unless entity @e[tag=rpg.ch1.puzzle.enemy.current,limit=1] as @e[type=minecraft:marker,tag=rpg.ch1.slot{n}] at @s run function rpg:campaign/beelzebub/probe/slot{n}" for n in range(1, 4)],
+        "execute if score @s rpg_ch1_sub matches 1 if entity @s[tag=rpg.ch1.puzzle.wait.slot] unless entity @e[tag=rpg.ch1.puzzle.enemy.current,limit=1] run function rpg:campaign/beelzebub/calibration/respawn",
+        "execute if score @s rpg_ch1_sub matches 2 unless entity @s[tag=rpg.ch1.recap.prep] run function rpg:campaign/beelzebub/recap/prep",
+        f"execute if score @s rpg_ch1_sub matches 2 if entity @s[tag=rpg.ch1.recap.prep] if score @s rpg_ch1_time matches {RUNTIME['recap_hold_ticks']}.. run function rpg:campaign/beelzebub/advance",
     ]))
     pending_name = row(c("[待确证残页] ", CHURCH, True), c("万蝇之王 · 缺页判词", BEEL_LIGHT))
     pending_lore = json.dumps([[c("+------------------+", "white")], [c("环境证物只建立了真名假说", GRAY)],
@@ -704,6 +841,56 @@ def write_tracking_inquest_prep():
         write_point_probe(f"cache{n}", cache_text[n], [f"execute as @a[tag=rpg.ch1.current] run function {fn}" for fn in calls] + [
             tell("@a[tag=rpg.ch1.current,distance=..24]", c(speaker, color, True), c(words, GRAY)),
         ])
+    slot_spawn = []
+    for key in ("slot1", "slot2", "slot3"):
+        point = scene("ritual_calibration", key)
+        slot_spawn += owned_spawn(point["spawn"], key, point["label"], palette_color(CONFIG, point["color"]))
+        write_choice_probe(key, f"calibration/resolve_{key}")
+    write("campaign/beelzebub/calibration/spawn_choices.mcfunction", "\n".join(slot_spawn))
+    write("campaign/beelzebub/calibration/activate.mcfunction", "\n".join([
+        "scoreboard players set @s rpg_ch1_sub 1", "scoreboard players set @s rpg_ch1_time 0",
+        "tag @s remove rpg.ch1.slot.1", "tag @s remove rpg.ch1.slot.2", "tag @s remove rpg.ch1.slot.3",
+        "bossbar set rpg:chapter1 name " + row(c("仪式校准｜手持对应器具踏入三槽", CHURCH, True)),
+        tell("@a[tag=rpg.ch1.current]", c("[仪式校准] ", CHURCH, True), c("边界槽用银质圣钉；腐宴槽用别西卜媒介；见证槽用待确证残页。器具不会消耗。", GRAY)),
+        "function rpg:campaign/beelzebub/calibration/spawn_choices",
+    ]))
+    requirements = {
+        "slot1": ("silver_nail", 1, "银质圣钉固定法阵边界"),
+        "slot2": ("beelzebub_medium", 2, "腐败媒介让饕宴拒食"),
+        "slot3": ("pending_name_page", 3, "待确证残页保留见证空位"),
+    }
+    designated = [ITEMS[key] for key in ("silver_nail", "beelzebub_medium", "pending_name_page")]
+    for slot, (item_key, n, text_value) in requirements.items():
+        item = ITEMS[item_key]
+        held = f"{item['base_item']}[{item['match']}]"
+        wrong_tests = " ".join(f"unless items entity @a[tag=rpg.ch1.choice.player,limit=1] weapon.mainhand {other['base_item']}[{other['match']}]" for other in designated)
+        write(f"campaign/beelzebub/calibration/resolve_{slot}.mcfunction", "\n".join([
+            f"execute if items entity @a[tag=rpg.ch1.choice.player,limit=1] weapon.mainhand {held} run return run function rpg:campaign/beelzebub/calibration/correct_{slot}",
+            f"execute {wrong_tests} run return run tellraw @a[tag=rpg.ch1.choice.player,limit=1] " + row(c("[校准提示] ", CHURCH, True), c("请手持银质圣钉、别西卜媒介或待确证残页再踏入槽位。", GRAY)),
+            "function rpg:campaign/beelzebub/calibration/wrong",
+        ]))
+        write(f"campaign/beelzebub/calibration/correct_{slot}.mcfunction", "\n".join([
+            f"tag @s add rpg.ch1.slot.{n}",
+            f"kill @e[type=minecraft:text_display,tag=rpg.ch1.{slot}.label,distance=..{RUNTIME['scene_radius']}]",
+            f"kill @e[type=minecraft:marker,tag=rpg.ch1.{slot},distance=..{RUNTIME['scene_radius']}]",
+            tell("@a[tag=rpg.ch1.current]", c("[槽位校准] ", SEAL, True), c(text_value, GRAY)),
+            "function rpg:campaign/beelzebub/calibration/check_complete",
+        ]))
+    write("campaign/beelzebub/calibration/check_complete.mcfunction", "\n".join([
+        "execute unless entity @s[tag=rpg.ch1.slot.1] run return 0", "execute unless entity @s[tag=rpg.ch1.slot.2] run return 0", "execute unless entity @s[tag=rpg.ch1.slot.3] run return 0",
+        "scoreboard players set @s rpg_ch1_sub 2", "scoreboard players set @s rpg_ch1_time 0",
+        tell("@a[tag=rpg.ch1.current]", c("[校准完成] ", CHAPTER, True), c("边界、拒食与见证三环已经互相闭合；现在才适合进入 Boss 战。", GRAY)),
+    ]))
+    slot_kill = [f"kill @e[type=minecraft:marker,tag=rpg.ch1.slot{n},distance=..{RUNTIME['scene_radius']}]" for n in range(1, 4)] + [f"kill @e[type=minecraft:text_display,tag=rpg.ch1.slot{n}.label,distance=..{RUNTIME['scene_radius']}]" for n in range(1, 4)]
+    write("campaign/beelzebub/calibration/wrong.mcfunction", "\n".join(slot_kill + [
+        "tag @s remove rpg.ch1.slot.1", "tag @s remove rpg.ch1.slot.2", "tag @s remove rpg.ch1.slot.3", "tag @s add rpg.ch1.puzzle.wait.slot", "scoreboard players add @s rpg_ch1_fail 1",
+        tell("@a[tag=rpg.ch1.current]", c("[错置回响] ", DANGER, True), c("器具与槽位含义冲突；击败回响后重新校准。", GRAY)),
+    ] + puzzle_spawn_lines((scene("ritual_calibration", "slot1")["spawn"], scene("ritual_calibration", "slot3")["spawn"]), "错置")))
+    write("campaign/beelzebub/calibration/respawn.mcfunction", "\n".join([
+        "tag @s remove rpg.ch1.puzzle.wait.slot",
+        tell("@a[tag=rpg.ch1.current]", c("[安全复盘] ", CHAPTER, True), c("错置回响已清除；三件器具仍在背包，槽位重新展开。", GRAY)),
+        "function rpg:campaign/beelzebub/calibration/spawn_choices",
+    ]))
     write("campaign/beelzebub/recap/prep.mcfunction", "\n".join([
         "tag @s add rpg.ch1.recap.prep", "scoreboard players set @s rpg_ch1_time 0",
         tell("@a[tag=rpg.ch1.current]", c("[入场前复盘]", CHAPTER, True)),
@@ -762,12 +949,15 @@ def write_boss_and_rite():
         f"execute if entity @s[tag=rpg.name.{BOSS['lord_score']}] unless items entity @s inventory.* {ITEMS['confirmed_name_page']['base_item']}[{ITEMS['confirmed_name_page']['match']}] run function {ITEMS['confirmed_name_page']['give_function']}",
     ]))
     write("campaign/beelzebub/stage/7_enter.mcfunction", "\n".join([
-        "bossbar set rpg:chapter1 value 58", "bossbar set rpg:chapter1 name " + row(c("万蝇腐宴｜Ⅰ 镇压 · 见证三种权能", BEEL, True)),
-        "scoreboard players set @s rpg_ch1_seen 0", "function rpg:campaign/beelzebub/spawn/boss",
-        tell("@a[tag=rpg.ch1.current]", c("卡西安：", CHURCH, True), c("登记人口，一万三千四百二十一。", GRAY)),
-        tell("@a[tag=rpg.ch1.current]", c("卡西安：", CHURCH, True), c("应发口粮，一万三千四百二十一。实发口粮，零。", GRAY)),
-        tell("@a[tag=rpg.ch1.current]", c("别西卜：", BEEL, True), c("可你们的账，一直都是平的。欢迎赴宴。", BEEL_LIGHT)),
-        tell("@a[tag=rpg.ch1.current]", c("米拉：", WITNESS, True), c("先看祂怎样进食。我们需要证据，不只是伤口。", GRAY)),
+        "bossbar set rpg:chapter1 value 58", "bossbar set rpg:chapter1 name " + row(c("粮仓门内｜Boss 尚未入场", CHAPTER, True)),
+        "scoreboard players set @s rpg_ch1_seen 0", "scoreboard players set @s rpg_ch1_sub 0",
+        tell("@a[tag=rpg.ch1.current]", c("[安全对白] ", CHAPTER, True), c("别西卜将在简报结束后现身；此时没有战斗压力。", GRAY)),
+    ]))
+    write("campaign/beelzebub/boss/begin.mcfunction", "\n".join([
+        "scoreboard players set @s rpg_ch1_sub 1", "scoreboard players set @s rpg_ch1_time 0",
+        "bossbar set rpg:chapter1 name " + row(c("万蝇腐宴｜Ⅰ 镇压 · 见证三种权能", BEEL, True)),
+        tell("@a[tag=rpg.ch1.current]", c("[Boss 战开始] ", DANGER, True), c("万蝇离席，腐宴开幕。", GRAY)),
+        "function rpg:campaign/beelzebub/spawn/boss",
     ]))
     write("campaign/beelzebub/spawn/boss.mcfunction", "\n".join([
         f"execute positioned {BOSS['spawn']} run tag @e[type={BOSS['entity_type']},tag=rpg.advent,scores={{rpg_dm_lord={BOSS['lord_score']}}},distance=..{RUNTIME['boss_claim_radius']}] add rpg.ch1.preexisting",
@@ -784,6 +974,15 @@ def write_boss_and_rite():
     ]))
     write("campaign/beelzebub/stage/7_tick.mcfunction", "\n".join([
         "execute as @a[tag=rpg.ch1.current,tag=!rpg.ch1.kit.issued] run function rpg:campaign/beelzebub/cache/reissue_missing",
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 40 run tellraw @a[tag=rpg.ch1.current] " + row(c("卡西安：", CHURCH, True), c("登记人口，一万三千四百二十一。应发口粮，一万三千四百二十一。", GRAY)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 110 run tellraw @a[tag=rpg.ch1.current] " + row(c("卡西安：", CHURCH, True), c("实发口粮，零。可账目从未出现亏空。", GRAY)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 180 run tellraw @a[tag=rpg.ch1.current] " + row(c("米拉：", WITNESS, True), c("先亲历三种不同权能，再用真名和点燃图腾绑定祂。重复招式不算新见证。", GRAY)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 240 run tellraw @a[tag=rpg.ch1.current] " + row(c("别西卜：", BEEL, True), c("你们的账一直都是平的。欢迎赴宴。", BEEL_LIGHT)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 300 run tellraw @a[tag=rpg.ch1.current] " + row(c("别西卜：", BEEL, True), c("城市教会了我：吃掉一个人前，最好先吃掉他的名字。", BEEL_LIGHT)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 360 run tellraw @a[tag=rpg.ch1.current] " + row(c("别西卜：", BEEL, True), c("每一只蝇，都记得一顿没有发生过的晚餐。", BEEL_LIGHT)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 420 run tellraw @a[tag=rpg.ch1.current] " + row(c("别西卜：", BEEL, True), c("被吃掉以后，就再也不会挨饿。", BEEL_LIGHT)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 480 run tellraw @a[tag=rpg.ch1.current] " + row(c("[Boss 即将现身] ", DANGER, True), c("5 秒后进入战斗。", GRAY)),
+        "execute if score @s rpg_ch1_sub matches 0 if score @s rpg_ch1_time matches 580.. run function rpg:campaign/beelzebub/boss/begin",
         f"tag @e[type={BOSS['entity_type']},tag=rpg.ch1.boss] remove rpg.ch1.boss.current",
         f"execute as @e[type={BOSS['entity_type']},tag=rpg.ch1.boss] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run tag @s add rpg.ch1.boss.current",
         f"execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,tag=!rpg.ch1.rite,distance=..{RUNTIME['scene_radius'] - 8}] at @s if entity @e[type={BOSS['entity_type']},tag=rpg.ch1.boss.current,distance=..{RUNTIME['rite_bind_radius']},limit=1] run function rpg:campaign/beelzebub/claim_rite",
@@ -791,13 +990,7 @@ def write_boss_and_rite():
         f"execute if entity @e[type={BOSS['entity_type']},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=1}},limit=1] run bossbar set rpg:chapter1 name " + row(c("万蝇腐宴｜Ⅱ 镇魔 · 真名 + 点燃图腾", CHURCH, True)),
         "execute if entity @e[type=minecraft:item_display,tag=rpg.ch1.rite,scores={rpg_ex_stage=2},limit=1] run bossbar set rpg:chapter1 name " + row(c("万蝇腐宴｜Ⅲ 固阵 · 稳定度推进至 100", SEAL, True)),
         "execute if entity @e[type=minecraft:item_display,tag=rpg.ch1.rite,scores={rpg_ex_stage=4},limit=1] run bossbar set rpg:chapter1 name " + row(c("万蝇腐宴｜Ⅳ 裁决 · 四选一", PACT, True)),
-        "execute if score @s rpg_ch1_time matches 60 run tellraw @a[tag=rpg.ch1.current] " + row(c("别西卜：", BEEL, True), c("城市教会了我：吃掉一个人前，最好先吃掉他的名字。", BEEL_LIGHT)),
-        "execute if score @s rpg_ch1_time matches 140 run tellraw @a[tag=rpg.ch1.current] " + row(c("[见证规则] ", CHURCH, True), c("环境证物只是推论；亲历三种不同招式后，现实才承认真名。", GRAY)),
-        "execute if score @s rpg_ch1_time matches 220 run tellraw @a[tag=rpg.ch1.current] " + row(c("伊莱亚：", CHURCH, True), c("重复招式只算一证。看余烬、吞噬、蝇群、腐宴或饥啮的差异。", GRAY)),
-        "execute if score @s rpg_ch1_time matches 340 run tellraw @a[tag=rpg.ch1.current] " + row(c("米拉：", WITNESS, True), c("饥饿会逼人求生；祂在劝你放弃自己。别把两者混为一谈。", GRAY)),
-        "execute if score @s rpg_ch1_time matches 430 run tellraw @a[tag=rpg.ch1.current] " + row(c("别西卜：", BEEL, True), c("每一只蝇，都记得一顿没有发生过的晚餐。", BEEL_LIGHT)),
-        "execute if score @s rpg_ch1_time matches 540 run tellraw @a[tag=rpg.ch1.current] " + row(c("别西卜：", BEEL, True), c("被吃掉以后，就再也不会挨饿。", BEEL_LIGHT)),
-        f"execute unless entity @e[type={BOSS['entity_type']},tag=rpg.ch1.boss.current,limit=1] if score @s rpg_ch1_time matches {RECOVERY['boss_missing_ticks']}.. run function rpg:campaign/beelzebub/recover_boss",
+        f"execute if score @s rpg_ch1_sub matches 1 unless entity @e[type={BOSS['entity_type']},tag=rpg.ch1.boss.current,limit=1] if score @s rpg_ch1_time matches {RECOVERY['boss_missing_ticks']}.. run function rpg:campaign/beelzebub/recover_boss",
     ]))
     write("campaign/beelzebub/recover_boss.mcfunction", "\n".join([
         f"tag @e[type={BOSS['entity_type']},tag=rpg.ch1.boss] remove rpg.ch1.boss.current",

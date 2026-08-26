@@ -8,7 +8,7 @@
 
 - 15 个物品引用：驱魔图腾、待确证残页、正式真名残页、别西卜媒介、6 件仪式工具、边缘者档案和4种裁决残响。
 - 11 个角色/锚点定义：固定 Marker 控制器、空缺者母亲、米拉实体及被捕位置、别西卜和5名所罗门罪仆；`position_only` 条目只表示同一实体的转移落点。
-- 24 个相对位置：上述11个实体位置，以及3个异常、4条追踪痕迹、3项真名假说和3个器具箱。
+- 33 个相对位置：上述11个实体位置、13个基础调查点，以及路线密文、假说审判、仪式校准各3个交互槽位。
 - 队伍、加入阶段、作用距离、场地预检、调查读条、失败恢复、Boss 生命和罪仆多人血量。
 - 调试入口名、阶段跳转范围与调试开关。
 
@@ -52,7 +52,9 @@
 
 ### 调整调查节奏
 
-`runtime.observation_ticks` 以20 tick = 1秒计算。异常、追踪、假说与器具箱分别有独立读条时间；`runtime.recap_hold_ticks` 控制每次案情复盘独占屏幕的阅读窗口。失败恢复窗口在 `runtime.recovery`，其中米拉3分钟救援窗口当前是3600 tick。
+`runtime.observation_ticks` 以20 tick = 1秒计算。异常、追踪、假说、器具箱和谜题选择分别有独立读条时间；`runtime.recap_hold_ticks` 控制每次案情复盘独占屏幕的阅读窗口，当前为200 tick（10秒）。失败恢复窗口在 `runtime.recovery`，其中米拉3分钟救援窗口当前是3600 tick。
+
+`scene_points.route_cipher`、`scene_points.hypothesis_board` 与 `scene_points.ritual_calibration` 是三套新谜题的全部交互位置。调整它们时必须继续位于 `runtime.safe_plane` 的采样范围内；错误答案生成的短战斗也使用同一章节ID回收协议。
 
 ## 生成器接入映射
 

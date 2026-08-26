@@ -15,6 +15,9 @@ python opt_cascade.py ../rpg
 python opt_misc.py  ../rpg
 # 苦力怕的变种体系整段摘掉（作者决定）——苦力怕就是原版苦力怕
 python drop_creeper_variants.py ../rpg
+# 同步退役僵尸/骷髅变种、风袭掠夺者、溺尸军团和猪灵军团；
+# 放在生成优化之后，确保原始整段扫描与优化后的 batch 入口一并摘除。
+python drop_legacy_mob_factions.py ../rpg
 # 攻击瞬爆改成粒子、声音与分段伤害：同刻结算，但不生成 TNT、不破坏地形
 python instant_boom.py ../rpg
 python add_items.py ../resourcepack ../rpg
@@ -120,6 +123,7 @@ python check_beelzebub_campaign.py ../rpg
 python check_beelzebub_campaign_ui.py ../rpg ../resourcepack
 python check_beelzebub_campaign_config.py ../rpg --require-wired
 python check_beelzebub_narrative_ui.py ../rpg --story-contract
+python check_retired_mob_content.py ../rpg
 # 攻击瞬爆不得回流成苦力怕或 fuse:0 TNT（后者会破坏地形）
 python check_creeper.py ../rpg
 echo

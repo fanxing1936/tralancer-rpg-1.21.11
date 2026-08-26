@@ -13,8 +13,8 @@ import os
 import re
 import sys
 
-RP = sys.argv[1] if len(sys.argv) > 1 else "../resourcepack"
-DP = sys.argv[2] if len(sys.argv) > 2 else "../rpg"
+RP = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else "../resourcepack")
+DP = os.path.abspath(sys.argv[2] if len(sys.argv) > 2 else "../rpg")
 
 RPG_MODELS = os.path.join(RP, "assets/rpg/models/item")
 MC_ITEMS = os.path.join(RP, "assets/minecraft/items")

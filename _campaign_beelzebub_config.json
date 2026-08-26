@@ -40,9 +40,10 @@
       "anomaly": 60,
       "trail": 40,
       "hypothesis": 80,
-      "cache": 40
+      "cache": 40,
+      "puzzle": 30
     },
-    "recap_hold_ticks": 100,
+    "recap_hold_ticks": 200,
     "recovery": {
       "party_wipe_ticks": 200,
       "mira_capture_ticks": 120,
@@ -286,6 +287,21 @@
       "cache1": {"spawn": "^-10 ^ ^35", "label": "封印档案箱", "color": "church"},
       "cache2": {"spawn": "^10 ^ ^35", "label": "圣器保管箱", "color": "witness"},
       "cache3": {"spawn": "^ ^ ^42", "label": "裁决器具箱", "color": "seal"}
+    },
+    "route_cipher": {
+      "route1": {"spawn": "^-7 ^ ^43", "label": "Ⅰ · 处决名册", "color": "church"},
+      "route2": {"spawn": "^ ^ ^47", "label": "Ⅱ · 慈济所车辙", "color": "witness"},
+      "route3": {"spawn": "^7 ^ ^43", "label": "Ⅲ · 第七粮仓", "color": "beelzebub_light"}
+    },
+    "hypothesis_board": {
+      "theory1": {"spawn": "^-8 ^ ^46", "label": "A · 疫病复生", "color": "ash"},
+      "theory2": {"spawn": "^ ^ ^50", "label": "B · 人为盗粮", "color": "church"},
+      "theory3": {"spawn": "^8 ^ ^46", "label": "C · 暴食寄生", "color": "beelzebub"}
+    },
+    "ritual_calibration": {
+      "slot1": {"spawn": "^-8 ^ ^48", "label": "边界槽 · 固阵", "color": "seal"},
+      "slot2": {"spawn": "^ ^ ^53", "label": "腐宴槽 · 拒食", "color": "beelzebub_light"},
+      "slot3": {"spawn": "^8 ^ ^48", "label": "见证槽 · 落名", "color": "witness"}
     }
   },
   "cache_loadouts": {

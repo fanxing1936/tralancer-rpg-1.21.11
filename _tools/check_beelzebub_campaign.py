@@ -34,6 +34,10 @@ required = [
     "campaign/beelzebub/recap/menu.mcfunction", "campaign/beelzebub/recap/anomaly.mcfunction",
     "campaign/beelzebub/recap/minions.mcfunction", "campaign/beelzebub/recap/area.mcfunction",
     "campaign/beelzebub/recap/hypothesis.mcfunction", "campaign/beelzebub/recap/prep.mcfunction",
+    "campaign/beelzebub/boss/begin.mcfunction", "campaign/beelzebub/puzzle/refresh_enemies.mcfunction",
+    "campaign/beelzebub/route/activate.mcfunction", "campaign/beelzebub/route/wrong.mcfunction",
+    "campaign/beelzebub/hypothesis_board/activate.mcfunction", "campaign/beelzebub/hypothesis_board/wrong.mcfunction",
+    "campaign/beelzebub/calibration/activate.mcfunction", "campaign/beelzebub/calibration/wrong.mcfunction",
 ]
 required += [f"campaign/beelzebub/stage/{n}_{suffix}.mcfunction" for n in range(11) for suffix in ("enter", "tick")]
 for rel in required: read(rel)
@@ -172,6 +176,68 @@ for role, values in expected_hp.items():
         if signature not in scale or f"{{Health:{hp}f}}" not in scale: errors.append(f"minion scale missing role={role} roster={roster} hp={hp}")
 if "rpg_ch1_roster" in read("campaign/beelzebub/spawn/boss.mcfunction"):
     errors.append("Boss incorrectly inherits party health scaling")
+
+# Combat and critical story are separated by explicit safe sub-states.  Enemy
+# spawn functions must not share an entry file/tick with unguarded exposition.
+stage3_enter = read("campaign/beelzebub/stage/3_enter.mcfunction")
+stage3_tick = read("campaign/beelzebub/stage/3_tick.mcfunction")
+if "spawn/minion/" in stage3_enter or "minion/wave" in stage3_enter:
+    errors.append("Stage 3 still spawns enemies in the briefing entry")
+for wave in (1, 2, 3):
+    body = read(f"campaign/beelzebub/minion/wave{wave}.mcfunction")
+    if "[战斗开始]" not in body or any(speaker in body for speaker in ("米拉：", "伊莱亚：", "别西卜：", "卡西安：")):
+        errors.append(f"wave {wave} mixes critical dialogue into active combat")
+for state, wave in ((12, 2), (13, 3)):
+    for token in (f"rpg_ch1_sub matches {state}", f"minion/wave{wave}", "[战斗即将开始]"):
+        if token not in stage3_tick:
+            errors.append(f"Stage 3 safe intermission {state} missing: {token}")
+stage7_enter = read("campaign/beelzebub/stage/7_enter.mcfunction")
+stage7_tick = read("campaign/beelzebub/stage/7_tick.mcfunction")
+if "spawn/boss" in stage7_enter:
+    errors.append("Stage 7 still spawns the boss before its safe briefing")
+if "rpg_ch1_sub matches 0" not in stage7_tick or "boss/begin" not in stage7_tick:
+    errors.append("Stage 7 has no briefing-to-combat gate")
+for line in stage7_tick.splitlines():
+    if "tellraw" in line and "rpg_ch1_sub matches 0" not in line:
+        errors.append("Stage 7 has unguarded narrative dialogue during active combat: " + line)
+if "rpg_ch1_sub matches 1" not in stage7_tick or "recover_boss" not in stage7_tick:
+    errors.append("Stage 7 boss recovery is not gated to the combat state")
+
+# Three different puzzle verbs must be reachable only after their observation
+# phase, own all spawned retaliation enemies, and return to a complete board.
+puzzle_specs = (
+    (4, "route", ("route1", "route2", "route3"), "puzzle.wait.route"),
+    (5, "hypothesis_board", ("theory1", "theory2", "theory3"), "puzzle.wait.theory"),
+    (6, "calibration", ("slot1", "slot2", "slot3"), "puzzle.wait.slot"),
+)
+for stage, group, keys, wait_tag in puzzle_specs:
+    body = read(f"campaign/beelzebub/stage/{stage}_tick.mcfunction")
+    for token in (f"{group}/activate", "puzzle/refresh_enemies", f"rpg.ch1.{wait_tag}", f"{group}/respawn"):
+        if token not in body:
+            errors.append(f"Stage {stage} puzzle lifecycle missing: {token}")
+    for key in keys:
+        probe = read(f"campaign/beelzebub/probe/{key}.mcfunction")
+        if f"rpg_ch1_seen matches {RUNTIME['observation_ticks']['puzzle']}.." not in probe or f"choice/{key}" not in probe:
+            errors.append(f"puzzle choice probe missing or untimed: {key}")
+    wrong = read(f"campaign/beelzebub/{group}/wrong.mcfunction")
+    for token in ("rpg.ch1.puzzle.enemy.current", "life_ticks:1200", "rpg_ch1_id = @s rpg_ch1_id", f"rpg.ch1.{wait_tag}"):
+        if token not in wrong:
+            errors.append(f"{group} wrong-answer recovery lacks: {token}")
+refresh_puzzle = read("campaign/beelzebub/puzzle/refresh_enemies.mcfunction")
+if f"distance={RUNTIME['scene_radius'] + 0.01}.." not in refresh_puzzle:
+    errors.append("puzzle retaliation enemies have no arena-boundary recovery")
+route_order = {"route2": 0, "route1": 1, "route3": 2}
+for key, expected in route_order.items():
+    if f"rpg_ch1_choice matches {expected}" not in read(f"campaign/beelzebub/route/resolve_{key}.mcfunction"):
+        errors.append(f"route cipher order drifted: {key} should be step {expected}")
+if "rpg.ch1.theory.1" not in read("campaign/beelzebub/hypothesis_board/reject1.mcfunction") or "rpg.ch1.theory.2" not in read("campaign/beelzebub/hypothesis_board/reject2.mcfunction"):
+    errors.append("hypothesis board does not preserve both rejected false theories")
+if "hypothesis_board/wrong" not in read("campaign/beelzebub/hypothesis_board/resolve_theory3.mcfunction"):
+    errors.append("rejecting the retained Beelzebub hypothesis is not handled")
+slot_items = {"slot1": "rpg_nail:1b", "slot2": "rpg_medium:4b", "slot3": "rpg_ch1_pending_page:1b"}
+for slot, identity in slot_items.items():
+    if identity not in read(f"campaign/beelzebub/calibration/resolve_{slot}.mcfunction"):
+        errors.append(f"ritual calibration item mapping drifted: {slot}")
 
 # Environment yields hypothesis only. Canonical skill hooks produce distinct
 # witness facts; chapter binding additionally requires witness.ready.

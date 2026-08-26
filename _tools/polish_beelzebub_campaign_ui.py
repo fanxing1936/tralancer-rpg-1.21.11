@@ -142,12 +142,28 @@ def write_ui_runtime() -> None:
     for stage, (total, label, color) in exploration.items():
         lines = ["bossbar set rpg:chapter1 color yellow"]
         for done in range(total + 1):
-            lines.append("execute if score @s rpg_ch1_obj matches %d run bossbar set rpg:chapter1 name %s" %
-                         (done, row(comp(label % done, color, True))))
+            sub_gate = " if score @s rpg_ch1_sub matches 0" if stage in (4, 5, 6) else ""
+            lines.append("execute if score @s rpg_ch1_obj matches %d%s run bossbar set rpg:chapter1 name %s" %
+                         (done, sub_gate, row(comp(label % done, color, True))))
+        if stage == 4:
+            for step in range(4):
+                lines.append("execute if score @s rpg_ch1_sub matches 1 if score @s rpg_ch1_choice matches %d run bossbar set rpg:chapter1 name %s" %
+                             (step, row(comp("路线密文｜因果 %d / 3" % step, CHAPTER, True))))
+            lines.append("execute if score @s rpg_ch1_sub matches 2 run bossbar set rpg:chapter1 name " + row(comp("案情复盘｜三线已经闭合", CHAPTER, True)))
+        elif stage == 5:
+            lines.append("execute if score @s rpg_ch1_sub matches 1 run bossbar set rpg:chapter1 name " + row(comp("假说审判｜排除两个伪解", BEEL_LIGHT, True)))
+            lines.append("execute if score @s rpg_ch1_sub matches 2 run bossbar set rpg:chapter1 name " + row(comp("案情复盘｜保留暴食寄生", CHAPTER, True)))
+        elif stage == 6:
+            lines.append("execute if score @s rpg_ch1_sub matches 1 run bossbar set rpg:chapter1 name " + row(comp("仪式校准｜器具归入三槽", CHURCH, True)))
+            lines.append("execute if score @s rpg_ch1_sub matches 2 run bossbar set rpg:chapter1 name " + row(comp("入场复盘｜三环已经闭合", CHAPTER, True)))
         write("campaign/beelzebub/ui/stage%d.mcfunction" % stage, "\n".join(lines))
 
     write("campaign/beelzebub/ui/stage3.mcfunction", "\n".join([
-        "bossbar set rpg:chapter1 color green",
+        "execute if score @s rpg_ch1_sub matches 0 run bossbar set rpg:chapter1 color yellow",
+        "execute if score @s rpg_ch1_sub matches 0 run bossbar set rpg:chapter1 name " + row(comp("见证人封锁线｜听完简报后迎战", HOLY_LIGHT, True)),
+        "execute if score @s rpg_ch1_sub matches 1..3 run bossbar set rpg:chapter1 color green",
+        "execute if score @s rpg_ch1_sub matches 12..13 run bossbar set rpg:chapter1 color yellow",
+        "execute if score @s rpg_ch1_sub matches 12..13 run bossbar set rpg:chapter1 name " + row(comp("战间复盘｜敌人暂未入场", CHAPTER, True)),
         "execute if score @s rpg_ch1_sub matches 1 run bossbar set rpg:chapter1 name " + row(comp("罪仆战｜第一轮 · 封路与追猎", BEEL_COMBAT, True)),
         "execute if score @s rpg_ch1_sub matches 2 run bossbar set rpg:chapter1 name " + row(comp("罪仆战｜第二轮 · 转运与伪记忆", BEEL_COMBAT, True)),
         "execute if score @s rpg_ch1_sub matches 3 run bossbar set rpg:chapter1 name " + row(comp("罪仆战｜第三轮 · 处刑者", BEEL_COMBAT, True)),
@@ -156,7 +172,9 @@ def write_ui_runtime() -> None:
     ]))
 
     battle = [
-        "bossbar set rpg:chapter1 color green",
+        "execute if score @s rpg_ch1_sub matches 0 run bossbar set rpg:chapter1 color yellow",
+        "execute if score @s rpg_ch1_sub matches 0 run bossbar set rpg:chapter1 name " + row(comp("粮仓门内｜别西卜尚未现身", CHAPTER, True)),
+        "execute if score @s rpg_ch1_sub matches 1 run bossbar set rpg:chapter1 color green",
         f"execute as @e[type={BOSS_TYPE},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=0}},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 name " + row(comp("驱魔·一｜权能见证 ", BEEL_COMBAT, True), score("@e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1]", "rpg_ch1_seen", BEEL_GLINT), comp(" / 3", DARK)),
         f"execute as @e[type={BOSS_TYPE},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=1}},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 color yellow",
         f"execute as @e[type={BOSS_TYPE},tag=rpg.ch1.boss.current,scores={{rpg_ex_stage=1}},limit=1] at @s if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id unless entity @a[tag=rpg.ch1.member,tag=rpg.ch1.current,tag=rpg.name.4,distance=..10,gamemode=!spectator] unless entity @e[type=minecraft:item_display,tag=rpg.totem.lit,tag=!rpg.rite.anchor,distance=..8,limit=1] run bossbar set rpg:chapter1 name " + row(comp("驱魔·二｜◇ 真名　◇ 图腾", CHURCH, True)),
@@ -170,7 +188,7 @@ def write_ui_runtime() -> None:
         "execute as @e[type=minecraft:item_display,tag=rpg.ch1.rite,scores={rpg_ex_stage=4},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 name " + row(comp("驱魔·四｜选择裁决", RITUAL, True)),
         "execute as @e[type=minecraft:item_display,tag=rpg.ch1.rite,scores={rpg_ex_stage=4},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id unless entity @e[type=minecraft:marker,tag=rpg.ch1.controller,tag=rpg.ch1.ui.phase4,limit=1] run function rpg:campaign/beelzebub/ui/title/phase4",
         "execute if entity @e[type=minecraft:item_display,tag=rpg.ch1.rite,scores={rpg_ex_stage=4},limit=1] as @a[tag=rpg.ch1.member,tag=rpg.ch1.current] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run scoreboard players set @s rpg_hud_dmt 0",
-        "execute unless entity @s[tag=rpg.ch1.ui.title.7] run function rpg:campaign/beelzebub/ui/title/stage7",
+        "execute if score @s rpg_ch1_sub matches 1 unless entity @s[tag=rpg.ch1.ui.title.7] run function rpg:campaign/beelzebub/ui/title/stage7",
     ]
     write("campaign/beelzebub/ui/stage7.mcfunction", "\n".join(battle))
 

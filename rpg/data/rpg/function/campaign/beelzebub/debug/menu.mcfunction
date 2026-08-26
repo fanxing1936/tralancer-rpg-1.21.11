@@ -1,5 +1,5 @@
 tellraw @s ["",{"text":"+------ 第一章 · 调试台 ------+","color":"#B8A98B","bold":true,"italic":false}]
-tellraw @s ["",{"text":"配置摘要　044eabcb78ec","color":"dark_gray","bold":false,"italic":false}]
+tellraw @s ["",{"text":"配置摘要　062896e28871","color":"dark_gray","bold":false,"italic":false}]
 tellraw @s ["",{"text":"[以当前位置开案]","color":"#D4AF37","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/function rpg:campaign/beelzebub/debug/start"}},{"text":"[全部物品]","color":"#FFF2A8","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/function rpg:campaign/beelzebub/debug/give_all_items"}}]
 tellraw @s ["",{"text":"[召唤 Boss]","color":"#B5D957","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/function rpg:campaign/beelzebub/debug/spawn_boss"}},{"text":"[召唤五罪仆]","color":"#5A6B1E","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/function rpg:campaign/beelzebub/debug/spawn_all_minions"}}]
 tellraw @s ["",{"text":"[列出全部坐标]","color":"#62D9E8","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/function rpg:campaign/beelzebub/debug/list_positions"}}]
