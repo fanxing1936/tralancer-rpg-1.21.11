@@ -39,7 +39,10 @@ def button(label, color, value, hover):
 
 
 def display(text, color, key):
-    txt = json.dumps(row(c(text, color, True)), ensure_ascii=False)
+    # Since 1.21.5 text components in entity SNBT are structured values.  row()
+    # already returns a valid JSON/SNBT component list; quoting it again turns
+    # the list into a literal string and makes the client render the JSON source.
+    txt = row(c(text, color, True))
     return ("summon minecraft:text_display ~ ~1.15 ~ {Tags:[\"rpg.ch1.scene\",\"rpg.ch1.label\","
             f"\"rpg.ch1.{key}.label\",\"rpg.ch1.new\"],billboard:\"center\",see_through:1b,"
             f"shadow:1b,background:0,view_range:0.65f,text:{txt}}}")

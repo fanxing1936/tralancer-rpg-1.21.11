@@ -256,9 +256,20 @@ if observation_ticks < 700: errors.append("active investigation rhythm is shorte
 # Cleanup and performance safety: no terrain edits, no broad world deletion,
 # no heavy repeating selector lacking an ownership tag/type.
 campaign_dir = fun / "campaign" / "beelzebub"
+display_count = 0
 for p in campaign_dir.rglob("*.mcfunction"):
     data = p.read_text(encoding="utf-8")
     if re.search(r"\b(setblock|fill|clone|place|forceload)\b", data): errors.append("terrain mutation: " + str(p.relative_to(fun)))
+    for line in data.splitlines():
+        if "summon minecraft:text_display" not in line:
+            continue
+        display_count += 1
+        if re.search(r'text:"\[\\"', line):
+            errors.append("text_display component is double-encoded as literal JSON: " + str(p.relative_to(fun)))
+        if "text:[" not in line:
+            errors.append("text_display does not use a direct 1.21.11 component list: " + str(p.relative_to(fun)))
+if display_count < 13:
+    errors.append("campaign investigation displays are unexpectedly missing")
 for rel in ("campaign/beelzebub/finish.mcfunction", "campaign/beelzebub/abort.mcfunction"):
     cleanup_data = read(rel)
     for token in ("rpg.ch1.cleanup.controller", "@a[tag=rpg.ch1.member]", "if score @s rpg_ch1_id =", "rpg.ch1.cleanup.player", "scoreboard players set @a[tag=rpg.ch1.cleanup.player] rpg_ch1_id 0"):

@@ -275,6 +275,61 @@ def block_display(key: str, block: str, scale=0.78) -> str:
             "right_rotation:[0f,0f,0f,1f]}}") % (key, block, scale, scale, scale)
 
 
+def _snbt_quote(value: str) -> str:
+    """Quote a string for an inline 1.21.5+ SNBT text component."""
+    return "'" + value.replace("\\", "\\\\").replace("'", "\\'") + "'"
+
+
+def _component_snbt(value) -> str:
+    """Serialize the JSON text-component subset used by scene labels."""
+    if isinstance(value, str):
+        return _snbt_quote(value)
+    if value is True:
+        return "true"
+    if value is False:
+        return "false"
+    if value is None:
+        return "null"
+    if isinstance(value, (int, float)):
+        return repr(value)
+    if isinstance(value, list):
+        return "[" + ",".join(_component_snbt(item) for item in value) + "]"
+    if isinstance(value, dict):
+        parts = []
+        for key, item in value.items():
+            snbt_key = key if re.fullmatch(r"[A-Za-z0-9_.+-]+", key) else _snbt_quote(key)
+            parts.append(snbt_key + ":" + _component_snbt(item))
+        return "{" + ",".join(parts) + "}"
+    raise TypeError("unsupported text component value: %r" % (value,))
+
+
+_WRAPPED_TEXT_COMPONENT = re.compile(
+    r'(?P<prefix>\btext\s*:\s*)"(?P<payload>(?:\\.|[^"\\])*)"')
+
+
+def _inline_text_display_component(line: str) -> str:
+    """Migrate JSON-in-a-string text_display NBT to inline component SNBT."""
+    if "summon minecraft:text_display" not in line:
+        return line
+
+    def replace(match: re.Match) -> str:
+        # Decode the outer SNBT double-quoted string, then its JSON payload.
+        wrapped = '"' + match.group("payload") + '"'
+        try:
+            payload = json.loads(wrapped)
+        except json.JSONDecodeError as exc:
+            raise RuntimeError("invalid wrapped text_display string: %s" % line) from exc
+        if not payload.lstrip().startswith(("[", "{")):
+            return match.group(0)
+        try:
+            component = json.loads(payload)
+        except json.JSONDecodeError as exc:
+            raise RuntimeError("invalid wrapped text_display component: %s" % line) from exc
+        return match.group("prefix") + _component_snbt(component)
+
+    return _WRAPPED_TEXT_COMPONENT.sub(replace, line, count=1)
+
+
 def owned_prop(local: str, command: str, entity_type: str) -> list[str]:
     return [
         "execute positioned %s run %s" % (local, command),
@@ -377,6 +432,9 @@ def normalise_existing_displays() -> None:
             if "summon minecraft:text_display" in line:
                 line = line.replace('\\"color\\":\\"#5A6B1E\\"',
                                     '\\"color\\":\\"#B5D957\\"')
+                line = line.replace('color:"#5A6B1E"', 'color:"#B5D957"')
+                line = line.replace("color:'#5A6B1E'", "color:'#B5D957'")
+                line = _inline_text_display_component(line)
             lines.append(line)
         target.write_text("\n".join(lines).rstrip("\n") + "\n",
                           encoding="utf-8", newline="\n")

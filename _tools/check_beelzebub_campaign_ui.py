@@ -211,6 +211,14 @@ def main() -> None:
             require(body.count("summon minecraft:text_display") <=
                     body.count("scoreboard players operation @e[type=minecraft:text_display,tag=rpg.ch1.new"),
                     "%s text display lacks ID inheritance" % target.relative_to(FUN))
+            for line_no, line in enumerate(body.splitlines(), 1):
+                if "summon minecraft:text_display" not in line:
+                    continue
+                where = "%s:%d" % (target.relative_to(FUN), line_no)
+                require(re.search(r"\btext\s*:\s*\[", line) is not None,
+                        where + " text_display is not an inline 1.21.11 component list")
+                require(re.search(r"\btext\s*:\s*[\"']\s*[\[{]", line) is None,
+                        where + " text_display still wraps JSON/SNBT in a string")
     require("see_through:1b" not in campaign_text,
             "world label leaks through walls")
     ranges = [float(x) for x in re.findall(r"view_range:([0-9.]+)f", campaign_text)]
