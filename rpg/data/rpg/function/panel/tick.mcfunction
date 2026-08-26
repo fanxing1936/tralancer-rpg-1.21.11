@@ -11,6 +11,7 @@ execute if score @s rpg_panel matches 3 run function rpg:panel/pact
 execute if score @s rpg_panel matches 4 run function rpg:panel/squad
 execute if score @s rpg_panel matches 5 run function rpg:panel/hud_toggle
 execute if score @s rpg_panel matches 6 run function rpg:panel/help
+execute if score @s rpg_panel matches 7 run function rpg:panel/endless
 execute if score @s rpg_panel matches 8 run function rpg:panel/open
 execute if score @s rpg_panel matches 9 run function rpg:divine/judgment/arm
 execute if score @s rpg_panel matches 10 run function rpg:divine/gift
@@ -19,4 +20,6 @@ execute if score @s rpg_panel matches 12 run function rpg:campaign/beelzebub/sta
 execute if score @s rpg_panel matches 13 run function rpg:campaign/beelzebub/rescue
 execute if score @s rpg_panel matches 14 run function rpg:campaign/beelzebub/join
 execute if score @s rpg_panel matches 15 run function rpg:campaign/beelzebub/next_hunt
+execute if score @s rpg_panel matches 16 run function rpg:endless/start
+execute if score @s rpg_panel matches 17 run function rpg:endless/join
 execute if score @s rpg_panel matches 1.. run scoreboard players set @s rpg_panel 0

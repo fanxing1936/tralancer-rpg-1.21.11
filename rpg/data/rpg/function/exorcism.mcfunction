@@ -64,3 +64,8 @@ execute if entity @e[type=minecraft:marker,tag=rpg.lt.gathering,limit=1] run fun
 execute if entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] run execute as @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] at @s run function rpg:campaign/beelzebub/tick
 
 execute if entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] run execute as @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] at @s run function rpg:campaign/beelzebub/ui/tick
+
+
+# 无尽驱魔控制器：公共 Bossbar 只允许一个活动实例。
+execute as @a[tag=rpg.end.member] unless entity @e[type=minecraft:marker,tag=rpg.end.controller,limit=1] run function rpg:endless/member/stale_cleanup
+execute if entity @e[type=minecraft:marker,tag=rpg.end.controller,limit=1] run execute as @e[type=minecraft:marker,tag=rpg.end.controller,limit=1] at @s run function rpg:endless/tick

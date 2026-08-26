@@ -1,3 +1,4 @@
+execute if entity @e[type=minecraft:marker,tag=rpg.end.controller,limit=1] run return run tellraw @s ["",{"text":"[回廊封锁] ","color":"#FF806B","bold":true,"italic":false},{"text":"无尽副本正在运行，暂时不能开启第一章。","color":"#706B5E","bold":false,"italic":false}]
 execute if entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] run return run tellraw @s ["",{"text":"[第一章] 已有调查实例；请从档案选择加入。","color":"#8B2500","bold":false,"italic":false}]
 execute if entity @s[gamemode=spectator] run return run tellraw @s ["",{"text":"[场地校验] 旁观者不能发起章节。","color":"#8B2500","bold":false,"italic":false}]
 execute unless dimension minecraft:overworld run return run tellraw @s ["",{"text":"[场地校验] 第一章只能在配置维度展开。","color":"#8B2500","bold":false,"italic":false}]

@@ -179,7 +179,10 @@ def name_json(lord, role, spirit):
 
 
 def summon_snbt(index, role_index, lord, role, spirit):
-    no_ai = ",NoAI:1b" if role.get("no_ai") else ""
+    # Ritualists intentionally delegate all spell logic to the datapack.
+    # Hexers must keep vanilla pathfinding enabled; declaring the false value
+    # explicitly also repairs entities copied from an older NoAI summon.
+    no_ai = ",NoAI:1b" if role.get("no_ai") else (",NoAI:0b" if role_index == 4 else "")
     return (
         "{Tags:[\"rpg.demon.minion\",\"rpg.demon.minion.new\",\"rpg.demon.minion.lord%d\",\"rpg.demon.minion.role%d\"],"
         "CanJoinRaid:0b,PersistenceRequired:1b,CustomNameVisible:1b%s,CustomName:%s,Health:%sf,"
@@ -320,10 +323,16 @@ execute as @e[tag=rpg.demon.minion] at @s run function rpg:minion/entity_tick
     write("minion/entity_tick.mcfunction", """execute if entity @s[tag=rpg.demon.minion.casting,scores={rpg_mn_cast=1..}] run scoreboard players remove @s rpg_mn_cast 10
 execute if entity @s[tag=rpg.demon.minion.casting,scores={rpg_mn_cast=..0}] run return run function rpg:minion/resolve_dispatch
 execute if entity @s[tag=rpg.demon.minion.casting] run return 0
+execute if entity @s[scores={rpg_mn_role=4}] run function rpg:minion/role/hexer_move
 execute if entity @s[scores={rpg_mn_cd=1..}] run scoreboard players remove @s rpg_mn_cd 10
 execute if entity @s[scores={rpg_mn_role=3}] unless entity @a[distance=..14,gamemode=!spectator,gamemode=!creative,limit=1] run return 0
 execute unless entity @s[scores={rpg_mn_role=3}] unless entity @a[distance=..12,gamemode=!spectator,gamemode=!creative,limit=1] run return 0
 execute if score #casts rpg_mn_tick matches ..1 if entity @s[scores={rpg_mn_cd=..0}] run function rpg:minion/ability_dispatch
+""")
+    write("minion/role/hexer_move.mcfunction", """# 咒使补偿寻路：幻术师原生 AI 在脱离袭击后可能不主动接近玩家。
+# 每十刻只在远距离、前方两格可通行时迈进，不穿墙且保留远程站位。
+data merge entity @s {NoAI:0b}
+execute facing entity @a[distance=10..28,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] feet if block ^ ^ ^0.7 minecraft:air if block ^ ^1 ^0.7 minecraft:air run tp @s ^ ^ ^0.45
 """)
     dispatch = ["# 柱位与职责共同决定独立能力。"]
     resolve = ["# 蓄势结束后按柱位与职责结算；随后清除施法态。"]

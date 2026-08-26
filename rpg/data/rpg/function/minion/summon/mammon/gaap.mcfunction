@@ -12,4 +12,4 @@ tag @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] remove rpg.de
 particle wax_on ~ ~1 ~ 0.55 0.75 0.55 0.035 18
 particle soul ~ ~1 ~ 0.35 0.65 0.35 0.025 10
 playsound minecraft:block.amethyst_block.chime hostile @a[distance=..28] ~ ~ ~ 0.55 0.9
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#987B08","bold":true,"italic":false},{"text":"玛门 · ","color":"#B7950B","bold":false,"italic":false},{"text":"司祭 ","color":"gray","bold":false,"italic":false},{"text":"盖布","color":"#FFD85A","bold":false,"italic":false},{"text":"应召现身。","color":"dark_gray","bold":false,"italic":false}]
+execute unless entity @s[tag=rpg.end.controller] run tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#987B08","bold":true,"italic":false},{"text":"玛门 · ","color":"#B7950B","bold":false,"italic":false},{"text":"司祭 ","color":"gray","bold":false,"italic":false},{"text":"盖布","color":"#FFD85A","bold":false,"italic":false},{"text":"应召现身。","color":"dark_gray","bold":false,"italic":false}]

@@ -7,7 +7,7 @@
 规则很窄：
 
 * 短标签式恶魔姓名使用契约主色；罪器本名例外保留青色，契约柱名用白色；
-* 物品 ``custom_name`` 中，方括号前缀可以继续加粗，其余本名/后缀强制不加粗；
+* 方括号前缀可以继续加粗；恶魔本名与物品 ``custom_name`` 的其余后缀强制不加粗；
 * 不改 lore 的强调，不改技能名、数值或玩法。
 """
 
@@ -74,6 +74,12 @@ def polish_component(node, *, item_name=False, colour_names=True, stats=None):
                 if node.get("color") != colour:
                     node["color"] = colour
                     stats["demon_colour"] += 1
+                # Text-component styles inherit from the preceding/root
+                # component.  Be explicit so a bold [DEVIL] prefix cannot
+                # make the proper name bold as well.
+                if not is_prefix(value) and node.get("bold") is not False:
+                    node["bold"] = False
+                    stats["demon_unbold"] += 1
                 stats["seen"][who] += 1
                 break
 
@@ -414,6 +420,8 @@ def validate(stats):
                 for who, colour in DEMON_COLOURS.items():
                     if is_name_label(value, who) and component.get("color") != colour:
                         wrong.append("%s: %s -> %r" % (path, value, component.get("color")))
+                    if is_name_label(value, who) and not is_prefix(value) and component.get("bold") is not False:
+                        bold.append("%s: %s" % (path, value))
                         break
     if wrong:
         raise SystemExit("恶魔姓名色仍有残留：\n" + "\n".join(wrong[:20]))
@@ -428,6 +436,7 @@ def main():
         "suffix_unbold": 0,
         "item_suffix_colour": 0,
         "demon_colour": 0,
+        "demon_unbold": 0,
         "seen": dict((who, 0) for who in DEMON_COLOURS),
     }
     for root, dirs, files in os.walk(DP):
@@ -442,6 +451,7 @@ def main():
     print("恶魔姓名色：%d 处更新；七罪命中 %s" % (
         stats["demon_colour"], ", ".join(
             "%s=%d" % pair for pair in stats["seen"].items())))
+    print("恶魔本名字重：%d 处显式取消粗体继承" % stats["demon_unbold"])
     print("物品名：%d 个 custom_name 规范化，%d 个后缀取消粗体；共改 %d 文件" % (
         stats["custom_names"], stats["suffix_unbold"], stats["files"]))
     print("物品双色：%d 个罪器/契约本名更新（罪器 #55FFFF，契约 #FFFFFF）" %

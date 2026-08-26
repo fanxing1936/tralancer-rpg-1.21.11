@@ -9,6 +9,6 @@ tag @s remove rpg.rite.subject
 function rpg:inquest/phase2/shockwave
 title @a[distance=..18,gamemode=!spectator] times 10 60 15
 title @a[distance=..18,gamemode=!spectator] title ["",{"text":"Ⅱ · 镇　魔","color":"#5B2C6F","bold":true,"italic":false}]
-title @a[distance=..18,gamemode=!spectator] subtitle ["",{"text":"贝利尔 · 真名已被法阵承认","color":"#5B2C6F","italic":false}]
+title @a[distance=..18,gamemode=!spectator] subtitle ["",{"text":"贝利尔 · 真名已被法阵承认","color":"#5B2C6F","italic":false,"bold":false}]
 tellraw @a[distance=..18,gamemode=!spectator] ["",{"text":"[显形] ","color":"#5B2C6F","bold":true,"italic":false},{"text":"稳定度 50 / 100 · 右键布下弱点媒介：","color":"gray","italic":false},{"text":"紫水晶碎片 · 清醒之镜","color":"white","bold":true,"italic":false}]
 playsound minecraft:block.beacon.power_select player @a[distance=..24] ~ ~ ~ 1 1.25

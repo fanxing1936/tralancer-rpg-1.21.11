@@ -85,6 +85,15 @@ CAMPAIGN = [
 for stage, label in enumerate(STAGES):
     CAMPAIGN.append(command(f"/function rpg:campaign/beelzebub/debug/stage/{stage}", f"跳转到 Stage {stage}「{label}」。", "附近必须已有第一章控制器；自动清理旧阶段现场。", "章节实例", "不写首通"))
 
+ENDLESS = [
+    command("/function rpg:endless/start", "以执行者当前位置开启无尽驱魔「七柱回廊」。", "必须由玩家在安全空地执行；第一章或其他无尽实例运行时会拒绝。", "单一公共副本", "正式入口"),
+    command("/function rpg:endless/join", "加入附近 16 格内正在运行的七柱回廊。", "必须由玩家执行；从下一次层末结算开始获得奖励。", "个人副本成员", "加入"),
+    command("/function rpg:endless/abort", "关闭附近的七柱回廊并清理所属敌人。", "必须站在控制器 96 格内；历史最深层记录保留。", "副本实体", "清理"),
+    command("/function rpg:endless/debug/menu", "打开无尽驱魔调试台。", "必须由玩家执行；可开启、加入、清理或跳转测试层。", "无", "推荐"),
+]
+for floor in (1, 5, 10, 25, 50, 72, 100):
+    ENDLESS.append(command(f"/function rpg:endless/debug/floor/{floor}", f"把附近七柱回廊跳转至第 {floor} 层。", "附近必须已有控制器；清理当前敌人，不补发跳过层奖励。", "副本当前层", "调试跳层"))
+
 CATEGORIES = [
     ("初始化", "首次装包与测试世界基础设施", SYSTEM),
     ("测试物品发放", "优先用潜影盒；@a 群体发放项已单独标注", GIVE),
@@ -92,6 +101,7 @@ CATEGORIES = [
     ("Boss、试炼与军团", "均在执行位置或附近生成实体／方块", BOSSES),
     ("七柱罪仆", "每柱包含一条五职整队命令与五条单体命令", MINIONS),
     ("第一章 · 空缺者", "正式入口、调试台、补生与 Stage 0–10 跳转", CAMPAIGN),
+    ("无尽驱魔 · 七柱回廊", "正式入口、多人加入、清理与 1–100 层关键节点跳转", ENDLESS),
 ]
 ALL_COMMANDS = [item for _name, _note, items in CATEGORIES for item in items]
 

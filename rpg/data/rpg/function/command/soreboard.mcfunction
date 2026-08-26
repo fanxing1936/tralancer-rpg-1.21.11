@@ -324,3 +324,15 @@ scoreboard objectives add rpg_ch1_hp dummy
 scoreboard objectives add rpg_ch1_rescue dummy
 scoreboard objectives add rpg_ch1_verdict dummy
 scoreboard objectives add rpg_ch1_session dummy
+scoreboard objectives add rpg_end_id dummy
+scoreboard objectives add rpg_end_floor dummy
+scoreboard objectives add rpg_end_state dummy
+scoreboard objectives add rpg_end_time dummy
+scoreboard objectives add rpg_end_idle dummy
+scoreboard objectives add rpg_end_pick trigger
+scoreboard objectives add rpg_end_leave trigger
+scoreboard objectives add rpg_end_claim dummy
+scoreboard objectives add rpg_end_best dummy
+scoreboard objectives add rpg_end_power dummy
+scoreboard objectives add rpg_end_vital dummy
+scoreboard objectives add rpg_end_tmp dummy

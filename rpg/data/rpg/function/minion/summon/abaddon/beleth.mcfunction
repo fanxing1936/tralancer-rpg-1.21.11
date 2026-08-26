@@ -12,4 +12,4 @@ tag @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] remove rpg.de
 particle sculk_soul ~ ~1 ~ 0.55 0.75 0.55 0.035 18
 particle soul ~ ~1 ~ 0.35 0.65 0.35 0.025 10
 playsound minecraft:entity.warden.heartbeat hostile @a[distance=..28] ~ ~ ~ 0.55 0.9
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#5B5B62","bold":true,"italic":false},{"text":"亚巴顿 · ","color":"#6A6A70","bold":false,"italic":false},{"text":"司祭 ","color":"gray","bold":false,"italic":false},{"text":"贝雷特","color":"#C2C2CC","bold":false,"italic":false},{"text":"应召现身。","color":"dark_gray","bold":false,"italic":false}]
+execute unless entity @s[tag=rpg.end.controller] run tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#5B5B62","bold":true,"italic":false},{"text":"亚巴顿 · ","color":"#6A6A70","bold":false,"italic":false},{"text":"司祭 ","color":"gray","bold":false,"italic":false},{"text":"贝雷特","color":"#C2C2CC","bold":false,"italic":false},{"text":"应召现身。","color":"dark_gray","bold":false,"italic":false}]

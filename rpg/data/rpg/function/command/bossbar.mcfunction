@@ -15,3 +15,9 @@ bossbar add minecraft:devil4 {"text":"devil","bold":true}
 bossbar set minecraft:devil4 color blue
 bossbar set minecraft:devil4 max 1000
 bossbar set minecraft:devil4 style notched_6
+bossbar add rpg:endless ["",{"text":"无尽驱魔 · 七柱回廊","color":"#D4AF37","bold":true,"italic":false}]
+bossbar set rpg:endless max 5
+bossbar set rpg:endless value 0
+bossbar set rpg:endless color yellow
+bossbar set rpg:endless style notched_10
+bossbar set rpg:endless visible true

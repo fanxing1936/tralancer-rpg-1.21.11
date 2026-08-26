@@ -228,6 +228,12 @@ def all_direct_give_keys():
             path = os.path.join(root, name)
             if not name.endswith(".mcfunction") or os.path.normcase(path) == os.path.normcase(OUT):
                 continue
+            # Endless floor rewards are ordinary Minecraft materials produced
+            # at runtime, not authored catalogue items.  Treating those payout
+            # tables as canonical give sources would incorrectly force them
+            # into the custom-item testing shulker boxes.
+            if relpath(path).startswith("endless/reward/"):
+                continue
             for line in io.open(path, encoding="utf-8"):
                 parsed = parse_give(line)
                 if parsed:

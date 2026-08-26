@@ -1,5 +1,5 @@
 tellraw @s ["",{"text":"+------ 第一章 · 空缺者 ------+","color":"#B8A98B","bold":true,"italic":false}]
-tellraw @s ["",{"text":"别西卜驱魔战役","color":"#5A6B1E","bold":true,"italic":false},{"text":"　30–60 分钟","color":"dark_gray","bold":false,"italic":false}]
+tellraw @s ["",{"text":"别西卜驱魔战役","color":"#5A6B1E","bold":false,"italic":false},{"text":"　30–60 分钟","color":"dark_gray","bold":false,"italic":false}]
 function rpg:campaign/beelzebub/recap/menu
 execute unless entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] run tellraw @s ["",{"text":"[接受后方城市调查令]","color":"#D4AF37","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 12"},"hover_event":{"action":"show_text","value":{"text":"以当前位置建立无地形破坏的章节实例","color":"gray","bold":false,"italic":false}}}]
 execute if entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] unless entity @s[tag=rpg.ch1.accepted] run tellraw @s ["",{"text":"[加入当前调查]","color":"#B5D957","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 14"},"hover_event":{"action":"show_text","value":{"text":"需在控制器 96 格内；罪仆战开始后关闭加入","color":"gray","bold":false,"italic":false}}}]

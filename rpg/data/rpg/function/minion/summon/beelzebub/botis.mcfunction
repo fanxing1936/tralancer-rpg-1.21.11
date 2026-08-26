@@ -12,4 +12,4 @@ tag @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] remove rpg.de
 particle spore_blossom_air ~ ~1 ~ 0.55 0.75 0.55 0.035 18
 particle soul ~ ~1 ~ 0.35 0.65 0.35 0.025 10
 playsound minecraft:entity.spider.ambient hostile @a[distance=..28] ~ ~ ~ 0.55 0.9
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#596B18","bold":true,"italic":false},{"text":"别西卜 · ","color":"#5A6B1E","bold":false,"italic":false},{"text":"猎手 ","color":"gray","bold":false,"italic":false},{"text":"布提斯","color":"#B5D957","bold":false,"italic":false},{"text":"应召现身。","color":"dark_gray","bold":false,"italic":false}]
+execute unless entity @s[tag=rpg.end.controller] run tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#596B18","bold":true,"italic":false},{"text":"别西卜 · ","color":"#5A6B1E","bold":false,"italic":false},{"text":"猎手 ","color":"gray","bold":false,"italic":false},{"text":"布提斯","color":"#B5D957","bold":false,"italic":false},{"text":"应召现身。","color":"dark_gray","bold":false,"italic":false}]

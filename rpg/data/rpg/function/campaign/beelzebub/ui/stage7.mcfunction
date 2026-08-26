@@ -1,5 +1,5 @@
 execute if score @s rpg_ch1_sub matches 0 run bossbar set rpg:chapter1 color yellow
-execute if score @s rpg_ch1_sub matches 0 run bossbar set rpg:chapter1 name ["",{"text":"粮仓门内｜别西卜尚未现身","color":"#5A6B1E","bold":true,"italic":false}]
+execute if score @s rpg_ch1_sub matches 0 run bossbar set rpg:chapter1 name ["",{"text":"粮仓门内｜别西卜尚未现身","color":"#5A6B1E","bold":false,"italic":false}]
 execute if score @s rpg_ch1_sub matches 1 run bossbar set rpg:chapter1 color green
 execute as @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current,scores={rpg_ex_stage=0},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 name ["",{"text":"驱魔·一｜权能见证 ","color":"#B7C84B","bold":true,"italic":false},{"score":{"name":"@e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1]","objective":"rpg_ch1_seen"},"color":"#FFF6C7","bold":false,"italic":false},{"text":" / 3","color":"dark_gray","bold":false,"italic":false}]
 execute as @e[type=minecraft:vindicator,tag=rpg.ch1.boss.current,scores={rpg_ex_stage=1},limit=1] if score @s rpg_ch1_id = @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] rpg_ch1_id run bossbar set rpg:chapter1 color yellow

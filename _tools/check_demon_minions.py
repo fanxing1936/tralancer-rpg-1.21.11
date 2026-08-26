@@ -100,6 +100,8 @@ for lord_index, (lord, spirits) in enumerate(LORDS, 1):
             problems.append("%s/%s is not independently persistent" % (lord, spirit))
         if role_index == 3 and "NoAI:1b" not in summon:
             problems.append("%s ritualist can cast uncontrolled vanilla evoker spells" % lord)
+        if role_index == 4 and "NoAI:0b" not in summon:
+            problems.append("%s hexer does not explicitly keep pathfinding enabled" % lord)
         if '"rpg.demon"' in "\n".join(summon_lines):
             problems.append("%s/%s reuses boss-only tag" % (lord, spirit))
         if "rpg_mn_lord %d" % lord_index not in summon or "rpg_mn_role %d" % role_index not in summon:
@@ -193,6 +195,12 @@ for token in ("rpg_mn_cast=1..", "rpg_mn_cast=..0", "function rpg:minion/resolve
         problems.append("runtime two-stage cast transition missing: " + token)
 if "rpg_mn_role=3}] unless entity @a[distance=..14" not in entity_tick or "unless entity @s[scores={rpg_mn_role=3}] unless entity @a[distance=..12" not in entity_tick:
     problems.append("ritualist 14-block support trigger is not separated from the 12-block combat trigger")
+hexer_move = read("minion/role/hexer_move.mcfunction")
+if "rpg_mn_role=4}] run function rpg:minion/role/hexer_move" not in entity_tick:
+    problems.append("hexer movement recovery is not wired into the shared beat")
+for token in ("NoAI:0b", "distance=10..28", "if block ^ ^ ^0.7 minecraft:air", "tp @s ^ ^ ^0.45"):
+    if token not in hexer_move:
+        problems.append("hexer movement recovery missing: " + token)
 resolve_dispatch = read("minion/resolve_dispatch.mcfunction")
 if resolve_dispatch.count("function rpg:minion/ability/resolve/") != 35:
     problems.append("resolve dispatch does not expose all 35 delayed abilities")

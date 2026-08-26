@@ -12,6 +12,7 @@ S = json.load(io.open("../_guide_sections.json", encoding="utf-8"))
 Q = json.load(io.open("../_squad.json", encoding="utf-8"))
 D = json.load(io.open("../_divine.json", encoding="utf-8"))
 C = json.load(io.open("../_campaign_beelzebub.json", encoding="utf-8"))
+E = json.load(io.open("../_endless_exorcism_config.json", encoding="utf-8"))
 
 
 def on_dark(hexcol):
@@ -153,6 +154,40 @@ def campaign_section():
 <div class="note"><b>统一配置：</b><code>_campaign_beelzebub_config.json</code> 集中管理本章 15 类物品引用、Boss、NPC、五名罪仆、33 个相对生成位置、场地与作用半径、调查／谜题读条、恢复窗口和多人血量。修改后重新构建数据包即可生效；生成包内的摘要会校验当前配置，防止误装旧版本。</div>
 <div class="note"><b>后续章节制作：</b><code>CHAPTER-PRODUCTION-PLAYBOOK.md</code> 已整理第一章的剧情、解谜、状态机、配置、UI、独立终审与发布经验，可作为下一章的直接开工清单。</div>
 </section>'''
+
+
+def endless_section():
+    qualities = " → ".join(item["label"] for item in E["reward_quality"])
+    return f'''<section class="plate" id="s17">
+<div class="plate-h"><span class="num">∞</span><h2>无尽驱魔 · 七柱回廊</h2><span class="sub">完整 72 柱 · 每 {E["boss_interval"]} 层领主战 · 三路线成长</span></div>
+<blockquote class="verse">回廊不会创造新的名字；它只会让已经被记录的名字，以更深的代价重新归来。<cite>——边缘者训练庭记录</cite></blockquote>
+<p>以玩家当前位置建立副本原点，逐层清除所罗门罪群。普通层覆盖完整 72 柱：前 35 位保留七罪直属身份，后 37 位游离魔神按五种职责与七类罪性亲和参战；同层不会出现重复恶魔。Boss 层不消耗编队序号，完成 72 个普通战斗层后进入新的深渊轮回，编队可以重现，但难度与奖励继续提升。</p>
+
+<div class="sys">
+<div><h3>普通层</h3><p class="how">3 → 4 → 5 名罪仆</p><p>第 10 层起增加第四名，第 25 层起形成五职编队。两人队至少四名、四人队完整五名；敌人越过 {E["enemy_leash_radius"]} 格会被拉回原点。</p></div>
+<div><h3>领主层</h3><p class="how">每 {E["boss_interval"]} 层一次</p><p>路西法、利维坦、亚巴顿、别西卜、萨麦尔、贝利尔、玛门依次降临。领主继承原本技能、配色和演出，并按深度提高生命、攻击与护甲。</p></div>
+<div><h3>难度与轮回</h3><p class="how">每 {E["difficulty"]["tier_every_floors"]} 层提高一档</p><p>数值成长覆盖 20 档至第 100 层；之后维持最高战斗数值，轮回编号、历史层数、Boss 宝库与神话奖励仍继续推进。</p></div>
+<div><h3>多人恢复</h3><p class="how">独立奖励 · 自动暂停</p><p>开启时 {E["start_party_radius"]} 格内玩家自动加入；后到者可在 16 格内加入。{E["active_radius"]} 格内没有成员时暂停，五分钟无人返回才清场。</p></div>
+</div>
+
+<h3 class="sub-h">层末三选一<span class="rolls">每名玩家独立选择 · {E["reward_window_ticks"] // 20} 秒超时自动遗珍</span></h3>
+<div class="tw"><table><thead><tr><th>路线</th><th>即时效果</th><th>本轮成长</th></tr></thead><tbody>
+<tr><td><b style="color:#B5D957">圣恩</b></td><td>恢复生命并获得短时再生</td><td>生存恩赐 +1，最高 8 层；后续层提高最大生命、护甲与抗击退</td></tr>
+<tr><td><b style="color:#FF665E">断罪</b></td><td>立即应用本轮输出强化</td><td>输出恩赐 +1，最高 8 层；后续层提高攻击与移动速度</td></tr>
+<tr><td><b style="color:#C28BE0">遗珍</b></td><td>立即领取当前深度物资</td><td>不增加战斗增益，以风险换取资源；品质为 {qualities}</td></tr>
+</tbody></table></div>
+<div class="note"><b>每层都有回报。</b>三条路线都会获得随难度档位增长的驱魔阅历；领主层另发宝库奖励。遗珍会从金锭、绿宝石和铁块逐步提升到钻石、回响碎片、下界合金碎片、下界合金锭与附魔金苹果。</div>
+
+<h3 class="sub-h">入口与调试<span class="rolls">玩家面板 · 可配置坐标</span></h3>
+<div class="tw"><table><thead><tr><th>入口</th><th>作用</th></tr></thead><tbody>
+<tr><td class="num">玩家面板 → 无尽副本</td><td>查看历史最深层，开启、加入或离开七柱回廊。</td></tr>
+<tr><td class="num">/function rpg:endless/start</td><td>以当前位置和朝向建立副本；第一章运行时会拒绝。</td></tr>
+<tr><td class="num">/function rpg:endless/join</td><td>加入附近 16 格内的活动副本，从下一次层末结算开始领奖。</td></tr>
+<tr><td class="num">/function rpg:endless/debug/menu</td><td>跳转第 1／5／10／25／50／72／100 层；不补发跳过层奖励。</td></tr>
+</tbody></table></div>
+<div class="note"><b>完整配置：</b><code>_endless_exorcism_config.json</code> 管理五个罪仆槽、领主坐标、活动与拉回半径、层间节拍及人数增兵层数。详细设计、奖励表和恢复规则见 <code>ENDLESS-EXORCISM.md</code>。</div>
+</section>'''
+
 
 HEAD = u"""<title>破碎大陆</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -480,6 +515,7 @@ def build():
 <li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
 <li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
 <li><a href="#s16"><span class="num">CH.I</span>第一章·空缺者</a></li>
+<li><a href="#s17"><span class="num">∞</span>无尽驱魔·七柱回廊</a></li>
 <li><a href="#s14"><span class="num">X</span>驱魔道具</a></li>
 <li><a href="#s12"><span class="num">XI</span>七十二柱契约</a></li>
 <li><a href="#s15"><span class="num">XII</span>卡巴拉上位契约</a></li>
@@ -504,7 +540,7 @@ def build():
 <li><div><h3>布置试炼与宝库<span class="opt">可选</span></h3><p>在脚下生成一组不祥试炼刷怪笼与宝库，掉落表指向本包的 <code>rpg:trial/*</code> 与 <code>rpg:loot/*</code>。站在要放置的位置执行。</p><code class="cmd">/function rpg:command/setblock</code></div></li>
 <li><div><h3>召唤恶魔 BOSS<span class="opt">可选</span></h3><p>在脚下生成 1000 点生命的恶魔（唤魔者本体 + 卫道士护卫）。战斗全程由 <code>rpg:entities/warden/warden</code> 每刻驱动。</p><code class="cmd">/function rpg:command/summon</code></div></li>
 </ol>
-<div class="note"><b>完整调试手册：</b>本页末尾的<a href="#debug-catalog">调试指令总表</a>收录 <b>''' + str(len(ALL_COMMANDS)) + '''</b> 个公开入口，逐条标明执行者、前置条件、影响范围与风险。推荐先用 <code>/function rpg:command/give/box</code> 领取分类潜影盒；第一章统一从 <code>/function rpg:campaign/beelzebub/debug/menu</code> 进入。</div>
+<div class="note"><b>完整调试手册：</b>本页末尾的<a href="#debug-catalog">调试指令总表</a>收录 <b>''' + str(len(ALL_COMMANDS)) + '''</b> 个公开入口，逐条标明执行者、前置条件、影响范围与风险。推荐先用 <code>/function rpg:command/give/box</code> 领取分类潜影盒；第一章使用 <code>/function rpg:campaign/beelzebub/debug/menu</code>，无尽副本使用 <code>/function rpg:endless/debug/menu</code>。</div>
 <div class="note"><b>公共入口边界：</b><code>*_worker</code>、每刻 tick、伤害结算、UI 刷新与阶段内部函数不是调试接口。它们依赖调用上下文，手动执行容易留下半成品状态，因此未列入可复制命令。</div>
 <div class="note"><b>独立文档：</b><code>DEBUG-COMMANDS.md</code> 与本介绍页由同一清单生成，适合在编辑器中检索、复制或随工程一起归档。</div>
 <div class="note"><b>玩家等级：</b>玩家的经验等级即角色等级。等级每提升一档，最大生命值会按 64/32/16/8/4/2/1 的分段自动加成，并播放升级特效——无需任何额外操作。</div>
@@ -786,6 +822,9 @@ def build():
     # Campaign Chapter I ----------------------------------------------------
     a(campaign_section())
 
+    # Endless exorcism ------------------------------------------------------
+    a(endless_section())
+
     # X rite kit -------------------------------------------------------------
     a('''<section class="plate" id="s14">
 <div class="plate-h"><span class="num">X</span><h2>驱魔道具</h2><span class="sub">基础四件 · 七种仪式工具</span></div>
@@ -980,12 +1019,12 @@ def build():
     a('''<section class="plate" id="s11">
 <div class="plate-h" id="debug-catalog"><span class="num">XV</span><h2>调试指令总表</h2><span class="sub">''' + str(len(ALL_COMMANDS)) + ''' 个公开入口 · rpg 命名空间</span></div>
 <p>以下命令均经过工程路径核对，可直接复制。默认需要开启作弊或拥有管理员权限；含 <code>@s</code> 的函数必须由目标玩家本人执行。风险标记不是装饰：<strong>群体发放</strong>会影响所有在线玩家，<strong>持久实体</strong>不会在离场后自动消失，<strong>全局清理</strong>会作用于当前维度全部目标。</p>
-<div class="note"><b>推荐顺序：</b>首次测试先确认计分板与 Bossbar 已由加载标签建立，再补建 green 队伍；需要全套内容时使用分类潜影盒。章节联调从第一章调试台进入，阶段跳转只用于预览，不会写入永久首通和奖励。</div>
+<div class="note"><b>推荐顺序：</b>首次测试先确认计分板与 Bossbar 已由加载标签建立；需要全套内容时使用分类潜影盒。章节联调从第一章调试台进入，无尽副本从七柱回廊调试台进入；跳转只用于测试，不会补发首通或跳层奖励。</div>
 ''' + render_debug_commands() + '''
 <div class="note"><b>每刻运行的函数</b>由 <code>#minecraft:tick</code> 驱动，依次为 <code>rpg:command/index</code>（标志索引与伤害检测）→ <code>rpg:command/tick</code>（合成、试炼、等级）→ <code>rpg:item/sword/legend/legend1</code>（武器技能）→ <code>rpg:entities/warden/warden</code>（BOSS 战）→ <code>rpg:command/tick_end</code>。正常游玩无需手动调用。</div>
 </section>''')
 
-    a('<footer>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）　·　第一章战役制作与验证：Codex（OpenAI）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
+    a('<footer>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）　·　第一章与无尽副本制作验证：Codex（OpenAI）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
     a('</main></div></div>')
 
     a('''<script>

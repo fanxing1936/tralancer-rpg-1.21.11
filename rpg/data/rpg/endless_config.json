@@ -1,0 +1,76 @@
+{
+  "schema": 2,
+  "name": "无尽驱魔 · 七柱回廊",
+  "boss_interval": 5,
+  "roster_cycle": 72,
+  "reward_window_ticks": 400,
+  "intermission_ticks": 120,
+  "start_party_radius": 12,
+  "active_radius": 96,
+  "enemy_leash_radius": 48,
+  "idle_abort_ticks": 6000,
+  "spawn_offsets": [
+    [
+      -8,
+      0,
+      12
+    ],
+    [
+      8,
+      0,
+      12
+    ],
+    [
+      0,
+      0,
+      16
+    ],
+    [
+      -12,
+      0,
+      18
+    ],
+    [
+      12,
+      0,
+      18
+    ]
+  ],
+  "boss_offset": [
+    0,
+    0,
+    16
+  ],
+  "difficulty": {
+    "tier_every_floors": 5,
+    "max_tier": 20,
+    "fourth_enemy_floor": 10,
+    "fifth_enemy_floor": 25
+  },
+  "reward_quality": [
+    {
+      "min_floor": 1,
+      "label": "裂隙"
+    },
+    {
+      "min_floor": 5,
+      "label": "灰烬"
+    },
+    {
+      "min_floor": 10,
+      "label": "圣痕"
+    },
+    {
+      "min_floor": 20,
+      "label": "深渊"
+    },
+    {
+      "min_floor": 35,
+      "label": "启示"
+    },
+    {
+      "min_floor": 50,
+      "label": "神话"
+    }
+  ]
+}

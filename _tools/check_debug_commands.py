@@ -54,6 +54,20 @@ for clicked in re.findall(r'"command":"(/function rpg:[^"]+)"', menu):
     if clicked not in catalogue:
         fail(f"chapter debug menu command missing from catalogue: {clicked}")
 
+endless_debug = FUNCTION_ROOT / "endless" / "debug"
+for path in endless_debug.rglob("*.mcfunction"):
+    expected = "/function rpg:" + path.relative_to(FUNCTION_ROOT).with_suffix("").as_posix()
+    if expected not in catalogue:
+        fail(f"unlisted endless debug entry: {expected}")
+endless_menu = (endless_debug / "menu.mcfunction").read_text(encoding="utf-8")
+for clicked in re.findall(r'"command":"(/function rpg:[^"]+)"', endless_menu):
+    if clicked not in catalogue:
+        fail(f"endless debug menu command missing from catalogue: {clicked}")
+for required in ("/function rpg:endless/start", "/function rpg:endless/join",
+                 "/function rpg:endless/abort", "/function rpg:endless/debug/menu"):
+    if required not in catalogue:
+        fail(f"endless public entry omitted: {required}")
+
 for stage, expected_label in enumerate(STAGES):
     stage_source = (FUNCTION_ROOT / "campaign" / "beelzebub" / "stage" / f"{stage}_enter.mcfunction").read_text(encoding="utf-8")
     match = re.search(r'^bossbar set rpg:chapter1 name .*?"text":"([^"]+)"', stage_source, re.MULTILINE)

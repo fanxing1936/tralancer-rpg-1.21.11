@@ -2657,10 +2657,10 @@ Whilst parsing command on line 6: Expected double at position 36: ...oned ^ ^ ^<
 `opt_cascade.py` 只改这两处，不动任何掷点概率与变种数值 —— 变种照样出
 （实测 30 只僵尸里滚出 2 只铁剑僵尸、4 只僵尸村民），只是不再一代代滚下去。
 
-一个已知的小副作用：被替换掉的那只走 `/kill`，所以会掉一份原版腐肉。
-1.21.11 收紧了实体 NBT 的解析，`DeathLootTable` 已经不存在，原版也没有
-"无掉落移除实体"的命令。多出来的掉落物比多出来的**生物**便宜得多，
-所以这个取舍是划算的。
+一个已知的小副作用：被替换掉的那只走 `/kill`，所以会掉一份原版腐肉。这里没有给
+旧变种补写战利品表，因为它们随后已整体退役；但 1.21.11 仍支持实体
+`DeathLootTable`。现行 35 位直属罪仆使用受控专属表，37 位无尽游柱则显式指向
+`minecraft:empty`，避免司祭的原版唤魔者掉落不死图腾，绕过层末奖励经济。
 
 ## 30.3 一处 O(n²)
 
@@ -3212,6 +3212,34 @@ Stage 0–10 的说明直接对齐运行时状态机，而非误用 11 步剧情
 生成器复活内容；`check_retired_mob_content.py` 则检查文件、tick 引用、公开命令与文档
 残留。这样旧生态的删除是可重建约束，而不是只对当前产物的一次性手工删除。
 
+## 37. 无尽驱魔：有限内容的无尽组合
+
+七柱回廊不把“无尽”理解成无限复制同一只高血量怪物。`add_endless_exorcism.py` 复用
+35 名已有独立姓名、职责、术式和掉落的七罪直属罪仆，并生成剩余 37 位游离魔神；后者
+继承五种清晰战斗职责和七类罪性亲和。五个不同偏移由此生成 72 套互不相同的编队；
+单层依据深度与人数启用其中 3–5 个槽位。领主层不递增普通编队序号；第 90 层领主战
+结束后恰好完成 72 个普通战斗层，第 91 层进入新的深渊轮回，编队可以
+再次出现，但难度、奖励和轮回编号继续增长。每五层则跳过普通编队，按七柱顺序轮换
+700 生命领主，并在捕获后统一应用本层缩放。
+
+副本使用单一公共控制器与 `rpg_end_id` 归属。玩家、罪仆和领主都复制控制器 ID；每刻
+只刷新本实例敌人的临时 `current` 标签。敌人越过 48 格会被拉回，96 格内没有成员时
+状态机暂停，连续五分钟无人返回才清场。第一章与无尽模式在各自入口互相检查控制器，
+避免两个公共 Bossbar／战役状态机同时争用屏幕。
+
+层末奖励按玩家独立结算。圣恩和断罪分别积累最高八层的本轮生存／输出增益，且通过
+命名空间独立的属性修饰器实现；离开、关场或旧 ID 恢复会精确撤销，不会误清玩家原有效果。遗珍直接
+领取随深度变化的物资；20 秒超时会自动选择遗珍。`rpg_end_claim` 在发奖前置位，阻止
+重复 Trigger。控制器每刻只建立 ID 一致的 `rpg.end.member.current`，离线旧标签在玩家
+重新上线后自动清理，因此不会阻塞后续副本；在线成员也不会替他人决定。所有路线都会得到随难度
+增长的驱魔阅历，Boss 层另发宝库奖励，`rpg_end_best` 永久保留历史最深层。
+
+位置、半径、节拍、人数增兵层数和奖励品质声明集中在
+`_endless_exorcism_config.json`。`check_endless_exorcism.py` 会检查 72 套编队无重复、完整 72 柱覆盖、
+单层五名互异、七柱 Boss 轮换、20 档属性、ID 捕获、奖励幂等与超时恢复、面板和加载
+入口，以及禁止直接写 Actionbar。调试台提供第 1／5／10／25／50／72／100 层跳转，
+跳层只改变当前测试层，不补发历史奖励。
+
 ---
 
 # 重建方式
@@ -3240,14 +3268,16 @@ bash "_tools/build.sh"
 　　　　　　→ `add_life_tree_particles.py` + `add_kabbalah_covenant.py`
 　　　　　→ `add_player_panel.py` + `polish_recent_ui.py`
 　　　　　→ `add_divine_covenants.py` + `add_beelzebub_campaign.py`
-　　　　　→ `polish_beelzebub_campaign_ui.py` + `make_boxes.py` + `polish_demon_names.py`
+　　　　　→ `polish_beelzebub_campaign_ui.py` + `add_endless_exorcism.py`
+　　　　　→ `make_boxes.py` + `polish_demon_names.py`
 　　　　　→ `drop_legacy_mob_factions.py`
 　　　　　　→ `validate.py` + `check_adv.py` + `check_ritual_phase2.py`
 　　　　　　→ `check_demon_minions.py` + `check_life_tree_particles.py`
 　　　　　　→ `check_kabbalah_covenant.py` + `check_divine_covenants.py`
 　　　　　　→ `check_beelzebub_campaign.py` + `check_beelzebub_campaign_ui.py`
-　　　　　　→ `check_beelzebub_campaign_config.py` + `check_beelzebub_narrative_ui.py`
-　　　　　→ `check_retired_mob_content.py` + `check_creeper.py` → `profile_tick.py`
+　　　　　→ `check_beelzebub_campaign_config.py` + `check_beelzebub_narrative_ui.py`
+　　　　　→ `check_endless_exorcism.py` + `check_retired_mob_content.py`
+　　　　　→ `check_creeper.py` → `profile_tick.py`
 材质包流程（先跑）：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
 　　　　　→ `add_lucifer.py` + `add_leviathan.py` + `add_runes.py` + `add_epics.py`
