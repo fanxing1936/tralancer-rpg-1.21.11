@@ -14,6 +14,8 @@ execute if score @s rpg_lt_divine matches 2 run function rpg:hud/authority
 execute if entity @s[scores={rpg_pact=1..7}] run function rpg:hud/pact
 execute if entity @s[scores={rpg_pact_cd=1..}] run function rpg:hud/pbar
 execute if score @s rpg_lt_div_cd matches 1.. run function rpg:hud/divine_bar
-execute if entity @s[scores={rpg_hud_on=1,rpg_hud_dmt=1..}] run function rpg:hud/demon/render with storage rpg:hud
-execute if entity @s[scores={rpg_hud_on=1,rpg_hud_dmt=0}] run function rpg:hud/render with storage rpg:hud
-execute if entity @s[scores={rpg_hud_on=0,rpg_hud_dmt=1..}] run function rpg:hud/demon/solo
+execute if entity @s[scores={rpg_hud_dmt=1..},tag=rpg.seal.carrier] run function rpg:hud/demon/render with storage rpg:hud
+execute if entity @s[scores={rpg_hud_on=1,rpg_hud_dmt=1..},tag=!rpg.seal.carrier] run function rpg:hud/demon/render with storage rpg:hud
+execute if entity @s[scores={rpg_hud_dmt=0},tag=rpg.seal.carrier] run function rpg:hud/seal/render with storage rpg:hud
+execute if entity @s[scores={rpg_hud_on=1,rpg_hud_dmt=0},tag=!rpg.seal.carrier] run function rpg:hud/render with storage rpg:hud
+execute if entity @s[scores={rpg_hud_on=0,rpg_hud_dmt=1..},tag=!rpg.seal.carrier] run function rpg:hud/demon/solo

@@ -53,6 +53,18 @@
       ]
     },
     {
+      "type": "bitmap",
+      "file": "rpg:font/seal_status.png",
+      "height": 28,
+      "ascent": 27,
+      "chars": [
+        "\uf300",
+        "\uf301",
+        "\uf302",
+        "\uf303"
+      ]
+    },
+    {
       "type": "space",
       "advances": {
         "\uf100": -142,
@@ -177,7 +189,8 @@
         "\uf12a": -241,
         "\uf22a": 241,
         "\uf12b": -252,
-        "\uf22b": 252
+        "\uf22b": 252,
+        "\uf310": -65
       }
     }
   ]

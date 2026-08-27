@@ -3,4 +3,5 @@ execute if entity @s[tag=rpg.holy] run return run function rpg:taint/sk4d_feast_
 effect give @s minecraft:hunger 12 4 true
 effect give @s minecraft:nausea 7 0 true
 effect give @s minecraft:poison 6 1 true
+function rpg:inquest/seal/ability/record_magic
 damage @s 4 minecraft:magic by @e[tag=rpg.dm.cast,limit=1]

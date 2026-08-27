@@ -2,4 +2,5 @@
 effect give @s minecraft:hunger 6 4 true
 effect give @s minecraft:nausea 3 0 true
 effect give @s minecraft:poison 3 1 true
+function rpg:inquest/seal/ability/record_magic
 damage @s 4 minecraft:magic by @e[tag=rpg.dm.cast,limit=1]

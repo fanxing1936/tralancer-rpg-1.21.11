@@ -2,4 +2,5 @@
 execute if entity @s[tag=rpg.holy] run return run function rpg:taint/sk2e_pressure_holy
 effect give @s minecraft:slowness 6 3 true
 effect give @s minecraft:mining_fatigue 6 2 true
+function rpg:inquest/seal/ability/record_drown
 damage @s 7 minecraft:drown by @e[tag=rpg.dm.cast,limit=1]

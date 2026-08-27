@@ -8,3 +8,6 @@ execute as @e[type=minecraft:item] run function rpg:command/index_item
 ## damage detection
 tag @e[tag=rpg.hurt] remove rpg.hurt
 execute as @a at @s run function rpg:command/damage_scan
+execute if entity @a[tag=rpg.seal.active4,limit=1] as @e[tag=rpg.hurt,type=#rpg:seal_hostile,tag=!rpg.demon,tag=!rpg.demon.minion,nbt={Health:0.0f}] at @s run function rpg:inquest/seal/ability/beelzebub_death
+execute if entity @a[tag=rpg.seal.active4,limit=1] as @e[tag=rpg.hurt,tag=rpg.demon,nbt={Health:0.0f}] at @s run function rpg:inquest/seal/ability/beelzebub_death
+execute if entity @a[tag=rpg.seal.active4,limit=1] as @e[tag=rpg.hurt,tag=rpg.demon.minion,tag=!rpg.demon,nbt={Health:0.0f}] at @s run function rpg:inquest/seal/ability/beelzebub_death

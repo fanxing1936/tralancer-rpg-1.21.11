@@ -258,7 +258,6 @@ scoreboard objectives add rpg_ex_seen dummy
 scoreboard objectives add rpg_ex_prev dummy
 scoreboard objectives add rpg_ex_use minecraft.used:minecraft.goat_horn
 scoreboard objectives add rpg_seal_t dummy
-scoreboard objectives add rpg_seal_roll dummy
 scoreboard objectives add rpg_seal_i dummy
 scoreboard objectives add rpg_prop_t dummy
 scoreboard objectives add rpg_ex_phase dummy
@@ -351,3 +350,15 @@ scoreboard objectives add rpg_pr_time dummy
 scoreboard objectives add rpg_pr_roll dummy
 scoreboard objectives add rpg_pr_paid dummy
 scoreboard objectives add rpg_pr_total dummy
+scoreboard objectives add rpg_agit dummy
+scoreboard objectives add rpg_rel_n dummy
+scoreboard objectives add rpg_rel_1 dummy
+scoreboard objectives add rpg_rel_2 dummy
+scoreboard objectives add rpg_rel_w dummy
+scoreboard objectives add rpg_rel_cd dummy
+scoreboard objectives add rpg_rel_hold dummy
+scoreboard objectives add rpg_rel_gap dummy
+scoreboard objectives add rpg_rel_rec dummy
+scoreboard objectives add rpg_rel_src dummy
+scoreboard objectives add rpg_rel_pulse dummy
+scoreboard objectives add rpg_rel_left dummy

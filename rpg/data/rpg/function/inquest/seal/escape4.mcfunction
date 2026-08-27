@@ -1,4 +1,4 @@
-clear @s minecraft:echo_shard[minecraft:custom_data~{rpg_sealed:1b,rpg_lord:4}] 1
+clear @s minecraft:echo_shard[minecraft:food={nutrition:0,saturation:0f,can_always_eat:1b},minecraft:consumable={consume_seconds:100160f,animation:"block",sound:"minecraft:block.respawn_anchor.ambient",has_consume_particles:false,on_consume_effects:[]},minecraft:max_stack_size=1,minecraft:custom_data~{rpg_sealed:1b,rpg_lord:4}] 1
 scoreboard players add @s rpg_taint 15
 execute at @s run function rpg:taint/lord4
 tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[封印逃逸] ","color":"#5A6B1E","bold":true,"italic":false},{"text":"别西卜的残魂从遗物中重新降临。","color":"gray","italic":false}]

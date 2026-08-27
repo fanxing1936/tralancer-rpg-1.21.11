@@ -15,6 +15,8 @@ execute if entity @s[tag=rpg.panel.hud_off] run return 0
 # 从没蓄过力的玩家过不了下面 rpg_hud_t=..0 那一关，状态条永远不显示。
 scoreboard players add @s rpg_hud_t 0
 scoreboard players add @s rpg_hud_mt 0
+data modify storage rpg:hud r set value '{"text":""}'
+execute if entity @s[tag=rpg.seal.carrier] run function rpg:inquest/seal/hud
 
 # 提示的寿命照常递减，哪怕这一刻正被蓄力条压着 ——
 # 否则蓄力一结束，会弹出一条早就该消失的提示。

@@ -3,4 +3,5 @@ execute if entity @s[tag=rpg.holy] run return run function rpg:taint/ult2_hit_ho
 execute at @s facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^3
 effect give @s minecraft:slowness 8 3 true
 effect give @s minecraft:mining_fatigue 8 2 true
+function rpg:inquest/seal/ability/record_drown
 damage @s 17 minecraft:drown by @e[tag=rpg.dm.cast,limit=1]

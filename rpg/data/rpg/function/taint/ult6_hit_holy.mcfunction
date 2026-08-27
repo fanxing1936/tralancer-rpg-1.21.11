@@ -3,5 +3,6 @@ execute at @s facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^2.5
 effect give @s minecraft:slowness 3 4 true
 effect give @s minecraft:weakness 3 2 true
 effect give @s minecraft:nausea 4 0 true
+function rpg:inquest/seal/ability/record_magic
 damage @s 17 minecraft:magic by @e[tag=rpg.dm.cast,limit=1]
 effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true

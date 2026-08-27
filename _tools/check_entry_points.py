@@ -45,10 +45,23 @@ if reveal_calls != 7:
 
 all_functions = "\n".join(
     path.read_text(encoding="utf-8") for path in FUNC.rglob("*.mcfunction"))
-if all_functions.count("give @s minecraft:book[") != 1:
-    errors.append("parish roster must have exactly one give site")
-if all_functions.count("give @s minecraft:echo_shard[") != 1:
-    errors.append("corridor token must have exactly one give site")
+
+# 按**身份**数发放点，不按底材。
+#
+# 原本这里数的是 `give @s minecraft:echo_shard[` —— 那在写下它的那一刻确实
+# 只有一处，但那是**偶然的唯一性**：七件封印遗物同样是 echo_shard，
+# 只是当时写的是不带命名空间的 `echo_shard`，恰好没撞上。遗物那边一改写，
+# 断言立刻误报"信物有多个发放点"。
+#
+# 底材会重名，custom_data 标记不会 —— 那才是这件东西的身份。
+for marker, label in (("rpg_ch1_roster", "parish roster"),
+                      ("rpg_endless_token", "corridor token")):
+    sites = sum(1 for line in all_functions.split("\n")
+                if line.lstrip().startswith(("give ", "execute"))
+                and "give " in line and marker in line)
+    if sites != 1:
+        errors.append("%s must have exactly one give site (found %d)"
+                      % (label, sites))
 
 for body, tag, marker, label in (
         (chapter_invite, "rpg.ch1.invited", "rpg_ch1_roster", "chapter"),

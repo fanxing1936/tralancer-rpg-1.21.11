@@ -2,4 +2,5 @@
 tp @s ~ ~ ~ facing entity @e[tag=rpg.dm.cast,limit=1] eyes
 effect give @s minecraft:nausea 3 0 true
 effect give @s minecraft:weakness 2 1 true
+function rpg:inquest/seal/ability/record_magic
 damage @s 3 minecraft:magic by @e[tag=rpg.dm.cast,limit=1]

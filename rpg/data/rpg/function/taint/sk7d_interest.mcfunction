@@ -2,4 +2,5 @@
 execute if entity @s[tag=rpg.holy] run return run function rpg:taint/sk7d_interest_holy
 xp add @s -15 points
 effect give @s minecraft:weakness 6 1 true
+function rpg:inquest/seal/ability/record_magic
 damage @s 6 minecraft:magic by @e[tag=rpg.dm.cast,limit=1]

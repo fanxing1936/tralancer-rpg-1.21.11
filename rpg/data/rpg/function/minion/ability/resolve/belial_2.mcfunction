@@ -6,6 +6,7 @@ playsound minecraft:item.crossbow.shoot hostile @a[distance=..14] ~ ~ ~ 0.32 1.0
 tag @s add rpg.demon.minion.caster
 effect give @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] minecraft:slowness 4 0 true
 effect give @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] minecraft:mining_fatigue 3 0 true
+execute as @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] run function rpg:inquest/seal/ability/record_magic
 execute as @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] run damage @s 2 minecraft:magic by @e[tag=rpg.demon.minion.caster,distance=..12,sort=nearest,limit=1]
 execute at @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] run particle crit ~ ~1 ~ 0.35 0.55 0.35 0.05 10
 tag @s remove rpg.demon.minion.caster

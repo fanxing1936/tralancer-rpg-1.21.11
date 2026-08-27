@@ -2,4 +2,5 @@
 execute at @s facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^3
 effect give @s minecraft:slowness 4 3 true
 effect give @s minecraft:mining_fatigue 4 2 true
+function rpg:inquest/seal/ability/record_drown
 damage @s 17 minecraft:drown by @e[tag=rpg.dm.cast,limit=1]

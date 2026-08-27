@@ -11,7 +11,9 @@ import io
 import json
 import os
 import shutil
+import struct
 import sys
+import zlib
 
 import add_pact
 
@@ -34,6 +36,93 @@ TOP0 = 0xF000
 BACK0 = 0xF100
 FORWARD0 = 0xF200
 RIGHT0 = 0xF040
+STATUS0 = 0xF300
+STATUS_BACK = 0xF310
+STATUS_W = 64
+STATUS_ADVANCE = STATUS_W + 1
+
+
+# Tiny authored 5x7 capitals for the four persistent relic-stage sprites.
+# Keeping these patterns in the generator makes the normal build deterministic
+# and dependency-free; --bake and normal build use the exact same pixels.
+PIXEL_FONT = {
+    "A": ("01110", "10001", "10001", "11111", "10001", "10001", "10001"),
+    "C": ("01111", "10000", "10000", "10000", "10000", "10000", "01111"),
+    "D": ("11110", "10001", "10001", "10001", "10001", "10001", "11110"),
+    "E": ("11111", "10000", "10000", "11110", "10000", "10000", "11111"),
+    "G": ("01111", "10000", "10000", "10111", "10001", "10001", "01111"),
+    "I": ("11111", "00100", "00100", "00100", "00100", "00100", "11111"),
+    "L": ("10000", "10000", "10000", "10000", "10000", "10000", "11111"),
+    "N": ("10001", "11001", "10101", "10011", "10001", "10001", "10001"),
+    "P": ("11110", "10001", "10001", "11110", "10000", "10000", "10000"),
+    "R": ("11110", "10001", "10001", "11110", "10100", "10010", "10001"),
+    "S": ("01111", "10000", "10000", "01110", "00001", "00001", "11110"),
+    "T": ("11111", "00100", "00100", "00100", "00100", "00100", "00100"),
+}
+
+
+def _png_rgba(width, height, pixels):
+    """Return a minimal non-interlaced RGBA PNG using only stdlib."""
+    raw = b"".join(b"\0" + bytes(pixels[y * width * 4:(y + 1) * width * 4])
+                   for y in range(height))
+
+    def chunk(kind, payload):
+        return (struct.pack(">I", len(payload)) + kind + payload +
+                struct.pack(">I", zlib.crc32(kind + payload) & 0xFFFFFFFF))
+
+    return (b"\x89PNG\r\n\x1a\n" +
+            chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 6, 0, 0, 0)) +
+            chunk(b"IDAT", zlib.compress(raw, 9)) + chunk(b"IEND", b""))
+
+
+def build_status_atlas(rp):
+    """Bake four fixed relic-stage images into the raised actionbar font."""
+    labels = ("SLEEP", "AGIT", "DANGER", "CRIT")
+    colours = ((118, 118, 128, 255), (213, 150, 242, 255),
+               (255, 216, 90, 255), (255, 51, 0, 255))
+    height = CELL_H * len(labels)
+    pixels = bytearray(STATUS_W * height * 4)
+
+    def dot(x, y, colour):
+        if 0 <= x < STATUS_W and 0 <= y < height:
+            pos = (y * STATUS_W + x) * 4
+            pixels[pos:pos + 4] = bytes(colour)
+
+    for row_index, (label, colour) in enumerate(zip(labels, colours)):
+        y0 = row_index * CELL_H + 4
+        # Four distinct fixed emblems: sleep dash, agitation wave, danger
+        # chevron and critical double bar. The adjacent label is part of the
+        # same baked glyph, not dynamic actionbar text.
+        for x in range(2, 13):
+            if row_index == 0 and x not in (6, 7):
+                dot(x, y0 + 8, colour)
+            elif row_index == 1:
+                dot(x, y0 + 6 + (x % 3), colour)
+            elif row_index == 2:
+                dot(x, y0 + abs(7 - x), colour)
+            elif row_index == 3 and x in (5, 6, 9, 10):
+                for yy in range(1, 9):
+                    dot(x, y0 + yy, colour)
+        x0 = 17
+        for letter in label:
+            glyph = PIXEL_FONT[letter]
+            for yy, bits in enumerate(glyph):
+                for xx, bit in enumerate(bits):
+                    if bit == "1":
+                        dot(x0 + xx, y0 + 2 + yy, colour)
+            x0 += 6
+        # Pin every row to one measured advance while remaining visually clear.
+        dot(STATUS_W - 1, y0 + 11, (colour[0], colour[1], colour[2], 1))
+
+    texture = os.path.join(rp, "assets/rpg/textures/font/seal_status.png")
+    parent = os.path.dirname(texture)
+    if not os.path.isdir(parent):
+        os.makedirs(parent)
+    with open(texture, "wb") as f:
+        f.write(_png_rgba(STATUS_W, height, pixels))
+    return {"type": "bitmap", "file": "rpg:font/seal_status.png",
+            "height": CELL_H, "ascent": CELL_H - 1,
+            "chars": [chr(STATUS0 + i) for i in range(len(labels))]}
 
 
 def notices():
@@ -170,6 +259,8 @@ def build(rp):
         if parts[i] == 1:
             spaces[chr(RIGHT0 + i)] = 0
     space_provider = {"type": "space", "advances": spaces}
+    status_provider = build_status_atlas(rp)
+    spaces[chr(STATUS_BACK)] = -STATUS_ADVANCE
 
     # Remove older injected providers from minecraft:default.  Its merged
     # 1.21.11 fallback chain may resolve Unifont/missing glyphs first.
@@ -193,7 +284,7 @@ def build(rp):
     # Bitmap and cursor movement share one explicit font, avoiding both the
     # default-font merge and cross-font fallback.
     write_json(os.path.join(rp, "assets/rpg/font/combat_prompt.json"),
-               {"providers": [prompt_provider, space_provider]})
+               {"providers": [prompt_provider, status_provider, space_provider]})
 
     for rel in ("assets/rpg/font/hud_space.json",):
         obsolete = os.path.join(rp, rel)

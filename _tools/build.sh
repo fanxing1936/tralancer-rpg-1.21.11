@@ -132,6 +132,10 @@ python make_boxes.py ../rpg
 python polish_demon_names.py ../rpg
 # 两道门必须晚于领取箱生成，避免自然接引物被静默收进开局物资而绕开首次事件。
 python add_entry_points.py ../rpg
+# Final ownership layer: deterministic sealed-relic agitation, ordered active
+# slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
+# overwrite these products after this point.
+python add_seal_relic.py ../rpg
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg
@@ -148,11 +152,14 @@ python check_beelzebub_campaign_config.py ../rpg --require-wired
 python check_beelzebub_narrative_ui.py ../rpg --story-contract
 python check_endless_exorcism.py ../rpg
 python check_entry_points.py ../rpg
+python check_seal_relic.py ../rpg
 python check_prayer_supplies.py ../rpg
 python check_drop_policy.py ../rpg
 python check_retired_mob_content.py ../rpg
 # 攻击瞬爆不得回流成苦力怕或 fuse:0 TNT（后者会破坏地形）
 python check_creeper.py ../rpg
+# effect give 的时长只收整数秒；带 t 后缀会让整份函数拒绝加载，validate 抓不到
+python check_effect_duration.py ../rpg
 echo
 echo "== 4. per-tick profile =="
 python profile_tick.py ../rpg

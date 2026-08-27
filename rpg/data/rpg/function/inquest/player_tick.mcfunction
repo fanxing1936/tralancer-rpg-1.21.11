@@ -17,9 +17,6 @@ execute if score @s rpg_ex_choice matches 23 run function rpg:inquest/career/cho
 execute if score @s rpg_ex_choice matches 1.. run scoreboard players set @s rpg_ex_choice 0
 execute if score @s rpg_ex_use matches 1.. if items entity @s weapon.mainhand minecraft:goat_horn[minecraft:custom_data~{rpg_bell:1b}] run function rpg:inquest/tool/bell
 execute if score @s rpg_ex_use matches 1.. run scoreboard players set @s rpg_ex_use 0
-scoreboard players add @s rpg_seal_i 1
-execute if score @s rpg_seal_i matches 100.. run function rpg:inquest/seal/reindex
-execute if entity @s[tag=rpg.seal.carrier] run function rpg:inquest/seal/tick
-execute unless entity @s[tag=rpg.seal.carrier] run scoreboard players set @s rpg_seal_t 0
+function rpg:inquest/seal/player_tick
 
 function rpg:panel/tick
