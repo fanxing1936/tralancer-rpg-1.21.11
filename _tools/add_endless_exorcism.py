@@ -301,7 +301,9 @@ def build_entrypoints():
     write("endless/cleanup.mcfunction", "\n".join([
         tell("@a[tag=rpg.end.member.current,distance=..%d]" % active, comp("[回廊闭合] ", RED, True), comp("本次挑战已结束，历史最深层记录保留。", GRAY)),
         "tp @e[tag=rpg.end.enemy] ~ -200 ~",
+        "execute as @e[type=minecraft:vex] at @s run function rpg:minion/role/vex_tick",
         "kill @e[tag=rpg.end.enemy]",
+        "execute as @e[type=minecraft:vex,tag=rpg.demon.minion.ritual_vex] at @s run function rpg:minion/role/vex_tick",
         "execute as @a[tag=rpg.end.member.current] run function rpg:endless/member/stale_cleanup",
         "bossbar set rpg:endless players",
         "bossbar set rpg:endless value 0",
@@ -409,7 +411,7 @@ def build_wandering_summons():
     for offset, (number, slug, name, role_index) in enumerate(WANDERING_SPIRITS):
         lord_index = offset % 7 + 1
         lord, role = LORDS[lord_index], ROLES[role_index]
-        no_ai = ",NoAI:1b" if role.get("no_ai") else (",NoAI:0b" if role_index == 4 else "")
+        no_ai = ",NoAI:1b" if role.get("no_ai") else (",NoAI:0b" if role_index in (3, 4) else "")
         snbt = (
             "{Tags:[\"rpg.demon.minion\",\"rpg.demon.minion.new\",\"rpg.demon.minion.roaming\","
             "\"rpg.demon.minion.lord%d\",\"rpg.demon.minion.role%d\"],CanJoinRaid:0b,"
@@ -717,7 +719,9 @@ def build_debug():
             "tag @e[type=minecraft:marker,tag=rpg.end.controller] remove rpg.end.controller.current",
             "tag @e[type=minecraft:marker,tag=rpg.end.controller,distance=..%d,sort=nearest,limit=1] add rpg.end.controller.current" % CFG["active_radius"],
             "tp @e[tag=rpg.end.enemy] ~ -200 ~",
+            "execute as @e[type=minecraft:vex] at @s run function rpg:minion/role/vex_tick",
             "kill @e[tag=rpg.end.enemy]",
+            "execute as @e[type=minecraft:vex,tag=rpg.demon.minion.ritual_vex] at @s run function rpg:minion/role/vex_tick",
             "scoreboard players set @e[type=minecraft:marker,tag=rpg.end.controller.current,limit=1] rpg_end_floor %d" % floor,
             "scoreboard players set @e[type=minecraft:marker,tag=rpg.end.controller.current,limit=1] rpg_end_state 0",
             "scoreboard players set @e[type=minecraft:marker,tag=rpg.end.controller.current,limit=1] rpg_end_time 79",

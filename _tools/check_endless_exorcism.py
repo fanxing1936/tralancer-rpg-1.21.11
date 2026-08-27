@@ -88,6 +88,11 @@ if len(wandering) != 37:
     errors.append(f"expected 37 roaming-spirit summons, found {len(wandering)}")
 for path in wandering:
     body = path.read_text(encoding="utf-8")
+    if '"rpg.demon.minion.role3"' in body:
+        if "NoAI:0b" not in body or "NoAI:1b" in body:
+            errors.append(f"roaming ritualist {path.name} has disabled AI")
+        if '{id:"minecraft:movement_speed",base:0.28f}' not in body:
+            errors.append(f"roaming ritualist {path.name} has incorrect movement speed")
     for signature in ("rpg.demon.minion.roaming", "rpg_mn_lord", "rpg_mn_role",
                       "PersistenceRequired:1b", 'DeathLootTable:"minecraft:empty"'):
         if signature not in body:

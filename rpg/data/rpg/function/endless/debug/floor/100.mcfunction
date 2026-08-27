@@ -2,7 +2,9 @@ execute unless entity @e[type=minecraft:marker,tag=rpg.end.controller,distance=.
 tag @e[type=minecraft:marker,tag=rpg.end.controller] remove rpg.end.controller.current
 tag @e[type=minecraft:marker,tag=rpg.end.controller,distance=..96,sort=nearest,limit=1] add rpg.end.controller.current
 tp @e[tag=rpg.end.enemy] ~ -200 ~
+execute as @e[type=minecraft:vex] at @s run function rpg:minion/role/vex_tick
 kill @e[tag=rpg.end.enemy]
+execute as @e[type=minecraft:vex,tag=rpg.demon.minion.ritual_vex] at @s run function rpg:minion/role/vex_tick
 scoreboard players set @e[type=minecraft:marker,tag=rpg.end.controller.current,limit=1] rpg_end_floor 100
 scoreboard players set @e[type=minecraft:marker,tag=rpg.end.controller.current,limit=1] rpg_end_state 0
 scoreboard players set @e[type=minecraft:marker,tag=rpg.end.controller.current,limit=1] rpg_end_time 79

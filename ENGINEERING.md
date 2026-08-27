@@ -2662,6 +2662,15 @@ Whilst parsing command on line 6: Expected double at position 36: ...oned ^ ^ ^<
 `DeathLootTable`。现行 35 位直属罪仆使用受控专属表，37 位无尽游柱则显式指向
 `minecraft:empty`，避免司祭的原版唤魔者掉落不死图腾，绕过层末奖励经济。
 
+司祭 AI 修复（2026-08-27）：`add_demon_minions.ROLES[3]` 改用 0.28 基础移速，
+直属和无尽游柱召唤均显式设置 `NoAI:0b`。共用 `entity_tick` 在施法提前返回之前
+调用一次性 `minion/role/ritualist_ai`，覆盖旧存档及后续加载区块中的司祭；
+迁移只补零基础移速，保留非零自定义速度和所有修饰器，不改治疗、增益和蓄势计时。
+独立检查同时约束两类司祭的 AI、移速与迁移入口，避免生成器重建时恢复站桩配置。
+原生恼鬼由十刻 `minion/role/vex_tick` 通过 `execute on origin` 识别司祭主人，
+先记录归属，再检查死亡动画及零生命；已归属但失去主人的恼鬼会被清理。
+原版恼鬼不被接管，派生物不计入无尽敌人数；本体全部消失后仍保留有条件的清理节拍。
+
 ## 30.3 一处 O(n²)
 
 `entities/warden/warden` 开头两行：

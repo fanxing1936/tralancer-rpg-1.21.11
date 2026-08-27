@@ -40,7 +40,7 @@ LORDS = {
 ROLES = {
     1: {"name": "先锋", "entity": "vindicator", "health": 92, "attack": 8, "armor": 10, "speed": 0.27, "weapon": "minecraft:iron_sword", "cd": 110, "material": "minecraft:iron_nugget"},
     2: {"name": "猎手", "entity": "pillager", "health": 66, "attack": 6, "armor": 5, "speed": 0.31, "weapon": "minecraft:crossbow", "cd": 85, "material": "minecraft:arrow"},
-    3: {"name": "司祭", "entity": "evoker", "health": 76, "attack": 4, "armor": 7, "speed": 0.0, "weapon": "minecraft:book", "cd": 125, "material": "minecraft:glowstone_dust", "no_ai": True},
+    3: {"name": "司祭", "entity": "evoker", "health": 76, "attack": 4, "armor": 7, "speed": 0.28, "weapon": "minecraft:book", "cd": 125, "material": "minecraft:glowstone_dust"},
     4: {"name": "咒使", "entity": "illusioner", "health": 70, "attack": 6, "armor": 6, "speed": 0.29, "weapon": "minecraft:bow", "cd": 100, "material": "minecraft:spider_eye"},
     5: {"name": "处刑者", "entity": "vindicator", "health": 108, "attack": 11, "armor": 8, "speed": 0.33, "weapon": "minecraft:iron_axe", "cd": 75, "material": "minecraft:redstone"},
 }
@@ -153,8 +153,13 @@ def patch_scoreboard_and_hooks():
     write(rel, src)
 
     rel = "exorcism.mcfunction"
-    lines = [line for line in read(rel).splitlines() if "罪仆生态" not in line and "function rpg:minion/tick" not in line]
-    lines += ["", "# 罪仆生态：仅场上确有罪仆时推进十刻节拍。", "execute if entity @e[tag=rpg.demon.minion,limit=1] run function rpg:minion/tick"]
+    lines = read(rel).splitlines()
+    if not any("function rpg:minion/tick" in line for line in lines):
+        lines += ["", "# 罪仆生态：仅场上确有罪仆时推进十刻节拍。", "execute if entity @e[tag=rpg.demon.minion,limit=1] run function rpg:minion/tick"]
+    vex_hook = "execute unless entity @e[tag=rpg.demon.minion,limit=1] if entity @e[type=minecraft:vex,tag=rpg.demon.minion.ritual_vex,limit=1] run function rpg:minion/tick"
+    if vex_hook not in lines:
+        index = next(i for i, line in enumerate(lines) if "function rpg:minion/tick" in line)
+        lines.insert(index + 1, vex_hook)
     write(rel, "\n".join(lines))
 
     rel = "taint/cast.mcfunction"
@@ -179,10 +184,9 @@ def name_json(lord, role, spirit):
 
 
 def summon_snbt(index, role_index, lord, role, spirit):
-    # Ritualists intentionally delegate all spell logic to the datapack.
-    # Hexers must keep vanilla pathfinding enabled; declaring the false value
-    # explicitly also repairs entities copied from an older NoAI summon.
-    no_ai = ",NoAI:1b" if role.get("no_ai") else (",NoAI:0b" if role_index == 4 else "")
+    # Ritualists and hexers keep vanilla AI alongside the custom skill loop.
+    # Previously spawned ritualists are repaired once by ritualist_ai.
+    no_ai = ",NoAI:1b" if role.get("no_ai") else (",NoAI:0b" if role_index in (3, 4) else "")
     return (
         "{Tags:[\"rpg.demon.minion\",\"rpg.demon.minion.new\",\"rpg.demon.minion.lord%d\",\"rpg.demon.minion.role%d\"],"
         "CanJoinRaid:0b,PersistenceRequired:1b,CustomNameVisible:1b%s,CustomName:%s,Health:%sf,"
@@ -319,8 +323,10 @@ execute if score #clock rpg_mn_tick matches 10.. run function rpg:minion/beat
     write("minion/beat.mcfunction", """scoreboard players set #clock rpg_mn_tick 0
 scoreboard players set #casts rpg_mn_tick 0
 execute as @e[tag=rpg.demon.minion] at @s run function rpg:minion/entity_tick
+execute as @e[type=minecraft:vex] at @s run function rpg:minion/role/vex_tick
 """)
-    write("minion/entity_tick.mcfunction", """execute if entity @s[tag=rpg.demon.minion.casting,scores={rpg_mn_cast=1..}] run scoreboard players remove @s rpg_mn_cast 10
+    write("minion/entity_tick.mcfunction", """execute if entity @s[tag=!rpg.demon.minion.ai_v1,scores={rpg_mn_role=3}] run function rpg:minion/role/ritualist_ai
+execute if entity @s[tag=rpg.demon.minion.casting,scores={rpg_mn_cast=1..}] run scoreboard players remove @s rpg_mn_cast 10
 execute if entity @s[tag=rpg.demon.minion.casting,scores={rpg_mn_cast=..0}] run return run function rpg:minion/resolve_dispatch
 execute if entity @s[tag=rpg.demon.minion.casting] run return 0
 execute if entity @s[scores={rpg_mn_role=4}] run function rpg:minion/role/hexer_move
@@ -328,6 +334,24 @@ execute if entity @s[scores={rpg_mn_cd=1..}] run scoreboard players remove @s rp
 execute if entity @s[scores={rpg_mn_role=3}] unless entity @a[distance=..14,gamemode=!spectator,gamemode=!creative,limit=1] run return 0
 execute unless entity @s[scores={rpg_mn_role=3}] unless entity @a[distance=..12,gamemode=!spectator,gamemode=!creative,limit=1] run return 0
 execute if score #casts rpg_mn_tick matches ..1 if entity @s[scores={rpg_mn_cd=..0}] run function rpg:minion/ability_dispatch
+""")
+    write("minion/role/ritualist_ai.mcfunction", """# 司祭 AI 一次性迁移：旧实体恢复寻路；仅修复为零的基础移速，不覆盖非零自定义速度或属性修饰器。
+execute unless entity @s[type=minecraft:evoker,tag=rpg.demon.minion,scores={rpg_mn_role=3}] run return 0
+data merge entity @s {NoAI:0b}
+execute store result score #ritual_speed rpg_mn_tick run attribute @s minecraft:movement_speed base get 1000000
+execute if score #ritual_speed rpg_mn_tick matches 0 run attribute @s minecraft:movement_speed base set 0.28
+tag @s add rpg.demon.minion.ai_v1
+""")
+    write("minion/role/vex_tick.mcfunction", """# 只管理司祭真实召唤的恼鬼，不按距离猜测主人，也不计入回廊敌人数。
+# 先识别归属（含死亡动画中的主人），再检查主人是否存活。
+execute unless entity @s[type=minecraft:vex] run return 0
+scoreboard players set @s rpg_mn_tick 0
+execute store success score @s rpg_mn_tick on origin if entity @s[tag=rpg.demon.minion,scores={rpg_mn_role=3}]
+execute if score @s rpg_mn_tick matches 1 run tag @s add rpg.demon.minion.ritual_vex
+execute unless entity @s[tag=rpg.demon.minion.ritual_vex] run return 0
+scoreboard players set @s rpg_mn_tick 0
+execute store success score @s rpg_mn_tick on origin if entity @s[tag=rpg.demon.minion,scores={rpg_mn_role=3},nbt={DeathTime:0s}] unless entity @s[nbt={Health:0.0f}]
+execute if score @s rpg_mn_tick matches 0 run kill @s
 """)
     write("minion/role/hexer_move.mcfunction", """# 咒使补偿寻路：幻术师原生 AI 在脱离袭击后可能不主动接近玩家。
 # 每十刻只在远距离、前方两格可通行时迈进，不穿墙且保留远程站位。

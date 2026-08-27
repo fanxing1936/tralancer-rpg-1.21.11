@@ -49,6 +49,7 @@ execute if entity @e[type=minecraft:item_display,tag=rpg.rite.prop,limit=1] run 
 
 # 罪仆生态：仅场上确有罪仆时推进十刻节拍。
 execute if entity @e[tag=rpg.demon.minion,limit=1] run function rpg:minion/tick
+execute unless entity @e[tag=rpg.demon.minion,limit=1] if entity @e[type=minecraft:vex,tag=rpg.demon.minion.ritual_vex,limit=1] run function rpg:minion/tick
 
 # 生命之树粒子阵：有锚点时才推进十刻刷新。
 execute if entity @e[type=minecraft:marker,tag=rpg.ritual.life_tree,limit=1] run function rpg:ritual/life_tree/tick
@@ -64,6 +65,8 @@ execute if entity @e[type=minecraft:marker,tag=rpg.lt.gathering,limit=1] run fun
 execute if entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] run execute as @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] at @s run function rpg:campaign/beelzebub/tick
 
 execute if entity @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] run execute as @e[type=minecraft:marker,tag=rpg.ch1.controller,limit=1] at @s run function rpg:campaign/beelzebub/ui/tick
+
+
 
 
 # 无尽驱魔控制器：公共 Bossbar 只允许一个活动实例。

@@ -1,3 +1,4 @@
+execute if entity @s[tag=!rpg.demon.minion.ai_v1,scores={rpg_mn_role=3}] run function rpg:minion/role/ritualist_ai
 execute if entity @s[tag=rpg.demon.minion.casting,scores={rpg_mn_cast=1..}] run scoreboard players remove @s rpg_mn_cast 10
 execute if entity @s[tag=rpg.demon.minion.casting,scores={rpg_mn_cast=..0}] run return run function rpg:minion/resolve_dispatch
 execute if entity @s[tag=rpg.demon.minion.casting] run return 0

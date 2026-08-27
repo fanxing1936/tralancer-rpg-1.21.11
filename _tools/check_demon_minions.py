@@ -98,8 +98,11 @@ for lord_index, (lord, spirits) in enumerate(LORDS, 1):
             summon_count += 1
         if "PersistenceRequired:1b" not in summon or "rpg_mn_life" in summon:
             problems.append("%s/%s is not independently persistent" % (lord, spirit))
-        if role_index == 3 and "NoAI:1b" not in summon:
-            problems.append("%s ritualist can cast uncontrolled vanilla evoker spells" % lord)
+        if role_index == 3:
+            if "NoAI:0b" not in summon or "NoAI:1b" in summon:
+                problems.append("%s ritualist AI is not enabled" % lord)
+            if '{id:"minecraft:movement_speed",base:0.28f}' not in summon:
+                problems.append("%s ritualist lacks its mobile support speed" % lord)
         if role_index == 4 and "NoAI:0b" not in summon:
             problems.append("%s hexer does not explicitly keep pathfinding enabled" % lord)
         if '"rpg.demon"' in "\n".join(summon_lines):
@@ -196,6 +199,34 @@ for token in ("rpg_mn_cast=1..", "rpg_mn_cast=..0", "function rpg:minion/resolve
 if "rpg_mn_role=3}] unless entity @a[distance=..14" not in entity_tick or "unless entity @s[scores={rpg_mn_role=3}] unless entity @a[distance=..12" not in entity_tick:
     problems.append("ritualist 14-block support trigger is not separated from the 12-block combat trigger")
 hexer_move = read("minion/role/hexer_move.mcfunction")
+ritualist_ai = read("minion/role/ritualist_ai.mcfunction")
+repair_hook = "execute if entity @s[tag=!rpg.demon.minion.ai_v1,scores={rpg_mn_role=3}] run function rpg:minion/role/ritualist_ai"
+if not entity_tick.startswith(repair_hook):
+    problems.append("ritualist once-only AI migration must run before casting early returns")
+for token in ("type=minecraft:evoker,tag=rpg.demon.minion,scores={rpg_mn_role=3}",
+              "data merge entity @s {NoAI:0b}", "minecraft:movement_speed base get 1000000",
+              "execute if score #ritual_speed rpg_mn_tick matches 0 run attribute @s minecraft:movement_speed base set 0.28",
+              "tag @s add rpg.demon.minion.ai_v1"):
+    if token not in ritualist_ai:
+        problems.append("ritualist AI migration missing: " + token)
+if "modifier remove" in ritualist_ai or "effect clear" in ritualist_ai:
+    problems.append("ritualist AI migration must preserve existing modifiers and effects")
+vex_tick = read("minion/role/vex_tick.mcfunction")
+if "execute as @e[type=minecraft:vex] at @s run function rpg:minion/role/vex_tick" not in beat:
+    problems.append("ritualist vex lifecycle guard is missing from shared beat")
+for token in ("execute unless entity @s[type=minecraft:vex] run return 0",
+              "on origin if entity @s[tag=rpg.demon.minion,scores={rpg_mn_role=3}]",
+              "execute unless entity @s[tag=rpg.demon.minion.ritual_vex] run return 0",
+              "nbt={DeathTime:0s}", "unless entity @s[nbt={Health:0.0f}]",
+              "execute if score @s rpg_mn_tick matches 0 run kill @s"):
+    if token not in vex_tick:
+        problems.append("ritualist vex ownership/lifecycle guard missing: " + token)
+if "distance=" in vex_tick or "rpg.end.enemy" in vex_tick:
+    problems.append("vex ownership must be exact and must not alter endless enemy counts")
+if vex_tick.count("scoreboard players set @s rpg_mn_tick 0\nexecute store success") != 2:
+    problems.append("vex owner checks must clear stale success scores before possibly empty origin relations")
+if "execute unless entity @e[tag=rpg.demon.minion,limit=1] if entity @e[type=minecraft:vex,tag=rpg.demon.minion.ritual_vex,limit=1] run function rpg:minion/tick" not in read("exorcism.mcfunction"):
+    problems.append("orphan ritualist vexes cannot be cleaned after all minions disappear")
 if "rpg_mn_role=4}] run function rpg:minion/role/hexer_move" not in entity_tick:
     problems.append("hexer movement recovery is not wired into the shared beat")
 for token in ("NoAI:0b", "distance=10..28", "if block ^ ^ ^0.7 minecraft:air", "tp @s ^ ^ ^0.45"):
