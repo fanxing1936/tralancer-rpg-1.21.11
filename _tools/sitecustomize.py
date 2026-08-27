@@ -43,6 +43,7 @@ import builtins
 import errno
 import functools
 import io
+import os
 import sys
 import time
 
@@ -84,3 +85,44 @@ def _open(real, file, *a, **kw):
 
 io.open = functools.partial(_open, _io_open)
 builtins.open = functools.partial(_open, _builtin_open)
+
+# ---------------------------------------------------------------------------
+# 目录遍历：既要重试，更要**不许静默**
+# ---------------------------------------------------------------------------
+# `os.walk` 默认 `onerror=None`，意思是**遇到 OSError 就当那个目录不存在**，
+# 一声不吭地少列几个文件。这个包里有 22 处 os.walk，没有一处传 onerror。
+#
+# 于是扫描干扰会变成这样一条链：walk 少列出几个文件 -> 某个生成器少处理几个
+# 函数 -> opt_guard 少插几道守卫 -> opt_runtime_hotpaths 找不到本该被拆出来的
+# deep_seek/g0 -> 构建失败。而且**每次少的不是同一批**，所以看起来像
+# "构建不确定"。实测守卫数会在 25/162/13 与 31/214/19 之间跳。
+#
+# 这里做两件事：listdir/scandir 走同一套重试；walk 的 onerror 默认改成抛出。
+# 宁可当场炸，也不要悄悄少做一半工作 —— 后者会一路伪装成别的问题。
+_listdir, _scandir, _walk = os.listdir, os.scandir, os.walk
+
+
+def _retry_call(fn, *a, **kw):
+    last = None
+    for wait in (0,) + _BACKOFF:
+        if wait:
+            time.sleep(wait)
+        try:
+            return fn(*a, **kw)
+        except OSError as e:
+            if e.errno not in _TRANSIENT:
+                raise
+            last = e
+    raise last
+
+
+def _walk_loud(top, topdown=True, onerror=None, followlinks=False):
+    if onerror is None:
+        def onerror(e):
+            raise e
+    return _walk(top, topdown, onerror, followlinks)
+
+
+os.listdir = functools.partial(_retry_call, _listdir)
+os.scandir = functools.partial(_retry_call, _scandir)
+os.walk = _walk_loud
