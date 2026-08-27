@@ -4,6 +4,14 @@ set -e
 cd "$(dirname "$0")"
 rm -rf ../rpg
 cp -r ../_orig ../rpg
+# 复制完两千来个文件之后要缓一下再动手。
+#
+# 实测：在这台机器上 `cp -r` 返回时，Windows 还没把新建文件的句柄放干净
+# （实时扫描在后面追），紧接着的第一个写操作会随机撞上
+# `OSError: [Errno 22] Invalid argument` —— 每次挂在不同的文件，
+# 看起来像"构建不确定"，其实是复制还没落稳。
+# 停一下比事后重试便宜，也比误判成生成器有 bug 省事。
+sleep 5
 echo "== 1. version migration 1.21 -> 1.21.11 =="
 python migrate.py   ../rpg
 echo

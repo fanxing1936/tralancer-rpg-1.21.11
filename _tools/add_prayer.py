@@ -69,10 +69,14 @@ def build_currency(items):
     lines=['# 仅兼容精确匹配既有货币名称与整段 lore、尚无 custom_data 的旧币。']
     seen=set()
     for name,lore in legacy:
-        signature=json.dumps([name,lore],ensure_ascii=False,separators=(',',':'))
+        # sort_keys 不是洁癖：name/lore 是从既有 give 命令解析回来的字典，
+        # 键序随解析来源浮动，于是同样的输入两次构建会写出不同的字节，
+        # git status 永远是脏的、diff 也失去意义。JSON 对象本就无序，
+        # 排一下键既不改变 Minecraft 的解析结果，又让构建可复现。
+        signature=json.dumps([name,lore],ensure_ascii=False,separators=(',',':'),sort_keys=True)
         if signature in seen: continue
         seen.add(signature)
-        predicate='minecraft:raw_gold[minecraft:custom_name='+json.dumps(name,ensure_ascii=False,separators=(',',':'))+',minecraft:lore='+json.dumps(lore,ensure_ascii=False,separators=(',',':'))+',!minecraft:custom_data]'
+        predicate='minecraft:raw_gold[minecraft:custom_name='+json.dumps(name,ensure_ascii=False,separators=(',',':'),sort_keys=True)+',minecraft:lore='+json.dumps(lore,ensure_ascii=False,separators=(',',':'),sort_keys=True)+',!minecraft:custom_data]'
         for slot in [f'hotbar.{i}' for i in range(9)]+[f'inventory.{i}' for i in range(27)]+['weapon.offhand']:
             lines.append(f'execute if items entity @s {slot} {predicate} run item modify entity @s {slot} rpg:prayer/mark_currency')
     write('prayer/currency.mcfunction',lines)

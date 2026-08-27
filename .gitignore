@@ -5,3 +5,22 @@ Thumbs.db
 
 # the 1.21.11 map ships as a Release asset, not in the tree (932 MB raw)
 _world/
+
+# 无头服务器的一次性测试目录。每个里面是 eula.txt + 世界数据 + logs，
+# 有的还带整棵 node_modules —— 都是 _tools/server_test.py 随时能再造的脚手架，
+# 不是交付物。不挡住的话，git status 里常年挂着几十条未跟踪噪音，
+# 真正该注意的未提交改动反而看不见（接手时我就差点漏掉 rpg/ 里两处真实差异）。
+# 后缀不止 qa 一种：还有 perf / diag / regression，都是同一类东西。
+_*_qa*/
+_*qa*/
+_*_perf_*/
+_*_diag_*/
+_*_regression_*/
+
+# 升级资源包时解压出来的中间产物，同样可重建
+Dungeons GUI */
+Dungeons GUI *.zip
+
+# 部署前的整包备份（每份都是一整套数据包，目前 782 MB）。
+# 它是本地保险，不是版本历史 —— 版本历史 git 自己就是。
+backups/
