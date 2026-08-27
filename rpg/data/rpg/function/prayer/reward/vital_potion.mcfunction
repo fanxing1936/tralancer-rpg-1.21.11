@@ -1,0 +1,5 @@
+give @s splash_potion[potion_contents={custom_color:16728576,custom_effects:[{id:instant_health,duration:1,amplifier:1}]},custom_name=["",{"text":"[brave]","italic":false,"color":"aqua","bold":true},{"text":"精血药水","italic":false,"bold":false}],lore=[["",{"text":"+------------------+","italic":false,"color":"white"}],["",{"text":"精血炼制的","italic":false,"color":"white"},{"text":"药水","italic":false,"color":"aqua","bold":true}],["",{"text":"快速","italic":false,"color":"white"},{"text":"回血","italic":false,"color":"aqua","bold":true}],["",{"text":"+------------------+","italic":false,"color":"white"}]]] 1
+scoreboard players set @s rpg_pr_pending 0
+tellraw @s ["",{"text":"[恩赐]","color":"#D4AF37","bold":true,"italic":false},{"text":"祷告已被垂听。获得：","color":"#AAB4C3","bold":false,"italic":false},{"text":"精血药水","color":"#AAB4C3","bold":false,"italic":false},{"text":" ×1","color":"#AAB4C3","bold":false,"italic":false}]
+particle minecraft:end_rod ~ ~1 ~ 0.35 0.55 0.35 0.02 8 normal @s
+playsound minecraft:block.amethyst_block.chime player @s ~ ~ ~ 0.5 1.5

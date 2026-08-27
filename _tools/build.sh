@@ -106,6 +106,10 @@ python polish_beelzebub_campaign_ui.py ../rpg ../resourcepack
 # 独立无尽副本：完整 72 柱与 72 套编队、每五层七罪领主、三路线个人奖励。
 # 晚于章节与玩家面板，才能建立互斥入口并追加面板按钮。
 python add_endless_exorcism.py ../rpg
+# 保底仪式物资与规范遗珍，随后接入付费祷告和持久待领记录。
+python add_endless_supplies.py ../rpg
+python add_prayer.py ../rpg
+python add_drop_policy.py ../rpg
 # 全量领取箱必须在所有 give 生成器之后运行，才能收齐驱魔工具、真名残页
 # 与裁决奖励，并将旧目录中的物品按语义重新分类。
 python make_boxes.py ../rpg
@@ -127,6 +131,8 @@ python check_beelzebub_campaign_ui.py ../rpg ../resourcepack
 python check_beelzebub_campaign_config.py ../rpg --require-wired
 python check_beelzebub_narrative_ui.py ../rpg --story-contract
 python check_endless_exorcism.py ../rpg
+python check_prayer_supplies.py ../rpg
+python check_drop_policy.py ../rpg
 python check_retired_mob_content.py ../rpg
 # 攻击瞬爆不得回流成苦力怕或 fuse:0 TNT（后者会破坏地形）
 python check_creeper.py ../rpg

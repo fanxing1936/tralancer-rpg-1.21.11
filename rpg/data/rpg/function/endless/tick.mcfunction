@@ -15,3 +15,6 @@ execute if score @s rpg_end_state matches 0 run function rpg:endless/state/prepa
 execute if score @s rpg_end_state matches 1 run function rpg:endless/state/combat
 execute if score @s rpg_end_state matches 2 run function rpg:endless/state/reward
 execute if score @s rpg_end_state matches 3 run function rpg:endless/state/intermission
+scoreboard players enable @a[tag=rpg.end.member.current] rpg_end_supply
+execute as @a[tag=rpg.end.member.current,scores={rpg_end_supply=1..}] at @s run function rpg:endless/supply/request
+scoreboard players set @a[tag=rpg.end.member.current,scores={rpg_end_supply=1..}] rpg_end_supply 0

@@ -1,0 +1,5 @@
+give @s splash_potion[potion_contents={custom_color:16763904,custom_effects:[{id:absorption,duration:1200,amplifier:4}]},custom_name=["",{"text":"[epic]","italic":false,"color":"dark_purple","bold":true},{"text":"护盾药水","italic":false,"bold":false}],lore=[["",{"text":"+------------------+","italic":false,"color":"white"}],["",{"text":"守护他人的力量","italic":false,"color":"white"}],["",{"text":"获得","italic":false,"color":"white"},{"text":"伤害吸收护盾","italic":false,"color":"dark_purple","bold":true}],["",{"text":"+------------------+","italic":false,"color":"white"}]]] 1
+scoreboard players set @s rpg_pr_pending 0
+tellraw @s ["",{"text":"[恩赐]","color":"#D4AF37","bold":true,"italic":false},{"text":"祷告已被垂听。获得：","color":"#AAB4C3","bold":false,"italic":false},{"text":"护盾药水","color":"#AAB4C3","bold":false,"italic":false},{"text":" ×1","color":"#AAB4C3","bold":false,"italic":false}]
+particle minecraft:end_rod ~ ~1 ~ 0.35 0.55 0.35 0.02 8 normal @s
+playsound minecraft:block.amethyst_block.chime player @s ~ ~ ~ 0.5 1.5

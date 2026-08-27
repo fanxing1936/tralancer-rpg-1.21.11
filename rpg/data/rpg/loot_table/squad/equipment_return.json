@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:slots",
+          "slot_source": {
+            "type": "minecraft:slot_range",
+            "source": "this",
+            "slots": "weapon.mainhand"
+          }
+        }
+      ]
+    }
+  ]
+}

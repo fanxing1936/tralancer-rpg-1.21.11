@@ -1,0 +1,5 @@
+give @s allay_spawn_egg[custom_name=[{"text":"[驱魔]","italic":false,"color":"#FFD700","bold":true},{"text":"替死人偶","color":"yellow","bold":false}],lore=[[{"text":"+------------------+","italic":false,"color":"white"}],[{"text":"可以抵挡恶魔的","italic":false,"color":"white"},{"text":"人偶","color":"gold","bold":true},{"text":"","color":"dark_purple","bold":false}],[{"text":"恶魔","italic":false,"color":"white"},{"text":"攻击","color":"gold","bold":true},{"text":"其会使祂显形","color":"white","bold":false}],[{"text":"+------------------+","italic":false,"color":"white"}]],entity_data={id:allay,Tags:["rpg.doll"],CustomName:[{"text":""}],Health:10,Glowing:1b,NoAI:1b,attributes:[{id:"max_health",base:10f}]},custom_data={holy_weapon_tag:1b}] 1
+scoreboard players set @s rpg_pr_pending 0
+tellraw @s ["",{"text":"[恩赐]","color":"#D4AF37","bold":true,"italic":false},{"text":"祷告已被垂听。获得：","color":"#AAB4C3","bold":false,"italic":false},{"text":"替死人偶","color":"#FFD85A","bold":false,"italic":false},{"text":" ×1","color":"#AAB4C3","bold":false,"italic":false}]
+particle minecraft:end_rod ~ ~1 ~ 0.35 0.55 0.35 0.02 8 normal @s
+playsound minecraft:block.amethyst_block.chime player @s ~ ~ ~ 0.5 1.5

@@ -1,0 +1,5 @@
+give @s quartz[custom_name=["",{"text":"[legend]","italic":false,"color":"gold","bold":true},{"text":"铸造之石","italic":false,"bold":false}],lore=[["",{"text":"+------------------+","italic":false,"color":"white"}],["",{"text":"升级武器的","italic":false,"color":"white"},{"text":"晶石","italic":false,"color":"gold","bold":true}],["",{"text":"增加","italic":false,"color":"white"},{"text":"100点","italic":false,"color":"gold","bold":true},{"text":"武器经验值","italic":false,"color":"white"}],["",{"text":"+------------------+","italic":false,"color":"white"}]],custom_model_data={floats:[1110003.0f]},custom_data={level_item:1b}] 2
+scoreboard players set @s rpg_pr_pending 0
+tellraw @s ["",{"text":"[恩赐]","color":"#D4AF37","bold":true,"italic":false},{"text":"祷告已被垂听。获得：","color":"#AAB4C3","bold":false,"italic":false},{"text":"铸造之石","color":"#AAB4C3","bold":false,"italic":false},{"text":" ×2","color":"#AAB4C3","bold":false,"italic":false}]
+particle minecraft:end_rod ~ ~1 ~ 0.35 0.55 0.35 0.02 8 normal @s
+playsound minecraft:block.amethyst_block.chime player @s ~ ~ ~ 0.5 1.5

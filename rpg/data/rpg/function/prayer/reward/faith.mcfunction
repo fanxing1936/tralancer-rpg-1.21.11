@@ -1,0 +1,5 @@
+give @s music_disc_precipice[custom_name=["",{"text":"[HOLY]","italic":false,"color":"#ff3300","bold":true},{"text":"信仰之源","italic":false,"bold":false}],lore=[["",{"text":"+------------------+","italic":false,"color":"white"}],["",{"text":"天堂之门","italic":false,"color":"#ff3300","bold":true},{"text":"将再度洞开","italic":false,"color":"white"}],["",{"text":"武器分支更改为","italic":false,"color":"white"},{"text":"信念","italic":false,"color":"#ff3300","bold":true}],["",{"text":"+------------------+","italic":false,"color":"white"}]],custom_data={weapon_tree:1b}] 1
+scoreboard players set @s rpg_pr_pending 0
+tellraw @s ["",{"text":"[恩赐]","color":"#D4AF37","bold":true,"italic":false},{"text":"祷告已被垂听。获得：","color":"#AAB4C3","bold":false,"italic":false},{"text":"信仰之源","color":"#FFD85A","bold":false,"italic":false},{"text":" ×1","color":"#AAB4C3","bold":false,"italic":false}]
+particle minecraft:end_rod ~ ~1 ~ 0.35 0.55 0.35 0.02 8 normal @s
+playsound minecraft:block.amethyst_block.chime player @s ~ ~ ~ 0.5 1.5

@@ -316,6 +316,9 @@ def polish_leaf_objects(text, stats, skip_spans=()):
 
 
 def process_mcfunction(path, stats):
+    # These components are exact historical matching keys, not displayed UI.
+    if path.replace('\\', '/').endswith('/prayer/currency.mcfunction'):
+        return
     with io.open(path, encoding="utf-8") as handle:
         source = handle.read()
     # 先统一普通姓名，再让物品上下文最后覆盖罪器青色/契约白色例外。
@@ -354,6 +357,8 @@ def validate(stats):
             if not name.endswith(".mcfunction"):
                 continue
             path = os.path.join(root, name)
+            if path.replace('\\', '/').endswith('/prayer/currency.mcfunction'):
+                continue
             data = io.open(path, encoding="utf-8").read()
             regions = list(custom_name_regions(data))
             for _, _, raw_name in regions:

@@ -135,11 +135,14 @@ reachable = [floor - floor // CFG["boss_interval"] for floor in range(1, 91)
 if reachable != list(range(1, 73)):
     errors.append("ordinary-floor ordinal does not cover deck 1..72 before repeating")
 
-loot_signatures = ("gold_ingot", "iron_block", "diamond", "echo_shard",
-                   "netherite_scrap", "netherite_scrap 2", "netherite_ingot")
-for index, signature in enumerate(loot_signatures, 1):
-    if signature not in source(f"endless/reward/loot/{index}.mcfunction"):
-        errors.append(f"reward tier {index} lacks its richer material: {signature}")
+from rpg_catalogue import catalogue, give
+supplies = json.loads((ROOT / "_endless_supplies.json").read_text(encoding="utf-8"))
+items = catalogue(DP)
+for index, tier in enumerate(supplies['relic_tiers'], 1):
+    body = source(f"endless/reward/loot/{index}.mcfunction")
+    for name, count in tier['items']:
+        if give(items, name, count) not in body:
+            errors.append(f"reward tier {index} lacks canonical {name} x{count}")
 
 scoreboard = source("command/soreboard.mcfunction")
 for objective in ("rpg_end_id", "rpg_end_floor", "rpg_end_state", "rpg_end_pick",

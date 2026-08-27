@@ -14,5 +14,6 @@ python check_beelzebub_campaign_docs.py
 python check_beelzebub_campaign_config.py ../rpg --require-wired
 python check_beelzebub_narrative_ui.py ../rpg --story-contract
 python check_endless_exorcism_docs.py
+python check_prayer_supplies.py ../rpg --docs
 python unused_textures.py ../resourcepack | head -3
 echo "wrote ../TRALANCER-RPG-图鉴.html"

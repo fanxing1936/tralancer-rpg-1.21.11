@@ -86,6 +86,7 @@ for stage, label in enumerate(STAGES):
     CAMPAIGN.append(command(f"/function rpg:campaign/beelzebub/debug/stage/{stage}", f"跳转到 Stage {stage}「{label}」。", "附近必须已有第一章控制器；自动清理旧阶段现场。", "章节实例", "不写首通"))
 
 ENDLESS = [
+    command("/function rpg:endless/supply/request", "补领当前领主层缺失的图腾、圣器、仪式工具与对应媒介。", "本场成员、领主战中、控制器范围内；每人每层一次，背包不足不扣配额。", "自身背包", "补领"),
     command("/function rpg:endless/start", "以执行者当前位置开启无尽驱魔「七柱回廊」。", "必须由玩家在安全空地执行；第一章或其他无尽实例运行时会拒绝。", "单一公共副本", "正式入口"),
     command("/function rpg:endless/join", "加入附近 16 格内正在运行的七柱回廊。", "必须由玩家执行；从下一次层末结算开始获得奖励。", "个人副本成员", "加入"),
     command("/function rpg:endless/abort", "关闭附近的七柱回廊并清理所属敌人。", "必须站在控制器 96 格内；历史最深层记录保留。", "副本实体", "清理"),
@@ -93,6 +94,14 @@ ENDLESS = [
 ]
 for floor in (1, 5, 10, 25, 50, 72, 100):
     ENDLESS.append(command(f"/function rpg:endless/debug/floor/{floor}", f"把附近七柱回廊跳转至第 {floor} 层。", "附近必须已有控制器；清理当前敌人，不补发跳过层奖励。", "副本当前层", "调试跳层"))
+
+PRAYER = [
+    command("/function rpg:prayer/menu", "打开圣所祷告界面。", "由玩家执行；自动识别旧版规范货币。", "个人菜单"),
+    command("/function rpg:prayer/start", "消耗 10 枚货币祷告一次，播放两秒光环后领取恩赐。", "由玩家执行；至少一个主背包空格，无未完成祷告。", "自身背包", "消耗货币"),
+    command("/function rpg:prayer/claim", "免费领取已经付费的待领恩赐。", "动画结束且背包有空格；不会重新抽取或重复扣费。", "自身背包", "补领"),
+    command("/function rpg:prayer/pool", "查看全部奖品、数量与单次概率。", "由玩家执行；只读。", "无", "只读"),
+    command("/function rpg:prayer/debug/coins", "获得 64 枚规范测试货币。", "由玩家执行；管理员测试入口。", "自身背包", "测试发放"),
+]
 
 CATEGORIES = [
     ("初始化", "首次装包与测试世界基础设施", SYSTEM),
@@ -102,6 +111,7 @@ CATEGORIES = [
     ("七柱罪仆", "每柱包含一条五职整队命令与五条单体命令", MINIONS),
     ("第一章 · 空缺者", "正式入口、调试台、补生与 Stage 0–10 跳转", CAMPAIGN),
     ("无尽驱魔 · 七柱回廊", "正式入口、多人加入、清理与 1–100 层关键节点跳转", ENDLESS),
+    ("圣所祷告", "付费祷告、完整概率、待领恢复与测试货币", PRAYER),
 ]
 ALL_COMMANDS = [item for _name, _note, items in CATEGORIES for item in items]
 

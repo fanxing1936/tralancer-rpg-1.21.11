@@ -1,0 +1,5 @@
+give @s echo_shard[custom_name=["",{"text":"[🗡]","italic":false,"color":"gold","bold":true},{"text":"传说冶炼石","italic":false,"bold":false}],lore=[["",{"text":"+------------------+","italic":false,"color":"white"}],["",{"text":"锻造装备的","italic":false,"color":"white"},{"text":"原材料","italic":false,"color":"gold","bold":true}],["",{"text":"决定成品","italic":false,"color":"gold","bold":true},{"text":"的矿石","italic":false,"color":"white"}],["",{"text":"+------------------+","italic":false,"color":"white"}]],custom_data={echo_tag:2b},damage_resistant={types:"#minecraft:is_fire"}] 2
+scoreboard players set @s rpg_pr_pending 0
+tellraw @s ["",{"text":"[恩赐]","color":"#D4AF37","bold":true,"italic":false},{"text":"祷告已被垂听。获得：","color":"#AAB4C3","bold":false,"italic":false},{"text":"传说冶炼石","color":"#FFD85A","bold":false,"italic":false},{"text":" ×2","color":"#AAB4C3","bold":false,"italic":false}]
+particle minecraft:end_rod ~ ~1 ~ 0.35 0.55 0.35 0.02 8 normal @s
+playsound minecraft:block.amethyst_block.chime player @s ~ ~ ~ 0.5 1.5

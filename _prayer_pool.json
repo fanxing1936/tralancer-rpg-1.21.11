@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "title": "圣所祷告",
+  "cost": 10,
+  "animation_ticks": 40,
+  "total_weight": 10000,
+  "groups": [
+    {"id":"provision","name":"补给","color":"#AAB4C3"},
+    {"id":"ward","name":"护佑","color":"#62D9E8"},
+    {"id":"arms","name":"武备","color":"#C28BE0"},
+    {"id":"relic","name":"珍藏","color":"#FFD85A"},
+    {"id":"miracle","name":"神恩","color":"#FFF2A8"}
+  ],
+  "entries": [
+    {"key":"gold","group":"provision","name":"黄金","count":4,"weight":500},
+    {"key":"diamond","group":"provision","name":"钻石","count":2,"weight":500},
+    {"key":"iron","group":"provision","name":"生铁","count":8,"weight":500},
+    {"key":"smelting","group":"provision","name":"冶炼石","count":2,"weight":500},
+    {"key":"forging","group":"provision","name":"铸造之石","count":2,"weight":500},
+    {"key":"holy_water","group":"provision","name":"驱魔圣水","count":1,"weight":500},
+    {"key":"vital_potion","group":"provision","name":"精血药水","count":1,"weight":500},
+    {"key":"shield_potion","group":"provision","name":"护盾药水","count":1,"weight":500},
+    {"key":"frost_helm","group":"ward","name":"冰霜战盔","count":1,"weight":500},
+    {"key":"frost_chest","group":"ward","name":"冰霜甲胄","count":1,"weight":500},
+    {"key":"frost_legs","group":"ward","name":"冰霜髀褌","count":1,"weight":500},
+    {"key":"frost_boots","group":"ward","name":"冰霜长靴","count":1,"weight":500},
+    {"key":"forest_helm","group":"ward","name":"森焱之盔","count":1,"weight":500},
+    {"key":"forest_boots","group":"ward","name":"森焱之靴","count":1,"weight":500},
+    {"key":"dogma","group":"arms","name":"教条战斧","count":1,"weight":400},
+    {"key":"truth","group":"arms","name":"求真之刃","count":1,"weight":400},
+    {"key":"vine","group":"arms","name":"藤蔓之鞭","count":1,"weight":400},
+    {"key":"chime","group":"arms","name":"晶啸","count":1,"weight":400},
+    {"key":"mischief","group":"arms","name":"稚弩","count":1,"weight":400},
+    {"key":"legend_smelting","group":"relic","name":"传说冶炼石","count":2,"weight":200},
+    {"key":"doll","group":"relic","name":"替死人偶","count":1,"weight":200},
+    {"key":"apocalypse","group":"relic","name":"天启星","count":1,"weight":200},
+    {"key":"faith","group":"relic","name":"信仰之源","count":1,"weight":200},
+    {"key":"longinus","group":"miracle","name":"朗基努斯之枪","count":1,"weight":50},
+    {"key":"holy_crown","group":"miracle","name":"圣荆棘冠","count":1,"weight":50},
+    {"key":"shroud","group":"miracle","name":"都灵裹尸布","count":1,"weight":50},
+    {"key":"jachin","group":"miracle","name":"雅斤","count":1,"weight":50}
+  ]
+}

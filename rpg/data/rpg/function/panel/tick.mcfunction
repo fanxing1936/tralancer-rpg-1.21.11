@@ -22,4 +22,5 @@ execute if score @s rpg_panel matches 14 run function rpg:campaign/beelzebub/joi
 execute if score @s rpg_panel matches 15 run function rpg:campaign/beelzebub/next_hunt
 execute if score @s rpg_panel matches 16 run function rpg:endless/start
 execute if score @s rpg_panel matches 17 run function rpg:endless/join
+execute if score @s rpg_panel matches 18 run function rpg:prayer/menu
 execute if score @s rpg_panel matches 1.. run scoreboard players set @s rpg_panel 0

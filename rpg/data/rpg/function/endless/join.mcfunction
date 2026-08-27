@@ -10,3 +10,4 @@ scoreboard players set @s rpg_end_vital 0
 scoreboard players set @s rpg_end_claim 1
 scoreboard players set @s rpg_end_pick 0
 tellraw @s ["",{"text":"[已加入] ","color":"#62D9E8","bold":true,"italic":false},{"text":"从下一层奖励开始参与选择。","color":"#AAB4C3","bold":false,"italic":false}]
+function rpg:endless/supply/request

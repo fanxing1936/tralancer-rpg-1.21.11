@@ -10,6 +10,8 @@ import json
 import os
 import re
 import sys
+from snbt import parse_value
+from extract_items import node_to_py
 
 PACK = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 ROOT = os.path.join(PACK, "data/rpg/loot_table")
@@ -79,7 +81,10 @@ def read_entry(e):
         elif n == "enchant_with_levels":
             it["ench"].append("附魔台等价 %s" % (num(f.get("levels")),))
         elif n == "set_custom_data":
-            it["tags"].update(f.get("tag", {}))
+            tag = f.get("tag", {})
+            if isinstance(tag, str):
+                tag = node_to_py(parse_value(tag)[0])
+            it["tags"].update(tag)
         elif n == "set_damage":
             it["damage"] = num(f.get("damage"))
         elif n == "set_count":

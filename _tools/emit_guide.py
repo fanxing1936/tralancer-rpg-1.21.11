@@ -2,6 +2,7 @@
 """Assemble the codex page from the generated card fragments."""
 
 import colorsys
+import html
 import io
 import json
 
@@ -13,6 +14,8 @@ Q = json.load(io.open("../_squad.json", encoding="utf-8"))
 D = json.load(io.open("../_divine.json", encoding="utf-8"))
 C = json.load(io.open("../_campaign_beelzebub.json", encoding="utf-8"))
 E = json.load(io.open("../_endless_exorcism_config.json", encoding="utf-8"))
+P = json.load(io.open("../_prayer_pool.json", encoding="utf-8"))
+ES = json.load(io.open("../_endless_supplies.json", encoding="utf-8"))
 
 
 def on_dark(hexcol):
@@ -158,6 +161,15 @@ def campaign_section():
 
 def endless_section():
     qualities = " → ".join(item["label"] for item in E["reward_quality"])
+    supply_rows = "".join(
+        '<tr><td class="num">%s</td><td>%s</td></tr>' % (
+            "–".join(str(n) for n in entry["tier"])
+            if entry["tier"][0] != entry["tier"][1] else str(entry["tier"][0]),
+            "、".join("%s ×%d" % (html.escape(name), count)
+                      for name, count in entry["items"]))
+        for entry in ES["relic_tiers"])
+    boss_kit = "、".join("%s ×%d" % (html.escape(name), count)
+                         for name, count in ES["boss_kit"])
     return f'''<section class="plate" id="s17">
 <div class="plate-h"><span class="num">∞</span><h2>无尽驱魔 · 七柱回廊</h2><span class="sub">完整 72 柱 · 每 {E["boss_interval"]} 层领主战 · 三路线成长</span></div>
 <blockquote class="verse">回廊不会创造新的名字；它只会让已经被记录的名字，以更深的代价重新归来。<cite>——边缘者训练庭记录</cite></blockquote>
@@ -177,16 +189,68 @@ def endless_section():
 <tr><td><b style="color:#FF665E">断罪</b></td><td>立即应用本轮输出强化</td><td>输出恩赐 +1，最高 8 层；后续层提高攻击与移动速度</td></tr>
 <tr><td><b style="color:#C28BE0">遗珍</b></td><td>立即领取当前深度物资</td><td>不增加战斗增益，以风险换取资源；品质为 {qualities}</td></tr>
 </tbody></table></div>
-<div class="note"><b>每层都有回报。</b>三条路线都会获得随难度档位增长的驱魔阅历；领主层另发宝库奖励。遗珍会从金锭、绿宝石和铁块逐步提升到钻石、回响碎片、下界合金碎片、下界合金锭与附魔金苹果。</div>
+<div class="note"><b>每层都有回报。</b>三条路线都会获得随难度档位增长的驱魔阅历；领主层另发宝库奖励。遗珍与宝库均使用数据包原有自定义物品，不再发放无标记的原版材料。货币可带到<a href="#s18">圣所祷告</a>，换取一次随机恩赐。</div>
+<div class="tw"><table><thead><tr><th>难度档位</th><th>遗珍内容</th></tr></thead><tbody>{supply_rows}</tbody></table></div>
+
+<h3 class="sub-h">领主层仪式补给<span class="rolls">补足最低库存 · 不跳真名调查</span></h3>
+<p>领主生成前，系统为本层成员检查仪式工具，仅补足缺少的数量：<strong>{boss_kit}、对应领主的媒介 ×{ES["medium_count"]}</strong>。已有足量物品时不额外堆叠；不会赠送真名进度或替玩家完成见证。</p>
+<div class="note"><b>领取保护：</b>同一玩家、同一副本实例、同一领主层最多领取一次。背包空位不足时不消耗这次配额；整理后可在无尽面板点击补给按钮，或执行 <code>/trigger rpg_end_supply set 1</code> 重试。</div>
 
 <h3 class="sub-h">入口与调试<span class="rolls">玩家面板 · 可配置坐标</span></h3>
 <div class="tw"><table><thead><tr><th>入口</th><th>作用</th></tr></thead><tbody>
 <tr><td class="num">玩家面板 → 无尽副本</td><td>查看历史最深层，开启、加入或离开七柱回廊。</td></tr>
+<tr><td class="num">/trigger rpg_end_supply set 1</td><td>重试领取当前领主层缺少的仪式补给；只补最低库存，不重复发放。</td></tr>
 <tr><td class="num">/function rpg:endless/start</td><td>以当前位置和朝向建立副本；第一章运行时会拒绝。</td></tr>
 <tr><td class="num">/function rpg:endless/join</td><td>加入附近 16 格内的活动副本，从下一次层末结算开始领奖。</td></tr>
 <tr><td class="num">/function rpg:endless/debug/menu</td><td>跳转第 1／5／10／25／50／72／100 层；不补发跳过层奖励。</td></tr>
 </tbody></table></div>
-<div class="note"><b>完整配置：</b><code>_endless_exorcism_config.json</code> 管理五个罪仆槽、领主坐标、活动与拉回半径、层间节拍及人数增兵层数。详细设计、奖励表和恢复规则见 <code>ENDLESS-EXORCISM.md</code>。</div>
+<div class="note"><b>完整配置：</b><code>_endless_exorcism_config.json</code> 管理五个罪仆槽、领主坐标、活动与拉回半径、层间节拍及人数增兵层数；<code>_endless_supplies.json</code> 统一管理遗珍、宝库与仪式补给。详细设计、奖励表和恢复规则见 <a href="ENDLESS-EXORCISM.md">ENDLESS-EXORCISM.md</a>。</div>
+</section>'''
+
+
+def prayer_section():
+    """Probability disclosure shares the exact gameplay configuration."""
+    total = P["total_weight"]
+    group_rows = []
+    prize_rows = []
+    for group in P["groups"]:
+        entries = [entry for entry in P["entries"] if entry["group"] == group["id"]]
+        group_rows.append(
+            '<tr><td style="color:%s">%s</td><td class="num">%d</td>'
+            '<td class="num">%.2f%%</td></tr>' % (
+                html.escape(group["color"], quote=True), html.escape(group["name"]),
+                len(entries), sum(entry["weight"] for entry in entries) * 100 / total))
+        for entry in entries:
+            prize_rows.append(
+                '<tr><td style="color:%s">%s</td><td>%s</td>'
+                '<td class="num">%d</td><td class="num">%.2f%%</td></tr>' % (
+                    html.escape(group["color"], quote=True), html.escape(group["name"]),
+                    html.escape(entry["name"]), entry["count"], entry["weight"] * 100 / total))
+    return f'''<section class="plate" id="s18">
+<div class="plate-h"><span class="num">✦</span><h2>圣所祷告 · 耶和华</h2><span class="sub">{len(P["entries"])} 项恩赐 · 每次 {P["cost"]} 枚货币 · 固定概率</span></div>
+<blockquote class="verse">奉上货币，静候恩赐。<cite>——圣所祷告</cite></blockquote>
+<p>从玩家面板进入<strong>圣所祷告</strong>，以数据包中的 <strong>[currency]货币</strong>进行一次祈愿。耶和华将从补给、护佑、武备、珍藏与神恩中回应一项奖励；物品沿用既有名称、贴图、技能与组件。<strong>普通粗金不计入货币。</strong></p>
+<div class="sys">
+<div><h3>Ⅰ · 查看与奉上</h3><p class="how">玩家面板 → 圣所祷告</p><p>菜单显示余额与每次 {P["cost"]} 枚的费用。只有点击「祷告一次」才扣费；货币不足或没有空背包格时，不扣费、不抽取。</p></div>
+<div><h3>Ⅱ · 静候回应</h3><p class="how">{P["animation_ticks"] / 20:g} 秒圣光演出</p><p>扣费后立即锁定随机奖品，演出只负责揭晓，不会重抽。提示使用聊天区，保留原本的战斗 Actionbar。</p></div>
+<div><h3>Ⅲ · 收取恩赐</h3><p class="how">直接进入背包 · 满包待领</p><p>若演出途中背包被装满，已付费的奖品保留为待领，不丢到地面、不再次收费。断线会暂停演出；重新进入后继续，亦可从菜单领取待领恩赐。</p></div>
+</div>
+<div class="note"><b>概率公开：</b>每次独立抽取，只获得一项列表奖励；数量是该项一次发放量，不是额外抽数。无保底、无累计加成，允许重复获得。旧约、新约、真名见证、剧情线索与已签契约不在奖池中，不绕过仪式或剧情进程。</div>
+
+<h3 class="sub-h">恩赐分类<span class="rolls">分类是奖池标签，不改变原物品品质</span></h3>
+<div class="tw"><table><thead><tr><th>分类</th><th>奖项数</th><th>分类总概率</th></tr></thead><tbody>{''.join(group_rows)}</tbody></table></div>
+<h3 class="sub-h">完整奖池<span class="rolls">每项为单次祷告的实际概率 · 合计 100%</span></h3>
+<div class="tw"><table><thead><tr><th>分类</th><th>奖励</th><th>数量</th><th>单次概率</th></tr></thead><tbody>{''.join(prize_rows)}</tbody></table></div>
+
+<h3 class="sub-h">祷告入口<span class="rolls">普通玩家可使用，无需管理员权限</span></h3>
+<div class="tw"><table><thead><tr><th>入口</th><th>作用</th></tr></thead><tbody>
+<tr><td class="num">/trigger rpg_pray set 1</td><td>打开祷告菜单，查看余额；不扣费。</td></tr>
+<tr><td class="num">/trigger rpg_pray set 2</td><td>消耗 {P["cost"]} 枚货币祷告一次；已有待领恩赐时优先领取，不重复扣费。</td></tr>
+<tr><td class="num">/trigger rpg_pray set 3</td><td>在游戏中查看完整概率。</td></tr>
+<tr><td class="num">/trigger rpg_pray set 4</td><td>领取已付费的待领恩赐。</td></tr>
+</tbody></table></div>
+<div class="note"><b>奖池文件：</b><a href="PRAYER-POOL.md">PRAYER-POOL.md</a> 是完整可阅读介绍；<code>_prayer_pool.json</code> 是费用、动画时间、奖项数量与权重的唯一配置。此处表格与游戏奖励均从同一配置生成。</div>
+<div class="note"><b>死亡掉落：</b>保留本包定制战利品与佣兵受托武器返还，屏蔽其余原版死亡表、充能苦力怕头颅和普通装备随机掉落。不清理玩家投掷物，也不修改玩家死亡背包。凋灵之星、坐骑内部库存等原版硬编码掉落仍保留，边界详见 <a href="DROP-POLICY.md">掉落策略</a>。</div>
 </section>'''
 
 
@@ -517,6 +581,7 @@ def build():
 <li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
 <li><a href="#s16"><span class="num">CH.I</span>第一章·空缺者</a></li>
 <li><a href="#s17"><span class="num">∞</span>无尽驱魔·七柱回廊</a></li>
+<li><a href="#s18"><span class="num">✦</span>圣所祷告·耶和华</a></li>
 <li><a href="#s14"><span class="num">X</span>驱魔道具</a></li>
 <li><a href="#s12"><span class="num">XI</span>七十二柱契约</a></li>
 <li><a href="#s15"><span class="num">XII</span>卡巴拉上位契约</a></li>
@@ -825,6 +890,9 @@ def build():
 
     # Endless exorcism ------------------------------------------------------
     a(endless_section())
+
+    # Prayer and transparent reward pool -----------------------------------
+    a(prayer_section())
 
     # X rite kit -------------------------------------------------------------
     a('''<section class="plate" id="s14">

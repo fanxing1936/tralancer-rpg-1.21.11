@@ -1,0 +1,9 @@
+particle minecraft:dust{color:[1.0,0.84,0.35],scale:0.7} ~0.000 ~0.850 ~0.540 0 0 0 0 1 normal @s
+particle minecraft:dust{color:[1.0,0.84,0.35],scale:0.7} ~-0.382 ~0.850 ~0.382 0 0 0 0 1 normal @s
+particle minecraft:dust{color:[1.0,0.84,0.35],scale:0.7} ~-0.540 ~0.850 ~0.000 0 0 0 0 1 normal @s
+particle minecraft:dust{color:[1.0,0.84,0.35],scale:0.7} ~-0.382 ~0.850 ~-0.382 0 0 0 0 1 normal @s
+particle minecraft:dust{color:[1.0,0.84,0.35],scale:0.7} ~-0.000 ~0.850 ~-0.540 0 0 0 0 1 normal @s
+particle minecraft:dust{color:[1.0,0.84,0.35],scale:0.7} ~0.382 ~0.850 ~-0.382 0 0 0 0 1 normal @s
+particle minecraft:dust{color:[1.0,0.84,0.35],scale:0.7} ~0.540 ~0.850 ~-0.000 0 0 0 0 1 normal @s
+particle minecraft:dust{color:[1.0,0.84,0.35],scale:0.7} ~0.382 ~0.850 ~0.382 0 0 0 0 1 normal @s
+particle minecraft:end_rod ~ ~0.8 ~ 0.18 0.4 0.18 0.015 3 normal @s

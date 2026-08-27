@@ -4,6 +4,8 @@ scoreboard players remove #lord rpg_end_tmp 1
 scoreboard players set #seven rpg_end_tmp 7
 scoreboard players operation #lord rpg_end_tmp %= #seven rpg_end_tmp
 scoreboard players add #lord rpg_end_tmp 1
+scoreboard players operation @s rpg_end_kit_lord = #lord rpg_end_tmp
+execute as @a[tag=rpg.end.member.current,distance=..96,gamemode=!spectator] at @s run function rpg:endless/supply/request
 execute if score #lord rpg_end_tmp matches 1 positioned ^0 ^0 ^16 run function rpg:endless/boss/1
 execute if score #lord rpg_end_tmp matches 2 positioned ^0 ^0 ^16 run function rpg:endless/boss/2
 execute if score #lord rpg_end_tmp matches 3 positioned ^0 ^0 ^16 run function rpg:endless/boss/3

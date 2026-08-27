@@ -1,3 +1,4 @@
+function rpg:drop_policy/tick
 function rpg:item/chestplate/off
 
 
@@ -41,3 +42,4 @@ function rpg:level/player
 
 
 #生物检测
+function rpg:prayer/tick
