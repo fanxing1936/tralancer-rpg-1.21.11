@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{rpg_endless_token:1b}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:entry/endless/use"
+  }
+}

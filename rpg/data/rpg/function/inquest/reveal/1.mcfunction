@@ -1,4 +1,5 @@
 tag @s add rpg.name.1
+execute unless entity @s[tag=rpg.endless.invited] run function rpg:entry/endless/invite
 scoreboard players set @s rpg_case1 3
 title @s times 10 70 20
 title @s title ["",{"text":"真　名　确　证","color":"#FFF2A8","bold":true,"italic":false}]

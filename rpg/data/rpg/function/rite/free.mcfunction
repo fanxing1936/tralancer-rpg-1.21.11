@@ -8,4 +8,5 @@ playsound minecraft:entity.evoker.celebrate hostile @a[distance=..20] ~ ~ ~ 1 1.
 effect give @s minecraft:glowing 4 0 true
 kill @e[type=minecraft:vex,tag=rpg.vac.shard,distance=..12]
 execute as @a[distance=..8] run scoreboard players remove @s rpg_taint 5
+execute as @a[distance=..8,tag=!rpg.ch1.invited] run function rpg:entry/chapter/invite
 execute at @s run summon minecraft:experience_orb ~ ~1 ~ {Value:24}

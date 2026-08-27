@@ -2,6 +2,12 @@
 # Rebuild the upgraded pack from the pristine 1.21 copy in _orig/.
 set -e
 cd "$(dirname "$0")"
+
+# 让 _tools/sitecustomize.py 被 Python 启动时自动导入。
+# 它给所有生成器的**写**操作套了一层有上限的重试 —— 这台机器上
+# 实时扫描会让刚复制出来的文件随机返回 Errno 22，每次挂在不同的生成器。
+# 详见该文件顶部的排查记录。
+export PYTHONPATH="$(pwd)${PYTHONPATH:+:$PYTHONPATH}"
 rm -rf ../rpg
 cp -r ../_orig ../rpg
 # 复制完两千来个文件之后要缓一下再动手。
@@ -124,6 +130,8 @@ python make_boxes.py ../rpg
 # 所有生成器（尤其领取箱）完成后再统一七罪姓名色与物品名字重：这样箱内
 # 副本、散装 give、Boss 名牌、调查/裁决/面板会共享同一套最终规范。
 python polish_demon_names.py ../rpg
+# 两道门必须晚于领取箱生成，避免自然接引物被静默收进开局物资而绕开首次事件。
+python add_entry_points.py ../rpg
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg
@@ -139,6 +147,7 @@ python check_beelzebub_campaign_ui.py ../rpg ../resourcepack
 python check_beelzebub_campaign_config.py ../rpg --require-wired
 python check_beelzebub_narrative_ui.py ../rpg --story-contract
 python check_endless_exorcism.py ../rpg
+python check_entry_points.py ../rpg
 python check_prayer_supplies.py ../rpg
 python check_drop_policy.py ../rpg
 python check_retired_mob_content.py ../rpg
