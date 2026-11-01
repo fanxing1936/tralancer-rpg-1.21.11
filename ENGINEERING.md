@@ -3263,6 +3263,53 @@ Stage 0–10 的说明直接对齐运行时状态机，而非误用 11 步剧情
 入口，以及禁止直接写 Actionbar。调试台提供第 1／5／10／25／50／72／100 层跳转，
 跳层只改变当前测试层，不补发历史奖励。
 
+## 38. 范围收缩：只保留装备、恶魔生态与契约体系
+
+作者决定当前阶段只做三块：**装备**（武器、防具、符文、锻造）、**恶魔生态**（七宗罪领主、
+35 名罪仆、魔化、空缺者、真名调查与四阶段驱魔、封印遗物）、**契约体系**（七十二柱罪约、
+卡巴拉生命之树、旧约与新约）。第一章《空缺者》、无尽驱魔《七柱回廊》、圣所祷告与佣兵小队
+在本地 `trim-core` 分支整体退役；`main` 与 GitHub 保持原样，需要时从历史找回。
+
+退役按“源头删除”执行，而不是删产物：`add_squad`、`beelzebub_campaign_config`、
+`add_beelzebub_campaign`、`polish_beelzebub_campaign_ui`、`add_endless_exorcism`、
+`add_endless_supplies`、`add_prayer`、`add_entry_points` 与对应 9 个校验脚本、全部配置 JSON
+和章节／无尽／祷告文档一并删除。这四块大多以补丁方式挂进共享文件（`exorcism`、`command/tick`、
+面板、真名调查、`rite/free`），生成器不跑，重建时这些挂钩自然不再出现。
+
+需要手工拆开的是共享生成器里写死的部分：
+
+- `add_demon_minions` 不再给罪仆继承 `rpg_ch1_id`／`rpg.ch1.minion`，对应校验同步收窄；
+- `add_player_panel` 去掉“佣兵小队”按钮与页面，其余按钮编号不变；
+- `make_boxes` 去掉佣兵分类与章节残页／裁决来源，领取箱由 14 只变为 13 只；
+- `add_drop_policy` 去掉佣兵主手返还表与 `rpg.merc` 分支；
+- `opt_mp` 去掉佣兵三处归属断言；`add_book` 去掉卷六（佣兵）与卷七（第一章）；
+- `debug_commands`／`emit_guide` 去掉三类调试入口与四个图鉴页面，章节号顺延。
+
+被删生成器里有两处是保留体系的隐性依赖，已迁回各自的消费者：
+
+- `rpg:sneaking` 谓词原本由 `add_squad` 顺手写出，但新约的潜行分支和封印遗物的压制也在用。
+  删掉佣兵后 `check_divine_covenants` 立即报缺；现在由 `add_divine_covenants` 写出，早于 `add_seal_relic`。
+- ［货币］的 `currency_tag:1b` 标记原本由 `add_squad`（`give/item` 入口）和 `add_prayer`
+  （僵尸、尸壳、骷髅、僵尸村民与两张试炼表共 6 张定制掉落表）补上，而玛门什一税只认这个标记。
+  没有任何校验覆盖它：去掉后构建照样全绿，玛门却再也收不到钱。现在由 `add_mammon` 的
+  `tag_currency()` 负责，产物与删减前逐字节一致。
+
+这第二处是靠逐行审查“保留文件里新增了哪些行”才发现的。删除挂钩应当只产生删除行；
+最终 `rpg/` 中修改文件的新增行只剩四类可解释的变化：罪仆召唤去掉 `rpg.end.controller` 前缀后的
+同一条 tellraw、HUD 消息槽因佣兵消息退场而从 m55–m58 前移到 m35–m38、别西卜真名确证回到与其余
+六柱一致的通用样式（原先是第一章美术层单独改写的），以及领取箱、手记与面板随内容减少的重排。
+
+验证：`build.sh` 退出码 0，全部保留校验通过；数据包由 1968 个函数降到 1403 个，
+`profile_tick` 的静态每刻上界由约 14.0 万条命令降到 3.8 万条，NBT 选择器 1179 → 14；
+这是四个被删 tick 入口（`squad/squad`、`prayer/tick` 与 `exorcism` 里的章节、无尽控制器）合计的
+静态可达开销，未逐项拆分，也不代表实机耗时。产物中已无 `squad`／`endless`／`prayer`／`campaign`／`entry`
+命名空间与相关计分板、标签。材质包里没有这四块的专属资源，未改动。
+`rp_build.sh` 与 `guide_build.sh` 依赖客户端 jar，本次所在机器没有。图鉴按不依赖 jar 的部分
+重建：`extract_items`／`extract_loot` 重新提取，`emit_guide` 与 `check_debug_commands` 实跑通过；
+`build_guide`／`build_loot_frag`（需要 jar 合成图标）未运行，募兵旗、指挥旗两张卡片是从
+`_guide_sections.json`／`_guide_fragments.json` 中手工剔除的——提取结果与删减前相比恰好只少这两件。
+在有 jar 的机器上跑一次完整 `guide_build.sh` 可彻底对齐。`DEBUG-COMMANDS.md` 已重新生成（66 条）。
+
 ---
 
 # 重建方式
@@ -3279,7 +3326,7 @@ bash "_tools/build.sh"
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
 　　　　　→ `add_lucifer.py` + `add_leviathan.py`
 　　　　　→ `add_runes.py` + `add_epics.py` + `add_exorcism.py`
-　　　　　→ `add_pact.py` + `add_squad.py` + `add_holy_items.py`
+　　　　　→ `add_pact.py` + `add_holy_items.py`
 　　　　　→ `retype_longinus.py` + `modernize_legacy_weapons.py`
 　　　　　→ `modernize_legacy_advanced.py` + `add_book.py` + `make_boxes.py`
 　　　　　→ `opt_actionbar.py` + `fix_display.py` → `opt_mp.py`
@@ -3290,16 +3337,13 @@ bash "_tools/build.sh"
 　　　　　　→ `add_ritual_phase2.py` + `add_demon_minions.py`
 　　　　　　→ `add_life_tree_particles.py` + `add_kabbalah_covenant.py`
 　　　　　→ `add_player_panel.py` + `polish_recent_ui.py`
-　　　　　→ `add_divine_covenants.py` + `add_beelzebub_campaign.py`
-　　　　　→ `polish_beelzebub_campaign_ui.py` + `add_endless_exorcism.py`
+　　　　　→ `add_divine_covenants.py`
 　　　　　→ `make_boxes.py` + `polish_demon_names.py`
 　　　　　→ `drop_legacy_mob_factions.py`
 　　　　　　→ `validate.py` + `check_adv.py` + `check_ritual_phase2.py`
 　　　　　　→ `check_demon_minions.py` + `check_life_tree_particles.py`
 　　　　　　→ `check_kabbalah_covenant.py` + `check_divine_covenants.py`
-　　　　　　→ `check_beelzebub_campaign.py` + `check_beelzebub_campaign_ui.py`
-　　　　　→ `check_beelzebub_campaign_config.py` + `check_beelzebub_narrative_ui.py`
-　　　　　→ `check_endless_exorcism.py` + `check_retired_mob_content.py`
+　　　　　　→ `check_retired_mob_content.py`
 　　　　　→ `check_creeper.py` → `profile_tick.py`
 材质包流程（先跑）：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`

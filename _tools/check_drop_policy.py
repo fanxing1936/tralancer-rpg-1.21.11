@@ -46,18 +46,11 @@ def main() -> None:
         if not path.is_file() or read_json(path) != EMPTY_ENTITY_TABLE:
             problems.append(f"charged-creeper table not suppressed: {name}")
 
-    returned = read_json(dp / "data/rpg/loot_table/squad/equipment_return.json")
-    return_text = json.dumps(returned, ensure_ascii=False, separators=(",", ":"))
-    for token in ('"type":"minecraft:slots"', '"source":"this"', '"slots":"weapon.mainhand"'):
-        if token not in return_text:
-            problems.append(f"mercenary equipment return lacks {token}")
-
     tick = (dp / "data/rpg/function/drop_policy/tick.mcfunction").read_text(encoding="utf-8")
     prepare = (dp / "data/rpg/function/drop_policy/prepare.mcfunction").read_text(encoding="utf-8")
     required = (
         "type=#rpg:drop_policy_mobs",
         "tag=!rpg.drop_policy.v1",
-        "DeathLootTable set value \"rpg:squad/equipment_return\"",
         "CanPickUpLoot:0b",
         "mainhand:0f",
         "offhand:0f",
@@ -87,7 +80,6 @@ def main() -> None:
     print("drop-policy check PASS")
     print(f"  {len(suppressed)} vanilla entity loot tables empty; 7 authored tables preserved")
     print("  charged-creeper heads suppressed; ordinary item entities untouched")
-    print("  mercenary main-hand return uses minecraft:slots")
 
 
 if __name__ == "__main__":

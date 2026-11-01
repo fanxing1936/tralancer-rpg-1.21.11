@@ -39,8 +39,6 @@ EXORCISM_GLOBS = [
     "inquest/give/page?.mcfunction",
     "inquest/give/relic?.mcfunction",
     "inquest/give/core?.mcfunction",
-    "campaign/beelzebub/give/pending_page.mcfunction",
-    "campaign/beelzebub/reward/*.mcfunction",
 ]
 
 # key -> box colour, visible label. Order is the hand-out order.
@@ -54,7 +52,6 @@ CATEGORIES = [
     ("pact", "black", "罪约契约"),
     ("divine", "light_blue", "上位契约"),
     ("kabbalah", "magenta", "卡巴拉秘仪"),
-    ("mercenary", "green", "佣兵"),
     ("exorcism", "white", "驱魔器具"),
     ("page", "light_blue", "真名档案"),
     ("verdict", "brown", "裁决遗物"),
@@ -111,10 +108,6 @@ def category(source, item, block):
 
     if source.startswith("inquest/give/page"):
         return "page"
-    if source == "campaign/beelzebub/give/pending_page.mcfunction":
-        return "page"
-    if source.startswith("campaign/beelzebub/reward/"):
-        return "verdict"
     if source.startswith("inquest/give/relic") or source.startswith("inquest/give/core"):
         return "verdict"
     if source.startswith("inquest/give/"):
@@ -126,8 +119,6 @@ def category(source, item, block):
     if any(flag in blob for flag in
            ("rpg_kabbalah_contract:1b", "rpg_sephirah:", "rpg_true_cross:1b")):
         return "kabbalah"
-    if "squad_hire:1b" in blob or "squad_order:1b" in blob:
-        return "mercenary"
     if ('"text":"[驱魔]"' in blob or "rpg_rite_tool:1b" in blob or
             "rite_tag:1b" in blob):
         return "exorcism"
@@ -227,12 +218,6 @@ def all_direct_give_keys():
         for name in names:
             path = os.path.join(root, name)
             if not name.endswith(".mcfunction") or os.path.normcase(path) == os.path.normcase(OUT):
-                continue
-            # Endless floor rewards are ordinary Minecraft materials produced
-            # at runtime, not authored catalogue items.  Treating those payout
-            # tables as canonical give sources would incorrectly force them
-            # into the custom-item testing shulker boxes.
-            if relpath(path).startswith("endless/reward/"):
                 continue
             for line in io.open(path, encoding="utf-8"):
                 parsed = parse_give(line)

@@ -67,54 +67,14 @@ execute if entity @s[scores={rpg_hud_m=33}] run data modify storage rpg:hud e se
 execute if entity @s[scores={rpg_hud_m=33}] run function rpg:hud/seal/event with storage rpg:hud
 execute if entity @s[scores={rpg_hud_m=34}] run data modify storage rpg:hud e set value '["",{"text":"图腾已立","color":"gold"},{"text":"　以驱魔圣水浇之","color":"gray","italic":true}]'
 execute if entity @s[scores={rpg_hud_m=34}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=35}] run data modify storage rpg:hud e set value '["",{"text":"已解雇","italic":true,"color":"gray"}]'
+execute if entity @s[scores={rpg_hud_m=35}] run data modify storage rpg:hud e set value '["",{"text":"人偶替你受下了","italic":true,"color":"#C9A227"}]'
 execute if entity @s[scores={rpg_hud_m=35}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=36}] run data modify storage rpg:hud e set value '["",{"text":"小队已满员","italic":true,"color":"gray"}]'
+execute if entity @s[scores={rpg_hud_m=36}] run data modify storage rpg:hud e set value '["",{"text":"圣痕淡去","italic":true,"color":"gray"}]'
 execute if entity @s[scores={rpg_hud_m=36}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=37}] run data modify storage rpg:hud e set value '["",{"text":"已配装","color":"#D4AF37"}]'
+execute if entity @s[scores={rpg_hud_m=37}] run data modify storage rpg:hud e set value '["",{"text":"你打碎的只是空壳","italic":true,"color":"dark_gray"}]'
 execute if entity @s[scores={rpg_hud_m=37}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=38}] run data modify storage rpg:hud e set value '["",{"text":"视线里没有目标","italic":true,"color":"gray"}]'
+execute if entity @s[scores={rpg_hud_m=38}] run data modify storage rpg:hud e set value '["",{"text":"壳裂开了","italic":true,"color":"dark_purple"}]'
 execute if entity @s[scores={rpg_hud_m=38}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=39}] run data modify storage rpg:hud e set value '["",{"text":"你还没有小队","italic":true,"color":"gray"}]'
-execute if entity @s[scores={rpg_hud_m=39}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=40}] run data modify storage rpg:hud e set value '["",{"text":"身边没有自己的佣兵","italic":true,"color":"gray"}]'
-execute if entity @s[scores={rpg_hud_m=40}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=41}] run data modify storage rpg:hud e set value '["",{"text":"钱不够","italic":true,"color":"red"}]'
-execute if entity @s[scores={rpg_hud_m=41}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=42}] run data modify storage rpg:hud e set value '["",{"text":"待雇 · HAIKU","color":"gray","bold":true},{"text":"　8 枚　再次长按雇下他","color":"gray","italic":true}]'
-execute if entity @s[scores={rpg_hud_m=42}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=43}] run data modify storage rpg:hud e set value '["",{"text":"待雇 · SONNET","color":"#57C6D6","bold":true},{"text":"　20 枚　再次长按雇下他","color":"gray","italic":true}]'
-execute if entity @s[scores={rpg_hud_m=43}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=44}] run data modify storage rpg:hud e set value '["",{"text":"待雇 · OPUS","color":"#A275DE","bold":true},{"text":"　40 枚　再次长按雇下他","color":"gray","italic":true}]'
-execute if entity @s[scores={rpg_hud_m=44}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=45}] run data modify storage rpg:hud e set value '["",{"text":"待雇 · FABLE","color":"#D9A02B","bold":true},{"text":"　80 枚　再次长按雇下他","color":"gray","italic":true}]'
-execute if entity @s[scores={rpg_hud_m=45}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=46}] run data modify storage rpg:hud e set value '["",{"text":"待雇 · MYTHOS","color":"#FFD700","bold":true},{"text":"　160 枚　再次长按雇下他","color":"gray","italic":true}]'
-execute if entity @s[scores={rpg_hud_m=46}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=47}] run data modify storage rpg:hud e set value '["",{"text":"跟　随","color":"#D4AF37","bold":true}]'
-execute if entity @s[scores={rpg_hud_m=47}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=48}] run data modify storage rpg:hud e set value '["",{"text":"驻　守","color":"#8FA1B3","bold":true}]'
-execute if entity @s[scores={rpg_hud_m=48}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=49}] run data modify storage rpg:hud e set value '["",{"text":"佣兵已入队","color":"#D4AF37"}]'
-execute if entity @s[scores={rpg_hud_m=49}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=50}] run data modify storage rpg:hud e set value '["",{"text":"已晋升 · SONNET","italic":false,"color":"#57C6D6","bold":true}]'
-execute if entity @s[scores={rpg_hud_m=50}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=51}] run data modify storage rpg:hud e set value '["",{"text":"已晋升 · OPUS","italic":false,"color":"#A275DE","bold":true}]'
-execute if entity @s[scores={rpg_hud_m=51}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=52}] run data modify storage rpg:hud e set value '["",{"text":"已晋升 · FABLE","italic":false,"color":"#D9A02B","bold":true}]'
-execute if entity @s[scores={rpg_hud_m=52}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=53}] run data modify storage rpg:hud e set value '["",{"text":"已晋升 · MYTHOS","italic":false,"color":"#FFD700","bold":true}]'
-execute if entity @s[scores={rpg_hud_m=53}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=54}] run data modify storage rpg:hud e set value '["",{"text":"他已经是 MYTHOS 了","italic":true,"color":"#D4AF37"}]'
-execute if entity @s[scores={rpg_hud_m=54}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=55}] run data modify storage rpg:hud e set value '["",{"text":"人偶替你受下了","italic":true,"color":"#C9A227"}]'
-execute if entity @s[scores={rpg_hud_m=55}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=56}] run data modify storage rpg:hud e set value '["",{"text":"圣痕淡去","italic":true,"color":"gray"}]'
-execute if entity @s[scores={rpg_hud_m=56}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=57}] run data modify storage rpg:hud e set value '["",{"text":"你打碎的只是空壳","italic":true,"color":"dark_gray"}]'
-execute if entity @s[scores={rpg_hud_m=57}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=58}] run data modify storage rpg:hud e set value '["",{"text":"壳裂开了","italic":true,"color":"dark_purple"}]'
-execute if entity @s[scores={rpg_hud_m=58}] run function rpg:hud/seal/event with storage rpg:hud
 execute if entity @s[scores={rpg_hud_m=59}] run data modify storage rpg:hud e set value '["",{"text":"[十诫净界]","color":"#D4AF37","bold":true,"italic":false},{"text":"　律法涤尽十方罪影","color":"#FFF2A8","bold":false,"italic":false},{"text":" ✦","color":"#FFFFFF","bold":false,"italic":false}]'
 execute if entity @s[scores={rpg_hud_m=59}] run function rpg:hud/seal/event with storage rpg:hud
 execute if entity @s[scores={rpg_hud_m=60}] run data modify storage rpg:hud e set value '["",{"text":"[创世净光]","color":"#62D9E8","bold":true,"italic":false},{"text":"　权柄化作前路之光","color":"#E8F4FF","bold":false,"italic":false},{"text":" ✦","color":"#FFFFFF","bold":false,"italic":false}]'

@@ -2,7 +2,7 @@
 """把旧玩家头颅面板升级成多人安全的可点击信息终端。
 
 本脚本必须在驱魔扩展之后运行：面板会读取驱魔职业、真名调查、契约、
-侵蚀与佣兵目标，并把所有聊天交互收束到普通玩家可用的 trigger。
+侵蚀目标，并把所有聊天交互收束到普通玩家可用的 trigger。
 """
 
 import io
@@ -174,8 +174,7 @@ def menu_functions():
         tell(button("驱魔师档案", "#FFF2A8", 1), text("  "),
              button("真名调查", "#62D9E8", 2), text("  "),
              button("契约·侵蚀", "#D596F2", 3)),
-        tell(button("佣兵小队", "#D4AF37", 4), text("  "),
-             button("HUD 开关", "#8FC7FF", 5), text("  "),
+        tell(button("HUD 开关", "#8FC7FF", 5), text("  "),
              button("操作速查", "#AAB4C3", 6)),
         tell(text("切走再切回面板，可再次打开此页。", "dark_gray")),
         tell(text("+--------------------------+", "#D4AF37", True)),
@@ -189,7 +188,6 @@ def menu_functions():
         "execute if score @s rpg_panel matches 1 run function rpg:inquest/career",
         "execute if score @s rpg_panel matches 2 run function rpg:panel/inquest",
         "execute if score @s rpg_panel matches 3 run function rpg:panel/pact",
-        "execute if score @s rpg_panel matches 4 run function rpg:panel/squad",
         "execute if score @s rpg_panel matches 5 run function rpg:panel/hud_toggle",
         "execute if score @s rpg_panel matches 6 run function rpg:panel/help",
         "execute if score @s rpg_panel matches 8 run function rpg:panel/open",
@@ -240,22 +238,6 @@ def menu_functions():
         home_line(),
     ]
     write("panel/pact.mcfunction", "\n".join(pact_lines))
-
-    write("panel/squad.mcfunction", "\n".join([
-        "scoreboard players set #panel_count rpg_squad 0",
-        "scoreboard players operation #panel_squad rpg_squad = @s rpg_squad",
-        "execute if entity @s[tag=rpg.sq.lead] as @e[type=minecraft:husk,tag=rpg.squad] if score @s rpg_squad = #panel_squad rpg_squad run scoreboard players add #panel_count rpg_squad 1",
-        "scoreboard players operation @s rpg_sq_n = #panel_count rpg_squad",
-        tell(text("+---------- 佣兵小队 ----------+", "#D4AF37", True)),
-        "execute unless entity @s[tag=rpg.sq.lead] run tellraw @s " + raw(text("尚未建立佣兵编制。", "gray")),
-        "execute if entity @s[tag=rpg.sq.lead] run tellraw @s " +
-        raw(text("当前编制：", "gray"), score("rpg_sq_n", "#D4AF37"), text(" / 4", "dark_gray")),
-        "execute if entity @s[tag=rpg.sq.lead,scores={rpg_sq_stance=0}] run tellraw @s " + raw(text("全队姿态：跟随", "#70DB70")),
-        "execute if entity @s[tag=rpg.sq.lead,scores={rpg_sq_stance=1}] run tellraw @s " + raw(text("全队姿态：驻守", "#8FC7FF")),
-        tell(text("募兵旗：招募/晋升　指挥旗：集火/配装/姿态/解雇", "gray")),
-        tell(text("姿态切换：潜行 + 指挥旗长按右键", "dark_gray")),
-        home_line(),
-    ]))
 
     write("panel/hud_toggle.mcfunction", "\n".join([
         "tag @s remove rpg.panel.was_off",
@@ -346,7 +328,7 @@ def validate():
     assert "custom_data={skull_tag:1b,rpg_panel:1b}" in read("command/give/weapon.mcfunction")
     for rel in ("panel/open.mcfunction", "panel/tick.mcfunction",
                 "panel/inquest.mcfunction", "panel/pact.mcfunction",
-                "panel/squad.mcfunction", "panel/hud_toggle.mcfunction",
+                "panel/hud_toggle.mcfunction",
                 "panel/help.mcfunction"):
         body = read(rel)
         assert "tellraw @a" not in body, rel

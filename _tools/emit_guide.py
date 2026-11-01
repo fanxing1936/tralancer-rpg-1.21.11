@@ -10,12 +10,7 @@ from debug_commands import ALL_COMMANDS, render_html as render_debug_commands
 
 F = json.load(io.open("../_guide_fragments.json", encoding="utf-8"))
 S = json.load(io.open("../_guide_sections.json", encoding="utf-8"))
-Q = json.load(io.open("../_squad.json", encoding="utf-8"))
 D = json.load(io.open("../_divine.json", encoding="utf-8"))
-C = json.load(io.open("../_campaign_beelzebub.json", encoding="utf-8"))
-E = json.load(io.open("../_endless_exorcism_config.json", encoding="utf-8"))
-P = json.load(io.open("../_prayer_pool.json", encoding="utf-8"))
-ES = json.load(io.open("../_endless_supplies.json", encoding="utf-8"))
 
 
 def on_dark(hexcol):
@@ -115,142 +110,6 @@ def divine_section():
 </div>
 
 <div class="grid">{F.get("divine", "")}</div>
-</section>'''
-
-
-def campaign_section():
-    """Chapter I player guide; narrative canon lives in the campaign markdown."""
-    flow = "".join(
-        '<li><span class="num">%02d</span><b>%s</b></li>' % (i, label)
-        for i, label in enumerate(C["flow"], 1))
-    return f'''<section class="plate" id="s16">
-<div class="plate-h"><span class="num">CH.I</span><h2>第一章 · 空缺者</h2><span class="sub">别西卜驱魔战役 · 50–70 分钟</span></div>
-<blockquote class="verse">前线吃人，后方负责忘记那些被吃掉的人。<cite>——维斯珀城空缺者档案</cite></blockquote>
-<p>玩家以临时教廷辅员身份进入战争后方的<strong>维斯珀城</strong>。已经下葬的人仍会回家，记得姓名与亲属，却失去了情感与作为人的主体。军需系统侵吞粮食，教廷删除饥饿死者的名字，<strong style="color:#B5D957">别西卜</strong>则以第七粮仓为核心，把这种制度性的暴食变成覆盖城市的寄生仪式。</p>
-
-<h3 class="sub-h">楔子 · 第十三声钟<span class="rolls">征调令 → 矛盾记录 → 不可信档案</span></h3>
-<p>玩家不是直接出现在 Boss 门口，而是持战时征调令前来核对粮册与死亡登记。粮册满仓、街边空碗；墓地增员、死者回家。伊莱亚只给出一条调查原则：<strong>先记录事实，再比较解释；一个异常不能证明恶魔。</strong></p>
-
-<h3 class="sub-h">完整任务链<span class="rolls">调查、五职罪仆、700 生命领主、四阶段驱魔</span></h3>
-<ol class="campaign-flow">{flow}</ol>
-
-<div class="sys">
-<div><h3>调查与推理</h3><p class="how">观察 → 路线排序 → 假说排除 → 仪式校准</p><p>基础调查仍遵循“观察 → 竞争解释 → 交叉验证 → 复盘”，随后必须完成三类主动判断：按车辙、名册、粮仓重排因果；排除疫病与盗粮伪解；再把银钉、腐败媒介、待确证残页放入正确语义槽。错误会化为短战斗，击败回响后恢复完整谜面，不清空已取得线索。</p></div>
-<div><h3>五席未满</h3><p class="how">安全对白 → 战斗 → 战间复盘 → 下一波</p><p>三波罪仆不再与关键对白同时出现：米拉简报结束后才开战，每轮清空后先分析证物并显示下一轮倒计时。Boss 登场也遵循相同规则，战斗期间只保留技能和仪式即时提示。</p></div>
-<div><h3>万蝇腐宴</h3><p class="how">700 生命 · 镇压 → 镇魔 → 固阵 → 裁决</p><p>六成生命处锁血；真名与点燃图腾完成绑定；腐败媒介、银钉、告解铃、净罪香和粉笔把稳定度推进到 100，最后选择消灭、放逐、封印或契约。</p></div>
-<div><h3>不是失败结局</h3><p class="how">四种裁决都有效 · 教廷故意删去见证人印</p><p>判词只能裁决教廷承认存在的卡西安空壳。别西卜借缺页逃脱，玩家只获得所选路线的裁决残响；完整罪器、核心与真实契约不会在本章错误掉落。</p></div>
-</div>
-
-<div class="note"><b>随时复盘：</b>重新打开“第一章 · 空缺者”档案，会按当前阶段显示一行案件梗概。章末应能归纳为：<strong>塞维拉下令删证，卡西安执行清洗，别西卜借空缺进食；三者同时成立。</strong></div>
-
-<h3 class="sub-h">边缘者的起点<span class="rolls">救人不是被选中，而是主动选择</span></h3>
-<p>教廷准备处决全部知情者。玩家第一次释放属于自己的魔力，救下仍能说出姓名、恐惧与个人记忆的<strong>米拉·维恩</strong>。审判官随即给出两个选择：作为污染源被处决，或签下终身征召的边缘者入院令。</p>
-<div class="note"><b>章节完成：</b>取得边缘者临时入院令与裁决残响，在登记台选择<strong>审判／守护／秘仪</strong>完成第一次强化，并解锁高阶预调查档案<strong>「王冠失窃案｜路西法」</strong>。重演可以补看其他裁决记录，但首通阅历、实体残响、入院令与职业强化都不会重复发放。</div>
-
-<h3 class="sub-h">入口与恢复<span class="rolls">共享队伍进度 · 个人永久档案</span></h3>
-<div class="tw"><table><thead><tr><th>入口</th><th>作用</th></tr></thead><tbody>
-<tr><td class="num">玩家面板 → 第一章·空缺者</td><td>查看案件状态、接受或继续当前章节。</td></tr>
-<tr><td class="num">/function rpg:campaign/beelzebub/start</td><td>管理员／测试入口；在通过地形校验的安全区域创建章节实例。</td></tr>
-<tr><td class="num">/function rpg:campaign/beelzebub/abort</td><td>仅清理当前章节实例；永久调查、首通与职业档案不回滚。</td></tr>
-<tr><td class="num">/function rpg:campaign/beelzebub/debug/menu</td><td>管理员调试台：补发全部章节物品、按配置生成 Boss／罪仆、列出相对坐标并跳转 Stage 0–10；不写永久通关进度。</td></tr>
-</tbody></table></div>
-<div class="note"><b>统一配置：</b><code>_campaign_beelzebub_config.json</code> 集中管理本章 15 类物品引用、Boss、NPC、五名罪仆、33 个相对生成位置、场地与作用半径、调查／谜题读条、恢复窗口和多人血量。修改后重新构建数据包即可生效；生成包内的摘要会校验当前配置，防止误装旧版本。</div>
-<div class="note"><b>后续章节制作：</b><code>CHAPTER-PRODUCTION-PLAYBOOK.md</code> 已整理第一章的剧情、解谜、状态机、配置、UI、独立终审与发布经验，可作为下一章的直接开工清单。</div>
-</section>'''
-
-
-def endless_section():
-    qualities = " → ".join(item["label"] for item in E["reward_quality"])
-    supply_rows = "".join(
-        '<tr><td class="num">%s</td><td>%s</td></tr>' % (
-            "–".join(str(n) for n in entry["tier"])
-            if entry["tier"][0] != entry["tier"][1] else str(entry["tier"][0]),
-            "、".join("%s ×%d" % (html.escape(name), count)
-                      for name, count in entry["items"]))
-        for entry in ES["relic_tiers"])
-    boss_kit = "、".join("%s ×%d" % (html.escape(name), count)
-                         for name, count in ES["boss_kit"])
-    return f'''<section class="plate" id="s17">
-<div class="plate-h"><span class="num">∞</span><h2>无尽驱魔 · 七柱回廊</h2><span class="sub">完整 72 柱 · 每 {E["boss_interval"]} 层领主战 · 三路线成长</span></div>
-<blockquote class="verse">回廊不会创造新的名字；它只会让已经被记录的名字，以更深的代价重新归来。<cite>——边缘者训练庭记录</cite></blockquote>
-<p>以玩家当前位置建立副本原点，逐层清除所罗门罪群。普通层覆盖完整 72 柱：前 35 位保留七罪直属身份，后 37 位游离魔神按五种职责与七类罪性亲和参战；同层不会出现重复恶魔。Boss 层不消耗编队序号，完成 72 个普通战斗层后进入新的深渊轮回，编队可以重现，但难度与奖励继续提升。</p>
-<p>司祭已恢复原生 AI 与移动能力，保留原有治疗、增益术式。执行 <code>/reload</code> 后，已生成的直属司祭与游柱司祭会自动修复；自定义的非零移速与属性修饰器不会被覆盖。</p>
-
-<div class="sys">
-<div><h3>普通层</h3><p class="how">3 → 4 → 5 名罪仆</p><p>第 10 层起增加第四名，第 25 层起形成五职编队。两人队至少四名、四人队完整五名；敌人越过 {E["enemy_leash_radius"]} 格会被拉回原点。</p></div>
-<div><h3>领主层</h3><p class="how">每 {E["boss_interval"]} 层一次</p><p>路西法、利维坦、亚巴顿、别西卜、萨麦尔、贝利尔、玛门依次降临。领主继承原本技能、配色和演出，并按深度提高生命、攻击与护甲。</p></div>
-<div><h3>难度与轮回</h3><p class="how">每 {E["difficulty"]["tier_every_floors"]} 层提高一档</p><p>数值成长覆盖 20 档至第 100 层；之后维持最高战斗数值，轮回编号、历史层数、Boss 宝库与神话奖励仍继续推进。</p></div>
-<div><h3>多人恢复</h3><p class="how">独立奖励 · 自动暂停</p><p>开启时 {E["start_party_radius"]} 格内玩家自动加入；后到者可在 16 格内加入。{E["active_radius"]} 格内没有成员时暂停，五分钟无人返回才清场。</p></div>
-</div>
-
-<h3 class="sub-h">层末三选一<span class="rolls">每名玩家独立选择 · {E["reward_window_ticks"] // 20} 秒超时自动遗珍</span></h3>
-<div class="tw"><table><thead><tr><th>路线</th><th>即时效果</th><th>本轮成长</th></tr></thead><tbody>
-<tr><td><b style="color:#B5D957">圣恩</b></td><td>恢复生命并获得短时再生</td><td>生存恩赐 +1，最高 8 层；后续层提高最大生命、护甲与抗击退</td></tr>
-<tr><td><b style="color:#FF665E">断罪</b></td><td>立即应用本轮输出强化</td><td>输出恩赐 +1，最高 8 层；后续层提高攻击与移动速度</td></tr>
-<tr><td><b style="color:#C28BE0">遗珍</b></td><td>立即领取当前深度物资</td><td>不增加战斗增益，以风险换取资源；品质为 {qualities}</td></tr>
-</tbody></table></div>
-<div class="note"><b>每层都有回报。</b>三条路线都会获得随难度档位增长的驱魔阅历；领主层另发宝库奖励。遗珍与宝库均使用数据包原有自定义物品，不再发放无标记的原版材料。货币可带到<a href="#s18">圣所祷告</a>，换取一次随机恩赐。</div>
-<div class="tw"><table><thead><tr><th>难度档位</th><th>遗珍内容</th></tr></thead><tbody>{supply_rows}</tbody></table></div>
-
-<h3 class="sub-h">领主层仪式补给<span class="rolls">补足最低库存 · 不跳真名调查</span></h3>
-<p>领主生成前，系统为本层成员检查仪式工具，仅补足缺少的数量：<strong>{boss_kit}、对应领主的媒介 ×{ES["medium_count"]}</strong>。已有足量物品时不额外堆叠；不会赠送真名进度或替玩家完成见证。</p>
-<div class="note"><b>领取保护：</b>同一玩家、同一副本实例、同一领主层最多领取一次。背包空位不足时不消耗这次配额；整理后可在无尽面板点击补给按钮，或执行 <code>/trigger rpg_end_supply set 1</code> 重试。</div>
-
-<h3 class="sub-h">入口与调试<span class="rolls">玩家面板 · 可配置坐标</span></h3>
-<div class="tw"><table><thead><tr><th>入口</th><th>作用</th></tr></thead><tbody>
-<tr><td class="num">玩家面板 → 无尽副本</td><td>查看历史最深层，开启、加入或离开七柱回廊。</td></tr>
-<tr><td class="num">/trigger rpg_end_supply set 1</td><td>重试领取当前领主层缺少的仪式补给；只补最低库存，不重复发放。</td></tr>
-<tr><td class="num">/function rpg:endless/start</td><td>以当前位置和朝向建立副本；第一章运行时会拒绝。</td></tr>
-<tr><td class="num">/function rpg:endless/join</td><td>加入附近 16 格内的活动副本，从下一次层末结算开始领奖。</td></tr>
-<tr><td class="num">/function rpg:endless/debug/menu</td><td>跳转第 1／5／10／25／50／72／100 层；不补发跳过层奖励。</td></tr>
-</tbody></table></div>
-<div class="note"><b>完整配置：</b><code>_endless_exorcism_config.json</code> 管理五个罪仆槽、领主坐标、活动与拉回半径、层间节拍及人数增兵层数；<code>_endless_supplies.json</code> 统一管理遗珍、宝库与仪式补给。详细设计、奖励表和恢复规则见 <a href="ENDLESS-EXORCISM.md">ENDLESS-EXORCISM.md</a>。</div>
-</section>'''
-
-
-def prayer_section():
-    """Probability disclosure shares the exact gameplay configuration."""
-    total = P["total_weight"]
-    group_rows = []
-    prize_rows = []
-    for group in P["groups"]:
-        entries = [entry for entry in P["entries"] if entry["group"] == group["id"]]
-        group_rows.append(
-            '<tr><td style="color:%s">%s</td><td class="num">%d</td>'
-            '<td class="num">%.2f%%</td></tr>' % (
-                html.escape(group["color"], quote=True), html.escape(group["name"]),
-                len(entries), sum(entry["weight"] for entry in entries) * 100 / total))
-        for entry in entries:
-            prize_rows.append(
-                '<tr><td style="color:%s">%s</td><td>%s</td>'
-                '<td class="num">%d</td><td class="num">%.2f%%</td></tr>' % (
-                    html.escape(group["color"], quote=True), html.escape(group["name"]),
-                    html.escape(entry["name"]), entry["count"], entry["weight"] * 100 / total))
-    return f'''<section class="plate" id="s18">
-<div class="plate-h"><span class="num">✦</span><h2>圣所祷告 · 耶和华</h2><span class="sub">{len(P["entries"])} 项恩赐 · 每次 {P["cost"]} 枚货币 · 固定概率</span></div>
-<blockquote class="verse">奉上货币，静候恩赐。<cite>——圣所祷告</cite></blockquote>
-<p>从玩家面板进入<strong>圣所祷告</strong>，以数据包中的 <strong>[currency]货币</strong>进行一次祈愿。耶和华将从补给、护佑、武备、珍藏与神恩中回应一项奖励；物品沿用既有名称、贴图、技能与组件。<strong>普通粗金不计入货币。</strong></p>
-<div class="sys">
-<div><h3>Ⅰ · 查看与奉上</h3><p class="how">玩家面板 → 圣所祷告</p><p>菜单显示余额与每次 {P["cost"]} 枚的费用。只有点击「祷告一次」才扣费；货币不足或没有空背包格时，不扣费、不抽取。</p></div>
-<div><h3>Ⅱ · 静候回应</h3><p class="how">{P["animation_ticks"] / 20:g} 秒圣光演出</p><p>扣费后立即锁定随机奖品，演出只负责揭晓，不会重抽。提示使用聊天区，保留原本的战斗 Actionbar。</p></div>
-<div><h3>Ⅲ · 收取恩赐</h3><p class="how">直接进入背包 · 满包待领</p><p>若演出途中背包被装满，已付费的奖品保留为待领，不丢到地面、不再次收费。断线会暂停演出；重新进入后继续，亦可从菜单领取待领恩赐。</p></div>
-</div>
-<div class="note"><b>概率公开：</b>每次独立抽取，只获得一项列表奖励；数量是该项一次发放量，不是额外抽数。无保底、无累计加成，允许重复获得。旧约、新约、真名见证、剧情线索与已签契约不在奖池中，不绕过仪式或剧情进程。</div>
-
-<h3 class="sub-h">恩赐分类<span class="rolls">分类是奖池标签，不改变原物品品质</span></h3>
-<div class="tw"><table><thead><tr><th>分类</th><th>奖项数</th><th>分类总概率</th></tr></thead><tbody>{''.join(group_rows)}</tbody></table></div>
-<h3 class="sub-h">完整奖池<span class="rolls">每项为单次祷告的实际概率 · 合计 100%</span></h3>
-<div class="tw"><table><thead><tr><th>分类</th><th>奖励</th><th>数量</th><th>单次概率</th></tr></thead><tbody>{''.join(prize_rows)}</tbody></table></div>
-
-<h3 class="sub-h">祷告入口<span class="rolls">普通玩家可使用，无需管理员权限</span></h3>
-<div class="tw"><table><thead><tr><th>入口</th><th>作用</th></tr></thead><tbody>
-<tr><td class="num">/trigger rpg_pray set 1</td><td>打开祷告菜单，查看余额；不扣费。</td></tr>
-<tr><td class="num">/trigger rpg_pray set 2</td><td>消耗 {P["cost"]} 枚货币祷告一次；已有待领恩赐时优先领取，不重复扣费。</td></tr>
-<tr><td class="num">/trigger rpg_pray set 3</td><td>在游戏中查看完整概率。</td></tr>
-<tr><td class="num">/trigger rpg_pray set 4</td><td>领取已付费的待领恩赐。</td></tr>
-</tbody></table></div>
-<div class="note"><b>奖池文件：</b><a href="PRAYER-POOL.md">PRAYER-POOL.md</a> 是完整可阅读介绍；<code>_prayer_pool.json</code> 是费用、动画时间、奖项数量与权重的唯一配置。此处表格与游戏奖励均从同一配置生成。</div>
-<div class="note"><b>死亡掉落：</b>保留本包定制战利品与佣兵受托武器返还，屏蔽其余原版死亡表、充能苦力怕头颅和普通装备随机掉落。不清理玩家投掷物，也不修改玩家死亡背包。凋灵之星、坐骑内部库存等原版硬编码掉落仍保留，边界详见 <a href="DROP-POLICY.md">掉落策略</a>。</div>
 </section>'''
 
 
@@ -355,10 +214,6 @@ a{color:var(--gold)}
 .steps h3{margin:0 0 4px; font-size:16.5px; font-weight:500}
 .steps p{margin:0; color:var(--muted); font-size:14.5px}
 .steps .opt{font-family:"Cinzel",serif; font-size:10px; letter-spacing:.18em; color:var(--muted); border:1px solid var(--rule); padding:2px 7px; margin-left:9px; vertical-align:2px}
-.campaign-flow{list-style:none; margin:0 0 28px; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); border:1px solid var(--rule); background:var(--sunk)}
-.campaign-flow li{position:relative; min-height:70px; padding:13px 30px 13px 15px; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); display:flex; gap:10px; align-items:center}
-.campaign-flow li:not(:last-child)::after{content:"→"; position:absolute; right:9px; color:#718B28}
-.campaign-flow .num{color:#B5D957; min-width:23px}.campaign-flow b{font-size:13px; font-weight:500;color:var(--ink)}
 code, pre{font-family:"JetBrains Mono",monospace}
 code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px; color:var(--ink)}
 .cmd{display:block; margin-top:9px; background:var(--sunk); border-left:2px solid var(--gold-soft); padding:9px 13px; font-size:13px; overflow-x:auto; white-space:pre}
@@ -579,15 +434,11 @@ def build():
 <li><a href="#s7"><span class="num">VII</span>掉落总表</a></li>
 <li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
 <li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
-<li><a href="#s16"><span class="num">CH.I</span>第一章·空缺者</a></li>
-<li><a href="#s17"><span class="num">∞</span>无尽驱魔·七柱回廊</a></li>
-<li><a href="#s18"><span class="num">✦</span>圣所祷告·耶和华</a></li>
 <li><a href="#s14"><span class="num">X</span>驱魔道具</a></li>
 <li><a href="#s12"><span class="num">XI</span>七十二柱契约</a></li>
 <li><a href="#s15"><span class="num">XII</span>卡巴拉上位契约</a></li>
-<li><a href="#s13"><span class="num">XIII</span>佣兵小队</a></li>
-<li><a href="#s10"><span class="num">XIV</span>破碎大陆</a></li>
-<li><a href="#s11"><span class="num">XV</span>调试指令</a></li>
+<li><a href="#s10"><span class="num">XIII</span>破碎大陆</a></li>
+<li><a href="#s11"><span class="num">XIV</span>调试指令</a></li>
 </ol></nav>''')
 
     a('<main>')
@@ -606,7 +457,7 @@ def build():
 <li><div><h3>布置试炼与宝库<span class="opt">可选</span></h3><p>在脚下生成一组不祥试炼刷怪笼与宝库，掉落表指向本包的 <code>rpg:trial/*</code> 与 <code>rpg:loot/*</code>。站在要放置的位置执行。</p><code class="cmd">/function rpg:command/setblock</code></div></li>
 <li><div><h3>召唤恶魔 BOSS<span class="opt">可选</span></h3><p>在脚下生成 1000 点生命的恶魔（唤魔者本体 + 卫道士护卫）。战斗全程由 <code>rpg:entities/warden/warden</code> 每刻驱动。</p><code class="cmd">/function rpg:command/summon</code></div></li>
 </ol>
-<div class="note"><b>完整调试手册：</b>本页末尾的<a href="#debug-catalog">调试指令总表</a>收录 <b>''' + str(len(ALL_COMMANDS)) + '''</b> 个公开入口，逐条标明执行者、前置条件、影响范围与风险。推荐先用 <code>/function rpg:command/give/box</code> 领取分类潜影盒；第一章使用 <code>/function rpg:campaign/beelzebub/debug/menu</code>，无尽副本使用 <code>/function rpg:endless/debug/menu</code>。</div>
+<div class="note"><b>完整调试手册：</b>本页末尾的<a href="#debug-catalog">调试指令总表</a>收录 <b>''' + str(len(ALL_COMMANDS)) + '''</b> 个公开入口，逐条标明执行者、前置条件、影响范围与风险。推荐先用 <code>/function rpg:command/give/box</code> 领取分类潜影盒。</div>
 <div class="note"><b>公共入口边界：</b><code>*_worker</code>、每刻 tick、伤害结算、UI 刷新与阶段内部函数不是调试接口。它们依赖调用上下文，手动执行容易留下半成品状态，因此未列入可复制命令。</div>
 <div class="note"><b>独立文档：</b><code>DEBUG-COMMANDS.md</code> 与本介绍页由同一清单生成，适合在编辑器中检索、复制或随工程一起归档。</div>
 <div class="note"><b>玩家等级：</b>玩家的经验等级即角色等级。等级每提升一档，最大生命值会按 64/32/16/8/4/2/1 的分段自动加成，并播放升级特效——无需任何额外操作。</div>
@@ -623,7 +474,7 @@ def build():
 <div><h3>锻造</h3><p class="how">冶炼石 + 生铁 + 剑胚 · 灵魂火上方</p><p>三件材料同时丢在<b>灵魂火</b>上即可锻造出随机武器。普通<b>冶炼石</b>产出 <code>rpg:trial/sword</code>，<b>传说冶炼石</b>产出 <code>rpg:trial/epic_sword</code>，成功后灵魂火熄灭。</p></div>
 <div><h3>武器升级</h3><p class="how">武器 + 铸造之石 · 地面 1 格内</p><p>铸造之石一次提供 100 点武器经验。武器每升一级，攻击伤害 +1%、攻击速度 +0.97%，等级与经验实时显示在 Lore 第 9–11 行。</p></div>
 <div><h3>武器分支</h3><p class="how">武器 + 音乐唱片 · 地面 1 格内</p><p>六张唱片把武器导向<b>神圣</b>（信仰／存续／不屈）或<b>恶魔</b>（恶念／睚眦／傲慢）分支，为武器加上对应的词缀与攻击特效，唱片消耗。</p></div>
-<div><h3>玩家面板</h3><p class="how">切换到「玩家面板」头颅</p><p>面板 Lore 会实时刷新等级、生命、攻击、攻速、护甲、韧性、驱魔等级、阅历、侵蚀（或权柄完整度）与契约序列。切换到面板时会打开可点击功能页，可直接查看驱魔师档案、七柱真名调查、契约与侵蚀、佣兵小队，或切换个人 HUD；切走再切回即可重开。立下新约后，入口动态切为「契约·权柄」，页标题切为「契约与权柄」，「当前侵蚀」行则换成 <b>0–100 的权柄完整度</b>并标明「新约 · 权柄」。</p></div>
+<div><h3>玩家面板</h3><p class="how">切换到「玩家面板」头颅</p><p>面板 Lore 会实时刷新等级、生命、攻击、攻速、护甲、韧性、驱魔等级、阅历、侵蚀（或权柄完整度）与契约序列。切换到面板时会打开可点击功能页，可直接查看驱魔师档案、七柱真名调查、契约与侵蚀，或切换个人 HUD；切走再切回即可重开。立下新约后，入口动态切为「契约·权柄」，页标题切为「契约与权柄」，「当前侵蚀」行则换成 <b>0–100 的权柄完整度</b>并标明「新约 · 权柄」。</p></div>
 <div><h3>试炼与宝库</h3><p class="how">不祥试炼刷怪笼 · 宝库</p><p>刷怪笼进入冷却时触发奖励流程；宝库钥匙掉落走 <code>rpg:loot/loot</code>（普通）与 <code>loot_ominous</code>（不祥），产出下界之星形态的战利品凭证，落地后再兑换成实际物品。</p></div>
 </div>
 </section>''')
@@ -683,6 +534,7 @@ def build():
 <div class="note"><b>怎么读这些数字：</b>「权重」是同一个池子里被抽中的相对概率；「随机属性范围」是该词条实际会落在的区间，
 生成时在区间内均匀取值；「随机附魔 ×N」表示从全部可用附魔里随机抽 N 次，等级也随机。
 耐久损耗一栏说明掉落时装备已经是残破状态。</div>
+<div class="note"><b>死亡掉落：</b>保留本包定制战利品，屏蔽其余原版死亡表、充能苦力怕头颅和普通装备随机掉落。不清理玩家投掷物，也不修改玩家死亡背包。凋灵之星、坐骑内部库存等原版硬编码掉落仍保留，边界详见 <a href="DROP-POLICY.md">掉落策略</a>。</div>
 </section>''')
 
     # VII bestiary --------------------------------------------------------
@@ -885,15 +737,6 @@ def build():
 驱魔图腾用的是 <code>item_display</code>：把一件物品当作可缩放、可旋转的展示实体摆在世界里，这是 1.19.4 之后原版唯一的「自定义模型」路子，本包的图腾缩放动画就是这么做的。</div>
 </section>''')
 
-    # Campaign Chapter I ----------------------------------------------------
-    a(campaign_section())
-
-    # Endless exorcism ------------------------------------------------------
-    a(endless_section())
-
-    # Prayer and transparent reward pool -----------------------------------
-    a(prayer_section())
-
     # X rite kit -------------------------------------------------------------
     a('''<section class="plate" id="s14">
 <div class="plate-h"><span class="num">X</span><h2>驱魔道具</h2><span class="sub">基础四件 · 七种仪式工具</span></div>
@@ -977,91 +820,9 @@ def build():
 
     a(divine_section())
 
-    # XIII squad ------------------------------------------------------------
-    trow = "".join(
-        '<tr><td><b style="color:%s">%s</b></td><td>%s</td>'
-        '<td class="num">%d</td><td class="num">%d</td><td class="num">%d</td>'
-        '<td class="num">%d</td><td class="num">%d</td>'
-        '<td class="num">%d%%</td></tr>'
-        % (t["colour"], t["key"], t["gear"], t["hp"], t["armor_real"],
-           t["tough"], t["total"], t["price"], t["w"])
-        for t in Q["tiers"])
-    cheap, dear = Q["tiers"][0], Q["tiers"][-1]
-
-    a('''<section class="plate" id="s13">
-<div class="plate-h"><span class="num">XIII</span><h2>佣兵小队</h2><span class="sub">五等 · 掷点募兵 · 指哪打哪</span></div>
-<p>一个<strong>独立分支</strong>，不与罪器、契约、驱魔任何一条耦合。你可以完全不碰前面那些体系，只带着一队人打。</p>
-
-<h3 class="sub-h">五等<span class="rolls">招到谁，是掷出来的</span></h3>
-<p>佣兵分五等。<strong>甲、纹饰、基础数值与价钱全由等级定下</strong>，招人时当场掷一次点——
-你看着名牌决定雇不雇，这才叫募兵。等级<b>不能升</b>：想要好的，就继续招。</p>
-<div class="tw"><table>
-<thead><tr><th>等级</th><th>装备</th><th>生命</th><th>护甲<span class="rolls">含整套甲</span></th><th>韧性</th><th>攻击<span class="rolls">含起手剑</span></th><th>价钱</th><th>掷中概率</th></tr></thead>
-<tbody>''' + trow + '''</tbody></table></div>
-<div class="note"><b>纹饰就是等级的徽记。</b>二等起每一等都带一套固定的盔甲纹饰（海岸／守护／沉寂／尖塔），
-隔着老远也认得出你带的是什么队。<b>盔甲不可替换、战死也不掉</b>——它属于等级，不属于个人。</div>
-<div class="note"><b>护甲那一列为什么到 30 就不涨了。</b>原版护甲值的上限就是 <b>30</b>，超出的部分会被直接截掉。
-所以高两等的差距主要落在<b>韧性</b>上（上限 20，不撞顶）——它按比例削减每一次伤害中能被护甲挡下的部分，
-面对高伤害的一击尤其明显。早先的数值把四等与五等都推过了 30，两者的护甲实际一模一样，等级是白分的。</div>
-
-<h3 class="sub-h">名牌下方那块信息板<span class="rolls">跟着人走</span></h3>
-<p>每名佣兵头顶挂着一块 <code>text_display</code>，两行：装备与纹饰在上，<b>❤ 生命　⛊ 护甲　⚔ 攻击</b>在下。
-三个数都是<strong>现读的属性</strong>，不是写死的——给他换一把剑，⚔ 立刻跟着变。</p>
-<div class="note"><b>为什么是骑乘而不是每刻传送。</b>实体名牌只渲染一行，换行符不生效，所以只能另挂一个展示实体。
-让它<b>骑在佣兵身上</b>，位置由原版每刻同步，既不欠一次 <code>tp</code> 的开销，也没有跟随时慢一刻的抖动。</div>
-
-<div class="sys">
-<div><h3>募兵旗 · 两步</h3><p class="how">长按右键 · 白色旗帜</p><p>身边没有待雇者时，先<b>招一名待雇者到场</b>（不花钱，中立站着，名牌写<b>待雇 · 等级</b>）。
-身边有待雇者时再长按，才是真的<b>雇下他</b>——雇的是眼前这个人，不是凭空变一个出来。
-不满意就走开重招。上限 <b>''' + str(Q["cap"]) + '''</b> 人。</p></div>
-<div><h3>指挥旗 · 指哪打哪</h3><p class="how">长按右键 · 副手空着</p><p>沿视线找出 ''' + str(Q["sight"]) + ''' 格内第一个目标并标记，全队压上；目标倒下即自动归队。</p></div>
-<div><h3>配装</h3><p class="how">副手拿武器 + 长按指挥旗</p><p><b>只有武器归你管。</b>交给最近的佣兵，他原本拿的<b>掉在地上</b>——那就是取回的方式。
-你塞什么他就按什么打（伤害读的是他自己的攻击力属性，天然含手持武器），信息板上的 ⚔ 当场重算。佣兵战死时武器<b>必定掉落</b>。</p></div>
-<div><h3>姿态与解雇</h3><p class="how">潜行 + 长按指挥旗</p><p><b>副手空着</b>切换<b>跟随 ⇄ 驻守</b>；<b>副手拿着东西</b>则解雇最近的佣兵，武器掉地，
-并<b>按他的等级退回一半雇金</b>（4 / 10 / 20 / 40 / 80 枚）。</p></div>
-</div>
-
-<div class="note"><b>价钱是概率的对价。</b>一等 ''' + str(cheap["price"]) + ''' 枚就能带走，五等要 ''' + str(dear["price"]) + ''' 枚——
-但五等只有 ''' + str(dear["w"]) + '''% 的机会出现，钱多也未必招得到。<b>［货币］</b>是粗金。</p></div>
-
-<h3 class="sub-h">佣兵<span class="rolls">尸壳 · 白天不自燃 · 全程静音</span></h3>
-<div class="tw"><table>
-<thead><tr><th>属性</th><th>数值</th><th>说明</th></tr></thead>
-<tbody>
-<tr><td>生命 / 护甲 / 攻击</td><td>随等级</td><td>见上表；攻击栏已含起手剑，<b>换武器即变</b></td></tr>
-<tr><td>攻击间隔</td><td class="num">''' + str(Q["cd"]) + ''' 刻</td><td>生物受伤后约有 10 刻无敌帧，砍得更密只是浪费</td></tr>
-<tr><td>待雇状态</td><td>—</td><td>未雇佣的佣兵不跟随、不出手，也不占队伍名额</td></tr>
-<tr><td>索敌半径</td><td class="num">0</td><td><b>永不主动出手</b>，见下</td></tr>
-<tr><td>归队距离</td><td class="num">''' + str(Q["leash"]) + ''' 格</td><td>掉队即刻拉回雇主身边</td></tr>
-<tr><td>音效</td><td>—</td><td><code>Silent</code>：一队尸壳跟着你走，不该一路嚎</td></tr>
-</tbody></table></div>
-
-<div class="note"><b>指挥旗指的就是你看的那个。</b>射线每 <b>0.5</b> 格取一个点、命中半径 <b>0.7</b>，
-并且用一张实体类型标签把<b>不该当敌人的东西</b>整批挡在外面——
-掉落物、经验球、展示实体、盔甲架、船、矿车、画、拴绳结、区域效果云（圣水池就是它）、各类抛射物，
-以及<b>自家人</b>：在编佣兵、待雇者、替死人偶，还有骑在佣兵头顶的那块信息板。
-早先的版本半径是 1.3、排除表只有四项——那不是一条线，是一根直径 2.6 格的管子，
-往队友那边一指，标中的多半是自家佣兵的名牌。</div>
-
-<div class="note"><b>为什么佣兵永远不会误伤你。</b>尸壳是敌对生物，自带主动索敌，而原版命令
-<b>没有任何办法清除一个生物的当前目标</b>。所以这里不是"打之前判断一下是不是自己人"——
-那种写法总有漏网的一刻。唯一能从根上断掉的地方是<b>索敌半径</b>：把 <code>follow_range</code> 设成 <code>0</code>，
-它就永远不会自己选中任何东西。安全性是<b>结构性</b>的，不靠判定去兜。
-代价是它也不会自己打该打的人——于是移动与攻击全部由数据包驱动。</div>
-
-<div class="note"><b>配武器不需要任何数值表。</b>伤害读的是佣兵<b>自己的 <code>attack_damage</code> 属性</b>，
-而这个属性天然含手持武器（实测：空手 4，塞一把下界合金剑变 11）。
-所以你把本包<b>任何一把</b>自定义武器塞给他，他就按那把武器的数值打，包括后续新加的。</div>
-
-<div class="note"><b>两条尸壳专属的注意。</b>其一，尸壳属于 <code>#minecraft:zombies</code>，
-本包每刻会给新出生的僵尸类重掷装备甚至替换成强化变种——佣兵已在那条流水线上按标签排除。
-其二，<b>佣兵不下水</b>：尸壳泡水会转化成普通僵尸，而转化是换一个实体，标签与记分板一起没了，
-人就凭空消失；所以踩到水会立刻召回雇主身边。</div>
-</section>''')
-
     # XIV chapters --------------------------------------------------------
     a('''<section class="plate" id="s10">
-<div class="plate-h"><span class="num">XIV</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
+<div class="plate-h"><span class="num">XIII</span><h2>破碎大陆</h2><span class="sub">Eretz Ha-Shevarim</span></div>
 
 <div class="scroll-h">
 <p class="heb">אֶרֶץ הַשְּׁבָרִים</p>
@@ -1084,16 +845,16 @@ def build():
 人类已经知道神的答案，所以人类终于可以写下自己的答案。</div>
 </section>''')
 
-    # XV commands ---------------------------------------------------------
+    # XIV commands ---------------------------------------------------------
     a('''<section class="plate" id="s11">
-<div class="plate-h" id="debug-catalog"><span class="num">XV</span><h2>调试指令总表</h2><span class="sub">''' + str(len(ALL_COMMANDS)) + ''' 个公开入口 · rpg 命名空间</span></div>
+<div class="plate-h" id="debug-catalog"><span class="num">XIV</span><h2>调试指令总表</h2><span class="sub">''' + str(len(ALL_COMMANDS)) + ''' 个公开入口 · rpg 命名空间</span></div>
 <p>以下命令均经过工程路径核对，可直接复制。默认需要开启作弊或拥有管理员权限；含 <code>@s</code> 的函数必须由目标玩家本人执行。风险标记不是装饰：<strong>群体发放</strong>会影响所有在线玩家，<strong>持久实体</strong>不会在离场后自动消失，<strong>全局清理</strong>会作用于当前维度全部目标。</p>
-<div class="note"><b>推荐顺序：</b>首次测试先确认计分板与 Bossbar 已由加载标签建立；需要全套内容时使用分类潜影盒。章节联调从第一章调试台进入，无尽副本从七柱回廊调试台进入；跳转只用于测试，不会补发首通或跳层奖励。</div>
+<div class="note"><b>推荐顺序：</b>首次测试先确认计分板与 Bossbar 已由加载标签建立；需要全套内容时使用分类潜影盒。</div>
 ''' + render_debug_commands() + '''
 <div class="note"><b>每刻运行的函数</b>由 <code>#minecraft:tick</code> 驱动，依次为 <code>rpg:command/index</code>（标志索引与伤害检测）→ <code>rpg:command/tick</code>（合成、试炼、等级）→ <code>rpg:item/sword/legend/legend1</code>（武器技能）→ <code>rpg:entities/warden/warden</code>（BOSS 战）→ <code>rpg:command/tick_end</code>。正常游玩无需手动调用。</div>
 </section>''')
 
-    a('<footer>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）　·　第一章与无尽副本制作验证：Codex（OpenAI）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
+    a('<footer>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
     a('</main></div></div>')
 
     a('''<script>

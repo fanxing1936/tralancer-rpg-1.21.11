@@ -120,28 +120,6 @@ def generate(dp: Path, source_jar: Path | None) -> None:
         {"replace": False, "values": [f"minecraft:{name}" for name in guarded_types]},
     )
 
-    write_json(
-        dp / "data/rpg/loot_table/squad/equipment_return.json",
-        {
-            "type": "minecraft:entity",
-            "pools": [
-                {
-                    "rolls": 1,
-                    "entries": [
-                        {
-                            "type": "minecraft:slots",
-                            "slot_source": {
-                                "type": "minecraft:slot_range",
-                                "source": "this",
-                                "slots": "weapon.mainhand",
-                            },
-                        }
-                    ],
-                }
-            ],
-        },
-    )
-
     fn = dp / "data/rpg/function/drop_policy"
     # Run before combat code so existing/newly loaded mobs receive the guard
     # before this pack's tick can apply damage. No scoreboard reset on reload.
@@ -156,8 +134,6 @@ def generate(dp: Path, source_jar: Path | None) -> None:
     )
     write_text(
         fn / "prepare.mcfunction",
-        "# RPG mercenaries return the player's entrusted main-hand item through an authored loot table.\n"
-        'execute if entity @s[tag=rpg.merc] run data modify entity @s DeathLootTable set value "rpg:squad/equipment_return"\n'
         "# 0f is checked before Looting adjustment in Minecraft 1.21.11 Mob.dropCustomDeathLoot.\n"
         "data merge entity @s {CanPickUpLoot:0b,drop_chances:{mainhand:0f,offhand:0f,head:0f,chest:0f,legs:0f,feet:0f,body:0f,saddle:0f}}\n"
         "tag @s add rpg.drop_policy.v1",

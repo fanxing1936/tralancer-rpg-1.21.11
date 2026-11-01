@@ -1,6 +1,6 @@
 # TRALANCER RPG 调试指令手册
 
-> 共 102 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
+> 共 66 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
 
 所有命令默认需要开启作弊或拥有管理员权限。带 `@s` 的入口必须由目标玩家自己执行；命令方块或服务器控制台不会自动获得玩家上下文。
 
@@ -106,60 +106,3 @@
 | `/function rpg:minion/summon/mammon/gaap` | 单独召唤玛门麾下司祭「盖布」。 | 在执行位置生成；可脱离 Boss 独立、永久存活。 影响：持久实体；标记：生成单体。 |
 | `/function rpg:minion/summon/mammon/furfur` | 单独召唤玛门麾下咒使「佛尔佛尔」。 | 在执行位置生成；可脱离 Boss 独立、永久存活。 影响：持久实体；标记：生成单体。 |
 | `/function rpg:minion/summon/mammon/marchosias` | 单独召唤玛门麾下处刑者「马可西亚斯」。 | 在执行位置生成；可脱离 Boss 独立、永久存活。 影响：持久实体；标记：生成单体。 |
-
-## 第一章 · 空缺者
-
-正式入口、调试台、补生与 Stage 0–10 跳转
-
-| 指令 | 用途 | 前置、影响与风险 |
-|---|---|---|
-| `/function rpg:campaign/beelzebub/start` | 正式接受并创建第一章「空缺者」实例。 | 安全空地、管理员；会写入正常章节状态。 影响：章节存档；标记：正式入口。 |
-| `/function rpg:campaign/beelzebub/abort` | 中止并清理附近第一章实例。 | 必须站在目标实例／控制器 72 格内执行；永久调查与首通档案不回滚。 影响：章节实例；标记：清理。 |
-| `/function rpg:campaign/beelzebub/debug/menu` | 打开可点击的第一章完整调试台。 | 必须由玩家执行；建议作为第一章调试总入口。 影响：无；标记：推荐。 |
-| `/function rpg:campaign/beelzebub/debug/start` | 以当前位置作为候选原点开启章节。 | 安全空地；仍会执行正式地形与朝向校验。 影响：章节存档；标记：创建实例。 |
-| `/function rpg:campaign/beelzebub/debug/give_all_items` | 发放配置登记的全部第一章物品。 | 必须由玩家执行；不写完成、奖励或职业进度。 影响：自身背包；标记：常规。 |
-| `/function rpg:campaign/beelzebub/debug/spawn_boss` | 按本章配置在实例内补生别西卜。 | 附近必须已有第一章控制器；已有 Boss 时不会重复生成。 影响：章节实体；标记：生成战斗。 |
-| `/function rpg:campaign/beelzebub/debug/spawn_all_minions` | 按配置在实例内额外生成五名别西卜罪仆。 | 附近必须已有第一章控制器；不检查现存罪仆，重复执行会每次叠加五名。 影响：章节持久实体；标记：生成五名。 |
-| `/function rpg:campaign/beelzebub/debug/list_positions` | 在聊天栏列出全部可配置相对坐标。 | 必须由玩家执行；只读，不改变实例。 影响：无；标记：只读。 |
-| `/function rpg:campaign/beelzebub/debug/stage/0` | 跳转到 Stage 0「楔子｜第十三声钟」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/1` | 跳转到 Stage 1「发现异常｜取得 3 份相互矛盾的记录」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/2` | 跳转到 Stage 2「会回家的死者｜以圣器照见空缺」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/3` | 跳转到 Stage 3「见证人封锁线｜听完简报后迎战」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/4` | 跳转到 Stage 4「确认活动区域｜让三条运输记录彼此指认」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/5` | 跳转到 Stage 5「调查真名与弱点｜排除 2 个错误答案」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/6` | 跳转到 Stage 6「被撕去的判词｜准备 3 组仪式器具」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/7` | 跳转到 Stage 7「万蝇腐宴｜Boss 与四阶段驱魔」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/8` | 跳转到 Stage 8「四种不完整的裁决｜见证人印缺失」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/9` | 跳转到 Stage 9「活着的人必须有名字｜救下米拉」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-| `/function rpg:campaign/beelzebub/debug/stage/10` | 跳转到 Stage 10「边缘者登记｜选择驱魔道路后完成归档」。 | 附近必须已有第一章控制器；自动清理旧阶段现场。 影响：章节实例；标记：不写首通。 |
-
-## 无尽驱魔 · 七柱回廊
-
-正式入口、多人加入、清理与 1–100 层关键节点跳转
-
-| 指令 | 用途 | 前置、影响与风险 |
-|---|---|---|
-| `/function rpg:endless/supply/request` | 补领当前领主层缺失的图腾、圣器、仪式工具与对应媒介。 | 本场成员、领主战中、控制器范围内；每人每层一次，背包不足不扣配额。 影响：自身背包；标记：补领。 |
-| `/function rpg:endless/start` | 以执行者当前位置开启无尽驱魔「七柱回廊」。 | 必须由玩家在安全空地执行；第一章或其他无尽实例运行时会拒绝。 影响：单一公共副本；标记：正式入口。 |
-| `/function rpg:endless/join` | 加入附近 16 格内正在运行的七柱回廊。 | 必须由玩家执行；从下一次层末结算开始获得奖励。 影响：个人副本成员；标记：加入。 |
-| `/function rpg:endless/abort` | 关闭附近的七柱回廊并清理所属敌人。 | 必须站在控制器 96 格内；历史最深层记录保留。 影响：副本实体；标记：清理。 |
-| `/function rpg:endless/debug/menu` | 打开无尽驱魔调试台。 | 必须由玩家执行；可开启、加入、清理或跳转测试层。 影响：无；标记：推荐。 |
-| `/function rpg:endless/debug/floor/1` | 把附近七柱回廊跳转至第 1 层。 | 附近必须已有控制器；清理当前敌人，不补发跳过层奖励。 影响：副本当前层；标记：调试跳层。 |
-| `/function rpg:endless/debug/floor/5` | 把附近七柱回廊跳转至第 5 层。 | 附近必须已有控制器；清理当前敌人，不补发跳过层奖励。 影响：副本当前层；标记：调试跳层。 |
-| `/function rpg:endless/debug/floor/10` | 把附近七柱回廊跳转至第 10 层。 | 附近必须已有控制器；清理当前敌人，不补发跳过层奖励。 影响：副本当前层；标记：调试跳层。 |
-| `/function rpg:endless/debug/floor/25` | 把附近七柱回廊跳转至第 25 层。 | 附近必须已有控制器；清理当前敌人，不补发跳过层奖励。 影响：副本当前层；标记：调试跳层。 |
-| `/function rpg:endless/debug/floor/50` | 把附近七柱回廊跳转至第 50 层。 | 附近必须已有控制器；清理当前敌人，不补发跳过层奖励。 影响：副本当前层；标记：调试跳层。 |
-| `/function rpg:endless/debug/floor/72` | 把附近七柱回廊跳转至第 72 层。 | 附近必须已有控制器；清理当前敌人，不补发跳过层奖励。 影响：副本当前层；标记：调试跳层。 |
-| `/function rpg:endless/debug/floor/100` | 把附近七柱回廊跳转至第 100 层。 | 附近必须已有控制器；清理当前敌人，不补发跳过层奖励。 影响：副本当前层；标记：调试跳层。 |
-
-## 圣所祷告
-
-付费祷告、完整概率、待领恢复与测试货币
-
-| 指令 | 用途 | 前置、影响与风险 |
-|---|---|---|
-| `/function rpg:prayer/menu` | 打开圣所祷告界面。 | 由玩家执行；自动识别旧版规范货币。 影响：个人菜单；标记：常规。 |
-| `/function rpg:prayer/start` | 消耗 10 枚货币祷告一次，播放两秒光环后领取恩赐。 | 由玩家执行；至少一个主背包空格，无未完成祷告。 影响：自身背包；标记：消耗货币。 |
-| `/function rpg:prayer/claim` | 免费领取已经付费的待领恩赐。 | 动画结束且背包有空格；不会重新抽取或重复扣费。 影响：自身背包；标记：补领。 |
-| `/function rpg:prayer/pool` | 查看全部奖品、数量与单次概率。 | 由玩家执行；只读。 影响：无；标记：只读。 |
-| `/function rpg:prayer/debug/coins` | 获得 64 枚规范测试货币。 | 由玩家执行；管理员测试入口。 影响：自身背包；标记：测试发放。 |

@@ -568,7 +568,7 @@ def fix_bare_walks():
 # 两人靠近时，契约者反而会把东西送到旁观者手里。
 #
 # 用一个同步调用内生死的施法者标签锁住真正的人；与链锯、
-# 路西法和佣兵的归属策略是同一种形状。
+# 路西法的归属策略是同一种形状。
 def fix_mammon_pull():
     sub("pact/mammon.mcfunction",
         "execute as @e[type=minecraft:item,distance=0.6..6,nbt={PickupDelay:0s}] "
@@ -654,19 +654,10 @@ def assert_new_system_guards():
     assert "\ntag @s add rpg.mam.seen\n" not in arrow, \
         "mammon/arrow: 发现未守卫的 seen，多人射箭会互相抢标记"
 
-    for rel in ("squad/upgrade.mcfunction",
-                "squad/handover.mcfunction",
-                "squad/fire_near.mcfunction"):
-        src = read(rel)
-        assert "if score @s rpg_squad = #sq rpg_squad run tag @s add rpg.sq.pick" in src, \
-            "%s: 必须先按队伍编号挑候选人，不能先 limit=1 再验归属" % rel
-        assert "tag=rpg.sq.pick" in src, \
-            "%s: 最终目标必须从本队候选人中取" % rel
-
-    # HEAD 后的系统都有真实的执行者、origin 或队伍编号，不应再用
+    # HEAD 后的系统都有真实的执行者或 origin，不应再用
     # “最近玩家”猜归属。世界事件里有意图的 @p 留给 mp_audit 人工复核；
     # 这些新系统则一处都不应该有。
-    roots = ("pact", "mammon", "squad", "taint", "vacant", "hud", "rite", "doll")
+    roots = ("pact", "mammon", "taint", "vacant", "hud", "rite", "doll")
     bad = []
     for root in roots:
         base = os.path.join(FUNC, root)

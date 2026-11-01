@@ -20,7 +20,7 @@
 
 ## 为什么不写进各个生成器
 
-会失败的操作散落在四十来个生成器里（migrate / opt_spawn / add_pact / add_squad /
+会失败的操作散落在四十来个生成器里（migrate / opt_spawn / add_pact /
 drop_legacy_mob_factions 都撞过），逐个改既啰嗦又一定会漏。
 `sitecustomize` 由 Python 启动时自动导入，一处生效、全线覆盖 ——
 代价是它要能被找到，所以 `build.sh` 里导出了 `PYTHONPATH=_tools`。

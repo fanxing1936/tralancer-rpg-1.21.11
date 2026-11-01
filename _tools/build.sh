@@ -44,7 +44,6 @@ python add_epics.py ../resourcepack ../rpg
 python add_exorcism.py ../rpg ../resourcepack
 python add_pact.py ../rpg ../resourcepack
 python build_combat_prompt_font.py ../resourcepack
-python add_squad.py ../rpg
 # 玛门：七宗罪的最后一件罪器（弓）。要在 add_pact 之后 —— 税与买断都认柱位
 python add_mammon.py ../rpg ../resourcepack
 # 把包里原有的三件驱魔道具（替死人偶／圣水／天启星）接进驱魔体系
@@ -58,7 +57,7 @@ python modernize_legacy_weapons.py ../rpg
 # 高复杂度旧武器：随机连段、教条战斧纹饰与 flame/sweep/wind 镶嵌。
 # 紧随首批迁移，避免两份生成器互相覆盖；仍早于统一 actionbar 收编。
 python modernize_legacy_advanced.py ../rpg
-# 游戏内的玩法总览书。数值读 _squad.json / _pact.json，与图鉴同源
+# 游戏内的玩法总览书。数值读 _pact.json，与图鉴同源
 python add_book.py ../rpg
 # 把所有直接写 actionbar 的地方收回统一 HUD（它只有一行，谁最后写谁赢）
 python opt_actionbar.py ../rpg
@@ -100,7 +99,7 @@ python add_demon_minions.py ../rpg
 python add_life_tree_particles.py ../rpg
 # 花朵盾徽血契展开法阵，十色染料归位十源质；奖励由后续上位契约阶段接管。
 python add_kabbalah_covenant.py ../rpg
-# 玩家面板最后汇总驱魔档案、真名调查、契约、佣兵与个人 HUD 控制。
+# 玩家面板最后汇总驱魔档案、真名调查、契约与个人 HUD 控制。
 # 必须在驱魔扩展之后，才能读取完整目标与状态机。
 python add_player_panel.py ../rpg
 # 统一近期驱魔、仪式与面板的分隔线、层级、配色和非斜体文本规范。
@@ -108,21 +107,6 @@ python polish_recent_ui.py ../rpg
 # 十源质先授旧约；真·十字架置于 Daath 后汇聚成新约，并接入上位契约状态与纹理。
 # 必须晚于面板/UI 生成器，确保权柄完整度是最终 HUD 语义。
 python add_divine_covenants.py ../rpg ../resourcepack
-# 世界观第一章：空缺者事件、所罗门罪仆、别西卜 700 生命 Boss、
-# 真名调查、完整四阶段驱魔、裁决逃脱与边缘者入院尾声。
-# 必须晚于上位契约和玩家面板，才能复用最终接口并追加章节入口；
-# 又必须早于领取箱，让四种裁决残响与边缘者档案自动进入分类。
-python beelzebub_campaign_config.py
-python add_beelzebub_campaign.py ../rpg
-# 专属美术/UI规整层：章节色板、动态 Bossbar、关键 Title、Display 可读性、
-# 裁决档案与双层 HUD 兼容。必须在章节生成后运行。
-python polish_beelzebub_campaign_ui.py ../rpg ../resourcepack
-# 独立无尽副本：完整 72 柱与 72 套编队、每五层七罪领主、三路线个人奖励。
-# 晚于章节与玩家面板，才能建立互斥入口并追加面板按钮。
-python add_endless_exorcism.py ../rpg
-# 保底仪式物资与规范遗珍，随后接入付费祷告和持久待领记录。
-python add_endless_supplies.py ../rpg
-python add_prayer.py ../rpg
 python add_drop_policy.py ../rpg
 # 全量领取箱必须在所有 give 生成器之后运行，才能收齐驱魔工具、真名残页
 # 与裁决奖励，并将旧目录中的物品按语义重新分类。
@@ -130,8 +114,6 @@ python make_boxes.py ../rpg
 # 所有生成器（尤其领取箱）完成后再统一七罪姓名色与物品名字重：这样箱内
 # 副本、散装 give、Boss 名牌、调查/裁决/面板会共享同一套最终规范。
 python polish_demon_names.py ../rpg
-# 两道门必须晚于领取箱生成，避免自然接引物被静默收进开局物资而绕开首次事件。
-python add_entry_points.py ../rpg
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.
@@ -146,14 +128,7 @@ python check_demon_minions.py ../rpg
 python check_life_tree_particles.py ../rpg
 python check_kabbalah_covenant.py ../rpg
 python check_divine_covenants.py ../rpg ../resourcepack
-python check_beelzebub_campaign.py ../rpg
-python check_beelzebub_campaign_ui.py ../rpg ../resourcepack
-python check_beelzebub_campaign_config.py ../rpg --require-wired
-python check_beelzebub_narrative_ui.py ../rpg --story-contract
-python check_endless_exorcism.py ../rpg
-python check_entry_points.py ../rpg
 python check_seal_relic.py ../rpg
-python check_prayer_supplies.py ../rpg
 python check_drop_policy.py ../rpg
 python check_retired_mob_content.py ../rpg
 # 攻击瞬爆不得回流成苦力怕或 fuse:0 TNT（后者会破坏地形）

@@ -185,18 +185,6 @@ scoreboard objectives add rpg_hud_dm dummy
 scoreboard objectives add rpg_hud_dmt dummy
 scoreboard players set #pact_full rpg_hud 300
 scoreboard players set #two rpg_pact 2
-scoreboard objectives add rpg_squad dummy
-scoreboard objectives add rpg_sq_mode dummy
-scoreboard objectives add rpg_sq_cd dummy
-scoreboard objectives add rpg_sq_t dummy
-scoreboard objectives add rpg_sq_n dummy
-scoreboard objectives add rpg_sq_have dummy
-scoreboard objectives add rpg_sq_aim dummy
-scoreboard objectives add rpg_sq_stance dummy
-scoreboard objectives add rpg_sq_tier dummy
-scoreboard objectives add rpg_sq_roll dummy
-scoreboard objectives add rpg_sq_fr dummy
-scoreboard objectives add rpg_sq_slot dummy
 scoreboard objectives add rpg_mam dummy
 scoreboard objectives add rpg_mam_c dummy
 scoreboard objectives add rpg_mam_win dummy
@@ -301,55 +289,6 @@ scoreboard players set #four rpg_lt_max 4
 scoreboard players set #five rpg_lt_max 5
 scoreboard players set #twenty rpg_lt_max 20
 scoreboard players set #hundred rpg_lt_max 100
-
-scoreboard objectives add rpg_ch1_id dummy
-scoreboard objectives add rpg_ch1_stage dummy
-scoreboard objectives add rpg_ch1_sub dummy
-scoreboard objectives add rpg_ch1_time dummy
-scoreboard objectives add rpg_ch1_obj dummy
-scoreboard objectives add rpg_ch1_choice dummy
-scoreboard objectives add rpg_ch1_done dummy
-scoreboard objectives add rpg_ch1_next dummy
-scoreboard objectives add rpg_ch1_replay dummy
-scoreboard objectives add rpg_ch1_reward dummy
-scoreboard objectives add rpg_ch1_fail dummy
-scoreboard objectives add rpg_ch1_seen dummy
-scoreboard objectives add rpg_ch1_safe dummy
-scoreboard objectives add rpg_ch1_yaw dummy
-scoreboard objectives add rpg_ch1_guard dummy
-scoreboard objectives add rpg_ch1_roster dummy
-scoreboard objectives add rpg_ch1_empty dummy
-scoreboard objectives add rpg_ch1_hp dummy
-scoreboard objectives add rpg_ch1_rescue dummy
-scoreboard objectives add rpg_ch1_verdict dummy
-scoreboard objectives add rpg_ch1_session dummy
-scoreboard objectives add rpg_end_id dummy
-scoreboard objectives add rpg_end_floor dummy
-scoreboard objectives add rpg_end_state dummy
-scoreboard objectives add rpg_end_time dummy
-scoreboard objectives add rpg_end_idle dummy
-scoreboard objectives add rpg_end_pick trigger
-scoreboard objectives add rpg_end_leave trigger
-scoreboard objectives add rpg_end_claim dummy
-scoreboard objectives add rpg_end_best dummy
-scoreboard objectives add rpg_end_power dummy
-scoreboard objectives add rpg_end_vital dummy
-scoreboard objectives add rpg_end_tmp dummy
-scoreboard objectives add rpg_end_supply trigger
-scoreboard objectives add rpg_end_kit_id dummy
-scoreboard objectives add rpg_end_kit_floor dummy
-scoreboard objectives add rpg_end_kit_lord dummy
-scoreboard objectives add rpg_end_need dummy
-scoreboard objectives add rpg_end_free dummy
-scoreboard objectives add rpg_end_have dummy
-scoreboard objectives add rpg_pray trigger
-scoreboard objectives add rpg_pr_have dummy
-scoreboard objectives add rpg_pr_space dummy
-scoreboard objectives add rpg_pr_pending dummy
-scoreboard objectives add rpg_pr_time dummy
-scoreboard objectives add rpg_pr_roll dummy
-scoreboard objectives add rpg_pr_paid dummy
-scoreboard objectives add rpg_pr_total dummy
 scoreboard objectives add rpg_agit dummy
 scoreboard objectives add rpg_rel_n dummy
 scoreboard objectives add rpg_rel_1 dummy

@@ -19,20 +19,6 @@ LORDS = [
     ("mammon", "玛门", 7, [("foras", "佛拉斯", "先锋"), ("asmoday", "阿斯摩太", "猎手"), ("gaap", "盖布", "司祭"), ("furfur", "佛尔佛尔", "咒使"), ("marchosias", "马可西亚斯", "处刑者")]),
 ]
 
-STAGES = [
-    "楔子｜第十三声钟",
-    "发现异常｜取得 3 份相互矛盾的记录",
-    "会回家的死者｜以圣器照见空缺",
-    "见证人封锁线｜听完简报后迎战",
-    "确认活动区域｜让三条运输记录彼此指认",
-    "调查真名与弱点｜排除 2 个错误答案",
-    "被撕去的判词｜准备 3 组仪式器具",
-    "万蝇腐宴｜Boss 与四阶段驱魔",
-    "四种不完整的裁决｜见证人印缺失",
-    "活着的人必须有名字｜救下米拉",
-    "边缘者登记｜选择驱魔道路后完成归档",
-]
-
 SYSTEM = [
     command("/function rpg:command/soreboard", "手动补建／修复全部计分项。", "正常由 #minecraft:load 自动执行；仅在初始化异常或独立函数测试时手动调用。", "全存档", "恢复入口"),
     command("/function rpg:command/bossbar", "手动补建四槽恶魔 Boss 血条。", "正常由 #minecraft:load 自动执行；重复执行会出现已存在提示。", "全存档", "恢复入口"),
@@ -72,46 +58,12 @@ for lord_id, lord_name, _lord_no, minions in LORDS:
     for minion_id, minion_name, role in minions:
         MINIONS.append(command(f"/function rpg:minion/summon/{lord_id}/{minion_id}", f"单独召唤{lord_name}麾下{role}「{minion_name}」。", "在执行位置生成；可脱离 Boss 独立、永久存活。", "持久实体", "生成单体"))
 
-CAMPAIGN = [
-    command("/function rpg:campaign/beelzebub/start", "正式接受并创建第一章「空缺者」实例。", "安全空地、管理员；会写入正常章节状态。", "章节存档", "正式入口"),
-    command("/function rpg:campaign/beelzebub/abort", "中止并清理附近第一章实例。", "必须站在目标实例／控制器 72 格内执行；永久调查与首通档案不回滚。", "章节实例", "清理"),
-    command("/function rpg:campaign/beelzebub/debug/menu", "打开可点击的第一章完整调试台。", "必须由玩家执行；建议作为第一章调试总入口。", "无", "推荐"),
-    command("/function rpg:campaign/beelzebub/debug/start", "以当前位置作为候选原点开启章节。", "安全空地；仍会执行正式地形与朝向校验。", "章节存档", "创建实例"),
-    command("/function rpg:campaign/beelzebub/debug/give_all_items", "发放配置登记的全部第一章物品。", "必须由玩家执行；不写完成、奖励或职业进度。", "自身背包"),
-    command("/function rpg:campaign/beelzebub/debug/spawn_boss", "按本章配置在实例内补生别西卜。", "附近必须已有第一章控制器；已有 Boss 时不会重复生成。", "章节实体", "生成战斗"),
-    command("/function rpg:campaign/beelzebub/debug/spawn_all_minions", "按配置在实例内额外生成五名别西卜罪仆。", "附近必须已有第一章控制器；不检查现存罪仆，重复执行会每次叠加五名。", "章节持久实体", "生成五名"),
-    command("/function rpg:campaign/beelzebub/debug/list_positions", "在聊天栏列出全部可配置相对坐标。", "必须由玩家执行；只读，不改变实例。", "无", "只读"),
-]
-for stage, label in enumerate(STAGES):
-    CAMPAIGN.append(command(f"/function rpg:campaign/beelzebub/debug/stage/{stage}", f"跳转到 Stage {stage}「{label}」。", "附近必须已有第一章控制器；自动清理旧阶段现场。", "章节实例", "不写首通"))
-
-ENDLESS = [
-    command("/function rpg:endless/supply/request", "补领当前领主层缺失的图腾、圣器、仪式工具与对应媒介。", "本场成员、领主战中、控制器范围内；每人每层一次，背包不足不扣配额。", "自身背包", "补领"),
-    command("/function rpg:endless/start", "以执行者当前位置开启无尽驱魔「七柱回廊」。", "必须由玩家在安全空地执行；第一章或其他无尽实例运行时会拒绝。", "单一公共副本", "正式入口"),
-    command("/function rpg:endless/join", "加入附近 16 格内正在运行的七柱回廊。", "必须由玩家执行；从下一次层末结算开始获得奖励。", "个人副本成员", "加入"),
-    command("/function rpg:endless/abort", "关闭附近的七柱回廊并清理所属敌人。", "必须站在控制器 96 格内；历史最深层记录保留。", "副本实体", "清理"),
-    command("/function rpg:endless/debug/menu", "打开无尽驱魔调试台。", "必须由玩家执行；可开启、加入、清理或跳转测试层。", "无", "推荐"),
-]
-for floor in (1, 5, 10, 25, 50, 72, 100):
-    ENDLESS.append(command(f"/function rpg:endless/debug/floor/{floor}", f"把附近七柱回廊跳转至第 {floor} 层。", "附近必须已有控制器；清理当前敌人，不补发跳过层奖励。", "副本当前层", "调试跳层"))
-
-PRAYER = [
-    command("/function rpg:prayer/menu", "打开圣所祷告界面。", "由玩家执行；自动识别旧版规范货币。", "个人菜单"),
-    command("/function rpg:prayer/start", "消耗 10 枚货币祷告一次，播放两秒光环后领取恩赐。", "由玩家执行；至少一个主背包空格，无未完成祷告。", "自身背包", "消耗货币"),
-    command("/function rpg:prayer/claim", "免费领取已经付费的待领恩赐。", "动画结束且背包有空格；不会重新抽取或重复扣费。", "自身背包", "补领"),
-    command("/function rpg:prayer/pool", "查看全部奖品、数量与单次概率。", "由玩家执行；只读。", "无", "只读"),
-    command("/function rpg:prayer/debug/coins", "获得 64 枚规范测试货币。", "由玩家执行；管理员测试入口。", "自身背包", "测试发放"),
-]
-
 CATEGORIES = [
     ("初始化", "首次装包与测试世界基础设施", SYSTEM),
     ("测试物品发放", "优先用潜影盒；@a 群体发放项已单独标注", GIVE),
     ("状态重置与清场", "这些命令会移除个人进度、法阵或展示实体", RESET),
     ("Boss、试炼与军团", "均在执行位置或附近生成实体／方块", BOSSES),
     ("七柱罪仆", "每柱包含一条五职整队命令与五条单体命令", MINIONS),
-    ("第一章 · 空缺者", "正式入口、调试台、补生与 Stage 0–10 跳转", CAMPAIGN),
-    ("无尽驱魔 · 七柱回廊", "正式入口、多人加入、清理与 1–100 层关键节点跳转", ENDLESS),
-    ("圣所祷告", "付费祷告、完整概率、待领恢复与测试货币", PRAYER),
 ]
 ALL_COMMANDS = [item for _name, _note, items in CATEGORIES for item in items]
 

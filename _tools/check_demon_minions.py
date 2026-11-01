@@ -109,9 +109,9 @@ for lord_index, (lord, spirits) in enumerate(LORDS, 1):
             problems.append("%s/%s reuses boss-only tag" % (lord, spirit))
         if "rpg_mn_lord %d" % lord_index not in summon or "rpg_mn_role %d" % role_index not in summon:
             problems.append("%s/%s lacks identity scores" % (lord, spirit))
-        for token in ("rpg_mn_owner 0", "tag=rpg.rite.anchor", "rpg_mn_owner = @s rpg_rite_id", "tag=rpg.ch1.rite", "rpg_ch1_id = @s rpg_ch1_id", "add rpg.ch1.minion", "rpg_mn_cast 0"):
+        for token in ("rpg_mn_owner 0", "tag=rpg.rite.anchor", "rpg_mn_owner = @s rpg_rite_id", "rpg_mn_cast 0"):
             if token not in summon:
-                problems.append("%s/%s ownership/campaign inheritance missing: %s" % (lord, spirit, token))
+                problems.append("%s/%s ownership inheritance missing: %s" % (lord, spirit, token))
         initial = re.search(r"rpg_mn_cd (\d+)", summon)
         if not initial:
             problems.append("%s/%s lacks deterministic initial cooldown" % (lord, spirit))
@@ -221,8 +221,8 @@ for token in ("execute unless entity @s[type=minecraft:vex] run return 0",
               "execute if score @s rpg_mn_tick matches 0 run kill @s"):
     if token not in vex_tick:
         problems.append("ritualist vex ownership/lifecycle guard missing: " + token)
-if "distance=" in vex_tick or "rpg.end.enemy" in vex_tick:
-    problems.append("vex ownership must be exact and must not alter endless enemy counts")
+if "distance=" in vex_tick:
+    problems.append("vex ownership must be exact")
 if vex_tick.count("scoreboard players set @s rpg_mn_tick 0\nexecute store success") != 2:
     problems.append("vex owner checks must clear stale success scores before possibly empty origin relations")
 if "execute unless entity @e[tag=rpg.demon.minion,limit=1] if entity @e[type=minecraft:vex,tag=rpg.demon.minion.ritual_vex,limit=1] run function rpg:minion/tick" not in read("exorcism.mcfunction"):
@@ -269,4 +269,4 @@ print("  35 unique Goetic minions / 7 lords / 5 persistent roles")
 print("  manual all/individual summons and phase-two capped rotation present")
 print("  35 named audiovisual abilities, 35 two-pool loot tables, career reward present")
 print("  one ten-tick ecology pass / two casts per beat / 10-20 tick telegraph then resolve")
-print("  exact rite ownership / campaign cleanup inheritance / <=12 particles per pulse")
+print("  exact rite ownership / <=12 particles per pulse")

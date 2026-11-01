@@ -60,7 +60,7 @@ FORKS = 2                # 附赠几根箭（连原箭共三根）
 JIT_XZ = 250             # Motion 的横向抖动（千分之一格/刻）
 JIT_Y = 110
 
-# 佣兵那边的同一种钱。什一税优先收它。
+# 包内通用货币。什一税优先收它。
 CUR = "minecraft:raw_gold[minecraft:custom_data~{currency_tag:1b}]"
 
 OBJECTIVES = ["rpg_mam", "rpg_mam_c", "rpg_mam_win", "rpg_mam_dw"]
@@ -515,8 +515,66 @@ def build_models():
     return 1
 
 
+def tag_currency():
+    """给既有的［货币］补上 currency_tag，什一税只认这个标记。
+
+    原包的货币只靠名字区分。标记原本由佣兵（give 入口）和祷告（定制掉落表）
+    顺手补上；两者退役后改由唯一的消费者自己负责，否则玛门永远收不到钱。
+    """
+    from extract_items import flatten
+
+    item = os.path.join(FUNC, "command/give/item.mcfunction")
+    s = io.open(item, encoding="utf-8").read()
+    out, gives = [], 0
+    for line in s.split("\n"):
+        if '"[currency]"' in line and "raw_gold" in line and "custom_data" not in line:
+            line = line.rstrip()
+            assert line.endswith("]"), "货币那一行的结尾不是预期的形状"
+            line = line[:-1] + ",custom_data={currency_tag:1b}]"
+            gives += 1
+        out.append(line)
+    io.open(item, "w", encoding="utf-8", newline="\n").write("\n".join(out))
+    assert gives or "currency_tag:1b" in s, "give/item 里找不到［货币］"
+
+    marker ={"function": "minecraft:set_custom_data", "tag": "{currency_tag:1b}"}
+    tables = 0
+    for root, _dirs, names in os.walk(os.path.join(DP, "data")):
+        if "loot_table" not in root.replace("\\", "/").split("/"):
+            continue
+        for fn in names:
+            if not fn.endswith(".json"):
+                continue
+            path = os.path.join(root, fn)
+            doc = json.load(io.open(path, encoding="utf-8"))
+            dirty = [False]
+
+            def visit(node):
+                if isinstance(node, list):
+                    for v in node:
+                        visit(v)
+                elif isinstance(node, dict):
+                    if isinstance(node.get("name"), str) and node["name"].split(":")[-1] == "raw_gold":
+                        funcs = node.get("functions", [])
+                        names_ = [f.get("name") for f in funcs
+                                  if f.get("function", "").split(":")[-1] == "set_name"]
+                        if any("[currency]" in flatten(x)[0] for x in names_) and marker not in funcs:
+                            node.setdefault("functions", []).append(marker)
+                            dirty[0] = True
+                    for v in node.values():
+                        visit(v)
+            visit(doc)
+            if dirty[0]:
+                with io.open(path, "w", encoding="utf-8", newline="\n") as fh:
+                    json.dump(doc, fh, ensure_ascii=False, indent=2)
+                    fh.write("\n")
+                tables += 1
+    return gives, tables
+
+
 def main():
     obj = add_objectives()
+    cur_give, cur_tables = tag_currency()
+    assert cur_give <= 1, "give/item 里应至多有一行未标记的［货币］，实际 %d" % cur_give
     n = build_functions()
     build_advancement()
     ticked = wire_tick()
@@ -526,6 +584,7 @@ def main():
     print("mammon: %d functions, give +%d, tick +%d, models +%d, "
           "爆裂弓避让 %d 处" % (n, gave, ticked, models, carved))
     print("mammon: objectives %s" % (obj or "-"))
+    print("mammon: currency tagged give %d, loot tables %d" % (cur_give, cur_tables))
 
 
 if __name__ == "__main__":

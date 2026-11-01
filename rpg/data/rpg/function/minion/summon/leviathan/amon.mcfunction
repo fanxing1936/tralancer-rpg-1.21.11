@@ -4,12 +4,10 @@ scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nea
 scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_role 2
 scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_owner 0
 execute if entity @s[type=minecraft:item_display,tag=rpg.rite.anchor] run scoreboard players operation @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_owner = @s rpg_rite_id
-execute if entity @s[type=minecraft:item_display,tag=rpg.ch1.rite] run scoreboard players operation @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_ch1_id = @s rpg_ch1_id
-execute if entity @s[type=minecraft:item_display,tag=rpg.ch1.rite] run tag @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] add rpg.ch1.minion
 scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_cd 55
 scoreboard players set @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] rpg_mn_cast 0
 tag @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] remove rpg.demon.minion.new
 particle nautilus ~ ~1 ~ 0.55 0.75 0.55 0.035 18
 particle soul ~ ~1 ~ 0.35 0.65 0.35 0.025 10
 playsound minecraft:entity.guardian.attack hostile @a[distance=..28] ~ ~ ~ 0.55 0.9
-execute unless entity @s[tag=rpg.end.controller] run tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#1B4F72","bold":true,"italic":false},{"text":"利维坦 · ","color":"#1B4F72","bold":false,"italic":false},{"text":"猎手 ","color":"gray","bold":false,"italic":false},{"text":"亚蒙","color":"#62D9E8","bold":false,"italic":false},{"text":"应召现身。","color":"dark_gray","bold":false,"italic":false}]
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#1B4F72","bold":true,"italic":false},{"text":"利维坦 · ","color":"#1B4F72","bold":false,"italic":false},{"text":"猎手 ","color":"gray","bold":false,"italic":false},{"text":"亚蒙","color":"#62D9E8","bold":false,"italic":false},{"text":"应召现身。","color":"dark_gray","bold":false,"italic":false}]

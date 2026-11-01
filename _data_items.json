@@ -4025,17 +4025,12 @@
    "id": "minecraft:raw_gold",
    "enchantments": {},
    "modifiers": [],
-   "tags": [
-    "currency_tag"
-   ],
-   "custom_data": {
-    "currency_tag": 1
-   },
+   "tags": [],
+   "custom_data": {},
    "cmd": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
-    "custom_data",
     "custom_name",
     "lore"
    ],
@@ -6058,91 +6053,6 @@
     "custom_model_data",
     "custom_name",
     "enchantment_glint_override",
-    "food",
-    "lore",
-    "max_stack_size"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "white_banner",
-   "name": "募兵旗",
-   "rarity": "佣兵",
-   "name_colour": "white",
-   "lore": [
-    "+------------------+",
-    "插在哪里，哪里就是营地",
-    "长按右键：身边没人时召出一名待雇佣兵",
-    "　对着待雇者再长按一次，才是雇下他",
-    "+------------------+",
-    "⚔募兵　上限 4 人",
-    "　价钱逐人递增：8 / 16 / 24 / 32 枚货币",
-    "　佣兵永不主动出手，也永远不会误伤你",
-    "+------------------+"
-   ],
-   "id": "white_banner",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "squad_hire"
-   ],
-   "custom_data": {
-    "squad_hire": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": 100130,
-   "components": [
-    "banner_patterns",
-    "consumable",
-    "custom_data",
-    "custom_name",
-    "food",
-    "lore",
-    "max_stack_size"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "red_banner",
-   "name": "指挥旗",
-   "rarity": "佣兵",
-   "name_colour": "white",
-   "lore": [
-    "+------------------+",
-    "举起它，队伍就看你的手势",
-    "+------------------+",
-    "⚔指挥　长按右键",
-    "　指着谁打谁：全队压上，目标倒下即归队",
-    "⚔配装　副手拿武器 + 长按右键",
-    "　交给最近的佣兵；他原本拿的掉在地上",
-    "⚔姿态　潜行 + 长按右键",
-    "　跟随 ⇄ 驻守",
-    "⚔解雇　潜行 + 副手拿物品 + 长按",
-    "　装备掉地，退回一半雇金",
-    "+------------------+"
-   ],
-   "id": "red_banner",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "squad_order"
-   ],
-   "custom_data": {
-    "squad_order": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": 100131,
-   "components": [
-    "banner_patterns",
-    "consumable",
-    "custom_data",
-    "custom_name",
     "food",
     "lore",
     "max_stack_size"
