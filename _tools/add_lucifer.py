@@ -34,7 +34,7 @@ RPG_TEX = os.path.join(RP, "assets/rpg/textures/item")
 MC_ITEMS = os.path.join(RP, "assets/minecraft/items")
 FUNC = os.path.join(DP, "data/rpg/function")
 ADV = os.path.join(DP, "data/rpg/advancement/item")
-JAR = r"F:/筑梦 MCBE/HMCL启动器/新建文件夹/versions/1.21.11-Fabric/1.21.11-Fabric.jar"
+from mc_env import JAR
 
 BASE = "netherite_spear"
 CMD = 1110014

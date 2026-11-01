@@ -32,7 +32,7 @@ import zipfile
 import png_tool as P
 
 RP = os.path.join(os.path.dirname(__file__), "..", "resourcepack")
-JAR = r"F:/筑梦 MCBE/HMCL启动器/新建文件夹/versions/1.21.11-Fabric/1.21.11-Fabric.jar"
+from mc_env import JAR
 
 _jar = zipfile.ZipFile(JAR)
 _jar_names = set(_jar.namelist())

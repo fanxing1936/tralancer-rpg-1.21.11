@@ -18,6 +18,7 @@
 """
 import io
 import os
+import shutil
 import sys
 
 import png_tool as P
@@ -25,6 +26,7 @@ import png_tool as P
 SRC = sys.argv[1] if len(sys.argv) > 1 else r"F:/筑梦 MCBE/新建文件夹"
 RP = sys.argv[2] if len(sys.argv) > 2 else "../resourcepack"
 OUT = os.path.join(RP, "assets/rpg/textures/item")
+CROPS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "_art_crops")
 
 FILL = 0.88          # 原版弓的填充率，量出来是 81~94%，取中间
 
@@ -97,15 +99,33 @@ def do_single(src, dst, canvas):
     return 1
 
 
+def outputs():
+    return [dst for _src, dst in BOW] + [dst for _src, dst, _c in SINGLE]
+
+
 def main():
-    if not os.path.isdir(SRC):
-        print("import_art: 找不到原图目录 %s，跳过" % SRC)
-        return
     if not os.path.isdir(OUT):
         os.makedirs(OUT)
+    if not os.path.isdir(SRC):
+        # 原图只在作者机器上。没有它时用仓库里上一次裁好的结果，
+        # 否则 rp_build 清空材质包后，art_placeholder 会拿原版图顶上，图腾干脆缺图。
+        n = 0
+        for dst in outputs():
+            cached = os.path.join(CROPS, dst + ".png")
+            if os.path.isfile(cached):
+                shutil.copyfile(cached, os.path.join(OUT, dst + ".png"))
+                n += 1
+        print("import_art: 找不到原图目录 %s，改用 _art_crops 里已裁好的 %d 张" % (SRC, n))
+        return
     n = do_series(BOW)
     for src, dst, canvas in SINGLE:
         n += do_single(src, dst, canvas)
+    # 刷新缓存，让没有原图的机器也拿到这一版
+    os.makedirs(CROPS, exist_ok=True)
+    for dst in outputs():
+        made = os.path.join(OUT, dst + ".png")
+        if os.path.isfile(made):
+            shutil.copyfile(made, os.path.join(CROPS, dst + ".png"))
     print("import_art: %d 张" % n)
 
 

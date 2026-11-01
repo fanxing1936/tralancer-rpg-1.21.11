@@ -3304,11 +3304,29 @@ Stage 0–10 的说明直接对齐运行时状态机，而非误用 11 步剧情
 这是四个被删 tick 入口（`squad/squad`、`prayer/tick` 与 `exorcism` 里的章节、无尽控制器）合计的
 静态可达开销，未逐项拆分，也不代表实机耗时。产物中已无 `squad`／`endless`／`prayer`／`campaign`／`entry`
 命名空间与相关计分板、标签。材质包里没有这四块的专属资源，未改动。
-`rp_build.sh` 与 `guide_build.sh` 依赖客户端 jar，本次所在机器没有。图鉴按不依赖 jar 的部分
-重建：`extract_items`／`extract_loot` 重新提取，`emit_guide` 与 `check_debug_commands` 实跑通过；
-`build_guide`／`build_loot_frag`（需要 jar 合成图标）未运行，募兵旗、指挥旗两张卡片是从
-`_guide_sections.json`／`_guide_fragments.json` 中手工剔除的——提取结果与删减前相比恰好只少这两件。
-在有 jar 的机器上跑一次完整 `guide_build.sh` 可彻底对齐。`DEBUG-COMMANDS.md` 已重新生成（66 条）。
+删减时所在机器没有客户端 jar，图鉴先按不依赖 jar 的部分重建，募兵旗、指挥旗两张卡片手工剔除；
+随后在接入本地实例后补跑了完整的 `rp_build.sh` → `build.sh` → `guide_build.sh`（见第 39 节），
+`_guide_sections.json` 与手工版本无差异。`DEBUG-COMMANDS.md` 已重新生成（66 条）。
+
+## 39. 本地实例路径收拢，以及没有原画时不再降级
+
+十二个脚本各自写死了作者 HMCL 实例的绝对路径（jar、版本 json、库目录、Java），换一台机器
+就要改十几处。现在统一由 `_tools/mc_env.py` 解析：依次尝试候选实例（HMCL、PCL），取第一个
+jar 真实存在的；`RPG_MC_GAME`／`RPG_MC_VERSION`／`RPG_MC_JAVA` 可覆盖。PCL 的版本目录名带
+加载器版本（`1.21.11-Fabric 0.19.3`），jar、json 与 natives 目录都跟着这个名字走，所以版本名
+也成了配置项，而不是写死的 `1.21.11-Fabric`。Java 未指定时退回 PATH 上的 `java`。
+
+接入 PCL 实例后第一次跑完整材质包构建，暴露出一个从未在作者机器以外出现的问题：
+`rp_build.sh` 先从 `_orig_rp/` 重建整个材质包，玛门弓四张贴图与驱魔图腾原本由 `import_art.py`
+从作者本机的原画目录裁出；原画目录不存在时它只是打印“跳过”，随后 `art_placeholder.py` 拿原版
+弓贴图顶上，驱魔图腾则干脆缺图——而 `rp_validate` 跑在数据包构建之前，看不到这一步。
+现在 `import_art` 在找不到原画时改用仓库里 `_art_crops/` 的上一次裁剪结果；有原画时照常裁剪，
+并同步刷新这份缓存。
+
+验证：在没有原画目录、只有 PCL 实例的机器上，完整流水线 `rp_build.sh` → `build.sh` →
+`guide_build.sh` 全部通过，`rp_validate` 对照真实 jar 无问题，进度字段 42 项对照 54 种原版触发器
+通过；重建出的 `resourcepack/` 与 `rpg/` 与上一次提交逐字节一致（忽略换行符）。图鉴数据中的
+［货币］条目随之带上 `currency_tag`，这是第 38 节修复在提取侧的正确反映。
 
 ---
 

@@ -340,8 +340,8 @@ def main():
         shutil.rmtree(DST)
     shutil.copytree(SRC, DST)
 
-    jar = sys.argv[3] if len(sys.argv) > 3 else (
-        "F:/筑梦 MCBE/HMCL启动器/新建文件夹/versions/1.21.11-Fabric/1.21.11-Fabric.jar")
+    from mc_env import JAR as MC_JAR
+    jar = sys.argv[3] if len(sys.argv) > 3 else MC_JAR
     import zipfile
     z = zipfile.ZipFile(jar)
     jar_items = {"assets/minecraft/items/netherite_chestplate.json":

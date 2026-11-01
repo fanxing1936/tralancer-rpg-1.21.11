@@ -16,11 +16,7 @@ import subprocess
 import sys
 import time
 
-GAME = r"F:/筑梦 MCBE/HMCL启动器/新建文件夹"
-INST = GAME + "/versions/1.21.11-Fabric"
-VJSON = INST + "/1.21.11-Fabric.json"
-JAVA = r"F:/筑梦 MCBE/MCA Selector/jre/bin/java.exe"
-LIBS = GAME + "/libraries"
+from mc_env import GAME, INST, JAR, JAVA, LIBS, VJSON
 
 WORLD = sys.argv[1]                    # path to the save folder to upgrade
 RUNDIR = sys.argv[2]                   # scratch directory to run the server in
@@ -43,7 +39,7 @@ def classpath():
         p = os.path.join(LIBS, parts[0].replace(".", "/"), parts[1], parts[2], fn)
         if os.path.isfile(p):
             out.append(p)
-    out.append(INST + "/1.21.11-Fabric.jar")
+    out.append(JAR)
     return out
 
 

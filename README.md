@@ -132,9 +132,13 @@ python _tools/package.py --install
 最后的数据包构建会统一重新现代化、收编 HUD 并执行多人校验。任何修改都应该改
 `_tools/` 里对应的生成脚本，而不是改输出。
 
-`rp_build.sh` 与 `guide_build.sh` 需要读取 1.21.11 客户端 jar（路径硬编码在 `_tools/icons.py`、
-`_tools/rp_migrate.py`、`_tools/rp_validate.py` 等十余个脚本里，默认指向作者本机的 HMCL 实例）；`build.sh` 不依赖 jar，
-缺 jar 时只会跳过进度字段比对。
+`rp_build.sh`、`guide_build.sh` 和无头测试需要本地 1.21.11 实例（客户端 jar、库与 Java 21）。
+位置统一由 `_tools/mc_env.py` 解析：按顺序找第一个存在的候选实例（作者的 HMCL 实例、PCL 实例），
+也可用环境变量 `RPG_MC_GAME` / `RPG_MC_VERSION` / `RPG_MC_JAVA` 指向别处；`python _tools/mc_env.py`
+会打印当前解析结果。`build.sh` 不依赖 jar，缺 jar 时只会跳过进度字段比对。
+
+玛门弓与驱魔图腾的贴图由 `import_art.py` 从作者本机的原画目录裁出；没有原画目录的机器会改用
+仓库里 `_art_crops/` 中上一次裁好的结果，因此任何机器上的完整重建都不会把它们降级成占位图。
 
 验证手段：`_tools/server_test.py` 会用客户端 jar 起一个真实的 1.21.11 无头服务器加载数据包，
 `validate.py` / `rp_validate.py` 对着同一个 jar 校验两个包。

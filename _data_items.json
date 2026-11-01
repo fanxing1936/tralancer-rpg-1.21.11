@@ -4025,12 +4025,17 @@
    "id": "minecraft:raw_gold",
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "currency_tag"
+   ],
+   "custom_data": {
+    "currency_tag": 1
+   },
    "cmd": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore"
    ],

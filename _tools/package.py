@@ -9,7 +9,7 @@ import sys
 import zipfile
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-INST = r"F:/筑梦 MCBE/HMCL启动器/新建文件夹/versions/1.21.11-Fabric"
+from mc_env import INST
 
 TARGETS = [
     ("rpg", "rpg-datapack-1.21.11.zip"),

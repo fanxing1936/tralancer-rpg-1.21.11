@@ -14,11 +14,7 @@ import subprocess
 import sys
 import time
 
-GAME = r"F:/筑梦 MCBE/HMCL启动器/新建文件夹"
-INST = GAME + "/versions/1.21.11-Fabric"
-VJSON = INST + "/1.21.11-Fabric.json"
-JAVA = r"F:/筑梦 MCBE/MCA Selector/jre/bin/java.exe"
-LIBS = GAME + "/libraries"
+from mc_env import GAME, INST, JAR, JAVA, LIBS, VJSON
 
 RUNDIR = sys.argv[1]
 WAIT = int(sys.argv[2]) if len(sys.argv) > 2 else 240
@@ -44,7 +40,7 @@ def classpath(doc):
         p = maven_path(name)
         if os.path.isfile(p):
             out.append(p)
-    out.append(INST + "/1.21.11-Fabric.jar")
+    out.append(JAR)
     return out
 
 

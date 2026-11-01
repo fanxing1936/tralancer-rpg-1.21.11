@@ -14,11 +14,7 @@ import subprocess
 import sys
 import time
 
-GAME = r"F:/筑梦 MCBE/HMCL启动器/新建文件夹"
-INST = GAME + "/versions/1.21.11-Fabric"
-VJSON = INST + "/1.21.11-Fabric.json"
-JAVA = r"F:/筑梦 MCBE/MCA Selector/jre/bin/java.exe"
-LIBS = GAME + "/libraries"
+from mc_env import GAME, INST, JAR, JAVA, LIBS, NATIVES, VERSION, VJSON
 
 PACK = sys.argv[1] if len(sys.argv) > 1 else "file/rpg_resourcepack_claude"
 WORLD = os.environ.get("MC_TEST_WORLD")   # boot straight into this save
@@ -58,7 +54,7 @@ def classpath(doc):
             out.append(p)
         else:
             print("  [warn] missing library %s" % lib["name"])
-    out.append(INST + "/1.21.11-Fabric.jar")
+    out.append(JAR)
     return out
 
 
@@ -97,11 +93,11 @@ def main():
         os.remove(log)
 
     subst = {
-        "${natives_directory}": INST + "/natives-windows-x86_64",
+        "${natives_directory}": NATIVES,
         "${launcher_name}": "claude", "${launcher_version}": "1",
         "${classpath}": os.pathsep.join(cp),
         "${auth_player_name}": "PackTest",
-        "${version_name}": "1.21.11-Fabric",
+        "${version_name}": VERSION,
         "${game_directory}": RUNDIR,
         "${assets_root}": GAME + "/assets",
         "${assets_index_name}": doc["assetIndex"]["id"],

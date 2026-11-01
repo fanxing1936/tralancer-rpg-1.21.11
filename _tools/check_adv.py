@@ -23,8 +23,8 @@ import sys
 import zipfile
 
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
-JAR = (sys.argv[2] if len(sys.argv) > 2 else
-       r"F:/筑梦 MCBE/HMCL启动器/新建文件夹/versions/1.21.11-Fabric/1.21.11-Fabric.jar")
+from mc_env import JAR as MC_JAR
+JAR = sys.argv[2] if len(sys.argv) > 2 else MC_JAR
 
 
 def vanilla_vocab():
