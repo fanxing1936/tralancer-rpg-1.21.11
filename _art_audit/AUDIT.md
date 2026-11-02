@@ -197,3 +197,10 @@ C 类 11 张贴图按 2 倍、8 倍、12 倍放大存储，合计 29 KB；按原
 | [`04_density.png`](04_density.png) | 按 A、B、C、D 分类的像素密度对照，以原版钻石剑、弓、三叉戟为基准 |
 | [`05_items_all.png`](05_items_all.png) | 全部 111 张物品贴图，按物品栏同尺寸显示，红字为非 16 网格 |
 | [`06_new_covenant.png`](06_new_covenant.png) | 旧约、新约现状、新约还原 16 网格的候选 |
+
+### 实施后对比（来自真实构建产物）
+
+| 文件 | 内容 |
+| --- | --- |
+| [`after/01_tooltip_before_after.png`](after/01_tooltip_before_after.png) | 12 件代表物品：左为改动前（提交 `739098e`），右为改动后 |
+| [`after/02_hud_textures_before_after.png`](after/02_hud_textures_before_after.png) | HUD 上层提示与封印状态，以及四组贴图网格的改动前后 |
