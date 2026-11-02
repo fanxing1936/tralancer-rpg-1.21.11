@@ -32,10 +32,12 @@
 | **S1 大陆远景** | 挑一个视野开阔的高处站着，或者绕着地形走一圈。不用敲命令 | 约 20 秒 |
 | **S2 武器长廊** | 找一块平地，面朝南（F3 里显示 `south` / +Z），执行 `/function promo:armory/spawn`。31 件武器会排成两排长廊，沿着长廊慢慢走到底 | 约 20 秒 |
 | **S3 圣卫方阵** | `/function promo:clear`，然后 `/function promo:guards`。三名圣卫在前方列队冲过来，站着让他们打几下 | 约 20 秒 |
-| **S4 别西卜** | `/function promo:clear`，然后 `/function promo:bz/summon`，正常和他打。中间依次执行 `/function promo:bz/cast1` 到 `cast5`，每条隔 3–4 秒，最后执行 `/function promo:bz/ult`（万蝇饕宴）| 约 60 秒 |
+| **S4 路西法** | **等换装完成再录，见下方说明。** `/function promo:clear`，然后 `/function promo:lucifer/summon`，正常和他打。中间依次执行 `/function promo:lucifer/cast1` 到 `cast5`，每条隔 3–4 秒，最后执行 `/function promo:lucifer/ult`（万蛇加冕）| 约 60 秒 |
 | **S5 生命之树** | `/function promo:clear`，然后 `/function promo:time/night`。站在平地上执行 `/function promo:tree`，原地等它展开 | 约 20 秒 |
 
 都录完后退出存档，回放会自动保存。
+
+> **S4 要等路西法换装**：建模会话正在把参考无名者的模型改挂到路西法。等它改完，并且我用 `python _promo/install.py --refresh` 把新资源包同步进拍摄存档之后，再录 S4。在那之前先录 S1、S2、S3、S5。
 
 ## 渲染
 
@@ -50,8 +52,8 @@
 | `S1_land.mp4` | 4 秒 | 高空缓慢推近，夕阳在画面一侧 |
 | `S2_armory.mp4` | 5 秒 | 齐腰高度沿长廊中线推轨，从勇者推到神圣 |
 | `S3_guards.mp4` | 4 秒 | 低机位正面，圣卫迎着镜头冲过来 |
-| `S4a_beelzebub.mp4` | 8 秒 | 降临的烟雾，接一个起手招式 |
-| `S4b_feast.mp4` | 6 秒 | 万蝇饕宴，镜头拉远看清全貌 |
+| `S4a_lucifer.mp4` | 8 秒 | 降临的烟雾，接一个起手招式 |
+| `S4b_crown.mp4` | 6 秒 | 万蛇加冕，镜头拉远看清全貌 |
 | `S5_tree.mp4` | 7 秒 | 俯视角缓慢环绕，看清整棵树 |
 
 放好之后告诉我，我把占位卡换成这些镜头，再渲染成片。

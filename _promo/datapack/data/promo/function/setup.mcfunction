@@ -1,4 +1,4 @@
-# 拍摄环境：黄昏定格、晴天、不刷怪；玩家生存模式 + 无敌，这样别西卜的招式会对准你。
+# 拍摄环境：黄昏定格、晴天、不刷怪；玩家生存模式 + 无敌，这样路西法的招式会对准你。
 gamerule advance_time false
 gamerule advance_weather false
 gamerule spawn_mobs false
