@@ -119,6 +119,151 @@
       "rpg:beelzebub/sfx_mob_namelesswakeup_003_soundwave"
     ]
   },
+  "leviathan.cast": {
+    "subtitle": "subtitles.rpg.leviathan.cast",
+    "sounds": [
+      "rpg:leviathan/sfx_multi_evokercastspell_001_soundwave",
+      "rpg:leviathan/sfx_multi_evokercastspell_002_soundwave"
+    ]
+  },
+  "leviathan.death": {
+    "subtitle": "subtitles.rpg.leviathan.death",
+    "sounds": [
+      "rpg:leviathan/sfx_mob_necromancerdeath_001_soundwave",
+      "rpg:leviathan/sfx_mob_necromancerdeath_002_soundwave"
+    ]
+  },
+  "leviathan.hurt": {
+    "subtitle": "subtitles.rpg.leviathan.hurt",
+    "sounds": [
+      "rpg:leviathan/sfx_mob_necromancerhurt_001_soundwave",
+      "rpg:leviathan/sfx_mob_necromancerhurt_002_soundwave",
+      "rpg:leviathan/sfx_mob_necromancerhurt_003_soundwave",
+      "rpg:leviathan/sfx_mob_necromancerhurt_004_soundwave"
+    ]
+  },
+  "leviathan.idle": {
+    "subtitle": "subtitles.rpg.leviathan.idle",
+    "sounds": [
+      "rpg:leviathan/sfx_mob_necromanceridle_001_soundwave",
+      "rpg:leviathan/sfx_mob_necromanceridle_002_soundwave",
+      "rpg:leviathan/sfx_mob_necromanceridle_003_soundwave"
+    ]
+  },
+  "leviathan.impact": {
+    "subtitle": "subtitles.rpg.leviathan.impact",
+    "sounds": [
+      "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_001",
+      "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_002",
+      "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_003",
+      "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_004"
+    ]
+  },
+  "leviathan.laugh": {
+    "subtitle": "subtitles.rpg.leviathan.laugh",
+    "sounds": [
+      "rpg:leviathan/sfx_mob_necromancerboneylaugh_001_soundwave",
+      "rpg:leviathan/sfx_mob_necromancerboneylaugh_002_soundwave"
+    ]
+  },
+  "leviathan.prepare": {
+    "subtitle": "subtitles.rpg.leviathan.prepare",
+    "sounds": [
+      "rpg:leviathan/sfx_mob_necromancerpreparesummon_002_soundwave",
+      "rpg:leviathan/sfx_mob_evokerpreparesummon_001_soundwave"
+    ]
+  },
+  "leviathan.spell": {
+    "subtitle": "subtitles.rpg.leviathan.spell",
+    "sounds": [
+      "rpg:leviathan/sfx_mob_necromancerspell_001_soundwave",
+      "rpg:leviathan/sfx_mob_necromancerspell_002_soundwave"
+    ]
+  },
+  "leviathan.step": {
+    "subtitle": "subtitles.rpg.leviathan.step",
+    "sounds": [
+      "rpg:leviathan/sfx_mob_necromancerstep_001_soundwave",
+      "rpg:leviathan/sfx_mob_necromancerstep_002_soundwave",
+      "rpg:leviathan/sfx_mob_necromancerstep_003_soundwave",
+      "rpg:leviathan/sfx_mob_necromancerstep_004_soundwave"
+    ]
+  },
+  "leviathan.summoned": {
+    "subtitle": "subtitles.rpg.leviathan.summoned",
+    "sounds": [
+      "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_001_soundwave",
+      "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_002_soundwave",
+      "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_003_soundwave"
+    ]
+  },
+  "sunken_skeleton.death": {
+    "subtitle": "subtitles.rpg.sunken_skeleton.death",
+    "sounds": [
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletondeath_001",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletondeath_002",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletondeath_003"
+    ]
+  },
+  "sunken_skeleton.hurt": {
+    "subtitle": "subtitles.rpg.sunken_skeleton.hurt",
+    "sounds": [
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_001",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_002",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_003",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_004"
+    ]
+  },
+  "sunken_skeleton.idle": {
+    "subtitle": "subtitles.rpg.sunken_skeleton.idle",
+    "sounds": [
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonidle_001",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonidle_002",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonidle_003"
+    ]
+  },
+  "sunken_skeleton.impact": {
+    "subtitle": "subtitles.rpg.sunken_skeleton.impact",
+    "sounds": [
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_001",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_002",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_003",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_004"
+    ]
+  },
+  "sunken_skeleton.load": {
+    "subtitle": "subtitles.rpg.sunken_skeleton.load",
+    "sounds": [
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_001",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_002",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_003",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_004"
+    ]
+  },
+  "sunken_skeleton.novelty": {
+    "subtitle": "subtitles.rpg.sunken_skeleton.novelty",
+    "sounds": [
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonnovelty_001",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonnovelty_002"
+    ]
+  },
+  "sunken_skeleton.shoot": {
+    "subtitle": "subtitles.rpg.sunken_skeleton.shoot",
+    "sounds": [
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowshoot_001",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowshoot_002",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowshoot_003"
+    ]
+  },
+  "sunken_skeleton.step": {
+    "subtitle": "subtitles.rpg.sunken_skeleton.step",
+    "sounds": [
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_001",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_002",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_003",
+      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_004"
+    ]
+  },
   "tower_guard.armour": {
     "subtitle": "subtitles.rpg.tower_guard.armour",
     "sounds": [

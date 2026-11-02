@@ -23,8 +23,8 @@ LORDS = [
     ("mammon", ["foras", "asmoday", "gaap", "furfur", "marchosias"]),
 ]
 ROLE_ENTITIES = ("vindicator", "pillager", "evoker", "illusioner", "vindicator")
-# 塞列欧斯 (别西卜's hexer) is a pillager: see ROLE_OVERRIDES in add_demon_minions.py
-ENTITY_OVERRIDES = {(4, 4): "pillager"}
+# 派蒙 (利维坦's hexer) and 塞列欧斯 (别西卜's hexer) are pillagers: see ROLE_OVERRIDES in add_demon_minions.py
+ENTITY_OVERRIDES = {(2, 4): "pillager", (4, 4): "pillager"}
 ROLE_COOLDOWNS = (110, 85, 125, 100, 75)
 SKILL_NAMES = [
     ["王冠护持", "罪痕标定", "晨星赐福", "失坠敕令", "王座裁落"],

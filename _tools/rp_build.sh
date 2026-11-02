@@ -22,6 +22,8 @@ python build_combat_prompt_font.py ../resourcepack
 python add_tower_guard.py ../resourcepack ../rpg
 python add_beelzebub.py ../resourcepack ../rpg
 python add_vanguard.py ../resourcepack ../rpg
+python add_leviathan_model.py ../resourcepack ../rpg
+python add_sunken_skeleton.py ../resourcepack ../rpg
 # last, so every hand transform in the pack has exactly one owner
 python fix_display.py ../resourcepack
 echo

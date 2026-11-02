@@ -122,6 +122,10 @@ python add_tower_guard.py ../resourcepack ../rpg
 python add_beelzebub.py ../resourcepack ../rpg
 # 别西卜麾下五名罪仆换上 Dungeons 先锋外观（塞列欧斯改用掠夺者底子，见 add_demon_minions.py）
 python add_vanguard.py ../resourcepack ../rpg
+# 利维坦换上 Dungeons 死灵法师模型（挂进 sk2_*、ult2*、advent_gone），
+# 麾下五名罪仆换上沉没骷髅外观（派蒙改用掠夺者底子）
+python add_leviathan_model.py ../resourcepack ../rpg
+python add_sunken_skeleton.py ../resourcepack ../rpg
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.

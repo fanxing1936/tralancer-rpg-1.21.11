@@ -5,3 +5,5 @@ execute at @s as @a[distance=..14,gamemode=!spectator,gamemode=!creative] run fu
 playsound minecraft:entity.elder_guardian.hurt hostile @a[distance=..32] ~ ~ ~ 1 1.2
 particle witch ~ ~1 ~ 3 1 3 0.3 80
 execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk2c_envy
+# 利维坦外观（add_leviathan_model.py）
+execute if entity @s[tag=rpg.lv] run function rpg:leviathan/skill/sk2_3

@@ -1,0 +1,17 @@
+# 利维坦换装（as 降临者，at 其脚下）。只加 rpg.lv 标签与七个部件，不碰其他标签与数值。
+tag @s add rpg.lv
+tag @s add rpg.lv.dressing
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lv.part","rpg.lv.p.body","rpg.lv.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:leviathan/body"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0f,-1.93769f,0.02906f],left_rotation:[0.21644f,0f,0f,0.9763f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lv.part","rpg.lv.p.head","rpg.lv.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:leviathan/head"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0f,-1.0157f,0.68656f],left_rotation:[0.46175f,0f,0f,0.88701f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lv.part","rpg.lv.p.right_arm","rpg.lv.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:leviathan/right_arm"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[-0.37269f,-1.65199f,0.26045f],left_rotation:[0.08707f,0.01492f,-0.04099f,0.99525f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lv.part","rpg.lv.p.left_arm","rpg.lv.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:leviathan/left_arm"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0.39156f,-1.628f,0.1867f],left_rotation:[0.19888f,-0.01628f,0.06783f,0.97754f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lv.part","rpg.lv.p.staff","rpg.lv.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:leviathan/staff"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[-0.34638f,-2.00126f,0.11503f],left_rotation:[0.63977f,-0.21547f,0.18182f,0.71499f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lv.part","rpg.lv.p.gem","rpg.lv.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:leviathan/gem"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[-1.15662f,-1.82689f,1.38024f],left_rotation:[0.63977f,-0.21547f,0.18182f,0.71499f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lv.part","rpg.lv.p.cape","rpg.lv.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:leviathan/cape"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0f,-1.86071f,-0.13696f],left_rotation:[0.18224f,0f,0f,0.98325f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+execute as @e[type=minecraft:item_display,tag=rpg.lv.new,distance=..1] run ride @s mount @e[type=minecraft:vindicator,tag=rpg.lv.dressing,limit=1]
+tag @e[type=minecraft:item_display,tag=rpg.lv.new,distance=..1] remove rpg.lv.new
+tag @s remove rpg.lv.dressing
+function rpg:leviathan/anim/init
+playsound rpg:leviathan.prepare hostile @a[distance=..32] ~ ~ ~ 1.2 0.8
+playsound rpg:leviathan.laugh hostile @a[distance=..48] ~ ~ ~ 1.2 0.8
+function rpg:leviathan/anim/enter/rise

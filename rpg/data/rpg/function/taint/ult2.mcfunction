@@ -7,3 +7,5 @@ particle splash ~ ~0.7 ~ 5 1 5 0.25 72 normal
 playsound minecraft:entity.elder_guardian.curse hostile @a[distance=..36] ~ ~ ~ 1.25 0.45
 playsound minecraft:entity.generic.splash hostile @a[distance=..36] ~ ~ ~ 1.4 0.55
 execute as @a[distance=..12,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult2_hit
+# 利维坦外观（add_leviathan_model.py）
+execute if entity @s[tag=rpg.lv] run function rpg:leviathan/skill/ult2
