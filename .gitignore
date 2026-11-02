@@ -28,3 +28,11 @@ Dungeons GUI *.zip
 # 部署前的整包备份（每份都是一整套数据包，目前 782 MB）。
 # 它是本地保险，不是版本历史 —— 版本历史 git 自己就是。
 /backups/
+
+# 宣传片的大文件：配乐与音效素材、录屏原片、中间帧和成片都不进仓库，
+# 来源记在 _promo/SOURCES.md，按 _promo/README.md 可以重新取得、重新渲染。
+/_promo/assets/music/
+/_promo/assets/sfx/
+/_promo/raw/
+/_promo/build/
+/_promo/out/
