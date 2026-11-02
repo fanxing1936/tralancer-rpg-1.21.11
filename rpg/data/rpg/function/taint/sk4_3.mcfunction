@@ -5,3 +5,5 @@ execute at @s as @a[distance=..14,gamemode=!spectator,gamemode=!creative] run fu
 playsound minecraft:entity.bee.loop_aggressive hostile @a[distance=..32] ~ ~ ~ 1 0.5
 particle mycelium ~ ~1 ~ 2 1 2 0.3 80
 execute at @s run function rpg:taint/sk4c_swarm
+# 别西卜外观（add_beelzebub.py）
+execute if entity @s[tag=rpg.bz] run function rpg:beelzebub/skill/sk4_3

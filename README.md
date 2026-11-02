@@ -156,3 +156,21 @@ python _tools/package.py --install
 每一处实现判断、踩过的坑与修正都记在 [`ENGINEERING.md`](ENGINEERING.md) 里。
 
 感谢这段三方的合作。
+
+### 素材来源
+
+圣卫（塔卫）、别西卜（无名者）与别西卜麾下罪仆（先锋）的原始贴图与音效取自
+**Minecraft Dungeons**（Mojang Studios），经由 [minecraft.wiki](https://minecraft.wiki) 获取，
+版权归 Mojang 所有。本项目开源、免费、非商业，与 Mojang 及 Microsoft 无任何关联。
+
+| 生物 | 原型 | 来源页面 | 用到的素材 |
+|---|---|---|---|
+| 圣卫 | Tower Guard | <https://minecraft.wiki/w/Dungeons:Tower_Guard> | 本体、盾牌、长戟贴图及其发光层；全部 13 组共 56 段音效 |
+| 别西卜 | Nameless One | <https://minecraft.wiki/w/Dungeons:Nameless_One> | 本体贴图与发光层；全部 16 组共 40 段音效 |
+| 别西卜麾下罪仆 | Vanguard | <https://minecraft.wiki/w/Dungeons:Vanguard>（另有 [Skeleton](https://minecraft.wiki/w/Dungeons:Skeleton)、[Glaive](https://minecraft.wiki/w/Dungeons:Glaive) 页） | 骷髅本体、沙漠盔甲、沙漠盾牌、长戟贴图；先锋全部 6 组共 18 段音效 |
+
+逐个文件的来源记在 [`_tools/tower_guard_ref/SOURCES.md`](_tools/tower_guard_ref/SOURCES.md) 与
+[`_tools/beelzebub_ref/SOURCES.md`](_tools/beelzebub_ref/SOURCES.md)、
+[`_tools/vanguard_ref/SOURCES.md`](_tools/vanguard_ref/SOURCES.md)。模型几何、姿势与动画是在
+Blockbench 里按原作外观重做的；图集里原贴图之外的部分（皇冠、法袍、护肩、法杖头的嵌套方块等）
+用原贴图的像素与配色补画。

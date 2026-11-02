@@ -45,6 +45,19 @@ ROLES = {
     5: {"name": "处刑者", "entity": "vindicator", "health": 108, "attack": 11, "armor": 8, "speed": 0.33, "weapon": "minecraft:iron_axe", "cd": 75, "material": "minecraft:redstone"},
 }
 
+# (lord, role) -> fields that differ from ROLES for that one spirit.
+# 别西卜's servants wear a display-entity model over an invisible body
+# (add_vanguard.py); the illusioner renderer draws its body and mirror images
+# even while invisible, so 塞列欧斯 the hexer is a pillager instead -- still a
+# ranged illager, with the crossbow its AI needs.
+ROLE_OVERRIDES = {
+    (4, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
+}
+
+
+def role_of(lord_index, role_index):
+    return dict(ROLES[role_index], **ROLE_OVERRIDES.get((lord_index, role_index), {}))
+
 # Each spirit owns a named combat language.  The five tuple positions are the
 # stable roles above; effects are interpreted by the role-specific executor in
 # build_ability().  This keeps the ecology readable without creating 35 hot
@@ -223,7 +236,7 @@ def build_summons():
     for lord_index, lord in LORDS.items():
         all_lines = ["# %s麾下五职；手动调用时不检查 Boss 与人口上限。" % lord["lord"]]
         for role_index, spirit in enumerate(lord["spirits"], 1):
-            role = ROLES[role_index]
+            role = role_of(lord_index, role_index)
             rel = "minion/summon/%s/%s.mcfunction" % (lord["slug"], spirit[0])
             lines = [
                 "# %s麾下%s：%s。可独立、永久存活。" % (lord["lord"], role["name"], spirit[1]),
@@ -362,7 +375,7 @@ execute facing entity @a[distance=10..28,sort=nearest,limit=1,gamemode=!spectato
         for role_index, spirit in enumerate(lord["spirits"], 1):
             dispatch.append("execute if entity @s[scores={rpg_mn_lord=%d,rpg_mn_role=%d}] run return run function rpg:minion/ability/%s_%d" % (lord_index, role_index, lord["slug"], role_index))
             resolve.append("execute if entity @s[scores={rpg_mn_lord=%d,rpg_mn_role=%d}] run return run function rpg:minion/ability/resolve/%s_%d" % (lord_index, role_index, lord["slug"], role_index))
-            build_ability(lord_index, role_index, lord, ROLES[role_index], spirit)
+            build_ability(lord_index, role_index, lord, role_of(lord_index, role_index), spirit)
     write("minion/ability_dispatch.mcfunction", "\n".join(dispatch))
     write("minion/resolve_dispatch.mcfunction", "\n".join(resolve))
 
@@ -444,7 +457,7 @@ playsound minecraft:entity.experience_orb.pickup player @s ~ ~ ~ 0.22 1.55
 """)
     for lord_index, lord in LORDS.items():
         for role_index, spirit in enumerate(lord["spirits"], 1):
-            role = ROLES[role_index]
+            role = role_of(lord_index, role_index)
             table = {
                 "type": "minecraft:entity",
                 "pools": [

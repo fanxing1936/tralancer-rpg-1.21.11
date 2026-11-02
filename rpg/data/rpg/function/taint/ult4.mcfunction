@@ -9,3 +9,5 @@ playsound minecraft:entity.bee.loop_aggressive hostile @a[distance=..36] ~ ~ ~ 1
 playsound minecraft:entity.ravager.roar hostile @a[distance=..40] ~ ~ ~ 0.65 0.55
 function rpg:taint/ult4_swarm
 execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult4_hit
+# 别西卜外观（add_beelzebub.py）
+execute if entity @s[tag=rpg.bz] run function rpg:beelzebub/skill/ult4

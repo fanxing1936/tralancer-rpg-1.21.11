@@ -23,6 +23,8 @@ LORDS = [
     ("mammon", ["foras", "asmoday", "gaap", "furfur", "marchosias"]),
 ]
 ROLE_ENTITIES = ("vindicator", "pillager", "evoker", "illusioner", "vindicator")
+# 塞列欧斯 (别西卜's hexer) is a pillager: see ROLE_OVERRIDES in add_demon_minions.py
+ENTITY_OVERRIDES = {(4, 4): "pillager"}
 ROLE_COOLDOWNS = (110, 85, 125, 100, 75)
 SKILL_NAMES = [
     ["王冠护持", "罪痕标定", "晨星赐福", "失坠敕令", "王座裁落"],
@@ -92,7 +94,8 @@ for lord_index, (lord, spirits) in enumerate(LORDS, 1):
     for role_index, spirit in enumerate(spirits, 1):
         summon = read("minion/summon/%s/%s.mcfunction" % (lord, spirit))
         summon_lines = [line for line in summon.splitlines() if line.startswith("summon minecraft:")]
-        if len(summon_lines) != 1 or not summon_lines[0].startswith("summon minecraft:%s " % ROLE_ENTITIES[role_index - 1]):
+        entity = ENTITY_OVERRIDES.get((lord_index, role_index), ROLE_ENTITIES[role_index - 1])
+        if len(summon_lines) != 1 or not summon_lines[0].startswith("summon minecraft:%s " % entity):
             problems.append("%s/%s must summon its role-specific illager" % (lord, spirit))
         else:
             summon_count += 1

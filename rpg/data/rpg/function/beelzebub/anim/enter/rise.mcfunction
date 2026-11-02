@@ -1,0 +1,5 @@
+# 切到 rise 并立即播放第一帧。
+scoreboard players set @s rpg_bz_anim 4
+scoreboard players set @s rpg_bz_t 0
+execute at @s run playsound rpg:beelzebub.wake hostile @a[distance=..24] ~ ~ ~ 1 1
+return run function rpg:beelzebub/anim/rise/tick
