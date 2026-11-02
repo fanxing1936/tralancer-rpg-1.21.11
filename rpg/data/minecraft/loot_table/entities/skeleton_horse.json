@@ -29,7 +29,7 @@
                   {
                     "text": "[骸骨]",
                     "italic": false,
-                    "color": "dark_gray",
+                    "color": "#797979",
                     "bold": true
                   }
                 ],
@@ -43,7 +43,7 @@
                   {
                     "text": "[战士]",
                     "italic": false,
-                    "color": "dark_gray",
+                    "color": "#797979",
                     "bold": true
                   }
                 ],
@@ -64,14 +64,16 @@
               "name": [
                 "",
                 {
-                  "text": "[item]",
+                  "text": "[货币]",
                   "italic": false,
-                  "color": "dark_gray",
+                  "color": "#797979",
                   "bold": true
                 },
                 {
                   "text": "骸骨",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"

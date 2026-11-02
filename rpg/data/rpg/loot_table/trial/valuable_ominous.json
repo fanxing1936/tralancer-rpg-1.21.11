@@ -15,14 +15,16 @@
               "name": [
                 "",
                 {
-                  "text": "[🧪]",
+                  "text": "[附魔]",
                   "italic": false,
-                  "color": "gold",
+                  "color": "#FFAA00",
                   "bold": true
                 },
                 {
                   "text": "黄金",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -105,14 +107,16 @@
               "name": [
                 "",
                 {
-                  "text": "[🧪]",
+                  "text": "[附魔]",
                   "italic": false,
-                  "color": "aqua",
+                  "color": "#55FFFF",
                   "bold": true
                 },
                 {
                   "text": "钻石",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"

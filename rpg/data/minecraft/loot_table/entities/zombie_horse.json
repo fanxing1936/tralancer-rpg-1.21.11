@@ -29,7 +29,7 @@
                   {
                     "text": "[遗物]",
                     "italic": false,
-                    "color": "dark_gray",
+                    "color": "#797979",
                     "bold": true
                   }
                 ],
@@ -43,7 +43,7 @@
                   {
                     "text": "[证据]",
                     "italic": false,
-                    "color": "dark_gray",
+                    "color": "#797979",
                     "bold": true
                   }
                 ],
@@ -64,14 +64,16 @@
               "name": [
                 "",
                 {
-                  "text": "[item]",
+                  "text": "[货币]",
                   "italic": false,
-                  "color": "dark_gray",
+                  "color": "#797979",
                   "bold": true
                 },
                 {
                   "text": "腐肉",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"

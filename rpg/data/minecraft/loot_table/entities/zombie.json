@@ -70,7 +70,7 @@
                 {
                   "text": "[uncommon]",
                   "italic": false,
-                  "color": "green",
+                  "color": "#55FF55",
                   "bold": true
                 },
                 {
@@ -79,7 +79,9 @@
                 },
                 {
                   "text": "的破损石剑",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -184,7 +186,7 @@
                 {
                   "text": "[uncommon]",
                   "italic": false,
-                  "color": "green",
+                  "color": "#55FF55",
                   "bold": true
                 },
                 {
@@ -193,7 +195,9 @@
                 },
                 {
                   "text": "捡到的剑",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -298,7 +302,7 @@
                 {
                   "text": "[uncommon]",
                   "italic": false,
-                  "color": "green",
+                  "color": "#55FF55",
                   "bold": true
                 },
                 {
@@ -307,7 +311,9 @@
                 },
                 {
                   "text": "的普通石剑",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -401,14 +407,16 @@
               "name": [
                 "",
                 {
-                  "text": "[brave]",
+                  "text": "[勇者]",
                   "italic": false,
-                  "color": "dark_aqua",
+                  "color": "#00AAAA",
                   "bold": true
                 },
                 {
                   "text": "磨损的铁剑",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -475,14 +483,16 @@
               "name": [
                 "",
                 {
-                  "text": "[currency]",
+                  "text": "[货币]",
                   "italic": false,
-                  "color": "gold",
+                  "color": "#FFAA00",
                   "bold": true
                 },
                 {
                   "text": "货币",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -613,7 +623,7 @@
                   {
                     "text": "[遗物]",
                     "italic": false,
-                    "color": "dark_gray",
+                    "color": "#797979",
                     "bold": true
                   }
                 ],
@@ -627,7 +637,7 @@
                   {
                     "text": "[证据]",
                     "italic": false,
-                    "color": "dark_gray",
+                    "color": "#797979",
                     "bold": true
                   }
                 ],
@@ -648,14 +658,16 @@
               "name": [
                 "",
                 {
-                  "text": "[item]",
+                  "text": "[货币]",
                   "italic": false,
-                  "color": "dark_gray",
+                  "color": "#797979",
                   "bold": true
                 },
                 {
                   "text": "腐肉",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
