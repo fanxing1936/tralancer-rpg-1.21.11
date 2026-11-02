@@ -107,13 +107,16 @@ python polish_recent_ui.py ../rpg
 # 十源质先授旧约；真·十字架置于 Daath 后汇聚成新约，并接入上位契约状态与纹理。
 # 必须晚于面板/UI 生成器，确保权柄完整度是最终 HUD 语义。
 python add_divine_covenants.py ../rpg ../resourcepack
+# 物品贴图按原生网格存储（最后一个写物品贴图的生成器之后）：整数倍放大
+# 的无损还原，新约按 ART-STYLE D6 重建；单独重建数据包也要收回来
+python fix_texture_grid.py ../resourcepack
 python add_drop_policy.py ../rpg
 # 全量领取箱必须在所有 give 生成器之后运行，才能收齐驱魔工具、真名残页
 # 与裁决奖励，并将旧目录中的物品按语义重新分类。
 python make_boxes.py ../rpg
 # 所有生成器（尤其领取箱）完成后再统一七罪姓名色与物品名字重：这样箱内
 # 副本、散装 give、Boss 名牌、调查/裁决/面板会共享同一套最终规范。
-python polish_demon_names.py ../rpg
+python polish_ui.py ../rpg
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.
@@ -135,6 +138,9 @@ python check_retired_mob_content.py ../rpg
 python check_creeper.py ../rpg
 # effect give 的时长只收整数秒；带 t 后缀会让整份函数拒绝加载，validate 抓不到
 python check_effect_duration.py ../rpg
+# 色板自检（对比度、同族色差）＋产物里不得残留七柱旧色写字；生成器里
+# 未登记的 Hex 先只警告（ART-STYLE.md §1.6）
+python check_ui_palette.py ../rpg
 echo
 echo "== 4. per-tick profile =="
 python profile_tick.py ../rpg

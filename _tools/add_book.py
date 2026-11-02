@@ -448,8 +448,10 @@ def item_snbt():
     也不用 json.dumps：见 snbt() —— 页面必须是 NBT，不是 JSON 字符串。
     """
     pages = ",".join(snbt(pg) for pg in build_pages())
+    # \u4e66\u9875\u662f\u6d45\u8272\u7eb8\u9762\uff0c\u7ae0\u8282\u540d\u7528\u6df1\u84dd B\uff1b\u7269\u54c1\u540d\u663e\u793a\u5728\u6df1\u8272 Tooltip \u4e0a\uff0c
+    # \u6309\u5168\u5305\u89c4\u5219\u7528\u767d\u8272\u3001\u4e0d\u52a0\u7c97\uff08ART-STYLE.md \u00a72.1\uff09\u3002
     name = snbt([{"text": "\u300a" + TITLE + "\u300b",
-                  "italic": False, "color": B, "bold": True}])
+                  "italic": False, "color": "#FFFFFF", "bold": False}])
     return ("written_book[minecraft:written_book_content={"
             'title:"' + TITLE + '",author:"' + AUTHOR + '",'
             "resolved:true,pages:[" + pages + "]},"

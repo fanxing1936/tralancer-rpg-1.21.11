@@ -101,7 +101,7 @@ def covenant_lore_rows(kind, signed):
             rows.append([comp("长按右键动用契约之力（冷却 30 秒）", ui.GRAY)])
         else:
             rows.append([comp("长按右键施展净光；潜行长按展开敕界", ui.GRAY)])
-            rows.append([comp("两种权能分别回响 20 / 30 秒", ui.DARK_GRAY)])
+            rows.append([comp("两种权能分别回响 20 / 30 秒", ui.MUTED)])
         rows.append([comp("在燃着的驱魔图腾旁长按则", ui.GRAY),
                      comp("解约", ui.RED, True)])
     else:
@@ -120,7 +120,7 @@ def covenant_lore_rows(kind, signed):
     else:
         rows += [
             [ui.label("权柄"), comp("　魔化由权柄完整度取代", NEW_LIGHT)],
-            [comp("　权柄每 2 秒恢复 1 点，可在玩家面板中消耗", ui.DARK_GRAY)],
+            [comp("　权柄每 2 秒恢复 1 点，可在玩家面板中消耗", ui.MUTED)],
             [ui.label("力量"), comp("[创世净光]", NEW_COLOUR, True)],
             [comp("　对前方恶魔造成 25% 最大生命值伤害", ui.GRAY)],
             [comp("　并追加 15 点基础伤害与审判印记", ui.GRAY)],
@@ -129,17 +129,17 @@ def covenant_lore_rows(kind, signed):
             [comp("　并追加 10 点伤害；净化、恢复并庇护范围内同伴", ui.GRAY)],
             [ui.label("神佑"), comp("　免疫失明与黑暗", NEW_LIGHT)],
             [ui.label("赦免"), comp("　可无副作用动用七罪契约之力", OLD_LIGHT)],
-            [comp("　手持七罪契约书使用（冷却 15 秒）", ui.DARK_GRAY)],
+            [comp("　手持七罪契约书使用（冷却 15 秒）", ui.MUTED)],
             [ui.label("圣裁"), comp("　消耗 25 权柄强化下一次对恶魔的攻击", NEW_LIGHT)],
             [comp("　净化目标并附加 20% 最大生命值与 10 点伤害", ui.GRAY)],
-            [comp("　生命不高于 20% 时直接斩杀；覆印保留 30 秒", ui.DARK_GRAY)],
+            [comp("　生命不高于 20% 时直接斩杀；覆印保留 30 秒", ui.MUTED)],
             [ui.label("恩赐"), comp("　消耗 35 权柄救治 12 格内最近的同伴", OLD_LIGHT)],
         ]
     rows.append([comp(ui.RULE_TEXT, ui.WHITE)])
     if signed:
         rows.append([comp("契约已立 · 在燃着的驱魔图腾旁可断约", p["light"])])
     else:
-        rows.append([comp("立约前不会消耗此书", ui.DARK_GRAY)])
+        rows.append([comp("立约前不会消耗此书", ui.MUTED)])
     return rows
 
 

@@ -34,6 +34,7 @@ import io
 import json
 import os
 import sys
+import rpg_ui_style as ui
 
 import add_exorcism as ex
 
@@ -48,8 +49,8 @@ GIVE = os.path.join(FUNC, "command/give/extra.mcfunction")
 # 常数
 # ---------------------------------------------------------------------------
 CMD = 1110003            # 弓的第三个模型位（1110001 泡泡弓 / 1110002 疾风弓）
-ACCENT = "#B7950B"       # 与第七柱同色 —— 作者要的就是契约与罪器认得出是一家
-LIT = "#FFD700"
+ACCENT = ui.pillar("mammon")["lit"]   # 与第七柱同色 —— 契约与罪器认得出是一家
+LIT = ui.WHITE                        # 招式名白色（ART-STYLE.md §5）
 
 FULL = 40                # 攒到多少刻算买断（原版满弓 20 刻，即再持满弓一秒）
 WIN = 8                  # 拉弓之后留几刻去认那支箭
@@ -96,7 +97,7 @@ def item_snbt():
     ]
     return (
         "bow["
-        "custom_name=" + row(seg("[DEVIL]", ACCENT, True), seg("玛门", "aqua")) + ","
+        "custom_name=" + row(seg(ui.tier_tag("devil"), ACCENT, True), seg("玛门", ui.WHITE)) + ","
         "lore=[" + ",".join(lore) + "],"
         "enchantments={power:5,punch:2,flame:1,unbreaking:3},"
         'attribute_modifiers=[{type:"luck",amount:1,slot:mainhand,'
@@ -333,7 +334,7 @@ playsound minecraft:entity.wither.ambient player @s ~ ~ ~ 0.6 1.4
 # ---------------------------------------------------------------------------
 BUYOUT = """\
 # 买断。它不掷点 —— 贪婪不赊账，这一箭的价钱是写死的。
-title @s actionbar ["",{"text":"[买断]","italic":false,"color":"%(A)s","bold":true},{"text":"　金箭离弦","italic":false,"color":"%(L)s"},{"text":" ✦","italic":false,"color":"#FFF2A8"}]
+title @s actionbar ["",{"text":"[买断]","italic":false,"color":"%(A)s","bold":true},{"text":"　金箭离弦","italic":false,"color":"%(L)s"},{"text":" ✦","italic":false,"color":"%(A)s"}]
 playsound minecraft:block.amethyst_block.resonate player @s ~ ~ ~ 1 0.8
 playsound minecraft:entity.player.levelup player @s ~ ~ ~ 0.7 0.6
 execute at @s anchored eyes run particle wax_on ^ ^ ^1 0.3 0.3 0.3 0.1 40

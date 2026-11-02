@@ -23,6 +23,7 @@ import io
 import json
 import os
 import sys
+import rpg_ui_style as ui
 
 import png_tool as P
 
@@ -218,7 +219,7 @@ def build_models():
 # Each demon carries its own accent, used for the [DEVIL] prefix, the bold
 # half of each epithet and the skill name (萨麦尔 #b00057, 贝利尔 #660099).
 # 路西法 takes the deep green of the serpent art.
-DEVIL = "#00491c"
+DEVIL = ui.pillar("lucifer")["lit"]   # 写字用亮色；深色 #00491C 只作身份色
 RULE = '["",{"text":"+------------------+","italic":false,"color":"white"}]'
 
 
@@ -235,7 +236,7 @@ def row(*segs):
 # #enchantable/melee_weapon and #enchantable/lunge, but NOT in
 # #enchantable/sweeping, so sweeping_edge is deliberately absent
 LUCIFER = ("give @a %s[" % BASE +
-           "custom_name=" + row(seg("[DEVIL]", DEVIL, True),
+           "custom_name=" + row(seg(ui.tier_tag("devil"), DEVIL, True),
                                 seg("路西法", "aqua")) + ","
            "lore=[" + ",".join([
                RULE,

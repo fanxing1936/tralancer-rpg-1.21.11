@@ -21,6 +21,7 @@ import os
 import sys
 
 import png_tool as P
+import rpg_ui_style as ui
 
 RP = sys.argv[1] if len(sys.argv) > 1 else "../resourcepack"
 DP = sys.argv[2] if len(sys.argv) > 2 else "../rpg"
@@ -46,21 +47,21 @@ RULE = '["",{"text":"+------------------+","italic":false,"color":"white"}]'
 WEAPONS = [
     dict(key="forge", art="568568", item="netherite_axe", cmd=1110021,
          parent="rpg:item/sword_handheld",
-         name="熔火之锤", tier="传说", tier_colour="gold", name_colour="red",
+         name="熔火之锤", tier="legend", motif="red",
          icon="🔱", kind="主动技能", skill="熔流",
          flavour=("锻炉裂开的那一日", " 铁匠把山的心脏装进了锤头"),
          text=("长按右键蓄力1.5秒砸地，热浪由内向外三重扩散",
                "每一圈都点燃并推开当中的敌人")),
     dict(key="dawn", art="568486", item="netherite_sword", cmd=1110022,
          parent="rpg:item/sword_handheld",
-         name="熔岩链锯", tier="LTD", tier_colour="#FFD700", name_colour="gold",
+         name="熔岩链锯", tier="limited", motif="gold",
          icon="🗡", kind="主动技能", skill="熔锯",
          flavour=("[切割链锯]烧红了它的锯齿", " 从此它咬下去的地方会流"),
          text=("右键起锯，三秒内连切六轮",
                "每一轮都在身前召出熔岩獠牙")),
     dict(key="chime", art="568583", item="netherite_axe", cmd=1110023,
          parent="rpg:item/sword_handheld",
-         name="晶啸", tier="史诗", tier_colour="dark_purple", name_colour="light_purple",
+         name="晶啸", tier="epic", motif="light_purple",
          icon="🪓", kind="被动技能", skill="共振",
          flavour=("紫晶在斧刃里长了三百年", " 它记得每一次挥击"),
          text=("命中时晶体共鸣，震荡波及目标周围的敌人",)),
@@ -211,15 +212,16 @@ SAW_CONSUMABLE = _consumable(SAW_CONSUME)
 
 def give(w):
     lore = [RULE,
-            row(seg(w["flavour"][0]), seg(w["flavour"][1], w["tier_colour"], True)),
+            row(seg(w["flavour"][0]), seg(w["flavour"][1], ui.tier_colour(w["tier"]), True)),
             RULE,
             row(seg("%s%s" % (w["icon"], w["kind"]), "white", True),
-                seg("[%s]" % w["skill"], w["tier_colour"], True))]
+                # 本名白色；原来的本名意象色移到技能名（ART-STYLE.md §2.1）
+                seg("[%s]" % w["skill"], ui.readable(w["motif"]), True))]
     lore += [row(seg(t)) for t in w["text"]]
     lore.append(RULE)
     return ("give @a %s[" % w["item"] +
-            "custom_name=" + row(seg("[%s]" % w["tier"], w["tier_colour"], True),
-                                 seg(w["name"], w["name_colour"])) + ","
+            "custom_name=" + row(seg(ui.tier_tag(w["tier"]), ui.tier_colour(w["tier"]), True),
+                                 seg(w["name"], ui.WHITE)) + ","
             "lore=[" + ",".join(lore) + "],"
             "enchantments=" + ENCH[w["key"]] + ","
             "attribute_modifiers=[" + ATTRS[w["key"]] + "],"

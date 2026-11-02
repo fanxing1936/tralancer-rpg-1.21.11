@@ -27,6 +27,8 @@ import json
 import os
 import sys
 
+import rpg_ui_style as ui
+
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 FUNC = os.path.join(DP, "data/rpg/function")
 ADV = os.path.join(DP, "data/rpg/advancement/item")
@@ -132,11 +134,12 @@ def bar(filled, total, on_colour, off_colour="dark_gray"):
     return parts
 
 
+# 四档的色相沿用作者的「灰 → 紫 → 红 → 暗红」，提亮到在 Actionbar 上读得出。
 TAINT_TIERS = [
-    (0, 30, "gray", "尚可自持"),
-    (31, 60, "dark_purple", "侵蚀渐深"),
+    (0, 30, ui.GRAY, "尚可自持"),
+    (31, 60, ui.readable("dark_purple"), "侵蚀渐深"),
     (61, 90, "red", "近乎失守"),
-    (91, TAINT_MAX, "dark_red", "濒临魔化"),
+    (91, TAINT_MAX, ui.WARN, "濒临魔化"),
 ]
 
 
@@ -148,11 +151,13 @@ def build_hud():
     所以拆成一层调度 + 每种条各自一个函数：空闲一刻只评估几条落空的判定
     加一次递减，真正的分支只在该显示的时候才进去。
     """
-    skills = [(HUD_ANCHOR, "沉　锚", "dark_aqua", "aqua"),
-              (HUD_FORGE, "熔　流", "gold", "yellow"),
-              (HUD_VINE, "缠　绕", "dark_green", "green"),
-              (HUD_INVERT, "逆圣化", "dark_red", "gold"),
-              (HUD_MAMMON, "买　断", "#7A5C00", "#FFD700")]
+    # 标签灰色、进度用该技能的语义色（ART-STYLE.md §2.3）：罪器取柱亮色，
+    # 逆圣化取圣金。
+    skills = [(HUD_ANCHOR, "沉　锚", ui.GRAY, ui.pillar("leviathan")["lit"]),
+              (HUD_FORGE, "熔　流", ui.GRAY, "gold"),
+              (HUD_VINE, "缠　绕", ui.GRAY, "green"),
+              (HUD_INVERT, "逆圣化", ui.GRAY, ui.HOLY),
+              (HUD_MAMMON, "买　断", ui.GRAY, ui.pillar("mammon")["lit"])]
 
     # ---- 调度层 ----
     top = ["# 屏幕下方唯一的 actionbar 出口。技能不再各写各的 —— 它们只更新",
@@ -211,7 +216,7 @@ def build_hud():
                 "# 并排显示，最后由 rpg:hud/render 一条宏拼起来。",
                 "scoreboard players set @s rpg_hud_on 1"]
         for n in range(SEGMENTS + 1):
-            comp = row(seg("魔化 ", "dark_gray"), *bar(n, SEGMENTS, colour),
+            comp = row(seg("魔化 ", ui.GRAY), *bar(n, SEGMENTS, colour),
                        seg("  " + word, colour))
             body.append("execute if entity @s[scores={rpg_hud_p=%d}] "
                         "run data modify storage rpg:hud a set value '%s'" % (n, comp))
@@ -225,8 +230,8 @@ def build_hud():
             "scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud",
             "scoreboard players operation @s rpg_hud_p /= #fall_max rpg_hud"]
     for n in range(SEGMENTS + 1):
-        comp = row(seg("堕落 ", "dark_red"), *bar(n, SEGMENTS, "dark_red", "#3D2226"),
-                   seg("  降临将至", "dark_red"))
+        comp = row(seg("堕落 ", ui.GRAY), *bar(n, SEGMENTS, ui.WARN),
+                   seg("  降临将至", ui.WARN))
         body.append("execute if entity @s[scores={rpg_hud_p=%d}] "
                     "run data modify storage rpg:hud a set value '%s'" % (n, comp))
     wf("hud/tfall.mcfunction", "\n".join(body))
@@ -239,8 +244,8 @@ def build_hud():
             "scoreboard players operation @s rpg_hud_p *= #hud_seg rpg_hud",
             "scoreboard players operation @s rpg_hud_p /= #holy_full rpg_hud"]
     for n in range(SEGMENTS + 1):
-        comp = row(seg("圣痕 ", "yellow"), *bar(n, SEGMENTS, "gold"),
-                   seg("  逆圣化", "gold"))
+        comp = row(seg("圣痕 ", ui.GRAY), *bar(n, SEGMENTS, ui.HOLY),
+                   seg("  逆圣化", ui.HOLY))
         body.append("execute if entity @s[scores={rpg_hud_p=%d}] "
                     "run data modify storage rpg:hud a set value '%s'" % (n, comp))
     wf("hud/holy.mcfunction", "\n".join(body))
@@ -259,7 +264,7 @@ def build_hud():
             "scoreboard players operation @s rpg_hud_p /= #pact_full rpg_hud"]
     for n in range(SEGMENTS // 2 + 1):
         comp = row(seg("　", "dark_gray"),
-                   *bar(n, SEGMENTS // 2, "#D4AF37"))
+                   *bar(n, SEGMENTS // 2, ui.HOLY_DARK))
         body.append("execute if entity @s[scores={rpg_hud_p=%d}] "
                     "run data modify storage rpg:hud c set value '%s'" % (n, comp))
     wf("hud/pbar.mcfunction", "\n".join(body))
@@ -946,17 +951,17 @@ def build_give():
     if "驱魔图腾" in s:
         return 0
     totem = ("give @a totem_of_undying["
-             "custom_name=" + row(seg("[驱魔]", "#FFD700", True), seg("驱魔图腾", "white")) + ","
+             "custom_name=" + row(seg("[驱魔]", ui.HOLY, True), seg("驱魔图腾", "white")) + ","
              "lore=[" + ",".join([
                  RULE,
-                 row(seg("以"), seg("[圣座]", "#FFD700", True), seg("之木刻成")),
+                 row(seg("以"), seg("[圣座]", ui.HOLY, True), seg("之木刻成")),
                  row(seg("长按右键立起，再以驱魔圣水浇之")),
                  RULE,
-                 row(seg("🔱仪式", "white", True), seg("[驱魔]", "#FFD700", True)),
+                 row(seg("🔱仪式", "white", True), seg("[驱魔]", ui.HOLY, True)),
                  row(seg("点燃后每隔两秒净化一次，效力逐次递减")),
                  row(seg("燃尽时炸开，驱出范围内所有空缺者")),
                  RULE,
-                 row(seg("🔱逆圣化", "white", True), seg("[满魔化]", "#FF3300", True)),
+                 row(seg("🔱逆圣化", "white", True), seg("[满魔化]", ui.WARN, True)),
                  row(seg("魔化满值者在场时点燃，仪式转为反转")),
                  row(seg("站定十秒熬过灼烧，魔化尽去，留下圣痕")),
                  RULE]) + "],"
@@ -973,10 +978,10 @@ def build_give():
     # 必须是滞留型：喷溅药水落地即散，图腾没有任何东西可以感知；
     # 滞留药水会留下 area_effect_cloud，那才是"浇上了"的凭据。
     water = ("give @a lingering_potion["
-             "custom_name=" + row(seg("[驱魔]", "#FFD700", True), seg("驱魔圣水", "white")) + ","
+             "custom_name=" + row(seg("[驱魔]", ui.HOLY, True), seg("驱魔圣水", "white")) + ","
              "lore=[" + ",".join([
                  RULE,
-                 row(seg("自"), seg("[圣座]", "#FFD700", True), seg("取来的水")),
+                 row(seg("自"), seg("[圣座]", ui.HOLY, True), seg("取来的水")),
                  row(seg("浇在驱魔图腾上以点燃仪式")),
                  RULE]) + "],"
              'potion_contents={custom_color:16777200,custom_effects:[{id:"minecraft:water_breathing",duration:100,amplifier:0}]},'
@@ -1226,14 +1231,14 @@ def demon_nbt(name, accent, colour):
     * `active_effects` 是 1.21.11 的正确字段名（作者原本的代码里就是它，
       老的 `ActiveEffects` 会被静默丢掉）。
 
-    名牌仍用罪器那一套 [DEVIL] 前缀 —— 虽然隐身，被打时的伤害提示与
-    死亡消息里还是认得出是哪一位。
+    名牌仍用罪器那一套 [恶魔] 前缀（柱亮色）+ 白色本名 —— 虽然隐身，
+    被打时的伤害提示与死亡消息里还是认得出是哪一位。
     """
     return (
         '{Tags:["rpg.advent","rpg.demon","devil","rpg.advent.new","rpg.health700"],'
         'Johnny:1,Silent:1b,PersistenceRequired:1b,'
-        'CustomName:[{"text":"[DEVIL]","color":"%s","bold":true,"italic":false},'
-        '{"text":"%s","color":"%s","italic":false}],'
+        'CustomName:[{"text":"[恶魔]","color":"%s","bold":true,"italic":false},'
+        '{"text":"%s","color":"%s","bold":false,"italic":false}],'
         'Health:%df,'
         'active_effects:[{id:"invisibility",duration:-1,amplifier:0,'
         'show_particles:0b},{id:"speed",duration:-1,amplifier:1,'
@@ -1295,7 +1300,7 @@ def build_fall():
     wf("taint/advent.mcfunction", ADVENT % {"LEFT": 40})
     wf("taint/advent_at.mcfunction", ADVENT_AT)
     wf("taint/lord.mcfunction",
-       LORD_NONE % {"NBT": demon_nbt("无名者", "#3D0000", "dark_gray")})
+       LORD_NONE % {"NBT": demon_nbt("无名者", ui.NAMELESS["lit"], ui.WHITE)})
     wf("taint/advent_life.mcfunction",
        ADVENT_LIFE % {"LIFE": DEMON_LIFE, "BOSS": BOSS_LIFE})
     wf("taint/advent_tick.mcfunction", ADVENT_TICK % {"R": DEMON_R})

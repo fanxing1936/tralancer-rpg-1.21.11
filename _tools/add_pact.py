@@ -31,6 +31,7 @@ import shutil
 import sys
 
 import add_exorcism as ex          # 复用 HUD 的段落拼装与写文件
+import rpg_ui_style as ui
 
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 RP = sys.argv[2] if len(sys.argv) > 2 else "../resourcepack"
@@ -62,48 +63,55 @@ def wf(rel, text):
 # name / 罪 / 主色 / 恩赐文案 / 力量名 / 力量文案 / 枷锁文案
 # boon / bane 是 (属性, 数值, 运算) 列表，签约时写进去，毁约时原样撤掉
 PILLARS = [
-    dict(n=1, who="路西法", sin="傲慢", colour="#00491C", lit="green",
+    dict(n=1, who="路西法", sin="傲慢",
          boon="攻击伤害 +2.5",
          power="原罪", power_text="沿视线刺出蛇矛，幻魔者尖牙同路破土；贯穿者受伤加重并向近旁蔓延",
          bane="击退抗性 −0.25（更容易被打飞）",
          boons=[("attack_damage", 2.5, "add_value")],
          banes=[("knockback_resistance", -0.25, "add_value")]),
-    dict(n=2, who="利维坦", sin="嫉妒", colour="#1B4F72", lit="aqua",
+    dict(n=2, who="利维坦", sin="嫉妒",
          boon="移动速度 +8%",
          power="沉锚", power_text="向前方抛出巨锚，锚落处涌起漩涡，将敌人拖向锚心并持续碾压",
          bane="最大生命 −4",
          boons=[("movement_speed", 0.008, "add_value")],
          banes=[("max_health", -4, "add_value")]),
-    dict(n=3, who="亚巴顿", sin="怠惰", colour="#6A6A70", lit="gray",
+    dict(n=3, who="亚巴顿", sin="怠惰",
          boon="最大生命 +6",
          power="收割", power_text="周身 6 格爆发灵魂收割，每收割一个目标回复 1 颗心",
          bane="移动速度 −12%",
          boons=[("max_health", 6, "add_value")],
          banes=[("movement_speed", -0.012, "add_value")]),
-    dict(n=4, who="别西卜", sin="暴食", colour="#5A6B1E", lit="yellow",
+    dict(n=4, who="别西卜", sin="暴食",
          boon="攻击速度 +12%",
          power="余烬", power_text="向前方喷出灰烬，追加三段刀罡",
          bane="护甲 −3",
          boons=[("attack_speed", 0.5, "add_value")],
          banes=[("armor", -3, "add_value")]),
-    dict(n=5, who="萨麦尔", sin="暴怒", colour="#7B241C", lit="red",
+    dict(n=5, who="萨麦尔", sin="暴怒",
          boon="攻击伤害 +1.5，且攻击附带剧毒",
          power="毒雾", power_text="前方 7 格喷出毒雾，中者剧毒与凋零并存",
          bane="最大生命 −2",
          boons=[("attack_damage", 1.5, "add_value")],
          banes=[("max_health", -2, "add_value")]),
-    dict(n=6, who="贝利尔", sin="色欲", colour="#5B2C6F", lit="light_purple",
+    dict(n=6, who="贝利尔", sin="色欲",
          boon="护甲 +2",
          power="朝拜", power_text="7 格内所有生物停止活动，并受一次冲击",
          bane="攻击伤害 −1",
          boons=[("armor", 2, "add_value")],
          banes=[("attack_damage", -1, "add_value")]),
-    dict(n=7, who="玛门", sin="贪婪", colour="#B7950B", lit="gold",
+    dict(n=7, who="玛门", sin="贪婪",
          boon="6 格内的掉落物自动吸附到身边",
          power="点金", power_text="8 格内的掉落物尽数翻倍，并吐出经验",
          bane="魔化沾染速度翻倍",
          boons=[], banes=[]),
 ]
+
+
+# 颜色只从 rpg_ui_style 取（ART-STYLE.md §1.4）：colour / lit 是写字用的
+# 亮色，deep 是封皮、粒子暗端用的身份色，深色从不写字。
+for _p in PILLARS:
+    _q = ui.pillar(_p["n"])
+    _p.update(colour=_q["lit"], lit=_q["lit"], deep=_q["deep"])
 
 
 # ---------------------------------------------------------------------------
@@ -403,16 +411,16 @@ def item_snbt(p, signed):
     if signed:
         lore.append(row(seg("长按右键动用柱中之力（冷却 %d 秒）" % (CD // 20), "gray")))
         lore.append(row(seg("在燃着的驱魔图腾旁长按则", "gray"),
-                        seg("毁约", "#FF3300", True)))
+                        seg("毁约", ui.WARN, True)))
     else:
         lore.append(row(seg("长按右键签下契约", "gray")))
     lore += [RULE,
              row(seg("🜏恩赐", "white", True), seg("　" + p["boon"], p["lit"])),
              row(seg("🜏力量", "white", True), seg("[" + p["power"] + "]", p["colour"], True)),
              row(seg("　" + p["power_text"], "gray")),
-             row(seg("🜏枷锁", "white", True), seg("　" + p["bane"], "dark_red")),
+             row(seg("🜏枷锁", "white", True), seg("　" + p["bane"], ui.WARN)),
              RULE,
-             row(seg("契约期间持续沾染", "gray"), seg("魔化", "dark_red", True)),
+             row(seg("契约期间持续沾染", "gray"), seg("魔化", ui.WARN, True)),
              RULE]
     data = "{pact_tag:1b,pact:%d%s}" % (p["n"], ",pact_signed:1b" if signed else "")
     return ("enchanted_book["
@@ -1121,41 +1129,40 @@ damage @s 5 minecraft:magic %(BY)s
 }
 
 
-# 恶魔战斗提示不借用 Minecraft 的 16 色名：七柱本色有些很暗，直接拿来
-# 写聊天提示也不能直接用近黑本色，所以这里保留相同色相，单独给出可读的
-# 亮色、柔色和高光。提示走双层 Actionbar 的上层，下层战斗状态仍可同时显示。
+# 恶魔战斗提示：领主名与收尾符号用该柱亮色，招式名白色（ART-STYLE.md §5）。
+# 提示走双层 Actionbar 的上层，下层战斗状态仍可同时显示。
 DEMON_UI = {
-    1: dict(who="路西法", main="#31D97C", soft="#A9F5CE", glint="#E8FFF3",
+    1: dict(who="路西法", main=ui.pillar(1)["lit"],
             skills=[("原罪", "蛇矛破土"), ("蛇矛", "贯穿罪痕"), ("高踞", "众生俯首"),
                     ("失坠", "荣耀折翼"), ("王座回绝", "近身者皆退")],
             ultimate="万蛇加冕", ult_text="傲慢者立于万蛇之上"),
-    2: dict(who="利维坦", main="#3DA9E8", soft="#A9DDF5", glint="#E8F8FF",
+    2: dict(who="利维坦", main=ui.pillar(2)["lit"],
             skills=[("沉锚", "深潮回卷"), ("溺没", "剥夺呼吸"), ("嫉羡", "恩赐尽褫"),
                     ("逆潮", "远近皆失其位"), ("海渊重压", "深度压骨")],
             ultimate="妒海沉城", ult_text="深海正拖拽整片陆地"),
-    3: dict(who="亚巴顿", main="#92929B", soft="#D1D1D8", glint="#F0F0F4",
+    3: dict(who="亚巴顿", main=ui.pillar(3)["lit"],
             skills=[("收割", "灵魂归仓"), ("沉眠", "四肢封缄"), ("深渊之口", "地脉噬人"),
                     ("停摆", "此刻不再前行"), ("死寂", "无底坑吞声")],
             ultimate="终末收割", ult_text="所有灵魂都将归于静止"),
-    4: dict(who="别西卜", main="#B7C84B", soft="#E4EA9B", glint="#FFF6C7",
+    4: dict(who="别西卜", main=ui.pillar(4)["lit"],
             skills=[("余烬", "灰烬噬肺"), ("吞噬", "血肉为宴"), ("蝇群", "饥群出巢"),
                     ("腐宴", "宾客皆在盘中"), ("饥啮", "万口追血肉")],
             ultimate="万蝇饕宴", ult_text="饥饿张开了千万张口"),
-    5: dict(who="萨麦尔", main="#E44D4D", soft="#FF9B83", glint="#FFE0D5",
+    5: dict(who="萨麦尔", main=ui.pillar(5)["lit"],
             skills=[("毒雾", "腐血漫延"), ("怒斩", "暴怒近身"), ("死亡低语", "终声索命"),
                     ("血猎", "循伤者而至"), ("怒潮", "赤环逐众")],
             ultimate="血怒天罚", ult_text="死亡天使循血而至"),
-    6: dict(who="贝利尔", main="#C06BE8", soft="#E0A9F5", glint="#FFE8FA",
+    6: dict(who="贝利尔", main=ui.pillar(6)["lit"],
             skills=[("朝拜", "众生低首"), ("迷乱", "感官倒悬"), ("献身", "献血予王"),
                     ("顾盼", "万目归于王座"), ("欲障", "紫幕覆真形")],
             ultimate="紫宴朝圣", ult_text="你的意志正在向他跪下"),
-    7: dict(who="玛门", main="#E2B93B", soft="#FFE08A", glint="#FFF5C7",
+    7: dict(who="玛门", main=ui.pillar(7)["lit"],
             skills=[("点金", "性命折价"), ("夺财", "万物归库"), ("重金一击", "一次结清"),
                     ("复利", "血与经验同偿"), ("金牢", "黄金钉足")],
             ultimate="黄金终审", ult_text="灵魂与财富一并结算"),
 }
 
-NONE_UI = dict(who="无名者", main="#D23B47", soft="#AAA5AE", glint="#ECE9EF",
+NONE_UI = dict(who="无名者", main=ui.NAMELESS["lit"],
                skills=[("蚀界", "名字也会被黑暗吞掉")],
                ultimate="无名蚀界", ult_text="黑暗正抹去一切称谓")
 
@@ -1164,20 +1171,20 @@ def combat_notices():
     """固定顺序的恶魔提示；数据包编号与资源包私用字符共用这一份。"""
     out = []
     for n in range(1, 8):
-        ui = DEMON_UI[n]
-        for name, phrase in ui["skills"]:
-            out.append({"key": (ui["who"], name, phrase, False),
-                        "ui": ui, "name": name, "phrase": phrase,
+        dui = DEMON_UI[n]
+        for name, phrase in dui["skills"]:
+            out.append({"key": (dui["who"], name, phrase, False),
+                        "ui": dui, "name": name, "phrase": phrase,
                         "ultimate": False})
     name, phrase = NONE_UI["skills"][0]
     out.append({"key": (NONE_UI["who"], name, phrase, False),
                 "ui": NONE_UI, "name": name, "phrase": phrase,
                 "ultimate": False})
     for n in range(1, 8):
-        ui = DEMON_UI[n]
-        out.append({"key": (ui["who"], ui["ultimate"], ui["ult_text"], True),
-                    "ui": ui, "name": ui["ultimate"],
-                    "phrase": ui["ult_text"], "ultimate": True})
+        dui = DEMON_UI[n]
+        out.append({"key": (dui["who"], dui["ultimate"], dui["ult_text"], True),
+                    "ui": dui, "name": dui["ultimate"],
+                    "phrase": dui["ult_text"], "ultimate": True})
     out.append({"key": (NONE_UI["who"], NONE_UI["ultimate"],
                          NONE_UI["ult_text"], True),
                 "ui": NONE_UI, "name": NONE_UI["ultimate"],
@@ -1187,15 +1194,15 @@ def combat_notices():
 
 
 def notice_text(q):
-    """资源包烘字用的三段纯文本；颜色仍读同一份 ui 三色。"""
+    """资源包烘字用的三段纯文本；颜色由 build_combat_prompt_font 按柱亮色上。"""
     head = "[%s%s]" % (q["ui"]["who"], " · 罪约" if q["ultimate"] else "")
     return (head, "　%s · %s" % (q["name"], q["phrase"]),
             " ◆" if q["ultimate"] else " ✦")
 
 
-def _notice(ui, name, phrase, ultimate=False, radius=14):
+def _notice(dui, name, phrase, ultimate=False, radius=14):
     """把提示号写进独立上层槽；中央 HUD 把它叠在 Actionbar 状态行上方。"""
-    key = (ui["who"], name, phrase, bool(ultimate))
+    key = (dui["who"], name, phrase, bool(ultimate))
     keys = [q["key"] for q in combat_notices()]
     if key not in keys:
         raise AssertionError("unregistered demon notice: %r" % (key,))
@@ -1221,7 +1228,8 @@ def build_demon_hud():
 
         # F000/F1xx/F2xx are outside vanilla 1.21.11 Unifont PUA's occupied
         # glyphs; E4xx/E5xx/E6xx otherwise render vanilla symbols/tofu first.
-        top = chr(0xF000 + i - 1) + chr(0xF040 + i - 1)
+        # 四段字形切片：Unifont 2 倍密度下最长的罪约提示要三段，空段是零宽。
+        top = "".join(chr(base + i - 1) for base in (0xF000, 0xF040, 0xF080, 0xF0C0))
         back = chr(0xF100 + i - 1)
         forward = chr(0xF200 + i - 1)
         top_comp = json.dumps({"text": top, "font": "rpg:combat_prompt",
@@ -1378,7 +1386,7 @@ def wire_lords():
     # 当 fallback，单独重跑 add_pact 会把七条分流吞进去并再追加一遍，文件每次
     # 增长七条；完整 build 因 add_exorcism 先覆盖而碰巧藏住了这个幂等缺陷。
     none_src = ex.LORD_NONE % {
-        "NBT": ex.demon_nbt("无名者", "#3D0000", "dark_gray")}
+        "NBT": ex.demon_nbt("无名者", ui.NAMELESS["lit"], ui.WHITE)}
     branch = []
     none = "\n".join(l for l in none_src.split("\n")
                      if l and not l.startswith("#"))
@@ -1396,12 +1404,12 @@ def wire_lords():
         7: "particle wax_on ~ ~1 ~ 0.6 0.7 0.6 0.04 4 force",
     }
     for p in PILLARS:
-        ui = DEMON_UI[p["n"]]
+        dui = DEMON_UI[p["n"]]
         branch.append("execute if score #lord rpg_fall matches %d "
                       "run return run function rpg:taint/lord%d" % (p["n"], p["n"]))
         wf("taint/lord%d.mcfunction" % p["n"], LORD_ONE % {
             "WHO": p["who"], "RGB": _rgb(p["colour"]), "N": p["n"],
-            "NBT": ex.demon_nbt(p["who"], p["colour"], p["lit"])})
+            "NBT": ex.demon_nbt(p["who"], p["lit"], ui.WHITE)})
 
         # 他那五招。skN 只负责掷点，真正的招式在 skN_1..5。
         sk.append("execute if entity @s[scores={rpg_dm_lord=%d}] "
@@ -1417,9 +1425,9 @@ def wire_lords():
             pick.append("execute if score #pick rpg_fall matches %d "
                         "run return run function rpg:taint/sk%d_%d"
                         % (i, p["n"], i))
-            skill_name, skill_text = ui["skills"][i - 1]
+            skill_name, skill_text = dui["skills"][i - 1]
             wf("taint/sk%d_%d.mcfunction" % (p["n"], i),
-               _notice(ui, skill_name, skill_text) + "\n" + body % subs)
+               _notice(dui, skill_name, skill_text) + "\n" + body % subs)
             for name, text in extra.items():
                 # 走 wf_holy：带 debuff 的会自动派生"对方有圣器"的那一版
                 ex.wf_holy("taint/%s.mcfunction" % name, text % subs)
@@ -1436,10 +1444,10 @@ def wire_lords():
         ult_cast.append("execute if entity @s[scores={rpg_dm_lord=%d}] "
                         "run return run function rpg:taint/ult%d" %
                         (p["n"], p["n"]))
-        rgb = _rgb(ui["main"])
-        flash = int(ui["main"].lstrip("#"), 16)
+        rgb = _rgb(dui["main"])
+        flash = int(dui["main"].lstrip("#"), 16)
         wf("taint/ult%d_warn.mcfunction" % p["n"],
-           _notice(ui, ui["ultimate"], ui["ult_text"], True, 18) + "\n" +
+           _notice(dui, dui["ultimate"], dui["ult_text"], True, 18) + "\n" +
            "particle dust{color:[%s],scale:2.6} ~ ~1 ~ 1.4 1 1.4 0.04 42 force\n" % rgb +
            "playsound minecraft:block.trial_spawner.ominous_activate hostile "
            "@a[distance=..32] ~ ~ ~ 1 0.65")
