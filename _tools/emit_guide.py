@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """Assemble the codex page from the generated card fragments."""
 
-import colorsys
 import html
 import io
 import json
+
+import rpg_ui_style as ui
 
 from debug_commands import ALL_COMMANDS, render_html as render_debug_commands
 
@@ -13,19 +14,21 @@ S = json.load(io.open("../_guide_sections.json", encoding="utf-8"))
 D = json.load(io.open("../_divine.json", encoding="utf-8"))
 
 
-def on_dark(hexcol):
-    """把物品用的强调色搬到这张深色页面上。
-
-    罪器的强调色是给 Minecraft 的深色 tooltip 挑的，路西法那支
-    #00491c 在这里几乎是黑的。保住色相、抬亮度、收一点饱和度 ——
-    七柱各自的身份还在，字却读得出来。
-    """
-    r, g, b = (int(hexcol.lstrip("#")[i:i + 2], 16) / 255.0 for i in (0, 2, 4))
-    hue, _l, sat = colorsys.rgb_to_hls(r, g, b)
-    # 近乎中性的来源要留住中性 —— 硬抬饱和度会把亚巴顿的'虚无'染成蓝色
-    sat = 0.08 if sat < 0.12 else min(max(sat, 0.30), 0.48)
-    r, g, b = colorsys.hls_to_rgb(hue, 0.62, sat)
-    return "#%02X%02X%02X" % (int(r * 255), int(g * 255), int(b * 255))
+def tier_tokens():
+    """CSS colour tokens straight from rpg_ui_style, so the codex and the game
+    can never drift apart again (ART-STYLE.md §7).  Every text colour there
+    already reads on a dark ground, so no on-page lightening is needed."""
+    devil = ", ".join("%s %d%%, %s %d%%" % (p["lit"], i * 100 // 7, p["lit"], (i + 1) * 100 // 7)
+                      for i, p in enumerate(ui.PILLARS))
+    return ("--r-holy:%s; --r-devil:%s; --r-legend:%s; --r-lgd:%s;\n"
+            "  --r-epic:%s; --r-brave:%s; --r-none:#93897C;\n"
+            "  --r-rite:%s;\n"
+            "  --r-ritual:%s; --r-sephirah:%s;\n"
+            "  --r-covenant:%s; --r-authority:%s;\n"
+            "  --r-devil-band:linear-gradient(90deg, %s);"
+            % (ui.tier_colour("holy"), ui.NAMED["gray"], ui.tier_colour("legend"),
+               ui.tier_colour("limited"), ui.tier_colour("epic"), ui.tier_colour("brave"),
+               ui.HOLY, ui.RITUAL, ui.RITUAL, ui.HOLY_DARK, ui.CYAN, devil))
 
 
 def n_of(key):
@@ -130,11 +133,7 @@ HEAD = u"""<title>破碎大陆</title>
   --ground:#12100F; --surface:#1B1816; --sunk:#0C0B0A;
   --ink:#E9E3D5; --muted:#93897C; --rule:#302A25;
   --gold:#C9A227; --gold-soft:#8A7429;
-  --r-holy:#FF3300; --r-devil:#DC6A62; --r-legend:#D9A02B; --r-lgd:#FFD700;
-  --r-epic:#A275DE; --r-brave:#57C6D6; --r-none:#93897C;
-  --r-rite:#E4C24A;
-  --r-ritual:#D596F2; --r-sephirah:#D596F2;
-  --r-covenant:#D4AF37; --r-authority:#62D9E8;
+  @@TIER_TOKENS@@
   --shadow:0 1px 0 rgba(0,0,0,.5);
 }
 
@@ -271,7 +270,9 @@ code{font-size:13px; background:var(--sunk); padding:2px 6px; border-radius:2px;
 .tools button[aria-pressed="true"]{color:var(--ground); background:var(--ink); border-color:var(--ink)}
 /* the bar doubles as the rarity legend: each button wears its own tier colour */
 .tools button[data-f="holy"]{color:var(--r-holy)}
-.tools button[data-f="devil"]{color:var(--r-devil)}
+/* 恶魔不是一个颜色而是七柱：按钮下方一条七色带，卡片各取所属领主的亮色 */
+.tools button[data-f="devil"]{color:var(--ink); background-image:var(--r-devil-band);
+  background-size:100% 2px; background-repeat:no-repeat; background-position:0 100%}
 .tools button[data-f="lgd"]{color:var(--r-lgd)}
 .tools button[data-f="legend"]{color:var(--r-legend)}
 .tools button[data-f="epic"]{color:var(--r-epic)}
@@ -335,7 +336,8 @@ h3 .new{
   border-radius:2px; color:var(--tier,var(--muted)); font-weight:400;
 }
 td.has-icon{display:flex; gap:10px; align-items:flex-start}
-td.has-icon .icon{width:30px; height:30px; padding:3px}
+/* 38 - 2x3 padding - 2x1 border = 32px: 16 网格贴图正好 2 倍（ART-STYLE.md §7） */
+td.has-icon .icon{width:38px; height:38px; padding:3px}
 .tier{font-family:"Cinzel",serif; font-size:10px; letter-spacing:.22em; color:var(--tier,var(--r-none)); display:block; margin-bottom:5px}
 .card h3{margin:0; font-size:19px; font-weight:700; color:var(--tier,var(--ink)); letter-spacing:.03em; line-height:1.3}
 .card .base{margin:3px 0 0; font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--muted)}
@@ -405,7 +407,7 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 def build():
     p = []
     a = p.append
-    a(HEAD)
+    a(HEAD.replace("@@TIER_TOKENS@@", tier_tokens()))
     a('<div class="wrap">')
 
     # masthead ------------------------------------------------------------
@@ -482,7 +484,7 @@ def build():
     # III weapons ---------------------------------------------------------
     a('''<section class="plate" id="s3">
 <div class="plate-h"><span class="num">III</span><h2>武器图鉴</h2><span class="sub">''' + str(n_of("weapons")) + ''' 件</span></div>
-<p>稀有度由高到低：<strong>神圣 · 恶魔 · 限定传说 · 传说 · 史诗</strong>。
+<p>稀有度由高到低：<strong>神圣 · 恶魔 · 限定 · 传说 · 史诗</strong>。
 标记「主动技能」的武器<strong>长按右键</strong>发动：多数物品靠 <code>food</code> + <code>consumable</code> 组件借用进食动作，
 而两把<strong>长枪</strong>（朗基努斯之枪、路西法）用的是长枪自带的蓄力动作，因此保留原本的突刺手感。
 「被动技能」在命中敌人时按概率自动触发。属性中的百分比为乘算加成。</p>
@@ -490,7 +492,7 @@ def build():
 <button type="button" data-f="all" aria-pressed="true">全部</button>
 <button type="button" data-f="holy" aria-pressed="false">神圣</button>
 <button type="button" data-f="devil" aria-pressed="false">恶魔</button>
-<button type="button" data-f="lgd" aria-pressed="false">限定传说</button>
+<button type="button" data-f="lgd" aria-pressed="false">限定</button>
 <button type="button" data-f="legend" aria-pressed="false">传说</button>
 <button type="button" data-f="epic" aria-pressed="false">史诗</button>
 <input type="search" id="q" placeholder="搜索名称或技能…" aria-label="搜索武器">
@@ -790,7 +792,7 @@ def build():
             '<td>%s</td>'
             '<td><b>［%s］</b><br><span class="dim">%s</span></td>'
             '<td class="bane">%s</td></tr>'
-            % (q["n"], on_dark(q["colour"]), q["who"], q["sin"], q["boon"],
+            % (q["n"], ui.pillar(q["n"])["lit"], q["who"], q["sin"], q["boon"],
                q["power"], q["power_text"], q["bane"]))
     a('''<section class="plate" id="s12">
 <div class="plate-h"><span class="num">XI</span><h2>七十二柱契约</h2><span class="sub">七位领主 · 一本书</span></div>

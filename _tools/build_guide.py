@@ -8,6 +8,7 @@ import re
 import sys
 
 import icons
+import rpg_ui_style as ui
 
 DATA = json.load(io.open("../_data_items.json", encoding="utf-8"))
 OUT_HTML = "../TRALANCER-RPG-图鉴.html"
@@ -24,9 +25,11 @@ RARITY = {
     "秘仪": ("ritual", "秘仪"),
     "源质": ("sephirah", "源质"),
     "契约": ("covenant", "契约"),
-    # a couple of items spell the top tier out in latin
-    "限定传说": ("lgd", "限定传说"),
-    "l·legend": ("lgd", "限定传说"), "ltd": ("lgd", "限定传说"),
+    # the canonical tag is [限定] (ART-STYLE.md §1.3); older spellings stay
+    # recognised so a stale _data_items.json still renders
+    "限定": ("lgd", "限定"),
+    "限定传说": ("lgd", "限定"),
+    "l·legend": ("lgd", "限定"), "ltd": ("lgd", "限定"),
     "legend": ("legend", "传说"),
 }
 # names that repeat across a whole family -- the bracket label is what actually
@@ -151,9 +154,12 @@ def card(it, show_tags=True):
 
     # 新锻 gear is ordinary gear -- it carries the same tags, rarities and skill
     # format, so it gets no badge and no separate shelf.
-    bits = ['<article class="card r-%s" data-rarity="%s" data-name="%s">' %
+    # 罪器与七柱之书各取所属领主的亮色，与游戏内前缀同色（ART-STYLE.md §7）
+    lord = ui.pillar_in(it["name"] or "") if cls in ("devil", "covenant") else None
+    style = ' style="--tier:%s"' % lord["lit"] if lord else ""
+    bits = ['<article class="card r-%s" data-rarity="%s" data-name="%s"%s>' %
             (cls, cls, esc(it["name"] + " " + (rar or "") + " " +
-                           (sk["name"] if sk else "")))]
+                           (sk["name"] if sk else "")), style)]
     bits.append('<header class="card-h">')
     bits.append(icons.item_img(it, heading))
     bits.append('<div class="card-id">')
