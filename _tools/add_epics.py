@@ -212,7 +212,8 @@ SAW_CONSUMABLE = _consumable(SAW_CONSUME)
 
 def give(w):
     lore = [RULE,
-            row(seg(w["flavour"][0]), seg(w["flavour"][1], ui.tier_colour(w["tier"]), True)),
+            # 题记是一句话，不整句加粗（ART-STYLE.md §2.2）：后半句只上档次色
+            row(seg(w["flavour"][0]), seg(w["flavour"][1], ui.tier_colour(w["tier"]))),
             RULE,
             row(seg("%s%s" % (w["icon"], w["kind"]), "white", True),
                 # 本名白色；原来的本名意象色移到技能名（ART-STYLE.md §2.1）

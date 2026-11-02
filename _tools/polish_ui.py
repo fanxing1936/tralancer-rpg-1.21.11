@@ -435,11 +435,11 @@ def walk_json(node, stats):
     if not isinstance(node, dict):
         return
     for key, child in node.items():
-        if key == "minecraft:custom_name" or (key == "name" and
-                                              node.get("function") == "minecraft:set_name"):
+        # 战利品函数名可以不带命名空间（作者的表里就是 "set_name"）
+        function = str(node.get("function", "")).replace("minecraft:", "")
+        if key == "minecraft:custom_name" or (key == "name" and function == "set_name"):
             polish_item_name(child, stats)
-        elif key == "minecraft:lore" or (key == "lore" and
-                                         node.get("function") == "minecraft:set_lore"):
+        elif key == "minecraft:lore" or (key == "lore" and function == "set_lore"):
             polish_lore(child, stats)
         else:
             walk_json(child, stats)
