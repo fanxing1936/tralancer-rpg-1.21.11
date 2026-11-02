@@ -19,3 +19,4 @@ execute if score @s rpg_sk_anim matches 1 if score @s rpg_sk_mv matches 0 run re
 execute if score @s rpg_sk_anim matches 0 run return run function rpg:sunken_skeleton/anim/idle/tick
 execute if score @s rpg_sk_anim matches 1 run return run function rpg:sunken_skeleton/anim/walk/tick
 execute if score @s rpg_sk_anim matches 2 run return run function rpg:sunken_skeleton/anim/attack/tick
+execute if score @s rpg_sk_anim matches 3 run return run function rpg:sunken_skeleton/anim/shoot/tick

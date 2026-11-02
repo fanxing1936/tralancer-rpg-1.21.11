@@ -1,2 +1,2 @@
-execute if score @s rpg_sk_t matches ..18 run return run function rpg:sunken_skeleton/anim/attack/at_b_b_a
+execute if score @s rpg_sk_t matches ..14 run return run function rpg:sunken_skeleton/anim/attack/at_b_b_a
 function rpg:sunken_skeleton/anim/attack/at_b_b_b

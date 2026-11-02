@@ -23,6 +23,15 @@ with F(c) = R180 . (c - K - 8) / 16 and G(r) = R180 . s r / 16 - h.
 Glow: elements of a glow bone carry `light_emission: 15` inside their
 part's model instead of a second, full-bright display.
 
+Held item: `Mob.held` names a part that has no model of its own.  Its
+display shows the carrier's own mainhand item (copied in when dressed) in
+`thirdperson_righthand` mode, placed the way the vanilla held-item layer
+places it on a humanoid right arm: from the arm's pivot, turn -90 about x
+and 180 about y, then move (1, 2, -10)/16.  Vanilla model space is this
+one with x and y negated (y measured down from 24), so for the part's bone
+(the arm), M = G . W . T(pivot) . 16 D . Hold, D = diag(-1, -1, 1), and
+the display transformation is M . R180, undoing the turn the renderer adds.
+
 Animations
 ----------
 Clips are authored in the .bbmodel (Blockbench animation tab) and baked
@@ -158,7 +167,7 @@ class Mob(object):
     def __init__(self, key, label, generator, bbmodel, parts, glow, seat, tag, score,
                  clips, carrier="minecraft:vindicator", model_scale=1.0,
                  sounds=None, sound_dir=None, cues=None, enter_cues=None,
-                 hurt=None, death=None, ambient=None, on_death=(), on_hurt=()):
+                 hurt=None, death=None, ambient=None, on_death=(), on_hurt=(), held=None):
         self.key, self.label, self.generator = key, label, generator
         self.bbmodel, self.parts, self.glow = bbmodel, parts, set(glow)
         self.seat, self.tag, self.score, self.carrier = seat, tag, score, carrier
@@ -167,6 +176,7 @@ class Mob(object):
         self.enter_cues = enter_cues or {}
         self.hurt, self.death, self.ambient, self.on_death = hurt, death, ambient, list(on_death)
         self.on_hurt = list(on_hurt)
+        self.held = held
         self.carrier_sel = "type=%s,tag=%s" % (carrier, tag) if carrier else "tag=%s" % tag
         self.tex = "%s:item/%s/atlas" % (NS, key)
         self.fn = "%s:%s" % (NS, key)
@@ -306,6 +316,17 @@ def display_matrix(mob, bones, part_bone, K, W=None):
     return mat_mul(G, mat_mul(W, inverse_affine(F)))
 
 
+HOLD = mat_mul(rot_x(-90), mat_mul(rot_y(180), translate(1 / 16.0, 2 / 16.0, -10 / 16.0)))
+VANILLA = [[-16, 0, 0, 0], [0, -16, 0, 0], [0, 0, 16, 0], [0, 0, 0, 1]]
+
+
+def held_matrix(mob, bones, arm, W):
+    """The held-item part on bone `arm` (see module docstring)."""
+    G = mat_mul(translate(0, -mob.seat, 0), mat_mul(scale(mob.model_scale / 16.0), R180))
+    M = mat_mul(G, mat_mul(W, mat_mul(translate(*bones[arm]["pivot"]), mat_mul(VANILLA, HOLD))))
+    return mat_mul(M, R180)
+
+
 # ---------------------------------------------------------------------------
 # animations
 # ---------------------------------------------------------------------------
@@ -436,8 +457,8 @@ def bake(mob, bones, offsets, clips):
         for t in times:
             frame = {}
             for part, members in mob.parts:
-                T = display_matrix(mob, bones, members[0], offsets[part],
-                                   posed_matrix(bones, members[0], clip, t * TICK))
+                W = posed_matrix(bones, members[0], clip, t * TICK)
+                T = held_matrix(mob, bones, members[0], W) if part == mob.held else                     display_matrix(mob, bones, members[0], offsets[part], W)
                 frame[part] = prev[part] = components(T, mob.model_scale, prev.get(part))
             frames.append((t, frame))
         baked[name] = {"ticks": ticks, "step": step, "loop": loop, "frames": frames}
@@ -710,6 +731,9 @@ def build(mob, rp, dp):
 
     offsets = {}
     for part, members in mob.parts:
+        if part == mob.held:
+            offsets[part] = None
+            continue
         model, K = part_model(mob, bones, part, members, res)
         offsets[part] = K
         wj(os.path.join(rp, "assets", NS, "models", mob.key, part + ".json"), model)

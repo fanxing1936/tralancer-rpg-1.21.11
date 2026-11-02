@@ -46,6 +46,6 @@
 
 | 文件 | 说明 |
 |---|---|
-| `leviathan.geo.json` | `leviathan_geo.py` 按贴图网格重建的初始几何（与别西卜同一套骨架，法杖头换成叉托方块） |
-| `leviathan_atlas.png` | 原贴图放在左上，右半部分用原贴图像素与配色补画皇冠、法袍、腰带、护肩与发光方块 |
-| `leviathan.bbmodel` | Blockbench 工程：由 `beelzebub.bbmodel` 换图集、换法杖头而来，姿势与动画相同；`add_leviathan_model.py` 的数据源 |
+| `leviathan.geo.json` | `leviathan_geo.py` 按贴图网格重建的初始几何（与别西卜同一套骨架与嵌套方块法杖头） |
+| `leviathan_atlas.png` | 原贴图放在左上，右半部分用原贴图像素与配色补画皇冠、法袍、腰带、护肩与法杖头的发光嵌套方块（青色） |
+| `leviathan.bbmodel` | Blockbench 工程：由 `beelzebub.bbmodel` 换图集而来，姿势与动画相同；`add_leviathan_model.py` 的数据源 |

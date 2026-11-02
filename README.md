@@ -176,5 +176,5 @@ python _tools/package.py --install
 [`_tools/vanguard_ref/SOURCES.md`](_tools/vanguard_ref/SOURCES.md)、
 [`_tools/leviathan_ref/SOURCES.md`](_tools/leviathan_ref/SOURCES.md)、
 [`_tools/sunken_skeleton_ref/SOURCES.md`](_tools/sunken_skeleton_ref/SOURCES.md)。模型几何、姿势与动画是在
-Blockbench 里按原作外观重做的；图集里原贴图之外的部分（皇冠、法袍、护肩、法杖头的嵌套方块与发光方块、沉没骷髅的弩等）
+Blockbench 里按原作外观重做的；图集里原贴图之外的部分（皇冠、法袍、护肩、法杖头的嵌套方块等）
 用原贴图的像素与配色补画。

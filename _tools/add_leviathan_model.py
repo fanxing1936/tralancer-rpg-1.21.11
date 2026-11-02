@@ -13,8 +13,8 @@ removal path either kills its passengers or leaves them riding nothing,
 which the orphan sweep in display_mob.py catches.
 
 The Necromancer is the Nameless One's recolour, so the rig, poses and
-clips are 别西卜's (add_beelzebub.py); only the atlas and the staff head
-(a glowing cube in a fork) differ.  Source of truth is
+clips are 别西卜's (add_beelzebub.py), staff head of nested cubes included;
+only the atlas differs, the head glowing sea cyan.  Source of truth is
 `_tools/leviathan_ref/leviathan.bbmodel` (see leviathan_geo.py).  Sounds
 are the Necromancer set from https://minecraft.wiki/w/Dungeons:Necromancer
 (leviathan_ref/sounds, see SOURCES.md there).

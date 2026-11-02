@@ -47,5 +47,5 @@
 | 文件 | 说明 |
 |---|---|
 | `sunken_skeleton.geo.json` | `sunken_skeleton_geo.py` 按贴图网格重建的初始几何 |
-| `sunken_skeleton_atlas.png` | Tier 1 原贴图放在上半，下方加四个纯色色块（木、深木、铁、弦）给方块搭的弩用；wiki 上没有弩的贴图 |
+| `sunken_skeleton_atlas.png` | Tier 1 原贴图原样复制（模型不另建武器，手里显示罪仆自己的原版物品） |
 | `sunken_skeleton.bbmodel` | Blockbench 工程（模型、姿势与动画），`add_sunken_skeleton.py` 的数据源 |

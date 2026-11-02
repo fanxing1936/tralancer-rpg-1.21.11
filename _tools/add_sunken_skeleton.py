@@ -8,18 +8,22 @@ add_demon_minions.py summons (rpg.demon.minion.lord2: 华利弗 the vanguard,
 亚蒙 the hunter, 巴巴托斯 the ritualist, 派蒙 the hexer, 布耶尔 the
 executioner), with their health, AI, abilities, loot and lifetime
 untouched.  Each tick any such servant not yet dressed gets the tag
-`rpg.sk`, invisibility, seven item_display parts, and its held item's
-model set to `rpg:empty` (the item stays, so its damage and the crossbow's
-loading still work), as add_vanguard.py does for 别西卜's servants.
+`rpg.sk`, invisibility and seven item_display parts.  No weapon is
+modelled: the servant's own vanilla mainhand item (sword, crossbow, book,
+axe) is copied into the `weapon` part, drawn in `thirdperson_righthand`
+mode on the model's right arm (Mob.held in display_mob.py).  The carrier's
+own item stays, so its damage and the crossbow's loading still work, but
+its model is set to `rpg:empty` so it is not drawn twice.
 
-All five share one model, crossbow included.  An illusioner cannot be
+All five share one model.  An illusioner cannot be
 dressed (its renderer draws the body and four mirror copies even while
 invisible), so 派蒙, the hexer, is summoned as a pillager (ROLE_OVERRIDES
 in add_demon_minions.py); the selector still skips illusioners.
 
-When a player comes within range and the shot is off cooldown, the
-`attack` clip raises and fires the crossbow; it stands in for the
-illager's own swing or shot, which an invisible body cannot show.
+When a player comes within reach and the move is off cooldown, a clip
+stands in for the illager's own swing or shot, which an invisible body
+cannot show: crossbow carriers (pillagers) raise and fire at range,
+everyone else swings in melee.
 
 Source of truth is `_tools/sunken_skeleton_ref/sunken_skeleton.bbmodel`
 (bootstrapped by sunken_skeleton_geo.py, posed and animated in
@@ -52,7 +56,7 @@ MOB = Mob(
         ("head", ["head", "coral", "sprig"]),
         ("right_arm", ["right_arm"]),
         ("left_arm", ["left_arm"]),
-        ("crossbow", ["crossbow"]),
+        ("weapon", ["right_arm"]),    # the carrier's own item, see Mob.held
         ("right_leg", ["right_leg"]),
         ("left_leg", ["left_leg"]),
     ],
@@ -63,7 +67,8 @@ MOB = Mob(
     clips=[
         ("idle", 4, True),
         ("walk", 2, True),
-        ("attack", 1, False),         # raise, fire at 0.6 s, recoil
+        ("attack", 1, False),         # overhead swing, lands at 0.4 s
+        ("shoot", 1, False),          # crossbow raised, fires at 0.6 s
     ],
     sounds=dict(
         idle=(("沉没罪仆：咯咯作响", "Sunken servant rattles"), snd("Idle", 3), None),
@@ -78,14 +83,15 @@ MOB = Mob(
     sound_dir=os.path.join(HERE, "sunken_skeleton_ref", "sounds"),
     cues={
         "walk": [(0.0, "step", 0.5, 1.0), (0.5, "step", 0.5, 1.0)],
-        "attack": [(0.0, "load", 0.9, 1.0), (0.6, "shoot", 1.0, 1.0), (0.75, "impact", 0.6, 1.0)],
+        "shoot": [(0.0, "load", 0.9, 1.0), (0.6, "shoot", 1.0, 1.0), (0.75, "impact", 0.6, 1.0)],
     },
-    hurt="hurt", death="death", ambient=("idle", 0.006),
+    hurt="hurt", death="death", ambient=("idle", 0.006), held="weapon",
 )
 
 SERVANTS = "tag=rpg.demon.minion.lord2,tag=!rpg.sk,type=!minecraft:illusioner"
-SHOT_CD = 40                  # ticks between attack clips
-SHOT_RANGE = 12               # blocks
+SHOT_CD = 40                  # ticks between clips
+SHOT_RANGE = 12               # blocks, crossbow carriers
+SWING_RANGE = 3.2             # blocks, everyone else
 
 
 def write_datapack(baked):
@@ -96,10 +102,14 @@ def write_datapack(baked):
         "tag @s add rpg.sk",
         "tag @s add rpg.sk.dressing",
         "effect give @s minecraft:invisibility infinite 0 true",
-        'item modify entity @s weapon.mainhand {function:"minecraft:set_components",'
-        'components:{"minecraft:item_model":"rpg:empty"}}',
     ]
     for part, _ in MOB.parts:
+        if part == MOB.held:
+            lines.append(
+                'summon minecraft:item_display ~ ~ ~ {Tags:["rpg.sk.part","rpg.sk.p.%s","rpg.sk.new"],'
+                'item_display:"thirdperson_righthand",teleport_duration:2,interpolation_duration:2,'
+                'view_range:1f,transformation:%s}' % (part, snbt_components(MOB, first[part])))
+            continue
         lines.append(
             'summon minecraft:item_display ~ ~ ~ {Tags:["rpg.sk.part","rpg.sk.p.%s","rpg.sk.new"],'
             'item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:sunken_skeleton/%s"}},'
@@ -108,6 +118,11 @@ def write_datapack(baked):
     lines += [
         "execute as @e[type=minecraft:item_display,tag=rpg.sk.new,distance=..1] run "
         "ride @s mount @e[tag=rpg.sk.dressing,limit=1]",
+        "# 手里的原版物品复制到 weapon 部件上画出来，载体自己的那份只把模型设成空的",
+        "item replace entity @e[type=minecraft:item_display,tag=rpg.sk.new,tag=rpg.sk.p.weapon,distance=..1,limit=1] "
+        "contents from entity @s weapon.mainhand",
+        'item modify entity @s weapon.mainhand {function:"minecraft:set_components",'
+        'components:{"minecraft:item_model":"rpg:empty"}}',
         "tag @e[type=minecraft:item_display,tag=rpg.sk.new,distance=..1] remove rpg.sk.new",
         "tag @s remove rpg.sk.dressing",
         "scoreboard players set @s rpg_sk 0",
@@ -117,8 +132,9 @@ def write_datapack(baked):
     ]
     wf(os.path.join(MOB.func, "dress.mcfunction"), lines)
     wf(os.path.join(MOB.func, "strike.mcfunction"), [
-        "# 有人进了射程：举弩、放箭。冷却借用 rpg_sk 的个体分数。",
+        "# 有人进了距离：持弩的举弩放箭，其余的挥一下。冷却借用 rpg_sk 的个体分数。",
         "scoreboard players set @s rpg_sk %d" % SHOT_CD,
+        "execute if entity @s[type=minecraft:pillager] run return run function rpg:sunken_skeleton/anim/enter/shoot",
         "function rpg:sunken_skeleton/anim/enter/attack",
     ])
     write_rig_runtime(MOB, [
@@ -128,9 +144,14 @@ def write_datapack(baked):
         "as @e[tag=rpg.sk,type=!minecraft:item_display] at @s run function rpg:sunken_skeleton/follow",
     ], follow_extra=[
         "execute if score @s rpg_sk matches 1.. run scoreboard players remove @s rpg_sk 1",
-        "execute if score @s rpg_sk matches ..0 unless score @s rpg_sk_anim matches 2 "
+        "execute if score @s rpg_sk matches ..0 unless score @s rpg_sk_anim matches 2..3 "
+        "if entity @s[type=minecraft:pillager] "
         "if entity @a[distance=..%d,gamemode=!spectator,gamemode=!creative,limit=1] "
         "run function rpg:sunken_skeleton/strike" % SHOT_RANGE,
+        "execute if score @s rpg_sk matches ..0 unless score @s rpg_sk_anim matches 2..3 "
+        "unless entity @s[type=minecraft:pillager] "
+        "if entity @a[distance=..%s,gamemode=!spectator,gamemode=!creative,limit=1] "
+        "run function rpg:sunken_skeleton/strike" % SWING_RANGE,
     ])
     pred = os.path.join(DP, "data", NS, "predicate", "sunken_skeleton")
     wj(os.path.join(pred, "invisible.json"), {

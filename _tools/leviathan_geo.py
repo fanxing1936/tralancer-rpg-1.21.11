@@ -6,13 +6,12 @@ The Necromancer is the Nameless One's own recolour (the texture keeps the
 same islands, silver turned to old gold and green to sea cyan), so this is
 beelzebub_geo.py with the Necromancer's pixels and palette: the same
 skeleton nets used as box UV, the same composed robe, crown, belt and
-pauldron tiles in the right half of a 128x128 atlas.  Only the staff head
-differs: a glowing cyan cube held in a three-pronged fork.
+pauldron tiles in the right half of a 128x128 atlas, and the same staff
+head of cubes nested in a translucent cube, glowing cyan here.
 
 Output: leviathan_ref/leviathan.geo.json.  leviathan.bbmodel was made in
-Blockbench from beelzebub.bbmodel (same rig, poses and clips) with this
-atlas and this staff head; it is the source add_leviathan_model.py reads,
-and re-running this script does not reproduce the edits made there.
+Blockbench from beelzebub.bbmodel (same rig, poses and clips) by swapping
+in this atlas; it is the source add_leviathan_model.py reads.
 """
 
 import io
@@ -39,12 +38,11 @@ PURPLE = (97, 64, 91, 255)
 PURPLE_LO = (63, 36, 61, 255)
 SHADOW = (44, 26, 44, 255)
 CLEAR = (0, 0, 0, 0)
-ORB_HI = (120, 236, 255, 255)
-ORB = (40, 200, 240, 255)
-ORB_MID = (4, 159, 208, 255)
-ORB_LO = (0, 121, 162, 255)
-EYE = (0, 255, 255, 255)
-WHITE = (221, 209, 182, 255)
+LIME_GLASS = (74, 220, 255, 120)        # sea cyan, not lime
+LIME_RIM = (74, 220, 255, 200)
+LIME_HI = (0, 255, 255, 255)           # the eyes in the _S layer
+WHITE = (221, 209, 182, 255)           # crown spikes, old gold
+FROST = (214, 250, 255, 255)           # edges of the middle cube
 
 # tiles in the atlas's right half: name -> (u, v, w, h)
 T = {
@@ -53,7 +51,7 @@ T = {
     "belt_front": (64, 16, 10, 3), "belt_side": (76, 16, 6, 3), "belt_back": (84, 16, 10, 3),
     "belt_top": (64, 20, 10, 6),
     "paul_top": (96, 16, 6, 6), "paul_side": (104, 16, 6, 5), "paul_bottom": (112, 16, 6, 6),
-    "orb_side": (64, 32, 6, 6), "orb_top": (72, 32, 6, 6), "orb_bottom": (64, 40, 6, 6),
+    "gem_outer": (64, 32, 8, 8), "gem_mid": (64, 40, 6, 6), "gem_core": (72, 40, 3, 3),
     "eye": (80, 32, 1, 1),
 }
 
@@ -133,19 +131,23 @@ def build_atlas():
         put("paul_side", x, 4, SILVER_LO)
     fill("paul_bottom", SHADOW)
 
-    # staff head: a glowing cube, lit from above -- bright top, a lighter
-    # band near the top of each side, darker toward the fork
+    # staff head: cubes nested in a cube, tilted corner-on so it reads as
+    # the hexagon of the renders -- a translucent cyan shell, a pale cube
+    # drawn as edges only, a bright core
     for x in range(64, 80):
         for y in range(32, 48):
             if (x, y) != T["eye"][:2]:
                 px[x, y] = CLEAR
+    for y in range(8):
+        for x in range(8):
+            rim = x in (0, 7) or y in (0, 7)
+            put("gem_outer", x, y, LIME_RIM if rim else LIME_GLASS)
     for y in range(6):
         for x in range(6):
-            rim = x in (0, 5) or y in (0, 5)
-            put("orb_top", x, y, ORB if rim else ORB_HI)
-            put("orb_side", x, y, ORB_HI if y == 0 else ORB if y < 3 else ORB_MID if y < 5 else ORB_LO)
-            put("orb_bottom", x, y, ORB_LO)
-    fill("eye", EYE)
+            if x in (0, 5) or y in (0, 5):
+                put("gem_mid", x, y, FROST)
+    fill("gem_core", LIME_HI)
+    fill("eye", LIME_HI)
     atlas.save(ATLAS)
 
 
@@ -189,7 +191,13 @@ def bone(name, pivot, cubes=(), parent=None, rotation=None):
 build_atlas()
 
 POLE = (8, 33, 10, 52)       # dark staff shaft in the original, 2 x 19
-ORB_C = [-5, 35, 0]          # staff head centre, in the fork
+GEM_C = [-5, 38, 0]          # staff head centre, above the cap
+
+
+def nested(size, tile):
+    h = size / 2.0
+    return faces([GEM_C[0] - h, GEM_C[1] - h, GEM_C[2] - h], [size, size, size],
+                 {f: tile for f in ("north", "south", "east", "west", "up", "down")})
 
 
 bones = [
@@ -239,19 +247,17 @@ bones = [
     bone("left_arm", [5, 25, 0], parent="body", cubes=[
         box([4, 14, -1], [2, 12, 2], [40, 16], mirror=True),
     ]),
-    # staff through the right fist (y 15): shaft, then a fork whose
-    # crossbar and two prongs hold the cube from below
+    # staff through the right fist (y 15): shaft, silver-rimmed cap, gem
     bone("staff", [-5, 15, 0], parent="right_arm", cubes=[
         faces([-6, -8, -1], [2, 19, 2], {f: POLE for f in ("north", "south", "east", "west", "down")}),
         faces([-6, 11, -1], [2, 19, 2], {f: POLE for f in ("north", "south", "east", "west")}),
-        faces([-8.5, 30, -1], [7, 1.5, 2], {f: POLE for f in ("north", "south", "east", "west", "up", "down")}),
-        faces([-8.5, 31.5, -1], [1.5, 3.5, 2], {f: POLE for f in ("north", "south", "east", "west", "up")}),
-        faces([-3, 31.5, -1], [1.5, 3.5, 2], {f: POLE for f in ("north", "south", "east", "west", "up")}),
+        faces([-7, 30, -2], [4, 2, 4], {
+            "north": (0, 32, 4, 34), "south": (0, 32, 4, 34), "east": (0, 32, 4, 34),
+            "west": (0, 32, 4, 34), "up": (1, 33, 5, 37), "down": (1, 33, 5, 37)}),
     ]),
-    bone("gem", ORB_C, parent="staff", cubes=[
-        faces([ORB_C[0] - 3, ORB_C[1] - 3, ORB_C[2] - 3], [6, 6, 6], {
-            "north": "orb_side", "south": "orb_side", "east": "orb_side", "west": "orb_side",
-            "up": "orb_top", "down": "orb_bottom"}),
+    # tilted corner-on (x 45, z 35.26): the outline is a hexagon
+    bone("gem", GEM_C, parent="staff", rotation=[45, 0, 35.26], cubes=[
+        nested(8, "gem_outer"), nested(6, "gem_mid"), nested(3, "gem_core"),
     ]),
     bone("cape", [0, 27, 3], parent="body", rotation=[6, 0, 0], cubes=[
         faces([-8, 3, 3], [16, 24, 1], {
