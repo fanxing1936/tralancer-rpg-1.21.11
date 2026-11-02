@@ -363,10 +363,10 @@ def mg_sins(t, dur):
     for i, s in enumerate(SINS):
         lt = t - 0.2 - i * 0.32
         x = W / 2 + (i - 3) * 230
-        hi = s == "傲慢"          # 片中出场的领主是路西法
-        col = (60, 190, 110) if hi else (200, 70, 60)
+        hi = s == "暴食"          # 片中出场的领主是别西卜
+        col = (156, 178, 60) if hi else (200, 70, 60)
         a = ease(lt / 0.25)
-        if t > 2.9 and not hi:    # 最后只留下傲慢
+        if t > 2.9 and not hi:    # 最后只留下暴食
             a *= 1 - ease((t - 2.9) / 0.6) * 0.75
         sc = 1.0 + (0.25 * ease((t - 2.9) / 0.6) if hi else 0)
         paste(im, cached_text(s, font("serif_black", 92), col, glow=col), x, H / 2 - 30, a, sc)
@@ -488,7 +488,7 @@ CREDITS = [
     ("en", 24, PARCH, "Necromancer (Nameless One fight) — Johan Johnson"),
     ("en", 24, PARCH, "The Arch-Illager: Stage 1 — Peter Hont"),
     ("serif", 22, GRAY, ""),
-    ("serif", 24, PARCH, "圣卫与路西法的模型参考、贴图与音效取自 Minecraft Dungeons"),
+    ("serif", 24, PARCH, "圣卫与别西卜的模型参考、贴图与音效取自 Minecraft Dungeons"),
     ("en", 22, GRAY, "Minecraft Dungeons music, textures and sounds © Mojang Studios."),
     ("en", 22, GRAY, "This is a free, non-commercial fan project, not affiliated with or endorsed by Mojang or Microsoft."),
     ("en", 22, GRAY, "Shot with ReplayMod and Complementary Reimagined shaders."),
@@ -520,7 +520,7 @@ def mg_placeholder(t, dur, code, title, note):
 # ---------------------------------------------------------------- 实机镜头
 
 RAWFILE = {"S1": "S1_land.mp4", "S2": "S2_armory.mp4", "S3": "S3_guards.mp4",
-           "S4a": "S4a_lucifer.mp4", "S4b": "S4b_crown.mp4", "S5": "S5_tree.mp4"}
+           "S4a": "S4a_beelzebub.mp4", "S4b": "S4b_feast.mp4", "S5": "S5_tree.mp4"}
 
 
 def probe_duration(path):
@@ -572,14 +572,14 @@ def shots(ws):
         "Jachin & Boaz in both hands · runes, gems, forging", "壹 · 装备")
     add(26, 30, "S3", "教廷圣卫，借神之名而来", "The Papal Guard marches in God's name", "壹 · 装备",
         title="圣卫方阵", note="低机位正面，圣卫迎着镜头冲来")
-    add(30, 34, mg_sins, "晨星坠落，七罪称王", "The Morning Star fell; seven sins took the throne", "贰 · 恶魔生态")
-    add(34, 42, "S4a", "路西法 · 傲慢", "Lucifer · Pride", "贰 · 恶魔生态",
-        title="路西法降临", note="降临烟雾，接一个起手招式")
+    add(30, 34, mg_sins, "七宗罪领主", "Seven Lords of Sin", "贰 · 恶魔生态")
+    add(34, 42, "S4a", "别西卜 · 暴食", "Beelzebub · Gluttony", "贰 · 恶魔生态",
+        title="别西卜降临", note="降临烟雾，接一个起手招式")
     add(42, 46, mg_servants, "35 名所罗门罪仆，七柱五职",
         "35 servants of Solomon · seven pillars, five roles", "贰 · 恶魔生态")
     add(46, 52, "S4b", "魔化 · 真名调查 · 四阶段驱魔 · 封印遗物",
         "Corruption · True-name inquest · Four-stage exorcism · Sealed relics", "贰 · 恶魔生态",
-        title="万蛇加冕", note="路西法大招，镜头拉远看清全貌")
+        title="万蝇饕宴", note="别西卜大招，镜头拉远看清全貌")
     add(52, 56, mg_pacts, "七十二柱罪约", "Pacts of the Seventy-Two Pillars", "叁 · 契约体系")
     add(56, 63, "S5", "卡巴拉生命之树，十源质归位", "The Tree of Life · ten sephirot restored", "叁 · 契约体系",
         title="生命之树", note="夜里，俯视角缓慢环绕粒子阵")
@@ -683,9 +683,9 @@ MUSIC_PLAN = [  # (文件, 开始秒, 结束秒, 音量)
     ("Bgm_env_deteNamelessFightLong-001_soundWave.ogg", 29.5, 52.5, 1.0),
     ("Bgm_mob_obpiBossStage1Loop-001.ogg", 51.5, 82, 0.9),
 ]
-# 无名者音效在本分支里存于 beelzebub_ref；建模会话改挂路西法后可能搬到 lucifer_ref，两处都认
-SFX_DIR = {"bz": next((d for d in (os.path.join(ROOT, "_tools", n, "sounds")
-                                   for n in ("lucifer_ref", "beelzebub_ref")) if os.path.isdir(d)), ""),
+# 无名者音效存于 beelzebub_ref；目录不在时跳过音效，不影响出片
+SFX_DIR = {"bz": next((d for d in [os.path.join(ROOT, "_tools", "beelzebub_ref", "sounds")]
+                   if os.path.isdir(d)), ""),
            "tg": os.path.join(ROOT, "_tools", "tower_guard_ref", "sounds")}
 SFX_PLAN = [  # (目录, 文件名前缀, 时刻, 音量)
     ("tg", "S1_sfx_towerGuard_basicAttack_swing_01", 26.1, 0.8),

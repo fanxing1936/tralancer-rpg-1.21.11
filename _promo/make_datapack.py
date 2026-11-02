@@ -114,7 +114,7 @@ def main():
     armory(ws)
 
     write("setup.mcfunction", """
-# 拍摄环境：黄昏定格、晴天、不刷怪；玩家生存模式 + 无敌，这样路西法的招式会对准你。
+# 拍摄环境：黄昏定格、晴天、不刷怪；玩家生存模式 + 无敌，这样别西卜的招式会对准你。
 gamerule advance_time false
 gamerule advance_weather false
 gamerule spawn_mobs false
@@ -138,24 +138,24 @@ effect give @s minecraft:fire_resistance infinite 0 true
     write("time/night.mcfunction", "time set 18000")
     write("time/noon.mcfunction", "time set 6000")
 
-    # 路西法：完整入口 = 拨 #boss + lord1（召唤 + 记名 + 给寿命），见 rpg:command/summon_devil。
-    # 按 rpg_dm_lord=1 找他而不是按模型标签 —— 换装模型的标签名随建模会话变，记名分数不变。
-    lucifer = "@e[type=minecraft:vindicator,scores={rpg_dm_lord=1},limit=1,sort=nearest]"
-    write("lucifer/summon.mcfunction", """
-# 在你视线前方 10 格召唤路西法。
+    # 别西卜：完整入口 = 拨 #boss + lord4（召唤 + 记名 + 给寿命），见 rpg:command/summon_devil。
+    # 按 rpg_dm_lord=4 找他而不是按模型标签 —— 模型标签随建模调整会变，记名分数不变。
+    bz = "@e[type=minecraft:vindicator,scores={rpg_dm_lord=4},limit=1,sort=nearest]"
+    write("bz/summon.mcfunction", """
+# 在你视线前方 10 格召唤别西卜。
 scoreboard players set #boss rpg_fall 1
-execute positioned ^ ^ ^10 run function rpg:taint/lord1
-""" + tellraw("[宣传片] 路西法已降临。用 promo:lucifer/cast1..5、promo:lucifer/ult 点名放招。", "#2FA05A"))
+execute positioned ^ ^ ^10 run function rpg:taint/lord4
+""" + tellraw("[宣传片] 别西卜已降临。用 promo:bz/cast1..5、promo:bz/ult 点名放招。", "#7A8F22"))
     for n in range(1, 6):
-        write("lucifer/cast%d.mcfunction" % n,
-              "execute as %s at @s run function rpg:taint/sk1_%d" % (lucifer, n))
-    write("lucifer/ult.mcfunction", """
-# 万蛇加冕：先预警再爆发，和实战节奏一致。
-execute as %s at @s run function rpg:taint/ult1_warn
-schedule function promo:lucifer/ult_fire 40t
-""" % lucifer)
-    write("lucifer/ult_fire.mcfunction",
-          "execute as %s at @s run function rpg:taint/ult1" % lucifer)
+        write("bz/cast%d.mcfunction" % n,
+              "execute as %s at @s run function rpg:taint/sk4_%d" % (bz, n))
+    write("bz/ult.mcfunction", """
+# 万蝇饕宴：先预警再爆发，和实战节奏一致。
+execute as %s at @s run function rpg:taint/ult4_warn
+schedule function promo:bz/ult_fire 40t
+""" % bz)
+    write("bz/ult_fire.mcfunction",
+          "execute as %s at @s run function rpg:taint/ult4" % bz)
 
     write("guards.mcfunction", """
 # 圣卫方阵：视线前方 8 格，三人一排。
@@ -172,8 +172,8 @@ function rpg:ritual/life_tree/place
     write("clear.mcfunction", """
 # 收场：撤掉陈列、领主、圣卫和生命之树，不碰别的实体。
 function promo:armory/clear
-execute as @e[type=minecraft:vindicator,scores={rpg_dm_lord=1}] on passengers run kill @s
-kill @e[type=minecraft:vindicator,scores={rpg_dm_lord=1}]
+execute as @e[type=minecraft:vindicator,scores={rpg_dm_lord=4}] on passengers run kill @s
+kill @e[type=minecraft:vindicator,scores={rpg_dm_lord=4}]
 execute as @e[type=minecraft:vindicator,tag=rpg.tg] on passengers run kill @s
 kill @e[type=minecraft:vindicator,tag=rpg.tg]
 function rpg:ritual/life_tree/clear_all
@@ -183,8 +183,8 @@ function rpg:ritual/life_tree/clear_all
         "[宣传片] 拍摄函数：",
         " promo:setup  环境就绪   promo:clear  清场",
         " promo:armory/spawn  武器长廊（朝 +Z）",
-        " promo:guards  圣卫方阵   promo:lucifer/summon  路西法",
-        " promo:lucifer/cast1..5  路西法五式   promo:lucifer/ult  万蛇加冕",
+        " promo:guards  圣卫方阵   promo:bz/summon  别西卜",
+        " promo:bz/cast1..5  别西卜五式   promo:bz/ult  万蝇饕宴",
         " promo:tree  生命之树   promo:time/dusk|night|noon",
     ]))
     os.makedirs(os.path.join(OUT, "data", "minecraft", "tags", "function"), exist_ok=True)
