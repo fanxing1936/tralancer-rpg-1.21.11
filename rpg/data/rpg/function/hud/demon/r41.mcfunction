@@ -1,1 +1,1 @@
-$title @s actionbar ["",{"text":"\uf028\uf068","font":"rpg:combat_prompt","italic":false,"color":"white"},{"text":"\uf128","font":"rpg:combat_prompt"},$(r),$(a),$(b),$(c),$(d)]
+$title @s actionbar ["",{"text":"\uf028\uf068\uf0a8\uf0e8","font":"rpg:combat_prompt","italic":false,"color":"white"},{"text":"\uf128","font":"rpg:combat_prompt"},$(r),$(a),$(b),$(c),$(d)]

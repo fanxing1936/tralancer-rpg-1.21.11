@@ -6,4 +6,4 @@ clear @a[tag=rpg.rite.user,distance=..6,limit=1] minecraft:paper[minecraft:custo
 scoreboard players add @a[tag=rpg.rite.user,distance=..6,limit=1] rpg_ex_xp 6
 tag @a[tag=rpg.rite.user,distance=..6] remove rpg.rite.user
 function rpg:inquest/stability/show
-tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"[弱点媒介] ","color":"#6A6A70","italic":false,"bold":true},{"text":"时钟 · 不眠之钟已布入法阵。","color":"gray","italic":false}]
+tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"[弱点媒介] ","color":"#A7AFC9","italic":false,"bold":true},{"text":"时钟 · 不眠之钟已布入法阵。","color":"gray","italic":false}]
