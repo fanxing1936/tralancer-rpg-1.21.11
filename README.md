@@ -152,6 +152,10 @@ python _tools/package.py --install
 | **Claude**（Anthropic） | 1.21.11 迁移、性能重构、图鉴生成，以及路西法、利维坦、圣殿双柱等新增内容的实现与验证 |
 | **Codex**（OpenAI） | 美术/UI 规整、文档与发布验证 |
 
+**字体**：Actionbar 上层的恶魔招式提示与封印状态位图，由 Minecraft 客户端自带的
+[GNU Unifont](https://unifoundry.com/unifont/) 字形烘焙而成（GPLv2+ 附字体嵌入例外 / SIL OFL 1.1 双许可）。
+全包的配色与文字规范见 [`ART-STYLE.md`](ART-STYLE.md)。
+
 世界观由作者设定、ChatGPT 落笔成文，再由 Claude 整合进图鉴与数据包；
 每一处实现判断、踩过的坑与修正都记在 [`ENGINEERING.md`](ENGINEERING.md) 里。
 
