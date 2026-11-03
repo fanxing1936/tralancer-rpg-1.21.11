@@ -24,8 +24,9 @@ nets, checked against the wiki's front render (MCD_Wretched_Wraith_face.png,
             strips at 0,112 and 21,112) over a dark inside;
 * sleeves   6x24x7 boxes at 62,52 and 87,50 (frost along the top, rags below);
 * forearms  2x23x2 boxes at 111,26;
-* fists     11x20x11 boxes at 49,84 and 93,84, the fingers in the lower rows;
-            laid flat so the fingers reach forward, as in the render.
+* hands     15x20x7 boxes at 49,88 and 93,88 (the jagged ice top is their
+            up face, rows 88..94), palm above and three claws in the lower
+            rows; they hang below the forearms, the thin face forward.
 
 Output: abaddon_ref/abaddon_atlas.png and abaddon_ref/abaddon.geo.json,
 imported into Blockbench through the MCP and refined there.  abaddon.bbmodel
@@ -103,17 +104,22 @@ def shard(origin, w, h, col, side=False):
 
 
 def arm(side, sleeve_uv, sleeve_d, fist_uv):
-    """side -1: right (bedrock -x), +1: left."""
-    x = 10 * side                         # the sleeve's inner side against the torso
+    """side -1: right (bedrock -x), +1: left.  Placed after the wiki render:
+    the sleeve's frosted top level with the lower third of the head and just
+    tucked under its side, the forearm angled out so the hands hang beside
+    the robe, a short stretch of forearm showing above them."""
+    x = 9.5 * side
     name = "right" if side < 0 else "left"
     return [
-        bone(name + "_arm", [x, 48, 0], parent="body", rotation=[-10, 0, -3 * side], cubes=[
-            box([x - 3, 26, -sleeve_d / 2.0], [6, 24, sleeve_d], sleeve_uv),
-            box([x - 1, 16, -1], [2, 23, 2], [111, 26]),
+        bone(name + "_arm", [x, 56, 0], parent="body", rotation=[-12, 0, -7 * side], cubes=[
+            box([x - 3, 32, -sleeve_d / 2.0], [6, 24, sleeve_d], sleeve_uv),
+            box([x - 1, 21, -1], [2, 23, 2], [111, 26]),
         ]),
-        # the hand lies flat, its fingers (the lower rows of the net) reaching forward
-        bone(name + "_fist", [x, 10, 0], parent=name + "_arm", rotation=[-90, 0, 0], cubes=[
-            box([x - 5.5, 0, -5.5], [11, 20, 11], fist_uv),
+        # the hand hangs below the forearm, its thin 7-wide face forward and
+        # the claws (the net's lower rows) hanging from its foot, as in the
+        # concept sheet
+        bone(name + "_fist", [x, 19, 0], parent=name + "_arm", rotation=[0, -90, 0], cubes=[
+            box([x - 7.5, 9, -3.5], [15, 20, 7], fist_uv),
         ]),
     ]
 
@@ -165,7 +171,15 @@ bones = [
             "north": GEM_SIDE[0], "east": GEM_SIDE[1], "south": GEM_SIDE[2], "west": GEM_SIDE[3],
             "up": GEM_CAP, "down": GEM_CAP}),
     ]),
-] + arm(-1, [62, 52], 7, [49, 84]) + arm(1, [87, 50], 9, [93, 84])
+] + arm(-1, [62, 52], 7, [49, 88]) + arm(1, [87, 50], 9, [93, 88])
+
+# the arms above hang the fists just off the ground once the whole figure
+# drops by this much
+DROP = 9
+for b in bones:
+    b["pivot"][1] -= DROP
+    for c in b.get("cubes", ()):
+        c["origin"][1] -= DROP
 
 geo = {
     "format_version": "1.12.0",
