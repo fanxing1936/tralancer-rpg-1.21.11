@@ -144,7 +144,11 @@ def render(geo_path, atlas_path, yaw=25.0, pitch=-12.0, px=12, scale_tex=8):
             tex = Image.fromarray(arr.astype(np.uint8))
         src = [(0, 0), (tex.width, 0), (tex.width, tex.height), (0, tex.height)]
         dst = [(x - x0, y - y0) for x, y in scr]
-        warped = tex.transform((x1 - x0, y1 - y0), Image.PERSPECTIVE, _persp_coeffs(dst, src), Image.NEAREST)
+        try:
+            coeffs = _persp_coeffs(dst, src)
+        except np.linalg.LinAlgError:     # 面正好侧对镜头、退化成线：本来就看不见
+            continue
+        warped = tex.transform((x1 - x0, y1 - y0), Image.PERSPECTIVE, coeffs, Image.NEAREST)
         # 只留四边形内部，避免透视外推出的杂边
         mask = Image.new("L", warped.size, 0)
         from PIL import ImageDraw
