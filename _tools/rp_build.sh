@@ -24,7 +24,6 @@ python add_beelzebub.py ../resourcepack ../rpg
 python add_vanguard.py ../resourcepack ../rpg
 python add_leviathan_model.py ../resourcepack ../rpg
 python add_sunken_skeleton.py ../resourcepack ../rpg
-python add_full_metal_armor.py ../resourcepack ../rpg
 # last, so every hand transform in the pack has exactly one owner
 python fix_display.py ../resourcepack
 echo

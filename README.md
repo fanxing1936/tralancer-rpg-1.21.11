@@ -159,7 +159,7 @@ python _tools/package.py --install
 
 ### 素材来源
 
-圣卫（塔卫）、别西卜（无名者）、利维坦（死灵法师）与两位领主麾下罪仆（先锋、沉没骷髅），以及都灵裹尸布、圣荆棘冠（全金属盔甲）的原始贴图与音效取自
+圣卫（塔卫）、别西卜（无名者）、利维坦（死灵法师）与两位领主麾下罪仆（先锋、沉没骷髅）的原始贴图与音效取自
 **Minecraft Dungeons**（Mojang Studios），经由 [minecraft.wiki](https://minecraft.wiki) 获取，
 版权归 Mojang 所有。本项目开源、免费、非商业，与 Mojang 及 Microsoft 无任何关联。
 
@@ -170,13 +170,11 @@ python _tools/package.py --install
 | 别西卜麾下罪仆 | Vanguard | <https://minecraft.wiki/w/Dungeons:Vanguard>（另有 [Skeleton](https://minecraft.wiki/w/Dungeons:Skeleton)、[Glaive](https://minecraft.wiki/w/Dungeons:Glaive) 页） | 骷髅本体、沙漠盔甲、沙漠盾牌、长戟贴图；先锋全部 6 组共 18 段音效 |
 | 利维坦 | Necromancer | <https://minecraft.wiki/w/Dungeons:Necromancer> | 本体贴图与发光层；Sounds 一节全部 28 段音效 |
 | 利维坦麾下罪仆 | Sunken Skeleton | <https://minecraft.wiki/w/Dungeons:Sunken_Skeleton> | Tier 1～3 贴图（模型用 Tier 1）；全部 8 组共 27 段音效 |
-| 都灵裹尸布、圣荆棘冠 | Full Metal Armor | <https://minecraft.wiki/w/Dungeons:Full_Metal_Armor> | 盔甲贴图（按原作重建 3D 模型）；板甲穿戴音 13 段 |
 
 逐个文件的来源记在 [`_tools/tower_guard_ref/SOURCES.md`](_tools/tower_guard_ref/SOURCES.md) 与
 [`_tools/beelzebub_ref/SOURCES.md`](_tools/beelzebub_ref/SOURCES.md)、
 [`_tools/vanguard_ref/SOURCES.md`](_tools/vanguard_ref/SOURCES.md)、
 [`_tools/leviathan_ref/SOURCES.md`](_tools/leviathan_ref/SOURCES.md)、
-[`_tools/sunken_skeleton_ref/SOURCES.md`](_tools/sunken_skeleton_ref/SOURCES.md)、
-[`_tools/full_metal_armor_ref/SOURCES.md`](_tools/full_metal_armor_ref/SOURCES.md)。模型几何、姿势与动画是在
+[`_tools/sunken_skeleton_ref/SOURCES.md`](_tools/sunken_skeleton_ref/SOURCES.md)。模型几何、姿势与动画是在
 Blockbench 里按原作外观重做的；图集里原贴图之外的部分（皇冠、法袍、护肩、法杖头的嵌套方块等）
 用原贴图的像素与配色补画。
