@@ -133,16 +133,25 @@ def build_textures():
                     mirror(w, h, rgba))
             stale = [name + ".png"]
         else:
-            # 肋骨照漆黑之日的拿法：贴图铺满画布、握柄落在左下角，物品栏和手里
-            # 共用这一张裁好的图（漆黑之日是 19×19，刀身同样撑满画布）
-            P.write(os.path.join(RPG_TEX, name + ".png"), cw, ch, crop)
-            stale = [name + "_icon.png"]
+            P.write(os.path.join(RPG_TEX, name + "_icon.png"), cw, ch, crop)
+            # 手持：照漆黑之日的拿法，贴图铺满画布、握柄落在左下角（漆黑之日是
+            # 19×19，刀身同样撑满画布）。原画的弧线凸向右下，拿在手里凸面朝上；
+            # 用户要凸面朝下，于是沿「握柄—刀尖」这条对角线翻过来：
+            # (x, y) -> (ch-1-y, cw-1-x)。握柄仍在左下、刀尖仍在右上，只换弯的方向
+            flip = bytearray(cw * ch * 4)
+            for y in range(ch):
+                for x in range(cw):
+                    s = (y * cw + x) * 4
+                    d = ((cw - 1 - x) * ch + (ch - 1 - y)) * 4
+                    flip[d:d + 4] = crop[s:s + 4]
+            P.write(os.path.join(RPG_TEX, name + "_in_hand.png"), ch, cw,
+                    bytes(flip))
+            stale = [name + ".png"]
         for f in stale:
             if os.path.isfile(os.path.join(RPG_TEX, f)):
                 os.remove(os.path.join(RPG_TEX, f))
-    # 肋骨不再单独分图标模型
-    if os.path.isfile(os.path.join(RPG_MODELS, "michael_rib_icon.json")):
-        os.remove(os.path.join(RPG_MODELS, "michael_rib_icon.json"))
+    if os.path.isfile(os.path.join(RPG_MODELS, "michael_rib.json")):
+        os.remove(os.path.join(RPG_MODELS, "michael_rib.json"))
 
 
 def dispatch_entry(path, base, cmd, model):
@@ -174,18 +183,13 @@ def build_models():
     wj(os.path.join(RPG_MODELS, "michael_spine_in_hand.json"),
        {"parent": "minecraft:item/spear_in_hand",
         "textures": {"layer0": "rpg:item/michael_spine_in_hand"}})
-    # 肋骨用漆黑之日（warrior_sword）的手持父模型，副手照作者原包的写法反手握：
-    # _orig_rp 的 sword_handheld 左手是 [-170,-90,-55]，fix_display 把全包副手
-    # 统一成了正手，这里只给肋骨写回来（用户要求）。比例取 fix_display 算出的
-    # 等比 1.195，免得原包的 [1.46,0.85,0.85] 把刀身剪切变形。
-    # 模型的 display 按视角逐项继承，只覆盖这一项，其余仍跟 sword_handheld 走。
-    wj(os.path.join(RPG_MODELS, "michael_rib.json"),
+    wj(os.path.join(RPG_MODELS, "michael_rib_icon.json"),
+       {"parent": "item/generated",
+        "textures": {"layer0": "rpg:item/michael_rib_icon"}})
+    # 肋骨手持用漆黑之日（warrior_sword）的父模型 sword_handheld；副手正手握
+    wj(os.path.join(RPG_MODELS, "michael_rib_in_hand.json"),
        {"parent": "rpg:item/sword_handheld",
-        "textures": {"layer0": "rpg:item/michael_rib"},
-        "display": {"thirdperson_lefthand": {
-            "rotation": [-170, -90, -55],
-            "translation": [0, -11.5, 1.25],
-            "scale": [1.195, 1.195, 1.195]}}})
+        "textures": {"layer0": "rpg:item/michael_rib_in_hand"}})
 
     dispatch_entry(os.path.join(MC_ITEMS, "netherite_spear.json"),
                    "netherite_spear", SPINE_CMD,
@@ -196,9 +200,16 @@ def build_models():
                                          "model": "rpg:item/michael_spine"}}],
                     "fallback": {"type": "minecraft:model",
                                  "model": "rpg:item/michael_spine_in_hand"}})
+    # 肋骨也分两套：物品栏里是原画裁好的图标，手里是翻过弯的那张
     dispatch_entry(os.path.join(MC_ITEMS, "netherite_sword.json"),
                    "netherite_sword", RIB_CMD,
-                   {"type": "minecraft:model", "model": "rpg:item/michael_rib"})
+                   {"type": "minecraft:select",
+                    "property": "minecraft:display_context",
+                    "cases": [{"when": ["gui", "ground", "fixed", "on_shelf"],
+                               "model": {"type": "minecraft:model",
+                                         "model": "rpg:item/michael_rib_icon"}}],
+                    "fallback": {"type": "minecraft:model",
+                                 "model": "rpg:item/michael_rib_in_hand"}})
 
 
 # ---------------------------------------------------------------------------
