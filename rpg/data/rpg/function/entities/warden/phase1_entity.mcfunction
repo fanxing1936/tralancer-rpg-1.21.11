@@ -1,7 +1,7 @@
 # 单次实体绑定完成一阶段常驻逻辑。
 effect give @s minecraft:invisibility 1 1 true
-particle large_smoke ~0.1 ~1.5 ~0.1 -0.2 -0.5 -0.2 0.1 1
-particle squid_ink ~0.1 ~1.5 ~0.1 -0.2 -0.5 -0.2 0.1 5
+particle large_smoke ~ ~1.3 ~ 0.12 0.3 0.12 0.005 1
+particle squid_ink ~ ~1.3 ~ 0.12 0.3 0.12 0.01 2
 execute if score @s devil matches 200.. run scoreboard players set @s devil 0
 scoreboard players add @s devil 1
 execute if entity @s[tag=rpg.boss.minion] run scoreboard players add @s rpg_boss_fx 1
