@@ -32,7 +32,6 @@ Two timing details shape the code:
 import io
 import json
 import os
-import shutil
 import sys
 
 import png_tool as P
@@ -111,18 +110,57 @@ def mirror(w, h, rgba):
     return bytes(out)
 
 
+def is_fire(px):
+    r, g, b = px[0], px[1], px[2]
+    return r > 150 and g < 130 and r - b > 90
+
+
+def outline(w, h, rgba):
+    """原画的深色像素是零散的，外轮廓不闭合，骨白直接贴着物品栏灰底发虚。
+    在轮廓外补一圈描边（ART-STYLE §4：同色相深两档，不用纯黑）：挨着骨的用原画里
+    最深的骨褐，挨着圣火的用原画里最深的暗红。两色都取自原画，不新增颜色。"""
+    px = [tuple(rgba[i:i + 4]) for i in range(0, len(rgba), 4)]
+    solid = [p for p in px if p[3]]
+    lum = lambda p: p[0] * 299 + p[1] * 587 + p[2] * 114
+    bone_dark = min((p for p in solid if not is_fire(p)), key=lum)
+    fire_dark = min((p for p in solid if is_fire(p)), key=lum)
+    out = list(px)
+    for y in range(h):
+        for x in range(w):
+            if px[y * w + x][3]:
+                continue
+            nb = [px[(y + dy) * w + x + dx]
+                  for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))
+                  if 0 <= x + dx < w and 0 <= y + dy < h
+                  and px[(y + dy) * w + x + dx][3]]
+            if nb:
+                fire = sum(1 for p in nb if is_fire(p)) * 2 > len(nb)
+                out[y * w + x] = fire_dark if fire else bone_dark
+    return bytes(bytearray(c for p in out for c in p))
+
+
 def build_textures():
     if not os.path.isdir(RPG_TEX):
         os.makedirs(RPG_TEX)
     for name in ("michael_spine", "michael_rib"):
-        src = os.path.join(ART, name + ".png")
-        w, h, _ = P.read(src)
+        w, h, rgba = P.read(os.path.join(ART, name + ".png"))
         assert (w, h) == (32, 32), "%s 不是 32 网格" % name
-        shutil.copyfile(src, os.path.join(RPG_TEX, name + ".png"))
-    # 长枪的手持模型沿用原版 spear_in_hand，它要的是左右镜像过的贴图
-    w, h, rgba = P.read(os.path.join(ART, "michael_spine.png"))
-    P.write(os.path.join(RPG_TEX, "michael_spine_in_hand.png"), w, h,
-            mirror(w, h, rgba))
+        rgba = outline(w, h, rgba)
+        # 物品栏图标：用户要求铺满 32×32（主体 100%，是 ART-STYLE §4
+        # 「80%–94%」的登记例外）。等比放大、居中，像素只复制不插值
+        P.write(os.path.join(RPG_TEX, name + "_icon.png"), 32, 32,
+                P.paste_fit(w, h, rgba, 32, 1.0))
+        # 手持：描边后的 32 网格原尺寸，手里的大小不变
+        if name == "michael_spine":
+            # 长枪的手持模型沿用原版 spear_in_hand，它要的是左右镜像过的贴图；
+            # 不镜像的那张已经没有模型引用，旧构建留下的就删掉
+            P.write(os.path.join(RPG_TEX, name + "_in_hand.png"), w, h,
+                    mirror(w, h, rgba))
+            stale = os.path.join(RPG_TEX, name + ".png")
+            if os.path.isfile(stale):
+                os.remove(stale)
+        else:
+            P.write(os.path.join(RPG_TEX, name + ".png"), w, h, rgba)
 
 
 def dispatch_entry(path, base, cmd, model):
@@ -150,7 +188,10 @@ def dispatch_entry(path, base, cmd, model):
 def build_models():
     wj(os.path.join(RPG_MODELS, "michael_spine.json"),
        {"parent": "item/generated",
-        "textures": {"layer0": "rpg:item/michael_spine"}})
+        "textures": {"layer0": "rpg:item/michael_spine_icon"}})
+    wj(os.path.join(RPG_MODELS, "michael_rib_icon.json"),
+       {"parent": "item/generated",
+        "textures": {"layer0": "rpg:item/michael_rib_icon"}})
     wj(os.path.join(RPG_MODELS, "michael_spine_in_hand.json"),
        {"parent": "minecraft:item/spear_in_hand",
         "textures": {"layer0": "rpg:item/michael_spine_in_hand"}})
@@ -168,9 +209,16 @@ def build_models():
                                          "model": "rpg:item/michael_spine"}}],
                     "fallback": {"type": "minecraft:model",
                                  "model": "rpg:item/michael_spine_in_hand"}})
+    # 肋骨同样分两套：物品栏里是铺满的图标，手里是原尺寸
     dispatch_entry(os.path.join(MC_ITEMS, "netherite_sword.json"),
                    "netherite_sword", RIB_CMD,
-                   {"type": "minecraft:model", "model": "rpg:item/michael_rib"})
+                   {"type": "minecraft:select",
+                    "property": "minecraft:display_context",
+                    "cases": [{"when": ["gui", "ground", "fixed", "on_shelf"],
+                               "model": {"type": "minecraft:model",
+                                         "model": "rpg:item/michael_rib_icon"}}],
+                    "fallback": {"type": "minecraft:model",
+                                 "model": "rpg:item/michael_rib"}})
 
 
 # ---------------------------------------------------------------------------
