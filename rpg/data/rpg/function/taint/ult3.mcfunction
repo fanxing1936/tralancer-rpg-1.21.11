@@ -8,3 +8,5 @@ particle soul_fire_flame ~ ~1 ~ 4 1 4 0.08 72 normal
 playsound minecraft:entity.warden.sonic_boom hostile @a[distance=..36] ~ ~ ~ 1.1 0.65
 playsound minecraft:entity.wither.spawn hostile @a[distance=..40] ~ ~ ~ 0.7 0.55
 execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult3_hit
+# 亚巴顿外观（add_abaddon_model.py）
+execute if entity @s[tag=rpg.ab] run function rpg:abaddon/skill/ult3

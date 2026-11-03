@@ -7,3 +7,5 @@ particle sonic_boom ~ ~1 ~ 0 0 0 0 3
 particle sculk_charge_pop ~ ~0.2 ~ 4 0.3 4 0.2 80
 execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] at @s facing entity @e[tag=rpg.dm.cast,limit=1] feet run tp @s ^ ^ ^2
 execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk3c_maw
+# 亚巴顿外观（add_abaddon_model.py）
+execute if entity @s[tag=rpg.ab] run function rpg:abaddon/skill/sk3_3

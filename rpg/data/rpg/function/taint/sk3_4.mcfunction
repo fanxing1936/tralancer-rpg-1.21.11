@@ -7,3 +7,5 @@ playsound minecraft:entity.warden.heartbeat hostile @a[distance=..32] ~ ~ ~ 1 0.
 particle sculk_soul ~ ~1 ~ 4 1 4 0.04 80
 particle dust{color:[0.65,0.69,0.79],scale:2} ~ ~1 ~ 4 1 4 0.04 64
 execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk3d_still
+# 亚巴顿外观（add_abaddon_model.py）
+execute if entity @s[tag=rpg.ab] run function rpg:abaddon/skill/sk3_4

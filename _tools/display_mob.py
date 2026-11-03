@@ -161,6 +161,8 @@ class Mob(object):
     ambient    (event, chance per tick) while alive
     on_death   extra lines for the death function (at the swept anchor part)
     on_hurt    extra lines for the hurt function (as the carrier)
+    anim_from  another .bbmodel whose clips this rig plays, matched by bone
+               name (a rig that shares another's bone layout); default: its own
     carrier    entity type of the carrier, or None when carriers of several
                types share the tag (selectors then go by tag alone)
     """
@@ -168,7 +170,8 @@ class Mob(object):
     def __init__(self, key, label, generator, bbmodel, parts, glow, seat, tag, score,
                  clips, carrier="minecraft:vindicator", model_scale=1.0,
                  sounds=None, sound_dir=None, cues=None, enter_cues=None,
-                 hurt=None, death=None, ambient=None, on_death=(), on_hurt=(), held=None):
+                 hurt=None, death=None, ambient=None, on_death=(), on_hurt=(), held=None,
+                 anim_from=None):
         self.key, self.label, self.generator = key, label, generator
         self.bbmodel, self.parts, self.glow = bbmodel, parts, set(glow)
         self.seat, self.tag, self.score, self.carrier = seat, tag, score, carrier
@@ -178,6 +181,7 @@ class Mob(object):
         self.hurt, self.death, self.ambient, self.on_death = hurt, death, ambient, list(on_death)
         self.on_hurt = list(on_hurt)
         self.held = held
+        self.anim_from = anim_from
         self.carrier_sel = "type=%s,tag=%s" % (carrier, tag) if carrier else "tag=%s" % tag
         self.tex = "%s:item/%s/atlas" % (NS, key)
         self.fn = "%s:%s" % (NS, key)
@@ -333,7 +337,7 @@ def held_matrix(mob, bones, arm, W):
 # ---------------------------------------------------------------------------
 
 def load_animations(mob):
-    with io.open(mob.bbmodel, encoding="utf-8") as fh:
+    with io.open(mob.anim_from or mob.bbmodel, encoding="utf-8") as fh:
         doc = json.load(fh)
     names = {g["uuid"]: g["name"] for g in doc["groups"]}
     clips = {}
