@@ -11,6 +11,7 @@ it reaches zero.
 """
 
 import io
+import json
 import os
 import re
 import sys
@@ -45,6 +46,7 @@ def main():
     for slug, values in ui.PILLAR_LEGACY.items():
         legacy.update(v.upper() for v in values)
     legacy -= registered()
+    deep = set(p["deep"].upper() for p in ui.PILLARS) | {ui.NAMELESS["deep"].upper()}
     for root, _, files in os.walk(os.path.join(DP, "data")):
         for name in files:
             if not name.endswith(".mcfunction"):
@@ -57,6 +59,19 @@ def main():
                 if found.upper() in legacy:
                     problems.append("%s: 七柱旧色 %s 仍在写字" % (name, found))
                     break
+            # 聊天行的加粗标签：深色只做身份色，不写字；低于 4.5:1 的
+            # 原版色（dark_red、dark_gray……）在聊天底上读不出来。
+            for _, _, raw in polish_ui.tellraw_arrays(text):
+                try:
+                    head = polish_ui.broadcast_head(json.loads(raw))
+                except ValueError:
+                    continue
+                if head is None:
+                    continue
+                node = json.loads(raw)[head[0]]
+                colour = node.get("color", "white")
+                if colour.upper() in deep or ui.contrast(colour) < 4.5:
+                    problems.append("%s: 标签 %s 用色 %s 读不出" % (name, head[1], colour))
 
     known = registered()
     loose = {}

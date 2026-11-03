@@ -10,4 +10,4 @@ tag @e[tag=rpg.demon.minion.new,distance=..3,limit=1,sort=nearest] remove rpg.de
 particle end_rod ~ ~1 ~ 0.55 0.75 0.55 0.035 18
 particle soul ~ ~1 ~ 0.35 0.65 0.35 0.025 10
 playsound minecraft:entity.evoker.prepare_attack hostile @a[distance=..28] ~ ~ ~ 0.55 0.9
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#5FD68C","bold":true,"italic":false},{"text":"路西法 · ","color":"#5FD68C","bold":false,"italic":false},{"text":"先锋 ","color":"gray","bold":false,"italic":false},{"text":"巴力","color":"#FFFFFF","bold":false,"italic":false},{"text":"应召现身。","color":"dark_gray","bold":false,"italic":false}]
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪群] ","color":"#5FD68C","bold":true,"italic":false},{"text":"路西法 · ","color":"#5FD68C","bold":false,"italic":false},{"text":"先锋 ","color":"gray","bold":false,"italic":false},{"text":"巴力","color":"#FFFFFF","bold":false,"italic":false},{"text":"应召现身。","color":"gray","bold":false,"italic":false}]

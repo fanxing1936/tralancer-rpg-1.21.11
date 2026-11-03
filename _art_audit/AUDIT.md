@@ -204,3 +204,4 @@ C 类 11 张贴图按 2 倍、8 倍、12 倍放大存储，合计 29 KB；按原
 | --- | --- |
 | [`after/01_tooltip_before_after.png`](after/01_tooltip_before_after.png) | 12 件代表物品：左为改动前（提交 `739098e`），右为改动后 |
 | [`after/02_hud_textures_before_after.png`](after/02_hud_textures_before_after.png) | HUD 上层提示与封印状态，以及四组贴图网格的改动前后 |
+| [`after/03_ritual_chat_before_after.png`](after/03_ritual_chat_before_after.png) | 驱魔仪式聊天播报（ART-STYLE §12）：左为用户实机截图对应的旧产物，右为改动后 |

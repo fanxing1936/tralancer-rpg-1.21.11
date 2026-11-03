@@ -13,22 +13,17 @@ import re
 import sys
 from pathlib import Path
 
-from rpg_ui_style import (CYAN, DARK_GRAY, GRAY, HOLY, HOLY_LIGHT, RED,
+import rpg_ui_style as ui
+from rpg_ui_style import (CYAN, DARK_GRAY, GRAY, HOLY, HOLY_LIGHT, MUTED, RED,
                           RITUAL, WHITE, comp, lore, row)
 
 
 DP = Path(sys.argv[1] if len(sys.argv) > 1 else "../rpg").resolve()
 FUNC = DP / "data/rpg/function"
 
-LORDS = (
-    (1, "路西法 · 傲慢", "#00491C"),
-    (2, "利维坦 · 嫉妒", "#1B4F72"),
-    (3, "亚巴顿 · 怠惰", "#6A6A70"),
-    (4, "别西卜 · 暴食", "#5A6B1E"),
-    (5, "萨麦尔 · 暴怒", "#7B241C"),
-    (6, "贝利尔 · 色欲", "#5B2C6F"),
-    (7, "玛门 · 贪婪", "#B7950B"),
-)
+# This generator runs after polish_ui.py, so it must already speak the
+# palette: lit colours for text (deep is identity only), [遗物休眠] in MUTED.
+LORDS = tuple((p["n"], "%s · %s" % (p["who"], p["sin"]), p["lit"]) for p in ui.PILLARS)
 
 OBJECTIVES = (
     "rpg_agit", "rpg_rel_n", "rpg_rel_1", "rpg_rel_2", "rpg_rel_w",
@@ -138,7 +133,7 @@ def patch_relic_items() -> None:
             6: "本轮尚未显现能力",
             7: "本轮尚未显现能力",
         }[number]
-        name_json = row(comp("[封印遗物] ", HOLY, True), comp(name, colour))
+        name_json = row(comp("[封印遗物] ", HOLY, True), comp(name, WHITE))
         lore_json = lore([
             [comp(ability, HOLY_LIGHT)],
             [comp("背包顺序前两件生效；其余休眠。", GRAY)],
@@ -309,7 +304,7 @@ def build_use_and_abilities() -> None:
         "tag @s remove rpg.seal.held_active",
     ] + active_checks + [
         "execute if score @s rpg_rel_hold matches 30 unless entity @s[tag=rpg.seal.held_active] run tellraw @s " +
-        row(comp("[遗物休眠] ", DARK_GRAY, True), comp("它不在背包顺序的前两个生效槽位。", GRAY)),
+        row(comp("[遗物休眠] ", MUTED, True), comp("它不在背包顺序的前两个生效槽位。", GRAY)),
         "execute if score @s rpg_rel_hold matches 30 if entity @s[tag=rpg.seal.held_active] if predicate rpg:sneaking run return run function rpg:inquest/seal/suppress",
         "execute if score @s rpg_rel_hold matches 30 if entity @s[tag=rpg.seal.held_active] unless predicate rpg:sneaking if items entity @s weapon.mainhand minecraft:echo_shard[minecraft:custom_data~{rpg_sealed:1b,rpg_lord:2}] run return run function rpg:inquest/seal/ability/leviathan",
     ]
@@ -328,7 +323,7 @@ playsound minecraft:block.respawn_anchor.deplete player @s ~ ~ ~ 0.8 1.4
     write("inquest/seal/ability/leviathan.mcfunction", """\
 scoreboard players set @s rpg_rel_hold 31
 execute if score @s rpg_rel_cd matches 1.. run return run tellraw @s ["",{"text":"[遗物冷却] ","color":"#62D9E8","bold":true,"italic":false},{"text":"压制余波仍在，尚不能动用反制。","color":"gray","italic":false}]
-execute unless score @s rpg_rel_rec matches 1 run return run tellraw @s ["",{"text":"[利维坦] ","color":"#1B4F72","bold":true,"italic":false},{"text":"尚无可反制的术式","color":"gray","italic":false}]
+execute unless score @s rpg_rel_rec matches 1 run return run tellraw @s ["",{"text":"[利维坦] ","color":"#4F9EF0","bold":true,"italic":false},{"text":"尚无可反制的术式","color":"gray","italic":false}]
 tag @s add rpg.seal.cast
 execute if score @s rpg_rel_src matches 2 run function rpg:inquest/seal/ability/reflect_drown
 execute unless score @s rpg_rel_src matches 2 run function rpg:inquest/seal/ability/reflect_magic
@@ -337,7 +332,7 @@ scoreboard players set @s rpg_rel_rec 0
 scoreboard players set @s rpg_rel_src 0
 scoreboard players add @s rpg_agit 3
 execute if score @s rpg_agit matches 101.. run scoreboard players set @s rpg_agit 100
-tellraw @s ["",{"text":"[利维坦 · 反制] ","color":"#1B4F72","bold":true,"italic":false},{"text":"术式已同源返还；记录清空，躁动 +3。","color":"gray","italic":false}]
+tellraw @s ["",{"text":"[利维坦・反制] ","color":"#4F9EF0","bold":true,"italic":false},{"text":"术式已同源返还；记录清空，躁动 +3。","color":"gray","italic":false}]
 """)
     for source_name, damage_type in (("magic", "minecraft:magic"),
                                      ("drown", "minecraft:drown")):
@@ -519,7 +514,7 @@ def build_panel() -> None:
 
 
 def build_hud() -> None:
-    stage_specs = ((0, 39, "\uf300", DARK_GRAY), (40, 69, "\uf301", RITUAL),
+    stage_specs = ((0, 39, "\uf300", MUTED), (40, 69, "\uf301", RITUAL),
                    (70, 89, "\uf302", HOLY), (90, 100, "\uf303", RED))
     lines = ["data modify storage rpg:hud r set value '{\"text\":\"\"}'"]
     for lo, hi, glyph, _colour in stage_specs:
@@ -535,7 +530,7 @@ def build_hud() -> None:
     for filled in range(11):
         lo = filled * 10
         hi = 100 if filled == 10 else lo + 9
-        colour = DARK_GRAY if hi < 40 else RITUAL if hi < 70 else HOLY if hi < 90 else RED
+        colour = MUTED if hi < 40 else RITUAL if hi < 70 else HOLY if hi < 90 else RED
         stage_name = ("沉眠" if hi < 40 else "躁动" if hi < 70 else
                       "危险" if hi < 90 else "临界")
         parts = [comp(stage_name + " ", colour, True), comp("▰" * filled, colour),

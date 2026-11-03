@@ -366,6 +366,69 @@ def prefix_message(prefix, prefix_color, text, text_color=GRAY):
 
 
 # ---------------------------------------------------------------------------
+# Ritual broadcasts (§12)
+# ---------------------------------------------------------------------------
+# One chat line per event: "[标签] " bold, then gray prose.  The tag colour
+# says who acted, so the chat column reads the fight at a glance:
+#   the exorcist, tools, rite progress  HOLY
+#   the demon (counter-rite, domain)    its pillar's lit
+#   failure, threat, the rite slipping  WARN
+#   the four verdicts                   VERDICTS
+#   a sealed relic's stage              the HUD seal stages
+# Bold doubles every glyph one unit to the right, which turns the vanilla
+# "·" into a dash; tags join their halves with the Unifont dot "・".
+TAG_JOIN = "・"
+VERDICTS = {"消灭": WARN, "放逐": HOLY_LIGHT, "封印": CYAN, "契约": RITUAL}
+SEAL_STAGES = {"遗物休眠": MUTED, "遗物躁动": RITUAL, "遗物危险": HOLY,
+               "遗物临界": WARN, "遗物压制": CYAN, "遗物冷却": CYAN}
+BROADCAST_WARN = {"仪式失败", "法阵熄灭", "恶魔挣脱", "伪名坐实", "伪名误判",
+                  "嫉妒得逞", "逾期加征", "封印失败", "赎金失败"}
+BROADCAST_HOLY = {"驱魔调查", "调查档案", "罪证", "镇压", "真名确证", "镇魔二阶段",
+                  "罪约裁决", "裁决尚待", "驱魔完成", "驱魔师档案", "职业解锁",
+                  "告解铃", "净罪香", "银质圣钉", "仪式粉笔",
+                  "真名击破", "妒影击破", "银钉守界", "赎金已付"}
+BROADCAST_PILLAR = {"反仪式・吞媒": "别西卜"}
+# Tags shared by all seven lords; the line names the lord ("别西卜 · 司祭 巴钦").
+BROADCAST_SPEAKER = {"罪群", "罪仆术式", "显形", "弱点媒介", "封印逃逸"}
+
+
+def broadcast_tag(tag):
+    """``[反仪式·暴食]`` -> ``反仪式・暴食``: brackets off, the join made bold-safe."""
+    body = tag.strip()[1:-1]
+    return TAG_JOIN.join(part.strip() for part in body.split("·"))
+
+
+def broadcast_colour(tag, body=""):
+    """The colour a ritual broadcast tag must carry, or None if it is not one.
+
+    Explicit tables win over the pillar lookup: failure tags such as
+    [嫉妒得逞] name a sin but belong to WARN.  ``body`` is the rest of the
+    line, which names the lord for the tags in BROADCAST_SPEAKER.
+    """
+    key = broadcast_tag(tag)
+    head, _, tail = key.partition(TAG_JOIN)
+    if key in SEAL_STAGES:
+        return SEAL_STAGES[key]
+    if key in BROADCAST_WARN:
+        return WARN
+    if key in BROADCAST_HOLY:
+        return HOLY
+    if key in VERDICTS:
+        return VERDICTS[key]
+    if head == "裁决" and tail in VERDICTS:
+        return VERDICTS[tail]
+    if key in BROADCAST_PILLAR:
+        return pillar(BROADCAST_PILLAR[key])["lit"]
+    if key in BROADCAST_SPEAKER:
+        speaker = pillar_in(body)
+        return speaker["lit"] if speaker else None
+    for p in PILLARS:
+        if head == p["who"] or (head in ("反仪式", "罪域") and tail in (p["who"], p["sin"])):
+            return p["lit"]
+    return None
+
+
+# ---------------------------------------------------------------------------
 # Self-check (§1.6) -- run by check_ui_palette.py on every build
 # ---------------------------------------------------------------------------
 TEXT_COLOURS = dict(

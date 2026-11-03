@@ -5,7 +5,7 @@ particle dust_color_transition{from_color:[0.31,0.62,0.94],to_color:[0.11,0.31,0
 particle dust_color_transition{from_color:[0.31,0.62,0.94],to_color:[0.11,0.31,0.45],scale:2.5} ~ ~0.50 ~ 11 0.14 11 0.045 116 force
 particle nautilus ~ ~1.15 ~ 12 1.8 12 0.07 138 force
 particle bubble_column_up ~ ~1.55 ~ 8 1.2 8 0.045 58 force
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪域·利维坦] ","color":"#4F9EF0","italic":false,"bold":true},{"text":"海渊重压 · 三重罪域爆发，退入法阵四格庇护圈。","color":"gray","italic":false}]
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪域・利维坦] ","color":"#4F9EF0","bold":true,"italic":false},{"text":"海渊重压 · 三重罪域爆发，退入法阵四格庇护圈。","color":"gray","italic":false}]
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle nautilus ~ ~1 ~ 0.65 0.95 0.65 0.06 22 force
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle bubble_pop ~ ~1 ~ 0.38 0.60 0.38 0.04 12 force
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] run damage @s 10 minecraft:magic

@@ -5,7 +5,7 @@ particle dust_color_transition{from_color:[0.71,0.85,0.34],to_color:[0.35,0.42,0
 particle dust_color_transition{from_color:[0.71,0.85,0.34],to_color:[0.35,0.42,0.12],scale:2.5} ~ ~0.50 ~ 11 0.14 11 0.045 116 force
 particle spore_blossom_air ~ ~1.15 ~ 12 1.8 12 0.07 138 force
 particle mycelium ~ ~1.55 ~ 8 1.2 8 0.045 58 force
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪域·别西卜] ","color":"#B5D957","italic":false,"bold":true},{"text":"腐宴开席 · 三重罪域爆发，退入法阵四格庇护圈。","color":"gray","italic":false}]
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪域・别西卜] ","color":"#B5D957","bold":true,"italic":false},{"text":"腐宴开席 · 三重罪域爆发，退入法阵四格庇护圈。","color":"gray","italic":false}]
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle spore_blossom_air ~ ~1 ~ 0.65 0.95 0.65 0.06 22 force
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle infested ~ ~1 ~ 0.38 0.60 0.38 0.04 12 force
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] run damage @s 8 minecraft:magic
