@@ -126,6 +126,8 @@ python add_vanguard.py ../resourcepack ../rpg
 # 麾下五名罪仆换上沉没骷髅外观（派蒙改用掠夺者底子）
 python add_leviathan_model.py ../resourcepack ../rpg
 python add_sunken_skeleton.py ../resourcepack ../rpg
+# 都灵裹尸布与圣荆棘冠换上 Dungeons 全金属盔甲外观（只改这两件：去纹饰与染色，加 equippable 与图标）
+python add_full_metal_armor.py ../resourcepack ../rpg
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.
