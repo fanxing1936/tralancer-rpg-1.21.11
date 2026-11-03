@@ -51,6 +51,9 @@ python add_holy_items.py ../rpg
 python retype_longinus.py ../resourcepack ../rpg
 # 如意金箍棒同样迁到原生下界合金枪，并保留独立 GUI／手持模型。
 python retype_wukong.py ../resourcepack ../rpg
+# 米迦勒脊骨／肋骨：[神圣] 双持圣骸。要在 add_twins 之后（借它的副手索引块），
+# 早于 opt_index、make_boxes、polish_ui 与 polish_vfx。
+python add_michael.py ../resourcepack ../rpg
 # 更新前旧武器的首批现代化：统一命中入口、玩家独立状态与 HUD 反馈。
 # 必须早于 opt_actionbar，让新增提示也进入唯一 actionbar 出口。
 python modernize_legacy_weapons.py ../rpg

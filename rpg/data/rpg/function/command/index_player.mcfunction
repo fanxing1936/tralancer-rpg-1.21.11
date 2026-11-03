@@ -47,6 +47,8 @@ tag @s remove rpg.h.vine_tag1
 tag @s remove rpg.h.truth_tag1
 tag @s remove rpg.h.jachin_tag1
 tag @s remove rpg.h.boaz_tag1
+tag @s remove rpg.h.michael_spine_tag1
+tag @s remove rpg.h.michael_rib_tag1
 tag @s remove rpg.h.lucifer_tag1
 tag @s remove rpg.h.leviathan_tag1
 tag @s remove rpg.h.wilt_tag1
@@ -61,6 +63,8 @@ tag @s remove rpg.h.dawn_tag1
 tag @s remove rpg.h.chime_tag1
 tag @s remove rpg.o.jachin_tag1
 tag @s remove rpg.o.boaz_tag1
+tag @s remove rpg.o.michael_spine_tag1
+tag @s remove rpg.o.michael_rib_tag1
 tag @s remove rpg.e.chest_absorption_tag1
 tag @s remove rpg.e.chest_boom_tag1
 tag @s remove rpg.e.chest_chestplate_tag1
@@ -123,6 +127,8 @@ execute if items entity @s weapon.mainhand *[minecraft:custom_data~{vine_tag:1b}
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{truth_tag:1b}] run tag @s add rpg.h.truth_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{jachin_tag:1b}] run tag @s add rpg.h.jachin_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{boaz_tag:1b}] run tag @s add rpg.h.boaz_tag1
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{michael_spine_tag:1b}] run tag @s add rpg.h.michael_spine_tag1
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{michael_rib_tag:1b}] run tag @s add rpg.h.michael_rib_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{lucifer_tag:1b}] run tag @s add rpg.h.lucifer_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{leviathan_tag:1b}] run tag @s add rpg.h.leviathan_tag1
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{wilt_tag:1b}] run tag @s add rpg.h.wilt_tag1
@@ -137,6 +143,8 @@ execute if items entity @s weapon.mainhand *[minecraft:custom_data~{dawn_tag:1b}
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{chime_tag:1b}] run tag @s add rpg.h.chime_tag1
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{jachin_tag:1b}] run tag @s add rpg.o.jachin_tag1
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{boaz_tag:1b}] run tag @s add rpg.o.boaz_tag1
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{michael_spine_tag:1b}] run tag @s add rpg.o.michael_spine_tag1
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{michael_rib_tag:1b}] run tag @s add rpg.o.michael_rib_tag1
 execute if items entity @s armor.chest *[minecraft:custom_data~{absorption_tag:1b}] run tag @s add rpg.e.chest_absorption_tag1
 execute if items entity @s armor.chest *[minecraft:custom_data~{boom_tag:1b}] run tag @s add rpg.e.chest_boom_tag1
 execute if items entity @s armor.chest *[minecraft:custom_data~{chestplate_tag:1b}] run tag @s add rpg.e.chest_chestplate_tag1

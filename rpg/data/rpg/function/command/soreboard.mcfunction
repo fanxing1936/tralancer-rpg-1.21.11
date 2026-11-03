@@ -191,6 +191,16 @@ scoreboard objectives add rpg_mam_win dummy
 scoreboard objectives add rpg_mam_dw dummy
 scoreboard players set #mam_full rpg_hud 40
 
+##米迦勒圣骸
+scoreboard objectives add rpg_mi_dmg minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add rpg_mi_flame dummy
+scoreboard objectives add rpg_mi_ttl dummy
+scoreboard objectives add rpg_mi_fuse dummy
+scoreboard objectives add rpg_mi_hold dummy
+scoreboard objectives add rpg_mi_last dummy
+scoreboard objectives add rpg_mi_cd dummy
+scoreboard objectives add rpg_mi_tmp dummy
+
 # 老武器现代化：状态全部归玩家，不再 reset * 互踩
 scoreboard objectives add rpg_leg_cd dummy
 scoreboard objectives add rpg_pen_mode dummy

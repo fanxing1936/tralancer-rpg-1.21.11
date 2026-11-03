@@ -1224,6 +1224,160 @@
    "potion_contents": null
   },
   {
+   "item": "netherite_spear",
+   "name": "米迦勒脊骨",
+   "rarity": "神圣",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "天使长呼喊[谁似神]",
+    "三分之一的[星辰]应声坠落",
+    "+------------------+",
+    "🗡主动技能[谁似神]",
+    "蓄力1秒，前方10格骨刺破土，挑飞并重创",
+    "恶魔受到的伤害提高50%%并被点燃",
+    "与[米迦勒肋骨]双持时骨刺延至16格并叠上圣焰",
+    "+------------------+"
+   ],
+   "id": "netherite_spear",
+   "enchantments": {
+    "sharpness": 5,
+    "fire_aspect": 2,
+    "lunge": 2,
+    "looting": 2,
+    "unbreaking": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 12,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -3.1,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "entity_interaction_range",
+     "amount": 1,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "armor",
+     "amount": 4,
+     "op": "add_value",
+     "slot": "offhand"
+    },
+    {
+     "attr": "knockback_resistance",
+     "amount": 0.3,
+     "op": "add_value",
+     "slot": "offhand"
+    }
+   ],
+   "tags": [
+    "holy_weapon_tag",
+    "michael_spine_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "michael_spine_tag": 1,
+    "holy_weapon_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110040.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "netherite_sword",
+   "name": "米迦勒肋骨",
+   "rarity": "神圣",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "取自天使长[肋旁]的一根骨",
+    "火在其中，从未[熄灭]",
+    "+------------------+",
+    "🪓被动技能[圣焰]",
+    "命中叠加圣焰，第3层引燃并灼烧",
+    "恶魔额外受创并显形",
+    "与[米迦勒脊骨]双持时每2层引燃，对路西法加倍",
+    "+------------------+"
+   ],
+   "id": "netherite_sword",
+   "enchantments": {
+    "sharpness": 5,
+    "sweeping_edge": 3,
+    "fire_aspect": 2,
+    "looting": 3,
+    "unbreaking": 3
+   },
+   "modifiers": [
+    {
+     "attr": "attack_damage",
+     "amount": 9,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_speed",
+     "amount": -2.2,
+     "op": "add_value",
+     "slot": "mainhand"
+    },
+    {
+     "attr": "attack_damage",
+     "amount": 4,
+     "op": "add_value",
+     "slot": "offhand"
+    }
+   ],
+   "tags": [
+    "holy_weapon_tag",
+    "michael_rib_tag",
+    "sword_tag"
+   ],
+   "custom_data": {
+    "michael_rib_tag": 1,
+    "holy_weapon_tag": 1,
+    "sword_tag": 1
+   },
+   "cmd": 1110041.0,
+   "unbreakable": true,
+   "consumable": null,
+   "components": [
+    "attribute_modifiers",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "enchantments",
+    "lore",
+    "tooltip_display",
+    "unbreakable"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
    "item": "crossbow",
    "name": "蔚蓝追寻者",
    "rarity": "传说",
