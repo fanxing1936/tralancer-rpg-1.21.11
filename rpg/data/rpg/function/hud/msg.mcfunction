@@ -25,7 +25,7 @@ execute if entity @s[scores={rpg_hud_m=12}] run data modify storage rpg:hud e se
 execute if entity @s[scores={rpg_hud_m=12}] run function rpg:hud/seal/event with storage rpg:hud
 execute if entity @s[scores={rpg_hud_m=13}] run data modify storage rpg:hud e set value '["",{"text":"[淬毒]","italic":false,"color":"#5FAF2D","bold":true},{"text":"　三痕归一，蛇毒入骨","italic":false,"color":"#B7E37E"},{"text":" ✦","italic":false,"color":"#EEFFD5"}]'
 execute if entity @s[scores={rpg_hud_m=13}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=14}] run data modify storage rpg:hud e set value '["",{"text":"[严寒风暴]","italic":false,"color":"#45C9E8","bold":true},{"text":"　冻原扩张","italic":false,"color":"#BDEFFF"},{"text":" ✦","italic":false,"color":"#F2FDFF"}]'
+execute if entity @s[scores={rpg_hud_m=14}] run data modify storage rpg:hud e set value '["",{"text":"[严寒风暴]","italic":false,"color":"#45C9E8","bold":true},{"text":"　冻原扩张","italic":false,"color":"#BDEFFF"},{"text":" ✦","italic":false,"color":"#E8F4FF"}]'
 execute if entity @s[scores={rpg_hud_m=14}] run function rpg:hud/seal/event with storage rpg:hud
 execute if entity @s[scores={rpg_hud_m=15}] run data modify storage rpg:hud e set value '["",{"text":"[珊瑚突刺]","italic":false,"color":"#E56DB8","bold":true},{"text":"　潮锋贯出","italic":false,"color":"#FFC4E6"},{"text":" ✦","italic":false,"color":"#FFF0F9"}]'
 execute if entity @s[scores={rpg_hud_m=15}] run function rpg:hud/seal/event with storage rpg:hud
@@ -37,27 +37,27 @@ execute if entity @s[scores={rpg_hud_m=18}] run data modify storage rpg:hud e se
 execute if entity @s[scores={rpg_hud_m=18}] run function rpg:hud/seal/event with storage rpg:hud
 execute if entity @s[scores={rpg_hud_m=19}] run data modify storage rpg:hud e set value '["",{"text":"[烈焰]","italic":false,"color":"#FF5A36","bold":true},{"text":"　焚尽前路","italic":false,"color":"#FFC0AA"},{"text":" ✦","italic":false,"color":"#FFF0E8"}]'
 execute if entity @s[scores={rpg_hud_m=19}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=20}] run data modify storage rpg:hud e set value '["",{"text":"[钢刃]","italic":false,"color":"#55C6E3","bold":true},{"text":"　剑气出鞘","italic":false,"color":"#BFEAF4"},{"text":" ✦","italic":false,"color":"#F3FDFF"}]'
+execute if entity @s[scores={rpg_hud_m=20}] run data modify storage rpg:hud e set value '["",{"text":"[钢刃]","italic":false,"color":"#55C6E3","bold":true},{"text":"　剑气出鞘","italic":false,"color":"#BFEAF4"},{"text":" ✦","italic":false,"color":"#E8F4FF"}]'
 execute if entity @s[scores={rpg_hud_m=20}] run function rpg:hud/seal/event with storage rpg:hud
 execute if entity @s[scores={rpg_hud_m=21}] run data modify storage rpg:hud e set value '["",{"text":"[风暴]","italic":false,"color":"#59B94C","bold":true},{"text":"　风弹离手","italic":false,"color":"#BFE4B5"},{"text":" ✦","italic":false,"color":"#F0FFE9"}]'
 execute if entity @s[scores={rpg_hud_m=21}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=22}] run data modify storage rpg:hud e set value '["",{"text":"[买断]","italic":false,"color":"#B7950B","bold":true},{"text":"　金箭离弦","italic":false,"color":"#FFD700"},{"text":" ✦","italic":false,"color":"#FFF2A8"}]'
+execute if entity @s[scores={rpg_hud_m=22}] run data modify storage rpg:hud e set value '["",{"text":"[买断]","italic":false,"color":"#E6A23C","bold":true},{"text":"　金箭离弦","italic":false,"color":"#FFFFFF"},{"text":" ✦","italic":false,"color":"#E6A23C"}]'
 execute if entity @s[scores={rpg_hud_m=22}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=23}] run data modify storage rpg:hud e set value '["",{"text":"[买断]","italic":false,"color":"#B7950B","bold":true},{"text":"　付不起 —— 于是拿命抵了","italic":false,"color":"dark_red"}]'
+execute if entity @s[scores={rpg_hud_m=23}] run data modify storage rpg:hud e set value '["",{"text":"[买断]","italic":false,"color":"#E6A23C","bold":true},{"text":"　付不起 —— 于是拿命抵了","italic":false,"color":"dark_red"}]'
 execute if entity @s[scores={rpg_hud_m=23}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=24}] run data modify storage rpg:hud e set value '["",{"text":"[买断]","italic":false,"color":"#B7950B","bold":true},{"text":"　付讫：5 级","italic":false,"color":"gray"}]'
+execute if entity @s[scores={rpg_hud_m=24}] run data modify storage rpg:hud e set value '["",{"text":"[买断]","italic":false,"color":"#E6A23C","bold":true},{"text":"　付讫：5 级","italic":false,"color":"gray"}]'
 execute if entity @s[scores={rpg_hud_m=24}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=25}] run data modify storage rpg:hud e set value '["",{"text":"[通行费]","italic":false,"color":"#B7950B","bold":true},{"text":"　玛门收走了 6 点经验","italic":false,"color":"#B7950B","bold":false}]'
+execute if entity @s[scores={rpg_hud_m=25}] run data modify storage rpg:hud e set value '["",{"text":"[通行费]","italic":false,"color":"#E6A23C","bold":true},{"text":"　玛门收走了 6 点经验","italic":false,"color":"#E6A23C","bold":false}]'
 execute if entity @s[scores={rpg_hud_m=25}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=26}] run data modify storage rpg:hud e set value '["",{"text":"[什一税]","italic":false,"color":"#B7950B","bold":true},{"text":"　玛门收走了 1 枚","italic":false,"color":"#B7950B","bold":false}]'
+execute if entity @s[scores={rpg_hud_m=26}] run data modify storage rpg:hud e set value '["",{"text":"[什一税]","italic":false,"color":"#E6A23C","bold":true},{"text":"　玛门收走了 1 枚","italic":false,"color":"#E6A23C","bold":false}]'
 execute if entity @s[scores={rpg_hud_m=26}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=27}] run data modify storage rpg:hud e set value '["",{"text":"[血税]","italic":false,"color":"#B7950B","bold":true},{"text":"　玛门称走了你的一份血","italic":false,"color":"#B7950B","bold":false}]'
+execute if entity @s[scores={rpg_hud_m=27}] run data modify storage rpg:hud e set value '["",{"text":"[血税]","italic":false,"color":"#E6A23C","bold":true},{"text":"　玛门称走了你的一份血","italic":false,"color":"#E6A23C","bold":false}]'
 execute if entity @s[scores={rpg_hud_m=27}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=28}] run data modify storage rpg:hud e set value '["",{"text":"[饥荒]","italic":false,"color":"#B7950B","bold":true},{"text":"　你的下一顿也被算进账里","italic":false,"color":"gray"}]'
+execute if entity @s[scores={rpg_hud_m=28}] run data modify storage rpg:hud e set value '["",{"text":"[饥荒]","italic":false,"color":"#E6A23C","bold":true},{"text":"　你的下一顿也被算进账里","italic":false,"color":"gray"}]'
 execute if entity @s[scores={rpg_hud_m=28}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=29}] run data modify storage rpg:hud e set value '["",{"text":"[贪得无厌]","italic":false,"color":"#B7950B","bold":true},{"text":"　这一箭，玛门收了两样","italic":false,"color":"dark_red"}]'
+execute if entity @s[scores={rpg_hud_m=29}] run data modify storage rpg:hud e set value '["",{"text":"[贪得无厌]","italic":false,"color":"#E6A23C","bold":true},{"text":"　这一箭，玛门收了两样","italic":false,"color":"dark_red"}]'
 execute if entity @s[scores={rpg_hud_m=29}] run function rpg:hud/seal/event with storage rpg:hud
-execute if entity @s[scores={rpg_hud_m=30}] run data modify storage rpg:hud e set value '["",{"text":"[什一税]","italic":false,"color":"#B7950B","bold":true},{"text":"　柱中的东西替你付了账","italic":false,"color":"dark_red"}]'
+execute if entity @s[scores={rpg_hud_m=30}] run data modify storage rpg:hud e set value '["",{"text":"[什一税]","italic":false,"color":"#E6A23C","bold":true},{"text":"　柱中的东西替你付了账","italic":false,"color":"dark_red"}]'
 execute if entity @s[scores={rpg_hud_m=30}] run function rpg:hud/seal/event with storage rpg:hud
 execute if entity @s[scores={rpg_hud_m=31}] run data modify storage rpg:hud e set value '["",{"text":"你已与另一柱立约","italic":true,"color":"dark_red"}]'
 execute if entity @s[scores={rpg_hud_m=31}] run function rpg:hud/seal/event with storage rpg:hud

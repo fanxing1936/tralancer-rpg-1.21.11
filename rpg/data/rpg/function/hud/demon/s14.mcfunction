@@ -1,1 +1,1 @@
-title @s actionbar ["",{"text":"\uf00d\uf04d","font":"rpg:combat_prompt","italic":false,"color":"white"},{"text":"\uf10d","font":"rpg:combat_prompt"},{"text":"\uf20d","font":"rpg:combat_prompt"}]
+title @s actionbar ["",{"text":"\uf00d\uf04d\uf08d\uf0cd","font":"rpg:combat_prompt","italic":false,"color":"white"},{"text":"\uf10d","font":"rpg:combat_prompt"},{"text":"\uf20d","font":"rpg:combat_prompt"}]

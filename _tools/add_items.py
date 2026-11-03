@@ -13,6 +13,8 @@ import os
 import re
 import sys
 
+import rpg_ui_style as ui
+
 RP = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else "../resourcepack")
 DP = os.path.abspath(sys.argv[2] if len(sys.argv) > 2 else "../rpg")
 
@@ -158,50 +160,50 @@ def skill_line(icon, kind, name, colour):
 
 
 def name_tag(tier, tier_colour, name, name_colour):
-    return ('["",{"text":"[%s]","italic":false,"color":"%s","bold":true},'
-            '{"text":"%s","italic":false,"color":"%s"}]'
+    return ('["",{"text":"%s","italic":false,"color":"%s","bold":true},'
+            '{"text":"%s","italic":false,"color":"%s","bold":false}]'
             % (tier, tier_colour, name, name_colour))
 
 
 ITEMS = [
-    dict(key="azure_seeker", id="crossbow", cmd=1110003, tier="legend", tier_colour="gold",
+    dict(key="azure_seeker", id="crossbow", cmd=1110003, tier="legend",
          name="蔚蓝追寻者", colour="aqua",
          flavour=[[("[深海]", "aqua"), "之下沉睡的弩"], ["循着潮声", ("[追寻]", "aqua"), "猎物"]],
-         icon="🏹", kind="被动技能", skill="深潜", skill_colour="gold",
+         icon="🏹", kind="被动技能", skill="深潜", skill_colour=None,
          skill_text="命中后将目标拽入深渊并锚定",
          ench="{piercing:4,power:4,quick_charge:3,unbreaking:3}",
          attrs=[("oxygen_bonus", 4, "add_value", "any")],
          data="{deep_seek_tag:1b,bow_tag:1b}"),
-    dict(key="baby_crossbow", id="crossbow", cmd=1110004, tier="epic", tier_colour="dark_purple",
+    dict(key="baby_crossbow", id="crossbow", cmd=1110004, tier="epic",
          name="稚弩", colour="light_purple",
          flavour=[["孩童手中的", ("[玩具]", "light_purple")], ["却淬着大人的", ("[恶意]", "light_purple")]],
-         icon="🏹", kind="被动技能", skill="顽劣", skill_colour="dark_purple",
+         icon="🏹", kind="被动技能", skill="顽劣", skill_colour=None,
          skill_text="命中后令目标眩晕脱力并现形",
          ench="{quick_charge:4,multishot:1,piercing:2}",
          attrs=[("movement_speed", 0.05, "add_multiplied_base", "mainhand")],
          data="{mischief_tag:1b,bow_tag:1b}"),
-    dict(key="burst_gale_bow", id="bow", cmd=1110002, tier="legend", tier_colour="gold",
+    dict(key="burst_gale_bow", id="bow", cmd=1110002, tier="legend",
          name="疾风迸发之弓", colour="yellow",
          flavour=[["风自", ("[裂隙]", "yellow"), "中迸发"], ["每一箭都是一场", ("[风暴]", "yellow")]],
-         icon="🏹", kind="被动技能", skill="裂空", skill_colour="gold",
+         icon="🏹", kind="被动技能", skill="裂空", skill_colour=None,
          skill_text="命中处炸开风隙掀飞三格内敌人",
          ench="{power:5,punch:2,infinity:1,unbreaking:3}",
          attrs=[("movement_speed", 0.1, "add_multiplied_base", "mainhand")],
          data="{rift_tag:1b,bow_tag:1b}"),
-    dict(key="vine_whip", id="fishing_rod", cmd=1110001, tier="epic", tier_colour="dark_purple",
+    dict(key="vine_whip", id="fishing_rod", cmd=1110001, tier="epic",
          name="藤蔓之鞭", colour="green",
          flavour=[["自丛林深处", ("[垂落]", "green")], ["缠绕即是", ("[死亡]", "green")]],
-         icon="🗡", kind="主动技能", skill="缠绕", skill_colour="dark_purple",
+         icon="🗡", kind="主动技能", skill="缠绕", skill_colour=None,
          skill_text="右键甩鞭消耗1级经验拽近敌人并连抽六鞭",
          ench="{unbreaking:3,lure:3,luck_of_the_sea:3}",
          attrs=[("attack_damage", 5, "add_value", "mainhand"),
                 ("attack_speed", -1.5, "add_value", "mainhand"),
                 ("entity_interaction_range", 2, "add_value", "mainhand")],
          data="{vine_tag:1b,sword_tag:1b}"),
-    dict(key="truthseeker", id="netherite_sword", cmd=1110011, tier="epic", tier_colour="dark_purple",
+    dict(key="truthseeker", id="netherite_sword", cmd=1110011, tier="epic",
          name="求真之刃", colour="red",
          flavour=[["刺穿谎言的", ("[利刃]", "red")], ["唯有", ("[真实]", "red"), "无法被斩断"]],
-         icon="🪓", kind="被动技能", skill="洞悉", skill_colour="dark_purple",
+         icon="🪓", kind="被动技能", skill="洞悉", skill_colour=None,
          skill_text="命中使目标显形残血时追加真实伤害",
          ench="{sharpness:4,looting:2,sweeping_edge:3}",
          attrs=[("attack_damage", 9, "add_value", "mainhand"),
@@ -221,7 +223,9 @@ def build_give():
         for f in it["flavour"]:
             lore.append(line(f))
         lore.append(RULE)
-        lore.append(skill_line(it["icon"], it["kind"], it["skill"], it["skill_colour"]))
+        # 本名一律白色（ART-STYLE.md §2.1）；原来借本名表达的意象色移到技能名上。
+        lore.append(skill_line(it["icon"], it["kind"], it["skill"],
+                               ui.readable(it["skill_colour"] or it["colour"])))
         lore.append(line([it["skill_text"]]))
         lore.append(RULE)
         mods = ",".join(
@@ -238,7 +242,7 @@ def build_give():
             "give @a %s[custom_name=%s,lore=[%s],enchantments=%s,"
             "attribute_modifiers=[%s],%scustom_model_data={floats:[%d.0f]},"
             "custom_data=%s]"
-            % (it["id"], name_tag(it["tier"], it["tier_colour"], it["name"], it["colour"]),
+            % (it["id"], name_tag(ui.tier_tag(it["tier"]), ui.tier_colour(it["tier"]), it["name"], ui.WHITE),
                ",".join(lore), it["ench"], mods, edible, it["cmd"], it["data"]))
     with io.open(os.path.join(GIVE, "extra.mcfunction"), "w",
                  encoding="utf-8", newline="\n") as fh:

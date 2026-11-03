@@ -16,6 +16,9 @@ GRADE = {
     "brave": ("brave", "勇者"), "barve": ("brave", "勇者"),   # author's typo
     "uncommon": ("none", "常见"), "food": ("none", "食物"),
     "currency": ("none", "货币"), "item": ("none", "材料"),
+    # canonical tags since ART-STYLE.md §2.1 (polish_ui rewrites loot names too)
+    "传说": ("legend", "传说"), "史诗": ("epic", "史诗"), "勇者": ("brave", "勇者"),
+    "货币": ("none", "货币"),
 }
 
 

@@ -17,12 +17,14 @@
                 {
                   "text": "[food]",
                   "italic": false,
-                  "color": "#663333",
+                  "color": "#B16363",
                   "bold": true
                 },
                 {
                   "text": "压缩肉干",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -57,7 +59,7 @@
                   {
                     "text": "[硬通货]",
                     "italic": false,
-                    "color": "#663333",
+                    "color": "#B16363",
                     "bold": true
                   }
                 ],
@@ -71,7 +73,7 @@
                   {
                     "text": "[佳肴]",
                     "italic": false,
-                    "color": "#663333",
+                    "color": "#B16363",
                     "bold": true
                   }
                 ],
@@ -99,14 +101,16 @@
               "name": [
                 "",
                 {
-                  "text": "[currency]",
+                  "text": "[货币]",
                   "italic": false,
-                  "color": "gold",
+                  "color": "#FFAA00",
                   "bold": true
                 },
                 {
                   "text": "货币",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -215,14 +219,16 @@
               "name": [
                 "",
                 {
-                  "text": "[legend]",
+                  "text": "[传说]",
                   "italic": false,
-                  "color": "gold",
+                  "color": "#FFAA00",
                   "bold": true
                 },
                 {
                   "text": "灾厄试炼之匙",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -304,14 +310,16 @@
               "name": [
                 "",
                 {
-                  "text": "[legend]",
+                  "text": "[传说]",
                   "italic": false,
-                  "color": "gold",
+                  "color": "#FFAA00",
                   "bold": true
                 },
                 {
                   "text": "不死图腾",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"

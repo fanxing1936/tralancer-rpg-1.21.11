@@ -7,4 +7,4 @@ particle dust{color:[1.0,0.12,0.08],scale:1.5} ~2 ~0.1 ~ 0.2 0.1 2 0.02 35 force
 particle dust{color:[1.0,0.12,0.08],scale:1.5} ~-2 ~0.1 ~ 0.2 0.1 2 0.02 35 force
 particle dust{color:[1.0,0.12,0.08],scale:1.5} ~ ~0.1 ~2 2 0.1 0.2 0.02 35 force
 particle dust{color:[1.0,0.12,0.08],scale:1.5} ~ ~0.1 ~-2 2 0.1 0.2 0.02 35 force
-tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"[反仪式·暴怒] ","color":"#FF7A70","bold":true,"italic":false},{"text":"萨麦尔击碎法阵边缘并震开守阵者。","color":"gray","italic":false}]
+tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"[反仪式・暴怒] ","color":"#FF5C52","bold":true,"italic":false},{"text":"萨麦尔击碎法阵边缘并震开守阵者。","color":"gray","italic":false}]

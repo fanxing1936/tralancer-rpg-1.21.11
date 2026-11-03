@@ -21,6 +21,8 @@ import json
 import os
 import sys
 
+import rpg_ui_style as ui
+
 RP = sys.argv[1] if len(sys.argv) > 1 else "../resourcepack"
 DP = sys.argv[2] if len(sys.argv) > 2 else "../rpg"
 
@@ -130,7 +132,7 @@ CONSUMABLE = ('{consume_seconds:%df,animation:"eat",'
               'on_consume_effects:[]}' % CONSUME)
 
 JACHIN = ("give @a netherite_sword["
-          "custom_name=" + row(seg("[legend]", "gold", True), seg("雅斤", "light_purple")) + ","
+          "custom_name=" + row(seg(ui.tier_tag("legend"), ui.tier_colour("legend"), True), seg("雅斤", ui.WHITE)) + ","
           "lore=[" + ",".join([
               RULE,
               row(seg("所罗门圣殿右侧的"), seg("[石柱]", "light_purple", True)),
@@ -151,7 +153,7 @@ JACHIN = ("give @a netherite_sword["
           "custom_data={jachin_tag:1b,sword_tag:1b}]")
 
 BOAZ = ("give @a netherite_sword["
-        "custom_name=" + row(seg("[legend]", "gold", True), seg("波阿斯", "aqua")) + ","
+        "custom_name=" + row(seg(ui.tier_tag("legend"), ui.tier_colour("legend"), True), seg("波阿斯", ui.WHITE)) + ","
         "lore=[" + ",".join([
             RULE,
             row(seg("所罗门圣殿左侧的"), seg("[石柱]", "aqua", True)),

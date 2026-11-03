@@ -68,9 +68,9 @@
               "name": [
                 "",
                 {
-                  "text": "[barve]",
+                  "text": "[勇者]",
                   "italic": false,
-                  "color": "dark_aqua",
+                  "color": "#00AAAA",
                   "bold": true
                 },
                 {
@@ -79,7 +79,9 @@
                 },
                 {
                   "text": "的遗物",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -185,9 +187,9 @@
               "name": [
                 "",
                 {
-                  "text": "[barve]",
+                  "text": "[勇者]",
                   "italic": false,
-                  "color": "dark_aqua",
+                  "color": "#00AAAA",
                   "bold": true
                 },
                 {
@@ -196,7 +198,9 @@
                 },
                 {
                   "text": "的金剑",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -302,9 +306,9 @@
               "name": [
                 "",
                 {
-                  "text": "[barve]",
+                  "text": "[勇者]",
                   "italic": false,
-                  "color": "dark_aqua",
+                  "color": "#00AAAA",
                   "bold": true
                 },
                 {
@@ -313,7 +317,9 @@
                 },
                 {
                   "text": "的战利品",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -375,7 +381,7 @@
                   {
                     "text": "[武器]",
                     "italic": false,
-                    "color": "dark_purple",
+                    "color": "#D31ED3",
                     "bold": true
                   }
                 ],
@@ -389,7 +395,7 @@
                   {
                     "text": "[刀刃]",
                     "italic": false,
-                    "color": "dark_purple",
+                    "color": "#D31ED3",
                     "bold": true
                   }
                 ],
@@ -410,14 +416,16 @@
               "name": [
                 "",
                 {
-                  "text": "[epic]",
+                  "text": "[史诗]",
                   "italic": false,
-                  "color": "dark_purple",
+                  "color": "#B85CF0",
                   "bold": true
                 },
                 {
                   "text": "钻石剑！",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -490,14 +498,16 @@
               "name": [
                 "",
                 {
-                  "text": "[currency]",
+                  "text": "[货币]",
                   "italic": false,
-                  "color": "gold",
+                  "color": "#FFAA00",
                   "bold": true
                 },
                 {
                   "text": "货币",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"
@@ -628,7 +638,7 @@
                   {
                     "text": "[遗物]",
                     "italic": false,
-                    "color": "dark_gray",
+                    "color": "#797979",
                     "bold": true
                   }
                 ],
@@ -642,7 +652,7 @@
                   {
                     "text": "[证据]",
                     "italic": false,
-                    "color": "dark_gray",
+                    "color": "#797979",
                     "bold": true
                   }
                 ],
@@ -663,14 +673,16 @@
               "name": [
                 "",
                 {
-                  "text": "[item]",
+                  "text": "[货币]",
                   "italic": false,
-                  "color": "dark_gray",
+                  "color": "#797979",
                   "bold": true
                 },
                 {
                   "text": "腐肉",
-                  "italic": false
+                  "italic": false,
+                  "color": "#FFFFFF",
+                  "bold": false
                 }
               ],
               "target": "custom_name"

@@ -12,6 +12,7 @@ import os
 import sys
 
 import add_true_name_rite as rite
+import rpg_ui_style as ui
 import add_exorcism_expansion as expansion
 
 
@@ -384,34 +385,42 @@ playsound minecraft:entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 0.9 0
                 "execute as @a[distance=5..24,gamemode=!spectator,gamemode=!creative] run damage @s 6 minecraft:magic"]),
         ],
     }
+    # 双色渐变两端取七柱色板：亮端 -> 深端（ART-STYLE.md §6）。
     # 复用罪器、史诗武器与恶魔大招已经形成的视觉语言：双色渐变负责轮廓，
     # signature 表达材质，hit 只在玩家身上做命中反馈，finisher 用于终末波。
     themes = {
-        1: dict(start="[0.19,0.85,0.49]", end="[0.0,0.18,0.07]",
+        1: dict(start="[%s]" % ui.floats(ui.pillar(1)["lit"]),
+                end="[%s]" % ui.floats(ui.pillar(1)["deep"]),
                 signature="end_rod", hit="enchanted_hit", finisher="dragon_breath",
                 alt_signature="dragon_breath", alt_hit="crit", alt_finisher="reverse_portal",
                 sound="minecraft:entity.evoker.prepare_attack"),
-        2: dict(start="[0.24,0.66,0.91]", end="[0.02,0.09,0.18]",
+        2: dict(start="[%s]" % ui.floats(ui.pillar(2)["lit"]),
+                end="[%s]" % ui.floats(ui.pillar(2)["deep"]),
                 signature="bubble_column_up", hit="bubble_pop", finisher="nautilus",
                 alt_signature="splash", alt_hit="enchanted_hit", alt_finisher="splash",
                 sound="minecraft:entity.guardian.attack"),
-        3: dict(start="[0.57,0.57,0.61]", end="[0.04,0.03,0.07]",
+        3: dict(start="[%s]" % ui.floats(ui.pillar(3)["lit"]),
+                end="[%s]" % ui.floats(ui.pillar(3)["deep"]),
                 signature="soul", hit="sculk_charge_pop", finisher="reverse_portal",
                 alt_signature="sculk_soul", alt_hit="damage_indicator", alt_finisher="soul_fire_flame",
                 sound="minecraft:entity.warden.sonic_boom"),
-        4: dict(start="[0.72,0.78,0.29]", end="[0.14,0.17,0.03]",
+        4: dict(start="[%s]" % ui.floats(ui.pillar(4)["lit"]),
+                end="[%s]" % ui.floats(ui.pillar(4)["deep"]),
                 signature="mycelium", hit="infested", finisher="ash",
                 alt_signature="spore_blossom_air", alt_hit="item_slime", alt_finisher="spore_blossom_air",
                 sound="minecraft:entity.spider.ambient"),
-        5: dict(start="[0.89,0.30,0.30]", end="[0.24,0.0,0.04]",
+        5: dict(start="[%s]" % ui.floats(ui.pillar(5)["lit"]),
+                end="[%s]" % ui.floats(ui.pillar(5)["deep"]),
                 signature="soul_fire_flame", hit="damage_indicator", finisher="sweep_attack",
                 alt_signature="flame", alt_hit="crit", alt_finisher="flame",
                 sound="minecraft:entity.ravager.roar"),
-        6: dict(start="[0.75,0.42,0.91]", end="[0.12,0.0,0.18]",
+        6: dict(start="[%s]" % ui.floats(ui.pillar(6)["lit"]),
+                end="[%s]" % ui.floats(ui.pillar(6)["deep"]),
                 signature="reverse_portal", hit="heart", finisher="portal",
                 alt_signature="witch", alt_hit="enchanted_hit", alt_finisher="witch",
                 sound="minecraft:entity.illusioner.prepare_mirror"),
-        7: dict(start="[0.89,0.73,0.23]", end="[0.20,0.10,0.0]",
+        7: dict(start="[%s]" % ui.floats(ui.pillar(7)["lit"]),
+                end="[%s]" % ui.floats(ui.pillar(7)["deep"]),
                 signature="end_rod", hit="firework", finisher="totem_of_undying",
                 alt_signature="wax_on", alt_hit="crit", alt_finisher="wax_on",
                 sound="minecraft:block.amethyst_block.resonate"),

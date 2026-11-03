@@ -2,6 +2,7 @@
 scoreboard objectives add rpg_vg_anim dummy
 scoreboard objectives add rpg_vg_t dummy
 scoreboard objectives add rpg_vg_mv dummy
+scoreboard objectives add rpg_vg_mc dummy
 scoreboard objectives add rpg_vg_x dummy
 scoreboard objectives add rpg_vg_z dummy
 scoreboard objectives add rpg_vg dummy

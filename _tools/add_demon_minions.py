@@ -13,6 +13,8 @@ import os
 import shutil
 import sys
 
+import rpg_ui_style as ui
+
 
 DP = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else "../rpg")
 FUNC = os.path.join(DP, "data/rpg/function")
@@ -21,21 +23,27 @@ ADV = os.path.join(DP, "data/rpg/advancement")
 
 
 LORDS = {
-    1: {"slug": "lucifer", "lord": "路西法", "base": "#00491C", "light": "#72D99A", "particle": "end_rod", "sound": "minecraft:entity.evoker.prepare_attack", "loot": "minecraft:emerald",
+    1: {"slug": "lucifer", "lord": "路西法", "particle": "end_rod", "sound": "minecraft:entity.evoker.prepare_attack", "loot": "minecraft:emerald",
         "spirits": [("bael", "巴力"), ("agares", "阿加雷斯"), ("vassago", "瓦沙克"), ("samigina", "萨米基纳"), ("marbas", "马尔巴士")]},
-    2: {"slug": "leviathan", "lord": "利维坦", "base": "#1B4F72", "light": "#62D9E8", "particle": "nautilus", "sound": "minecraft:entity.guardian.attack", "loot": "minecraft:prismarine_crystals",
+    2: {"slug": "leviathan", "lord": "利维坦", "particle": "nautilus", "sound": "minecraft:entity.guardian.attack", "loot": "minecraft:prismarine_crystals",
         "spirits": [("valefor", "华利弗"), ("amon", "亚蒙"), ("barbatos", "巴巴托斯"), ("paimon", "派蒙"), ("buer", "布耶尔")]},
-    3: {"slug": "abaddon", "lord": "亚巴顿", "base": "#5B5B62", "light": "#C2C2CC", "particle": "sculk_soul", "sound": "minecraft:entity.warden.heartbeat", "loot": "minecraft:bone",
+    3: {"slug": "abaddon", "lord": "亚巴顿", "particle": "sculk_soul", "sound": "minecraft:entity.warden.heartbeat", "loot": "minecraft:bone",
         "spirits": [("gusion", "古辛"), ("sitri", "西迪"), ("beleth", "贝雷特"), ("leraje", "列拉金"), ("eligos", "艾利欧格")]},
-    4: {"slug": "beelzebub", "lord": "别西卜", "base": "#596B18", "light": "#B5D957", "particle": "spore_blossom_air", "sound": "minecraft:entity.spider.ambient", "loot": "minecraft:rotten_flesh",
+    4: {"slug": "beelzebub", "lord": "别西卜", "particle": "spore_blossom_air", "sound": "minecraft:entity.spider.ambient", "loot": "minecraft:rotten_flesh",
         "spirits": [("zepar", "桀派"), ("botis", "布提斯"), ("bathin", "巴钦"), ("sallos", "塞列欧斯"), ("purson", "布松")]},
-    5: {"slug": "samael", "lord": "萨麦尔", "base": "#7B241C", "light": "#FF665E", "particle": "soul_fire_flame", "sound": "minecraft:entity.ravager.roar", "loot": "minecraft:blaze_powder",
+    5: {"slug": "samael", "lord": "萨麦尔", "particle": "soul_fire_flame", "sound": "minecraft:entity.ravager.roar", "loot": "minecraft:blaze_powder",
         "spirits": [("marax", "莫拉格斯"), ("ipos", "因波斯"), ("aim", "艾姆"), ("naberius", "纳贝流士"), ("glasya_labolas", "格拉夏·拉波拉斯")]},
-    6: {"slug": "belial", "lord": "贝利尔", "base": "#57256B", "light": "#C28BE0", "particle": "witch", "sound": "minecraft:entity.illusioner.prepare_blindness", "loot": "minecraft:amethyst_shard",
+    6: {"slug": "belial", "lord": "贝利尔", "particle": "witch", "sound": "minecraft:entity.illusioner.prepare_blindness", "loot": "minecraft:amethyst_shard",
         "spirits": [("bune", "布涅"), ("ronove", "罗诺比"), ("berith", "比利士"), ("astaroth", "亚斯塔禄"), ("forneus", "佛纽司")]},
-    7: {"slug": "mammon", "lord": "玛门", "base": "#987B08", "light": "#FFD85A", "particle": "wax_on", "sound": "minecraft:block.amethyst_block.chime", "loot": "minecraft:gold_nugget",
+    7: {"slug": "mammon", "lord": "玛门", "particle": "wax_on", "sound": "minecraft:block.amethyst_block.chime", "loot": "minecraft:gold_nugget",
         "spirits": [("foras", "佛拉斯"), ("asmoday", "阿斯摩太"), ("gaap", "盖布"), ("furfur", "佛尔佛尔"), ("marchosias", "马可西亚斯")]},
 }
+
+# 名牌与术式提示的颜色只从 rpg_ui_style 取：前缀用柱亮色，本名白色
+# （ART-STYLE.md §1.4、§2.1）。base 是身份深色，只留给需要暗端的地方。
+for _n, _lord in LORDS.items():
+    _lord.update(base=ui.pillar(_n)["deep"], light=ui.pillar(_n)["lit"])
+
 
 ROLES = {
     1: {"name": "先锋", "entity": "vindicator", "health": 92, "attack": 8, "armor": 10, "speed": 0.27, "weapon": "minecraft:iron_sword", "cd": 110, "material": "minecraft:iron_nugget"},
@@ -46,11 +54,13 @@ ROLES = {
 }
 
 # (lord, role) -> fields that differ from ROLES for that one spirit.
-# 别西卜's servants wear a display-entity model over an invisible body
-# (add_vanguard.py); the illusioner renderer draws its body and mirror images
-# even while invisible, so 塞列欧斯 the hexer is a pillager instead -- still a
-# ranged illager, with the crossbow its AI needs.
+# 别西卜's and 利维坦's servants wear a display-entity model over an invisible
+# body (add_vanguard.py, add_sunken_skeleton.py); the illusioner renderer draws
+# its body and mirror images even while invisible, so their hexers 塞列欧斯 and
+# 派蒙 are pillagers instead -- still ranged illagers, with the crossbow their
+# AI needs.
 ROLE_OVERRIDES = {
+    (2, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
     (4, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
 }
 
@@ -191,8 +201,8 @@ def patch_scoreboard_and_hooks():
 def name_json(lord, role, spirit):
     return json.dumps([
         "",
-        {"text": "[罪仆·%s] " % role["name"], "color": lord["base"], "bold": True, "italic": False},
-        {"text": spirit[1], "color": lord["light"], "bold": False, "italic": False},
+        {"text": "[罪仆·%s] " % role["name"], "color": lord["light"], "bold": True, "italic": False},
+        {"text": spirit[1], "color": ui.WHITE, "bold": False, "italic": False},
     ], ensure_ascii=False, separators=(",", ":"))
 
 
@@ -215,10 +225,10 @@ def summon_snbt(index, role_index, lord, role, spirit):
 def tellraw_summon(lord, role, spirit):
     component = [
         "",
-        {"text": "[罪群] ", "color": lord["base"], "bold": True, "italic": False},
-        {"text": lord["lord"] + " · ", "color": lord["base"], "bold": False, "italic": False},
+        {"text": "[罪群] ", "color": lord["light"], "bold": True, "italic": False},
+        {"text": lord["lord"] + " · ", "color": lord["light"], "bold": False, "italic": False},
         {"text": role["name"] + " ", "color": "gray", "bold": False, "italic": False},
-        {"text": spirit[1], "color": lord["light"], "bold": False, "italic": False},
+        {"text": spirit[1], "color": ui.WHITE, "bold": False, "italic": False},
         {"text": "应召现身。", "color": "dark_gray", "bold": False, "italic": False},
     ]
     return "tellraw @a[distance=..24,gamemode=!spectator] " + json.dumps(component, ensure_ascii=False, separators=(",", ":"))
@@ -270,14 +280,8 @@ def build_summons():
 
 
 def transition(lord, count=12):
-    colors = {
-        1: ("0.19,0.85,0.49", "0.0,0.18,0.07"), 2: ("0.25,0.78,0.93", "0.02,0.16,0.31"),
-        3: ("0.76,0.76,0.82", "0.10,0.10,0.12"), 4: ("0.70,0.84,0.34", "0.18,0.23,0.05"),
-        5: ("0.94,0.20,0.18", "0.25,0.01,0.01"), 6: ("0.76,0.47,0.88", "0.18,0.04,0.25"),
-        7: ("1.0,0.79,0.20", "0.28,0.17,0.01"),
-    }
-    a, b = colors[lord]
-    return "particle dust_color_transition{from_color:[%s],to_color:[%s],scale:1.05} ~ ~1 ~ 0.55 0.7 0.55 0.03 %d" % (a, b, count)
+    # 亮端 -> 深端，两端都取七柱色板（ART-STYLE.md §6）。
+    return "particle %s ~ ~1 ~ 0.55 0.7 0.55 0.03 %d" % (ui.pillar_transition(lord, 1.05), count)
 
 
 def player_effect(effect, seconds, amplifier, radius):
@@ -291,8 +295,8 @@ def target_effect(effect, seconds, amplifier, radius):
 def cast_notice(lord, role_index, role, spirit, skill, cue):
     component = [
         "",
-        {"text": "[罪仆术式] ", "color": lord["base"], "bold": True, "italic": False},
-        {"text": spirit[1] + " · ", "color": lord["light"], "bold": False, "italic": False},
+        {"text": "[罪仆术式] ", "color": lord["light"], "bold": True, "italic": False},
+        {"text": spirit[1] + " · ", "color": ui.WHITE, "bold": False, "italic": False},
         {"text": skill, "color": lord["light"], "bold": True, "italic": False},
         {"text": "｜" + role["name"], "color": "gray", "bold": False, "italic": False},
         {"text": "　" + cue, "color": "dark_gray", "bold": False, "italic": False},

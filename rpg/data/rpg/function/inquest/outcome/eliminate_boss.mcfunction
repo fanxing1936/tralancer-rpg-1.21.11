@@ -16,4 +16,4 @@ tag @s add rpg.rite.subject
 execute on passengers run scoreboard players operation @s rpg_dm_lord = @e[type=minecraft:vindicator,tag=rpg.rite.subject,limit=1] rpg_dm_lord
 tag @s remove rpg.rite.subject
 scoreboard players add @a[tag=rpg.rite.chooser,distance=..14] rpg_ex_xp 8
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[裁决·消灭] ","color":"#FF6B5E","bold":true,"italic":false},{"text":"仪式解除锁血；恶魔以 700 生命狂暴复苏。","color":"gray","italic":false}]
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[裁决・消灭] ","color":"#FF6B5E","bold":true,"italic":false},{"text":"仪式解除锁血；恶魔以 700 生命狂暴复苏。","color":"gray","italic":false}]

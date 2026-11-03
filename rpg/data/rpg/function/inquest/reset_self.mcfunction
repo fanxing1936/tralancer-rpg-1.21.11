@@ -48,5 +48,5 @@ tag @s remove rpg.clue.7.3
 tag @s remove rpg.clue.7.4
 tag @s remove rpg.clue.7.5
 scoreboard players set @s rpg_case7 0
-tellraw @s ["",{"text":"[调查档案] ","color":"#DAA520","bold":true,"italic":false},{"text":"已清空你的七柱真名与罪证；下一次见证将从 1 / 3 开始。","color":"gray","italic":false}]
+tellraw @s ["",{"text":"[调查档案] ","color":"#FFD85A","bold":true,"italic":false},{"text":"已清空你的七柱真名与罪证；下一次见证将从 1 / 3 开始。","color":"gray","italic":false}]
 playsound minecraft:item.book.page_turn player @s ~ ~ ~ 0.8 1.0

@@ -59,10 +59,13 @@ def flatten(tc):
     return "".join(p[0] for p in parts), parts
 
 
+# Canonical tags are Chinese since ART-STYLE.md §2.1 and fall through to the
+# bracket-content branch below; these keep older spellings readable.
 RARITY = {
     "[legend]": ("传说", "gold"), "[epic]": ("史诗", "dark_purple"),
     "[DEVIL]": ("恶魔", "dark_red"), "[brave]": ("勇者", "aqua"),
     "[HOLY]": ("神圣", "yellow"), "[rare]": ("稀有", "blue"),
+    "[LTD]": ("限定", "gold"),
 }
 
 GIVE_RE = re.compile(r"^give\s+\S+\s+([a-z0-9_:]+)\[")

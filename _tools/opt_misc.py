@@ -5,7 +5,10 @@ import io
 import os
 import sys
 
-GOLD_HEX = "#FFD700"
+import rpg_ui_style as ui
+
+GOLD_HEX = ui.tier_colour("limited")
+LTD = ui.tier_tag("limited")
 
 ROOT = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 
@@ -52,7 +55,7 @@ def fix_belial_devil_tag():
 def fix_limited_legend():
     """`[l·legend]` was half English and shipped in two different colours
     (#ffcc33 on one weapon, #D84E4E on the other).  Normalise the item-name
-    prefix to the compact English `[LTD]` in a single gold, one step brighter
+    prefix to the canonical `[限定]` (ART-STYLE.md §1.3) in a single gold, one step brighter
     than the plain 传说 tier's vanilla `gold` so the two stay distinguishable."""
     import glob
     n = 0
@@ -63,13 +66,13 @@ def fix_limited_legend():
         for colour in ('"italic":false,"bold":true,"color":"#ffcc33"',
                        '"italic":false,"color":"#D84E4E","bold":true'):
             s = s.replace('{"text":"[l·legend]",' + colour + "}",
-                          '{"text":"[LTD]","italic":false,'
-                          '"color":"%s","bold":true}' % GOLD_HEX)
+                          '{"text":"%s","italic":false,'
+                          '"color":"%s","bold":true}' % (LTD, GOLD_HEX))
         # migrate.py parses some embedded item stacks and may reorder the text
         # component's keys.  The visible label is still safe to normalise even
         # when the surrounding component is no longer byte-identical.
-        s = s.replace("[l·legend]", "[LTD]")
-        s = s.replace('"text":"[限定传说]"', '"text":"[LTD]"')
+        s = s.replace("[l·legend]", LTD)
+        s = s.replace('"text":"[限定传说]"', '"text":"%s"' % LTD)
         if s != before:
             io.open(path, "w", encoding="utf-8", newline="\n").write(s)
             n += before.count("[l·legend]") + before.count("[限定传说]")

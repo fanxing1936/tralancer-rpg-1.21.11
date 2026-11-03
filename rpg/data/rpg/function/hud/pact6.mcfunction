@@ -1,1 +1,1 @@
-data modify storage rpg:hud b set value '["",{"text":"　│　契约 ","italic":false,"color":"dark_gray"},{"text":"贝利尔","italic":false,"color":"#5B2C6F","bold":false},{"text":" · 色欲","italic":false,"color":"light_purple"}]'
+data modify storage rpg:hud b set value '["",{"text":"　│　契约 ","italic":false,"color":"dark_gray"},{"text":"贝利尔","italic":false,"color":"#D97AD9","bold":false},{"text":" · 色欲","italic":false,"color":"#D97AD9"}]'

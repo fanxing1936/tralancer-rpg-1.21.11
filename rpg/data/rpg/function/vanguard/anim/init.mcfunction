@@ -2,5 +2,7 @@
 scoreboard players set @s rpg_vg_anim 0
 scoreboard players set @s rpg_vg_t 0
 scoreboard players set @s rpg_vg_mv 0
-execute store result score @s rpg_vg_x run data get entity @s Pos[0] 100
-execute store result score @s rpg_vg_z run data get entity @s Pos[2] 100
+scoreboard players set @s rpg_vg_mc 0
+data modify storage rpg:display_mob pos set from entity @s Pos
+execute store result score @s rpg_vg_x run data get storage rpg:display_mob pos[0] 100
+execute store result score @s rpg_vg_z run data get storage rpg:display_mob pos[2] 100

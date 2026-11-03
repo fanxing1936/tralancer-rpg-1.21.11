@@ -6,4 +6,4 @@ clear @a[tag=rpg.rite.user,distance=..6,limit=1] minecraft:paper[minecraft:custo
 scoreboard players add @a[tag=rpg.rite.user,distance=..6,limit=1] rpg_ex_xp 6
 tag @a[tag=rpg.rite.user,distance=..6] remove rpg.rite.user
 function rpg:inquest/stability/show
-tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"[弱点媒介] ","color":"#B7950B","italic":false,"bold":true},{"text":"金锭 · 自愿之金已布入法阵。","color":"gray","italic":false}]
+tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"[弱点媒介] ","color":"#E6A23C","italic":false,"bold":true},{"text":"金锭 · 自愿之金已布入法阵。","color":"gray","italic":false}]

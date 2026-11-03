@@ -1,4 +1,4 @@
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[仪式失败] ","color":"dark_red","bold":true,"italic":false},{"text":"稳定度归零，裁决被迫写为——消灭。","color":"gray","italic":false}]
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[仪式失败] ","color":"#FF6B5E","bold":true,"italic":false},{"text":"稳定度归零，裁决被迫写为——消灭。","color":"gray","italic":false}]
 tag @s add rpg.rite.anchor.active
 execute as @e[type=minecraft:vindicator,tag=rpg.exorcism.bound,distance=..14] if score @s rpg_rite_id = @e[type=minecraft:item_display,tag=rpg.rite.anchor.active,limit=1] rpg_rite_id run function rpg:inquest/outcome/eliminate_boss
 kill @e[type=minecraft:armor_stand,tag=rpg.counter.name,distance=..12]

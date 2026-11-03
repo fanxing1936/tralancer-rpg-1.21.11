@@ -102,7 +102,7 @@ def contract_item(target):
         [txt("　将十枚源质嵌入各自对应的圆心", ui.GRAY)],
         [txt("　十源质归位后，", ui.GRAY), txt("『旧约』", ui.HOLY_DARK, True),
          txt("显于人间", ui.GRAY)],
-        [txt("　血契不会在展开法阵时消耗", ui.DARK_GRAY)],
+        [txt("　血契不会在展开法阵时消耗", ui.MUTED)],
     ])
     return 'give %s minecraft:flower_banner_pattern[custom_name=%s,lore=%s,enchantment_glint_override=true,max_stack_size=1,custom_data={rpg_kabbalah_use:1b,rpg_kabbalah_contract:1b},%s] 1' % (target, name, item_lore, USE)
 
@@ -115,7 +115,7 @@ def sephirah_item(target, row):
         [txt("卡巴拉生命之树的第 %d 源质" % n, ui.GRAY)],
         [txt("长按右键嵌入 ", ui.GRAY), txt("[%s]" % chinese, ui_color, True),
          txt(" 圆心", ui.GRAY)],
-        [txt("错误位置或已归位时不会消耗", ui.DARK_GRAY)],
+        [txt("错误位置或已归位时不会消耗", ui.MUTED)],
     ])
     return 'give %s %s[custom_name=%s,lore=%s,enchantment_glint_override=true,custom_data={rpg_kabbalah_use:1b,rpg_sephirah:%db},%s] 1' % (target, item, name, item_lore, n, USE)
 

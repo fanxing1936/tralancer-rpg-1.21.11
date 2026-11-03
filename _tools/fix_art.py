@@ -45,11 +45,22 @@ def union_bbox(files):
     return (x0, y0, x1, y1), canvas
 
 
+# ART-STYLE.md §4: a crop lands on the vanilla grid (16, else 32) whenever
+# the drawing still fills at least this much of it.  Below that the tight crop
+# stays -- a visibly smaller icon is worse than a slightly finer pixel.
+MIN_GRID_FILL = 0.75
+
+
 def square(box, canvas):
-    """Grow the box to a square, centred, clamped to the canvas."""
+    """Grow the box to a square, centred, clamped to the canvas, then out to
+    the vanilla grid when the fill allows it."""
     x0, y0, x1, y1 = box
     cw, ch = canvas
     side = max(x1 - x0 + 1, y1 - y0 + 1)
+    for grid in (16, 32):
+        if side <= grid <= min(cw, ch) and side >= grid * MIN_GRID_FILL:
+            side = grid
+            break
     cx, cy = (x0 + x1 + 1) // 2, (y0 + y1 + 1) // 2
     nx0 = max(0, min(cw - side, cx - side // 2))
     ny0 = max(0, min(ch - side, cy - side // 2))
@@ -77,8 +88,9 @@ def main():
         for f in files:
             crop(os.path.join(TEX, f), x0, y0, side)
             changed += 1
-        print("  %-16s %dx%d -> %dx%d   art fill %.0f%% -> 100%%   (%d frames)"
-              % (name, canvas[0], canvas[1], side, side, before, len(files)))
+        print("  %-16s %dx%d -> %dx%d   art fill %.0f%% -> %.0f%%   (%d frames)"
+              % (name, canvas[0], canvas[1], side, side, before,
+                 100.0 * (box[2] - box[0] + 1) / side, len(files)))
     print("cropped %d files" % changed)
 
 

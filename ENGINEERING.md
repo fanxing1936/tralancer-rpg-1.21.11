@@ -3328,6 +3328,136 @@ jar 真实存在的；`RPG_MC_GAME`／`RPG_MC_VERSION`／`RPG_MC_JAVA` 可覆盖
 通过；重建出的 `resourcepack/` 与 `rpg/` 与上一次提交逐字节一致（忽略换行符）。图鉴数据中的
 ［货币］条目随之带上 `currency_tag`，这是第 38 节修复在提取侧的正确反映。
 
+## 40. 美术风格统一：一张色板，一套文字语法
+
+审计报告见 `_art_audit/AUDIT.md`（附对比图），规范见 `ART-STYLE.md`。规范的六个决策由用户按推荐
+方案确认：前缀全部中文；神圣档保留作者的受难红；七柱分深／亮两色，亮色写字；本名一律白色；
+作者原画的自定网格不动；新约贴图还原为 16 网格。
+
+### 40.1 为什么是「亮色写字、深色作身份」
+
+七柱身份色当初是「给深色 Tooltip 挑的」（第 27.7 节），但按 WCAG 公式在原版 Tooltip 底色
+`#100010` 上算，路西法 `#00491C` 只有 1.91:1，贝利尔 1.98，萨麦尔 2.05，利维坦 2.34——低于 3:1
+就是读不出来。图鉴为此单独加过一层 `on_dark()` 提亮，游戏内却从没提亮。现在每柱一对颜色：
+深色只用在封皮、粒子暗端；亮色写字和画粒子亮端，对比度最低的萨麦尔也有 6.7:1。图鉴的
+`on_dark()` 随之删除，直接用同一个亮色。
+
+根因不是挑错了一个颜色，而是七柱颜色在 5 个地方各写了一份：`add_pact.PILLARS`、
+`polish_demon_names.DEMON_COLOURS`、`add_demon_minions.LORDS`、各罪器生成器的 `[DEVIL]` 色、粒子浮点
+三元组，图鉴还在页面上另算一套。萨麦尔的罪器前缀是洋红 `#B00057`，契约书前缀是棕红
+`#7B241C`，招式粒子又是正红。现在 `rpg_ui_style.PILLARS` 是唯一来源，上面这些地方全部改为导入。
+
+### 40.2 末端规范化：`polish_demon_names.py` → `polish_ui.py`
+
+作者 `_orig/` 里的物品名不能手改，而且很多旧物品在多个生成器之间流转（领取箱会把完整组件嵌进
+`container`）。所以文本统一放在构建末端，紧跟 `make_boxes.py`，与原来的姓名色步骤同一个位置：
+
+* 物品名：方括号前缀按 `TAG_ALIASES` 换成规范标签（`[legend]`/`[传说]` → `[传说]`，`[LTD]` →
+  `[限定]`，`[DEVIL]` → `[恶魔]`，`[🧪]` → `[附魔]` 等），加粗、取档次色；`[恶魔]`／`[契约]` 取所属
+  领主的亮色；本名一律 `#FFFFFF`、不加粗、`italic:false`。显式写白色不只是风格问题：没写颜色的
+  本名会被原版染成稀有度色，附魔过的普通物品稀有度升到 rare，有 15 件传说、史诗装备的本名因此
+  显示成青色，看起来和 `[勇者]` 一样。
+* 任何文本组件里出现的七柱旧色（`PILLAR_LEGACY`）都折叠成该柱亮色。带点击事件的组件不是叶子
+  对象，叶子扫描漏掉了它们，所以最后再按 `"color":"#…"` 键值折叠一遍；颜色键只会是文本色
+  （粒子色是数组）。
+* Lore 里达不到 4.5:1 的强调色按原色相提亮（`ui.readable()`，饱和度封顶 0.75，否则提亮后的
+  `dark_red` 会变成荧光红）。
+* 七柱旧粒子色（`PILLAR_DUST_LEGACY`）：单色的换成亮色，渐变的换成「亮 → 深」，跟在七柱色
+  后面的纯黑暗端换成该柱深色。与七柱无关的武器粒子（夜、樱、星）是作者的设计，不动。
+* **书页例外**：《破碎大陆手记》的页面是浅色纸面，章节名的深蓝 `#1B4F72` 恰好与利维坦深色
+  同值。第一次试跑把书里的章节名也折叠成了浅蓝，在纸面上反而读不清。现在 `book_spans()` 把
+  成书内容整体跳过，校验时同样剔除。
+
+作者的战利品表把函数写成不带命名空间的 `"set_name"`，第一版只认 `minecraft:set_name`，漏掉了
+这批物品名，已补上（`build_loot_frag.GRADE` 同步认中文标签）。
+
+产物统计（不含战利品表）：168 个前缀换成规范标签，357 个本名改白，320 处七柱旧色写字、93 处七柱旧粒子色并入
+色板，187 处 Lore 强调色提亮。检查过运行时：没有任何谓词、进度或 `items` 检测按物品名匹配，
+改名不影响玩法。已经在存档里的物品会保留旧名字，直到重新获得。
+
+源头也一并改了，避免末端一直在打补丁：`add_pact`、`add_demon_minions`、`add_ritual_phase2`
+（审讯压迫粒子）、`add_lucifer`／`add_leviathan`／`add_mammon`（罪器名）、`add_items`／`add_epics`／
+`add_twins`／`opt_misc`（档次标签）、`add_exorcism`（`[驱魔]` 改用圣金；`[满魔化]`、魔化条改用
+警示红；降临恶魔的名牌改为 `[恶魔]` + 白色本名）都改为从 `rpg_ui_style` 取值。按决策 D4，
+生成器自己的物品把原来的本名意象色移到了技能名上，例如蔚蓝追寻者的青色现在落在［深潜］上。
+
+一个踩到的坑：上位契约 Lore 里的补充说明行用 `dark_gray`（2.74:1），末端提亮成 `#797979`，
+于是 `check_divine_covenants.py` 的「产物 = 生成器输出」断言失败。不能让末端悄悄改生成器的
+输出，所以把这个灰登记为色板的 `MUTED`，生成器直接写它。
+
+### 40.3 HUD：从 Unifont 烘焙
+
+双层 Actionbar 的上层原来用微软雅黑粗体在 11px 下栅格化，alpha 阈值 96，1 texel / GUI 单位。
+笔画多的字（「路西法」「深潮回卷」）会粘成色块；下层是原版 Unifont，按 2 texel / 单位渲染，
+上下两层像两套 UI。另外，把微软雅黑的位图随开源包分发也有字体许可问题。
+
+`build_combat_prompt_font.py --bake` 现在从本机资源索引读取客户端自带的 `unifont.zip`，按原版
+unihex 的方式画字形（宽度按墨迹修剪，字距 1 单位，粗体偏移半个单位）。纹素密度是 2 texel /
+单位，所以和下层文字逐像素同形。字号随之从 11 单位降到原版的 8 单位。罪约提示也不放大：
+放大 2 倍后，最长的那条会超出 854 宽窗口的 Actionbar。
+
+密度翻倍以后，最长的提示约 430 纹素，超过单个字形页能放下的 192 纹素切片宽度。每条提示
+现在切成最多 4 段（`F000`/`F040`/`F080`/`F0C0` 起），数据包这边始终发 4 个字符，没用到的段在
+space provider 里是零宽，这和原来单段提示的做法相同。非末段切片在最后一列放一个 alpha=1 的像素：
+客户端按最右边的不透明列测量位图字形的步进，否则末尾恰好是空隙的切片会把下一段往左拉；
+alpha 1 低于文本着色器的丢弃阈值，不会被画出来。封印状态的 `SLEEP/AGIT/DANGER/CRIT` 改为
+「封印 沉眠／躁动／危险／临界」，与下层状态行用同一组词。两张位图都作为保留产物放在
+`combat_prompt_art/`，常规构建只做校验和复制，不需要 Pillow。README 已注明 Unifont 的许可。
+
+### 40.4 贴图网格
+
+* `fix_art.py` 的裁剪框原来紧贴包围盒，把稚弩从 32 裁到了 12×12，像素变成原版的 1.33 倍粗。
+  现在裁剪框会向上取到 16 或 32，前提是主体仍占新画布的 75% 以上。稚弩因此改为 16×16。
+  藤蔓之鞭 17、求真之刃 21、玛门之弓 19 如果补到 32，图标会缩小到原来的六成左右，
+  比像素略细更糟，所以保留紧致裁剪，登记为例外。
+* 新增 `fix_texture_grid.py`，在最后一个写物品贴图的生成器之后运行（`rp_build.sh` 和
+  `build.sh` 各一处）。七本契约书、旧约、真·十字架（128，原生 16）和熔岩链锯（32，原生 16）
+  都是精确的最近邻放大，按原生网格存储后一个像素都不变。新约是 192px 的平滑重采样，带约 4300 种
+  噪点色，按决策 D6 用路西法蛇矛那套多数表决法 `add_lucifer.reconstruct()` 还原到 16 网格。
+* `_orig_rp` 里作者自定网格的 17 张贴图（25、27、26 等）原样保留，见规范 §4。
+
+### 40.5 图鉴
+
+色彩令牌改由 `tier_tokens()` 从色板生成，图鉴和游戏不再各有一套。罪器卡与七柱之书卡按所属
+领主取亮色；「恶魔」筛选按钮下方是一条七色带，不再用一个偏红的色代表七位领主。审计时说卡片
+图标是 2.125 倍，这是看错了：页面是 `border-box`，内容区正好 32px。真正非整数倍的是索引表里的
+22px 小图标，已改为 32px。版式本身没动。
+
+### 40.6 一次构建不稳定的复现
+
+重建过程中有一次 `soreboard.mcfunction` 少了 134 行，日志里对应一条 `[io-retry]`：
+`sitecustomize.py` 在第 3 次重试后报告写入成功，但文件内容已经丢失。重跑一次后，产物与预期一致。
+这是本机实时扫描导致的已知 IO 抖动（见提交 654602e 的排查），与本节改动无关。这里记下来，
+是因为它说明重试层虽然避免了报错，却仍可能留下不完整的文件。建议另开任务，让重试层在重试成功
+后再校验一次文件长度。
+
+### 40.7 校验与开销
+
+新增 `check_ui_palette.py`，在 `build.sh` 的验证段运行。以下情况会让构建**失败**：色板自检
+（每个文字色在 `#100010` 上 ≥ 4.5:1，档次、七柱各自族内 ΔE ≥ 20），以及产物里还有七柱旧色在写字。
+生成器里还剩 205 个未登记的 Hex 字面量，主要在 `modernize_legacy_*`、`add_exorcism_expansion` 和
+`add_player_panel`，目前只**警告**，迁移完再升级为失败。
+
+完整流水线 `rp_build.sh` → `build.sh` → `guide_build.sh` 全部通过，`rp_validate` 对照真实 jar 无问题。
+每刻静态开销与改动前一致（38313 条命令），粒子数量没有变，只是换了颜色。Tooltip 和 HUD 的效果是按
+原版字形复原的；实机抽查需要把资源包同步到 PCL 实例后进游戏看。
+
+### 40.8 仪式播报（补充）
+
+用户实机截图里的驱魔聊天行有三个问题：
+- 反仪式用的是另一套旧色（`#31D97C`、`#DCEB72`……），和七柱色板对不上；
+- 失败标签用 `dark_red`、状态尾句用 `dark_gray`，在聊天底上读不出来；
+- 加粗以后「·」读成了「-」。
+
+修法沿用 §40.2 的末端规范化思路。`rpg_ui_style.broadcast_colour()` 按行动方给标签定色：圣方为 `HOLY`，恶魔为该柱亮色，失败为 `WARN`，另有四种裁决色和封印状态色。具体做法：
+- 匹配时显式表优先于七柱查找，因为 [嫉妒得逞] 含有罪名，却应该归入 `WARN`；
+- 罪名查找没有并进 `pillar_in`，避免影响名字标签的染色；
+- `polish_ui.polish_broadcasts()` 用 JSON 方式改写每条 `tellraw` 的首个标签：定色、加粗、把连接点换成「・」，正文里的 `dark_gray` 提为 `gray`。
+
+`dark_gray → gray` 只作用于播报行。面板和菜单里的 `dark_gray` 是禁用态，属于合法用法。
+
+`check_ui_palette.py` 新增一条失败规则：聊天行首的标签不能用七柱深色，对比度也不能低于 4.5:1。这是为了补上原来的漏洞——深色是登记过的色值，所以封印遗物的 [利维坦] 用深色写字时，旧检查没有拦下来。
+
 ---
 
 # 重建方式
@@ -3355,19 +3485,19 @@ bash "_tools/build.sh"
 　　　　　　→ `add_ritual_phase2.py` + `add_demon_minions.py`
 　　　　　　→ `add_life_tree_particles.py` + `add_kabbalah_covenant.py`
 　　　　　→ `add_player_panel.py` + `polish_recent_ui.py`
-　　　　　→ `add_divine_covenants.py`
-　　　　　→ `make_boxes.py` + `polish_demon_names.py`
+　　　　　→ `add_divine_covenants.py` → `fix_texture_grid.py`
+　　　　　→ `make_boxes.py` + `polish_ui.py`
 　　　　　→ `drop_legacy_mob_factions.py`
 　　　　　　→ `validate.py` + `check_adv.py` + `check_ritual_phase2.py`
 　　　　　　→ `check_demon_minions.py` + `check_life_tree_particles.py`
 　　　　　　→ `check_kabbalah_covenant.py` + `check_divine_covenants.py`
 　　　　　　→ `check_retired_mob_content.py`
-　　　　　→ `check_creeper.py` → `profile_tick.py`
+　　　　　→ `check_creeper.py` + `check_ui_palette.py` → `profile_tick.py`
 材质包流程（先跑）：`rp_migrate.py` → `import_twin_art.py` → `fix_art.py`
 　　　　　→ `add_items.py` + `add_skills.py` + `add_twins.py`
 　　　　　→ `add_lucifer.py` + `add_leviathan.py` + `add_runes.py` + `add_epics.py`
-　　　　　→ `retype_longinus.py` → `fix_display.py`
-　　　　　→ `rp_validate.py`
+　　　　　→ `retype_longinus.py` → `build_combat_prompt_font.py` → `fix_display.py`
+　　　　　→ `fix_texture_grid.py` → `rp_validate.py`
 随后再跑数据包流程。部分共用内容生成器在材质构建时也会写数据侧入口；让
 `build.sh` 最后运行，才能保证旧武器现代化、actionbar 收编和多人修正不会被覆盖。
 打包与安装：`package.py --install`（写回 1.21.11 实例的 resourcepacks 与各存档）

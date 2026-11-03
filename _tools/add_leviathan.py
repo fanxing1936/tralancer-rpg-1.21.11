@@ -29,6 +29,7 @@ import io
 import json
 import os
 import sys
+import rpg_ui_style as ui
 
 import png_tool as P
 
@@ -185,7 +186,7 @@ def build_models():
 # ---------------------------------------------------------------------------
 # the item
 # ---------------------------------------------------------------------------
-DEVIL = "#123E7C"      # 利维坦's accent: 深蓝
+DEVIL = ui.pillar("leviathan")["lit"]   # 写字用柱亮色；粒子仍用下方 ABYSS 等武器色
 RULE = '["",{"text":"+------------------+","italic":false,"color":"white"}]'
 
 
@@ -199,7 +200,7 @@ def row(*segs):
 
 
 LEVIATHAN = ("give @a %s[" % BASE +
-             "custom_name=" + row(seg("[DEVIL]", DEVIL, True),
+             "custom_name=" + row(seg(ui.tier_tag("devil"), DEVIL, True),
                                   seg("利维坦", "aqua")) + ","
              "lore=[" + ",".join([
                  RULE,

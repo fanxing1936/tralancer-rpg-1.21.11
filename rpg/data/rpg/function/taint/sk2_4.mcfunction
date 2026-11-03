@@ -8,3 +8,5 @@ particle nautilus ~ ~1 ~ 4 1.2 4 0.12 96
 particle bubble_column_up ~ ~0.4 ~ 4 0.5 4 0.35 110
 execute as @a[distance=..4,gamemode=!spectator,gamemode=!creative] at @s run function rpg:taint/sk2d_out
 execute as @a[distance=4.01..10,gamemode=!spectator,gamemode=!creative] at @s run function rpg:taint/sk2d_in
+# 利维坦外观（add_leviathan_model.py）
+execute if entity @s[tag=rpg.lv] run function rpg:leviathan/skill/sk2_4

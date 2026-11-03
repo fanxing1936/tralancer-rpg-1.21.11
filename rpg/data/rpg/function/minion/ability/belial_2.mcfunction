@@ -3,9 +3,9 @@ scoreboard players add #casts rpg_mn_tick 1
 scoreboard players set @s rpg_mn_cd 105
 scoreboard players set @s rpg_mn_cast 20
 tag @s add rpg.demon.minion.casting
-tellraw @a[distance=..10,gamemode=!spectator] ["",{"text":"[罪仆术式] ","color":"#57256B","bold":true,"italic":false},{"text":"罗诺比 · ","color":"#C28BE0","bold":false,"italic":false},{"text":"魅视缚足","color":"#C28BE0","bold":true,"italic":false},{"text":"｜猎手","color":"gray","bold":false,"italic":false},{"text":"　睡意攀上最近目标的四肢","color":"dark_gray","bold":false,"italic":false}]
+tellraw @a[distance=..10,gamemode=!spectator] ["",{"text":"[罪仆术式] ","color":"#D97AD9","bold":true,"italic":false},{"text":"罗诺比 · ","color":"#FFFFFF","bold":false,"italic":false},{"text":"魅视缚足","color":"#D97AD9","bold":true,"italic":false},{"text":"｜猎手","color":"gray","bold":false,"italic":false},{"text":"　睡意攀上最近目标的四肢","color":"dark_gray","bold":false,"italic":false}]
 playsound minecraft:entity.illusioner.prepare_blindness hostile @a[distance=..20] ~ ~ ~ 0.35 1.12
 playsound minecraft:item.crossbow.shoot hostile @a[distance=..14] ~ ~ ~ 0.28 0.92
-particle dust_color_transition{from_color:[0.76,0.47,0.88],to_color:[0.18,0.04,0.25],scale:1.05} ~ ~1 ~ 0.55 0.7 0.55 0.03 4
+particle dust_color_transition{from_color:[0.85,0.48,0.85],to_color:[0.36,0.17,0.44],scale:1.05} ~ ~1 ~ 0.55 0.7 0.55 0.03 4
 execute at @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] run particle crit ~ ~1 ~ 0.28 0.55 0.28 0.035 8
 effect give @a[distance=..10,sort=nearest,limit=1,gamemode=!spectator,gamemode=!creative] minecraft:glowing 1 0 true
