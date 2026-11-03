@@ -174,11 +174,18 @@ def build_models():
     wj(os.path.join(RPG_MODELS, "michael_spine_in_hand.json"),
        {"parent": "minecraft:item/spear_in_hand",
         "textures": {"layer0": "rpg:item/michael_spine_in_hand"}})
-    # 肋骨用漆黑之日（warrior_sword）的手持父模型。fix_display 之后它与
-    # twin_handheld 的变换相同，副手也是正手，不是反握
+    # 肋骨用漆黑之日（warrior_sword）的手持父模型，副手照作者原包的写法反手握：
+    # _orig_rp 的 sword_handheld 左手是 [-170,-90,-55]，fix_display 把全包副手
+    # 统一成了正手，这里只给肋骨写回来（用户要求）。比例取 fix_display 算出的
+    # 等比 1.195，免得原包的 [1.46,0.85,0.85] 把刀身剪切变形。
+    # 模型的 display 按视角逐项继承，只覆盖这一项，其余仍跟 sword_handheld 走。
     wj(os.path.join(RPG_MODELS, "michael_rib.json"),
        {"parent": "rpg:item/sword_handheld",
-        "textures": {"layer0": "rpg:item/michael_rib"}})
+        "textures": {"layer0": "rpg:item/michael_rib"},
+        "display": {"thirdperson_lefthand": {
+            "rotation": [-170, -90, -55],
+            "translation": [0, -11.5, 1.25],
+            "scale": [1.195, 1.195, 1.195]}}})
 
     dispatch_entry(os.path.join(MC_ITEMS, "netherite_spear.json"),
                    "netherite_spear", SPINE_CMD,
