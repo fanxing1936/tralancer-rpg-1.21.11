@@ -258,6 +258,16 @@ def build_give():
     return True
 
 
+def build_give_self():
+    """单独入口：只把这一对发给执行者自己。组件与 give/weapon 里的两行逐字相同，
+    make_boxes 按组件去重，所以潜影盒里仍然只收一份。"""
+    self_give = lambda line: line.replace("give @a ", "give @s ", 1)
+    wf("command/give/michael.mcfunction", "\n".join([
+        "# 米迦勒圣骸：只发脊骨与肋骨，发给执行者自己（由 add_michael.py 生成）",
+        "# 主手一把、副手一把即触发［骨中之骨］",
+        self_give(SPINE), self_give(RIB)]))
+
+
 def build_advancement():
     # 长枪的蓄力是真正的使用动作，using_item 直接响；custom_data 谓词
     # 让普通下界合金长枪不会触发任何东西
@@ -542,6 +552,7 @@ if __name__ == "__main__":
     build_functions()
     build_advancement()
     print("michael: give appended: %s" % build_give())
+    build_give_self()
     print("michael: objectives added: %s"
           % (", ".join(add_objectives()) or "(already present)"))
     print("michael: index flags added: %d" % register_index())

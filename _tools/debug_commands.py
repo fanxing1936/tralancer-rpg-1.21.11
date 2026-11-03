@@ -30,6 +30,7 @@ GIVE = [
     command("/function rpg:command/give/item", "发放符文、符石、晶石与锻造材料。", "会发给所有在线玩家（@a），多人服慎用。", "全体背包", "群体发放"),
     command("/function rpg:command/give/weapon_up_item", "发放全部武器分支唱片。", "会发给所有在线玩家（@a），多人服慎用。", "全体背包", "群体发放"),
     command("/function rpg:command/give/extra", "发放额外／导入内容测试物品。", "会发给所有在线玩家（@a），可能占用较多背包格。", "全体背包", "群体发放"),
+    command("/function rpg:command/give/michael", "只发放米迦勒脊骨与米迦勒肋骨（[神圣] 双持圣骸）。", "必须由玩家执行；主手一把、副手一把即触发［骨中之骨］。", "自身背包"),
     command("/function rpg:inquest/give/all_tools", "发放七罪媒介、仪式工具、三类粉笔和真名残页。", "必须由玩家执行；用于驱魔流程联调。", "自身背包"),
     command("/function rpg:ritual/life_tree/give/all", "发放卡巴拉血契、十源质与真·十字架。", "必须由玩家执行；仅测试／管理入口。", "自身背包"),
 ]
