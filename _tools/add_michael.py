@@ -112,24 +112,32 @@ def mirror(w, h, rgba):
 
 
 def build_textures():
-    # 用户原画原样使用：不描边、不放大（试过描边＋铺满的物品栏图标，用户选回原图）
+    # 用户原画原样使用，不描边（试过描边，用户选回原图）
     if not os.path.isdir(RPG_TEX):
         os.makedirs(RPG_TEX)
     for name in ("michael_spine", "michael_rib"):
         src = os.path.join(ART, name + ".png")
-        w, h, _ = P.read(src)
+        w, h, rgba = P.read(src)
         assert (w, h) == (32, 32), "%s 不是 32 网格" % name
-        shutil.copyfile(src, os.path.join(RPG_TEX, name + ".png"))
-    # 长枪的手持模型沿用原版 spear_in_hand，它要的是左右镜像过的贴图
-    w, h, rgba = P.read(os.path.join(ART, "michael_spine.png"))
-    P.write(os.path.join(RPG_TEX, "michael_spine_in_hand.png"), w, h,
-            mirror(w, h, rgba))
-    # 那一版留下的铺满图标已经没有模型引用；资源包不整体重建，旧文件要自己清
-    for stale in (os.path.join(RPG_TEX, "michael_spine_icon.png"),
-                  os.path.join(RPG_TEX, "michael_rib_icon.png"),
-                  os.path.join(RPG_MODELS, "michael_rib_icon.json")):
-        if os.path.isfile(stale):
-            os.remove(stale)
+        # 物品栏图标：只保留有像素的部分，透明边直接裁掉，不缩放（用户要求）。
+        # 于是画布是包围盒的尺寸（27×27、26×23），客户端把它撑满物品格 ——
+        # 这是 ART-STYLE §4「16/32 网格、主体 80%–94%」的登记例外
+        x0, y0, x1, y1 = P.bbox(w, h, rgba)
+        cw, ch = x1 - x0 + 1, y1 - y0 + 1
+        crop = b"".join(rgba[((y0 + y) * w + x0) * 4:((y0 + y) * w + x1 + 1) * 4]
+                        for y in range(ch))
+        P.write(os.path.join(RPG_TEX, name + "_icon.png"), cw, ch, crop)
+        # 手持：原图原尺寸，手里的大小不变
+        if name == "michael_spine":
+            # 长枪的手持模型沿用原版 spear_in_hand，它要的是左右镜像过的贴图；
+            # 不镜像的那张没有模型引用，旧构建留下的就删掉
+            P.write(os.path.join(RPG_TEX, name + "_in_hand.png"), w, h,
+                    mirror(w, h, rgba))
+            stale = os.path.join(RPG_TEX, name + ".png")
+            if os.path.isfile(stale):
+                os.remove(stale)
+        else:
+            shutil.copyfile(src, os.path.join(RPG_TEX, name + ".png"))
 
 
 def dispatch_entry(path, base, cmd, model):
@@ -157,7 +165,10 @@ def dispatch_entry(path, base, cmd, model):
 def build_models():
     wj(os.path.join(RPG_MODELS, "michael_spine.json"),
        {"parent": "item/generated",
-        "textures": {"layer0": "rpg:item/michael_spine"}})
+        "textures": {"layer0": "rpg:item/michael_spine_icon"}})
+    wj(os.path.join(RPG_MODELS, "michael_rib_icon.json"),
+       {"parent": "item/generated",
+        "textures": {"layer0": "rpg:item/michael_rib_icon"}})
     wj(os.path.join(RPG_MODELS, "michael_spine_in_hand.json"),
        {"parent": "minecraft:item/spear_in_hand",
         "textures": {"layer0": "rpg:item/michael_spine_in_hand"}})
@@ -175,9 +186,16 @@ def build_models():
                                          "model": "rpg:item/michael_spine"}}],
                     "fallback": {"type": "minecraft:model",
                                  "model": "rpg:item/michael_spine_in_hand"}})
+    # 肋骨同样分两套：物品栏里是铺满的图标，手里是原尺寸
     dispatch_entry(os.path.join(MC_ITEMS, "netherite_sword.json"),
                    "netherite_sword", RIB_CMD,
-                   {"type": "minecraft:model", "model": "rpg:item/michael_rib"})
+                   {"type": "minecraft:select",
+                    "property": "minecraft:display_context",
+                    "cases": [{"when": ["gui", "ground", "fixed", "on_shelf"],
+                               "model": {"type": "minecraft:model",
+                                         "model": "rpg:item/michael_rib_icon"}}],
+                    "fallback": {"type": "minecraft:model",
+                                 "model": "rpg:item/michael_rib"}})
 
 
 # ---------------------------------------------------------------------------
