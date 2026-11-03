@@ -4,5 +4,5 @@ summon minecraft:armor_stand ~2 ~ ~ {Tags:["rpg.counter.name","rpg.counter.false
 summon minecraft:armor_stand ~-2 ~ ~ {Tags:["rpg.counter.name","rpg.counter.true"],Invisible:1b,NoGravity:1b,PersistenceRequired:1b,CustomNameVisible:1b,CustomName:[{"text":"路西法","color":"#5FD68C","bold":false,"italic":false}],Health:200f,attributes:[{id:"max_health",base:200f}]}
 summon minecraft:armor_stand ~ ~ ~2 {Tags:["rpg.counter.name","rpg.counter.false"],Invisible:1b,NoGravity:1b,PersistenceRequired:1b,CustomNameVisible:1b,CustomName:[{"text":"光耀者","color":"#A8FFCB","bold":true,"italic":false}],Health:200f,attributes:[{id:"max_health",base:200f}]}
 scoreboard players operation @e[type=minecraft:armor_stand,tag=rpg.counter.name,distance=..4] rpg_rite_id = @s rpg_rite_id
-tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"[反仪式・傲慢] ","color":"#5FD68C","bold":true,"italic":false},{"text":"王冠伪造了三个名号。攻击错误名字会撕裂法阵。","color":"gray","italic":false}]
+tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"〖反仪式・傲慢〗","color":"#34975A","bold":true,"italic":false},{"text":" 𝔓𝔯𝔦𝔡𝔢","color":"#22623B","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"王冠伪造了三个名号。攻击错误名字会撕裂法阵。","color":"#9C9A94","italic":false}]
 playsound minecraft:entity.illusioner.prepare_mirror hostile @a[distance=..20] ~ ~ ~ 1 0.8

@@ -6,4 +6,4 @@ tag @s remove rpg.ex.claim2
 tag @s remove rpg.ex.claim3
 tag @s remove rpg.ex.claim4
 tag @s remove rpg.ex.claim5
-tellraw @s ["",{"text":"[驱魔师档案] ","color":"#FFD85A","bold":true,"italic":false},{"text":"职业阅历、路线与领取记录已重置。","color":"gray","italic":false}]
+tellraw @s ["",{"text":"〖驱魔师档案〗","color":"#C9A646","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"职业阅历、路线与领取记录已重置。","color":"#9C9A94","italic":false}]

@@ -5,7 +5,7 @@ particle dust_color_transition{from_color:[0.37,0.84,0.55],to_color:[0.0,0.29,0.
 particle dust_color_transition{from_color:[0.37,0.84,0.55],to_color:[0.0,0.29,0.11],scale:2.5} ~ ~0.50 ~ 11 0.14 11 0.045 116 force
 particle dragon_breath ~ ~1.15 ~ 12 1.8 12 0.07 138 force
 particle end_rod ~ ~1.55 ~ 8 1.2 8 0.045 58 force
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪域・路西法] ","color":"#5FD68C","bold":true,"italic":false},{"text":"王冠坠落 · 三重罪域爆发，退入法阵四格庇护圈。","color":"gray","italic":false}]
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"〖罪域・路西法〗","color":"#34975A","bold":true,"italic":false},{"text":" 𝔇𝔬𝔪𝔦𝔫𝔦𝔬𝔫","color":"#22623B","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"王冠坠落 · 三重罪域爆发，退入法阵四格庇护圈。","color":"#9C9A94","italic":false}]
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle dragon_breath ~ ~1 ~ 0.65 0.95 0.65 0.06 22 force
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle enchanted_hit ~ ~1 ~ 0.38 0.60 0.38 0.04 12 force
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] run damage @s 8 minecraft:magic

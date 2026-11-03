@@ -70,7 +70,9 @@ def main():
                     continue
                 node = json.loads(raw)[head[0]]
                 colour = node.get("color", "white")
-                if colour.upper() in deep or ui.contrast(colour) < 4.5:
+                # 〖〗播报标签是用户选定的暗色板（§12），底线 4:1；其余聊天标签 4.5:1。
+                floor = 4.0 if head[1].startswith(ui.BRACKETS[0]) else 4.5
+                if colour.upper() in deep or ui.contrast(colour) < floor:
                     problems.append("%s: 标签 %s 用色 %s 读不出" % (name, head[1], colour))
 
     known = registered()

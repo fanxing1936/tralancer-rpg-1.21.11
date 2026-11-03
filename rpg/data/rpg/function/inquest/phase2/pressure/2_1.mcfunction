@@ -5,7 +5,7 @@ particle dust_color_transition{from_color:[0.31,0.62,0.94],to_color:[0.11,0.31,0
 particle dust_color_transition{from_color:[0.31,0.62,0.94],to_color:[0.11,0.31,0.45],scale:2.5} ~ ~0.50 ~ 11 0.14 11 0.045 116 force
 particle splash ~ ~1.15 ~ 12 1.8 12 0.07 138 force
 particle bubble_column_up ~ ~1.55 ~ 8 1.2 8 0.045 58 force
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"[罪域・利维坦] ","color":"#4F9EF0","bold":true,"italic":false},{"text":"妒海沉城 · 三重罪域爆发，退入法阵四格庇护圈。","color":"gray","italic":false}]
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"〖罪域・利维坦〗","color":"#387AB7","bold":true,"italic":false},{"text":" 𝔇𝔬𝔪𝔦𝔫𝔦𝔬𝔫","color":"#244F77","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"妒海沉城 · 三重罪域爆发，退入法阵四格庇护圈。","color":"#9C9A94","italic":false}]
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle splash ~ ~1 ~ 0.65 0.95 0.65 0.06 22 force
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle bubble_pop ~ ~1 ~ 0.38 0.60 0.38 0.04 12 force
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] run damage @s 8 minecraft:magic

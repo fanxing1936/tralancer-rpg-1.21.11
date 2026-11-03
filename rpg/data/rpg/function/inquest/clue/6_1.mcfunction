@@ -4,5 +4,5 @@ tag @s add rpg.clue.6.1
 scoreboard players add @s rpg_ex_xp 4
 function rpg:inquest/recount/6
 playsound minecraft:block.enchantment_table.use player @s ~ ~ ~ 0.7 1.45
-tellraw @s ["",{"text":"[罪证] ","color":"#FFD85A","bold":true,"italic":false},{"text":"贝利尔 · ","color":"#D97AD9","bold":false,"italic":false},{"text":"朝拜强迫身体低头，却不能证明心已屈服。","color":"gray","italic":false},{"text":"　进度 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_case6"},"color":"white","italic":false},{"text":"/3","color":"gray","italic":false}]
+tellraw @s ["",{"text":"〖罪证〗","color":"#C9A646","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"贝利尔 · ","color":"#A057A9","bold":false,"italic":false},{"text":"朝拜强迫身体低头，却不能证明心已屈服。","color":"#9C9A94","italic":false},{"text":"　进度 ","color":"#9C9A94","italic":false},{"score":{"name":"@s","objective":"rpg_case6"},"color":"#E6DFCF","italic":false},{"text":"/3","color":"#9C9A94","italic":false}]
 execute if score @s rpg_case6 matches 3.. run function rpg:inquest/reveal/6

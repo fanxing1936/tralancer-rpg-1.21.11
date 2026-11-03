@@ -368,28 +368,90 @@ def prefix_message(prefix, prefix_color, text, text_color=GRAY):
 # ---------------------------------------------------------------------------
 # Ritual broadcasts (§12)
 # ---------------------------------------------------------------------------
-# One chat line per event: "[标签] " bold, then gray prose.  The tag colour
-# says who acted, so the chat column reads the fight at a glance:
-#   the exorcist, tools, rite progress  HOLY
-#   the demon (counter-rite, domain)    its pillar's lit
-#   failure, threat, the rite slipping  WARN
+# One chat line per event, in the style the user picked on 2026-11-03
+# ("A 暗金祷文"): a darker shade than the item-text palette, the tag in
+# full-width lenticular brackets, a faint blackletter gloss on the lines that
+# matter, and loose spacing before the prose:
+#
+#     〖反仪式・暴食〗 𝔊𝔩𝔲𝔱𝔱𝔬𝔫𝔶  别西卜没有找到可吞食的媒介。
+#
+# The tag colour says who acted, so the chat column reads the fight:
+#   the exorcist, tools, rite progress  BROADCAST_HOLY
+#   the demon (counter-rite, domain)    its pillar's mid tone
+#   failure, threat, the rite slipping  BROADCAST_WARN
 #   the four verdicts                   VERDICTS
-#   a sealed relic's stage              the HUD seal stages
+#   a sealed relic's stage              SEAL_STAGES
 # Bold doubles every glyph one unit to the right, which turns the vanilla
 # "·" into a dash; tags join their halves with the Unifont dot "・".
 TAG_JOIN = "・"
-VERDICTS = {"消灭": WARN, "放逐": HOLY_LIGHT, "封印": CYAN, "契约": RITUAL}
-SEAL_STAGES = {"遗物休眠": MUTED, "遗物躁动": RITUAL, "遗物危险": HOLY,
-               "遗物临界": WARN, "遗物压制": CYAN, "遗物冷却": CYAN}
-BROADCAST_WARN = {"仪式失败", "法阵熄灭", "恶魔挣脱", "伪名坐实", "伪名误判",
-                  "嫉妒得逞", "逾期加征", "封印失败", "赎金失败"}
-BROADCAST_HOLY = {"驱魔调查", "调查档案", "罪证", "镇压", "真名确证", "镇魔二阶段",
-                  "罪约裁决", "裁决尚待", "驱魔完成", "驱魔师档案", "职业解锁",
-                  "告解铃", "净罪香", "银质圣钉", "仪式粉笔",
-                  "真名击破", "妒影击破", "银钉守界", "赎金已付"}
-BROADCAST_PILLAR = {"反仪式・吞媒": "别西卜"}
+BRACKETS = ("〖", "〗")
+GAP = "  "                          # between the tag (or its gloss) and the prose
+CHOICE_GAP = "   "                  # between the four verdict buttons
+
+
+def mix(a, b, t):
+    a, b = rgb(a), rgb(b)
+    return from_rgb(*(x + (y - x) * t for x, y in zip(a, b)))
+
+
+def shade(colour, t=0.35):
+    """The gloss colour: the tag's own hue, sunk toward black."""
+    return mix(colour, "#000000", t)
+
+
+def pillar_mid(key):
+    """Between a pillar's deep and lit: the broadcast voice of that lord."""
+    p = key if isinstance(key, dict) else pillar(key)
+    return mix(p["deep"], p["lit"], 0.55)
+
+
+BROADCAST_HOLY = "#C9A646"
+BROADCAST_WARN = "#C04A3C"
+BROADCAST_BODY = "#9C9A94"
+BROADCAST_NAME = "#E6DFCF"
+VERDICTS = {"消灭": BROADCAST_WARN, "放逐": "#CDBE86", "封印": "#4E9FAD", "契约": "#A276BE"}
+SEAL_STAGES = {"遗物休眠": MUTED, "遗物躁动": VERDICTS["契约"], "遗物危险": BROADCAST_HOLY,
+               "遗物临界": BROADCAST_WARN, "遗物压制": VERDICTS["封印"],
+               "遗物冷却": VERDICTS["封印"]}
+WARN_TAGS = {"仪式失败", "法阵熄灭", "恶魔挣脱", "伪名坐实", "伪名误判",
+             "嫉妒得逞", "逾期加征", "封印失败", "赎金失败"}
+HOLY_TAGS = {"驱魔调查", "调查档案", "罪证", "镇压", "真名确证", "镇魔二阶段",
+             "罪约裁决", "裁决尚待", "驱魔完成", "驱魔师档案", "职业解锁",
+             "告解铃", "净罪香", "银质圣钉", "仪式粉笔",
+             "真名击破", "妒影击破", "银钉守界", "赎金已付"}
+PILLAR_TAGS = {"反仪式・吞媒": "别西卜"}
 # Tags shared by all seven lords; the line names the lord ("别西卜 · 司祭 巴钦").
-BROADCAST_SPEAKER = {"罪群", "罪仆术式", "显形", "弱点媒介", "封印逃逸"}
+SPEAKER_TAGS = {"罪群", "罪仆术式", "显形", "弱点媒介", "封印逃逸"}
+
+# The blackletter gloss, only on the lines that carry the fight.  Frequent
+# small notices (罪证, tools, relic ticks, minion casts) stay bare so the
+# chat does not fill with ornament.
+SIN_ENGLISH = {"傲慢": "Pride", "嫉妒": "Envy", "怠惰": "Sloth", "暴食": "Gluttony",
+               "暴怒": "Wrath", "色欲": "Lust", "贪婪": "Greed"}
+ENGLISH = {
+    "驱魔调查": "Inquest", "真名确证": "True Name", "镇魔二阶段": "Second Seal",
+    "罪约裁决": "Verdict", "裁决尚待": "Pending", "驱魔完成": "Exorcised",
+    "恶魔挣脱": "Unbound", "仪式失败": "Rite Broken", "法阵熄灭": "Extinguished",
+    "罪群": "Legion", "反仪式・吞媒": "Devour",
+    "裁决・消灭": "Annihilate", "裁决・放逐": "Banish", "裁决・封印": "Seal",
+    "裁决・契约": "Covenant",
+}
+
+
+def fraktur(text):
+    """ASCII letters -> Mathematical Fraktur (Unifont covers plane 1)."""
+    holes = {"C": "ℭ", "H": "ℌ", "I": "ℑ", "R": "ℜ", "Z": "ℨ"}
+    out = []
+    for ch in text:
+        if ch in holes:
+            out.append(holes[ch])
+        elif "A" <= ch <= "Z":
+            out.append(chr(0x1D504 + ord(ch) - 65))
+        elif "a" <= ch <= "z":
+            out.append(chr(0x1D51E + ord(ch) - 97))
+        else:
+            out.append(ch)
+    return "".join(out)
 
 
 def broadcast_tag(tag):
@@ -398,33 +460,46 @@ def broadcast_tag(tag):
     return TAG_JOIN.join(part.strip() for part in body.split("·"))
 
 
+def broadcast_english(tag):
+    """The blackletter gloss for a tag, or None for the bare ones."""
+    key = broadcast_tag(tag)
+    head, _, tail = key.partition(TAG_JOIN)
+    if key in ENGLISH:
+        return fraktur(ENGLISH[key])
+    if head == "反仪式" and tail in SIN_ENGLISH:
+        return fraktur(SIN_ENGLISH[tail])
+    if head == "罪域":
+        return fraktur("Dominion")
+    return None
+
+
 def broadcast_colour(tag, body=""):
     """The colour a ritual broadcast tag must carry, or None if it is not one.
 
     Explicit tables win over the pillar lookup: failure tags such as
     [嫉妒得逞] name a sin but belong to WARN.  ``body`` is the rest of the
-    line, which names the lord for the tags in BROADCAST_SPEAKER.
+    line, which names the lord for the tags in SPEAKER_TAGS.
     """
     key = broadcast_tag(tag)
     head, _, tail = key.partition(TAG_JOIN)
     if key in SEAL_STAGES:
         return SEAL_STAGES[key]
-    if key in BROADCAST_WARN:
-        return WARN
-    if key in BROADCAST_HOLY:
-        return HOLY
+    if key in WARN_TAGS:
+        return BROADCAST_WARN
+    if key in HOLY_TAGS:
+        return BROADCAST_HOLY
     if key in VERDICTS:
         return VERDICTS[key]
     if head == "裁决" and tail in VERDICTS:
         return VERDICTS[tail]
-    if key in BROADCAST_PILLAR:
-        return pillar(BROADCAST_PILLAR[key])["lit"]
-    if key in BROADCAST_SPEAKER:
+    if key in PILLAR_TAGS:
+        return pillar_mid(PILLAR_TAGS[key])
+    if key in SPEAKER_TAGS:
         speaker = pillar_in(body)
-        return speaker["lit"] if speaker else None
+        return pillar_mid(speaker) if speaker else None
     for p in PILLARS:
         if head == p["who"] or (head in ("反仪式", "罪域") and tail in (p["who"], p["sin"])):
-            return p["lit"]
+            return pillar_mid(p)
     return None
 
 

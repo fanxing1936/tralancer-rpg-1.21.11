@@ -8,5 +8,5 @@ item replace entity @e[type=minecraft:husk,tag=rpg.counter.clone,distance=..4,li
 item replace entity @e[type=minecraft:husk,tag=rpg.counter.clone,distance=..4,limit=1,sort=nearest] armor.chest from entity @p[distance=..14] armor.chest
 item replace entity @e[type=minecraft:husk,tag=rpg.counter.clone,distance=..4,limit=1,sort=nearest] armor.legs from entity @p[distance=..14] armor.legs
 item replace entity @e[type=minecraft:husk,tag=rpg.counter.clone,distance=..4,limit=1,sort=nearest] armor.feet from entity @p[distance=..14] armor.feet
-tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"[反仪式・嫉妒] ","color":"#4F9EF0","bold":true,"italic":false},{"text":"利维坦复制了最近驱魔者的装备；十秒内击破妒影。","color":"gray","italic":false}]
+tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"〖反仪式・嫉妒〗","color":"#387AB7","bold":true,"italic":false},{"text":" 𝔈𝔫𝔳𝔶","color":"#244F77","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"利维坦复制了最近驱魔者的装备；十秒内击破妒影。","color":"#9C9A94","italic":false}]
 playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..20] ~ ~ ~ 1 0.75

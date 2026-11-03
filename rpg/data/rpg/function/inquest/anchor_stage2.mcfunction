@@ -5,5 +5,5 @@ execute unless entity @s[tag=rpg.rite.medium] if score @s rpg_dm_lord matches 4 
 execute unless entity @s[tag=rpg.rite.medium] if score @s rpg_dm_lord matches 5 run return run function rpg:inquest/scan/5
 execute unless entity @s[tag=rpg.rite.medium] if score @s rpg_dm_lord matches 6 run return run function rpg:inquest/scan/6
 execute unless entity @s[tag=rpg.rite.medium] if score @s rpg_dm_lord matches 7 run return run function rpg:inquest/scan/7
-execute if score @s rpg_totem matches 2300 run tellraw @a[distance=..18,gamemode=!spectator] ["",{"text":"[镇魔二阶段] ","color":"#FFD85A","bold":true,"italic":false},{"text":"攻击恶魔与右键布置仪式器物可提高稳定度；技能和挣脱会令其下降。","color":"gray","italic":false}]
+execute if score @s rpg_totem matches 2300 run tellraw @a[distance=..18,gamemode=!spectator] ["",{"text":"〖镇魔二阶段〗","color":"#C9A646","bold":true,"italic":false},{"text":" 𝔖𝔢𝔠𝔬𝔫𝔡 𝔖𝔢𝔞𝔩","color":"#836C2E","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"攻击恶魔与右键布置仪式器物可提高稳定度；技能和挣脱会令其下降。","color":"#9C9A94","italic":false}]
 tag @s remove rpg.rite.anchor.active

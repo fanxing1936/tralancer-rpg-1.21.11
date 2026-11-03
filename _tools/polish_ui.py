@@ -394,10 +394,16 @@ def process_mcfunction(path, stats):
 
 
 # ---------------------------------------------------------------------------
-# 仪式播报：「[标签] 正文」聊天行（ART-STYLE.md §12）
+# 仪式播报：「〖标签〗 𝔊𝔩𝔬𝔰𝔰  正文」聊天行（ART-STYLE.md §12）
 # ---------------------------------------------------------------------------
 TELLRAW = re.compile(r'\btellraw\s+')
-BROADCAST_HEAD = re.compile(r"^(\[[^\[\]]{1,14}\])\s*(.*)$", re.S)
+BROADCAST_HEAD = re.compile(r"^(\[[^\[\]]{1,14}\]|〖[^〖〗]{1,14}〗)\s*(.*)$", re.S)
+VERDICT_BUTTON = re.compile(r"^(?:\[|〖)(消灭|放逐|封印|契约)(?:\]|〗)\s*$")
+BODY_COLOURS = dict(
+    [(ui.GRAY, ui.BROADCAST_BODY), (ui.NAMED["gray"], ui.BROADCAST_BODY),
+     (ui.DARK_GRAY, ui.BROADCAST_BODY), ("white", ui.BROADCAST_NAME),
+     (ui.WHITE, ui.BROADCAST_NAME)] +
+    [(p["lit"], ui.pillar_mid(p)) for p in ui.PILLARS])
 
 
 def tellraw_arrays(text):
@@ -424,7 +430,7 @@ def tellraw_arrays(text):
 
 def broadcast_head(parts):
     """数组里第一个有字的组件：``(下标, 标签, 同组件余文, 应有标签色)``；
-    行首不是 ``[标签]`` 则返回 None。应有标签色为 None 表示不在播报表里。"""
+    行首不是 ``[标签]``／``〖标签〗`` 则返回 None。应有标签色为 None 表示不在播报表里。"""
     if not isinstance(parts, list):
         return None
     for i, node in enumerate(parts):
@@ -441,6 +447,26 @@ def broadcast_head(parts):
     return None
 
 
+def verdict_buttons(parts):
+    return [n for n in parts if isinstance(n, dict)
+            and VERDICT_BUTTON.match(n.get("text", ""))]
+
+
+def style_choices(parts):
+    """〖消灭〗   〖放逐〗   〖封印〗   〖契约〗：四个可点按钮，宽松排开。"""
+    nodes = [n for n in parts if isinstance(n, dict)]
+    for k, node in enumerate(nodes):
+        found = VERDICT_BUTTON.match(node.get("text", ""))
+        if found:
+            # 按钮紧接下一个按钮时自带间距；中间已有空白组件时由它来撑开。
+            nxt = nodes[k + 1] if k + 1 < len(nodes) else None
+            gap = ui.CHOICE_GAP if nxt is not None and VERDICT_BUTTON.match(nxt.get("text", "")) else ""
+            node.update(text=ui.BRACKETS[0] + found.group(1) + ui.BRACKETS[1] + gap,
+                        color=ui.VERDICTS[found.group(1)], bold=True, italic=False)
+        elif not node.get("text", "x").strip():
+            node["text"] = ui.CHOICE_GAP
+
+
 def polish_broadcast(parts, stats):
     i, tag, rest, colour = broadcast_head(parts)
     head = parts[i]
@@ -450,19 +476,33 @@ def polish_broadcast(parts, stats):
             head["text"] = head["text"].replace(tag, "[%s]" % ui.broadcast_tag(tag), 1)
             stats["broadcast_join"] += 1
         return
-    tagged = dict(text="[%s] " % ui.broadcast_tag(tag),
+    if tag.startswith(ui.BRACKETS[0]):
+        return  # 已是播报样式（封印遗物层之后的第二遍）
+    key = ui.broadcast_tag(tag)
+    if key in ui.VERDICTS and len(verdict_buttons(parts)) > 1:
+        style_choices(parts)
+        stats["broadcast"] += 1
+        return
+    tagged = dict(text=ui.BRACKETS[0] + key + ui.BRACKETS[1],
                   color=colour, bold=True, italic=False)
-    for key, value in head.items():
-        if key not in ("text", "color", "bold", "italic"):
-            tagged[key] = value
-    parts[i] = tagged
+    for name, value in head.items():
+        if name not in ("text", "color", "bold", "italic"):
+            tagged[name] = value
+    body = parts[i + 1:]
     if rest:
         # 「[赎金失败] 背包中没有金锭。」整句一个红色组件：拆成标签 + 正文。
-        parts.insert(i + 1, dict(text=rest, color=ui.GRAY, italic=False))
+        body.insert(0, dict(text=rest, color=ui.GRAY, italic=False))
         stats["broadcast_split"] += 1
-    for node in parts[i + 1:]:
-        if isinstance(node, dict) and node.get("color") == ui.DARK_GRAY:
-            node["color"] = ui.GRAY
+    for node in body:
+        if isinstance(node, dict) and node.get("color") in BODY_COLOURS:
+            node["color"] = BODY_COLOURS[node["color"]]
+    lead = [tagged]
+    english = ui.broadcast_english(tag)
+    if english:
+        lead.append(dict(text=" " + english, color=ui.shade(colour), bold=False, italic=False))
+        stats["broadcast_gloss"] += 1
+    lead.append(dict(text=ui.GAP, color=ui.BROADCAST_BODY, bold=False, italic=False))
+    parts[i:] = lead + body
     stats["broadcast"] += 1
 
 
@@ -482,6 +522,30 @@ def polish_broadcasts(text, stats):
     for start, end, cooked in reversed(edits):
         text = text[:start] + cooked + text[end:]
     return text
+
+
+def broadcast_problems(path, data):
+    problems = []
+    for _, _, raw in tellraw_arrays(data):
+        try:
+            parts = json.loads(raw)
+        except ValueError:
+            continue
+        head = broadcast_head(parts)
+        if head is None:
+            continue
+        i, tag, rest, want = head
+        if parts[i].get("bold") and "·" in tag:
+            problems.append("%s: 加粗标签 %s 仍用「·」连接" % (path, tag))
+        if want is None:
+            continue
+        if (rest and not VERDICT_BUTTON.match(parts[i]["text"])) or not tag.startswith(ui.BRACKETS[0]) \
+                or parts[i].get("color") != want or not parts[i].get("bold"):
+            problems.append("%s: 播报标签 %s 应为加粗〖〗、颜色 %s" % (path, tag, want))
+        if any(isinstance(n, dict) and n.get("color") in (ui.DARK_GRAY, ui.GRAY)
+               for n in parts[i + 1:]):
+            problems.append("%s: 播报 %s 正文仍用原版灰" % (path, tag))
+    return problems
 
 
 # ---------------------------------------------------------------------------
@@ -592,35 +656,43 @@ def validate(stats):
                         continue
                     if node.get("color") != ui.WHITE or node.get("bold") is not False:
                         problems.append("%s: 本名 %s 不是白色或仍加粗" % (path, text))
-            for _, _, raw in tellraw_arrays(data):
-                try:
-                    parts = json.loads(raw)
-                except ValueError:
-                    continue
-                head = broadcast_head(parts)
-                if head is None:
-                    continue
-                i, tag, rest, want = head
-                if parts[i].get("bold") and "·" in tag:
-                    problems.append("%s: 加粗标签 %s 仍用「·」连接" % (path, tag))
-                if want is None:
-                    continue
-                if rest or parts[i].get("color") != want or not parts[i].get("bold"):
-                    problems.append("%s: 播报标签 %s 应为加粗 %s" % (path, tag, want))
-                if any(isinstance(n, dict) and n.get("color") == ui.DARK_GRAY
-                       for n in parts[i + 1:]):
-                    problems.append("%s: 播报 %s 正文仍有 dark_gray" % (path, tag))
+            problems += broadcast_problems(path, data)
     if problems:
         raise SystemExit("文本规范仍有残留：\n" + "\n".join(problems[:30]))
+
+
+def broadcasts_only(stats):
+    """封印遗物层排在本脚本之后，它写的播报行由构建末尾这一遍补上样式。"""
+    problems = []
+    for root, dirs, files in os.walk(DP):
+        dirs.sort()
+        for name in sorted(files):
+            if not name.endswith(".mcfunction"):
+                continue
+            path = os.path.join(root, name)
+            with io.open(path, encoding="utf-8") as handle:
+                source = handle.read()
+            text = polish_broadcasts(source, stats)
+            if text != source:
+                with io.open(path, "w", encoding="utf-8", newline="\n") as handle:
+                    handle.write(text)
+                stats["files"] += 1
+            problems += broadcast_problems(path, text)
+    if problems:
+        raise SystemExit("仪式播报仍有残留：\n" + "\n".join(problems[:30]))
+    print("仪式播报（末尾补一遍）：%d 行，%d 个文件" % (stats["broadcast"], stats["files"]))
 
 
 def main():
     stats = {
         "files": 0, "tag_renamed": 0, "name_white": 0, "lore_lifted": 0,
         "colour_folded": 0, "demon_colour": 0, "dust_folded": 0, "unparsed": [],
-        "broadcast": 0, "broadcast_split": 0, "broadcast_join": 0,
+        "broadcast": 0, "broadcast_split": 0, "broadcast_join": 0, "broadcast_gloss": 0,
         "seen": dict((who, 0) for who in DEMON_COLOURS),
     }
+    if "--broadcasts" in sys.argv:
+        broadcasts_only(stats)
+        return
     for root, dirs, files in os.walk(DP):
         dirs.sort()
         for name in sorted(files):
@@ -636,8 +708,10 @@ def main():
         stats["colour_folded"], stats["demon_colour"], ", ".join(
             "%s=%d" % pair for pair in stats["seen"].items())))
     print("粒子：%d 处七柱旧色并入色板" % stats["dust_folded"])
-    print("仪式播报：%d 行按播报表定色（%d 行整句拆出标签），另 %d 个加粗标签换连接点" % (
-        stats["broadcast"], stats["broadcast_split"], stats["broadcast_join"]))
+    print("仪式播报：%d 行改为〖〗暗色样式（%d 行带哥特体英文，%d 行整句拆出标签），"
+          "另 %d 个加粗标签换连接点" % (
+              stats["broadcast"], stats["broadcast_gloss"], stats["broadcast_split"],
+              stats["broadcast_join"]))
     print("Lore：%d 处强调色提亮到 4.5:1；共改 %d 文件" % (
         stats["lore_lifted"], stats["files"]))
     if stats["unparsed"]:

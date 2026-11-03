@@ -56,9 +56,9 @@ def main() -> None:
             errors.append("escape dispatch does not preserve escape%d" % number)
 
     warning_contract = {
-        "inquest/seal/warn_agitated.mcfunction": ("[遗物躁动]", "躁动"),
-        "inquest/seal/warn_danger.mcfunction": ("[遗物危险]", "圣水", "压制"),
-        "inquest/seal/warn_critical.mcfunction": ("[遗物临界]", "rpg_rel_left", "距逃逸还差"),
+        "inquest/seal/warn_agitated.mcfunction": ("〖遗物躁动〗", "躁动"),
+        "inquest/seal/warn_danger.mcfunction": ("〖遗物危险〗", "圣水", "压制"),
+        "inquest/seal/warn_critical.mcfunction": ("〖遗物临界〗", "rpg_rel_left", "距逃逸还差"),
     }
     for rel, needles in warning_contract.items():
         source = read(rel)

@@ -4,5 +4,5 @@ tag @s add rpg.clue.1.4
 scoreboard players add @s rpg_ex_xp 4
 function rpg:inquest/recount/1
 playsound minecraft:block.enchantment_table.use player @s ~ ~ ~ 0.7 1.45
-tellraw @s ["",{"text":"[罪证] ","color":"#FFD85A","bold":true,"italic":false},{"text":"路西法 · ","color":"#5FD68C","bold":false,"italic":false},{"text":"失坠会折断他人的高度，却暴露王冠对低处的恐惧。","color":"gray","italic":false},{"text":"　进度 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_case1"},"color":"white","italic":false},{"text":"/3","color":"gray","italic":false}]
+tellraw @s ["",{"text":"〖罪证〗","color":"#C9A646","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"路西法 · ","color":"#34975A","bold":false,"italic":false},{"text":"失坠会折断他人的高度，却暴露王冠对低处的恐惧。","color":"#9C9A94","italic":false},{"text":"　进度 ","color":"#9C9A94","italic":false},{"score":{"name":"@s","objective":"rpg_case1"},"color":"#E6DFCF","italic":false},{"text":"/3","color":"#9C9A94","italic":false}]
 execute if score @s rpg_case1 matches 3.. run function rpg:inquest/reveal/1

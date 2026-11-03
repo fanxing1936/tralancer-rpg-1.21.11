@@ -10,5 +10,5 @@ kill @e[type=minecraft:husk,tag=rpg.counter.clone,distance=..12]
 execute as @e[type=minecraft:vindicator,tag=rpg.exorcism.bound,distance=..14,limit=1] run effect give @s minecraft:strength 8 1 true
 execute as @e[type=minecraft:vindicator,tag=rpg.exorcism.bound,distance=..14,limit=1] run effect give @s minecraft:speed 8 1 true
 scoreboard players add @a[tag=rpg.rite.chooser,distance=..16] rpg_ex_xp 2
-tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"[告解铃] ","color":"#FFD85A","bold":true,"italic":false},{"text":"反仪式被打断；敲铃者已被恶魔注视。","color":"gray","italic":false}]
+tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"〖告解铃〗","color":"#C9A646","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"反仪式被打断；敲铃者已被恶魔注视。","color":"#9C9A94","italic":false}]
 particle flash{color:16773574} ~ ~1 ~ 0 0 0 0 1 force

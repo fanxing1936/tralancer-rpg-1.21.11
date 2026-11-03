@@ -133,6 +133,8 @@ python add_sunken_skeleton.py ../resourcepack ../rpg
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.
 python add_seal_relic.py ../rpg
+# 封印遗物层写的播报行（[遗物休眠]、[利维坦・反制] 等）补上〖〗暗色样式（ART-STYLE §12）。
+python polish_ui.py ../rpg --broadcasts
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg
