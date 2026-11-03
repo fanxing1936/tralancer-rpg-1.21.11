@@ -650,10 +650,10 @@ def mg_guards(t, dur):
     adv = ease(t / dur)
     for k, (dx, delay) in enumerate([(-360, 0.25), (0, 0.0), (360, 0.25)]):
         px = int(13 + 4 * ease((t - delay) / dur))
-        m = model("tower_guard", 22 - dx / 40, px)
+        m = model("tower_guard", -dx / 30, px)
         bob = abs(math.sin((t - delay) * 5.0)) * 10
         x = W / 2 + dx * (1 + 0.2 * adv)
-        y = H / 2 + 40 - bob
+        y = H / 2 - 30 - bob
         paste(im, m, x, y)
         tag = txt("圣卫", ui.HOLY, 5, True)
         plate = Image.new("RGBA", (tag.width + 8, tag.height + 4), (0, 0, 0, 64))
@@ -666,8 +666,8 @@ def mg_beelzebub(t, dur):
     """别西卜降临：模型缓缓转身，原版 Boss 血条，聊天栏里罪群应召、反仪式发动。"""
     im = backdrop(t, *SECTION["demon"])
     rise = ease_out(t / 1.2)
-    m = model("beelzebub", 180 + 25 * math.sin(t * 0.6), 17)
-    paste(im, m, W / 2 + 480, H / 2 + 20 + (1 - rise) * 120, rise)
+    m = model("beelzebub", -20 + 25 * math.sin(t * 0.6), 15)
+    paste(im, m, W / 2 + 430, H / 2 + 40 + (1 - rise) * 120, rise)
     paste(im, boss_bar(BZ_NAME, 1.0 - 0.06 * t, 4), W / 2, 110, ease((t - 0.4) / 0.5))
     chat(im, [tellraw_runs("[罪群]", "别西卜 · ", "先锋 "), tellraw_runs("[罪群]", "别西卜 · ", "司祭 "),
               tellraw_runs("[反仪式・吞媒]"), tellraw_runs("腐宴开席")], t, step=1.4, start=1.0)
@@ -677,9 +677,9 @@ def mg_beelzebub(t, dur):
 def mg_exorcism(t, dur):
     """驱魔与封印：法阵里裁决落笔，残魂收入封魔灯，又从遗物里重新降临。"""
     im = backdrop(t, ui.HOLY, ui.pillar(4)["deep"])
-    m = model("beelzebub", 180 + 10 * math.sin(t), 17)
+    m = model("beelzebub", -15 + 10 * math.sin(t), 15)
     dim = 1 - 0.55 * ease((t - 3.0) / 0.6)
-    paste(im, m, W / 2 + 480, H / 2 + 20, dim)
+    paste(im, m, W / 2 + 430, H / 2 + 40, dim)
     paste(im, boss_bar(BZ_NAME, max(0.0, 0.18 - 0.05 * t), 4), W / 2, 110, 1 - ease((t - 3.0) / 0.5))
     chat(im, [tellraw_runs("[裁决尚待]"), tellraw_runs("[消灭] "), tellraw_runs("[裁决・封印]"),
               tellraw_runs("[封印逃逸] \",\"color\":\"#B5D957\"")], t, step=1.2, start=0.3)

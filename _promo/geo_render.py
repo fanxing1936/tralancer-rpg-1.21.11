@@ -12,6 +12,8 @@ import math
 import numpy as np
 from PIL import Image
 
+# Bedrock 的 X 与屏幕左右相反；模型正面朝 -Z，所以相机放在 -Z 一侧（yaw=0 即正面）
+NEG_X, CAM = True, -1
 SHADE = {"up": 1.0, "down": 0.5, "north": 0.8, "south": 0.8, "east": 0.6, "west": 0.6}
 
 
@@ -98,20 +100,23 @@ def render(geo_path, atlas_path, yaw=25.0, pitch=-12.0, px=12, scale_tex=8):
                 fuv = {k: tuple(f["uv"]) + tuple(f["uv_size"]) for k, f in uv.items()}
             crot = c.get("rotation")
             cpiv = np.array(c.get("pivot", [0, 0, 0]), float)
+            def place(q):
+                q = np.array(q, float)
+                if crot:
+                    q = _rot(*crot) @ (q - cpiv) + cpiv
+                q = to_model(q)
+                if NEG_X:
+                    q[0] = -q[0]
+                q = view @ q
+                return np.array([CAM * q[0], q[1], CAM * q[2]])   # 相机在 +z 一侧看向 -z
+            centre = place([(box[0] + box[3]) / 2, (box[1] + box[4]) / 2, (box[2] + box[5]) / 2])
+            flat = not (w and h and d)
             for face, corners in _faces(*box).items():
                 if face not in fuv:
                     continue
-                pts = []
-                for p in corners:
-                    p = np.array(p, float)
-                    if crot:
-                        p = _rot(*crot) @ (p - cpiv) + cpiv
-                    p = to_model(p)
-                    p[0] = -p[0]                      # Bedrock 的 X 与屏幕左右相反
-                    pts.append(view @ p)
-                pts = np.array(pts)
-                n = np.cross(pts[1] - pts[0], pts[3] - pts[0])
-                if n[2] >= -1e-6 and w and h and d:   # 背面剔除（片状方块两面都画）
+                pts = np.array([place(q) for q in corners])
+                outward = pts.mean(axis=0) - centre
+                if not flat and outward[2] <= 1e-6:   # 背面剔除：外法线背离相机（片状方块两面都画）
                     continue
                 polys.append((pts[:, 2].mean(), face, pts, fuv[face]))
 
@@ -122,7 +127,7 @@ def render(geo_path, atlas_path, yaw=25.0, pitch=-12.0, px=12, scale_tex=8):
     W = int((maxx - minx) * px) + pad * 2
     H = int((maxy - miny) * px) + pad * 2
     out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    for _z, face, pts, (u, v, uw, vh) in sorted(polys, key=lambda q: -q[0]):
+    for _z, face, pts, (u, v, uw, vh) in sorted(polys, key=lambda q: q[0]):
         scr = [((p[0] - minx) * px + pad, (maxy - p[1]) * px + pad) for p in pts]
         x0, y0 = int(min(s[0] for s in scr)), int(min(s[1] for s in scr))
         x1, y1 = int(math.ceil(max(s[0] for s in scr))), int(math.ceil(max(s[1] for s in scr)))
