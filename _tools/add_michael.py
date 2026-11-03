@@ -32,7 +32,6 @@ Two timing details shape the code:
 import io
 import json
 import os
-import shutil
 import sys
 
 import png_tool as P
@@ -126,18 +125,24 @@ def build_textures():
         cw, ch = x1 - x0 + 1, y1 - y0 + 1
         crop = b"".join(rgba[((y0 + y) * w + x0) * 4:((y0 + y) * w + x1 + 1) * 4]
                         for y in range(ch))
-        P.write(os.path.join(RPG_TEX, name + "_icon.png"), cw, ch, crop)
-        # 手持：原图原尺寸，手里的大小不变
         if name == "michael_spine":
-            # 长枪的手持模型沿用原版 spear_in_hand，它要的是左右镜像过的贴图；
+            P.write(os.path.join(RPG_TEX, name + "_icon.png"), cw, ch, crop)
+            # 手持：长枪沿用原版 spear_in_hand，它要的是左右镜像过的 32 网格原图；
             # 不镜像的那张没有模型引用，旧构建留下的就删掉
             P.write(os.path.join(RPG_TEX, name + "_in_hand.png"), w, h,
                     mirror(w, h, rgba))
-            stale = os.path.join(RPG_TEX, name + ".png")
-            if os.path.isfile(stale):
-                os.remove(stale)
+            stale = [name + ".png"]
         else:
-            shutil.copyfile(src, os.path.join(RPG_TEX, name + ".png"))
+            # 肋骨照漆黑之日的拿法：贴图铺满画布、握柄落在左下角，物品栏和手里
+            # 共用这一张裁好的图（漆黑之日是 19×19，刀身同样撑满画布）
+            P.write(os.path.join(RPG_TEX, name + ".png"), cw, ch, crop)
+            stale = [name + "_icon.png"]
+        for f in stale:
+            if os.path.isfile(os.path.join(RPG_TEX, f)):
+                os.remove(os.path.join(RPG_TEX, f))
+    # 肋骨不再单独分图标模型
+    if os.path.isfile(os.path.join(RPG_MODELS, "michael_rib_icon.json")):
+        os.remove(os.path.join(RPG_MODELS, "michael_rib_icon.json"))
 
 
 def dispatch_entry(path, base, cmd, model):
@@ -166,15 +171,13 @@ def build_models():
     wj(os.path.join(RPG_MODELS, "michael_spine.json"),
        {"parent": "item/generated",
         "textures": {"layer0": "rpg:item/michael_spine_icon"}})
-    wj(os.path.join(RPG_MODELS, "michael_rib_icon.json"),
-       {"parent": "item/generated",
-        "textures": {"layer0": "rpg:item/michael_rib_icon"}})
     wj(os.path.join(RPG_MODELS, "michael_spine_in_hand.json"),
        {"parent": "minecraft:item/spear_in_hand",
         "textures": {"layer0": "rpg:item/michael_spine_in_hand"}})
-    # 肋骨挂雅斤／波阿斯的双持手持变换：副手是正手，不是反握
+    # 肋骨用漆黑之日（warrior_sword）的手持父模型。fix_display 之后它与
+    # twin_handheld 的变换相同，副手也是正手，不是反握
     wj(os.path.join(RPG_MODELS, "michael_rib.json"),
-       {"parent": "rpg:item/twin_handheld",
+       {"parent": "rpg:item/sword_handheld",
         "textures": {"layer0": "rpg:item/michael_rib"}})
 
     dispatch_entry(os.path.join(MC_ITEMS, "netherite_spear.json"),
@@ -186,16 +189,9 @@ def build_models():
                                          "model": "rpg:item/michael_spine"}}],
                     "fallback": {"type": "minecraft:model",
                                  "model": "rpg:item/michael_spine_in_hand"}})
-    # 肋骨同样分两套：物品栏里是铺满的图标，手里是原尺寸
     dispatch_entry(os.path.join(MC_ITEMS, "netherite_sword.json"),
                    "netherite_sword", RIB_CMD,
-                   {"type": "minecraft:select",
-                    "property": "minecraft:display_context",
-                    "cases": [{"when": ["gui", "ground", "fixed", "on_shelf"],
-                               "model": {"type": "minecraft:model",
-                                         "model": "rpg:item/michael_rib_icon"}}],
-                    "fallback": {"type": "minecraft:model",
-                                 "model": "rpg:item/michael_rib"}})
+                   {"type": "minecraft:model", "model": "rpg:item/michael_rib"})
 
 
 # ---------------------------------------------------------------------------
