@@ -7,5 +7,5 @@ summon minecraft:vindicator ~ ~1 ~ {Tags:["rpg.advent","rpg.demon","devil","rpg.
 # 那一步会把 rpg.advent.new 摘掉。
 scoreboard players set @e[type=minecraft:vindicator,tag=rpg.advent.new] rpg_dm_lord 4
 function rpg:taint/advent_life
-particle dust{color:[0.71,0.85,0.34],scale:3} ~ ~1.2 ~ 0.8 1 0.8 0.05 70
+particle dust{color:[0.71,0.85,0.34],scale:2} ~ ~1.2 ~ 0.8 1 0.8 0.05 70
 playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..48] ~ ~ ~ 1 0.5

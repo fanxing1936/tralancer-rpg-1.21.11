@@ -4,6 +4,6 @@ execute at @s as @a[distance=..14,gamemode=!spectator,gamemode=!creative] run fu
 # 怒潮 —— 暴怒从中心炸开，把所有人赶出他的呼吸。
 playsound minecraft:item.mace.smash_ground_heavy hostile @a[distance=..32] ~ ~ ~ 1 0.7
 particle sweep_attack ~ ~1 ~ 3 1 3 0 26
-particle crit ~ ~1 ~ 4 1 4 0.22 96
-particle dust{color:[1.0,0.36,0.32],scale:2.4} ~ ~1 ~ 4 1 4 0.05 72
+particle crit ~ ~1 ~ 4 1 4 0.22 80
+particle dust{color:[1.0,0.36,0.32],scale:2} ~ ~1 ~ 4 1 4 0.05 72
 execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] at @s run function rpg:taint/sk5e_surge

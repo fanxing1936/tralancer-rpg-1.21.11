@@ -4,8 +4,8 @@ execute at @s as @a[distance=..14,gamemode=!spectator,gamemode=!creative] run fu
 # 腐宴 —— 宴席先腐烂，宾客才知道自己已经坐在盘中。
 playsound minecraft:entity.generic.eat hostile @a[distance=..32] ~ ~ ~ 1 0.45
 playsound minecraft:block.composter.fill_success hostile @a[distance=..28] ~ ~ ~ 1 0.55
-particle spore_blossom_air ~ ~1.4 ~ 4 1.5 4 0.08 105
-particle mycelium ~ ~0.8 ~ 4 1 4 0.16 92
+particle spore_blossom_air ~ ~1.4 ~ 4 1.5 4 0.08 80
+particle mycelium ~ ~0.8 ~ 4 1 4 0.16 80
 execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk4d_feast
 # 别西卜外观（add_beelzebub.py）
 execute if entity @s[tag=rpg.bz] run function rpg:beelzebub/skill/sk4_4

@@ -3,6 +3,6 @@ execute at @s as @e[type=minecraft:item_display,tag=rpg.rite.anchor,distance=..3
 function rpg:inquest/tool/consume
 execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,distance=..3,sort=nearest,limit=1] run tag @s add rpg.layout.suppress
 execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,distance=..3,sort=nearest,limit=1] run scoreboard players remove @s rpg_ex_slots 1
-particle dust{color:[0.72,0.86,1.0],scale:0.8} ~ ~0.15 ~ 1.8 0.05 1.8 0.01 45 force
+particle dust{color:[0.91,0.96,1.0],scale:0.8} ~ ~0.15 ~ 1.8 0.05 1.8 0.01 45 normal
 playsound minecraft:block.calcite.place player @a[distance=..14] ~ ~ ~ 0.8 1.4
 tellraw @a[distance=..14,gamemode=!spectator] ["",{"text":"〖仪式粉笔〗","color":"#C9A646","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"压制法阵已刻写。","color":"#9C9A94","italic":false}]

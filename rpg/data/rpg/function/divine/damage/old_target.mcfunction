@@ -7,4 +7,4 @@ execute store result score @s rpg_lt_max run attribute @s minecraft:max_health g
 scoreboard players operation @s rpg_lt_max /= #five rpg_lt_max
 execute if score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_stage1
 execute unless score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_score
-particle minecraft:enchanted_hit ~ ~1 ~ 0.5 0.8 0.5 0.1 24 force
+particle minecraft:enchanted_hit ~ ~1 ~ 0.5 0.8 0.5 0.1 24 normal

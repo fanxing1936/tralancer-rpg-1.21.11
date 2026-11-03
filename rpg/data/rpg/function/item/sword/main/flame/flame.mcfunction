@@ -8,4 +8,4 @@ scoreboard players set @s rpg_hud 10
 scoreboard players operation @s rpg_hud_p = @s flame
 scoreboard players operation @s rpg_hud_p /= #rune5 rpg_hud_p
 scoreboard players set @s rpg_hud_t 3
-execute at @s anchored eyes run particle enchant ^ ^ ^0.4 0.25 0.25 0.25 0.2 4 force @s
+execute at @s anchored eyes run particle enchant ^ ^ ^0.4 0.25 0.25 0.25 0.2 4 normal @s

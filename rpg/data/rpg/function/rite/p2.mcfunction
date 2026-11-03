@@ -1,6 +1,6 @@
 # 一拍净化。图腾每燃尽一分，效力就弱一分 —— 净化量由调用处给。
 particle end_rod ~ ~0.5 ~ 3.0 0.2 3.0 0.04 70
-particle dust{color:[1.0,0.98,0.86],scale:2} ~ ~0.8 ~ 3.0 0.4 3.0 0.03 60
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:2} ~ ~0.8 ~ 3.0 0.4 3.0 0.03 60
 playsound minecraft:block.conduit.ambient player @a[distance=..20] ~ ~ ~ 1 1.3
 execute as @a[distance=..6] run scoreboard players remove @s rpg_taint 10
 execute as @a[distance=..6,scores={rpg_taint=..-1}] run scoreboard players set @s rpg_taint 0

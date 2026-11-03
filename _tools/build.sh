@@ -135,6 +135,9 @@ python add_sunken_skeleton.py ../resourcepack ../rpg
 python add_seal_relic.py ../rpg
 # 封印遗物层写的播报行（[遗物休眠]、[利维坦・反制] 等）补上〖〗暗色样式（ART-STYLE §12）。
 python polish_ui.py ../rpg --broadcasts
+# 特效收口（docs/VFX-SPEC.md）：force 只留给预警和大招，数量／速度／尺寸收进各档上限，
+# 旧柱色闪光折回亮色。放在最后，前面所有生成器（含封印遗物层）写的粒子都经过这一道。
+python polish_vfx.py ../rpg
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg
@@ -155,6 +158,8 @@ python check_effect_duration.py ../rpg
 # 色板自检（对比度、同族色差）＋产物里不得残留七柱旧色写字；生成器里
 # 未登记的 Hex 先只警告（ART-STYLE.md §1.6）
 python check_ui_palette.py ../rpg
+# 特效分级预算：超档、滥用 force、每刻常驻超预算、深色闪光都会让构建失败
+python check_vfx_budget.py ../rpg
 echo
 echo "== 4. per-tick profile =="
 python profile_tick.py ../rpg

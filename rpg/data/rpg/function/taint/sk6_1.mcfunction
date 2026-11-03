@@ -3,5 +3,5 @@ execute at @s as @a[tag=rpg.holy,distance=..18,gamemode=!spectator] run function
 execute at @s as @a[distance=..14,gamemode=!spectator,gamemode=!creative] run function rpg:hud/demon/m26
 # 朝拜 —— 七格之内，全都得低头。
 playsound minecraft:entity.evoker.prepare_summon hostile @a[distance=..32] ~ ~ ~ 1 0.6
-particle dust_color_transition{from_color:[0.85,0.48,0.85],to_color:[0.36,0.17,0.44],scale:2} ~ ~1 ~ 3 1.2 3 0.06 90
+particle dust_color_transition{from_color:[0.85,0.48,0.85],to_color:[0.36,0.17,0.44],scale:2} ~ ~1 ~ 3 1.2 3 0.06 80
 execute as @a[distance=..7,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk6_kneel

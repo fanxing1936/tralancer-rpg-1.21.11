@@ -7,5 +7,5 @@ execute if score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_
 execute unless score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_score
 effect give @s minecraft:glowing 8 0 true
 effect give @s minecraft:weakness 6 0 true
-particle minecraft:flash{color:8641023} ~ ~1 ~ 0 0 0 0 1 force
-particle minecraft:end_rod ~ ~1 ~ 0.45 0.7 0.45 0.04 30 force
+particle minecraft:flash{color:6478312} ~ ~1 ~ 0 0 0 0 1 normal
+particle minecraft:end_rod ~ ~1 ~ 0.45 0.7 0.45 0.04 24 normal

@@ -10,4 +10,4 @@ effect clear @a[distance=..6,gamemode=!spectator] minecraft:darkness
 effect clear @a[distance=..6,gamemode=!spectator] minecraft:nausea
 tag @a[tag=rpg.rite.user,distance=..6] remove rpg.rite.user
 function rpg:inquest/stability/show
-particle campfire_cosy_smoke ~ ~0.4 ~ 1.2 0.3 1.2 0.03 35 force
+particle campfire_cosy_smoke ~ ~0.4 ~ 1.2 0.3 1.2 0.03 24 normal

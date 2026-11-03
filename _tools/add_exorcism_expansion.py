@@ -11,6 +11,8 @@ import os
 import sys
 
 import add_true_name_rite as rite
+import rpg_ui_style as ui
+import rpg_vfx as vfx
 
 
 DP = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else "../rpg")
@@ -329,8 +331,8 @@ execute as @e[type=minecraft:vindicator,tag=rpg.exorcism.bound,distance=..14,lim
 execute as @e[type=minecraft:vindicator,tag=rpg.exorcism.bound,distance=..14,limit=1] run effect give @s minecraft:speed 8 1 true
 scoreboard players add @a[tag=rpg.rite.chooser,distance=..16] rpg_ex_xp 2
 tellraw @a[distance=..16,gamemode=!spectator] %(msg)s
-particle flash{color:16773574} ~ ~1 ~ 0 0 0 0 1 force
-""" % {"msg": raw([txt("[告解铃] ", "#FFF2A8", True),
+particle %(flash)s ~ ~1 ~ 0 0 0 0 1 force
+""" % {"flash": vfx.flash(ui.HOLY_LIGHT), "msg": raw([txt("[告解铃] ", "#FFF2A8", True),
                          txt("反仪式被打断；敲铃者已被恶魔注视。", "gray")])})
 
     # 遗物只在携带者身上计时：每十分钟掷一次，平均约一小时逃逸一次。
@@ -432,10 +434,10 @@ tag @e[type=minecraft:item,tag=rpg.rite.tool.chalk%(n)d,distance=..4] remove rpg
 function rpg:inquest/tool/consume
 execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,distance=..3,sort=nearest,limit=1] run tag @s add rpg.layout.%(key)s
 execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,distance=..3,sort=nearest,limit=1] run scoreboard players remove @s rpg_ex_slots 1
-particle dust{color:[0.72,0.86,1.0],scale:0.8} ~ ~0.15 ~ 1.8 0.05 1.8 0.01 45 force
+particle %(chalk)s ~ ~0.15 ~ 1.8 0.05 1.8 0.01 45 normal
 playsound minecraft:block.calcite.place player @a[distance=..14] ~ ~ ~ 0.8 1.4
 tellraw @a[distance=..14,gamemode=!spectator] %(msg)s
-""" % {"n": n, "key": key, "msg": raw([txt("[仪式粉笔] ", colour, True), txt(name + "法阵已刻写。", "gray")])})
+""" % {"n": n, "key": key, "chalk": ui.dust(ui.CYAN_LIGHT, 0.8), "msg": raw([txt("[仪式粉笔] ", colour, True), txt(name + "法阵已刻写。", "gray")])})
     write("inquest/tool/incense_item.mcfunction", """\
 tag @e[type=minecraft:item,tag=rpg.rite.tool.incense,distance=..4] remove rpg.rite.tool.incense
 function rpg:inquest/tool/consume
@@ -723,12 +725,12 @@ function rpg:inquest/stability/hit25
 tag @s add rpg.rite.anchor.active
 execute as @a[distance=..7,gamemode=!spectator,gamemode=!creative] at @s facing entity @e[type=minecraft:item_display,tag=rpg.rite.anchor.active,limit=1] feet run tp @s ^ ^0.25 ^-1.4
 tag @s remove rpg.rite.anchor.active
-particle dust{color:[1.0,0.12,0.08],scale:1.5} ~2 ~0.1 ~ 0.2 0.1 2 0.02 35 force
-particle dust{color:[1.0,0.12,0.08],scale:1.5} ~-2 ~0.1 ~ 0.2 0.1 2 0.02 35 force
-particle dust{color:[1.0,0.12,0.08],scale:1.5} ~ ~0.1 ~2 2 0.1 0.2 0.02 35 force
-particle dust{color:[1.0,0.12,0.08],scale:1.5} ~ ~0.1 ~-2 2 0.1 0.2 0.02 35 force
+particle %(edge)s ~2 ~0.1 ~ 0.2 0.1 2 0.02 35 force
+particle %(edge)s ~-2 ~0.1 ~ 0.2 0.1 2 0.02 35 force
+particle %(edge)s ~ ~0.1 ~2 2 0.1 0.2 0.02 35 force
+particle %(edge)s ~ ~0.1 ~-2 2 0.1 0.2 0.02 35 force
 tellraw @a[distance=..16,gamemode=!spectator] %(msg)s
-""" % {"msg": raw([txt("[反仪式·暴怒] ", "#FF7A70", True), txt("萨麦尔击碎法阵边缘并震开守阵者。", "gray")])})
+""" % {"edge": ui.pillar_transition(5, 1.5), "msg": raw([txt("[反仪式·暴怒] ", "#FF7A70", True), txt("萨麦尔击碎法阵边缘并震开守阵者。", "gray")])})
     write("inquest/counter/samael_blocked.mcfunction", """\
 tag @s remove rpg.rite.nailed
 scoreboard players add @a[distance=..10,gamemode=!spectator] rpg_ex_xp 3
@@ -1033,7 +1035,7 @@ execute if score #bound_found rpg_ex_tmp matches 0 run return run function rpg:i
 scoreboard players remove @s rpg_totem 1
 execute if score @s rpg_totem matches ..0 run return run function rpg:inquest/anchor_timeout
 execute if score @s rpg_ex_toolcd matches 1.. run scoreboard players remove @s rpg_ex_toolcd 1
-particle dust{color:[1.0,0.91,0.52],scale:0.7} ~ ~0.75 ~ 0.28 0.35 0.28 0.01 1 normal
+particle """ + ui.dust(ui.HOLY, 0.7) + """ ~ ~0.75 ~ 0.28 0.35 0.28 0.01 1 normal
 execute if score @s rpg_ex_stage matches 2..3 run function rpg:inquest/tool/scan
 execute if score @s rpg_ex_stage matches 2..3 run function rpg:inquest/counter/tick
 execute if score @s rpg_ex_stab matches ..0 run return run function rpg:inquest/anchor_collapse

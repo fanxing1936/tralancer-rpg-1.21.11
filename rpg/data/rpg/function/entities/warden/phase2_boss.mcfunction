@@ -13,7 +13,7 @@ execute if score @s devil matches 250 run effect give @s minecraft:instant_healt
 execute if score @s devil matches 250 run particle minecraft:sweep_attack ~5 ~1.2 ~5 -10 -1 -10 0 72 normal
 execute if score @s devil matches 250 run playsound minecraft:entity.ghast.death player @a[distance=..15]
 execute if score @s devil matches 250 run function rpg:entities/warden/pseudo_burst_players
-execute if score @s devil matches 250 as @a[distance=..10] at @s run particle squid_ink ~1 ~1 ~1 -2 -1 -2 1 24
+execute if score @s devil matches 250 as @a[distance=..10] at @s run particle squid_ink ~1 ~1 ~1 -2 -1 -2 0.25 24
 execute if score @s devil matches 350 as @a[distance=..10] at @s run summon lightning_bolt ~ ~ ~
 execute if score @s devil matches 350 as @a[distance=..10] at @s run particle sculk_soul ~0.25 ~1.2 ~0.25 -0.5 -1 -0.5 0.1 16
 execute if score @s devil matches 350 as @a[distance=..10] at @s run particle trial_spawner_detection_ominous ~0.25 ~1.2 ~0.25 -0.5 -1 -0.5 0.1 16

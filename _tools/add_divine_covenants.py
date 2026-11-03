@@ -14,6 +14,7 @@ import shutil
 import sys
 
 import rpg_ui_style as ui
+import rpg_vfx as vfx
 
 
 DP = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else "../rpg")
@@ -30,6 +31,15 @@ OLD_COLOUR = ui.HOLY_DARK
 OLD_LIGHT = ui.HOLY_LIGHT
 NEW_COLOUR = ui.CYAN
 NEW_LIGHT = ui.CYAN_LIGHT
+# 契约特效的颜色（docs/VFX-SPEC.md §3）：旧约圣金，新约权柄青；
+# 审判是权柄执行神圣判决，由青渐变到圣金浅。
+FX = {
+    "flash_new": vfx.flash(NEW_COLOUR),
+    "flash_new_light": vfx.flash(NEW_LIGHT),
+    "judge_arm": ui.dust_transition(NEW_COLOUR, OLD_LIGHT, 1.5),
+    "judge_strike": ui.dust_transition(NEW_COLOUR, OLD_LIGHT, 2.0),
+    "gather_dust": ui.dust(NEW_LIGHT, 1.4),
+}
 USE = ('food={nutrition:0,saturation:0f,can_always_eat:1b},'
        'consumable={consume_seconds:100180f,animation:"block",'
        'sound:"minecraft:block.enchantment_table.use",'
@@ -289,19 +299,19 @@ tellraw @s %s
     write("divine/sign_vfx_old.mcfunction", """title @s times 10 60 20
 title @s title %s
 title @s subtitle %s
-particle minecraft:flash{color:16771162} ~ ~1 ~ 0 0 0 0 1 force
+particle minecraft:%s ~ ~1 ~ 0 0 0 0 1 force
 particle minecraft:end_rod ~ ~1 ~ 0.7 0.9 0.7 0.12 100 force
 playsound minecraft:block.end_portal.spawn master @s ~ ~ ~ 0.75 1.45
 """ % (row(comp("契 约 已 立", OLD_COLOUR, True)),
-         row(comp("人与上帝 · 律法见证", OLD_LIGHT))))
+         row(comp("人与上帝 · 律法见证", OLD_LIGHT)), vfx.flash(ui.HOLY)))
     write("divine/sign_vfx_new.mcfunction", """title @s times 10 60 20
 title @s title %s
 title @s subtitle %s
-particle minecraft:flash{color:15594751} ~ ~1 ~ 0 0 0 0 1 force
+particle minecraft:%s ~ ~1 ~ 0 0 0 0 1 force
 particle end_rod ~ ~1 ~ 0.7 0.9 0.7 0.12 100 force
 playsound minecraft:block.end_portal.spawn master @s ~ ~ ~ 0.75 1.45
 """ % (row(comp("契 约 已 立", NEW_COLOUR, True)),
-         row(comp("人与上帝 · 权柄见证", NEW_LIGHT))))
+         row(comp("人与上帝 · 权柄见证", NEW_LIGHT)), vfx.flash(ui.CYAN_LIGHT)))
     write("divine/reissue.mcfunction", """execute if score @s rpg_lt_divine matches 1 if items entity @s weapon.mainhand *[minecraft:custom_data~{rpg_divine_old:1b}] run item replace entity @s weapon.mainhand with %s
 execute if score @s rpg_lt_divine matches 2 if items entity @s weapon.mainhand *[minecraft:custom_data~{rpg_divine_new:1b}] run item replace entity @s weapon.mainhand with %s
 playsound minecraft:block.enchantment_table.use player @s ~ ~ ~ 0.55 1.4
@@ -318,12 +328,12 @@ execute as @e[tag=rpg.demon,distance=..10] at @s run function rpg:divine/damage/
 execute as @e[tag=rpg.demon.minion,tag=!rpg.demon,distance=..10] at @s run function rpg:divine/damage/old_target
 execute as @e[tag=rpg.demon.fly,tag=!rpg.demon,tag=!rpg.demon.minion,distance=..10] at @s run function rpg:divine/damage/old_target
 tag @s remove rpg.divine.cast
-particle minecraft:flash{color:16771482} ~ ~1 ~ 0 0 0 0 1 force
-particle minecraft:totem_of_undying ~ ~1 ~ 5 1 5 0.08 130 force
-particle minecraft:end_rod ~ ~0.8 ~ 4.8 0.5 4.8 0.03 90 force
+particle minecraft:%s ~ ~1 ~ 0 0 0 0 1 force
+particle minecraft:totem_of_undying ~ ~1 ~ 5 1 5 0.08 96 force
+particle minecraft:end_rod ~ ~0.8 ~ 4.8 0.5 4.8 0.03 72 force
 playsound minecraft:block.beacon.power_select master @a[distance=..24] ~ ~ ~ 1 1.35
 function rpg:hud/m59
-""")
+""" % vfx.flash(ui.HOLY_LIGHT))
     write("divine/damage/old_target.mcfunction", """execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/old
 execute store result score @s rpg_lt_hp run data get entity @s Health 100
 execute store result score @s rpg_lt_max run attribute @s minecraft:max_health get 100
@@ -359,9 +369,9 @@ $execute unless entity @a[tag=rpg.divine.cast,limit=1] run damage @s $(amount) r
 def build_new_power_and_borrow():
     beam = []
     for d in range(1, 21):
-        beam.append("particle dust{color:[0.78,0.92,1.0],scale:1.25} ^ ^1 ^%d 0.10 0.10 0.10 0.01 4 force" % d)
+        beam.append("particle %s ^ ^1 ^%d 0.10 0.10 0.10 0.01 4 normal" % (ui.dust(ui.CYAN_LIGHT, 1.25), d))
         if d % 2 == 0:
-            beam.append("particle end_rod ^ ^1 ^%d 0.14 0.14 0.14 0.01 2 force" % d)
+            beam.append("particle end_rod ^ ^1 ^%d 0.14 0.14 0.14 0.01 2 normal" % d)
         beam.append("execute positioned ^ ^1 ^%d as @e[tag=rpg.demon,tag=!rpg.divine.hit,distance=..2.5] at @s run function rpg:divine/damage/new_target" % d)
         beam.append("execute positioned ^ ^1 ^%d as @e[tag=rpg.demon.minion,tag=!rpg.demon,tag=!rpg.divine.hit,distance=..2.5] at @s run function rpg:divine/damage/new_target" % d)
         beam.append("execute positioned ^ ^1 ^%d as @e[tag=rpg.demon.fly,tag=!rpg.demon,tag=!rpg.demon.minion,tag=!rpg.divine.hit,distance=..2.5] at @s run function rpg:divine/damage/new_target" % d)
@@ -373,8 +383,8 @@ def build_new_power_and_borrow():
             x = math.cos(angle) * radius
             z = math.sin(angle) * radius
             field_ring.append(
-                "particle dust{color:[0.38,0.85,0.91],scale:%.2f} ~%.3f ~0.08 ~%.3f 0 0 0 0 1 force"
-                % (scale, x, z))
+                "particle dust{color:[%s],scale:%.2f} ~%.3f ~0.08 ~%.3f 0 0 0 0 1 force"
+                % (ui.floats(ui.CYAN), scale, x, z))
 
     write("divine/invoke_new.mcfunction", """# 新约双式：常态为创世净光，潜行为伊甸敕界。
 execute if predicate rpg:sneaking run return run function rpg:divine/invoke_new_field
@@ -387,10 +397,10 @@ tag @e[tag=rpg.divine.hit] remove rpg.divine.hit
 %s
 tag @e[tag=rpg.divine.hit] remove rpg.divine.hit
 tag @s remove rpg.divine.cast
-particle minecraft:flash{color:8641023} ^ ^1 ^1 0 0 0 0 1 force
+particle minecraft:%s ^ ^1 ^1 0 0 0 0 1 force
 playsound minecraft:block.beacon.activate master @a[distance=..32] ~ ~ ~ 1 1.65
 function rpg:hud/m60
-""" % "\n".join(beam))
+""" % ("\n".join(beam), vfx.flash(ui.CYAN)))
     write("divine/damage/new_target.mcfunction", """tag @s add rpg.divine.hit
 execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/beam
 execute store result score @s rpg_lt_max run attribute @s minecraft:max_health get 100
@@ -400,9 +410,9 @@ execute if score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_
 execute unless score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_score
 effect give @s minecraft:glowing 8 0 true
 effect give @s minecraft:weakness 6 0 true
-particle minecraft:flash{color:8641023} ~ ~1 ~ 0 0 0 0 1 force
+particle minecraft:%(flash_new)s ~ ~1 ~ 0 0 0 0 1 force
 particle minecraft:end_rod ~ ~1 ~ 0.45 0.7 0.45 0.04 30 force
-""")
+""" % FX)
     write("divine/invoke_new_field.mcfunction", """scoreboard players set @s rpg_lt_div_cd 600
 scoreboard players set @s rpg_lt_div_max 600
 tag @s add rpg.divine.cast
@@ -420,12 +430,12 @@ effect give @a[distance=..8,gamemode=!spectator] minecraft:regeneration 6 1 true
 effect give @a[distance=..8,gamemode=!spectator] minecraft:resistance 6 0 true
 effect give @a[distance=..8,gamemode=!spectator] minecraft:absorption 6 1 true
 %s
-particle minecraft:flash{color:6482395} ~ ~1 ~ 0 0 0 0 1 force
-particle minecraft:totem_of_undying ~ ~0.8 ~ 5.5 0.5 5.5 0.05 120 force
+particle minecraft:%s ~ ~1 ~ 0 0 0 0 1 force
+particle minecraft:totem_of_undying ~ ~0.8 ~ 5.5 0.5 5.5 0.05 80 force
 playsound minecraft:block.beacon.power_select master @a[distance=..32] ~ ~ ~ 1 0.85
 playsound minecraft:block.amethyst_block.resonate master @a[distance=..24] ~ ~ ~ 0.8 1.55
 function rpg:hud/m61
-""" % "\n".join(field_ring))
+""" % ("\n".join(field_ring), vfx.flash(ui.CYAN)))
     write("divine/damage/field_target.mcfunction", """execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/field
 execute store result score @s rpg_lt_max run attribute @s minecraft:max_health get 100
 scoreboard players operation @s rpg_lt_max *= #three rpg_lt_max
@@ -471,11 +481,11 @@ execute unless score @s rpg_lt_auth matches 25.. run return run function rpg:div
 scoreboard players remove @s rpg_lt_auth 25
 scoreboard players set @s rpg_lt_auth_t 0
 scoreboard players set @s rpg_lt_judge 600
-particle dust_color_transition{from_color:[0.38,0.85,0.91],to_color:[1.0,0.95,0.66],scale:1.5} ~ ~1 ~ 0.45 0.75 0.45 0.04 36 force
+particle %(judge_arm)s ~ ~1 ~ 0.45 0.75 0.45 0.04 36 force
 particle minecraft:end_rod ~ ~1 ~ 0.35 0.65 0.35 0.03 24 force
 playsound minecraft:block.beacon.power_select player @s ~ ~ ~ 0.8 1.55
 function rpg:hud/m63
-""")
+""" % FX)
     write("divine/judgment/already_armed.mcfunction", """tellraw @s %s
 playsound minecraft:block.note_block.bass player @s ~ ~ ~ 0.45 0.75
 """ % row(comp("[终末圣裁] ", NEW_COLOUR, True),
@@ -523,10 +533,10 @@ scoreboard players operation @s rpg_lt_max /= #five rpg_lt_max
 scoreboard players add @s rpg_lt_max 1000
 execute if score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_stage1
 execute unless score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_score
-particle minecraft:flash{color:15594751} ~ ~1 ~ 0 0 0 0 1 force
-particle dust_color_transition{from_color:[0.38,0.85,0.91],to_color:[1.0,0.95,0.66],scale:2.0} ~ ~1 ~ 0.65 0.85 0.65 0.08 48 force
+particle minecraft:%(flash_new_light)s ~ ~1 ~ 0 0 0 0 1 force
+particle %(judge_strike)s ~ ~1 ~ 0.65 0.85 0.65 0.08 48 force
 particle minecraft:enchanted_hit ~ ~1 ~ 0.5 0.7 0.5 0.12 36 force
-""")
+""" % FX)
 
     write("divine/gift.mcfunction", """execute unless score @s rpg_lt_divine matches 2 run return run function rpg:divine/authority/no_covenant
 execute unless score @s rpg_lt_auth matches 35.. run return run function rpg:divine/authority/insufficient
@@ -608,8 +618,8 @@ def build_damage_type_and_ritual_compat():
 tag @s add rpg.divine.ritual_subject
 execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,distance=..14] if score @s rpg_rite_id = @e[type=minecraft:vindicator,tag=rpg.divine.ritual_subject,limit=1,sort=nearest] rpg_rite_id run function rpg:divine/ritual/%s_apply
 tag @s remove rpg.divine.ritual_subject
-particle minecraft:flash{color:%d} ~ ~1 ~ 0 0 0 0 1 force
-""" % (name, particle_colour))
+particle minecraft:%s ~ ~1 ~ 0 0 0 0 1 force
+""" % (name, vfx.flash(particle_colour)))
         write("divine/ritual/%s_apply.mcfunction" % name, """scoreboard players add @s rpg_ex_stab %d
 execute if score @s rpg_ex_stab matches 101.. run scoreboard players set @s rpg_ex_stab 100
 execute at @s run particle dust{color:%s,scale:1.1} ~ ~0.18 ~ 0.8 0.08 0.8 0.04 28 force
@@ -618,10 +628,10 @@ execute at @s run playsound minecraft:block.amethyst_block.resonate master @a[di
 execute at @s as @a[tag=rpg.divine.cast,distance=..24,sort=nearest,limit=1] run scoreboard players add @s rpg_ex_xp %d
 """ % (amount, colour, pitch, xp))
 
-    ritual_route("old", 20, 3, "[0.83,0.69,0.22]", 16771482, 1.15)
-    ritual_route("beam", 25, 4, "[0.38,0.85,0.91]", 8641023, 1.55)
-    ritual_route("field", 15, 2, "[0.91,0.96,1.0]", 6482395, 1.35)
-    ritual_route("judgment", 20, 3, "[0.38,0.85,0.91]", 15594751, 1.70)
+    ritual_route("old", 20, 3, "[%s]" % ui.floats(OLD_COLOUR), OLD_LIGHT, 1.15)
+    ritual_route("beam", 25, 4, "[%s]" % ui.floats(NEW_COLOUR), NEW_COLOUR, 1.55)
+    ritual_route("field", 15, 2, "[%s]" % ui.floats(NEW_LIGHT), NEW_COLOUR, 1.35)
+    ritual_route("judgment", 20, 3, "[%s]" % ui.floats(NEW_COLOUR), NEW_LIGHT, 1.70)
 
 
 def build_player_tick_hud_and_renounce():
@@ -919,14 +929,14 @@ def build_tree_rewards_and_cross():
     write("ritual/life_tree/complete.mcfunction", """tag @s add rpg.lt.complete
 execute as @a[tag=rpg.kabbalah.user,distance=..5,sort=nearest,limit=1] unless score @s rpg_lt_claim matches 1.. run function rpg:ritual/life_tree/give_old_covenant
 scoreboard players set @a[tag=rpg.kabbalah.user,distance=..5,sort=nearest,limit=1] rpg_lt_claim 1
-particle minecraft:flash{color:13145394} ~ ~0.18 ~ 0 0 0 0 1 force
-particle minecraft:totem_of_undying ~ ~0.35 ~ 2.2 0.35 4.6 0.10 140 force
+particle minecraft:%s ~ ~0.18 ~ 0 0 0 0 1 force
+particle minecraft:totem_of_undying ~ ~0.35 ~ 2.2 0.35 4.6 0.10 96 force
 playsound minecraft:ui.toast.challenge_complete master @a[distance=..32] ~ ~ ~ 1.0 0.82
 tellraw @a[distance=..24,gamemode=!spectator] %s
-""" % row(comp("[旧约] ", OLD_COLOUR, True),
+""" % (vfx.flash(OLD_COLOUR), row(comp("[旧约] ", OLD_COLOUR, True),
            comp("十源质归位，律法的上半部显于人间；", ui.GRAY),
            comp("Daath 节点", NEW_COLOUR, True),
-           comp("仍等待最后的见证。", ui.GRAY)))
+           comp("仍等待最后的见证。", ui.GRAY))))
 
     # Add True Cross routing at the hidden node before the generic failure text.
     rel = "ritual/life_tree/input.mcfunction"
@@ -961,21 +971,21 @@ tag @a[tag=rpg.kabbalah.user,distance=..1] remove rpg.kabbalah.user
     write("divine/gather/one.mcfunction", """scoreboard players add @s rpg_lt_gather 1
 execute as @e[type=minecraft:item_display,tag=rpg.ritual.life_tree.prop,distance=..8] at @s facing entity @e[type=minecraft:item_display,tag=rpg.ritual.life_tree.cross,distance=..8,limit=1,sort=nearest] feet run tp @s ^ ^ ^0.22
 execute as @e[type=minecraft:item_display,tag=rpg.ritual.life_tree.prop,distance=..8] at @s run particle minecraft:end_rod ~ ~0.08 ~ 0.08 0.03 0.08 0.01 2 force
-execute positioned ^0 ^0.12 ^-1.58 run particle dust{color:[0.75,0.90,1.0],scale:1.4} ~ ~ ~ 0.25 0.05 0.25 0.02 8 force
+execute positioned ^0 ^0.12 ^-1.58 run particle %(gather_dust)s ~ ~ ~ 0.25 0.05 0.25 0.02 8 force
 execute if score @s rpg_lt_gather matches 24.. run return run function rpg:divine/gather/finish
-""")
+""" % FX)
     write("divine/gather/finish.mcfunction", """execute as @a if score @s rpg_lt_owner = @e[type=minecraft:marker,tag=rpg.lt.gathering,distance=..1,limit=1] rpg_lt_owner run function rpg:divine/gather/reward
 kill @e[type=minecraft:item_display,tag=rpg.ritual.life_tree.prop,distance=..8]
 kill @e[type=minecraft:item_display,tag=rpg.ritual.life_tree.cross,distance=..8]
-particle minecraft:flash{color:8641023} ~ ~0.4 ~ 0 0 0 0 1 force
+particle minecraft:%s ~ ~0.4 ~ 0 0 0 0 1 force
 particle minecraft:end_rod ~ ~0.4 ~ 2.2 0.5 4.5 0.12 180 force
 particle minecraft:totem_of_undying ~ ~0.4 ~ 2.0 0.4 4.2 0.10 120 force
 playsound minecraft:ui.toast.challenge_complete master @a[distance=..32] ~ ~ ~ 1 1.25
 tellraw @a[distance=..24,gamemode=!spectator] %s
 kill @s
-""" % row(comp("[新约] ", NEW_COLOUR, True),
+""" % (vfx.flash(ui.CYAN), row(comp("[新约] ", NEW_COLOUR, True),
            comp("十源质与真·十字架归于一体；生命之树收束为", ui.GRAY),
-           comp("『新约』", NEW_LIGHT, True), comp("。", ui.GRAY)))
+           comp("『新约』", NEW_LIGHT, True), comp("。", ui.GRAY))))
     write("divine/gather/reward.mcfunction", """clear @s minecraft:enchanted_book[minecraft:custom_data~{rpg_divine_old:1b}]
 execute if score @s rpg_lt_divine matches 1 run scoreboard players set @s rpg_lt_divine 0
 tag @s remove rpg.divine.old

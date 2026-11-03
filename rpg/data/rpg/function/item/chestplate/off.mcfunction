@@ -5,7 +5,7 @@ scoreboard players reset * random
 scoreboard players reset * absorption
 
 execute as @e[scores={boom=1..3},tag=rpg.e.chest_boom_tag1] at @s run execute positioned ~ ~ ~ run function rpg:effect/pseudo_explosion/owned_p5
-execute as @e[scores={boom=1..3},tag=rpg.e.chest_boom_tag1] at @s run particle explosion ~1 ~1.5 ~1 -2 -2 -2 1 50 force
+execute as @e[scores={boom=1..3},tag=rpg.e.chest_boom_tag1] at @s run particle explosion ~1 ~1.5 ~1 -2 -2 -2 1 50 normal
 execute as @e[scores={boom=1..3},tag=rpg.e.chest_boom_tag1] at @s run kill
 
 execute as @e[scores={health=0..3},tag=rpg.e.chest_health_tag1] at @s run effect give @s strength 5 2 true

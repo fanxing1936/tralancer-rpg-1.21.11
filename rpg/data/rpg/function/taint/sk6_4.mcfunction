@@ -3,6 +3,6 @@ execute at @s as @a[tag=rpg.holy,distance=..18,gamemode=!spectator] run function
 execute at @s as @a[distance=..14,gamemode=!spectator,gamemode=!creative] run function rpg:hud/demon/m29
 # 顾盼 —— 一个眼神就把所有人的视线强行转向王座。
 playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..32] ~ ~ ~ 1 0.65
-particle witch ~ ~1.4 ~ 4 1.4 4 0.18 105
-particle dust_color_transition{from_color:[0.85,0.48,0.85],to_color:[0.36,0.17,0.44],scale:2.4} ~ ~1 ~ 4 1 4 0.05 72
+particle witch ~ ~1.4 ~ 4 1.4 4 0.18 80
+particle dust_color_transition{from_color:[0.85,0.48,0.85],to_color:[0.36,0.17,0.44],scale:2} ~ ~1 ~ 4 1 4 0.05 72
 execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk6d_gaze

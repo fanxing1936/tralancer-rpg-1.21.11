@@ -28,6 +28,7 @@ import os
 import sys
 
 import rpg_ui_style as ui
+import rpg_vfx as vfx
 
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 FUNC = os.path.join(DP, "data/rpg/function")
@@ -326,8 +327,8 @@ execute if entity @s[scores={rpg_taint=%(MAXP)d..}] run scoreboard players set @
 execute if entity @s[scores={rpg_taint=..-1}] run scoreboard players set @s rpg_taint 0
 
 # 分档外显。低档只是身上泛起暗纹，越深越明显。
-execute if entity @s[scores={rpg_taint=31..60}] at @s run particle dust{color:[0.32,0.16,0.42],scale:1} ~ ~1 ~ 0.35 0.6 0.35 0.01 4
-execute if entity @s[scores={rpg_taint=61..90}] at @s run particle dust{color:[0.45,0.10,0.14],scale:2} ~ ~1 ~ 0.4 0.7 0.4 0.02 8
+execute if entity @s[scores={rpg_taint=31..60}] at @s run particle %(taint_low)s ~ ~1 ~ 0.35 0.6 0.35 0.01 4
+execute if entity @s[scores={rpg_taint=61..90}] at @s run particle %(taint_high)s ~ ~1 ~ 0.4 0.7 0.4 0.02 8
 execute if entity @s[scores={rpg_taint=61..90}] at @s run particle sculk_soul ~ ~1.2 ~ 0.3 0.5 0.3 0.01 2
 
 # 濒临魔化：力量上来了，但圣性之物开始灼手。
@@ -435,10 +436,28 @@ execute if entity @s[tag=rpg.pact] run scoreboard players operation #lord rpg_fa
 execute at @s run function rpg:taint/advent_at
 """
 
+# 祷仪与污染的粒子色，全部从色板派生（docs/VFX-SPEC.md §3）。
+# 净化用圣金；逆圣化用无名者红；污染从灰一路染到无名者红，档位越深越红。
+_N_LIT, _N_DEEP = ui.NAMELESS["lit"], ui.NAMELESS["deep"]
+FX = {
+    "holy_mote": ui.dust(ui.HOLY, 1),
+    "holy_glow": ui.dust(ui.HOLY_LIGHT, 1),
+    "holy_pulse": ui.dust_transition(ui.HOLY_LIGHT, ui.HOLY, 2),
+    "holy_burst": ui.dust_transition(ui.HOLY_LIGHT, ui.HOLY, 2),
+    "holy_climax": ui.dust_transition(ui.WHITE, ui.HOLY_LIGHT, 3),
+    "holy_flash": vfx.flash(ui.HOLY_LIGHT),
+    "inv_flash": vfx.flash(_N_LIT),
+    "inv_ignite": ui.dust_transition(_N_LIT, _N_DEEP, 2),
+    "inv_ember": ui.dust(_N_LIT, 1),
+    "advent": ui.dust_transition(_N_LIT, _N_DEEP, 3),
+    "taint_low": ui.dust(ui.mix(ui.MUTED, _N_LIT, 0.4), 1),
+    "taint_high": ui.dust(ui.mix(ui.MUTED, _N_LIT, 0.8), 1.2),
+}
+
 ADVENT_AT = """\
 particle explosion ~ ~1 ~ 0 0 0 0 1
 particle sculk_soul ~ ~1 ~ 0.6 1 0.6 0.08 80
-particle dust{color:[0.35,0.0,0.05],scale:3} ~ ~1 ~ 0.8 1.2 0.8 0.05 90
+particle %(advent)s ~ ~1 ~ 0.8 1.2 0.8 0.05 90
 particle explosion_emitter ~ ~1 ~ 0 0 0 0 1
 playsound minecraft:entity.wither.spawn hostile @a[distance=..48] ~ ~ ~ 1 0.6
 playsound minecraft:entity.evoker.prepare_summon hostile @a[distance=..48] ~ ~ ~ 1 0.5
@@ -563,7 +582,7 @@ TAINT_HOLY = """\
 # 属性增益在授予那一下就按整段时长给足了，这里只管计时、光晕和清场。
 scoreboard players remove @s rpg_holy 1
 particle end_rod ~ ~1.1 ~ 0.35 0.7 0.35 0.01 3
-particle dust{color:[1.0,0.97,0.80],scale:1} ~ ~1 ~ 0.4 0.8 0.4 0.01 2
+particle %(holy_glow)s ~ ~1 ~ 0.4 0.8 0.4 0.01 2
 # 走到哪儿，空壳就散到哪儿 —— 本人就是一场行走的仪式。
 # 这一行自己就是那次走查，前面再加一道同样的守卫只会白扫一遍。
 execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..6] at @s run function rpg:rite/free
@@ -723,7 +742,7 @@ execute at @s anchored eyes positioned ^ ^ ^2 run function rpg:rite/place
 RITE_PLACE = """\
 # 图腾落地。此刻它还是熄的 —— 要等圣水浇上去。
 summon minecraft:item_display ~ ~ ~ {Tags:["rpg.totem"],item:{id:"minecraft:totem_of_undying",count:1,components:{"minecraft:custom_model_data":{floats:[%(TCMD)d.0f]}}},transformation:{translation:[0f,0.4f,0f],left_rotation:[0f,0f,0f,1f],scale:[1.0f,1.0f,1.0f],right_rotation:[0f,0f,0f,1f]},billboard:"vertical",brightness:{sky:15,block:15}}
-particle dust{color:[0.95,0.86,0.45],scale:1} ~ ~0.6 ~ 0.3 0.4 0.3 0.02 20
+particle %(holy_mote)s ~ ~0.6 ~ 0.3 0.4 0.3 0.02 20
 playsound minecraft:block.respawn_anchor.set_spawn player @a[distance=..16] ~ ~ ~ 1 1.4
 title @a[distance=..6] actionbar ["",{"text":"图腾已立","color":"gold"},{"text":"　以驱魔圣水浇之","color":"gray","italic":true}]
 """
@@ -755,8 +774,8 @@ execute unless entity @a[distance=..%(INV_R)d,scores={rpg_taint=%(MAX)d}] run fu
 
 RITE_LIGHT_PURE = """\
 particle end_rod ~ ~0.6 ~ 0.4 0.5 0.4 0.05 60
-particle dust{color:[1.0,0.98,0.86],scale:2} ~ ~0.8 ~ 0.5 0.6 0.5 0.04 80
-particle minecraft:flash{color:16777200} ~ ~0.8 ~ 0 0 0 0 1
+particle %(holy_pulse)s ~ ~0.8 ~ 0.5 0.6 0.5 0.04 80
+particle minecraft:%(holy_flash)s ~ ~0.8 ~ 0 0 0 0 1
 playsound minecraft:block.beacon.activate player @a[distance=..24] ~ ~ ~ 1 1.2
 title @a[distance=..8] actionbar ["",{"text":"驱　魔","color":"gold","bold":true},{"text":"　图腾开始燃尽","color":"gray"}]
 """
@@ -765,9 +784,9 @@ RITE_LIGHT_INV = """\
 # 逆圣化点燃。图腾这次不往外净化 —— 它朝着那个人烧。
 tag @s add rpg.totem.inv
 tag @a[distance=..%(INV_R)d,scores={rpg_taint=%(MAX)d}] add rpg.inv.subject
-particle minecraft:flash{color:6684672} ~ ~0.8 ~ 0 0 0 0 1
-particle sculk_charge_pop ~ ~0.8 ~ 0.6 0.6 0.6 0.1 80
-particle dust{color:[0.42,0.06,0.10],scale:3} ~ ~0.8 ~ 0.6 0.7 0.6 0.03 90
+particle minecraft:%(inv_flash)s ~ ~0.8 ~ 0 0 0 0 1
+particle sculk_charge_pop ~ ~0.8 ~ 0.6 0.6 0.6 0.1 64
+particle %(inv_ignite)s ~ ~0.8 ~ 0.6 0.7 0.6 0.03 72
 playsound minecraft:entity.wither.spawn master @a[distance=..40] ~ ~ ~ 1 0.7
 playsound minecraft:block.end_portal.spawn master @a[distance=..40] ~ ~ ~ 0.6 1.6
 title @a[tag=rpg.inv.subject] times 10 50 20
@@ -784,7 +803,7 @@ execute unless entity @s[tag=rpg.totem.inv] run function rpg:rite/beat_pure
 RITE_BEAT_PURE = """\
 # 净化的节拍：一拍比一拍弱。
 %(PULSES)s
-particle dust{color:[0.98,0.92,0.62],scale:1} ~ ~0.7 ~ 0.22 0.3 0.22 0.01 2
+particle %(holy_mote)s ~ ~0.7 ~ 0.22 0.3 0.22 0.01 2
 execute if entity @s[scores={rpg_totem=1..}] run scoreboard players remove @s rpg_totem 1
 execute if entity @s[scores={rpg_totem=..0}] run function rpg:rite/burst
 """
@@ -798,8 +817,8 @@ execute unless entity @a[tag=rpg.inv.subject,distance=..%(INV_R)d] run return ru
 scoreboard players operation #inv_now rpg_hud = @s rpg_totem
 execute as @a[tag=rpg.inv.subject,distance=..%(INV_R)d] run function rpg:rite/inv_hud
 %(BURNS)s
-particle soul_fire_flame ~ ~0.8 ~ 0.45 0.55 0.45 0.02 3
-particle dust{color:[0.42,0.06,0.10],scale:2} ~ ~0.8 ~ 0.5 0.6 0.5 0.01 2
+particle soul_fire_flame ~ ~0.8 ~ 0.45 0.55 0.45 0.02 2
+particle %(inv_ember)s ~ ~0.8 ~ 0.5 0.6 0.5 0.01 2
 execute if entity @s[scores={rpg_totem=1..}] run scoreboard players remove @s rpg_totem 1
 execute if entity @s[scores={rpg_totem=..0}] run function rpg:rite/inv_burst
 """
@@ -818,7 +837,7 @@ scoreboard players operation @s rpg_hud_p /= #inv_full rpg_hud
 RITE_PULSE = """\
 # 一拍净化。图腾每燃尽一分，效力就弱一分 —— 净化量由调用处给。
 particle end_rod ~ ~0.5 ~ %(R_HALF)s 0.2 %(R_HALF)s 0.04 70
-particle dust{color:[1.0,0.98,0.86],scale:2} ~ ~0.8 ~ %(R_HALF)s 0.4 %(R_HALF)s 0.03 60
+particle %(DUST)s ~ ~0.8 ~ %(R_HALF)s 0.4 %(R_HALF)s 0.03 60
 playsound minecraft:block.conduit.ambient player @a[distance=..20] ~ ~ ~ 1 1.3
 execute as @a[distance=..%(R)d] run scoreboard players remove @s rpg_taint %(AMOUNT)d
 execute as @a[distance=..%(R)d,scores={rpg_taint=..-1}] run scoreboard players set @s rpg_taint 0
@@ -829,9 +848,9 @@ data merge entity @s {transformation:{translation:[0f,0.4f,0f],left_rotation:[0f
 
 RITE_BURN = """\
 # 反转的第 %(N)d 道。灼烧越来越烈，光却越来越白 —— 那是它正在翻面。
-particle minecraft:flash{color:%(FLASH)d} ~ ~0.9 ~ 0 0 0 0 1
+particle minecraft:%(FLASH)s ~ ~0.9 ~ 0 0 0 0 1
 particle end_rod ~ ~0.7 ~ 0.5 0.4 0.5 %(SPD)s %(CNT)d
-particle dust{color:[%(DR)s,%(DG)s,%(DB)s],scale:2} ~ ~0.8 ~ 0.6 0.5 0.6 0.03 %(CNT)d
+particle %(DUST)s ~ ~0.8 ~ 0.6 0.5 0.6 0.03 %(CNT)d
 playsound minecraft:block.respawn_anchor.charge master @a[distance=..24] ~ ~ ~ 1 %(PITCH)s
 execute as @a[tag=rpg.inv.subject,distance=..%(R)d] run damage @s %(DMG)d minecraft:magic
 execute as @a[tag=rpg.inv.subject,distance=..%(R)d] run effect give @s minecraft:slowness 3 2 true
@@ -842,9 +861,9 @@ data merge entity @s {transformation:{translation:[0f,0.4f,0f],left_rotation:[0f
 RITE_BURST = """\
 # 燃尽。图腾炸开 —— 最后一下把余威全部吐出来。
 particle explosion ~ ~0.6 ~ 0.6 0.3 0.6 0 6
-particle end_rod ~ ~0.6 ~ 1.2 0.6 1.2 0.35 140
-particle dust{color:[1.0,0.94,0.70],scale:3} ~ ~0.8 ~ 1 0.6 1 0.2 120
-particle minecraft:flash{color:16777200} ~ ~1 ~ 0 0 0 0 1
+particle end_rod ~ ~0.6 ~ 1.2 0.6 1.2 0.3 80
+particle %(holy_burst)s ~ ~0.8 ~ 1 0.6 1 0.2 72
+particle minecraft:%(holy_flash)s ~ ~1 ~ 0 0 0 0 1
 playsound minecraft:entity.generic.explode player @a[distance=..28] ~ ~ ~ 1 1.4
 playsound minecraft:block.beacon.deactivate player @a[distance=..28] ~ ~ ~ 1 1.1
 
@@ -859,9 +878,9 @@ kill @s
 RITE_INV_BURST = """\
 # 反转完成。魔化没有被洗掉 —— 它被烧穿了，从另一面出来。
 particle minecraft:flash{color:16777215} ~ ~1 ~ 0 0 0 0 1
-particle end_rod ~ ~0.8 ~ 1.4 0.8 1.4 0.5 220
-particle dust{color:[1.0,0.99,0.92],scale:4} ~ ~1 ~ 1.2 0.8 1.2 0.25 180
-particle totem_of_undying ~ ~1 ~ 0.8 0.8 0.8 0.4 120
+particle end_rod ~ ~0.8 ~ 1.4 0.8 1.4 0.35 96
+particle %(holy_climax)s ~ ~1 ~ 1.2 0.8 1.2 0.25 80
+particle totem_of_undying ~ ~1 ~ 0.8 0.8 0.8 0.35 64
 playsound minecraft:item.totem.use master @a[distance=..48] ~ ~ ~ 1 1
 playsound minecraft:block.beacon.power_select master @a[distance=..48] ~ ~ ~ 1 0.8
 execute as @a[tag=rpg.inv.subject,distance=..%(R)d] run function rpg:rite/inv_grant
@@ -998,10 +1017,10 @@ def build_functions():
     # ---- 魔化 ----
     wf("taint/taint.mcfunction", TAINT)
     wf("taint/step.mcfunction",
-       TAINT_STEP % {"MAX": TAINT_MAX, "MAXP": TAINT_MAX + 1, "NEAR": TAINT_MAX - 1})
+       TAINT_STEP % dict(FX, MAX=TAINT_MAX, MAXP=TAINT_MAX + 1, NEAR=TAINT_MAX - 1))
     wf("taint/full.mcfunction", TAINT_FULL)
     build_fall()
-    wf("taint/holy.mcfunction", TAINT_HOLY)
+    wf("taint/holy.mcfunction", TAINT_HOLY % FX)
     wf("taint/holy_end.mcfunction", TAINT_HOLY_END)
 
     # ---- 空缺者 ----
@@ -1020,13 +1039,13 @@ def build_functions():
 
     # ---- 仪式 ----
     wf("rite/trigger.mcfunction", RITE_TRIGGER)
-    wf("rite/place.mcfunction", RITE_PLACE % {"TCMD": TOTEM_CMD})
+    wf("rite/place.mcfunction", RITE_PLACE % dict(FX, TCMD=TOTEM_CMD))
     wf("rite/tick.mcfunction", RITE_TICK)
     wf("rite/light.mcfunction",
        RITE_LIGHT % {"LIT": LIT, "INV_R": INV_R, "MAX": TAINT_MAX})
-    wf("rite/light_pure.mcfunction", RITE_LIGHT_PURE)
+    wf("rite/light_pure.mcfunction", RITE_LIGHT_PURE % FX)
     wf("rite/light_inv.mcfunction",
-       RITE_LIGHT_INV % {"INV_R": INV_R, "MAX": TAINT_MAX})
+       RITE_LIGHT_INV % dict(FX, INV_R=INV_R, MAX=TAINT_MAX))
     wf("rite/beat.mcfunction", RITE_BEAT)
 
     pulses = []
@@ -1035,30 +1054,28 @@ def build_functions():
                       "run function rpg:rite/p%d" % (at, i))
         wf("rite/p%d.mcfunction" % i,
            RITE_PULSE % {"R": RITE_R, "R_HALF": "%.1f" % (RITE_R * 0.5),
-                         "AMOUNT": amount, "SCALE": scale})
-    wf("rite/beat_pure.mcfunction", RITE_BEAT_PURE % {"PULSES": "\n".join(pulses)})
+                         "AMOUNT": amount, "SCALE": scale, "DUST": FX["holy_pulse"]})
+    wf("rite/beat_pure.mcfunction", RITE_BEAT_PURE % dict(FX, PULSES="\n".join(pulses)))
 
-    # 反转的五道：光从暗红一路走到纯白，声音一道比一道高。
-    tints = [(0.42, 0.06, 0.10), (0.58, 0.14, 0.12), (0.76, 0.34, 0.16),
-             (0.92, 0.62, 0.28), (1.00, 0.94, 0.72)]
-    flashes = [0x4A0A0E, 0x7A1C14, 0xC05A22, 0xE8A64A, 0xFFF4C0]
+    # 反转的五道：光从无名者红一路走到圣金浅（恶魔那一面被烧穿、翻到神圣这一面），
+    # 声音一道比一道高；粒子数随之从 48 涨到 96（大招档上限）。
+    ramp = [ui.mix(_N_LIT, ui.HOLY_LIGHT, k / 4.0) for k in range(5)]
     burns = []
     for i, (at, dmg, scale) in enumerate(BURNS, 1):
         burns.append("execute if entity @s[scores={rpg_totem=%d}] "
                      "run function rpg:rite/v%d" % (at, i))
-        r, g, b = tints[i - 1]
         wf("rite/v%d.mcfunction" % i,
            RITE_BURN % {"N": i, "R": INV_R, "DMG": dmg, "SCALE": scale,
-                        "FLASH": flashes[i - 1], "DR": r, "DG": g, "DB": b,
-                        "CNT": 40 + i * 20, "SPD": "%.2f" % (0.05 + i * 0.03),
+                        "FLASH": vfx.flash(ramp[i - 1]), "DUST": ui.dust(ramp[i - 1], 2),
+                        "CNT": 36 + i * 12, "SPD": "%.2f" % (0.05 + i * 0.03),
                         "PITCH": "%.2f" % (0.6 + i * 0.22)})
     wf("rite/beat_inv.mcfunction",
-       RITE_BEAT_INV % {"INV_R": INV_R, "BURNS": "\n".join(burns)})
+       RITE_BEAT_INV % dict(FX, INV_R=INV_R, BURNS="\n".join(burns)))
     wf("rite/inv_hud.mcfunction",
        RITE_INV_HUD % {"HID": HUD_INVERT, "TTL": HUD_TTL})
 
-    wf("rite/burst.mcfunction", RITE_BURST % {"R": RITE_R})
-    wf("rite/inv_burst.mcfunction", RITE_INV_BURST % {"R": INV_R})
+    wf("rite/burst.mcfunction", RITE_BURST % dict(FX, R=RITE_R))
+    wf("rite/inv_burst.mcfunction", RITE_INV_BURST % dict(FX, R=INV_R))
     wf("rite/inv_grant.mcfunction",
        RITE_INV_GRANT % {"HOLY": HOLY_TICKS, "SEC": HOLY_TICKS // 20})
     wf("rite/inv_fail.mcfunction", RITE_INV_FAIL)
@@ -1284,8 +1301,9 @@ def build_fall():
         else:
             body.append("playsound minecraft:entity.wither.ambient master @s ~ ~ ~ 0.%d 0.5" % (i + 2))
 
-        rgb = {"gray": "0.45,0.45,0.48", "dark_purple": "0.32,0.10,0.42",
-               "red": "0.62,0.09,0.12", "dark_red": "0.38,0.0,0.04"}[colour]
+        # 堕落四档：从灰染向无名者红。原来的暗紫／暗红单色尘在夜里看不见（ART-STYLE §6）。
+        rgb = ui.floats(ui.mix(ui.MUTED, _N_LIT, {"gray": 0.25, "dark_purple": 0.5,
+                                                  "red": 0.75, "dark_red": 1.0}[colour]))
         wf("taint/f%d.mcfunction" % i, FALL_TIER % {
             "WORD": word.replace("\u3000", ""), "ATK": atk, "RGB": rgb,
             "SCALE": "%.1f" % (1 + i * 0.4), "CNT": 4 + i * 4,
@@ -1298,7 +1316,7 @@ def build_fall():
     wf("taint/swing_roll.mcfunction", FALL_SWING)
     wf("taint/swing.mcfunction", FALL_SWING_DO % {"DMG": 5})
     wf("taint/advent.mcfunction", ADVENT % {"LEFT": 40})
-    wf("taint/advent_at.mcfunction", ADVENT_AT)
+    wf("taint/advent_at.mcfunction", ADVENT_AT % FX)
     wf("taint/lord.mcfunction",
        LORD_NONE % {"NBT": demon_nbt("无名者", ui.NAMELESS["lit"], ui.WHITE)})
     wf("taint/advent_life.mcfunction",

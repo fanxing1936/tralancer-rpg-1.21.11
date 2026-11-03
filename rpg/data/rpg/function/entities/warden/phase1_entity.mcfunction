@@ -18,5 +18,5 @@ execute if score @s devil matches 180 run playsound minecraft:entity.vex.death p
 execute on attacker if entity @s[tag=rpg.h.devil_tag1] run effect give @e[distance=..1,limit=1] minecraft:instant_damage 1 0 true
 execute on attacker if entity @s[tag=rpg.h.devil_tag1] run effect clear @e[distance=..1,limit=1] minecraft:invisibility
 execute if entity @e[type=minecraft:area_effect_cloud,limit=1,distance=..2] run effect give @s minecraft:instant_damage 1 1 true
-execute if entity @e[type=minecraft:area_effect_cloud,limit=1,distance=..2] run particle trial_spawner_detection_ominous ~0.2 ~1.2 ~0.2 -0.4 -0.4 -0.4 0 10
+execute if entity @e[type=minecraft:area_effect_cloud,limit=1,distance=..2] run particle trial_spawner_detection_ominous ~0.2 ~1.2 ~0.2 -0.4 -0.4 -0.4 0 4
 execute if entity @s[tag=boss] run function rpg:entities/warden/phase1_boss
