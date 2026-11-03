@@ -58,6 +58,7 @@ import shutil
 
 NS = "rpg"
 TICK = 0.05
+STRIDE = 4      # ticks between walk/idle position samples (each one is an NBT read)
 
 
 # ---------------------------------------------------------------------------
@@ -614,21 +615,9 @@ def write_anim(mob, baked):
     tick = [
         "# %s动画（as 载体）。%s = 当前片段，%s = 已播放刻数。" % (mob.label, S, T),
         "execute unless score @s %s matches 0.. run function %s/anim/init" % (S, mob.fn),
-        "# 水平位移（百分之一格）的平方 >= 4 记为在走；停下 4 刻后才回 idle，免得来回抖",
-        "execute store result score #x %s run data get entity @s Pos[0] 100" % sc,
-        "execute store result score #z %s run data get entity @s Pos[2] 100" % sc,
-        "scoreboard players operation #dx %s = #x %s" % (sc, sc),
-        "scoreboard players operation #dx %s -= @s %s_x" % (sc, sc),
-        "scoreboard players operation #dz %s = #z %s" % (sc, sc),
-        "scoreboard players operation #dz %s -= @s %s_z" % (sc, sc),
-        "scoreboard players operation @s %s_x = #x %s" % (sc, sc),
-        "scoreboard players operation @s %s_z = #z %s" % (sc, sc),
-        "scoreboard players operation #dx %s *= #dx %s" % (sc, sc),
-        "scoreboard players operation #dz %s *= #dz %s" % (sc, sc),
-        "scoreboard players operation #dx %s += #dz %s" % (sc, sc),
-        "execute if score #dx %s matches 4.. run scoreboard players set @s %s_mv 4" % (sc, sc),
-        "execute if score #dx %s matches ..3 if score @s %s_mv matches 1.. run scoreboard players remove @s %s_mv 1"
-        % (sc, sc, sc),
+        "# 每 %d 刻量一次水平位移：走过 %d/100 格以上记为在走，没走就回 idle" % (STRIDE, STRIDE * 2),
+        "scoreboard players add @s %s_mc 1" % sc,
+        "execute if score @s %s_mc matches %d.. run function %s/anim/stride" % (sc, STRIDE, mob.fn),
         "execute if score @s %s matches %d if score @s %s_mv matches 1.. run return run function %s/anim/enter/walk"
         % (S, idle, sc, mob.fn),
         "execute if score @s %s matches %d if score @s %s_mv matches 0 run return run function %s/anim/enter/idle"
@@ -638,18 +627,45 @@ def write_anim(mob, baked):
         tick.append("execute if score @s %s matches %d run return run function %s/anim/%s/tick"
                     % (S, ids[name], mob.fn, name))
     wf(os.path.join(mob.anim, "tick.mcfunction"), tick)
+    # Walking is read off the carrier's position.  Any `data ... entity`
+    # serialises the whole carrier to NBT; the old per-tick Pos[0] + Pos[2]
+    # pair was ~45% of a rig's tick.  Now it is one copy of Pos into storage
+    # every STRIDE ticks.  (The movement predicate would need no NBT at all,
+    # but a carrier's velocity goes stale while it stands still, so it
+    # reports idle rigs as walking.)  Each carrier keeps its own counter,
+    # so rigs spawned on different ticks spread their reads out.
+    def pos(x, z):
+        return [
+            "data modify storage %s:display_mob pos set from entity @s Pos" % NS,
+            "execute store result score %s run data get storage %s:display_mob pos[0] 100" % (x, NS),
+            "execute store result score %s run data get storage %s:display_mob pos[2] 100" % (z, NS),
+        ]
+    wf(os.path.join(mob.anim, "stride.mcfunction"), [
+        "# 每 %d 刻一次（as 载体）：比较这次和上次的位置。" % STRIDE,
+        "scoreboard players set @s %s_mc 0" % sc,
+    ] + pos("#x " + sc, "#z " + sc) + [
+        "scoreboard players operation #dx %s = #x %s" % (sc, sc),
+        "scoreboard players operation #dx %s -= @s %s_x" % (sc, sc),
+        "scoreboard players operation #dz %s = #z %s" % (sc, sc),
+        "scoreboard players operation #dz %s -= @s %s_z" % (sc, sc),
+        "scoreboard players operation @s %s_x = #x %s" % (sc, sc),
+        "scoreboard players operation @s %s_z = #z %s" % (sc, sc),
+        "scoreboard players operation #dx %s *= #dx %s" % (sc, sc),
+        "scoreboard players operation #dz %s *= #dz %s" % (sc, sc),
+        "scoreboard players operation #dx %s += #dz %s" % (sc, sc),
+        "execute store success score @s %s_mv if score #dx %s matches %d.." % (sc, sc, (STRIDE * 2) ** 2),
+    ])
     wf(os.path.join(mob.anim, "init.mcfunction"), [
         "# 新%s：从 idle 第一帧开始，记下当前位置。" % mob.label,
         "scoreboard players set @s %s %d" % (S, idle),
         "scoreboard players set @s %s 0" % T,
         "scoreboard players set @s %s_mv 0" % sc,
-        "execute store result score @s %s_x run data get entity @s Pos[0] 100" % sc,
-        "execute store result score @s %s_z run data get entity @s Pos[2] 100" % sc,
-    ])
+        "scoreboard players set @s %s_mc 0" % sc,
+    ] + pos("@s %s_x" % sc, "@s %s_z" % sc))
     wf(os.path.join(mob.func, "load.mcfunction"), [
         "# %s计分板。由 %s 生成。" % (mob.label, mob.generator),
     ] + ["scoreboard objectives add %s dummy" % o
-         for o in (S, T, sc + "_mv", sc + "_x", sc + "_z", sc)])
+         for o in (S, T, sc + "_mv", sc + "_mc", sc + "_x", sc + "_z", sc)])
 
 
 def hook_tag(dp, name, entry, before_last):
@@ -693,8 +709,10 @@ def write_rig_runtime(mob, tick_lines, follow_extra=()):
     voice = []
     if mob.hurt:
         # Silent carrier: its voice is ours.  HurtTime is 10 on the first
-        # tick after a hit.
-        voice.append("execute if entity @s[nbt={HurtTime:10s}] run function %s/hurt" % mob.fn)
+        # tick after a hit.  Reading it is a full NBT dump, so only do it
+        # when rpg:command/index (earlier in the tick) saw the health move.
+        voice.append("execute if entity @s[tag=rpg.hurt] if entity @s[nbt={HurtTime:10s}] run function %s/hurt"
+                     % mob.fn)
         wf(os.path.join(mob.func, "hurt.mcfunction"), [
             "# %s挨了一下。" % mob.label,
             playsound(mob, mob.hurt),
