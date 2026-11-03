@@ -7,3 +7,5 @@ playsound minecraft:block.composter.fill_success hostile @a[distance=..28] ~ ~ ~
 particle spore_blossom_air ~ ~1.4 ~ 4 1.5 4 0.08 105
 particle mycelium ~ ~0.8 ~ 4 1 4 0.16 92
 execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk4d_feast
+# 别西卜外观（add_beelzebub.py）
+execute if entity @s[tag=rpg.bz] run function rpg:beelzebub/skill/sk4_4

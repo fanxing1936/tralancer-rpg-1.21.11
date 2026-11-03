@@ -1,0 +1,5 @@
+# shoot 第 2 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_sunken_skeleton.py 烘焙。
+execute on passengers if entity @s[tag=rpg.sk.p.head] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.24032f,0.03114f,0.0106f],left_rotation:[0.00997f,0f,0f,0.99995f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.sk.p.right_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.3125f,-0.77094f,0.20298f],left_rotation:[-0.45621f,0f,0f,0.88987f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.sk.p.left_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.28302f,-0.83701f,0.12916f],left_rotation:[-0.2739f,-0.10763f,-0.03086f,0.95522f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.sk.p.weapon] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.375f,-0.88835f,0.58043f],left_rotation:[0.30664f,0f,0f,0.95182f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}

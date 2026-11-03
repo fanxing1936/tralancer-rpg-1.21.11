@@ -117,6 +117,18 @@ python make_boxes.py ../rpg
 # 所有生成器（尤其领取箱）完成后再统一七罪姓名色与物品名字重：这样箱内
 # 副本、散装 give、Boss 名牌、调查/裁决/面板会共享同一套最终规范。
 python polish_ui.py ../rpg
+# 圣卫（塔卫，展示实体生物）：只写 rpg:tower_guard/ 与 #minecraft:tick 一条入口，
+# 放在所有选择器优化之后，免得被改写；仍早于封印遗物这一最终层。
+python add_tower_guard.py ../resourcepack ../rpg
+# 别西卜换上无名者模型：只加外观与音效，挂进 sk4_*、ult4*、advent_gone 末尾，
+# 不动标签、血量与招式；共用 display_mob.py 管线。
+python add_beelzebub.py ../resourcepack ../rpg
+# 别西卜麾下五名罪仆换上 Dungeons 先锋外观（塞列欧斯改用掠夺者底子，见 add_demon_minions.py）
+python add_vanguard.py ../resourcepack ../rpg
+# 利维坦换上 Dungeons 死灵法师模型（挂进 sk2_*、ult2*、advent_gone），
+# 麾下五名罪仆换上沉没骷髅外观（派蒙改用掠夺者底子）
+python add_leviathan_model.py ../resourcepack ../rpg
+python add_sunken_skeleton.py ../resourcepack ../rpg
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.

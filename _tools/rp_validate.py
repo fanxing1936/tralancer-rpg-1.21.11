@@ -145,7 +145,9 @@ def walk_item_model(node, origin):
 
 def check_item_definitions():
     for rel in sorted(x for x in PACK_FILES if "/items/" in x and x.endswith(".json")):
-        if rel not in VANILLA:
+        # outside the minecraft namespace a definition is reached through
+        # the item_model component (e.g. rpg:tower_guard/body), not by name
+        if rel not in VANILLA and rel.startswith("assets/minecraft/"):
             notes.append("%s: no vanilla item by that name (definition will be ignored)" % rel)
         try:
             doc = load(rel)

@@ -1,0 +1,17 @@
+# 别西卜换装（as 降临者，at 其脚下）。只加 rpg.bz 标签与七个部件，不碰其他标签与数值。
+tag @s add rpg.bz
+tag @s add rpg.bz.dressing
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.bz.part","rpg.bz.p.body","rpg.bz.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:beelzebub/body"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0f,-1.93769f,0.02906f],left_rotation:[0.21644f,0f,0f,0.9763f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.bz.part","rpg.bz.p.head","rpg.bz.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:beelzebub/head"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0f,-1.0157f,0.68656f],left_rotation:[0.46175f,0f,0f,0.88701f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.bz.part","rpg.bz.p.right_arm","rpg.bz.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:beelzebub/right_arm"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[-0.37269f,-1.65199f,0.26045f],left_rotation:[0.08707f,0.01492f,-0.04099f,0.99525f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.bz.part","rpg.bz.p.left_arm","rpg.bz.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:beelzebub/left_arm"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0.39156f,-1.628f,0.1867f],left_rotation:[0.19888f,-0.01628f,0.06783f,0.97754f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.bz.part","rpg.bz.p.staff","rpg.bz.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:beelzebub/staff"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[-0.29114f,-2.01315f,0.02876f],left_rotation:[0.63977f,-0.21547f,0.18182f,0.71499f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.bz.part","rpg.bz.p.gem","rpg.bz.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:beelzebub/gem"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[-1.28553f,-1.79915f,1.58152f],left_rotation:[0.34176f,0.00586f,-0.04441f,0.93872f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.bz.part","rpg.bz.p.cape","rpg.bz.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:beelzebub/cape"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0f,-1.86071f,-0.13696f],left_rotation:[0.18224f,0f,0f,0.98325f],scale:[1.1f,1.1f,1.1f],right_rotation:[0f,0f,0f,1f]}}
+execute as @e[type=minecraft:item_display,tag=rpg.bz.new,distance=..1] run ride @s mount @e[type=minecraft:vindicator,tag=rpg.bz.dressing,limit=1]
+tag @e[type=minecraft:item_display,tag=rpg.bz.new,distance=..1] remove rpg.bz.new
+tag @s remove rpg.bz.dressing
+function rpg:beelzebub/anim/init
+playsound rpg:beelzebub.teleport_in hostile @a[distance=..32] ~ ~ ~ 1.2 1
+playsound rpg:beelzebub.approach hostile @a[distance=..48] ~ ~ ~ 1 1
+function rpg:beelzebub/anim/enter/rise

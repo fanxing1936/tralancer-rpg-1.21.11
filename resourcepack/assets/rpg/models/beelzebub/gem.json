@@ -1,0 +1,236 @@
+{
+  "textures": {
+    "0": "rpg:item/beelzebub/atlas",
+    "particle": "rpg:item/beelzebub/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        4.0,
+        4.0,
+        4.0
+      ],
+      "to": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            4.0,
+            9.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            8.0,
+            4.0,
+            9.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            8.0,
+            4.0,
+            9.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            8.0,
+            4.0,
+            9.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            8.0,
+            4.0,
+            9.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            8.0,
+            4.0,
+            9.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        5.0,
+        5.0,
+        5.0
+      ],
+      "to": [
+        11.0,
+        11.0,
+        11.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            5.0,
+            8.75,
+            5.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            8.0,
+            5.0,
+            8.75,
+            5.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            8.0,
+            5.0,
+            8.75,
+            5.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            8.0,
+            5.0,
+            8.75,
+            5.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            8.0,
+            5.0,
+            8.75,
+            5.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            8.0,
+            5.0,
+            8.75,
+            5.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        6.5,
+        6.5,
+        6.5
+      ],
+      "to": [
+        9.5,
+        9.5,
+        9.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            9.0,
+            5.0,
+            9.375,
+            5.375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            9.0,
+            5.0,
+            9.375,
+            5.375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            9.0,
+            5.0,
+            9.375,
+            5.375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            9.0,
+            5.0,
+            9.375,
+            5.375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            9.0,
+            5.0,
+            9.375,
+            5.375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            9.0,
+            5.0,
+            9.375,
+            5.375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    }
+  ]
+}
