@@ -24,7 +24,8 @@ FN = os.path.join(OUT, "data", "promo", "function")
 WEAPON_SUFFIX = ("sword", "axe", "bow", "crossbow", "mace", "spear", "trident", "fishing_rod")
 # 名字前缀里有几件写的是中文品质
 # LTD（限定款）在 README 的五档里算传说，陈列也归进传说
-TIER_ALIAS = {"传说": "legend", "史诗": "epic", "LTD": "legend"}
+TIER_ALIAS = {"传说": "legend", "史诗": "epic", "勇者": "brave", "恶魔": "DEVIL", "神圣": "HOLY",
+              "LTD": "legend", "限定": "legend"}
 # 五档品质的陈列顺序；glow 是陈列时的描边色
 TIERS = [
     ("brave", "勇者", 0xBFC7D5),
@@ -43,9 +44,11 @@ def weapons():
         ident = r["id"].split(":")[-1]
         if ident.endswith(WEAPON_SUFFIX) and not ident.endswith("pickaxe"):
             m = re.search(r"\[(\w+)\]", r["full_name"])
-            if not m:          # 剑胚之类的锻造原料，不是武器
+            if not m:
                 continue
             tier = TIER_ALIAS.get(m.group(1), m.group(1))
+            if tier not in [t[0] for t in TIERS]:   # [锻造] 之类的类目前缀，不是档次
+                continue
             out.append((tier, r["name"], r["item"]))
     order = [t[0] for t in TIERS]
     out.sort(key=lambda w: order.index(w[0]))

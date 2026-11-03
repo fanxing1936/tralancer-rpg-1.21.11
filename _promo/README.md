@@ -2,7 +2,8 @@
 
 《破碎大陆 · TRALANCER RPG》宣传片的规格：
 - 16:9，1920×1080，60 fps，约 82 秒（正片 75 秒，片尾署名 7 秒）
-- 实机镜头和动态图形交替剪辑
+- 实机镜头和动态图形交替剪辑；没有实拍素材时，实机镜头的位置由“无实拍版”画面顶上，整片照样完整
+- 画面风格跟美术规范 `ART-STYLE.md` 走：原版像素字形与 Tooltip、规范色板（`_tools/rpg_ui_style.py`）
 - 字幕中文为主，下方加一行英文小字
 - 配乐用 Minecraft Dungeons 原声
 
@@ -14,6 +15,8 @@
 | `make_datapack.py` → `datapack/` | 拍摄布景数据包，命名空间是 `promo` |
 | `install.py` | 把拍摄存档和资源包装进本机实例 |
 | `render.py` | 渲染成片：动态图形、实机镜头、字幕和混音 |
+| `mcui.py` | 原版 GUI 像素绘制：ascii.png 与 Unifont 字形、Tooltip 九宫格、物品格、文本组件 |
+| `geo_render.py` | 把 `_tools/*_ref/*.geo.json` 加贴图集画成模型图（无实拍版的别西卜、圣卫） |
 
 不进仓库的目录（已写进 `.gitignore`）：
 - `assets/music/`：配乐
@@ -24,7 +27,7 @@
 ## 环境
 
 - **Python 3.12**：需要 Pillow、numpy、imageio_ffmpeg。ffmpeg 用 imageio_ffmpeg 自带的那份，不需要另外安装。
-- **字体**：Windows 自带的 `NotoSerifSC-VF.ttf`、`georgia*.ttf`、`times.ttf`。
+- **字形与 GUI 贴图**：全部取自本机 1.21.11 客户端，`mcui.py` 通过 `_tools/mc_env.py` 找到客户端 jar（ascii.png、Tooltip、物品格、Boss 血条、方块贴图）和 assets 里的 `unifont.zip`。不用系统字体。
 - **游戏实例**：本机 1.21.11 实例的位置由 `_tools/mc_env.py` 解析。实例里需要有 ReplayMod、Complementary Reimagined 光影包和 `ffmpeg/bin/ffmpeg.exe`，来源见 `SOURCES.md`。
 
 ## 从头重做
@@ -64,7 +67,14 @@
 
    输出 `_promo/out/tralancer-promo.mp4`。
 
-   - 缺哪个实机镜头，对应位置就画占位卡；S5 用画出来的生命之树代替。这样没有录屏也能出片。
+   - 缺哪个实机镜头，就用无实拍版画面顶上（`render.py` 里的 `NO_REC` 与 `mg_armory`）：
+     - S1 原版地层碎成五块；
+     - S2 每档一件武器的原版 Tooltip 轮换；
+     - S3 圣卫模型列队；
+     - S4a 别西卜模型加 Boss 血条和聊天栏里的罪群播报；
+     - S4b 驱魔裁决与封印的聊天播报；
+     - S5 生命之树十源质。
+     聊天播报都是从数据包里原样读出的 tellraw 文本。
    - 调画面时可以用 `--still <秒>` 只出那一帧，存到 `build/`。
    - `--preview 30` 出 30 fps 的快速预览。
 

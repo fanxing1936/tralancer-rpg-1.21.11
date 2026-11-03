@@ -29,7 +29,11 @@ Minecraft Dungeons 的音乐、贴图和音效版权归 Mojang Studios 所有。
 - **武器、符文、契约的图标**：从仓库里的 `TRALANCER-RPG-图鉴.html` 导出，本项目自绘。
 - **七本罪约契约书的原画**：取自 `_tools/pact_art/`，本项目自绘。
 - **实机镜头**：在本项目的数据包和资源包里录制，用 ReplayMod 渲染，光影是 Complementary Reimagined。
-- **字体**：本机 Windows 自带的思源宋体（NotoSerifSC）、Georgia 和 Times New Roman。
+- **字形与 GUI**：都来自本机 Minecraft 1.21.11 客户端（© Mojang），只在渲染时读取，不随仓库分发：
+  - 字形：`ascii.png`、`unifont.zip`；
+  - 界面贴图：Tooltip、物品格、Boss 血条；
+  - 方块贴图：草、土、石、深板岩。
+- **模型图**：`geo_render.py` 按 `_tools/beelzebub_ref`、`_tools/tower_guard_ref` 里的几何和贴图集现画。这两套素材的出处见各自的 `SOURCES.md`。
 
 ## 录制工具
 
