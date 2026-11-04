@@ -499,7 +499,7 @@ def polish_broadcast(parts, stats):
     lead = [tagged]
     english = ui.broadcast_english(tag)
     if english:
-        lead.append(dict(text=" " + english, color=ui.shade(colour), bold=False, italic=False))
+        lead.append(dict(text=" " + english, color=ui.BROADCAST_GLOSS, bold=False, italic=False))
         stats["broadcast_gloss"] += 1
     lead.append(dict(text=ui.GAP, color=ui.BROADCAST_BODY, bold=False, italic=False))
     parts[i:] = lead + body

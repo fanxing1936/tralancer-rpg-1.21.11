@@ -5,5 +5,5 @@ execute at @s as @a[distance=..14,gamemode=!spectator,gamemode=!creative] run fu
 playsound minecraft:block.anvil.land hostile @a[distance=..32] ~ ~ ~ 0.8 1.35
 playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..32] ~ ~ ~ 1 0.75
 particle end_rod ~ ~1 ~ 3 1 3 0.08 72
-particle wax_on ~ ~0.5 ~ 3 0.5 3 0.12 88
+particle wax_on ~ ~0.5 ~ 3 0.5 3 0.12 80
 execute as @a[distance=..7,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk7e_prison

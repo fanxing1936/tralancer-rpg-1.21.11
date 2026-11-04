@@ -13,6 +13,7 @@ import sys
 
 import add_true_name_rite as rite
 import rpg_ui_style as ui
+import rpg_vfx as vfx
 import add_exorcism_expansion as expansion
 
 
@@ -264,7 +265,7 @@ effect clear @a[distance=..6,gamemode=!spectator] minecraft:darkness
 effect clear @a[distance=..6,gamemode=!spectator] minecraft:nausea
 tag @a[tag=rpg.rite.user,distance=..6] remove rpg.rite.user
 function rpg:inquest/stability/show
-particle campfire_cosy_smoke ~ ~0.4 ~ 1.2 0.3 1.2 0.03 35 force
+particle campfire_cosy_smoke ~ ~0.4 ~ 1.2 0.3 1.2 0.03 24 normal
 """)
 
     write("inquest/right_click/lantern.mcfunction", """\
@@ -284,10 +285,11 @@ execute as @a[distance=0.25..10,gamemode=!spectator,gamemode=!creative] at @e[ty
 effect give @a[distance=..11,gamemode=!spectator,gamemode=!creative] minecraft:slow_falling 3 0 true
 particle explosion_emitter ~ ~1 ~ 0 0 0 0 1 force
 particle gust_emitter_large ~ ~1 ~ 0 0 0 0 1 force
-particle dust{color:[1.0,0.84,0.32],scale:2.4} ~ ~0.6 ~ 5.5 0.2 5.5 0.03 130 force
+%(holy_dust)s
 playsound minecraft:entity.warden.sonic_boom hostile @a[distance=..32] ~ ~ ~ 1.2 0.62
 tag @s remove rpg.phase2.source
-""")
+""" % {"holy_dust": "particle %s ~ ~0.6 ~ 5.5 0.2 5.5 0.03 96 force" %
+       ui.dust_transition(ui.HOLY, ui.HOLY_DARK, 2.4)})
     write("inquest/phase2/tick.mcfunction", """\
 scoreboard players remove @s rpg_ex_phase 1
 execute if score @s rpg_ex_phase matches 20 run function rpg:inquest/phase2/warning
@@ -321,11 +323,11 @@ execute if score @s rpg_ex_pressure matches ..0 run function rpg:inquest/phase2/
     write("inquest/phase2/pressure_warning.mcfunction", "\n".join(warning_dispatch))
     write("inquest/phase2/pressure_core.mcfunction", """\
 function rpg:inquest/stability/hit10
-particle trial_omen ~ ~0.45 ~ 7 0.25 7 0.045 70 force
-particle large_smoke ~ ~0.65 ~ 9 0.5 9 0.055 55 force
-particle reverse_portal ~ ~1.1 ~ 11 0.9 11 0.07 75 force
+particle trial_omen ~ ~0.45 ~ 7 0.25 7 0.045 48 force
+particle large_smoke ~ ~0.65 ~ 9 0.5 9 0.055 36 force
+particle reverse_portal ~ ~1.1 ~ 11 0.9 11 0.07 48 force
 particle explosion_emitter ~ ~0.4 ~ 0 0 0 0 1 force
-execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle trial_omen ~ ~1 ~ 0.45 0.7 0.45 0.04 12 force
+execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle trial_omen ~ ~1 ~ 0.45 0.7 0.45 0.04 10 normal
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] run damage @s 6 minecraft:magic
 playsound minecraft:entity.ender_dragon.growl hostile @a[distance=..36] ~ ~ ~ 1.1 0.65
 playsound minecraft:entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 0.9 0.72
@@ -425,6 +427,10 @@ playsound minecraft:entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 0.9 0
                 alt_signature="wax_on", alt_hit="crit", alt_finisher="wax_on",
                 sound="minecraft:block.amethyst_block.resonate"),
     }
+    # 四格庇护圈的边界：圣金一圈，罪域的柱色铺在圈外。玩家一眼就知道往哪退
+    # （docs/VFX-SPEC.md §4.3）。只在预警和爆发那一刻画，各 16 个点。
+    sanctuary = vfx.ring(ui.dust_transition(ui.HOLY_LIGHT, ui.HOLY, 1.3), 4.0,
+                         y=0.15, mode="force")
     for q in LORDS:
         n = q["n"]
         theme = themes[n]
@@ -435,10 +441,11 @@ playsound minecraft:entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 0.9 0
             "title @a[distance=..24,gamemode=!spectator] subtitle " + raw([
                 txt("%s · 罪域聚能" % q["who"], q["colour"], True),
                 txt(" · 退入法阵四格庇护圈", "#FFF2A8")]),
-            "particle %s ~ ~0.25 ~ 5 0.08 5 0.018 52 force" % (transition % "1.4"),
-            "particle %s ~ ~0.35 ~ 10 0.12 10 0.035 82 force" % (transition % "2.1"),
-            "particle %s ~ ~1.0 ~ 7 0.8 7 0.035 36 force" % theme["signature"],
-            "particle trial_spawner_detection_ominous ~ ~0.2 ~ 11 0.05 11 0.012 48 force",
+            "particle %s ~ ~0.25 ~ 5 0.08 5 0.018 36 force" % (transition % "1.4"),
+            "particle %s ~ ~0.35 ~ 10 0.12 10 0.035 56 force" % (transition % "2.1"),
+            "particle %s ~ ~1.0 ~ 7 0.8 7 0.035 24 force" % theme["signature"],
+            "particle trial_spawner_detection_ominous ~ ~0.2 ~ 11 0.05 11 0.012 32 force",
+        ] + sanctuary + [
             "playsound minecraft:block.respawn_anchor.charge hostile @a[distance=..32] ~ ~ ~ 0.9 0.58"]
         write("inquest/phase2/warning/%d.mcfunction" % n, "\n".join(warning))
 
@@ -447,8 +454,10 @@ playsound minecraft:entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 0.9 0
         theme = themes[n]
         transition = "dust_color_transition{from_color:%s,to_color:%s,scale:%%s}" % (
             theme["start"], theme["end"])
-        colour = q["colour"].lstrip("#")
-        flash_colour = int(colour, 16)
+        # 闪光取柱亮色：深色闪光（原来的 q["colour"]）白天几乎看不见。
+        flash = vfx.pillar_flash(n)
+        # 罪域是恶魔的大招：单条 ≤96，整套比原来少约四成（用户 2026-11-03 拍板）。
+        # 圈外铺柱色渐变，圈上一圈圣金，玩家身上那份是个人反馈，一律 normal。
         for index, (name, particle, damage, effects, extra) in enumerate(variants[n], 1):
             signature_particle = (theme["alt_signature"] if particle == theme["signature"]
                                   else theme["signature"])
@@ -458,16 +467,17 @@ playsound minecraft:entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 0.9 0
             body = [
                 "scoreboard players set @s rpg_ex_wave 20",
                 "scoreboard players set @s rpg_ex_wave_kind %d" % (n * 10 + index),
-                "particle flash{color:%d} ~ ~1.2 ~ 0 0 0 0 1 force" % flash_colour,
-                "particle %s ~ ~0.25 ~ 5 0.08 5 0.025 82 force" % (transition % "1.8"),
-                "particle %s ~ ~0.50 ~ 11 0.14 11 0.045 116 force" % (transition % "2.5"),
-                "particle %s ~ ~1.15 ~ 12 1.8 12 0.07 138 force" % particle,
-                "particle %s ~ ~1.55 ~ 8 1.2 8 0.045 58 force" % signature_particle,
+                "particle %s ~ ~1.2 ~ 0 0 0 0 1 force" % flash,
+                "particle %s ~ ~0.25 ~ 5 0.08 5 0.025 48 force" % (transition % "1.8"),
+                "particle %s ~ ~0.50 ~ 11 0.14 11 0.045 72 force" % (transition % "2.5"),
+                "particle %s ~ ~1.15 ~ 12 1.8 12 0.07 80 force" % particle,
+                "particle %s ~ ~1.55 ~ 8 1.2 8 0.045 40 force" % signature_particle,
+            ] + sanctuary + [
                 "tellraw @a[distance=..24,gamemode=!spectator] " + raw([
                     txt("[罪域·%s] " % q["who"], q["colour"], True),
                     txt(name + " · 三重罪域爆发，退入法阵四格庇护圈。", "gray")]),
-                "execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle %s ~ ~1 ~ 0.65 0.95 0.65 0.06 22 force" % particle,
-                "execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle %s ~ ~1 ~ 0.38 0.60 0.38 0.04 12 force" % hit_particle,
+                "execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle %s ~ ~1 ~ 0.65 0.95 0.65 0.06 16 normal" % particle,
+                "execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle %s ~ ~1 ~ 0.38 0.60 0.38 0.04 10 normal" % hit_particle,
                 "execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] run damage @s %d minecraft:magic" % damage,
                 "playsound %s hostile @a[distance=..32] ~ ~ ~ 0.95 %.2f" %
                 (theme["sound"], 0.72 + index * 0.08)]
@@ -477,17 +487,17 @@ playsound minecraft:entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 0.9 0
             write("inquest/phase2/pressure/%d_%d.mcfunction" % (n, index), "\n".join(body))
 
             pulse = [
-                "execute if score @s rpg_ex_wave matches 12 run particle %s ~ ~0.35 ~ 14 0.15 14 0.05 108 force" % (transition % "2.2"),
-                "execute if score @s rpg_ex_wave matches 12 run particle %s ~ ~1.1 ~ 14 1.6 14 0.08 94 force" % particle,
-                "execute if score @s rpg_ex_wave matches 12 run particle %s ~ ~1.5 ~ 9 1.0 9 0.035 42 force" % signature_particle,
-                "execute if score @s rpg_ex_wave matches 12 as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle %s ~ ~1 ~ 0.42 0.65 0.42 0.05 14 force" % hit_particle,
+                "execute if score @s rpg_ex_wave matches 12 run particle %s ~ ~0.35 ~ 14 0.15 14 0.05 64 force" % (transition % "2.2"),
+                "execute if score @s rpg_ex_wave matches 12 run particle %s ~ ~1.1 ~ 14 1.6 14 0.08 56 force" % particle,
+                "execute if score @s rpg_ex_wave matches 12 run particle %s ~ ~1.5 ~ 9 1.0 9 0.035 28 force" % signature_particle,
+                "execute if score @s rpg_ex_wave matches 12 as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle %s ~ ~1 ~ 0.42 0.65 0.42 0.05 10 normal" % hit_particle,
                 "execute if score @s rpg_ex_wave matches 12 as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] run damage @s 2 minecraft:magic",
                 "execute if score @s rpg_ex_wave matches 12 run playsound minecraft:block.respawn_anchor.deplete hostile @a[distance=..32] ~ ~ ~ 0.8 0.68",
-                "execute if score @s rpg_ex_wave matches 1 run particle flash{color:%d} ~ ~1.2 ~ 0 0 0 0 1 force" % flash_colour,
-                "execute if score @s rpg_ex_wave matches 1 run particle %s ~ ~0.35 ~ 17 0.2 17 0.06 142 force" % (transition % "3.0"),
-                "execute if score @s rpg_ex_wave matches 1 run particle %s ~ ~1.3 ~ 18 2.2 18 0.10 126 force" % particle,
-                "execute if score @s rpg_ex_wave matches 1 run particle %s ~ ~1.4 ~ 12 1.4 12 0.06 62 force" % finisher_particle,
-                "execute if score @s rpg_ex_wave matches 1 as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle %s ~ ~1 ~ 0.68 0.9 0.68 0.07 20 force" % hit_particle,
+                "execute if score @s rpg_ex_wave matches 1 run particle %s ~ ~1.2 ~ 0 0 0 0 1 force" % flash,
+                "execute if score @s rpg_ex_wave matches 1 run particle %s ~ ~0.35 ~ 17 0.2 17 0.06 88 force" % (transition % "3.0"),
+                "execute if score @s rpg_ex_wave matches 1 run particle %s ~ ~1.3 ~ 18 2.2 18 0.10 80 force" % particle,
+                "execute if score @s rpg_ex_wave matches 1 run particle %s ~ ~1.4 ~ 12 1.4 12 0.06 40 force" % finisher_particle,
+                "execute if score @s rpg_ex_wave matches 1 as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle %s ~ ~1 ~ 0.68 0.9 0.68 0.07 14 normal" % hit_particle,
                 "execute if score @s rpg_ex_wave matches 1 as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] run damage @s %d minecraft:magic" % max(4, damage // 2),
                 "execute if score @s rpg_ex_wave matches 1 run playsound %s hostile @a[distance=..36] ~ ~ ~ 1.2 0.62" % theme["sound"]]
             write("inquest/phase2/wave/%d_%d.mcfunction" % (n, index), "\n".join(pulse))
@@ -652,7 +662,7 @@ scoreboard players remove @s rpg_totem 1
 execute if score @s rpg_totem matches ..0 run return run function rpg:inquest/anchor_timeout
 execute if score @s rpg_ex_toolcd matches 1.. run scoreboard players remove @s rpg_ex_toolcd 1
 function rpg:inquest/stability/show
-particle dust{color:[1.0,0.91,0.52],scale:0.7} ~ ~0.75 ~ 0.28 0.35 0.28 0.01 1 normal
+particle """ + ui.dust(ui.HOLY, 0.7) + """ ~ ~0.75 ~ 0.28 0.35 0.28 0.01 1 normal
 execute if score @s rpg_ex_stage matches 2 run function rpg:inquest/tool/scan
 execute if score @s rpg_ex_stage matches 2 if score @s rpg_ex_phase matches 1.. run function rpg:inquest/phase2/tick
 execute if score @s rpg_ex_stage matches 2 if score @s rpg_ex_phase matches ..0 run function rpg:inquest/phase2/pressure_tick

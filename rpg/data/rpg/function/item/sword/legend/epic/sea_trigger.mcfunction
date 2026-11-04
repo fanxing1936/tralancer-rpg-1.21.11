@@ -7,4 +7,4 @@ execute if score @s sea_step matches 11.. run scoreboard players set @s sea_step
 scoreboard players set @s rpg_hud 14
 scoreboard players operation @s rpg_hud_p = @s sea_step
 scoreboard players set @s rpg_hud_t 3
-execute at @s anchored eyes run particle enchant ^ ^ ^0.4 0.25 0.25 0.25 0.2 3 force @s
+execute at @s anchored eyes run particle enchant ^ ^ ^0.4 0.25 0.25 0.25 0.2 3 normal @s

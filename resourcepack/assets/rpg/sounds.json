@@ -1,4 +1,111 @@
 {
+  "abaddon.bolt": {
+    "subtitle": "subtitles.rpg.abaddon.bolt",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithprojectileattackfoley_001_soundwave",
+      "rpg:abaddon/wretchedwraithprojectileattackfoley_002_soundwave",
+      "rpg:abaddon/wretchedwraithprojectileattackfoley_003_soundwave"
+    ]
+  },
+  "abaddon.bolt_vocal": {
+    "subtitle": "subtitles.rpg.abaddon.bolt_vocal",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithprojectileattackvocal_001_soundwave",
+      "rpg:abaddon/wretchedwraithprojectileattackvocal_002_soundwave",
+      "rpg:abaddon/wretchedwraithprojectileattackvocal_003_soundwave"
+    ]
+  },
+  "abaddon.circle": {
+    "subtitle": "subtitles.rpg.abaddon.circle",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithprojectilecirclefoley_001_soundwave",
+      "rpg:abaddon/wretchedwraithprojectilecirclefoley_002_soundwave",
+      "rpg:abaddon/wretchedwraithprojectilecirclefoley_003_soundwave"
+    ]
+  },
+  "abaddon.circle_vocal": {
+    "subtitle": "subtitles.rpg.abaddon.circle_vocal",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithprojectilecirclevocal_001_soundwave",
+      "rpg:abaddon/wretchedwraithprojectilecirclevocal_002_soundwave",
+      "rpg:abaddon/wretchedwraithprojectilecirclevocal_003_soundwave"
+    ]
+  },
+  "abaddon.crown": {
+    "subtitle": "subtitles.rpg.abaddon.crown",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithstuncrown_001_soundwave",
+      "rpg:abaddon/wretchedwraithstuncrown_002_soundwave"
+    ]
+  },
+  "abaddon.death": {
+    "subtitle": "subtitles.rpg.abaddon.death",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithdeath_001_soundwave",
+      "rpg:abaddon/wretchedwraithdeath_002_soundwave"
+    ]
+  },
+  "abaddon.hurt": {
+    "subtitle": "subtitles.rpg.abaddon.hurt",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithhurt_001_soundwave",
+      "rpg:abaddon/wretchedwraithhurt_002_soundwave",
+      "rpg:abaddon/wretchedwraithhurt_003_soundwave"
+    ]
+  },
+  "abaddon.idle": {
+    "subtitle": "subtitles.rpg.abaddon.idle",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithidle_001_soundwave",
+      "rpg:abaddon/wretchedwraithidle_002_soundwave",
+      "rpg:abaddon/wretchedwraithidle_003_soundwave",
+      "rpg:abaddon/wretchedwraithidle_004_soundwave",
+      "rpg:abaddon/wretchedwraithidle_005_soundwave",
+      "rpg:abaddon/wretchedwraithidle_006_soundwave"
+    ]
+  },
+  "abaddon.intro": {
+    "subtitle": "subtitles.rpg.abaddon.intro",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithintrovocal_soundwave"
+    ]
+  },
+  "abaddon.intro_foley": {
+    "subtitle": "subtitles.rpg.abaddon.intro_foley",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithintrofoley_soundwave"
+    ]
+  },
+  "abaddon.step": {
+    "subtitle": "subtitles.rpg.abaddon.step",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithwalkice_001_soundwave",
+      "rpg:abaddon/wretchedwraithwalkice_002_soundwave",
+      "rpg:abaddon/wretchedwraithwalkice_003_soundwave"
+    ]
+  },
+  "abaddon.strike": {
+    "subtitle": "subtitles.rpg.abaddon.strike",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithbasicattackfoley_001_soundwave",
+      "rpg:abaddon/wretchedwraithbasicattackfoley_002_soundwave",
+      "rpg:abaddon/wretchedwraithbasicattackfoley_003_soundwave"
+    ]
+  },
+  "abaddon.strike_vocal": {
+    "subtitle": "subtitles.rpg.abaddon.strike_vocal",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithbasicattackvocal_001_soundwave",
+      "rpg:abaddon/wretchedwraithbasicattackvocal_002_soundwave",
+      "rpg:abaddon/wretchedwraithbasicattackvocal_003_soundwave"
+    ]
+  },
+  "abaddon.summon": {
+    "subtitle": "subtitles.rpg.abaddon.summon",
+    "sounds": [
+      "rpg:abaddon/wretchedwraithsummon_001_soundwave"
+    ]
+  },
   "beelzebub.approach": {
     "subtitle": "subtitles.rpg.beelzebub.approach",
     "sounds": [
@@ -383,6 +490,79 @@
       "rpg:tower_guard/s1_sfx_towerguard_basicattack_swing_01",
       "rpg:tower_guard/s1_sfx_towerguard_basicattack_swing_02",
       "rpg:tower_guard/s1_sfx_towerguard_basicattack_swing_03"
+    ]
+  },
+  "tower_wraith.appear": {
+    "subtitle": "subtitles.rpg.tower_wraith.appear",
+    "sounds": [
+      "rpg:tower_wraith/sfx_mob_towerwraithteleportin_001_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithteleportin_002_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithteleportin_003_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithteleportin_004_soundwave"
+    ]
+  },
+  "tower_wraith.attack": {
+    "subtitle": "subtitles.rpg.tower_wraith.attack",
+    "sounds": [
+      "rpg:tower_wraith/sfx_mob_towerwraithattack_001_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithattack_002_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithattack_003_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithattack_004_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithattack_005_soundwave"
+    ]
+  },
+  "tower_wraith.attack_vocal": {
+    "subtitle": "subtitles.rpg.tower_wraith.attack_vocal",
+    "sounds": [
+      "rpg:tower_wraith/sfx_mob_towerwraithattackvocal_001_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithattackvocal_002_soundwave"
+    ]
+  },
+  "tower_wraith.death": {
+    "subtitle": "subtitles.rpg.tower_wraith.death",
+    "sounds": [
+      "rpg:tower_wraith/sfx_mob_towerwraithdeathvocal_001_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithdeathvocal_002_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithdeath_001_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithdeath_002_soundwave"
+    ]
+  },
+  "tower_wraith.ember": {
+    "subtitle": "subtitles.rpg.tower_wraith.ember",
+    "sounds": [
+      "rpg:tower_wraith/sfx_mob_towerwraithember_001_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithember_002_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithember_003_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithember_004_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithember_005_soundwave"
+    ]
+  },
+  "tower_wraith.fly": {
+    "subtitle": "subtitles.rpg.tower_wraith.fly",
+    "sounds": [
+      "rpg:tower_wraith/sfx_mob_towerwraithfly_001_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithfly_002_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithfly_003_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithfly_004_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithfly_005_soundwave"
+    ]
+  },
+  "tower_wraith.hurt": {
+    "subtitle": "subtitles.rpg.tower_wraith.hurt",
+    "sounds": [
+      "rpg:tower_wraith/sfx_mob_towerwraithhurtvocal_001_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithhurtvocal_002_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithhurtvocal_003_soundwave"
+    ]
+  },
+  "tower_wraith.idle": {
+    "subtitle": "subtitles.rpg.tower_wraith.idle",
+    "sounds": [
+      "rpg:tower_wraith/sfx_mob_towerwraithidle_001_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithidle_002_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithidle_003_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithidle_004_soundwave",
+      "rpg:tower_wraith/sfx_mob_towerwraithidle_005_soundwave"
     ]
   },
   "vanguard.death": {

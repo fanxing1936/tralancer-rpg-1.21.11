@@ -4,7 +4,7 @@ scoreboard players set @s rpg_dm_lord 6
 scoreboard players set @s rpg_ex_stage 2
 scoreboard players set @s rpg_ex_time 0
 scoreboard players set @s rpg_totem 2400
-particle flash{color:16777200} ~ ~0.8 ~ 0 0 0 0 1 force
+particle flash{color:16777215} ~ ~0.8 ~ 0 0 0 0 1 normal
 particle end_rod ~ ~0.7 ~ 0.7 0.5 0.7 0.06 45 normal
 scoreboard players set @s rpg_ex_stab 50
 execute store result score @s rpg_ex_counter run random value 140..220

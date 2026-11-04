@@ -12,6 +12,8 @@ import json
 import os
 import sys
 
+import rpg_ui_style as ui
+
 
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 FUNC = os.path.join(DP, "data/rpg/function")
@@ -259,7 +261,7 @@ playsound minecraft:block.trial_spawner.ominous_activate hostile @a[distance=..2
     stage1 = [
         "data merge entity @s {Health:420f}",
         "effect give @s minecraft:resistance 2 4 true",
-        "particle dust{color:[0.95,0.82,0.32],scale:0.8} ~ ~1 ~ 0.35 0.7 0.35 0.01 1 normal"]
+        "particle %s ~ ~1 ~ 0.35 0.7 0.35 0.01 1 normal" % ui.dust(ui.HOLY, 0.8)]
     for q in LORDS:
         stage1.append(
             "execute if score @s rpg_dm_lord matches %(n)d "
@@ -401,7 +403,7 @@ execute as @e[type=minecraft:vindicator,tag=rpg.exorcism.bound,distance=..14] if
 execute if score #bound_found rpg_ex_tmp matches 0 run return run function rpg:inquest/anchor_orphan
 scoreboard players remove @s rpg_totem 1
 execute if score @s rpg_totem matches ..0 run return run function rpg:inquest/anchor_timeout
-particle dust{color:[1.0,0.91,0.52],scale:0.7} ~ ~0.75 ~ 0.28 0.35 0.28 0.01 1 normal
+particle """ + ui.dust(ui.HOLY, 0.7) + """ ~ ~0.75 ~ 0.28 0.35 0.28 0.01 1 normal
 execute if score @s rpg_ex_stage matches 2 run return run function rpg:inquest/anchor_stage2
 execute if score @s rpg_ex_stage matches 3 run return run function rpg:inquest/anchor_stage3
 execute if score @s rpg_ex_stage matches 4 run return run function rpg:inquest/anchor_stage4

@@ -17,6 +17,6 @@ scoreboard players operation @s rpg_lt_max /= #five rpg_lt_max
 scoreboard players add @s rpg_lt_max 1000
 execute if score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_stage1
 execute unless score @s rpg_ex_stage matches 1 run function rpg:divine/damage/apply_score
-particle minecraft:flash{color:15594751} ~ ~1 ~ 0 0 0 0 1 force
-particle dust_color_transition{from_color:[0.38,0.85,0.91],to_color:[1.0,0.95,0.66],scale:2.0} ~ ~1 ~ 0.65 0.85 0.65 0.08 48 force
-particle minecraft:enchanted_hit ~ ~1 ~ 0.5 0.7 0.5 0.12 36 force
+particle minecraft:flash{color:15267071} ~ ~1 ~ 0 0 0 0 1 normal
+particle dust_color_transition{from_color:[0.38,0.85,0.91],to_color:[1.0,0.95,0.66],scale:1.6} ~ ~1 ~ 0.65 0.85 0.65 0.08 24 normal
+particle minecraft:enchanted_hit ~ ~1 ~ 0.5 0.7 0.5 0.12 24 normal

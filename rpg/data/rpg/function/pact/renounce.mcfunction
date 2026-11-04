@@ -13,8 +13,8 @@ execute if entity @s[scores={rpg_taint=101..}] run scoreboard players set @s rpg
 effect give @s minecraft:wither 10 1
 effect give @s minecraft:blindness 4 0
 
-particle minecraft:flash{color:16777200} ~ ~1 ~ 0 0 0 0 1
-particle end_rod ~ ~1 ~ 0.6 0.8 0.6 0.25 120
+particle minecraft:flash{color:16777215} ~ ~1 ~ 0 0 0 0 1
+particle end_rod ~ ~1 ~ 0.6 0.8 0.6 0.25 80
 particle sculk_charge_pop ~ ~1 ~ 0.5 0.7 0.5 0.12 80
 playsound minecraft:block.beacon.deactivate master @a[distance=..32] ~ ~ ~ 1 0.6
 playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 0.7

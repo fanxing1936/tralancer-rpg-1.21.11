@@ -13,7 +13,7 @@ execute if entity @s[scores={rpg_totem=160}] run function rpg:rite/v2
 execute if entity @s[scores={rpg_totem=120}] run function rpg:rite/v3
 execute if entity @s[scores={rpg_totem=80}] run function rpg:rite/v4
 execute if entity @s[scores={rpg_totem=40}] run function rpg:rite/v5
-particle soul_fire_flame ~ ~0.8 ~ 0.45 0.55 0.45 0.02 3
-particle dust{color:[0.42,0.06,0.10],scale:2} ~ ~0.8 ~ 0.5 0.6 0.5 0.01 2
+particle soul_fire_flame ~ ~0.8 ~ 0.45 0.55 0.45 0.02 2
+particle dust{color:[0.86,0.27,0.31],scale:1} ~ ~0.8 ~ 0.5 0.6 0.5 0.01 2
 execute if entity @s[scores={rpg_totem=1..}] run scoreboard players remove @s rpg_totem 1
 execute if entity @s[scores={rpg_totem=..0}] run function rpg:rite/inv_burst

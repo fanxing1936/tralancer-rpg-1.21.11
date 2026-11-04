@@ -32,6 +32,7 @@ import sys
 
 import add_exorcism as ex          # 复用 HUD 的段落拼装与写文件
 import rpg_ui_style as ui
+import rpg_vfx as vfx
 
 DP = sys.argv[1] if len(sys.argv) > 1 else "../rpg"
 RP = sys.argv[2] if len(sys.argv) > 2 else "../resourcepack"
@@ -880,7 +881,7 @@ damage @s 5 minecraft:magic %(BY)s
 playsound minecraft:entity.blaze.shoot hostile @a[distance=..32] ~ ~ ~ 1 0.5
 execute at @s anchored eyes facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run function rpg:taint/sk4_cone
 """, {"sk4_cone": "\n".join(
-            "execute positioned ^ ^ ^%d run particle ash ~ ~ ~ 1 1 1 0.1 40\n"
+            "execute positioned ^ ^ ^%d run particle ash ~ ~ ~ 1 1 1 0.1 24\n"
             "execute positioned ^ ^ ^%d run particle lava ~ ~ ~ 0.6 0.6 0.6 0 6\n"
             "execute positioned ^ ^ ^%d as @a[distance=..3,gamemode=!spectator,"
             "gamemode=!creative] run function rpg:taint/sk4_hit" % (d, d, d)
@@ -1258,7 +1259,7 @@ data modify storage rpg:demon uuid set from entity @s UUID
 function rpg:taint/ult1_fangs with storage rpg:demon
 particle dust_color_transition{from_color:[0.19,0.85,0.49],to_color:[0.0,0.18,0.07],scale:3} ~ ~1 ~ 5 1 5 0.04 150 force
 particle end_rod ~ ~2 ~ 2.5 1.5 2.5 0.05 75 force
-particle flash{color:3266940} ~ ~2 ~ 0 0 0 0 1 force
+particle %(FLASH)s ~ ~2 ~ 0 0 0 0 1 force
 particle dragon_breath ~ ~1 ~ 4 1 4 0.08 110 force
 particle enchanted_hit ~ ~1 ~ 4 1 4 0.12 90 force
 playsound minecraft:entity.evoker.prepare_attack hostile @a[distance=..32] ~ ~ ~ 1.2 0.55
@@ -1270,7 +1271,7 @@ damage @s 18 minecraft:magic %(BY)s
     2: ("""# 妒海沉城 —— 深潮将十二格内的一切拖向海眼。
 particle bubble_column_up ~ ~0.5 ~ 5 1 5 0.55 220 force
 particle dust_color_transition{from_color:[0.24,0.66,0.91],to_color:[0.02,0.09,0.18],scale:3} ~ ~1 ~ 5 1 5 0.05 150 force
-particle flash{color:4041192} ~ ~1 ~ 0 0 0 0 1 force
+particle %(FLASH)s ~ ~1 ~ 0 0 0 0 1 force
 particle nautilus ~ ~1 ~ 5 1.5 5 0.14 120 force
 particle splash ~ ~0.7 ~ 5 1 5 0.25 160 force
 playsound minecraft:entity.elder_guardian.curse hostile @a[distance=..36] ~ ~ ~ 1.25 0.45
@@ -1285,7 +1286,7 @@ damage @s 17 minecraft:drown %(BY)s
 particle sculk_charge_pop ~ ~1 ~ 5 1 5 0.14 180 force
 particle soul ~ ~1 ~ 4 1.5 4 0.08 130 force
 particle sonic_boom ~ ~1 ~ 0 0 0 0 4 force
-particle flash{color:9605787} ~ ~1 ~ 0 0 0 0 1 force
+particle %(FLASH)s ~ ~1 ~ 0 0 0 0 1 force
 particle reverse_portal ~ ~1 ~ 4 1.5 4 0.3 130 force
 particle soul_fire_flame ~ ~1 ~ 4 1 4 0.08 95 force
 playsound minecraft:entity.warden.sonic_boom hostile @a[distance=..36] ~ ~ ~ 1.1 0.65
@@ -1300,7 +1301,7 @@ effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
 particle ash ~ ~1 ~ 5 2 5 0.15 240 force
 particle mycelium ~ ~1 ~ 4 1.5 4 0.18 170 force
 particle dust_color_transition{from_color:[0.72,0.78,0.29],to_color:[0.14,0.17,0.03],scale:2.6} ~ ~1 ~ 4 1 4 0.05 130 force
-particle flash{color:12044363} ~ ~1 ~ 0 0 0 0 1 force
+particle %(FLASH)s ~ ~1 ~ 0 0 0 0 1 force
 particle large_smoke ~ ~1 ~ 5 1.5 5 0.14 150 force
 particle spore_blossom_air ~ ~2 ~ 5 2 5 0.08 120 force
 playsound minecraft:entity.bee.loop_aggressive hostile @a[distance=..36] ~ ~ ~ 1.25 0.45
@@ -1314,7 +1315,7 @@ effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
 """),
     5: ("""# 血怒天罚 —— 死亡天使沿最近的血气突入人群。
 execute at @s facing entity @a[limit=1,sort=nearest,gamemode=!spectator,gamemode=!creative] feet run tp @s ^ ^ ^5
-particle flash{color:15158613} ~ ~1 ~ 0 0 0 0 1 force
+particle %(FLASH)s ~ ~1 ~ 0 0 0 0 1 force
 particle dust_color_transition{from_color:[0.89,0.30,0.30],to_color:[0.24,0.0,0.04],scale:3} ~ ~1 ~ 4 1.2 4 0.06 180 force
 particle sweep_attack ~ ~1 ~ 3 0.8 3 0 34 force
 particle trial_omen ~ ~1 ~ 4 1 4 0.1 110 force
@@ -1329,7 +1330,7 @@ damage @s 22 minecraft:magic %(BY)s
     6: ("""# 紫宴朝圣 —— 意志被拖向宴席中央，再献出自己的血。
 particle portal ~ ~1 ~ 5 1.5 5 0.65 240 force
 particle dust_color_transition{from_color:[0.75,0.42,0.91],to_color:[0.12,0.0,0.18],scale:3} ~ ~1 ~ 4 1 4 0.06 150 force
-particle flash{color:12610536} ~ ~1 ~ 0 0 0 0 1 force
+particle %(FLASH)s ~ ~1 ~ 0 0 0 0 1 force
 particle witch ~ ~1 ~ 5 1.5 5 0.18 150 force
 particle reverse_portal ~ ~1 ~ 4 1 4 0.28 120 force
 playsound minecraft:entity.evoker.prepare_summon hostile @a[distance=..36] ~ ~ ~ 1.2 0.5
@@ -1345,7 +1346,7 @@ effect give @e[tag=rpg.dm.cast,limit=1] minecraft:instant_health 1 0 true
     7: ("""# 黄金终审 —— 场上的财富、经验与性命在同一刻结算。
 particle wax_on ~ ~1 ~ 5 1.5 5 0.16 210 force
 particle end_rod ~ ~1 ~ 4 1 4 0.08 130 force
-particle flash{color:16765754} ~ ~1 ~ 0 0 0 0 1 force
+particle %(FLASH)s ~ ~1 ~ 0 0 0 0 1 force
 particle firework ~ ~1 ~ 5 1.5 5 0.18 160 force
 particle totem_of_undying ~ ~1 ~ 4 1 4 0.16 120 force
 playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..36] ~ ~ ~ 1.2 0.55
@@ -1361,8 +1362,8 @@ damage @s 24 minecraft:magic %(BY)s
 ULT_NONE = ("""# 无名蚀界 —— 无名者没有柱位，只把周围的一切称谓抹黑。
 particle squid_ink ~ ~1 ~ 5 1.5 5 0.18 210 force
 particle sculk_soul ~ ~1 ~ 4 1 4 0.09 120 force
-particle dust_color_transition{from_color:[0.82,0.23,0.28],to_color:[0.0,0.0,0.0],scale:3} ~ ~1 ~ 4 1 4 0.05 130 force
-particle flash{color:13777735} ~ ~1 ~ 0 0 0 0 1 force
+particle dust_color_transition{from_color:[0.82,0.23,0.28],to_color:[%(NONE_DEEP)s],scale:3} ~ ~1 ~ 4 1 4 0.05 130 force
+particle %(FLASH)s ~ ~1 ~ 0 0 0 0 1 force
 particle trial_omen ~ ~1 ~ 4 1 4 0.1 100 force
 particle reverse_portal ~ ~1 ~ 4 1.5 4 0.3 130 force
 playsound minecraft:entity.warden.roar hostile @a[distance=..36] ~ ~ ~ 1.1 0.55
@@ -1459,7 +1460,9 @@ def wire_lords():
            "execute if score @s rpg_dm_ult matches 10 run playsound minecraft:block.respawn_anchor.charge hostile @a[distance=..32] ~ ~ ~ 1.1 1.1" %
            (rgb, charge_fx[p["n"]], flash, rgb))
         ult_body, ult_hit = ULTIMATES[p["n"]]
-        wf("taint/ult%d.mcfunction" % p["n"], ult_body % subs)
+        # 罪约的闪光取柱亮色（docs/VFX-SPEC.md §3）
+        wf("taint/ult%d.mcfunction" % p["n"],
+           ult_body % dict(subs, FLASH=vfx.pillar_flash(p["n"])))
         ex.wf_holy("taint/ult%d_hit.mcfunction" % p["n"], ult_hit % subs)
 
     # 别西卜那道锥形的命中段，六个取点共用一份
@@ -1495,13 +1498,15 @@ def wire_lords():
     wf("taint/ult0_charge.mcfunction",
        "particle dust{color:[%s],scale:1.7} ~ ~1 ~ 0.55 0.75 0.55 0.02 3 force\n"
        "particle squid_ink ~ ~1 ~ 0.55 0.65 0.55 0.04 4 force\n"
-       "execute if score @s rpg_dm_ult matches 20 run particle flash{color:13777735} ~ ~1 ~ 0 0 0 0 1 force\n"
+       "execute if score @s rpg_dm_ult matches 20 run particle %s ~ ~1 ~ 0 0 0 0 1 force\n"
        "execute if score @s rpg_dm_ult matches 20 run playsound minecraft:block.respawn_anchor.charge hostile @a[distance=..32] ~ ~ ~ 0.9 0.55\n"
        "execute if score @s rpg_dm_ult matches 10 run particle dust{color:[%s],scale:3.2} ~ ~1 ~ 2.2 1.2 2.2 0.08 85 force\n"
        "execute if score @s rpg_dm_ult matches 10 run playsound minecraft:block.respawn_anchor.charge hostile @a[distance=..32] ~ ~ ~ 1.1 0.9" %
-       (none_rgb, none_rgb))
+       (none_rgb, vfx.flash(ui.NAMELESS["lit"]), none_rgb))
     none_body, none_hit = ULT_NONE
-    wf("taint/ult0.mcfunction", none_body % subs)
+    # 无名者的渐变暗端：纯黑在夜里看不见，取无名者深色（ART-STYLE §6）
+    wf("taint/ult0.mcfunction", none_body % dict(
+        subs, FLASH=vfx.flash(ui.NAMELESS["lit"]), NONE_DEEP=ui.floats(ui.NAMELESS["deep"])))
     ex.wf_holy("taint/ult0_hit.mcfunction", none_hit % subs)
 
     wf("taint/ult_start.mcfunction", """# 每第四次出手进入三十刻罪约蓄势。

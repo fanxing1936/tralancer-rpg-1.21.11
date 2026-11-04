@@ -5,3 +5,5 @@ execute at @s as @a[distance=..14,gamemode=!spectator,gamemode=!creative] run fu
 playsound minecraft:entity.warden.heartbeat hostile @a[distance=..32] ~ ~ ~ 1 0.5
 particle sculk_soul ~ ~1 ~ 3 1 3 0.05 70
 execute as @a[distance=..7,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk3b_sleep
+# 亚巴顿外观（add_abaddon_model.py）
+execute if entity @s[tag=rpg.ab] run function rpg:abaddon/skill/sk3_2

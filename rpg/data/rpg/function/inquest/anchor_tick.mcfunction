@@ -6,7 +6,7 @@ scoreboard players remove @s rpg_totem 1
 execute if score @s rpg_totem matches ..0 run return run function rpg:inquest/anchor_timeout
 execute if score @s rpg_ex_toolcd matches 1.. run scoreboard players remove @s rpg_ex_toolcd 1
 function rpg:inquest/stability/show
-particle dust{color:[1.0,0.91,0.52],scale:0.7} ~ ~0.75 ~ 0.28 0.35 0.28 0.01 1 normal
+particle dust{color:[1.0,0.85,0.35],scale:0.7} ~ ~0.75 ~ 0.28 0.35 0.28 0.01 1 normal
 execute if score @s rpg_ex_stage matches 2 run function rpg:inquest/tool/scan
 execute if score @s rpg_ex_stage matches 2 if score @s rpg_ex_phase matches 1.. run function rpg:inquest/phase2/tick
 execute if score @s rpg_ex_stage matches 2 if score @s rpg_ex_phase matches ..0 run function rpg:inquest/phase2/pressure_tick

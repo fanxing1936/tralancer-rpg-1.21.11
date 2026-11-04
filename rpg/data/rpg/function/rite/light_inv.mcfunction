@@ -7,9 +7,9 @@ execute as @a[tag=rpg.inv.new,distance=..7] run scoreboard players operation @s 
 tag @a[tag=rpg.inv.new,distance=..7] add rpg.inv.subject
 # 寿命比图腾的 200 刻多给 20 刻，防止死在圈外留下幽灵标签。
 scoreboard players set @a[tag=rpg.inv.new,distance=..7] rpg_inv 220
-particle minecraft:flash{color:6684672} ~ ~0.8 ~ 0 0 0 0 1
-particle sculk_charge_pop ~ ~0.8 ~ 0.6 0.6 0.6 0.1 80
-particle dust{color:[0.42,0.06,0.10],scale:3} ~ ~0.8 ~ 0.6 0.7 0.6 0.03 90
+particle minecraft:flash{color:14435408} ~ ~0.8 ~ 0 0 0 0 1
+particle sculk_charge_pop ~ ~0.8 ~ 0.6 0.6 0.6 0.1 64
+particle dust_color_transition{from_color:[0.86,0.27,0.31],to_color:[0.24,0.0,0.0],scale:2} ~ ~0.8 ~ 0.6 0.7 0.6 0.03 72
 playsound minecraft:entity.wither.spawn master @a[distance=..40] ~ ~ ~ 1 0.7
 playsound minecraft:block.end_portal.spawn master @a[distance=..40] ~ ~ ~ 0.6 1.6
 title @a[tag=rpg.inv.new,distance=..7] times 10 50 20

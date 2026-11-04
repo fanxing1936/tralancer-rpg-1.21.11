@@ -1,5 +1,5 @@
 tag @s add rpg.inquest.intro
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"〖驱魔调查〗","color":"#C9A646","bold":true,"italic":false},{"text":" ℑ𝔫𝔮𝔲𝔢𝔰𝔱","color":"#836C2E","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"携带圣器见证五种招式中的任意三种；重复招式不会生成新罪证。","color":"#9C9A94","italic":false}]
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"〖驱魔调查〗","color":"#C9A646","bold":true,"italic":false},{"text":" ℑ𝔫𝔮𝔲𝔢𝔰𝔱","color":"#8F7430","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"携带圣器见证五种招式中的任意三种；重复招式不会生成新罪证。","color":"#9C9A94","italic":false}]
 execute if score @s rpg_dm_lord matches 1 as @a[tag=rpg.name.1,distance=..24,gamemode=!spectator] run function rpg:inquest/reminder/1
 execute if score @s rpg_dm_lord matches 2 as @a[tag=rpg.name.2,distance=..24,gamemode=!spectator] run function rpg:inquest/reminder/2
 execute if score @s rpg_dm_lord matches 3 as @a[tag=rpg.name.3,distance=..24,gamemode=!spectator] run function rpg:inquest/reminder/3

@@ -74,8 +74,8 @@ particle dust{color:[0.38,0.85,0.91],scale:1.25} ~4.596 ~0.08 ~-3.857 0 0 0 0 1 
 particle dust{color:[0.38,0.85,0.91],scale:1.25} ~5.196 ~0.08 ~-3.000 0 0 0 0 1 force
 particle dust{color:[0.38,0.85,0.91],scale:1.25} ~5.638 ~0.08 ~-2.052 0 0 0 0 1 force
 particle dust{color:[0.38,0.85,0.91],scale:1.25} ~5.909 ~0.08 ~-1.042 0 0 0 0 1 force
-particle minecraft:flash{color:6482395} ~ ~1 ~ 0 0 0 0 1 force
-particle minecraft:totem_of_undying ~ ~0.8 ~ 5.5 0.5 5.5 0.05 120 force
+particle minecraft:flash{color:6478312} ~ ~1 ~ 0 0 0 0 1 force
+particle minecraft:totem_of_undying ~ ~0.8 ~ 5.5 0.5 5.5 0.05 80 force
 playsound minecraft:block.beacon.power_select master @a[distance=..32] ~ ~ ~ 1 0.85
 playsound minecraft:block.amethyst_block.resonate master @a[distance=..24] ~ ~ ~ 0.8 1.55
 function rpg:hud/m61

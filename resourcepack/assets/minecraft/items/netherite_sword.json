@@ -105,6 +105,31 @@
           "type": "minecraft:model",
           "model": "rpg:item/dawn"
         }
+      },
+      {
+        "threshold": 1110041,
+        "model": {
+          "type": "minecraft:select",
+          "property": "minecraft:display_context",
+          "cases": [
+            {
+              "when": [
+                "gui",
+                "ground",
+                "fixed",
+                "on_shelf"
+              ],
+              "model": {
+                "type": "minecraft:model",
+                "model": "rpg:item/michael_rib_icon"
+              }
+            }
+          ],
+          "fallback": {
+            "type": "minecraft:model",
+            "model": "rpg:item/michael_rib_in_hand"
+          }
+        }
       }
     ]
   }

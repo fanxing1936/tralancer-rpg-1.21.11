@@ -1,6 +1,6 @@
 # 临界 —— 攻击 +10
 attribute @s minecraft:attack_damage modifier add rpg:fall 10 add_value
-execute at @s run particle dust{color:[0.38,0.0,0.04],scale:2.6} ~ ~1 ~ 0.4 0.7 0.4 0.02 20
+execute at @s run particle dust{color:[0.86,0.27,0.31],scale:2} ~ ~1 ~ 0.4 0.7 0.4 0.02 20
 effect give @s minecraft:nausea 6 0 true
 execute if predicate rpg:fall4 run function rpg:taint/yank_roll
 # 脚步忽快忽慢 —— 不是你在走

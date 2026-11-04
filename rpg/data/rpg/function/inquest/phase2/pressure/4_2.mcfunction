@@ -1,13 +1,29 @@
 scoreboard players set @s rpg_ex_wave 20
 scoreboard players set @s rpg_ex_wave_kind 42
-particle flash{color:5925662} ~ ~1.2 ~ 0 0 0 0 1 force
-particle dust_color_transition{from_color:[0.71,0.85,0.34],to_color:[0.35,0.42,0.12],scale:1.8} ~ ~0.25 ~ 5 0.08 5 0.025 82 force
-particle dust_color_transition{from_color:[0.71,0.85,0.34],to_color:[0.35,0.42,0.12],scale:2.5} ~ ~0.50 ~ 11 0.14 11 0.045 116 force
-particle infested ~ ~1.15 ~ 12 1.8 12 0.07 138 force
-particle mycelium ~ ~1.55 ~ 8 1.2 8 0.045 58 force
-tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"〖罪域・别西卜〗","color":"#8CA83D","bold":true,"italic":false},{"text":" 𝔇𝔬𝔪𝔦𝔫𝔦𝔬𝔫","color":"#5B6D28","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"万蝇蔽日 · 三重罪域爆发，退入法阵四格庇护圈。","color":"#9C9A94","italic":false}]
-execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle infested ~ ~1 ~ 0.65 0.95 0.65 0.06 22 force
-execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle item_slime ~ ~1 ~ 0.38 0.60 0.38 0.04 12 force
+particle flash{color:11917655} ~ ~1.2 ~ 0 0 0 0 1 force
+particle dust_color_transition{from_color:[0.71,0.85,0.34],to_color:[0.35,0.42,0.12],scale:1.8} ~ ~0.25 ~ 5 0.08 5 0.025 48 force
+particle dust_color_transition{from_color:[0.71,0.85,0.34],to_color:[0.35,0.42,0.12],scale:2.5} ~ ~0.50 ~ 11 0.14 11 0.045 72 force
+particle infested ~ ~1.15 ~ 12 1.8 12 0.07 80 force
+particle mycelium ~ ~1.55 ~ 8 1.2 8 0.045 40 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~4 ~0.15 ~0 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~3.696 ~0.15 ~1.531 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~2.828 ~0.15 ~2.828 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~1.531 ~0.15 ~3.696 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~0 ~0.15 ~4 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~-1.531 ~0.15 ~3.696 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~-2.828 ~0.15 ~2.828 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~-3.696 ~0.15 ~1.531 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~-4 ~0.15 ~0 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~-3.696 ~0.15 ~-1.531 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~-2.828 ~0.15 ~-2.828 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~-1.531 ~0.15 ~-3.696 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~0 ~0.15 ~-4 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~1.531 ~0.15 ~-3.696 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~2.828 ~0.15 ~-2.828 0 0 0 0 1 force
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:1.3} ~3.696 ~0.15 ~-1.531 0 0 0 0 1 force
+tellraw @a[distance=..24,gamemode=!spectator] ["",{"text":"〖罪域・别西卜〗","color":"#8CA83D","bold":true,"italic":false},{"text":" 𝔇𝔬𝔪𝔦𝔫𝔦𝔬𝔫","color":"#8F7430","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"万蝇蔽日 · 三重罪域爆发，退入法阵四格庇护圈。","color":"#9C9A94","italic":false}]
+execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle infested ~ ~1 ~ 0.65 0.95 0.65 0.06 16 normal
+execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] at @s run particle item_slime ~ ~1 ~ 0.38 0.60 0.38 0.04 10 normal
 execute as @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] run damage @s 7 minecraft:magic
 playsound minecraft:entity.spider.ambient hostile @a[distance=..32] ~ ~ ~ 0.95 0.88
 effect give @a[distance=4.01..24,gamemode=!spectator,gamemode=!creative] minecraft:blindness 5 0 true

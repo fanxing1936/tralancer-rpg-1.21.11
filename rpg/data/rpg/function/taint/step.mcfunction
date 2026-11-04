@@ -23,8 +23,8 @@ scoreboard players operation #t1 rpg_hud -= #t0 rpg_hud
 execute if score #t1 rpg_hud matches 1.. if entity @e[type=minecraft:allay,tag=rpg.doll,distance=..16,limit=1] run function rpg:taint/doll
 
 # 分档外显。低档只是身上泛起暗纹，越深越明显。
-execute if entity @s[scores={rpg_taint=31..60}] at @s run particle dust{color:[0.32,0.16,0.42],scale:1} ~ ~1 ~ 0.35 0.6 0.35 0.01 4
-execute if entity @s[scores={rpg_taint=61..90}] at @s run particle dust{color:[0.45,0.10,0.14],scale:2} ~ ~1 ~ 0.4 0.7 0.4 0.02 8
+execute if entity @s[scores={rpg_taint=31..60}] at @s run particle dust{color:[0.63,0.39,0.41],scale:1} ~ ~1 ~ 0.35 0.6 0.35 0.01 4
+execute if entity @s[scores={rpg_taint=61..90}] at @s run particle dust{color:[0.78,0.31,0.35],scale:1.2} ~ ~1 ~ 0.4 0.7 0.4 0.02 8
 execute if entity @s[scores={rpg_taint=61..90}] at @s run particle sculk_soul ~ ~1.2 ~ 0.3 0.5 0.3 0.01 2
 
 # 濒临魔化：力量上来了，但圣性之物开始灼手。

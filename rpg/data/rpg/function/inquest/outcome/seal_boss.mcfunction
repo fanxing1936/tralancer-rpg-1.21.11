@@ -10,5 +10,5 @@ scoreboard players add @a[tag=rpg.rite.chooser,distance=..14] rpg_ex_xp 18
 scoreboard players add @a[tag=rpg.rite.chooser,distance=..14] rpg_taint 5
 
 execute on passengers run kill @s
-particle sculk_soul ~ ~1 ~ 1.2 1.2 1.2 0.12 80 force
+particle sculk_soul ~ ~1 ~ 1.2 1.2 1.2 0.12 80 normal
 kill @s

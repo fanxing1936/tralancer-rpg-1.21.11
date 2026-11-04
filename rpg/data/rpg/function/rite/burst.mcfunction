@@ -1,8 +1,8 @@
 # 燃尽。图腾炸开 —— 最后一下把余威全部吐出来。
 particle explosion ~ ~0.6 ~ 0.6 0.3 0.6 0 6
-particle end_rod ~ ~0.6 ~ 1.2 0.6 1.2 0.35 140
-particle dust{color:[1.0,0.94,0.70],scale:3} ~ ~0.8 ~ 1 0.6 1 0.2 120
-particle minecraft:flash{color:16777200} ~ ~1 ~ 0 0 0 0 1
+particle end_rod ~ ~0.6 ~ 1.2 0.6 1.2 0.3 80
+particle dust_color_transition{from_color:[1.0,0.95,0.66],to_color:[1.0,0.85,0.35],scale:2} ~ ~0.8 ~ 1 0.6 1 0.2 72
+particle minecraft:flash{color:16773800} ~ ~1 ~ 0 0 0 0 1
 playsound minecraft:entity.generic.explode player @a[distance=..28] ~ ~ ~ 1 1.4
 playsound minecraft:block.beacon.deactivate player @a[distance=..28] ~ ~ ~ 1 1.1
 

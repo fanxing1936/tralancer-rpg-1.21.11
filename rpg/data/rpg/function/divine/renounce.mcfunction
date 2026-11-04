@@ -15,5 +15,5 @@ tag @s remove rpg.divine.old
 tag @s remove rpg.divine.new
 kill @e[type=minecraft:item_display,tag=rpg.totem.lit,distance=..6,limit=1,sort=nearest]
 particle minecraft:flash{color:16777215} ~ ~1 ~ 0 0 0 0 1
-particle minecraft:end_rod ~ ~1 ~ 0.6 0.8 0.6 0.15 90
+particle minecraft:end_rod ~ ~1 ~ 0.6 0.8 0.6 0.15 80
 playsound minecraft:block.beacon.deactivate master @s ~ ~ ~ 1 0.7

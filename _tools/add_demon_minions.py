@@ -54,13 +54,14 @@ ROLES = {
 }
 
 # (lord, role) -> fields that differ from ROLES for that one spirit.
-# 别西卜's and 利维坦's servants wear a display-entity model over an invisible
-# body (add_vanguard.py, add_sunken_skeleton.py); the illusioner renderer draws
-# its body and mirror images even while invisible, so their hexers 塞列欧斯 and
-# 派蒙 are pillagers instead -- still ranged illagers, with the crossbow their
-# AI needs.
+# 别西卜's, 利维坦's and 亚巴顿's servants wear a display-entity model over an
+# invisible body (add_vanguard.py, add_sunken_skeleton.py, add_tower_wraith.py);
+# the illusioner renderer draws its body and mirror images even while
+# invisible, so their hexers 塞列欧斯, 派蒙 and 列拉金 are pillagers instead --
+# still ranged illagers, with the crossbow their AI needs.
 ROLE_OVERRIDES = {
     (2, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
+    (3, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
     (4, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
 }
 

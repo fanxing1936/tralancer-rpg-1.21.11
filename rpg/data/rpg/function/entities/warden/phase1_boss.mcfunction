@@ -8,5 +8,5 @@ scoreboard players reset @s random
 execute if score @s devil matches 150..151 run effect give @s minecraft:instant_health 1 3 true
 execute if score @s devil matches 100..105 at @a[distance=..20] run summon evoker_fangs
 execute if score @s devil matches 40 if entity @a[distance=..5] run playsound minecraft:entity.vex.charge player @a[distance=..15]
-execute if score @s devil matches 50 if entity @a[distance=..5] run particle squid_ink ~1 ~1 ~1 -2 -1 -2 1 96
+execute if score @s devil matches 50 if entity @a[distance=..5] run particle squid_ink ~1 ~1 ~1 -2 -1 -2 0.35 96
 execute if score @s devil matches 50 if entity @a[distance=..5] run execute positioned ~ ~1 ~ run function rpg:effect/pseudo_explosion/owned_p8

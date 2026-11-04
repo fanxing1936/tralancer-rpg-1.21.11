@@ -17,6 +17,9 @@ python add_runes.py ../rpg ../resourcepack
 python add_epics.py ../resourcepack ../rpg
 python retype_longinus.py ../resourcepack ../rpg
 python retype_wukong.py ../resourcepack ../rpg
+# 米迦勒脊骨／肋骨：[神圣] 双持圣骸。要在 add_twins 之后（借它的副手索引块），
+# 早于 opt_index、make_boxes、polish_ui 与 polish_vfx。
+python add_michael.py ../resourcepack ../rpg
 python build_combat_prompt_font.py ../resourcepack
 # 圣卫（塔卫）与别西卜：从 *_ref/*.bbmodel 生成部件模型、图集与音效（sounds.json）
 python add_tower_guard.py ../resourcepack ../rpg
@@ -24,6 +27,8 @@ python add_beelzebub.py ../resourcepack ../rpg
 python add_vanguard.py ../resourcepack ../rpg
 python add_leviathan_model.py ../resourcepack ../rpg
 python add_sunken_skeleton.py ../resourcepack ../rpg
+python add_abaddon_model.py ../resourcepack ../rpg
+python add_tower_wraith.py ../resourcepack ../rpg
 # last, so every hand transform in the pack has exactly one owner
 python fix_display.py ../resourcepack
 # 物品贴图按原生网格存储（整数倍放大的无损还原，新约按 D6 重建）

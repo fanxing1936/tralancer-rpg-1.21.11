@@ -1,6 +1,6 @@
 particle explosion ~ ~1 ~ 0 0 0 0 1
 particle sculk_soul ~ ~1 ~ 0.6 1 0.6 0.08 80
-particle dust{color:[0.35,0.0,0.05],scale:3} ~ ~1 ~ 0.8 1.2 0.8 0.05 90
+particle dust_color_transition{from_color:[0.86,0.27,0.31],to_color:[0.24,0.0,0.0],scale:3} ~ ~1 ~ 0.8 1.2 0.8 0.05 90
 particle explosion_emitter ~ ~1 ~ 0 0 0 0 1
 playsound minecraft:entity.wither.spawn hostile @a[distance=..48] ~ ~ ~ 1 0.6
 playsound minecraft:entity.evoker.prepare_summon hostile @a[distance=..48] ~ ~ ~ 1 0.5

@@ -5,7 +5,7 @@ tag @s add rpg.throne.source
 scoreboard players operation #caster rpg_throne_owner = @s rpg_legacy_uid
 execute as @e[tag=rpg.throne.mark,distance=..14] if score @s rpg_throne_owner = #caster rpg_throne_owner at @s run function rpg:item/legacy/power_target
 particle minecraft:flash{color:16724787} ~ ~1 ~ 0 0 0 0 1
-particle minecraft:dust_color_transition{from_color:[0.17,0.17,0.17],to_color:[1.0,0.2,0.0],scale:2} ~ ~1 ~ 1.8 1 1.8 0.05 65 force
+particle minecraft:dust_color_transition{from_color:[0.17,0.17,0.17],to_color:[1.0,0.2,0.0],scale:2} ~ ~1 ~ 1.8 1 1.8 0.05 65 normal
 playsound minecraft:item.trident.thunder player @a[distance=..28] ~ ~ ~ 0.8 0.8
 tag @s remove rpg.throne.source
 function rpg:hud/m11

@@ -395,7 +395,7 @@ def mix(a, b, t):
 
 
 def shade(colour, t=0.35):
-    """The gloss colour: the tag's own hue, sunk toward black."""
+    """``colour`` sunk toward black."""
     return mix(colour, "#000000", t)
 
 
@@ -409,6 +409,7 @@ BROADCAST_HOLY = "#C9A646"
 BROADCAST_WARN = "#C04A3C"
 BROADCAST_BODY = "#9C9A94"
 BROADCAST_NAME = "#E6DFCF"
+BROADCAST_GLOSS = "#8F7430"         # the blackletter gloss on every line: dark gold
 VERDICTS = {"消灭": BROADCAST_WARN, "放逐": "#CDBE86", "封印": "#4E9FAD", "契约": "#A276BE"}
 SEAL_STAGES = {"遗物休眠": MUTED, "遗物躁动": VERDICTS["契约"], "遗物危险": BROADCAST_HOLY,
                "遗物临界": BROADCAST_WARN, "遗物压制": VERDICTS["封印"],

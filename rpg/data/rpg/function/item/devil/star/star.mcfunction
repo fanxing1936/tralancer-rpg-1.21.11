@@ -12,6 +12,6 @@ execute as @e[type=minecraft:vindicator,tag=devil2,distance=..7] at @s run effec
 execute as @e[type=minecraft:villager,tag=rpg.vacant,distance=..32] at @s run function rpg:item/devil/star/shell
 execute as @a[distance=..32,scores={rpg_taint=31..}] at @s run function rpg:item/devil/star/judge
 execute at @s run particle end_rod ~ ~1 ~ 0.6 1.2 0.6 0.4 120
-execute at @s run particle flash{color:16777200} ~ ~1.4 ~ 0 0 0 0 1
+execute at @s run particle flash{color:16777215} ~ ~1.4 ~ 0 0 0 0 1
 execute at @s run playsound minecraft:block.beacon.power_select master @a[distance=..32] ~ ~ ~ 1 1.6
 item replace entity @s weapon.mainhand with air

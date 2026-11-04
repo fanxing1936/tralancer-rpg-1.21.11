@@ -8,5 +8,5 @@ execute unless score @s rpg_ex_stage matches 1 run function rpg:divine/damage/ap
 effect give @s minecraft:slowness 8 2 true
 effect give @s minecraft:weakness 8 1 true
 effect give @s minecraft:glowing 8 0 true
-particle minecraft:enchanted_hit ~ ~1 ~ 0.8 0.8 0.8 0.12 35 force
-particle minecraft:end_rod ~ ~0.8 ~ 0.6 0.7 0.6 0.04 24 force
+particle minecraft:enchanted_hit ~ ~1 ~ 0.8 0.8 0.8 0.12 24 normal
+particle minecraft:end_rod ~ ~0.8 ~ 0.6 0.7 0.6 0.04 24 normal

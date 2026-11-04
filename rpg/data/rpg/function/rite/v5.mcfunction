@@ -1,7 +1,7 @@
 # 反转的第 5 道。灼烧越来越烈，光却越来越白 —— 那是它正在翻面。
-particle minecraft:flash{color:16774336} ~ ~0.9 ~ 0 0 0 0 1
-particle end_rod ~ ~0.7 ~ 0.5 0.4 0.5 0.20 140
-particle dust{color:[1.0,0.94,0.72],scale:2} ~ ~0.8 ~ 0.6 0.5 0.6 0.03 140
+particle minecraft:flash{color:16773800} ~ ~0.9 ~ 0 0 0 0 1
+particle end_rod ~ ~0.7 ~ 0.5 0.4 0.5 0.20 96
+particle dust{color:[1.0,0.95,0.66],scale:2} ~ ~0.8 ~ 0.6 0.5 0.6 0.03 96
 playsound minecraft:block.respawn_anchor.charge master @a[distance=..24] ~ ~ ~ 1 1.70
 execute as @a[tag=rpg.inv.subject,distance=..7] if score @s rpg_inv_id = #inv_id rpg_inv_id run damage @s 5 minecraft:magic
 execute as @a[tag=rpg.inv.subject,distance=..7] if score @s rpg_inv_id = #inv_id rpg_inv_id run effect give @s minecraft:slowness 3 2 true
