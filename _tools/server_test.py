@@ -12,6 +12,7 @@ import os
 import re
 import subprocess
 import sys
+import threading
 import time
 
 from mc_env import GAME, INST, JAR, JAVA, LIBS, VJSON
@@ -81,6 +82,17 @@ def main():
     probes.append("stop")
 
     if done:
+        # Keep reading the console while we type.  Left unread, about 4 KB fills
+        # the Windows pipe buffer, the server thread blocks inside its next log
+        # write, and the watchdog kills it for a 60-second tick.
+        tail = []
+
+        def pump():
+            for line in proc.stdout:
+                tail.append(line.rstrip())
+
+        reader = threading.Thread(target=pump, daemon=True)
+        reader.start()
         for c in probes:
             lines.append(">>> " + c)
             try:
@@ -92,12 +104,8 @@ def main():
             # before issuing the next probe so benchmark samples do not mix.
             sprint_wait = float(os.environ.get("MC_SPRINT_WAIT", "5"))
             time.sleep(sprint_wait if c.startswith("tick sprint ") else 0.7)
-        # drain to EOF -- the console replies were buffered while we typed
-        while True:
-            line = proc.stdout.readline()
-            if not line:
-                break
-            lines.append(line.rstrip())
+        reader.join(WAIT)
+        lines += tail
     if proc.poll() is None:
         proc.kill()
 

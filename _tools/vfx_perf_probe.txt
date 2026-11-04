@@ -2,7 +2,7 @@
 execute in minecraft:overworld run kill @e[tag=rpg.qa.vfxperf]
 tick sprint 200
 tick sprint 200
-# 召唤在地面（y=-60）：悬空 y=80 的唤魔者会让无头服务器卡住，与本包无关
+# 召唤在地面（y=-60）。之前这里的卡死是 server_test.py 发探针时不读 stdout，与高度和本包无关，已在脚本里修复
 execute in minecraft:overworld run summon minecraft:evoker 0 -60 0 {NoAI:1b,Tags:["devil","rpg.qa.vfxperf"]}
 execute in minecraft:overworld run summon minecraft:evoker 2 -60 0 {NoAI:1b,Tags:["devil","rpg.qa.vfxperf"]}
 execute in minecraft:overworld run summon minecraft:evoker 0 -60 2 {NoAI:1b,Tags:["devil","rpg.qa.vfxperf"]}
