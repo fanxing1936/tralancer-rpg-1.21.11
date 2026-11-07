@@ -1,0 +1,60 @@
+{
+  "textures": {
+    "0": "rpg:item/arch_visage/atlas",
+    "particle": "rpg:item/arch_visage/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        2.0,
+        7.998,
+        1.7947
+      ],
+      "to": [
+        14.0,
+        7.998,
+        14.2053
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            6.75,
+            1.4062,
+            7.2656,
+            2.0625
+          ],
+          "texture": "#0",
+          "tintindex": 1
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        2.0,
+        8.002,
+        1.7947
+      ],
+      "to": [
+        14.0,
+        8.002,
+        14.2053
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            2.0469,
+            12.2969,
+            4.0469,
+            14.2969
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    }
+  ]
+}

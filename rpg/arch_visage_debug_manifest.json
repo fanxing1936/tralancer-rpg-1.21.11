@@ -1,0 +1,125 @@
+{
+  "generator": "add_arch_visage.py",
+  "model_sha256": "e80846861ae9a42c964192642e0c8a8828b5e761f4752bbef0de50b735cd5da3",
+  "display_mob_sha256": "1c30d036b915e4ac9dc8cd58a712a0d3bbed42929f4c8f8e272f0e6d5cb631f5",
+  "texture_png_sha256": "8fe03a292ebf6c72b534d5591025c16a244ecdfd2009f739678026c19e2b4968",
+  "parts": [
+    [
+      "head",
+      [
+        "head"
+      ]
+    ],
+    [
+      "jaw",
+      [
+        "jaw"
+      ]
+    ],
+    [
+      "eyes",
+      [
+        "eyes"
+      ]
+    ],
+    [
+      "head_light",
+      [
+        "head_light"
+      ]
+    ],
+    [
+      "jaw_light",
+      [
+        "jaw_light"
+      ]
+    ]
+  ],
+  "part_count": 5,
+  "clips": {
+    "idle": {
+      "id": 0,
+      "ticks": 20,
+      "loop": true,
+      "samples": 20,
+      "first_tick": 0,
+      "last_tick": 19,
+      "source_length_seconds": 1.0,
+      "runtime_length_seconds": 1.0
+    },
+    "walk": {
+      "id": 1,
+      "ticks": 20,
+      "loop": true,
+      "samples": 20,
+      "first_tick": 0,
+      "last_tick": 19,
+      "source_length_seconds": 1.0,
+      "runtime_length_seconds": 1.0
+    },
+    "spawn_attack": {
+      "id": 2,
+      "ticks": 98,
+      "loop": false,
+      "samples": 99,
+      "first_tick": 0,
+      "last_tick": 98,
+      "source_length_seconds": 4.88,
+      "runtime_length_seconds": 4.9
+    }
+  },
+  "fullbright": true,
+  "emissive_mask_faces": [
+    {
+      "part": "head_light",
+      "element_uuid": "bde4e4de-a146-52ff-bb4c-ec7f1985e94a",
+      "face": "down",
+      "tint_rgb": [
+        255,
+        211,
+        255
+      ],
+      "tint_index": 1
+    },
+    {
+      "part": "jaw_light",
+      "element_uuid": "0263f87d-d17a-5879-843f-593a47f62f37",
+      "face": "up",
+      "tint_rgb": [
+        255,
+        211,
+        255
+      ],
+      "tint_index": 1
+    }
+  ],
+  "carrier": "minecraft:armor_stand",
+  "marker": true,
+  "carrier_tag": "rpg.av",
+  "part_tag": "rpg.av.part",
+  "model_scale": 3.0,
+  "research_ground_y": 0.0,
+  "effective_seat": 0.0,
+  "scoreboards": [
+    "rpg_av_anim",
+    "rpg_av_t",
+    "rpg_av_run",
+    "rpg_av_id"
+  ],
+  "runtime": {
+    "run_values": {
+      "0": "paused/stopped",
+      "1": "playing",
+      "2": "finished"
+    },
+    "initial_clip": "spawn_attack",
+    "sample_rate": 20,
+    "once_finish": "hold final sample",
+    "automatic_walk": false,
+    "multi_instance": "scores per carrier; animation/clear only its direct passengers",
+    "dimensions": "one global unrestricted @e query; at @s before local execution",
+    "clear_scope": "loaded entities; removed carriers leave parts swept on next loaded tick",
+    "debug_scope": "@s carrier, otherwise nearest within 32 blocks in current dimension",
+    "sound_limit": "stopsound cannot filter emitting entity; nearby same-model sounds also stop"
+  }
+}

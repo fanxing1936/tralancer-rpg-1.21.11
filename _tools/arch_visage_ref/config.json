@@ -1,0 +1,178 @@
+{
+  "key": "arch_visage",
+  "label": "Arch-Visage",
+  "bbmodel": "arch_visage.bbmodel",
+  "tag": "rpg.av",
+  "score": "rpg_av",
+  "carrier": "minecraft:armor_stand",
+  "model_scale": 1.0,
+  "seat": 0.0,
+  "research_ground_y": 0.0,
+  "parts": [
+    {
+      "name": "head",
+      "bones": [
+        "head"
+      ]
+    },
+    {
+      "name": "jaw",
+      "bones": [
+        "jaw"
+      ]
+    },
+    {
+      "name": "eyes",
+      "bones": [
+        "eyes"
+      ]
+    },
+    {
+      "name": "head_light",
+      "bones": [
+        "head_light"
+      ]
+    },
+    {
+      "name": "jaw_light",
+      "bones": [
+        "jaw_light"
+      ]
+    }
+  ],
+  "glow": [
+    "head",
+    "jaw",
+    "eyes",
+    "head_light",
+    "jaw_light"
+  ],
+  "clips": [
+    [
+      "idle",
+      1,
+      true
+    ],
+    [
+      "walk",
+      1,
+      true
+    ],
+    [
+      "spawn_attack",
+      1,
+      false
+    ]
+  ],
+  "sounds": {
+    "tele_in": [
+      [
+        "Arch-Visage：现身",
+        "Arch-Visage appears"
+      ],
+      [
+        "Sfx_boss_ArchvisageTeleIn.ogg"
+      ],
+      null
+    ],
+    "tele_out": [
+      [
+        "Arch-Visage：沉入地面",
+        "Arch-Visage sinks"
+      ],
+      [
+        "Sfx_boss_ArchvisageTeleOut.ogg"
+      ],
+      null
+    ],
+    "beam_attack": [
+      [
+        "Arch-Visage：张嘴蓄光",
+        "Arch-Visage charges its mouth"
+      ],
+      [
+        "Sfx_boss_ArchvisageBeamAttack-001.ogg",
+        "Sfx_boss_ArchvisageBeamAttack-002.ogg",
+        "Sfx_boss_ArchvisageBeamAttack-003.ogg"
+      ],
+      null
+    ],
+    "beam_loop": [
+      [
+        "Arch-Visage：口内鸣响",
+        "Arch-Visage mouth hums"
+      ],
+      [
+        "Sfx_boss_ArchvisageBeamLoop-001.ogg"
+      ],
+      null
+    ],
+    "mortar": [
+      [
+        "Arch-Visage：投射音效存档",
+        "Arch-Visage archived mortar sound"
+      ],
+      [
+        "Sfx_boss_ArchvisageMortarShoot-001.ogg",
+        "Sfx_boss_ArchvisageMortarShoot-002.ogg",
+        "Sfx_boss_ArchvisageMortarShoot-003.ogg"
+      ],
+      null
+    ]
+  },
+  "sound_dir": "sounds",
+  "cues": {
+    "spawn_attack": [
+      [
+        0.72,
+        "beam_attack",
+        1,
+        1
+      ],
+      [
+        0.8,
+        "beam_loop",
+        0.6,
+        1
+      ],
+      [
+        3.28,
+        "tele_out",
+        1,
+        1
+      ]
+    ]
+  },
+  "enter_cues": {
+    "spawn_attack": [
+      [
+        "tele_in",
+        1,
+        1
+      ]
+    ]
+  },
+  "material": {
+    "atlas": "atlas.png",
+    "accepted_HE_source_sha256": "ebc5d7cfc16cc5e3e5f3357b82c6c99da29b468faafffe8c9d7f4ab9f1a1e106",
+    "fullbright": true,
+    "raw44_rgba_preserved": true,
+    "actual_mask_consumption": "emissive_masks metadata, dedicated generated-item constant tint postprocess",
+    "no_bloom": true,
+    "head_match": "exact source geometry/UV/PNG; only translated, no stretch"
+  },
+  "emissive": {
+    "metadata": "unhandled_root_fields.emissive_masks",
+    "mask_bones": [
+      "head_light",
+      "jaw_light"
+    ]
+  },
+  "placeholder_clips": [
+    "idle",
+    "walk"
+  ],
+  "debug_recommended_clip": "spawn_attack",
+  "sound_timing_status": "timings attached to observed visual stages; original GIF has no audio, not verified original audiovisual sync",
+  "part_count_reason": "5 independent display parts: head, jaw, eye on/off, upper-cavity on/off, lower-cavity on/off. Visibility uses position into opaque parent, never scale."
+}

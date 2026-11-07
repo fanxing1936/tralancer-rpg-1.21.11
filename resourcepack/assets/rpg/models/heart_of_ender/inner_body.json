@@ -1,0 +1,84 @@
+{
+  "textures": {
+    "0": "rpg:item/heart_of_ender/atlas",
+    "particle": "rpg:item/heart_of_ender/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        6.6,
+        6.45,
+        7.125
+      ],
+      "to": [
+        9.4,
+        9.55,
+        8.875
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            6.8281,
+            0.5469,
+            6.9688,
+            0.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            6.9688,
+            0.5469,
+            7.0469,
+            0.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            7.0469,
+            0.5469,
+            7.1719,
+            0.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            6.75,
+            0.5469,
+            6.8281,
+            0.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            6.8281,
+            0.4688,
+            6.9688,
+            0.5469
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            6.8281,
+            0.6875,
+            6.9688,
+            0.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# mortar @ 33/20 秒；实际bbmodel烘焙，非玩法。
+execute on passengers if entity @s[tag=rpg.he.p.shell_head] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.84859f,5.78377f,-0.34931f],left_rotation:[-0.18835f,-0.01898f,0.01136f,0.98185f],scale:[2.5f,2.5f,2.5f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.he.p.shell_jaw] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.81959f,4.36393f,0.05961f],left_rotation:[0.02263f,-0.01616f,0.0151f,0.9995f],scale:[2.5f,2.5f,2.5f],right_rotation:[0f,0f,0f,1f]}}

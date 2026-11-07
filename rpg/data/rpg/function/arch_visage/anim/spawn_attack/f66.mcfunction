@@ -1,0 +1,7 @@
+# spawn_attack @ 66/20 秒；实际bbmodel烘焙，非玩法。
+execute on passengers if entity @s[tag=rpg.av.p.head] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.41915f,1.3689f,0.01796f],left_rotation:[0.03399f,-0.1204f,-0.06714f,0.98987f],scale:[3f,3f,3f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.av.p.jaw] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.25144f,0.00925f,-0.10931f],left_rotation:[0.06594f,-0.12251f,-0.06321f,0.98826f],scale:[3f,3f,3f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.av.p.eyes] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.13525f,1.01902f,0.93737f],left_rotation:[0.03399f,-0.1204f,-0.06714f,0.98987f],scale:[3f,3f,3f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.av.p.head_light] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.28809f,0.33005f,-0.06973f],left_rotation:[0.03399f,-0.1204f,-0.06714f,0.98987f],scale:[3f,3f,3f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.av.p.jaw_light] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.26197f,0.10949f,-0.09537f],left_rotation:[0.06594f,-0.12251f,-0.06321f,0.98826f],scale:[3f,3f,3f],right_rotation:[0f,0f,0f,1f]}}
+execute at @s run playsound rpg:arch_visage.tele_out hostile @a[distance=..24] ~ ~ ~ 1 1

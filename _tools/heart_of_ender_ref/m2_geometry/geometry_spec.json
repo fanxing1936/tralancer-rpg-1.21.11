@@ -1,0 +1,1441 @@
+{
+  "stage": "M2 static geometry study; not an accepted final model",
+  "expected_part_count": 21,
+  "coordinate_system": "Java model space: +y up, facing -z; cube coordinates are absolute unposed rig coordinates; rotations are degrees XYZ applied as Rz*Ry*Rx around pivot",
+  "model_scale": null,
+  "seat": 0,
+  "scale_note": "head width = 12 model units; seat=0 only for normalized geometry study; game visual size not chosen",
+  "camera": {
+    "projection": "orthographic",
+    "yaw_deg": -45,
+    "elevation_deg": 25,
+    "roll_deg": 0,
+    "pixels_per_unit": 15.397157,
+    "offset_px": [
+      498.454163,
+      663.28135
+    ],
+    "screen_basis_rows": [
+      [
+        -0.707107,
+        0.0,
+        0.707107
+      ],
+      [
+        -0.298836,
+        -0.906308,
+        -0.298836
+      ],
+      [
+        -0.640856,
+        0.422618,
+        -0.640856
+      ]
+    ],
+    "canvas": [
+      1000,
+      840
+    ],
+    "depth_rule": "larger camera depth is nearer viewer",
+    "handedness": "screen_right cross screen_up = viewer; P rows are right, down, viewer (det=-1)",
+    "orthographic_height": 54.555527,
+    "target": [
+      4.650743,
+      14.320032,
+      4.792726
+    ],
+    "position_at_distance_80": [
+      -46.617768,
+      48.129493,
+      -46.475784
+    ]
+  },
+  "head_fit": {
+    "width": 12.0,
+    "total_closed_height": 14.787021,
+    "depth": 12.410508,
+    "upper_skull_height": 12.0,
+    "closed_jaw_height": 2.787021,
+    "front_face": "north",
+    "side_face": "west",
+    "front_quad_px": [
+      [
+        218,
+        211
+      ],
+      [
+        348,
+        262
+      ],
+      [
+        402,
+        439
+      ],
+      [
+        272,
+        388
+      ]
+    ],
+    "top_quad_px": [
+      [
+        218,
+        211
+      ],
+      [
+        346,
+        103
+      ],
+      [
+        476,
+        154
+      ],
+      [
+        348,
+        262
+      ]
+    ],
+    "side_quad_px": [
+      [
+        348,
+        262
+      ],
+      [
+        476,
+        154
+      ],
+      [
+        530,
+        331
+      ],
+      [
+        402,
+        439
+      ]
+    ],
+    "front_model_quad": [
+      [
+        6,
+        38.0,
+        -10.8
+      ],
+      [
+        -6,
+        38.0,
+        -10.8
+      ],
+      [
+        -6,
+        23.212979,
+        -10.8
+      ],
+      [
+        6,
+        23.212979,
+        -10.8
+      ]
+    ],
+    "side_model_quad": [
+      [
+        -6,
+        38.0,
+        -10.8
+      ],
+      [
+        -6,
+        38.0,
+        1.610508
+      ],
+      [
+        -6,
+        23.212979,
+        1.610508
+      ],
+      [
+        -6,
+        23.212979,
+        -10.8
+      ]
+    ],
+    "inferred": "2D black boundaries ±8–12px; complete head includes closed lower jaw; not original UV or bone data",
+    "world_rotation": [
+      -17.98273,
+      -0.263876,
+      -1.522435
+    ],
+    "relative_rotation": [
+      -17.98273,
+      -0.263876,
+      10.477565
+    ]
+  },
+  "bones": [
+    {
+      "name": "shell_root",
+      "parent": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        -12
+      ],
+      "evidence": "推断：壳整体静态倾斜，使躯干投影匹配；不是动画"
+    },
+    {
+      "name": "shell_body",
+      "parent": "shell_root",
+      "pivot": [
+        0,
+        17,
+        4.5
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ],
+      "evidence": "inferred"
+    },
+    {
+      "name": "shell_head",
+      "parent": "shell_root",
+      "pivot": [
+        0.0,
+        25.0,
+        0.0
+      ],
+      "rest_rotation": [
+        -17.98273,
+        -0.263876,
+        10.477565
+      ],
+      "evidence": "上颅+闭颚总轮廓的三轴正交投影拟合；黑色边界±8–12px"
+    },
+    {
+      "name": "shell_jaw",
+      "parent": "shell_head",
+      "pivot": [
+        0,
+        26.0,
+        1.610508
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ],
+      "evidence": "闭口静态；铰点在后上缘，为张口结构推断，未制作动作"
+    },
+    {
+      "name": "limb_left_upper_proximal",
+      "parent": "shell_root",
+      "pivot": [
+        4.5,
+        28.0,
+        4.0
+      ],
+      "rest_rotation": [
+        24.737312,
+        0.0,
+        106.970512
+      ],
+      "evidence": "根点层级/深度推断；拟合A屏幕折点"
+    },
+    {
+      "name": "limb_left_upper_distal",
+      "parent": "limb_left_upper_proximal",
+      "pivot": [
+        4.5,
+        14.0,
+        4.0
+      ],
+      "rest_rotation": [
+        -33.003852,
+        2.941839,
+        6.404004
+      ],
+      "evidence": "两段方向静态拟合；A实际原始骨骼/深度未知"
+    },
+    {
+      "name": "limb_left_middle_proximal",
+      "parent": "shell_root",
+      "pivot": [
+        4.5,
+        18.5,
+        4.0
+      ],
+      "rest_rotation": [
+        42.581286,
+        0.0,
+        87.965226
+      ],
+      "evidence": "根点层级/深度推断；拟合B屏幕折点"
+    },
+    {
+      "name": "limb_left_middle_distal",
+      "parent": "limb_left_middle_proximal",
+      "pivot": [
+        4.5,
+        2.308647,
+        4.0
+      ],
+      "rest_rotation": [
+        -39.612804,
+        -10.169609,
+        -11.25659
+      ],
+      "evidence": "两段方向静态拟合；B实际原始骨骼/深度未知"
+    },
+    {
+      "name": "limb_left_lower_proximal",
+      "parent": "shell_root",
+      "pivot": [
+        4.5,
+        9.0,
+        4.0
+      ],
+      "rest_rotation": [
+        55.429368,
+        0.0,
+        79.255581
+      ],
+      "evidence": "根点层级/深度推断；拟合C屏幕折点"
+    },
+    {
+      "name": "limb_left_lower_distal",
+      "parent": "limb_left_lower_proximal",
+      "pivot": [
+        4.5,
+        -6.257302,
+        4.0
+      ],
+      "rest_rotation": [
+        19.667865,
+        -17.359642,
+        -12.440002
+      ],
+      "evidence": "两段方向静态拟合；C实际原始骨骼/深度未知"
+    },
+    {
+      "name": "limb_right_upper_proximal",
+      "parent": "shell_root",
+      "pivot": [
+        -4.5,
+        28.0,
+        4.0
+      ],
+      "rest_rotation": [
+        -2.267492,
+        0.0,
+        -15.846767
+      ],
+      "evidence": "根点层级/深度推断；拟合F屏幕折点"
+    },
+    {
+      "name": "limb_right_upper_distal",
+      "parent": "limb_right_upper_proximal",
+      "pivot": [
+        -4.5,
+        9.957962,
+        4.0
+      ],
+      "rest_rotation": [
+        -28.914748,
+        -1.626825,
+        45.82986
+      ],
+      "evidence": "两段方向静态拟合；F实际原始骨骼/深度未知"
+    },
+    {
+      "name": "limb_right_middle_proximal",
+      "parent": "shell_root",
+      "pivot": [
+        -4.5,
+        18.5,
+        4.0
+      ],
+      "rest_rotation": [
+        15.318862,
+        0.0,
+        -16.002816
+      ],
+      "evidence": "根点层级/深度推断；拟合E屏幕折点"
+    },
+    {
+      "name": "limb_right_middle_distal",
+      "parent": "limb_right_middle_proximal",
+      "pivot": [
+        -4.5,
+        0.509109,
+        4.0
+      ],
+      "rest_rotation": [
+        26.371092,
+        -12.568117,
+        -54.47746
+      ],
+      "evidence": "两段方向静态拟合；E实际原始骨骼/深度未知"
+    },
+    {
+      "name": "limb_right_lower_proximal",
+      "parent": "shell_root",
+      "pivot": [
+        -4.5,
+        9.0,
+        4.0
+      ],
+      "rest_rotation": [
+        -7.240723,
+        0.0,
+        -92.736594
+      ],
+      "evidence": "根点层级/深度推断；拟合D屏幕折点"
+    },
+    {
+      "name": "limb_right_lower_distal",
+      "parent": "limb_right_lower_proximal",
+      "pivot": [
+        -4.5,
+        -5.0,
+        4.0
+      ],
+      "rest_rotation": [
+        -23.408409,
+        0.45974,
+        -3.621016
+      ],
+      "evidence": "两段方向静态拟合；D实际原始骨骼/深度未知"
+    },
+    {
+      "name": "inner_root",
+      "parent": "shell_root",
+      "pivot": [
+        0.0,
+        -4.3,
+        2.9
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        4
+      ],
+      "evidence": "独立整体骨；静态漂浮位置为投影拟合，未作动画"
+    },
+    {
+      "name": "inner_body",
+      "parent": "inner_root",
+      "pivot": [
+        0.0,
+        -1.3,
+        2.9
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ],
+      "evidence": "inferred"
+    },
+    {
+      "name": "inner_head",
+      "parent": "inner_root",
+      "pivot": [
+        0.0,
+        0.2,
+        2.9
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        -4
+      ],
+      "evidence": "inferred"
+    },
+    {
+      "name": "inner_arm_left",
+      "parent": "inner_root",
+      "pivot": [
+        1.55,
+        -0.2,
+        2.9
+      ],
+      "rest_rotation": [
+        8,
+        0,
+        -14
+      ],
+      "evidence": "inferred"
+    },
+    {
+      "name": "inner_leg_left",
+      "parent": "inner_root",
+      "pivot": [
+        0.72,
+        -2.6,
+        2.9
+      ],
+      "rest_rotation": [
+        -10,
+        0,
+        7
+      ],
+      "evidence": "inferred"
+    },
+    {
+      "name": "inner_arm_right",
+      "parent": "inner_root",
+      "pivot": [
+        -1.55,
+        -0.2,
+        2.9
+      ],
+      "rest_rotation": [
+        8,
+        0,
+        14
+      ],
+      "evidence": "inferred"
+    },
+    {
+      "name": "inner_leg_right",
+      "parent": "inner_root",
+      "pivot": [
+        -0.72,
+        -2.6,
+        2.9
+      ],
+      "rest_rotation": [
+        -10,
+        0,
+        -7
+      ],
+      "evidence": "inferred"
+    },
+    {
+      "name": "shell_eyes_glow",
+      "parent": "shell_head",
+      "pivot": [
+        0.0,
+        25.0,
+        0.0
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ],
+      "evidence": "空骨占位；root按原渲染采样生成眼形，刚性合入头部"
+    },
+    {
+      "name": "shell_teeth_front_glow",
+      "parent": "shell_jaw",
+      "pivot": [
+        0,
+        26.0,
+        1.610508
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ],
+      "evidence": "空骨占位；root按原渲染采样生成牙形，刚性合入下颚"
+    },
+    {
+      "name": "shell_teeth_side_glow",
+      "parent": "shell_jaw",
+      "pivot": [
+        0,
+        26.0,
+        1.610508
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ],
+      "evidence": "空骨占位；root按原渲染采样生成牙形，刚性合入下颚"
+    }
+  ],
+  "cubes": [
+    {
+      "name": "shell_body_upper",
+      "bone": "shell_body",
+      "from": [
+        -4.5,
+        10.0,
+        0.0
+      ],
+      "to": [
+        4.5,
+        30.0,
+        8.0
+      ],
+      "purpose": "紧凑纵长中央上躯干；下方留前开口，以不透明几何显示体内小人",
+      "inferred": true
+    },
+    {
+      "name": "shell_body_lower_back",
+      "bone": "shell_body",
+      "from": [
+        -4.5,
+        -1.5,
+        6.5
+      ],
+      "to": [
+        4.5,
+        10.0,
+        8.0
+      ],
+      "purpose": "下躯干后壁；为代替原作半透明的明确适配推断，非原作实证拓扑",
+      "inferred": true
+    },
+    {
+      "name": "shell_body_lower_left_rim",
+      "bone": "shell_body",
+      "from": [
+        3.4,
+        3.0,
+        0.0
+      ],
+      "to": [
+        4.5,
+        10.0,
+        8.0
+      ],
+      "purpose": "下躯干窄侧缘；前方不做实心封板，不依赖半透明",
+      "inferred": true
+    },
+    {
+      "name": "shell_body_lower_right_rim",
+      "bone": "shell_body",
+      "from": [
+        -4.5,
+        3.0,
+        0.0
+      ],
+      "to": [
+        -3.4,
+        10.0,
+        8.0
+      ],
+      "purpose": "下躯干窄侧缘；前方不做实心封板，不依赖半透明",
+      "inferred": true
+    },
+    {
+      "name": "shell_skull",
+      "bone": "shell_head",
+      "from": [
+        -6,
+        26.0,
+        -10.8
+      ],
+      "to": [
+        6,
+        38.0,
+        1.610508
+      ],
+      "purpose": "上颅主方块；宽12、高12；深由2D拟合推断",
+      "inferred": true
+    },
+    {
+      "name": "shell_lower_jaw",
+      "bone": "shell_jaw",
+      "from": [
+        -6,
+        23.212979,
+        -10.8
+      ],
+      "to": [
+        6,
+        26.0,
+        1.610508
+      ],
+      "purpose": "闭口下颚；厚度来自总头轮廓减上颅高12",
+      "inferred": true
+    },
+    {
+      "name": "limb_left_upper_proximal_cube",
+      "bone": "limb_left_upper_proximal",
+      "from": [
+        2.5,
+        14.0,
+        2.0
+      ],
+      "to": [
+        6.5,
+        28.0,
+        6.0
+      ],
+      "purpose": "近端直方柱，无额外肩块/手掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_left_upper_distal_cube",
+      "bone": "limb_left_upper_distal",
+      "from": [
+        2.5,
+        -2.0,
+        2.0
+      ],
+      "to": [
+        6.5,
+        14.0,
+        6.0
+      ],
+      "purpose": "远端方柱平端，无手指/脚掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_left_middle_proximal_cube",
+      "bone": "limb_left_middle_proximal",
+      "from": [
+        2.5,
+        2.308647,
+        2.0
+      ],
+      "to": [
+        6.5,
+        18.5,
+        6.0
+      ],
+      "purpose": "近端直方柱，无额外肩块/手掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_left_middle_distal_cube",
+      "bone": "limb_left_middle_distal",
+      "from": [
+        2.5,
+        -13.691353,
+        2.0
+      ],
+      "to": [
+        6.5,
+        2.308647,
+        6.0
+      ],
+      "purpose": "远端方柱平端，无手指/脚掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_left_lower_proximal_cube",
+      "bone": "limb_left_lower_proximal",
+      "from": [
+        2.5,
+        -6.257302,
+        2.0
+      ],
+      "to": [
+        6.5,
+        9.0,
+        6.0
+      ],
+      "purpose": "近端直方柱，无额外肩块/手掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_left_lower_distal_cube",
+      "bone": "limb_left_lower_distal",
+      "from": [
+        2.5,
+        -22.257302,
+        2.0
+      ],
+      "to": [
+        6.5,
+        -6.257302,
+        6.0
+      ],
+      "purpose": "远端方柱平端，无手指/脚掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_right_upper_proximal_cube",
+      "bone": "limb_right_upper_proximal",
+      "from": [
+        -6.5,
+        9.957962,
+        2.0
+      ],
+      "to": [
+        -2.5,
+        28.0,
+        6.0
+      ],
+      "purpose": "近端直方柱，无额外肩块/手掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_right_upper_distal_cube",
+      "bone": "limb_right_upper_distal",
+      "from": [
+        -6.5,
+        -6.042038,
+        2.0
+      ],
+      "to": [
+        -2.5,
+        9.957962,
+        6.0
+      ],
+      "purpose": "远端方柱平端，无手指/脚掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_right_middle_proximal_cube",
+      "bone": "limb_right_middle_proximal",
+      "from": [
+        -6.5,
+        0.509109,
+        2.0
+      ],
+      "to": [
+        -2.5,
+        18.5,
+        6.0
+      ],
+      "purpose": "近端直方柱，无额外肩块/手掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_right_middle_distal_cube",
+      "bone": "limb_right_middle_distal",
+      "from": [
+        -6.5,
+        -15.490891,
+        2.0
+      ],
+      "to": [
+        -2.5,
+        0.509109,
+        6.0
+      ],
+      "purpose": "远端方柱平端，无手指/脚掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_right_lower_proximal_cube",
+      "bone": "limb_right_lower_proximal",
+      "from": [
+        -6.5,
+        -5.0,
+        2.0
+      ],
+      "to": [
+        -2.5,
+        9.0,
+        6.0
+      ],
+      "purpose": "近端直方柱，无额外肩块/手掌",
+      "inferred": true
+    },
+    {
+      "name": "limb_right_lower_distal_cube",
+      "bone": "limb_right_lower_distal",
+      "from": [
+        -6.5,
+        -21.0,
+        2.0
+      ],
+      "to": [
+        -2.5,
+        -5.0,
+        6.0
+      ],
+      "purpose": "远端方柱平端，无手指/脚掌",
+      "inferred": true
+    },
+    {
+      "name": "inner_torso",
+      "bone": "inner_body",
+      "from": [
+        -1.4,
+        -2.8,
+        2.025
+      ],
+      "to": [
+        1.4,
+        0.3,
+        3.775
+      ],
+      "purpose": "小人躯干；Docile轮廓为主，兼容UV候选8/9宽×9高×4/5深的区间，非精确展开图反推",
+      "inferred": true
+    },
+    {
+      "name": "inner_head_core",
+      "bone": "inner_head",
+      "from": [
+        -2.1,
+        0.2,
+        1.85
+      ],
+      "to": [
+        2.1,
+        2.65,
+        3.95
+      ],
+      "purpose": "小人大头；按64px原贴图UV候选12×7×6乘0.35，UV反推仍非原geo",
+      "inferred": true
+    },
+    {
+      "name": "inner_head_upper_strip",
+      "bone": "inner_head",
+      "from": [
+        -0.7,
+        2.65,
+        2.2
+      ],
+      "to": [
+        0.7,
+        6.5,
+        3.6
+      ],
+      "purpose": "可见头顶高条；与原贴图金色4×11×4冠岛比例吻合，0.35倍",
+      "inferred": true
+    },
+    {
+      "name": "inner_nose",
+      "bone": "inner_head",
+      "from": [
+        -0.35,
+        0.55,
+        1.15
+      ],
+      "to": [
+        0.35,
+        1.95,
+        1.85
+      ],
+      "purpose": "小人鼻候选2×4×2乘0.35；UV反推，非原geo",
+      "inferred": true
+    },
+    {
+      "name": "inner_arm_left_cube",
+      "bone": "inner_arm_left",
+      "from": [
+        1.27,
+        -2.6,
+        2.58
+      ],
+      "to": [
+        1.83,
+        -0.2,
+        3.22
+      ],
+      "purpose": "细臂，仅一段，手随臂刚性",
+      "inferred": true
+    },
+    {
+      "name": "inner_leg_left_shin",
+      "bone": "inner_leg_left",
+      "from": [
+        0.42,
+        -4.3,
+        2.55
+      ],
+      "to": [
+        1.02,
+        -2.6,
+        3.25
+      ],
+      "purpose": "小人独立腿",
+      "inferred": true
+    },
+    {
+      "name": "inner_leg_left_foot",
+      "bone": "inner_leg_left",
+      "from": [
+        0.42,
+        -4.5,
+        1.95
+      ],
+      "to": [
+        1.02,
+        -4.08,
+        3.25
+      ],
+      "purpose": "原轮廓中的前伸短足，合并到腿骨",
+      "inferred": true
+    },
+    {
+      "name": "inner_arm_right_cube",
+      "bone": "inner_arm_right",
+      "from": [
+        -1.83,
+        -2.6,
+        2.58
+      ],
+      "to": [
+        -1.27,
+        -0.2,
+        3.22
+      ],
+      "purpose": "细臂，仅一段，手随臂刚性",
+      "inferred": true
+    },
+    {
+      "name": "inner_leg_right_shin",
+      "bone": "inner_leg_right",
+      "from": [
+        -1.02,
+        -4.3,
+        2.55
+      ],
+      "to": [
+        -0.42,
+        -2.6,
+        3.25
+      ],
+      "purpose": "小人独立腿",
+      "inferred": true
+    },
+    {
+      "name": "inner_leg_right_foot",
+      "bone": "inner_leg_right",
+      "from": [
+        -1.02,
+        -4.5,
+        1.95
+      ],
+      "to": [
+        -0.42,
+        -4.08,
+        3.25
+      ],
+      "purpose": "原轮廓中的前伸短足，合并到腿骨",
+      "inferred": true
+    }
+  ],
+  "parts": [
+    {
+      "name": "shell_body",
+      "bones": [
+        "shell_body"
+      ]
+    },
+    {
+      "name": "shell_head",
+      "bones": [
+        "shell_head",
+        "shell_eyes_glow"
+      ]
+    },
+    {
+      "name": "shell_jaw",
+      "bones": [
+        "shell_jaw",
+        "shell_teeth_front_glow",
+        "shell_teeth_side_glow"
+      ]
+    },
+    {
+      "name": "limb_left_upper_proximal",
+      "bones": [
+        "limb_left_upper_proximal"
+      ]
+    },
+    {
+      "name": "limb_left_upper_distal",
+      "bones": [
+        "limb_left_upper_distal"
+      ]
+    },
+    {
+      "name": "limb_left_middle_proximal",
+      "bones": [
+        "limb_left_middle_proximal"
+      ]
+    },
+    {
+      "name": "limb_left_middle_distal",
+      "bones": [
+        "limb_left_middle_distal"
+      ]
+    },
+    {
+      "name": "limb_left_lower_proximal",
+      "bones": [
+        "limb_left_lower_proximal"
+      ]
+    },
+    {
+      "name": "limb_left_lower_distal",
+      "bones": [
+        "limb_left_lower_distal"
+      ]
+    },
+    {
+      "name": "limb_right_upper_proximal",
+      "bones": [
+        "limb_right_upper_proximal"
+      ]
+    },
+    {
+      "name": "limb_right_upper_distal",
+      "bones": [
+        "limb_right_upper_distal"
+      ]
+    },
+    {
+      "name": "limb_right_middle_proximal",
+      "bones": [
+        "limb_right_middle_proximal"
+      ]
+    },
+    {
+      "name": "limb_right_middle_distal",
+      "bones": [
+        "limb_right_middle_distal"
+      ]
+    },
+    {
+      "name": "limb_right_lower_proximal",
+      "bones": [
+        "limb_right_lower_proximal"
+      ]
+    },
+    {
+      "name": "limb_right_lower_distal",
+      "bones": [
+        "limb_right_lower_distal"
+      ]
+    },
+    {
+      "name": "inner_body",
+      "bones": [
+        "inner_body"
+      ]
+    },
+    {
+      "name": "inner_head",
+      "bones": [
+        "inner_head"
+      ]
+    },
+    {
+      "name": "inner_arm_left",
+      "bones": [
+        "inner_arm_left"
+      ]
+    },
+    {
+      "name": "inner_leg_left",
+      "bones": [
+        "inner_leg_left"
+      ]
+    },
+    {
+      "name": "inner_arm_right",
+      "bones": [
+        "inner_arm_right"
+      ]
+    },
+    {
+      "name": "inner_leg_right",
+      "bones": [
+        "inner_leg_right"
+      ]
+    }
+  ],
+  "glow_bones": [
+    "shell_eyes_glow",
+    "shell_teeth_front_glow",
+    "shell_teeth_side_glow"
+  ],
+  "limb_fit": [
+    {
+      "bone_prefix": "limb_left_upper",
+      "source_id": "A",
+      "root_model": [
+        4.5,
+        28.0,
+        4.0
+      ],
+      "root_projected": [
+        430.699576,
+        228.703697
+      ],
+      "elbow_projected": [
+        229,
+        182
+      ],
+      "tip_projected": [
+        86,
+        54
+      ],
+      "root_world": [
+        10.223192,
+        26.45253,
+        4.0
+      ],
+      "elbow_world": [
+        22.890677,
+        27.554223,
+        -1.858421
+      ],
+      "tip_world": [
+        38.371019,
+        30.849003,
+        0.487514
+      ],
+      "segment_lengths": [
+        14.0,
+        16.0
+      ],
+      "thickness": 4.0,
+      "depth_signs": [
+        -1,
+        -1
+      ],
+      "mapping_status": "推断：模型左右/层级不是已知原骨架；端点投影拟合不验证深度"
+    },
+    {
+      "bone_prefix": "limb_left_middle",
+      "source_id": "B",
+      "root_model": [
+        4.5,
+        18.5,
+        4.0
+      ],
+      "root_projected": [
+        452.204012,
+        367.463276
+      ],
+      "elbow_projected": [
+        207,
+        405
+      ],
+      "tip_projected": [
+        49,
+        452
+      ],
+      "root_world": [
+        8.24803,
+        17.160128,
+        4.0
+      ],
+      "elbow_world": [
+        19.814131,
+        14.268918,
+        -6.955645
+      ],
+      "tip_world": [
+        33.778024,
+        6.477313,
+        -7.503895
+      ],
+      "segment_lengths": [
+        16.191353,
+        16.0
+      ],
+      "thickness": 4.0,
+      "depth_signs": [
+        -1,
+        -1
+      ],
+      "mapping_status": "推断：模型左右/层级不是已知原骨架；端点投影拟合不验证深度"
+    },
+    {
+      "bone_prefix": "limb_left_lower",
+      "source_id": "C",
+      "root_model": [
+        4.5,
+        9.0,
+        4.0
+      ],
+      "root_projected": [
+        473.708447,
+        506.222856
+      ],
+      "elbow_projected": [
+        250,
+        574
+      ],
+      "tip_projected": [
+        47,
+        674
+      ],
+      "root_world": [
+        6.272869,
+        7.867726,
+        4.0
+      ],
+      "elbow_world": [
+        14.256989,
+        4.520621,
+        -8.563279
+      ],
+      "tip_world": [
+        17.585968,
+        1.3071,
+        -23.879649
+      ],
+      "segment_lengths": [
+        15.257302,
+        16.0
+      ],
+      "thickness": 4.0,
+      "depth_signs": [
+        1,
+        1
+      ],
+      "mapping_status": "推断：模型左右/层级不是已知原骨架；端点投影拟合不验证深度"
+    },
+    {
+      "bone_prefix": "limb_right_upper",
+      "source_id": "F",
+      "root_model": [
+        -4.5,
+        28.0,
+        4.0
+      ],
+      "root_projected": [
+        526.545232,
+        243.09797
+      ],
+      "elbow_projected": [
+        626,
+        501
+      ],
+      "tip_projected": [
+        668,
+        627
+      ],
+      "root_world": [
+        1.419863,
+        28.323735,
+        4.0
+      ],
+      "elbow_world": [
+        -7.001128,
+        12.383457,
+        4.713831
+      ],
+      "tip_world": [
+        -2.739494,
+        -0.728202,
+        12.833122
+      ],
+      "segment_lengths": [
+        18.042038,
+        16.0
+      ],
+      "thickness": 4.0,
+      "depth_signs": [
+        -1,
+        -1
+      ],
+      "mapping_status": "推断：模型左右/层级不是已知原骨架；端点投影拟合不验证深度"
+    },
+    {
+      "bone_prefix": "limb_right_middle",
+      "source_id": "E",
+      "root_model": [
+        -4.5,
+        18.5,
+        4.0
+      ],
+      "root_projected": [
+        548.049668,
+        381.85755
+      ],
+      "elbow_projected": [
+        585,
+        655
+      ],
+      "tip_projected": [
+        626,
+        778
+      ],
+      "root_world": [
+        -0.555298,
+        19.031333,
+        4.0
+      ],
+      "elbow_world": [
+        -8.702173,
+        3.711106,
+        -0.753024
+      ],
+      "tip_world": [
+        -21.691116,
+        2.220758,
+        -9.976158
+      ],
+      "segment_lengths": [
+        17.990891,
+        16.0
+      ],
+      "thickness": 4.0,
+      "depth_signs": [
+        1,
+        1
+      ],
+      "mapping_status": "推断：模型左右/层级不是已知原骨架；端点投影拟合不验证深度"
+    },
+    {
+      "bone_prefix": "limb_right_lower",
+      "source_id": "D",
+      "root_model": [
+        -4.5,
+        9.0,
+        4.0
+      ],
+      "root_projected": [
+        569.554104,
+        520.61713
+      ],
+      "elbow_projected": [
+        735,
+        525
+      ],
+      "tip_projected": [
+        966,
+        487
+      ],
+      "root_world": [
+        -2.530459,
+        9.738931,
+        4.0
+      ],
+      "elbow_world": [
+        -15.961963,
+        13.271791,
+        5.764537
+      ],
+      "tip_world": [
+        -29.026106,
+        17.614269,
+        13.917515
+      ],
+      "segment_lengths": [
+        14.0,
+        16.0
+      ],
+      "thickness": 4.0,
+      "depth_signs": [
+        1,
+        1
+      ],
+      "mapping_status": "推断：模型左右/层级不是已知原骨架；端点投影拟合不验证深度"
+    }
+  ],
+  "inner_static_translation": [
+    0.0,
+    -4.3,
+    7.4
+  ],
+  "uncertainty": [
+    "All hidden depth and root positions inferred; one image cannot recover unique 3D rig.",
+    "A-F to side/row assignment is a hypothesis only.",
+    "No original clean back/side view; side and back study views expose inferred geometry.",
+    "The lower-body front opening is an opaque-rendering adaptation, not proven source topology.",
+    "Inner upper strip aspect agrees with a 4x11x4 gold UV island; source geometry is still unavailable.",
+    "No textures, eye/mouth drawing, particles, gameplay, animation or runtime hooks included.",
+    "Root origin is a normalized study origin, not a verified in-game ground or passenger seat position."
+  ]
+}
