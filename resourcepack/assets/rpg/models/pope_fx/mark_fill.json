@@ -1,0 +1,34 @@
+{
+ "textures": {
+  "0": "rpg:item/pope_fx/mark_fill",
+  "particle": "rpg:item/pope_fx/mark_fill"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    8,
+    0
+   ],
+   "to": [
+    16,
+    8,
+    16
+   ],
+   "light_emission": 15,
+   "shade": false,
+   "faces": {
+    "up": {
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ],
+     "texture": "#0",
+     "tintindex": 0
+    }
+   }
+  }
+ ]
+}

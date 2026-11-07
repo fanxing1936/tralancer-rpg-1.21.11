@@ -1,0 +1,2 @@
+execute if score #n rpg_pf matches ..3 at @a[distance=..48,gamemode=!spectator,gamemode=!creative,sort=nearest,limit=1] rotated 0 0 positioned ^ ^ ^5 positioned over motion_blocking_no_leaves run function rpg:pope_fight/spawn_guard
+execute if score #n rpg_pf matches ..2 at @a[distance=..48,gamemode=!spectator,gamemode=!creative,sort=nearest,limit=1] rotated 180 0 positioned ^ ^ ^5 positioned over motion_blocking_no_leaves run function rpg:pope_fight/spawn_guard

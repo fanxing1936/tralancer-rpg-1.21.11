@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "stage": "M3_review_not_runtime",
+  "key": "pope",
+  "sound_dir": "_tools/pope_ref/sounds",
+  "binding_basis": "按页面声音标识与本次clip事件绑定；不是原GIF音轨逐帧恢复。M1已完整解码，未逐段人工听完。M4薄配置将直接使用sounds/cues/enter_cues。",
+  "sounds": {
+    "idle": [
+      [
+        "教皇：低声嘀咕",
+        "Pope mutters"
+      ],
+      [
+        "Sfx_boss_ArchillagerIdle-001.ogg",
+        "Sfx_boss_ArchillagerIdle-002.ogg",
+        "Sfx_boss_ArchillagerIdle-003.ogg",
+        "Sfx_boss_ArchillagerIdle-004.ogg",
+        "Sfx_boss_ArchillagerIdle-005.ogg",
+        "Sfx_boss_ArchillagerIdle-006.ogg",
+        "Sfx_boss_ArchillagerIdle-007.ogg",
+        "Sfx_boss_ArchillagerIdle-008.ogg",
+        "Sfx_boss_ArchillagerIdle-009.ogg",
+        "Sfx_boss_ArchillagerIdle-010.ogg",
+        "Sfx_boss_ArchillagerIdle-011.ogg",
+        "Sfx_boss_ArchillagerIdle-012.ogg",
+        "Sfx_boss_ArchillagerIdle-013.ogg"
+      ],
+      null
+    ],
+    "hurt": [
+      [
+        "教皇：受伤",
+        "Pope hurts"
+      ],
+      [
+        "Sfx_boss_ArchillagerHurt-001.ogg",
+        "Sfx_boss_ArchillagerHurt-002.ogg",
+        "Sfx_boss_ArchillagerHurt-003.ogg",
+        "Sfx_boss_ArchillagerHurt-004.ogg",
+        "Sfx_boss_ArchillagerHurt-005.ogg",
+        "Sfx_boss_ArchillagerHurt-006.ogg"
+      ],
+      null
+    ],
+    "hargh": [
+      [
+        "教皇：哼声",
+        "Pope grunts"
+      ],
+      [
+        "Sfx_mob_archillagerHargh-001_soundWave.ogg",
+        "Sfx_mob_archillagerHargh-002_soundWave.ogg",
+        "Sfx_mob_archillagerHargh-003_soundWave.ogg",
+        "Sfx_mob_archillagerHargh-004_soundWave.ogg"
+      ],
+      null
+    ],
+    "haha": [
+      [
+        "教皇：短笑",
+        "Pope chuckles"
+      ],
+      [
+        "Sfx_mob_archIllagerHaha-001_soundWave.ogg",
+        "Sfx_mob_archIllagerHaha-002_soundWave.ogg"
+      ],
+      null
+    ],
+    "laugh": [
+      [
+        "教皇：大笑",
+        "Pope laughs"
+      ],
+      [
+        "Sfx_mob_archIllagerLaugh-001_soundWave.ogg"
+      ],
+      null
+    ],
+    "appear": [
+      [
+        "教皇：现身",
+        "Pope appears"
+      ],
+      [
+        "Sfx_mob_archIllagerAppear-001_soundWave.ogg"
+      ],
+      null
+    ],
+    "mirror_in": [
+      [
+        "教皇：瞬移出现",
+        "Pope teleports in"
+      ],
+      [
+        "Sfx_mob_archIllager_mirrorIn-001_soundWave.ogg"
+      ],
+      null
+    ],
+    "mirror_out": [
+      [
+        "教皇：瞬移消失",
+        "Pope teleports out"
+      ],
+      [
+        "Sfx_mob_archIllager_mirrorOut-001_soundWave.ogg"
+      ],
+      null
+    ],
+    "load_spell": [
+      [
+        "教皇：蓄法",
+        "Pope charges a spell"
+      ],
+      [
+        "Sfx_mob_archIllager_loadSpell-001_soundWave.ogg"
+      ],
+      null
+    ],
+    "spell": [
+      [
+        "教皇：施法",
+        "Pope casts a spell"
+      ],
+      [
+        "Sfx_mob_archIllager_spell-001_soundWave.ogg"
+      ],
+      null
+    ],
+    "spell_disappear": [
+      [
+        "教皇：法术消散",
+        "Pope spell dissipates"
+      ],
+      [
+        "Sfx_mob_archIllager_spellDissapear-001_soundWave.ogg"
+      ],
+      null
+    ],
+    "summon_mobs": [
+      [
+        "教皇：召唤",
+        "Pope summons"
+      ],
+      [
+        "Sfx_boss_archillagerSummonMobs-001.ogg",
+        "Sfx_boss_archillagerSummonMobs-002.ogg"
+      ],
+      null
+    ],
+    "magic_impact": [
+      [
+        "教皇：魔法冲击",
+        "Pope magic impacts"
+      ],
+      [
+        "Sfx_boss_ArchillagerMagicImpact-001.ogg"
+      ],
+      null
+    ],
+    "whirlwind": [
+      [
+        "教皇：被权杖吸入",
+        "Pope is drawn into the staff"
+      ],
+      [
+        "Sfx_boss_ArchillagerWhirlwind.ogg"
+      ],
+      null
+    ],
+    "intro_greetings": [
+      [
+        "教皇：登场招呼",
+        "Pope greets"
+      ],
+      [
+        "Sfx_boss_archIllagerIntroGreetings-001.ogg"
+      ],
+      null
+    ],
+    "intro_laugh": [
+      [
+        "教皇：登场笑声",
+        "Pope introductory laugh"
+      ],
+      [
+        "Sfx_boss_archillagerIntroLaugh-002.ogg"
+      ],
+      null
+    ],
+    "intro_final_blow": [
+      [
+        "教皇：登场终击",
+        "Pope introductory final blow"
+      ],
+      [
+        "Sfx_boss_archillagerIntroFinalBlow.ogg"
+      ],
+      null
+    ]
+  },
+  "cues": {
+    "attack": [
+      [
+        0.0,
+        "load_spell",
+        1.0,
+        1.0
+      ],
+      [
+        0.5,
+        "spell",
+        1.0,
+        1.0
+      ]
+    ],
+    "summon": [
+      [
+        0.0,
+        "load_spell",
+        1.0,
+        1.0
+      ],
+      [
+        0.65,
+        "summon_mobs",
+        1.0,
+        1.0
+      ]
+    ],
+    "cast": [
+      [
+        0.0,
+        "load_spell",
+        1.0,
+        1.0
+      ],
+      [
+        0.9,
+        "spell",
+        1.0,
+        1.0
+      ]
+    ]
+  },
+  "enter_cues": {
+    "appear": [
+      [
+        "appear",
+        1.0,
+        1.0
+      ]
+    ],
+    "teleport_in": [
+      [
+        "mirror_in",
+        1.0,
+        1.0
+      ]
+    ],
+    "teleport_out": [
+      [
+        "mirror_out",
+        1.0,
+        1.0
+      ]
+    ],
+    "whirlwind": [
+      [
+        "whirlwind",
+        1.0,
+        1.0
+      ]
+    ]
+  },
+  "runtime_bindings": {
+    "hurt": {
+      "event": "hurt",
+      "status": "M4尚未接入；沿用rpg.hurt门控，不改受伤逻辑"
+    },
+    "ambient": {
+      "event": "idle",
+      "chance_per_tick": null,
+      "status": "M4尚未接入；不在M3自行指定随机播放频率"
+    },
+    "death": {
+      "event": null,
+      "status": "未指定；whirlwind是动作音效，不拿它替代载体死亡回调"
+    }
+  },
+  "registered_without_automatic_cue": [
+    "idle",
+    "hurt",
+    "hargh",
+    "haha",
+    "laugh",
+    "spell_disappear",
+    "magic_impact",
+    "intro_greetings",
+    "intro_laugh",
+    "intro_final_blow"
+  ],
+  "automatic_intro_cues": false,
+  "duration_policy": "原OGG按原名原字节保留，不裁剪/变速，全部pitch=1。音效尾声可长于clip：mirror_in约3.315秒、mirror_out约2.201秒、summon_mobs约3.144~3.916秒、whirlwind约13.033秒而clip为7秒；目前没有stop或阶段切换声音命令，M4交接须明确尾音策略。",
+  "no_gameplay_note": "magic_impact只注册，不自动假定命中；intro三组只注册，不自行在appear播放长段。没有AI、技能、粒子、血量、掉落或召唤逻辑。",
+  "source_audio_duration_seconds": {
+    "Sfx_mob_archIllager_loadSpell-001_soundWave.ogg": 1.18458,
+    "Sfx_mob_archIllager_mirrorIn-001_soundWave.ogg": 3.314671,
+    "Sfx_mob_archIllager_mirrorOut-001_soundWave.ogg": 2.201338,
+    "Sfx_mob_archIllager_spell-001_soundWave.ogg": 2.316349,
+    "Sfx_mob_archIllager_spellDissapear-001_soundWave.ogg": 1.904104,
+    "Sfx_mob_archIllagerAppear-001_soundWave.ogg": 1.783605,
+    "Sfx_mob_archIllagerHaha-001_soundWave.ogg": 1.972902,
+    "Sfx_mob_archIllagerHaha-002_soundWave.ogg": 3.224671,
+    "Sfx_mob_archillagerHargh-001_soundWave.ogg": 2.297438,
+    "Sfx_mob_archillagerHargh-002_soundWave.ogg": 2.902018,
+    "Sfx_mob_archillagerHargh-003_soundWave.ogg": 2.100907,
+    "Sfx_mob_archillagerHargh-004_soundWave.ogg": 2.645374,
+    "Sfx_mob_archIllagerLaugh-001_soundWave.ogg": 3.281565,
+    "Sfx_boss_ArchillagerHurt-001.ogg": 0.657982,
+    "Sfx_boss_ArchillagerHurt-002.ogg": 0.76254,
+    "Sfx_boss_ArchillagerHurt-003.ogg": 1.204717,
+    "Sfx_boss_ArchillagerHurt-004.ogg": 1.065941,
+    "Sfx_boss_ArchillagerHurt-005.ogg": 0.760068,
+    "Sfx_boss_ArchillagerHurt-006.ogg": 1.080363,
+    "Sfx_boss_ArchillagerIdle-001.ogg": 4.102018,
+    "Sfx_boss_ArchillagerIdle-002.ogg": 3.300907,
+    "Sfx_boss_ArchillagerIdle-003.ogg": 3.845374,
+    "Sfx_boss_ArchillagerIdle-004.ogg": 3.498662,
+    "Sfx_boss_ArchillagerIdle-005.ogg": 2.53907,
+    "Sfx_boss_ArchillagerIdle-006.ogg": 3.0978,
+    "Sfx_boss_ArchillagerIdle-007.ogg": 2.100091,
+    "Sfx_boss_ArchillagerIdle-008.ogg": 2.322404,
+    "Sfx_boss_ArchillagerIdle-009.ogg": 3.223492,
+    "Sfx_boss_ArchillagerIdle-010.ogg": 2.351293,
+    "Sfx_boss_ArchillagerIdle-011.ogg": 3.825306,
+    "Sfx_boss_ArchillagerIdle-012.ogg": 2.010431,
+    "Sfx_boss_ArchillagerIdle-013.ogg": 2.592698,
+    "Sfx_boss_archillagerIntroFinalBlow.ogg": 4.962449,
+    "Sfx_boss_archIllagerIntroGreetings-001.ogg": 3.219841,
+    "Sfx_boss_archillagerIntroLaugh-002.ogg": 3.771769,
+    "Sfx_boss_ArchillagerMagicImpact-001.ogg": 1.673719,
+    "Sfx_boss_archillagerSummonMobs-001.ogg": 3.916213,
+    "Sfx_boss_archillagerSummonMobs-002.ogg": 3.143764,
+    "Sfx_boss_ArchillagerWhirlwind.ogg": 13.032993
+  }
+}

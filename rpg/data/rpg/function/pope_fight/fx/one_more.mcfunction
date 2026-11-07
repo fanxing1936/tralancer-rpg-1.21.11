@@ -1,0 +1,10 @@
+execute if entity @s[tag=rpg.pf.lance] run function rpg:pope_fight/fx/lance_tick
+execute if entity @s[tag=rpg.pf.sealed] run function rpg:pope_fight/fx/sealed_tick
+execute if entity @s[tag=rpg.pf.dooms] run function rpg:pope_fight/fx/doom_tick
+execute if entity @s[tag=rpg.pf.refuge] run function rpg:pope_fight/fx/refuge_tick
+execute if entity @s[tag=rpg.pf.refdisc] run function rpg:pope_fight/fx/refdisc_tick
+execute if entity @s[tag=rpg.pf.fbeam] run function rpg:pope_fight/fx/fbeam_tick
+execute if entity @s[tag=rpg.pf.pool] run function rpg:pope_fight/fx/pool_tick
+execute if entity @s[tag=rpg.pf.edge] run function rpg:pope_fight/fx/edge_tick
+execute if entity @s[tag=rpg.pf.gyre] run function rpg:pope_fight/fx/gyre_tick
+execute if entity @s[tag=rpg.pf.bolt] run function rpg:pope_fight/fx/bolt

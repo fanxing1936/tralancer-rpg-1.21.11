@@ -1,0 +1,3 @@
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.pope.fx","rpg.pf.new","rpg.pf.fall"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:heart_of_ender/shell_head"}},brightness:{sky:15,block:15},view_range:2f,teleport_duration:1,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.9f,0.9f,0.9f]}}
+scoreboard players set @e[tag=rpg.pf.new,distance=..1] rpg_pf_l 15
+tag @e[tag=rpg.pf.new,distance=..1] remove rpg.pf.new
