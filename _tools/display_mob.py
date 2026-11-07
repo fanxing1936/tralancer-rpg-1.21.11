@@ -158,7 +158,8 @@ class Mob(object):
                (for loops, whose frame 0 repeats)
     hurt       event played when the carrier takes a hit
     death      event played where its parts are swept after it is removed
-    ambient    (event, chance per tick) while alive
+    ambient    (event, chance per tick[, volume]) while alive
+    hurt_volume  volume of the hurt voice
     on_death   extra lines for the death function (at the swept anchor part)
     on_hurt    extra lines for the hurt function (as the carrier)
     anim_from  another .bbmodel whose clips this rig plays, matched by bone
@@ -170,7 +171,7 @@ class Mob(object):
     def __init__(self, key, label, generator, bbmodel, parts, glow, seat, tag, score,
                  clips, carrier="minecraft:vindicator", model_scale=1.0,
                  sounds=None, sound_dir=None, cues=None, enter_cues=None,
-                 hurt=None, death=None, ambient=None, on_death=(), on_hurt=(), held=None,
+                 hurt=None, death=None, ambient=None, on_death=(), on_hurt=(), held=None, hurt_volume=1.0, death_volume=1.0,
                  anim_from=None):
         self.key, self.label, self.generator = key, label, generator
         self.bbmodel, self.parts, self.glow = bbmodel, parts, set(glow)
@@ -179,6 +180,7 @@ class Mob(object):
         self.sounds, self.sound_dir, self.cues = sounds or {}, sound_dir, cues or {}
         self.enter_cues = enter_cues or {}
         self.hurt, self.death, self.ambient, self.on_death = hurt, death, ambient, list(on_death)
+        self.hurt_volume, self.death_volume = hurt_volume, death_volume
         self.on_hurt = list(on_hurt)
         self.held = held
         self.anim_from = anim_from
@@ -706,7 +708,7 @@ def write_rig_runtime(mob, tick_lines, follow_extra=()):
         ])
         wf(os.path.join(mob.func, "death.mcfunction"), [
             "# %s的遗骸消散（at 部件位置）。" % mob.label,
-        ] + ([playsound(mob, mob.death, radius=48)] if mob.death else []) + mob.on_death)
+        ] + ([playsound(mob, mob.death, mob.death_volume, radius=48)] if mob.death else []) + mob.on_death)
     else:
         sweep = "execute if entity @e[%s,limit=1] run kill @e[%s]" % (orphan, orphan)
     wf(os.path.join(mob.func, "tick.mcfunction"), tick_lines + [sweep])
@@ -719,11 +721,12 @@ def write_rig_runtime(mob, tick_lines, follow_extra=()):
                      % mob.fn)
         wf(os.path.join(mob.func, "hurt.mcfunction"), [
             "# %s挨了一下。" % mob.label,
-            playsound(mob, mob.hurt),
+            playsound(mob, mob.hurt, mob.hurt_volume),
         ] + mob.on_hurt)
     if mob.ambient:
-        event, chance = mob.ambient
-        voice.append("execute if predicate %s/ambient run %s" % (mob.fn, playsound(mob, event, 1, 1, 16)))
+        event, chance = mob.ambient[:2]
+        volume = mob.ambient[2] if len(mob.ambient) > 2 else 1
+        voice.append("execute if predicate %s/ambient run %s" % (mob.fn, playsound(mob, event, volume, 1, 16)))
         wj(os.path.join(mob.dp, "data", NS, "predicate", mob.key, "ambient.json"),
            {"condition": "minecraft:random_chance", "chance": chance})
     wf(os.path.join(mob.func, "follow.mcfunction"), [

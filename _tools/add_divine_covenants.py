@@ -334,7 +334,8 @@ particle minecraft:end_rod ~ ~0.8 ~ 4.8 0.5 4.8 0.03 72 force
 playsound minecraft:block.beacon.power_select master @a[distance=..24] ~ ~ ~ 1 1.35
 function rpg:hud/m59
 """ % vfx.flash(ui.HOLY_LIGHT))
-    write("divine/damage/old_target.mcfunction", """execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/old
+    write("divine/damage/old_target.mcfunction", """execute if entity @s[tag=rpg.pf.heart] run return run function rpg:pope_fight/heart/old_target
+execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/old
 execute store result score @s rpg_lt_hp run data get entity @s Health 100
 execute store result score @s rpg_lt_max run attribute @s minecraft:max_health get 100
 scoreboard players operation @s rpg_lt_max /= #four rpg_lt_max
@@ -402,6 +403,7 @@ playsound minecraft:block.beacon.activate master @a[distance=..32] ~ ~ ~ 1 1.65
 function rpg:hud/m60
 """ % ("\n".join(beam), vfx.flash(ui.CYAN)))
     write("divine/damage/new_target.mcfunction", """tag @s add rpg.divine.hit
+execute if entity @s[tag=rpg.pf.heart] run return run function rpg:pope_fight/heart/new_target
 execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/beam
 execute store result score @s rpg_lt_max run attribute @s minecraft:max_health get 100
 scoreboard players operation @s rpg_lt_max /= #four rpg_lt_max
@@ -436,7 +438,8 @@ playsound minecraft:block.beacon.power_select master @a[distance=..32] ~ ~ ~ 1 0
 playsound minecraft:block.amethyst_block.resonate master @a[distance=..24] ~ ~ ~ 0.8 1.55
 function rpg:hud/m61
 """ % ("\n".join(field_ring), vfx.flash(ui.CYAN)))
-    write("divine/damage/field_target.mcfunction", """execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/field
+    write("divine/damage/field_target.mcfunction", """execute if entity @s[tag=rpg.pf.heart] run return run function rpg:pope_fight/heart/field_target
+execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/field
 execute store result score @s rpg_lt_max run attribute @s minecraft:max_health get 100
 scoreboard players operation @s rpg_lt_max *= #three rpg_lt_max
 scoreboard players operation @s rpg_lt_max /= #twenty rpg_lt_max
@@ -514,7 +517,8 @@ tag @s remove rpg.divine.cast
 playsound minecraft:entity.lightning_bolt.impact player @s ~ ~ ~ 0.75 1.75
 function rpg:hud/m65
 """)
-    write("divine/judgment/strike.mcfunction", """execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/judgment
+    write("divine/judgment/strike.mcfunction", """execute if entity @s[tag=rpg.pf.heart] run return run function rpg:pope_fight/heart/judgment_target
+execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/judgment
 effect clear @s minecraft:regeneration
 effect clear @s minecraft:resistance
 effect clear @s minecraft:absorption

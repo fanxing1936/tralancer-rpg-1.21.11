@@ -53,7 +53,7 @@
 ```
 
 一次给出 **13 只潜影盒**：武器 2 箱，以及防具、符文镶嵌、锻造升级、药剂功能、
-测试物、罪约契约、上位契约、卡巴拉秘仪、驱魔器具、真名档案、裁决遗物各 1 箱。
+测试物、罪约契约、七柱柱页、七柱柱印、上位契约、卡巴拉秘仪、驱魔器具、真名档案、裁决遗物各 1 箱。
 其中上位契约箱含旧约与新约，卡巴拉秘仪箱含血契、十源质与真·十字架。
 （想逐件取仍可用 `give/weapon`、`give/item`、`give/weapon_up_item`、`give/extra`。）
 
@@ -67,6 +67,7 @@
 * **14 件护甲**、12 种药水、符文、镶嵌石、磨刀石与武器升级树
 * **恶魔生态**：35 名具备独立职责、技能和掉落的所罗门罪仆，以及七宗罪领主
 * **卡巴拉生命之树**：卡巴拉血契、十源质、Daath 节点与真·十字架转化仪式
+* **七十二柱契约**：立约、侍奉、深契、清算四环，三阶技能与化身，35 枚柱印组成的从契
 * **上位契约**：十源质归位后显化的『旧约』，以及权与力合一后的『新约』
 
 当前开发范围只保留 **装备、恶魔生态、契约体系** 三块。第一章战役《空缺者》、无尽驱魔《七柱回廊》、
@@ -74,6 +75,20 @@
 
 全部条目连同**按游戏内真实合成的图标**（染色、盔甲纹饰、药水颜色、附魔光泽）
 都在 `TRALANCER-RPG-图鉴.html` 里。
+
+## 七十二柱契约
+
+书是契约的凭证，放主手或副手都能用。完整设计见 [`docs/PACT-DESIGN.md`](docs/PACT-DESIGN.md)。
+
+| 操作 | 作用 |
+| --- | --- |
+| 长按未立约的书 | 翻开条款，点「签下」并交出祭品 |
+| 长按 | 一阶力量，冷却 15 秒 |
+| 潜行长按 | 魂誓技能，第二阶解锁，冷却 20 秒 |
+| 潜行抬头长按 | 化身，第三阶解锁，附身 20 秒，冷却 3 分钟 |
+| 潜行低头长按 | 打开契约：查看进度、深契、取下柱印 |
+| 长按五职齐全的柱页 | 合成未立约的书 |
+| 长按柱印 | 镶入契约 |
 
 ## 卡巴拉生命之树与上位契约
 
@@ -117,6 +132,8 @@
 `[契约]` / `[已立约]`；Lore 以 `🜏` 分层，正文保持灰色，仅关键名词使用圣金、
 秘仪紫或权柄青。技能提示、权柄状态与五格冷却条都由唯一的 Actionbar 出口合成，
 玩家面板也会在新约生效时把“契约与侵蚀”切换为“契约与权柄”。
+
+玩家面板是对话框界面：切到面板物品并停留片刻就会打开，按钮只作用于点击者，不需要管理员权限。
 
 ## 重建
 
@@ -170,12 +187,20 @@ python _tools/package.py --install
 | 生物 | 原型 | 来源页面 | 用到的素材 |
 |---|---|---|---|
 | 圣卫 | Tower Guard | <https://minecraft.wiki/w/Dungeons:Tower_Guard> | 本体、盾牌、长戟贴图及其发光层；全部 13 组共 56 段音效 |
+| 教皇（12 部件、9 段动作） | Arch-Illager | [角色与音效](https://minecraft.wiki/w/Dungeons:Arch-Illager)；[图库](https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery) | 原作本体贴图复用现有档案，权杖贴图、渲染图、10 段 GIF、截图；17 组共 39 段音效，不含 Music；版权归 Mojang 所有，本项目非商业，与 Mojang 无关联；[逐文件来源与校验](_tools/pope_ref/SOURCES.md) |
+| 教皇战特效 | Heart of Ender | <https://minecraft.wiki/w/Dungeons:Heart_of_Ender> | 黑色拖痕的星空取自 `MCD_Decal_Puddle` 贴图；其余特效贴图为本项目绘制，光束和拖痕边缘参考原作截图 |
 | 别西卜 | Nameless One | <https://minecraft.wiki/w/Dungeons:Nameless_One> | 本体贴图与发光层；全部 16 组共 40 段音效 |
 | 别西卜麾下罪仆 | Vanguard | <https://minecraft.wiki/w/Dungeons:Vanguard>（另有 [Skeleton](https://minecraft.wiki/w/Dungeons:Skeleton)、[Glaive](https://minecraft.wiki/w/Dungeons:Glaive) 页） | 骷髅本体、沙漠盔甲、沙漠盾牌、长戟贴图；先锋全部 6 组共 18 段音效 |
 | 利维坦 | Necromancer | <https://minecraft.wiki/w/Dungeons:Necromancer> | 本体贴图与发光层；Sounds 一节全部 28 段音效 |
 | 利维坦麾下罪仆 | Sunken Skeleton | <https://minecraft.wiki/w/Dungeons:Sunken_Skeleton> | Tier 1～3 贴图（模型用 Tier 1）；全部 8 组共 27 段音效 |
 | 亚巴顿 | Wretched Wraith | <https://minecraft.wiki/w/Dungeons:Wretched_Wraith> | 本体贴图与发光层（渲染图、正面图用于核对）；15 组共 38 段音效；动画用塔中幽魂的 |
 | 亚巴顿麾下罪仆 | Tower Wraith | <https://minecraft.wiki/w/Dungeons:Tower_Wraith> | 本体贴图与发光层（绿色变体存档）；全部 13 组共 45 段音效；动画参照页面动图重做 |
+| 末影之心（独立调试模型） | Heart of Ender | <https://minecraft.wiki/w/Dungeons:Heart_of_Ender>；[Arch-Illager 图库](https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery) | 星空贴图、原44×44发光遮罩、小人贴图；渲染图、GIF、游戏截图与待机视频；全部 13 组共 47 段音效归档，不含 Music；7 段动作及逐帧对照 |
+| 末影面容（独立调试模型） | Arch-Visage | <https://minecraft.wiki/w/Dungeons:Heart_of_Ender#Arch-visage> | 渲染图、游戏内及未采用版本 GIF；以游戏内 4.88 秒动图制作模型动作；全部 5 组共 9 段音效；共用原始素材档案 |
+
+末影之心与末影面容素材的版权同样归 Mojang 所有，本项目非商业，与 Mojang 无关联。
+其逐文件校验与署名见 [`_tools/heart_of_ender_ref/SOURCES.md`](_tools/heart_of_ender_ref/SOURCES.md)
+和 [`_tools/arch_visage_ref/SOURCES.md`](_tools/arch_visage_ref/SOURCES.md)。两者仅提供调试召唤，不替换现有生物；动作证据、已知视觉差距、验证与召唤方法见 [最终交付报告](_tools/heart_of_ender_ref/FINAL_REPORT.md)。
 
 逐个文件的来源记在 [`_tools/tower_guard_ref/SOURCES.md`](_tools/tower_guard_ref/SOURCES.md) 与
 [`_tools/beelzebub_ref/SOURCES.md`](_tools/beelzebub_ref/SOURCES.md)、

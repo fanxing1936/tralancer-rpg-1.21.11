@@ -448,7 +448,7 @@ for needle in ("minecraft:instant_health", "minecraft:regeneration",
     require(receive, needle, "Son's Gift healing lacks: " + needle)
 
 panel_tick = read("panel/tick.mcfunction")
-panel_pact = read("panel/pact.mcfunction")
+panel_pact = read("panel/pact.mcfunction") + read("panel/pages/panel_pact.mcfunction")
 for value, function in ((9, "rpg:divine/judgment/arm"), (10, "rpg:divine/gift")):
     require(panel_tick, "rpg_panel matches %d run function %s" % (value, function),
             "player panel lacks authority dispatch %d" % value)

@@ -20,3 +20,4 @@ damage @s 8 minecraft:magic
 scoreboard players set #lord rpg_fall 0
 execute if entity @s[tag=rpg.pact] run scoreboard players operation #lord rpg_fall = @s rpg_pact
 execute at @s run function rpg:taint/advent_at
+execute at @s run function rpg:pact/clear/bind

@@ -181,6 +181,9 @@ scoreboard players set #holy_full rpg_hud 3600
 scoreboard objectives add rpg_pact dummy
 scoreboard objectives add rpg_pact_cd dummy
 scoreboard objectives add rpg_pact_t dummy
+scoreboard objectives add rpg_pact_lv dummy
+scoreboard objectives add rpg_pact_dom dummy
+scoreboard objectives add rpg_pact_seep dummy
 scoreboard objectives add rpg_hud_dm dummy
 scoreboard objectives add rpg_hud_dmt dummy
 scoreboard players set #pact_full rpg_hud 300
@@ -299,6 +302,28 @@ scoreboard players set #four rpg_lt_max 4
 scoreboard players set #five rpg_lt_max 5
 scoreboard players set #twenty rpg_lt_max 20
 scoreboard players set #hundred rpg_lt_max 100
+scoreboard objectives add rpg_pact_bond dummy
+scoreboard objectives add rpg_pact_cd2 dummy
+scoreboard objectives add rpg_pact_cd3 dummy
+scoreboard objectives add rpg_pact_av dummy
+scoreboard objectives add rpg_pact_fx dummy
+scoreboard objectives add rpg_pact_bid dummy
+scoreboard objectives add rpg_pact_s1 dummy
+scoreboard objectives add rpg_pact_s2 dummy
+scoreboard objectives add rpg_pv_a dummy
+scoreboard objectives add rpg_pv_b dummy
+scoreboard objectives add rpg_pv_t dummy
+scoreboard objectives add rpg_pact_do trigger
+scoreboard objectives add rpg_ps_dmg minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add rpg_ps_taken minecraft.custom:minecraft.damage_taken
+scoreboard objectives add rpg_ps_sprint minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add rpg_ps_crouch minecraft.custom:minecraft.crouch_one_cm
+scoreboard objectives add rpg_ps_dead deathCount
+scoreboard objectives add rpg_ps_hp health
+scoreboard objectives add rpg_ps_food food
+scoreboard players set #five rpg_pact 5
+scoreboard players set #ten rpg_pact 10
+scoreboard players set #twenty_t rpg_pact 20
 scoreboard objectives add rpg_agit dummy
 scoreboard objectives add rpg_rel_n dummy
 scoreboard objectives add rpg_rel_1 dummy
@@ -311,3 +336,4 @@ scoreboard objectives add rpg_rel_rec dummy
 scoreboard objectives add rpg_rel_src dummy
 scoreboard objectives add rpg_rel_pulse dummy
 scoreboard objectives add rpg_rel_left dummy
+scoreboard objectives add rpg_panel_h dummy

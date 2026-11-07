@@ -1,6 +1,9 @@
 scoreboard players enable @s rpg_panel
 scoreboard players add @s rpg_panel 0
-execute if entity @s[tag=rpg.h.player_tag1,tag=!rpg.panel.open] run function rpg:panel/open
+execute if entity @s[tag=rpg.h.player_tag1,tag=!rpg.panel.open] run scoreboard players add @s rpg_panel_h 1
+execute unless entity @s[tag=rpg.h.player_tag1] run scoreboard players set @s rpg_panel_h 0
+execute if entity @s[tag=!rpg.panel.open,scores={rpg_panel_h=12..}] run function rpg:panel/open
+execute if entity @s[tag=rpg.panel.open] run scoreboard players set @s rpg_panel_h 0
 execute unless entity @s[tag=rpg.h.player_tag1] run tag @s remove rpg.panel.open
 execute if score @s rpg_panel matches 1 run function rpg:inquest/career
 execute if score @s rpg_panel matches 2 run function rpg:panel/inquest

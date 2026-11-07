@@ -8,4 +8,4 @@ execute on passengers if entity @s[tag=rpg.tg.p.spear] run data merge entity @s 
 execute on passengers if entity @s[tag=rpg.tg.p.cape] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.06199f,-1.43427f,-0.31647f],left_rotation:[0.07055f,0.11641f,0.0028f,0.99069f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}
 execute on passengers if entity @s[tag=rpg.tg.p.right_leg] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.125f,-1.90873f,0.11365f],left_rotation:[-0.1116f,0f,0f,0.99375f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}
 execute on passengers if entity @s[tag=rpg.tg.p.left_leg] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.125f,-1.91585f,-0.08805f],left_rotation:[0.15899f,0f,0f,0.98728f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}
-execute at @s run playsound rpg:tower_guard.swing hostile @a[distance=..24] ~ ~ ~ 1 1
+execute at @s run playsound rpg:tower_guard.swing hostile @a[distance=..24] ~ ~ ~ 0.5 1

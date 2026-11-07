@@ -1,0 +1,6 @@
+execute if score @s rpg_pact_lv matches 2 run title @s times 5 50 15
+execute if score @s rpg_pact_lv matches 2 run title @s title ["",{"text":"◆ ","italic":false,"color":"#C9A646","bold":true},{"text":"深契 · 魂誓","italic":false,"color":"#387AB7","bold":true},{"text":" ◆","italic":false,"color":"#C9A646","bold":true}]
+execute if score @s rpg_pact_lv matches 2 run title @s subtitle ["",{"text":"利","italic":false,"color":"#387AB7","bold":true},{"text":"维坦 · 嫉妒","italic":false,"color":"#387AB7","bold":true},{"text":" 𝔈𝔫𝔳𝔶","italic":false,"color":"#8F7430"},{"text":"  柱中的东西离你更近了","italic":false,"color":"#9C9A94"}]
+execute if score @s rpg_pact_lv matches 3 run title @s times 5 50 15
+execute if score @s rpg_pact_lv matches 3 run title @s title ["",{"text":"◆ ","italic":false,"color":"#C9A646","bold":true},{"text":"深契 · 真名","italic":false,"color":"#387AB7","bold":true},{"text":" ◆","italic":false,"color":"#C9A646","bold":true}]
+execute if score @s rpg_pact_lv matches 3 run title @s subtitle ["",{"text":"利","italic":false,"color":"#387AB7","bold":true},{"text":"维坦 · 嫉妒","italic":false,"color":"#387AB7","bold":true},{"text":" 𝔈𝔫𝔳𝔶","italic":false,"color":"#8F7430"},{"text":"  柱中的东西离你更近了","italic":false,"color":"#9C9A94"}]

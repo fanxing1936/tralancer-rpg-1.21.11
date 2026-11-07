@@ -110,6 +110,8 @@ python polish_recent_ui.py ../rpg
 # 十源质先授旧约；真·十字架置于 Daath 后汇聚成新约，并接入上位契约状态与纹理。
 # 必须晚于面板/UI 生成器，确保权柄完整度是最终 HUD 语义。
 python add_divine_covenants.py ../rpg ../resourcepack
+# 契约的深契、戒律、柱页与柱印：要接管上面写好的模型表、面板和 HUD。
+python add_pact_depth.py ../rpg ../resourcepack
 # 物品贴图按原生网格存储（最后一个写物品贴图的生成器之后）：整数倍放大
 # 的无损还原，新约按 ART-STYLE D6 重建；单独重建数据包也要收回来
 python fix_texture_grid.py ../resourcepack
@@ -134,12 +136,22 @@ python add_leviathan_model.py ../resourcepack ../rpg
 python add_sunken_skeleton.py ../resourcepack ../rpg
 python add_abaddon_model.py ../resourcepack ../rpg
 python add_tower_wraith.py ../resourcepack ../rpg
+python add_pope_model.py ../resourcepack ../rpg
+# 末影之心与灾厄面容：仅调试模型/动作，不绑定现有怪物或接入战斗逻辑。
+python add_heart_of_ender.py ../resourcepack ../rpg
+python add_arch_visage.py ../resourcepack ../rpg
+# 教皇战特效贴图：母图在 pope_fx_ref/raw/（Codex 绘制），这里定网格和色板
+python add_pope_fx_art.py ../resourcepack
+# 教皇战（docs/POPE-DESIGN.md）：调用各模型的函数，放在所有模型之后。
+python add_pope_fight.py ../rpg
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.
 python add_seal_relic.py ../rpg
 # 封印遗物层写的播报行（[遗物休眠]、[利维坦・反制] 等）补上〖〗暗色样式（ART-STYLE §12）。
 python polish_ui.py ../rpg --broadcasts
+# 玩家面板换成对话框：要在所有写面板的生成器和文字规范化之后。
+python add_panel_dialog.py ../rpg
 # 特效收口（docs/VFX-SPEC.md）：force 只留给预警和大招，数量／速度／尺寸收进各档上限，
 # 旧柱色闪光折回亮色。放在最后，前面所有生成器（含封印遗物层）写的粒子都经过这一道。
 python polish_vfx.py ../rpg

@@ -1,6 +1,8 @@
-# 毁约。恩赐与枷锁一同撤走，柱位清空。
+# 毁约。恩赐与枷锁一同撤走，柱位清空。深契的状态在 depth/clear 里一并清掉，
+# 逆圣化、图腾毁约、签新约都走这里。
 attribute @s minecraft:movement_speed modifier remove rpg:pact/2/boon0
 attribute @s minecraft:max_health modifier remove rpg:pact/2/bane0
+function rpg:pact/depth/clear
 scoreboard players set @s rpg_pact 0
 scoreboard players set @s rpg_pact_cd 0
 tag @s remove rpg.pact

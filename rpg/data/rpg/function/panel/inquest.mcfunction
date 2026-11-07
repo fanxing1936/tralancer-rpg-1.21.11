@@ -1,40 +1,20 @@
 function rpg:inquest/seal/reindex
-tellraw @s ["",{"text":"+------ 真名与弱点调查 ------+","color":"#62D9E8","italic":false,"bold":true}]
-execute unless entity @s[tag=rpg.name.1] run tellraw @s ["",{"text":"◇ ","color":"dark_gray","italic":false},{"text":"路西法 · 傲慢","color":"#5FD68C","italic":false,"bold":false},{"text":"　见证 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_case1"},"color":"white","italic":false},{"text":" / 3","color":"dark_gray","italic":false}]
-execute if entity @s[tag=rpg.name.1] run tellraw @s ["",{"text":"◆ ","color":"#5FD68C","italic":false},{"text":"路西法 · 傲慢","color":"#5FD68C","italic":false,"bold":false},{"text":"　真名已确认","color":"#FFF2A8","italic":false,"bold":true}]
-execute unless entity @s[tag=rpg.name.2] run tellraw @s ["",{"text":"◇ ","color":"dark_gray","italic":false},{"text":"利维坦 · 嫉妒","color":"#4F9EF0","italic":false,"bold":false},{"text":"　见证 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_case2"},"color":"white","italic":false},{"text":" / 3","color":"dark_gray","italic":false}]
-execute if entity @s[tag=rpg.name.2] run tellraw @s ["",{"text":"◆ ","color":"#4F9EF0","italic":false},{"text":"利维坦 · 嫉妒","color":"#4F9EF0","italic":false,"bold":false},{"text":"　真名已确认","color":"#FFF2A8","italic":false,"bold":true}]
-execute unless entity @s[tag=rpg.name.3] run tellraw @s ["",{"text":"◇ ","color":"dark_gray","italic":false},{"text":"亚巴顿 · 怠惰","color":"#A7AFC9","italic":false,"bold":false},{"text":"　见证 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_case3"},"color":"white","italic":false},{"text":" / 3","color":"dark_gray","italic":false}]
-execute if entity @s[tag=rpg.name.3] run tellraw @s ["",{"text":"◆ ","color":"#A7AFC9","italic":false},{"text":"亚巴顿 · 怠惰","color":"#A7AFC9","italic":false,"bold":false},{"text":"　真名已确认","color":"#FFF2A8","italic":false,"bold":true}]
-execute unless entity @s[tag=rpg.name.4] run tellraw @s ["",{"text":"◇ ","color":"dark_gray","italic":false},{"text":"别西卜 · 暴食","color":"#B5D957","italic":false,"bold":false},{"text":"　见证 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_case4"},"color":"white","italic":false},{"text":" / 3","color":"dark_gray","italic":false}]
-execute if entity @s[tag=rpg.name.4] run tellraw @s ["",{"text":"◆ ","color":"#B5D957","italic":false},{"text":"别西卜 · 暴食","color":"#B5D957","italic":false,"bold":false},{"text":"　真名已确认","color":"#FFF2A8","italic":false,"bold":true}]
-execute unless entity @s[tag=rpg.name.5] run tellraw @s ["",{"text":"◇ ","color":"dark_gray","italic":false},{"text":"萨麦尔 · 暴怒","color":"#FF5C52","italic":false,"bold":false},{"text":"　见证 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_case5"},"color":"white","italic":false},{"text":" / 3","color":"dark_gray","italic":false}]
-execute if entity @s[tag=rpg.name.5] run tellraw @s ["",{"text":"◆ ","color":"#FF5C52","italic":false},{"text":"萨麦尔 · 暴怒","color":"#FF5C52","italic":false,"bold":false},{"text":"　真名已确认","color":"#FFF2A8","italic":false,"bold":true}]
-execute unless entity @s[tag=rpg.name.6] run tellraw @s ["",{"text":"◇ ","color":"dark_gray","italic":false},{"text":"贝利尔 · 色欲","color":"#D97AD9","italic":false,"bold":false},{"text":"　见证 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_case6"},"color":"white","italic":false},{"text":" / 3","color":"dark_gray","italic":false}]
-execute if entity @s[tag=rpg.name.6] run tellraw @s ["",{"text":"◆ ","color":"#D97AD9","italic":false},{"text":"贝利尔 · 色欲","color":"#D97AD9","italic":false,"bold":false},{"text":"　真名已确认","color":"#FFF2A8","italic":false,"bold":true}]
-execute unless entity @s[tag=rpg.name.7] run tellraw @s ["",{"text":"◇ ","color":"dark_gray","italic":false},{"text":"玛门 · 贪婪","color":"#E6A23C","italic":false,"bold":false},{"text":"　见证 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_case7"},"color":"white","italic":false},{"text":" / 3","color":"dark_gray","italic":false}]
-execute if entity @s[tag=rpg.name.7] run tellraw @s ["",{"text":"◆ ","color":"#E6A23C","italic":false},{"text":"玛门 · 贪婪","color":"#E6A23C","italic":false,"bold":false},{"text":"　真名已确认","color":"#FFF2A8","italic":false,"bold":true}]
-tellraw @s ["",{"text":"携带圣器见证三种不同招式，即可确认真名。","color":"gray","italic":false}]
-tellraw @s ["",{"text":"+-------- 封印遗物 --------+","color":"#D596F2","bold":true,"italic":false}]
-tellraw @s ["",{"text":"躁动：","color":"gray","bold":false,"italic":false},{"score":{"name":"@s","objective":"rpg_agit"},"color":"#D596F2","bold":false,"italic":false},{"text":" / 100　","color":"dark_gray","bold":false,"italic":false},{"text":"前两件生效","color":"#FFF2A8","bold":true,"italic":false}]
-execute if score @s rpg_rel_1 matches 0 run tellraw @s ["",{"text":"生效 I　","color":"gray","bold":false,"italic":false},{"text":"空","color":"dark_gray","bold":false,"italic":false}]
-execute if score @s rpg_rel_1 matches 1 run tellraw @s ["",{"text":"生效 I　","color":"gray","bold":false,"italic":false},{"text":"路西法 · 傲慢","color":"#5FD68C","bold":true,"italic":false}]
-execute if score @s rpg_rel_1 matches 2 run tellraw @s ["",{"text":"生效 I　","color":"gray","bold":false,"italic":false},{"text":"利维坦 · 嫉妒","color":"#4F9EF0","bold":true,"italic":false}]
-execute if score @s rpg_rel_1 matches 3 run tellraw @s ["",{"text":"生效 I　","color":"gray","bold":false,"italic":false},{"text":"亚巴顿 · 怠惰","color":"#A7AFC9","bold":true,"italic":false}]
-execute if score @s rpg_rel_1 matches 4 run tellraw @s ["",{"text":"生效 I　","color":"gray","bold":false,"italic":false},{"text":"别西卜 · 暴食","color":"#B5D957","bold":true,"italic":false}]
-execute if score @s rpg_rel_1 matches 5 run tellraw @s ["",{"text":"生效 I　","color":"gray","bold":false,"italic":false},{"text":"萨麦尔 · 暴怒","color":"#FF5C52","bold":true,"italic":false}]
-execute if score @s rpg_rel_1 matches 6 run tellraw @s ["",{"text":"生效 I　","color":"gray","bold":false,"italic":false},{"text":"贝利尔 · 色欲","color":"#D97AD9","bold":true,"italic":false}]
-execute if score @s rpg_rel_1 matches 7 run tellraw @s ["",{"text":"生效 I　","color":"gray","bold":false,"italic":false},{"text":"玛门 · 贪婪","color":"#E6A23C","bold":true,"italic":false}]
-execute if score @s rpg_rel_2 matches 0 run tellraw @s ["",{"text":"生效 II ","color":"gray","bold":false,"italic":false},{"text":"空","color":"dark_gray","bold":false,"italic":false}]
-execute if score @s rpg_rel_2 matches 1 run tellraw @s ["",{"text":"生效 II ","color":"gray","bold":false,"italic":false},{"text":"路西法 · 傲慢","color":"#5FD68C","bold":true,"italic":false}]
-execute if score @s rpg_rel_2 matches 2 run tellraw @s ["",{"text":"生效 II ","color":"gray","bold":false,"italic":false},{"text":"利维坦 · 嫉妒","color":"#4F9EF0","bold":true,"italic":false}]
-execute if score @s rpg_rel_2 matches 3 run tellraw @s ["",{"text":"生效 II ","color":"gray","bold":false,"italic":false},{"text":"亚巴顿 · 怠惰","color":"#A7AFC9","bold":true,"italic":false}]
-execute if score @s rpg_rel_2 matches 4 run tellraw @s ["",{"text":"生效 II ","color":"gray","bold":false,"italic":false},{"text":"别西卜 · 暴食","color":"#B5D957","bold":true,"italic":false}]
-execute if score @s rpg_rel_2 matches 5 run tellraw @s ["",{"text":"生效 II ","color":"gray","bold":false,"italic":false},{"text":"萨麦尔 · 暴怒","color":"#FF5C52","bold":true,"italic":false}]
-execute if score @s rpg_rel_2 matches 6 run tellraw @s ["",{"text":"生效 II ","color":"gray","bold":false,"italic":false},{"text":"贝利尔 · 色欲","color":"#D97AD9","bold":true,"italic":false}]
-execute if score @s rpg_rel_2 matches 7 run tellraw @s ["",{"text":"生效 II ","color":"gray","bold":false,"italic":false},{"text":"玛门 · 贪婪","color":"#E6A23C","bold":true,"italic":false}]
-tellraw @s ["",{"text":"其余遗物休眠：无能力，也不推动躁动。","color":"dark_gray","bold":false,"italic":false}]
-tellraw @s ["",{"text":"放任：","color":"#D596F2","bold":true,"italic":false},{"text":"躁动越高能力越强；能力生效再 +3。","color":"gray","bold":false,"italic":false}]
-tellraw @s ["",{"text":"净化：","color":"#62D9E8","bold":true,"italic":false},{"text":"站在驱魔圣水云中，每秒 -3（消耗圣水）。","color":"gray","bold":false,"italic":false}]
-tellraw @s ["",{"text":"压制：","color":"#FFD85A","bold":true,"italic":false},{"text":"潜行长按生效遗物 -20；代价为 30 秒能力冷却与 8 秒缓慢 I。","color":"gray","bold":false,"italic":false}]
-tellraw @s ["",{"text":"[返回面板]","color":"#D4AF37","italic":false,"bold":true,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 8"}}]
+data modify storage rpg:panel ui set value {title:{text:""},body:[],actions:[]}
+scoreboard players add @s rpg_agit 0
+execute store result storage rpg:panel v.rpg_agit int 1 run scoreboard players get @s rpg_agit
+scoreboard players add @s rpg_case1 0
+execute store result storage rpg:panel v.rpg_case1 int 1 run scoreboard players get @s rpg_case1
+scoreboard players add @s rpg_case2 0
+execute store result storage rpg:panel v.rpg_case2 int 1 run scoreboard players get @s rpg_case2
+scoreboard players add @s rpg_case3 0
+execute store result storage rpg:panel v.rpg_case3 int 1 run scoreboard players get @s rpg_case3
+scoreboard players add @s rpg_case4 0
+execute store result storage rpg:panel v.rpg_case4 int 1 run scoreboard players get @s rpg_case4
+scoreboard players add @s rpg_case5 0
+execute store result storage rpg:panel v.rpg_case5 int 1 run scoreboard players get @s rpg_case5
+scoreboard players add @s rpg_case6 0
+execute store result storage rpg:panel v.rpg_case6 int 1 run scoreboard players get @s rpg_case6
+scoreboard players add @s rpg_case7 0
+execute store result storage rpg:panel v.rpg_case7 int 1 run scoreboard players get @s rpg_case7
+function rpg:panel/pages/panel_inquest with storage rpg:panel v
+function rpg:panel/ui/show with storage rpg:panel ui

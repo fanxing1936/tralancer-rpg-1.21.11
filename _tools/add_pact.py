@@ -47,8 +47,8 @@ USE_TAINT = 3            # 每次动用柱中之力添的魔化
 LOCK = 8                 # 触发去抖（刻）—— using_item 按住期间每刻都响
 HUD_PACT = 5             # HUD 占用编号，接在驱魔那四个后面
 
-OBJECTIVES = ["rpg_pact", "rpg_pact_cd", "rpg_pact_t",
-              "rpg_hud_dm", "rpg_hud_dmt"]
+OBJECTIVES = ["rpg_pact", "rpg_pact_cd", "rpg_pact_t", "rpg_pact_lv", "rpg_pact_dom",
+              "rpg_pact_seep", "rpg_hud_dm", "rpg_hud_dmt"]
 
 RULE = ex.RULE
 seg, row = ex.seg, ex.row
@@ -106,6 +106,87 @@ PILLARS = [
          bane="魔化沾染速度翻倍",
          boons=[], banes=[]),
 ]
+
+
+# 三阶与戒律（docs/PACT-DESIGN.md）。amounts 与 boons / banes 一一对应，
+# 文案写进书的 Lore 与条款界面；add_pact_depth.py 读同一份表。
+TIER_NAMES = ["血誓", "魂誓", "真名"]
+SECOND_TAINT = 6         # 二阶技能添的魔化
+AVATAR_TAINT = 15        # 化身添的魔化
+SEEP_STEPS = 30          # 立约常驻：每 30 次结算（60 秒）渗一次
+DEPTH = {
+    1: dict(boon=("攻击伤害 +2.5", "攻击伤害 +4", "攻击伤害 +6"),
+            bane=("击退抗性 −0.25（更容易被打飞）", "击退抗性 −0.35", "击退抗性 −0.5"),
+            boons=(2.5, 4, 6), banes=(-0.25, -0.35, -0.5),
+            oath="击杀恶魔或罪仆", taboo="死亡",
+            tribute=("minecraft:emerald", "绿宝石"),
+            second="失坠", second_text="8 格内敌人被托起再坠下，受到伤害并陷入虚弱",
+            avatar="万蛇加冕", avatar_text="三圈蛇牙破土，随后 20 秒王冠加身：攻击大幅提升"),
+    2: dict(boon=("移动速度 +8%", "移动速度 +14%", "移动速度 +20%"),
+            bane=("最大生命 −4", "最大生命 −6", "最大生命 −8"),
+            boons=(0.008, 0.014, 0.02), banes=(-4, -6, -8),
+            oath="在水中或雨中杀敌", taboo="连续 10 分钟没碰过水",
+            tribute=("minecraft:prismarine_crystals", "海晶砂粒"),
+            second="逆潮", second_text="近者推开、远者卷来，全部受到溺水伤害",
+            avatar="妒海沉城", avatar_text="12 格内敌人被拖向海眼，随后 20 秒潮汐附身：移速大幅提升"),
+    3: dict(boon=("最大生命 +6", "最大生命 +10", "最大生命 +14"),
+            bane=("移动速度 −12%", "移动速度 −16%", "移动速度 −20%"),
+            boons=(6, 10, 14), banes=(-0.012, -0.016, -0.02),
+            oath="潜行静止", taboo="1 分钟内疾跑超过 300 格",
+            tribute=("minecraft:bone", "骨头"),
+            second="停摆", second_text="10 格内敌人动弹不得 3 秒，并陷入虚弱",
+            avatar="终末收割", avatar_text="10 格内灵魂被割下，按人数回血，随后 20 秒血量与护甲大幅提升"),
+    4: dict(boon=("攻击速度 +12%", "攻击速度 +20%", "攻击速度 +30%"),
+            bane=("护甲 −3", "护甲 −5", "护甲 −7"),
+            boons=(0.5, 0.8, 1.2), banes=(-3, -5, -7),
+            oath="进食", taboo="饥饿值低于 6",
+            tribute=("minecraft:rotten_flesh", "腐肉"),
+            second="蝇群", second_text="5 秒内蝇群环身，不断啃噬 6 格内敌人并使其饥饿",
+            avatar="万蝇饕宴", avatar_text="灰烬遮天，10 格内敌人受到重创，随后 20 秒攻速大幅提升并持续回血"),
+    5: dict(boon=("攻击伤害 +1.5，且攻击附带剧毒", "攻击伤害 +2.5，且攻击附带剧毒", "攻击伤害 +3.5，且攻击附带剧毒"),
+            bane=("最大生命 −2", "最大生命 −4", "最大生命 −6"),
+            boons=(1.5, 2.5, 3.5), banes=(-2, -4, -6),
+            oath="造成伤害", taboo="连续 5 分钟没有打过人",
+            tribute=("minecraft:blaze_powder", "烈焰粉"),
+            second="血猎", second_text="瞬间突入 14 格内最近的敌人身边，重创并使其凋零",
+            avatar="血怒天罚", avatar_text="10 格内敌人受到血怒冲击，随后 20 秒攻击与移速大幅提升"),
+    6: dict(boon=("护甲 +2", "护甲 +4", "护甲 +6"),
+            bane=("攻击伤害 −1", "攻击伤害 −1.5", "攻击伤害 −2"),
+            boons=(2, 4, 6), banes=(-1, -1.5, -2),
+            oath="承受伤害（献血）", taboo="连续 5 分钟保持满血",
+            tribute=("minecraft:amethyst_shard", "紫水晶碎片"),
+            second="顾盼", second_text="8 格内敌人被迷惑，彼此攻击并发光",
+            avatar="紫宴朝圣", avatar_text="12 格内敌人被拖向宴席中央，随后 20 秒护甲与韧性大幅提升"),
+    7: dict(boon=("6 格内的掉落物自动吸附到身边", "9 格内的掉落物自动吸附到身边", "12 格内的掉落物自动吸附到身边"),
+            bane=("魔化沾染速度翻倍", "魔化沾染速度翻倍", "魔化沾染速度翻倍"),
+            boons=(), banes=(),
+            oath="在契约界面献上金锭", taboo="经验等级低于 5",
+            tribute=("minecraft:gold_nugget", "金粒"),
+            second="金牢", second_text="8 格内敌人被钉在原地，并吐出经验",
+            avatar="黄金终审", avatar_text="10 格内敌人被清算，随后 20 秒攻击、护甲与幸运提升"),
+}
+
+CMD_T2 = 1110100         # 二阶书：CMD_T2 + N
+CMD_T3 = 1110110         # 三阶书：CMD_T3 + N
+TRIBUTE = 8              # 立约祭品的数量
+
+
+def event_title(p, name, body, accent=None):
+    """契约大事件的标题，全部用 §12 的暗色板。层次靠字号、加粗和色相：
+    招式名在大字层用柱中间色，◆ 暗金，副标题的领主名加粗，说明文字最轻。"""
+    accent = accent or ui.BROADCAST_GLOSS
+    mid = ui.pillar_mid(p["n"])
+    head = [seg("◆ ", accent, True), seg(name, mid, True), seg(" ◆", accent, True)]
+    # 名字拆成两段：polish_ui 会把含领主名的短文本改回亮色，这里要的是暗色。
+    sub = [seg(p["who"][:1], mid, True), seg(p["who"][1:] + " · " + p["sin"], mid, True),
+           seg(" " + ui.fraktur(ui.SIN_ENGLISH[p["sin"]]), ui.BROADCAST_GLOSS),
+           seg(ui.GAP + body, ui.BROADCAST_BODY)]
+    return ("title @s times 5 50 15\ntitle @s title %s\ntitle @s subtitle %s"
+            % (row(*head), row(*sub)))
+
+
+def book_cmd(n, lv):
+    return (CMD0 + n - 1, CMD_T2 + n, CMD_T3 + n)[lv - 1]
 
 
 # 颜色只从 rpg_ui_style 取（ART-STYLE.md §1.4）：colour / lit 是写字用的
@@ -270,15 +351,21 @@ TRIGGER = """\
 # `minecraft:using_item` 在按住期间**每刻都会响**，而签约与动用都该是一次性的，
 # 所以先用一个短锁去抖：锁没退干净就直接返回。
 advancement revoke @s only rpg:item/pact
+# 对话框开着时客户端仍算在长按，这里要一直顶住锁，否则界面每隔一会儿就重开一次。
+execute if entity @s[tag=rpg.pact.ui] run scoreboard players set @s rpg_pact_t %(LOCK)d
 execute if entity @s[scores={rpg_pact_t=1..}] run return 0
 scoreboard players set @s rpg_pact_t %(LOCK)d
+
+# 书放副手也能用：主手没有契约书，就认副手那一本。
+tag @s remove rpg.pact.off
+execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{pact_tag:1b}] run tag @s add rpg.pact.off
 
 execute unless entity @s[tag=rpg.pact] run function rpg:pact/sign
 execute if entity @s[tag=rpg.pact] run function rpg:pact/invoke
 """
 
 SIGN = """\
-# 还没有柱位。看手里这本是哪一柱，就签哪一柱。
+# 还没有柱位。看手里这本是哪一柱，就翻开哪一柱的条款；真正签下要点界面上的按钮。
 # `if items` 读的是手上那一件，不需要翻整个背包。
 %(BRANCH)s
 """
@@ -288,25 +375,35 @@ SIGN_ONE = """\
 scoreboard players set @s rpg_pact %(N)d
 scoreboard players set @s rpg_pact_cd %(CD)d
 tag @s add rpg.pact
-%(ATTR)s
-item replace entity @s weapon.mainhand with %(ITEM)s
-title @s times 10 70 20
-title @s title ["",{"text":"契 约 已 立","italic":false,"color":"%(COLOUR)s","bold":true}]
-title @s subtitle ["",{"text":"%(WHO)s之柱 · %(SIN)s","italic":false,"color":"%(LIT)s"}]
+# 补签不重置进度：只有从没立过约的人才从一阶开始。
+execute unless score @s rpg_pact_lv matches 1.. run scoreboard players set @s rpg_pact_lv 1
+scoreboard players add @s rpg_pact_dom 0
+function rpg:pact/attr
+function rpg:pact/book/fresh
+%(TITLE)s
 playsound minecraft:block.end_portal.spawn master @s ~ ~ ~ 0.8 0.6
 playsound minecraft:entity.wither.spawn master @a[distance=..32] ~ ~ ~ 0.5 1.4
 execute at @s run particle sculk_charge_pop ~ ~1 ~ 0.5 0.8 0.5 0.1 60
 execute at @s run particle minecraft:flash{color:%(FLASH)d} ~ ~1 ~ 0 0 0 0 1
-tellraw @s ["",{"text":"◆ ","color":"%(COLOUR)s"},{"text":"魔神借契约进入你的心。","color":"gray","italic":true}]
 """
 
 INVOKE = """\
 # 已有柱位。手里必须是**自己那一本已立约的书** —— 攥着别柱的书没有用。
-execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{pact_signed:1b}] run return run function rpg:pact/reissue
+execute unless entity @s[tag=rpg.pact.off] unless items entity @s weapon.mainhand *[minecraft:custom_data~{pact_signed:1b}] run return run function rpg:pact/reissue
+execute if entity @s[tag=rpg.pact.off] unless items entity @s weapon.offhand *[minecraft:custom_data~{pact_signed:1b}] run return run function rpg:pact/reissue
+
+# 旧存档的立约者没有阶位；书的阶位落后时就地换新，不必等下一次升阶。
+execute unless score @s rpg_pact_lv matches 1.. run function rpg:pact/oath/migrate
+function rpg:pact/book/stale
 
 # 站在一支**燃着的**驱魔图腾旁边举起这本书，不是动用力量，而是毁约。
 # 这是逆圣化之外的第二条解约途径 —— 详见 rpg:pact/renounce。
 execute if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,distance=..%(R)d] run return run function rpg:pact/renounce
+
+# 四种长按：普通放力量，潜行放二阶技能，潜行抬头化身，潜行低头打开契约。
+execute if predicate rpg:sneaking if entity @s[x_rotation=45..90] run return run function rpg:pact/ui/open
+execute if predicate rpg:sneaking if entity @s[x_rotation=-90..-45] run return run function rpg:pact/depth/avatar
+execute if predicate rpg:sneaking run return run function rpg:pact/depth/second
 
 execute if entity @s[scores={rpg_pact_cd=1..}] run return run function rpg:pact/cooling
 
@@ -319,7 +416,7 @@ tag @s remove rpg.pact.cast
 
 REISSUE = """# 手里这本没盖过印。死一次把书掉了是常事 —— 柱位还在身上，
 # 只要新捡的这本正是同一柱，就地重新盖印，而不是把人卡死。
-# 柱位对不上才是真的攥错了书。
+# 柱位对不上才是真的攥错了书。分主手和副手各判一次。
 %(BRANCH)s
 function rpg:pact/wrong_book
 """
@@ -394,8 +491,10 @@ scoreboard players remove @s rpg_pact_cd 1
 
 # 逆圣化会把契约一并烧断 —— 反转烧掉的是污染的一切，柱位也在其中。
 BREAK = """\
-# 毁约。恩赐与枷锁一同撤走，柱位清空。
+# 毁约。恩赐与枷锁一同撤走，柱位清空。深契的状态在 depth/clear 里一并清掉，
+# 逆圣化、图腾毁约、签新约都走这里。
 %(ATTR)s
+function rpg:pact/depth/clear
 scoreboard players set @s rpg_pact 0
 scoreboard players set @s rpg_pact_cd 0
 tag @s remove rpg.pact
@@ -403,32 +502,50 @@ playsound minecraft:block.glass.break master @s ~ ~ ~ 1 0.5
 """
 
 
-def item_snbt(p, signed):
-    """一本书的完整 SNBT。签约前后只差名字、Lore 和两个 custom_data 位。"""
+def item_snbt(p, signed, lv=1, dom=0):
+    """一本书的完整 SNBT。阶位不同，贴图、Lore 和 custom_data 都不同。"""
+    d = DEPTH[p["n"]]
     tag = "[已立约]" if signed else "[契约]"
+    index = lv - 1
     lore = [RULE,
             row(seg("七十二柱之一，", "gray"), seg("所罗门", p["colour"], True),
                 seg("封入柱中的名", "gray"))]
     if signed:
-        lore.append(row(seg("长按右键动用柱中之力（冷却 %d 秒）" % (CD // 20), "gray")))
+        state = "第%s阶 · %s" % ("一二三"[index], TIER_NAMES[index])
+        lore.append(row(seg(state, p["lit"], True),
+                        seg(" · 支配" if dom else "", ui.HOLY_DARK, True)))
+    else:
+        lore.append(row(seg("长按右键翻开条款，需要祭品 ", "gray"),
+                        seg("%s ×%d" % (d["tribute"][1], TRIBUTE), ui.WHITE)))
+    bane = d["bane"][index] + ("（支配后减半）" if dom and d["banes"] else "")
+    lore += [RULE,
+             row(seg("🜏恩赐", "white", True), seg("　" + d["boon"][index], p["lit"])),
+             row(seg("🜏力量", "white", True), seg("[" + p["power"] + "]", p["colour"], True),
+                 seg("　长按", "gray")),
+             row(seg("　" + p["power_text"], "gray")),
+             row(seg("🜏魂誓", "white", True), seg("[" + d["second"] + "]", p["colour"], True),
+                 seg("　潜行长按", "gray")),
+             row(seg("　" + d["second_text"], "gray")),
+             row(seg("🜏真名", "white", True), seg("[" + d["avatar"] + "]", p["colour"], True),
+                 seg("　潜行抬头长按", "gray")),
+             row(seg("　" + d["avatar_text"], "gray")),
+             row(seg("🜏枷锁", "white", True), seg("　" + bane, ui.WARN)),
+             RULE,
+             row(seg("🜏供奉", "white", True), seg("　" + d["oath"], "gray")),
+             row(seg("🜏禁忌", "white", True), seg("　" + d["taboo"], ui.WARN)),
+             RULE]
+    if signed:
+        lore.append(row(seg("潜行低头长按打开契约", "gray")))
         lore.append(row(seg("在燃着的驱魔图腾旁长按则", "gray"),
                         seg("毁约", ui.WARN, True)))
-    else:
-        lore.append(row(seg("长按右键签下契约", "gray")))
-    lore += [RULE,
-             row(seg("🜏恩赐", "white", True), seg("　" + p["boon"], p["lit"])),
-             row(seg("🜏力量", "white", True), seg("[" + p["power"] + "]", p["colour"], True)),
-             row(seg("　" + p["power_text"], "gray")),
-             row(seg("🜏枷锁", "white", True), seg("　" + p["bane"], ui.WARN)),
-             RULE,
-             row(seg("契约期间持续沾染", "gray"), seg("魔化", ui.WARN, True)),
-             RULE]
-    data = "{pact_tag:1b,pact:%d%s}" % (p["n"], ",pact_signed:1b" if signed else "")
+        lore.append(RULE)
+    data = "{pact_tag:1b,pact:%d%s}" % (
+        p["n"], ",pact_signed:1b,pact_lv:%d,pact_dom:%d" % (lv, dom) if signed else "")
     return ("enchanted_book["
             "custom_name=" + row(seg(tag, p["colour"], True),
                                  seg(p["who"] + "之柱", "white")) + ","
             "lore=[" + ",".join(lore) + "],"
-            "custom_model_data={floats:[%d.0f]}," % (CMD0 + p["n"] - 1) +
+            "custom_model_data={floats:[%d.0f]}," % book_cmd(p["n"], lv) +
             "enchantment_glint_override=true,"
             "max_stack_size=1,"
             "food={nutrition:0,saturation:0f,can_always_eat:1b},"
@@ -438,19 +555,30 @@ def item_snbt(p, signed):
             "custom_data=" + data + "]")
 
 
-def attr_lines(p, add):
-    """恩赐与枷锁的属性修饰符。id 用 rpg:pact/N/... ，毁约时按同一个 id 撤。"""
+def mod_ids(p):
+    """恩赐与枷锁的 (属性, 修饰符 id)。id 不随阶位变，毁约时按同一个 id 撤。"""
     out = []
     for kind, mods in (("boon", p["boons"]), ("bane", p["banes"])):
-        for i, (attr, amount, op) in enumerate(mods):
+        for i, (attr, _amount, _op) in enumerate(mods):
+            out.append((attr, "rpg:pact/%d/%s%d" % (p["n"], kind, i)))
+    return out
+
+
+def attr_lines(p, add, lv=1, dom=0):
+    """恩赐与枷锁的属性修饰符。支配之后，枷锁按当前阶减半。"""
+    out = []
+    d = DEPTH[p["n"]]
+    for kind, mods, amounts in (("boon", p["boons"], d["boons"]), ("bane", p["banes"], d["banes"])):
+        for i, (attr, _amount, op) in enumerate(mods):
             mid = "rpg:pact/%d/%s%d" % (p["n"], kind, i)
+            # 先撤再加：同名修饰符重复添加会被服务器拒绝
+            out.append("attribute @s minecraft:%s modifier remove %s" % (attr, mid))
             if add:
-                # 先撤再加：同名修饰符重复添加会被服务器拒绝
-                out.append("attribute @s minecraft:%s modifier remove %s" % (attr, mid))
+                amount = amounts[lv - 1]
+                if kind == "bane" and dom:
+                    amount = amount / 2.0
                 out.append("attribute @s minecraft:%s modifier add %s %s %s"
                            % (attr, mid, amount, op))
-            else:
-                out.append("attribute @s minecraft:%s modifier remove %s" % (attr, mid))
     return "\n".join(out) if out else "# 这一柱不靠属性修饰符 —— 它的恩赐与枷锁都是逐刻的"
 
 
@@ -478,15 +606,16 @@ def build_functions():
     # ---- 签约 ----
     branch = []
     for p in PILLARS:
-        branch.append("execute if items entity @s weapon.mainhand "
-                      "*[minecraft:custom_data~{pact:%d}] run function rpg:pact/sign%d"
-                      % (p["n"], p["n"]))
+        for hand, gate in (("mainhand", "unless"), ("offhand", "if")):
+            branch.append("execute %s entity @s[tag=rpg.pact.off] if items entity @s weapon.%s "
+                          "*[minecraft:custom_data~{pact:%d}] run function rpg:pact/ui/terms%d"
+                          % (gate, hand, p["n"], p["n"]))
         wf("pact/sign%d.mcfunction" % p["n"], SIGN_ONE % {
             "N": p["n"], "CD": CD, "WHO": p["who"], "SIN": p["sin"],
             "COLOUR": p["colour"], "LIT": p["lit"],
             "FLASH": int(p["colour"].lstrip("#"), 16),
-            "ATTR": attr_lines(p, True),
-            "ITEM": item_snbt(p, True)})
+            "TITLE": event_title(p, "契 约 已 立", "魔神借契约进入你的心"),
+            })
         wf("pact/break%d.mcfunction" % p["n"],
            BREAK % {"ATTR": attr_lines(p, False)})
         n += 2
@@ -513,16 +642,21 @@ def build_functions():
                    "MAX": ex.TAINT_MAX, "MAXP": ex.TAINT_MAX + 1,
                    "R": ex.RITE_R})
     wf("pact/trigger.mcfunction", TRIGGER % {"LOCK": LOCK})
-    reissue = ["execute if entity @s[scores={rpg_pact=%d}] "
-               "if items entity @s weapon.mainhand *[minecraft:custom_data~{pact:%d}] "
-               "run return run function rpg:pact/sign%d" % (q["n"], q["n"], q["n"])
-               for q in PILLARS]
+    reissue = ["execute %s entity @s[tag=rpg.pact.off,scores={rpg_pact=%d}] "
+               "if items entity @s weapon.%s *[minecraft:custom_data~{pact:%d}] "
+               "run return run function rpg:pact/sign%d" % (gate, q["n"], hand, q["n"], q["n"])
+               for q in PILLARS for gate, hand in (("if", "offhand"),)]
+    reissue += ["execute if entity @s[tag=!rpg.pact.off,scores={rpg_pact=%d}] "
+                "if items entity @s weapon.mainhand *[minecraft:custom_data~{pact:%d}] "
+                "run return run function rpg:pact/sign%d" % (q["n"], q["n"], q["n"])
+                for q in PILLARS]
     wf("pact/reissue.mcfunction", REISSUE % {"BRANCH": "\n".join(reissue)})
     wf("pact/wrong_book.mcfunction", WRONG_BOOK)
     wf("pact/cooling.mcfunction", COOLING)
     wf("pact/cd.mcfunction", CD_TICK)
     wf("pact/mammon.mcfunction", MAMMON_TICK)
     wf("pact/samael.mcfunction", SAMAEL_TICK)
+    build_tier_functions()
 
     # 毁约总入口：逆圣化烧断契约时走这里，按柱位撤掉对应的修饰符
     brk = ["execute if entity @s[scores={rpg_pact=%d}] run function rpg:pact/break%d"
@@ -539,6 +673,44 @@ def build_functions():
                     "minecraft:custom_data": "{pact_tag:1b}"}}}}},
         "rewards": {"function": "rpg:pact/trigger"}})
     return n
+
+
+def build_tier_functions():
+    """属性与书按 柱 × 阶 × 支配 展开。数据都在表里，这里只是分流。"""
+    attr = []
+    fresh = []
+    stale = []
+    for p in PILLARS:
+        n = p["n"]
+        attr.append("execute if score @s rpg_pact matches %d run function rpg:pact/attr/p%d" % (n, n))
+        fresh.append("execute if score @s rpg_pact matches %d run function rpg:pact/book/p%d" % (n, n))
+        branch_a = []
+        branch_b = []
+        for lv in (1, 2, 3):
+            for dom in (0, 1):
+                gate = "execute if score @s rpg_pact_lv matches %d if score @s rpg_pact_dom matches %d run" % (lv, dom)
+                branch_a.append("%s function rpg:pact/attr/p%d_%d_%d" % (gate, n, lv, dom))
+                branch_b.append("%s function rpg:pact/book/p%d_%d_%d" % (gate, n, lv, dom))
+                wf("pact/attr/p%d_%d_%d.mcfunction" % (n, lv, dom), attr_lines(p, True, lv, dom))
+                item = item_snbt(p, True, lv, dom)
+                wf("pact/book/p%d_%d_%d.mcfunction" % (n, lv, dom),
+                   "execute if entity @s[tag=rpg.pact.give] run return run give @s %s 1\n"
+                   "execute if entity @s[tag=rpg.pact.off] run return run item replace entity @s weapon.offhand with %s\n"
+                   "item replace entity @s weapon.mainhand with %s" % (item, item, item))
+                stale.append("execute if score @s rpg_pact_lv matches %d if score @s rpg_pact_dom matches %d "
+                             "if items entity @s weapon.%%s *[minecraft:custom_data~{pact_lv:%d,pact_dom:%d}] run return 0"
+                             % (lv, dom, lv, dom))
+        wf("pact/attr/p%d.mcfunction" % n, "\n".join(branch_a))
+        wf("pact/book/p%d.mcfunction" % n, "\n".join(branch_b))
+    wf("pact/attr.mcfunction", "# 按柱位、阶位和支配状态重挂恩赐与枷锁。\n" + "\n".join(attr))
+    wf("pact/book/fresh.mcfunction", "# 把手里的书换成当前阶位的样子。\n" + "\n".join(fresh))
+    unique = list(dict.fromkeys(stale))
+    wf("pact/book/stale.mcfunction",
+       "# 手里这本的阶位与身上一致就不动，否则换新。\n"
+       "execute if entity @s[tag=rpg.pact.off] run return run function rpg:pact/book/stale_off\n" +
+       "\n".join(line % "mainhand" for line in unique) + "\nfunction rpg:pact/book/fresh")
+    wf("pact/book/stale_off.mcfunction",
+       "\n".join(line % "offhand" for line in unique) + "\nfunction rpg:pact/book/fresh")
 
 
 def build_hud_bar():
@@ -628,15 +800,28 @@ def wire_taint():
     """契约的常驻代价：每次结算多沾 1 点，玛门翻倍。"""
     p = os.path.join(FUNC, "taint/step.mcfunction")
     s = io.open(p, encoding="utf-8").read()
-    if "rpg.pact" in s:
+    if "rpg:pact/seep" in s:
         return 0
     anchor = "execute if entity @s[tag=rpg.h.devil_weapon_tag1] run scoreboard players add @s rpg_taint 1"
     add = (anchor + "\n"
-           "# 立约本身就是代价 —— 柱中的东西一直在往里渗。贪婪那一柱渗得更快。\n"
-           "execute if entity @s[tag=rpg.pact] run scoreboard players add @s rpg_taint 1\n"
-           "execute if entity @s[tag=rpg.pact,scores={rpg_pact=7}] run scoreboard players add @s rpg_taint 1")
+           "# 立约本身就是代价，但只是慢慢地渗：魔化主要来自动用力量和犯禁忌。\n"
+           "execute if entity @s[tag=rpg.pact] run function rpg:pact/seep")
     assert anchor in s
-    io.open(p, "w", encoding="utf-8", newline="\n").write(s.replace(anchor, add))
+    s = s.replace(anchor, add)
+    # 戒律不受圣痕影响，所以挂在圣痕的提前返回之前。
+    head = "# 圣痕期间沾不上任何东西"
+    assert head in s
+    s = s.replace(head, "execute if entity @s[tag=rpg.pact] at @s run function rpg:pact/oath/step\n" + head)
+    io.open(p, "w", encoding="utf-8", newline="\n").write(s)
+
+    wf("pact/seep.mcfunction", """\
+# 每 %(STEPS)d 次结算渗一次，每升一阶多 1 点。贪婪那一柱翻倍。
+scoreboard players add @s rpg_pact_seep 1
+execute if score @s rpg_pact_seep matches ..%(LESS)d run return 0
+scoreboard players set @s rpg_pact_seep 0
+scoreboard players operation @s rpg_taint += @s rpg_pact_lv
+execute if entity @s[scores={rpg_pact=7}] run scoreboard players operation @s rpg_taint += @s rpg_pact_lv
+""" % {"STEPS": SEEP_STEPS, "LESS": SEEP_STEPS - 1})
 
     # 逆圣化把污染整个烧穿，柱位也在其中
     q = os.path.join(FUNC, "rite/inv_grant.mcfunction")
@@ -668,6 +853,8 @@ summon minecraft:vindicator ~ ~1 ~ %(NBT)s
 # 记下他是哪一位 —— 出手时按这个分流。要在 advent_life 之前，
 # 那一步会把 rpg.advent.new 摘掉。
 scoreboard players set @e[tag=rpg.advent.new] rpg_dm_lord %(N)d
+# 死亡探针也记一份：主人一死分数就没了，清算要靠它认出倒下的是谁。
+execute as @e[tag=rpg.advent.new] on passengers run scoreboard players set @s rpg_dm_lord %(N)d
 function rpg:taint/advent_life
 particle dust{color:[%(RGB)s],scale:3} ~ ~1.2 ~ 0.8 1 0.8 0.05 70
 playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..48] ~ ~ ~ 1 0.5
@@ -1657,9 +1844,15 @@ def add_objectives():
 
 def dump_for_guide():
     """把七柱交给图鉴，免得两边各写一份、迟早写歪。"""
+    pillars = []
+    for p in PILLARS:
+        d = DEPTH[p["n"]]
+        row_ = {k: v for k, v in p.items() if k not in ("boons", "banes")}
+        row_.update({k: d[k] for k in ("oath", "taboo", "second", "second_text", "avatar", "avatar_text")})
+        pillars.append(row_)
     doc = {"cd_seconds": CD // 20, "use_taint": USE_TAINT, "cmd0": CMD0,
-           "pillars": [{k: v for k, v in p.items() if k not in ("boons", "banes")}
-                       for p in PILLARS]}
+           "tribute": TRIBUTE, "second_taint": SECOND_TAINT, "avatar_taint": AVATAR_TAINT,
+           "pillars": pillars}
     ex.wj(os.path.join(DP, "..", "_pact.json"), doc)
 
 

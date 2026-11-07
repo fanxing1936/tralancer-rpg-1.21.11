@@ -89,3 +89,25 @@ execute if entity @s[scores={rpg_hud_m=64}] run data modify storage rpg:hud e se
 execute if entity @s[scores={rpg_hud_m=64}] run function rpg:hud/seal/event with storage rpg:hud
 execute if entity @s[scores={rpg_hud_m=65}] run data modify storage rpg:hud e set value '["",{"text":"[终末圣裁]","color":"#62D9E8","bold":true,"italic":false},{"text":"　罪秽在审判中消散","color":"#FFF2A8","bold":false,"italic":false},{"text":" ✦","color":"#FFFFFF","bold":false,"italic":false}]'
 execute if entity @s[scores={rpg_hud_m=65}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=80}] run data modify storage rpg:hud e set value '["",{"text":"[契约]","color":"#D596F2","bold":true,"italic":false},{"text":"　柱中之力还没回气","color":"gray","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=80}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=81}] run data modify storage rpg:hud e set value '["",{"text":"[契约]","color":"#D596F2","bold":true,"italic":false},{"text":"　契约还不够深","color":"gray","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=81}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=82}] run data modify storage rpg:hud e set value '["",{"text":"[深契]","color":"#D4AF37","bold":true,"italic":false},{"text":"　契约更进一阶","color":"gray","bold":false,"italic":false},{"text":" ✦","color":"white","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=82}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=91}] run data modify storage rpg:hud e set value '["",{"text":"[违约]","color":"#FF6B5E","bold":true,"italic":false},{"text":"　契合散尽，阶位跌落","color":"gray","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=91}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=84}] run data modify storage rpg:hud e set value '["",{"text":"[违约]","color":"#FF6B5E","bold":true,"italic":false},{"text":"　死亡 —— ","color":"gray","bold":false,"italic":false},{"text":"路西法记下了","color":"#5FD68C","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=84}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=85}] run data modify storage rpg:hud e set value '["",{"text":"[违约]","color":"#FF6B5E","bold":true,"italic":false},{"text":"　连续 10 分钟没碰过水 —— ","color":"gray","bold":false,"italic":false},{"text":"利维坦记下了","color":"#4F9EF0","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=85}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=86}] run data modify storage rpg:hud e set value '["",{"text":"[违约]","color":"#FF6B5E","bold":true,"italic":false},{"text":"　1 分钟内疾跑超过 300 格 —— ","color":"gray","bold":false,"italic":false},{"text":"亚巴顿记下了","color":"#A7AFC9","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=86}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=87}] run data modify storage rpg:hud e set value '["",{"text":"[违约]","color":"#FF6B5E","bold":true,"italic":false},{"text":"　饥饿值低于 6 —— ","color":"gray","bold":false,"italic":false},{"text":"别西卜记下了","color":"#B5D957","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=87}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=88}] run data modify storage rpg:hud e set value '["",{"text":"[违约]","color":"#FF6B5E","bold":true,"italic":false},{"text":"　连续 5 分钟没有打过人 —— ","color":"gray","bold":false,"italic":false},{"text":"萨麦尔记下了","color":"#FF5C52","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=88}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=89}] run data modify storage rpg:hud e set value '["",{"text":"[违约]","color":"#FF6B5E","bold":true,"italic":false},{"text":"　连续 5 分钟保持满血 —— ","color":"gray","bold":false,"italic":false},{"text":"贝利尔记下了","color":"#D97AD9","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=89}] run function rpg:hud/seal/event with storage rpg:hud
+execute if entity @s[scores={rpg_hud_m=90}] run data modify storage rpg:hud e set value '["",{"text":"[违约]","color":"#FF6B5E","bold":true,"italic":false},{"text":"　经验等级低于 5 —— ","color":"gray","bold":false,"italic":false},{"text":"玛门记下了","color":"#E6A23C","bold":false,"italic":false}]'
+execute if entity @s[scores={rpg_hud_m=90}] run function rpg:hud/seal/event with storage rpg:hud

@@ -50,6 +50,8 @@ CATEGORIES = [
     ("utility", "blue", "药剂功能"),
     ("test", "gray", "测试物"),
     ("pact", "black", "罪约契约"),
+    ("pact_page", "orange", "七柱柱页"),
+    ("pact_seal", "pink", "七柱柱印"),
     ("divine", "light_blue", "上位契约"),
     ("kabbalah", "magenta", "卡巴拉秘仪"),
     ("exorcism", "white", "驱魔器具"),
@@ -112,6 +114,10 @@ def category(source, item, block):
         return "verdict"
     if source.startswith("inquest/give/"):
         return "exorcism"
+    if "pact_page:" in blob:
+        return "pact_page"
+    if "rpg_seal:" in blob:
+        return "pact_seal"
     if "pact_tag:1b" in blob:
         return "pact"
     if "rpg_divine_pact:1b" in blob:

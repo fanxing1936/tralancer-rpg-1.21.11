@@ -19,6 +19,21 @@ from rpg_ui_style import (CYAN, DARK_GRAY, GRAY, HOLY, HOLY_LIGHT, MUTED, RED,
 
 
 DP = Path(sys.argv[1] if len(sys.argv) > 1 else "../rpg").resolve()
+# 也供 add_pact_depth.py 使用：进度里不能引用还没绑定的实体标签。
+HOSTILE_TYPES = [
+        "minecraft:blaze", "minecraft:bogged", "minecraft:breeze",
+        "minecraft:cave_spider", "minecraft:creaking", "minecraft:creeper",
+        "minecraft:drowned", "minecraft:elder_guardian", "minecraft:ender_dragon",
+        "minecraft:endermite", "minecraft:evoker", "minecraft:ghast",
+        "minecraft:guardian", "minecraft:hoglin", "minecraft:husk",
+        "minecraft:illusioner", "minecraft:magma_cube", "minecraft:phantom",
+        "minecraft:piglin_brute", "minecraft:pillager", "minecraft:ravager",
+        "minecraft:shulker", "minecraft:silverfish", "minecraft:skeleton",
+        "minecraft:slime", "minecraft:spider", "minecraft:stray", "minecraft:vex",
+        "minecraft:vindicator", "minecraft:warden", "minecraft:witch",
+        "minecraft:wither", "minecraft:wither_skeleton", "minecraft:zoglin",
+        "minecraft:zombie", "minecraft:zombie_villager",
+]
 FUNC = DP / "data/rpg/function"
 
 # This generator runs after polish_ui.py, so it must already speak the
@@ -386,20 +401,7 @@ tag @s remove rpg.seal.aura_target
     write("inquest/seal/ability/abaddon.mcfunction", "\n".join(abaddon))
 
     # Standard hostile types; tagged lords/minions are included separately at runtime.
-    write_json("rpg/tags/entity_type/seal_hostile.json", {"values": [
-        "minecraft:blaze", "minecraft:bogged", "minecraft:breeze",
-        "minecraft:cave_spider", "minecraft:creaking", "minecraft:creeper",
-        "minecraft:drowned", "minecraft:elder_guardian", "minecraft:ender_dragon",
-        "minecraft:endermite", "minecraft:evoker", "minecraft:ghast",
-        "minecraft:guardian", "minecraft:hoglin", "minecraft:husk",
-        "minecraft:illusioner", "minecraft:magma_cube", "minecraft:phantom",
-        "minecraft:piglin_brute", "minecraft:pillager", "minecraft:ravager",
-        "minecraft:shulker", "minecraft:silverfish", "minecraft:skeleton",
-        "minecraft:slime", "minecraft:spider", "minecraft:stray", "minecraft:vex",
-        "minecraft:vindicator", "minecraft:warden", "minecraft:witch",
-        "minecraft:wither", "minecraft:wither_skeleton", "minecraft:zoglin",
-        "minecraft:zombie", "minecraft:zombie_villager",
-    ]})
+    write_json("rpg/tags/entity_type/seal_hostile.json", {"values": HOSTILE_TYPES})
 
 
 def patch_hurt_and_skill_paths() -> None:

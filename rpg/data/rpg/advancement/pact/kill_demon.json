@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "demon": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"rpg.demon\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "minion": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"rpg.demon.minion\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "demon",
+      "minion"
+    ]
+  ],
+  "rewards": {
+    "function": "rpg:pact/oath/kill_demon"
+  }
+}

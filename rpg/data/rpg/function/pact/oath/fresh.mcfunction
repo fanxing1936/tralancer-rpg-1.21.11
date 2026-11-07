@@ -1,0 +1,19 @@
+# 第一次立约：所有进度从头开始，统计项归零，免得旧账算到这份契约上。
+scoreboard players set @s rpg_pact_lv 1
+scoreboard players set @s rpg_pact_dom 0
+scoreboard players set @s rpg_pact_bond 0
+scoreboard players set @s rpg_pact_seep 0
+scoreboard players set @s rpg_pact_cd2 0
+scoreboard players set @s rpg_pact_cd3 0
+scoreboard players set @s rpg_pact_av 0
+scoreboard players set @s rpg_pact_fx 0
+scoreboard players set @s rpg_pact_s1 0
+scoreboard players set @s rpg_pact_s2 0
+scoreboard players set @s rpg_pv_a 0
+scoreboard players set @s rpg_pv_b 0
+scoreboard players set @s rpg_pv_t 0
+scoreboard players set @s rpg_ps_dmg 0
+scoreboard players set @s rpg_ps_taken 0
+scoreboard players set @s rpg_ps_sprint 0
+scoreboard players set @s rpg_ps_crouch 0
+scoreboard players set @s rpg_ps_dead 0

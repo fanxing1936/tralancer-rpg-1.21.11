@@ -1,0 +1,6 @@
+execute if score @s rpg_pact_lv matches 2 run title @s times 5 50 15
+execute if score @s rpg_pact_lv matches 2 run title @s title ["",{"text":"◆ ","italic":false,"color":"#C9A646","bold":true},{"text":"深契 · 魂誓","italic":false,"color":"#C4433A","bold":true},{"text":" ◆","italic":false,"color":"#C9A646","bold":true}]
+execute if score @s rpg_pact_lv matches 2 run title @s subtitle ["",{"text":"萨","italic":false,"color":"#C4433A","bold":true},{"text":"麦尔 · 暴怒","italic":false,"color":"#C4433A","bold":true},{"text":" 𝔚𝔯𝔞𝔱𝔥","italic":false,"color":"#8F7430"},{"text":"  柱中的东西离你更近了","italic":false,"color":"#9C9A94"}]
+execute if score @s rpg_pact_lv matches 3 run title @s times 5 50 15
+execute if score @s rpg_pact_lv matches 3 run title @s title ["",{"text":"◆ ","italic":false,"color":"#C9A646","bold":true},{"text":"深契 · 真名","italic":false,"color":"#C4433A","bold":true},{"text":" ◆","italic":false,"color":"#C9A646","bold":true}]
+execute if score @s rpg_pact_lv matches 3 run title @s subtitle ["",{"text":"萨","italic":false,"color":"#C4433A","bold":true},{"text":"麦尔 · 暴怒","italic":false,"color":"#C4433A","bold":true},{"text":" 𝔚𝔯𝔞𝔱𝔥","italic":false,"color":"#8F7430"},{"text":"  柱中的东西离你更近了","italic":false,"color":"#9C9A94"}]

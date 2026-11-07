@@ -1,23 +1,11 @@
-execute unless score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"+-------- 契约与侵蚀 --------+","color":"#D596F2","italic":false,"bold":true}]
-execute if score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"+-------- 契约与权柄 --------+","color":"#62D9E8","bold":true,"italic":false}]
-execute if score @s rpg_lt_divine matches 1 run tellraw @s ["",{"text":"上位契约：","color":"gray","bold":false,"italic":false},{"text":"旧约 · 律法","color":"#D4AF37","bold":true,"italic":false}]
-execute if score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"上位契约：","color":"gray","bold":false,"italic":false},{"text":"新约 · 权柄","color":"#62D9E8","bold":true,"italic":false}]
-execute if score @s rpg_lt_divine matches 0 run tellraw @s ["",{"text":"上位契约：无","color":"dark_gray","bold":false,"italic":false}]
-execute if score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"权柄完整度：","color":"#62D9E8","bold":false,"italic":false},{"score":{"name":"@s","objective":"rpg_lt_auth"},"color":"#E8F4FF","italic":false},{"text":" / 100","color":"dark_gray","bold":false,"italic":false}]
-execute if score @s rpg_lt_divine matches 2 if score @s rpg_lt_judge matches 1.. run tellraw @s ["",{"text":"圣裁状态：","color":"gray","bold":false,"italic":false},{"text":"已覆印 · 等待下一次恶魔命中","color":"#FFF2A8","bold":true,"italic":false}]
-execute if score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"[终末圣裁]","color":"#62D9E8","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 9"}},{"text":"　25 权柄 · 强化下一次对恶魔的攻击","color":"gray","bold":false,"italic":false}]
-execute if score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"[圣子恩赐]","color":"#FFF2A8","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 10"}},{"text":"　35 权柄 · 救治十二格内最近同伴","color":"gray","bold":false,"italic":false}]
-execute unless score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"当前侵蚀：","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_taint"},"color":"#D596F2","italic":false},{"text":" / 100","color":"dark_gray","italic":false}]
-execute if score @s rpg_pact matches ..0 run tellraw @s ["",{"text":"当前契约：无","color":"gray","italic":false}]
-execute if score @s rpg_pact matches 1 run tellraw @s ["",{"text":"当前契约：","color":"gray","italic":false},{"text":"路西法 · 傲慢","color":"#5FD68C","italic":false,"bold":false}]
-execute if score @s rpg_pact matches 2 run tellraw @s ["",{"text":"当前契约：","color":"gray","italic":false},{"text":"利维坦 · 嫉妒","color":"#4F9EF0","italic":false,"bold":false}]
-execute if score @s rpg_pact matches 3 run tellraw @s ["",{"text":"当前契约：","color":"gray","italic":false},{"text":"亚巴顿 · 怠惰","color":"#A7AFC9","italic":false,"bold":false}]
-execute if score @s rpg_pact matches 4 run tellraw @s ["",{"text":"当前契约：","color":"gray","italic":false},{"text":"别西卜 · 暴食","color":"#B5D957","italic":false,"bold":false}]
-execute if score @s rpg_pact matches 5 run tellraw @s ["",{"text":"当前契约：","color":"gray","italic":false},{"text":"萨麦尔 · 暴怒","color":"#FF5C52","italic":false,"bold":false}]
-execute if score @s rpg_pact matches 6 run tellraw @s ["",{"text":"当前契约：","color":"gray","italic":false},{"text":"贝利尔 · 色欲","color":"#D97AD9","italic":false,"bold":false}]
-execute if score @s rpg_pact matches 7 run tellraw @s ["",{"text":"当前契约：","color":"gray","italic":false},{"text":"玛门 · 贪婪","color":"#E6A23C","italic":false,"bold":false}]
-execute if score @s rpg_pact_cd matches 1.. run tellraw @s ["",{"text":"契约回响冷却：","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_pact_cd"},"color":"#D596F2","italic":false},{"text":" 刻","color":"dark_gray","italic":false}]
-execute if score @s rpg_pact matches 1..7 unless score @s rpg_pact_cd matches 1.. run tellraw @s ["",{"text":"契约回响：可用","color":"#70DB70","italic":false,"bold":true}]
-execute unless score @s rpg_pact matches 1..7 run tellraw @s ["",{"text":"契约回响：尚未缔结契约","color":"dark_gray","italic":false}]
-execute if entity @s[tag=rpg.seal.carrier] run tellraw @s ["",{"text":"封印状态：正携带恶魔遗物","color":"#62D9E8","italic":false,"bold":true}]
-tellraw @s ["",{"text":"[返回面板]","color":"#D4AF37","italic":false,"bold":true,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 8"}}]
+data modify storage rpg:panel ui set value {title:{text:""},body:[],actions:[]}
+scoreboard players add @s rpg_lt_auth 0
+execute store result storage rpg:panel v.rpg_lt_auth int 1 run scoreboard players get @s rpg_lt_auth
+scoreboard players add @s rpg_pact_bond 0
+execute store result storage rpg:panel v.rpg_pact_bond int 1 run scoreboard players get @s rpg_pact_bond
+scoreboard players add @s rpg_pact_cd 0
+execute store result storage rpg:panel v.rpg_pact_cd int 1 run scoreboard players get @s rpg_pact_cd
+scoreboard players add @s rpg_taint 0
+execute store result storage rpg:panel v.rpg_taint int 1 run scoreboard players get @s rpg_taint
+function rpg:panel/pages/panel_pact with storage rpg:panel v
+function rpg:panel/ui/show with storage rpg:panel ui

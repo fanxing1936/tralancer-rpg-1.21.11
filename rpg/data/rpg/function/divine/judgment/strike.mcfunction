@@ -1,3 +1,4 @@
+execute if entity @s[tag=rpg.pf.heart] run return run function rpg:pope_fight/heart/judgment_target
 execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/judgment
 effect clear @s minecraft:regeneration
 effect clear @s minecraft:resistance

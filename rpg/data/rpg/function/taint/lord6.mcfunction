@@ -6,6 +6,8 @@ summon minecraft:vindicator ~ ~1 ~ {Tags:["rpg.advent","rpg.demon","devil","rpg.
 # 记下他是哪一位 —— 出手时按这个分流。要在 advent_life 之前，
 # 那一步会把 rpg.advent.new 摘掉。
 scoreboard players set @e[type=minecraft:vindicator,tag=rpg.advent.new] rpg_dm_lord 6
+# 死亡探针也记一份：主人一死分数就没了，清算要靠它认出倒下的是谁。
+execute as @e[type=minecraft:vindicator,tag=rpg.advent.new] on passengers run scoreboard players set @s rpg_dm_lord 6
 function rpg:taint/advent_life
 particle dust{color:[0.85,0.48,0.85],scale:2} ~ ~1.2 ~ 0.8 1 0.8 0.05 70
 playsound minecraft:entity.evoker.cast_spell hostile @a[distance=..48] ~ ~ ~ 1 0.5

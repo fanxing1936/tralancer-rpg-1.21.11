@@ -59,3 +59,9 @@ execute as @a[scores={rpg_lt_usecd=1..}] run scoreboard players remove @s rpg_lt
 
 # Daath 汇聚动画：只有正在转化的生命之树才进入。
 execute if entity @e[type=minecraft:marker,tag=rpg.lt.gathering,limit=1] run function rpg:divine/gather/step
+
+# 深契：立约者逐刻，柱印的命中效果，以及契约界面的按钮。
+execute as @a[tag=rpg.pact] run function rpg:pact/depth/tick
+execute if entity @a[tag=rpg.pact.onhit,limit=1] as @e[tag=rpg.hurt] run function rpg:pact/seal/victim
+execute as @a[scores={rpg_pact_do=1..}] run function rpg:pact/do
+execute as @a[tag=rpg.pact.ui,scores={rpg_pact_t=0}] run tag @s remove rpg.pact.ui

@@ -1,6 +1,7 @@
 # 一次结算。魔器加、圣器减，两者都握着时互相抵消。
 scoreboard players set @s rpg_taint_t 0
 
+execute if entity @s[tag=rpg.pact] at @s run function rpg:pact/oath/step
 # 圣痕期间沾不上任何东西 —— 反转过的人，脏不了。
 execute if entity @s[scores={rpg_holy=1..}] run return 0
 
@@ -8,9 +9,8 @@ execute if entity @s[scores={rpg_holy=1..}] run return 0
 scoreboard players operation #t0 rpg_hud = @s rpg_taint
 execute if entity @s[tag=rpg.h.devil_tag1] run scoreboard players add @s rpg_taint 2
 execute if entity @s[tag=rpg.h.devil_weapon_tag1] run scoreboard players add @s rpg_taint 1
-# 立约本身就是代价 —— 柱中的东西一直在往里渗。贪婪那一柱渗得更快。
-execute if entity @s[tag=rpg.pact] run scoreboard players add @s rpg_taint 1
-execute if entity @s[tag=rpg.pact,scores={rpg_pact=7}] run scoreboard players add @s rpg_taint 1
+# 立约本身就是代价，但只是慢慢地渗：魔化主要来自动用力量和犯禁忌。
+execute if entity @s[tag=rpg.pact] run function rpg:pact/seep
 execute if entity @s[tag=rpg.holy] run scoreboard players remove @s rpg_taint 1
 execute if entity @s[scores={rpg_taint=101..}] run scoreboard players set @s rpg_taint 100
 # 旧约以律法抵消每次结算中的两点魔化。

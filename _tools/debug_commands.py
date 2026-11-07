@@ -51,6 +51,14 @@ BOSSES = [
 for lord_id, lord_name, lord_no, _minions in LORDS:
     BOSSES.append(command(f"/function rpg:taint/lord{lord_no}", f"在执行位置召唤七罪领主：{lord_name}（700 生命）。", "预先初始化计分板和 Bossbar；不会自动建立驱魔法阵，十分钟后会自行消散。", "临时 Boss", "生成战斗"))
 BOSSES.extend([
+    command("/function rpg:pope_fight/summon", "在执行位置开始教皇战：圣卫战 → 教皇 → 末影之心。", "同一时间只允许一场；战场半径 40 格，没人满 60 秒判负清场。", "教皇战", "生成战斗"),
+    command("/function rpg:pope_fight/debug/boss1", "跳过圣卫战，直接从 Boss 一阶段开始。", "同一时间只允许一场。", "教皇战", "生成战斗"),
+    command("/function rpg:pope_fight/debug/boss2", "直接进入 Boss 二阶段（末影之心）。", "同一时间只允许一场。", "教皇战", "生成战斗"),
+    command("/function rpg:pact/debug/materials", "给执行者七柱祭品和五职材料。", "逐项给予，背包满时掉在地上。", "七十二柱契约"),
+    command("/function rpg:pact/debug/bond", "把执行者的契合度加满。", "需要已立约。", "七十二柱契约"),
+    command("/function rpg:pact/debug/up", "让执行者直接升一阶。", "需要已立约，第三阶时无效。", "七十二柱契约"),
+    command("/function rpg:pact/debug/lords", "把七位领主记为已被执行者击败。", "只影响真名阶的条件。", "七十二柱契约"),
+    command("/function rpg:pope_fight/clear", "清除教皇战的全部实体。", "战斗卡住或测试收尾时使用。", "教皇战", "清理"),
 ])
 
 MINIONS = []

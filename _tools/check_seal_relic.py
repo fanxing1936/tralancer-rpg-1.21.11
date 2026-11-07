@@ -24,7 +24,7 @@ def main() -> None:
     gate = read("inquest/seal/escape_gate.mcfunction")
     dispatch = read("inquest/seal/escape.mcfunction")
     reindex = read("inquest/seal/reindex.mcfunction")
-    panel = read("panel/inquest.mcfunction")
+    panel = read("panel/inquest.mcfunction") + read("panel/pages/panel_inquest.mcfunction")
     pool = read("rite/pool_beat.mcfunction")
     suppress = read("inquest/seal/suppress.mcfunction")
 

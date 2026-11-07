@@ -150,7 +150,7 @@ def prefix_style(tag, colour, name):
     tag = ui.MATERIAL_TAGS.get(tag, tag)
     if tag in ui.SYSTEM_TAGS:
         return tag, ui.SYSTEM_TAGS[tag]
-    if tag in ("[契约]", "[已立约]"):
+    if tag in ("[契约]", "[已立约]", "[柱页]", "[柱印]"):
         p = ui.pillar_in(name)
         if p:
             return tag, p["lit"]

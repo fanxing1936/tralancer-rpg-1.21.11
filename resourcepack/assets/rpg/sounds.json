@@ -106,6 +106,40 @@
       "rpg:abaddon/wretchedwraithsummon_001_soundwave"
     ]
   },
+  "arch_visage.beam_attack": {
+    "subtitle": "subtitles.rpg.arch_visage.beam_attack",
+    "sounds": [
+      "rpg:arch_visage/sfx_boss_archvisagebeamattack_001",
+      "rpg:arch_visage/sfx_boss_archvisagebeamattack_002",
+      "rpg:arch_visage/sfx_boss_archvisagebeamattack_003"
+    ]
+  },
+  "arch_visage.beam_loop": {
+    "subtitle": "subtitles.rpg.arch_visage.beam_loop",
+    "sounds": [
+      "rpg:arch_visage/sfx_boss_archvisagebeamloop_001"
+    ]
+  },
+  "arch_visage.mortar": {
+    "subtitle": "subtitles.rpg.arch_visage.mortar",
+    "sounds": [
+      "rpg:arch_visage/sfx_boss_archvisagemortarshoot_001",
+      "rpg:arch_visage/sfx_boss_archvisagemortarshoot_002",
+      "rpg:arch_visage/sfx_boss_archvisagemortarshoot_003"
+    ]
+  },
+  "arch_visage.tele_in": {
+    "subtitle": "subtitles.rpg.arch_visage.tele_in",
+    "sounds": [
+      "rpg:arch_visage/sfx_boss_archvisagetelein"
+    ]
+  },
+  "arch_visage.tele_out": {
+    "subtitle": "subtitles.rpg.arch_visage.tele_out",
+    "sounds": [
+      "rpg:arch_visage/sfx_boss_archvisageteleout"
+    ]
+  },
   "beelzebub.approach": {
     "subtitle": "subtitles.rpg.beelzebub.approach",
     "sounds": [
@@ -226,6 +260,106 @@
       "rpg:beelzebub/sfx_mob_namelesswakeup_003_soundwave"
     ]
   },
+  "heart_of_ender.death": {
+    "subtitle": "subtitles.rpg.heart_of_ender.death",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesseldeath"
+    ]
+  },
+  "heart_of_ender.fourside": {
+    "subtitle": "subtitles.rpg.heart_of_ender.fourside",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesselfourside_001",
+      "rpg:heart_of_ender/sfx_boss_archvesselfourside_002",
+      "rpg:heart_of_ender/sfx_boss_archvesselfourside_003",
+      "rpg:heart_of_ender/sfx_boss_archvesselfourside_004"
+    ]
+  },
+  "heart_of_ender.hurt": {
+    "subtitle": "subtitles.rpg.heart_of_ender.hurt",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesselhurt_001",
+      "rpg:heart_of_ender/sfx_boss_archvesselhurt_002",
+      "rpg:heart_of_ender/sfx_boss_archvesselhurt_003",
+      "rpg:heart_of_ender/sfx_boss_archvesselhurt_004",
+      "rpg:heart_of_ender/sfx_boss_archvesselhurt_005",
+      "rpg:heart_of_ender/sfx_boss_archvesselhurt_006",
+      "rpg:heart_of_ender/sfx_boss_archvesselhurt_007",
+      "rpg:heart_of_ender/sfx_boss_archvesselhurt_008"
+    ]
+  },
+  "heart_of_ender.inner_voice": {
+    "subtitle": "subtitles.rpg.heart_of_ender.inner_voice",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_001",
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_002",
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_003",
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_004",
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_005",
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_006",
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_007",
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_008",
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_009",
+      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_010"
+    ]
+  },
+  "heart_of_ender.mortar": {
+    "subtitle": "subtitles.rpg.heart_of_ender.mortar",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_001",
+      "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_002",
+      "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_003",
+      "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_004"
+    ]
+  },
+  "heart_of_ender.mortar_explode": {
+    "subtitle": "subtitles.rpg.heart_of_ender.mortar_explode",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_mob_witchbottlebreak_001_soundwave",
+      "rpg:heart_of_ender/sfx_mob_witchbottlebreak_002_soundwave",
+      "rpg:heart_of_ender/sfx_mob_witchbottlebreak_003_soundwave"
+    ]
+  },
+  "heart_of_ender.mortar_land": {
+    "subtitle": "subtitles.rpg.heart_of_ender.mortar_land",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesselmortarland_001",
+      "rpg:heart_of_ender/sfx_boss_archvesselmortarland_002",
+      "rpg:heart_of_ender/sfx_boss_archvesselmortarland_003"
+    ]
+  },
+  "heart_of_ender.step": {
+    "subtitle": "subtitles.rpg.heart_of_ender.step",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesselstep_001",
+      "rpg:heart_of_ender/sfx_boss_archvesselstep_002",
+      "rpg:heart_of_ender/sfx_boss_archvesselstep_003",
+      "rpg:heart_of_ender/sfx_boss_archvesselstep_004"
+    ]
+  },
+  "heart_of_ender.tele_in": {
+    "subtitle": "subtitles.rpg.heart_of_ender.tele_in",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesseltelein"
+    ]
+  },
+  "heart_of_ender.tele_out": {
+    "subtitle": "subtitles.rpg.heart_of_ender.tele_out",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesselteleout"
+    ]
+  },
+  "heart_of_ender.vessel_voice": {
+    "subtitle": "subtitles.rpg.heart_of_ender.vessel_voice",
+    "sounds": [
+      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_001",
+      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_002",
+      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_003",
+      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_004",
+      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_005",
+      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_006"
+    ]
+  },
   "leviathan.cast": {
     "subtitle": "subtitles.rpg.leviathan.cast",
     "sounds": [
@@ -302,6 +436,130 @@
       "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_001_soundwave",
       "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_002_soundwave",
       "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_003_soundwave"
+    ]
+  },
+  "pope.appear": {
+    "subtitle": "subtitles.rpg.pope.appear",
+    "sounds": [
+      "rpg:pope/sfx_mob_archillagerappear_001_soundwave"
+    ]
+  },
+  "pope.haha": {
+    "subtitle": "subtitles.rpg.pope.haha",
+    "sounds": [
+      "rpg:pope/sfx_mob_archillagerhaha_001_soundwave",
+      "rpg:pope/sfx_mob_archillagerhaha_002_soundwave"
+    ]
+  },
+  "pope.hargh": {
+    "subtitle": "subtitles.rpg.pope.hargh",
+    "sounds": [
+      "rpg:pope/sfx_mob_archillagerhargh_001_soundwave",
+      "rpg:pope/sfx_mob_archillagerhargh_002_soundwave",
+      "rpg:pope/sfx_mob_archillagerhargh_003_soundwave",
+      "rpg:pope/sfx_mob_archillagerhargh_004_soundwave"
+    ]
+  },
+  "pope.hurt": {
+    "subtitle": "subtitles.rpg.pope.hurt",
+    "sounds": [
+      "rpg:pope/sfx_boss_archillagerhurt_001",
+      "rpg:pope/sfx_boss_archillagerhurt_002",
+      "rpg:pope/sfx_boss_archillagerhurt_003",
+      "rpg:pope/sfx_boss_archillagerhurt_004",
+      "rpg:pope/sfx_boss_archillagerhurt_005",
+      "rpg:pope/sfx_boss_archillagerhurt_006"
+    ]
+  },
+  "pope.idle": {
+    "subtitle": "subtitles.rpg.pope.idle",
+    "sounds": [
+      "rpg:pope/sfx_boss_archillageridle_001",
+      "rpg:pope/sfx_boss_archillageridle_002",
+      "rpg:pope/sfx_boss_archillageridle_003",
+      "rpg:pope/sfx_boss_archillageridle_004",
+      "rpg:pope/sfx_boss_archillageridle_005",
+      "rpg:pope/sfx_boss_archillageridle_006",
+      "rpg:pope/sfx_boss_archillageridle_007",
+      "rpg:pope/sfx_boss_archillageridle_008",
+      "rpg:pope/sfx_boss_archillageridle_009",
+      "rpg:pope/sfx_boss_archillageridle_010",
+      "rpg:pope/sfx_boss_archillageridle_011",
+      "rpg:pope/sfx_boss_archillageridle_012",
+      "rpg:pope/sfx_boss_archillageridle_013"
+    ]
+  },
+  "pope.intro_final_blow": {
+    "subtitle": "subtitles.rpg.pope.intro_final_blow",
+    "sounds": [
+      "rpg:pope/sfx_boss_archillagerintrofinalblow"
+    ]
+  },
+  "pope.intro_greetings": {
+    "subtitle": "subtitles.rpg.pope.intro_greetings",
+    "sounds": [
+      "rpg:pope/sfx_boss_archillagerintrogreetings_001"
+    ]
+  },
+  "pope.intro_laugh": {
+    "subtitle": "subtitles.rpg.pope.intro_laugh",
+    "sounds": [
+      "rpg:pope/sfx_boss_archillagerintrolaugh_002"
+    ]
+  },
+  "pope.laugh": {
+    "subtitle": "subtitles.rpg.pope.laugh",
+    "sounds": [
+      "rpg:pope/sfx_mob_archillagerlaugh_001_soundwave"
+    ]
+  },
+  "pope.load_spell": {
+    "subtitle": "subtitles.rpg.pope.load_spell",
+    "sounds": [
+      "rpg:pope/sfx_mob_archillager_loadspell_001_soundwave"
+    ]
+  },
+  "pope.magic_impact": {
+    "subtitle": "subtitles.rpg.pope.magic_impact",
+    "sounds": [
+      "rpg:pope/sfx_boss_archillagermagicimpact_001"
+    ]
+  },
+  "pope.mirror_in": {
+    "subtitle": "subtitles.rpg.pope.mirror_in",
+    "sounds": [
+      "rpg:pope/sfx_mob_archillager_mirrorin_001_soundwave"
+    ]
+  },
+  "pope.mirror_out": {
+    "subtitle": "subtitles.rpg.pope.mirror_out",
+    "sounds": [
+      "rpg:pope/sfx_mob_archillager_mirrorout_001_soundwave"
+    ]
+  },
+  "pope.spell": {
+    "subtitle": "subtitles.rpg.pope.spell",
+    "sounds": [
+      "rpg:pope/sfx_mob_archillager_spell_001_soundwave"
+    ]
+  },
+  "pope.spell_disappear": {
+    "subtitle": "subtitles.rpg.pope.spell_disappear",
+    "sounds": [
+      "rpg:pope/sfx_mob_archillager_spelldissapear_001_soundwave"
+    ]
+  },
+  "pope.summon_mobs": {
+    "subtitle": "subtitles.rpg.pope.summon_mobs",
+    "sounds": [
+      "rpg:pope/sfx_boss_archillagersummonmobs_001",
+      "rpg:pope/sfx_boss_archillagersummonmobs_002"
+    ]
+  },
+  "pope.whirlwind": {
+    "subtitle": "subtitles.rpg.pope.whirlwind",
+    "sounds": [
+      "rpg:pope/sfx_boss_archillagerwhirlwind"
     ]
   },
   "sunken_skeleton.death": {

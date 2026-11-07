@@ -1,27 +1,36 @@
 {
-    "boss1":{
-        "sounds":[
-            "boss_bgm"
-        ]
-    },
-    "boss2":{
-        "sounds":[
-            "boss2_bgm"
-        ]
-    },
-    "boss3":{
-        "sounds":[
-            "boss3_bgm"
-        ]
-    },
-    "develop":{
-        "sounds":[
-            "develop_bgm"
-        ]
-    },
-    "rest":{
-        "sounds":[
-            "_rest"
-        ]
-    }
+ "boss1": {
+  "sounds": [
+   {
+    "name": "boss_bgm",
+    "stream": true
+   }
+  ]
+ },
+ "boss2": {
+  "sounds": [
+   {
+    "name": "boss2_bgm",
+    "stream": true
+   }
+  ]
+ },
+ "boss3": {
+  "sounds": [
+   {
+    "name": "boss3_bgm",
+    "stream": true
+   }
+  ]
+ },
+ "develop": {
+  "sounds": [
+   "develop_bgm"
+  ]
+ },
+ "rest": {
+  "sounds": [
+   "_rest"
+  ]
+ }
 }

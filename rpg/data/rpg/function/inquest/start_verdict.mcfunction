@@ -1,4 +1,5 @@
 tag @s add rpg.rite.anchor.active
+execute as @e[type=minecraft:vindicator,tag=rpg.exorcism.bound,distance=..14] if score @s rpg_rite_id = @e[type=minecraft:item_display,tag=rpg.rite.anchor.active,limit=1] rpg_rite_id at @s run function rpg:pact/clear/fell
 scoreboard players set @s rpg_ex_stage 4
 scoreboard players set @s rpg_ex_time 300
 kill @e[type=minecraft:armor_stand,tag=rpg.counter.name,distance=..12]

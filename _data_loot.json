@@ -1913,6 +1913,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "贝雷特",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下司祭的残页",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "亚巴顿之柱",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110123.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:3,pact_role:3}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "贝雷特",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下的从属契约",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　司祭：生命上限，并定时回复",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110213.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:13}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/abaddon/eligos": [
@@ -1954,6 +2166,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "艾利欧格",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下处刑者的残页",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "亚巴顿之柱",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110123.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:3,pact_role:5}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "艾利欧格",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下的从属契约",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　处刑者：攻击提升，并追斩残血",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110215.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:15}"
+     }
     }
    ],
    "conditions": 2
@@ -2001,6 +2425,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "古辛",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下先锋的残页",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "亚巴顿之柱",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110123.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:3,pact_role:1}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "古辛",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下的从属契约",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　先锋：护甲与击退抗性",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110211.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:11}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/abaddon/leraje": [
@@ -2042,6 +2678,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "列拉金",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下咒使的残页",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "亚巴顿之柱",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110123.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:3,pact_role:4}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "列拉金",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下的从属契约",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　咒使：命中使敌人虚弱",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110214.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:14}"
+     }
     }
    ],
    "conditions": 2
@@ -2089,6 +2937,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "西迪",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下猎手的残页",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "亚巴顿之柱",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110123.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:3,pact_role:2}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#A7AFC9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "西迪",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "亚巴顿麾下的从属契约",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　猎手：移速与触及距离",
+         "color": "#A7AFC9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110212.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:12}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/beelzebub/bathin": [
@@ -2130,6 +3190,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "巴钦",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下司祭的残页",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "别西卜之柱",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110124.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:4,pact_role:3}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "巴钦",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下的从属契约",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　司祭：生命上限，并定时回复",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110218.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:18}"
+     }
     }
    ],
    "conditions": 2
@@ -2177,6 +3449,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "布提斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下猎手的残页",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "别西卜之柱",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110124.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:4,pact_role:2}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "布提斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下的从属契约",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　猎手：移速与触及距离",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110217.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:17}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/beelzebub/purson": [
@@ -2218,6 +3702,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "布松",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下处刑者的残页",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "别西卜之柱",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110124.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:4,pact_role:5}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "布松",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下的从属契约",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　处刑者：攻击提升，并追斩残血",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110220.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:20}"
+     }
     }
    ],
    "conditions": 2
@@ -2265,6 +3961,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "塞列欧斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下咒使的残页",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "别西卜之柱",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110124.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:4,pact_role:4}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "塞列欧斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下的从属契约",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　咒使：命中使敌人虚弱",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110219.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:19}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/beelzebub/zepar": [
@@ -2306,6 +4214,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "桀派",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下先锋的残页",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "别西卜之柱",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110124.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:4,pact_role:1}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#B5D957",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "桀派",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "别西卜麾下的从属契约",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　先锋：护甲与击退抗性",
+         "color": "#B5D957",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110216.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:16}"
+     }
     }
    ],
    "conditions": 2
@@ -2353,6 +4473,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "亚斯塔禄",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下咒使的残页",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "贝利尔之柱",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110126.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:6,pact_role:4}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "亚斯塔禄",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下的从属契约",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　咒使：命中使敌人虚弱",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110229.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:29}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/belial/berith": [
@@ -2394,6 +4726,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "比利士",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下司祭的残页",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "贝利尔之柱",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110126.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:6,pact_role:3}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "比利士",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下的从属契约",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　司祭：生命上限，并定时回复",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110228.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:28}"
+     }
     }
    ],
    "conditions": 2
@@ -2441,6 +4985,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "布涅",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下先锋的残页",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "贝利尔之柱",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110126.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:6,pact_role:1}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "布涅",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下的从属契约",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　先锋：护甲与击退抗性",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110226.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:26}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/belial/forneus": [
@@ -2482,6 +5238,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "佛纽司",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下处刑者的残页",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "贝利尔之柱",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110126.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:6,pact_role:5}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "佛纽司",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下的从属契约",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　处刑者：攻击提升，并追斩残血",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110230.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:30}"
+     }
     }
    ],
    "conditions": 2
@@ -2529,6 +5497,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "罗诺比",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下猎手的残页",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "贝利尔之柱",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110126.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:6,pact_role:2}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#D97AD9",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "罗诺比",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "贝利尔麾下的从属契约",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　猎手：移速与触及距离",
+         "color": "#D97AD9",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110227.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:27}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/leviathan/amon": [
@@ -2570,6 +5750,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "亚蒙",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下猎手的残页",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "利维坦之柱",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110122.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:2,pact_role:2}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "亚蒙",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下的从属契约",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　猎手：移速与触及距离",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110207.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:7}"
+     }
     }
    ],
    "conditions": 2
@@ -2617,6 +6009,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "巴巴托斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下司祭的残页",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "利维坦之柱",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110122.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:2,pact_role:3}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "巴巴托斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下的从属契约",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　司祭：生命上限，并定时回复",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110208.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:8}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/leviathan/buer": [
@@ -2658,6 +6262,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "布耶尔",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下处刑者的残页",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "利维坦之柱",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110122.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:2,pact_role:5}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "布耶尔",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下的从属契约",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　处刑者：攻击提升，并追斩残血",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110210.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:10}"
+     }
     }
    ],
    "conditions": 2
@@ -2705,6 +6521,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "派蒙",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下咒使的残页",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "利维坦之柱",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110122.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:2,pact_role:4}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "派蒙",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下的从属契约",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　咒使：命中使敌人虚弱",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110209.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:9}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/leviathan/valefor": [
@@ -2746,6 +6774,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "华利弗",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下先锋的残页",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "利维坦之柱",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110122.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:2,pact_role:1}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#4F9EF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "华利弗",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "利维坦麾下的从属契约",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　先锋：护甲与击退抗性",
+         "color": "#4F9EF0",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110206.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:6}"
+     }
     }
    ],
    "conditions": 2
@@ -2793,6 +7033,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "阿加雷斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下猎手的残页",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "路西法之柱",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110121.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:1,pact_role:2}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "阿加雷斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下的从属契约",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　猎手：移速与触及距离",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110202.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:2}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/lucifer/bael": [
@@ -2834,6 +7286,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "巴力",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下先锋的残页",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "路西法之柱",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110121.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:1,pact_role:1}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "巴力",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下的从属契约",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　先锋：护甲与击退抗性",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110201.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:1}"
+     }
     }
    ],
    "conditions": 2
@@ -2881,6 +7545,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "马尔巴士",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下处刑者的残页",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "路西法之柱",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110121.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:1,pact_role:5}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "马尔巴士",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下的从属契约",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　处刑者：攻击提升，并追斩残血",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110205.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:5}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/lucifer/samigina": [
@@ -2922,6 +7798,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "萨米基纳",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下咒使的残页",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "路西法之柱",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110121.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:1,pact_role:4}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "萨米基纳",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下的从属契约",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　咒使：命中使敌人虚弱",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110204.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:4}"
+     }
     }
    ],
    "conditions": 2
@@ -2969,6 +8057,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "瓦沙克",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下司祭的残页",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "路西法之柱",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110121.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:1,pact_role:3}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#5FD68C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "瓦沙克",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "路西法麾下的从属契约",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　司祭：生命上限，并定时回复",
+         "color": "#5FD68C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110203.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:3}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/mammon/asmoday": [
@@ -3010,6 +8310,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "阿斯摩太",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下猎手的残页",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "玛门之柱",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110127.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:7,pact_role:2}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "阿斯摩太",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下的从属契约",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　猎手：移速与触及距离",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110232.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:32}"
+     }
     }
    ],
    "conditions": 2
@@ -3057,6 +8569,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "佛拉斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下先锋的残页",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "玛门之柱",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110127.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:7,pact_role:1}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "佛拉斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下的从属契约",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　先锋：护甲与击退抗性",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110231.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:31}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/mammon/furfur": [
@@ -3098,6 +8822,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "佛尔佛尔",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下咒使的残页",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "玛门之柱",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110127.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:7,pact_role:4}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "佛尔佛尔",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下的从属契约",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　咒使：命中使敌人虚弱",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110234.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:34}"
+     }
     }
    ],
    "conditions": 2
@@ -3145,6 +9081,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "盖布",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下司祭的残页",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "玛门之柱",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110127.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:7,pact_role:3}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "盖布",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下的从属契约",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　司祭：生命上限，并定时回复",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110233.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:33}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/mammon/marchosias": [
@@ -3186,6 +9334,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "马可西亚斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下处刑者的残页",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "玛门之柱",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110127.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:7,pact_role:5}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#E6A23C",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "马可西亚斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "玛门麾下的从属契约",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　处刑者：攻击提升，并追斩残血",
+         "color": "#E6A23C",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110235.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:35}"
+     }
     }
    ],
    "conditions": 2
@@ -3233,6 +9593,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "艾姆",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下司祭的残页",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "萨麦尔之柱",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110125.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:5,pact_role:3}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "艾姆",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下的从属契约",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　司祭：生命上限，并定时回复",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110223.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:23}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/samael/glasya_labolas": [
@@ -3274,6 +9846,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "格拉夏·拉波拉斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下处刑者的残页",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "萨麦尔之柱",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110125.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:5,pact_role:5}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "格拉夏·拉波拉斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下的从属契约",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　处刑者：攻击提升，并追斩残血",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110225.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:25}"
+     }
     }
    ],
    "conditions": 2
@@ -3321,6 +10105,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "因波斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下猎手的残页",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "萨麦尔之柱",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110125.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:5,pact_role:2}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "因波斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下的从属契约",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　猎手：移速与触及距离",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110222.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:22}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/samael/marax": [
@@ -3365,6 +10361,218 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "莫拉格斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下先锋的残页",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "萨麦尔之柱",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110125.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:5,pact_role:1}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "莫拉格斯",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下的从属契约",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　先锋：护甲与击退抗性",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110221.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:21}"
+     }
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/samael/naberius": [
@@ -3406,6 +10614,218 @@
      "damage": null,
      "count": null,
      "components": {}
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱页]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "纳贝流士",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下咒使的残页",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "集齐五职各一页后长按右键，合成",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "萨麦尔之柱",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110125.0
+       ]
+      },
+      "minecraft:max_stack_size": 16,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{pact_page:5,pact_role:4}"
+     }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:paper",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[柱印]",
+        "color": "#FF5C52",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "纳贝流士",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "萨麦尔麾下的从属契约",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🜏从契",
+         "color": "white",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "　咒使：命中使敌人虚弱",
+         "color": "#FF5C52",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "与主契约同柱时效果增强",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       },
+       [
+        "",
+        {
+         "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+         "color": "gray",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       {
+        "text": "+------------------+",
+        "color": "white",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110224.0
+       ]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:food": {
+       "nutrition": 0,
+       "saturation": 0.0,
+       "can_always_eat": true
+      },
+      "minecraft:consumable": {
+       "consume_seconds": 100120.0,
+       "animation": "block",
+       "sound": "minecraft:block.enchantment_table.use",
+       "has_consume_particles": false,
+       "on_consume_effects": []
+      },
+      "minecraft:custom_data": "{rpg_seal:24}"
+     }
     }
    ],
    "conditions": 2

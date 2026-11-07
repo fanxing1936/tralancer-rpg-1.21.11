@@ -56,7 +56,7 @@ SPEED_EXEMPT = {
 # 武器特效是作者的设计（ART-STYLE §6），数量与颜色保留原样。
 FULL_ZONES = ("taint/", "inquest/", "divine/", "rite/", "pact/", "minion/",
               "entities/warden/", "vacant/", "doll/", "mammon/", "ritual/",
-              "exorcism")
+              "exorcism", "pope_fight/")
 FORCE_ONLY_ZONES = ("item/",)
 # 展示实体生物归建模会话；死代码不动。
 SKIP = re.compile(r"^(tower_guard|beelzebub|leviathan|vanguard|sunken_skeleton)/"
@@ -82,6 +82,9 @@ TIER_RULES = [
     (r"/(bound_tick|anchor_tick|shine)$", "ambient"),
     (r"^rite/beat_(inv|pure)$", "ambient"),
     (r"^item/legacy/projectiles_active$", "ambient"),
+    (r"^pope_fight/fx/(blast|fall|beam)$", "ambient"),
+    (r"^pope_fight/(stage3_spiral|boss/blood_step|heart/weak_fx)$", "pulse"),
+    (r"^pope_fight/(stage2_enter|fx/burst|stage4_enter|heart/shatter)$", "ult"),
     # 十刻以上一拍
     (r"^taint/step$", "pulse"),
     (r"^rite/pool_beat$", "pulse"),

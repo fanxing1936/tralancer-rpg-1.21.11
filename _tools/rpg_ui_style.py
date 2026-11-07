@@ -410,6 +410,7 @@ BROADCAST_WARN = "#C04A3C"
 BROADCAST_BODY = "#9C9A94"
 BROADCAST_NAME = "#E6DFCF"
 BROADCAST_GLOSS = "#8F7430"         # the blackletter gloss on every line: dark gold
+BROADCAST_VOID = "#A276BE"          # what speaks from the Heart of Ender
 VERDICTS = {"消灭": BROADCAST_WARN, "放逐": "#CDBE86", "封印": "#4E9FAD", "契约": "#A276BE"}
 SEAL_STAGES = {"遗物休眠": MUTED, "遗物躁动": VERDICTS["契约"], "遗物危险": BROADCAST_HOLY,
                "遗物临界": BROADCAST_WARN, "遗物压制": VERDICTS["封印"],
@@ -421,6 +422,8 @@ HOLY_TAGS = {"驱魔调查", "调查档案", "罪证", "镇压", "真名确证",
              "告解铃", "净罪香", "银质圣钉", "仪式粉笔",
              "真名击破", "妒影击破", "银钉守界", "赎金已付"}
 PILLAR_TAGS = {"反仪式・吞媒": "别西卜"}
+# Whoever speaks in the Pope fight: tag colour and blackletter gloss.
+BOSS_VOICES = {"教皇": (BROADCAST_HOLY, "The Pope"), "末影之心": (BROADCAST_VOID, "Heart of Ender")}
 # Tags shared by all seven lords; the line names the lord ("别西卜 · 司祭 巴钦").
 SPEAKER_TAGS = {"罪群", "罪仆术式", "显形", "弱点媒介", "封印逃逸"}
 
@@ -437,6 +440,28 @@ ENGLISH = {
     "裁决・消灭": "Annihilate", "裁决・放逐": "Banish", "裁决・封印": "Seal",
     "裁决・契约": "Covenant",
 }
+
+
+def dark_colour(colour):
+    """界面文字换到 §12 的暗色板：对话框里不用亮色。"""
+    for p in PILLARS:
+        if colour == p["lit"]:
+            return pillar_mid(p)
+    table = {"white": BROADCAST_NAME, WHITE: BROADCAST_NAME, GRAY: BROADCAST_BODY, DARK_GRAY: MUTED,
+             HOLY: BROADCAST_HOLY, HOLY_LIGHT: BROADCAST_HOLY, HOLY_DARK: BROADCAST_HOLY,
+             RITUAL: BROADCAST_VOID, CYAN: VERDICTS["封印"], "#8FC7FF": VERDICTS["封印"],
+             "#AAB4C3": BROADCAST_BODY, WARN: BROADCAST_WARN, "#FF806B": BROADCAST_WARN,
+             READY: mix(READY, "#000000", 0.3)}
+    return table.get(colour, colour)
+
+
+def darken(value):
+    """递归处理文本组件和对话框数据里的 color。"""
+    if isinstance(value, dict):
+        return {k: dark_colour(v) if k == "color" else darken(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [darken(v) for v in value]
+    return value
 
 
 def fraktur(text):
@@ -489,6 +514,8 @@ def broadcast_colour(tag, body=""):
         return BROADCAST_WARN
     if key in HOLY_TAGS:
         return BROADCAST_HOLY
+    if key in BOSS_VOICES:
+        return BOSS_VOICES[key][0]
     if key in VERDICTS:
         return VERDICTS[key]
     if head == "裁决" and tail in VERDICTS:

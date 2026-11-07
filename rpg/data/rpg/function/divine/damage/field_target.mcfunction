@@ -1,3 +1,4 @@
+execute if entity @s[tag=rpg.pf.heart] run return run function rpg:pope_fight/heart/field_target
 execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/field
 execute store result score @s rpg_lt_max run attribute @s minecraft:max_health get 100
 scoreboard players operation @s rpg_lt_max *= #three rpg_lt_max

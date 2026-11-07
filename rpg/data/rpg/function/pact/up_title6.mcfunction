@@ -1,0 +1,6 @@
+execute if score @s rpg_pact_lv matches 2 run title @s times 5 50 15
+execute if score @s rpg_pact_lv matches 2 run title @s title ["",{"text":"◆ ","italic":false,"color":"#C9A646","bold":true},{"text":"深契 · 魂誓","italic":false,"color":"#A057A9","bold":true},{"text":" ◆","italic":false,"color":"#C9A646","bold":true}]
+execute if score @s rpg_pact_lv matches 2 run title @s subtitle ["",{"text":"贝","italic":false,"color":"#A057A9","bold":true},{"text":"利尔 · 色欲","italic":false,"color":"#A057A9","bold":true},{"text":" 𝔏𝔲𝔰𝔱","italic":false,"color":"#8F7430"},{"text":"  柱中的东西离你更近了","italic":false,"color":"#9C9A94"}]
+execute if score @s rpg_pact_lv matches 3 run title @s times 5 50 15
+execute if score @s rpg_pact_lv matches 3 run title @s title ["",{"text":"◆ ","italic":false,"color":"#C9A646","bold":true},{"text":"深契 · 真名","italic":false,"color":"#A057A9","bold":true},{"text":" ◆","italic":false,"color":"#C9A646","bold":true}]
+execute if score @s rpg_pact_lv matches 3 run title @s subtitle ["",{"text":"贝","italic":false,"color":"#A057A9","bold":true},{"text":"利尔 · 色欲","italic":false,"color":"#A057A9","bold":true},{"text":" 𝔏𝔲𝔰𝔱","italic":false,"color":"#8F7430"},{"text":"  柱中的东西离你更近了","italic":false,"color":"#9C9A94"}]

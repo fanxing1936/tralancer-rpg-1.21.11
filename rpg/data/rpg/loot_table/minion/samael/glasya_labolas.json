@@ -36,6 +36,224 @@
           "name": "minecraft:redstone"
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.12
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[柱页]",
+                    "color": "#FF5C52",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "格拉夏·拉波拉斯",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  {
+                    "text": "+------------------+",
+                    "color": "white",
+                    "bold": false,
+                    "italic": false
+                  },
+                  [
+                    "",
+                    {
+                      "text": "萨麦尔麾下处刑者的残页",
+                      "color": "#FF5C52",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "集齐五职各一页后长按右键，合成",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "萨麦尔之柱",
+                      "color": "#FF5C52",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  {
+                    "text": "+------------------+",
+                    "color": "white",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    1110125.0
+                  ]
+                },
+                "minecraft:max_stack_size": 16,
+                "minecraft:food": {
+                  "nutrition": 0,
+                  "saturation": 0.0,
+                  "can_always_eat": true
+                },
+                "minecraft:consumable": {
+                  "consume_seconds": 100120.0,
+                  "animation": "block",
+                  "sound": "minecraft:block.enchantment_table.use",
+                  "has_consume_particles": false,
+                  "on_consume_effects": []
+                },
+                "minecraft:custom_data": "{pact_page:5,pact_role:5}"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.04
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[柱印]",
+                    "color": "#FF5C52",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "格拉夏·拉波拉斯",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  {
+                    "text": "+------------------+",
+                    "color": "white",
+                    "bold": false,
+                    "italic": false
+                  },
+                  [
+                    "",
+                    {
+                      "text": "萨麦尔麾下的从属契约",
+                      "color": "#FF5C52",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🜏从契",
+                      "color": "white",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "　处刑者：攻击提升，并追斩残血",
+                      "color": "#FF5C52",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "与主契约同柱时效果增强",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  {
+                    "text": "+------------------+",
+                    "color": "white",
+                    "bold": false,
+                    "italic": false
+                  },
+                  [
+                    "",
+                    {
+                      "text": "长按右键镶入契约：魂誓开一槽，真名开两槽",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  {
+                    "text": "+------------------+",
+                    "color": "white",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    1110225.0
+                  ]
+                },
+                "minecraft:max_stack_size": 1,
+                "minecraft:food": {
+                  "nutrition": 0,
+                  "saturation": 0.0,
+                  "can_always_eat": true
+                },
+                "minecraft:consumable": {
+                  "consume_seconds": 100120.0,
+                  "animation": "block",
+                  "sound": "minecraft:block.enchantment_table.use",
+                  "has_consume_particles": false,
+                  "on_consume_effects": []
+                },
+                "minecraft:custom_data": "{rpg_seal:25}"
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

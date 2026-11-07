@@ -179,8 +179,9 @@ for lord_index, (lord, spirits) in enumerate(LORDS, 1):
         try:
             with io.open(loot, encoding="utf-8") as handle:
                 data = json.load(handle)
-            if len(data.get("pools", [])) != 2:
-                problems.append("%s/%s loot lacks lord and role pools" % (lord, spirit))
+            # 领主材料、职业材料，加 add_pact_depth 的柱页和柱印。
+            if len(data.get("pools", [])) != 4:
+                problems.append("%s/%s loot lacks lord, role, page and seal pools" % (lord, spirit))
         except Exception as exc:
             problems.append("%s/%s loot invalid: %s" % (lord, spirit, exc))
 

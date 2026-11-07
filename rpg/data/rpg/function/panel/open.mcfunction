@@ -1,10 +1,13 @@
 tag @s add rpg.panel.open
 playsound minecraft:item.book.page_turn player @s ~ ~ ~ 0.65 1.25
-tellraw @s ["",{"text":"+-------- 玩家面板 --------+","color":"#D4AF37","italic":false,"bold":true}]
-execute unless score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"驱魔等级 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_ex_lvl"},"color":"#FFF2A8","italic":false},{"text":"　阅历 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_ex_xp"},"color":"#FFD85A","italic":false},{"text":"　侵蚀 ","color":"gray","italic":false},{"score":{"name":"@s","objective":"rpg_taint"},"color":"#D596F2","italic":false},{"text":"/100","color":"dark_gray","italic":false}]
-execute if score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"驱魔等级 ","color":"gray","bold":false,"italic":false},{"score":{"name":"@s","objective":"rpg_ex_lvl"},"color":"#FFF2A8","italic":false},{"text":"　阅历 ","color":"gray","bold":false,"italic":false},{"score":{"name":"@s","objective":"rpg_ex_xp"},"color":"#FFD85A","italic":false},{"text":"　权柄完整度 ","color":"#62D9E8","bold":false,"italic":false},{"score":{"name":"@s","objective":"rpg_lt_auth"},"color":"#E8F4FF","italic":false},{"text":"/100","color":"dark_gray","bold":false,"italic":false}]
-execute unless score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"〖驱魔师档案〗","color":"#C9A646","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 1"}},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"  ","color":"#E6DFCF","italic":false},{"text":"[真名调查]","color":"#62D9E8","italic":false,"bold":true,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 2"}},{"text":"  ","color":"#E6DFCF","italic":false},{"text":"[契约·侵蚀]","color":"#D596F2","italic":false,"bold":true,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 3"}}]
-execute if score @s rpg_lt_divine matches 2 run tellraw @s ["",{"text":"〖驱魔师档案〗","color":"#C9A646","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 1"}},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"  ","color":"#E6DFCF","italic":false},{"text":"[真名调查]","color":"#62D9E8","italic":false,"bold":true,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 2"}},{"text":"  ","color":"#E6DFCF","italic":false},{"text":"[契约·权柄]","color":"#62D9E8","italic":false,"bold":true,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 3"}}]
-tellraw @s ["",{"text":"[HUD 开关]","color":"#8FC7FF","italic":false,"bold":true,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 5"}},{"text":"  ","color":"white","italic":false},{"text":"[操作速查]","color":"#AAB4C3","italic":false,"bold":true,"click_event":{"action":"run_command","command":"/trigger rpg_panel set 6"}}]
-tellraw @s ["",{"text":"切走再切回面板，可再次打开此页。","color":"dark_gray","italic":false}]
-tellraw @s ["",{"text":"+--------------------------+","color":"#D4AF37","italic":false,"bold":true}]
+data modify storage rpg:panel ui set value {title:{text:""},body:[],actions:[]}
+scoreboard players add @s rpg_ex_lvl 0
+execute store result storage rpg:panel v.rpg_ex_lvl int 1 run scoreboard players get @s rpg_ex_lvl
+scoreboard players add @s rpg_ex_xp 0
+execute store result storage rpg:panel v.rpg_ex_xp int 1 run scoreboard players get @s rpg_ex_xp
+scoreboard players add @s rpg_lt_auth 0
+execute store result storage rpg:panel v.rpg_lt_auth int 1 run scoreboard players get @s rpg_lt_auth
+scoreboard players add @s rpg_taint 0
+execute store result storage rpg:panel v.rpg_taint int 1 run scoreboard players get @s rpg_taint
+function rpg:panel/pages/panel_open with storage rpg:panel v
+function rpg:panel/ui/show with storage rpg:panel ui

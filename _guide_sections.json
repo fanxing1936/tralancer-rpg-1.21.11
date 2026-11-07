@@ -3539,14 +3539,19 @@
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
-    "长按右键签下契约",
+    "长按右键翻开条款，需要祭品 绿宝石 ×8",
     "+------------------+",
     "🜏恩赐　攻击伤害 +2.5",
-    "🜏力量[原罪]",
+    "🜏力量[原罪]　长按",
     "　沿视线刺出蛇矛，幻魔者尖牙同路破土；贯穿者受伤加重并向近旁蔓延",
+    "🜏魂誓[失坠]　潜行长按",
+    "　8 格内敌人被托起再坠下，受到伤害并陷入虚弱",
+    "🜏真名[万蛇加冕]　潜行抬头长按",
+    "　三圈蛇牙破土，随后 20 秒王冠加身：攻击大幅提升",
     "🜏枷锁　击退抗性 −0.25（更容易被打飞）",
     "+------------------+",
-    "契约期间持续沾染魔化",
+    "🜏供奉　击杀恶魔或罪仆",
+    "🜏禁忌　死亡",
     "+------------------+"
    ],
    "id": "enchanted_book",
@@ -3586,14 +3591,19 @@
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
-    "长按右键签下契约",
+    "长按右键翻开条款，需要祭品 海晶砂粒 ×8",
     "+------------------+",
     "🜏恩赐　移动速度 +8%",
-    "🜏力量[沉锚]",
+    "🜏力量[沉锚]　长按",
     "　向前方抛出巨锚，锚落处涌起漩涡，将敌人拖向锚心并持续碾压",
+    "🜏魂誓[逆潮]　潜行长按",
+    "　近者推开、远者卷来，全部受到溺水伤害",
+    "🜏真名[妒海沉城]　潜行抬头长按",
+    "　12 格内敌人被拖向海眼，随后 20 秒潮汐附身：移速大幅提升",
     "🜏枷锁　最大生命 −4",
     "+------------------+",
-    "契约期间持续沾染魔化",
+    "🜏供奉　在水中或雨中杀敌",
+    "🜏禁忌　连续 10 分钟没碰过水",
     "+------------------+"
    ],
    "id": "enchanted_book",
@@ -3633,14 +3643,19 @@
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
-    "长按右键签下契约",
+    "长按右键翻开条款，需要祭品 骨头 ×8",
     "+------------------+",
     "🜏恩赐　最大生命 +6",
-    "🜏力量[收割]",
+    "🜏力量[收割]　长按",
     "　周身 6 格爆发灵魂收割，每收割一个目标回复 1 颗心",
+    "🜏魂誓[停摆]　潜行长按",
+    "　10 格内敌人动弹不得 3 秒，并陷入虚弱",
+    "🜏真名[终末收割]　潜行抬头长按",
+    "　10 格内灵魂被割下，按人数回血，随后 20 秒血量与护甲大幅提升",
     "🜏枷锁　移动速度 −12%",
     "+------------------+",
-    "契约期间持续沾染魔化",
+    "🜏供奉　潜行静止",
+    "🜏禁忌　1 分钟内疾跑超过 300 格",
     "+------------------+"
    ],
    "id": "enchanted_book",
@@ -3680,14 +3695,19 @@
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
-    "长按右键签下契约",
+    "长按右键翻开条款，需要祭品 腐肉 ×8",
     "+------------------+",
     "🜏恩赐　攻击速度 +12%",
-    "🜏力量[余烬]",
+    "🜏力量[余烬]　长按",
     "　向前方喷出灰烬，追加三段刀罡",
+    "🜏魂誓[蝇群]　潜行长按",
+    "　5 秒内蝇群环身，不断啃噬 6 格内敌人并使其饥饿",
+    "🜏真名[万蝇饕宴]　潜行抬头长按",
+    "　灰烬遮天，10 格内敌人受到重创，随后 20 秒攻速大幅提升并持续回血",
     "🜏枷锁　护甲 −3",
     "+------------------+",
-    "契约期间持续沾染魔化",
+    "🜏供奉　进食",
+    "🜏禁忌　饥饿值低于 6",
     "+------------------+"
    ],
    "id": "enchanted_book",
@@ -3727,14 +3747,19 @@
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
-    "长按右键签下契约",
+    "长按右键翻开条款，需要祭品 烈焰粉 ×8",
     "+------------------+",
     "🜏恩赐　攻击伤害 +1.5，且攻击附带剧毒",
-    "🜏力量[毒雾]",
+    "🜏力量[毒雾]　长按",
     "　前方 7 格喷出毒雾，中者剧毒与凋零并存",
+    "🜏魂誓[血猎]　潜行长按",
+    "　瞬间突入 14 格内最近的敌人身边，重创并使其凋零",
+    "🜏真名[血怒天罚]　潜行抬头长按",
+    "　10 格内敌人受到血怒冲击，随后 20 秒攻击与移速大幅提升",
     "🜏枷锁　最大生命 −2",
     "+------------------+",
-    "契约期间持续沾染魔化",
+    "🜏供奉　造成伤害",
+    "🜏禁忌　连续 5 分钟没有打过人",
     "+------------------+"
    ],
    "id": "enchanted_book",
@@ -3774,14 +3799,19 @@
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
-    "长按右键签下契约",
+    "长按右键翻开条款，需要祭品 紫水晶碎片 ×8",
     "+------------------+",
     "🜏恩赐　护甲 +2",
-    "🜏力量[朝拜]",
+    "🜏力量[朝拜]　长按",
     "　7 格内所有生物停止活动，并受一次冲击",
+    "🜏魂誓[顾盼]　潜行长按",
+    "　8 格内敌人被迷惑，彼此攻击并发光",
+    "🜏真名[紫宴朝圣]　潜行抬头长按",
+    "　12 格内敌人被拖向宴席中央，随后 20 秒护甲与韧性大幅提升",
     "🜏枷锁　攻击伤害 −1",
     "+------------------+",
-    "契约期间持续沾染魔化",
+    "🜏供奉　承受伤害（献血）",
+    "🜏禁忌　连续 5 分钟保持满血",
     "+------------------+"
    ],
    "id": "enchanted_book",
@@ -3821,14 +3851,19 @@
    "lore": [
     "+------------------+",
     "七十二柱之一，所罗门封入柱中的名",
-    "长按右键签下契约",
+    "长按右键翻开条款，需要祭品 金粒 ×8",
     "+------------------+",
     "🜏恩赐　6 格内的掉落物自动吸附到身边",
-    "🜏力量[点金]",
+    "🜏力量[点金]　长按",
     "　8 格内的掉落物尽数翻倍，并吐出经验",
+    "🜏魂誓[金牢]　潜行长按",
+    "　8 格内敌人被钉在原地，并吐出经验",
+    "🜏真名[黄金终审]　潜行抬头长按",
+    "　10 格内敌人被清算，随后 20 秒攻击、护甲与幸运提升",
     "🜏枷锁　魔化沾染速度翻倍",
     "+------------------+",
-    "契约期间持续沾染魔化",
+    "🜏供奉　在契约界面献上金锭",
+    "🜏禁忌　经验等级低于 5",
     "+------------------+"
    ],
    "id": "enchanted_book",
@@ -3851,6 +3886,2771 @@
     "custom_model_data",
     "custom_name",
     "enchantment_glint_override",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "巴力",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下先锋的残页",
+    "集齐五职各一页后长按右键，合成路西法之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 1,
+    "pact_role": 1
+   },
+   "cmd": 1110121.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "阿加雷斯",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下猎手的残页",
+    "集齐五职各一页后长按右键，合成路西法之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 1,
+    "pact_role": 2
+   },
+   "cmd": 1110121.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "瓦沙克",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下司祭的残页",
+    "集齐五职各一页后长按右键，合成路西法之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 1,
+    "pact_role": 3
+   },
+   "cmd": 1110121.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "萨米基纳",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下咒使的残页",
+    "集齐五职各一页后长按右键，合成路西法之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 1,
+    "pact_role": 4
+   },
+   "cmd": 1110121.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "马尔巴士",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下处刑者的残页",
+    "集齐五职各一页后长按右键，合成路西法之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 1,
+    "pact_role": 5
+   },
+   "cmd": 1110121.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "华利弗",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下先锋的残页",
+    "集齐五职各一页后长按右键，合成利维坦之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 2,
+    "pact_role": 1
+   },
+   "cmd": 1110122.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "亚蒙",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下猎手的残页",
+    "集齐五职各一页后长按右键，合成利维坦之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 2,
+    "pact_role": 2
+   },
+   "cmd": 1110122.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "巴巴托斯",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下司祭的残页",
+    "集齐五职各一页后长按右键，合成利维坦之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 2,
+    "pact_role": 3
+   },
+   "cmd": 1110122.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "派蒙",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下咒使的残页",
+    "集齐五职各一页后长按右键，合成利维坦之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 2,
+    "pact_role": 4
+   },
+   "cmd": 1110122.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "布耶尔",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下处刑者的残页",
+    "集齐五职各一页后长按右键，合成利维坦之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 2,
+    "pact_role": 5
+   },
+   "cmd": 1110122.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "古辛",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下先锋的残页",
+    "集齐五职各一页后长按右键，合成亚巴顿之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 3,
+    "pact_role": 1
+   },
+   "cmd": 1110123.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "西迪",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下猎手的残页",
+    "集齐五职各一页后长按右键，合成亚巴顿之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 3,
+    "pact_role": 2
+   },
+   "cmd": 1110123.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "贝雷特",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下司祭的残页",
+    "集齐五职各一页后长按右键，合成亚巴顿之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 3,
+    "pact_role": 3
+   },
+   "cmd": 1110123.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "列拉金",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下咒使的残页",
+    "集齐五职各一页后长按右键，合成亚巴顿之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 3,
+    "pact_role": 4
+   },
+   "cmd": 1110123.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "艾利欧格",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下处刑者的残页",
+    "集齐五职各一页后长按右键，合成亚巴顿之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 3,
+    "pact_role": 5
+   },
+   "cmd": 1110123.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "桀派",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下先锋的残页",
+    "集齐五职各一页后长按右键，合成别西卜之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 4,
+    "pact_role": 1
+   },
+   "cmd": 1110124.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "布提斯",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下猎手的残页",
+    "集齐五职各一页后长按右键，合成别西卜之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 4,
+    "pact_role": 2
+   },
+   "cmd": 1110124.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "巴钦",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下司祭的残页",
+    "集齐五职各一页后长按右键，合成别西卜之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 4,
+    "pact_role": 3
+   },
+   "cmd": 1110124.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "塞列欧斯",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下咒使的残页",
+    "集齐五职各一页后长按右键，合成别西卜之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 4,
+    "pact_role": 4
+   },
+   "cmd": 1110124.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "布松",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下处刑者的残页",
+    "集齐五职各一页后长按右键，合成别西卜之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 4,
+    "pact_role": 5
+   },
+   "cmd": 1110124.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "莫拉格斯",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下先锋的残页",
+    "集齐五职各一页后长按右键，合成萨麦尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 5,
+    "pact_role": 1
+   },
+   "cmd": 1110125.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "因波斯",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下猎手的残页",
+    "集齐五职各一页后长按右键，合成萨麦尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 5,
+    "pact_role": 2
+   },
+   "cmd": 1110125.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "艾姆",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下司祭的残页",
+    "集齐五职各一页后长按右键，合成萨麦尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 5,
+    "pact_role": 3
+   },
+   "cmd": 1110125.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "纳贝流士",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下咒使的残页",
+    "集齐五职各一页后长按右键，合成萨麦尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 5,
+    "pact_role": 4
+   },
+   "cmd": 1110125.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "格拉夏·拉波拉斯",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下处刑者的残页",
+    "集齐五职各一页后长按右键，合成萨麦尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 5,
+    "pact_role": 5
+   },
+   "cmd": 1110125.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "布涅",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下先锋的残页",
+    "集齐五职各一页后长按右键，合成贝利尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 6,
+    "pact_role": 1
+   },
+   "cmd": 1110126.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "罗诺比",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下猎手的残页",
+    "集齐五职各一页后长按右键，合成贝利尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 6,
+    "pact_role": 2
+   },
+   "cmd": 1110126.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "比利士",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下司祭的残页",
+    "集齐五职各一页后长按右键，合成贝利尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 6,
+    "pact_role": 3
+   },
+   "cmd": 1110126.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "亚斯塔禄",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下咒使的残页",
+    "集齐五职各一页后长按右键，合成贝利尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 6,
+    "pact_role": 4
+   },
+   "cmd": 1110126.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "佛纽司",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下处刑者的残页",
+    "集齐五职各一页后长按右键，合成贝利尔之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 6,
+    "pact_role": 5
+   },
+   "cmd": 1110126.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "佛拉斯",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下先锋的残页",
+    "集齐五职各一页后长按右键，合成玛门之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 7,
+    "pact_role": 1
+   },
+   "cmd": 1110127.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "阿斯摩太",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下猎手的残页",
+    "集齐五职各一页后长按右键，合成玛门之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 7,
+    "pact_role": 2
+   },
+   "cmd": 1110127.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "盖布",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下司祭的残页",
+    "集齐五职各一页后长按右键，合成玛门之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 7,
+    "pact_role": 3
+   },
+   "cmd": 1110127.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "佛尔佛尔",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下咒使的残页",
+    "集齐五职各一页后长按右键，合成玛门之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 7,
+    "pact_role": 4
+   },
+   "cmd": 1110127.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "马可西亚斯",
+   "rarity": "柱页",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下处刑者的残页",
+    "集齐五职各一页后长按右键，合成玛门之柱",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "pact_page",
+    "pact_role"
+   ],
+   "custom_data": {
+    "pact_page": 7,
+    "pact_role": 5
+   },
+   "cmd": 1110127.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "巴力",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下的从属契约",
+    "🜏从契　先锋：护甲与击退抗性",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 1
+   },
+   "cmd": 1110201.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "阿加雷斯",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下的从属契约",
+    "🜏从契　猎手：移速与触及距离",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 2
+   },
+   "cmd": 1110202.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "瓦沙克",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下的从属契约",
+    "🜏从契　司祭：生命上限，并定时回复",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 3
+   },
+   "cmd": 1110203.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "萨米基纳",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下的从属契约",
+    "🜏从契　咒使：命中使敌人虚弱",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 4
+   },
+   "cmd": 1110204.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "马尔巴士",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "路西法麾下的从属契约",
+    "🜏从契　处刑者：攻击提升，并追斩残血",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 5
+   },
+   "cmd": 1110205.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "华利弗",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下的从属契约",
+    "🜏从契　先锋：护甲与击退抗性",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 6
+   },
+   "cmd": 1110206.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "亚蒙",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下的从属契约",
+    "🜏从契　猎手：移速与触及距离",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 7
+   },
+   "cmd": 1110207.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "巴巴托斯",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下的从属契约",
+    "🜏从契　司祭：生命上限，并定时回复",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 8
+   },
+   "cmd": 1110208.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "派蒙",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下的从属契约",
+    "🜏从契　咒使：命中使敌人虚弱",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 9
+   },
+   "cmd": 1110209.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "布耶尔",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "利维坦麾下的从属契约",
+    "🜏从契　处刑者：攻击提升，并追斩残血",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 10
+   },
+   "cmd": 1110210.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "古辛",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下的从属契约",
+    "🜏从契　先锋：护甲与击退抗性",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 11
+   },
+   "cmd": 1110211.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "西迪",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下的从属契约",
+    "🜏从契　猎手：移速与触及距离",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 12
+   },
+   "cmd": 1110212.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "贝雷特",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下的从属契约",
+    "🜏从契　司祭：生命上限，并定时回复",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 13
+   },
+   "cmd": 1110213.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "列拉金",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下的从属契约",
+    "🜏从契　咒使：命中使敌人虚弱",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 14
+   },
+   "cmd": 1110214.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "艾利欧格",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "亚巴顿麾下的从属契约",
+    "🜏从契　处刑者：攻击提升，并追斩残血",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 15
+   },
+   "cmd": 1110215.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "桀派",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下的从属契约",
+    "🜏从契　先锋：护甲与击退抗性",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 16
+   },
+   "cmd": 1110216.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "布提斯",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下的从属契约",
+    "🜏从契　猎手：移速与触及距离",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 17
+   },
+   "cmd": 1110217.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "巴钦",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下的从属契约",
+    "🜏从契　司祭：生命上限，并定时回复",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 18
+   },
+   "cmd": 1110218.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "塞列欧斯",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下的从属契约",
+    "🜏从契　咒使：命中使敌人虚弱",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 19
+   },
+   "cmd": 1110219.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "布松",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别西卜麾下的从属契约",
+    "🜏从契　处刑者：攻击提升，并追斩残血",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 20
+   },
+   "cmd": 1110220.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "莫拉格斯",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下的从属契约",
+    "🜏从契　先锋：护甲与击退抗性",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 21
+   },
+   "cmd": 1110221.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "因波斯",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下的从属契约",
+    "🜏从契　猎手：移速与触及距离",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 22
+   },
+   "cmd": 1110222.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "艾姆",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下的从属契约",
+    "🜏从契　司祭：生命上限，并定时回复",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 23
+   },
+   "cmd": 1110223.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "纳贝流士",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下的从属契约",
+    "🜏从契　咒使：命中使敌人虚弱",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 24
+   },
+   "cmd": 1110224.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "格拉夏·拉波拉斯",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "萨麦尔麾下的从属契约",
+    "🜏从契　处刑者：攻击提升，并追斩残血",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 25
+   },
+   "cmd": 1110225.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "布涅",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下的从属契约",
+    "🜏从契　先锋：护甲与击退抗性",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 26
+   },
+   "cmd": 1110226.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "罗诺比",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下的从属契约",
+    "🜏从契　猎手：移速与触及距离",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 27
+   },
+   "cmd": 1110227.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "比利士",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下的从属契约",
+    "🜏从契　司祭：生命上限，并定时回复",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 28
+   },
+   "cmd": 1110228.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "亚斯塔禄",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下的从属契约",
+    "🜏从契　咒使：命中使敌人虚弱",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 29
+   },
+   "cmd": 1110229.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "佛纽司",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "贝利尔麾下的从属契约",
+    "🜏从契　处刑者：攻击提升，并追斩残血",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 30
+   },
+   "cmd": 1110230.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "佛拉斯",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下的从属契约",
+    "🜏从契　先锋：护甲与击退抗性",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 31
+   },
+   "cmd": 1110231.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "阿斯摩太",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下的从属契约",
+    "🜏从契　猎手：移速与触及距离",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 32
+   },
+   "cmd": 1110232.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "盖布",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下的从属契约",
+    "🜏从契　司祭：生命上限，并定时回复",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 33
+   },
+   "cmd": 1110233.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "佛尔佛尔",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下的从属契约",
+    "🜏从契　咒使：命中使敌人虚弱",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 34
+   },
+   "cmd": 1110234.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
+    "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null,
+   "_new": true
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "马可西亚斯",
+   "rarity": "柱印",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "玛门麾下的从属契约",
+    "🜏从契　处刑者：攻击提升，并追斩残血",
+    "与主契约同柱时效果增强",
+    "+------------------+",
+    "长按右键镶入契约：魂誓开一槽，真名开两槽",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_seal"
+   ],
+   "custom_data": {
+    "rpg_seal": 35
+   },
+   "cmd": 1110235.0,
+   "unbreakable": false,
+   "consumable": 100120.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_model_data",
+    "custom_name",
     "food",
     "lore",
     "max_stack_size"

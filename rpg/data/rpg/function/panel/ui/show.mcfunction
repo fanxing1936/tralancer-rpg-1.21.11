@@ -1,0 +1,1 @@
+$dialog show @s {"type":"minecraft:multi_action","title":$(title),"body":{"type":"minecraft:plain_message","width":320,"contents":$(body)},"actions":$(actions),"columns":2,"exit_action":{"label":{"text":"合上","color":"#9C9A94","italic":false}},"can_close_with_escape":true,"pause":false,"after_action":"close"}
