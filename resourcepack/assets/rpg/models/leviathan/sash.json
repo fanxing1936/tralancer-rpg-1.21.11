@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/leviathan/atlas",
+    "particle": "rpg:item/leviathan/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.872,
+        8.0,
+        7.3602
+      ],
+      "to": [
+        8.128,
+        8.0,
+        8.6398
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3.0625,
+            4.0,
+            3.3125,
+            5.25
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            3.0625,
+            5.25,
+            3.3125,
+            4.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0,
+          7.7392,
+          7.1042
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      }
+    }
+  ]
+}

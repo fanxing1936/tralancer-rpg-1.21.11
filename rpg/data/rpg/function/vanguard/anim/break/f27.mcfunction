@@ -1,0 +1,3 @@
+# break 第 27 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_vanguard.py 烘焙。
+execute on passengers if entity @s[tag=rpg.vg.p.vanguard_head_004] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0f,-0.224f,0f],left_rotation:[0.70711f,0f,0f,0.70711f],scale:[8.45714f,8.45714f,8.45714f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.vg.p.vanguard_helmet1_008] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0f,-0.06543f,0.03171f],left_rotation:[0.70711f,0f,0f,0.70711f],scale:[8.45714f,8.45714f,8.45714f],right_rotation:[0f,0f,0f,1f]}}

@@ -9,6 +9,9 @@
     "rpg:beelzebub/tick",
     "rpg:vanguard/tick",
     "rpg:leviathan/tick",
+    "rpg:lucifer_lord/tick",
+    "rpg:lucifer_p2/tick",
+    "rpg:lucifer_vine/tick",
     "rpg:sunken_skeleton/tick",
     "rpg:abaddon/tick",
     "rpg:tower_wraith/tick",
@@ -16,13 +19,17 @@
     "rpg:heart_of_ender/tick",
     "rpg:arch_visage/tick",
     "rpg:pope_fight/tick",
+    "rpg:lucifer_fight/global",
+    "rpg:lucifer_boss/tick",
     "rpg:command/tick_end",
     "rpg:beelzebub/tick_late",
     "rpg:vanguard/tick_late",
     "rpg:leviathan/tick_late",
+    "rpg:lucifer_p2/tick_late",
     "rpg:sunken_skeleton/tick_late",
     "rpg:abaddon/tick_late",
     "rpg:tower_wraith/tick_late",
-    "rpg:pope/tick_late"
+    "rpg:pope/tick_late",
+    "rpg:lucifer_lord/tick_late"
   ]
 }

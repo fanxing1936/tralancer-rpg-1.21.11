@@ -61,6 +61,16 @@ MOB = Mob(
     # whirlwind 不是死亡音；不在部件清理时重播。
 )
 
+# 原作模型变体（dungeons_variant.py）：默认用从本体提取的模型；POPE_MODEL=legacy 退回手工模型。
+# 原作杖头方块没有自发光图，按旧版 staff_glow 的约定让它发光。
+import dungeons_variant  # noqa: E402
+DUNGEONS = dungeons_variant.apply(MOB, extra_glow=("SuperCube1", "pope_supercube1_020"))
+if DUNGEONS:
+    # 出手音对准原作事件（model_config.json 的 notifies：archillager_spell_Cue）
+    MOB.cues = {"attack": [[0.0, "load_spell", 1.0, 1.0], [0.36, "spell", 1.0, 1.0]],
+                "summon": [[0.0, "load_spell", 1.0, 1.0], [1.08, "summon_mobs", 1.0, 1.0]],
+                "cast": [[0.0, "load_spell", 1.0, 1.0], [0.35, "spell", 1.0, 1.0]]}
+
 
 def write_datapack(rest):
     passengers = ",".join(passenger(MOB, part, comp) for part, comp in rest)

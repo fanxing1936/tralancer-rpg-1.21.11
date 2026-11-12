@@ -1,0 +1,3 @@
+# idle 第 21 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_lucifer_vine_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.luv.p.lucifer_vine_bnd_vine_01_001] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.01536f,1.38523f,-0.02144f],left_rotation:[0.69817f,0.01407f,0.00129f,0.7158f],scale:[7.19492f,7.19492f,7.19492f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.luv.p.lucifer_vine_bnd_vine_02_002] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.05325f,2.56465f,-0.12893f],left_rotation:[0.65629f,0.03229f,-0.00777f,0.75377f],scale:[7.19492f,7.19492f,7.19492f],right_rotation:[0f,0f,0f,1f]}}

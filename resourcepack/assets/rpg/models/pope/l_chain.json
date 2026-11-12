@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/pope/atlas",
+    "particle": "rpg:item/pope/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.9784,
+        8.0,
+        7.9118
+      ],
+      "to": [
+        8.1606,
+        8.0,
+        8.1447
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            4.75,
+            8.0,
+            5.625,
+            9.125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            4.75,
+            9.125,
+            5.625,
+            8.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.1149,
+          8.0496,
+          7.817
+        ],
+        "axis": "x",
+        "angle": -5.102955128078695e-06
+      }
+    }
+  ]
+}

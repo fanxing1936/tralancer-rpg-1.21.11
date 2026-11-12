@@ -1,0 +1,3 @@
+# walk 第 4 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_lucifer_vine_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.luv.p.lucifer_vine_bnd_vine_01_001] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.00162f,1.38419f,0.04628f],left_rotation:[0.73225f,0.0072f,-0.00518f,0.68097f],scale:[7.19492f,7.19492f,7.19492f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.luv.p.lucifer_vine_bnd_vine_02_002] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.03981f,2.56852f,0.08073f],left_rotation:[0.70635f,0.00994f,-0.05236f,0.70585f],scale:[7.19492f,7.19492f,7.19492f],right_rotation:[0f,0f,0f,1f]}}

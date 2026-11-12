@@ -1,0 +1,2 @@
+execute if score @s rpg_l2_t matches 33 run data merge entity @s {start_interpolation:0,interpolation_duration:3,transformation:{translation:[-0.75f,0f,-0.75f],left_rotation:[0f,0f,0f,1f],scale:[1.5f,4.2f,1.5f],right_rotation:[0f,0f,0f,1f]}}
+execute if score @s rpg_l2_t matches 5 run data merge entity @s {start_interpolation:0,interpolation_duration:4,transformation:{translation:[-0.75f,-4.2f,-0.75f],left_rotation:[0f,0f,0f,1f],scale:[1.5f,4.2f,1.5f],right_rotation:[0f,0f,0f,1f]}}

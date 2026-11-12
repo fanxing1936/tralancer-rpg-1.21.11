@@ -1,0 +1,161 @@
+{
+ "model_scale": 14.183344670717245,
+ "height_blocks": 3.71,
+ "source_height_cm": 217.9786741733551,
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/NamelessKing/SK_NamelessKing",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\nameless"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "NamelessKing_Walk",
+   "seconds": 1.625,
+   "loop": true,
+   "ticks": 33,
+   "max_bone_error_px": 8.219600597940324e-06,
+   "max_vertex_error_px": 5.388177377460033e-06,
+   "notifies": [
+    [
+     0.0273,
+     "AnimNS_NamelessKing_Visible",
+     null
+    ],
+    [
+     0.0346,
+     "nameless_fly_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "walk",
+   "source": "NamelessKing_Walk",
+   "seconds": 1.625,
+   "loop": true,
+   "ticks": 33,
+   "max_bone_error_px": 8.219600597940324e-06,
+   "max_vertex_error_px": 5.388177377460033e-06,
+   "notifies": [
+    [
+     0.0273,
+     "AnimNS_NamelessKing_Visible",
+     null
+    ],
+    [
+     0.0346,
+     "nameless_fly_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "cast",
+   "source": "NamelessKing_TeleportIn",
+   "seconds": 0.5833333,
+   "loop": false,
+   "ticks": 12,
+   "max_bone_error_px": 0.0014612176718649306,
+   "max_vertex_error_px": 0.0011758687914735963,
+   "notifies": [
+    [
+     0.0049,
+     "AnimNS_NamelessKing_FadeIn",
+     null
+    ],
+    [
+     0.0117,
+     "PS_NamelessKing_TeleportIn",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.014,
+     "nameless_teleport_in_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "summon",
+   "source": "NamelessKing_BasicAttack",
+   "seconds": 5.7916665,
+   "loop": false,
+   "ticks": 116,
+   "max_bone_error_px": 0.0015663694878860993,
+   "max_vertex_error_px": 0.0022742454252746504,
+   "notifies": [
+    [
+     0.1949,
+     "PS_NamelessKing_SummonBuildup",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.2331,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.5495,
+     "nameless_long_load_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     3.2874,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     4.4451,
+     "nameless_cast_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     4.5198,
+     "PS_NamelessKing_SummonRelease",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "rise",
+   "source": "NamelessKing_Awake",
+   "seconds": 7.0,
+   "loop": false,
+   "ticks": 140,
+   "max_bone_error_px": 0.00038325826000554453,
+   "max_vertex_error_px": 0.0004950540086292074,
+   "notifies": [
+    [
+     0.3436,
+     "AnimNS_NamelessKing_Awake",
+     null
+    ],
+    [
+     0.3818,
+     "nameless_wakeup_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "beelzebub",
+  "source_mesh_sha256": "213b456ac0cf38f03ef14e25c684bbe7f680fd069059cfc3b4d7f98da250c2a9",
+  "triangles": 135,
+  "all_triangles_covered_once": true,
+  "bones": 32,
+  "plane_groups": 10,
+  "display_parts": 10,
+  "elements": 62,
+  "direct_uv_elements": 35,
+  "baked_elements": 27,
+  "glow_groups": 10,
+  "textures": {
+   "MI_NamelessKing": 0
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

@@ -43,3 +43,9 @@ execute if entity @s[scores={rpg_hud_dm=41}] run return run function rpg:hud/dem
 execute if entity @s[scores={rpg_hud_dm=42}] run return run function rpg:hud/demon/s42
 execute if entity @s[scores={rpg_hud_dm=43}] run return run function rpg:hud/demon/s43
 execute if entity @s[scores={rpg_hud_dm=44}] run return run function rpg:hud/demon/s44
+execute if entity @s[scores={rpg_hud_dm=45}] run return run function rpg:hud/demon/s45
+execute if entity @s[scores={rpg_hud_dm=46}] run return run function rpg:hud/demon/s46
+execute if entity @s[scores={rpg_hud_dm=47}] run return run function rpg:hud/demon/s47
+execute if entity @s[scores={rpg_hud_dm=48}] run return run function rpg:hud/demon/s48
+execute if entity @s[scores={rpg_hud_dm=49}] run return run function rpg:hud/demon/s49
+execute if entity @s[scores={rpg_hud_dm=50}] run return run function rpg:hud/demon/s50

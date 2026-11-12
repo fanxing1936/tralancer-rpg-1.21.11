@@ -1,0 +1,138 @@
+{
+ "model_scale": 8.802652887501406,
+ "height_blocks": 2.08,
+ "source_height_cm": 196.910335496068,
+ "merge": {},
+ "held_bone": "J_R_Weapon",
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/TowerWraith/SK_TowerWraith",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\towerwraith"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Wraith_Idle",
+   "seconds": 5.7916665,
+   "loop": true,
+   "ticks": 116,
+   "max_bone_error_px": 4.5803867449369114e-07,
+   "max_vertex_error_px": 2.905200041634297e-06,
+   "notifies": [
+    [
+     1.5228,
+     "AnimNS_Wraith_Opaque",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "walk",
+   "source": "Wraith_Walk2",
+   "seconds": 3.0833333,
+   "loop": true,
+   "ticks": 62,
+   "max_bone_error_px": 1.7463944831335929e-06,
+   "max_vertex_error_px": 1.1059604664387091e-05,
+   "notifies": [
+    [
+     0.0584,
+     "AnimNS_Wraith_Opaque",
+     null
+    ],
+    [
+     0.1003,
+     "StepSFX",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "attack",
+   "source": "Wraith_BasicAttack",
+   "seconds": 1.8333334,
+   "loop": false,
+   "ticks": 37,
+   "max_bone_error_px": 0.05345894261562713,
+   "max_vertex_error_px": 0.05184357959263129,
+   "notifies": [
+    [
+     0.0001,
+     "wraith_fire_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0405,
+     "AnimNS_Wraith_ChargeUp",
+     null
+    ],
+    [
+     0.1233,
+     "WraithAttackSFX",
+     null
+    ],
+    [
+     0.1747,
+     "wraith_fly_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2746,
+     "PS_Wraith_GhostFireAttack",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "cast",
+   "source": "TowerWraith_PoisonEmberAttack",
+   "seconds": 1.8333334,
+   "loop": false,
+   "ticks": 37,
+   "max_bone_error_px": 0.023298510084704634,
+   "max_vertex_error_px": 0.020160735982277345,
+   "notifies": [
+    [
+     0.0001,
+     "wraith_fire_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0973,
+     "WraithAttack2",
+     null
+    ],
+    [
+     0.1514,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1747,
+     "wraith_fly_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "tower_wraith",
+  "source_mesh_sha256": "3a6865d9218dd896322acb3ef652f08b078b7a5dfad95837917937c279306ee4",
+  "triangles": 134,
+  "all_triangles_covered_once": true,
+  "bones": 30,
+  "plane_groups": 13,
+  "display_parts": 12,
+  "elements": 67,
+  "direct_uv_elements": 64,
+  "baked_elements": 3,
+  "glow_groups": 0,
+  "textures": {
+   "MI_TowerWraith": 0
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

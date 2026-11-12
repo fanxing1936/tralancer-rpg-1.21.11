@@ -1,0 +1,94 @@
+{
+  "textures": {
+    "0": "rpg:item/tower_wraith/atlas",
+    "particle": "rpg:item/tower_wraith/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.64,
+        7.64,
+        8.0
+      ],
+      "to": [
+        8.36,
+        8.36,
+        8.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            1.0,
+            1.0,
+            1.75,
+            0.25
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            1.75,
+            1.0,
+            1.0,
+            0.25
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0009,
+          8.0004,
+          7.9283
+        ],
+        "axis": "x",
+        "angle": -0.00015334642815193007
+      }
+    },
+    {
+      "from": [
+        7.64,
+        7.64,
+        8.0
+      ],
+      "to": [
+        8.36,
+        8.36,
+        8.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4.75,
+            1.4873,
+            5.5,
+            2.2363
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            5.5,
+            1.4873,
+            4.75,
+            2.2363
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0009,
+          8.0004,
+          7.9283
+        ],
+        "axis": "x",
+        "angle": -0.00015334642815193007
+      }
+    }
+  ]
+}

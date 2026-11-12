@@ -1,0 +1,9 @@
+scoreboard objectives add rpg_lu_anim dummy
+scoreboard objectives add rpg_lu_t dummy
+scoreboard objectives add rpg_lu_x dummy
+scoreboard objectives add rpg_lu_z dummy
+scoreboard objectives add rpg_lu_dx dummy
+scoreboard objectives add rpg_lu_dz dummy
+scoreboard objectives add rpg_lu_move dummy
+scoreboard objectives add rpg_lu_clock dummy
+scoreboard objectives add rpg_lu_hurt dummy

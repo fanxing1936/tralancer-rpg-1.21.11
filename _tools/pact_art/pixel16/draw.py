@@ -77,6 +77,10 @@ def book_palette(deep, lit):
 
 def book(deep, lit, tier):
     pal = book_palette(deep, lit)
+    if tier == 1:
+        # Same leather/paper IDs and geometry; all metal is cold iron.
+        pal.update(dict(zip('abcde', map(rgb, [
+            '3A3A40', '6A6A72', '6A6A72', 'A0A0A8', 'A0A0A8']))))
     im = matrix(BOOK, pal)
     # Four separate raised clasps: a bright upper pixel, mid face, dark foot.
     clasps = [((8, 2), (9, 2), (9, 3)), ((2, 5), (3, 5), (3, 6)),
@@ -105,7 +109,11 @@ def book(deep, lit, tier):
             if (x+dx, y+dy) not in glyph:
                 put(im, (x+dx, y+dy), pal['0' if dx+dy < 2 else '1'])
     for xy in sorted(glyph):
-        put(im, xy, pal['w' if xy in core else 'v'])
+        if tier == 1:
+            # Recessed stamp with one upper-left lip; no luminous core.
+            put(im, xy, pal['3' if xy == (8, 4) else '1'])
+        else:
+            put(im, xy, pal['w' if xy in core else 'v'])
     if tier == 3:
         put(im, (8, 5), pal['z'])
     return im
@@ -216,8 +224,9 @@ def reference():
 
 def preview(assets):
     # 32 native pixels (two icon widths) of fully transparent separation.
-    board = Image.new('RGBA', (16 + 7*48, 16 + 4*48))
-    groups = [[assets[f'pact_{n}_t2.png'] for n in PILLARS],
+    board = Image.new('RGBA', (16 + 7*48, 16 + 5*48))
+    groups = [[assets[f'pact_{n}.png'] for n in PILLARS],
+              [assets[f'pact_{n}_t2.png'] for n in PILLARS],
               [assets[f'pact_{n}_t3.png'] for n in PILLARS],
               [assets[f'page_{n}.png'] for n in PILLARS],
               [assets[f'seal_{n}.png'] for n in range(1, 6)]]
@@ -226,7 +235,7 @@ def preview(assets):
             board.paste(im, (8+48*col, 8+48*row))
     board.resize((board.width*6, board.height*6), Image.Resampling.NEAREST).save(HERE / 'preview.png')
     compare = Image.new('RGBA', (16+8*48, 32))
-    for i, im in enumerate(groups[0] + [reference()]):
+    for i, im in enumerate(groups[1] + [reference()]):
         compare.paste(im, (8+i*48, 8))
     compare.resize((compare.width*6, compare.height*6), Image.Resampling.NEAREST).save(HERE / 'comparison_t2.png')
     detail = Image.new('RGBA', (160, 32))
@@ -235,59 +244,69 @@ def preview(assets):
     detail.resize((1600, 320), Image.Resampling.NEAREST).save(HERE / 'review_detail.png')
 
 def main():
-    assets = {}
-    for i, (name, (deep, lit)) in enumerate(PILLARS.items()):
-        for tier in (2, 3):
-            assets[f'pact_{name}_t{tier}.png'] = book(deep, lit, tier)
-        assets[f'page_{name}.png'] = page(deep, lit, SYMBOLS[i])
-    for i, glyph in enumerate(SEAL_GLYPHS, 1):
-        assets[f'seal_{i}.png'] = seal(glyph)
+    # This task only generates tier one. In particular, the accepted seal
+    # rework on disk is newer than seal() and the original validation entries.
+    validation_path = HERE / 'validation.json'
+    validation = json.loads(validation_path.read_text(encoding='utf-8'))
+    names = ([f'pact_{n}_t{tier}.png' for n in PILLARS for tier in (2, 3)]
+             + [f'page_{n}.png' for n in PILLARS]
+             + [f'seal_{i}.png' for i in range(1, 6)])
+    before = {n: hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in names}
+    original_mismatches = [n for n in names
+                           if before[n] != validation['assets'][n]['sha256']]
+    # Do not silently bless a changed book or page. Existing seal discrepancies
+    # are recorded separately without replacing the historical SHA-256 values.
+    assert all(n.startswith('seal_') for n in original_mismatches), original_mismatches
+    assets = {n: Image.open(HERE/n).convert('RGBA') for n in names}
     report = {}
-    for name, im in assets.items():
+    patterns = []
+    for name, (deep, lit) in PILLARS.items():
+        filename = f'pact_{name}.png'
+        im = book(deep, lit, 1)
         colors = {p[:3] for p in im.getdata() if p[3]}
         assert im.size == (16, 16)
         assert {p[3] for p in im.getdata()} == {0, 255}
-        if name.startswith('seal_'):
-            assert colors <= set(GREYS)
-        else:
-            assert 16 <= len(colors) <= 24, (name, len(colors))
-        bbox = im.getbbox()
-        assert 13 <= max(bbox[2]-bbox[0], bbox[3]-bbox[1]) <= 15
-        im.save(HERE / name)
-        report[name] = {'size': [16, 16], 'opaque_colors': len(colors), 'alpha': [0, 255],
-                        'bbox': bbox, 'sha256': hashlib.sha256((HERE/name).read_bytes()).hexdigest()}
-    for prefix in ('pact_', 'page_', 'seal_'):
-        for suffix in (('_t2.png', '_t3.png') if prefix == 'pact_' else ('.png',)):
-            masks = [im.getchannel('A').tobytes() for name, im in assets.items() if name.startswith(prefix) and name.endswith(suffix)]
-            assert len(set(masks)) == 1, (prefix, suffix)
-    # Hue swaps preserve the full equality pattern of every book pixel.
-    for tier in (2, 3):
-        patterns = []
-        for name in PILLARS:
-            seen = {}
-            pattern = []
-            for p in assets[f'pact_{name}_t{tier}.png'].getdata():
-                pattern.append(seen.setdefault(p, len(seen)))
-            patterns.append(pattern)
-        assert all(p == patterns[0] for p in patterns)
-    for name, (deep, lit) in PILLARS.items():
-        im = assets[f'pact_{name}_t3.png']
-        pal = book_palette(deep, lit)
-        cross = {(x, y) for y in range(16) for x in range(16)
-                 if im.getpixel((x, y)) in {rgba(pal[k]) for k in 'vwz'}}
-        assert cross == {(16-x, y) for x, y in cross}
-        assert len([p for p in im.getdata() if p == (255, 255, 255, 255)]) == 1
-    wax_mask = assets['seal_1.png'].getchannel('A')
-    assert wax_mask.tobytes() == wax_mask.transpose(Image.Transpose.FLIP_LEFT_RIGHT).tobytes()
-    assert wax_mask.tobytes() == wax_mask.transpose(Image.Transpose.FLIP_TOP_BOTTOM).tobytes()
+        assert 14 <= len(colors) <= 22, (filename, len(colors))
+        assert not (colors & set(GOLD.values())), filename
+        assert im.getchannel('A').tobytes() == assets[f'pact_{name}_t2.png'].getchannel('A').tobytes()
+        assert book(deep, lit, 2).tobytes() == assets[f'pact_{name}_t2.png'].tobytes()
+        # Only iron and the recessed glyph may differ from tier two.
+        leather_paper = {rgba(book_palette(deep, lit)[k]) for k in '0123456pqrstu'}
+        t2 = assets[f'pact_{name}_t2.png']
+        glyph_area = {(x, y) for y in range(3, 8) for x in range(6, 11)}
+        for y in range(16):
+            for x in range(16):
+                if (x, y) not in glyph_area and t2.getpixel((x, y)) in leather_paper:
+                    assert im.getpixel((x, y)) == t2.getpixel((x, y))
+        seen = {}
+        patterns.append([seen.setdefault(p, len(seen)) for p in im.getdata()])
+        im.save(HERE / filename)
+        assets[filename] = im
+        report[filename] = {
+            'size': [16, 16], 'opaque_colors': len(colors), 'alpha': [0, 255],
+            'bbox': im.getbbox(),
+            'sha256': hashlib.sha256((HERE/filename).read_bytes()).hexdigest()}
+    assert all(p == patterns[0] for p in patterns)
     preview(assets)
-    (HERE/'validation.json').write_text(json.dumps({'assets': report, 'checks': {
-        'native_grid': True, 'binary_alpha': True, 'shared_family_silhouettes': True,
-        'book_material_structure_identical': True, 'seal_palette': True,
-        't3_cross_symmetric_one_white_pixel': True, 'seal_contour_symmetric': True,
-        'book_page_colors_16_to_24': True, 'preview_gap_native_pixels': 32,
-        'seal_color_exception': 'BRIEF16 explicitly specifies nine greys'}}, indent=2), encoding='utf-8')
-    print(f'Validated {len(assets)} sprites; colors: ' + ', '.join(f'{n}: {v["opaque_colors"]}' for n, v in report.items()))
+    tiers = Image.new('RGBA', (16 + 7*48, 16 + 3*48))
+    for row, suffix in enumerate(('.png', '_t2.png', '_t3.png')):
+        for col, name in enumerate(PILLARS):
+            tiers.paste(assets[f'pact_{name}{suffix}'], (8+48*col, 8+48*row))
+    tiers.resize((tiers.width*6, tiers.height*6), Image.Resampling.NEAREST).save(HERE / 'preview_tiers.png')
+    after = {n: hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in names}
+    assert after == before
+    validation['tier1_2026_11_07'] = {
+        'assets': report,
+        'checks': {'native_grid': True, 'binary_alpha': True,
+                   'opaque_colors_14_to_22': True, 'no_gold_metal': True,
+                   't2_silhouette_identical': True,
+                   'shared_color_structure': True,
+                   'existing_files_unchanged': before == after},
+        'existing_sha256': after,
+        'preexisting_original_validation_mismatches': original_mismatches}
+    validation_path.write_text(json.dumps(validation, indent=2) + '\n', encoding='utf-8')
+    print('Tier one: ' + ', '.join(f'{n}: {v["opaque_colors"]}' for n, v in report.items()))
+    print(f'Existing files unchanged: {len(names)}/{len(names)}; pre-existing validation mismatches: {original_mismatches}')
 
 if __name__ == '__main__':
     main()

@@ -1,2 +1,4 @@
-execute if score @s rpg_vg_t matches ..3 run return run function rpg:vanguard/anim/walk/at_a_a
-function rpg:vanguard/anim/walk/at_a_b
+execute if score @s rpg_vg_t matches 1 run return run function rpg:vanguard/anim/walk/f0
+execute if score @s rpg_vg_t matches 3 run return run function rpg:vanguard/anim/walk/f2
+execute if score @s rpg_vg_t matches 5 run return run function rpg:vanguard/anim/walk/f4
+execute if score @s rpg_vg_t matches 7 run return run function rpg:vanguard/anim/walk/f6

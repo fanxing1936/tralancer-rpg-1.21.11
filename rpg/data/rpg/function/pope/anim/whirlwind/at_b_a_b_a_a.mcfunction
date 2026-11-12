@@ -1,4 +1,2 @@
-execute if score @s rpg_pp_t matches 88 run return run function rpg:pope/anim/whirlwind/f87
-execute if score @s rpg_pp_t matches 89 run return run function rpg:pope/anim/whirlwind/f88
-execute if score @s rpg_pp_t matches 90 run return run function rpg:pope/anim/whirlwind/f89
-execute if score @s rpg_pp_t matches 91 run return run function rpg:pope/anim/whirlwind/f90
+execute if score @s rpg_pp_t matches ..106 run return run function rpg:pope/anim/whirlwind/at_b_a_b_a_a_a
+function rpg:pope/anim/whirlwind/at_b_a_b_a_a_b

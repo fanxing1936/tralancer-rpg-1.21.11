@@ -1,0 +1,237 @@
+{
+  "textures": {
+    "0": "rpg:item/beelzebub/atlas",
+    "particle": "rpg:item/beelzebub/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.6799,
+        8.384,
+        7.68
+      ],
+      "to": [
+        8.3201,
+        8.384,
+        8.32
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            9.0,
+            0.0,
+            10.25,
+            1.375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            9.0,
+            1.375,
+            10.25,
+            0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0,
+          8.008,
+          8.112
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        7.6799,
+        7.616,
+        8.32
+      ],
+      "to": [
+        8.3201,
+        8.384,
+        8.32
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.0,
+            4.625,
+            0.75,
+            4.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            0.0,
+            4.0,
+            0.75,
+            4.625
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0,
+          8.008,
+          8.112
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        7.6799,
+        7.616,
+        7.68
+      ],
+      "to": [
+        8.3201,
+        7.616,
+        8.32
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            10.25,
+            0.0,
+            11.625,
+            1.375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            10.25,
+            1.375,
+            11.625,
+            0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0,
+          8.008,
+          8.112
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        7.6799,
+        7.616,
+        7.68
+      ],
+      "to": [
+        7.6799,
+        8.384,
+        8.32
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            0.75,
+            4.75,
+            1.375,
+            5.5
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            1.375,
+            4.75,
+            0.75,
+            5.5
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0,
+          8.008,
+          8.112
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        8.3201,
+        7.616,
+        7.68
+      ],
+      "to": [
+        8.3201,
+        8.384,
+        8.32
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            12.875,
+            0.0,
+            11.625,
+            1.25
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            12.875,
+            1.25,
+            11.625,
+            0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0,
+          8.008,
+          8.112
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      },
+      "light_emission": 15,
+      "shade": false
+    }
+  ]
+}

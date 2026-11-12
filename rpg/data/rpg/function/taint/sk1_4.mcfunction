@@ -7,3 +7,5 @@ playsound minecraft:entity.ender_dragon.flap hostile @a[distance=..32] ~ ~ ~ 0.7
 particle dragon_breath ~ ~1.5 ~ 3 1.2 3 0.08 72
 particle dust_color_transition{from_color:[0.37,0.84,0.55],to_color:[0.0,0.29,0.11],scale:2} ~ ~1 ~ 3 1 3 0.04 54
 execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk1d_fall
+# Lucifer mesh appearance (add_lucifer_model.py)
+execute if entity @s[tag=rpg.lu,tag=!rpg.lu.phase2] run function rpg:lucifer_lord/skill/sk1_4

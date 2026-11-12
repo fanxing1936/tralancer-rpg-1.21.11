@@ -1,2 +1,4 @@
-execute if score @s rpg_sk_t matches ..13 run return run function rpg:sunken_skeleton/anim/walk/at_b_a
-function rpg:sunken_skeleton/anim/walk/at_b_b
+execute if score @s rpg_sk_t matches 9 run return run function rpg:sunken_skeleton/anim/walk/f8
+execute if score @s rpg_sk_t matches 11 run return run function rpg:sunken_skeleton/anim/walk/f10
+execute if score @s rpg_sk_t matches 13 run return run function rpg:sunken_skeleton/anim/walk/f12
+execute if score @s rpg_sk_t matches 15 run return run function rpg:sunken_skeleton/anim/walk/f14

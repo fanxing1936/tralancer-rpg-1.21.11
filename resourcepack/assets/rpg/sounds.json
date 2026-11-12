@@ -438,6 +438,386 @@
       "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_003_soundwave"
     ]
   },
+  "lucifer_lord.arrowwhoosh": {
+    "sounds": [
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-003_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-004_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-005_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-006_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "lucifer_lord.attack": {
+    "sounds": [
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonattack-001",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonattack-002",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonattack-003",
+        "stream": false
+      }
+    ]
+  },
+  "lucifer_lord.death": {
+    "sounds": [
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-001_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-002_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-003_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-004_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-005_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-006_soundwave",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-007_soundwave",
+        "stream": false
+      }
+    ]
+  },
+  "lucifer_lord.hurt": {
+    "sounds": [
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-001",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-002",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-003",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-004",
+        "stream": false
+      }
+    ]
+  },
+  "lucifer_lord.idle": {
+    "sounds": [
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonidle-001",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonidle-002",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonidle-003",
+        "stream": false
+      }
+    ]
+  },
+  "lucifer_lord.step": {
+    "sounds": [
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-001",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-002",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-003",
+        "stream": false
+      },
+      {
+        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-004",
+        "stream": false
+      }
+    ]
+  },
+  "lucifer_p2.attack_boom": {
+    "subtitle": "subtitles.rpg.lucifer_p2.attack_boom",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_attack_boom_foley"
+    ]
+  },
+  "lucifer_p2.basic_attack_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.basic_attack_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_basicattack_foley"
+    ]
+  },
+  "lucifer_p2.basic_attack_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.basic_attack_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_basicattack_vocal",
+      "rpg:lucifer_p2/dlc_mob_abom_basicattack2_vocal",
+      "rpg:lucifer_p2/dlc_mob_abom_vineattack_vocal"
+    ]
+  },
+  "lucifer_p2.death_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.death_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_death_foley"
+    ]
+  },
+  "lucifer_p2.death_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.death_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_death_vocal"
+    ]
+  },
+  "lucifer_p2.fall_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.fall_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_fall_foley"
+    ]
+  },
+  "lucifer_p2.fall_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.fall_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_fall_vocal"
+    ]
+  },
+  "lucifer_p2.flower_close": {
+    "subtitle": "subtitles.rpg.lucifer_p2.flower_close",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_flowerclose"
+    ]
+  },
+  "lucifer_p2.flower_loop": {
+    "subtitle": "subtitles.rpg.lucifer_p2.flower_loop",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_flower_loop"
+    ]
+  },
+  "lucifer_p2.flower_open": {
+    "subtitle": "subtitles.rpg.lucifer_p2.flower_open",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_floweropen"
+    ]
+  },
+  "lucifer_p2.getup_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.getup_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_getup_foley"
+    ]
+  },
+  "lucifer_p2.getup_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.getup_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_getup_vocal"
+    ]
+  },
+  "lucifer_p2.hurt_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.hurt_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_gethit1_foley",
+      "rpg:lucifer_p2/dlc_mob_abom_gethit2_foley",
+      "rpg:lucifer_p2/dlc_mob_abom_gethit3_foley"
+    ]
+  },
+  "lucifer_p2.hurt_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.hurt_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_gethit1_vocal",
+      "rpg:lucifer_p2/dlc_mob_abom_gethit2_vocal",
+      "rpg:lucifer_p2/dlc_mob_abom_gethit3_vocal",
+      "rpg:lucifer_p2/dlc_mob_abom_gethit4_vocal"
+    ]
+  },
+  "lucifer_p2.idle_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.idle_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_idle_foley"
+    ]
+  },
+  "lucifer_p2.idle_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.idle_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_idle_vocal"
+    ]
+  },
+  "lucifer_p2.intro_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.intro_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_intro_foley_stereo"
+    ]
+  },
+  "lucifer_p2.intro_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.intro_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_intro_vocal_stereo"
+    ]
+  },
+  "lucifer_p2.land_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.land_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_land_foley"
+    ]
+  },
+  "lucifer_p2.land_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.land_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_land_vocal"
+    ]
+  },
+  "lucifer_p2.laugh_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.laugh_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_laugh_vocal_stereo"
+    ]
+  },
+  "lucifer_p2.music_end_preview": {
+    "subtitle": "subtitles.rpg.lucifer_p2.music_end_preview",
+    "sounds": [
+      {
+        "stream": true,
+        "name": "rpg:lucifer_p2/bgm_env_sosw2dbosscauldronend_001_soundwave"
+      }
+    ]
+  },
+  "lucifer_p2.music_loop_preview": {
+    "subtitle": "subtitles.rpg.lucifer_p2.music_loop_preview",
+    "sounds": [
+      {
+        "stream": true,
+        "name": "rpg:lucifer_p2/bgm_env_sosw2dbosscauldronloop_001_soundwave"
+      }
+    ]
+  },
+  "lucifer_p2.music_start_preview": {
+    "subtitle": "subtitles.rpg.lucifer_p2.music_start_preview",
+    "sounds": [
+      {
+        "stream": true,
+        "name": "rpg:lucifer_p2/bgm_env_sosw2dbosscauldronstart_001_soundwave"
+      }
+    ]
+  },
+  "lucifer_p2.summon_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.summon_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_summon_foley"
+    ]
+  },
+  "lucifer_p2.summon_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.summon_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_summon_vocal"
+    ]
+  },
+  "lucifer_p2.vine_attack_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.vine_attack_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_vineattack_foley"
+    ]
+  },
+  "lucifer_p2.vine_attack_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.vine_attack_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_vineattack_vocal",
+      "rpg:lucifer_p2/dlc_mob_abom_basicattack_vocal",
+      "rpg:lucifer_p2/dlc_mob_abom_basicattack2_vocal"
+    ]
+  },
+  "lucifer_p2.vine_burst_new": {
+    "subtitle": "subtitles.rpg.lucifer_p2.vine_burst_new",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abomvine_burst_f_new"
+    ]
+  },
+  "lucifer_p2.vine_burst_old": {
+    "subtitle": "subtitles.rpg.lucifer_p2.vine_burst_old",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abomvine_burst_f"
+    ]
+  },
+  "lucifer_p2.vine_fail_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.vine_fail_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_vineattackfail_foley"
+    ]
+  },
+  "lucifer_p2.vine_fail_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.vine_fail_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_vineattackfail_vocal"
+    ]
+  },
+  "lucifer_p2.vine_success_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.vine_success_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_vineattacksuccess_foley"
+    ]
+  },
+  "lucifer_p2.vine_success_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.vine_success_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_vineattacksuccess_vocal"
+    ]
+  },
+  "lucifer_p2.walk_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.walk_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_walk1_foley",
+      "rpg:lucifer_p2/dlc_mob_abom_walk2_foley"
+    ]
+  },
+  "lucifer_p2.walk_legacy_foley": {
+    "subtitle": "subtitles.rpg.lucifer_p2.walk_legacy_foley",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_walk_foley"
+    ]
+  },
+  "lucifer_p2.walk_legacy_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.walk_legacy_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_walk_vocal"
+    ]
+  },
+  "lucifer_p2.walk_voice": {
+    "subtitle": "subtitles.rpg.lucifer_p2.walk_voice",
+    "sounds": [
+      "rpg:lucifer_p2/dlc_mob_abom_walk1_vocal",
+      "rpg:lucifer_p2/dlc_mob_abom_walk2_vocal"
+    ]
+  },
   "pope.appear": {
     "subtitle": "subtitles.rpg.pope.appear",
     "sounds": [

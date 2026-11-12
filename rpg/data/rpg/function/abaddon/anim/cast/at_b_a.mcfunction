@@ -1,2 +1,2 @@
-execute if score @s rpg_ab_t matches ..22 run return run function rpg:abaddon/anim/cast/at_b_a_a
+execute if score @s rpg_ab_t matches ..20 run return run function rpg:abaddon/anim/cast/at_b_a_a
 function rpg:abaddon/anim/cast/at_b_a_b

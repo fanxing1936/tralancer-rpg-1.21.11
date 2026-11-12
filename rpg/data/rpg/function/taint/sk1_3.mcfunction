@@ -5,3 +5,5 @@ execute at @s as @a[distance=..14,gamemode=!spectator,gamemode=!creative] run fu
 playsound minecraft:entity.illusioner.prepare_blindness hostile @a[distance=..32] ~ ~ ~ 1 0.6
 particle end_rod ~ ~1 ~ 3 1 3 0.1 60
 execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk1c_lift
+# Lucifer mesh appearance (add_lucifer_model.py)
+execute if entity @s[tag=rpg.lu,tag=!rpg.lu.phase2] run function rpg:lucifer_lord/skill/sk1_3

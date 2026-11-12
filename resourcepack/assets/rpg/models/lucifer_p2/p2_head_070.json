@@ -1,0 +1,42 @@
+{
+  "textures": {
+    "0": "rpg:item/lucifer_p2/atlas",
+    "particle": "rpg:item/lucifer_p2/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.5328,
+        7.5328,
+        8.0
+      ],
+      "to": [
+        8.4672,
+        8.4672,
+        8.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            9.4844,
+            2.0234,
+            9.1914,
+            2.3164
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            9.1914,
+            2.0234,
+            9.4844,
+            2.3164
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

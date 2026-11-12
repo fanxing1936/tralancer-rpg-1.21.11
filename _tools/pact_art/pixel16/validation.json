@@ -480,5 +480,179 @@
     "book_page_colors_16_to_24": true,
     "preview_gap_native_pixels": 32,
     "seal_color_exception": "BRIEF16 explicitly specifies nine greys"
+  },
+  "tier1_2026_11_07": {
+    "assets": {
+      "pact_lucifer.png": {
+        "size": [
+          16,
+          16
+        ],
+        "opaque_colors": 16,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          1,
+          15,
+          15
+        ],
+        "sha256": "bbca08eca64fef52ea30bfd5dcd2efee161fc2da1e4bc4d892a612856352f7c5"
+      },
+      "pact_leviathan.png": {
+        "size": [
+          16,
+          16
+        ],
+        "opaque_colors": 16,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          1,
+          15,
+          15
+        ],
+        "sha256": "18180ced5a234b7227497058edee9f085e9d86a83343319cad9f76e0df91f5cd"
+      },
+      "pact_abaddon.png": {
+        "size": [
+          16,
+          16
+        ],
+        "opaque_colors": 16,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          1,
+          15,
+          15
+        ],
+        "sha256": "26ea5b64977f52581e529aa3b2f50d70658a17e93457f037c24296775e94dd45"
+      },
+      "pact_beelzebub.png": {
+        "size": [
+          16,
+          16
+        ],
+        "opaque_colors": 16,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          1,
+          15,
+          15
+        ],
+        "sha256": "84a83434b6b9560c8362c364646b69358dcf41b5b312c59819edad202569a263"
+      },
+      "pact_samael.png": {
+        "size": [
+          16,
+          16
+        ],
+        "opaque_colors": 16,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          1,
+          15,
+          15
+        ],
+        "sha256": "2b025681630e08fc6dfd022cf208805ed9f558e616246a9b16a60874cf629ce2"
+      },
+      "pact_belial.png": {
+        "size": [
+          16,
+          16
+        ],
+        "opaque_colors": 16,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          1,
+          15,
+          15
+        ],
+        "sha256": "ab0280b6264fbd00229dd0cc336cd45a503582690f2fa0383dacc52addc6bf7c"
+      },
+      "pact_mammon.png": {
+        "size": [
+          16,
+          16
+        ],
+        "opaque_colors": 16,
+        "alpha": [
+          0,
+          255
+        ],
+        "bbox": [
+          1,
+          1,
+          15,
+          15
+        ],
+        "sha256": "9606cc7e95a3035dcdb27a2b24f41be0b0b7aa6201bca20b098d3de5f5819236"
+      }
+    },
+    "checks": {
+      "native_grid": true,
+      "binary_alpha": true,
+      "opaque_colors_14_to_22": true,
+      "no_gold_metal": true,
+      "t2_silhouette_identical": true,
+      "shared_color_structure": true,
+      "existing_files_unchanged": true
+    },
+    "existing_sha256": {
+      "pact_lucifer_t2.png": "2b1bd05c97b29a54484566e22c1b05e4ce41fcfcaae4fbade92e98b947061d11",
+      "pact_lucifer_t3.png": "9dd03cc8746774e9579829f15d03b9b4a0ffe30c206757ac8a45fa30b4adad1f",
+      "pact_leviathan_t2.png": "88aa31df11369800ca8c791bb1a479bdb887d711eb1f01adc129fe480d1094c6",
+      "pact_leviathan_t3.png": "296c1f43f2b549fba923194405c962204412877ec73568d440e972849463d875",
+      "pact_abaddon_t2.png": "cec41be3717f5111e21f56102ccdc1f780298828dbace17406e6887c3dfb8659",
+      "pact_abaddon_t3.png": "6e31967c2e621694ffe4407374601240fc0de704dda8284b0c085b76868c1043",
+      "pact_beelzebub_t2.png": "de10e3227ce1d73e28fd3bbc89c97c75587a199b21c98837d8a4eccea770bfac",
+      "pact_beelzebub_t3.png": "b92be10320f9b928724536dc97d9948fc0adfb59be9a669ef5f291cd92f27987",
+      "pact_samael_t2.png": "85b597351816a4fb787ad7352b5cf38c7d543bb11b45d5028742067a69cf5821",
+      "pact_samael_t3.png": "61523d7a9a5dd1a1f703f9b82b29a3cf63f4bc097fb997acd1c1fc2e6d82f8a5",
+      "pact_belial_t2.png": "9bcc714071b069de6962a8dcfaffb2aaab42d9299c95ede8b34275b10ed7790f",
+      "pact_belial_t3.png": "a8345659add5a764bb434ca98a1a72805d7f269dda4912389015de9c0f55d44e",
+      "pact_mammon_t2.png": "689c5c4916cb7446202cbf819463fbc78fdb4cec564b7a0b66da096c610cf36d",
+      "pact_mammon_t3.png": "6ba4b1e4f6150bfc190108fa2d3ae26336758e73f180d7c7454f9e45fa2f6efa",
+      "page_lucifer.png": "8a1ad6c9e97103f1bc11cbaf4a08432456e7a209c5c4c406cde260b3a77ccdb8",
+      "page_leviathan.png": "084e5df72ba7541d9d34aed711371af06a6c224992ef0d9a8a938dccde5a4880",
+      "page_abaddon.png": "55835d08ac4ed1cda02fe0cd6e5b22256e5e2285f129de56958d2449d08922bc",
+      "page_beelzebub.png": "d977c39f78586e557b41ca5e098f87083955f5d892ba4364159f40cba4886f05",
+      "page_samael.png": "f2ab4c2baaa9f0355af03cbca4036a671bc2775c5a2362b2b8561727bad3d871",
+      "page_belial.png": "5b194060e4d1ff9dd67d2b81a461c6f11b211bc34f551549155a7c9c92672b0d",
+      "page_mammon.png": "43bc4f0d1f22be5e0cf82815a744e499fbc0863b85624dc763234467607ef43f",
+      "seal_1.png": "d22b24c9ac717d7df0ffd3dd11768b923116ff13166266b2c68fadd3268e622a",
+      "seal_2.png": "3c28596f19a6a4814606410c43498c497208bdb304303643b56d529e234f2fd6",
+      "seal_3.png": "958195242c70e265d0cc3992b13a7eb0bc9850c5eeb784089658b22a4dd71ed5",
+      "seal_4.png": "c2434002409c745eab765becf8b43c3b94483cc644b633c3b24ff8be47e7b521",
+      "seal_5.png": "7352d009e55d783165aa483527d8510829b1fd56de4eb6b9f5598c6f666ce214"
+    },
+    "preexisting_original_validation_mismatches": [
+      "seal_1.png",
+      "seal_2.png",
+      "seal_3.png",
+      "seal_4.png",
+      "seal_5.png"
+    ]
   }
 }

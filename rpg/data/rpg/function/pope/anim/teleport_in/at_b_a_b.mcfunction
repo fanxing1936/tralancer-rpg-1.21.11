@@ -1,3 +1,3 @@
-execute if score @s rpg_pp_t matches 12 run return run function rpg:pope/anim/teleport_in/f11
-execute if score @s rpg_pp_t matches 13 run return run function rpg:pope/anim/teleport_in/f12
-execute if score @s rpg_pp_t matches 14 run return run function rpg:pope/anim/teleport_in/f13
+execute if score @s rpg_pp_t matches 15 run return run function rpg:pope/anim/teleport_in/f14
+execute if score @s rpg_pp_t matches 16 run return run function rpg:pope/anim/teleport_in/f15
+execute if score @s rpg_pp_t matches 17 run return run function rpg:pope/anim/teleport_in/f16

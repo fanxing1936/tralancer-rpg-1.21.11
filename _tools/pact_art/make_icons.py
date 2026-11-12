@@ -99,10 +99,12 @@ def tint(icon, n):
 
 
 def main():
-    """pixel16/ holds Codex's hand-finished 16x16 art: books and pages copy over."""
+    """pixel16/ holds Codex's hand-finished 16x16 art: books of all three tiers and pages copy over.
+
+    The original tier-1 books are kept in t1_old/ for reference."""
     src = os.path.join(HERE, "pixel16")
     for slug in PILLARS:
-        for name in ("pact_%s_t2", "pact_%s_t3", "page_%s"):
+        for name in ("pact_%s", "pact_%s_t2", "pact_%s_t3", "page_%s"):
             icon = Image.open(os.path.join(src, name % slug + ".png")).convert("RGBA")
             assert icon.size == (GRID, GRID), name % slug
             cap(icon).save(os.path.join(HERE, name % slug + ".png"))
@@ -111,7 +113,7 @@ def main():
         for role, master in enumerate(masters, 1):
             assert master.size == (GRID, GRID), role
             tint(master, n).save(os.path.join(HERE, "seal_%s_%d.png" % (slug, role)))
-    print("pact icons: 14 books, 7 pages, 35 seals at %d grid" % GRID)
+    print("pact icons: 21 books, 7 pages, 35 seals at %d grid" % GRID)
 
 
 if __name__ == "__main__":

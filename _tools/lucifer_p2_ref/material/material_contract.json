@@ -1,0 +1,89 @@
+{
+  "schema": "dungeons-jungle-emissive-v1",
+  "shader_name": "rendertype_item_entity_translucent_cull",
+  "client_version": "1.21.11",
+  "tint_slots": {
+    "reserved": [
+      1,
+      2
+    ],
+    "nonglow": {
+      "index": 1,
+      "rgb": [
+        37,
+        211,
+        0
+      ],
+      "integer": 2478848
+    },
+    "glow": {
+      "index": 2,
+      "rgb_base": [
+        38,
+        211,
+        0
+      ],
+      "integer_base": 2544384
+    }
+  },
+  "initial_custom_model_data_colors": [
+    16777215,
+    2478848,
+    2544384
+  ],
+  "phase_range": [
+    0,
+    199
+  ],
+  "period_ticks": 200,
+  "pulse_parts": [
+    "p2_j_spine_010",
+    "p2_head_069",
+    "p2_j_spine_087",
+    "p2_j_jaw_01_090",
+    "p2_head_093",
+    "p2_head_094",
+    "p2_head_095",
+    "p2_head_096"
+  ],
+  "pulse_part_count": 8,
+  "update": "colors[2] = glow integer_base + global phase; only pulse-tagged part item_displays",
+  "other_color_writes": "Do not replace reserved colors slots for red hurt tint; use entity outline.",
+  "max_pulse_absolute_error_one_tick": 0.010471975511965976,
+  "max_pulse_relative_error_one_tick": 0.006283185307179586,
+  "source_time_phase": "A shared server tick clock, not recovered UE runtime start phase",
+  "texture_filter": "p2 only: nearest texelFetch LOD0 for both base and auxiliary",
+  "hdr_display_mapping": "ACES fitted curve applied to linear lit base + verified HDR emission, then sRGB; no bloom",
+  "color_space": "Standard source sRGB decode assumption; original property omitted SRGB, default parser true; not GPU-captured.",
+  "compatibility": "Removing inserted shader declaration/main blocks reproduces original strings byte-for-byte; no Globals uniform added",
+  "atlas": {
+    "size": [
+      4096,
+      4096
+    ],
+    "unit_scale_java_pixels_per_ue_cm": 0.0192,
+    "model_scale": 10.0,
+    "reference_and_render_quadrants_pixel_identical": true,
+    "auxiliary_source_sha256": "116be11eb6c1e54c38f658d2bf30258fdc06f081b788469c2ff38392e195e895",
+    "albedo_source_sha256": "b15c854c7b3f656c4365031648a98564840522289a39e7e5ede5f9b9c108a7b9",
+    "original_atlas_sha256": "e2b54e485c6a6a2fbf44d9351f429f5fd12f39e75f9d1dd9fce644298055d5b5",
+    "shader_atlas_sha256": "c4f17c0fafb374762f67e6e1eb569fbcc7fe4138f214fd1ab1444a19fee718dc",
+    "auxiliary_support_matches_existing_partition": true,
+    "cutout_tiles": 51,
+    "auxiliary_encoding": {
+      "r": 19,
+      "g": 237,
+      "b": "exact original _E.B",
+      "a": 255
+    },
+    "reference_tile_bake_pixel_identical": true
+  },
+  "vanilla_shader_sha256": {
+    "vsh": "1dd0553f4f42043e9d7603f108d2963a20081b77580c814e20fef0f1eefe48af",
+    "fsh": "f7d2074126564aba5e1d5c4c3a509474e8b7191670ee15ea7dd67d140033272e"
+  },
+  "derived_shader_sha256": {
+    "vsh": "98469a32687dd01989a9d90aad05cccd576c1b38e2d6199cb420f2c0dd26b7ba",
+    "fsh": "9572baa72a12a329606fdb2ecd00e4ea5debcc402735d0ae4bd659a319972d5a"
+  }
+}

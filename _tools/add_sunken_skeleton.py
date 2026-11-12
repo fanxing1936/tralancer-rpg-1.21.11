@@ -88,6 +88,13 @@ MOB = Mob(
     hurt="hurt", death="death", ambient=("idle", 0.006), held="weapon",
 )
 
+# 原作模型变体（dungeons_variant.py）：默认用从本体提取的模型；SUNKEN_SKELETON_MODEL=legacy 退回手工模型。
+import dungeons_variant  # noqa: E402
+DUNGEONS = dungeons_variant.apply(MOB)
+if DUNGEONS:
+    # 原作事件：Skeleton_BasicAttack 的 BowLoad 0.29 s、shootbow 0.57 s
+    MOB.cues.update({"shoot": [(0.29, "load", 0.9, 1.0), (0.57, "shoot", 1.0, 1.0), (0.7, "impact", 0.6, 1.0)]})
+
 SERVANTS = "tag=rpg.demon.minion.lord2,tag=!rpg.sk,type=!minecraft:illusioner"
 SHOT_CD = 40                  # ticks between clips
 SHOT_RANGE = 12               # blocks, crossbow carriers

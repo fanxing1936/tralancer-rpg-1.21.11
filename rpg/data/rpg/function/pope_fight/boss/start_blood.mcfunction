@@ -4,5 +4,5 @@ tellraw @a[distance=..48] ["",{"text":"〖教皇〗","color":"#C9A646","bold":tr
 scoreboard players set #sk rpg_pf 4
 scoreboard players set #st rpg_pf 0
 function rpg:pope_fight/clip/cast
-execute positioned ^0.43 ^2.90 ^0.57 run function rpg:pope_fight/fx/charge
+execute positioned ^0.54 ^1.68 ^1.68 run function rpg:pope_fight/fx/charge
 playsound rpg:pope.load_spell hostile @a[distance=..32] ~ ~ ~ 0.7 1

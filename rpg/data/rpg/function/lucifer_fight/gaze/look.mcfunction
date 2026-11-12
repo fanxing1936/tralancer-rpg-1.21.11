@@ -1,0 +1,10 @@
+execute positioned ^ ^ ^2 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw
+execute positioned ^ ^ ^4 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw
+execute positioned ^ ^ ^6 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw
+execute positioned ^ ^ ^8 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw
+execute positioned ^ ^ ^10 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw
+execute positioned ^ ^ ^12 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw
+execute positioned ^ ^ ^14 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw
+execute positioned ^ ^ ^16 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw
+execute positioned ^ ^ ^18 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw
+execute positioned ^ ^ ^20 positioned ~-1.5 ~-5 ~-1.5 if entity @e[tag=rpg.dm.cast,dx=2,dy=5,dz=2] run tag @s add rpg.lu2f.saw

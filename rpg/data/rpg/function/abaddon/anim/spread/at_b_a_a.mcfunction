@@ -1,3 +1,2 @@
-execute if score @s rpg_ab_t matches 13 run return run function rpg:abaddon/anim/spread/f12
-execute if score @s rpg_ab_t matches 14 run return run function rpg:abaddon/anim/spread/f13
-execute if score @s rpg_ab_t matches 15 run return run function rpg:abaddon/anim/spread/f14
+execute if score @s rpg_ab_t matches ..24 run return run function rpg:abaddon/anim/spread/at_b_a_a_a
+function rpg:abaddon/anim/spread/at_b_a_a_b

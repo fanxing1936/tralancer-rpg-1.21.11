@@ -1,2 +1,2 @@
-execute if score @s rpg_tw_t matches 6 run return run function rpg:tower_wraith/anim/attack/f5
-execute if score @s rpg_tw_t matches 7 run return run function rpg:tower_wraith/anim/attack/f6
+execute if score @s rpg_tw_t matches ..11 run return run function rpg:tower_wraith/anim/attack/at_a_b_a_a
+function rpg:tower_wraith/anim/attack/at_a_b_a_b

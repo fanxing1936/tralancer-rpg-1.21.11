@@ -1,3 +1,4 @@
-execute if score @s rpg_lv_t matches 31 run return run function rpg:leviathan/anim/rise/f30
-execute if score @s rpg_lv_t matches 33 run return run function rpg:leviathan/anim/rise/f32
-execute if score @s rpg_lv_t matches 35 run return run function rpg:leviathan/anim/rise/f34
+execute if score @s rpg_lv_t matches 43 run return run function rpg:leviathan/anim/rise/f42
+execute if score @s rpg_lv_t matches 45 run return run function rpg:leviathan/anim/rise/f44
+execute if score @s rpg_lv_t matches 47 run return run function rpg:leviathan/anim/rise/f46
+execute if score @s rpg_lv_t matches 49 run return run function rpg:leviathan/anim/rise/f48

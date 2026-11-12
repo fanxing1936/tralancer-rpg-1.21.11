@@ -1,0 +1,80 @@
+{
+  "textures": {
+    "0": "rpg:item/abaddon/atlas",
+    "particle": "rpg:item/abaddon/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.6995,
+        7.7598,
+        7.76
+      ],
+      "to": [
+        8.2999,
+        8.2402,
+        7.76
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3.125,
+            2.9375,
+            3.0,
+            2.7812
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            3.125,
+            2.7812,
+            3.0,
+            2.9375
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "from": [
+        7.7001,
+        7.7598,
+        8.24
+      ],
+      "to": [
+        8.3005,
+        8.2402,
+        8.24
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3.125,
+            2.9375,
+            3.0,
+            2.7813
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            3.125,
+            2.7812,
+            3.0,
+            2.9375
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    }
+  ]
+}

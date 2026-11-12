@@ -1,0 +1,156 @@
+{
+  "textures": {
+    "0": "rpg:item/lucifer_p2/atlas",
+    "particle": "rpg:item/lucifer_p2/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        8.4633,
+        7.6525,
+        7.3448
+      ],
+      "to": [
+        8.4633,
+        8.3475,
+        8.6522
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            7.1953,
+            10.0234,
+            6.9766,
+            10.4336
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            7.1953,
+            10.4336,
+            6.9766,
+            10.0234
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        7.6525,
+        7.5367,
+        7.3452
+      ],
+      "to": [
+        8.3475,
+        7.5367,
+        8.6548
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7.2109,
+            10.0234,
+            7.4297,
+            10.4336
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            7.2109,
+            10.4336,
+            7.4297,
+            10.0234
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        7.5367,
+        7.6525,
+        7.3478
+      ],
+      "to": [
+        7.5367,
+        8.3475,
+        8.6552
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            7.6641,
+            10.0234,
+            7.4453,
+            10.4336
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            7.6641,
+            10.4336,
+            7.4453,
+            10.0234
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        7.6525,
+        8.4633,
+        7.3452
+      ],
+      "to": [
+        8.3475,
+        8.4633,
+        8.6548
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7.6797,
+            10.0234,
+            7.8984,
+            10.4336
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            7.6797,
+            10.4336,
+            7.8984,
+            10.0234
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    }
+  ]
+}

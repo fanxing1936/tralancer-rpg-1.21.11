@@ -1,3 +1,5 @@
+# 路西法二阶段（add_lucifer_fight.py）
+return 0
 particle dust{color:[0.37,0.84,0.55],scale:1.7} ~ ~1 ~ 0.55 0.75 0.55 0.02 3 normal
 particle end_rod ~ ~2 ~ 0.45 0.7 0.45 0.02 3 normal
 execute if score @s rpg_dm_ult matches 20 run particle flash{color:6280844} ~ ~1 ~ 0 0 0 0 1 normal

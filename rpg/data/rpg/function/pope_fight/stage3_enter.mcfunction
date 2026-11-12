@@ -4,7 +4,7 @@ scoreboard players set #t rpg_pf 0
 # 还没落下的天罚、光束、圣印到这里全部作废。
 kill @e[tag=rpg.pope.fx]
 execute as @e[type=minecraft:vindicator,tag=rpg.pf.boss,limit=1] run function rpg:pope_fight/boss/show
-execute unless entity @e[type=minecraft:vindicator,tag=rpg.pf.boss,limit=1] run scoreboard players set #t rpg_pf 139
+execute unless entity @e[type=minecraft:vindicator,tag=rpg.pf.boss,limit=1] run scoreboard players set #t rpg_pf 159
 execute as @e[type=minecraft:vindicator,tag=rpg.pf.unit] run function rpg:tower_guard/ai/remove
 execute as @e[type=minecraft:vindicator,tag=rpg.pf.boss,limit=1] run data merge entity @s {Invulnerable:1b}
 execute as @e[type=minecraft:vindicator,tag=rpg.pf.boss,limit=1] run function rpg:pope_fight/clip/whirlwind

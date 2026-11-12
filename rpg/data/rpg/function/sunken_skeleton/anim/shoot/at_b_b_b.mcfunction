@@ -1,3 +1,4 @@
-execute if score @s rpg_sk_t matches 19 run return run function rpg:sunken_skeleton/anim/shoot/f18
-execute if score @s rpg_sk_t matches 20 run return run function rpg:sunken_skeleton/anim/shoot/f19
-execute if score @s rpg_sk_t matches 21 run return run function rpg:sunken_skeleton/anim/shoot/f20
+execute if score @s rpg_sk_t matches 23 run return run function rpg:sunken_skeleton/anim/shoot/f22
+execute if score @s rpg_sk_t matches 24 run return run function rpg:sunken_skeleton/anim/shoot/f23
+execute if score @s rpg_sk_t matches 25 run return run function rpg:sunken_skeleton/anim/shoot/f24
+execute if score @s rpg_sk_t matches 26 run return run function rpg:sunken_skeleton/anim/shoot/f25

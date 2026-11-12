@@ -1,4 +1,6 @@
 # 万蛇加冕 —— 三圈蛇牙从王冠下同时破土。
+# 路西法二阶段（add_lucifer_fight.py）
+return 0
 data modify storage rpg:demon uuid set from entity @s UUID
 function rpg:taint/ult1_fangs with storage rpg:demon
 particle dust_color_transition{from_color:[0.37,0.84,0.55],to_color:[0.0,0.29,0.11],scale:3} ~ ~1 ~ 5 1 5 0.04 72 normal
@@ -9,3 +11,5 @@ particle enchanted_hit ~ ~1 ~ 4 1 4 0.12 72 normal
 playsound minecraft:entity.evoker.prepare_attack hostile @a[distance=..32] ~ ~ ~ 1.2 0.55
 playsound minecraft:entity.ender_dragon.growl hostile @a[distance=..40] ~ ~ ~ 0.8 0.7
 execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult1_hit
+# Lucifer mesh appearance (add_lucifer_model.py)
+execute if entity @s[tag=rpg.lu,tag=!rpg.lu.phase2] run function rpg:lucifer_lord/skill/ult1

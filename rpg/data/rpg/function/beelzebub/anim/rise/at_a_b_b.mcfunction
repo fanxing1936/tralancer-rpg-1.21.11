@@ -1,3 +1,2 @@
-execute if score @s rpg_bz_t matches 19 run return run function rpg:beelzebub/anim/rise/f18
-execute if score @s rpg_bz_t matches 21 run return run function rpg:beelzebub/anim/rise/f20
-execute if score @s rpg_bz_t matches 23 run return run function rpg:beelzebub/anim/rise/f22
+execute if score @s rpg_bz_t matches ..59 run return run function rpg:beelzebub/anim/rise/at_a_b_b_a
+function rpg:beelzebub/anim/rise/at_a_b_b_b

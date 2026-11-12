@@ -27,6 +27,11 @@ python add_pope_model.py ../resourcepack ../rpg
 python add_beelzebub.py ../resourcepack ../rpg
 python add_vanguard.py ../resourcepack ../rpg
 python add_leviathan_model.py ../resourcepack ../rpg
+python add_lucifer_model.py ../resourcepack ../rpg --defer-shaders
+python add_lucifer_p2_model.py ../resourcepack ../rpg
+# 原作 Abomination Vine：缠枝破土的藤蔓（dungeons_conversion/generic.py 转换）
+python add_lucifer_vine_model.py ../resourcepack ../rpg
+python add_lucifer_model.py ../resourcepack ../rpg --finalize-shaders
 python add_sunken_skeleton.py ../resourcepack ../rpg
 python add_abaddon_model.py ../resourcepack ../rpg
 python add_tower_wraith.py ../resourcepack ../rpg
@@ -34,6 +39,12 @@ python add_heart_of_ender.py ../resourcepack ../rpg
 python add_arch_visage.py ../resourcepack ../rpg
 # 教皇战特效贴图：母图在 pope_fx_ref/raw/（Codex 绘制），这里定网格和色板
 python add_pope_fx_art.py ../resourcepack
+# 路西法二阶段特效贴图：母图在 lucifer_p2_fx_ref/（Codex 绘制），这里定网格和色板
+python add_lucifer_p2_fx_art.py ../resourcepack
+# 原作静态道具：毒刺弹、藤臂尖根
+python add_lucifer_props.py ../resourcepack
+# 最终 Boss 路西法的位图血条：饰物与标题在 lucifer_boss_ref/bar/（Codex 绘制）
+python add_lucifer_boss_art.py ../resourcepack
 # last, so every hand transform in the pack has exactly one owner
 python fix_display.py ../resourcepack
 # 物品贴图按原生网格存储（整数倍放大的无损还原，新约按 D6 重建）

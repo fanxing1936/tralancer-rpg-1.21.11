@@ -1,0 +1,113 @@
+{
+ "model_scale": 8.457142857142859,
+ "height_blocks": 2.22,
+ "source_height_cm": 218.75,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [
+  {
+   "name": "shield",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\vanguard\\assets\\Dungeons\\Content\\Actors\\Characters\\Enemies\\SkeletonVanguard\\SM_DesertShield.glb",
+   "bone": "J_R_Weapon",
+   "material": "MI_DesertShield",
+   "component": "Shield",
+   "attach": "J_R_WeaponSocket"
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/SkeletonVanguard/SK_SkeletonVanguard",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\vanguard"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Skeleton_Vanguard_Idle",
+   "seconds": 4.125,
+   "loop": true,
+   "ticks": 83,
+   "max_bone_error_px": 2.8703974750617486e-07,
+   "max_vertex_error_px": 1.5868731171693018e-06,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Skeleton_Vanguard_Walk",
+   "seconds": 0.7916667,
+   "loop": true,
+   "ticks": 16,
+   "max_bone_error_px": 3.3652173207209225e-05,
+   "max_vertex_error_px": 3.3772631475694856e-05,
+   "notifies": [
+    [
+     0.1898,
+     "vanguard_step_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.6039,
+     "vanguard_step_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "attack",
+   "source": "Skeleton_Vanguard_Attack",
+   "seconds": 1.0,
+   "loop": false,
+   "ticks": 20,
+   "max_bone_error_px": 0.008649332894996097,
+   "max_vertex_error_px": 0.07104007572142892,
+   "notifies": [
+    [
+     0.3267,
+     "vanguard_spear_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3373,
+     "jump_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3481,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "break",
+   "source": "Skeleton_GetHitFromTheFront",
+   "seconds": 1.4166666,
+   "loop": false,
+   "ticks": 29,
+   "max_bone_error_px": 0.00025795126263816894,
+   "max_vertex_error_px": 0.0014936175778162148,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "vanguard",
+  "source_mesh_sha256": "f091c35a6df3c8efe26c86fdcbc36fb35abe4046a2a5394cb54caae33ea8ea0c",
+  "triangles": 894,
+  "all_triangles_covered_once": true,
+  "bones": 27,
+  "plane_groups": 15,
+  "display_parts": 12,
+  "elements": 261,
+  "direct_uv_elements": 242,
+  "baked_elements": 19,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Skeleton": 0,
+   "MI_DesertArmor": 1,
+   "MI_Glaive": 2,
+   "MI_DesertShield": 3
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ }
+}

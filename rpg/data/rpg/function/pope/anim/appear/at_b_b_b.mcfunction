@@ -1,2 +1,3 @@
-execute if score @s rpg_pp_t matches ..34 run return run function rpg:pope/anim/appear/at_b_b_b_a
-function rpg:pope/anim/appear/at_b_b_b_b
+execute if score @s rpg_pp_t matches 19 run return run function rpg:pope/anim/appear/f18
+execute if score @s rpg_pp_t matches 20 run return run function rpg:pope/anim/appear/f19
+execute if score @s rpg_pp_t matches 21 run return run function rpg:pope/anim/appear/f20

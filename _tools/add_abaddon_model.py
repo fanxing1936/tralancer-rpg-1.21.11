@@ -98,6 +98,10 @@ MOB = Mob(
 )
 
 # skill hook -> (clip, extra sound right away)
+# 原作模型变体（dungeons_variant.py）：默认用从本体提取的模型；<KEY>_MODEL=legacy 退回手工模型。
+import dungeons_variant  # noqa: E402
+DUNGEONS = dungeons_variant.apply(MOB)
+
 SKILLS = {
     "sk3_1": ("spread", "strike"),       # 收割：周身爆发
     "sk3_2": ("cast", "crown"),          # 沉眠

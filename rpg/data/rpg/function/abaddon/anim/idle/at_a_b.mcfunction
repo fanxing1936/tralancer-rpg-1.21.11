@@ -1,2 +1,3 @@
-execute if score @s rpg_ab_t matches ..25 run return run function rpg:abaddon/anim/idle/at_a_b_a
-function rpg:abaddon/anim/idle/at_a_b_b
+execute if score @s rpg_ab_t matches 13 run return run function rpg:abaddon/anim/idle/f12
+execute if score @s rpg_ab_t matches 17 run return run function rpg:abaddon/anim/idle/f16
+execute if score @s rpg_ab_t matches 21 run return run function rpg:abaddon/anim/idle/f20

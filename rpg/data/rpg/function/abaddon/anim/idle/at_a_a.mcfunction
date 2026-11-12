@@ -1,2 +1,3 @@
-execute if score @s rpg_ab_t matches ..5 run return run function rpg:abaddon/anim/idle/at_a_a_a
-function rpg:abaddon/anim/idle/at_a_a_b
+execute if score @s rpg_ab_t matches 1 run return run function rpg:abaddon/anim/idle/f0
+execute if score @s rpg_ab_t matches 5 run return run function rpg:abaddon/anim/idle/f4
+execute if score @s rpg_ab_t matches 9 run return run function rpg:abaddon/anim/idle/f8

@@ -1,2 +1,2 @@
-execute if score @s rpg_pp_t matches 57 run return run function rpg:pope/anim/whirlwind/f56
-execute if score @s rpg_pp_t matches 58 run return run function rpg:pope/anim/whirlwind/f57
+execute if score @s rpg_pp_t matches 68 run return run function rpg:pope/anim/whirlwind/f67
+execute if score @s rpg_pp_t matches 69 run return run function rpg:pope/anim/whirlwind/f68

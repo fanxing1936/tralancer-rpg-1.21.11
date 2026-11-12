@@ -1,0 +1,42 @@
+{
+  "textures": {
+    "0": "rpg:item/abaddon/atlas",
+    "particle": "rpg:item/abaddon/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.8199,
+        8.0,
+        7.8799
+      ],
+      "to": [
+        8.1801,
+        8.0,
+        8.1201
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0.9063,
+            2.8437,
+            0.8125,
+            2.9063
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            0.9063,
+            2.9063,
+            0.8125,
+            2.8438
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

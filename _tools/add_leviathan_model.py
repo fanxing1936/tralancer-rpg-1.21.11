@@ -94,6 +94,10 @@ MOB = Mob(
 )
 
 # skill hook -> (clip, extra sound right away)
+# 原作模型变体（dungeons_variant.py）：默认用从本体提取的模型；<KEY>_MODEL=legacy 退回手工模型。
+import dungeons_variant  # noqa: E402
+DUNGEONS = dungeons_variant.apply(MOB)
+
 SKILLS = {
     "sk2_1": ("cast", "impact"),         # 沉锚：锚落处涌起漩涡
     "sk2_2": ("cast", "laugh"),          # 溺没

@@ -1,2 +1,3 @@
-execute if score @s rpg_tg_t matches ..35 run return run function rpg:tower_guard/anim/normal_stop/at_b_b_a
-function rpg:tower_guard/anim/normal_stop/at_b_b_b
+execute if score @s rpg_tg_t matches 17 run return run function rpg:tower_guard/anim/normal_stop/f16
+execute if score @s rpg_tg_t matches 19 run return run function rpg:tower_guard/anim/normal_stop/f18
+execute if score @s rpg_tg_t matches 21 run return run function rpg:tower_guard/anim/normal_stop/f20

@@ -1,0 +1,4 @@
+stopsound @a[distance=..48] record minecraft:boss1
+stopsound @a[distance=..48] record minecraft:boss2
+execute as @a[distance=..48] at @s run playsound minecraft:boss1 record @s ~ ~ ~ 1 1
+scoreboard players set #bgm rpg_lub 2943

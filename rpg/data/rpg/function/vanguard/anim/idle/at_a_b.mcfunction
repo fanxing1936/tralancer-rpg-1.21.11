@@ -1,3 +1,2 @@
-execute if score @s rpg_vg_t matches 9 run return run function rpg:vanguard/anim/idle/f8
-execute if score @s rpg_vg_t matches 13 run return run function rpg:vanguard/anim/idle/f12
-execute if score @s rpg_vg_t matches 17 run return run function rpg:vanguard/anim/idle/f16
+execute if score @s rpg_vg_t matches ..25 run return run function rpg:vanguard/anim/idle/at_a_b_a
+function rpg:vanguard/anim/idle/at_a_b_b

@@ -164,6 +164,7 @@ class Mob(object):
     on_hurt    extra lines for the hurt function (as the carrier)
     anim_from  another .bbmodel whose clips this rig plays, matched by bone
                name (a rig that shares another's bone layout); default: its own
+    face_rotation  opt in to forwarding per-face UV rotations to Java models
     carrier    entity type of the carrier, or None when carriers of several
                types share the tag (selectors then go by tag alone)
     """
@@ -172,7 +173,9 @@ class Mob(object):
                  clips, carrier="minecraft:vindicator", model_scale=1.0,
                  sounds=None, sound_dir=None, cues=None, enter_cues=None,
                  hurt=None, death=None, ambient=None, on_death=(), on_hurt=(), held=None, hurt_volume=1.0, death_volume=1.0,
-                 anim_from=None):
+                 anim_from=None, face_rotation=False, idle_clip="idle", walk_clip="walk",
+                 affine_parts=(), hold_clips=(), pose_cache=False, bulk_pose=False,
+                 tick_rounding="round"):
         self.key, self.label, self.generator = key, label, generator
         self.bbmodel, self.parts, self.glow = bbmodel, parts, set(glow)
         self.seat, self.tag, self.score, self.carrier = seat, tag, score, carrier
@@ -184,6 +187,16 @@ class Mob(object):
         self.on_hurt = list(on_hurt)
         self.held = held
         self.anim_from = anim_from
+        self.face_rotation = face_rotation
+        self.idle_clip, self.walk_clip = idle_clip, walk_clip
+        self.affine_parts, self.hold_clips = set(affine_parts), set(hold_clips)
+        self.pose_cache = pose_cache
+        self.bulk_pose = bulk_pose
+        if tick_rounding not in ("round", "ceil"):
+            raise ValueError("tick_rounding must be round or ceil")
+        self.tick_rounding = tick_rounding
+        if bulk_pose and any(step != 1 for _, step, _ in clips):
+            raise ValueError("bulk_pose currently requires one-tick samples")
         self.carrier_sel = "type=%s,tag=%s" % (carrier, tag) if carrier else "tag=%s" % tag
         self.tex = "%s:item/%s/atlas" % (NS, key)
         self.fn = "%s:%s" % (NS, key)
@@ -276,7 +289,7 @@ def part_model(mob, bones, part, members, res):
             if not -16 <= v <= 32:
                 raise SystemExit("%s: %s element out of -16..32 (%s)" % (mob.key, part, v))
         el = {"from": [round(v, 4) for v in f], "to": [round(v, 4) for v in t], "faces": {}}
-        if rel != ident():
+        if max(abs(rel[i][j] - (i == j)) for i in range(4) for j in range(4)) > 1e-9:
             # a merged child bone with its own rest rotation: one axis only
             b = next(n for n in members if c in bones[n]["cubes"])
             rx, ry, rz = bones[b]["rotation"]
@@ -293,6 +306,12 @@ def part_model(mob, bones, part, members, res):
             el["faces"][face] = {"uv": [round(u0 * su, 4), round(v0 * sv, 4),
                                         round(u1 * su, 4), round(v1 * sv, 4)],
                                  "texture": "#0", "tintindex": 0}
+            if getattr(mob, "face_rotation", False):
+                rotation = data.get("rotation", 0)
+                if rotation not in (0, 90, 180, 270):
+                    raise SystemExit("%s: %s face %s rotation must be 0/90/180/270" % (mob.key, part, face))
+                if rotation:
+                    el["faces"][face]["rotation"] = int(rotation)
         elements.append(el)
     model = {"textures": {"0": mob.tex, "particle": mob.tex}, "elements": elements}
     return model, K
@@ -330,6 +349,21 @@ VANILLA = [[-16, 0, 0, 0], [0, -16, 0, 0], [0, 0, 16, 0], [0, 0, 0, 1]]
 def held_matrix(mob, bones, arm, W):
     """The held-item part on bone `arm` (see module docstring)."""
     G = mat_mul(translate(0, -mob.seat, 0), mat_mul(scale(mob.model_scale / 16.0), R180))
+    ref = getattr(mob, "held_ref", None)
+    if ref:
+        # A rig whose hand bone is not a vanilla arm (dungeons_variant.py): `arm` is the weapon
+        # socket.  At the reference pose (clip, time) the item is held the vanilla way at the
+        # socket; from there it follows the socket bone.
+        cache = mob.__dict__.setdefault("_held_cache", {})
+        if arm not in cache:
+            clip = load_animations(mob)[ref[0]]
+            Wr = posed_matrix(bones, arm, clip, ref[1])
+            p = [sum(Wr[i][k] * (bones[arm]["pivot"] + [1])[k] for k in range(4)) for i in range(3)]
+            k = getattr(mob, "held_size", 1.0)
+            L = mat_mul(VANILLA, HOLD)
+            L = [[v * k for v in row[:3]] + [0] for row in L[:3]] + [[0, 0, 0, 1]]
+            cache[arm] = mat_mul(inverse_affine(Wr), mat_mul(translate(*p), L))
+        return mat_mul(mat_mul(G, mat_mul(W, cache[arm])), R180)
     M = mat_mul(G, mat_mul(W, mat_mul(translate(*bones[arm]["pivot"]), mat_mul(VANILLA, HOLD))))
     return mat_mul(M, R180)
 
@@ -359,6 +393,23 @@ def load_animations(mob):
             keys.sort(key=lambda k: k[0])
         clips[a["name"].split("animation.", 1)[-1]] = {"length": a["length"], "tracks": tracks,
                                                        "loop": a["loop"] == "loop"}
+        if a.get("dungeons_affine_tracks"):
+            affine = {}
+            for bone, keys in a["dungeons_affine_tracks"].items():
+                parsed = []
+                for time, matrix in keys:
+                    if len(matrix) != 4 or any(len(row) != 4 for row in matrix):
+                        raise ValueError("%s: affine track %s needs 4x4 matrices" % (mob.key, bone))
+                    matrix = [[float(v) for v in row] for row in matrix]
+                    if not math.isfinite(float(time)) or any(not math.isfinite(v) for row in matrix for v in row):
+                        raise ValueError("%s: non-finite affine track %s" % (mob.key, bone))
+                    if any(abs(a-b)>1e-9 for a,b in zip(matrix[3], [0,0,0,1])):
+                        raise ValueError("%s: non-affine bottom row in %s" % (mob.key, bone))
+                    parsed.append((float(time), matrix))
+                if not parsed:
+                    raise ValueError("%s: empty affine track %s" % (mob.key, bone))
+                affine[bone] = sorted(parsed, key=lambda item: item[0])
+            clips[a["name"].split("animation.", 1)[-1]]["affine_tracks"] = affine
     return clips
 
 
@@ -389,10 +440,37 @@ def track_value(keys, time, loop=False):
     return [a[k] + (b[k] - a[k]) * alpha for k in range(3)]
 
 
-def posed_matrix(bones, name, clip, time):
+def affine_track_value(keys, time):
+    """Explicit derived world matrices, used only by opt-in deforming parts."""
+    if time <= keys[0][0]:
+        return keys[0][1]
+    if time >= keys[-1][0]:
+        return keys[-1][1]
+    lo, hi = 0, len(keys)-1
+    while hi-lo > 1:
+        mid = (lo+hi)//2
+        if keys[mid][0] <= time:
+            lo = mid
+        else:
+            hi = mid
+    t0, a = keys[lo]
+    t1, b = keys[hi]
+    alpha = (time-t0)/(t1-t0)
+    return [[a[i][j]+(b[i][j]-a[i][j])*alpha for j in range(4)] for i in range(4)]
+
+
+def posed_matrix(bones, name, clip, time, cache=None):
     """World matrix of bone `name` at `time` into `clip`."""
     m = ident()
     for n in chain(bones, name):
+        if cache is not None and n in cache:
+            m = cache[n]
+            continue
+        if n in clip.get("affine_tracks", {}):
+            m = affine_track_value(clip["affine_tracks"][n], time)
+            if cache is not None:
+                cache[n] = m
+            continue
         b = bones[n]
         rot = list(b["rotation"])
         off = [0.0, 0.0, 0.0]
@@ -402,6 +480,8 @@ def posed_matrix(bones, name, clip, time):
         if (n, "position") in clip["tracks"]:
             off = track_value(clip["tracks"][(n, "position")], time, clip["loop"])
         m = mat_mul(m, mat_mul(translate(*off), about(b["pivot"], rot)))
+        if cache is not None:
+            cache[n] = m
     return m
 
 
@@ -436,6 +516,63 @@ def components(T, s, prev=None):
     return [T[0][3], T[1][3], T[2][3]], q
 
 
+def affine_components(T, prev=None):
+    """Opt-in exact affine display decomposition for source-skinned thin faces.
+
+    Keep rotations proper, allow signed/zero scale, and choose equivalent SVD
+    axes closest to the previous frame. Ordinary rigs never enter this path.
+    """
+    import itertools
+    import numpy as np
+    A = np.asarray(T, dtype=float)[:3, :3]
+    if not np.isfinite(A).all():
+        raise ValueError("Non-finite display affine transform")
+    uniform = float(np.linalg.norm(A)/math.sqrt(3))
+    if uniform > 1e-12 and np.linalg.det(A) > 0 and np.max(abs(A.T@A-np.eye(3)*uniform**2)) < 1e-8*uniform**2:
+        qr = prev[3] if prev and len(prev) == 4 else [0.,0.,0.,1.]
+        x,y,z,w = qr
+        right = np.asarray([[1-2*(y*y+z*z),2*(x*y-z*w),2*(x*z+y*w)],
+                            [2*(x*y+z*w),1-2*(x*x+z*z),2*(y*z-x*w)],
+                            [2*(x*z-y*w),2*(y*z+x*w),1-2*(x*x+y*y)]])
+        ql = quaternion((A/uniform)@right.T)
+        if prev and sum(a*b for a,b in zip(ql,prev[1])) < 0:
+            ql = [-v for v in ql]
+        return [T[0][3],T[1][3],T[2][3]], ql, [uniform]*3, list(qr)
+    U, values, V = np.linalg.svd(A)
+    if np.linalg.det(U) < 0:
+        U[:, -1] *= -1
+        values[-1] *= -1
+    if np.linalg.det(V) < 0:
+        V[-1, :] *= -1
+        values[-1] *= -1
+    best = None
+    ref_l = prev[1] if prev else [0., 0., 0., 1.]
+    ref_r = prev[3] if prev and len(prev) == 4 else [0., 0., 0., 1.]
+    ref_s = np.asarray(prev[2]) if prev and len(prev) == 4 else None
+    for permutation in itertools.permutations(range(3)):
+        left, right = U[:, permutation], V[list(permutation), :]
+        for signs in itertools.product((-1., 1.), repeat=3):
+            l = left * signs
+            r = np.asarray(signs)[:, None] * right
+            if np.linalg.det(l) < 0 or np.linalg.det(r) < 0:
+                continue
+            ql, qr = quaternion(l), quaternion(r)
+            dl, dr = sum(a*b for a,b in zip(ql,ref_l)), sum(a*b for a,b in zip(qr,ref_r))
+            if dl < 0:
+                ql = [-v for v in ql]
+            if dr < 0:
+                qr = [-v for v in qr]
+            sv = values[list(permutation)]
+            score = 2-abs(dl)-abs(dr)
+            if ref_s is not None:
+                score += .01*float(np.linalg.norm((sv-ref_s)/np.maximum(abs(ref_s),1.)))
+            if best is None or score < best[0]:
+                best = score, ql, sv.tolist(), qr
+    if best is None:
+        raise ValueError("Unable to decompose display affine transform")
+    return [T[0][3], T[1][3], T[2][3]], best[1], best[2], best[3]
+
+
 def fl(vals):
     """SNBT float list in fixed notation (no exponents, no -0)."""
     out = []
@@ -446,7 +583,10 @@ def fl(vals):
 
 
 def snbt_components(mob, c):
-    s = fl([mob.model_scale] * 3)
+    if len(c) == 4:
+        return ("{translation:%s,left_rotation:%s,scale:%s,right_rotation:%s}"
+                % (fl(c[0]), fl(c[1]), fl(c[2]), fl(c[3])))
+    s = fl(c[2] if len(c) == 3 else [mob.model_scale] * 3)
     return ("{translation:%s,left_rotation:%s,scale:%s,right_rotation:[0f,0f,0f,1f]}"
             % (fl(c[0]), fl(c[1]), s))
 
@@ -458,15 +598,21 @@ def bake(mob, bones, offsets, clips):
         clip = clips.get(name)
         if clip is None:
             raise SystemExit("%s: no animation.%s in the .bbmodel" % (mob.key, name))
-        ticks = int(round(clip["length"] / TICK))
+        ticks = int(math.ceil(clip["length"] / TICK)) if mob.tick_rounding == "ceil" else int(round(clip["length"] / TICK))
         times = list(range(0, ticks, step)) if loop else list(range(0, ticks + 1, step))
         frames, prev = [], {}
         for t in times:
             frame = {}
+            cache = {} if mob.pose_cache else None
             for part, members in mob.parts:
-                W = posed_matrix(bones, members[0], clip, t * TICK)
+                W = posed_matrix(bones, members[0], clip, t * TICK, cache)
                 T = held_matrix(mob, bones, members[0], W) if part == mob.held else                     display_matrix(mob, bones, members[0], offsets[part], W)
-                frame[part] = prev[part] = components(T, mob.model_scale, prev.get(part))
+                held_size = getattr(mob, "held_size", 1.0) if part == mob.held else 1.0
+                frame[part] = prev[part] = (affine_components(T, prev.get(part)) if part in mob.affine_parts
+                                           else components(T, mob.model_scale * held_size, prev.get(part)))
+                if held_size != 1.0:
+                    # a held item drawn at its own size (dungeons_variant.py): carry the scale along
+                    frame[part] = prev[part] = tuple(frame[part]) + ([mob.model_scale * held_size] * 3,)
             frames.append((t, frame))
         baked[name] = {"ticks": ticks, "step": step, "loop": loop, "frames": frames}
     return baked
@@ -572,6 +718,13 @@ def write_anim(mob, baked):
     for d in (mob.anim, os.path.join(mob.func, "debug")):
         if os.path.isdir(d):
             shutil.rmtree(d)
+    if mob.bulk_pose:
+        wf(os.path.join(mob.anim, "apply.mcfunction"), [
+            "# Opt-in bulk pose: each passenger reads only its own named matrix.",
+            "$execute unless data storage %s pose.$(part) run return 0" % mob.fn,
+            "$data modify entity @s transformation set from storage %s pose.$(part)" % mob.fn,
+            "data merge entity @s {start_interpolation:0,interpolation_duration:1}",
+        ])
     for name, clip in baked.items():
         d = os.path.join(mob.anim, name)
         fn = "%s/anim/%s" % (mob.fn, name)
@@ -580,14 +733,22 @@ def write_anim(mob, baked):
         for k, (t, frame) in enumerate(clip["frames"]):
             lines = ["# %s 第 %d 刻的姿势（每 %d 刻一帧，补间 %d 刻）。由 %s 烘焙。"
                      % (name, t, step, step, mob.generator)]
+            bulk = []
             for part, _ in mob.parts:
                 c = frame[part]
                 # frame 0 may follow any clip, so it sets every part
-                if k and all(abs(a - b) < 1e-4 for a, b in zip(c[0] + c[1], prev[part][0] + prev[part][1])):
+                if k and all(abs(a - b) < 1e-4 for a, b in zip([v for values in c for v in values],
+                                                              [v for values in prev[part] for v in values])):
                     continue
-                lines.append("execute on passengers if entity @s[tag=%s.p.%s] run data merge entity @s "
-                             "{start_interpolation:0,interpolation_duration:%d,transformation:%s}"
-                             % (tg, part, step, snbt_components(mob, c)))
+                if mob.bulk_pose:
+                    bulk.append('"%s":%s' % (part, snbt_components(mob, c)))
+                else:
+                    lines.append("execute on passengers if entity @s[tag=%s.p.%s] run data merge entity @s "
+                                 "{start_interpolation:0,interpolation_duration:%d,transformation:%s}"
+                                 % (tg, part, step, snbt_components(mob, c)))
+            if mob.bulk_pose:
+                lines += ["data modify storage %s pose set value {%s}" % (mob.fn, ",".join(bulk)),
+                          'execute on passengers if entity @s[type=minecraft:item_display,tag=%s.part] run function %s/anim/apply with entity @s item.components."minecraft:custom_data"' % (tg,mob.fn)]
             lines += cue_lines(mob, name, t, step)
             prev = frame
             wf(os.path.join(d, "f%d.mcfunction" % t), lines)
@@ -597,9 +758,11 @@ def write_anim(mob, baked):
         if clip["loop"]:
             head = ["execute if score @s %s matches %d.. run scoreboard players set @s %s 0"
                     % (T, ticks, T)]
+        elif name in mob.hold_clips:
+            head = ["execute if score @s %s matches %d.. run return 0" % (T, ticks + 1)]
         else:
-            head = ["execute if score @s %s matches %d.. run return run function %s/anim/enter/idle"
-                    % (T, ticks + 1, mob.fn)]
+            head = ["execute if score @s %s matches %d.. run return run function %s/anim/enter/%s"
+                    % (T, ticks + 1, mob.fn, mob.idle_clip)]
         wf(os.path.join(d, "tick.mcfunction"),
            ["# %s：%d 刻%s。由 %s 生成。" % (name, ticks, "循环" if clip["loop"] else "，播完回到 idle",
                                          mob.generator)]
@@ -613,21 +776,21 @@ def write_anim(mob, baked):
             "return run function %s/tick" % fn,
         ])
         wf(os.path.join(mob.func, "debug", "anim", name + ".mcfunction"), [
-            "# 调试：让所有%s播放 %s%s。" % (mob.label, name, "（移动时自动切换走/站）" if name in ("idle", "walk") else ""),
+            "# 调试：让所有%s播放 %s%s。" % (mob.label, name, "（移动时自动切换走/站）" if name in (mob.idle_clip, mob.walk_clip) else ""),
             "execute as @e[%s] run function %s/anim/enter/%s" % (mob.carrier_sel, mob.fn, name),
         ])
 
-    idle, walk = ids["idle"], ids["walk"]
+    idle, walk = ids[mob.idle_clip], ids[mob.walk_clip]
     tick = [
         "# %s动画（as 载体）。%s = 当前片段，%s = 已播放刻数。" % (mob.label, S, T),
         "execute unless score @s %s matches 0.. run function %s/anim/init" % (S, mob.fn),
         "# 每 %d 刻量一次水平位移：走过 %d/100 格以上记为在走，没走就回 idle" % (STRIDE, STRIDE * 2),
         "scoreboard players add @s %s_mc 1" % sc,
         "execute if score @s %s_mc matches %d.. run function %s/anim/stride" % (sc, STRIDE, mob.fn),
-        "execute if score @s %s matches %d if score @s %s_mv matches 1.. run return run function %s/anim/enter/walk"
-        % (S, idle, sc, mob.fn),
-        "execute if score @s %s matches %d if score @s %s_mv matches 0 run return run function %s/anim/enter/idle"
-        % (S, walk, sc, mob.fn),
+        "execute if score @s %s matches %d if score @s %s_mv matches 1.. run return run function %s/anim/enter/%s"
+        % (S, idle, sc, mob.fn, mob.walk_clip),
+        "execute if score @s %s matches %d if score @s %s_mv matches 0 run return run function %s/anim/enter/%s"
+        % (S, walk, sc, mob.fn, mob.idle_clip),
     ]
     for name, _, _ in mob.clips:
         tick.append("execute if score @s %s matches %d run return run function %s/anim/%s/tick"
@@ -771,7 +934,7 @@ def build(mob, rp, dp):
     if mob.sounds:
         write_sounds(mob)
     # spawn already in idle's first pose so nothing snaps on the first tick
-    first = baked["idle"]["frames"][0][1]
+    first = baked[mob.idle_clip]["frames"][0][1]
     print("%s: %d parts, atlas %dx%d, clips %s" % (
         mob.key, len(mob.parts), res["width"], res["height"],
         ", ".join("%s(%d)" % (n, len(c["frames"])) for n, c in baked.items())))

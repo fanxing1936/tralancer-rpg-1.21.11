@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/tower_guard/atlas",
+    "particle": "rpg:item/tower_guard/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.88,
+        8.3254,
+        7.682
+      ],
+      "to": [
+        8.12,
+        8.3254,
+        7.802
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0.25,
+            0.1875,
+            0.1875,
+            0.2188
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            0.25,
+            0.2188,
+            0.1875,
+            0.1875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.1104,
+          7.735,
+          7.3316
+        ],
+        "axis": "x",
+        "angle": 33.57195840007327
+      }
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+ "model_scale": 11.555555555555557,
+ "height_blocks": 2.6,
+ "source_height_cm": 187.5,
+ "merge": {
+  "head": [
+   "nose",
+   "l_eyepupil",
+   "l_eyeiris",
+   "r_eyepupil",
+   "r_eyeiris",
+   "l_eyebrow",
+   "r_eyebrow"
+  ]
+ },
+ "held_bone": null,
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/Illagers/ArchIllager/SK_ArchIllager",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\archillager"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "ArchIllager_Idle",
+   "seconds": 4.1666665,
+   "loop": true,
+   "ticks": 84,
+   "max_bone_error_px": 1.7188554743278768e-05,
+   "max_vertex_error_px": 0.0015789022294902318,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "ArchIllager_Run",
+   "seconds": 1.0,
+   "loop": true,
+   "ticks": 20,
+   "max_bone_error_px": 0.0017613136887211613,
+   "max_vertex_error_px": 0.0030253499835891902,
+   "notifies": []
+  },
+  {
+   "clip": "attack",
+   "source": "ArchIllager_BasicAttackJump_VFX",
+   "seconds": 1.0416666,
+   "loop": false,
+   "ticks": 21,
+   "max_bone_error_px": 0.07003756373063241,
+   "max_vertex_error_px": 0.09572947387721824,
+   "notifies": [
+    [
+     0.075,
+     "PS_ArchIllager_StaffGlow_ProjectileFlash",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3601,
+     "archillager_spell_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3689,
+     "PS_ArchIllager_ProjectileLaunch",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "summon",
+   "source": "ArchIllager_SummonSingle_VFX",
+   "seconds": 2.0833333,
+   "loop": false,
+   "ticks": 42,
+   "max_bone_error_px": 0.04848853747100586,
+   "max_vertex_error_px": 0.15563709034120396,
+   "notifies": [
+    [
+     0.025,
+     "archillager_hargh-005",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.4426,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     1.0828,
+     "archillager_spell_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.1103,
+     "archillager_hargh",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.1479,
+     "PS_ArchIllagerProjectileHit",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "cast",
+   "source": "ArchIllager_SummonCircle_VFX",
+   "seconds": 1.6666666,
+   "loop": false,
+   "ticks": 34,
+   "max_bone_error_px": 0.050533011117704384,
+   "max_vertex_error_px": 0.05975974521176625,
+   "notifies": [
+    [
+     0.048,
+     "archillager_laugh",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.062,
+     "PS_ArchIllager_StaffGlow_Circular",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3481,
+     "archillager_spell_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "appear",
+   "source": "ArchIllager_LandingFinalBoss",
+   "seconds": 1.0,
+   "loop": false,
+   "ticks": 20,
+   "max_bone_error_px": 0.00600556691094808,
+   "max_vertex_error_px": 0.007109541868002605,
+   "notifies": []
+  },
+  {
+   "clip": "teleport_in",
+   "source": "ArchIllager_TeleportOut",
+   "seconds": 1.099,
+   "loop": false,
+   "ticks": 22,
+   "max_bone_error_px": 0.0030323414999809607,
+   "max_vertex_error_px": 0.008096991483754269,
+   "notifies": [
+    [
+     0.0547,
+     "archillager_mirror_in_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1533,
+     "PS_Spawn_Medium",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3247,
+     "thunder_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.5132,
+     "archillager_haha_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "teleport_out",
+   "source": "ArchIllager_TeleportIn",
+   "seconds": 0.85999966,
+   "loop": false,
+   "ticks": 18,
+   "max_bone_error_px": 0.04918988968617301,
+   "max_vertex_error_px": 0.061325284795003376,
+   "notifies": [
+    [
+     0.0125,
+     "archillager_spell_dissapear_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1499,
+     "PS_Spawn_Medium",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.1505,
+     "archillager_mirror_out_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "whirlwind",
+   "source": "ArchIllager_DefeatedInawhirlwind_VFX",
+   "seconds": 8.291667,
+   "loop": false,
+   "ticks": 166,
+   "max_bone_error_px": 0.17099934013539378,
+   "max_vertex_error_px": 0.1857550379397354,
+   "notifies": [
+    [
+     0.0409,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.9186,
+     "AnimNS_ArchIllager_DefeatFade_C",
+     null
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "pope",
+  "source_mesh_sha256": "b70804a465b645c47b593ed33dff1f66b423de52ab884dbc03ded9f238359f7f",
+  "triangles": 220,
+  "all_triangles_covered_once": true,
+  "bones": 46,
+  "plane_groups": 22,
+  "display_parts": 22,
+  "elements": 104,
+  "direct_uv_elements": 76,
+  "baked_elements": 28,
+  "glow_groups": 0,
+  "textures": {
+   "MI_ArchIllager": 0,
+   "MI_OrbOfDominanceIdle": 1,
+   "MI_SuperStaff": 2
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

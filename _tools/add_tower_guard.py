@@ -121,6 +121,13 @@ MOB = Mob(
     hurt="hurt", death="death", ambient=("idle", 0.002, 0.4), hurt_volume=0.4, death_volume=0.6,
 )
 
+# 原作模型变体（dungeons_variant.py）：默认用从本体提取的模型；TOWER_GUARD_MODEL=legacy 退回手工模型。
+import dungeons_variant  # noqa: E402
+DUNGEONS = dungeons_variant.apply(MOB)
+if DUNGEONS:
+    # TowerGuard_BasicAttack：长矛在 0.6~0.7 s 刺到最前（姿势实测），命中放在第 14 刻
+    ATTACK_HIT = 14
+
 
 def write_datapack(rest):
     # gold: the Holy See's colour

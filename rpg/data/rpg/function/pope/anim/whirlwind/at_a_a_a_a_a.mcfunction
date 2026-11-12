@@ -1,4 +1,2 @@
-execute if score @s rpg_pp_t matches 1 run return run function rpg:pope/anim/whirlwind/f0
-execute if score @s rpg_pp_t matches 2 run return run function rpg:pope/anim/whirlwind/f1
-execute if score @s rpg_pp_t matches 3 run return run function rpg:pope/anim/whirlwind/f2
-execute if score @s rpg_pp_t matches 4 run return run function rpg:pope/anim/whirlwind/f3
+execute if score @s rpg_pp_t matches ..2 run return run function rpg:pope/anim/whirlwind/at_a_a_a_a_a_a
+function rpg:pope/anim/whirlwind/at_a_a_a_a_a_b

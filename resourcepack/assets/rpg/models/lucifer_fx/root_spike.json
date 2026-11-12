@@ -1,0 +1,90 @@
+{
+ "textures": {
+  "0": "rpg:item/lucifer_fx/root_spike",
+  "particle": "rpg:item/lucifer_fx/root_spike"
+ },
+ "elements": [
+  {
+   "from": [
+    -8,
+    0,
+    8
+   ],
+   "to": [
+    24,
+    32,
+    8
+   ],
+   "rotation": {
+    "origin": [
+     8,
+     0,
+     8
+    ],
+    "axis": "y",
+    "angle": 45
+   },
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ],
+     "texture": "#0"
+    },
+    "south": {
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ],
+     "texture": "#0"
+    }
+   }
+  },
+  {
+   "from": [
+    -8,
+    0,
+    8
+   ],
+   "to": [
+    24,
+    32,
+    8
+   ],
+   "rotation": {
+    "origin": [
+     8,
+     0,
+     8
+    ],
+    "axis": "y",
+    "angle": -45
+   },
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ],
+     "texture": "#0"
+    },
+    "south": {
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ],
+     "texture": "#0"
+    }
+   }
+  }
+ ]
+}

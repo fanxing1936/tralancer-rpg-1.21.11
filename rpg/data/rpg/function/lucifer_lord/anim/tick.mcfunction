@@ -1,0 +1,9 @@
+execute if score @s rpg_lu_anim matches 0 run return run function rpg:lucifer_lord/anim/idle/tick
+execute if score @s rpg_lu_anim matches 1 run return run function rpg:lucifer_lord/anim/walk/tick
+execute if score @s rpg_lu_anim matches 2 run return run function rpg:lucifer_lord/anim/attack/tick
+execute if score @s rpg_lu_anim matches 3 run return run function rpg:lucifer_lord/anim/strong/tick
+execute if score @s rpg_lu_anim matches 4 run return run function rpg:lucifer_lord/anim/cast/tick
+execute if score @s rpg_lu_anim matches 5 run return run function rpg:lucifer_lord/anim/laugh/tick
+execute if score @s rpg_lu_anim matches 6 run return run function rpg:lucifer_lord/anim/stun/tick
+execute if score @s rpg_lu_anim matches 7 run return run function rpg:lucifer_lord/anim/rise/tick
+execute if score @s rpg_lu_anim matches 8 run return run function rpg:lucifer_lord/anim/slash/tick

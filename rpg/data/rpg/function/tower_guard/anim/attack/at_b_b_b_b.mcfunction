@@ -1,3 +1,3 @@
-execute if score @s rpg_tg_t matches 31 run return run function rpg:tower_guard/anim/attack/f30
-execute if score @s rpg_tg_t matches 32 run return run function rpg:tower_guard/anim/attack/f31
-execute if score @s rpg_tg_t matches 33 run return run function rpg:tower_guard/anim/attack/f32
+execute if score @s rpg_tg_t matches 36 run return run function rpg:tower_guard/anim/attack/f35
+execute if score @s rpg_tg_t matches 37 run return run function rpg:tower_guard/anim/attack/f36
+execute if score @s rpg_tg_t matches 38 run return run function rpg:tower_guard/anim/attack/f37

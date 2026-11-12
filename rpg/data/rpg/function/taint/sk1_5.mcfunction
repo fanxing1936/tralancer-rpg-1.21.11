@@ -6,3 +6,5 @@ playsound minecraft:block.beacon.deactivate hostile @a[distance=..32] ~ ~ ~ 1 0.
 particle end_rod ~ ~1.5 ~ 2.5 1.2 2.5 0.08 72
 particle enchanted_hit ~ ~1 ~ 3 1 3 0.15 64
 execute as @a[distance=..6,gamemode=!spectator,gamemode=!creative] at @s run function rpg:taint/sk1e_reject
+# Lucifer mesh appearance (add_lucifer_model.py)
+execute if entity @s[tag=rpg.lu,tag=!rpg.lu.phase2] run function rpg:lucifer_lord/skill/sk1_5

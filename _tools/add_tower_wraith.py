@@ -90,6 +90,14 @@ MOB = Mob(
     hurt="hurt", death="death", ambient=("idle", 0.006), held="weapon",
 )
 
+# 原作模型变体（dungeons_variant.py）：默认用从本体提取的模型；TOWER_WRAITH_MODEL=legacy 退回手工模型。
+import dungeons_variant  # noqa: E402
+DUNGEONS = dungeons_variant.apply(MOB)
+if DUNGEONS:
+    # 原作事件：Wraith_BasicAttack 的 WraithAttackSFX 0.12 s、GhostFireAttack 0.27 s；PoisonEmberAttack 的 fire 0 s、WraithAttack2 0.1 s
+    MOB.cues.update({"attack": [(0.05, "attack_vocal", 1.0, 1.0), (0.27, "attack", 1.0, 1.0)],
+                     "cast": [(0.0, "ember", 1.0, 1.0), (0.1, "attack_vocal", 1.0, 1.0)]})
+
 SERVANTS = "tag=rpg.demon.minion.lord3,tag=!rpg.tw,type=!minecraft:illusioner"
 CAST_CD = 50                  # ticks between clips
 CAST_RANGE = 12               # blocks, crossbow carriers and the evoker

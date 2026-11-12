@@ -9,6 +9,8 @@
 # 这一行把那条路堵死：认不出发条，就补一个，而不是判死刑。
 execute if entity @s[tag=!rpg.advent.timed] run function rpg:taint/advent_arm
 function rpg:inquest/boss_tick
+# 路西法二阶段（add_lucifer_fight.py）
+execute if score @s rpg_dm_lord matches 1 run function rpg:lucifer_fight/tick
 execute if entity @s[scores={rpg_ex_stage=2..4}] run return 0
 
 scoreboard players remove @s rpg_fall 1

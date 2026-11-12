@@ -1,0 +1,129 @@
+{
+ "model_scale": 5.224997687313213,
+ "height_blocks": 2.43,
+ "source_height_cm": 387.5599801540375,
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/Wicked_Wraith/SK_WickedWraith_01",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\wickedwraith"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "wickedWraith_Idle",
+   "seconds": 2.4,
+   "loop": true,
+   "ticks": 48,
+   "max_bone_error_px": 2.222911962757099e-08,
+   "max_vertex_error_px": 0.0014931273757358328,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "wickedWraith_Walk",
+   "seconds": 1.9666667,
+   "loop": true,
+   "ticks": 40,
+   "max_bone_error_px": 0.0001829772941237972,
+   "max_vertex_error_px": 0.0015444654209902607,
+   "notifies": [
+    [
+     0.0001,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "cast",
+   "source": "wickedWraith_basicAttack",
+   "seconds": 1.5666667,
+   "loop": false,
+   "ticks": 32,
+   "max_bone_error_px": 0.04923134296308205,
+   "max_vertex_error_px": 0.0805403602758897,
+   "notifies": [
+    [
+     0.3006,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3602,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.435,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.4663,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.6106,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "spread",
+   "source": "wickedWraith_CircularProjectileAttack",
+   "seconds": 2.1666667,
+   "loop": false,
+   "ticks": 44,
+   "max_bone_error_px": 0.006792641598779301,
+   "max_vertex_error_px": 0.009998110913813505,
+   "notifies": [
+    [
+     0.0001,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3274,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.2032,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     1.2032,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     1.2502,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "abaddon",
+  "source_mesh_sha256": "236a9cd0c7fb23610cad04b276b0381694eb0b23392df7eaef11a48293595772",
+  "triangles": 254,
+  "all_triangles_covered_once": true,
+  "bones": 25,
+  "plane_groups": 30,
+  "display_parts": 30,
+  "elements": 127,
+  "direct_uv_elements": 109,
+  "baked_elements": 18,
+  "glow_groups": 0,
+  "textures": {
+   "M_Wicked_Wraith": 0
+  },
+  "atlas": [
+   512,
+   512
+  ]
+ }
+}

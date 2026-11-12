@@ -1,3 +1,5 @@
+# 最终 Boss 路西法（add_lucifer_boss.py）
+execute if entity @s[tag=rpg.lub] run return run function rpg:pope_fight/heart/old_target
 execute if entity @s[tag=rpg.pf.heart] run return run function rpg:pope_fight/heart/old_target
 execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/old
 execute store result score @s rpg_lt_hp run data get entity @s Health 100

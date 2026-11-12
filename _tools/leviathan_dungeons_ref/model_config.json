@@ -1,0 +1,134 @@
+{
+ "model_scale": 14.00469221023262,
+ "height_blocks": 3.71,
+ "source_height_cm": 220.75934410095215,
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/SkeletonNecromancer/SK_SkeletonNecromancer",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\necromancer"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "SkeletonNecromancer_Idle",
+   "seconds": 6.2083335,
+   "loop": true,
+   "ticks": 125,
+   "max_bone_error_px": 0.0001288028241681896,
+   "max_vertex_error_px": 6.362742951926722e-05,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "SkeletonNecromancer_Walk",
+   "seconds": 0.7916667,
+   "loop": true,
+   "ticks": 16,
+   "max_bone_error_px": 0.000462255119749128,
+   "max_vertex_error_px": 0.00038061999305959106,
+   "notifies": [
+    [
+     0.1775,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.6077,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "cast",
+   "source": "SkeletonNecromancer_BasicAttack",
+   "seconds": 1.4583334,
+   "loop": false,
+   "ticks": 30,
+   "max_bone_error_px": 0.035371495730068106,
+   "max_vertex_error_px": 0.023250847294904516,
+   "notifies": [
+    [
+     0.0909,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3301,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3389,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.5874,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "summon",
+   "source": "SkeletonNecromancer_StrongAttack",
+   "seconds": 2.875,
+   "loop": false,
+   "ticks": 58,
+   "max_bone_error_px": 0.03724177155285203,
+   "max_vertex_error_px": 0.024772301757508577,
+   "notifies": [
+    [
+     0.2039,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.5957,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.674,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.8495,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "rise",
+   "source": "SkeletonNecromancer_Novelty",
+   "seconds": 3.2916667,
+   "loop": false,
+   "ticks": 66,
+   "max_bone_error_px": 0.13986746621060972,
+   "max_vertex_error_px": 0.09705180039013202,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "leviathan",
+  "source_mesh_sha256": "8fa8c253beecbad8c6700b9020d4a1b2bfd6f06a6e6df423d39a838a2986f773",
+  "triangles": 249,
+  "all_triangles_covered_once": true,
+  "bones": 35,
+  "plane_groups": 16,
+  "display_parts": 13,
+  "elements": 122,
+  "direct_uv_elements": 62,
+  "baked_elements": 60,
+  "glow_groups": 1,
+  "textures": {
+   "MI_SkeletonNecromancer": 0
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ }
+}

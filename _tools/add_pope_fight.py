@@ -72,6 +72,7 @@ ATTACK_FIRE, ATTACK_END = 10, 25
 SUMMON_FIRE, SUMMON_END = 13, 40
 CAST_FIRE, CAST_END = 18, 50
 TELEPORT = 18
+TELEPORT_IN = 18        # teleport_in, after the jump
 APPEAR_END = 36
 BREATHER = 30           # between two skills
 PART_VIEW = "1.5f"      # view_range of the rig's parts, 0 hides them
@@ -79,11 +80,26 @@ PART_VIEW = "1.5f"      # view_range of the rig's parts, 0 hides them
 # ^left ^up ^forward of the staff head at the release frame, from sockets.json
 ATTACK_TIP = "^-0.05 ^0.09 ^2.22"
 CAST_TIP = "^0.43 ^2.90 ^0.57"
+# The extracted Arch-Illager (dungeons_variant.py, POPE_MODEL=legacy goes back): its own clip
+# lengths and release moments (archillager_spell_Cue / ProjectileLaunch in model_config.json),
+# and the SuperCube1 gem posed at those moments.
+import dungeons_variant  # noqa: E402
+if dungeons_variant.choice("pope") != "legacy" and dungeons_variant.available("pope"):
+    ATTACK_FIRE, ATTACK_END = 7, 21         # BasicAttackJump 1.04 s, launch 0.369 s
+    SUMMON_FIRE, SUMMON_END = 22, 42        # SummonSingle 2.08 s, spell 1.083 s
+    CAST_FIRE, CAST_END = 7, 34             # SummonCircle 1.67 s, spell 0.348 s
+    TELEPORT, TELEPORT_IN = 17, 22          # leaving: TeleportIn 0.86 s; arriving: TeleportOut 1.10 s
+    APPEAR_END = 20                         # LandingFinalBoss 1.0 s
+    # the gem as displayed on the fire tick (tick 7 = 0.35 s; clips are sampled per tick)
+    ATTACK_TIP = "^0.93 ^2.84 ^1.02"
+    CAST_TIP = "^0.54 ^1.68 ^1.68"
 COOLDOWNS = dict(tp=120, blood=400, reclaim=1200, enhance=400)
 
 TRANSFORM_BURST = 140   # whirlwind is 7 s and converges on its last frame
 TRANSFORM_END = 150
 SPIRAL_FROM = 100
+if dungeons_variant.choice("pope") != "legacy" and dungeons_variant.available("pope"):
+    TRANSFORM_BURST, TRANSFORM_END, SPIRAL_FROM = 160, 170, 115     # DefeatedInawhirlwind 8.29 s
 SKILLS = dict(attack=1, teleport=2, summon=3, blood=4, reclaim=5, enhance=6, appear=7, melee=8, ring=9, judge=10,
               basic=11, seals=12, doom=13)
 # plain attacks: a quick bolt, or the staff when cornered.  Skills come every few of these.
@@ -1310,7 +1326,7 @@ def write_boss():
         "execute if score #st %s matches %d run function %s/boss/hide" % (O, TELEPORT - 1, F),
         "execute if score #st %s matches %d run function %s/boss/teleport_jump" % (O, TELEPORT, F),
         "execute if score #st %s matches %d run function %s/boss/show" % (O, TELEPORT + 3, F),
-        "execute if score #st %s matches %d.. run function %s/boss/teleport_done" % (O, TELEPORT * 2, F),
+        "execute if score #st %s matches %d.. run function %s/boss/teleport_done" % (O, TELEPORT + TELEPORT_IN, F),
     ])
     w(b + "hide", [
         "# 载体传送时客户端会滑行 3 刻，这几刻把部件藏起来，否则一路拖过去。",

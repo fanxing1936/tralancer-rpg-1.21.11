@@ -1,3 +1,4 @@
-execute if score @s rpg_tw_t matches 49 run return run function rpg:tower_wraith/anim/idle/f48
-execute if score @s rpg_tw_t matches 53 run return run function rpg:tower_wraith/anim/idle/f52
-execute if score @s rpg_tw_t matches 57 run return run function rpg:tower_wraith/anim/idle/f56
+execute if score @s rpg_tw_t matches 69 run return run function rpg:tower_wraith/anim/idle/f68
+execute if score @s rpg_tw_t matches 73 run return run function rpg:tower_wraith/anim/idle/f72
+execute if score @s rpg_tw_t matches 77 run return run function rpg:tower_wraith/anim/idle/f76
+execute if score @s rpg_tw_t matches 81 run return run function rpg:tower_wraith/anim/idle/f80

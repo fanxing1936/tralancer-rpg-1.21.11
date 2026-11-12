@@ -1,2 +1,3 @@
-execute if score @s rpg_bz_t matches ..15 run return run function rpg:beelzebub/anim/cast/at_b_a_a
-function rpg:beelzebub/anim/cast/at_b_a_b
+execute if score @s rpg_bz_t matches 7 run return run function rpg:beelzebub/anim/cast/f6
+execute if score @s rpg_bz_t matches 8 run return run function rpg:beelzebub/anim/cast/f7
+execute if score @s rpg_bz_t matches 9 run return run function rpg:beelzebub/anim/cast/f8

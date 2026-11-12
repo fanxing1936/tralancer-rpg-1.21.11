@@ -1,0 +1,84 @@
+{
+  "textures": {
+    "0": "rpg:item/lucifer_p2/atlas",
+    "particle": "rpg:item/lucifer_p2/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.0734,
+        7.5367,
+        7.5367
+      ],
+      "to": [
+        8.9266,
+        8.4633,
+        8.4633
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            9.2617,
+            1.2187,
+            9.3242,
+            1.25
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            9.3242,
+            1.1875,
+            9.2617,
+            1.1562
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            9.3242,
+            1.1563,
+            9.2617,
+            1.125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            9.2617,
+            1.2188,
+            9.2305,
+            1.1875
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "up": {
+          "uv": [
+            9.3242,
+            1.2188,
+            9.2617,
+            1.1875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            9.3242,
+            1.1875,
+            9.3555,
+            1.2187
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    }
+  ]
+}

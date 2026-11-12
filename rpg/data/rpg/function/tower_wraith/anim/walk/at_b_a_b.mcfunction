@@ -1,3 +1,4 @@
-execute if score @s rpg_tw_t matches 25 run return run function rpg:tower_wraith/anim/walk/f24
-execute if score @s rpg_tw_t matches 27 run return run function rpg:tower_wraith/anim/walk/f26
-execute if score @s rpg_tw_t matches 29 run return run function rpg:tower_wraith/anim/walk/f28
+execute if score @s rpg_tw_t matches 39 run return run function rpg:tower_wraith/anim/walk/f38
+execute if score @s rpg_tw_t matches 41 run return run function rpg:tower_wraith/anim/walk/f40
+execute if score @s rpg_tw_t matches 43 run return run function rpg:tower_wraith/anim/walk/f42
+execute if score @s rpg_tw_t matches 45 run return run function rpg:tower_wraith/anim/walk/f44

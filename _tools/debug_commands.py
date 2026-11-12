@@ -59,6 +59,9 @@ BOSSES.extend([
     command("/function rpg:pact/debug/up", "让执行者直接升一阶。", "需要已立约，第三阶时无效。", "七十二柱契约"),
     command("/function rpg:pact/debug/lords", "把七位领主记为已被执行者击败。", "只影响真名阶的条件。", "七十二柱契约"),
     command("/function rpg:pope_fight/clear", "清除教皇战的全部实体。", "战斗卡住或测试收尾时使用。", "教皇战", "清理"),
+    command("/function rpg:lucifer_boss/summon", "在执行位置开始最终 Boss 路西法：晨星之蛇 → 知善恶树（古龙待做）。", "同一时间只允许一场；战场半径 40 格，没人满 60 秒判负清场。与七罪领主路西法是两个 Boss。", "最终 Boss", "生成战斗"),
+    command("/function rpg:lucifer_boss/debug/stage2", "召唤后直接打到一阶段底线，走变身演出进入知善恶树。", "同一时间只允许一场。", "最终 Boss", "生成战斗"),
+    command("/function rpg:lucifer_boss/clear", "清除最终 Boss 路西法的全部实体。", "战斗卡住或测试收尾时使用。", "最终 Boss", "清理"),
 ])
 
 MINIONS = []

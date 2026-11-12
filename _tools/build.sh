@@ -133,6 +133,11 @@ python add_vanguard.py ../resourcepack ../rpg
 # 利维坦换上 Dungeons 死灵法师模型（挂进 sk2_*、ult2*、advent_gone），
 # 麾下五名罪仆换上沉没骷髅外观（派蒙改用掠夺者底子）
 python add_leviathan_model.py ../resourcepack ../rpg
+python add_lucifer_model.py ../resourcepack ../rpg --defer-shaders
+python add_lucifer_p2_model.py ../resourcepack ../rpg
+# 原作 Abomination Vine：缠枝破土的藤蔓（dungeons_conversion/generic.py 转换）
+python add_lucifer_vine_model.py ../resourcepack ../rpg
+python add_lucifer_model.py ../resourcepack ../rpg --finalize-shaders
 python add_sunken_skeleton.py ../resourcepack ../rpg
 python add_abaddon_model.py ../resourcepack ../rpg
 python add_tower_wraith.py ../resourcepack ../rpg
@@ -142,8 +147,19 @@ python add_heart_of_ender.py ../resourcepack ../rpg
 python add_arch_visage.py ../resourcepack ../rpg
 # 教皇战特效贴图：母图在 pope_fx_ref/raw/（Codex 绘制），这里定网格和色板
 python add_pope_fx_art.py ../resourcepack
+# 路西法二阶段特效贴图：母图在 lucifer_p2_fx_ref/（Codex 绘制），这里定网格和色板
+python add_lucifer_p2_fx_art.py ../resourcepack
+# 原作静态道具：毒刺弹、藤臂尖根
+python add_lucifer_props.py ../resourcepack
+# 最终 Boss 路西法的位图血条：饰物与标题在 lucifer_boss_ref/bar/（Codex 绘制）
+python add_lucifer_boss_art.py ../resourcepack
 # 教皇战（docs/POPE-DESIGN.md）：调用各模型的函数，放在所有模型之后。
 python add_pope_fight.py ../rpg
+# 路西法二阶段「知善恶树」的变身与招式（docs/LUCIFER-P2-DESIGN.md）；要在两阶段外观、
+# 驱魔与罪仆生成器之后，挂接最终的 advent_tick 与 sk1/ult1。
+python add_lucifer_fight.py ../rpg
+# 最终 Boss 路西法（docs/LUCIFER-BOSS-DESIGN.md）：复用上面的招式时间线，要在它之后
+python add_lucifer_boss.py ../rpg
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.

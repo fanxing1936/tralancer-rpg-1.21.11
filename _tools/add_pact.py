@@ -1354,6 +1354,15 @@ NONE_UI = dict(who="无名者", main=ui.NAMELESS["lit"],
                skills=[("蚀界", "名字也会被黑暗吞掉")],
                ultimate="无名蚀界", ult_text="黑暗正抹去一切称谓")
 
+# 路西法后续形态的招式（docs/LUCIFER-P2-DESIGN.md）。排在原 44 条之后，
+# 已有提示的编号与私用字符不变；招式本身由 add_lucifer_fight.py 生成。
+LUCIFER_FORMS = {
+    2: dict(who="路西法", main=ui.pillar(1)["lit"],
+            skills=[("缠枝", "古蛇盘根而出"), ("禁果", "果核如雨坠"), ("诱惑", "低语自根中来"),
+                    ("坠天", "晨星自高处陨落"), ("知善恶", "目视者知罪")],
+            ultimate="失乐园", ult_text="伊甸之门就此永闭"),
+}
+
 
 def combat_notices():
     """固定顺序的恶魔提示；数据包编号与资源包私用字符共用这一份。"""
@@ -1378,6 +1387,16 @@ def combat_notices():
                 "ui": NONE_UI, "name": NONE_UI["ultimate"],
                 "phrase": NONE_UI["ult_text"], "ultimate": True})
     assert len(out) == 44
+    for form in sorted(LUCIFER_FORMS):
+        dui = LUCIFER_FORMS[form]
+        for name, phrase in dui["skills"]:
+            out.append({"key": (dui["who"], name, phrase, False),
+                        "ui": dui, "name": name, "phrase": phrase,
+                        "ultimate": False})
+        out.append({"key": (dui["who"], dui["ultimate"], dui["ult_text"], True),
+                    "ui": dui, "name": dui["ultimate"],
+                    "phrase": dui["ult_text"], "ultimate": True})
+    assert len(out) <= 64, "combat prompt glyph pages hold 64 notices"
     return out
 
 

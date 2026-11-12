@@ -1,4 +1,3 @@
-execute if score @s rpg_tg_t matches 17 run return run function rpg:tower_guard/anim/shield_break/f16
-execute if score @s rpg_tg_t matches 18 run return run function rpg:tower_guard/anim/shield_break/f17
-execute if score @s rpg_tg_t matches 19 run return run function rpg:tower_guard/anim/shield_break/f18
-execute if score @s rpg_tg_t matches 20 run return run function rpg:tower_guard/anim/shield_break/f19
+execute if score @s rpg_tg_t matches 13 run return run function rpg:tower_guard/anim/shield_break/f12
+execute if score @s rpg_tg_t matches 14 run return run function rpg:tower_guard/anim/shield_break/f13
+execute if score @s rpg_tg_t matches 15 run return run function rpg:tower_guard/anim/shield_break/f14

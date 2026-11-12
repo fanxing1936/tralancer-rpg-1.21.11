@@ -86,6 +86,14 @@ MOB = Mob(
     on_hurt=["execute if entity @s[tag=!rpg.vg.broken] run function rpg:vanguard/shield_break"],
 )
 
+# 原作模型变体（dungeons_variant.py）：默认用从本体提取的模型；VANGUARD_MODEL=legacy 退回手工模型。
+import dungeons_variant  # noqa: E402
+DUNGEONS = dungeons_variant.apply(MOB)
+if DUNGEONS:
+    # 原作事件：vanguard_step_Cue、vanguard_spear_Cue
+    MOB.cues.update({"walk": [(0.19, "step", 0.5, 1.0), (0.6, "step", 0.5, 1.0)],
+                     "attack": [(0.33, "spear", 1.0, 1.0)]})
+
 SERVANTS = "tag=rpg.demon.minion.lord4,tag=!rpg.vg,type=!minecraft:illusioner"
 SWING_CD = 24                 # ticks between attack clips
 

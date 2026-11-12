@@ -1,0 +1,3 @@
+# summon 第 106 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_beelzebub.py 烘焙。
+execute on passengers if entity @s[tag=rpg.bz.p.l_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.88385f,0.45383f,-0.02916f],left_rotation:[0.08619f,0.45706f,0.10554f,0.87893f],scale:[14.18334f,14.18334f,14.18334f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.bz.p.cape] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.52645f,-0.14694f,-0.9081f],left_rotation:[0.90899f,0.08848f,-0.24503f,0.32537f],scale:[14.18334f,14.18334f,14.18334f],right_rotation:[0f,0f,0f,1f]}}
