@@ -61,27 +61,24 @@ def cap_boss_particle(line):
     return line
 
 
-# 恶魔身上每刻冒的黑烟。原样是 5 团墨汁以 0.1 的速度喷出 + 1 团大烟，
-# 一团黑雾把模型裹住、往外飘出一两格；作者要它小一点、贴着身子。
-# 数量减到 2、速度压到几乎不飞、散布收窄，并把偏到一侧的 ~0.1 放回正中。
-# 这是「常驻」档的样板（docs/VFX-SPEC.md §4）：每实体每刻 3 颗，低于 4 颗的预算。
-DEVIL_SMOKE = {
-    "particle large_smoke ~0.1 ~1.5 ~0.1 -0.2 -0.5 -0.2 0.1 1":
-        "particle large_smoke ~ ~1.3 ~ 0.12 0.3 0.12 0.005 1",
-    "particle squid_ink ~0.1 ~1.5 ~0.1 -0.2 -0.5 -0.2 0.1 5":
-        "particle squid_ink ~ ~1.3 ~ 0.12 0.3 0.12 0.01 2",
-}
+# 恶魔身上每刻冒的黑烟：原样是 1 团大烟 + 5 团墨汁，一团黑雾把模型裹住。
+# 先收小过一次（墨汁 5→2、贴身），作者最终决定整段去掉 —— 恶魔的身份交给
+# 模型和招式里的柱色粒子，身上不再常驻冒烟（docs/VFX-SPEC.md §5.2）。
+DEVIL_SMOKE = (
+    "particle large_smoke ~0.1 ~1.5 ~0.1 -0.2 -0.5 -0.2 0.1 1",
+    "particle squid_ink ~0.1 ~1.5 ~0.1 -0.2 -0.5 -0.2 0.1 5",
+)
 
 
-def shrink_devil_smoke(lines):
-    out = [DEVIL_SMOKE.get(x, x) for x in lines]
-    assert sum(x in DEVIL_SMOKE.values() for x in out) == len(DEVIL_SMOKE), lines
+def drop_devil_smoke(lines):
+    out = [x for x in lines if x not in DEVIL_SMOKE]
+    assert len(lines) - len(out) == len(DEVIL_SMOKE), lines
     return out
 
 
 def optimize_warden():
-    g0 = shrink_devil_smoke(localise("entities/warden/warden/g0.mcfunction",
-                                     "execute as @e[tag=devil] at @s "))
+    g0 = drop_devil_smoke(localise("entities/warden/warden/g0.mcfunction",
+                                   "execute as @e[tag=devil] at @s "))
     g1 = localise("entities/warden/warden/g1.mcfunction",
                   "execute as @e[tag=devil] at @s ")
     g2 = [cap_boss_particle(x) for x in localise(
