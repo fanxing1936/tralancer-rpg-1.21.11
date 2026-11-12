@@ -1,0 +1,103 @@
+{
+ "model_scale": 6.74112591883523,
+ "height_blocks": 2.2,
+ "source_height_cm": 271.9624815508723,
+ "turn": 0,
+ "merge": {},
+ "held_bone": "J_Potion",
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/Witch/SK_Witch",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\batch3"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Witch_Idle",
+   "seconds": 2.9333334,
+   "loop": true,
+   "ticks": 59,
+   "max_bone_error_px": 0.00792290836324038,
+   "max_vertex_error_px": 0.04157258109446616,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Witch_Walk",
+   "seconds": 1.1,
+   "loop": true,
+   "ticks": 22,
+   "max_bone_error_px": 0.022620285570828198,
+   "max_vertex_error_px": 0.07845171930323208,
+   "notifies": [
+    [
+     0.059,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.6756,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "attack",
+   "source": "Witch_AttackThrow",
+   "seconds": 1.5,
+   "loop": false,
+   "ticks": 30,
+   "max_bone_error_px": 0.028609899289453115,
+   "max_vertex_error_px": 0.046814503906431104,
+   "notifies": [
+    [
+     0.4857,
+     "witch_throw_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "shoot",
+   "source": "Witch_Drink",
+   "seconds": 0.96666664,
+   "loop": false,
+   "ticks": 20,
+   "max_bone_error_px": 3.513463996671136e-05,
+   "max_vertex_error_px": 0.00016279664008851032,
+   "notifies": [
+    [
+     0.42,
+     "P_HealthPotionEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.4541,
+     "witch_drink_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "belial_servant",
+  "source_mesh_sha256": "109e16612bc72446f239ec35b54afc194e8de607a9d13c8daec7a8b909832dd9",
+  "triangles": 168,
+  "all_triangles_covered_once": true,
+  "bones": 26,
+  "plane_groups": 14,
+  "display_parts": 14,
+  "elements": 84,
+  "direct_uv_elements": 84,
+  "baked_elements": 0,
+  "glow_groups": 0,
+  "textures": {
+   "M_Witch": 0
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

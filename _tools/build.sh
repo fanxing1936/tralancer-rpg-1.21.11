@@ -133,6 +133,12 @@ python add_vanguard.py ../resourcepack ../rpg
 # 利维坦换上 Dungeons 死灵法师模型（挂进 sk2_*、ult2*、advent_gone），
 # 麾下五名罪仆换上沉没骷髅外观（派蒙改用掠夺者底子）
 python add_leviathan_model.py ../resourcepack ../rpg
+# 玛门（第七柱）外观：猪灵商人，原作模型（mammon_lord_dungeons_ref/）
+python add_mammon_model.py ../resourcepack ../rpg
+# 萨麦尔（第五柱）：红石巨怪；贝利尔（第六柱）：腐化坩埚；三位领主的罪仆（共用 lord_look.py / servant_look.py）
+python add_samael_model.py ../resourcepack ../rpg
+python add_belial_model.py ../resourcepack ../rpg
+python add_lord_servants.py ../resourcepack ../rpg
 python add_lucifer_model.py ../resourcepack ../rpg --defer-shaders
 python add_lucifer_p2_model.py ../resourcepack ../rpg
 # 原作 Abomination Vine：缠枝破土的藤蔓（dungeons_conversion/generic.py 转换）

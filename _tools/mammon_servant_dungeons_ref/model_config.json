@@ -1,0 +1,75 @@
+{
+ "model_scale": 8.333333333333334,
+ "height_blocks": 2.0,
+ "source_height_cm": 200.0,
+ "turn": 180,
+ "merge": {},
+ "held_bone": "J_R_Hand",
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Content_DLC4/Actors/Characters/Enemies/Piglin/SK_Piglin",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\batch3"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Piglin_Idle",
+   "seconds": 3.7916667,
+   "loop": true,
+   "ticks": 76,
+   "max_bone_error_px": 0.00017912569460818304,
+   "max_vertex_error_px": 0.00026081668276988244,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Piglin_WalkMelee",
+   "seconds": 0.7083333,
+   "loop": true,
+   "ticks": 15,
+   "max_bone_error_px": 0.00029001011496726715,
+   "max_vertex_error_px": 0.00038536140076705124,
+   "notifies": []
+  },
+  {
+   "clip": "attack",
+   "source": "Piglin_MeleeAttack",
+   "seconds": 1.2083334,
+   "loop": false,
+   "ticks": 25,
+   "max_bone_error_px": 0.07264923436679177,
+   "max_vertex_error_px": 0.09443248596383673,
+   "notifies": []
+  },
+  {
+   "clip": "shoot",
+   "source": "Piglin_RangedAttack",
+   "seconds": 2.4583333,
+   "loop": false,
+   "ticks": 50,
+   "max_bone_error_px": 0.021713658334938813,
+   "max_vertex_error_px": 0.024613575928142256,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "mammon_servant",
+  "source_mesh_sha256": "d814703595b51bedfe52bbae469aec6f08324c6099eb603bdf69aebb1b706799",
+  "triangles": 172,
+  "all_triangles_covered_once": true,
+  "bones": 32,
+  "plane_groups": 16,
+  "display_parts": 16,
+  "elements": 86,
+  "direct_uv_elements": 83,
+  "baked_elements": 3,
+  "glow_groups": 0,
+  "textures": {
+   "MI_PiglinVariant0": 0
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

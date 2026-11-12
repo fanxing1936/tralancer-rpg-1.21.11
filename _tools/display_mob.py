@@ -130,6 +130,13 @@ def inverse_affine(m):
 R180 = rot_y(180)
 
 
+def base_turn(mob):
+    """R180, plus `mob.turn` degrees about y for a model authored facing the other way
+    (dungeons_variant.py: the Piglin Merchant, a friendly, faces +z where enemies face -z)."""
+    turn = getattr(mob, "turn", 0)
+    return mat_mul(R180, rot_y(turn)) if turn else R180
+
+
 # ---------------------------------------------------------------------------
 # the mob description
 # ---------------------------------------------------------------------------
@@ -338,7 +345,7 @@ def display_matrix(mob, bones, part_bone, K, W=None):
     """T = G . W . F^-1 (see module docstring)."""
     W = W or bone_matrix(bones, part_bone)
     F = mat_mul(scale(1 / 16.0), mat_mul(R180, translate(-K[0] - 8, -K[1] - 8, -K[2] - 8)))
-    G = mat_mul(translate(0, -mob.seat, 0), mat_mul(scale(mob.model_scale / 16.0), R180))
+    G = mat_mul(translate(0, -mob.seat, 0), mat_mul(scale(mob.model_scale / 16.0), base_turn(mob)))
     return mat_mul(G, mat_mul(W, inverse_affine(F)))
 
 
@@ -348,7 +355,7 @@ VANILLA = [[-16, 0, 0, 0], [0, -16, 0, 0], [0, 0, 16, 0], [0, 0, 0, 1]]
 
 def held_matrix(mob, bones, arm, W):
     """The held-item part on bone `arm` (see module docstring)."""
-    G = mat_mul(translate(0, -mob.seat, 0), mat_mul(scale(mob.model_scale / 16.0), R180))
+    G = mat_mul(translate(0, -mob.seat, 0), mat_mul(scale(mob.model_scale / 16.0), base_turn(mob)))
     ref = getattr(mob, "held_ref", None)
     if ref:
         # A rig whose hand bone is not a vanilla arm (dungeons_variant.py): `arm` is the weapon
@@ -649,7 +656,11 @@ def write_sounds(mob):
     for event, (subtitle, files, extra) in sorted(mob.sounds.items()):
         entries = []
         for src in files:
-            name = os.path.splitext(src)[0].lower().replace("-", "_")
+            if extra and extra.get("type") == "event":
+                # a vanilla sound event (e.g. minecraft:entity.piglin.hurt): no file to copy
+                entries.append(dict(extra, name=src))
+                continue
+            name = os.path.splitext(os.path.basename(src))[0].lower().replace("-", "_")
             shutil.copyfile(os.path.join(mob.sound_dir, src), os.path.join(out, name + ".ogg"))
             entry = dict(extra, name="%s:%s/%s" % (NS, mob.key, name)) if extra else \
                 "%s:%s/%s" % (NS, mob.key, name)

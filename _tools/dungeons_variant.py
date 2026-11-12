@@ -124,6 +124,7 @@ def apply(mob, extra_glow=()):
     mob.glow = set(json.load(open(os.path.join(ref, "glow_bones.json"), encoding="utf-8"))) | set(extra_glow)
     mob.face_rotation = True
     mob.model_scale = cfg["model_scale"]
+    mob.turn = cfg.get("turn", 0)
     new_lengths = {c["clip"]: c["seconds"] for c in cfg["clips"]}
     if mob.cues:
         scaled = {}

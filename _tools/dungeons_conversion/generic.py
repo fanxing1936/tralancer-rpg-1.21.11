@@ -563,7 +563,7 @@ def convert(mesh, meta, export_root, out, *, name, unit_scale=.0192, part_prefix
 class Clip(A.SourceClip):
     """SourceClip without the Jungle-only codec / composite restrictions."""
 
-    def __init__(self, path, bones, obj, sequence_obj):
+    def __init__(self, path, bones, obj, sequence_obj, retarget=None):
         self.path = Path(path)
         self.payload = read(path)
         self.obj = obj
@@ -585,6 +585,8 @@ class Clip(A.SourceClip):
             self.start = float(seg['AnimStartTime']); self.end = float(seg['AnimEndTime'])
             self.rate = float(seg.get('AnimPlayRate', 1))
         tracks = {t['boneName']: t for t in self.sequence['tracks']}
+        if retarget:
+            tracks = retarget_tracks(tracks, bones, retarget, self.sequence_length, self.num_frames)
         self.channels = []
         for b in bones:
             t = tracks.get(b['name'], {})
@@ -603,6 +605,63 @@ class Clip(A.SourceClip):
                         for i in range(len(self.bones))]
             self.pose_cache[key] = ue_world(self.bones, animated)
         return self.pose_cache[key]
+
+
+def _qmul(a, b):
+    x1, y1, z1, w1 = a; x2, y2, z2, w2 = b
+    return [w1 * x2 + x1 * w2 + y1 * z2 - z1 * y2, w1 * y2 - x1 * z2 + y1 * w2 + z1 * x2,
+            w1 * z2 + x1 * y2 - y1 * x2 + z1 * w2, w1 * w2 - x1 * x2 - y1 * y2 - z1 * z2]
+
+
+def retarget_tracks(tracks, bones, retarget, length, num_frames):
+    """Tracks of a clip made for another skeleton whose shared bones have the same rest rotations
+    (Piglin -> Piglin Merchant): rotations carry over by bone name; `merge` folds a chain of source
+    bones into one target bone (J_Neck + J_Head -> J_Head); positions are the target's own bone
+    lengths, except the bones in `move`, which get the source's offset from its rest added."""
+    src = {b['name']: b for b in retarget['source_bones']}
+    merge = retarget.get('merge', {})
+    move = set(retarget.get('move', ()))
+    out = {}
+    for b in bones:
+        names = [n for n in merge.get(b['name'], [b['name']]) if n in src]
+        if not names:
+            continue
+        row = {'boneName': b['name']}
+        keyed = [n for n in names if tracks.get(n, {}).get('rotation')]
+        if keyed:
+            times = sorted({t for n in keyed for t in A.source_key_times(tracks[n], 'rotation', length, num_frames)})
+            values = []
+            for t in times:
+                q = [0., 0., 0., 1.]
+                for n in names:
+                    tr = tracks.get(n, {})
+                    if tr.get('rotation'):
+                        v = A.sample_channel(A.source_key_times(tr, 'rotation', length, num_frames),
+                                             np.asarray(tr['rotation'], float), t, np.asarray(src[n]['rotation'], float), True)
+                    else:
+                        v = src[n]['rotation']
+                    q = _qmul(q, list(v))
+                k = retarget.get('damp', {}).get(b['name'])
+                if k is not None:       # soften: scale the turn away from rest (rest is identity here)
+                    w = max(-1., min(1., q[3]))
+                    ang = 2 * math.acos(abs(w)) * k
+                    axis = np.asarray(q[:3]) * (1 if w >= 0 else -1)
+                    n = np.linalg.norm(axis)
+                    q = [0., 0., 0., 1.] if n < 1e-12 else list(axis / n * math.sin(ang / 2)) + [math.cos(ang / 2)]
+                values.append(q)
+            row['rotation'] = values
+            if len(values) > 1:       # explicit key times, in source frames (animations.source_key_times)
+                row['rotationTime'] = [t * (num_frames - 1) / length for t in times]
+        n = names[-1]
+        if b['name'] in move and tracks.get(n, {}).get('position'):
+            tr = tracks[n]
+            delta = np.asarray(tr['position'], float) - np.asarray(src[n]['translation'], float)
+            row['position'] = (np.asarray(b['translation'], float) + delta).tolist()
+            if len(delta) > 1:
+                row['positionTime'] = [t * (num_frames - 1) / length
+                                       for t in A.source_key_times(tr, 'position', length, num_frames)]
+        out[b['name']] = row
+    return out
 
 
 def notifies(obj):
@@ -628,7 +687,8 @@ def anim_objects(metadata_dir):
     return found
 
 
-def author(document, meta, mesh, metadata_dir, clips, *, max_error_visual_pixels=.25, model_scale=1.):
+def author(document, meta, mesh, metadata_dir, clips, *, max_error_visual_pixels=.25, model_scale=1., retarget=None):
+    """retarget: {name: retarget_tracks settings}; a clip given as (source, new, loop, name) uses it."""
     """clips: [(source animation name, new clip name, loop)]. Returns (document, report)."""
     doc = json.loads(json.dumps(document))
     groups, parents, rest_world = A._hierarchy(doc)
@@ -651,7 +711,9 @@ def author(document, meta, mesh, metadata_dir, clips, *, max_error_visual_pixels
     rest_bb = np.asarray([rest_world[b['name']] for b in bones])
     objects = anim_objects(metadata_dir)
     animations, reports = [], []
-    for src_name, new_name, loop in clips:
+    for entry in clips:
+        src_name, new_name, loop = entry[:3]
+        rt = (retarget or {})[entry[3]] if len(entry) > 3 else None
         if src_name not in objects:
             raise KeyError('animation not exported: ' + src_name)
         tracks, obj = objects[src_name]
@@ -659,7 +721,7 @@ def author(document, meta, mesh, metadata_dir, clips, *, max_error_visual_pixels
         if obj['Type'] == 'AnimComposite':
             seq_name = read(tracks)['sequences'][0]['Name']
             seq_obj = objects[seq_name][1]
-        clip = Clip(tracks, bones, obj, seq_obj)
+        clip = Clip(tracks, bones, obj, seq_obj, retarget=rt)
         clip.name = new_name
         extra, iterations = {}, 0
         for iterations in range(12):

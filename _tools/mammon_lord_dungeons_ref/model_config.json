@@ -1,0 +1,85 @@
+{
+ "model_scale": 11.531531522420437,
+ "height_blocks": 3.2,
+ "source_height_cm": 231.2500001827113,
+ "turn": 180,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Content_DLC4/Actors/Characters/Friendlies/PiglinMerchant/SK_PiglinMerchant",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\mammon"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "PiglinMerchant_Idle1",
+   "seconds": 4.125,
+   "loop": true,
+   "ticks": 83,
+   "max_bone_error_px": 3.438931384421582e-06,
+   "max_vertex_error_px": 2.7649297668730345e-06,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Piglin_WalkMelee",
+   "seconds": 0.7083333,
+   "loop": true,
+   "ticks": 15,
+   "max_bone_error_px": 0.00021487917102414394,
+   "max_vertex_error_px": 0.00033141913590028306,
+   "notifies": []
+  },
+  {
+   "clip": "cast",
+   "source": "Piglin_Throw",
+   "seconds": 1.1427778,
+   "loop": false,
+   "ticks": 23,
+   "max_bone_error_px": 0.038869466484266035,
+   "max_vertex_error_px": 0.03590065509949527,
+   "notifies": []
+  },
+  {
+   "clip": "rise",
+   "source": "PiglinMerchant_IdleLookAround",
+   "seconds": 4.9583335,
+   "loop": false,
+   "ticks": 100,
+   "max_bone_error_px": 0.0017867349296661014,
+   "max_vertex_error_px": 0.0006585294854519335,
+   "notifies": []
+  },
+  {
+   "clip": "summon",
+   "source": "custom",
+   "seconds": 1.5,
+   "loop": false,
+   "ticks": 30,
+   "max_bone_error_px": 0.0,
+   "max_vertex_error_px": 0.0,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "mammon_lord",
+  "source_mesh_sha256": "48a527cc278659fc35421f9bca97f40c2eda26fc0d8550f501cb8c38f987b1e4",
+  "triangles": 258,
+  "all_triangles_covered_once": true,
+  "bones": 50,
+  "plane_groups": 29,
+  "display_parts": 26,
+  "elements": 129,
+  "direct_uv_elements": 93,
+  "baked_elements": 36,
+  "glow_groups": 0,
+  "textures": {
+   "MI_PiglinMerchant": 0
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ }
+}

@@ -1,0 +1,182 @@
+{
+ "model_scale": 8.240130400819446,
+ "height_blocks": 2.1,
+ "source_height_cm": 212.37527986522764,
+ "turn": 0,
+ "merge": {
+  "head": [
+   "nose",
+   "l_eyepupil",
+   "l_eyeiris",
+   "r_eyepupil",
+   "r_eyeiris",
+   "l_eyebrow",
+   "r_eyebrow"
+  ]
+ },
+ "held_bone": "J_RWeapon",
+ "attachments": [
+  {
+   "name": "l_boot",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\batch3\\assets\\Dungeons\\Content\\Content_DLC3\\Actors\\Characters\\Enemies\\Illagers\\Mountaineer\\SM_Mountaineer_Boot.glb",
+   "bone": "J_L_Leg",
+   "material": "M_MountaineerVariant2",
+   "component": "SM_Mountaineer_Boot_L",
+   "attach": "J_L_Leg"
+  },
+  {
+   "name": "r_boot",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\batch3\\assets\\Dungeons\\Content\\Content_DLC3\\Actors\\Characters\\Enemies\\Illagers\\Mountaineer\\SM_Mountaineer_Boot.glb",
+   "bone": "J_R_Leg",
+   "material": "M_MountaineerVariant2",
+   "component": "SM_Mountaineer_Boot_R",
+   "attach": "J_R_Leg"
+  },
+  {
+   "name": "l_pad",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\batch3\\assets\\Dungeons\\Content\\Content_DLC3\\Actors\\Characters\\Enemies\\Illagers\\Mountaineer\\SM_Mountaineer_Shoulderpad.glb",
+   "bone": "J_LArm",
+   "material": "M_MountaineerVariant2",
+   "component": "SM_Mountaineer_Shoulderpad_L",
+   "attach": "J_LArm"
+  },
+  {
+   "name": "r_pad",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\batch3\\assets\\Dungeons\\Content\\Content_DLC3\\Actors\\Characters\\Enemies\\Illagers\\Mountaineer\\SM_Mountaineer_Shoulderpad_2.glb",
+   "bone": "J_RArm",
+   "material": "M_MountaineerVariant2",
+   "component": "SM_Mountaineer_Shoulderpad_R",
+   "attach": "J_RArm"
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Content_DLC3/Actors/Characters/Enemies/Illagers/Mountaineer/SK_Mountaineer_01",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\batch3"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Mountaineer_Idle",
+   "seconds": 4.9333334,
+   "loop": true,
+   "ticks": 99,
+   "max_bone_error_px": 0.00019326852142245916,
+   "max_vertex_error_px": 0.00025919636516496045,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Mountaineer_Walk",
+   "seconds": 2.0,
+   "loop": true,
+   "ticks": 40,
+   "max_bone_error_px": 0.0010267676904262394,
+   "max_vertex_error_px": 0.00144984453209763,
+   "notifies": [
+    [
+     0.0231,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1249,
+     "step_gravel_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.5133,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.6192,
+     "step_gravel_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.0198,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.123,
+     "step_gravel_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.5155,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.6187,
+     "step_gravel_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "attack",
+   "source": "Mountaineer_Attack",
+   "seconds": 1.2666667,
+   "loop": false,
+   "ticks": 26,
+   "max_bone_error_px": 0.030228549537421108,
+   "max_vertex_error_px": 0.04003167859293375,
+   "notifies": [
+    [
+     0.3776,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.4868,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.5618,
+     "CustomParticle",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "shoot",
+   "source": "Mountaineer_Brace",
+   "seconds": 2.7333333,
+   "loop": false,
+   "ticks": 55,
+   "max_bone_error_px": 0.018793875410926513,
+   "max_vertex_error_px": 0.02498791934701663,
+   "notifies": [
+    [
+     0.9205,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "samael_servant",
+  "source_mesh_sha256": "e62612983013c9c5f9ef0d03bd097093878bc4606ac76f0c072827190388f9c0",
+  "triangles": 228,
+  "all_triangles_covered_once": true,
+  "bones": 37,
+  "plane_groups": 21,
+  "display_parts": 20,
+  "elements": 102,
+  "direct_uv_elements": 82,
+  "baked_elements": 20,
+  "glow_groups": 0,
+  "textures": {
+   "M_Mountaineer": 0,
+   "M_MountaineerVariant2": 1
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

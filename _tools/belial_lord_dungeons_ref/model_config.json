@@ -1,0 +1,200 @@
+{
+ "model_scale": 6.2503085803111,
+ "height_blocks": 2.6,
+ "source_height_cm": 346.64955159043114,
+ "turn": 180,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/CauldronBoss/SK_CauldronBoss",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\batch3"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "CauldronBoss_Idle",
+   "seconds": 4.125,
+   "loop": true,
+   "ticks": 83,
+   "max_bone_error_px": 0.0001739504081119242,
+   "max_vertex_error_px": 0.0004566505689809455,
+   "notifies": [
+    [
+     0.081,
+     "cauldron_idle_wand_spin_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.5246,
+     "cauldron_idle_wand_spin_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     2.9593,
+     "cauldron_idle_wand_spin_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "cast",
+   "source": "CauldronBoss_BasicAttack_VFX",
+   "seconds": 2.0,
+   "loop": false,
+   "ticks": 40,
+   "max_bone_error_px": 0.028269155785883376,
+   "max_vertex_error_px": 0.0031426722316228797,
+   "notifies": [
+    [
+     0.0905,
+     "PS_CauldronBoss_ChargeUp",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.1593,
+     "cauldron_chimes_bubbles_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1599,
+     "AnimNS_CauldronBoss_StrongAttackGlow",
+     null
+    ],
+    [
+     0.4512,
+     "cauldron_bubbles_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.8228,
+     "cauldron_voice_attack_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.3559,
+     "cauldron_bubble_attack_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.4399,
+     "redstone_cube_stones_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "summon",
+   "source": "CauldronBoss_StrongAttack_VFX",
+   "seconds": 4.125,
+   "loop": false,
+   "ticks": 83,
+   "max_bone_error_px": 0.012118261784965362,
+   "max_vertex_error_px": 0.012997947770520402,
+   "notifies": [
+    [
+     0.5586,
+     "place_item_deathcapmushroom_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.5611,
+     "shockwave_shing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.6508,
+     "AnimNS_CauldronBoss_StrongAttackGlow",
+     null
+    ],
+    [
+     3.1274,
+     "cauldron_spin_attack_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     3.1341,
+     "redstone_cube_stones_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "spin",
+   "source": "CauldronBoss_IntenseSpin",
+   "seconds": 8.958333,
+   "loop": false,
+   "ticks": 180,
+   "max_bone_error_px": 0.01807824797901948,
+   "max_vertex_error_px": 0.04709462863697825,
+   "notifies": [
+    [
+     0.3109,
+     "PS_CauldronBoss_Bubbling",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3223,
+     "cauldron_shake_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3369,
+     "cauldron_spin_magic_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.4786,
+     "cauldron_bubbles_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.5753,
+     "cauldron_voice_spin_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     3.2329,
+     "cauldron_bubbles_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     5.743,
+     "cauldron_bubbles_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "walk",
+   "source": "custom",
+   "seconds": 0.8,
+   "loop": true,
+   "ticks": 16,
+   "max_bone_error_px": 0.0,
+   "max_vertex_error_px": 0.0,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "belial_lord",
+  "source_mesh_sha256": "1214dfd75c6b04bfa5c5b1224b9ba9452299960032ba719e24cd71f98c727e7a",
+  "triangles": 666,
+  "all_triangles_covered_once": true,
+  "bones": 24,
+  "plane_groups": 13,
+  "display_parts": 13,
+  "elements": 195,
+  "direct_uv_elements": 182,
+  "baked_elements": 13,
+  "glow_groups": 1,
+  "textures": {
+   "MI_CauldronBoss": 0,
+   "MI_Goo": 1
+  },
+  "atlas": [
+   512,
+   512
+  ]
+ }
+}

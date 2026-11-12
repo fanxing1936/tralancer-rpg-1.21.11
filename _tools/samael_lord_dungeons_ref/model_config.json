@@ -1,0 +1,281 @@
+{
+ "model_scale": 4.962706555321732,
+ "height_blocks": 4.0,
+ "source_height_cm": 671.67649269104,
+ "turn": 0,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/RedStoneMonstrosity/SK_RedStoneMonstrosity",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\monstrosity"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "RedStoneMonstrosity_Idle",
+   "seconds": 4.9583335,
+   "loop": true,
+   "ticks": 100,
+   "max_bone_error_px": 0.0014348398466936278,
+   "max_vertex_error_px": 0.00017964461952675394,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "RedStoneMonstrosity_Walk",
+   "seconds": 2.0416667,
+   "loop": true,
+   "ticks": 41,
+   "max_bone_error_px": 0.0002531395436260238,
+   "max_vertex_error_px": 0.0005226057527067572,
+   "notifies": [
+    [
+     0.0205,
+     "rs_monstrosity_step_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3209,
+     "PS_RedStoneMonstrosity_StepVFX",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3388,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ],
+    [
+     0.9864,
+     "rs_monstrosity_step_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.3387,
+     "PS_RedStoneMonstrosity_StepVFX",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     1.3536,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ]
+   ]
+  },
+  {
+   "clip": "cast",
+   "source": "RedStoneMonstrosity_BasicAttack",
+   "seconds": 1.8333334,
+   "loop": false,
+   "ticks": 37,
+   "max_bone_error_px": 0.09265015300301718,
+   "max_vertex_error_px": 0.011516863784505624,
+   "notifies": [
+    [
+     0.6876,
+     "rs_monstrosity_shoot_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.1753,
+     "rs_monstrosity_arm_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "charge",
+   "source": "RedStoneMonstrosity_StrongAttack",
+   "seconds": 2.4583333,
+   "loop": false,
+   "ticks": 50,
+   "max_bone_error_px": 0.1769453351697844,
+   "max_vertex_error_px": 0.0333992891659584,
+   "notifies": [
+    [
+     0.0001,
+     "rs_monstrosity_growl_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.5612,
+     "rs_monstrosity_step2",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.6627,
+     "rs_monstrosity_step4",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.7759,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ],
+    [
+     0.8152,
+     "PS_RedStoneMonstrosity_GroundSlamAttack",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.886,
+     "dist_block",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.9051,
+     "explode_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "summon",
+   "source": "RedStoneMonstrosity_SlamAttack_Composite",
+   "seconds": 2.0916667,
+   "loop": false,
+   "ticks": 42,
+   "max_bone_error_px": 0.11165005763362802,
+   "max_vertex_error_px": 0.008249575646894877,
+   "notifies": [
+    [
+     0.206,
+     "PS_RedStoneMonstrosity_ChargeSlam",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.953,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.9559,
+     "PS_RedStoneMonstrosity_GroundSlamAttack",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.9592,
+     "PS_RedStoneMonstrosity_GroundSlamAttack",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "super",
+   "source": "RedStoneMonstrosity_LavaAttack",
+   "seconds": 3.7083333,
+   "loop": false,
+   "ticks": 75,
+   "max_bone_error_px": 0.0917323701344776,
+   "max_vertex_error_px": 0.027457558259467326,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_RedStoneMonstrosity_LavaAttack",
+     null
+    ],
+    [
+     0.4385,
+     "rs_monstrosity_voicecharge_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.768,
+     "rs_monstrosity_shoot_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.8649,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ],
+    [
+     0.9027,
+     "PS_RedStoneMonstrosity_LavaSlamAttack",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.9027,
+     "PS_RedStoneMonstrosity_LavaSlamAttack",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.9698,
+     "dirt_debris_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.0455,
+     "PS_RedStoneMonstrosity_Vomit",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     1.4176,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ]
+   ]
+  },
+  {
+   "clip": "rise",
+   "source": "RedStoneMonstrosity_Awaken",
+   "seconds": 4.708333,
+   "loop": false,
+   "ticks": 95,
+   "max_bone_error_px": 0.02533278660720394,
+   "max_vertex_error_px": 0.015968746773955322,
+   "notifies": [
+    [
+     0.7333,
+     "AnimNS_RedStoneMonstrosity_Awake",
+     null
+    ],
+    [
+     0.7687,
+     "ground_crack_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     2.9638,
+     "PS_RedStoneMonstrosity_StepVFX",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     2.9725,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ],
+    [
+     2.9757,
+     "PS_RedStoneMonstrosity_StepVFX",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     3.0388,
+     "rs_monstrosity_awaken_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "samael_lord",
+  "source_mesh_sha256": "fba3518370b0e07dc7bd3c7dc372f48959a602a4c955b6abc68c6a5200846c81",
+  "triangles": 304,
+  "all_triangles_covered_once": true,
+  "bones": 44,
+  "plane_groups": 22,
+  "display_parts": 21,
+  "elements": 146,
+  "direct_uv_elements": 48,
+  "baked_elements": 98,
+  "glow_groups": 0,
+  "textures": {
+   "MI_RedStoneMonstrosity": 0
+  },
+  "atlas": [
+   1024,
+   1024
+  ]
+ }
+}

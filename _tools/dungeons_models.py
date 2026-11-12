@@ -31,9 +31,11 @@ UP = Path(r"D:\agent\dungeons_extract\upgrade")
 E = "Dungeons/Content/Actors/Characters/Enemies/"
 UNIT = 0.0192
 D5 = "Dungeons/Content/Content_DLC5/Actors/Characters/Enemies/"
+D4 = "Dungeons/Content/Content_DLC4/Actors/Characters/"
 # 眼、眉、鼻并进头部：少几个实体（dungeons_variant.fold 检查能否合并）
 FACE = ["nose", "l_eyepupil", "l_eyeiris", "r_eyepupil", "r_eyeiris", "l_eyebrow", "r_eyebrow"]
-GLOW = {"cyan": lambda c: (c[:, 2] > 150) & (c[:, 1] > 110) & (c[:, 0] < 110)}
+GLOW = {"cyan": lambda c: (c[:, 2] > 150) & (c[:, 1] > 110) & (c[:, 0] < 110),
+        "red": lambda c: (c[:, 0] > 170) & (c[:, 1] < 80) & (c[:, 2] < 80)}
 
 MODELS = {
     "leviathan": dict(root="necromancer", mesh=E + "SkeletonNecromancer/SK_SkeletonNecromancer", anims="necromancer",
@@ -89,6 +91,82 @@ MODELS = {
                                              ("Wraith_Walk2", "walk", True),
                                              ("Wraith_BasicAttack", "attack", False),
                                              ("TowerWraith_PoisonEmberAttack", "cast", False)]),
+    # 玛门：猪灵商人（用户选定 2026-11-12）。商人本身只有两段待机；行走、出手借普通猪灵的动作，
+    # 两套骨架同名骨的静止姿态一致，按骨名搬旋转（generic.retarget_tracks），脖子并进头
+    "mammon_lord": dict(root="mammon", mesh=D4 + "Friendlies/PiglinMerchant/SK_PiglinMerchant", anims=["mammon"],
+                   retarget={"piglin": {"source_meta": D4 + "Enemies/Piglin/SK_Piglin",
+                                        "merge": {"J_Head": ["J_Neck", "J_Head"]}, "move": ["J_Root", "J_Body"],
+                                        # 猪灵出手时整个身体大幅扭转，商人背着货架太夸张：身体转幅压到 45%
+                                        "damp": {"J_Body": .45}}},
+                   # 商人是友方 NPC，原作朝 +z（敌人朝 -z），显示时整体转 180°
+                   turn=180,
+                   height=3.2, clips=[("PiglinMerchant_Idle1", "idle", True),
+                                      ("Piglin_WalkMelee", "walk", True, "piglin"),
+                                      ("Piglin_Throw", "cast", False, "piglin"),
+                                      ("PiglinMerchant_IdleLookAround", "rise", False)],
+                   # 猪灵的近战是侧身大挥砍，套在背货架的商人身上像要摔倒；范围技能用自制的「聚金砸地」：
+                   # 双手举过头聚金、后仰，0.75 s 砸向身前地面、前倾下蹲，再收回。
+                   # 轴向（实测，模型朝 +z）：手臂 x 负 = 向前/向上抬，右臂 z 正 = 外展；身体、头 x 正 = 前倾；
+                   # J_Root 位移在模型空间，y 负 = 下蹲。
+                   custom_clips={"summon": dict(length=1.5, loop=False, keys={
+                       "J_R_Arm": [(0, (0, 0, 0)), (.35, (-165, 0, 20)), (.55, (-170, 0, 22)), (.75, (-40, 0, 8)),
+                                   (1.05, (-30, 0, 5)), (1.5, (0, 0, 0))],
+                       "J_L_Arm": [(0, (0, 0, 0)), (.35, (-165, 0, -20)), (.55, (-170, 0, -22)), (.75, (-40, 0, -8)),
+                                   (1.05, (-30, 0, -5)), (1.5, (0, 0, 0))],
+                       "J_Body": [(0, (0, 0, 0)), (.35, (-12, 0, 0)), (.55, (-14, 0, 0)), (.75, (25, 0, 0)),
+                                  (1.05, (18, 0, 0)), (1.5, (0, 0, 0))],
+                       "J_Head": [(0, (0, 0, 0)), (.35, (-15, 0, 0)), (.55, (-18, 0, 0)), (.75, (10, 0, 0)),
+                                  (1.05, (6, 0, 0)), (1.5, (0, 0, 0))],
+                       "J_Root": [(0, None, (0, 0, 0)), (.55, None, (0, .1, 0)), (.75, None, (0, -.35, 0)),
+                                  (1.05, None, (0, -.25, 0)), (1.5, None, (0, 0, 0))],
+                   })}),
+    # 萨麦尔（第五柱·暴怒）：红石巨怪（用户 2026-11-12 改定，原先给的红石傀儡不要）；红石部分按红色发光
+    "samael_lord": dict(root="monstrosity", mesh=E + "RedStoneMonstrosity/SK_RedStoneMonstrosity", anims=["monstrosity"],
+                        glow="red",
+                        height=4.0, clips=[("RedStoneMonstrosity_Idle", "idle", True),
+                                           ("RedStoneMonstrosity_Walk", "walk", True),
+                                           ("RedStoneMonstrosity_BasicAttack", "cast", False),
+                                           ("RedStoneMonstrosity_StrongAttack", "charge", False),
+                                           ("RedStoneMonstrosity_SlamAttack_Composite", "summon", False),
+                                           ("RedStoneMonstrosity_LavaAttack", "super", False),
+                                           ("RedStoneMonstrosity_Awaken", "rise", False)]),
+    # 贝利尔（第六柱·色欲）：腐化坩埚（用户选定 2026-11-12）。药水材质 MI_Goo 只有颜色（原作就是品红紫，
+    # 线性 0.48/0/0.42），换成按柱色画的 16×16 药水贴图并发光。坩埚原作没有行走，自制「颠步」。
+    "belial_lord": dict(root="batch3", mesh=E + "CauldronBoss/SK_CauldronBoss", anims=["batch3"],
+                        material_override={"MI_Goo": ("dungeons_overrides/goo_belial.png", "dungeons_overrides/goo_belial.png")},
+                        turn=180,       # 眼睛在 +z（同猪灵商人），显示时转过来
+                        height=2.6, clips=[("CauldronBoss_Idle", "idle", True),
+                                           ("CauldronBoss_BasicAttack_VFX", "cast", False),
+                                           ("CauldronBoss_StrongAttack_VFX", "summon", False),
+                                           ("CauldronBoss_IntenseSpin", "spin", False)],
+                        # 颠步：整口锅左右摇、每步跳起一点（J_Root：z 正负 = 左右摇，位移 y = 上下）
+                        custom_clips={"walk": dict(length=.8, loop=True, keys={
+                            "J_Root": [(0, (0, 0, 0), (0, 0, 0)), (.2, (0, 0, 7), (0, .35, 0)), (.4, (0, 0, 0), (0, 0, 0)),
+                                       (.6, (0, 0, -7), (0, .35, 0)), (.8, (0, 0, 0), (0, 0, 0))]})}),
+    # 三位领主的罪仆（用户 2026-11-12：「把对应的罪仆模型也加上」），按领主的主题和柱色挑：
+    "mammon_servant": dict(root="batch3", mesh=D4 + "Enemies/Piglin/SK_Piglin", anims=["batch3"],
+                           # 金甲红衣的近战变体，最贴玛门的金橙
+                           material_override={"MI_PiglinVariant0": "T_PiglinMeleeVariant2"},
+                           turn=180,       # 猪灵也朝 +z
+                           held_bone="J_R_Hand", height=2.0,
+                           clips=[("Piglin_Idle", "idle", True), ("Piglin_WalkMelee", "walk", True),
+                                  ("Piglin_MeleeAttack", "attack", False), ("Piglin_RangedAttack", "shoot", False)]),
+    "belial_servant": dict(root="batch3", mesh=E + "Witch/SK_Witch", anims=["batch3"],
+                           # 女巫和坩埚同一主题、同为紫色；手里的东西画在她捧药瓶的位置
+                           held_bone="J_Potion", height=2.2,
+                           clips=[("Witch_Idle", "idle", True), ("Witch_Walk", "walk", True),
+                                  ("Witch_AttackThrow", "attack", False), ("Witch_Drink", "shoot", False)]),
+    "samael_servant": dict(root="batch3", mesh="Dungeons/Content/Content_DLC3/Actors/Characters/Enemies/Illagers/Mountaineer/SK_Mountaineer_01",
+                           anims=["batch3"],
+                           # 红色变体（BP_MountaineerVariant2）：护肩、靴子按蓝图挂上；斧子不挂，手里画载体自己的武器
+                           material_override={"M_Mountaineer": "T_MountaineerVariant2"},
+                           blueprint="Dungeons/Content/Content_DLC3/Actors/Characters/Enemies/Illagers/Mountaineer/BP_MountaineerVariant2Character",
+                           attach_names={"SM_Mountaineer_Boot_L": "l_boot", "SM_Mountaineer_Boot_R": "r_boot",
+                                         "SM_Mountaineer_Shoulderpad_L": "l_pad", "SM_Mountaineer_Shoulderpad_R": "r_pad"},
+                           attach_skip=["SM_Axe", "Backpack"], attach_materials_all="M_MountaineerVariant2",
+                           held_bone="J_RWeapon", height=2.1, merge={"head": FACE},
+                           clips=[("Mountaineer_Idle", "idle", True), ("Mountaineer_Walk", "walk", True),
+                                  ("Mountaineer_Attack", "attack", False), ("Mountaineer_Brace", "shoot", False)]),
     "tower_guard": dict(root="towerguard", mesh=E + "Illagers/RoyalGuard/SK_IllagerRoyalGuard", anims=["towerguard"],
                         blueprint=E + "Illagers/TowerGuard/BP_IllagerTowerGuardCharacter",
                         attach_names={"Shield": "shield", "SM_Mace": "spear", "SM_DesertArmor_Helmet": "helmet",
@@ -108,6 +186,30 @@ MODELS = {
                                ("TowerGuard_ChargeAttack_ShieldBroken", "shield_break", False),
                                ("IllagerRoyalGuard_Stun", "stun", True)]),
 }
+
+
+def custom_animation(doc, name, spec):
+    """A hand-keyed Blockbench animation: keys {bone: [(time, rotation or None[, position])]}; rotations
+    are degrees added to the bone's rest, positions an offset in the parent's space (display_mob)."""
+    groups = {g["name"]: g for g in doc["groups"]}
+    animators = {}
+    for bone, keys in spec["keys"].items():
+        frames = []
+        for i, key in enumerate(keys):
+            t, rot = key[0], key[1]
+            pos = key[2] if len(key) > 2 else None
+            for channel, value in (("rotation", rot), ("position", pos)):
+                if value is None:
+                    continue
+                frames.append({"channel": channel, "data_points": [{a: str(v) for a, v in zip("xyz", value)}],
+                               "uuid": G.uid("%s/%s/%s/%s/%d" % (doc["name"], name, bone, channel, i)), "time": float(t),
+                               "color": -1, "interpolation": "linear"})
+        animators[groups[bone]["uuid"]] = {"name": bone, "type": "bone", "rotation_global": False,
+                                           "quaternion_interpolation": False, "keyframes": frames}
+    return {"uuid": G.uid(doc["name"] + ":custom:" + name), "name": "animation." + name,
+            "loop": "loop" if spec["loop"] else "once", "override": False, "length": spec["length"], "snapping": 24,
+            "selected": False, "saved": True, "path": "", "scope": 0, "anim_time_update": "", "blend_weight": "",
+            "start_delay": "", "loop_delay": "", "animators": animators}
 
 
 def source_height_cm(root, mesh):
@@ -133,15 +235,30 @@ def build(key):
                                                socket_roots=[UP / r / "metadata" for r in cfg.get("sockets", [])],
                                                names=cfg.get("attach_names"), skip=cfg.get("attach_skip", ()))
         for a in attachments:
-            a["material"] = cfg.get("attach_materials", {}).get(a["name"], a["material"])
+            a["material"] = cfg.get("attach_materials", {}).get(a["name"], cfg.get("attach_materials_all", a["material"]))
+    override = {}
+    for mat, tex in cfg.get("material_override", {}).items():
+        if isinstance(tex, tuple):      # files under _tools (a texture we drew)
+            override[mat] = tuple(HERE / t if t else None for t in tex)
+        else:                           # another exported texture of the same mob (a colour variant)
+            override[mat] = (next((root / "assets").rglob(tex + ".png")), None)
     doc, report = G.convert(glb, meta, root, out, name=key, unit_scale=UNIT, glow_color=GLOW.get(cfg.get("glow")),
-                            attachments=attachments)
+                            attachments=attachments, material_textures_override=override)
     anims = cfg["anims"] if isinstance(cfg["anims"], list) else [cfg["anims"]]
-    doc, clips = G.author(doc, meta, glb, [UP / a / "metadata" for a in anims], cfg["clips"])
+    retarget = {}
+    for name, rt in cfg.get("retarget", {}).items():
+        src = rt["source_meta"]
+        retarget[name] = dict(rt, source_bones=G.read(root / "metadata" / src / (src.split("/")[-1] + ".meta.json"))["bones"])
+    doc, clips = G.author(doc, meta, glb, [UP / a / "metadata" for a in anims], cfg["clips"], retarget=retarget)
+    for name, spec in cfg.get("custom_clips", {}).items():
+        doc["animations"].append(custom_animation(doc, name, spec))
+        clips.append({"clip": name, "source": "custom", "seconds": spec["length"], "loop": spec["loop"],
+                      "ticks": int(spec["length"] * 20 + .999), "max_bone_error_px": 0., "max_vertex_error_px": 0.,
+                      "notifies": []})
     (out / (key + ".bbmodel")).write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     h = source_height_cm(cfg["root"], mesh)
     model_scale = cfg["height"] * 16 / (h * UNIT)
-    config = {"model_scale": model_scale, "height_blocks": cfg["height"], "source_height_cm": h,
+    config = {"model_scale": model_scale, "height_blocks": cfg["height"], "source_height_cm": h, "turn": cfg.get("turn", 0),
               "merge": cfg.get("merge", {}), "held_bone": cfg.get("held_bone"),
               "attachments": [{k: str(v) if k == "mesh" else v for k, v in a.items() if k != "matrix"} for a in attachments],
               "source": {"mesh": mesh, "export_root": str(root)}, "clips": clips, "conversion": report}
@@ -150,7 +267,7 @@ def build(key):
         "# 来源\n\n从《Minecraft Dungeons》本体提取（只读），经 `_tools/dungeons_conversion/generic.py` 转换。\n\n"
         "- 网格：`%s`\n- 动作：%s\n\n版权归 Mojang 所有；本项目非商业，与 Mojang 无关联。\n"
         % (mesh + "".join("、`%s`（挂 %s）" % (Path(a["mesh"]).stem, a["attach"]) for a in attachments),
-           "、".join("`%s`→%s" % (s, n) for s, n, _ in cfg["clips"])), encoding="utf-8")
+           "、".join("`%s`→%s" % (c[0], c[1]) for c in cfg["clips"])), encoding="utf-8")
     print("%-10s parts %-3d elements %-4d atlas %s scale %.4f  %s" % (
         key, report["display_parts"], report["elements"], report["atlas"], model_scale,
         ", ".join("%s %.2fs %.2fpx" % (c["clip"], c["seconds"], c["max_vertex_error_px"]) for c in clips)))

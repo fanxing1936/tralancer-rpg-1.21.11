@@ -63,6 +63,10 @@ ROLE_OVERRIDES = {
     (2, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
     (3, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
     (4, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
+    # 萨麦尔、贝利尔、玛门的罪仆也换上了模型（add_lord_servants.py），同样的理由
+    (5, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
+    (6, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
+    (7, 4): {"entity": "pillager", "weapon": "minecraft:crossbow"},
 }
 
 
