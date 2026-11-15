@@ -1,0 +1,2865 @@
+{
+  "coordinate_order": [
+    "head_x",
+    "jaw_x",
+    "root_y_rotation",
+    "root_z_rotation",
+    "root_x_position",
+    "root_y_position",
+    "head_y_position"
+  ],
+  "frame_rate": 25,
+  "duration": 4.88,
+  "records": [
+    {
+      "frame": 0,
+      "time": 0.0,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 1,
+      "time": 0.04,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 2,
+      "time": 0.08,
+      "pose": [
+        -0.7223766362442161,
+        24.49244214163946,
+        1.3214070584111703,
+        -0.2613675985514008,
+        0.048677327695495265,
+        -15.624772959679857,
+        1.012087696458246
+      ],
+      "silhouette_iou_125": 0.9304197814836113,
+      "cost": 0.07484068923977454,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9304197814836113
+    },
+    {
+      "frame": 3,
+      "time": 0.12,
+      "pose": [
+        3.8950977524203774,
+        5.245617567470205,
+        5.576133670347099,
+        -1.9137328296397702,
+        -0.15912752708993286,
+        -7.5179423512551855,
+        0.7974766820885646
+      ],
+      "silhouette_iou_125": 0.9079122340425532,
+      "cost": 0.10346929155574801,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9079122340425532
+    },
+    {
+      "frame": 4,
+      "time": 0.16,
+      "pose": [
+        5.402735859229326,
+        6.628495666576341,
+        5.331634873643385,
+        -4.873447208346408,
+        -0.1707479634961121,
+        -3.7505973659693432,
+        0.7171131750497594
+      ],
+      "silhouette_iou_125": 0.9392106021319504,
+      "cost": 0.0678240697257329,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9392106021319504
+    },
+    {
+      "frame": 5,
+      "time": 0.2,
+      "pose": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "silhouette_iou_125": 0.9417016806722689,
+      "cost": 0.6441894948996932,
+      "refinement": "source005 calibrated closed pose; removed spurious 8.46-degree upper-jaw opening from silhouette optimizer",
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9614973262032086
+    },
+    {
+      "frame": 6,
+      "time": 0.24,
+      "pose": [
+        22.530218594508767,
+        -3.082129017006158,
+        4.257787737992622,
+        1.2801224700621872,
+        -0.18014542288168153,
+        -0.20864233888955744,
+        -1.5944641879427466
+      ],
+      "silhouette_iou_125": 0.8683496199782845,
+      "cost": 0.3607436304570154,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8683496199782845
+    },
+    {
+      "frame": 7,
+      "time": 0.28,
+      "pose": [
+        36.5686671305439,
+        -17.097060736912677,
+        4.883402573994018,
+        4.166995122479911,
+        -0.6143144141193404,
+        0.25012031475069213,
+        -4.570679466050282
+      ],
+      "silhouette_iou_125": 0.8439425051334702,
+      "cost": 0.361947562043351,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8439425051334702
+    },
+    {
+      "frame": 8,
+      "time": 0.32,
+      "pose": [
+        40.148424606820086,
+        -19.47905244611287,
+        4.455754017490013,
+        6.597007403542175,
+        -0.7488308345282507,
+        0.6878995871989108,
+        -5.373486952444183
+      ],
+      "silhouette_iou_125": 0.8392545136866628,
+      "cost": 0.34175360872570204,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8392545136866628
+    },
+    {
+      "frame": 9,
+      "time": 0.36,
+      "pose": [
+        48.551065896496354,
+        -10.953152502901233,
+        3.913700355556308,
+        3.6792407580574533,
+        -0.5529842167670882,
+        0.07106789068084132,
+        -5.406324256288676
+      ],
+      "silhouette_iou_125": 0.8185595567867036,
+      "cost": 0.4178739657447418,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8185595567867036
+    },
+    {
+      "frame": 10,
+      "time": 0.4,
+      "pose": [
+        54.29028218843218,
+        17.82476290038413,
+        6.467222058449187,
+        6.738611021674021,
+        -0.5627747471608427,
+        -0.6231845243203331,
+        -5.294039212119181
+      ],
+      "silhouette_iou_125": 0.798154878389712,
+      "cost": 0.5386137614283973,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.798154878389712
+    },
+    {
+      "frame": 11,
+      "time": 0.44,
+      "pose": [
+        81.58724737796858,
+        -31.63082606402658,
+        8.771667241213727,
+        -10.868867553541653,
+        -1.2159627961279587,
+        -2.720293141144806,
+        -5.12569188214165
+      ],
+      "silhouette_iou_125": 0.9137104506232023,
+      "cost": 0.7069687768910471,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9137104506232023
+    },
+    {
+      "frame": 12,
+      "time": 0.48,
+      "pose": [
+        94.90937482862883,
+        -40.4753306439799,
+        10.211773923408694,
+        -2.6121899234134425,
+        -0.18415886315405772,
+        -1.9289505287089292,
+        -4.81462207364652
+      ],
+      "silhouette_iou_125": 0.9148457583547558,
+      "cost": 0.0928882682912479,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9148457583547558
+    },
+    {
+      "frame": 13,
+      "time": 0.52,
+      "pose": [
+        94.17895003032987,
+        -43.29726608468975,
+        6.539826752627726,
+        -0.30057955309508694,
+        0.20312656709644533,
+        -2.1416189999429944,
+        -4.338983553776772
+      ],
+      "silhouette_iou_125": 0.9477756286266924,
+      "cost": 0.057214369017926474,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9477756286266924
+    },
+    {
+      "frame": 14,
+      "time": 0.56,
+      "pose": [
+        96.15992796263039,
+        -47.18681150834063,
+        5.05172863408507,
+        0.7458923168280553,
+        0.538509468466109,
+        -2.242513758539349,
+        -3.9364800120768084
+      ],
+      "silhouette_iou_125": 0.9395886889460154,
+      "cost": 0.06652179257203446,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9395886889460154
+    },
+    {
+      "frame": 15,
+      "time": 0.6,
+      "pose": [
+        106.13919187665113,
+        -47.92657594342062,
+        3.5705577093405214,
+        4.868800798606762,
+        1.1336947687212011,
+        -3.29209378204767,
+        -2.482201608679829
+      ],
+      "silhouette_iou_125": 0.9207752465147909,
+      "cost": 0.08645692587031623,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9207752465147909
+    },
+    {
+      "frame": 16,
+      "time": 0.64,
+      "pose": [
+        112.61423968846213,
+        -49.61506298821047,
+        1.6342108321594224,
+        6.634251557784539,
+        1.5202476518342762,
+        -3.799100314948957,
+        -3.054983788266947
+      ],
+      "silhouette_iou_125": 0.9230769230769231,
+      "cost": 0.08345989973832856,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.9230769230769231
+    },
+    {
+      "frame": 17,
+      "time": 0.68,
+      "pose": [
+        97.53310188687249,
+        -62.57690128150709,
+        2.749575456268469,
+        7.575004705164709,
+        3.7872252326134226,
+        -4.45869756711088,
+        -3.0421808814616043
+      ],
+      "silhouette_iou_125": 0.8490279465370595,
+      "cost": 0.7205488297411458,
+      "refinement": "recoil recovery between measured16 and mouth-constrained20; numerical interpolation, not recovered original bone curve",
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.7452190006169032
+    },
+    {
+      "frame": 18,
+      "time": 0.72,
+      "pose": [
+        82.45196408528284,
+        -75.53873957480371,
+        3.8649400803775156,
+        8.515757852544876,
+        6.054202813392569,
+        -5.118294819272803,
+        -3.0293779746562617
+      ],
+      "silhouette_iou_125": 0.7186477644492911,
+      "cost": 0.5063719670467749,
+      "refinement": "recoil recovery between measured16 and mouth-constrained20; numerical interpolation, not recovered original bone curve",
+      "depth_lift_translation": [
+        -5.835309033673502,
+        3.8845736533430206,
+        -6.790168409529952
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.4171641791044776
+    },
+    {
+      "frame": 19,
+      "time": 0.76,
+      "pose": [
+        67.37082628369319,
+        -88.50057786810034,
+        4.980304704486562,
+        9.456510999925046,
+        8.321180394171716,
+        -5.777892071434726,
+        -3.016575067850919
+      ],
+      "silhouette_iou_125": 0.8519987793713762,
+      "cost": 0.5610864635023805,
+      "refinement": "recoil recovery between measured16 and mouth-constrained20; numerical interpolation, not recovered original bone curve",
+      "depth_lift_translation": [
+        -10.887153206705628,
+        7.247593617171911,
+        -12.668669876314484
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.527542372881356
+    },
+    {
+      "frame": 20,
+      "time": 0.8,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.397264147305215,
+        10.588157974950862,
+        -6.437489323596648,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7988023952095809,
+      "cost": 0.538666052899794,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.803798677256605,
+        11.186313054042035,
+        -19.553484190807154
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6239440722400234
+    },
+    {
+      "frame": 21,
+      "time": 0.84,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.19537525319653,
+        10.40073589959849,
+        -6.391659686445444,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7761819269898265,
+      "cost": 0.572938326105417,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.902481830184193,
+        11.252006571502584,
+        -19.668315337485925
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6499112950916618
+    },
+    {
+      "frame": 22,
+      "time": 0.88,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.245886583692359,
+        -6.349334352187451,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7575757575757576,
+      "cost": 0.6171088747667365,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.946880575078286,
+        11.281562880116546,
+        -19.719979260212718
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6462444771723123
+    },
+    {
+      "frame": 23,
+      "time": 0.92,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.214045625366722,
+        -6.34048264735947,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7703549060542797,
+      "cost": 0.6188843282910237,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.933583766276197,
+        11.272711175288563,
+        -19.704506631333167
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6449912126537786
+    },
+    {
+      "frame": 24,
+      "time": 0.96,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.308224708574794,
+        -6.390665876348637,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7663775052348191,
+      "cost": 0.6110047930925009,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.008967753192596,
+        11.322894404277731,
+        -19.792226058631762
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6480282519128899
+    },
+    {
+      "frame": 25,
+      "time": 1.0,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.67368329377542,
+        10.55283296069043,
+        -6.428152619500427,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7473021582733813,
+      "cost": 0.6152333305560624,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.000659764805963,
+        11.317363764407116,
+        -19.782558594584163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.645265318088537
+    },
+    {
+      "frame": 26,
+      "time": 1.04,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.896252170535186,
+        10.841587625883745,
+        -6.498933180955423,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7791212031849012,
+      "cost": 0.5610931170382688,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.943299490957095,
+        11.27917894724387,
+        -19.715812186261488
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6310763888888888
+    },
+    {
+      "frame": 27,
+      "time": 1.08,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.847455928631007,
+        10.395906153849868,
+        -6.7564136805219075,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7732330827067669,
+      "cost": 0.5732507254084848,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.50939138034194,
+        11.656027135777801,
+        -20.3745363844163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6244837758112094
+    },
+    {
+      "frame": 28,
+      "time": 1.12,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        11.896245853103487,
+        10.601061739106328,
+        -6.810113747544365,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7445768408188207,
+      "cost": 0.5483747339372165,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.503697800596925,
+        11.65223691151666,
+        -20.367911137133138
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6283763728109231
+    },
+    {
+      "frame": 29,
+      "time": 1.16,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.816425340094913,
+        10.834696463660222,
+        -6.778564427468464,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7292800967937084,
+      "cost": 0.5352301337362091,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.355839874416226,
+        11.55380767646415,
+        -20.195858515128513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6115774240231548
+    },
+    {
+      "frame": 30,
+      "time": 1.2,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.361181666727305,
+        10.52697725890966,
+        -6.537756074882595,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7218917311124331,
+      "cost": 0.5610954470217461,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.137032470256496,
+        11.408147271428124,
+        -19.94124661455513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6409130816505707
+    },
+    {
+      "frame": 31,
+      "time": 1.24,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.245886583692359,
+        -6.349334352187451,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7032484635645303,
+      "cost": 0.5834673138150561,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.946880575078286,
+        11.281562880116546,
+        -19.719979260212718
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6462444771723123
+    },
+    {
+      "frame": 32,
+      "time": 1.28,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.214045625366722,
+        -6.34048264735947,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.6978887897710377,
+      "cost": 0.5888022207912609,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.933583766276197,
+        11.272711175288563,
+        -19.704506631333167
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6449912126537786
+    },
+    {
+      "frame": 33,
+      "time": 1.32,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.308224708574794,
+        -6.390665876348637,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7372781065088757,
+      "cost": 0.5749862008918675,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.008967753192596,
+        11.322894404277731,
+        -19.792226058631762
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6480282519128899
+    },
+    {
+      "frame": 34,
+      "time": 1.36,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.67368329377542,
+        10.55283296069043,
+        -6.428152619500427,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7361111111111112,
+      "cost": 0.5646936905534067,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.000659764805963,
+        11.317363764407116,
+        -19.782558594584163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.645265318088537
+    },
+    {
+      "frame": 35,
+      "time": 1.4,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.896252170535186,
+        10.841587625883745,
+        -6.498933180955423,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7092303155411384,
+      "cost": 0.5529522708842852,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.943299490957095,
+        11.27917894724387,
+        -19.715812186261488
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6310763888888888
+    },
+    {
+      "frame": 36,
+      "time": 1.44,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.847455928631007,
+        10.395906153849868,
+        -6.7564136805219075,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7132802937576499,
+      "cost": 0.543289159010347,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.50939138034194,
+        11.656027135777801,
+        -20.3745363844163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6244837758112094
+    },
+    {
+      "frame": 37,
+      "time": 1.48,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        11.896245853103487,
+        10.601061739106328,
+        -6.810113747544365,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7105903834449179,
+      "cost": 0.5421360884804172,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.503697800596925,
+        11.65223691151666,
+        -20.367911137133138
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6283763728109231
+    },
+    {
+      "frame": 38,
+      "time": 1.52,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.816425340094913,
+        10.834696463660222,
+        -6.778564427468464,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7182120205376019,
+      "cost": 0.5355081417069184,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.355839874416226,
+        11.55380767646415,
+        -20.195858515128513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6115774240231548
+    },
+    {
+      "frame": 39,
+      "time": 1.56,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.361181666727305,
+        10.52697725890966,
+        -6.537756074882595,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7292418772563177,
+      "cost": 0.5570391207919844,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.137032470256496,
+        11.408147271428124,
+        -19.94124661455513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6409130816505707
+    },
+    {
+      "frame": 40,
+      "time": 1.6,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.245886583692359,
+        -6.349334352187451,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7506662718389103,
+      "cost": 0.5763300625704465,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.946880575078286,
+        11.281562880116546,
+        -19.719979260212718
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6462444771723123
+    },
+    {
+      "frame": 41,
+      "time": 1.64,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.214045625366722,
+        -6.34048264735947,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7523696682464455,
+      "cost": 0.5786721813684591,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.933583766276197,
+        11.272711175288563,
+        -19.704506631333167
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6449912126537786
+    },
+    {
+      "frame": 42,
+      "time": 1.68,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.308224708574794,
+        -6.390665876348637,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7323397913561848,
+      "cost": 0.5796953970228836,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.008967753192596,
+        11.322894404277731,
+        -19.792226058631762
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6480282519128899
+    },
+    {
+      "frame": 43,
+      "time": 1.72,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.67368329377542,
+        10.55283296069043,
+        -6.428152619500427,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7253687315634219,
+      "cost": 0.5670677791917457,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.000659764805963,
+        11.317363764407116,
+        -19.782558594584163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.645265318088537
+    },
+    {
+      "frame": 44,
+      "time": 1.76,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.896252170535186,
+        10.841587625883745,
+        -6.498933180955423,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7291851851851852,
+      "cost": 0.548067602352667,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.943299490957095,
+        11.27917894724387,
+        -19.715812186261488
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6310763888888888
+    },
+    {
+      "frame": 45,
+      "time": 1.8,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.847455928631007,
+        10.395906153849868,
+        -6.7564136805219075,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7409215746109247,
+      "cost": 0.5366415586668087,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.50939138034194,
+        11.656027135777801,
+        -20.3745363844163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6244837758112094
+    },
+    {
+      "frame": 46,
+      "time": 1.84,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        11.896245853103487,
+        10.601061739106328,
+        -6.810113747544365,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7376102158710854,
+      "cost": 0.5381052259618067,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.503697800596925,
+        11.65223691151666,
+        -20.367911137133138
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6283763728109231
+    },
+    {
+      "frame": 47,
+      "time": 1.88,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.816425340094913,
+        10.834696463660222,
+        -6.778564427468464,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7110643415514131,
+      "cost": 0.5360691301376375,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.355839874416226,
+        11.55380767646415,
+        -20.195858515128513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6115774240231548
+    },
+    {
+      "frame": 48,
+      "time": 1.92,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.361181666727305,
+        10.52697725890966,
+        -6.537756074882595,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7250149611011371,
+      "cost": 0.5509758390767422,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.137032470256496,
+        11.408147271428124,
+        -19.94124661455513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6409130816505707
+    },
+    {
+      "frame": 49,
+      "time": 1.96,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.245886583692359,
+        -6.349334352187451,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7371547371547371,
+      "cost": 0.5773909575155401,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.946880575078286,
+        11.281562880116546,
+        -19.719979260212718
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6462444771723123
+    },
+    {
+      "frame": 50,
+      "time": 2.0,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.214045625366722,
+        -6.34048264735947,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7752075919335706,
+      "cost": 0.5980589283400216,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.933583766276197,
+        11.272711175288563,
+        -19.704506631333167
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6449912126537786
+    },
+    {
+      "frame": 51,
+      "time": 2.04,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.308224708574794,
+        -6.390665876348637,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7588735699618656,
+      "cost": 0.6038674201035532,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.008967753192596,
+        11.322894404277731,
+        -19.792226058631762
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6480282519128899
+    },
+    {
+      "frame": 52,
+      "time": 2.08,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.67368329377542,
+        10.55283296069043,
+        -6.428152619500427,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7507436049970255,
+      "cost": 0.6116948563781285,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.000659764805963,
+        11.317363764407116,
+        -19.782558594584163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.645265318088537
+    },
+    {
+      "frame": 53,
+      "time": 2.12,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.896252170535186,
+        10.841587625883745,
+        -6.498933180955423,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7893800059329575,
+      "cost": 0.580367182318257,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.943299490957095,
+        11.27917894724387,
+        -19.715812186261488
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6310763888888888
+    },
+    {
+      "frame": 54,
+      "time": 2.16,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.847455928631007,
+        10.395906153849868,
+        -6.7564136805219075,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7262048192771084,
+      "cost": 0.5736867518929554,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.50939138034194,
+        11.656027135777801,
+        -20.3745363844163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6244837758112094
+    },
+    {
+      "frame": 55,
+      "time": 2.2,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        11.896245853103487,
+        10.601061739106328,
+        -6.810113747544365,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7727411944869832,
+      "cost": 0.5513126671112327,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.503697800596925,
+        11.65223691151666,
+        -20.367911137133138
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6283763728109231
+    },
+    {
+      "frame": 56,
+      "time": 2.24,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.816425340094913,
+        10.834696463660222,
+        -6.778564427468464,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7513562386980108,
+      "cost": 0.5304648337422081,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.355839874416226,
+        11.55380767646415,
+        -20.195858515128513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6115774240231548
+    },
+    {
+      "frame": 57,
+      "time": 2.28,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.361181666727305,
+        10.52697725890966,
+        -6.537756074882595,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7552301255230126,
+      "cost": 0.5544818951307257,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.137032470256496,
+        11.408147271428124,
+        -19.94124661455513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6409130816505707
+    },
+    {
+      "frame": 58,
+      "time": 2.32,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.245886583692359,
+        -6.349334352187451,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7670825906120023,
+      "cost": 0.5846647993277063,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.946880575078286,
+        11.281562880116546,
+        -19.719979260212718
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6462444771723123
+    },
+    {
+      "frame": 59,
+      "time": 2.36,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.214045625366722,
+        -6.34048264735947,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7653631284916201,
+      "cost": 0.603838055535805,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.933583766276197,
+        11.272711175288563,
+        -19.704506631333167
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6449912126537786
+    },
+    {
+      "frame": 60,
+      "time": 2.4,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.308224708574794,
+        -6.390665876348637,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7606963706107996,
+      "cost": 0.5870984337477666,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.008967753192596,
+        11.322894404277731,
+        -19.792226058631762
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6480282519128899
+    },
+    {
+      "frame": 61,
+      "time": 2.44,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.67368329377542,
+        10.55283296069043,
+        -6.428152619500427,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7540644398462902,
+      "cost": 0.5665627220277011,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.000659764805963,
+        11.317363764407116,
+        -19.782558594584163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.645265318088537
+    },
+    {
+      "frame": 62,
+      "time": 2.48,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.896252170535186,
+        10.841587625883745,
+        -6.498933180955423,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7479216152019003,
+      "cost": 0.5544402455456964,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.943299490957095,
+        11.27917894724387,
+        -19.715812186261488
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6310763888888888
+    },
+    {
+      "frame": 63,
+      "time": 2.52,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.847455928631007,
+        10.395906153849868,
+        -6.7564136805219075,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7627692307692308,
+      "cost": 0.5499928662234814,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.50939138034194,
+        11.656027135777801,
+        -20.3745363844163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6244837758112094
+    },
+    {
+      "frame": 64,
+      "time": 2.56,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        11.896245853103487,
+        10.601061739106328,
+        -6.810113747544365,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7620918984280532,
+      "cost": 0.5501453772829773,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.503697800596925,
+        11.65223691151666,
+        -20.367911137133138
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6283763728109231
+    },
+    {
+      "frame": 65,
+      "time": 2.6,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.816425340094913,
+        10.834696463660222,
+        -6.778564427468464,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7465753424657534,
+      "cost": 0.5441769911532889,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.355839874416226,
+        11.55380767646415,
+        -20.195858515128513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6115774240231548
+    },
+    {
+      "frame": 66,
+      "time": 2.64,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.361181666727305,
+        10.52697725890966,
+        -6.537756074882595,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7462775461584277,
+      "cost": 0.5529308036684931,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.137032470256496,
+        11.408147271428124,
+        -19.94124661455513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6409130816505707
+    },
+    {
+      "frame": 67,
+      "time": 2.68,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.245886583692359,
+        -6.349334352187451,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7542924807578448,
+      "cost": 0.5865272916332852,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.946880575078286,
+        11.281562880116546,
+        -19.719979260212718
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6462444771723123
+    },
+    {
+      "frame": 68,
+      "time": 2.72,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.214045625366722,
+        -6.34048264735947,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7701660735468565,
+      "cost": 0.576897528372382,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.933583766276197,
+        11.272711175288563,
+        -19.704506631333167
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6449912126537786
+    },
+    {
+      "frame": 69,
+      "time": 2.76,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        13.397264147305215,
+        10.308224708574794,
+        -6.390665876348637,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7543859649122807,
+      "cost": 0.5861398955494854,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.008967753192596,
+        11.322894404277731,
+        -19.792226058631762
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6480282519128899
+    },
+    {
+      "frame": 70,
+      "time": 2.8,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.67368329377542,
+        10.55283296069043,
+        -6.428152619500427,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7416567342073898,
+      "cost": 0.5709865906542374,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.000659764805963,
+        11.317363764407116,
+        -19.782558594584163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.645265318088537
+    },
+    {
+      "frame": 71,
+      "time": 2.84,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.896252170535186,
+        10.841587625883745,
+        -6.498933180955423,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7759643916913946,
+      "cost": 0.5383153629300339,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.943299490957095,
+        11.27917894724387,
+        -19.715812186261488
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6310763888888888
+    },
+    {
+      "frame": 72,
+      "time": 2.88,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        12.847455928631007,
+        10.395906153849868,
+        -6.7564136805219075,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7499237572430619,
+      "cost": 0.5396887810519153,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.50939138034194,
+        11.656027135777801,
+        -20.3745363844163
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6244837758112094
+    },
+    {
+      "frame": 73,
+      "time": 2.92,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        11.896245853103487,
+        10.601061739106328,
+        -6.810113747544365,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7331900521952717,
+      "cost": 0.5424746557179948,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.503697800596925,
+        11.65223691151666,
+        -20.367911137133138
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6283763728109231
+    },
+    {
+      "frame": 74,
+      "time": 2.96,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.816425340094913,
+        10.834696463660222,
+        -6.778564427468464,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7376102158710854,
+      "cost": 0.5335574584364396,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.355839874416226,
+        11.55380767646415,
+        -20.195858515128513
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6115774240231548
+    },
+    {
+      "frame": 75,
+      "time": 3.0,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        10.15472127846446,
+        10.941888521956955,
+        -6.712736557590227,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7479625716872925,
+      "cost": 0.49812079703144024,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -17.19412937151896,
+        11.446156761080134,
+        -20.00768655338222
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6185627000290952
+    },
+    {
+      "frame": 76,
+      "time": 3.04,
+      "pose": [
+        52.28968848210354,
+        -101.46241616139696,
+        6.0956693285956085,
+        8.453870792052932,
+        11.048971793377973,
+        -6.62539731035614,
+        -3.0037721610455765
+      ],
+      "silhouette_iou_125": 0.7624509507998792,
+      "cost": 0.4591924695832313,
+      "refinement": "source20 visible face-corner constraints; per-frame source silhouette centroid and bounded PCA tilt; hidden 3D motion inferred",
+      "depth_lift_translation": [
+        -16.89711193150895,
+        11.248431822197174,
+        -19.66206673674574
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.5934034688655104
+    },
+    {
+      "frame": 77,
+      "time": 3.08,
+      "pose": [
+        33.37711213674898,
+        -81.05450549978538,
+        6.930412113002447,
+        8.087078890234794,
+        8.471020950500364,
+        -4.862366980189777,
+        -2.0536750208399344
+      ],
+      "silhouette_iou_125": 0.7963855421686747,
+      "cost": 0.5045171349846281,
+      "refinement": "closing transition between source76 and80, inferred interpolation",
+      "depth_lift_translation": [
+        -12.096660814305013,
+        8.052764578792896,
+        -14.076094967396129
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6097987751531059
+    },
+    {
+      "frame": 78,
+      "time": 3.12,
+      "pose": [
+        14.464535791394406,
+        -60.64659483817381,
+        7.765154897409286,
+        7.720286988416657,
+        5.893070107622755,
+        -3.099336650023414,
+        -1.1035778806342924
+      ],
+      "silhouette_iou_125": 0.8167893961708395,
+      "cost": 0.4620448114812399,
+      "refinement": "closing transition between source76 and80, inferred interpolation",
+      "depth_lift_translation": [
+        -7.739758641402456,
+        5.152368508356226,
+        -9.006252166074729
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6548279689234184
+    },
+    {
+      "frame": 79,
+      "time": 3.16,
+      "pose": [
+        -4.448040553960162,
+        -40.23868417656223,
+        8.599897681816124,
+        7.353495086598518,
+        3.3151192647451464,
+        -1.3363063198570508,
+        -0.15348074042865034
+      ],
+      "silhouette_iou_125": 0.7639073729039128,
+      "cost": 0.5218277251424487,
+      "refinement": "closing transition between source76 and80, inferred interpolation",
+      "depth_lift_translation": [
+        -3.0183568105291756,
+        2.0093244890560404,
+        -3.5122648938170253
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.7663151895126816
+    },
+    {
+      "frame": 80,
+      "time": 3.2,
+      "pose": [
+        -23.36061689931473,
+        -19.83077351495066,
+        9.434640466222964,
+        6.986703184780381,
+        0.7371684218675374,
+        0.4267240103093124,
+        0.7966163997769917
+      ],
+      "silhouette_iou_125": 0.8353510895883777,
+      "cost": 0.8314430031398614,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8353510895883777
+    },
+    {
+      "frame": 81,
+      "time": 3.24,
+      "pose": [
+        -14.247807401507922,
+        -41.41900975846457,
+        1.187437739795289,
+        9.974139344908973,
+        0.23400445213893414,
+        -1.2045467362646645,
+        -0.3998669135169623
+      ],
+      "silhouette_iou_125": 0.8966555183946489,
+      "cost": 0.1193826734023422,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8966555183946489
+    },
+    {
+      "frame": 82,
+      "time": 3.28,
+      "pose": [
+        -13.308017726401289,
+        -6.369577243992595,
+        -6.519160092887228,
+        9.867355099870556,
+        -0.7540886671814443,
+        -2.8252506212340354,
+        -0.4663805687363876
+      ],
+      "silhouette_iou_125": 0.8005874673629243,
+      "cost": 0.21966276463364887,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8005874673629243
+    },
+    {
+      "frame": 83,
+      "time": 3.32,
+      "pose": [
+        3.4605292323732555,
+        -10.880992071166494,
+        -20.522347732822602,
+        6.82124914102629,
+        0.19622116891078284,
+        -4.576719247117588,
+        -0.46787445100583036
+      ],
+      "silhouette_iou_125": 0.8017722349852314,
+      "cost": 0.22245703419201948,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8017722349852314
+    },
+    {
+      "frame": 84,
+      "time": 3.36,
+      "pose": [
+        4.509722619301858,
+        -9.41398874486368,
+        -23.963706041627695,
+        7.514407424718785,
+        -0.3820625814022332,
+        -5.496317730189048,
+        -1.0292364280947846
+      ],
+      "silhouette_iou_125": 0.7817803948735712,
+      "cost": 0.24467828456560906,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.7817803948735712
+    },
+    {
+      "frame": 85,
+      "time": 3.4,
+      "pose": [
+        12.68613990538643,
+        -1.0410492143903087,
+        -22.837867435673218,
+        3.1032401780862755,
+        0.15042647805307663,
+        -8.35290569968391,
+        0.5376958968765035
+      ],
+      "silhouette_iou_125": 0.8580669710806698,
+      "cost": 0.15967782633249283,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8580669710806698
+    },
+    {
+      "frame": 86,
+      "time": 3.44,
+      "pose": [
+        23.12604308273128,
+        8.473098726060043,
+        -5.791322498760145,
+        0.9935484942452174,
+        0.5093774403513333,
+        -10.630909011950054,
+        0.28049295673835906
+      ],
+      "silhouette_iou_125": 0.8960032626427407,
+      "cost": 0.11539312166694934,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8960032626427407
+    },
+    {
+      "frame": 87,
+      "time": 3.48,
+      "pose": [
+        27.52377831778395,
+        4.7602800607937255,
+        3.4186567108792096,
+        -0.47074200672602134,
+        -0.10684686797443804,
+        -10.226676883873399,
+        -0.6325662768439461
+      ],
+      "silhouette_iou_125": 0.8995515695067264,
+      "cost": 0.11198709091148444,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8995515695067264
+    },
+    {
+      "frame": 88,
+      "time": 3.52,
+      "pose": [
+        29.01777796095538,
+        20.253149444735264,
+        0.7169714278046792,
+        -0.4038849864837475,
+        0.05748846106508112,
+        -12.61560382189307,
+        -1.003456163703294
+      ],
+      "silhouette_iou_125": 0.913717886572952,
+      "cost": 0.09446319572188822,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.913717886572952
+    },
+    {
+      "frame": 89,
+      "time": 3.56,
+      "pose": [
+        21.460086054993628,
+        24.940685216307582,
+        3.0191065161001123,
+        0.2544301600896619,
+        0.06100483896724016,
+        -14.751877227147554,
+        -1.5237183101091838
+      ],
+      "silhouette_iou_125": 0.8484149855907781,
+      "cost": 0.1616522263902938,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.8484149855907781
+    },
+    {
+      "frame": 90,
+      "time": 3.6,
+      "pose": [
+        21.460086054993628,
+        24.940685216307582,
+        3.0191065161001123,
+        0.2544301600896619,
+        0.06100483896724016,
+        -18.151877227147555,
+        -1.5237183101091838
+      ],
+      "silhouette_iou_125": 0.8157303370786517,
+      "cost": 0.1962040887968998,
+      "refinement": "position-only final sinking continuation; no scale",
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.6832871652816251
+    },
+    {
+      "frame": 91,
+      "time": 3.64,
+      "pose": [
+        21.460086054993628,
+        24.940685216307582,
+        3.0191065161001123,
+        0.2544301600896619,
+        0.06100483896724016,
+        -21.551877227147553,
+        -1.5237183101091838
+      ],
+      "silhouette_iou_125": 0.2411764705882353,
+      "cost": 0.7943621031890744,
+      "refinement": "position-only final sinking continuation; no scale",
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 0.28297872340425534
+    },
+    {
+      "frame": 92,
+      "time": 3.68,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 93,
+      "time": 3.72,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 94,
+      "time": 3.76,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 95,
+      "time": 3.8,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 96,
+      "time": 3.84,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 97,
+      "time": 3.88,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 98,
+      "time": 3.92,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 99,
+      "time": 3.96,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 100,
+      "time": 4.0,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 101,
+      "time": 4.04,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 102,
+      "time": 4.08,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 103,
+      "time": 4.12,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 104,
+      "time": 4.16,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 105,
+      "time": 4.2,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 106,
+      "time": 4.24,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 107,
+      "time": 4.28,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 108,
+      "time": 4.32,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 109,
+      "time": 4.36,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 110,
+      "time": 4.4,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 111,
+      "time": 4.44,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 112,
+      "time": 4.48,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 113,
+      "time": 4.52,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 114,
+      "time": 4.56,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 115,
+      "time": 4.6,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 116,
+      "time": 4.64,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 117,
+      "time": 4.68,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 118,
+      "time": 4.72,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 119,
+      "time": 4.76,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 120,
+      "time": 4.8,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    },
+    {
+      "frame": 121,
+      "time": 4.84,
+      "pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "silhouette_iou_125": 1.0,
+      "empty_reference": true,
+      "depth_lift_translation": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "depth_lift_note": "unobservable orthographic view-ray translation; chosen to keep full attack geometry above assumed floor, not recovered original trajectory",
+      "final_silhouette_iou_125": 1.0
+    }
+  ],
+  "fitting_limit": "silhouette and visible mouth-light constrained geometric inference; hidden depth remains unobservable; source alpha silhouette has glow and teeth that cuboids cannot exactly match",
+  "mouth_correspondence": {
+    "source_frame": 20,
+    "source_time": 0.8,
+    "box_vertex_labels": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "source_xy": [
+      [
+        198.0,
+        73.0
+      ],
+      [
+        309.0,
+        117.0
+      ],
+      [
+        358.0,
+        212.0
+      ],
+      [
+        111.0,
+        184.0
+      ],
+      [
+        219.0,
+        230.0
+      ],
+      [
+        259.0,
+        298.0
+      ],
+      [
+        230.0,
+        392.0
+      ],
+      [
+        131.0,
+        331.0
+      ],
+      [
+        165.0,
+        246.0
+      ],
+      [
+        259.0,
+        298.0
+      ]
+    ],
+    "pose": [
+      52.28968848210354,
+      -101.46241616139696,
+      6.0956693285956085,
+      10.397264147305215,
+      10.588157974950862,
+      -6.437489323596648,
+      -3.0037721610455765
+    ],
+    "rms_px": 11.475720040323457,
+    "status": "manual visible-front/inside-plane correspondences resolve previous silhouette-only flipped-face solution; joint rotations/depth still inferred"
+  }
+}

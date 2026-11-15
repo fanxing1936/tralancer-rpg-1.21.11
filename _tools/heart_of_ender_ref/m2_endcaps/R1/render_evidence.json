@@ -1,0 +1,83 @@
+{
+  "engine": "Blockbench native WebGL, offscreen Preview",
+  "source_bbmodel_sha256": "2af0dcc44f2c633bba2084c444b64daba320a4ca1a95046fe85453351c93fdd0",
+  "opened_project": {
+    "name": "heart_of_ender_R1",
+    "uuid": "1add3a6a-597f-0129-414e-1f6465ee20da",
+    "format": "bedrock",
+    "elements": 46,
+    "groups": 26,
+    "textures": 1,
+    "animations": 0
+  },
+  "texture_loaded": {
+    "loaded": true,
+    "sizes": [
+      [
+        512,
+        512
+      ]
+    ]
+  },
+  "alpha_note": "Blockbench preview only, not Minecraft alpha sorting evidence",
+  "full_bright_preview_from_glow_bones": [
+    "shell_eyes_glow",
+    "shell_teeth_front_glow",
+    "shell_teeth_side_glow"
+  ],
+  "full_bright_method": "clone native material and set SHADE=false only on these surfaces; no bloom, recoloring or alpha edit",
+  "views": {
+    "reference_three_quarter": {
+      "position": [
+        -46.617768,
+        48.129493,
+        -46.475784
+      ],
+      "target": [
+        4.650743,
+        14.320032,
+        4.792726
+      ],
+      "height": 54.555527
+    },
+    "front": {
+      "position": [
+        4.2308085328552,
+        16.40330131906787,
+        -104.40981804128164
+      ],
+      "target": [
+        4.2308085328552,
+        16.40330131906787,
+        -4.409818041281644
+      ],
+      "height": 63.59617600463847
+    },
+    "right_side": {
+      "position": [
+        104.2308085328552,
+        16.40330131906787,
+        -4.409818041281644
+      ],
+      "target": [
+        4.2308085328552,
+        16.40330131906787,
+        -4.409818041281644
+      ],
+      "height": 48.134222045823634
+    },
+    "back": {
+      "position": [
+        4.2308085328552,
+        16.40330131906787,
+        95.59018195871836
+      ],
+      "target": [
+        4.2308085328552,
+        16.40330131906787,
+        -4.409818041281644
+      ],
+      "height": 63.59617600463847
+    }
+  }
+}

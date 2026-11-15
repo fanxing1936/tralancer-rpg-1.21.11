@@ -1,0 +1,159 @@
+{
+ "model_scale": 9.058823529411764,
+ "height_blocks": 2.31,
+ "source_height_cm": 212.5,
+ "turn": 0,
+ "merge": {
+  "head": [
+   "nose",
+   "l_eyepupil",
+   "l_eyeiris",
+   "r_eyepupil",
+   "r_eyeiris",
+   "l_eyebrow",
+   "r_eyebrow",
+   "helmet"
+  ]
+ },
+ "held_bone": null,
+ "attachments": [
+  {
+   "name": "armor",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\royalguard\\assets\\Dungeons\\Content\\Actors\\Characters\\Enemies\\Illagers\\RoyalGuard\\Armor_IllagerRoyalGuard.glb",
+   "bone": "J_L_Spine",
+   "material": null,
+   "component": "Armor_IllagerRoyalGuard",
+   "attach": "J_L_Spine"
+  },
+  {
+   "name": "l_pauldron",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\royalguard\\assets\\Dungeons\\Content\\Actors\\Characters\\Enemies\\Illagers\\RoyalGuard\\L_Arm_IllagerRoyalGuard.glb",
+   "bone": "J_L_Hand",
+   "material": null,
+   "component": "L_Arm_IllagerRoyalGuard",
+   "attach": "J_L_Hand"
+  },
+  {
+   "name": "l_greave",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\royalguard\\assets\\Dungeons\\Content\\Actors\\Characters\\Enemies\\Illagers\\RoyalGuard\\L_Leg_IllagerRoyalGuard.glb",
+   "bone": "J_L_Leg",
+   "material": null,
+   "component": "L_Leg_IllagerRoyalGuard",
+   "attach": "J_L_Leg"
+  },
+  {
+   "name": "r_pauldron",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\royalguard\\assets\\Dungeons\\Content\\Actors\\Characters\\Enemies\\Illagers\\RoyalGuard\\R_Arm_IllagerRoyalGuard.glb",
+   "bone": "J_R_Hand",
+   "material": "MI_IllagerRoyalGuard",
+   "component": "R_Arm_IllagerRoyalGuard",
+   "attach": "J_R_Hand"
+  },
+  {
+   "name": "r_greave",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\royalguard\\assets\\Dungeons\\Content\\Actors\\Characters\\Enemies\\Illagers\\RoyalGuard\\R_Leg_IllagerRoyalGuard.glb",
+   "bone": "J_R_Leg",
+   "material": null,
+   "component": "R_Leg_IllagerRoyalGuard",
+   "attach": "J_R_Leg"
+  },
+  {
+   "name": "helmet",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\royalguard\\assets\\Dungeons\\Content\\Actors\\Characters\\Enemies\\Illagers\\RoyalGuard\\Helmet_IllagerRoyalGuard.glb",
+   "bone": "J_Head",
+   "material": "MI_IllagerRoyalGuard",
+   "component": "SM_DesertArmor_Helmet",
+   "attach": "J_Head"
+  },
+  {
+   "name": "mace",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\royalguard\\assets\\Dungeons\\Content\\Actors\\Equipment\\MeleeWeapons\\Mace\\SM_Mace.glb",
+   "bone": "J_R_Weapon",
+   "material": null,
+   "component": "SM_Mace",
+   "attach": "J_R_Weapon"
+  },
+  {
+   "name": "shield",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\royalguard\\assets\\Dungeons\\Content\\Actors\\Characters\\Enemies\\Illagers\\RoyalGuard\\IllagerRoyalGuardShield.glb",
+   "bone": "J_L_Weapon",
+   "material": "MI_RoyalGuardShield",
+   "component": "Shield",
+   "attach": "J_L_Weapon"
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/Illagers/RoyalGuard/SK_IllagerRoyalGuard",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\royalguard"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "IllagerRoyalGuard_Idle",
+   "seconds": 4.9583335,
+   "loop": true,
+   "ticks": 100,
+   "max_bone_error_px": 2.5435039101379747e-08,
+   "max_vertex_error_px": 1.324468942072018,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "IllagerRoyalGuard_Walk",
+   "seconds": 0.7916667,
+   "loop": true,
+   "ticks": 16,
+   "max_bone_error_px": 5.533456835403434e-08,
+   "max_vertex_error_px": 1.324468943568513,
+   "notifies": []
+  },
+  {
+   "clip": "attack",
+   "source": "IllagerRoyalGuard_BasicAttack",
+   "seconds": 1.8333334,
+   "loop": false,
+   "ticks": 37,
+   "max_bone_error_px": 6.125647652111362e-08,
+   "max_vertex_error_px": 1.3244689464363402,
+   "notifies": []
+  },
+  {
+   "clip": "stun",
+   "source": "IllagerRoyalGuard_Stun",
+   "seconds": 1.5416666,
+   "loop": true,
+   "ticks": 31,
+   "max_bone_error_px": 7.346463037905085e-08,
+   "max_vertex_error_px": 1.324468951323181,
+   "notifies": [
+    [
+     0.0304,
+     "StunSFX",
+     null
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "royal_guard",
+  "source_mesh_sha256": "5fc4d5eed6a453ed543b8ba24ef831f715a0846dfa3f34c5e361c5b4826d7e42",
+  "triangles": 644,
+  "all_triangles_covered_once": true,
+  "bones": 39,
+  "plane_groups": 26,
+  "display_parts": 23,
+  "elements": 255,
+  "direct_uv_elements": 208,
+  "baked_elements": 47,
+  "glow_groups": 0,
+  "textures": {
+   "MI_IllagerRoyalGuard": 0,
+   "MI_Mace": 1,
+   "MI_RoyalGuardShield": 2
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ }
+}

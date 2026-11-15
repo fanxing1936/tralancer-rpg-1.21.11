@@ -1,0 +1,170 @@
+{
+  "textures": {
+    "0": "rpg:item/prime_enchanter/atlas",
+    "particle": "rpg:item/prime_enchanter/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        10.25,
+        7.1,
+        7.976
+      ],
+      "to": [
+        10.95,
+        10.8,
+        8.024
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11.0,
+            2.0,
+            10.75,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            10.75,
+            2.0,
+            11.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            10.75,
+            2.0,
+            11.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            10.75,
+            2.0,
+            11.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        7.3,
+        5.2,
+        7.976
+      ],
+      "to": [
+        8.7,
+        10.8,
+        8.024
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11.75,
+            0.0,
+            11.25,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            11.5,
+            0.0,
+            11.75,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            11.25,
+            0.0,
+            11.75,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            11.25,
+            0.0,
+            11.5,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        5.05,
+        7.1,
+        7.976
+      ],
+      "to": [
+        5.75,
+        10.8,
+        8.024
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            12.25,
+            2.0,
+            12.0,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            12.0,
+            2.0,
+            12.25,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            12.0,
+            2.0,
+            12.25,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            12.0,
+            2.0,
+            12.25,
+            5.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

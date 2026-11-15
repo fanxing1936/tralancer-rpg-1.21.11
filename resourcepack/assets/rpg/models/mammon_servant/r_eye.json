@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/mammon_servant/atlas",
+    "particle": "rpg:item/mammon_servant/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.94,
+        8.0,
+        7.94
+      ],
+      "to": [
+        8.06,
+        8.0,
+        8.06
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0.8872,
+            0.8818,
+            0.9946,
+            0.9961
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            0.8872,
+            0.9961,
+            0.9946,
+            0.8818
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0,
+          8.0026,
+          7.94
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      }
+    }
+  ]
+}

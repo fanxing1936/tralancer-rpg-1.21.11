@@ -1,0 +1,1383 @@
+{
+  "schema_version": 1,
+  "stage": "M2局部重建候选，不是最终bbmodel",
+  "source_file": "heart_of_ender_ref/MCD_Arch-Illager_(texture).png",
+  "source_sha256": "1a21fa3f274e5883a6b05eee2deccf6ea95c27b81a830feacb0972c92261fbf7",
+  "coordinate_system": "+Y上，面向-Z；right_arm在+X，left_arm在-X；地面Y=0。source_rect为原64×64像素半开矩形。",
+  "uv_rule": "bb_uv已包括端点翻转，rotation始终0。display_mob.py忽略face.rotation，不可依赖90度UV字段。所有rect需加图集偏移，本体建议offset=(0,0)。",
+  "sleeves": [
+    {
+      "bone": "right_arm",
+      "source_u": 52,
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "shoulder_point": [
+        3.1,
+        10.8,
+        0
+      ],
+      "cuff_point": [
+        5.8,
+        10.8,
+        0
+      ],
+      "outer_cross_section_yz": [
+        3,
+        3
+      ],
+      "wall_thickness": 0.18,
+      "faces": {
+        "up": {
+          "surface": "袖筒外顶",
+          "source_rect": [
+            52,
+            3,
+            56,
+            6
+          ],
+          "bb_uv": [
+            52,
+            3,
+            56,
+            6
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "源U末1列金边必须在远离躯干的一端；V横跨袖筒。",
+          "rgba_sha256": "fec2602cf5f12dbcfb2d34b6c20ed4d039ecb66f80924097a48b9a6a2e8eb9ad"
+        },
+        "north": {
+          "surface": "袖筒外前",
+          "source_rect": [
+            52,
+            6,
+            56,
+            9
+          ],
+          "bb_uv": [
+            56,
+            6,
+            52,
+            9
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "同上；north默认U沿-X，因此角色右袖翻U。",
+          "rgba_sha256": "54108e34a7616a7ba1c69be3595558ce43b3b90754d38bcd3fa0fdaf26de9934"
+        },
+        "down": {
+          "surface": "袖筒外底",
+          "source_rect": [
+            52,
+            9,
+            56,
+            12
+          ],
+          "bb_uv": [
+            52,
+            9,
+            56,
+            12
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "此块暗蓝/暗金与朝下表面相容，面分配仍为重建候选。",
+          "rgba_sha256": "264c023e9d905fd6b72c64e78484e955bac8406697bec99e3c10dd38c5d56c8b"
+        },
+        "south": {
+          "surface": "袖筒外后",
+          "source_rect": [
+            52,
+            12,
+            56,
+            15
+          ],
+          "bb_uv": [
+            52,
+            12,
+            56,
+            15
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "源U末列在外袖口；原作绕轴面序未取得。",
+          "rgba_sha256": "54108e34a7616a7ba1c69be3595558ce43b3b90754d38bcd3fa0fdaf26de9934"
+        },
+        "west": {
+          "surface": "靠肩封帽",
+          "source_rect": [
+            52,
+            0,
+            55,
+            3
+          ],
+          "bb_uv": [
+            52,
+            0,
+            55,
+            3
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "3×3蓝色帽，靠躯干一侧，可被身体遮挡。",
+          "rgba_sha256": "06c9ca285906ba9ed514aef42762dcc924936f1826d89cc393163eae63f74bec"
+        },
+        "east": {
+          "surface": "袖口中央",
+          "source_rect": null,
+          "bb_uv": null,
+          "rotation": 0,
+          "texture": null,
+          "notes": "必须开孔，不能贴金色实心方块。"
+        }
+      },
+      "cuff_rim_faces": {
+        "up": {
+          "surface": "袖口金色截面-up",
+          "source_rect": [
+            55,
+            4,
+            56,
+            5
+          ],
+          "bb_uv": [
+            55,
+            4,
+            56,
+            5
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "明确复用本侧金边中的1px；四根薄壁构成环，中间空。",
+          "rgba_sha256": "b173b394dc22c84416bc05f87775c6c8f557dced7d911ccd0f189dc988b09daf"
+        },
+        "north": {
+          "surface": "袖口金色截面-north",
+          "source_rect": [
+            55,
+            7,
+            56,
+            8
+          ],
+          "bb_uv": [
+            55,
+            7,
+            56,
+            8
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "明确复用本侧金边中的1px；四根薄壁构成环，中间空。",
+          "rgba_sha256": "2f982de537a862f469a1144a9dfd4595de78a1f2e3d4a0604683c7c8b272e04a"
+        },
+        "down": {
+          "surface": "袖口金色截面-down",
+          "source_rect": [
+            55,
+            10,
+            56,
+            11
+          ],
+          "bb_uv": [
+            55,
+            10,
+            56,
+            11
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "明确复用本侧金边中的1px；四根薄壁构成环，中间空。",
+          "rgba_sha256": "f78c959f3f901c1087bdcad6d6f2513e6668666de9f12299b489bf834f0c19f5"
+        },
+        "south": {
+          "surface": "袖口金色截面-south",
+          "source_rect": [
+            55,
+            13,
+            56,
+            14
+          ],
+          "bb_uv": [
+            55,
+            13,
+            56,
+            14
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "明确复用本侧金边中的1px；四根薄壁构成环，中间空。",
+          "rgba_sha256": "2f982de537a862f469a1144a9dfd4595de78a1f2e3d4a0604683c7c8b272e04a"
+        }
+      },
+      "inner_wall_rule": "内壁明确复用对应外壁裁片，翻转U端点使金列仍在袖口。内壁面向空腔，不增加显示实体。",
+      "evidence": "每套3×3帽+四块4×3壁，共57px；第4列顶部3px是背景、下12px是金边，支持单端开放袖筒。",
+      "status": "候选；外截面与长度按原图紧凑比例，非官方几何。"
+    },
+    {
+      "bone": "left_arm",
+      "source_u": 56,
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "shoulder_point": [
+        -3.1,
+        10.8,
+        0
+      ],
+      "cuff_point": [
+        -5.8,
+        10.8,
+        0
+      ],
+      "outer_cross_section_yz": [
+        3,
+        3
+      ],
+      "wall_thickness": 0.18,
+      "faces": {
+        "up": {
+          "surface": "袖筒外顶",
+          "source_rect": [
+            56,
+            3,
+            60,
+            6
+          ],
+          "bb_uv": [
+            60,
+            3,
+            56,
+            6
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "源U末1列金边必须在远离躯干的一端；V横跨袖筒。",
+          "rgba_sha256": "fec2602cf5f12dbcfb2d34b6c20ed4d039ecb66f80924097a48b9a6a2e8eb9ad"
+        },
+        "north": {
+          "surface": "袖筒外前",
+          "source_rect": [
+            56,
+            6,
+            60,
+            9
+          ],
+          "bb_uv": [
+            56,
+            6,
+            60,
+            9
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "同上；north默认U沿-X，因此角色右袖翻U。",
+          "rgba_sha256": "54108e34a7616a7ba1c69be3595558ce43b3b90754d38bcd3fa0fdaf26de9934"
+        },
+        "down": {
+          "surface": "袖筒外底",
+          "source_rect": [
+            56,
+            9,
+            60,
+            12
+          ],
+          "bb_uv": [
+            60,
+            9,
+            56,
+            12
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "此块暗蓝/暗金与朝下表面相容，面分配仍为重建候选。",
+          "rgba_sha256": "264c023e9d905fd6b72c64e78484e955bac8406697bec99e3c10dd38c5d56c8b"
+        },
+        "south": {
+          "surface": "袖筒外后",
+          "source_rect": [
+            56,
+            12,
+            60,
+            15
+          ],
+          "bb_uv": [
+            60,
+            12,
+            56,
+            15
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "源U末列在外袖口；原作绕轴面序未取得。",
+          "rgba_sha256": "54108e34a7616a7ba1c69be3595558ce43b3b90754d38bcd3fa0fdaf26de9934"
+        },
+        "east": {
+          "surface": "靠肩封帽",
+          "source_rect": [
+            56,
+            0,
+            59,
+            3
+          ],
+          "bb_uv": [
+            56,
+            0,
+            59,
+            3
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "3×3蓝色帽，靠躯干一侧，可被身体遮挡。",
+          "rgba_sha256": "06c9ca285906ba9ed514aef42762dcc924936f1826d89cc393163eae63f74bec"
+        },
+        "west": {
+          "surface": "袖口中央",
+          "source_rect": null,
+          "bb_uv": null,
+          "rotation": 0,
+          "texture": null,
+          "notes": "必须开孔，不能贴金色实心方块。"
+        }
+      },
+      "cuff_rim_faces": {
+        "up": {
+          "surface": "袖口金色截面-up",
+          "source_rect": [
+            59,
+            4,
+            60,
+            5
+          ],
+          "bb_uv": [
+            59,
+            4,
+            60,
+            5
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "明确复用本侧金边中的1px；四根薄壁构成环，中间空。",
+          "rgba_sha256": "b173b394dc22c84416bc05f87775c6c8f557dced7d911ccd0f189dc988b09daf"
+        },
+        "north": {
+          "surface": "袖口金色截面-north",
+          "source_rect": [
+            59,
+            7,
+            60,
+            8
+          ],
+          "bb_uv": [
+            59,
+            7,
+            60,
+            8
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "明确复用本侧金边中的1px；四根薄壁构成环，中间空。",
+          "rgba_sha256": "2f982de537a862f469a1144a9dfd4595de78a1f2e3d4a0604683c7c8b272e04a"
+        },
+        "down": {
+          "surface": "袖口金色截面-down",
+          "source_rect": [
+            59,
+            10,
+            60,
+            11
+          ],
+          "bb_uv": [
+            59,
+            10,
+            60,
+            11
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "明确复用本侧金边中的1px；四根薄壁构成环，中间空。",
+          "rgba_sha256": "f78c959f3f901c1087bdcad6d6f2513e6668666de9f12299b489bf834f0c19f5"
+        },
+        "south": {
+          "surface": "袖口金色截面-south",
+          "source_rect": [
+            59,
+            13,
+            60,
+            14
+          ],
+          "bb_uv": [
+            59,
+            13,
+            60,
+            14
+          ],
+          "rotation": 0,
+          "texture": 0,
+          "notes": "明确复用本侧金边中的1px；四根薄壁构成环，中间空。",
+          "rgba_sha256": "2f982de537a862f469a1144a9dfd4595de78a1f2e3d4a0604683c7c8b272e04a"
+        }
+      },
+      "inner_wall_rule": "内壁明确复用对应外壁裁片，翻转U端点使金列仍在袖口。内壁面向空腔，不增加显示实体。",
+      "evidence": "每套3×3帽+四块4×3壁，共57px；第4列顶部3px是背景、下12px是金边，支持单端开放袖筒。",
+      "status": "候选；外截面与长度按原图紧凑比例，非官方几何。"
+    }
+  ],
+  "shorts_faces": {
+    "north": {
+      "surface": "深青短裤-north",
+      "source_rect": [
+        13,
+        16,
+        16,
+        19
+      ],
+      "bb_uv": [
+        13,
+        16,
+        16,
+        19
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "同一3³盒网被左右两条短裤腿有意共享；summon13可见两块深青裤腿。",
+      "rgba_sha256": "4a7fd103482227940c02cdcba109871f5122cac0746c1d4ebcf5dd3d572756c1"
+    },
+    "east": {
+      "surface": "深青短裤-east",
+      "source_rect": [
+        16,
+        16,
+        19,
+        19
+      ],
+      "bb_uv": [
+        16,
+        16,
+        19,
+        19
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "同一3³盒网被左右两条短裤腿有意共享；summon13可见两块深青裤腿。",
+      "rgba_sha256": "e27f763ce9cccff007957d092b23ca0f3d45e2dc3ca677c630d5de10494a4642"
+    },
+    "south": {
+      "surface": "深青短裤-south",
+      "source_rect": [
+        19,
+        16,
+        22,
+        19
+      ],
+      "bb_uv": [
+        19,
+        16,
+        22,
+        19
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "同一3³盒网被左右两条短裤腿有意共享；summon13可见两块深青裤腿。",
+      "rgba_sha256": "e27f763ce9cccff007957d092b23ca0f3d45e2dc3ca677c630d5de10494a4642"
+    },
+    "west": {
+      "surface": "深青短裤-west",
+      "source_rect": [
+        10,
+        16,
+        13,
+        19
+      ],
+      "bb_uv": [
+        10,
+        16,
+        13,
+        19
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "同一3³盒网被左右两条短裤腿有意共享；summon13可见两块深青裤腿。",
+      "rgba_sha256": "e27f763ce9cccff007957d092b23ca0f3d45e2dc3ca677c630d5de10494a4642"
+    },
+    "up": {
+      "surface": "深青短裤-up",
+      "source_rect": [
+        13,
+        13,
+        16,
+        16
+      ],
+      "bb_uv": [
+        13,
+        13,
+        16,
+        16
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "同一3³盒网被左右两条短裤腿有意共享；summon13可见两块深青裤腿。",
+      "rgba_sha256": "839ac747d8cbe47d9391722996aa37bd7f77a618440224130a7f63cb52c0d5dc"
+    },
+    "down": {
+      "surface": "深青短裤-down",
+      "source_rect": [
+        13,
+        19,
+        16,
+        22
+      ],
+      "bb_uv": [
+        13,
+        19,
+        16,
+        22
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "同一3³盒网被左右两条短裤腿有意共享；summon13可见两块深青裤腿。",
+      "rgba_sha256": "fda1c05a0c4859a44c8943da55ecc599a36276c4b22585f4dbbaba0d176e4e60"
+    }
+  },
+  "leg_faces": {
+    "north": {
+      "surface": "金腿-north",
+      "source_rect": [
+        1,
+        19,
+        2,
+        22
+      ],
+      "bb_uv": [
+        1,
+        19,
+        2,
+        22
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "四个1×3金色侧面；行19暗金、20–21金色；同网两腿共享。",
+      "rgba_sha256": "0a944b0d2a3d564a4f2592703cc2af0f2524922726cf6f0c30d47b96ffac0011"
+    },
+    "east": {
+      "surface": "金腿-east",
+      "source_rect": [
+        2,
+        19,
+        3,
+        22
+      ],
+      "bb_uv": [
+        2,
+        19,
+        3,
+        22
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "四个1×3金色侧面；行19暗金、20–21金色；同网两腿共享。",
+      "rgba_sha256": "0a944b0d2a3d564a4f2592703cc2af0f2524922726cf6f0c30d47b96ffac0011"
+    },
+    "south": {
+      "surface": "金腿-south",
+      "source_rect": [
+        3,
+        19,
+        4,
+        22
+      ],
+      "bb_uv": [
+        3,
+        19,
+        4,
+        22
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "四个1×3金色侧面；行19暗金、20–21金色；同网两腿共享。",
+      "rgba_sha256": "0a944b0d2a3d564a4f2592703cc2af0f2524922726cf6f0c30d47b96ffac0011"
+    },
+    "west": {
+      "surface": "金腿-west",
+      "source_rect": [
+        0,
+        19,
+        1,
+        22
+      ],
+      "bb_uv": [
+        0,
+        19,
+        1,
+        22
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "四个1×3金色侧面；行19暗金、20–21金色；同网两腿共享。",
+      "rgba_sha256": "0a944b0d2a3d564a4f2592703cc2af0f2524922726cf6f0c30d47b96ffac0011"
+    },
+    "up": {
+      "surface": "金腿-up",
+      "source_rect": [
+        2,
+        18,
+        3,
+        19
+      ],
+      "bb_uv": [
+        2,
+        18,
+        3,
+        19
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "1×1灰色(182,182,182)，连接裤内；推断为上端，不把它挪作鞋。",
+      "rgba_sha256": "b5500bf19d103375db3b45963e6a7f723e743b6f754e44bf98c5706a9245de15"
+    },
+    "down": {
+      "surface": "金腿-down",
+      "source_rect": [
+        1,
+        18,
+        2,
+        19
+      ],
+      "bb_uv": [
+        1,
+        18,
+        2,
+        19
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "1×1纯红(255,0,0)，与脚板相接；推断为下端。",
+      "rgba_sha256": "34aaa746c25a0f105c4316bbb1f009aa359f49582656ee97d73c58132d563423"
+    }
+  },
+  "foot_faces": {
+    "up": {
+      "surface": "红脚板-up",
+      "source_rect": [
+        4,
+        18,
+        5,
+        21
+      ],
+      "bb_uv": [
+        4,
+        18,
+        5,
+        21
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "原图独立1×3纯红条；顶部/底部整条复用，窄侧明确复用条边，不重画红色。",
+      "rgba_sha256": "8cc181e45b163468cc6ef77025f676f673fa35a85e77e74f2961d5fd6f6434f2"
+    },
+    "down": {
+      "surface": "红脚板-down",
+      "source_rect": [
+        4,
+        18,
+        5,
+        21
+      ],
+      "bb_uv": [
+        4,
+        18,
+        5,
+        21
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "原图独立1×3纯红条；顶部/底部整条复用，窄侧明确复用条边，不重画红色。",
+      "rgba_sha256": "8cc181e45b163468cc6ef77025f676f673fa35a85e77e74f2961d5fd6f6434f2"
+    },
+    "north": {
+      "surface": "红脚板-north",
+      "source_rect": [
+        4,
+        18,
+        5,
+        19
+      ],
+      "bb_uv": [
+        4,
+        18,
+        5,
+        19
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "原图独立1×3纯红条；顶部/底部整条复用，窄侧明确复用条边，不重画红色。",
+      "rgba_sha256": "34aaa746c25a0f105c4316bbb1f009aa359f49582656ee97d73c58132d563423"
+    },
+    "south": {
+      "surface": "红脚板-south",
+      "source_rect": [
+        4,
+        20,
+        5,
+        21
+      ],
+      "bb_uv": [
+        4,
+        20,
+        5,
+        21
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "原图独立1×3纯红条；顶部/底部整条复用，窄侧明确复用条边，不重画红色。",
+      "rgba_sha256": "34aaa746c25a0f105c4316bbb1f009aa359f49582656ee97d73c58132d563423"
+    },
+    "east": {
+      "surface": "红脚板-east",
+      "source_rect": [
+        4,
+        18,
+        5,
+        21
+      ],
+      "bb_uv": [
+        4,
+        18,
+        5,
+        21
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "原图独立1×3纯红条；顶部/底部整条复用，窄侧明确复用条边，不重画红色。",
+      "rgba_sha256": "8cc181e45b163468cc6ef77025f676f673fa35a85e77e74f2961d5fd6f6434f2"
+    },
+    "west": {
+      "surface": "红脚板-west",
+      "source_rect": [
+        4,
+        18,
+        5,
+        21
+      ],
+      "bb_uv": [
+        4,
+        18,
+        5,
+        21
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "原图独立1×3纯红条；顶部/底部整条复用，窄侧明确复用条边，不重画红色。",
+      "rgba_sha256": "8cc181e45b163468cc6ef77025f676f673fa35a85e77e74f2961d5fd6f6434f2"
+    }
+  },
+  "robe_faces": {
+    "north": {
+      "surface": "外袍-north",
+      "source_rect": [
+        36,
+        15,
+        44,
+        29
+      ],
+      "bb_uv": [
+        36,
+        15,
+        44,
+        29
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "上段开口4px、下段开口6px，金边随开口变窄；原alpha=0/255完整保留。",
+      "rgba_sha256": "62feca605521045249b464eb79e5bc95a55a10e232e31971df5b34590ba36ee0"
+    },
+    "west": {
+      "surface": "外袍-west",
+      "source_rect": [
+        32,
+        15,
+        36,
+        29
+      ],
+      "bb_uv": [
+        32,
+        15,
+        36,
+        29
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "从带白领/白下摆的蓝袍区取样；不是鞋。",
+      "rgba_sha256": "2100a809f43d88543b451a3fe17132ab42a3708ae8364163960dcad7a0562f5a"
+    },
+    "east": {
+      "surface": "外袍-east",
+      "source_rect": [
+        43,
+        15,
+        47,
+        29
+      ],
+      "bb_uv": [
+        43,
+        15,
+        47,
+        29
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "与front有意共享u43金缝列；是工作映射，不伪称严格24px无重叠盒网。",
+      "rgba_sha256": "794a5fa98791efaa4d261ae3c1836a2a19d3e2a1d897849aa496363518756951"
+    },
+    "south": {
+      "surface": "外袍-south",
+      "source_rect": [
+        47,
+        15,
+        55,
+        29
+      ],
+      "bb_uv": [
+        47,
+        15,
+        55,
+        29
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "8×14，顶有短白领图样、底有2px完整白边；不取u55..59另一个白条。",
+      "rgba_sha256": "f8620e496d11b66c20bc57eab7d4e0ea2f65524240322c333988b107fc4a67e5"
+    },
+    "up": {
+      "surface": "外袍-up",
+      "source_rect": null,
+      "bb_uv": null,
+      "texture": null,
+      "rotation": 0,
+      "notes": "外袍为空心薄片，不用完整上下盖堵住脖子或裤腿。薄片厚度边可明确复用本片最外1px，不跨未知区。"
+    },
+    "down": {
+      "surface": "外袍-down",
+      "source_rect": null,
+      "bb_uv": null,
+      "texture": null,
+      "rotation": 0,
+      "notes": "外袍为空心薄片，不用完整上下盖堵住脖子或裤腿。薄片厚度边可明确复用本片最外1px，不跨未知区。"
+    }
+  },
+  "torso_faces": {
+    "north": {
+      "surface": "内衣上身-north",
+      "source_rect": [
+        5,
+        27,
+        14,
+        36
+      ],
+      "bb_uv": [
+        5,
+        27,
+        14,
+        36
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "A11–A13工作六面；source宽高含不一致边界，几何以参考体型为准。",
+      "rgba_sha256": "5954c72787f4a319ff4a2040cb946591a1338e15f45ec824cb375385f8eca0c7"
+    },
+    "east": {
+      "surface": "内衣上身-east",
+      "source_rect": [
+        14,
+        27,
+        19,
+        36
+      ],
+      "bb_uv": [
+        14,
+        27,
+        19,
+        36
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "A11–A13工作六面；source宽高含不一致边界，几何以参考体型为准。",
+      "rgba_sha256": "309efa36104cbe2cade667aa8fb53a8b3b28455def58be11463f223b45915672"
+    },
+    "south": {
+      "surface": "内衣上身-south",
+      "source_rect": [
+        19,
+        27,
+        27,
+        36
+      ],
+      "bb_uv": [
+        19,
+        27,
+        27,
+        36
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "A11–A13工作六面；source宽高含不一致边界，几何以参考体型为准。",
+      "rgba_sha256": "f5d63375b8e04d3a93199c1270d1b17e9897e4745bdbc806a0b09303b47b2e0a"
+    },
+    "west": {
+      "surface": "内衣上身-west",
+      "source_rect": [
+        0,
+        27,
+        5,
+        36
+      ],
+      "bb_uv": [
+        0,
+        27,
+        5,
+        36
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "A11–A13工作六面；source宽高含不一致边界，几何以参考体型为准。",
+      "rgba_sha256": "ff444fc4edc4807a1e77fb97ca7ceb258580dbfe115b920eb8b50d86271f8b45"
+    },
+    "up": {
+      "surface": "内衣上身-up",
+      "source_rect": [
+        5,
+        22,
+        14,
+        27
+      ],
+      "bb_uv": [
+        5,
+        22,
+        14,
+        27
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "A11–A13工作六面；source宽高含不一致边界，几何以参考体型为准。",
+      "rgba_sha256": "98b59ac01c0f8dc4c257979a7948d69045b51b0582a9f859d8785a8fdf2e32bf"
+    },
+    "down": {
+      "surface": "内衣上身-down",
+      "source_rect": [
+        5,
+        36,
+        14,
+        40
+      ],
+      "bb_uv": [
+        5,
+        36,
+        14,
+        40
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "A11–A13工作六面；source宽高含不一致边界，几何以参考体型为准。",
+      "rgba_sha256": "f9284871078dc643cb0c388d965e7f5983204f4134d3d52f16fe6800c3b6061d"
+    }
+  },
+  "nose_faces": {
+    "north": {
+      "surface": "鼻-north",
+      "source_rect": [
+        2,
+        14,
+        4,
+        18
+      ],
+      "bb_uv": [
+        2,
+        14,
+        4,
+        18
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "M2原生渲染复核后修正：2×4×1完整28px盒网；6..10灰条属于手臂，不混入鼻。",
+      "rgba_sha256": "b0a7fa5aa4d9cf860aca1f9c329ddeb8af48ef615b666798e1c8e0baa3f54eb9"
+    },
+    "south": {
+      "surface": "鼻-south",
+      "source_rect": [
+        0,
+        14,
+        2,
+        18
+      ],
+      "bb_uv": [
+        0,
+        14,
+        2,
+        18
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "M2原生渲染复核后修正：2×4×1完整28px盒网；6..10灰条属于手臂，不混入鼻。",
+      "rgba_sha256": "329b58c6a13324d54b1b491977e3b48b730daba026082fc723399e10cfc8170a"
+    },
+    "east": {
+      "surface": "鼻-east",
+      "source_rect": [
+        4,
+        14,
+        5,
+        18
+      ],
+      "bb_uv": [
+        4,
+        14,
+        5,
+        18
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "M2原生渲染复核后修正：2×4×1完整28px盒网；6..10灰条属于手臂，不混入鼻。",
+      "rgba_sha256": "c306478113eaceb9d0cd567c9b15d6583976f90e6a58012767100e1da9b10a3e"
+    },
+    "west": {
+      "surface": "鼻-west",
+      "source_rect": [
+        5,
+        14,
+        6,
+        18
+      ],
+      "bb_uv": [
+        5,
+        14,
+        6,
+        18
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "M2原生渲染复核后修正：2×4×1完整28px盒网；6..10灰条属于手臂，不混入鼻。",
+      "rgba_sha256": "c306478113eaceb9d0cd567c9b15d6583976f90e6a58012767100e1da9b10a3e"
+    },
+    "up": {
+      "surface": "鼻-up",
+      "source_rect": [
+        2,
+        13,
+        4,
+        14
+      ],
+      "bb_uv": [
+        2,
+        13,
+        4,
+        14
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "M2原生渲染复核后修正：2×4×1完整28px盒网；6..10灰条属于手臂，不混入鼻。",
+      "rgba_sha256": "6fc0c052be3ccbfaf764b5dd3b29da2bad3635317cc6c1874cb33a7d796dac75"
+    },
+    "down": {
+      "surface": "鼻-down",
+      "source_rect": [
+        2,
+        18,
+        4,
+        19
+      ],
+      "bb_uv": [
+        2,
+        18,
+        4,
+        19
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "M2原生渲染复核后修正：2×4×1完整28px盒网；6..10灰条属于手臂，不混入鼻。",
+      "rgba_sha256": "910faa2341d9e3b1c5a655b1d411f2befbd60571869fa1e6608458e91a6838ab"
+    }
+  },
+  "pendant_faces": {
+    "north": {
+      "surface": "吊坠-north",
+      "source_rect": [
+        18,
+        20,
+        20,
+        22
+      ],
+      "bb_uv": [
+        18,
+        20,
+        20,
+        22
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "2×2×1完整16px盒网；正面只贴红白2×2宝石，金为实体侧/顶/背，不取43灰背景角。",
+      "rgba_sha256": "7e1aa59cb4cb93c52da7659a4caa209f1abf76d16ad0e8a241bf5a525a67946a"
+    },
+    "west": {
+      "surface": "吊坠-west",
+      "source_rect": [
+        17,
+        20,
+        18,
+        22
+      ],
+      "bb_uv": [
+        17,
+        20,
+        18,
+        22
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "2×2×1完整16px盒网；正面只贴红白2×2宝石，金为实体侧/顶/背，不取43灰背景角。",
+      "rgba_sha256": "d83010c34a9a83580739a3aacb24d08d435702a2152a0a536314db93f01952eb"
+    },
+    "east": {
+      "surface": "吊坠-east",
+      "source_rect": [
+        20,
+        20,
+        21,
+        22
+      ],
+      "bb_uv": [
+        20,
+        20,
+        21,
+        22
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "2×2×1完整16px盒网；正面只贴红白2×2宝石，金为实体侧/顶/背，不取43灰背景角。",
+      "rgba_sha256": "d83010c34a9a83580739a3aacb24d08d435702a2152a0a536314db93f01952eb"
+    },
+    "up": {
+      "surface": "吊坠-up",
+      "source_rect": [
+        18,
+        19,
+        20,
+        20
+      ],
+      "bb_uv": [
+        18,
+        19,
+        20,
+        20
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "2×2×1完整16px盒网；正面只贴红白2×2宝石，金为实体侧/顶/背，不取43灰背景角。",
+      "rgba_sha256": "d83010c34a9a83580739a3aacb24d08d435702a2152a0a536314db93f01952eb"
+    },
+    "down": {
+      "surface": "吊坠-down",
+      "source_rect": [
+        18,
+        22,
+        20,
+        23
+      ],
+      "bb_uv": [
+        18,
+        22,
+        20,
+        23
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "2×2×1完整16px盒网；正面只贴红白2×2宝石，金为实体侧/顶/背，不取43灰背景角。",
+      "rgba_sha256": "d83010c34a9a83580739a3aacb24d08d435702a2152a0a536314db93f01952eb"
+    },
+    "south": {
+      "surface": "吊坠-south",
+      "source_rect": [
+        21,
+        20,
+        23,
+        22
+      ],
+      "bb_uv": [
+        21,
+        20,
+        23,
+        22
+      ],
+      "rotation": 0,
+      "texture": 0,
+      "notes": "2×2×1完整16px盒网；正面只贴红白2×2宝石，金为实体侧/顶/背，不取43灰背景角。",
+      "rgba_sha256": "c3f0757f0723c91626d193a05ee87e52238be122ff85c47ef3868c595dc012dc"
+    }
+  },
+  "native_review_corrections": {
+    "nose_geometry_whd": [
+      2,
+      4,
+      1
+    ],
+    "nose_evidence": "2×8+2×4+2×2=28px；正面165灰，背57灰，两侧182灰，上230白，下182灰。图中黑鼻侧来自把背面57灰误贴侧面。",
+    "pendant_geometry_whd": [
+      2,
+      2,
+      1
+    ],
+    "pendant_evidence": "2×4+4×2=16px；不透明43背景只在网外角，整5×4上脸产生黑角。",
+    "sleeve_note": "首版金边方向正确但0.15壁厚像线框；可在0.3~0.4中取0.35试贴近参考，不改原纹理。",
+    "hand_staff_note": "首版left_hand与staff_rod的X/Z边界完全一致，四侧共面导致Z-fighting；灰握块X/Z向外各扩0.04~0.06或裁掉相交面，不能复制原参考已知缺陷。"
+  },
+  "geometry_recommendation": {
+    "torso": {
+      "from": [
+        -3.1,
+        6,
+        -1.75
+      ],
+      "to": [
+        3.1,
+        12,
+        1.75
+      ]
+    },
+    "robe": {
+      "outer_from": [
+        -4,
+        1.6,
+        -2.02
+      ],
+      "outer_to": [
+        4,
+        12,
+        2.02
+      ],
+      "thickness": 0.16,
+      "split": "body拥有front/side薄片；cape拥有back薄片；正面透明开口不能被其它填充面挡住。"
+    },
+    "legs": [
+      {
+        "side": "right",
+        "center_x": 1.7,
+        "shorts_from": [
+          0.19999999999999996,
+          3.08,
+          -1.5
+        ],
+        "shorts_to": [
+          3.2,
+          6.08,
+          1.5
+        ],
+        "leg_from": [
+          1.2,
+          0.08,
+          -0.5
+        ],
+        "leg_to": [
+          2.2,
+          3.08,
+          0.5
+        ],
+        "foot_from": [
+          1.2,
+          0,
+          -2.5
+        ],
+        "foot_to": [
+          2.2,
+          0.08,
+          0.5
+        ]
+      },
+      {
+        "side": "left",
+        "center_x": -1.7,
+        "shorts_from": [
+          -3.2,
+          3.08,
+          -1.5
+        ],
+        "shorts_to": [
+          -0.19999999999999996,
+          6.08,
+          1.5
+        ],
+        "leg_from": [
+          -2.2,
+          0.08,
+          -0.5
+        ],
+        "leg_to": [
+          -1.2,
+          3.08,
+          0.5
+        ],
+        "foot_from": [
+          -2.2,
+          0,
+          -2.5
+        ],
+        "foot_to": [
+          -1.2,
+          0.08,
+          0.5
+        ]
+      }
+    ],
+    "head_interface": "建议头底Y=12、12×7×6头至Y=19，冠11高至Y≈30；整体model_scale≈2.6*16/30=1.3867，最终须依bbmodel实测总高。",
+    "status": "坐标为开始建模的紧凑工作尺寸，非原模型恢复；须由原图并排渲染修正。"
+  },
+  "alternatives": [
+    {
+      "id": "A",
+      "label": "首选：金腿+薄红脚板、空心袖、环绕蓝白外袍",
+      "details": "使用以上所有精确rect；外袍前面透空，背面白领/白边由summon11支持。"
+    },
+    {
+      "id": "B",
+      "label": "仅用于背袍UV宽度歧义的比较",
+      "overrides": {
+        "robe_south_source_rect": [
+          46,
+          15,
+          55,
+          29
+        ]
+      },
+      "details": "背UV用9×14而非8×14，几何宽保持8；移动白领横向比例而不改变原像素。只比较背面，不连带改腿脚或换色。",
+      "reason": "此段非完美标准盒网，back起点46或47不能仅靠纯蓝连续纹样唯一确定；A更符合8宽主体与居中短白领。"
+    }
+  ],
+  "evidence_frames": [
+    {
+      "clip": "summon",
+      "frame": 11,
+      "time": 0.44,
+      "features": "背袍白领、蓝背、整条白下摆"
+    },
+    {
+      "clip": "summon",
+      "frame": 13,
+      "time": 0.52,
+      "features": "两条深青短裤、金腿、红色前伸薄脚板"
+    },
+    {
+      "clip": "summon",
+      "frame": 24,
+      "time": 0.96,
+      "features": "背袍侧厚与袖筒开口、金色袖边"
+    }
+  ],
+  "not_generated": [
+    "最终bbmodel",
+    "动画",
+    "接入文件",
+    "新材质色彩"
+  ]
+}

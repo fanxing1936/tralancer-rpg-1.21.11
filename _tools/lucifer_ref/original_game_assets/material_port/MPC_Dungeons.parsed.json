@@ -1,0 +1,651 @@
+{
+  "package": "/Game/Materials/MPC_Dungeons",
+  "summary": {
+    "header_size": 1209,
+    "name_count": 36,
+    "name_offset": 193,
+    "export_count": 1,
+    "export_offset": 1089,
+    "import_count": 3,
+    "import_offset": 1005,
+    "depends_offset": 1193,
+    "package_flags": 2147483648,
+    "version_assumption": "UE4.22 / UE4 package version 517; unversioned header"
+  },
+  "sources": [
+    {
+      "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Materials\\MPC_Dungeons.uasset",
+      "bytes": 1209,
+      "sha256": "0046e31d495c57239848beff2e7a7cb19c8cd02aac7dbb3a7c089f35d20b001c"
+    },
+    {
+      "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Materials\\MPC_Dungeons.uexp",
+      "bytes": 2224,
+      "sha256": "30219e9b49ec6d734e0bc7f282ba625758701b8f7ca481617f339d2fd0f1ca62"
+    }
+  ],
+  "imports": [
+    {
+      "index": -1,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -3,
+      "name": "MaterialParameterCollection",
+      "object_path": "/Script/Engine.MaterialParameterCollection"
+    },
+    {
+      "index": -2,
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialParameterCollection",
+      "outer": -3,
+      "name": "Default__MaterialParameterCollection",
+      "object_path": "/Script/Engine.Default__MaterialParameterCollection"
+    },
+    {
+      "index": -3,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Script/Engine",
+      "object_path": "/Script/Engine"
+    }
+  ],
+  "exports": [
+    {
+      "index": 1,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -2,
+      "outer": 0,
+      "name": "MPC_Dungeons",
+      "object_flags": 11,
+      "serial_bytes": 2220,
+      "serial_offset": 1209,
+      "uexp_offset": 0,
+      "object_path": "/Game/Materials/MPC_Dungeons.MPC_Dungeons",
+      "class_path": "/Script/Engine.MaterialParameterCollection",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__MaterialParameterCollection",
+      "properties": [
+        {
+          "name": "StateId",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 49,
+          "size": 16,
+          "metadata": {
+            "struct": "Guid",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": "8c7e6ed2fcf7474b800a708faccedb12"
+        },
+        {
+          "name": "ScalarParameters",
+          "type": "ArrayProperty",
+          "array_index": 0,
+          "tag_offset": 65,
+          "value_offset": 98,
+          "size": 998,
+          "metadata": {
+            "inner": "StructProperty"
+          },
+          "value": {
+            "count": 7,
+            "struct": "CollectionScalarParameter",
+            "items": [
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "FloatProperty",
+                    "array_index": 0,
+                    "tag_offset": 53,
+                    "value_offset": 78,
+                    "size": 4,
+                    "metadata": {},
+                    "value": 1.0
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 82,
+                    "value_offset": 107,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "DeathEmissive"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 115,
+                    "value_offset": 164,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "8de1de92877c294fb9b6a0407c548a99"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "FloatProperty",
+                    "array_index": 0,
+                    "tag_offset": 188,
+                    "value_offset": 213,
+                    "size": 4,
+                    "metadata": {},
+                    "value": 0.0
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 217,
+                    "value_offset": 242,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "MipBiasMedium"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 250,
+                    "value_offset": 299,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "08c2437192c8fe4cab61c0727bac6345"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "FloatProperty",
+                    "array_index": 0,
+                    "tag_offset": 323,
+                    "value_offset": 348,
+                    "size": 4,
+                    "metadata": {},
+                    "value": 0.5
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 352,
+                    "value_offset": 377,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "WindIntensity"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 385,
+                    "value_offset": 434,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "dace94887c4e0c4fa0e1655f9cfc36d3"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "FloatProperty",
+                    "array_index": 0,
+                    "tag_offset": 458,
+                    "value_offset": 483,
+                    "size": 4,
+                    "metadata": {},
+                    "value": 0.4000000059604645
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 487,
+                    "value_offset": 512,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "WindWeight"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 520,
+                    "value_offset": 569,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "28f798e5f56dc14d84c076f893ff8f7b"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "FloatProperty",
+                    "array_index": 0,
+                    "tag_offset": 593,
+                    "value_offset": 618,
+                    "size": 4,
+                    "metadata": {},
+                    "value": 0.5
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 622,
+                    "value_offset": 647,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "WindSpeed"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 655,
+                    "value_offset": 704,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "d729245f241f004097b358792f489e7a"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "FloatProperty",
+                    "array_index": 0,
+                    "tag_offset": 728,
+                    "value_offset": 753,
+                    "size": 4,
+                    "metadata": {},
+                    "value": 0.0
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 757,
+                    "value_offset": 782,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "SkylightIntensity"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 790,
+                    "value_offset": 839,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "5e5abfc0239b4545b963064e515fbd98"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "FloatProperty",
+                    "array_index": 0,
+                    "tag_offset": 863,
+                    "value_offset": 888,
+                    "size": 4,
+                    "metadata": {},
+                    "value": 0.0
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 892,
+                    "value_offset": 917,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "SunSubScatter"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 925,
+                    "value_offset": 974,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "1a31c656a668c14b941be7273ef1bdb0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "VectorParameters",
+          "type": "ArrayProperty",
+          "array_index": 0,
+          "tag_offset": 1096,
+          "value_offset": 1129,
+          "size": 1079,
+          "metadata": {
+            "inner": "StructProperty"
+          },
+          "value": {
+            "count": 6,
+            "struct": "CollectionVectorParameter",
+            "items": [
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 53,
+                    "value_offset": 102,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "LinearColor",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 118,
+                    "value_offset": 143,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "SkylightColor"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 151,
+                    "value_offset": 200,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "26a44ac072391e4e8826c0f51bb3d0c2"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 224,
+                    "value_offset": 273,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "LinearColor",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 289,
+                    "value_offset": 314,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "SunVector"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 322,
+                    "value_offset": 371,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "279d2627a005734fa1d57512ed9c81f5"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 395,
+                    "value_offset": 444,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "LinearColor",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 460,
+                    "value_offset": 485,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "SunColor"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 493,
+                    "value_offset": 542,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "5420d6cdc4a79f4fa9a73ca8d224ca29"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 566,
+                    "value_offset": 615,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "LinearColor",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 631,
+                    "value_offset": 656,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "MapColorBase"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 664,
+                    "value_offset": 713,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "839f017d78b0a442a6e3df3ca761291f"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 737,
+                    "value_offset": 786,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "LinearColor",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 802,
+                    "value_offset": 827,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "MapColorHigh"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 835,
+                    "value_offset": 884,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "15ee8d4af3532b49869f9d4df49bb72e"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "name": "DefaultValue",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 908,
+                    "value_offset": 957,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "LinearColor",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  },
+                  {
+                    "name": "ParameterName",
+                    "type": "NameProperty",
+                    "array_index": 0,
+                    "tag_offset": 973,
+                    "value_offset": 998,
+                    "size": 8,
+                    "metadata": {},
+                    "value": "MapColorLow"
+                  },
+                  {
+                    "name": "Id",
+                    "type": "StructProperty",
+                    "array_index": 0,
+                    "tag_offset": 1006,
+                    "value_offset": 1055,
+                    "size": 16,
+                    "metadata": {
+                      "struct": "Guid",
+                      "struct_guid": "00000000000000000000000000000000"
+                    },
+                    "value": "f87bbbdfe3480e48b0861cd0c0ae81c7"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "tagged_property_bytes": 2216,
+      "remaining_native_bytes": 4
+    }
+  ]
+}

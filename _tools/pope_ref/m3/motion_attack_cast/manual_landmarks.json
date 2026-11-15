@@ -1,0 +1,1749 @@
+{
+  "revision": 2,
+  "review_status": "人工点复核完成；保持遮挡/null",
+  "model_anchors": {
+    "staff_rod_bottom": [
+      -11,
+      0,
+      0
+    ],
+    "staff_tray_center": [
+      -11,
+      17.5,
+      0
+    ],
+    "left_hand_grip": [
+      -11,
+      11,
+      0
+    ],
+    "staff_core": [
+      -11,
+      22.2645298841,
+      0
+    ]
+  },
+  "coordinates": "原始500×500画布左上原点，x右y下；没有裁剪缩放后坐标",
+  "clips": {
+    "attack": [
+      {
+        "source_frame": 0,
+        "source_time_seconds": 0.0,
+        "head_visible_box_center_proxy": [
+          248,
+          242
+        ],
+        "staff_rod_bottom": [
+          306,
+          390
+        ],
+        "staff_tray_center": [
+          307,
+          255
+        ],
+        "left_hand_grip": [
+          306,
+          303
+        ],
+        "right_hand_endpoint": [
+          192,
+          291
+        ],
+        "staff_core_visible_pixel_centroid": [
+          304.946,
+          223.223
+        ],
+        "staff_core_bbox": [
+          275,
+          201,
+          336,
+          251
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          1,
+          -135
+        ],
+        "grip_fraction_bottom_to_tray": 0.6444,
+        "suggested_staff_slide_y_from_ratio": 0.0,
+        "core_extra_lift_y_from_axis_projection": 0.0,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 5,
+        "source_time_seconds": 0.2,
+        "head_visible_box_center_proxy": [
+          256,
+          245
+        ],
+        "staff_rod_bottom": [
+          314,
+          312
+        ],
+        "staff_tray_center": [
+          389,
+          190
+        ],
+        "left_hand_grip": [
+          328,
+          282
+        ],
+        "right_hand_endpoint": [
+          161,
+          265
+        ],
+        "staff_core_visible_pixel_centroid": [
+          410.938,
+          158.025
+        ],
+        "staff_core_bbox": [
+          382,
+          128,
+          441,
+          191
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          75,
+          -122
+        ],
+        "grip_fraction_bottom_to_tray": 0.2297,
+        "suggested_staff_slide_y_from_ratio": 7.051,
+        "core_extra_lift_y_from_axis_projection": 0.598,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 7,
+        "source_time_seconds": 0.28,
+        "head_visible_box_center_proxy": [
+          257,
+          245
+        ],
+        "staff_rod_bottom": [
+          309,
+          306
+        ],
+        "staff_tray_center": [
+          393,
+          179
+        ],
+        "left_hand_grip": [
+          330,
+          274
+        ],
+        "right_hand_endpoint": [
+          163,
+          263
+        ],
+        "staff_core_visible_pixel_centroid": [
+          416.026,
+          149.714
+        ],
+        "staff_core_bbox": [
+          393,
+          120,
+          440,
+          181
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          84,
+          -127
+        ],
+        "grip_fraction_bottom_to_tray": 0.2514,
+        "suggested_staff_slide_y_from_ratio": 6.682,
+        "core_extra_lift_y_from_axis_projection": 0.146,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 10,
+        "source_time_seconds": 0.4,
+        "head_visible_box_center_proxy": [
+          218,
+          261
+        ],
+        "staff_rod_bottom": [
+          232,
+          295
+        ],
+        "staff_tray_center": [
+          287,
+          167
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          309.663,
+          125.298
+        ],
+        "staff_core_bbox": [
+          279,
+          92,
+          341,
+          158
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          55,
+          -128
+        ],
+        "core_extra_lift_y_from_axis_projection": 1.768,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 11,
+        "source_time_seconds": 0.44,
+        "head_visible_box_center_proxy": [
+          210,
+          292
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": [
+          139,
+          338
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          105.871,
+          347.786
+        ],
+        "staff_core_bbox": [
+          75,
+          317,
+          138,
+          379
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 13,
+        "source_time_seconds": 0.52,
+        "head_visible_box_center_proxy": [
+          206,
+          300
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": [
+          119,
+          399
+        ],
+        "left_hand_grip": [
+          217,
+          340
+        ],
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          86.812,
+          417.173
+        ],
+        "staff_core_bbox": [
+          57,
+          384,
+          117,
+          451
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 18,
+        "source_time_seconds": 0.72,
+        "head_visible_box_center_proxy": [
+          203,
+          305
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": [
+          122,
+          431
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          94.52,
+          455.988
+        ],
+        "staff_core_bbox": [
+          68,
+          423,
+          121,
+          489
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 23,
+        "source_time_seconds": 0.92,
+        "head_visible_box_center_proxy": [
+          217,
+          265
+        ],
+        "staff_rod_bottom": [
+          308,
+          352
+        ],
+        "staff_tray_center": [
+          262,
+          329
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          238.963,
+          311.116
+        ],
+        "staff_core_bbox": [
+          207,
+          275,
+          273,
+          349
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          -46,
+          -23
+        ],
+        "core_extra_lift_y_from_axis_projection": 5.455,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 27,
+        "source_time_seconds": 1.08,
+        "head_visible_box_center_proxy": [
+          244,
+          246
+        ],
+        "staff_rod_bottom": [
+          312,
+          382
+        ],
+        "staff_tray_center": [
+          301,
+          255
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          295.645,
+          228.205
+        ],
+        "staff_core_bbox": [
+          266,
+          198,
+          327,
+          259
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          -11,
+          -127
+        ],
+        "core_extra_lift_y_from_axis_projection": -0.378,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 31,
+        "source_time_seconds": 1.24,
+        "head_visible_box_center_proxy": [
+          248,
+          242
+        ],
+        "staff_rod_bottom": [
+          306,
+          390
+        ],
+        "staff_tray_center": [
+          307,
+          255
+        ],
+        "left_hand_grip": [
+          306,
+          303
+        ],
+        "right_hand_endpoint": [
+          192,
+          291
+        ],
+        "staff_core_visible_pixel_centroid": [
+          304.946,
+          223.223
+        ],
+        "staff_core_bbox": [
+          275,
+          201,
+          336,
+          251
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          1,
+          -135
+        ],
+        "grip_fraction_bottom_to_tray": 0.6444,
+        "suggested_staff_slide_y_from_ratio": 0.0,
+        "core_extra_lift_y_from_axis_projection": 0.0,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      }
+    ],
+    "summon": [
+      {
+        "source_frame": 0,
+        "source_time_seconds": 0.0,
+        "head_visible_box_center_proxy": [
+          273,
+          244
+        ],
+        "staff_rod_bottom": [
+          329,
+          385
+        ],
+        "staff_tray_center": [
+          328,
+          260
+        ],
+        "left_hand_grip": [
+          328,
+          303
+        ],
+        "right_hand_endpoint": [
+          221,
+          288
+        ],
+        "staff_core_visible_pixel_centroid": [
+          327.039,
+          225.154
+        ],
+        "staff_core_bbox": [
+          298,
+          206,
+          356,
+          251
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          -1,
+          -125
+        ],
+        "grip_fraction_bottom_to_tray": 0.656,
+        "suggested_staff_slide_y_from_ratio": 0.0,
+        "core_extra_lift_y_from_axis_projection": 0.0,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 5,
+        "source_time_seconds": 0.2,
+        "head_visible_box_center_proxy": [
+          282,
+          249
+        ],
+        "staff_rod_bottom": [
+          333,
+          299
+        ],
+        "staff_tray_center": [
+          407,
+          171
+        ],
+        "left_hand_grip": [
+          345,
+          275
+        ],
+        "right_hand_endpoint": [
+          192,
+          260
+        ],
+        "staff_core_visible_pixel_centroid": [
+          421.973,
+          141.535
+        ],
+        "staff_core_bbox": [
+          392,
+          112,
+          453,
+          172
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          74,
+          -128
+        ],
+        "grip_fraction_bottom_to_tray": 0.1812,
+        "suggested_staff_slide_y_from_ratio": 8.073,
+        "core_extra_lift_y_from_axis_projection": -0.945,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 8,
+        "source_time_seconds": 0.32,
+        "head_visible_box_center_proxy": [
+          262,
+          260
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": [
+          419,
+          237
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          437.51,
+          208.328
+        ],
+        "staff_core_bbox": [
+          407,
+          183,
+          469,
+          235
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 9,
+        "source_time_seconds": 0.36,
+        "head_visible_box_center_proxy": [
+          237,
+          258
+        ],
+        "staff_rod_bottom": [
+          240,
+          313
+        ],
+        "staff_tray_center": [
+          381,
+          308
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          415.236,
+          295.358
+        ],
+        "staff_core_bbox": [
+          382,
+          262,
+          450,
+          330
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          141,
+          -5
+        ],
+        "core_extra_lift_y_from_axis_projection": -0.563,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 10,
+        "source_time_seconds": 0.4,
+        "head_visible_box_center_proxy": [
+          220,
+          271
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": null,
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          287.48,
+          309.733
+        ],
+        "staff_core_bbox": [
+          250,
+          271,
+          323,
+          355
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 11,
+        "source_time_seconds": 0.44,
+        "head_visible_box_center_proxy": [
+          245,
+          251
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": [
+          106,
+          282
+        ],
+        "left_hand_grip": [
+          168,
+          282
+        ],
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          113.558,
+          254.018
+        ],
+        "staff_core_bbox": [
+          88,
+          220,
+          141,
+          287
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 12,
+        "source_time_seconds": 0.48,
+        "head_visible_box_center_proxy": [
+          280,
+          255
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": [
+          154,
+          204
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          122.29,
+          175.083
+        ],
+        "staff_core_bbox": [
+          91,
+          140,
+          155,
+          210
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 13,
+        "source_time_seconds": 0.52,
+        "head_visible_box_center_proxy": [
+          328,
+          282
+        ],
+        "staff_rod_bottom": [
+          354,
+          310
+        ],
+        "staff_tray_center": null,
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          294.885,
+          165.607
+        ],
+        "staff_core_bbox": [
+          271,
+          133,
+          321,
+          197
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 14,
+        "source_time_seconds": 0.56,
+        "head_visible_box_center_proxy": [
+          328,
+          308
+        ],
+        "staff_rod_bottom": [
+          360,
+          337
+        ],
+        "staff_tray_center": [
+          434,
+          236
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          422.17,
+          194.779
+        ],
+        "staff_core_bbox": [
+          390,
+          163,
+          456,
+          227
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          74,
+          -101
+        ],
+        "core_extra_lift_y_from_axis_projection": -1.174,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 16,
+        "source_time_seconds": 0.64,
+        "head_visible_box_center_proxy": [
+          298,
+          289
+        ],
+        "staff_rod_bottom": [
+          295,
+          357
+        ],
+        "staff_tray_center": null,
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          449.203,
+          284.132
+        ],
+        "staff_core_bbox": [
+          416,
+          250,
+          483,
+          319
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 18,
+        "source_time_seconds": 0.72,
+        "head_visible_box_center_proxy": [
+          269,
+          300
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": null,
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          335.024,
+          345.678
+        ],
+        "staff_core_bbox": [
+          307,
+          318,
+          364,
+          376
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 21,
+        "source_time_seconds": 0.84,
+        "head_visible_box_center_proxy": [
+          233,
+          303
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": [
+          145,
+          383
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          114.255,
+          377.466
+        ],
+        "staff_core_bbox": [
+          84,
+          353,
+          144,
+          404
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 25,
+        "source_time_seconds": 1.0,
+        "head_visible_box_center_proxy": [
+          217,
+          299
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": [
+          69,
+          341
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          42.156,
+          326.481
+        ],
+        "staff_core_bbox": [
+          16,
+          303,
+          76,
+          365
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 29,
+        "source_time_seconds": 1.16,
+        "head_visible_box_center_proxy": [
+          206,
+          303
+        ],
+        "staff_rod_bottom": null,
+        "staff_tray_center": [
+          132,
+          294
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": [
+          284,
+          246
+        ],
+        "staff_core_visible_pixel_centroid": [
+          113.815,
+          265.8
+        ],
+        "staff_core_bbox": [
+          89,
+          247,
+          143,
+          288
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 33,
+        "source_time_seconds": 1.32,
+        "head_visible_box_center_proxy": [
+          232,
+          298
+        ],
+        "staff_rod_bottom": [
+          262,
+          364
+        ],
+        "staff_tray_center": [
+          118,
+          321
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          85.624,
+          296.391
+        ],
+        "staff_core_bbox": [
+          56,
+          270,
+          119,
+          325
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          -144,
+          -43
+        ],
+        "core_extra_lift_y_from_axis_projection": -0.434,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 37,
+        "source_time_seconds": 1.48,
+        "head_visible_box_center_proxy": [
+          255,
+          273
+        ],
+        "staff_rod_bottom": [
+          319,
+          377
+        ],
+        "staff_tray_center": null,
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          258.271,
+          289.735
+        ],
+        "staff_core_bbox": [
+          225,
+          255,
+          293,
+          326
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度"
+      },
+      {
+        "source_frame": 43,
+        "source_time_seconds": 1.72,
+        "head_visible_box_center_proxy": [
+          273,
+          244
+        ],
+        "staff_rod_bottom": [
+          330,
+          387
+        ],
+        "staff_tray_center": [
+          330,
+          258
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          326.056,
+          222.254
+        ],
+        "staff_core_bbox": [
+          298,
+          193,
+          356,
+          252
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          0,
+          -129
+        ],
+        "core_extra_lift_y_from_axis_projection": -0.029,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 50,
+        "source_time_seconds": 2.0,
+        "head_visible_box_center_proxy": [
+          273,
+          244
+        ],
+        "staff_rod_bottom": [
+          329,
+          385
+        ],
+        "staff_tray_center": [
+          328,
+          260
+        ],
+        "left_hand_grip": [
+          328,
+          303
+        ],
+        "right_hand_endpoint": [
+          221,
+          288
+        ],
+        "staff_core_visible_pixel_centroid": [
+          327.039,
+          225.154
+        ],
+        "staff_core_bbox": [
+          298,
+          206,
+          356,
+          251
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          -1,
+          -125
+        ],
+        "grip_fraction_bottom_to_tray": 0.656,
+        "suggested_staff_slide_y_from_ratio": 0.0,
+        "core_extra_lift_y_from_axis_projection": 0.0,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      }
+    ],
+    "cast": [
+      {
+        "source_frame": 0,
+        "source_time_seconds": 0.0,
+        "head_visible_box_center_proxy": [
+          263,
+          269
+        ],
+        "staff_rod_bottom": [
+          346,
+          485
+        ],
+        "staff_tray_center": [
+          346,
+          289
+        ],
+        "left_hand_grip": [
+          345,
+          356
+        ],
+        "right_hand_endpoint": [
+          181,
+          341
+        ],
+        "staff_core_visible_pixel_centroid": [
+          343.773,
+          250.39
+        ],
+        "staff_core_bbox": [
+          299,
+          232,
+          388,
+          282
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          0,
+          -196
+        ],
+        "grip_fraction_bottom_to_tray": 0.6582,
+        "suggested_staff_slide_y_from_ratio": 0.0,
+        "core_extra_lift_y_from_axis_projection": 0.0,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 3,
+        "source_time_seconds": 0.12,
+        "head_visible_box_center_proxy": [
+          266,
+          264
+        ],
+        "staff_rod_bottom": [
+          259,
+          429
+        ],
+        "staff_tray_center": [
+          179,
+          328
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          158.715,
+          282.347
+        ],
+        "staff_core_bbox": [
+          118,
+          246,
+          208,
+          319
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          -80,
+          -101
+        ],
+        "core_extra_lift_y_from_axis_projection": 3.035,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 6,
+        "source_time_seconds": 0.24,
+        "head_visible_box_center_proxy": [
+          262,
+          266
+        ],
+        "staff_rod_bottom": [
+          230,
+          395
+        ],
+        "staff_tray_center": [
+          226,
+          221
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          219.428,
+          163.106
+        ],
+        "staff_core_bbox": [
+          170,
+          120,
+          270,
+          207
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          -4,
+          -174
+        ],
+        "core_extra_lift_y_from_axis_projection": 2.319,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 10,
+        "source_time_seconds": 0.4,
+        "head_visible_box_center_proxy": [
+          263,
+          265
+        ],
+        "staff_rod_bottom": [
+          225,
+          403
+        ],
+        "staff_tray_center": [
+          225,
+          216
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          221.818,
+          149.941
+        ],
+        "staff_core_bbox": [
+          170,
+          112,
+          270,
+          194
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          0,
+          -187
+        ],
+        "core_extra_lift_y_from_axis_projection": 2.657,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 15,
+        "source_time_seconds": 0.6,
+        "head_visible_box_center_proxy": [
+          263,
+          262
+        ],
+        "staff_rod_bottom": [
+          223,
+          408
+        ],
+        "staff_tray_center": [
+          229,
+          212
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          220.984,
+          120.41
+        ],
+        "staff_core_bbox": [
+          175,
+          84,
+          271,
+          162
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          6,
+          -196
+        ],
+        "core_extra_lift_y_from_axis_projection": 4.567,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 23,
+        "source_time_seconds": 0.92,
+        "head_visible_box_center_proxy": [
+          263,
+          266
+        ],
+        "staff_rod_bottom": [
+          213,
+          417
+        ],
+        "staff_tray_center": [
+          231,
+          220
+        ],
+        "left_hand_grip": [
+          228,
+          320
+        ],
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          241.773,
+          87.153
+        ],
+        "staff_core_bbox": [
+          194,
+          43,
+          292,
+          137
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          18,
+          -197
+        ],
+        "grip_fraction_bottom_to_tray": 0.4952,
+        "suggested_staff_slide_y_from_ratio": 2.77,
+        "core_extra_lift_y_from_axis_projection": 8.104,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 30,
+        "source_time_seconds": 1.2,
+        "head_visible_box_center_proxy": [
+          263,
+          268
+        ],
+        "staff_rod_bottom": [
+          207,
+          421
+        ],
+        "staff_tray_center": [
+          236,
+          229
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          256.462,
+          92.494
+        ],
+        "staff_core_bbox": [
+          209,
+          45,
+          304,
+          147
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          29,
+          -192
+        ],
+        "core_extra_lift_y_from_axis_projection": 8.736,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 36,
+        "source_time_seconds": 1.44,
+        "head_visible_box_center_proxy": [
+          263,
+          270
+        ],
+        "staff_rod_bottom": [
+          200,
+          433
+        ],
+        "staff_tray_center": [
+          233,
+          226
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          273.667,
+          91.658
+        ],
+        "staff_core_bbox": [
+          227,
+          42,
+          321,
+          147
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          33,
+          -207
+        ],
+        "core_extra_lift_y_from_axis_projection": 7.93,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 45,
+        "source_time_seconds": 1.8,
+        "head_visible_box_center_proxy": [
+          263,
+          271
+        ],
+        "staff_rod_bottom": [
+          190,
+          444
+        ],
+        "staff_tray_center": [
+          241,
+          230
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          291.42,
+          97.23
+        ],
+        "staff_core_bbox": [
+          249,
+          48,
+          335,
+          148
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          51,
+          -214
+        ],
+        "core_extra_lift_y_from_axis_projection": 7.535,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 51,
+        "source_time_seconds": 2.04,
+        "head_visible_box_center_proxy": [
+          263,
+          271
+        ],
+        "staff_rod_bottom": [
+          181,
+          447
+        ],
+        "staff_tray_center": [
+          240,
+          257
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          281.892,
+          161.348
+        ],
+        "staff_core_bbox": [
+          235,
+          112,
+          329,
+          212
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          59,
+          -190
+        ],
+        "core_extra_lift_y_from_axis_projection": 5.518,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 57,
+        "source_time_seconds": 2.28,
+        "head_visible_box_center_proxy": [
+          263,
+          271
+        ],
+        "staff_rod_bottom": [
+          180,
+          444
+        ],
+        "staff_tray_center": [
+          245,
+          274
+        ],
+        "left_hand_grip": null,
+        "right_hand_endpoint": null,
+        "staff_core_visible_pixel_centroid": [
+          277.025,
+          187.818
+        ],
+        "staff_core_bbox": [
+          237,
+          138,
+          319,
+          237
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          65,
+          -170
+        ],
+        "core_extra_lift_y_from_axis_projection": 5.238,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      },
+      {
+        "source_frame": 62,
+        "source_time_seconds": 2.48,
+        "head_visible_box_center_proxy": [
+          263,
+          269
+        ],
+        "staff_rod_bottom": [
+          346,
+          485
+        ],
+        "staff_tray_center": [
+          346,
+          289
+        ],
+        "left_hand_grip": [
+          345,
+          356
+        ],
+        "right_hand_endpoint": [
+          181,
+          341
+        ],
+        "staff_core_visible_pixel_centroid": [
+          343.773,
+          250.39
+        ],
+        "staff_core_bbox": [
+          299,
+          232,
+          388,
+          282
+        ],
+        "manual_point_error_pixels": [
+          3,
+          5
+        ],
+        "point_review": "第二次原帧复核；关键f13/f11/f23以4倍网格裁片检查，未验证的手点一律null",
+        "head_proxy_error_pixels": [
+          4,
+          7
+        ],
+        "note": "头点是可见灰盒轮廓中心代理，不是骨骼pivot；手点是可见握杆/末端，遮挡处null；不能仅由二维点唯一恢复深度",
+        "staff_axis_pixel_vector": [
+          0,
+          -196
+        ],
+        "grip_fraction_bottom_to_tray": 0.6582,
+        "suggested_staff_slide_y_from_ratio": 0.0,
+        "core_extra_lift_y_from_axis_projection": 0.0,
+        "core_lift_caveat": "以17单位杆和本clip首姿归零，沿可见杆轴投影估计；杆强烈缩短投影时误差放大，仍须三维并排核对"
+      }
+    ]
+  }
+}

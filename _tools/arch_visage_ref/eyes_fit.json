@@ -1,0 +1,45 @@
+{
+  "source_frame": 5,
+  "source_time": 0.2,
+  "threshold": "RGBA alpha>25,R>230,G>180,B>230",
+  "source_core_centers": [
+    [
+      166.0935412026726,
+      178.30066815144767
+    ],
+    [
+      222.37555555555556,
+      206.43333333333334
+    ]
+  ],
+  "atlas_core_normalized_centers": [
+    [
+      0.17281754407123762,
+      0.4397150164413592
+    ],
+    [
+      0.8288289224756242,
+      0.5374102531805013
+    ]
+  ],
+  "fitted_plane_center": [
+    0.08087860072147089,
+    14.758654091052199,
+    -6.616813283718423
+  ],
+  "width": 9.928827828953125,
+  "height": 1.6,
+  "projected_centers": [
+    [
+      165.68916907487935,
+      179.24346957612798
+    ],
+    [
+      222.77992776374253,
+      205.49053192591106
+    ]
+  ],
+  "center_rms_px": 0.7253934657664621,
+  "source005_closed_calibration_pose": true,
+  "early_visibility": "s002/s003 source no eye cores; eyes hidden inside skull until s004"
+}

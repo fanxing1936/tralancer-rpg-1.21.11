@@ -1,0 +1,15 @@
+execute if score @s rpg_ub_t matches 18 run function rpg:usurper_boss/ring/light0
+execute if score @s rpg_ub_t matches 30 run function rpg:usurper_boss/ring/fire0
+execute if score @s rpg_ub_t matches 38 run function rpg:usurper_boss/ring/light1
+execute if score @s rpg_ub_t matches 50 run function rpg:usurper_boss/ring/fire1
+execute if score @s rpg_ub_t matches 58 run function rpg:usurper_boss/ring/light2
+execute if score @s rpg_ub_t matches 70 run function rpg:usurper_boss/ring/fire2
+execute if score @s rpg_ub_t matches 78 run function rpg:usurper_boss/ring/light3
+execute if score @s rpg_ub_t matches 90 run function rpg:usurper_boss/ring/fire3
+execute if score @s rpg_ub_t matches 98 run function rpg:usurper_boss/ring/light4
+execute if score @s rpg_ub_t matches 110 run function rpg:usurper_boss/ring/fire4
+execute if score @s rpg_ub_t matches 118 run function rpg:usurper_boss/ring/light5
+execute if score @s rpg_ub_t matches 130 run function rpg:usurper_boss/ring/fire5
+execute if score @s rpg_ub_t matches 138 run function rpg:usurper_boss/ring/light6
+execute if score @s rpg_ub_t matches 150 run function rpg:usurper_boss/ring/fire6
+execute if score @s rpg_ub_t matches 180.. run function rpg:usurper_boss/ring/done

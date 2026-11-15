@@ -1,5 +1,5 @@
 tag @s add rpg.dm.cast
-execute as @a[distance=..8,gamemode=!spectator,gamemode=!creative] run function rpg:taint/sk1d_fall
+execute as @e[tag=rpg.unit.f,distance=..8] run function rpg:taint/sk1d_fall
 tag @s remove rpg.dm.cast
 playsound minecraft:entity.ender_dragon.flap hostile @a[distance=..32] ~ ~ ~ 0.7 1.45
 particle block{block_state:{Name:"minecraft:rooted_dirt"}} ~ ~0.3 ~ 3 0.2 3 0.15 60

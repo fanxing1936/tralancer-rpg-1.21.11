@@ -7,4 +7,6 @@ particle totem_of_undying ~ ~1 ~ 4 1 4 0.16 72 normal
 playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..36] ~ ~ ~ 1.2 0.55
 playsound minecraft:entity.player.levelup hostile @a[distance=..36] ~ ~ ~ 1.1 0.45
 execute at @s as @e[type=minecraft:item,distance=..12] at @s run function rpg:taint/ult7_seize
-execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult7_hit
+execute as @e[tag=rpg.unit.f,distance=..10] run function rpg:taint/ult7_hit
+# 玛门外观（add_mammon_model.py）
+execute if entity @s[tag=rpg.mml] run function rpg:mammon_lord/skill/ult7

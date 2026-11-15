@@ -1,0 +1,820 @@
+{
+  "model_sha256": "e80846861ae9a42c964192642e0c8a8828b5e761f4752bbef0de50b735cd5da3",
+  "HE_model_sha256": "ebc5d7cfc16cc5e3e5f3357b82c6c99da29b468faafffe8c9d7f4ab9f1a1e106",
+  "atlas_png_sha256": "8fe03a292ebf6c72b534d5591025c16a244ecdfd2009f739678026c19e2b4968",
+  "atlas_png_identical_to_HE": true,
+  "elements": [
+    {
+      "element": "shell_skull",
+      "source_element_uuid": "29f12449-649b-5ce2-b6e7-52291cd34108",
+      "target_element_uuid": "ad5c0d3a-8581-594f-ad68-ad2a92e8aad4",
+      "bone": "head",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -6,
+        26,
+        -10.8
+      ],
+      "source_to": [
+        6,
+        38,
+        1.61051
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            148,
+            8,
+            202,
+            62
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            344,
+            178,
+            399.84729,
+            232
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            285,
+            205,
+            339,
+            259
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            308,
+            172,
+            363.84729,
+            226
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            331,
+            207,
+            385,
+            262.84729
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            131,
+            787,
+            259,
+            915
+          ],
+          "texture": 0
+        }
+      },
+      "mask_surface_separation": 0
+    },
+    {
+      "element": "shell_lower_jaw",
+      "source_element_uuid": "07861978-e732-50c4-95c4-b119b26adda8",
+      "target_element_uuid": "3ad2eeb4-d6dc-59b5-927f-f686f16abccb",
+      "bone": "jaw",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -6,
+        23.21298,
+        -10.8
+      ],
+      "source_to": [
+        6,
+        26,
+        1.61051
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            354,
+            250,
+            408,
+            262.54159
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            210,
+            70,
+            265.84729,
+            82.54159
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            49,
+            180,
+            103,
+            192.54159
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            312,
+            156,
+            367.84729,
+            168.54159
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            1,
+            787,
+            129,
+            915
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            207,
+            216,
+            261,
+            271.84729
+          ],
+          "texture": 0
+        }
+      },
+      "mask_surface_separation": 0
+    },
+    {
+      "element": "front_eyes_surface",
+      "source_element_uuid": "0e39888a-3639-572c-b013-d4dc37270fde",
+      "target_element_uuid": "0ad9c0e1-5a38-5153-8d1f-847aec49433d",
+      "bone": "eyes",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -4.78125,
+        29.58988,
+        -10.808
+      ],
+      "source_to": [
+        4.875,
+        31.161,
+        -10.808
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            20,
+            362,
+            123,
+            379
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        }
+      },
+      "mask_surface_separation": 0
+    },
+    {
+      "element": "eyes_source_wrapped_purple_halo",
+      "source_element_uuid": "85376e9a-db3a-5e98-9567-c21ceda81873",
+      "target_element_uuid": "5af76628-0714-5eaa-ade9-eeafe857287a",
+      "bone": "head",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -6.004,
+        25.996,
+        -10.804
+      ],
+      "source_to": [
+        6.004,
+        38.004,
+        1.61451
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            1,
+            641,
+            145,
+            785
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            147,
+            641,
+            291,
+            785
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            293,
+            641,
+            437,
+            785
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            439,
+            641,
+            583,
+            785
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            585,
+            641,
+            729,
+            785
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        }
+      },
+      "mask_surface_separation": 0
+    },
+    {
+      "element": "front_teeth_surface",
+      "source_element_uuid": "991ce44a-383c-55c3-acf7-3dfbd53b2c8b",
+      "target_element_uuid": "ce9ece88-ca07-5e40-903b-608fdecb5b43",
+      "bone": "jaw",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -6,
+        24.69168,
+        -10.808
+      ],
+      "source_to": [
+        4.59375,
+        26.90973,
+        -10.808
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            159,
+            408,
+            272,
+            432
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        }
+      },
+      "mask_surface_separation": 0
+    },
+    {
+      "element": "front_teeth_purple_halo_surface",
+      "source_element_uuid": "08e9c223-474f-573b-913e-22b81e714df7",
+      "target_element_uuid": "b4f79966-2677-5d33-afd4-3984bbdc9ab4",
+      "bone": "jaw",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -6.0,
+        23.212979,
+        -10.804
+      ],
+      "source_to": [
+        6.0,
+        26.90973425,
+        -10.804
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            731,
+            641,
+            859,
+            681
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        }
+      },
+      "mask_surface_separation": 0
+    },
+    {
+      "element": "side_teeth_surface",
+      "source_element_uuid": "3fd3a44a-dd5b-5b3e-b7dc-6049ee476adc",
+      "target_element_uuid": "45390196-89d3-5b12-8ac5-0b5a99bf33f0",
+      "bone": "jaw",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -6.008,
+        25.24619,
+        -10.8
+      ],
+      "source_to": [
+        -6.008,
+        26.90973,
+        -6.53389
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "west": {
+          "uv": [
+            280,
+            408,
+            324,
+            426
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        }
+      },
+      "mask_surface_separation": 0
+    },
+    {
+      "element": "side_teeth_purple_halo_surface",
+      "source_element_uuid": "79d26b2d-2814-5ff0-b35e-cbae046d3f1a",
+      "target_element_uuid": "f33d8534-269e-5017-84db-60f786612b3c",
+      "bone": "jaw",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -6.004,
+        23.212979,
+        -10.8
+      ],
+      "source_to": [
+        -6.004,
+        26.90973425,
+        -2.9464754062500003
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "west": {
+          "uv": [
+            861,
+            641,
+            942,
+            681
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        }
+      },
+      "mask_surface_separation": 0
+    },
+    {
+      "element": "upper_mouth_raw44",
+      "source_element_uuid": "2bd6bd80-9eba-5405-9ee6-f145e3fc6f5b",
+      "target_element_uuid": "bde4e4de-a146-52ff-bb4c-ec7f1985e94a",
+      "bone": "head_light",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -6,
+        25.998,
+        -10.8
+      ],
+      "source_to": [
+        6,
+        25.998,
+        1.61051
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "down": {
+          "uv": [
+            432,
+            90,
+            465,
+            132
+          ],
+          "texture": 0,
+          "tint": 1
+        }
+      },
+      "mask_surface_separation": -0.004
+    },
+    {
+      "element": "lower_mouth_raw44",
+      "source_element_uuid": "9de0c483-05a3-5076-9652-32a755d5fd92",
+      "target_element_uuid": "0263f87d-d17a-5879-843f-593a47f62f37",
+      "bone": "jaw_light",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "source_from": [
+        -6,
+        26.002,
+        -10.8
+      ],
+      "source_to": [
+        6,
+        26.002,
+        1.61051
+      ],
+      "source_faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "up": {
+          "uv": [
+            432,
+            90,
+            465,
+            132
+          ],
+          "texture": 0,
+          "tint": 1
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        }
+      },
+      "mask_surface_separation": 0.004
+    },
+    {
+      "element": "shell_skull_down_light",
+      "source_element_uuid": "29f12449-649b-5ce2-b6e7-52291cd34108",
+      "source_face": "down",
+      "bone": "head_light",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "separated_without_uv_change": true,
+      "surface_separation": -0.002,
+      "hidden_state_backing_source_face": "up"
+    },
+    {
+      "element": "shell_lower_jaw_up_light",
+      "source_element_uuid": "07861978-e732-50c4-95c4-b119b26adda8",
+      "source_face": "up",
+      "bone": "jaw_light",
+      "translation": [
+        0.0,
+        -17.8060535329898,
+        4.988303283718423
+      ],
+      "separated_without_uv_change": true,
+      "surface_separation": 0.002,
+      "hidden_state_backing_source_face": "down"
+    }
+  ],
+  "source_provenance": "../heart_of_ender_ref/final_material/MATERIAL_REPORT.md",
+  "note": "replaces previous AV-specific mouth projection; all current visible texels come from the HE main atlas"
+}

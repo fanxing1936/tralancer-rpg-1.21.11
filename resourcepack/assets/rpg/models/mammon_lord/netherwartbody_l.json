@@ -1,0 +1,96 @@
+{
+  "textures": {
+    "0": "rpg:item/mammon_lord/atlas",
+    "particle": "rpg:item/mammon_lord/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.7,
+        8.0,
+        7.7
+      ],
+      "to": [
+        8.3,
+        8.0,
+        8.3
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            6.625,
+            0.0,
+            6.9336,
+            0.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            6.625,
+            0.3125,
+            6.9336,
+            -0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          7.4,
+          8.96,
+          6.5
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      }
+    },
+    {
+      "from": [
+        8.0,
+        7.7,
+        7.7
+      ],
+      "to": [
+        8.0,
+        8.3,
+        8.3
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            6.625,
+            -0.0,
+            6.9336,
+            0.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            6.625,
+            0.3125,
+            6.9336,
+            -0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      },
+      "rotation": {
+        "origin": [
+          7.4,
+          8.96,
+          6.5
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      }
+    }
+  ]
+}

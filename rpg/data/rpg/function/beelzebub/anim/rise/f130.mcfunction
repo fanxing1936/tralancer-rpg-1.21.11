@@ -1,2 +1,3 @@
 # rise 第 130 刻的姿势（每 2 刻一帧，补间 2 刻）。由 add_beelzebub.py 烘焙。
-execute on passengers if entity @s[tag=rpg.bz.p.l_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:2,transformation:{translation:[0.57571f,1.04661f,0f],left_rotation:[0.70711f,0f,0f,0.70711f],scale:[14.18334f,14.18334f,14.18334f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.bz.p.l_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:2,transformation:{translation:[0.31035f,-0.35762f,0f],left_rotation:[0.70711f,0f,0f,0.70711f],scale:[7.64601f,7.64601f,7.64601f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.bz.p.orb] run data merge entity @s {start_interpolation:0,interpolation_duration:2,transformation:{translation:[-0.30376f,0.20173f,0.53716f],left_rotation:[-0.97555f,-0.06996f,0.10703f,-0.17876f],scale:[7.64601f,7.64601f,7.64601f],right_rotation:[0f,0f,0f,1f]}}

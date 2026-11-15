@@ -1,0 +1,2379 @@
+{
+  "scope": "Original source glTF/BIN bind frames only, readonly. No models combined, translated, resized, deformed or saved.",
+  "space": "Bone world frames expressed in Java px: J @ world_gltf @ inv(J), J=diag(-16,16,-16,1). Origin differences are Mossy minus Player.",
+  "matrix_source": "inverse binary float32 inverseBindMatrices; both rigs independently cross-checked against local glTF node hierarchy.",
+  "rig_sources": {
+    "player": {
+      "file": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Characters\\Player\\Master\\SK_Player_Master.gltf",
+      "sha256": "5dc6a3b127f4654b5716be7bb8c345f64f13381628960a21c982ec4c13839456",
+      "bin_sha256": "b9ad40e184ce6edd9c478a699ec87b5ebcf21dbcc53cbdb802abba2e1d5ed6b0",
+      "joint_count": 38,
+      "hierarchy_times_inverse_bind_max_error": 3.962869707940797e-07
+    },
+    "mossy": {
+      "file": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Characters\\Enemies\\Skeleton\\SK_Skeleton.gltf",
+      "sha256": "386eef0d7b268c173a6767421fb920a416fc5866d3978bcc27d5c0821c2fb440",
+      "bin_sha256": "645e0916de995d7c5c8c61ad7615207defe350370f3ab146dc6937168da40ac8",
+      "joint_count": 22,
+      "hierarchy_times_inverse_bind_max_error": 3.5762786865234375e-07
+    }
+  },
+  "common_bone_count": 20,
+  "common_bones": [
+    {
+      "player_bone": "Body",
+      "mossy_bone": "Body",
+      "player_parent": "J_Shoulders",
+      "mossy_parent": "J_Shoulders",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015817300428768714
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.583094428532895e-15
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015817300428768714
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        0.0,
+        22.999995651689026,
+        -0.015817300428768714
+      ],
+      "mossy_origin_java_px": [
+        -5.583094428532895e-15,
+        22.999995651689026,
+        -0.015817300428768714
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        -5.583094428532895e-15,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 5.583094428532895e-15,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 5.583094428532895e-15,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "Head",
+      "mossy_bone": "Head",
+      "player_parent": "J_Head",
+      "mossy_parent": "J_Neck",
+      "player_world_java": [
+        [
+          1.0,
+          8.461712044177662e-10,
+          1.1641517748324477e-10,
+          8.846003887491618e-18
+        ],
+        [
+          1.1641553246298811e-10,
+          1.7884305947647484e-07,
+          1.0000000596046164,
+          24.54740479870985
+        ],
+        [
+          -1.1389716307886783e-09,
+          -1.0000000596046164,
+          1.7878485180839137e-07,
+          4.389418730512383e-06
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          0.9999465270685888,
+          -0.010210548430799566,
+          -0.00163710992890972,
+          -2.133441392517322e-09
+        ],
+        [
+          0.00163244212345284,
+          -0.0004654890237943421,
+          0.9999986085671354,
+          24.547407491098454
+        ],
+        [
+          -0.010211297132617515,
+          -0.999947798554956,
+          -0.00044879601307274997,
+          4.389131981688998e-06
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        8.846003887491618e-18,
+        24.54740479870985,
+        4.389418730512383e-06
+      ],
+      "mossy_origin_java_px": [
+        -2.133441392517322e-09,
+        24.547407491098454,
+        4.389131981688998e-06
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        -2.133441401363326e-09,
+        2.692388605396445e-06,
+        -2.8674882338507803e-10
+      ],
+      "origin_distance_java_px": 2.692389465932764e-06,
+      "linear_matrix_max_abs_delta": 0.010211295993645885,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.5930830022607564,
+      "full_matrix_max_abs_delta": 0.010211295993645885,
+      "same_frame_with_tolerance_1e_minus_5": false
+    },
+    {
+      "player_bone": "J_Head",
+      "mossy_bone": "J_Head",
+      "player_parent": "J_Neck",
+      "mossy_parent": "J_Neck",
+      "player_world_java": [
+        [
+          1.0,
+          8.461712044177662e-10,
+          1.1641517748324477e-10,
+          8.846003887491618e-18
+        ],
+        [
+          1.1641553246298811e-10,
+          1.7884305947647484e-07,
+          1.0000000596046164,
+          24.54740479870985
+        ],
+        [
+          -1.1389716307886783e-09,
+          -1.0000000596046164,
+          1.7878485180839137e-07,
+          4.389418730512383e-06
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          8.461712044177662e-10,
+          1.1641517748324477e-10,
+          -5.764313724163322e-15
+        ],
+        [
+          1.1641553246298811e-10,
+          1.7884305947647484e-07,
+          1.0000000596046164,
+          24.54740479870985
+        ],
+        [
+          -1.1389716307886783e-09,
+          -1.0000000596046164,
+          1.7878485180839137e-07,
+          4.389418730512383e-06
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        8.846003887491618e-18,
+        24.54740479870985,
+        4.389418730512383e-06
+      ],
+      "mossy_origin_java_px": [
+        -5.764313724163322e-15,
+        24.54740479870985,
+        4.389418730512383e-06
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        -5.773159728050814e-15,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 5.773159728050814e-15,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 5.773159728050814e-15,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_L_Arm",
+      "mossy_bone": "J_L_Arm",
+      "player_parent": "J_Shoulders",
+      "mossy_parent": "J_Shoulders",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.436402797698975
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015817300428768714
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.436402797698975
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015817300428768714
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -4.436402797698975,
+        22.999995651689026,
+        -0.015817300428768714
+      ],
+      "mossy_origin_java_px": [
+        -4.436402797698975,
+        22.999995651689026,
+        -0.015817300428768714
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_L_Foot",
+      "mossy_bone": "J_L_Foot",
+      "player_parent": "J_L_Leg",
+      "mossy_parent": "J_L_Leg",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          -2.754623736593789e-16
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015821413148725816
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          -2.754623736593789e-16
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015821413148725816
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -2.0,
+        -2.754623736593789e-16,
+        -0.015821413148725816
+      ],
+      "mossy_origin_java_px": [
+        -2.0,
+        -2.754623736593789e-16,
+        -0.015821413148725816
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_L_Hand",
+      "mossy_bone": "J_L_Hand",
+      "player_parent": "J_L_Arm",
+      "mossy_parent": "J_L_Arm",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396402835845947
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015819088567813548
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396402835845947
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015819088567813548
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -5.396402835845947,
+        12.999997916665983,
+        -0.015819088567813548
+      ],
+      "mossy_origin_java_px": [
+        -5.396402835845947,
+        12.999997916665983,
+        -0.015819088567813548
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_L_Leg",
+      "mossy_bone": "J_L_Leg",
+      "player_parent": "J_Hip",
+      "mossy_parent": "J_L_Hip",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          11.999996903386993
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.01581926738193972
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          11.999996903386993
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.01581926738193972
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -2.0,
+        11.999996903386993,
+        -0.01581926738193972
+      ],
+      "mossy_origin_java_px": [
+        -2.0,
+        11.999996903386993,
+        -0.01581926738193972
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_L_Weapon",
+      "mossy_bone": "J_L_Weapon",
+      "player_parent": "J_L_Hand",
+      "mossy_parent": "J_L_Hand",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396402835845947
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015819088567813548
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396402835845947
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015819088567813548
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -5.396402835845947,
+        12.999997916665983,
+        -0.015819088567813548
+      ],
+      "mossy_origin_java_px": [
+        -5.396402835845947,
+        12.999997916665983,
+        -0.015819088567813548
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_Neck",
+      "mossy_bone": "J_Neck",
+      "player_parent": "J_Shoulders",
+      "mossy_parent": "J_Shoulders",
+      "player_world_java": [
+        [
+          0.9999465270685888,
+          -0.010210548430799566,
+          -0.00163710992890972,
+          -2.133441392517322e-09
+        ],
+        [
+          0.00163244212345284,
+          -0.0004654890237943421,
+          0.9999986085671354,
+          24.547407491098454
+        ],
+        [
+          -0.010211297132617515,
+          -0.999947798554956,
+          -0.00044879601307274997,
+          4.389131981688998e-06
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          0.9999465270685888,
+          -0.010210548430799566,
+          -0.00163710992890972,
+          -2.133441392517322e-09
+        ],
+        [
+          0.00163244212345284,
+          -0.0004654890237943421,
+          0.9999986085671354,
+          24.547407491098454
+        ],
+        [
+          -0.010211297132617515,
+          -0.999947798554956,
+          -0.00044879601307274997,
+          4.389131981688998e-06
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -2.133441392517322e-09,
+        24.547407491098454,
+        4.389131981688998e-06
+      ],
+      "mossy_origin_java_px": [
+        -2.133441392517322e-09,
+        24.547407491098454,
+        4.389131981688998e-06
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 2.4148365394514667e-06,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_R_Arm",
+      "mossy_bone": "J_R_Arm",
+      "player_parent": "J_Shoulders",
+      "mossy_parent": "J_Shoulders",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.436399936676025
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015817306016704495
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.436399936676025
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.015817306016704495
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        4.436399936676025,
+        22.999995651689026,
+        -0.015817306016704495
+      ],
+      "mossy_origin_java_px": [
+        4.436399936676025,
+        22.999995651689026,
+        -0.015817306016704495
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 2.0000001192092327,
+      "rotation_difference_degrees_after_polar_orthonormalization": 180.0,
+      "full_matrix_max_abs_delta": 2.0000001192092327,
+      "same_frame_with_tolerance_1e_minus_5": false
+    },
+    {
+      "player_bone": "J_R_Foot",
+      "mossy_bone": "J_R_Foot",
+      "player_parent": "J_R_Leg",
+      "mossy_parent": "J_R_Leg",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          -1.6444000502241032e-16
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.015821418736661597
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          -1.6444000502241032e-16
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.015821418736661597
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        2.0,
+        -1.6444000502241032e-16,
+        -0.015821418736661597
+      ],
+      "mossy_origin_java_px": [
+        2.0,
+        -1.6444000502241032e-16,
+        -0.015821418736661597
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_R_Hand",
+      "mossy_bone": "J_R_Hand",
+      "player_parent": "J_R_Arm",
+      "mossy_parent": "J_R_Arm",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623394012451
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.01581909415574933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623394012451
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.01581909415574933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        5.399623394012451,
+        12.999997916665983,
+        -0.01581909415574933
+      ],
+      "mossy_origin_java_px": [
+        5.399623394012451,
+        12.999997916665983,
+        -0.01581909415574933
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_R_Leg",
+      "mossy_bone": "J_R_Leg",
+      "player_parent": "J_Hip",
+      "mossy_parent": "J_L_Hip",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          11.999996903386993
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.0158192729698755
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          11.999996903386993
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.0158192729698755
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        2.0,
+        11.999996903386993,
+        -0.0158192729698755
+      ],
+      "mossy_origin_java_px": [
+        2.0,
+        11.999996903386993,
+        -0.0158192729698755
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_R_Weapon",
+      "mossy_bone": "J_R_Weapon",
+      "player_parent": "J_R_Hand",
+      "mossy_parent": "J_R_Hand",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623394012451
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.01581909415574933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623394012451
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.01581909415574933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        5.399623394012451,
+        12.999997916665983,
+        -0.01581909415574933
+      ],
+      "mossy_origin_java_px": [
+        5.399623394012451,
+        12.999997916665983,
+        -0.01581909415574933
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_Root",
+      "mossy_bone": "J_Root",
+      "player_parent": "SK_Player_Master",
+      "mossy_parent": "SK_Skeleton",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mossy_origin_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_Shoulders",
+      "mossy_bone": "J_Shoulders",
+      "player_parent": "J_Spine",
+      "mossy_parent": "J_L_Spine",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015817300428768714
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.583094428532895e-15
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015817300428768714
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        0.0,
+        22.999995651689026,
+        -0.015817300428768714
+      ],
+      "mossy_origin_java_px": [
+        -5.583094428532895e-15,
+        22.999995651689026,
+        -0.015817300428768714
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        -5.583094428532895e-15,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 5.583094428532895e-15,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 5.583094428532895e-15,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "L_Arm",
+      "mossy_bone": "L_Arm",
+      "player_parent": "J_L_Hand",
+      "mossy_parent": "J_L_Hand",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396402835845947
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015819088567813548
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396402835845947
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015819088567813548
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -5.396402835845947,
+        12.999997916665983,
+        -0.015819088567813548
+      ],
+      "mossy_origin_java_px": [
+        -5.396402835845947,
+        12.999997916665983,
+        -0.015819088567813548
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "L_Leg",
+      "mossy_bone": "L_Leg",
+      "player_parent": "J_L_Foot",
+      "mossy_parent": "J_L_Foot",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          -2.754623736593789e-16
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015821413148725816
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          -2.754623736593789e-16
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015821413148725816
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -2.0,
+        -2.754623736593789e-16,
+        -0.015821413148725816
+      ],
+      "mossy_origin_java_px": [
+        -2.0,
+        -2.754623736593789e-16,
+        -0.015821413148725816
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "R_Arm",
+      "mossy_bone": "R_Arm",
+      "player_parent": "J_R_Hand",
+      "mossy_parent": "J_R_Hand",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623394012451
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.01581909415574933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623394012451
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.01581909415574933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        5.399623394012451,
+        12.999997916665983,
+        -0.01581909415574933
+      ],
+      "mossy_origin_java_px": [
+        5.399623394012451,
+        12.999997916665983,
+        -0.01581909415574933
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "R_Leg",
+      "mossy_bone": "R_Leg",
+      "player_parent": "J_R_Foot",
+      "mossy_parent": "J_R_Foot",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          -1.6444000502241032e-16
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.015821418736661597
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          -1.6444000502241032e-16
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.015821418736661597
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        2.0,
+        -1.6444000502241032e-16,
+        -0.015821418736661597
+      ],
+      "mossy_origin_java_px": [
+        2.0,
+        -1.6444000502241032e-16,
+        -0.015821418736661597
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    }
+  ],
+  "structurally_corresponding_renamed_bones": [
+    {
+      "player_bone": "J_Hip",
+      "mossy_bone": "J_L_Hip",
+      "player_parent": "J_Root",
+      "mossy_parent": "J_Root",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          11.999996903386993
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.01581926738193972
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          11.999996903386993
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.01581926738193972
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        0.0,
+        11.999996903386993,
+        -0.01581926738193972
+      ],
+      "mossy_origin_java_px": [
+        0.0,
+        11.999996903386993,
+        -0.01581926738193972
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    },
+    {
+      "player_bone": "J_Spine",
+      "mossy_bone": "J_L_Spine",
+      "player_parent": "J_Hip",
+      "mossy_parent": "J_L_Hip",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.99999696299161
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.01581908856798408
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.99999696299161
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.01581908856798408
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        0.0,
+        12.99999696299161,
+        -0.01581908856798408
+      ],
+      "mossy_origin_java_px": [
+        0.0,
+        12.99999696299161,
+        -0.01581908856798408
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true
+    }
+  ],
+  "armor_socket_parent_bones": [
+    {
+      "player_bone": "J_Shoulders",
+      "mossy_bone": "J_Shoulders",
+      "player_parent": "J_Spine",
+      "mossy_parent": "J_L_Spine",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015817300428768714
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.583094428532895e-15
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          22.999995651689026
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015817300428768714
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        0.0,
+        22.999995651689026,
+        -0.015817300428768714
+      ],
+      "mossy_origin_java_px": [
+        -5.583094428532895e-15,
+        22.999995651689026,
+        -0.015817300428768714
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        -5.583094428532895e-15,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 5.583094428532895e-15,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 5.583094428532895e-15,
+      "same_frame_with_tolerance_1e_minus_5": true,
+      "part": "body",
+      "socket": "J_ShouldersSocket",
+      "source_vertex_count": 94,
+      "max_armor_vertex_distance_if_same_attachment_frame_used_java_px": 5.773159728050814e-15
+    },
+    {
+      "player_bone": "J_Head",
+      "mossy_bone": "J_Head",
+      "player_parent": "J_Neck",
+      "mossy_parent": "J_Neck",
+      "player_world_java": [
+        [
+          1.0,
+          8.461712044177662e-10,
+          1.1641517748324477e-10,
+          8.846003887491618e-18
+        ],
+        [
+          1.1641553246298811e-10,
+          1.7884305947647484e-07,
+          1.0000000596046164,
+          24.54740479870985
+        ],
+        [
+          -1.1389716307886783e-09,
+          -1.0000000596046164,
+          1.7878485180839137e-07,
+          4.389418730512383e-06
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          8.461712044177662e-10,
+          1.1641517748324477e-10,
+          -5.764313724163322e-15
+        ],
+        [
+          1.1641553246298811e-10,
+          1.7884305947647484e-07,
+          1.0000000596046164,
+          24.54740479870985
+        ],
+        [
+          -1.1389716307886783e-09,
+          -1.0000000596046164,
+          1.7878485180839137e-07,
+          4.389418730512383e-06
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        8.846003887491618e-18,
+        24.54740479870985,
+        4.389418730512383e-06
+      ],
+      "mossy_origin_java_px": [
+        -5.764313724163322e-15,
+        24.54740479870985,
+        4.389418730512383e-06
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        -5.773159728050814e-15,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 5.773159728050814e-15,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 5.773159728050814e-15,
+      "same_frame_with_tolerance_1e_minus_5": true,
+      "part": "head",
+      "socket": "J_Head_Socket",
+      "source_vertex_count": 70,
+      "max_armor_vertex_distance_if_same_attachment_frame_used_java_px": 5.773159728050814e-15
+    },
+    {
+      "player_bone": "J_R_Foot",
+      "mossy_bone": "J_R_Foot",
+      "player_parent": "J_R_Leg",
+      "mossy_parent": "J_R_Leg",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          -1.6444000502241032e-16
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.015821418736661597
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          -1.6444000502241032e-16
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.015821418736661597
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        2.0,
+        -1.6444000502241032e-16,
+        -0.015821418736661597
+      ],
+      "mossy_origin_java_px": [
+        2.0,
+        -1.6444000502241032e-16,
+        -0.015821418736661597
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true,
+      "part": "right_leg",
+      "socket": "J_R_Leg_Socket",
+      "source_vertex_count": 24,
+      "max_armor_vertex_distance_if_same_attachment_frame_used_java_px": 0.0
+    },
+    {
+      "player_bone": "J_L_Hand",
+      "mossy_bone": "J_L_Hand",
+      "player_parent": "J_L_Arm",
+      "mossy_parent": "J_L_Arm",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396402835845947
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015819088567813548
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396402835845947
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015819088567813548
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -5.396402835845947,
+        12.999997916665983,
+        -0.015819088567813548
+      ],
+      "mossy_origin_java_px": [
+        -5.396402835845947,
+        12.999997916665983,
+        -0.015819088567813548
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true,
+      "part": "left_arm",
+      "socket": "J_L_Shoulder_Socket",
+      "source_vertex_count": 20,
+      "max_armor_vertex_distance_if_same_attachment_frame_used_java_px": 0.0
+    },
+    {
+      "player_bone": "J_R_Hand",
+      "mossy_bone": "J_R_Hand",
+      "player_parent": "J_R_Arm",
+      "mossy_parent": "J_R_Arm",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623394012451
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.01581909415574933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623394012451
+        ],
+        [
+          0.0,
+          -1.7881395564245014e-07,
+          -1.0000000596046164,
+          12.999997916665983
+        ],
+        [
+          0.0,
+          1.0000000596046164,
+          -1.7881395564245014e-07,
+          -0.01581909415574933
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        5.399623394012451,
+        12.999997916665983,
+        -0.01581909415574933
+      ],
+      "mossy_origin_java_px": [
+        5.399623394012451,
+        12.999997916665983,
+        -0.01581909415574933
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true,
+      "part": "right_arm",
+      "socket": "J_R_Shoulder_Socket",
+      "source_vertex_count": 20,
+      "max_armor_vertex_distance_if_same_attachment_frame_used_java_px": 0.0
+    },
+    {
+      "player_bone": "J_L_Foot",
+      "mossy_bone": "J_L_Foot",
+      "player_parent": "J_L_Leg",
+      "mossy_parent": "J_L_Leg",
+      "player_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          -2.754623736593789e-16
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015821413148725816
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mossy_world_java": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          1.7881395564245014e-07,
+          1.0000000596046164,
+          -2.754623736593789e-16
+        ],
+        [
+          0.0,
+          -1.0000000596046164,
+          1.7881395564245014e-07,
+          -0.015821413148725816
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "player_origin_java_px": [
+        -2.0,
+        -2.754623736593789e-16,
+        -0.015821413148725816
+      ],
+      "mossy_origin_java_px": [
+        -2.0,
+        -2.754623736593789e-16,
+        -0.015821413148725816
+      ],
+      "origin_delta_mossy_minus_player_java_px": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_distance_java_px": 0.0,
+      "linear_matrix_max_abs_delta": 0.0,
+      "rotation_difference_degrees_after_polar_orthonormalization": 0.0,
+      "full_matrix_max_abs_delta": 0.0,
+      "same_frame_with_tolerance_1e_minus_5": true,
+      "part": "left_leg",
+      "socket": "J_L_Leg_Socket",
+      "source_vertex_count": 24,
+      "max_armor_vertex_distance_if_same_attachment_frame_used_java_px": 0.0
+    }
+  ],
+  "bind_pose_conclusion": {
+    "six_original_attachment_parent_frames_align": true,
+    "max_parent_origin_distance_java_px": 5.773159728050814e-15,
+    "max_parent_linear_matrix_delta": 0.0,
+    "max_original_armor_vertex_distance_java_px": 5.773159728050814e-15,
+    "need_invented_global_offset_scale_or_deformation_for_bind_coordinate_alignment": false,
+    "statement": "The six original armor meshes already assembled in player bind world space can be overlaid in Mossy bind world space without guessed translation, scale or deformation for frame alignment. This does not assert absence of visual intersections, runtime pose equivalence or an existing native monster armor attachment."
+  },
+  "material_differences": [
+    "J_R_Arm origins match but world orientation differs by 180 degrees. J_R_Hand world frames do match. Keep the proven J_R_Hand socket parent; do not substitute J_R_Arm.",
+    "Head marker differs slightly because its parent is J_Head for player and J_Neck for Skeleton. Armor uses J_Head, whose full world frame matches.",
+    "J_Hip/J_L_Hip and J_Spine/J_L_Spine have different labels; these two explicit structural comparisons are recorded separately from exact-name matches."
+  ],
+  "paperdoll_native_assignment_recheck": {
+    "scope": "Existing exact-extracted raw assets and their parsed tagged properties only; no new directory/PAK/payload search.",
+    "packages": [
+      {
+        "package": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor",
+        "class_super": "/Script/Dungeons.GearActor",
+        "paperdoll_export": 9,
+        "paperdoll_class": "/Script/Dungeons.PaperdollComponent",
+        "paperdoll_template": "/Script/Dungeons.Default__GearActor.Paperdoll",
+        "has_serialized_SkeletalMesh": false,
+        "all_serialized_paperdoll_properties": {
+          "AnimationData": {
+            "properties": [
+              {
+                "name": "AnimToPlay",
+                "type": "ObjectProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 25,
+                "size": 4,
+                "metadata": {},
+                "value": {
+                  "index": -1,
+                  "path": "/Game/Actors/Characters/Player/Master/Animations/Player_Master_Run.Player_Master_Run"
+                }
+              }
+            ]
+          },
+          "ClothingSimulationFactory": {
+            "index": -3,
+            "path": "/Script/ClothingSystemRuntime.ClothingSimulationFactoryNv"
+          }
+        },
+        "parsed_file_sha256": "f6fca2c5e5f18e60a0cd41cf302ac7dd5d7b7f34e150e46fc52d06c6d60aaaef",
+        "raw_sources": [
+          {
+            "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\BP_NatureArmor.uasset",
+            "bytes": 8444,
+            "sha256": "301da929e7f38fe8e5ae3909e08b5c818dc81bc607fc114288d1d9378d3788bd"
+          },
+          {
+            "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\BP_NatureArmor.uexp",
+            "bytes": 16357,
+            "sha256": "17c551f9c26e9fe234559bcf1efabb2a09ede4fc5a82467480e55ef0c8ac0ad1"
+          }
+        ]
+      },
+      {
+        "package": "/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/BP_SproutArmor",
+        "class_super": "/Script/Dungeons.GearActor",
+        "paperdoll_export": 9,
+        "paperdoll_class": "/Script/Dungeons.PaperdollComponent",
+        "paperdoll_template": "/Script/Dungeons.Default__GearActor.Paperdoll",
+        "has_serialized_SkeletalMesh": false,
+        "all_serialized_paperdoll_properties": {
+          "AnimationData": {
+            "properties": [
+              {
+                "name": "AnimToPlay",
+                "type": "ObjectProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 25,
+                "size": 4,
+                "metadata": {},
+                "value": {
+                  "index": -1,
+                  "path": "/Game/Actors/Equipment/MeleeWeapons/Sword_Unique1/Animations/Player_Master_SwordUnique1Swing_1.Player_Master_SwordUnique1Swing_1"
+                }
+              }
+            ]
+          },
+          "AnimationMode": "EAnimationMode::AnimationSingleNode",
+          "ClothingSimulationFactory": {
+            "index": -3,
+            "path": "/Script/ClothingSystemRuntime.ClothingSimulationFactoryNv"
+          }
+        },
+        "parsed_file_sha256": "ca08a67eaf47855925302d1ca0019cfd2ef9ba0eb15564ef89adf6da581011e1",
+        "raw_sources": [
+          {
+            "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\BP_SproutArmor.uasset",
+            "bytes": 8036,
+            "sha256": "18db8c529b76edb0af7093f8a0b394cbb64983d38184f3adb563d09166143871"
+          },
+          {
+            "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\BP_SproutArmor.uexp",
+            "bytes": 16090,
+            "sha256": "d3ef2326b0190dc2ac1ba9f18026991a82e43366955a2b3daa49dacf5e8d7017"
+          }
+        ]
+      },
+      {
+        "package": "/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor_Unique1/BP_SproutArmor_Unique1",
+        "class_super": "/Script/Dungeons.GearActor",
+        "paperdoll_export": 9,
+        "paperdoll_class": "/Script/Dungeons.PaperdollComponent",
+        "paperdoll_template": "/Script/Dungeons.Default__GearActor.Paperdoll",
+        "has_serialized_SkeletalMesh": false,
+        "all_serialized_paperdoll_properties": {
+          "ClothingSimulationFactory": {
+            "index": -2,
+            "path": "/Script/ClothingSystemRuntime.ClothingSimulationFactoryNv"
+          }
+        },
+        "parsed_file_sha256": "a0d7348d582fb099692f560dd163aa5eb15eaa6659e75122bc2ecfc8e4bb6ba5",
+        "raw_sources": [
+          {
+            "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor_Unique1\\BP_SproutArmor_Unique1.uasset",
+            "bytes": 7946,
+            "sha256": "1f4bfaa01a22c0121f05dae5dd03d30bf3983ef65ac5ed614aa4ca67c0fab7e4"
+          },
+          {
+            "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor_Unique1\\BP_SproutArmor_Unique1.uexp",
+            "bytes": 15843,
+            "sha256": "976653c134aebe6599213fd662ed2ffa9cc04adc7ac07a3015a097df5f0d104a"
+          }
+        ]
+      }
+    ],
+    "sufficient_to_prove_Paperdoll_SkeletalMesh_equals_SK_Player_Master": false,
+    "reason": "All three relevant BP generated classes terminate at native /Script/Dungeons.GearActor. Paperdoll template terminates at native /Script/Dungeons.Default__GearActor.Paperdoll, with class /Script/Dungeons.PaperdollComponent. None serializes SkeletalMesh. Native class constructor/default object values are absent from these raw asset files.",
+    "supporting_but_not_assignment_proof": "NatureArmor Paperdoll AnimationData.AnimToPlay references Player_Master_Run. SK_Player_Master.Skeleton separately references Player_Master_Skeleton. Six original socket names and bind frames agree; none supplies the missing native Paperdoll SkeletalMesh property assignment."
+  },
+  "limitations": [
+    "Bind-pose frame comparison only; no animation retargeting or runtime original-image pose verified.",
+    "Skeleton_Skeleton has no six player armor socket definitions; coordinate agreement does not invent native socket existence.",
+    "No whole-skeleton substitution by equal names: J_R_Arm and Head have recorded orientation differences.",
+    "Comparison does not modify the frozen armor_for_blockbench.json or any bbmodel."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "project": "root_rot_armor_original",
+  "parameters": {
+    "Emissive": [
+      0.693310022354126,
+      8,
+      0
+    ],
+    "EmissivePower": 1,
+    "NaturalEmissive": 0.699999988079071,
+    "DeathEmissive": 1,
+    "OpacityMaskClipValue": 0.33329999446868896
+  },
+  "width": 64,
+  "height": 64,
+  "encoding": "Float32 RGBA, source-image top-down after framebuffer flip; raw linear HDR before preview tonemapping",
+  "scope": "Actual Blockbench shader fragment rendered to float target vs independent source-derived static equation; not a full D3D scene image comparison",
+  "source_mask_pixels": 3377,
+  "gpu_alpha_differing_pixels": 0,
+  "linear_rgb_max_abs_error": 2.2666444987606837e-06,
+  "linear_rgb_rmse": 9.674382713441381e-08,
+  "source_hdr_max": 8.074916170808972,
+  "gpu_hdr_max": 8.074915885925293,
+  "gpu_hdr_components_above_one": 76,
+  "tolerance": 1e-05,
+  "passed": true,
+  "gpu_rgba32_sha256": "1f4505f297f2abfa2f0791bb25dc3b7fee7920d8a24465f27c2ef54194655eec",
+  "texel_checks": [
+    {
+      "x": 2,
+      "y": 24,
+      "reference": [
+        0.6525095898155673,
+        7.415527087450379,
+        0.0068048520082805534
+      ],
+      "gpu": [
+        0.6525096893310547,
+        7.415528774261475,
+        0.00680485088378191
+      ],
+      "error": [
+        9.951548740616545e-08,
+        1.6868110952472648e-06,
+        1.1244986435066107e-09
+      ]
+    },
+    {
+      "x": 6,
+      "y": 24,
+      "reference": [
+        0.6525095898155673,
+        7.415527087450379,
+        0.0068048520082805534
+      ],
+      "gpu": [
+        0.6525096893310547,
+        7.415528774261475,
+        0.00680485088378191
+      ],
+      "error": [
+        9.951548740616545e-08,
+        1.6868110952472648e-06,
+        1.1244986435066107e-09
+      ]
+    },
+    {
+      "x": 35,
+      "y": 49,
+      "reference": [
+        0.2098775119958597,
+        2.3080621606719594,
+        0.0068048520082805534
+      ],
+      "gpu": [
+        0.20987755060195923,
+        2.3080625534057617,
+        0.00680485088378191
+      ],
+      "error": [
+        3.860609953942884e-08,
+        3.927338023679283e-07,
+        1.1244986435066107e-09
+      ]
+    },
+    {
+      "x": 44,
+      "y": 50,
+      "reference": [
+        0.2098775119958597,
+        2.3080621606719594,
+        0.0068048520082805534
+      ],
+      "gpu": [
+        0.20987755060195923,
+        2.3080625534057617,
+        0.00680485088378191
+      ],
+      "error": [
+        3.860609953942884e-08,
+        3.927338023679283e-07,
+        1.1244986435066107e-09
+      ]
+    },
+    {
+      "x": 63,
+      "y": 8,
+      "reference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gpu": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "error": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "x": 12,
+      "y": 28,
+      "reference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gpu": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "error": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "reference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gpu": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "error": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

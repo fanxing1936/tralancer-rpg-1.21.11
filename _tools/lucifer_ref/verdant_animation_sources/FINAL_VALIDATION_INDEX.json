@@ -1,0 +1,96 @@
+{
+  "model_sha256": "14931c0cb1584e5da36ff107e0b5bd953d013b0d3f2f385d57a729e36628f197",
+  "payload_sha256": "4e614de79c7a37ebc0be235e86fb62eb82ca8abf2a1bd21e1c2538f92b81f017",
+  "reference_npz_sha256": "a970b6b48e8a073d316bcd0d5d10ed3fb52755dc21b21f62b229db131c907ef5",
+  "source_animation_json_sha256": "930867a3022a9544915e48f83c192d18be970d29777e731b6b4bec9f478bfcd1",
+  "native_status": "PASS",
+  "native_authored_poses": 536,
+  "native_max_rotation_matrix_error": 1.176836406102666e-14,
+  "native_max_position_error_java_pixels": 3.1020519486446574e-11,
+  "independent_grip_pass": true,
+  "independent_grip_samples": 2724,
+  "attack_start_and_hold": [
+    {
+      "t": 0.0,
+      "grip_world": [
+        1.3925462122029018,
+        19.834235359130865,
+        -13.12832344906594
+      ],
+      "tip_world": [
+        1.392546212202907,
+        19.834235359130904,
+        -33.59903175110747
+      ],
+      "base_world": [
+        1.3925462122029018,
+        19.975412657765613,
+        -0.49295522125409796
+      ],
+      "base_to_tip_unit": [
+        1.6096809476564974e-16,
+        -0.004264353550544285,
+        -0.9999909076030621
+      ],
+      "grip_center_clearance_inside_arm": 0.6003760000000087,
+      "grip_to_tip_unit": [
+        2.6032663059681656e-16,
+        1.909061957709988e-15,
+        -1.0
+      ],
+      "base_to_tip_angle_from_java_negative_z_degrees": 0.24433020131472022,
+      "grip_to_tip_angle_from_java_negative_z_degrees": 0.0,
+      "tip_forward_reach_from_grip_java_pixels": 20.47070830204153,
+      "tip_forward_reach_from_model_origin_java_pixels": 33.59903175110747,
+      "grip_texel_full_prism_clearance_inside_arm": 0.00991829656472376,
+      "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+      "grip_to_right_hand_max_abs_error": 4.884981308350689e-15
+    },
+    {
+      "t": 0.06,
+      "grip_world": [
+        1.4195726470935819,
+        19.8961536138946,
+        -13.045688139320262
+      ],
+      "tip_world": [
+        1.4195726470935925,
+        19.896153613894633,
+        -33.516396441361785
+      ],
+      "base_world": [
+        1.4195726470935792,
+        20.03733091252935,
+        -0.41031991150842373
+      ],
+      "base_to_tip_unit": [
+        4.0242023691412444e-16,
+        -0.004264353550544501,
+        -0.9999909076030621
+      ],
+      "grip_center_clearance_inside_arm": 0.6003760000000096,
+      "grip_to_tip_unit": [
+        5.206532611936333e-16,
+        1.5619597835808999e-15,
+        -1.0
+      ],
+      "base_to_tip_angle_from_java_negative_z_degrees": 0.24433020131472022,
+      "grip_to_tip_angle_from_java_negative_z_degrees": 0.0,
+      "tip_forward_reach_from_grip_java_pixels": 20.470708302041523,
+      "tip_forward_reach_from_model_origin_java_pixels": 33.516396441361785,
+      "grip_texel_full_prism_clearance_inside_arm": 0.009918296037088048,
+      "grip_to_socket_max_abs_error": 1.7763568394002505e-15,
+      "grip_to_right_hand_max_abs_error": 5.329070518200751e-15
+    }
+  ],
+  "assembly_pass": true,
+  "geometry_material_core_sha256": "09f0b3b31c9f8d25c46e6989f72a9685e2eeab844d49730a5989b39319bfa5f4",
+  "payload_math_status": "PASS",
+  "known_limits": [
+    "Checks all stored times, segment midpoints and 120 Hz samples, not symbolic continuous collision proof.",
+    "Arm volume is the actual source R_Arm cuboid transformed by its original rigid bone. No separate hand mesh is invented.",
+    "Grip center inside arm proves intersection/contact; the full texel prism need not be wholly hidden inside the arm.",
+    "Aiming direction is measured in model world coordinates; report alone does not accept visual appeal or combat behavior.",
+    "Original generated weapon topology/UV/texture preservation is covered by the separate geometry audit."
+  ]
+}

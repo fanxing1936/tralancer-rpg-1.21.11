@@ -1,0 +1,762 @@
+{
+  "method": "将头前面四角映到12×7模型单位；每单位100采样像素；颜色阈值仅统计原图片，不创建新眼材质。",
+  "references": {
+    "main": {
+      "file": "MCD_Arch-Illager.png",
+      "quad": [
+        [
+          95,
+          296
+        ],
+        [
+          360,
+          427
+        ],
+        [
+          334,
+          625
+        ],
+        [
+          68,
+          494
+        ]
+      ],
+      "exactness": "角点人工标记约1–2px误差；主渲染无JPEG压缩",
+      "transform_rectified_to_source": [
+        [
+          0.22153419291174756,
+          -0.03891444468788692,
+          95.0
+        ],
+        [
+          0.10999796399995243,
+          0.28036523165816596,
+          296.0
+        ],
+        [
+          1.946832162261773e-06,
+          -5.044354653799316e-06,
+          1.0
+        ]
+      ],
+      "measurements": {
+        "right": {
+          "brow_vertical": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                78,
+                56,
+                302,
+                285
+              ],
+              "local_model_bbox_xyxy": [
+                2.98,
+                16.65,
+                5.22,
+                18.94
+              ],
+              "pixel_count": 42383
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                81,
+                59,
+                302,
+                285
+              ],
+              "local_model_bbox_xyxy": [
+                2.98,
+                16.65,
+                5.19,
+                18.91
+              ],
+              "pixel_count": 42108
+            }
+          },
+          "brow_horizontal": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                69,
+                285,
+                471,
+                410
+              ],
+              "local_model_bbox_xyxy": [
+                1.29,
+                15.4,
+                5.31,
+                16.65
+              ],
+              "pixel_count": 39130
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                70,
+                285,
+                468,
+                410
+              ],
+              "local_model_bbox_xyxy": [
+                1.32,
+                15.4,
+                5.3,
+                16.65
+              ],
+              "pixel_count": 38670
+            }
+          },
+          "pupil": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                184,
+                400,
+                488,
+                503
+              ],
+              "local_model_bbox_xyxy": [
+                1.12,
+                14.47,
+                4.16,
+                15.5
+              ],
+              "pixel_count": 13202
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                289,
+                400,
+                479,
+                501
+              ],
+              "local_model_bbox_xyxy": [
+                1.21,
+                14.49,
+                3.11,
+                15.5
+              ],
+              "pixel_count": 12907
+            }
+          },
+          "white": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                183,
+                395,
+                487,
+                501
+              ],
+              "local_model_bbox_xyxy": [
+                1.13,
+                14.49,
+                4.17,
+                15.55
+              ],
+              "pixel_count": 10682
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                185,
+                397,
+                292,
+                498
+              ],
+              "local_model_bbox_xyxy": [
+                3.08,
+                14.52,
+                4.15,
+                15.53
+              ],
+              "pixel_count": 10358
+            }
+          }
+        },
+        "left": {
+          "brow_vertical": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                849,
+                72,
+                1065,
+                285
+              ],
+              "local_model_bbox_xyxy": [
+                -4.65,
+                16.65,
+                -2.49,
+                18.78
+              ],
+              "pixel_count": 39650
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                850,
+                74,
+                1064,
+                285
+              ],
+              "local_model_bbox_xyxy": [
+                -4.64,
+                16.65,
+                -2.5,
+                18.76
+              ],
+              "pixel_count": 39480
+            }
+          },
+          "brow_horizontal": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                706,
+                285,
+                1076,
+                410
+              ],
+              "local_model_bbox_xyxy": [
+                -4.76,
+                15.4,
+                -1.06,
+                16.65
+              ],
+              "pixel_count": 38860
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                706,
+                285,
+                1075,
+                410
+              ],
+              "local_model_bbox_xyxy": [
+                -4.75,
+                15.4,
+                -1.06,
+                16.65
+              ],
+              "pixel_count": 38590
+            }
+          },
+          "pupil": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                706,
+                403,
+                1006,
+                507
+              ],
+              "local_model_bbox_xyxy": [
+                -4.06,
+                14.43,
+                -1.06,
+                15.47
+              ],
+              "pixel_count": 17853
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                706,
+                405,
+                898,
+                505
+              ],
+              "local_model_bbox_xyxy": [
+                -2.98,
+                14.45,
+                -1.06,
+                15.45
+              ],
+              "pixel_count": 17532
+            }
+          },
+          "white": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                876,
+                401,
+                1005,
+                508
+              ],
+              "local_model_bbox_xyxy": [
+                -4.05,
+                14.42,
+                -2.76,
+                15.49
+              ],
+              "pixel_count": 10835
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                895,
+                404,
+                1004,
+                506
+              ],
+              "local_model_bbox_xyxy": [
+                -4.04,
+                14.44,
+                -2.95,
+                15.46
+              ],
+              "pixel_count": 10558
+            }
+          }
+        }
+      }
+    },
+    "throne": {
+      "file": "Arch-Illager_sit_in_his_throne_room_front_view.jpg",
+      "quad": [
+        [
+          827,
+          427
+        ],
+        [
+          1052,
+          427
+        ],
+        [
+          1049,
+          571
+        ],
+        [
+          830,
+          568
+        ]
+      ],
+      "exactness": "截图角点约2–3px误差，JPEG及游戏光照；仅作第二表情候选",
+      "transform_rectified_to_source": [
+        [
+          0.16874108416547795,
+          0.036423476665987366,
+          827.0
+        ],
+        [
+          -0.007614122681883041,
+          0.2234216425514571,
+          427.0
+        ],
+        [
+          -1.783166904422254e-05,
+          3.872019563888323e-05,
+          1.0
+        ]
+      ],
+      "measurements": {
+        "right": {
+          "brow_vertical": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                89,
+                70,
+                341,
+                285
+              ],
+              "local_model_bbox_xyxy": [
+                2.59,
+                16.65,
+                5.11,
+                18.8
+              ],
+              "pixel_count": 44722
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                90,
+                70,
+                327,
+                285
+              ],
+              "local_model_bbox_xyxy": [
+                2.73,
+                16.65,
+                5.1,
+                18.8
+              ],
+              "pixel_count": 44685
+            }
+          },
+          "brow_horizontal": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                77,
+                285,
+                495,
+                410
+              ],
+              "local_model_bbox_xyxy": [
+                1.05,
+                15.4,
+                5.23,
+                16.65
+              ],
+              "pixel_count": 40434
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                77,
+                285,
+                495,
+                410
+              ],
+              "local_model_bbox_xyxy": [
+                1.05,
+                15.4,
+                5.23,
+                16.65
+              ],
+              "pixel_count": 40431
+            }
+          },
+          "pupil": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                372,
+                400,
+                495,
+                437
+              ],
+              "local_model_bbox_xyxy": [
+                1.05,
+                15.13,
+                2.28,
+                15.5
+              ],
+              "pixel_count": 4420
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                372,
+                400,
+                495,
+                437
+              ],
+              "local_model_bbox_xyxy": [
+                1.05,
+                15.13,
+                2.28,
+                15.5
+              ],
+              "pixel_count": 4420
+            }
+          },
+          "white": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                207,
+                393,
+                495,
+                491
+              ],
+              "local_model_bbox_xyxy": [
+                1.05,
+                14.59,
+                3.93,
+                15.57
+              ],
+              "pixel_count": 21079
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                207,
+                393,
+                495,
+                491
+              ],
+              "local_model_bbox_xyxy": [
+                1.05,
+                14.59,
+                3.93,
+                15.57
+              ],
+              "pixel_count": 21079
+            }
+          }
+        },
+        "left": {
+          "brow_vertical": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                936,
+                69,
+                1172,
+                285
+              ],
+              "local_model_bbox_xyxy": [
+                -5.72,
+                16.65,
+                -3.36,
+                18.81
+              ],
+              "pixel_count": 42869
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                936,
+                74,
+                1172,
+                285
+              ],
+              "local_model_bbox_xyxy": [
+                -5.72,
+                16.65,
+                -3.36,
+                18.76
+              ],
+              "pixel_count": 42821
+            }
+          },
+          "brow_horizontal": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                752,
+                285,
+                1184,
+                410
+              ],
+              "local_model_bbox_xyxy": [
+                -5.84,
+                15.4,
+                -1.52,
+                16.65
+              ],
+              "pixel_count": 41807
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                752,
+                285,
+                1184,
+                410
+              ],
+              "local_model_bbox_xyxy": [
+                -5.84,
+                15.4,
+                -1.52,
+                16.65
+              ],
+              "pixel_count": 41802
+            }
+          },
+          "pupil": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                768,
+                400,
+                941,
+                434
+              ],
+              "local_model_bbox_xyxy": [
+                -3.41,
+                15.16,
+                -1.68,
+                15.5
+              ],
+              "pixel_count": 4134
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                822,
+                400,
+                941,
+                433
+              ],
+              "local_model_bbox_xyxy": [
+                -3.41,
+                15.17,
+                -2.22,
+                15.5
+              ],
+              "pixel_count": 3904
+            }
+          },
+          "white": {
+            "raw_bounds": {
+              "rectified_pixel_bbox": [
+                706,
+                392,
+                1107,
+                488
+              ],
+              "local_model_bbox_xyxy": [
+                -5.07,
+                14.62,
+                -1.06,
+                15.58
+              ],
+              "pixel_count": 24719
+            },
+            "largest_opened_component": {
+              "rectified_pixel_bbox": [
+                779,
+                392,
+                1107,
+                488
+              ],
+              "local_model_bbox_xyxy": [
+                -5.07,
+                14.62,
+                -1.79,
+                15.58
+              ],
+              "pixel_count": 24236
+            }
+          }
+        }
+      }
+    }
+  },
+  "source_pixel_colors": {
+    "brow_vertical": {
+      "rect": [
+        4,
+        2,
+        6,
+        4
+      ],
+      "rgba": [
+        57,
+        57,
+        57,
+        255
+      ]
+    },
+    "brow_horizontal": {
+      "rect": [
+        2,
+        4,
+        6,
+        5
+      ],
+      "rgba": [
+        57,
+        57,
+        57,
+        255
+      ]
+    },
+    "pupil_black": {
+      "rect": [
+        3,
+        5,
+        5,
+        6
+      ],
+      "rgba": [
+        37,
+        37,
+        37,
+        255
+      ]
+    },
+    "eye_white": {
+      "rect": [
+        5,
+        5,
+        6,
+        6
+      ],
+      "rgba": [
+        255,
+        255,
+        255,
+        255
+      ]
+    }
+  },
+  "current_geometry": {
+    "brow_vertical_positive_x": [
+      3.8,
+      16.5,
+      5.7,
+      18.5
+    ],
+    "brow_horizontal_positive_x": [
+      1.9,
+      15.5,
+      5.7,
+      16.5
+    ],
+    "eye_positive_x": [
+      2.85,
+      14.5,
+      5.7,
+      15.5
+    ],
+    "issue": "眉外缘约多出0.7，眼外缘约多出1.7；眼白与眉外缘齐平，参考眼外缘应内收约1模型单位。"
+  },
+  "recommendations": {
+    "A_main_expression": {
+      "label": "主渲染表情（先修定位，保留黑黑白比例）",
+      "positive_x_brow_vertical": [
+        3,
+        16.5,
+        5,
+        18.5
+      ],
+      "positive_x_brow_horizontal": [
+        1,
+        15.5,
+        5,
+        16.5
+      ],
+      "positive_x_eye": [
+        1,
+        14.5,
+        4,
+        15.5
+      ],
+      "positive_x_white": [
+        3,
+        14.5,
+        4,
+        15.5
+      ],
+      "positive_x_black": [
+        1,
+        14.5,
+        3,
+        15.5
+      ],
+      "uv_white": [
+        5,
+        5,
+        6,
+        6
+      ],
+      "uv_black": [
+        3,
+        5,
+        5,
+        6
+      ],
+      "note": "与主渲染的1白/2黑一致，但眼外端比眉外端内缩1。负X眼镜像。也可保留整3×1UV条，只修改geometry坐标。"
+    },
+    "B_throne_expression": {
+      "label": "王座正面表情（独立候选，不称主渲染同姿势）",
+      "positive_x_white": [
+        1,
+        14.5,
+        4,
+        15.5
+      ],
+      "positive_x_pupil": [
+        1.1,
+        15.05,
+        2.3,
+        15.5
+      ],
+      "uv_white": [
+        5,
+        5,
+        6,
+        6
+      ],
+      "uv_pupil": [
+        3,
+        5,
+        4,
+        6
+      ],
+      "note": "白底整3×1，短瞳约1.2×0.45从眉底内侧侵入；具体瞳X需按截图采样误差保留约±0.2。不得把同UV条横向拉伸冒充此表情。"
+    }
+  }
+}

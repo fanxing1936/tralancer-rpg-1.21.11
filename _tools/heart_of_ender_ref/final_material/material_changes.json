@@ -1,0 +1,81 @@
+{
+  "model_sha256": "ebc5d7cfc16cc5e3e5f3357b82c6c99da29b468faafffe8c9d7f4ab9f1a1e106",
+  "face_candidate_sha256": "5a6f434080a8bae55fa6f26b073421d656d67c515b1058b575eee730dab8e75c",
+  "mask_records": [
+    {
+      "element_uuid": "2bd6bd80-9eba-5405-9ee6-f145e3fc6f5b",
+      "element_name": "upper_mouth_raw44",
+      "face": "down",
+      "source_texture": "MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "source_rect": [
+        0,
+        2,
+        33,
+        44
+      ],
+      "atlas_rect": [
+        432,
+        90,
+        465,
+        132
+      ],
+      "tint_rgb": [
+        255,
+        211,
+        255
+      ],
+      "tint_source": {
+        "file": "Heart_of_Ender_prepare_to_shoot_beams.png",
+        "pixel": [
+          1105,
+          267
+        ]
+      },
+      "mode": "source RGB multiplied by constant item tint; original alpha source-over",
+      "status": "mouth mapping inferred; original raw RGBA unchanged; no bloom"
+    },
+    {
+      "element_uuid": "9de0c483-05a3-5076-9652-32a755d5fd92",
+      "element_name": "lower_mouth_raw44",
+      "face": "up",
+      "source_texture": "MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "source_rect": [
+        0,
+        2,
+        33,
+        44
+      ],
+      "atlas_rect": [
+        432,
+        90,
+        465,
+        132
+      ],
+      "tint_rgb": [
+        255,
+        211,
+        255
+      ],
+      "tint_source": {
+        "file": "Heart_of_Ender_prepare_to_shoot_beams.png",
+        "pixel": [
+          1105,
+          267
+        ]
+      },
+      "mode": "source RGB multiplied by constant item tint; original alpha source-over",
+      "status": "mouth mapping inferred; original raw RGBA unchanged; no bloom"
+    }
+  ],
+  "original_mask_atlas_rect": [
+    432,
+    88,
+    476,
+    132
+  ],
+  "original_mask_rgba_preserved": true,
+  "unmapped_mask_regions": "top two rows and right 11 columns contain dark/non-emitting RGB; not repainted or mapped to mouth",
+  "geometry_change": "two coplanar-offset interior surfaces, no silhouette/rig/animation or part-center changes",
+  "source_alpha_used_as_is": true,
+  "visual_status": "offline/native/runtime checks separate; no claimed client view"
+}

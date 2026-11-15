@@ -1,0 +1,300 @@
+{
+  "coordinate_system": "原64×64像素，[u0,v0,u1,v1]，右/下边界不含；不是最终BB逐面UV",
+  "status": "partial evidence; not a uniquely determined original UV topology",
+  "regions": [
+    {
+      "id": "hood_face",
+      "uv": [
+        0,
+        18,
+        10,
+        28
+      ],
+      "evidence": "眼睛图案与原作正面吻合：眼像素 x2..4 / x6..8, y24..25",
+      "certainty": "图案位置确定；整面朝向为强推断",
+      "color": "#ffce55"
+    },
+    {
+      "id": "sleeve_1_top",
+      "uv": [
+        3,
+        28,
+        7,
+        31
+      ],
+      "evidence": "4×3 肩顶洋红 U 图案；侧带 y31..41",
+      "certainty": "像素岛确定；盒展开/朝向为强推断",
+      "color": "#ff80ed"
+    },
+    {
+      "id": "sleeve_1_band",
+      "uv": [
+        0,
+        31,
+        14,
+        41
+      ],
+      "evidence": "宽14 = 2×(4+3)，与4×3肩顶相邻；下边为透明根须",
+      "certainty": "岛包围区确定；各侧朝向未由原模型证实",
+      "color": "#ff80ed"
+    },
+    {
+      "id": "sleeve_2_top",
+      "uv": [
+        17,
+        28,
+        21,
+        31
+      ],
+      "evidence": "第二肩顶，整体较第一套 +14u",
+      "certainty": "像素岛确定；盒展开/朝向为强推断",
+      "color": "#ff80ed"
+    },
+    {
+      "id": "sleeve_2_band",
+      "uv": [
+        14,
+        31,
+        28,
+        41
+      ],
+      "evidence": "第二侧带，整体较第一套 +14u",
+      "certainty": "岛包围区确定；各侧朝向未由原模型证实",
+      "color": "#ff80ed"
+    },
+    {
+      "id": "boot_top",
+      "uv": [
+        4,
+        42,
+        8,
+        46
+      ],
+      "evidence": "4×4顶，与侧带连续成标准十字展开",
+      "certainty": "盒展开边界很强；朝向为强推断",
+      "color": "#74d8ff"
+    },
+    {
+      "id": "boot_band",
+      "uv": [
+        0,
+        46,
+        16,
+        52
+      ],
+      "evidence": "4×6×4；正面候选 [4,46,8,52] 含紫色横带",
+      "certainty": "盒展开边界很强；朝向为强推断",
+      "color": "#74d8ff"
+    },
+    {
+      "id": "boot_bottom",
+      "uv": [
+        4,
+        52,
+        8,
+        56
+      ],
+      "evidence": "4×4底，与侧带连续成标准十字展开",
+      "certainty": "盒展开边界很强；朝向为强推断",
+      "color": "#74d8ff"
+    },
+    {
+      "id": "torso_band_candidate",
+      "uv": [
+        33,
+        10,
+        61,
+        24
+      ],
+      "evidence": "宽28；可解释为10宽4深14高；紫环[41,16,44,19]",
+      "certainty": "候选；非唯一，不可直接标为原作逐面映射",
+      "color": "#ff865d"
+    },
+    {
+      "id": "torso_top_candidate",
+      "uv": [
+        37,
+        6,
+        47,
+        10
+      ],
+      "evidence": "10×4，与候选正面[37,10,47,24]相邻",
+      "certainty": "候选；缺原模型/背面证据",
+      "color": "#ff865d"
+    },
+    {
+      "id": "hood_shell_unknown",
+      "uv": [
+        0,
+        0,
+        33,
+        28
+      ],
+      "evidence": "多片连续纹理与透明轮廓；不能仅据岛界唯一分配顶/左右/背",
+      "certainty": "未决区域，包含 hood_face 已定位小岛",
+      "color": "#b8a4ff"
+    },
+    {
+      "id": "sprout_A",
+      "uv": [
+        34,
+        47,
+        39,
+        52
+      ],
+      "evidence": "透明背景的嫩芽像素连通域",
+      "certainty": "像素包围框确定；正反/厚度UV未知",
+      "color": "#7bff9f"
+    },
+    {
+      "id": "sprout_B",
+      "uv": [
+        42,
+        48,
+        47,
+        53
+      ],
+      "evidence": "透明背景的第二嫩芽像素连通域",
+      "certainty": "像素包围框确定；正反/厚度UV未知",
+      "color": "#7bff9f"
+    },
+    {
+      "id": "sprout_C",
+      "uv": [
+        48,
+        50,
+        51,
+        53
+      ],
+      "evidence": "透明背景的第三小嫩芽像素连通域",
+      "certainty": "像素包围框确定；原作使用位置未知",
+      "color": "#7bff9f"
+    }
+  ],
+  "candidate_faces": {
+    "sleeve_1": {
+      "top": [
+        3,
+        28,
+        7,
+        31
+      ],
+      "side_A": [
+        0,
+        31,
+        3,
+        41
+      ],
+      "front_candidate": [
+        3,
+        31,
+        7,
+        41
+      ],
+      "side_B": [
+        7,
+        31,
+        10,
+        41
+      ],
+      "back_candidate": [
+        10,
+        31,
+        14,
+        41
+      ],
+      "bottom": null
+    },
+    "sleeve_2": "sleeve_1各u +14",
+    "boots": {
+      "top": [
+        4,
+        42,
+        8,
+        46
+      ],
+      "side_A": [
+        0,
+        46,
+        4,
+        52
+      ],
+      "front_candidate": [
+        4,
+        46,
+        8,
+        52
+      ],
+      "side_B": [
+        8,
+        46,
+        12,
+        52
+      ],
+      "back_candidate": [
+        12,
+        46,
+        16,
+        52
+      ],
+      "bottom": [
+        4,
+        52,
+        8,
+        56
+      ]
+    },
+    "torso": {
+      "top_candidate": [
+        37,
+        6,
+        47,
+        10
+      ],
+      "side_A_candidate": [
+        33,
+        10,
+        37,
+        24
+      ],
+      "front_candidate": [
+        37,
+        10,
+        47,
+        24
+      ],
+      "side_B_candidate": [
+        47,
+        10,
+        51,
+        24
+      ],
+      "back_candidate": [
+        51,
+        10,
+        61,
+        24
+      ],
+      "bottom": null
+    },
+    "hood": {
+      "front_face_candidate": [
+        0,
+        18,
+        10,
+        28
+      ],
+      "top": null,
+      "left": null,
+      "right": null,
+      "back": null,
+      "bottom": null
+    }
+  },
+  "unresolved": [
+    "兜帽顶/侧/后完整逐面UV及旋转",
+    "躯干背面映射与前后关系缺少原模型验证",
+    "嫩芽平面在三维中的原始对应、反面UV",
+    "ShadowTexture各颜色通道的材质语义不可只由文件名推定"
+  ]
+}

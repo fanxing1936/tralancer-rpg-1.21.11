@@ -1,0 +1,196 @@
+{
+  "scope": "M5 generated outputs only; no main pack build or instance write",
+  "models": [
+    {
+      "key": "heart_of_ender",
+      "model_sha256": "ebc5d7cfc16cc5e3e5f3357b82c6c99da29b468faafffe8c9d7f4ab9f1a1e106",
+      "parts": 21,
+      "elements": 51,
+      "faces": 270,
+      "clips": {
+        "idle": {
+          "id": 0,
+          "ticks": 320,
+          "loop": true,
+          "samples": 320,
+          "first_tick": 0,
+          "last_tick": 319,
+          "source_length_seconds": 16,
+          "runtime_length_seconds": 16.0
+        },
+        "walk": {
+          "id": 1,
+          "ticks": 160,
+          "loop": true,
+          "samples": 160,
+          "first_tick": 0,
+          "last_tick": 159,
+          "source_length_seconds": 8,
+          "runtime_length_seconds": 8.0
+        },
+        "mortar": {
+          "id": 2,
+          "ticks": 80,
+          "loop": false,
+          "samples": 81,
+          "first_tick": 0,
+          "last_tick": 80,
+          "source_length_seconds": 4,
+          "runtime_length_seconds": 4.0
+        },
+        "cross_beam": {
+          "id": 3,
+          "ticks": 80,
+          "loop": false,
+          "samples": 81,
+          "first_tick": 0,
+          "last_tick": 80,
+          "source_length_seconds": 4,
+          "runtime_length_seconds": 4.0
+        },
+        "sink": {
+          "id": 4,
+          "ticks": 40,
+          "loop": false,
+          "samples": 41,
+          "first_tick": 0,
+          "last_tick": 40,
+          "source_length_seconds": 2,
+          "runtime_length_seconds": 2.0
+        },
+        "rise": {
+          "id": 5,
+          "ticks": 48,
+          "loop": false,
+          "samples": 49,
+          "first_tick": 0,
+          "last_tick": 48,
+          "source_length_seconds": 2.4,
+          "runtime_length_seconds": 2.4000000000000004
+        },
+        "death": {
+          "id": 6,
+          "ticks": 80,
+          "loop": false,
+          "samples": 81,
+          "first_tick": 0,
+          "last_tick": 80,
+          "source_length_seconds": 4,
+          "runtime_length_seconds": 4.0
+        }
+      },
+      "functions": 1490,
+      "resolved_function_references": 1505,
+      "part_states_checked": 17073,
+      "transform_commands": 14592,
+      "max_component_error": 4.999999999921734e-06,
+      "frame_cues": 12,
+      "enter_cues": 3,
+      "byte_identical_sound_files": 45,
+      "raw_mask_faces": 2,
+      "initial_clip": "idle",
+      "checks": [
+        "single_png_preserved",
+        "part_bounds",
+        "uv_matches_source",
+        "all_elements_fullbright",
+        "exact_mask_tints",
+        "all_function_references",
+        "no_gameplay_commands",
+        "all_baked_states",
+        "frame_cues",
+        "enter_cues",
+        "passengers_fullbright",
+        "correct_initial_clip",
+        "scoped_controls",
+        "no_auto_walk",
+        "source_sound_bytes",
+        "unique_hooks"
+      ]
+    },
+    {
+      "key": "arch_visage",
+      "model_sha256": "7f27efab079a0d65531b86473b1524bab9e02c430c100e85ad11c69ed9c53d0c",
+      "parts": 5,
+      "elements": 12,
+      "faces": 24,
+      "clips": {
+        "idle": {
+          "id": 0,
+          "ticks": 20,
+          "loop": true,
+          "samples": 20,
+          "first_tick": 0,
+          "last_tick": 19,
+          "source_length_seconds": 1.0,
+          "runtime_length_seconds": 1.0
+        },
+        "walk": {
+          "id": 1,
+          "ticks": 20,
+          "loop": true,
+          "samples": 20,
+          "first_tick": 0,
+          "last_tick": 19,
+          "source_length_seconds": 1.0,
+          "runtime_length_seconds": 1.0
+        },
+        "spawn_attack": {
+          "id": 2,
+          "ticks": 98,
+          "loop": false,
+          "samples": 99,
+          "first_tick": 0,
+          "last_tick": 98,
+          "source_length_seconds": 4.88,
+          "runtime_length_seconds": 4.9
+        }
+      },
+      "functions": 260,
+      "resolved_function_references": 267,
+      "part_states_checked": 695,
+      "transform_commands": 385,
+      "max_component_error": 4.996485316599575e-06,
+      "frame_cues": 3,
+      "enter_cues": 1,
+      "byte_identical_sound_files": 9,
+      "raw_mask_faces": 2,
+      "initial_clip": "spawn_attack",
+      "checks": [
+        "single_png_preserved",
+        "part_bounds",
+        "uv_matches_source",
+        "all_elements_fullbright",
+        "exact_mask_tints",
+        "all_function_references",
+        "no_gameplay_commands",
+        "all_baked_states",
+        "frame_cues",
+        "enter_cues",
+        "passengers_fullbright",
+        "correct_initial_clip",
+        "scoped_controls",
+        "no_auto_walk",
+        "source_sound_bytes",
+        "unique_hooks"
+      ]
+    }
+  ],
+  "two_runs_byte_identical": true,
+  "identical_file_count": 1867,
+  "json_files_parsed": 61,
+  "source_inputs_unchanged": true,
+  "input_sha256": {
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\display_mob.py": "1c30d036b915e4ac9dc8cd58a712a0d3bbed42929f4c8f8e272f0e6d5cb631f5",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\ender_debug_model.py": "356abbc096a5081c231be3db229540bf69105bce1d6a2ba021dc0c2041b8f3b8",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\add_heart_of_ender.py": "306357f9ab7b7f43007cf7c507ae46fd94f0c723e3c9b4e69563f7e24e1fe12d",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\add_arch_visage.py": "ddeea81cdf711a95abe3ee86de34a479190d2f8650df700998a94f9dfc975067",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\heart_of_ender_emission.py": "51d3e089d94efe9f45e693332cffc03101a78bb9f1273c556f030bb73f6870c2",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\heart_of_ender_ref\\heart_of_ender.bbmodel": "ebc5d7cfc16cc5e3e5f3357b82c6c99da29b468faafffe8c9d7f4ab9f1a1e106",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\arch_visage_ref\\arch_visage.bbmodel": "7f27efab079a0d65531b86473b1524bab9e02c430c100e85ad11c69ed9c53d0c",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\arch_visage_ref\\config.json": "88ecfa21489ffe9b4c229e91aa00204e75cadd4c2d35aaf6326dd1d4c75e5f8a",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\heart_of_ender_ref\\m5_generated\\validate_generated.py": "e4570e82c60936e6948da82abd0b0c31f430147e50fa3625b7bf2a8b86bc4f73"
+  },
+  "named_check_groups": 35,
+  "server_test": "delegated to independent final_test; not claimed by this offline audit"
+}

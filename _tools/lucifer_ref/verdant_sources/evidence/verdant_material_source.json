@@ -1,0 +1,60 @@
+{
+  "source": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\MI_EvocationRobe_Unique2.parsed.json",
+  "parent": {
+    "serialized": true,
+    "value": {
+      "index": -2,
+      "path": "/Game/Actors/Equipment/M_MasterEquipment.M_MasterEquipment"
+    },
+    "type": "ObjectProperty",
+    "export_index": 1,
+    "tag_offset_in_export": 0,
+    "value_offset_in_uexp": 25,
+    "bytes": 4
+  },
+  "serialized_parameters": {
+    "scalar": {
+      "NaturalEmissive": 0.699999988079071,
+      "RefractionDepthBias": 0.0
+    },
+    "vector": {
+      "Emissive": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "EnchantmentColor": [
+        1.0,
+        0.33935999870300293,
+        0.0,
+        1.0
+      ]
+    },
+    "texture": {
+      "Albedo": {
+        "index": -9,
+        "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.T_EvocationRobe_Unique2"
+      },
+      "Specular": {
+        "index": -8,
+        "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.T_EvocationRobe_Unique1_S"
+      }
+    }
+  },
+  "compiled_descriptions": [
+    {
+      "offset": 11093,
+      "text": "Compiling M_MasterEquipment: Platform=PCD3D_SM5, Usage=LightingModel=MSM_DefaultLit, BlendMode=BLEND_Masked, SpecialEngine=0, TwoSided=1, TSNormal=1, Masked=1, Distorted=0, WritesEveryPixel=0, ModifiesMeshPosition=0, Usage={bUsedWithSkeletalMesh,bUsedWithInstancedStaticMeshes}, StaticSwitch'ConstantEmissive2-1'=True, StaticSwitch'FlashBehavior2-1'=True, StaticSwitch'EnchantmentMask2-1'=True, StaticSwitch'Desaturation2-1'=False, StaticSwitch'SpecularTexture2-1'=True, StaticSwitch'ConstantSpecular2-1'=False, StaticMaterialLayers="
+    },
+    {
+      "offset": 87602,
+      "text": "Compiling M_MasterEquipment: Platform=PCD3D_SM4, Usage=LightingModel=MSM_DefaultLit, BlendMode=BLEND_Masked, SpecialEngine=0, TwoSided=1, TSNormal=1, Masked=1, Distorted=0, WritesEveryPixel=0, ModifiesMeshPosition=0, Usage={bUsedWithSkeletalMesh,bUsedWithInstancedStaticMeshes}, StaticSwitch'ConstantEmissive2-1'=True, StaticSwitch'FlashBehavior2-1'=True, StaticSwitch'EnchantmentMask2-1'=True, StaticSwitch'Desaturation2-1'=False, StaticSwitch'SpecularTexture2-1'=True, StaticSwitch'ConstantSpecular2-1'=False, StaticMaterialLayers="
+    }
+  ],
+  "albedo_png": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\exported\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique2\\T_EvocationRobe_Unique2.png",
+  "specular_png": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\exported\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique1\\T_EvocationRobe_Unique1_S.png",
+  "albedo_sha256": "d893884fbfebf404a16037a28753b773b5a7de9733df8742cb5c59f8ea8dd48b",
+  "specular_sha256": "ff22dd2243f670a3144597e5dfaa966344eef5015497f2a1fd4808ba3cb8d9fa",
+  "interpretation": "Compiled descriptions establish this material permutation has SpecularTexture=True and ConstantEmissive=True. They do not alone establish the full shading equation. RootRot constants are not reused."
+}

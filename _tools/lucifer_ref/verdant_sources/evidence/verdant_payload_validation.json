@@ -1,0 +1,51 @@
+{
+  "scope": "Prepared data only; Blockbench not contacted; no native-save/runtime acceptance.",
+  "input": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\verdant_for_blockbench.json",
+  "sha256": "c70e27354f12521ae6bd7385df0988597b0d975a0cc100cde772509b02668c34",
+  "parts": 4,
+  "bones": 38,
+  "vertices": 128,
+  "triangles": 64,
+  "per_part": [
+    {
+      "name": "SageHat",
+      "vertices": 44,
+      "triangles": 22,
+      "position_max_error_independent_scalar_recalculation": 1.4210854715202004e-14,
+      "uv_corner_differences": 0,
+      "triangle_order_differences": 0,
+      "binding_bone": "J_Head",
+      "all_weights_one": true
+    },
+    {
+      "name": "R_Arm_EvocationRobe",
+      "vertices": 24,
+      "triangles": 12,
+      "position_max_error_independent_scalar_recalculation": 8.881784197001252e-16,
+      "uv_corner_differences": 0,
+      "triangle_order_differences": 0,
+      "binding_bone": "J_R_Hand",
+      "all_weights_one": true
+    },
+    {
+      "name": "MageRobe_Evocation",
+      "vertices": 36,
+      "triangles": 18,
+      "position_max_error_independent_scalar_recalculation": 3.552713678800501e-15,
+      "uv_corner_differences": 0,
+      "triangle_order_differences": 0,
+      "binding_bone": "J_Spine",
+      "all_weights_one": true
+    },
+    {
+      "name": "L_Arm_EvocationRobe",
+      "vertices": 24,
+      "triangles": 12,
+      "position_max_error_independent_scalar_recalculation": 0.0,
+      "uv_corner_differences": 0,
+      "triangle_order_differences": 0,
+      "binding_bone": "J_L_Hand",
+      "all_weights_one": true
+    }
+  ]
+}

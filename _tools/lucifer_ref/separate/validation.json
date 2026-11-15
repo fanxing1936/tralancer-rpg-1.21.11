@@ -1,0 +1,370 @@
+{
+  "scope": "独立模型的只读结构、UV边界及指定项目骨架比例检查；当前本体另验证原始PNG完全恢复。所有模型还原度仍未验收。未修改模型。",
+  "source_skeleton": "_tools\\sunken_skeleton_ref\\sunken_skeleton.bbmodel",
+  "source_skeleton_sha256": "c73ba99e7301c263fea4119852a9fc64348891d163f5b1eb4409354730644981",
+  "status": "structural_checks_passed_original_fidelity_unverified_not_accepted",
+  "models": {
+    "mossy_skeleton_body.bbmodel": {
+      "sha256": "742a2114592c5b840071f7759a945835576b5d519c043a7ff7be20d22ee96906",
+      "cube_count": 6,
+      "bone_count": 7,
+      "animation_count": 0,
+      "resolution": [
+        64,
+        32
+      ],
+      "texture_count": 1,
+      "atlas_sha256": "fdcbe40f0556da0c54983d7a9ccfbf30ec98e9ddd609045548e240c2105a97c0",
+      "alpha_histogram": {
+        "0": 1250,
+        "1": 20,
+        "2": 13,
+        "3": 9,
+        "9": 5,
+        "37": 1,
+        "254": 52,
+        "255": 698
+      },
+      "textured_face_count": 36,
+      "ignored_null_face_count": 0,
+      "texture_indices_used": [
+        "0"
+      ],
+      "uv_bounds_valid": true,
+      "outliner": {
+        "all_elements_referenced_once": true,
+        "all_groups_referenced_once": true,
+        "parents": {
+          "root": null,
+          "body": "root",
+          "head": "body",
+          "right_arm": "body",
+          "left_arm": "body",
+          "right_leg": "root",
+          "left_leg": "root"
+        }
+      },
+      "source_pivot_deltas": {
+        "root": [
+          0,
+          0,
+          0
+        ],
+        "body": [
+          0,
+          0,
+          0
+        ],
+        "head": [
+          0,
+          0,
+          0
+        ],
+        "right_arm": [
+          0,
+          0,
+          0
+        ],
+        "left_arm": [
+          0,
+          0,
+          0
+        ],
+        "right_leg": [
+          0,
+          0,
+          0
+        ],
+        "left_leg": [
+          0,
+          0,
+          0
+        ]
+      },
+      "arms_neutral": true,
+      "errors": [],
+      "warnings": [],
+      "source_geometry_comparison": [
+        {
+          "bone": "body",
+          "from": [
+            -4,
+            12,
+            -2
+          ],
+          "to": [
+            4,
+            24,
+            2
+          ],
+          "dimensions": [
+            8,
+            12,
+            4
+          ],
+          "geometry_matches_source": true,
+          "six_face_uv_matches_source": true,
+          "parent": "body"
+        },
+        {
+          "bone": "head",
+          "from": [
+            -4,
+            24,
+            -4
+          ],
+          "to": [
+            4,
+            32,
+            4
+          ],
+          "dimensions": [
+            8,
+            8,
+            8
+          ],
+          "geometry_matches_source": true,
+          "six_face_uv_matches_source": true,
+          "parent": "head"
+        },
+        {
+          "bone": "right_arm",
+          "from": [
+            4,
+            12,
+            -1
+          ],
+          "to": [
+            6,
+            24,
+            1
+          ],
+          "dimensions": [
+            2,
+            12,
+            2
+          ],
+          "geometry_matches_source": true,
+          "six_face_uv_matches_source": true,
+          "parent": "right_arm"
+        },
+        {
+          "bone": "left_arm",
+          "from": [
+            -6,
+            12,
+            -1
+          ],
+          "to": [
+            -4,
+            24,
+            1
+          ],
+          "dimensions": [
+            2,
+            12,
+            2
+          ],
+          "geometry_matches_source": true,
+          "six_face_uv_matches_source": true,
+          "parent": "left_arm"
+        },
+        {
+          "bone": "right_leg",
+          "from": [
+            1,
+            0,
+            -1
+          ],
+          "to": [
+            3,
+            12,
+            1
+          ],
+          "dimensions": [
+            2,
+            12,
+            2
+          ],
+          "geometry_matches_source": true,
+          "six_face_uv_matches_source": true,
+          "parent": "right_leg"
+        },
+        {
+          "bone": "left_leg",
+          "from": [
+            -3,
+            0,
+            -1
+          ],
+          "to": [
+            -1,
+            12,
+            1
+          ],
+          "dimensions": [
+            2,
+            12,
+            2
+          ],
+          "geometry_matches_source": true,
+          "six_face_uv_matches_source": true,
+          "parent": "left_leg"
+        }
+      ],
+      "full_36_faces_present": true,
+      "all_pivots_exactly_match_source": true,
+      "atlas_pixels_identical_to_T_MossySkeleton": true,
+      "status": "structural_and_source_texture_checks_passed_not_accepted",
+      "model_unchanged_after_validation": true,
+      "source_texture_comparison": {
+        "source_file": "_tools\\lucifer_ref\\T_MossySkeleton.png",
+        "source_sha256": "fdcbe40f0556da0c54983d7a9ccfbf30ec98e9ddd609045548e240c2105a97c0",
+        "embedded_png_bytes_identical": true,
+        "rgb_unchanged": true,
+        "rgba_unchanged": true,
+        "rgba_different_pixel_count": 0,
+        "alpha_different_pixel_count": 0,
+        "alpha_policy": "original_png_preserved_without_binarization",
+        "original_nonbinary_alpha_pixel_count": 100,
+        "note": "当前恢复原始PNG字节；此前100个alpha加工差异已纠正，不再以alpha二值化作为当前通过条件。"
+      },
+      "structural_checks_passed": true,
+      "new_uv_unique_usage_and_full_coverage": "documented_sunken_template_symmetry_exception_original_mossy_geometry_unverified",
+      "geometry_comparison_with_prior_history": {
+        "history_file": "history/mossy_skeleton_body_before_original_alpha.bbmodel",
+        "same_structural_fields": {
+          "elements": true,
+          "groups": true,
+          "outliner": true,
+          "animations": true
+        },
+        "ignored_ui_fields": [
+          "isOpen"
+        ],
+        "note": "原生保存仅改变root/body树节点的展开状态，不改变几何、UV、pivot或父级。"
+      },
+      "native_viewport_evidence": {
+        "metadata": "body_native_review_metadata.json",
+        "model_sha256": "742a2114592c5b840071f7759a945835576b5d519c043a7ff7be20d22ee96906",
+        "view_count": 4,
+        "image_hashes_verified": true,
+        "scope": "仅显示当前独立工程；不是原作未知面/原始几何的证据，未据此验收还原度。"
+      }
+    },
+    "root_rot_armor.bbmodel": {
+      "sha256": "df696b7cb8c6b80de92df936127dbdbb6d2e64be123c29b08b335d27b96c2a1d",
+      "cube_count": 59,
+      "bone_count": 16,
+      "animation_count": 0,
+      "resolution": [
+        64,
+        128
+      ],
+      "texture_count": 1,
+      "atlas_sha256": "65bc68bf997811f5b7117475b642bdc57e192217e597f7328b223737d4a4eb94",
+      "alpha_histogram": {
+        "0": 1438,
+        "255": 6754
+      },
+      "textured_face_count": 344,
+      "ignored_null_face_count": 10,
+      "texture_indices_used": [
+        "0"
+      ],
+      "uv_bounds_valid": true,
+      "outliner": {
+        "all_elements_referenced_once": true,
+        "all_groups_referenced_once": true,
+        "parents": {
+          "root": null,
+          "body": "root",
+          "head": "body",
+          "eyes_glow": "head",
+          "sprout_left": "head",
+          "sprout_right": "head",
+          "right_arm": "body",
+          "cuff_roots_right": "right_arm",
+          "left_arm": "body",
+          "cuff_roots_left": "left_arm",
+          "root_front_right": "body",
+          "root_front_left": "body",
+          "root_back_right": "body",
+          "root_back_left": "body",
+          "right_leg": "root",
+          "left_leg": "root"
+        }
+      },
+      "source_pivot_deltas": {
+        "root": [
+          0,
+          0.5,
+          0
+        ],
+        "body": [
+          0,
+          0.5,
+          0
+        ],
+        "head": [
+          0,
+          0.5,
+          0
+        ],
+        "right_arm": [
+          0,
+          0.5,
+          0
+        ],
+        "left_arm": [
+          0,
+          0.5,
+          0
+        ],
+        "right_leg": [
+          0,
+          0.5,
+          0
+        ],
+        "left_leg": [
+          0,
+          0.5,
+          0
+        ]
+      },
+      "arms_neutral": true,
+      "errors": [],
+      "warnings": [],
+      "mossy_prefixed_cubes": [],
+      "bare_body_named_cubes": [],
+      "armor_only": true,
+      "uniform_core_pivot_translation_vs_source": [
+        0,
+        0.5,
+        0
+      ],
+      "merge_note": "盔甲共同骨骼比完整本体整体高 0.5 像素；整合前应统一坐标基准。",
+      "status": "structural_checks_passed_not_accepted",
+      "model_unchanged_after_validation": true,
+      "structural_checks_passed": true,
+      "new_uv_unique_usage_and_full_coverage": "not_satisfied_pending_detailed_audit"
+    }
+  },
+  "not_verified": [
+    "原始几何与逐部件视觉还原度（未知面不验收）",
+    "合体后的遮挡与握持",
+    "动作与数据包接入",
+    "真实游戏内外观",
+    "盔甲未用区域和无依据复用的修正、复验"
+  ],
+  "acceptance": {
+    "overall_complete": false,
+    "user_accepted": false,
+    "integration_started": false,
+    "current_rule": "以忠实原作为准；仅允许有原始依据的左右对称共用纹理，未知面仍不验收。",
+    "body_uv": "208源像素对应指定Sunken模板左右臂/腿对称共享；作为指定骨架依据例外记录，不证明原Mossy全身。",
+    "armor_uv": "418有效像素未用、228有效像素复用仍未获原始依据，审计失败。",
+    "note": "当前仅结构和原始本体纹理检查通过，不能冒充几何/视觉还原度验收。"
+  },
+  "source_skeleton_provenance": "sunken_skeleton.bbmodel是本项目按贴图网格重建的模板，不是Mojang原始网格；匹配它不能证明Mossy全身原作外观。"
+}

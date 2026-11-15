@@ -1,0 +1,1 @@
+execute as @e[tag=rpg.unit.f,distance=..48,scores={rpg_lt_divine=2}] at @s positioned ~ ~1.2 ~ facing entity @e[type=minecraft:vindicator,tag=rpg.usb,limit=1,sort=nearest] eyes run function rpg:usurper_boss/morph/line

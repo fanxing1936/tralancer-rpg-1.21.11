@@ -1,0 +1,10 @@
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^2.00 0.5 0.25 0.5 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^4.00 0.5 0.25 0.5 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^6.00 0.5 0.25 0.5 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^8.00 0.5 0.25 0.5 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^10.00 0.5 0.25 0.5 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^12.00 0.5 0.25 0.5 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^14.00 0.5 0.25 0.5 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^16.00 0.5 0.25 0.5 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^18.00 0.5 0.25 0.5 0 2 force
+particle minecraft:dust_color_transition{from_color:[1.0,0.86,0.45],to_color:[1.0,0.97,0.85],scale:1.3} ^ ^0.25 ^20.00 0.5 0.25 0.5 0 2 force

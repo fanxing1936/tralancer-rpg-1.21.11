@@ -70,6 +70,7 @@
 | 神圣方：驱魔、祷仪、旧约 | `HOLY` `#FFD85A` → `HOLY_DARK` `#D4AF37`；高光 `HOLY_LIGHT` `#FFF2A8` | `HOLY_LIGHT` | `end_rod`、`totem_of_undying` | `enchanted_hit`、`wax_off` |
 | 权柄方：新约 | `CYAN_LIGHT` `#E8F4FF` → `CYAN` `#62D9E8` | `CYAN` 或 `CYAN_LIGHT` | `end_rod`、`electric_spark` | `enchanted_hit` |
 | 新约审判 | `CYAN` → `HOLY_LIGHT`（权柄执行神圣判决） | `CYAN_LIGHT` | `enchanted_hit` | — |
+| 篡夺者二阶段：篡夺白金（偷来的权柄） | `WHITE_GOLD` 亮 `#FFF6DC` → 中 `#F0CF7A` → 深 `#B8902F`；比圣金更白、更冷，不与 `HOLY` 混用 | `WHITE_GOLD` 亮 | `electric_spark`、`end_rod` | `wax_off` |
 | 秘仪：卡巴拉 | 源质十色 `SEPHIROT` | `RITUAL` | `enchant` | `end_rod` |
 | 七柱领主 | 柱亮色 → 柱深色（`ui.pillar_transition`） | 柱亮色（`vfx.pillar_flash`） | 各柱一种，见下 | 各柱主题表 |
 | 无名者／泛恶魔 | `NAMELESS` 亮 `#DC4450` → 深 `#3D0000` | `NAMELESS` 亮 | `squid_ink`、`large_smoke`、`sculk_soul`、`soul` | `trial_spawner_detection_ominous`、`trial_omen`、`reverse_portal` |

@@ -1,7 +1,7 @@
 data modify storage rpg:demon uuid set from entity @s UUID
 function rpg:taint/ult1_fangs with storage rpg:demon
 tag @s add rpg.dm.cast
-execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult1_hit
+execute as @e[tag=rpg.unit.f,distance=..10] run function rpg:taint/ult1_hit
 tag @s remove rpg.dm.cast
 particle dust_color_transition{from_color:[0.37,0.84,0.55],to_color:[0.0,0.29,0.11],scale:3} ~ ~1 ~ 5 1 5 0.04 72
 particle end_rod ~ ~2 ~ 2.5 1.5 2.5 0.05 60

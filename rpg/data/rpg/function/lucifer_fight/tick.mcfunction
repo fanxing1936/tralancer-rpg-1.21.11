@@ -18,4 +18,4 @@ execute if score @s rpg_l2_st matches 3 run return run function rpg:lucifer_figh
 execute if score @s rpg_l2_st matches 4 run return run function rpg:lucifer_fight/vuln/tick
 scoreboard players set @s rpg_l2_st 2
 execute if score @s rpg_l2_mc matches 1.. run scoreboard players remove @s rpg_l2_mc 1
-execute if score @s rpg_l2_mc matches ..0 if score @s rpg_dm_ult matches ..0 if entity @a[distance=..6,gamemode=!spectator,gamemode=!creative] run function rpg:lucifer_fight/melee/start
+execute if score @s rpg_l2_mc matches ..0 if score @s rpg_dm_ult matches ..0 if entity @e[tag=rpg.unit.f,distance=..6] run function rpg:lucifer_fight/melee/start

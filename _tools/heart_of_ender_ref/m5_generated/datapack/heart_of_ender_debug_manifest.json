@@ -1,0 +1,264 @@
+{
+  "generator": "add_heart_of_ender.py",
+  "model_sha256": "ebc5d7cfc16cc5e3e5f3357b82c6c99da29b468faafffe8c9d7f4ab9f1a1e106",
+  "display_mob_sha256": "1c30d036b915e4ac9dc8cd58a712a0d3bbed42929f4c8f8e272f0e6d5cb631f5",
+  "texture_png_sha256": "8fe03a292ebf6c72b534d5591025c16a244ecdfd2009f739678026c19e2b4968",
+  "parts": [
+    [
+      "shell_body",
+      [
+        "shell_body"
+      ]
+    ],
+    [
+      "shell_head",
+      [
+        "shell_head",
+        "shell_eyes_glow"
+      ]
+    ],
+    [
+      "shell_jaw",
+      [
+        "shell_jaw",
+        "shell_teeth_front_glow",
+        "shell_teeth_side_glow"
+      ]
+    ],
+    [
+      "limb_left_upper_proximal",
+      [
+        "limb_left_upper_proximal"
+      ]
+    ],
+    [
+      "limb_left_upper_distal",
+      [
+        "limb_left_upper_distal"
+      ]
+    ],
+    [
+      "limb_left_middle_proximal",
+      [
+        "limb_left_middle_proximal"
+      ]
+    ],
+    [
+      "limb_left_middle_distal",
+      [
+        "limb_left_middle_distal"
+      ]
+    ],
+    [
+      "limb_left_lower_proximal",
+      [
+        "limb_left_lower_proximal"
+      ]
+    ],
+    [
+      "limb_left_lower_distal",
+      [
+        "limb_left_lower_distal"
+      ]
+    ],
+    [
+      "limb_right_upper_proximal",
+      [
+        "limb_right_upper_proximal"
+      ]
+    ],
+    [
+      "limb_right_upper_distal",
+      [
+        "limb_right_upper_distal"
+      ]
+    ],
+    [
+      "limb_right_middle_proximal",
+      [
+        "limb_right_middle_proximal"
+      ]
+    ],
+    [
+      "limb_right_middle_distal",
+      [
+        "limb_right_middle_distal"
+      ]
+    ],
+    [
+      "limb_right_lower_proximal",
+      [
+        "limb_right_lower_proximal"
+      ]
+    ],
+    [
+      "limb_right_lower_distal",
+      [
+        "limb_right_lower_distal"
+      ]
+    ],
+    [
+      "inner_body",
+      [
+        "inner_body"
+      ]
+    ],
+    [
+      "inner_head",
+      [
+        "inner_head"
+      ]
+    ],
+    [
+      "inner_arm_left",
+      [
+        "inner_arm_left"
+      ]
+    ],
+    [
+      "inner_leg_left",
+      [
+        "inner_leg_left"
+      ]
+    ],
+    [
+      "inner_arm_right",
+      [
+        "inner_arm_right"
+      ]
+    ],
+    [
+      "inner_leg_right",
+      [
+        "inner_leg_right"
+      ]
+    ]
+  ],
+  "part_count": 21,
+  "clips": {
+    "idle": {
+      "id": 0,
+      "ticks": 320,
+      "loop": true,
+      "samples": 320,
+      "first_tick": 0,
+      "last_tick": 319,
+      "source_length_seconds": 16,
+      "runtime_length_seconds": 16.0
+    },
+    "walk": {
+      "id": 1,
+      "ticks": 160,
+      "loop": true,
+      "samples": 160,
+      "first_tick": 0,
+      "last_tick": 159,
+      "source_length_seconds": 8,
+      "runtime_length_seconds": 8.0
+    },
+    "mortar": {
+      "id": 2,
+      "ticks": 80,
+      "loop": false,
+      "samples": 81,
+      "first_tick": 0,
+      "last_tick": 80,
+      "source_length_seconds": 4,
+      "runtime_length_seconds": 4.0
+    },
+    "cross_beam": {
+      "id": 3,
+      "ticks": 80,
+      "loop": false,
+      "samples": 81,
+      "first_tick": 0,
+      "last_tick": 80,
+      "source_length_seconds": 4,
+      "runtime_length_seconds": 4.0
+    },
+    "sink": {
+      "id": 4,
+      "ticks": 40,
+      "loop": false,
+      "samples": 41,
+      "first_tick": 0,
+      "last_tick": 40,
+      "source_length_seconds": 2,
+      "runtime_length_seconds": 2.0
+    },
+    "rise": {
+      "id": 5,
+      "ticks": 48,
+      "loop": false,
+      "samples": 49,
+      "first_tick": 0,
+      "last_tick": 48,
+      "source_length_seconds": 2.4,
+      "runtime_length_seconds": 2.4000000000000004
+    },
+    "death": {
+      "id": 6,
+      "ticks": 80,
+      "loop": false,
+      "samples": 81,
+      "first_tick": 0,
+      "last_tick": 80,
+      "source_length_seconds": 4,
+      "runtime_length_seconds": 4.0
+    }
+  },
+  "fullbright": true,
+  "emissive_mask_faces": [
+    {
+      "part": "shell_head",
+      "element_uuid": "2bd6bd80-9eba-5405-9ee6-f145e3fc6f5b",
+      "face": "down",
+      "tint_rgb": [
+        255,
+        211,
+        255
+      ],
+      "tint_index": 1
+    },
+    {
+      "part": "shell_jaw",
+      "element_uuid": "9de0c483-05a3-5076-9652-32a755d5fd92",
+      "face": "up",
+      "tint_rgb": [
+        255,
+        211,
+        255
+      ],
+      "tint_index": 1
+    }
+  ],
+  "carrier": "minecraft:armor_stand",
+  "marker": true,
+  "carrier_tag": "rpg.he",
+  "part_tag": "rpg.he.part",
+  "model_scale": 2.5,
+  "research_ground_y": -4.66381,
+  "effective_seat": -0.7287203124999999,
+  "scoreboards": [
+    "rpg_he_anim",
+    "rpg_he_t",
+    "rpg_he_run",
+    "rpg_he_id"
+  ],
+  "runtime": {
+    "run_values": {
+      "0": "paused/stopped",
+      "1": "playing",
+      "2": "finished"
+    },
+    "initial_clip": "idle",
+    "sample_rate": 20,
+    "once_finish": "hold final sample",
+    "automatic_walk": false,
+    "multi_instance": "scores per carrier; animation/clear only its direct passengers",
+    "dimensions": "one global unrestricted @e query; at @s before local execution",
+    "clear_scope": "loaded entities; removed carriers leave parts swept on next loaded tick",
+    "debug_scope": "@s carrier, otherwise nearest within 32 blocks in current dimension",
+    "sound_limit": "stopsound cannot filter emitting entity; nearby same-model sounds also stop"
+  }
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>原始模型审阅 · 身体、盔甲与整合模型</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,"Microsoft YaHei",sans-serif;color:#24282b;background:#e9ebec}
+*{box-sizing:border-box}body{margin:0}main{max-width:1500px;margin:auto;padding:32px 24px 48px}
+h1{margin:0 0 10px;font-size:clamp(24px,3vw,34px)}h2{margin:0;font-size:23px}p{line-height:1.65;margin:8px 0}
+.intro{max-width:1060px}.notice{margin:18px 0 30px;padding:14px 18px;border-left:4px solid #63756d;background:#f6f7f7}
+section{margin:28px 0 38px}.sub{color:#51595e;margin-bottom:16px}.layout{display:grid;grid-template-columns:minmax(210px,.8fr) minmax(0,3fr);gap:16px;align-items:start}
+.refs{display:grid;gap:16px}.views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+figure{margin:0;min-width:0;border:1px solid #cbd0d2;border-radius:8px;overflow:hidden;background:#f2f3f3}
+figure a{display:flex;align-items:center;justify-content:center;min-height:280px;background:#dfe3e4}
+img{display:block;width:100%;height:340px;object-fit:contain;image-rendering:pixelated}.reference img{height:380px}.refs .reference img{height:280px}
+figcaption{padding:11px 14px;line-height:1.5}figcaption strong{display:block;font-size:16px}figcaption small{color:#596267}.reference figcaption{background:#e8ece9}
+details{margin-top:18px;padding:14px;border:1px solid #cbd0d2;border-radius:8px;background:#f2f3f3}summary{cursor:pointer;font-weight:600;line-height:1.5}details .views{margin-top:14px}
+.links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.linkbox{background:#f6f7f7;border:1px solid #cbd0d2;border-radius:8px;padding:16px}.linkbox h3{font-size:17px;margin:0 0 10px}.linkbox a{display:block;margin:9px 0;line-height:1.5;color:#255b50}.linkbox small{line-height:1.6;display:block;color:#596267}
+footer{color:#596267;font-size:13px;border-top:1px solid #cbd0d2;padding-top:14px}a{color:inherit}a:focus-visible{outline:3px solid #38776a;outline-offset:-3px}
+@media(max-width:780px){main{padding:22px 14px 32px}.layout,.links{grid-template-columns:1fr}.refs{grid-template-columns:repeat(2,minmax(0,1fr))}.reference img,.refs .reference img{height:280px}.reference a{min-height:0}img{height:300px}}
+@media(max-width:480px){.views,.refs{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main>
+<header>
+<h1>原始模型审阅</h1>
+<p class="intro">原始身体、原始盔甲与整合模型。网格、骨骼和 UV 直接取自原资产导出数据；本页不包含旧版推测草稿。点击图片可打开原尺寸 PNG。</p>
+<div class="notice">
+<p><strong>已移植原始默认状态的静态发光公式，保留原始贴图与 HDR 参数。</strong>整合模型与发光盔甲采用 Blockbench studio light、Three.js ACES 预览曝光；原游戏场景光照、运行时材质状态和 Bloom 尚未复现。</p>
+<p>原作参考使用不同姿态、视角和光照，本页不宣称截图逐像素一致。持矛检查与 Java 资源包转换仍待处理。</p>
+</div>
+</header>
+<section aria-labelledby="assembly-title">
+<h2 id="assembly-title">路西法 · 原始素材整合模型</h2>
+<p class="sub">身体与盔甲合体展示：12 个 Mesh、22 根骨骼、3 张原始 PNG；按原始绑定姿态整合。盔甲使用已核对的默认静态发光公式，显示效果包含明确区分的预览光照与色调映射。</p>
+<div class="layout"><div class="refs"><figure class="reference"><a href="../MCD_Mossy_Skeleton.png"><img src="../MCD_Mossy_Skeleton.png" alt="苔藓骷髅原作参考，独立姿态与光照"></a><figcaption><strong>苔藓骷髅 · 原作参考</strong><small>单张原作参考；不代表相同姿态或四个对应视角。</small></figcaption></figure><figure class="reference"><a href="../MCD_Root_Rot_Armor.png"><img src="../MCD_Root_Rot_Armor.png" alt="腐根盔甲原作参考，独立姿态与光照"></a><figcaption><strong>腐根盔甲 · 原作参考</strong><small>单张原作参考；不代表相同姿态或四个对应视角。</small></figcaption></figure></div><div class="views"><figure><a href="../native/lucifer_original_assembly_front.png"><img src="../native/lucifer_original_assembly_front.png" alt="整合模型 · 正面"></a><figcaption><strong>正面</strong><small>原始素材整合 · 静态发光 + 预览光照</small></figcaption></figure><figure><a href="../native/lucifer_original_assembly_side.png"><img src="../native/lucifer_original_assembly_side.png" alt="整合模型 · 侧面"></a><figcaption><strong>侧面</strong><small>原始素材整合 · 静态发光 + 预览光照</small></figcaption></figure><figure><a href="../native/lucifer_original_assembly_back.png"><img src="../native/lucifer_original_assembly_back.png" alt="整合模型 · 背面"></a><figcaption><strong>背面</strong><small>原始素材整合 · 静态发光 + 预览光照</small></figcaption></figure><figure><a href="../native/lucifer_original_assembly_threequarter.png"><img src="../native/lucifer_original_assembly_threequarter.png" alt="整合模型 · 四分之三视角"></a><figcaption><strong>四分之三视角</strong><small>原始素材整合 · 静态发光 + 预览光照</small></figcaption></figure></div></div>
+</section>
+<section aria-labelledby="body-title">
+<h2 id="body-title">苔藓骷髅 · 原始身体</h2>
+<p class="sub">原始 SK_Skeleton 网格与骨架直接导入，配套原始 T_MossySkeleton 贴图。以下为身体独立基础色预览。</p>
+<div class="layout"><figure class="reference"><a href="../MCD_Mossy_Skeleton.png"><img src="../MCD_Mossy_Skeleton.png" alt="苔藓骷髅原作参考，独立姿态与光照"></a><figcaption><strong>苔藓骷髅 · 原作参考</strong><small>单张原作参考；不代表相同姿态或四个对应视角。</small></figcaption></figure><div class="views"><figure><a href="../native/body_original_front.png"><img src="../native/body_original_front.png" alt="原始身体 · 正面"></a><figcaption><strong>正面</strong><small>Blockbench · 基础色独立预览</small></figcaption></figure><figure><a href="../native/body_original_side.png"><img src="../native/body_original_side.png" alt="原始身体 · 侧面"></a><figcaption><strong>侧面</strong><small>Blockbench · 基础色独立预览</small></figcaption></figure><figure><a href="../native/body_original_back.png"><img src="../native/body_original_back.png" alt="原始身体 · 背面"></a><figcaption><strong>背面</strong><small>Blockbench · 基础色独立预览</small></figcaption></figure><figure><a href="../native/body_original_threequarter.png"><img src="../native/body_original_threequarter.png" alt="原始身体 · 四分之三视角"></a><figcaption><strong>四分之三视角</strong><small>Blockbench · 基础色独立预览</small></figcaption></figure></div></div>
+</section>
+<section aria-labelledby="armor-title">
+<h2 id="armor-title">腐根盔甲 · 原始静态发光</h2>
+<p class="sub">原始盔甲独立展示；albedo 与辅助贴图分开保存，发光使用原始参数计算，没有烘焙进基础色贴图。</p>
+<div class="layout"><figure class="reference"><a href="../MCD_Root_Rot_Armor.png"><img src="../MCD_Root_Rot_Armor.png" alt="腐根盔甲原作参考，独立姿态与光照"></a><figcaption><strong>腐根盔甲 · 原作参考</strong><small>单张原作参考；不代表相同姿态或四个对应视角。</small></figcaption></figure><div class="views"><figure><a href="../native/armor_original_emissive_front.png"><img src="../native/armor_original_emissive_front.png" alt="原始盔甲静态发光 · 正面"></a><figcaption><strong>正面</strong><small>静态发光 + Blockbench studio / ACES 预览</small></figcaption></figure><figure><a href="../native/armor_original_emissive_side.png"><img src="../native/armor_original_emissive_side.png" alt="原始盔甲静态发光 · 侧面"></a><figcaption><strong>侧面</strong><small>静态发光 + Blockbench studio / ACES 预览</small></figcaption></figure><figure><a href="../native/armor_original_emissive_back.png"><img src="../native/armor_original_emissive_back.png" alt="原始盔甲静态发光 · 背面"></a><figcaption><strong>背面</strong><small>静态发光 + Blockbench studio / ACES 预览</small></figcaption></figure><figure><a href="../native/armor_original_emissive_threequarter.png"><img src="../native/armor_original_emissive_threequarter.png" alt="原始盔甲静态发光 · 四分之三视角"></a><figcaption><strong>四分之三视角</strong><small>静态发光 + Blockbench studio / ACES 预览</small></figcaption></figure></div></div>
+<details><summary>原始基础色预览 · 发光移植前的对照图</summary>
+<p>同一原始盔甲的旧基础色截图，仅供比较发光启用前后的显示变化；不属于旧版推测模型。</p><div class="views"><figure><a href="../native/armor_original_front.png"><img src="../native/armor_original_front.png" alt="原始盔甲基础色对照 · 正面"></a><figcaption><strong>正面</strong><small>基础色对照 · 未启用静态发光</small></figcaption></figure><figure><a href="../native/armor_original_side.png"><img src="../native/armor_original_side.png" alt="原始盔甲基础色对照 · 侧面"></a><figcaption><strong>侧面</strong><small>基础色对照 · 未启用静态发光</small></figcaption></figure><figure><a href="../native/armor_original_back.png"><img src="../native/armor_original_back.png" alt="原始盔甲基础色对照 · 背面"></a><figcaption><strong>背面</strong><small>基础色对照 · 未启用静态发光</small></figcaption></figure><figure><a href="../native/armor_original_threequarter.png"><img src="../native/armor_original_threequarter.png" alt="原始盔甲基础色对照 · 四分之三视角"></a><figcaption><strong>四分之三视角</strong><small>基础色对照 · 未启用静态发光</small></figcaption></figure></div></details>
+</section>
+<section aria-labelledby="files-title">
+<h2 id="files-title">当前工程与验证记录</h2>
+<p class="sub">工程文件可下载后在 Blockbench 打开。静态发光预览需要加载下列材质插件；验证报告分别注明精度、数值容差和未验证范围。</p>
+<div class="links">
+<div class="linkbox"><h3>原始模型工程</h3>
+<a href="lucifer_original_assembly.bbmodel">整合模型 · lucifer_original_assembly.bbmodel</a>
+<a href="mossy_skeleton_body_original.bbmodel">原始身体 · mossy_skeleton_body_original.bbmodel</a>
+<a href="root_rot_armor_original.bbmodel">原始盔甲 · root_rot_armor_original.bbmodel</a>
+<a href="../native/lucifer_original_material.js">静态发光材质插件</a>
+<a href="../native/lucifer_source_precision.js">原始数据保存精度插件</a>
+</div>
+<div class="linkbox"><h3>几何、UV 与原生保存</h3>
+<a href="assembly_original_validation.md">整合模型校验 · 说明</a><a href="assembly_original_validation.json">整合模型校验 · JSON</a>
+<a href="native_reopen_validation.json">Blockbench 原生重新打开校验 · JSON</a>
+<a href="body_original_validation.md">身体原始数据校验 · 说明</a><a href="body_original_validation.json">身体原始数据校验 · JSON</a>
+<a href="armor_original_validation.md">盔甲原始数据校验 · 说明</a><a href="armor_original_validation.json">盔甲原始数据校验 · JSON</a>
+</div>
+<div class="linkbox"><h3>材质与预览验证</h3>
+<a href="emissive_port_review.md">静态发光移植独立审阅</a>
+<a href="emissive_gpu_validation.json">线性 HDR 发光 GPU 数值校验 · JSON</a>
+<a href="original_material_view_metadata.json">材质预览设置与记录 · JSON</a>
+<small>GPU 结果在报告容差内，残差非零；其范围是默认静态发光方程。原游戏完整场景画面尚未验证。</small>
+</div>
+</div>
+</section>
+<footer>本地只读审阅页 · 不加载网络资源 · 图片按原文件显示，页面未添加颜色、亮度或发光滤镜。原始游戏素材属于其权利人。</footer>
+</main></body></html>

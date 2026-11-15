@@ -316,6 +316,33 @@ def matrix_quat(r):
     return [x, y, z, w]
 
 
+def cube_source(cubes, texture_size):
+    """Synthetic geometry: axis-aligned cubes centred on the bone, in UE cm, each face showing the cube's
+    own texture rectangle {'size': cm, 'uv': (u0, v0, u1, v1) in texture pixels}.  Same layout as
+    load_static, so it rides through with_attachments like any static mesh."""
+    tw, th = texture_size
+    verts, uvs, tris = [], [], []
+    for cube in cubes:
+        h = cube['size'] / 2
+        u0, v0, u1, v1 = cube['uv']
+        for axis in range(3):
+            for sign in (1, -1):
+                n = np.zeros(3); n[axis] = sign
+                a_ = np.zeros(3); a_[(axis + 1) % 3] = 1
+                b_ = np.cross(n, a_)
+                base = len(verts)
+                for cu, cv in ((-1, -1), (1, -1), (1, 1), (-1, 1)):
+                    verts.append(n * h + a_ * cu * h + b_ * cv * h)
+                    uvs.append([(u0 if cu < 0 else u1) / tw, (v1 if cv < 0 else v0) / th])
+                tris += [[base, base + 1, base + 2], [base, base + 2, base + 3]]
+    n = len(verts)
+    return {'mesh_sha256': 'synthetic', 'bones': STATIC_META['bones'], 'vertices_ue_cm': np.asarray(verts, float),
+            'uv': np.asarray(uvs, float), 'triangles': np.asarray(tris, dtype=np.int64), 'weights': np.ones((n, 1)),
+            'joint_source_indices': np.zeros((n, 1), dtype=np.int64),
+            'primitive_ranges': [{'material': None, 'vertex_start': 0, 'vertex_count': n, 'triangle_start': 0,
+                                  'triangle_count': len(tris)}]}
+
+
 def with_attachments(source, meta_doc, attachments):
     """Rigidly attached static meshes (blueprint.blueprint_attachments): each becomes a bone of its own,
     child of the bone it hangs on, so it animates with it and keeps a part name of its own."""
@@ -328,6 +355,11 @@ def with_attachments(source, meta_doc, attachments):
         bones.append({'name': att['name'], 'parent': index[att['bone']], 'translation': m[:3, 3].tolist(),
                       'rotation': matrix_quat(m[:3, :3] / s), 'scale': [s, s, s]})
         index[att['name']] = len(bones) - 1
+        if att.get('child'):        # a bone under it that carries the geometry (e.g. a tilt under a spin)
+            c = np.asarray(att['child']['matrix'], dtype=float)
+            bones.append({'name': att['child']['name'], 'parent': index[att['name']], 'translation': c[:3, 3].tolist(),
+                          'rotation': matrix_quat(c[:3, :3]), 'scale': [1., 1., 1.]})
+            index[att['child']['name']] = len(bones) - 1
     meta_doc['bones'] = bones
     world = ue_world(bones)
     src = dict(source)
@@ -337,12 +369,13 @@ def with_attachments(source, meta_doc, attachments):
     ranges = list(src['primitive_ranges'])
     nv, nt = len(src['vertices_ue_cm']), len(src['triangles'])
     for att in attachments:
-        static = load_static(att['mesh'])
-        w = world[index[att['name']]]
+        holder = att['child']['name'] if att.get('child') else att['name']
+        static = cube_source(att['cubes'], att['texture_size']) if att.get('cubes') else load_static(att['mesh'])
+        w = world[index[holder]]
         v = static['vertices_ue_cm'] @ w[:3, :3].T + w[:3, 3]
         vertices.append(v); uv.append(static['uv']); triangles.append(static['triangles'] + nv)
         wt = np.zeros((len(v), k)); wt[:, 0] = 1
-        jt = np.zeros((len(v), k), dtype=np.int64); jt[:, 0] = index[att['name']]
+        jt = np.zeros((len(v), k), dtype=np.int64); jt[:, 0] = index[holder]
         weights.append(wt); joints.append(jt)
         for r in static['primitive_ranges']:
             ranges.append(dict(r, material=att.get('material') or r['material'],
@@ -370,6 +403,8 @@ def convert(mesh, meta, export_root, out, *, name, unit_scale=.0192, part_prefix
 
     # material -> texture tile
     tex_index, tiles, tex_arrays, emissive_arrays, tri_texture = {}, [], [], [], np.zeros(len(triangles), dtype=int)
+    emissive_rgb = {}
+    glow_overlays = {}          # (owner, basis key) -> plane group holding full-bright emissive spots
     for r in source['primitive_ranges']:
         mat = r['material']
         if mat not in tex_index:
@@ -382,8 +417,16 @@ def convert(mesh, meta, export_root, out, *, name, unit_scale=.0192, part_prefix
             tiles.append(img)
             tex_arrays.append(np.array(img))
             if emissive is not None:
-                e = Image.open(emissive).convert('RGB').resize(img.size, Image.NEAREST)
-                emissive_arrays.append(np.array(e).max(axis=2))
+                # alpha counts: some emissive maps are white where transparent (Nameless King)
+                e = np.array(Image.open(emissive).convert('RGBA').resize(img.size, Image.NEAREST))
+                emissive_arrays.append(np.where(e[..., 3] > 127, e[..., :3].max(axis=2), 0))
+                emissive_rgb[len(tiles) - 1] = e[..., :3]
+            elif glow_color is not None:
+                # no emissive map: the asked-for colour is the emissive (a gem painted on a face)
+                a = np.array(img)
+                mask = glow_color(a.reshape(-1, 4)[:, :3].astype(int)).reshape(a.shape[:2]) & (a[..., 3] > 127)
+                emissive_arrays.append(np.where(mask, 255, 0))
+                emissive_rgb[len(tiles) - 1] = a[..., :3]
             else:
                 emissive_arrays.append(None)
         tri_texture[r['triangle_start']:r['triangle_start'] + r['triangle_count']] = tex_index[mat]
@@ -505,6 +548,56 @@ def convert(mesh, meta, export_root, out, *, name, unit_scale=.0192, part_prefix
         groups[part['name']]['children'].append(element_id)
         records.append({'element': element_id, 'part': part['name'], 'owner': owner_name, 'triangles': list(map(int, ids)),
                         'direct_uv': tile_index < n_textures, 'glow': glow})
+        # small emissive spots (eyes) on a surface that does not glow as a whole: a full-bright film
+        # over just those texels, a hair in front of the face, coloured from the emissive map
+        if not glow and emissive_arrays[tex] is not None:
+            E = emissive_arrays[tex]
+            A = coeff[:2] * tsize; b0 = coeff[2] * tsize           # local (axes) -> texture pixels
+            pxs = np.c_[face_corners(face_names[0], lo, hi)[:, axes], np.ones(4)] @ coeff * tsize
+            c0, r0 = np.floor(pxs.min(0) + 1e-6).astype(int); c1, r1 = np.ceil(pxs.max(0) - 1e-6).astype(int)
+            spots = [(r, c) for r in range(max(r0, 0), min(r1, E.shape[0])) for c in range(max(c0, 0), min(c1, E.shape[1]))
+                     if E[r, c] > emissive_threshold]
+            runs = []
+            for r, c in sorted(spots):
+                if runs and runs[-1][0] == r and runs[-1][2] == c:
+                    runs[-1][2] = c + 1
+                else:
+                    runs.append([r, c, c + 1])
+            for r, ca, cb in runs:
+                key = (owner, tuple(np.round(basis, 5).ravel()))
+                if key not in glow_overlays:
+                    gname = '%s_%s_glow_%03d' % (prefix, owner_name.lower(), len(parts))
+                    g = {'name': gname, 'uuid': uid(name + ':bone:' + gname), 'origin': groups[part['name']]['origin'],
+                         'rotation': list(groups[part['name']]['rotation']), 'export': True, 'visibility': True,
+                         'isOpen': False, 'children': []}
+                    groups[gname] = g
+                    groups[owner_name]['children'].append(g)
+                    gp = dict(part, name=gname, glow=True)
+                    parts.append(gp)
+                    glow_overlays[key] = gp
+                gp = glow_overlays[key]
+                corners = np.array([[ca, r], [cb, r + 1]], float)
+                loc = (corners - b0) @ np.linalg.inv(A)
+                olo, ohi = lo.copy(), hi.copy()
+                olo[axes] = loc.min(0); ohi[axes] = loc.max(0)
+                eps = unit_scale * .3
+                olo[flat] -= eps; ohi[flat] += eps
+                rgb = emissive_rgb[tex][r, ca:cb].astype(float)
+                rgb = rgb * (255. / max(1., rgb.max()))                # bright, same hue
+                tile = Image.fromarray(np.c_[rgb, np.full((len(rgb), 1), 255.)].astype(np.uint8)[None])
+                tile_i = len(tiles); tiles.append(tile)
+                ofaces = {}
+                for face in face_names:
+                    fc = face_corners(face, olo, ohi)
+                    tuv = np.c_[(fc[:, axes[0]] - olo[axes[0]]) / (ohi[axes[0]] - olo[axes[0]]) * tile.width,
+                                (ohi[axes[1]] - fc[:, axes[1]]) / (ohi[axes[1]] - olo[axes[1]]) * tile.height]
+                    ofaces[face] = rectangular_uv(tuv)
+                oid = uid(name + ':glow:%s:%d:%d' % (element_id, r, ca))
+                elements.append({'name': 'g%d_%d' % (sid, len(elements)), 'type': 'cube', 'uuid': oid, 'from': olo.tolist(),
+                                 'to': ohi.tolist(), 'origin': groups[gp['name']]['origin'], 'rotation': [0, 0, 0],
+                                 'autouv': 0, 'faces': ofaces, 'rescale': False, 'locked': False, 'visibility': True,
+                                 'export': True, 'color': 1, '_tile': tile_i})
+                groups[gp['name']]['children'].append(oid)
 
     atlas, placements = pack_tiles(tiles)
     for el in elements:

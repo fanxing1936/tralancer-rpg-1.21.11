@@ -1,0 +1,318 @@
+{
+  "projection": "uv = scale * P * world + origin; P=[[-cos(yaw),0,sin(yaw)],[-sin(pitch)*sin(yaw),-cos(pitch),-sin(pitch)*cos(yaw)]]",
+  "cameras": {
+    "attack": {
+      "source_frame": 0,
+      "source_time_seconds": 0,
+      "source_head_six_corners": [
+        [
+          198,
+          198
+        ],
+        [
+          270,
+          235
+        ],
+        [
+          189,
+          255
+        ],
+        [
+          261,
+          291
+        ],
+        [
+          229,
+          190
+        ],
+        [
+          301,
+          227
+        ]
+      ],
+      "head_model_corners_before_rest": [
+        [
+          6,
+          19.5,
+          -3
+        ],
+        [
+          -6,
+          19.5,
+          -3
+        ],
+        [
+          6,
+          12.5,
+          -3
+        ],
+        [
+          -6,
+          12.5,
+          -3
+        ],
+        [
+          6,
+          19.5,
+          3
+        ],
+        [
+          -6,
+          19.5,
+          3
+        ]
+      ],
+      "head_rest_rotation": [
+        0,
+        0,
+        8
+      ],
+      "camera_yaw_degrees": 43.5694,
+      "camera_pitch_down_degrees": 18.51902,
+      "pixels_per_model_unit": 8.405905,
+      "world_origin_pixel": [
+        243.17139,
+        366.0043
+      ],
+      "pixel_rmse": 1.70637,
+      "predicted_corners": [
+        [
+          195.537,
+          201.127
+        ],
+        [
+          267.911,
+          236.305
+        ],
+        [
+          189.604,
+          254.585
+        ],
+        [
+          261.977,
+          289.764
+        ],
+        [
+          230.299,
+          189.52
+        ],
+        [
+          302.672,
+          224.699
+        ]
+      ],
+      "status": "最终模型头盒比例与源首帧近静息姿态假设下的正交拟合；不是官方相机参数"
+    },
+    "summon": {
+      "source_frame": 0,
+      "source_time_seconds": 0,
+      "source_head_six_corners": [
+        [
+          223,
+          202
+        ],
+        [
+          292,
+          237
+        ],
+        [
+          215,
+          254
+        ],
+        [
+          284,
+          289
+        ],
+        [
+          253,
+          193
+        ],
+        [
+          322,
+          228
+        ]
+      ],
+      "head_model_corners_before_rest": [
+        [
+          6,
+          19.5,
+          -3
+        ],
+        [
+          -6,
+          19.5,
+          -3
+        ],
+        [
+          6,
+          12.5,
+          -3
+        ],
+        [
+          -6,
+          12.5,
+          -3
+        ],
+        [
+          6,
+          19.5,
+          3
+        ],
+        [
+          -6,
+          19.5,
+          3
+        ]
+      ],
+      "head_rest_rotation": [
+        0,
+        0,
+        8
+      ],
+      "camera_yaw_degrees": 42.97831,
+      "camera_pitch_down_degrees": 19.42398,
+      "pixels_per_model_unit": 7.94849,
+      "world_origin_pixel": [
+        266.47516,
+        359.07154
+      ],
+      "pixel_rmse": 1.1792,
+      "predicted_corners": [
+        [
+          221.333,
+          203.999
+        ],
+        [
+          290.436,
+          237.932
+        ],
+        [
+          215.667,
+          254.206
+        ],
+        [
+          284.771,
+          288.138
+        ],
+        [
+          253.845,
+          192.396
+        ],
+        [
+          322.948,
+          226.329
+        ]
+      ],
+      "status": "最终模型头盒比例与源首帧近静息姿态假设下的正交拟合；不是官方相机参数"
+    },
+    "cast": {
+      "source_frame": 0,
+      "source_time_seconds": 0,
+      "source_head_six_corners": [
+        [
+          187,
+          206
+        ],
+        [
+          292,
+          260
+        ],
+        [
+          175,
+          287
+        ],
+        [
+          280,
+          339
+        ],
+        [
+          233,
+          195
+        ],
+        [
+          339,
+          247
+        ]
+      ],
+      "head_model_corners_before_rest": [
+        [
+          6,
+          19.5,
+          -3
+        ],
+        [
+          -6,
+          19.5,
+          -3
+        ],
+        [
+          6,
+          12.5,
+          -3
+        ],
+        [
+          -6,
+          12.5,
+          -3
+        ],
+        [
+          6,
+          19.5,
+          3
+        ],
+        [
+          -6,
+          19.5,
+          3
+        ]
+      ],
+      "head_rest_rotation": [
+        0,
+        0,
+        8
+      ],
+      "camera_yaw_degrees": 43.29967,
+      "camera_pitch_down_degrees": 18.53609,
+      "pixels_per_model_unit": 12.163688,
+      "world_origin_pixel": [
+        253.59259,
+        448.58399
+      ],
+      "pixel_rmse": 1.97939,
+      "predicted_corners": [
+        [
+          184.593,
+          210.122
+        ],
+        [
+          289.788,
+          260.896
+        ],
+        [
+          175.969,
+          287.481
+        ],
+        [
+          281.164,
+          338.255
+        ],
+        [
+          234.645,
+          193.236
+        ],
+        [
+          339.841,
+          244.01
+        ]
+      ],
+      "status": "最终模型头盒比例与源首帧近静息姿态假设下的正交拟合；不是官方相机参数"
+    },
+    "walk_advisory": {
+      "source_frame": 0,
+      "camera_yaw_degrees": 43,
+      "camera_pitch_down_degrees": 19,
+      "pixels_per_model_unit": 10.6,
+      "status": "低置信试拍值；f0头有动作且杖遮住两个前上角，不能应用静息6角假设；未提供虚构RMSE"
+    }
+  }
+}

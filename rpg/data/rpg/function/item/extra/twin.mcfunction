@@ -14,9 +14,7 @@ execute as @a[tag=rpg.boaz.burst] run scoreboard players set @s rpg_boaz_stack 0
 execute as @a[tag=rpg.boaz.burst] at @s run playsound minecraft:item.mace.smash_ground_heavy player @a[distance=..14]
 
 # 强化打击落在刚被打中的目标上
-execute as @e[tag=rpg.hurt] at @s if entity @a[tag=rpg.boaz.burst,distance=..7] run particle dust_color_transition{from_color:[0.078,0.510,0.569],to_color:[0.871,0.561,0.949],scale:3} ~ ~1 ~ 0.4 0.5 0.4 0.05 40
-execute as @e[tag=rpg.hurt] at @s if entity @a[tag=rpg.boaz.burst,distance=..7] run particle sweep_attack ~ ~1 ~ 0.4 0.3 0.4 0 4
-execute as @e[tag=rpg.hurt] at @s if entity @a[tag=rpg.boaz.burst,distance=..7] run particle minecraft:flash{color:14585842} ~ ~1 ~ 0 0 0 0 1
+execute if entity @e[tag=rpg.hurt] run function rpg:item/extra/twin/g0
 execute as @e[tag=rpg.hurt,type=!player] at @s if entity @a[tag=rpg.boaz.burst,distance=..7] run damage @s 6 minecraft:player_attack by @a[tag=rpg.boaz.burst,limit=1,sort=nearest]
 execute as @e[tag=rpg.hurt,type=!player] at @s if entity @a[tag=rpg.boaz.burst,distance=..7] run effect give @s minecraft:weakness 4 1 true
 

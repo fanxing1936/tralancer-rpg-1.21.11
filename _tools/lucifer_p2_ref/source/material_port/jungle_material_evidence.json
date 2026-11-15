@@ -1,0 +1,2709 @@
+{
+  "status": "B channel and NaturalEmissive formula closed by this instance compiled shader; no model changes",
+  "scope": "Original cooked default parameters; runtime parameter updates and game display pipeline not captured",
+  "source_archive": {
+    "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\shader\\ShaderArchive-Dungeons-PCD3D_SM5.ushaderbytecode",
+    "bytes": 28270340,
+    "sha256": "dcf487c880116119481c49691103853f3c447078042e0416e8a51e4fcae8c78c"
+  },
+  "raw_uexp_sha256": "1c9839a7161f990ea4591362ad04df53cad6b3a250572129a5c131aa6c3b1140",
+  "inline_name_map": {
+    "start": 5372,
+    "end": 8848,
+    "names": [
+      "Metallic",
+      "Specular",
+      "Roughness",
+      "SinusEmissive",
+      "ConstantEmissive",
+      "EnchantmentMask",
+      "ExtraEmissive",
+      "TimedDissolve",
+      "ConstantSpecular",
+      "TShadowDepthVSForGSVertexShadowDepth_PerspectiveCorrectfalse",
+      "TShadowDepthVSForGSVertexShadowDepth_PerspectiveCorrecttrue",
+      "TShadowDepthVSForGSVertexShadowDepth_OnePassPointLightfalse",
+      "TShadowDepthPSPixelShadowDepth_NonPerspectiveCorrectfalse",
+      "TShadowDepthPSPixelShadowDepth_NonPerspectiveCorrecttrue",
+      "TShadowDepthVSVertexShadowDepth_PerspectiveCorrectfalse",
+      "TShadowDepthVSVertexShadowDepth_PerspectiveCorrecttrue",
+      "TShadowDepthVSVertexShadowDepth_OnePassPointLightfalse",
+      "TShadowDepthPSPixelShadowDepth_PerspectiveCorrectfalse",
+      "TShadowDepthVSForGSVertexShadowDepth_OutputDepthfalse",
+      "TShadowDepthPSPixelShadowDepth_PerspectiveCorrecttrue",
+      "TShadowDepthPSPixelShadowDepth_OnePassPointLightfalse",
+      "TShadowDepthVSForGSVertexShadowDepth_OutputDepthtrue",
+      "TShadowDepthPSPixelShadowDepth_OnePassPointLighttrue",
+      "TShadowDepthVSVertexShadowDepth_OutputDepthfalse",
+      "TShadowDepthVSVertexShadowDepth_OutputDepthtrue",
+      "TLightMapDensityVSFDummyLightMapPolicy",
+      "TLightMapDensityPSFDummyLightMapPolicy",
+      "TBasePassPSFNoLightMapPolicySkylight",
+      "TLightMapDensityVSFNoLightMapPolicy",
+      "TLightMapDensityPSFNoLightMapPolicy",
+      "TBasePassVSFNoLightMapPolicy",
+      "TBasePassPSFNoLightMapPolicy",
+      "FOnePassPointShadowDepthGS",
+      "FEvaluateSurfelMaterialCS",
+      "FConvertToUniformMeshVS",
+      "FConvertToUniformMeshGS",
+      "TDepthOnlyVS<false>",
+      "FDepthOnlyPS",
+      "FVelocityVS",
+      "FVelocityPS",
+      "FHitProxyVS",
+      "FHitProxyPS",
+      "DepthNoPixelPipeline",
+      "VelocityPipeline",
+      "DepthPipeline",
+      "FInstancedStaticMeshVertexFactory",
+      "FParticleSpriteVertexFactory",
+      "TGPUSkinVertexFactoryfalse",
+      "TGPUSkinVertexFactorytrue",
+      "FGPUSpriteVertexFactory",
+      "FLocalVertexFactory",
+      "FMaterialUniformExpressionVectorParameter",
+      "SelectionColor",
+      "EnchantmentColor",
+      "FMaterialUniformExpressionComponentSwizzle",
+      "DissolveTextureSize",
+      "Flash Color",
+      "ExtraEmissiveColor",
+      "EmissiveBColor",
+      "ConstantEmissiveColor",
+      "FMaterialUniformExpressionFoldedMath",
+      "FMaterialUniformExpressionScalarParameter",
+      "ExtraEmissiveScalar",
+      "StatusColor",
+      "EnchantedEye",
+      "Enchanted",
+      "FMaterialUniformExpressionConstant",
+      "NaturalEmissive",
+      "Flash Timestamp",
+      "Flash Seconds",
+      "EmissiveBPower",
+      "EmissiveB_SinusTempo",
+      "EmissiveB_SinusVariation",
+      "EmissiveB_SinusMin",
+      "EmissiveB_Max",
+      "DesaturateStart",
+      "DesaturateDuration",
+      "Saturation",
+      "DissolveStart",
+      "DissolveDuration",
+      "AlphaOverride",
+      "FMaterialUniformExpressionTextureParameter",
+      "FMaterialUniformExpressionTexture",
+      "Texture",
+      "Material",
+      "None",
+      "FViewUniformShaderParameters",
+      "FPrimitiveUniformShaderParameters",
+      "FShadowDepthPassUniformParameters",
+      "FOpaqueBasePassUniformParameters",
+      "FLightmapDensityPassUniformParameters",
+      "FParticleSpriteUniformParameters",
+      "FLocalVertexFactoryUniformShaderParameters",
+      "FPrecomputedLightingUniformParameters",
+      "FGPUSpriteEmitterDynamicUniformParameters",
+      "FGPUSpriteEmitterUniformParameters"
+    ]
+  },
+  "uniform_sets": [
+    {
+      "start": 10698,
+      "UniformVectorExpressions": {
+        "start": 10698,
+        "count": 18,
+        "expressions": [
+          {
+            "start": 10702,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "SelectionColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 10739
+          },
+          {
+            "start": 10739,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "EnchantmentColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.09922188520431519,
+              0.0,
+              0.3854166567325592,
+              1.0
+            ],
+            "end": 10776
+          },
+          {
+            "start": 10776,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 10784,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "EnchantmentColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                0.09922188520431519,
+                0.0,
+                0.3854166567325592,
+                1.0
+              ],
+              "end": 10821
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 10826
+          },
+          {
+            "start": 10826,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "DissolveTextureSize",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              2.0,
+              2.0,
+              0.0,
+              1.0
+            ],
+            "end": 10863
+          },
+          {
+            "start": 10863,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "Flash Color",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 10900
+          },
+          {
+            "start": 10900,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 10908,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "Flash Color",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "end": 10945
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 10950
+          },
+          {
+            "start": 10950,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "ExtraEmissiveColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 10987
+          },
+          {
+            "start": 10987,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 10995,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "ExtraEmissiveColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "end": 11032
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 11037
+          },
+          {
+            "start": 11037,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "EmissiveBColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 11074
+          },
+          {
+            "start": 11074,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 11082,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "EmissiveBColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "end": 11119
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 11124
+          },
+          {
+            "start": 11124,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "ConstantEmissiveColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 11161
+          },
+          {
+            "start": 11161,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 11169,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "ConstantEmissiveColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "end": 11206
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 11211
+          },
+          {
+            "start": 11211,
+            "type": "FoldedMath",
+            "a": {
+              "start": 11219,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "ExtraEmissiveScalar",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 11244
+            },
+            "b": {
+              "start": 11244,
+              "type": "ComponentSwizzle",
+              "x": {
+                "start": 11252,
+                "type": "VectorParameter",
+                "parameter": {
+                  "name": "ExtraEmissiveColor",
+                  "association": 2,
+                  "index": -1
+                },
+                "default": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "end": 11289
+              },
+              "indices": [
+                0,
+                1,
+                2,
+                -1
+              ],
+              "num_elements": 3,
+              "end": 11294
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 11299
+          },
+          {
+            "start": 11299,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "StatusColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 11336
+          },
+          {
+            "start": 11336,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 11344,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "StatusColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "end": 11381
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 11386
+          },
+          {
+            "start": 11386,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 11394,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "SelectionColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "end": 11431
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 11436
+          },
+          {
+            "start": 11436,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 11444,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "DissolveTextureSize",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                2.0,
+                2.0,
+                0.0,
+                1.0
+              ],
+              "end": 11481
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 11486
+          },
+          {
+            "start": 11486,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 11494,
+              "type": "ComponentSwizzle",
+              "x": {
+                "start": 11502,
+                "type": "VectorParameter",
+                "parameter": {
+                  "name": "DissolveTextureSize",
+                  "association": 2,
+                  "index": -1
+                },
+                "default": [
+                  2.0,
+                  2.0,
+                  0.0,
+                  1.0
+                ],
+                "end": 11539
+              },
+              "indices": [
+                0,
+                1,
+                2,
+                -1
+              ],
+              "num_elements": 3,
+              "end": 11544
+            },
+            "indices": [
+              0,
+              1,
+              -1,
+              -1
+            ],
+            "num_elements": 2,
+            "end": 11549
+          }
+        ],
+        "end": 11549
+      },
+      "UniformScalarExpressions": {
+        "start": 11549,
+        "count": 24,
+        "expressions": [
+          {
+            "start": 11553,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EnchantedEye",
+              "association": 2,
+              "index": -1
+            },
+            "default": 150.0,
+            "end": 11578
+          },
+          {
+            "start": 11578,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Enchanted",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 11603
+          },
+          {
+            "start": 11603,
+            "type": "FoldedMath",
+            "a": {
+              "start": 11611,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Enchanted",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 11636
+            },
+            "b": {
+              "start": 11636,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "EnchantedEye",
+                "association": 2,
+                "index": -1
+              },
+              "default": 150.0,
+              "end": 11661
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 11666
+          },
+          {
+            "start": 11666,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 11674,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "DissolveTextureSize",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                2.0,
+                2.0,
+                0.0,
+                1.0
+              ],
+              "end": 11711
+            },
+            "indices": [
+              0,
+              -1,
+              -1,
+              -1
+            ],
+            "num_elements": 1,
+            "end": 11716
+          },
+          {
+            "start": 11716,
+            "type": "FoldedMath",
+            "a": {
+              "start": 11724,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Enchanted",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 11749
+            },
+            "b": {
+              "start": 11749,
+              "type": "Constant",
+              "value": [
+                3.0,
+                3.0,
+                3.0,
+                3.0
+              ],
+              "value_type": 15,
+              "end": 11774
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 11779
+          },
+          {
+            "start": 11779,
+            "type": "FoldedMath",
+            "a": {
+              "start": 11787,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Enchanted",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 11812
+            },
+            "b": {
+              "start": 11812,
+              "type": "Constant",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "value_type": 15,
+              "end": 11837
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 11842
+          },
+          {
+            "start": 11842,
+            "type": "FoldedMath",
+            "a": {
+              "start": 11850,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Enchanted",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 11875
+            },
+            "b": {
+              "start": 11875,
+              "type": "Constant",
+              "value": [
+                8.0,
+                8.0,
+                8.0,
+                8.0
+              ],
+              "value_type": 15,
+              "end": 11900
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 11905
+          },
+          {
+            "start": 11905,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "NaturalEmissive",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.6000000238418579,
+            "end": 11930
+          },
+          {
+            "start": 11930,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Flash Timestamp",
+              "association": 2,
+              "index": -1
+            },
+            "default": -100.0,
+            "end": 11955
+          },
+          {
+            "start": 11955,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Flash Seconds",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.10000000149011612,
+            "end": 11980
+          },
+          {
+            "start": 11980,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "ExtraEmissiveScalar",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 12005
+          },
+          {
+            "start": 12005,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveBPower",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 12030
+          },
+          {
+            "start": 12030,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveB_SinusTempo",
+              "association": 2,
+              "index": -1
+            },
+            "default": 2.0,
+            "end": 12055
+          },
+          {
+            "start": 12055,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveB_SinusVariation",
+              "association": 2,
+              "index": -1
+            },
+            "default": 2.0,
+            "end": 12080
+          },
+          {
+            "start": 12080,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveB_SinusMin",
+              "association": 2,
+              "index": -1
+            },
+            "default": 2.0,
+            "end": 12105
+          },
+          {
+            "start": 12105,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveB_Max",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 12130
+          },
+          {
+            "start": 12130,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "DesaturateStart",
+              "association": 2,
+              "index": -1
+            },
+            "default": -50.0,
+            "end": 12155
+          },
+          {
+            "start": 12155,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "DesaturateDuration",
+              "association": 2,
+              "index": -1
+            },
+            "default": 4.0,
+            "end": 12180
+          },
+          {
+            "start": 12180,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Saturation",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 12205
+          },
+          {
+            "start": 12205,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Metallic",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.30000001192092896,
+            "end": 12230
+          },
+          {
+            "start": 12230,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "DissolveStart",
+              "association": 2,
+              "index": -1
+            },
+            "default": -50.0,
+            "end": 12255
+          },
+          {
+            "start": 12255,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "DissolveDuration",
+              "association": 2,
+              "index": -1
+            },
+            "default": 4.0,
+            "end": 12280
+          },
+          {
+            "start": 12280,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "AlphaOverride",
+              "association": 2,
+              "index": -1
+            },
+            "default": 1.0,
+            "end": 12305
+          },
+          {
+            "start": 12305,
+            "type": "FoldedMath",
+            "a": {
+              "start": 12313,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "AlphaOverride",
+                "association": 2,
+                "index": -1
+              },
+              "default": 1.0,
+              "end": 12338
+            },
+            "b": {
+              "start": 12338,
+              "type": "Constant",
+              "value": [
+                0.10000000149011612,
+                0.10000000149011612,
+                0.10000000149011612,
+                0.10000000149011612
+              ],
+              "value_type": 15,
+              "end": 12363
+            },
+            "operation": 0,
+            "value_type": 15,
+            "end": 12368
+          }
+        ],
+        "end": 12368
+      },
+      "Uniform2DTextureExpressions": {
+        "start": 12368,
+        "count": 5,
+        "expressions": [
+          {
+            "start": 12372,
+            "type": "TextureParameter",
+            "parameter": {
+              "name": "Specular",
+              "association": 2,
+              "index": -1
+            },
+            "texture_index": 1,
+            "sampler_source": 0,
+            "end": 12401
+          },
+          {
+            "start": 12401,
+            "type": "Texture",
+            "texture_index": 4,
+            "sampler_source": 0,
+            "end": 12417
+          },
+          {
+            "start": 12417,
+            "type": "TextureParameter",
+            "parameter": {
+              "name": "Texture",
+              "association": 2,
+              "index": -1
+            },
+            "texture_index": 0,
+            "sampler_source": 0,
+            "end": 12446
+          },
+          {
+            "start": 12446,
+            "type": "Texture",
+            "texture_index": 2,
+            "sampler_source": 0,
+            "end": 12462
+          },
+          {
+            "start": 12462,
+            "type": "Texture",
+            "texture_index": 3,
+            "sampler_source": 0,
+            "end": 12478
+          }
+        ],
+        "end": 12478
+      },
+      "UniformCubeTextureExpressions": {
+        "start": 12478,
+        "count": 0,
+        "expressions": [],
+        "end": 12482
+      },
+      "end": 12482
+    },
+    {
+      "start": 122383,
+      "UniformVectorExpressions": {
+        "start": 122383,
+        "count": 18,
+        "expressions": [
+          {
+            "start": 122387,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "SelectionColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 122424
+          },
+          {
+            "start": 122424,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "EnchantmentColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.09922188520431519,
+              0.0,
+              0.3854166567325592,
+              1.0
+            ],
+            "end": 122461
+          },
+          {
+            "start": 122461,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 122469,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "EnchantmentColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                0.09922188520431519,
+                0.0,
+                0.3854166567325592,
+                1.0
+              ],
+              "end": 122506
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 122511
+          },
+          {
+            "start": 122511,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "DissolveTextureSize",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              2.0,
+              2.0,
+              0.0,
+              1.0
+            ],
+            "end": 122548
+          },
+          {
+            "start": 122548,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "Flash Color",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 122585
+          },
+          {
+            "start": 122585,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 122593,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "Flash Color",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "end": 122630
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 122635
+          },
+          {
+            "start": 122635,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "ExtraEmissiveColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 122672
+          },
+          {
+            "start": 122672,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 122680,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "ExtraEmissiveColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "end": 122717
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 122722
+          },
+          {
+            "start": 122722,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "EmissiveBColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 122759
+          },
+          {
+            "start": 122759,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 122767,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "EmissiveBColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "end": 122804
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 122809
+          },
+          {
+            "start": 122809,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "ConstantEmissiveColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 122846
+          },
+          {
+            "start": 122846,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 122854,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "ConstantEmissiveColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "end": 122891
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 122896
+          },
+          {
+            "start": 122896,
+            "type": "FoldedMath",
+            "a": {
+              "start": 122904,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "ExtraEmissiveScalar",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 122929
+            },
+            "b": {
+              "start": 122929,
+              "type": "ComponentSwizzle",
+              "x": {
+                "start": 122937,
+                "type": "VectorParameter",
+                "parameter": {
+                  "name": "ExtraEmissiveColor",
+                  "association": 2,
+                  "index": -1
+                },
+                "default": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "end": 122974
+              },
+              "indices": [
+                0,
+                1,
+                2,
+                -1
+              ],
+              "num_elements": 3,
+              "end": 122979
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 122984
+          },
+          {
+            "start": 122984,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "StatusColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 123021
+          },
+          {
+            "start": 123021,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 123029,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "StatusColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "end": 123066
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 123071
+          },
+          {
+            "start": 123071,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 123079,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "SelectionColor",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "end": 123116
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 123121
+          },
+          {
+            "start": 123121,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 123129,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "DissolveTextureSize",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                2.0,
+                2.0,
+                0.0,
+                1.0
+              ],
+              "end": 123166
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 123171
+          },
+          {
+            "start": 123171,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 123179,
+              "type": "ComponentSwizzle",
+              "x": {
+                "start": 123187,
+                "type": "VectorParameter",
+                "parameter": {
+                  "name": "DissolveTextureSize",
+                  "association": 2,
+                  "index": -1
+                },
+                "default": [
+                  2.0,
+                  2.0,
+                  0.0,
+                  1.0
+                ],
+                "end": 123224
+              },
+              "indices": [
+                0,
+                1,
+                2,
+                -1
+              ],
+              "num_elements": 3,
+              "end": 123229
+            },
+            "indices": [
+              0,
+              1,
+              -1,
+              -1
+            ],
+            "num_elements": 2,
+            "end": 123234
+          }
+        ],
+        "end": 123234
+      },
+      "UniformScalarExpressions": {
+        "start": 123234,
+        "count": 24,
+        "expressions": [
+          {
+            "start": 123238,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EnchantedEye",
+              "association": 2,
+              "index": -1
+            },
+            "default": 150.0,
+            "end": 123263
+          },
+          {
+            "start": 123263,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Enchanted",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 123288
+          },
+          {
+            "start": 123288,
+            "type": "FoldedMath",
+            "a": {
+              "start": 123296,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Enchanted",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 123321
+            },
+            "b": {
+              "start": 123321,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "EnchantedEye",
+                "association": 2,
+                "index": -1
+              },
+              "default": 150.0,
+              "end": 123346
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 123351
+          },
+          {
+            "start": 123351,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 123359,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "DissolveTextureSize",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                2.0,
+                2.0,
+                0.0,
+                1.0
+              ],
+              "end": 123396
+            },
+            "indices": [
+              0,
+              -1,
+              -1,
+              -1
+            ],
+            "num_elements": 1,
+            "end": 123401
+          },
+          {
+            "start": 123401,
+            "type": "FoldedMath",
+            "a": {
+              "start": 123409,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Enchanted",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 123434
+            },
+            "b": {
+              "start": 123434,
+              "type": "Constant",
+              "value": [
+                3.0,
+                3.0,
+                3.0,
+                3.0
+              ],
+              "value_type": 15,
+              "end": 123459
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 123464
+          },
+          {
+            "start": 123464,
+            "type": "FoldedMath",
+            "a": {
+              "start": 123472,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Enchanted",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 123497
+            },
+            "b": {
+              "start": 123497,
+              "type": "Constant",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "value_type": 15,
+              "end": 123522
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 123527
+          },
+          {
+            "start": 123527,
+            "type": "FoldedMath",
+            "a": {
+              "start": 123535,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Enchanted",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 123560
+            },
+            "b": {
+              "start": 123560,
+              "type": "Constant",
+              "value": [
+                8.0,
+                8.0,
+                8.0,
+                8.0
+              ],
+              "value_type": 15,
+              "end": 123585
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 123590
+          },
+          {
+            "start": 123590,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "NaturalEmissive",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.6000000238418579,
+            "end": 123615
+          },
+          {
+            "start": 123615,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Flash Timestamp",
+              "association": 2,
+              "index": -1
+            },
+            "default": -100.0,
+            "end": 123640
+          },
+          {
+            "start": 123640,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Flash Seconds",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.10000000149011612,
+            "end": 123665
+          },
+          {
+            "start": 123665,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "ExtraEmissiveScalar",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 123690
+          },
+          {
+            "start": 123690,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveBPower",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 123715
+          },
+          {
+            "start": 123715,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveB_SinusTempo",
+              "association": 2,
+              "index": -1
+            },
+            "default": 2.0,
+            "end": 123740
+          },
+          {
+            "start": 123740,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveB_SinusVariation",
+              "association": 2,
+              "index": -1
+            },
+            "default": 2.0,
+            "end": 123765
+          },
+          {
+            "start": 123765,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveB_SinusMin",
+              "association": 2,
+              "index": -1
+            },
+            "default": 2.0,
+            "end": 123790
+          },
+          {
+            "start": 123790,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "EmissiveB_Max",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 123815
+          },
+          {
+            "start": 123815,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "DesaturateStart",
+              "association": 2,
+              "index": -1
+            },
+            "default": -50.0,
+            "end": 123840
+          },
+          {
+            "start": 123840,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "DesaturateDuration",
+              "association": 2,
+              "index": -1
+            },
+            "default": 4.0,
+            "end": 123865
+          },
+          {
+            "start": 123865,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Saturation",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 123890
+          },
+          {
+            "start": 123890,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Metallic",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.30000001192092896,
+            "end": 123915
+          },
+          {
+            "start": 123915,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "DissolveStart",
+              "association": 2,
+              "index": -1
+            },
+            "default": -50.0,
+            "end": 123940
+          },
+          {
+            "start": 123940,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "DissolveDuration",
+              "association": 2,
+              "index": -1
+            },
+            "default": 4.0,
+            "end": 123965
+          },
+          {
+            "start": 123965,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "AlphaOverride",
+              "association": 2,
+              "index": -1
+            },
+            "default": 1.0,
+            "end": 123990
+          },
+          {
+            "start": 123990,
+            "type": "FoldedMath",
+            "a": {
+              "start": 123998,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "AlphaOverride",
+                "association": 2,
+                "index": -1
+              },
+              "default": 1.0,
+              "end": 124023
+            },
+            "b": {
+              "start": 124023,
+              "type": "Constant",
+              "value": [
+                0.10000000149011612,
+                0.10000000149011612,
+                0.10000000149011612,
+                0.10000000149011612
+              ],
+              "value_type": 15,
+              "end": 124048
+            },
+            "operation": 0,
+            "value_type": 15,
+            "end": 124053
+          }
+        ],
+        "end": 124053
+      },
+      "Uniform2DTextureExpressions": {
+        "start": 124053,
+        "count": 5,
+        "expressions": [
+          {
+            "start": 124057,
+            "type": "TextureParameter",
+            "parameter": {
+              "name": "Specular",
+              "association": 2,
+              "index": -1
+            },
+            "texture_index": 1,
+            "sampler_source": 0,
+            "end": 124086
+          },
+          {
+            "start": 124086,
+            "type": "Texture",
+            "texture_index": 4,
+            "sampler_source": 0,
+            "end": 124102
+          },
+          {
+            "start": 124102,
+            "type": "TextureParameter",
+            "parameter": {
+              "name": "Texture",
+              "association": 2,
+              "index": -1
+            },
+            "texture_index": 0,
+            "sampler_source": 0,
+            "end": 124131
+          },
+          {
+            "start": 124131,
+            "type": "Texture",
+            "texture_index": 2,
+            "sampler_source": 0,
+            "end": 124147
+          },
+          {
+            "start": 124147,
+            "type": "Texture",
+            "texture_index": 3,
+            "sampler_source": 0,
+            "end": 124163
+          }
+        ],
+        "end": 124163
+      },
+      "UniformCubeTextureExpressions": {
+        "start": 124163,
+        "count": 0,
+        "expressions": [],
+        "end": 124167
+      },
+      "end": 124167
+    }
+  ],
+  "uniform_bytes_equal": true,
+  "uniform_bytes": 1784,
+  "compiler_descriptions": [
+    {
+      "length_offset": 12564,
+      "string_offset": 12568,
+      "length": 660,
+      "text": "Compiling Master_ModelMaterial: Platform=PCD3D_SM5, Usage=LightingModel=MSM_DefaultLit, BlendMode=BLEND_Masked, SpecialEngine=0, TwoSided=1, TSNormal=1, Masked=1, Distorted=0, WritesEveryPixel=0, ModifiesMeshPosition=0, Usage={bUsedWithSkeletalMesh,bUsedWithParticleSprites,bUsedWithInstancedStaticMeshes}, StaticSwitch'Metallic2-1'=False, StaticSwitch'Specular2-1'=False, StaticSwitch'Roughness2-1'=False, StaticSwitch'SinusEmissive2-1'=True, StaticSwitch'ConstantEmissive2-1'=True, StaticSwitch'EnchantmentMask2-1'=True, StaticSwitch'ExtraEmissive2-1'=True, StaticSwitch'TimedDissolve2-1'=True, StaticSwitch'ConstantSpecular2-1'=False, StaticMaterialLayers="
+    },
+    {
+      "length_offset": 124249,
+      "string_offset": 124253,
+      "length": 660,
+      "text": "Compiling Master_ModelMaterial: Platform=PCD3D_SM4, Usage=LightingModel=MSM_DefaultLit, BlendMode=BLEND_Masked, SpecialEngine=0, TwoSided=1, TSNormal=1, Masked=1, Distorted=0, WritesEveryPixel=0, ModifiesMeshPosition=0, Usage={bUsedWithSkeletalMesh,bUsedWithParticleSprites,bUsedWithInstancedStaticMeshes}, StaticSwitch'Metallic2-1'=False, StaticSwitch'Specular2-1'=False, StaticSwitch'Roughness2-1'=False, StaticSwitch'SinusEmissive2-1'=True, StaticSwitch'ConstantEmissive2-1'=True, StaticSwitch'EnchantmentMask2-1'=True, StaticSwitch'ExtraEmissive2-1'=True, StaticSwitch'TimedDissolve2-1'=True, StaticSwitch'ConstantSpecular2-1'=False, StaticMaterialLayers="
+    }
+  ],
+  "instance_overrides": {
+    "EmissiveB_SinusTempo": 0.10000000149011612,
+    "EmissiveB_SinusVariation": 3.0,
+    "EmissiveBPower": 10.0,
+    "Flash Timestamp": -100.0,
+    "RefractionDepthBias": 0.0,
+    "ConstantEmissiveColor": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "EmissiveBColor": [
+      1.0,
+      0.13600000739097595,
+      0.9861199855804443,
+      1.0
+    ],
+    "EnchantmentColor": [
+      0.01680699922144413,
+      0.0,
+      0.020289000123739243,
+      1.0
+    ],
+    "ExtraEmissiveColor": [
+      1.0,
+      0.06124600023031235,
+      0.9911019802093506,
+      1.0
+    ],
+    "Specular": {
+      "index": -8,
+      "path": "/Game/Actors/Characters/Enemies/JungleAbomination/T_Jungle_Abomination_E_M6.T_Jungle_Abomination_E_M6"
+    },
+    "Texture": {
+      "index": -9,
+      "path": "/Game/Actors/Characters/Enemies/JungleAbomination/T_Jungle_Abomination_M6.T_Jungle_Abomination_M6"
+    }
+  },
+  "material_slots": [
+    {
+      "buffer": "cb3[0]",
+      "expression": "SelectionColor",
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "start": 10702,
+      "end": 10739
+    },
+    {
+      "buffer": "cb3[1]",
+      "expression": "EnchantmentColor",
+      "value": [
+        0.01680699922144413,
+        0.0,
+        0.020289000123739243,
+        1.0
+      ],
+      "start": 10739,
+      "end": 10776
+    },
+    {
+      "buffer": "cb3[2]",
+      "expression": "EnchantmentColor.swizzle[0, 1, 2]",
+      "value": [
+        0.01680699922144413,
+        0.0,
+        0.020289000123739243,
+        0.0
+      ],
+      "start": 10776,
+      "end": 10826
+    },
+    {
+      "buffer": "cb3[3]",
+      "expression": "DissolveTextureSize",
+      "value": [
+        2.0,
+        2.0,
+        0.0,
+        1.0
+      ],
+      "start": 10826,
+      "end": 10863
+    },
+    {
+      "buffer": "cb3[4]",
+      "expression": "Flash Color",
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "start": 10863,
+      "end": 10900
+    },
+    {
+      "buffer": "cb3[5]",
+      "expression": "Flash Color.swizzle[0, 1, 2]",
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "start": 10900,
+      "end": 10950
+    },
+    {
+      "buffer": "cb3[6]",
+      "expression": "ExtraEmissiveColor",
+      "value": [
+        1.0,
+        0.06124600023031235,
+        0.9911019802093506,
+        1.0
+      ],
+      "start": 10950,
+      "end": 10987
+    },
+    {
+      "buffer": "cb3[7]",
+      "expression": "ExtraEmissiveColor.swizzle[0, 1, 2]",
+      "value": [
+        1.0,
+        0.06124600023031235,
+        0.9911019802093506,
+        0.0
+      ],
+      "start": 10987,
+      "end": 11037
+    },
+    {
+      "buffer": "cb3[8]",
+      "expression": "EmissiveBColor",
+      "value": [
+        1.0,
+        0.13600000739097595,
+        0.9861199855804443,
+        1.0
+      ],
+      "start": 11037,
+      "end": 11074
+    },
+    {
+      "buffer": "cb3[9]",
+      "expression": "EmissiveBColor.swizzle[0, 1, 2]",
+      "value": [
+        1.0,
+        0.13600000739097595,
+        0.9861199855804443,
+        0.0
+      ],
+      "start": 11074,
+      "end": 11124
+    },
+    {
+      "buffer": "cb3[10]",
+      "expression": "ConstantEmissiveColor",
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "start": 11124,
+      "end": 11161
+    },
+    {
+      "buffer": "cb3[11]",
+      "expression": "ConstantEmissiveColor.swizzle[0, 1, 2]",
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "start": 11161,
+      "end": 11211
+    },
+    {
+      "buffer": "cb3[12]",
+      "expression": "FoldedMath[2](ExtraEmissiveScalar,ExtraEmissiveColor.swizzle[0, 1, 2])",
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "start": 11211,
+      "end": 11299
+    },
+    {
+      "buffer": "cb3[13]",
+      "expression": "StatusColor",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "start": 11299,
+      "end": 11336
+    },
+    {
+      "buffer": "cb3[14]",
+      "expression": "StatusColor.swizzle[0, 1, 2]",
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "start": 11336,
+      "end": 11386
+    },
+    {
+      "buffer": "cb3[15]",
+      "expression": "SelectionColor.swizzle[0, 1, 2]",
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "start": 11386,
+      "end": 11436
+    },
+    {
+      "buffer": "cb3[16]",
+      "expression": "DissolveTextureSize.swizzle[0, 1, 2]",
+      "value": [
+        2.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      "start": 11436,
+      "end": 11486
+    },
+    {
+      "buffer": "cb3[17]",
+      "expression": "DissolveTextureSize.swizzle[0, 1, 2].swizzle[0, 1]",
+      "value": [
+        2.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      "start": 11486,
+      "end": 11549
+    },
+    {
+      "buffer": "cb3[18].x",
+      "expression": "EnchantedEye",
+      "value": 150.0,
+      "start": 11553,
+      "end": 11578
+    },
+    {
+      "buffer": "cb3[18].y",
+      "expression": "Enchanted",
+      "value": 0.0,
+      "start": 11578,
+      "end": 11603
+    },
+    {
+      "buffer": "cb3[18].z",
+      "expression": "FoldedMath[2](Enchanted,EnchantedEye)",
+      "value": 0.0,
+      "start": 11603,
+      "end": 11666
+    },
+    {
+      "buffer": "cb3[18].w",
+      "expression": "DissolveTextureSize.swizzle[0]",
+      "value": 2.0,
+      "start": 11666,
+      "end": 11716
+    },
+    {
+      "buffer": "cb3[19].x",
+      "expression": "FoldedMath[2](Enchanted,[3.0, 3.0, 3.0, 3.0])",
+      "value": 0.0,
+      "start": 11716,
+      "end": 11779
+    },
+    {
+      "buffer": "cb3[19].y",
+      "expression": "FoldedMath[2](Enchanted,[1.0, 1.0, 1.0, 1.0])",
+      "value": 0.0,
+      "start": 11779,
+      "end": 11842
+    },
+    {
+      "buffer": "cb3[19].z",
+      "expression": "FoldedMath[2](Enchanted,[8.0, 8.0, 8.0, 8.0])",
+      "value": 0.0,
+      "start": 11842,
+      "end": 11905
+    },
+    {
+      "buffer": "cb3[19].w",
+      "expression": "NaturalEmissive",
+      "value": 0.6000000238418579,
+      "start": 11905,
+      "end": 11930
+    },
+    {
+      "buffer": "cb3[20].x",
+      "expression": "Flash Timestamp",
+      "value": -100.0,
+      "start": 11930,
+      "end": 11955
+    },
+    {
+      "buffer": "cb3[20].y",
+      "expression": "Flash Seconds",
+      "value": 0.10000000149011612,
+      "start": 11955,
+      "end": 11980
+    },
+    {
+      "buffer": "cb3[20].z",
+      "expression": "ExtraEmissiveScalar",
+      "value": 0.0,
+      "start": 11980,
+      "end": 12005
+    },
+    {
+      "buffer": "cb3[20].w",
+      "expression": "EmissiveBPower",
+      "value": 10.0,
+      "start": 12005,
+      "end": 12030
+    },
+    {
+      "buffer": "cb3[21].x",
+      "expression": "EmissiveB_SinusTempo",
+      "value": 0.10000000149011612,
+      "start": 12030,
+      "end": 12055
+    },
+    {
+      "buffer": "cb3[21].y",
+      "expression": "EmissiveB_SinusVariation",
+      "value": 3.0,
+      "start": 12055,
+      "end": 12080
+    },
+    {
+      "buffer": "cb3[21].z",
+      "expression": "EmissiveB_SinusMin",
+      "value": 2.0,
+      "start": 12080,
+      "end": 12105
+    },
+    {
+      "buffer": "cb3[21].w",
+      "expression": "EmissiveB_Max",
+      "value": 0.0,
+      "start": 12105,
+      "end": 12130
+    },
+    {
+      "buffer": "cb3[22].x",
+      "expression": "DesaturateStart",
+      "value": -50.0,
+      "start": 12130,
+      "end": 12155
+    },
+    {
+      "buffer": "cb3[22].y",
+      "expression": "DesaturateDuration",
+      "value": 4.0,
+      "start": 12155,
+      "end": 12180
+    },
+    {
+      "buffer": "cb3[22].z",
+      "expression": "Saturation",
+      "value": 0.0,
+      "start": 12180,
+      "end": 12205
+    },
+    {
+      "buffer": "cb3[22].w",
+      "expression": "Metallic",
+      "value": 0.30000001192092896,
+      "start": 12205,
+      "end": 12230
+    },
+    {
+      "buffer": "cb3[23].x",
+      "expression": "DissolveStart",
+      "value": -50.0,
+      "start": 12230,
+      "end": 12255
+    },
+    {
+      "buffer": "cb3[23].y",
+      "expression": "DissolveDuration",
+      "value": 4.0,
+      "start": 12255,
+      "end": 12280
+    },
+    {
+      "buffer": "cb3[23].z",
+      "expression": "AlphaOverride",
+      "value": 1.0,
+      "start": 12280,
+      "end": 12305
+    },
+    {
+      "buffer": "cb3[23].w",
+      "expression": "FoldedMath[0](AlphaOverride,[0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612])",
+      "value": 1.1000000014901161,
+      "start": 12305,
+      "end": 12368
+    }
+  ],
+  "shader": {
+    "hash": "a76883453ab15344d2a4b5c87f3268361971f605",
+    "offset": 4650181,
+    "size": 1912,
+    "uncompressed": 6286,
+    "frequency": 3,
+    "material_offsets": [
+      24110,
+      24292,
+      40563,
+      40745
+    ],
+    "dxbc_offset": 196,
+    "dxbc_size": 5984,
+    "asm_lines": 209,
+    "model": "ps_5_0",
+    "shader_type_offset": 24186,
+    "shader_type": "TBasePassPSFNoLightMapPolicy",
+    "bin_sha256": "36b22cc8670bd567d073e050bbfd6507e54280a0ab7ba33c6fbdc83655cf0e58",
+    "dxbc_sha256": "3c6854fc8bf8fe078f61dacf3952cf3fe4f0667559d1ae5f95b2554c620c85db",
+    "asm_sha256": "76811ff6bf3c8cd1db74fab3a7f2a988155aba9d87376ea23d6e145267d3bf9a"
+  },
+  "resource_table": {
+    "ResourceTableBits": 24,
+    "ShaderResourceViewMap": {
+      "start": 4,
+      "count": 6,
+      "raw_u32": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4294967295
+      ]
+    },
+    "SamplerMap": {
+      "start": 32,
+      "count": 12,
+      "raw_u32": [
+        0,
+        0,
+        0,
+        5,
+        10,
+        50331905,
+        50332418,
+        50332931,
+        50333444,
+        50333957,
+        67117312,
+        4294967295
+      ],
+      "decoded_material_entries": [
+        {
+          "token": "0x03000101",
+          "uniform_buffer_index": 3,
+          "resource_index": 1,
+          "bind_index": 1
+        },
+        {
+          "token": "0x03000302",
+          "uniform_buffer_index": 3,
+          "resource_index": 3,
+          "bind_index": 2
+        },
+        {
+          "token": "0x03000503",
+          "uniform_buffer_index": 3,
+          "resource_index": 5,
+          "bind_index": 3
+        },
+        {
+          "token": "0x03000704",
+          "uniform_buffer_index": 3,
+          "resource_index": 7,
+          "bind_index": 4
+        },
+        {
+          "token": "0x03000905",
+          "uniform_buffer_index": 3,
+          "resource_index": 9,
+          "bind_index": 5
+        }
+      ]
+    },
+    "UnorderedAccessViewMap": {
+      "start": 84,
+      "count": 6,
+      "raw_u32": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4294967295
+      ]
+    },
+    "ResourceTableLayoutHashes": {
+      "start": 112,
+      "count": 5,
+      "raw_u32": [
+        0,
+        0,
+        0,
+        82249479,
+        96471035
+      ]
+    },
+    "TextureMap": {
+      "start": 136,
+      "count": 14,
+      "raw_u32": [
+        0,
+        0,
+        0,
+        5,
+        10,
+        50331651,
+        50332164,
+        50332677,
+        50333190,
+        50333703,
+        67117056,
+        67117569,
+        67118082,
+        4294967295
+      ],
+      "decoded_material_entries": [
+        {
+          "token": "0x03000003",
+          "uniform_buffer_index": 3,
+          "resource_index": 0,
+          "bind_index": 3
+        },
+        {
+          "token": "0x03000204",
+          "uniform_buffer_index": 3,
+          "resource_index": 2,
+          "bind_index": 4
+        },
+        {
+          "token": "0x03000405",
+          "uniform_buffer_index": 3,
+          "resource_index": 4,
+          "bind_index": 5
+        },
+        {
+          "token": "0x03000606",
+          "uniform_buffer_index": 3,
+          "resource_index": 6,
+          "bind_index": 6
+        },
+        {
+          "token": "0x03000807",
+          "uniform_buffer_index": 3,
+          "resource_index": 8,
+          "bind_index": 7
+        }
+      ]
+    },
+    "dxbc_offset": 196
+  },
+  "collection": {
+    "source": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\MPC_Dungeons.parsed.json",
+    "source_sha256": "51d14f9b3184f46cd0754a713f2a00f4d0140c575b1cde082d0e5a9f61e2533f",
+    "StateId": "8c7e6ed2fcf7474b800a708faccedb12",
+    "stateid_uexp_offset": 12498,
+    "parameter": {
+      "DefaultValue": 1.0,
+      "ParameterName": "DeathEmissive",
+      "Id": "8de1de92877c294fb9b6a0407c548a99"
+    },
+    "parent_expression": {
+      "index": 2,
+      "class_index": -2,
+      "super_index": 0,
+      "template_index": -10,
+      "outer": 1,
+      "name": "MaterialExpressionCollectionParameter_0",
+      "object_flags": 8,
+      "serial_bytes": 168,
+      "serial_offset": 210966,
+      "uexp_offset": 199025,
+      "object_path": "/Game/Models/Master_ModelMaterial.Master_ModelMaterial.MaterialExpressionCollectionParameter_0",
+      "class_path": "/Script/Engine.MaterialExpressionCollectionParameter",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__MaterialExpressionCollectionParameter",
+      "properties": [
+        {
+          "name": "Collection",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -19,
+            "path": "/Game/Materials/MPC_Dungeons.MPC_Dungeons"
+          }
+        },
+        {
+          "name": "ParameterName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 54,
+          "size": 8,
+          "metadata": {},
+          "value": "DeathEmissive"
+        },
+        {
+          "name": "ParameterId",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 62,
+          "value_offset": 111,
+          "size": 16,
+          "metadata": {
+            "struct": "Guid",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": "8de1de92877c294fb9b6a0407c548a99"
+        },
+        {
+          "name": "Material",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 127,
+          "value_offset": 152,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 1,
+            "path": "/Game/Models/Master_ModelMaterial.Master_ModelMaterial"
+          }
+        }
+      ],
+      "tagged_property_bytes": 164,
+      "remaining_native_bytes": 4
+    },
+    "binding_uexp_offset": 23905,
+    "material_ub": 3,
+    "collection_ub": 2
+  },
+  "instruction_trace": {
+    "specular_sample": {
+      "line": 79,
+      "instruction": "sample_b_indexable(texture2d)(float,float,float,float) r3.xyzw, v2.xyxx, t3.xyzw, s1, cb0[137].y"
+    },
+    "albedo_sample": {
+      "line": 93,
+      "instruction": "sample_b_indexable(texture2d)(float,float,float,float) r5.xyzw, v2.xyxx, t5.xyzw, s3, cb0[137].y"
+    },
+    "natural_emissive_add_flash": {
+      "line": 99,
+      "instruction": "mad r5.xyz, r5.xyzx, cb3[19].wwww, r6.xyzx"
+    },
+    "B_times_color": {
+      "line": 100,
+      "instruction": "mul r6.xyz, r3.zzzz, cb3[9].xyzx"
+    },
+    "B_times_power": {
+      "line": 101,
+      "instruction": "mul r6.xyz, r6.xyzx, cb3[20].wwww"
+    },
+    "time_times_tempo": {
+      "line": 102,
+      "instruction": "mul r0.w, cb0[136].z, cb3[21].x"
+    },
+    "radians": {
+      "line": 103,
+      "instruction": "mul r0.w, r0.w, l(6.283185)"
+    },
+    "sine": {
+      "line": 104,
+      "instruction": "sincos r0.w, null, r0.w"
+    },
+    "divide_variation": {
+      "line": 105,
+      "instruction": "div r0.w, r0.w, cb3[21].y"
+    },
+    "add_min": {
+      "line": 106,
+      "instruction": "add r0.w, r0.w, cb3[21].z"
+    },
+    "lower_clamp_named_Max": {
+      "line": 107,
+      "instruction": "max r0.w, r0.w, cb3[21].w"
+    },
+    "pulse_times_color": {
+      "line": 108,
+      "instruction": "mul r7.xyz, r0.wwww, cb3[9].xyzx"
+    },
+    "constant_emissive_alpha": {
+      "line": 109,
+      "instruction": "mul r8.xyz, r3.wwww, cb3[11].xyzx"
+    },
+    "B_product_add_constant": {
+      "line": 110,
+      "instruction": "mad r6.xyz, r6.xyzx, r7.xyzx, r8.xyzx"
+    },
+    "add_extra": {
+      "line": 111,
+      "instruction": "add r6.xyz, r6.xyzx, cb3[12].xyzx"
+    },
+    "add_to_natural": {
+      "line": 112,
+      "instruction": "add r5.xyz, r5.xyzx, r6.xyzx"
+    },
+    "add_enchantment_G": {
+      "line": 125,
+      "instruction": "mad r3.yzw, r4.xxyz, r3.yyyy, r5.xxyz"
+    },
+    "status_color": {
+      "line": 126,
+      "instruction": "mul r3.yzw, r3.yyzw, cb3[14].xxyz"
+    },
+    "collection_and_selection": {
+      "line": 127,
+      "instruction": "mad r4.xyz, cb2[0].xxxx, r3.yzwy, cb3[15].xyzx"
+    },
+    "nonnegative_emission": {
+      "line": 178,
+      "instruction": "max r4.xyz, r4.xyzx, l(0.000000, 0.000000, 0.000000, 0.000000)"
+    },
+    "output": {
+      "line": 199,
+      "instruction": "mad o0.xyz, cb0[139].xxxx, r3.xyzx, r4.xyzx"
+    }
+  },
+  "default_formula": {
+    "A": "GPU sample of Texture RGB, t5/s3; not raw PNG bytes",
+    "S": "GPU sample of Specular RGBA, t3/s1; not raw PNG bytes",
+    "t": "View uniform cb0[136].z, the time input used by the shader; no runtime buffer captured",
+    "pulse": "max(sin(6.283185307179586*t*0.10000000149011612)/3 + 2, 0)",
+    "emission": "0.6000000238418579*A + S.b*10*pulse*(C*C)",
+    "C": [
+      1.0,
+      0.13600000739097595,
+      0.9861199855804443
+    ],
+    "C_squared": [
+      1.0,
+      0.018496002010345514,
+      0.9724326259611757
+    ],
+    "pulse_range": [
+      1.6666666666666667,
+      2.3333333333333335
+    ],
+    "B_RGB_multiplier_range": [
+      [
+        16.666666666666668,
+        23.333333333333336
+      ],
+      [
+        0.30826670017242525,
+        0.43157338024139535
+      ],
+      [
+        16.207210432686264,
+        22.69009460576077
+      ]
+    ],
+    "conditions": "Enchanted=0; ConstantEmissiveColor.rgb=0; ExtraEmissiveScalar=0; Flash Color.rgb=0; DesaturateStart=-50 with zero Saturation; StatusColor.rgb=1; DeathEmissive=1; SelectionColor.rgb=0"
+  },
+  "limitations": [
+    "All formulas describe shader sample values and serialized defaults, not a live GPU/game capture.",
+    "SRGB is absent in both texture property exports. No new SRV/texture-constructor inspection was performed; equations intentionally use sampled values, not byte/255.",
+    "Nonzero B support is the local extra pink pulsation support, not the full emission support: NaturalEmissive contributes wherever sampled base RGB is nonzero and fragments survive alpha/dissolve.",
+    "Time pulse/HDR/color-squared/natural term are not reproduced by current Java light_emission=15 mask split.",
+    "No Java integer light_emission value is asserted physically equivalent to NaturalEmissive=0.6.",
+    "Runtime parameters, scene lighting, exposure, bloom, mip/filtering and exact temporal phase are not captured."
+  ]
+}

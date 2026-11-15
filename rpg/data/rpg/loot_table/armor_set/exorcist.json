@@ -1,0 +1,811 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_helmet",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "驱魔人兜帽",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "行走于",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪仆]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "之间的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "最后一盏",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[圣灯]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[明察]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "攻击距离 +0.5 格",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［驱魔圣职］",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "免疫失明与黑暗",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:eye",
+                  "material": "minecraft:gold"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 3,
+                  "minecraft:fire_protection": 2,
+                  "minecraft:projectile_protection": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/exorcist/head/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/exorcist/head/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/exorcist/head/2"
+                  },
+                  {
+                    "type": "minecraft:entity_interaction_range",
+                    "amount": 0.5,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/exorcist/head/3"
+                  }
+                ],
+                "minecraft:dyed_color": 13938487,
+                "minecraft:max_damage": 407
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"exorcist\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "驱魔人法衣",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "行走于",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪仆]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "之间的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "最后一盏",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[圣灯]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[誓约]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "生命上限 +30%",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［驱魔圣职］",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "免疫失明与黑暗",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:host",
+                  "material": "minecraft:gold"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 3,
+                  "minecraft:blast_protection": 2,
+                  "minecraft:fire_protection": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 7,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/exorcist/chest/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/exorcist/chest/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/exorcist/chest/2"
+                  },
+                  {
+                    "type": "minecraft:max_health",
+                    "amount": 0.3,
+                    "operation": "add_multiplied_base",
+                    "slot": "chest",
+                    "id": "rpg:armor/exorcist/chest/3"
+                  }
+                ],
+                "minecraft:dyed_color": 4865299,
+                "minecraft:max_damage": 592
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"exorcist\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_leggings",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "驱魔人绑腿",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "行走于",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪仆]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "之间的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "最后一盏",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[圣灯]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[行脚]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "潜行速度 +30%，可直接跨上一格高的台阶",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［驱魔圣职］",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "免疫失明与黑暗",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:wayfinder",
+                  "material": "minecraft:gold"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 3,
+                  "minecraft:projectile_protection": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 5,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/exorcist/legs/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/exorcist/legs/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/exorcist/legs/2"
+                  },
+                  {
+                    "type": "minecraft:sneaking_speed",
+                    "amount": 0.3,
+                    "operation": "add_multiplied_base",
+                    "slot": "legs",
+                    "id": "rpg:armor/exorcist/legs/3"
+                  },
+                  {
+                    "type": "minecraft:step_height",
+                    "amount": 0.5,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/exorcist/legs/4"
+                  }
+                ],
+                "minecraft:max_damage": 555
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"exorcist\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_boots",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "驱魔人长靴",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "行走于",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪仆]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "之间的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "最后一盏",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[圣灯]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[巡礼]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "移动速度 +10%，安全摔落高度 +3 格",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［驱魔圣职］",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "免疫失明与黑暗",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:wayfinder",
+                  "material": "minecraft:gold"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 3,
+                  "minecraft:feather_falling": 3
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/exorcist/feet/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/exorcist/feet/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/exorcist/feet/2"
+                  },
+                  {
+                    "type": "minecraft:movement_speed",
+                    "amount": 0.1,
+                    "operation": "add_multiplied_base",
+                    "slot": "feet",
+                    "id": "rpg:armor/exorcist/feet/3"
+                  },
+                  {
+                    "type": "minecraft:safe_fall_distance",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/exorcist/feet/4"
+                  }
+                ],
+                "minecraft:max_damage": 481
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"exorcist\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

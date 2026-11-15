@@ -2,7 +2,7 @@
 execute as @e[type=minecraft:armor_stand,tag=rpg.pf.rig,limit=1] at @s run tp @e[type=minecraft:marker,tag=rpg.pf.center,limit=1] ~ ~ ~
 function rpg:pope_fight/heart/weak_off
 kill @e[type=minecraft:vindicator,tag=rpg.pf.heart]
-tag @a[tag=rpg.pf.tgt] remove rpg.pf.tgt
+tag @e[tag=rpg.unit,tag=rpg.pf.tgt] remove rpg.pf.tgt
 execute as @e[type=minecraft:armor_stand,tag=rpg.pf.face] at @s run function rpg:arch_visage/internal/clear
 kill @e[tag=rpg.pope.fx]
 scoreboard players set #stage rpg_pf 5

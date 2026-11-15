@@ -1,0 +1,3721 @@
+{
+  "status": "PASS",
+  "project": "lucifer_verdant",
+  "native": "Blockbench 5.2.2",
+  "scope": "Every authored source/adapted key pose against actual native armature world matrices, after native interpolation and Molang numeric parsing. Does not validate Minecraft rendering.",
+  "decimal_serialization": "Native addKeyframe generates scientific notation for tiny nonzero channels; explicit fixed decimal numeric strings prevent Molang exponent parsing as subtraction. No expressions or scale tracks.",
+  "payload_sha256": "725e2d14f4490da587adf3b762fc3ced0af08d4d9093e330dba40b72052d0ec2",
+  "reference_sha256": "ecb7c492e1bdc5ee36fbebf2f8060352194d715a16c17ffab828e7769d39afec",
+  "max_rotation_error": 9.325873406851315e-15,
+  "max_position_error_px": 3.1020519486446574e-11,
+  "clips": [
+    {
+      "clip": "idle",
+      "poses": 188,
+      "max_rotation_matrix_error": 5.773159728050814e-15,
+      "max_position_error_px": 2.5757174171303632e-14,
+      "frames": [
+        {
+          "time": 0,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.03319964518689745,
+          "rotation_error": 5.551115123125783e-15,
+          "position_error_px": 2.398081733190338e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.0663992903737949,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.09959893556069234,
+          "rotation_error": 5.440092820663267e-15,
+          "position_error_px": 2.042810365310288e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.1327985807475898,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.16599822593448724,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.19919787112138468,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.23239751630828212,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.2655971614951796,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 0.29879680668207703,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.3319964518689745,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 2.042810365310288e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.3651960970558719,
+          "rotation_error": 2.55351295663786e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "L_Leg"
+        },
+        {
+          "time": 0.39839574224276936,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.4315953874296668,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.46479503261656424,
+          "rotation_error": 2.886579864025407e-15,
+          "position_error_px": 1.3322676295501878e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.4979946778034617,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 2.042810365310288e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.5311943229903592,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.5643939681772566,
+          "rotation_error": 3.219646771412954e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 0.5975936133641541,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.6307932585510515,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.663992903737949,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.220446049250313e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.6971925489248464,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.7303921941117438,
+          "rotation_error": 5.773159728050814e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.7635918392986413,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.7967914844855387,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.8299911296724362,
+          "rotation_error": 3.219646771412954e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8631907748593336,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.896390420046231,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.9295900652331285,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.9627897104200259,
+          "rotation_error": 3.885780586188048e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.9959893556069234,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.029189000793821,
+          "rotation_error": 3.552713678800501e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.0623886459807184,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.0955882911676158,
+          "rotation_error": 3.1086244689504383e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.1287879363545132,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.1619875815414107,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.1951872267283081,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.2283868719152056,
+          "rotation_error": 5.218048215738236e-15,
+          "position_error_px": 2.042810365310288e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.261586517102103,
+          "rotation_error": 2.886579864025407e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.2947861622890005,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.327985807475898,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.3611854526627953,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.3322676295501878e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.3943850978496928,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.4275847430365902,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.4607843882234877,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.493984033410385,
+          "rotation_error": 3.219646771412954e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.5271836785972825,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.56038332378418,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.5935829689710774,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.6267826141579749,
+          "rotation_error": 2.9976021664879227e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.6599822593448723,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.6931819045317698,
+          "rotation_error": 3.552713678800501e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.7263815497186672,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.7595811949055646,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.792780840092462,
+          "rotation_error": 2.55351295663786e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "L_Leg"
+        },
+        {
+          "time": 1.8259804852793595,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.859180130466257,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.8923797756531544,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.9255794208400518,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 1.3322676295501878e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.9587790660269493,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.9919787112138467,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.0251783564007444,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 2.058378001587642,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.0915776467745393,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.1247772919614367,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.157976937148334,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.1911765823352316,
+          "rotation_error": 5.218048215738236e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.224376227522129,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.2575758727090265,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.290775517895924,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.3239751630828214,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.357174808269719,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 2.3903744534566163,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.4235740986435137,
+          "rotation_error": 5.218048215738236e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.456773743830411,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 2.4899733890173086,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.523173034204206,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.5563726793911035,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.589572324578001,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.6227719697648983,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.655971614951796,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.6891712601386932,
+          "rotation_error": 4.6629367034256575e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 2.7223709053255907,
+          "rotation_error": 2.9976021664879227e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.755570550512488,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.7887701956993856,
+          "rotation_error": 2.9976021664879227e-15,
+          "position_error_px": 1.1546319456101628e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 2.821969840886283,
+          "rotation_error": 3.552713678800501e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.8551694860731804,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.888369131260078,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.9215687764469753,
+          "rotation_error": 5.551115123125783e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.9547684216338728,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 2.98796806682077,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 3.0211677120076676,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 3.054367357194565,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.0875670023814625,
+          "rotation_error": 3.552713678800501e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 3.12076664756836,
+          "rotation_error": 4.6629367034256575e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 3.1539662927552574,
+          "rotation_error": 3.885780586188048e-15,
+          "position_error_px": 1.3322676295501878e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.187165937942155,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 3.2203655831290523,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.2535652283159497,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.286764873502847,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.3199645186897446,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 3.353164163876642,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.3863638090635395,
+          "rotation_error": 2.55351295663786e-15,
+          "position_error_px": 1.3322676295501878e-14,
+          "worst_rotation_bone": "L_Leg"
+        },
+        {
+          "time": 3.419563454250437,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.4527630994373344,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.485962744624232,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.042810365310288e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.5191623898111293,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.5523620349980267,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.585561680184924,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 3.6187613253718216,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.651960970558719,
+          "rotation_error": 3.552713678800501e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.6851606157456165,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 2.220446049250313e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.718360260932514,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 3.7515599061194114,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.042810365310288e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 3.784759551306309,
+          "rotation_error": 2.55351295663786e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "L_Leg"
+        },
+        {
+          "time": 3.8179591964932063,
+          "rotation_error": 3.219646771412954e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.8511588416801037,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.884358486867001,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.9175581320538986,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 3.950757777240796,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.9839574224276935,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.017157067614591,
+          "rotation_error": 2.6645352591003757e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.050356712801489,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 4.083556357988386,
+          "rotation_error": 3.1086244689504383e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 4.116756003175284,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 4.149955648362181,
+          "rotation_error": 5.440092820663267e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 4.183155293549079,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.216354938735976,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.249554583922873,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.282754229109771,
+          "rotation_error": 3.1086244689504383e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.315953874296668,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 2.042810365310288e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.349153519483566,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 4.382353164670463,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.415552809857361,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.448752455044258,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.4819521002311555,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.515151745418053,
+          "rotation_error": 2.9976021664879227e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.54835139060495,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.581551035791848,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 4.614750680978745,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.647950326165643,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 2.5757174171303632e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.68114997135254,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.714349616539438,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.747549261726335,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.7807489069132325,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.81394855210013,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.847148197287027,
+          "rotation_error": 3.552713678800501e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 4.880347842473925,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.913547487660822,
+          "rotation_error": 4.6629367034256575e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 4.94674713284772,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 2.220446049250313e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 4.979946778034617,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.013146423221515,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.046346068408412,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.0795457135953095,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 5.112745358782207,
+          "rotation_error": 2.7755575615628914e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.145945003969104,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 5.179144649156002,
+          "rotation_error": 3.885780586188048e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 5.212344294342899,
+          "rotation_error": 2.886579864025407e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.245543939529797,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.278743584716694,
+          "rotation_error": 2.55351295663786e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "L_Leg"
+        },
+        {
+          "time": 5.311943229903592,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.345142875090489,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 5.3783425202773865,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.411542165464284,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.444741810651181,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.477941455838079,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.511141101024976,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.544340746211874,
+          "rotation_error": 2.9976021664879227e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 5.577540391398771,
+          "rotation_error": 3.885780586188048e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.6107400365856686,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 5.643939681772566,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 2.220446049250313e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 5.677139326959463,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.710338972146361,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.743538617333258,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.776738262520156,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.809937907707053,
+          "rotation_error": 4.6629367034256575e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.843137552893951,
+          "rotation_error": 3.1086244689504383e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.876337198080848,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.9095368432677455,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.942736488454643,
+          "rotation_error": 5.218048215738236e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 5.97593613364154,
+          "rotation_error": 3.552713678800501e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 6.009135778828438,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 6.042335424015335,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 6.075535069202233,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 6.10873471438913,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 6.141934359576028,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "Head"
+        },
+        {
+          "time": 6.175134004762925,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 6.2083336499498225,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        }
+      ]
+    },
+    {
+      "clip": "walk",
+      "poses": 25,
+      "max_rotation_matrix_error": 7.438494264988549e-15,
+      "max_position_error_px": 3.1020519486446574e-11,
+      "frames": [
+        {
+          "time": 0,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 3.1020519486446574e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.032986112421861453,
+          "rotation_error": 7.438494264988549e-15,
+          "position_error_px": 3.1011804235703266e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.06597222484372291,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 3.099209777701617e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.09895833726558435,
+          "rotation_error": 4.6629367034256575e-15,
+          "position_error_px": 3.093703071499476e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.13194444968744581,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 3.0876634582455154e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.16493056210930726,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 3.084416055898487e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.1979166745311687,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 3.087308186877635e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.23090278695303018,
+          "rotation_error": 6.661338147750939e-15,
+          "position_error_px": 3.092276434912833e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.26388889937489163,
+          "rotation_error": 6.106226635438361e-15,
+          "position_error_px": 3.0976499143520186e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.2968750117967531,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 3.101055523480056e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.3298611242186145,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 3.1018743129607174e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.36284723664047597,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 3.096353728970769e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.3958333490623374,
+          "rotation_error": 5.551115123125783e-15,
+          "position_error_px": 3.088179711951966e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.4288194614841989,
+          "rotation_error": 7.216449660063518e-15,
+          "position_error_px": 3.077749166635613e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.46180557390606036,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 3.0675462170393075e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.4947916863279218,
+          "rotation_error": 5.440092820663267e-15,
+          "position_error_px": 3.0603963807607215e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.5277777987497833,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 3.0594193844990514e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.5607639111716447,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 3.065137033075871e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.5937500235935061,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 3.076294774473354e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.6267361360153676,
+          "rotation_error": 4.6629367034256575e-15,
+          "position_error_px": 3.08717496011468e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.659722248437229,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 3.0954294683027683e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.6927083608590905,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 3.100630863173137e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.7256944732809519,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 3.101309486996939e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.7586805857028134,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 3.1020519486446574e-11,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.7916666981246748,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 3.1020519486446574e-11,
+          "worst_rotation_bone": "R_Arm"
+        }
+      ]
+    },
+    {
+      "clip": "attack",
+      "poses": 32,
+      "max_rotation_matrix_error": 8.215650382226158e-15,
+      "max_position_error_px": 1.9539925233402755e-14,
+      "frames": [
+        {
+          "time": 0,
+          "rotation_error": 7.327471962526033e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.03333333333333333,
+          "rotation_error": 7.771561172376096e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.06,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.06666666666666667,
+          "rotation_error": 7.105427357601002e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.1,
+          "rotation_error": 7.771561172376096e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.13333333333333333,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.16,
+          "rotation_error": 7.993605777301127e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.16666666666666666,
+          "rotation_error": 7.882583474838611e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.2,
+          "rotation_error": 7.105427357601002e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.23333333333333334,
+          "rotation_error": 6.439293542825908e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.26666666666666666,
+          "rotation_error": 6.994405055138486e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.3,
+          "rotation_error": 6.8833827526759706e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.3333333333333333,
+          "rotation_error": 7.327471962526033e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.34,
+          "rotation_error": 8.215650382226158e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.36666666666666664,
+          "rotation_error": 7.771561172376096e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.4,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.43333333333333335,
+          "rotation_error": 8.104628079763643e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.4666666666666667,
+          "rotation_error": 7.216449660063518e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.5,
+          "rotation_error": 7.993605777301127e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.5333333333333333,
+          "rotation_error": 7.771561172376096e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.5666666666666667,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.6,
+          "rotation_error": 7.327471962526033e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.62,
+          "rotation_error": 7.105427357601002e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.6333333333333333,
+          "rotation_error": 7.771561172376096e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.6666666666666666,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.7,
+          "rotation_error": 8.215650382226158e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.7333333333333333,
+          "rotation_error": 7.771561172376096e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.7666666666666666,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.8,
+          "rotation_error": 6.5503158452884236e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.8333333333333334,
+          "rotation_error": 6.772360450213455e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.8666666666666667,
+          "rotation_error": 6.5503158452884236e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.9,
+          "rotation_error": 7.216449660063518e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        }
+      ]
+    },
+    {
+      "clip": "strong",
+      "poses": 52,
+      "max_rotation_matrix_error": 6.106226635438361e-15,
+      "max_position_error_px": 3.552713678800501e-14,
+      "frames": [
+        {
+          "time": 0,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "Head"
+        },
+        {
+          "time": 0.01513410557373529,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "Head"
+        },
+        {
+          "time": 0.03716475707572808,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 3.019806626980426e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.05919540857772099,
+          "rotation_error": 2.9976021664879227e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.08122606007971378,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 3.552713678800501e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.10325671158170668,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.12528736308369948,
+          "rotation_error": 6.106226635438361e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.14731801458569238,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.16934866608768517,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.19137931758967808,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.21340996909167087,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.23544062059366366,
+          "rotation_error": 3.885780586188048e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.2574712720956567,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 2.220446049250313e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.27950192359764947,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.30153257509964226,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.32356322660163506,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.34559387810362807,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.36762452960562086,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.38965518110761366,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.41168583260960645,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.43371648411159947,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.45574713561359226,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.47777778711558505,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.49980843861757784,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.5218390901195709,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.5438697416215637,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.5659003931235564,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.5879310446255492,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.6099616961275423,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.631992347629535,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.6540229991315278,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.6760536506335206,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.6980843021355136,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.7201149536375064,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.7421456051394992,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.764176256641492,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.7862069081434848,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8082375596454778,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8302682111474706,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8522988626494634,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8743295141514562,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8963601656534492,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.918390817155442,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.9404214686574348,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.9624521201594276,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.9844827716614206,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.0065134231634134,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.0285440746654062,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.050574726167399,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.072605377669392,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.0946360291713848,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.1166666806733776,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        }
+      ]
+    },
+    {
+      "clip": "cast",
+      "poses": 18,
+      "max_rotation_matrix_error": 2.3314683517128287e-15,
+      "max_position_error_px": 2.4868995751603507e-14,
+      "frames": [
+        {
+          "time": 0,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.034375000000000044,
+          "rotation_error": 1.4432899320127035e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 0.06874999999999998,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 0.10312500000000002,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.13749999999999996,
+          "rotation_error": 1.2212453270876722e-15,
+          "position_error_px": 7.105427357601002e-15,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.171875,
+          "rotation_error": 1.4432899320127035e-15,
+          "position_error_px": 7.105427357601002e-15,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 0.19999999999999996,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 0.20624999999999993,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 0.24062499999999998,
+          "rotation_error": 1.4432899320127035e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 0.275,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 0.30937499999999996,
+          "rotation_error": 2.1094237467877974e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 0.3437499999999999,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 8.881784197001252e-15,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.37812499999999993,
+          "rotation_error": 2.3314683517128287e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 0.4125,
+          "rotation_error": 2.1094237467877974e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "Head"
+        },
+        {
+          "time": 0.446875,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.48125000000000007,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.5156249999999999,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 0.5499999999999999,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        }
+      ]
+    },
+    {
+      "clip": "laugh",
+      "poses": 99,
+      "max_rotation_matrix_error": 6.994405055138486e-15,
+      "max_position_error_px": 4.973799150320701e-14,
+      "frames": [
+        {
+          "time": 0,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.03324915896981436,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.06649831793962872,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.09974747690944309,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.13299663587925745,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.16624579484907182,
+          "rotation_error": 5.773159728050814e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.19949495381888618,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.23274411278870052,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 0.2659932717585149,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.29924243072832923,
+          "rotation_error": 3.885780586188048e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.33249158969814363,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.36574074866795797,
+          "rotation_error": 6.5503158452884236e-15,
+          "position_error_px": 3.019806626980426e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.39898990763777237,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.4322390666075867,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.46548822557740105,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.49873738454721545,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.5319865435170298,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 0.5652357024868442,
+          "rotation_error": 3.3306690738754696e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.5984848614566585,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.6317340204264729,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.6649831793962873,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.6982323383661015,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.7314814973359159,
+          "rotation_error": 3.552713678800501e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.7647306563057303,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.7979798152755447,
+          "rotation_error": 3.552713678800501e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.831228974245359,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8644781332151734,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.8977272921849878,
+          "rotation_error": 5.88418203051333e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.9309764511548021,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 1.3322676295501878e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.9642256101246165,
+          "rotation_error": 2.6645352591003757e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 0.9974747690944309,
+          "rotation_error": 6.661338147750939e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.0307239280642453,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.0639730870340596,
+          "rotation_error": 3.219646771412954e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.0972222460038739,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 1.1546319456101628e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.1304714049736884,
+          "rotation_error": 3.219646771412954e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.1637205639435027,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.196969722913317,
+          "rotation_error": 2.9976021664879227e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.2302188818831314,
+          "rotation_error": 3.885780586188048e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.2634680408529457,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.1546319456101628e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.29671719982276,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.3299663587925745,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.3632155177623888,
+          "rotation_error": 6.328271240363392e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.396464676732203,
+          "rotation_error": 5.218048215738236e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.4297138357020176,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.4629629946718319,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.4962121536416462,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.5294613126114607,
+          "rotation_error": 6.217248937900877e-15,
+          "position_error_px": 1.3322676295501878e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.562710471581275,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.5959596305510895,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.3322676295501878e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.6292087895209038,
+          "rotation_error": 6.439293542825908e-15,
+          "position_error_px": 2.930988785010413e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.662457948490718,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.6957071074605325,
+          "rotation_error": 6.994405055138486e-15,
+          "position_error_px": 3.907985046680551e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.7289562664303468,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 3.730349362740526e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.7622054254001611,
+          "rotation_error": 5.88418203051333e-15,
+          "position_error_px": 3.730349362740526e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.7954545843699756,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 3.907985046680551e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.82870374333979,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.8619529023096042,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 3.552713678800501e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.8952020612794187,
+          "rotation_error": 3.1086244689504383e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 1.928451220249233,
+          "rotation_error": 6.328271240363392e-15,
+          "position_error_px": 3.552713678800501e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.9617003792190473,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 3.730349362740526e-14,
+          "worst_rotation_bone": "Head"
+        },
+        {
+          "time": 1.9949495381888618,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 4.440892098500626e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.028198697158676,
+          "rotation_error": 2.7755575615628914e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.0614478561284906,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 2.094697015098305,
+          "rotation_error": 2.886579864025407e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 2.127946174068119,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "Head"
+        },
+        {
+          "time": 2.1611953330379334,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 4.263256414560601e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.1944444920077477,
+          "rotation_error": 3.774758283725532e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.2276936509775624,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 3.730349362740526e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.2609428099473767,
+          "rotation_error": 6.439293542825908e-15,
+          "position_error_px": 4.085620730620576e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.294191968917191,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.3274411278870053,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 3.730349362740526e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.3606902868568196,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 3.197442310920451e-14,
+          "worst_rotation_bone": "Head"
+        },
+        {
+          "time": 2.393939445826634,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 2.4271886047964486,
+          "rotation_error": 6.439293542825908e-15,
+          "position_error_px": 4.973799150320701e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.460437763766263,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 4.263256414560601e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.493686922736077,
+          "rotation_error": 6.328271240363392e-15,
+          "position_error_px": 4.796163466380676e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.5269360817058915,
+          "rotation_error": 2.7755575615628914e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.5601852406757057,
+          "rotation_error": 5.773159728050814e-15,
+          "position_error_px": 3.552713678800501e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.59343439964552,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 3.375077994860476e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 2.6266835586153348,
+          "rotation_error": 2.9976021664879227e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.659932717585149,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 4.440892098500626e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.6931818765549633,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 3.197442310920451e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.7264310355247776,
+          "rotation_error": 2.9976021664879227e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.759680194494592,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 3.907985046680551e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.792929353464406,
+          "rotation_error": 3.219646771412954e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.826178512434221,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 4.085620730620576e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.859427671404035,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 2.8926768303738495,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 3.019806626980426e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.9259259893436638,
+          "rotation_error": 2.55351295663786e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.959175148313478,
+          "rotation_error": 3.9968028886505635e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 2.9924243072832923,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 3.025673466253107,
+          "rotation_error": 4.126907149348824e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 3.0589226252229214,
+          "rotation_error": 4.3298697960381105e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.0921717841927356,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 2.5757174171303632e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 3.12542094316255,
+          "rotation_error": 4.884981308350689e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 3.158670102132364,
+          "rotation_error": 5.218048215738236e-15,
+          "position_error_px": 2.220446049250313e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 3.191919261102179,
+          "rotation_error": 4.6629367034256575e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 3.2251684200719932,
+          "rotation_error": 5.218048215738236e-15,
+          "position_error_px": 2.398081733190338e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 3.2584175790418075,
+          "rotation_error": 3.4416913763379853e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        }
+      ]
+    },
+    {
+      "clip": "stun",
+      "poses": 49,
+      "max_rotation_matrix_error": 7.66053886991358e-15,
+      "max_position_error_px": 2.842170943040401e-14,
+      "frames": [
+        {
+          "time": 0,
+          "rotation_error": 6.439293542825908e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.033163264660674416,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.06632652932134883,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.09948979398202323,
+          "rotation_error": 6.328271240363392e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.13265305864269766,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.16581632330337207,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.19897958796404647,
+          "rotation_error": 6.661338147750939e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.2321428526247209,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.2653061172853953,
+          "rotation_error": 5.88418203051333e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.2984693819460697,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.33163264660674413,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.36479591126741856,
+          "rotation_error": 6.5503158452884236e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.39795917592809293,
+          "rotation_error": 6.439293542825908e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.43112244058876736,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.4642857052494418,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.4974489699101162,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.5306122345707907,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.563775499231465,
+          "rotation_error": 6.328271240363392e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.5969387638921394,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.6301020285528138,
+          "rotation_error": 6.217248937900877e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.6632652932134883,
+          "rotation_error": 6.994405055138486e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.6964285578741627,
+          "rotation_error": 6.106226635438361e-15,
+          "position_error_px": 2.7533531010703882e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.7295918225348371,
+          "rotation_error": 4.107825191113079e-15,
+          "position_error_px": 1.509903313490213e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.7627550871955115,
+          "rotation_error": 5.773159728050814e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.7959183518561859,
+          "rotation_error": 4.773959005888173e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8290816165168603,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8622448811775347,
+          "rotation_error": 6.106226635438361e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.8954081458382092,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 0.9285714104988836,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.961734675159558,
+          "rotation_error": 6.772360450213455e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 0.9948979398202324,
+          "rotation_error": 5.440092820663267e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.0280612044809068,
+          "rotation_error": 7.66053886991358e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.0612244691415813,
+          "rotation_error": 5.551115123125783e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.0943877338022556,
+          "rotation_error": 4.440892098500626e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.12755099846293,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.1607142631236045,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.1938775277842788,
+          "rotation_error": 5.88418203051333e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.2270407924449533,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.2602040571056277,
+          "rotation_error": 4.551914400963142e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.2933673217663022,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.3265305864269765,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.3596938510876508,
+          "rotation_error": 3.6637359812630166e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.3928571157483254,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.4260203804089997,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.4591836450696742,
+          "rotation_error": 4.218847493575595e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.4923469097303486,
+          "rotation_error": 4.9960036108132044e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.525510174391023,
+          "rotation_error": 5.10702591327572e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "R_Arm"
+        },
+        {
+          "time": 1.5586734390516974,
+          "rotation_error": 5.551115123125783e-15,
+          "position_error_px": 2.5757174171303632e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        },
+        {
+          "time": 1.5918367037123717,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_L_Weapon"
+        }
+      ]
+    },
+    {
+      "clip": "rise",
+      "poses": 73,
+      "max_rotation_matrix_error": 2.3314683517128287e-15,
+      "max_position_error_px": 1.7763568394002505e-14,
+      "frames": [
+        {
+          "time": 0,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.03333333333333333,
+          "rotation_error": 1.5543122344752192e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.06666666666666667,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.1,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.13333333333333333,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.16666666666666666,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.2,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.23333333333333334,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.26666666666666666,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.3,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.3333333333333333,
+          "rotation_error": 2.1094237467877974e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.36666666666666664,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 8.881784197001252e-15,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.4,
+          "rotation_error": 1.4432899320127035e-15,
+          "position_error_px": 8.881784197001252e-15,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.43333333333333335,
+          "rotation_error": 2.3314683517128287e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.4666666666666667,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.5,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.5333333333333333,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.5666666666666667,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.2434497875801753e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.6,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.6333333333333333,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.6666666666666666,
+          "rotation_error": 1.5543122344752192e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.7,
+          "rotation_error": 1.5543122344752192e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.7333333333333333,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_Head"
+        },
+        {
+          "time": 0.7666666666666666,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.8,
+          "rotation_error": 1.2212453270876722e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.8333333333333334,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 7.105427357601002e-15,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.8666666666666667,
+          "rotation_error": 1.3322676295501878e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 0.9,
+          "rotation_error": 1.2212453270876722e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.9333333333333333,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 0.9666666666666667,
+          "rotation_error": 1.2212453270876722e-15,
+          "position_error_px": 7.105427357601002e-15,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 1.0333333333333332,
+          "rotation_error": 1.4432899320127035e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.0666666666666667,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.1,
+          "rotation_error": 1.5543122344752192e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.1333333333333333,
+          "rotation_error": 1.3322676295501878e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.1666666666666667,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 7.105427357601002e-15,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.2,
+          "rotation_error": 2.1094237467877974e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.2333333333333334,
+          "rotation_error": 1.5543122344752192e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.2666666666666666,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.3,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 1.3333333333333333,
+          "rotation_error": 1.5543122344752192e-15,
+          "position_error_px": 7.105427357601002e-15,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 1.3666666666666667,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 1.4,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 1.4333333333333333,
+          "rotation_error": 1.5543122344752192e-15,
+          "position_error_px": 7.105427357601002e-15,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.4666666666666666,
+          "rotation_error": 1.4432899320127035e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 1.5,
+          "rotation_error": 2.1094237467877974e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.5333333333333332,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.5666666666666667,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 1.6,
+          "rotation_error": 1.4432899320127035e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 1.6333333333333333,
+          "rotation_error": 2.3314683517128287e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 1.6666666666666667,
+          "rotation_error": 1.5543122344752192e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 1.7,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 1.7333333333333334,
+          "rotation_error": 1.3322676295501878e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 1.7666666666666666,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 1.8,
+          "rotation_error": 2.1094237467877974e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 1.8333333333333333,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 1.8666666666666667,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 1.9,
+          "rotation_error": 1.2212453270876722e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 1.9333333333333333,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 1.9666666666666666,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 2,
+          "rotation_error": 1.5543122344752192e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 2.033333333333333,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 7.105427357601002e-15,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 2.0666666666666664,
+          "rotation_error": 1.3322676295501878e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 2.1,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 2.1333333333333333,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_R_Hand"
+        },
+        {
+          "time": 2.1666666666666665,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 2.2,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 2.2333333333333334,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_Neck"
+        },
+        {
+          "time": 2.2666666666666666,
+          "rotation_error": 2.220446049250313e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "Head"
+        },
+        {
+          "time": 2.3,
+          "rotation_error": 1.9984014443252818e-15,
+          "position_error_px": 1.2725931419765857e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 2.3333333333333335,
+          "rotation_error": 1.887379141862766e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 2.3666666666666667,
+          "rotation_error": 1.6653345369377348e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        },
+        {
+          "time": 2.4,
+          "rotation_error": 1.7763568394002505e-15,
+          "position_error_px": 1.0658141036401503e-14,
+          "worst_rotation_bone": "J_L_Hand"
+        }
+      ]
+    },
+    {
+      "clip": "slash",
+      "poses": 70,
+      "max_rotation_matrix_error": 9.325873406851315e-15,
+      "max_position_error_px": 3.019806626980426e-14,
+      "frames": [
+        {
+          "time": 0,
+          "rotation_error": 5.440092820663267e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.016666666666666666,
+          "rotation_error": 6.217248937900877e-15,
+          "position_error_px": 3.019806626980426e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.03333333333333333,
+          "rotation_error": 6.772360450213455e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.05,
+          "rotation_error": 6.106226635438361e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.06,
+          "rotation_error": 6.661338147750939e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.06666666666666667,
+          "rotation_error": 5.551115123125783e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.08333333333333333,
+          "rotation_error": 6.772360450213455e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.1,
+          "rotation_error": 6.8833827526759706e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.11666666666666667,
+          "rotation_error": 6.8833827526759706e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.12,
+          "rotation_error": 7.882583474838611e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.13333333333333333,
+          "rotation_error": 6.5503158452884236e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.15,
+          "rotation_error": 6.772360450213455e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.16666666666666666,
+          "rotation_error": 6.994405055138486e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.18333333333333332,
+          "rotation_error": 6.772360450213455e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.2,
+          "rotation_error": 7.216449660063518e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.21666666666666667,
+          "rotation_error": 7.66053886991358e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.22,
+          "rotation_error": 7.771561172376096e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.23333333333333334,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.25,
+          "rotation_error": 8.215650382226158e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.26666666666666666,
+          "rotation_error": 7.66053886991358e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.2833333333333333,
+          "rotation_error": 6.5503158452884236e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.3,
+          "rotation_error": 6.328271240363392e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.31666666666666665,
+          "rotation_error": 6.994405055138486e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.3333333333333333,
+          "rotation_error": 6.217248937900877e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.34,
+          "rotation_error": 5.329070518200751e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.35,
+          "rotation_error": 6.6058269965196814e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.36666666666666664,
+          "rotation_error": 6.106226635438361e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.3833333333333333,
+          "rotation_error": 6.8833827526759706e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.4,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.4166666666666667,
+          "rotation_error": 5.551115123125783e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.43333333333333335,
+          "rotation_error": 6.106226635438361e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.45,
+          "rotation_error": 7.327471962526033e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.46,
+          "rotation_error": 6.772360450213455e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.4666666666666667,
+          "rotation_error": 6.106226635438361e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.48333333333333334,
+          "rotation_error": 6.217248937900877e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.5,
+          "rotation_error": 6.994405055138486e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.5166666666666666,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.5333333333333333,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 2.4868995751603507e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.55,
+          "rotation_error": 7.771561172376096e-15,
+          "position_error_px": 2.6645352591003757e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.5666666666666667,
+          "rotation_error": 7.105427357601002e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.5833333333333334,
+          "rotation_error": 6.8833827526759706e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.6,
+          "rotation_error": 6.328271240363392e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.6166666666666667,
+          "rotation_error": 5.995204332975845e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.6333333333333333,
+          "rotation_error": 5.662137425588298e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.65,
+          "rotation_error": 5.495603971894525e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.6666666666666666,
+          "rotation_error": 6.8833827526759706e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.6833333333333333,
+          "rotation_error": 6.994405055138486e-15,
+          "position_error_px": 1.9539925233402755e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.7,
+          "rotation_error": 6.439293542825908e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.7166666666666667,
+          "rotation_error": 6.994405055138486e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.7333333333333333,
+          "rotation_error": 7.438494264988549e-15,
+          "position_error_px": 2.3092638912203256e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.75,
+          "rotation_error": 8.881784197001252e-15,
+          "position_error_px": 2.842170943040401e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.7666666666666666,
+          "rotation_error": 7.993605777301127e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.78,
+          "rotation_error": 7.882583474838611e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.7833333333333333,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 2.1316282072803006e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.8,
+          "rotation_error": 6.994405055138486e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.8166666666666667,
+          "rotation_error": 6.661338147750939e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.8333333333333334,
+          "rotation_error": 8.43769498715119e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.85,
+          "rotation_error": 8.992806499463768e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.8666666666666667,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 1.1546319456101628e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.8833333333333333,
+          "rotation_error": 7.993605777301127e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.9,
+          "rotation_error": 9.325873406851315e-15,
+          "position_error_px": 1.865174681370263e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.9166666666666666,
+          "rotation_error": 6.439293542825908e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.9333333333333333,
+          "rotation_error": 6.8833827526759706e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.95,
+          "rotation_error": 8.215650382226158e-15,
+          "position_error_px": 1.4210854715202004e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.9666666666666667,
+          "rotation_error": 7.66053886991358e-15,
+          "position_error_px": 1.827704654289164e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 0.9833333333333333,
+          "rotation_error": 7.993605777301127e-15,
+          "position_error_px": 1.7763568394002505e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1,
+          "rotation_error": 7.216449660063518e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.0166666666666666,
+          "rotation_error": 7.327471962526033e-15,
+          "position_error_px": 1.5987211554602254e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.0333333333333332,
+          "rotation_error": 7.549516567451064e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        },
+        {
+          "time": 1.05,
+          "rotation_error": 7.105427357601002e-15,
+          "position_error_px": 1.687538997430238e-14,
+          "worst_rotation_bone": "J_R_Weapon"
+        }
+      ]
+    }
+  ]
+}

@@ -9,5 +9,5 @@ summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lu2f.fx","rpg.lu2f.pnew","rpg.lu
 scoreboard players set @e[tag=rpg.lu2f.pnew] rpg_l2_k 6
 scoreboard players set @e[tag=rpg.lu2f.pnew] rpg_l2_t 40
 tag @e[tag=rpg.lu2f.pnew] remove rpg.lu2f.pnew
-execute positioned ~ ~1 ~ as @a[distance=..1.6,tag=!rpg.lu2f.hit,gamemode=!spectator,gamemode=!creative] run function rpg:lucifer_fight/vine/hit_once
+execute positioned ~ ~1 ~ as @e[tag=rpg.unit.f,distance=..1.6,tag=!rpg.lu2f.hit] run function rpg:lucifer_fight/vine/hit_once
 kill @s

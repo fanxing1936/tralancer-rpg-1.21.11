@@ -1,0 +1,307 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/paper"
+    },
+    "entries": [
+      {
+        "threshold": 1110121,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/page_lucifer"
+        }
+      },
+      {
+        "threshold": 1110122,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/page_leviathan"
+        }
+      },
+      {
+        "threshold": 1110123,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/page_abaddon"
+        }
+      },
+      {
+        "threshold": 1110124,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/page_beelzebub"
+        }
+      },
+      {
+        "threshold": 1110125,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/page_samael"
+        }
+      },
+      {
+        "threshold": 1110126,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/page_belial"
+        }
+      },
+      {
+        "threshold": 1110127,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/page_mammon"
+        }
+      },
+      {
+        "threshold": 1110201,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_lucifer_1"
+        }
+      },
+      {
+        "threshold": 1110202,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_lucifer_2"
+        }
+      },
+      {
+        "threshold": 1110203,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_lucifer_3"
+        }
+      },
+      {
+        "threshold": 1110204,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_lucifer_4"
+        }
+      },
+      {
+        "threshold": 1110205,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_lucifer_5"
+        }
+      },
+      {
+        "threshold": 1110206,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_leviathan_1"
+        }
+      },
+      {
+        "threshold": 1110207,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_leviathan_2"
+        }
+      },
+      {
+        "threshold": 1110208,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_leviathan_3"
+        }
+      },
+      {
+        "threshold": 1110209,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_leviathan_4"
+        }
+      },
+      {
+        "threshold": 1110210,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_leviathan_5"
+        }
+      },
+      {
+        "threshold": 1110211,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_abaddon_1"
+        }
+      },
+      {
+        "threshold": 1110212,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_abaddon_2"
+        }
+      },
+      {
+        "threshold": 1110213,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_abaddon_3"
+        }
+      },
+      {
+        "threshold": 1110214,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_abaddon_4"
+        }
+      },
+      {
+        "threshold": 1110215,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_abaddon_5"
+        }
+      },
+      {
+        "threshold": 1110216,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_beelzebub_1"
+        }
+      },
+      {
+        "threshold": 1110217,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_beelzebub_2"
+        }
+      },
+      {
+        "threshold": 1110218,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_beelzebub_3"
+        }
+      },
+      {
+        "threshold": 1110219,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_beelzebub_4"
+        }
+      },
+      {
+        "threshold": 1110220,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_beelzebub_5"
+        }
+      },
+      {
+        "threshold": 1110221,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_samael_1"
+        }
+      },
+      {
+        "threshold": 1110222,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_samael_2"
+        }
+      },
+      {
+        "threshold": 1110223,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_samael_3"
+        }
+      },
+      {
+        "threshold": 1110224,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_samael_4"
+        }
+      },
+      {
+        "threshold": 1110225,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_samael_5"
+        }
+      },
+      {
+        "threshold": 1110226,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_belial_1"
+        }
+      },
+      {
+        "threshold": 1110227,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_belial_2"
+        }
+      },
+      {
+        "threshold": 1110228,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_belial_3"
+        }
+      },
+      {
+        "threshold": 1110229,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_belial_4"
+        }
+      },
+      {
+        "threshold": 1110230,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_belial_5"
+        }
+      },
+      {
+        "threshold": 1110231,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_mammon_1"
+        }
+      },
+      {
+        "threshold": 1110232,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_mammon_2"
+        }
+      },
+      {
+        "threshold": 1110233,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_mammon_3"
+        }
+      },
+      {
+        "threshold": 1110234,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_mammon_4"
+        }
+      },
+      {
+        "threshold": 1110235,
+        "model": {
+          "type": "minecraft:model",
+          "model": "rpg:item/seal_mammon_5"
+        }
+      }
+    ]
+  }
+}

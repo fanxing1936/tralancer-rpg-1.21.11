@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-"""萨麦尔、贝利尔、玛门麾下的罪仆外观（用户 2026-11-12：「把对应的罪仆模型也加上」）。
+"""路西法、萨麦尔、贝利尔、玛门麾下的罪仆外观（用户 2026-11-12：「把对应的罪仆模型也加上」；路西法的 2026-11-15）。
 
     python add_lord_servants.py ../resourcepack ../rpg
 
 按领主的主题和柱色挑的原作模型（dungeons_models.py 生成，共用逻辑在 servant_look.py）：
+  第一柱 路西法 → 苔藓骷髅（Mossy Skeleton，普通骷髅换苔藓贴图）：idle / walk / 手摆的劈砍 / 原作拉弓
   第五柱 萨麦尔 → 登山者红色变体（Mountaineer，护肩、靴子按蓝图挂上）：idle / walk / Attack / Brace
   第六柱 贝利尔 → 女巫（Witch，和坩埚同一主题、同为紫色）：idle / walk / AttackThrow / Drink
   第七柱 玛门   → 猪灵近战变体（Piglin，金甲红衣）：idle / walk / MeleeAttack / RangedAttack
@@ -28,6 +29,19 @@ W = "%s-%03d_soundWave.ogg"
 
 
 LOOKS = [
+    # 第一柱 路西法 → 苔藓骷髅（用户 2026-11-15）：普通骷髅换苔藓贴图；原作只有弓箭动作，近战的劈砍是手摆的。
+    # 原作骷髅的声音没下载，先借原版骷髅的
+    ServantLook(
+        key="lucifer_servant", lord=1, label="路西法罪仆", tag="rpg.lcs", generator="add_lord_servants.py",
+        sounds={"idle": ev("路西法罪仆：骨响", "Pride servant rattles", "entity.skeleton.ambient"),
+                "hurt": ev("路西法罪仆：受伤", "Pride servant hurts", "entity.skeleton.hurt"),
+                "death": ev("路西法罪仆：散架", "Pride servant collapses", "entity.skeleton.death"),
+                "swing": ev("路西法罪仆：劈砍", "Pride servant swings", "entity.player.attack.sweep"),
+                "shoot": ev("路西法罪仆：放箭", "Pride servant shoots", "entity.skeleton.shoot"),
+                "step": ev("路西法罪仆：脚步", "Pride servant steps", "entity.skeleton.step")},
+        cues={"walk": [(0.19, "step", 0.3, 1.0), (0.56, "step", 0.3, 1.0)], "attack": [(0.3, "swing", 1.0, 0.9)],
+              "shoot": [(0.9, "shoot", 1.0, 1.0)]},
+    ),
     ServantLook(
         key="samael_servant", lord=5, label="萨麦尔罪仆", tag="rpg.sms", generator="add_lord_servants.py",
         sounds={"idle": wiki("萨麦尔罪仆：低吼", "Wrath servant growls", "mountaineer", "D3_sfx_mob_mountaineerIdle_New", 4),

@@ -27,6 +27,13 @@ from mc_env import JAR as MC_JAR
 JAR = sys.argv[2] if len(sys.argv) > 2 else MC_JAR
 
 
+# 原版进度没用过、但触发器确实有的字段（逐条核对过 Minecraft Wiki 的触发器条件表才加进来）
+KNOWN = {
+    # player_hurt_entity：damage / entity / player；原版只用过 damage。友军雅克的防误伤要按被打的实体判定
+    "minecraft:player_hurt_entity": {"entity"},
+}
+
+
 def vanilla_vocab():
     """触发器 -> 原版实际用过的条件字段名集合。"""
     vocab = {}
@@ -45,6 +52,8 @@ def vanilla_vocab():
                 if not t:
                     continue
                 vocab.setdefault(t, set()).update((crit.get("conditions") or {}).keys())
+    for t, keys in KNOWN.items():
+        vocab.setdefault(t, set()).update(keys)
     return vocab
 
 

@@ -1,0 +1,2671 @@
+{
+  "conclusion": "Six base-body cuboid UV nets are compatible with the existing Sunken skeleton map. Direct substitution of the 36 recorded face UVs is supported; not all surfaces have an independent source-mesh verification. Sunken coral/sprig are excluded.",
+  "evidence_limits": "No original Mojang mesh/UV export was supplied. Front and visible head-side texture semantics are verified by numerical pixel projection; other faces rely on inherited skeleton box nets and texture occupancy evidence. Color/alpha changes within the body region do not imply UV relocation.",
+  "source_files": {
+    "T_MossySkeleton.png": {
+      "bytes": 2366,
+      "sha256": "fdcbe40f0556da0c54983d7a9ccfbf30ec98e9ddd609045548e240c2105a97c0"
+    },
+    "MCD_Mossy_Skeleton.png": {
+      "bytes": 24937,
+      "sha256": "548cfb68504a71447e5ad2501027d8686e1d538cd4a6ad947a96db5fdb3b9f85"
+    },
+    "MCD_Mossy_Skeleton_Aiming.png": {
+      "bytes": 43278,
+      "sha256": "7cd6f7605fa14e1082708d87b01beb9823a38e6d0b21eb35535bb25cfd887544"
+    },
+    "sunken_skeleton.bbmodel": {
+      "sha256": "c73ba99e7301c263fea4119852a9fc64348891d163f5b1eb4409354730644981"
+    }
+  },
+  "alpha_histogram": {
+    "0": 1250,
+    "255": 698,
+    "2": 13,
+    "3": 9,
+    "254": 52,
+    "1": 20,
+    "9": 5,
+    "37": 1
+  },
+  "binary_alpha_policy": {
+    "threshold": 128,
+    "source_unchanged": true,
+    "note": "Original has 52 pixels alpha254 and 48 pixels alpha1..37. If an opaque/cutout derived atlas is desired, map alpha>=128 to255, otherwise0; retain original source bytes."
+  },
+  "face_counts": {
+    "exact_raw_alpha_matches": 31,
+    "total_faces": 36,
+    "exact_binary_alpha_matches": 32
+  },
+  "faces": [
+    {
+      "cube": "body",
+      "face": "north",
+      "uv": [
+        20,
+        20,
+        28,
+        32
+      ],
+      "pixels": 96,
+      "source_opaque": 57,
+      "target_opaque": 26,
+      "source_translucent": 0,
+      "target_translucent": 43,
+      "alpha_exact_equal": false,
+      "alpha_equal_fraction": 0.4791666666666667,
+      "cutout_mask_equal_fraction_at_128": 0.8645833333333334
+    },
+    {
+      "cube": "body",
+      "face": "east",
+      "uv": [
+        16,
+        20,
+        20,
+        32
+      ],
+      "pixels": 48,
+      "source_opaque": 20,
+      "target_opaque": 25,
+      "source_translucent": 0,
+      "target_translucent": 7,
+      "alpha_exact_equal": false,
+      "alpha_equal_fraction": 0.75,
+      "cutout_mask_equal_fraction_at_128": 0.8958333333333334
+    },
+    {
+      "cube": "body",
+      "face": "south",
+      "uv": [
+        32,
+        20,
+        40,
+        32
+      ],
+      "pixels": 96,
+      "source_opaque": 54,
+      "target_opaque": 41,
+      "source_translucent": 0,
+      "target_translucent": 33,
+      "alpha_exact_equal": false,
+      "alpha_equal_fraction": 0.6145833333333334,
+      "cutout_mask_equal_fraction_at_128": 0.90625
+    },
+    {
+      "cube": "body",
+      "face": "west",
+      "uv": [
+        28,
+        20,
+        32,
+        32
+      ],
+      "pixels": 48,
+      "source_opaque": 20,
+      "target_opaque": 26,
+      "source_translucent": 0,
+      "target_translucent": 7,
+      "alpha_exact_equal": false,
+      "alpha_equal_fraction": 0.7291666666666666,
+      "cutout_mask_equal_fraction_at_128": 0.875
+    },
+    {
+      "cube": "body",
+      "face": "up",
+      "uv": [
+        28,
+        20,
+        20,
+        16
+      ],
+      "pixels": 32,
+      "source_opaque": 0,
+      "target_opaque": 0,
+      "source_translucent": 0,
+      "target_translucent": 1,
+      "alpha_exact_equal": false,
+      "alpha_equal_fraction": 0.96875,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "body",
+      "face": "down",
+      "uv": [
+        36,
+        16,
+        28,
+        20
+      ],
+      "pixels": 32,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "head",
+      "face": "north",
+      "uv": [
+        8,
+        8,
+        16,
+        16
+      ],
+      "pixels": 64,
+      "source_opaque": 64,
+      "target_opaque": 64,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "head",
+      "face": "east",
+      "uv": [
+        0,
+        8,
+        8,
+        16
+      ],
+      "pixels": 64,
+      "source_opaque": 64,
+      "target_opaque": 64,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "head",
+      "face": "south",
+      "uv": [
+        24,
+        8,
+        32,
+        16
+      ],
+      "pixels": 64,
+      "source_opaque": 64,
+      "target_opaque": 64,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "head",
+      "face": "west",
+      "uv": [
+        16,
+        8,
+        24,
+        16
+      ],
+      "pixels": 64,
+      "source_opaque": 64,
+      "target_opaque": 64,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "head",
+      "face": "up",
+      "uv": [
+        16,
+        8,
+        8,
+        0
+      ],
+      "pixels": 64,
+      "source_opaque": 64,
+      "target_opaque": 64,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "head",
+      "face": "down",
+      "uv": [
+        24,
+        0,
+        16,
+        8
+      ],
+      "pixels": 64,
+      "source_opaque": 28,
+      "target_opaque": 28,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_arm",
+      "face": "north",
+      "uv": [
+        2,
+        18,
+        4,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_arm",
+      "face": "east",
+      "uv": [
+        0,
+        18,
+        2,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_arm",
+      "face": "south",
+      "uv": [
+        6,
+        18,
+        8,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_arm",
+      "face": "west",
+      "uv": [
+        4,
+        18,
+        6,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_arm",
+      "face": "up",
+      "uv": [
+        4,
+        18,
+        2,
+        16
+      ],
+      "pixels": 4,
+      "source_opaque": 4,
+      "target_opaque": 4,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_arm",
+      "face": "down",
+      "uv": [
+        6,
+        16,
+        4,
+        18
+      ],
+      "pixels": 4,
+      "source_opaque": 4,
+      "target_opaque": 4,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_arm",
+      "face": "north",
+      "uv": [
+        4,
+        18,
+        2,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_arm",
+      "face": "east",
+      "uv": [
+        6,
+        18,
+        4,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_arm",
+      "face": "south",
+      "uv": [
+        8,
+        18,
+        6,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_arm",
+      "face": "west",
+      "uv": [
+        2,
+        18,
+        0,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_arm",
+      "face": "up",
+      "uv": [
+        2,
+        18,
+        4,
+        16
+      ],
+      "pixels": 4,
+      "source_opaque": 4,
+      "target_opaque": 4,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_arm",
+      "face": "down",
+      "uv": [
+        4,
+        16,
+        6,
+        18
+      ],
+      "pixels": 4,
+      "source_opaque": 4,
+      "target_opaque": 4,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_leg",
+      "face": "north",
+      "uv": [
+        42,
+        18,
+        44,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_leg",
+      "face": "east",
+      "uv": [
+        40,
+        18,
+        42,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_leg",
+      "face": "south",
+      "uv": [
+        46,
+        18,
+        48,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_leg",
+      "face": "west",
+      "uv": [
+        44,
+        18,
+        46,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_leg",
+      "face": "up",
+      "uv": [
+        44,
+        18,
+        42,
+        16
+      ],
+      "pixels": 4,
+      "source_opaque": 4,
+      "target_opaque": 4,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "right_leg",
+      "face": "down",
+      "uv": [
+        46,
+        16,
+        44,
+        18
+      ],
+      "pixels": 4,
+      "source_opaque": 4,
+      "target_opaque": 4,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_leg",
+      "face": "north",
+      "uv": [
+        44,
+        18,
+        42,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_leg",
+      "face": "east",
+      "uv": [
+        46,
+        18,
+        44,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_leg",
+      "face": "south",
+      "uv": [
+        48,
+        18,
+        46,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_leg",
+      "face": "west",
+      "uv": [
+        42,
+        18,
+        40,
+        30
+      ],
+      "pixels": 24,
+      "source_opaque": 24,
+      "target_opaque": 24,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_leg",
+      "face": "up",
+      "uv": [
+        42,
+        18,
+        44,
+        16
+      ],
+      "pixels": 4,
+      "source_opaque": 4,
+      "target_opaque": 4,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    },
+    {
+      "cube": "left_leg",
+      "face": "down",
+      "uv": [
+        44,
+        16,
+        46,
+        18
+      ],
+      "pixels": 4,
+      "source_opaque": 4,
+      "target_opaque": 4,
+      "source_translucent": 0,
+      "target_translucent": 0,
+      "alpha_exact_equal": true,
+      "alpha_equal_fraction": 1.0,
+      "cutout_mask_equal_fraction_at_128": 1.0
+    }
+  ],
+  "skeleton_bones": [
+    {
+      "name": "root",
+      "uuid": "1acc620c-359c-db5e-9a4d-a72c0efcd290",
+      "parent": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "body",
+      "uuid": "48bdab67-c78f-0295-6783-97954d1e8d22",
+      "parent": "root",
+      "pivot": [
+        0,
+        12,
+        0
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "head",
+      "uuid": "9925bc99-0edd-01e7-45e2-2afe45367e31",
+      "parent": "body",
+      "pivot": [
+        0,
+        24,
+        0
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "coral",
+      "uuid": "0bc7f720-ffba-cb24-8020-bd8d3bf16c63",
+      "parent": "head",
+      "pivot": [
+        0,
+        32,
+        0
+      ],
+      "rest_rotation": [
+        0,
+        -45,
+        0
+      ]
+    },
+    {
+      "name": "sprig",
+      "uuid": "09ae32f6-62c8-874b-c5b0-9433c9c95fc8",
+      "parent": "head",
+      "pivot": [
+        4,
+        28,
+        1
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        -20
+      ]
+    },
+    {
+      "name": "right_arm",
+      "uuid": "41773e4e-2e05-9732-71ff-2b2e3aaa0f89",
+      "parent": "body",
+      "pivot": [
+        5,
+        22,
+        0
+      ],
+      "rest_rotation": [
+        40,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "left_arm",
+      "uuid": "a2d9b132-c108-b0e7-d05a-e56a76ac9f54",
+      "parent": "body",
+      "pivot": [
+        -5,
+        22,
+        0
+      ],
+      "rest_rotation": [
+        12,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "right_leg",
+      "uuid": "15af67f3-37ab-5bb0-e60a-7fc9305de40e",
+      "parent": "root",
+      "pivot": [
+        2,
+        12,
+        0
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "left_leg",
+      "uuid": "0701cffe-b3c7-8be1-e148-f184d05c81e2",
+      "parent": "root",
+      "pivot": [
+        -2,
+        12,
+        0
+      ],
+      "rest_rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "base_cubes": [
+    {
+      "cube": "body",
+      "uuid": "b44f8a9c-0e89-697d-f326-c7c5deb743ec",
+      "bone": "body",
+      "from": [
+        -4,
+        12,
+        -2
+      ],
+      "to": [
+        4,
+        24,
+        2
+      ],
+      "size": [
+        8,
+        12,
+        4
+      ],
+      "element_origin": [
+        0,
+        0,
+        0
+      ],
+      "element_rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_uv": true,
+      "mirror_uv": false,
+      "uv_offset": [
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            20,
+            20,
+            28,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            16,
+            20,
+            20,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            20,
+            40,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            28,
+            20,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            28,
+            20,
+            20,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            36,
+            16,
+            28,
+            20
+          ],
+          "texture": 0
+        }
+      }
+    },
+    {
+      "cube": "head",
+      "uuid": "ee7110ab-06b2-d9e4-23f2-3a66273499f5",
+      "bone": "head",
+      "from": [
+        -4,
+        24,
+        -4
+      ],
+      "to": [
+        4,
+        32,
+        4
+      ],
+      "size": [
+        8,
+        8,
+        8
+      ],
+      "element_origin": [
+        0,
+        0,
+        0
+      ],
+      "element_rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_uv": true,
+      "mirror_uv": false,
+      "uv_offset": null,
+      "faces": {
+        "north": {
+          "uv": [
+            8,
+            8,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            8,
+            8,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            24,
+            8,
+            32,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            16,
+            8,
+            24,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            16,
+            8,
+            8,
+            0
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            24,
+            0,
+            16,
+            8
+          ],
+          "texture": 0
+        }
+      }
+    },
+    {
+      "cube": "right_arm",
+      "uuid": "77f3be48-34cd-7e5d-d30f-4fd3e859b9e5",
+      "bone": "right_arm",
+      "from": [
+        4,
+        12,
+        -1
+      ],
+      "to": [
+        6,
+        24,
+        1
+      ],
+      "size": [
+        2,
+        12,
+        2
+      ],
+      "element_origin": [
+        0,
+        0,
+        0
+      ],
+      "element_rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_uv": true,
+      "mirror_uv": false,
+      "uv_offset": [
+        0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            18,
+            4,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            18,
+            2,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            6,
+            18,
+            8,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            4,
+            18,
+            6,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            4,
+            18,
+            2,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            6,
+            16,
+            4,
+            18
+          ],
+          "texture": 0
+        }
+      }
+    },
+    {
+      "cube": "left_arm",
+      "uuid": "0f622524-7540-fd1b-1574-bf6386b51341",
+      "bone": "left_arm",
+      "from": [
+        -6,
+        12,
+        -1
+      ],
+      "to": [
+        -4,
+        24,
+        1
+      ],
+      "size": [
+        2,
+        12,
+        2
+      ],
+      "element_origin": [
+        0,
+        0,
+        0
+      ],
+      "element_rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_uv": true,
+      "mirror_uv": true,
+      "uv_offset": [
+        0,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            18,
+            2,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            6,
+            18,
+            4,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            8,
+            18,
+            6,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            2,
+            18,
+            0,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            2,
+            18,
+            4,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            4,
+            16,
+            6,
+            18
+          ],
+          "texture": 0
+        }
+      }
+    },
+    {
+      "cube": "right_leg",
+      "uuid": "8d48bca7-00be-e3d9-1c2c-2538a33c8c1d",
+      "bone": "right_leg",
+      "from": [
+        1,
+        0,
+        -1
+      ],
+      "to": [
+        3,
+        12,
+        1
+      ],
+      "size": [
+        2,
+        12,
+        2
+      ],
+      "element_origin": [
+        0,
+        0,
+        0
+      ],
+      "element_rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_uv": true,
+      "mirror_uv": false,
+      "uv_offset": [
+        40,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            42,
+            18,
+            44,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            40,
+            18,
+            42,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            46,
+            18,
+            48,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            44,
+            18,
+            46,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            44,
+            18,
+            42,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            46,
+            16,
+            44,
+            18
+          ],
+          "texture": 0
+        }
+      }
+    },
+    {
+      "cube": "left_leg",
+      "uuid": "05fa409c-2dea-9cc2-9ff9-addc7f7f03da",
+      "bone": "left_leg",
+      "from": [
+        -3,
+        0,
+        -1
+      ],
+      "to": [
+        -1,
+        12,
+        1
+      ],
+      "size": [
+        2,
+        12,
+        2
+      ],
+      "element_origin": [
+        0,
+        0,
+        0
+      ],
+      "element_rotation": [
+        0,
+        0,
+        0
+      ],
+      "box_uv": true,
+      "mirror_uv": true,
+      "uv_offset": [
+        40,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            44,
+            18,
+            42,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            46,
+            18,
+            44,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            48,
+            18,
+            46,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            42,
+            18,
+            40,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            42,
+            18,
+            44,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            44,
+            16,
+            46,
+            18
+          ],
+          "texture": 0
+        }
+      }
+    }
+  ],
+  "numeric_render_validation": {
+    "method": "For each 8x8 face, sample the reference render at the centers of 64 projected source texels. Fit one RGB channel-wise affine lighting transform. The image-space projection is affine and preserves all grid ordering. Small residual validates the entire discrete pattern, not a selected color.",
+    "head_front": {
+      "method": "64 face texel-center samples fit RGB affine shading. Optimization varies image affine projection only.",
+      "source_texture_uv": [
+        8,
+        8,
+        16,
+        16
+      ],
+      "reference": "MCD_Mossy_Skeleton.png",
+      "projection_parameters_ox_oy_ux_uy_vx_vy": [
+        33.01338107870253,
+        88.3412257873684,
+        18.982206131588374,
+        7.718618927861729,
+        0.44923003231043435,
+        19.894317426027527
+      ],
+      "fit": [
+        0.0599371060253284,
+        [
+          0.8089942033017635,
+          0.8144233891824342,
+          0.811020775729188
+        ],
+        [
+          -2.975422380032711,
+          -3.7416137523802036,
+          -3.0745086891086544
+        ],
+        [
+          [
+            88.0,
+            100.0,
+            54.0
+          ],
+          [
+            57.0,
+            72.0,
+            16.0
+          ],
+          [
+            88.0,
+            100.0,
+            54.0
+          ],
+          [
+            57.0,
+            72.0,
+            16.0
+          ],
+          [
+            57.0,
+            72.0,
+            24.0
+          ],
+          [
+            57.0,
+            72.0,
+            24.0
+          ],
+          [
+            57.0,
+            72.0,
+            24.0
+          ],
+          [
+            57.0,
+            72.0,
+            24.0
+          ],
+          [
+            88.0,
+            100.0,
+            54.0
+          ],
+          [
+            57.0,
+            72.0,
+            16.0
+          ],
+          [
+            57.0,
+            72.0,
+            16.0
+          ],
+          [
+            118.0,
+            127.0,
+            92.0
+          ],
+          [
+            57.0,
+            72.0,
+            24.0
+          ],
+          [
+            57.0,
+            72.0,
+            24.0
+          ],
+          [
+            88.0,
+            98.0,
+            59.0
+          ],
+          [
+            57.0,
+            72.0,
+            24.0
+          ],
+          [
+            118.0,
+            127.0,
+            92.0
+          ],
+          [
+            118.0,
+            127.0,
+            92.0
+          ],
+          [
+            88.0,
+            100.0,
+            54.0
+          ],
+          [
+            150.0,
+            155.0,
+            131.0
+          ],
+          [
+            150.0,
+            151.0,
+            131.0
+          ],
+          [
+            88.0,
+            98.0,
+            59.0
+          ],
+          [
+            118.0,
+            124.0,
+            95.0
+          ],
+          [
+            118.0,
+            124.0,
+            95.0
+          ],
+          [
+            150.0,
+            155.0,
+            131.0
+          ],
+          [
+            150.0,
+            155.0,
+            131.0
+          ],
+          [
+            150.0,
+            155.0,
+            131.0
+          ],
+          [
+            150.0,
+            155.0,
+            131.0
+          ],
+          [
+            150.0,
+            151.0,
+            131.0
+          ],
+          [
+            150.0,
+            151.0,
+            131.0
+          ],
+          [
+            150.0,
+            151.0,
+            131.0
+          ],
+          [
+            118.0,
+            124.0,
+            95.0
+          ],
+          [
+            164.0,
+            165.0,
+            144.0
+          ],
+          [
+            43.0,
+            45.0,
+            37.0
+          ],
+          [
+            43.0,
+            45.0,
+            37.0
+          ],
+          [
+            164.0,
+            165.0,
+            144.0
+          ],
+          [
+            157.0,
+            155.0,
+            137.0
+          ],
+          [
+            43.0,
+            42.0,
+            37.0
+          ],
+          [
+            43.0,
+            42.0,
+            37.0
+          ],
+          [
+            157.0,
+            155.0,
+            137.0
+          ],
+          [
+            123.0,
+            125.0,
+            108.0
+          ],
+          [
+            83.0,
+            85.0,
+            72.0
+          ],
+          [
+            123.0,
+            125.0,
+            108.0
+          ],
+          [
+            83.0,
+            85.0,
+            72.0
+          ],
+          [
+            81.0,
+            79.0,
+            70.0
+          ],
+          [
+            119.0,
+            117.0,
+            103.0
+          ],
+          [
+            119.0,
+            117.0,
+            103.0
+          ],
+          [
+            119.0,
+            117.0,
+            103.0
+          ],
+          [
+            83.0,
+            85.0,
+            72.0
+          ],
+          [
+            43.0,
+            45.0,
+            37.0
+          ],
+          [
+            43.0,
+            45.0,
+            37.0
+          ],
+          [
+            43.0,
+            45.0,
+            37.0
+          ],
+          [
+            43.0,
+            42.0,
+            37.0
+          ],
+          [
+            43.0,
+            42.0,
+            37.0
+          ],
+          [
+            43.0,
+            42.0,
+            37.0
+          ],
+          [
+            119.0,
+            117.0,
+            103.0
+          ],
+          [
+            123.0,
+            125.0,
+            108.0
+          ],
+          [
+            164.0,
+            165.0,
+            144.0
+          ],
+          [
+            164.0,
+            165.0,
+            144.0
+          ],
+          [
+            164.0,
+            165.0,
+            144.0
+          ],
+          [
+            157.0,
+            155.0,
+            137.0
+          ],
+          [
+            157.0,
+            155.0,
+            137.0
+          ],
+          [
+            81.0,
+            79.0,
+            70.0
+          ],
+          [
+            157.0,
+            155.0,
+            137.0
+          ]
+        ],
+        [
+          [
+            43,
+            102
+          ],
+          [
+            62,
+            110
+          ],
+          [
+            81,
+            118
+          ],
+          [
+            100,
+            125
+          ],
+          [
+            119,
+            133
+          ],
+          [
+            138,
+            141
+          ],
+          [
+            157,
+            148
+          ],
+          [
+            176,
+            156
+          ],
+          [
+            43,
+            122
+          ],
+          [
+            62,
+            130
+          ],
+          [
+            81,
+            137
+          ],
+          [
+            100,
+            145
+          ],
+          [
+            119,
+            153
+          ],
+          [
+            138,
+            161
+          ],
+          [
+            157,
+            168
+          ],
+          [
+            176,
+            176
+          ],
+          [
+            44,
+            142
+          ],
+          [
+            63,
+            150
+          ],
+          [
+            82,
+            157
+          ],
+          [
+            101,
+            165
+          ],
+          [
+            120,
+            173
+          ],
+          [
+            139,
+            181
+          ],
+          [
+            158,
+            188
+          ],
+          [
+            177,
+            196
+          ],
+          [
+            44,
+            162
+          ],
+          [
+            63,
+            170
+          ],
+          [
+            82,
+            177
+          ],
+          [
+            101,
+            185
+          ],
+          [
+            120,
+            193
+          ],
+          [
+            139,
+            200
+          ],
+          [
+            158,
+            208
+          ],
+          [
+            177,
+            216
+          ],
+          [
+            45,
+            182
+          ],
+          [
+            64,
+            189
+          ],
+          [
+            82,
+            197
+          ],
+          [
+            101,
+            205
+          ],
+          [
+            120,
+            213
+          ],
+          [
+            139,
+            220
+          ],
+          [
+            158,
+            228
+          ],
+          [
+            177,
+            236
+          ],
+          [
+            45,
+            202
+          ],
+          [
+            64,
+            209
+          ],
+          [
+            83,
+            217
+          ],
+          [
+            102,
+            225
+          ],
+          [
+            121,
+            232
+          ],
+          [
+            140,
+            240
+          ],
+          [
+            159,
+            248
+          ],
+          [
+            178,
+            256
+          ],
+          [
+            45,
+            222
+          ],
+          [
+            64,
+            229
+          ],
+          [
+            83,
+            237
+          ],
+          [
+            102,
+            245
+          ],
+          [
+            121,
+            252
+          ],
+          [
+            140,
+            260
+          ],
+          [
+            159,
+            268
+          ],
+          [
+            178,
+            276
+          ],
+          [
+            46,
+            241
+          ],
+          [
+            65,
+            249
+          ],
+          [
+            84,
+            257
+          ],
+          [
+            103,
+            265
+          ],
+          [
+            122,
+            272
+          ],
+          [
+            141,
+            280
+          ],
+          [
+            160,
+            288
+          ],
+          [
+            179,
+            295
+          ]
+        ]
+      ]
+    },
+    "head_side_best": {
+      "source_uv_candidate": [
+        16,
+        8,
+        24,
+        16
+      ],
+      "flip_x": false,
+      "projection_parameters": [
+        181.43153327321346,
+        149.3351878301832,
+        15.570355815391723,
+        -10.451304395081616,
+        -0.05034169509860725,
+        21.342989184697718
+      ],
+      "fit": [
+        0.07430199542626652,
+        [
+          0.5832434694556229,
+          0.5863773352160428,
+          0.581424508419039
+        ],
+        [
+          -6.365166444342307,
+          -6.745776747952874,
+          -6.088912794305024
+        ],
+        [
+          [
+            41.0,
+            50.0,
+            13.0
+          ],
+          [
+            41.0,
+            50.0,
+            13.0
+          ],
+          [
+            62.0,
+            68.0,
+            39.0
+          ],
+          [
+            41.0,
+            50.0,
+            13.0
+          ],
+          [
+            46.0,
+            55.0,
+            18.0
+          ],
+          [
+            46.0,
+            55.0,
+            18.0
+          ],
+          [
+            46.0,
+            55.0,
+            18.0
+          ],
+          [
+            64.0,
+            69.0,
+            41.0
+          ],
+          [
+            62.0,
+            68.0,
+            39.0
+          ],
+          [
+            41.0,
+            50.0,
+            13.0
+          ],
+          [
+            62.0,
+            68.0,
+            39.0
+          ],
+          [
+            41.0,
+            50.0,
+            13.0
+          ],
+          [
+            64.0,
+            69.0,
+            41.0
+          ],
+          [
+            46.0,
+            55.0,
+            18.0
+          ],
+          [
+            46.0,
+            55.0,
+            18.0
+          ],
+          [
+            64.0,
+            69.0,
+            41.0
+          ],
+          [
+            83.0,
+            87.0,
+            64.0
+          ],
+          [
+            62.0,
+            68.0,
+            39.0
+          ],
+          [
+            83.0,
+            87.0,
+            64.0
+          ],
+          [
+            62.0,
+            68.0,
+            39.0
+          ],
+          [
+            99.0,
+            98.0,
+            90.0
+          ],
+          [
+            64.0,
+            69.0,
+            41.0
+          ],
+          [
+            64.0,
+            69.0,
+            41.0
+          ],
+          [
+            46.0,
+            55.0,
+            18.0
+          ],
+          [
+            104.0,
+            105.0,
+            90.0
+          ],
+          [
+            104.0,
+            105.0,
+            90.0
+          ],
+          [
+            104.0,
+            105.0,
+            90.0
+          ],
+          [
+            62.0,
+            68.0,
+            39.0
+          ],
+          [
+            99.0,
+            98.0,
+            90.0
+          ],
+          [
+            81.0,
+            83.0,
+            65.0
+          ],
+          [
+            81.0,
+            83.0,
+            65.0
+          ],
+          [
+            46.0,
+            55.0,
+            18.0
+          ],
+          [
+            118.0,
+            119.0,
+            109.0
+          ],
+          [
+            118.0,
+            119.0,
+            109.0
+          ],
+          [
+            89.0,
+            89.0,
+            76.0
+          ],
+          [
+            75.0,
+            74.0,
+            61.0
+          ],
+          [
+            89.0,
+            89.0,
+            78.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            89.0,
+            89.0,
+            76.0
+          ],
+          [
+            89.0,
+            89.0,
+            76.0
+          ],
+          [
+            75.0,
+            74.0,
+            61.0
+          ],
+          [
+            118.0,
+            119.0,
+            109.0
+          ],
+          [
+            104.0,
+            105.0,
+            95.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            61.0,
+            60.0,
+            46.0
+          ],
+          [
+            75.0,
+            74.0,
+            61.0
+          ],
+          [
+            75.0,
+            74.0,
+            61.0
+          ],
+          [
+            75.0,
+            74.0,
+            61.0
+          ],
+          [
+            104.0,
+            104.0,
+            93.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            61.0,
+            60.0,
+            46.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            104.0,
+            104.0,
+            93.0
+          ],
+          [
+            104.0,
+            104.0,
+            93.0
+          ],
+          [
+            104.0,
+            104.0,
+            93.0
+          ],
+          [
+            89.0,
+            89.0,
+            76.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            75.0,
+            74.0,
+            62.0
+          ],
+          [
+            61.0,
+            60.0,
+            46.0
+          ]
+        ],
+        [
+          [
+            189,
+            155
+          ],
+          [
+            205,
+            144
+          ],
+          [
+            220,
+            134
+          ],
+          [
+            236,
+            123
+          ],
+          [
+            251,
+            113
+          ],
+          [
+            267,
+            103
+          ],
+          [
+            283,
+            92
+          ],
+          [
+            298,
+            82
+          ],
+          [
+            189,
+            176
+          ],
+          [
+            205,
+            166
+          ],
+          [
+            220,
+            155
+          ],
+          [
+            236,
+            145
+          ],
+          [
+            251,
+            134
+          ],
+          [
+            267,
+            124
+          ],
+          [
+            283,
+            113
+          ],
+          [
+            298,
+            103
+          ],
+          [
+            189,
+            197
+          ],
+          [
+            205,
+            187
+          ],
+          [
+            220,
+            177
+          ],
+          [
+            236,
+            166
+          ],
+          [
+            251,
+            156
+          ],
+          [
+            267,
+            145
+          ],
+          [
+            283,
+            135
+          ],
+          [
+            298,
+            124
+          ],
+          [
+            189,
+            219
+          ],
+          [
+            205,
+            208
+          ],
+          [
+            220,
+            198
+          ],
+          [
+            236,
+            187
+          ],
+          [
+            251,
+            177
+          ],
+          [
+            267,
+            167
+          ],
+          [
+            282,
+            156
+          ],
+          [
+            298,
+            146
+          ],
+          [
+            189,
+            240
+          ],
+          [
+            205,
+            230
+          ],
+          [
+            220,
+            219
+          ],
+          [
+            236,
+            209
+          ],
+          [
+            251,
+            198
+          ],
+          [
+            267,
+            188
+          ],
+          [
+            282,
+            177
+          ],
+          [
+            298,
+            167
+          ],
+          [
+            189,
+            261
+          ],
+          [
+            205,
+            251
+          ],
+          [
+            220,
+            241
+          ],
+          [
+            236,
+            230
+          ],
+          [
+            251,
+            220
+          ],
+          [
+            267,
+            209
+          ],
+          [
+            282,
+            199
+          ],
+          [
+            298,
+            188
+          ],
+          [
+            189,
+            283
+          ],
+          [
+            204,
+            272
+          ],
+          [
+            220,
+            262
+          ],
+          [
+            236,
+            251
+          ],
+          [
+            251,
+            241
+          ],
+          [
+            267,
+            231
+          ],
+          [
+            282,
+            220
+          ],
+          [
+            298,
+            210
+          ],
+          [
+            189,
+            304
+          ],
+          [
+            204,
+            294
+          ],
+          [
+            220,
+            283
+          ],
+          [
+            236,
+            273
+          ],
+          [
+            251,
+            262
+          ],
+          [
+            267,
+            252
+          ],
+          [
+            282,
+            241
+          ],
+          [
+            298,
+            231
+          ]
+        ]
+      ]
+    },
+    "head_side_alternative_mse": [
+      {
+        "uv": [
+          0,
+          8,
+          8,
+          16
+        ],
+        "flip_x": false,
+        "mse": 272.0150073318703
+      },
+      {
+        "uv": [
+          0,
+          8,
+          8,
+          16
+        ],
+        "flip_x": true,
+        "mse": 24.380264906219548
+      },
+      {
+        "uv": [
+          16,
+          8,
+          24,
+          16
+        ],
+        "flip_x": false,
+        "mse": 0.07430199542626652
+      },
+      {
+        "uv": [
+          16,
+          8,
+          24,
+          16
+        ],
+        "flip_x": true,
+        "mse": 277.3535720988703
+      },
+      {
+        "uv": [
+          24,
+          8,
+          32,
+          16
+        ],
+        "flip_x": false,
+        "mse": 339.91761536889413
+      },
+      {
+        "uv": [
+          24,
+          8,
+          32,
+          16
+        ],
+        "flip_x": true,
+        "mse": 322.58529570128593
+      }
+    ]
+  },
+  "not_verified": [
+    "Original Mojang 3D mesh UV data",
+    "Independent back-face reference",
+    "Independent limb front/back semantic fits",
+    "Sunken coral/sprig compatibility (excluded)"
+  ]
+}

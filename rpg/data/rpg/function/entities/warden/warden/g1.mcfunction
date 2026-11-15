@@ -1,7 +1,7 @@
 # 13 行原本各自扫一遍全实体表找 @e[tag=devil]；现在由上层一次判定后统一进入。
 # 行内容与顺序原样保留。
 execute as @e[tag=devil] at @s if score @s devil matches 50..51 run effect give @a[distance=..15] minecraft:blindness 5 10 true
-execute as @e[tag=devil] at @s if score @s devil matches 50 at @a[distance=..15] run particle minecraft:elder_guardian
+execute as @e[tag=devil] at @s if score @s devil matches 50 at @e[tag=rpg.unit,distance=..15] run particle minecraft:elder_guardian
 execute as @e[tag=devil] at @s if score @s devil matches 50..51 run playsound minecraft:entity.allay.death player @a[distance=..15]
 
 execute as @e[tag=devil] at @s if score @s devil matches 100 run effect give @a[distance=..15] minecraft:nausea 5 2 true

@@ -1,0 +1,99 @@
+{
+  "status": "DELIVERED_MODEL_AND_FUNCTION_INTEGRATION_CLIENT_VISUAL_PENDING",
+  "model_sha256": "1b31cc7009b5fb8065641c46a8f2d6de725dc8106b11486aac9de2fd7374a530",
+  "native_authored_poses": 606,
+  "animation_clips": 9,
+  "native_preview_png_animation_frames": 361,
+  "server_assertions_passed": 59,
+  "source_png_preserved": 4,
+  "additional_emissive_layer_png": 1,
+  "minecraft_client_visual_verified": false,
+  "user_instance_synced": false,
+  "runtime_laugh_policy": "all11parts synchronous20Hz step; other8clips smooth1tick",
+  "concurrent_phase2_updates_preserved": true,
+  "files": [
+    {
+      "path": "lucifer.bbmodel",
+      "bytes": 4608973,
+      "sha256": "1b31cc7009b5fb8065641c46a8f2d6de725dc8106b11486aac9de2fd7374a530"
+    },
+    {
+      "path": "separate/lucifer_verdant.bbmodel",
+      "bytes": 4608973,
+      "sha256": "1b31cc7009b5fb8065641c46a8f2d6de725dc8106b11486aac9de2fd7374a530"
+    },
+    {
+      "path": "lucifer_left_eye_emissive.png",
+      "bytes": 467,
+      "sha256": "a67c4f42c4228a8281262f438f62c9a09811de4c6fd64185f2a56f584c2e8d22"
+    },
+    {
+      "path": "native/lucifer_original_material.js",
+      "bytes": 10695,
+      "sha256": "b0185df3fc4261d7300aa39cf191793855743f3c910a52ce1dc0a47d61de7747"
+    },
+    {
+      "path": "native/lucifer_source_precision.js",
+      "bytes": 1530,
+      "sha256": "35e8bfd584f9abfe1fc0032d32e414bf073d08e3b0f59af57e86bb66eab9ed33"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 6192,
+      "sha256": "8bdf8fb2bb69792c209548c940deb4d43baf9eef63acaaaac585f0a39302dc6e"
+    },
+    {
+      "path": "CLAUDE_HANDOFF.md",
+      "bytes": 4707,
+      "sha256": "693957161fc401746601bdb26f631a647f70edc8f657f69bdffd4c4caa0e679f"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 14900,
+      "sha256": "37c536b2ace1c07dc8252d89844b80508b26ce0e10384d58d488e14fc06d18cc"
+    },
+    {
+      "path": "VERDANT_REVIEW.html",
+      "bytes": 5259,
+      "sha256": "f83dea007b2256031d12e2ec5d6928eff7e657e44775330ada422e1b85b41b7a"
+    },
+    {
+      "path": "previews/visual_revision/manifest.json",
+      "bytes": 7218,
+      "sha256": "f6369981a4b2fa60eb0278b21bf3f30c03e45f9b43c0bd40a666c0b46e6576eb"
+    },
+    {
+      "path": "previews/visual_revision/native_frame_hashes.json",
+      "bytes": 48457,
+      "sha256": "9cfb46c848d04d6014e4dc79dd3ebeb6617b3f6bddf1eeeb90b8b783f8e9553e"
+    },
+    {
+      "path": "validation/eye_palette_slash/NATIVE_VALIDATION_INDEX.json",
+      "bytes": 9624,
+      "sha256": "85a3a24c5509da27a4f0c1990e115021e793f7683fb97ccd16a9e9cd43ef430d"
+    },
+    {
+      "path": "validation/runtime_integration/BUILD_VALIDATION_INDEX.json",
+      "bytes": 4418,
+      "sha256": "e3ebb8f432fdb7d8d43c8ff6d8469ced9210212e7dc329c9dccd17bfacb010fc"
+    },
+    {
+      "path": "validation/runtime_integration/server/SERVER_VALIDATION_INDEX.json",
+      "bytes": 112007,
+      "sha256": "9fc8abda4344f90305f8df2bd8cc87053ebcd23540962bf0fbefcc5afd4a3608"
+    },
+    {
+      "path": "validation/runtime_integration/laugh_playback/SUMMARY.json",
+      "bytes": 3033,
+      "sha256": "66a34bbc87580e4323c6b946a733d11dce7118fe8c06f9ea36638a50cd257881"
+    },
+    {
+      "path": "validation/runtime_integration/WORKING_PROJECT_GENERATION_VALIDATION.json",
+      "bytes": 244019,
+      "sha256": "71c330ac02c7c767c22e512ef888b0e79176c8d08b5e068312ef4c45fa244fa4"
+    }
+  ],
+  "additional_wing_static_review": "wings/review_v5/REVIEW_INDEX.json",
+  "additional_wing_formally_integrated": false,
+  "additional_wing_dynamic_collision_pass": false
+}

@@ -1,0 +1,3 @@
+execute if score @s rpg_sml_t matches 26 run return run function rpg:samael_lord/anim/cast/f25
+execute if score @s rpg_sml_t matches 27 run return run function rpg:samael_lord/anim/cast/f26
+execute if score @s rpg_sml_t matches 28 run return run function rpg:samael_lord/anim/cast/f27

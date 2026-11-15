@@ -1,0 +1,751 @@
+[
+  {
+    "file": "T_Jungle_Abomination_M6.png",
+    "bytes": 90092,
+    "sha256": "b15c854c7b3f656c4365031648a98564840522289a39e7e5ede5f9b9c108a7b9",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/T_Jungle_Abomination_M6.uasset",
+    "derived": false
+  },
+  {
+    "file": "T_Jungle_Abomination_E_M6.png",
+    "bytes": 4447,
+    "sha256": "116be11eb6c1e54c38f658d2bf30258fdc06f081b788469c2ff38392e195e895",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/T_Jungle_Abomination_E_M6.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/SK_Abomination_02.source.glb",
+    "bytes": 144316,
+    "sha256": "04c5b58a2485dac4d5c5ede9870df9559d7d40cb1529c6669756b0a7aa14d130",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/SK_Abomination_02.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/skeleton.meta.json",
+    "bytes": 14710,
+    "sha256": "a44148e9b3ef05e671e9532561ad4c32ecbc3bb95047b4c718f5fa90d5200d69",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/SK_Abomination_02.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/material.uobject.json",
+    "bytes": 6470,
+    "sha256": "d83c03099653c75a37c26309036e62dcfb1fbc17645d034d738a738f495d59c3",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/M_JungleAbomination.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/material_channel_evidence.json",
+    "bytes": 9683,
+    "sha256": "7af24a946f2df378d4949c2197423ca3b6beaf344f5f5c490af9ff15627ce6a2",
+    "source": "CUE4Parse decoded material references",
+    "derived": true
+  },
+  {
+    "file": "source/animations/jungleAbomination_Attack.tracks.json",
+    "bytes": 168592,
+    "sha256": "ac2c5468abc7e6a2cd0c8d55a8ea737bfe986dd9d3fd27e35be54c2f88090129",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_Attack.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_Attack.uobject.json",
+    "bytes": 8532,
+    "sha256": "6faa53dbfb9b6f0a69894ce23d9d5d0d8a0a4cde8c9c5a818d73f0767ad6b84b",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_Attack.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_death.tracks.json",
+    "bytes": 128312,
+    "sha256": "684be3d19fe63b02a42dab594fd485822fe2783573d0107539575952d6706237",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_death.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_death.uobject.json",
+    "bytes": 6719,
+    "sha256": "fea71e4070d46afbc908dabe24ceeaad3100914899461f32cc59fab00b9e56b6",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_death.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_fall.tracks.json",
+    "bytes": 32142,
+    "sha256": "5ae0853a11a711afdc2786515d82e2bf79e70300564389b21812e6c06315da90",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_fall.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_fall.uobject.json",
+    "bytes": 3190,
+    "sha256": "feaad41026302d51fe5796ad684961a4b0ad33abc6e923b4a23620c2cde5ca53",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_fall.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_idle.tracks.json",
+    "bytes": 487068,
+    "sha256": "457a6d861010112c7480cc83f433055dad7bd6f0c4b338d54d14d59cdae4073a",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_idle.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_idle.uobject.json",
+    "bytes": 6740,
+    "sha256": "26c351b989c56b57ac7b02a72031f4b8a1cdad9b5b670ca3a6001a2717647674",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_idle.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_land.tracks.json",
+    "bytes": 205384,
+    "sha256": "56efd28ab2fbf8ff82a3a0955d2aad618951a3833a8ba6499770474d24c56405",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_land.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_land.uobject.json",
+    "bytes": 8490,
+    "sha256": "9962ac81b45ef54f4ff850ad3b8345dc703d16211975b9d607cc970a80e48b46",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_land.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_ProjectileAttack.tracks.json",
+    "bytes": 229422,
+    "sha256": "ee637916f98445c5b61bd6d2d1a4414022014646f97fe07828814c948e7231ac",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_ProjectileAttack.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_ProjectileAttack.uobject.json",
+    "bytes": 3258,
+    "sha256": "e6d88c9a494a2f9540069c90f96d51d15a848853514fb4de9a59e85284bc0216",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_ProjectileAttack.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_ProjectileAttack_End.tracks.json",
+    "bytes": 229574,
+    "sha256": "08eb5b5798b0a2a836b7f2db3be15b33832407cbab1dcf8580837cb08384e68e",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_ProjectileAttack_End.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_ProjectileAttack_End.uobject.json",
+    "bytes": 1046,
+    "sha256": "49b7f52d738d489df2e157e0aace8226863208665b650b2be7304d7b0dfa83c7",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_ProjectileAttack_End.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_ProjectileAttack_Loop.tracks.json",
+    "bytes": 229564,
+    "sha256": "2b3e5a2cc29df15648dba16a5c5b1e63c4c5b38e65fa77c1539b1fdee7659389",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_ProjectileAttack_Loop.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_ProjectileAttack_Loop.uobject.json",
+    "bytes": 1037,
+    "sha256": "9393c78b5e5a8dfccfe87a45eae12cd4aaa4bd6d97ff0a6c621b7f6e3c09faf6",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_ProjectileAttack_Loop.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_ProjectileAttack_Start.tracks.json",
+    "bytes": 229566,
+    "sha256": "8e4377b7ac9070c90895d1e346c52b1917529322d813b7790b941b50a2f460e3",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_ProjectileAttack_Start.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_ProjectileAttack_Start.uobject.json",
+    "bytes": 1038,
+    "sha256": "9f4e18b3bcc16015a974b09e65100b427d8c099498d6f893853305c32b4663fa",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_ProjectileAttack_Start.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_summon.tracks.json",
+    "bytes": 128424,
+    "sha256": "958220691a1ec7d55cf44f5c72c6576a30da765ef5d50f06453788dcc7bd27f7",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_summon.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_summon.uobject.json",
+    "bytes": 6747,
+    "sha256": "b1f2a8de604442249679d1df211a5860c963133d7d14ae93f0e0a48194bd7991",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_summon.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vineAttack.tracks.json",
+    "bytes": 141241,
+    "sha256": "c910db6727269c4e1c951724ac0114487869283ad1a99a492875fec38e4916cd",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vineAttack.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vineAttack.uobject.json",
+    "bytes": 6773,
+    "sha256": "00bcf5d5073d062691fd1e8760185388b3aa676693101b8789f8b69f8cc8fc32",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vineAttack.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vineAttackIdle.tracks.json",
+    "bytes": 67281,
+    "sha256": "dc21d86afa7f269253c4e28421b9cf42350c0093772f2c99b080e50f0aa72ec8",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vineAttackIdle.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vineAttackIdle.uobject.json",
+    "bytes": 3201,
+    "sha256": "5e617f7fc727dd39cdfb92a9d69df439e86eef57b4410e9818ddcd3ba2a46a8f",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vineAttackIdle.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vineAttackSucessful.tracks.json",
+    "bytes": 147431,
+    "sha256": "3c40529ba77586e809b4954edb38903c8b196bba323886a5d348fa08f14cc337",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vineAttackSucessful.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vineAttackSucessful.uobject.json",
+    "bytes": 6857,
+    "sha256": "c9ce581a79be64289b630ea260bc56bb57e358276174817b4b267bd38816bd3b",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vineAttackSucessful.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vineAttackUnsucessful.tracks.json",
+    "bytes": 119338,
+    "sha256": "0b0743f274cbb406e93914bebdcefc663cae73a601003d30f849b83e906b3ec6",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vineAttackUnsucessful.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vineAttackUnsucessful.uobject.json",
+    "bytes": 6857,
+    "sha256": "d62960efc4ba1f604b4b3800c227036fcb4d01270f5f0597492f2e5bb88868b8",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vineAttackUnsucessful.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vulnerableFall.tracks.json",
+    "bytes": 152179,
+    "sha256": "0c0e0380bb0a4ca631a7f444a9bcdf38c60fae8fb137819cebfe02ae8fc64544",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vulnerableFall.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vulnerableFall.uobject.json",
+    "bytes": 10157,
+    "sha256": "8b54429c1babc1f07e8eb19aba25eceb191256e77beac9334f1a63745849e0b2",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vulnerableFall.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vulnerableGetUp.tracks.json",
+    "bytes": 334554,
+    "sha256": "330543d0b3435564d2867806c2e23c6836c6d50ecab56ae956ec9d82ffb4aef0",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vulnerableGetUp.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vulnerableGetUp.uobject.json",
+    "bytes": 10160,
+    "sha256": "6190b7ccbe47da29fb6557eb0a5db6f6a071549519f680934862704aabbea13e",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vulnerableGetUp.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vulnerableStunCycle.tracks.json",
+    "bytes": 54753,
+    "sha256": "ec41e9045a2632d2227ca22b1db248854fa65912f88cea50f74046c5eb74b44b",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vulnerableStunCycle.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_vulnerableStunCycle.uobject.json",
+    "bytes": 3202,
+    "sha256": "68e5b652a8dcb0b0c303b7ead41f78bb299c23d247697737302c8cf48918b41b",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_vulnerableStunCycle.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_walk.tracks.json",
+    "bytes": 157852,
+    "sha256": "b131c47f822d17d3c6d8d4ab6fe953b92fbfcef449625b33da54839c5b56d73f",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_walk.uasset",
+    "derived": false
+  },
+  {
+    "file": "source/animations/jungleAbomination_walk.uobject.json",
+    "bytes": 10255,
+    "sha256": "c06f68278c3bfa90350480466d36e839d48bef0b332f6a49c5c7968e38884c59",
+    "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_walk.uasset",
+    "derived": false
+  },
+  {
+    "file": "sounds/Bgm_env_sosw2DBossCauldronStart-001_soundWave.ogg",
+    "bytes": 385183,
+    "sha256": "f911913bebdcf532fe39f42f6e4c550ee7dcd288ba42d9beaa46c3a324a9c9e0",
+    "source": "https://minecraft.wiki/images/Bgm_env_sosw2DBossCauldronStart-001_soundWave.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/Bgm_env_sosw2DBossCauldronLoop-001_soundWave.ogg",
+    "bytes": 394638,
+    "sha256": "6b09b4ff3490a18e73c7c46c327c2db0e12a42ee9da7317cf7db2e4d1b388b18",
+    "source": "https://minecraft.wiki/images/Bgm_env_sosw2DBossCauldronLoop-001_soundWave.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/Bgm_env_sosw2DBossCauldronEnd-001_soundWave.ogg",
+    "bytes": 93083,
+    "sha256": "464a287b92931348b9097c6856da1822ebea6e82335c30b5ed4d063dd3f329e5",
+    "source": "https://minecraft.wiki/images/Bgm_env_sosw2DBossCauldronEnd-001_soundWave.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Attack_BOOM_Foley.ogg",
+    "bytes": 25951,
+    "sha256": "5dda36e19b3e33a29f3db7919811b5ce954ce0b53ea1da46e01171354a746959",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Attack_BOOM_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_BasicAttack_Foley.ogg",
+    "bytes": 33013,
+    "sha256": "c3c26f17194eaedf0b51522da36df2a4853a8d564c1d6f79abd7639cf4f7c6ff",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_BasicAttack_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Death_Foley.ogg",
+    "bytes": 28127,
+    "sha256": "304d6fe890d8b7b21da65f446b319e0c7cf4288829b2c9dd6cc23f64f6c95d77",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Death_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Fall_Foley.ogg",
+    "bytes": 21188,
+    "sha256": "f15866379e8c2c78d6bb21e36505dcbf574bdba727b39aa884744e1072a690ae",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Fall_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Flower_LOOP.ogg",
+    "bytes": 41228,
+    "sha256": "d81d8527ca77456bb192678af23d5932ba7ff98fe5b137b2702986b0028fae60",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Flower_LOOP.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_FlowerClose.ogg",
+    "bytes": 16801,
+    "sha256": "4a2d385ffc53b5652b53220e99dd1ad279fbd94177ef822214b3d7fb591fbc7b",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_FlowerClose.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_FlowerOpen.ogg",
+    "bytes": 17351,
+    "sha256": "a73323ba8e7ede5a078083e016bd5a6f3de8419b60e0c0c212166a6c2c1f9feb",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_FlowerOpen.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_GetHit1_Foley.ogg",
+    "bytes": 11181,
+    "sha256": "10b1d82badaf30ec5cb695c64d75aa044f71d28480b5bc401a5eb08786a21716",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_GetHit1_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_GetHit2_Foley.ogg",
+    "bytes": 11521,
+    "sha256": "56727faa45f904a34c71cba0ec0807567ef1af7705880b26b8ef5f969c5ec48b",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_GetHit2_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_GetHit3_Foley.ogg",
+    "bytes": 10797,
+    "sha256": "19c3359db724a5a65be5483ff0e4e87306ded7fb66ba80f5fda4213ca15e6845",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_GetHit3_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_GetUp_Foley.ogg",
+    "bytes": 50305,
+    "sha256": "f0e09ee43891bc9d7091822e2c3a8d25fc673c297f52dfc8572496630790aba3",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_GetUp_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Idle_Foley.ogg",
+    "bytes": 65726,
+    "sha256": "2fb127540ed7762e5053c99ed8e113806259b5697fa27728462343339051ab31",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Idle_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Intro_Foley_STEREO.ogg",
+    "bytes": 76647,
+    "sha256": "bdd64235383b1f57859680f43547c0fae53897ebc22230d6cab321d762991c6c",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Intro_Foley_STEREO.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Land_Foley.ogg",
+    "bytes": 38107,
+    "sha256": "f5486891662a8e3c4f2f867716d2032a9a606ed4e8f5fe16146e45ce28df6360",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Land_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Summon_Foley.ogg",
+    "bytes": 24837,
+    "sha256": "fba9616001734b3cd2aa397aab7cc359dfbe0d9a88b97f0ab0586bfeaa96792a",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Summon_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_VineAttack_Foley.ogg",
+    "bytes": 22682,
+    "sha256": "943c579f6badc388b79c350b763c754373b5def65587d197ee2adeb7e3000319",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_VineAttack_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_VineAttackFail_Foley.ogg",
+    "bytes": 19413,
+    "sha256": "c616ff2c49941209d59a2bf543e243ba541c2b1c0bfca84e67aaea0f9844de00",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_VineAttackFail_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_VineAttackSuccess_Foley.ogg",
+    "bytes": 27046,
+    "sha256": "204f81ead299f6ba2ba677ebac4b97bddea11ad592cf8c0b6df5be025448c257",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_VineAttackSuccess_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Walk_Foley.ogg",
+    "bytes": 31684,
+    "sha256": "0986d47bbe23ba55bf3def7644ac8bbb6835b88812aea70f8bdd3ac46b7362f7",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Walk_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Walk1_Foley.ogg",
+    "bytes": 19505,
+    "sha256": "036461710f85228b1fb57ce594e049179f500c2298faf3f23a0314ea87ae1fe1",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Walk1_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Walk2_Foley.ogg",
+    "bytes": 17865,
+    "sha256": "4d9344c1698904fec429df3c186503d8b5e5a6d0ae45f57da0f1661299cc4082",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Walk2_Foley.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_BasicAttack_Vocal.ogg",
+    "bytes": 13867,
+    "sha256": "1ca5072a0a872a32d4f5ed70f87e6123d2a1c1803792cc11c71fdaebaace9069",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_BasicAttack_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_BasicAttack2_Vocal.ogg",
+    "bytes": 12804,
+    "sha256": "aae708f73293da5df5717144de62f5fe7ea1b059dce667a105ccd5d7fe5ac815",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_BasicAttack2_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Death_Vocal.ogg",
+    "bytes": 32401,
+    "sha256": "dfc6b0e323f435693fafde463cdabb322983dc4b70426526f1e1f165e67f0b50",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Death_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Fall_Vocal.ogg",
+    "bytes": 40127,
+    "sha256": "b5263c6b95cf8aff8da3ee33e9f693dd165081ac34f64e0e35b00e66dd5ac49a",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Fall_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_GetHit1_Vocal.ogg",
+    "bytes": 11419,
+    "sha256": "a4019c5454921705e69892a72c2ab30cca16e4afea2e4fd644f0c4abcd83b59f",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_GetHit1_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_GetHit2_Vocal.ogg",
+    "bytes": 12574,
+    "sha256": "5217a668ddcaef35f28fae50d363e45ccf792c309e712da80d29c2f54760e897",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_GetHit2_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_GetHit3_Vocal.ogg",
+    "bytes": 13009,
+    "sha256": "cca2d23f38f2c2d15fed63ee165613627cdba8026df1b78e12b93d45846cd3bb",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_GetHit3_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_GetHit4_Vocal.ogg",
+    "bytes": 12447,
+    "sha256": "1e542b73f002b9aeec45f5621c7428d32e59bedc5a600af4858ec665f95dfa7f",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_GetHit4_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_GetUp_Vocal.ogg",
+    "bytes": 28554,
+    "sha256": "e2af9a899ff90534f260f0fb9381e7348b5598e09aceb700f6fccafb0ef55ad9",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_GetUp_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Idle_Vocal.ogg",
+    "bytes": 21238,
+    "sha256": "49d292809bfcb58172b9535150ccf6f120cd2092bb9270688b7bf9cb1cee2810",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Idle_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Intro_Vocal_STEREO.ogg",
+    "bytes": 47717,
+    "sha256": "b11e050cc7c0029e46b12474f7581e211a350fe9562c38a1fe5e3427e17510f2",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Intro_Vocal_STEREO.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Land_Vocal.ogg",
+    "bytes": 23837,
+    "sha256": "c6aa69a4e75b8e84462ab0a1cb521b6d4b22d953d765fdebd60b684a16e443bf",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Land_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Laugh_Vocal_STEREO.ogg",
+    "bytes": 19165,
+    "sha256": "3a8102eb6e427d826c327d01555c8eb06c5c85081c471c9610b01d3a526913f4",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Laugh_Vocal_STEREO.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Summon_Vocal.ogg",
+    "bytes": 14187,
+    "sha256": "47fb08c4cf0866b514a6082f37633c66d5cde5b815c678e8421de1ccee6f3f64",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Summon_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_VineAttack_Vocal.ogg",
+    "bytes": 13559,
+    "sha256": "2a5d75bd27213469db58b114bd67347cf57b1af7e473990250b6e38d5a215e26",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_VineAttack_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_VineAttackFail_Vocal.ogg",
+    "bytes": 17854,
+    "sha256": "9e247f685dd61ea45114cc7bddb94859082633d94e41d417c5a84414676ed361",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_VineAttackFail_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_VineAttackSuccess_Vocal.ogg",
+    "bytes": 19508,
+    "sha256": "58309442020c314662157de7df585e686c6e2177991baad9fb0f1c0a32c2f78e",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_VineAttackSuccess_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Walk_Vocal.ogg",
+    "bytes": 20677,
+    "sha256": "0833a3f72b35f748ca2a2a554c63b9ed4263c5030293d9f5a21e83782ea64450",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Walk_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Walk1_Vocal.ogg",
+    "bytes": 13922,
+    "sha256": "a020910c5c4f14c52d856d793932b5fe85490cba551f20c603b787e63948c602",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Walk1_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_Mob_Abom_Walk2_Vocal.ogg",
+    "bytes": 11957,
+    "sha256": "494bead01c11bcb95637367479116caab1f195e4d9b1cf70beed0965e3049f7f",
+    "source": "https://minecraft.wiki/images/DLC_Mob_Abom_Walk2_Vocal.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_mob_abomvine_burst_F.ogg",
+    "bytes": 11387,
+    "sha256": "03713cd61983f6735b7f9384f30d88b13df3ce408c852c34d9ae2b7e3819871f",
+    "source": "https://minecraft.wiki/images/DLC_mob_abomvine_burst_F.ogg",
+    "derived": false
+  },
+  {
+    "file": "sounds/DLC_mob_abomvine_burst_F_New.ogg",
+    "bytes": 11497,
+    "sha256": "4c9de580a3e342258610a532df0b4ecc085c110f969d6d3c063f1b3816d80fdc",
+    "source": "https://minecraft.wiki/images/DLC_mob_abomvine_burst_F_New.ogg",
+    "derived": false
+  },
+  {
+    "file": "source/inventory_phase2.json",
+    "bytes": 723066,
+    "sha256": "7dbbf676f5fcd2fe30bbd840c158d1e5928e6b4e8fbbbe3be77892aa639401e5",
+    "source": "phase2_full/inventory_phase2.json",
+    "derived": true
+  },
+  {
+    "file": "source/INVENTORY_PHASE2.md",
+    "bytes": 17601,
+    "sha256": "c2613d052568cd15f271b285a0e02e4701fdcc13e3aa8ed34932ad4ee1d9dd63",
+    "source": "phase2_full/INVENTORY_PHASE2.md",
+    "derived": true
+  },
+  {
+    "file": "validation/source_bounds.json",
+    "bytes": 89222,
+    "sha256": "88c42b801cc4414a7f8aef3ae8b56877b1d119ebb17d9678b24a6a993a6dcfdd",
+    "source": "phase2_full/source_bounds.json",
+    "derived": true
+  },
+  {
+    "file": "validation/geometry_audit.json",
+    "bytes": 1301866,
+    "sha256": "87fe432a72f5ca98511b6ed0f8530005d36933c5dac2e2e5009fccc16c9df3e7",
+    "source": "phase2_analysis/geometry_audit.json",
+    "derived": true
+  },
+  {
+    "file": "validation/geometry_audit.md",
+    "bytes": 3569,
+    "sha256": "fe76a7a4014f752422841a17b8df790fbfcad24c87e737f8ab931437f3035884",
+    "source": "phase2_analysis/geometry_audit.md",
+    "derived": true
+  },
+  {
+    "file": "source/wiki_audio_manifest.json",
+    "bytes": 46697,
+    "sha256": "ef8cc65d10f36b3a06523d2e291fe289bf1ec022436031c95b1297e422ac8175",
+    "source": "phase2_audio/wiki_audio_manifest.json",
+    "derived": true
+  },
+  {
+    "file": "validation/auxiliary_texture_crosscheck.json",
+    "bytes": 1670,
+    "sha256": "19439c430e8f80eec8acc986dcb6939b87b1f8759cfa279b0c2f2f5673ac762f",
+    "source": "phase2_audio/texture_crosscheck/comparison.json",
+    "derived": true
+  },
+  {
+    "file": "reference_views/from_minus_y.png",
+    "bytes": 430147,
+    "sha256": "ce960f0e4fcc115103fa52a47ecf6da44abbaf2ec23b0218a4d7264ae963fd14",
+    "source": "Blender rendering of the extracted source; no bbmodel comparison",
+    "derived": true
+  },
+  {
+    "file": "reference_views/from_plus_x.png",
+    "bytes": 339131,
+    "sha256": "1dd948e32971d12ff01b90c7b87296fa3f60c8cfb9ec765926c4e38e80bd4972",
+    "source": "Blender rendering of the extracted source; no bbmodel comparison",
+    "derived": true
+  },
+  {
+    "file": "reference_views/from_plus_y.png",
+    "bytes": 417100,
+    "sha256": "cbba5b9812fa74bb00bd28a3f571ec1f0badecb57df0017eac027e6174fc4515",
+    "source": "Blender rendering of the extracted source; no bbmodel comparison",
+    "derived": true
+  },
+  {
+    "file": "reference_views/jungleabomination_idle_source_frame_000.png",
+    "bytes": 459873,
+    "sha256": "4b9a1b0ea4e0c91d99b1a07898f7f82fe8efd2e5a79868165061ae53c3ab0c25",
+    "source": "Blender rendering of the extracted source; no bbmodel comparison",
+    "derived": true
+  },
+  {
+    "file": "reference_views/jungleabomination_idle_source_frame_044.png",
+    "bytes": 507907,
+    "sha256": "31759b51880bbaedc817fa138b7a69ea7877941e3cfa11d3ef72af54f353946c",
+    "source": "Blender rendering of the extracted source; no bbmodel comparison",
+    "derived": true
+  },
+  {
+    "file": "reference_views/jungleabomination_idle_source_frame_089.png",
+    "bytes": 508685,
+    "sha256": "2326da6d2fa6f7e0560a22a07263b88c0279cd21c7ed06ba221cebcd72511ac2",
+    "source": "Blender rendering of the extracted source; no bbmodel comparison",
+    "derived": true
+  },
+  {
+    "file": "reference_views/jungleabomination_idle_source_frame_134.png",
+    "bytes": 459659,
+    "sha256": "915535b9b7a8b213799b5fefe41be75943b5986d6969eed4860884f57b2f544f",
+    "source": "Blender rendering of the extracted source; no bbmodel comparison",
+    "derived": true
+  },
+  {
+    "file": "reference_views/jungleabomination_idle_source_frame_178.png",
+    "bytes": 461047,
+    "sha256": "029b336cf8c483e2e83ff2b0496ecdb4fa5fa521d0bdd4d2b4392593bea353e0",
+    "source": "Blender rendering of the extracted source; no bbmodel comparison",
+    "derived": true
+  },
+  {
+    "file": "reference_views/three_quarter_pos_x_minus_y_pos_z.png",
+    "bytes": 505458,
+    "sha256": "76f5a0f742b478858c829ac4367d6337cc7ea3364db063fa8a6a93c07c5b8992",
+    "source": "Blender rendering of the extracted source; no bbmodel comparison",
+    "derived": true
+  },
+  {
+    "file": "validation/source_blender_probe.json",
+    "bytes": 178292,
+    "sha256": "9ec76cdba6f9be0547889951cf8a4973800fe512412b19c84d0bf65c3dfa7067",
+    "source": "Source-only Blender verification",
+    "derived": true
+  },
+  {
+    "file": "source/jungle_abomination_raw_preview.bbmodel",
+    "bytes": 474410,
+    "sha256": "d6cb2c626f15e0694dbefd7d1a1eff576144f3e4c690e2caa2693bb4e7205b06",
+    "source": "Exact source triangles and UVs; static mesh preview, not a display_mob cube model",
+    "derived": true
+  },
+  {
+    "file": "reference_views/SOURCE_FOUR_VIEWS.jpg",
+    "bytes": 457710,
+    "sha256": "96abdc8140450b8a19d56e7c7e0d25471413d473c5b15be4bb753c1bd66d1395",
+    "source": "Contact sheet of the four source-only Blender renders; not a converted-model comparison",
+    "derived": true
+  }
+]

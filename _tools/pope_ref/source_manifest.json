@@ -1,0 +1,543 @@
+{
+  "observed_date": "2026-11-04",
+  "method": "本机页面 fetch Wiki 原始媒体后 POST 到 127.0.0.1 接收器",
+  "assets": [
+    {
+      "path": "MCD_Arch-Illager.png",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager.png?a3f08&format=original",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager idle",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager.png/80px-MCD_Arch-Illager.png?a3f08",
+      "initial_url": "https://minecraft.wiki/images/MCD_Arch-Illager.png",
+      "original_file_page": "https://minecraft.wiki/w/File:MCD_Arch-Illager.png"
+    },
+    {
+      "path": "MCD_Arch-Illagers_Staff.png",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illagers_Staff.png",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "The staff of Arch-Illager (without emission)",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illagers_Staff.png/43px-MCD_Arch-Illagers_Staff.png?182a7"
+    },
+    {
+      "path": "T_SuperStaff.png",
+      "url": "https://minecraft.wiki/images/T_SuperStaff.png",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "The texture of the staff",
+      "observed_thumbnail": "/images/T_SuperStaff.png?5fc4e"
+    },
+    {
+      "path": "T_SuperCube.png",
+      "url": "https://minecraft.wiki/images/T_SuperCube.png",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "The texture of the cube",
+      "observed_thumbnail": "/images/T_SuperCube.png?984ff"
+    },
+    {
+      "path": "MCD_Arch-Illager_Idle.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Idle.gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager idle",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Idle.gif/80px-MCD_Arch-Illager_Idle.gif?f5b6b"
+    },
+    {
+      "path": "MCD_Arch-Illager_Idle_Highblock_Halls_(front_view).gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Idle_Highblock_Halls_(front_view).gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager idle in Highblock Halls (front view)",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Idle_Highblock_Halls_%28front_view%29.gif/120px-MCD_Arch-Illager_Idle_Highblock_Halls_%28front_view%29.gif?50ec8"
+    },
+    {
+      "path": "MCD_Arch-Illager_Run.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Run.gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager run",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Run.gif/120px-MCD_Arch-Illager_Run.gif?0fdf9"
+    },
+    {
+      "path": "MCD_Arch-Illager_Basic_Attack.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Basic_Attack.gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager basic attack",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Basic_Attack.gif/120px-MCD_Arch-Illager_Basic_Attack.gif?b7af2"
+    },
+    {
+      "path": "MCD_Arch-Illager_Summon_Circle.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Summon_Circle.gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager summon circle",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Summon_Circle.gif/120px-MCD_Arch-Illager_Summon_Circle.gif?01d97"
+    },
+    {
+      "path": "MCD_Arch-Illager_Summon_Single.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Summon_Single.gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager summon redstone golem",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Summon_Single.gif/120px-MCD_Arch-Illager_Summon_Single.gif?56906"
+    },
+    {
+      "path": "MCD_Arch-Illager_Appear.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Appear.gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager appear (ghost form)",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Appear.gif/120px-MCD_Arch-Illager_Appear.gif?f10b7"
+    },
+    {
+      "path": "MCD_Arch-Illager_Teleport_(Appear_Short).gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Teleport_(Appear_Short).gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager teleport in and out in battle",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Teleport_%28Appear_Short%29.gif/120px-MCD_Arch-Illager_Teleport_%28Appear_Short%29.gif?53b07"
+    },
+    {
+      "path": "MCD_Arch-Illager_Defeated_in_a_Whirlwind_in_game.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Defeated_in_a_Whirlwind_in_game.gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager defeated in a whirlwind (in game)",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Defeated_in_a_Whirlwind_in_game.gif/120px-MCD_Arch-Illager_Defeated_in_a_Whirlwind_in_game.gif?e974e"
+    },
+    {
+      "path": "MCD_Arch-Illager_Defeated_in_a_Whirlwind.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Defeated_in_a_Whirlwind.gif",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "Arch-Illager defeated in a whirlwind (full animation)",
+      "observed_thumbnail": "/images/thumb/MCD_Arch-Illager_Defeated_in_a_Whirlwind.gif/120px-MCD_Arch-Illager_Defeated_in_a_Whirlwind.gif?8733e"
+    },
+    {
+      "path": "Arch-Illager_sit_in_his_throne_room_front_view.jpg",
+      "url": "https://minecraft.wiki/images/Arch-Illager_sit_in_his_throne_room_front_view.jpg",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "The Arch-Illager in his throne room (front view)",
+      "observed_thumbnail": "/images/thumb/Arch-Illager_sit_in_his_throne_room_front_view.jpg/120px-Arch-Illager_sit_in_his_throne_room_front_view.jpg?97371"
+    },
+    {
+      "path": "Arch-Illager_ready_to_fight.png",
+      "url": "https://minecraft.wiki/images/Arch-Illager_ready_to_fight.png",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "The Arch-Illager getting ready to charge into the arena",
+      "observed_thumbnail": "/images/thumb/Arch-Illager_ready_to_fight.png/113px-Arch-Illager_ready_to_fight.png?1effc"
+    },
+    {
+      "path": "Arch-Illager_defeated.png",
+      "url": "https://minecraft.wiki/images/Arch-Illager_defeated.png",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "The Arch-Illager, defeated, being sucked into the whirlwind",
+      "observed_thumbnail": "/images/thumb/Arch-Illager_defeated.png/120px-Arch-Illager_defeated.png?c6cb3"
+    },
+    {
+      "path": "Arch-Illager_defeated_in_a_whirlwind_lose_crowns.jpg",
+      "url": "https://minecraft.wiki/images/Arch-Illager_defeated_in_a_whirlwind_lose_crowns.jpg",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "caption": "The Arch-Illager losing his crown in the whirlwind",
+      "observed_thumbnail": "/images/thumb/Arch-Illager_defeated_in_a_whirlwind_lose_crowns.jpg/120px-Arch-Illager_defeated_in_a_whirlwind_lose_crowns.jpg?1dcc7"
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_loadSpell-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archIllager_loadSpell-001_soundWave.ogg?137ee",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Load spell\tsfx_mob_archIllager_loadSpell"
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_mirrorIn-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archIllager_mirrorIn-001_soundWave.ogg?57c69",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Mirror in\tsfx_mob_archIllager_mirrorIn"
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_mirrorOut-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archIllager_mirrorOut-001_soundWave.ogg?09a2d",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Mirror out\tsfx_mob_archIllager_mirrorOut"
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_spell-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archIllager_spell-001_soundWave.ogg?116af",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Spell\tsfx_mob_archIllager_spell"
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_spellDissapear-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archIllager_spellDissapear-001_soundWave.ogg?61dee",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Disappear spell\tsfx_mob_archIllager_spellDissapear"
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllagerAppear-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archIllagerAppear-001_soundWave.ogg?61dee",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Appear\tsfx_mob_archIllagerAppear"
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllagerHaha-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archIllagerHaha-001_soundWave.ogg?1bbc2",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Haha laugh\tsfx_mob_archIllagerHaha"
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllagerHaha-002_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archIllagerHaha-002_soundWave.ogg?6cd48",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Haha laugh\tsfx_mob_archIllagerHaha"
+    },
+    {
+      "path": "sounds/Sfx_mob_archillagerHargh-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archillagerHargh-001_soundWave.ogg?6acb6",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hargh\tsfx_mob_archillagerHargh"
+    },
+    {
+      "path": "sounds/Sfx_mob_archillagerHargh-002_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archillagerHargh-002_soundWave.ogg?474e1",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hargh\tsfx_mob_archillagerHargh"
+    },
+    {
+      "path": "sounds/Sfx_mob_archillagerHargh-003_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archillagerHargh-003_soundWave.ogg?82506",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hargh\tsfx_mob_archillagerHargh"
+    },
+    {
+      "path": "sounds/Sfx_mob_archillagerHargh-004_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archillagerHargh-004_soundWave.ogg?bc908",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hargh\tsfx_mob_archillagerHargh"
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllagerLaugh-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_archIllagerLaugh-001_soundWave.ogg?8fc33",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Laugh\tsfx_mob_archIllagerLaugh"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerHurt-001.ogg?79ed5",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hurt\tsfx_boss_ArchillagerHurt"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerHurt-002.ogg?d5c7e",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hurt\tsfx_boss_ArchillagerHurt"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerHurt-003.ogg?0dc89",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hurt\tsfx_boss_ArchillagerHurt"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerHurt-004.ogg?4c125",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hurt\tsfx_boss_ArchillagerHurt"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-005.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerHurt-005.ogg?1e7b7",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hurt\tsfx_boss_ArchillagerHurt"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-006.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerHurt-006.ogg?79ed5",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Hurt\tsfx_boss_ArchillagerHurt"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-001.ogg?42200",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-002.ogg?42200",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-003.ogg?47f9f",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-004.ogg?f722a",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-005.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-005.ogg?f722a",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-006.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-006.ogg?b753d",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-007.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-007.ogg?73bea",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-008.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-008.ogg?1c93b",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-009.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-009.ogg?bcd83",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-010.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-010.ogg?bcd83",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-011.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-011.ogg?302db",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-012.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-012.ogg?f245f",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-013.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerIdle-013.ogg?04212",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Idle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "path": "sounds/Sfx_boss_archillagerIntroFinalBlow.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_archillagerIntroFinalBlow.ogg?8d89c",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Intro final blow\tsfx_boss_archillagerIntroFinalBlow"
+    },
+    {
+      "path": "sounds/Sfx_boss_archIllagerIntroGreetings-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_archIllagerIntroGreetings-001.ogg?0f51a",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Intro greetings\tsfx_boss_archIllagerIntroGreetings"
+    },
+    {
+      "path": "sounds/Sfx_boss_archillagerIntroLaugh-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_archillagerIntroLaugh-002.ogg?2eada",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Intro laugh\tsfx_boss_archillagerIntroLaugh"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerMagicImpact-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerMagicImpact-001.ogg?ff9c6",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Magic impact\tsfx_boss_ArchillagerMagicImpact"
+    },
+    {
+      "path": "sounds/Sfx_boss_archillagerSummonMobs-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_archillagerSummonMobs-001.ogg?43338",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Summon mobs\tsfx_boss_archillagerSummonMobs"
+    },
+    {
+      "path": "sounds/Sfx_boss_archillagerSummonMobs-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_archillagerSummonMobs-002.ogg?43338",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Summon mobs\tsfx_boss_archillagerSummonMobs"
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerWhirlwind.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchillagerWhirlwind.ogg?9f87f",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager#Sounds",
+      "caption": "Whirlwind\tsfx_boss_ArchillagerWhirlwind"
+    }
+  ],
+  "reused": [
+    {
+      "path": "../heart_of_ender_ref/MCD_Arch-Illager_(texture).png",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery"
+    },
+    {
+      "path": "../heart_of_ender_ref/MCD_Arch-Illager_(shadow_texture).png",
+      "page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery"
+    }
+  ],
+  "sound_rows": [
+    {
+      "sources": [
+        "/images/Sfx_mob_archIllager_loadSpell-001_soundWave.ogg?137ee",
+        "/images/transcoded/Sfx_mob_archIllager_loadSpell-001_soundWave.ogg/Sfx_mob_archIllager_loadSpell-001_soundWave.ogg.mp3?273fd"
+      ],
+      "text": "\tLoad spell\tsfx_mob_archIllager_loadSpell"
+    },
+    {
+      "sources": [
+        "/images/Sfx_mob_archIllager_mirrorIn-001_soundWave.ogg?57c69",
+        "/images/transcoded/Sfx_mob_archIllager_mirrorIn-001_soundWave.ogg/Sfx_mob_archIllager_mirrorIn-001_soundWave.ogg.mp3?273fd"
+      ],
+      "text": "\tMirror in\tsfx_mob_archIllager_mirrorIn"
+    },
+    {
+      "sources": [
+        "/images/Sfx_mob_archIllager_mirrorOut-001_soundWave.ogg?09a2d",
+        "/images/transcoded/Sfx_mob_archIllager_mirrorOut-001_soundWave.ogg/Sfx_mob_archIllager_mirrorOut-001_soundWave.ogg.mp3?273fd"
+      ],
+      "text": "\tMirror out\tsfx_mob_archIllager_mirrorOut"
+    },
+    {
+      "sources": [
+        "/images/Sfx_mob_archIllager_spell-001_soundWave.ogg?116af",
+        "/images/transcoded/Sfx_mob_archIllager_spell-001_soundWave.ogg/Sfx_mob_archIllager_spell-001_soundWave.ogg.mp3?82b2b"
+      ],
+      "text": "\tSpell\tsfx_mob_archIllager_spell"
+    },
+    {
+      "sources": [
+        "/images/Sfx_mob_archIllager_spellDissapear-001_soundWave.ogg?61dee",
+        "/images/transcoded/Sfx_mob_archIllager_spellDissapear-001_soundWave.ogg/Sfx_mob_archIllager_spellDissapear-001_soundWave.ogg.mp3?85fe0"
+      ],
+      "text": "\tDisappear spell\tsfx_mob_archIllager_spellDissapear"
+    },
+    {
+      "sources": [
+        "/images/Sfx_mob_archIllagerAppear-001_soundWave.ogg?61dee",
+        "/images/transcoded/Sfx_mob_archIllagerAppear-001_soundWave.ogg/Sfx_mob_archIllagerAppear-001_soundWave.ogg.mp3?53aaa"
+      ],
+      "text": "\tAppear\tsfx_mob_archIllagerAppear"
+    },
+    {
+      "sources": [
+        "/images/Sfx_mob_archIllagerHaha-001_soundWave.ogg?1bbc2",
+        "/images/transcoded/Sfx_mob_archIllagerHaha-001_soundWave.ogg/Sfx_mob_archIllagerHaha-001_soundWave.ogg.mp3?53aaa",
+        "/images/Sfx_mob_archIllagerHaha-002_soundWave.ogg?6cd48",
+        "/images/transcoded/Sfx_mob_archIllagerHaha-002_soundWave.ogg/Sfx_mob_archIllagerHaha-002_soundWave.ogg.mp3?b7b4a"
+      ],
+      "text": "\tHaha laugh\tsfx_mob_archIllagerHaha"
+    },
+    {
+      "sources": [
+        "/images/Sfx_mob_archillagerHargh-001_soundWave.ogg?6acb6",
+        "/images/transcoded/Sfx_mob_archillagerHargh-001_soundWave.ogg/Sfx_mob_archillagerHargh-001_soundWave.ogg.mp3?64647",
+        "/images/Sfx_mob_archillagerHargh-002_soundWave.ogg?474e1",
+        "/images/transcoded/Sfx_mob_archillagerHargh-002_soundWave.ogg/Sfx_mob_archillagerHargh-002_soundWave.ogg.mp3?f1ea3",
+        "/images/Sfx_mob_archillagerHargh-003_soundWave.ogg?82506",
+        "/images/transcoded/Sfx_mob_archillagerHargh-003_soundWave.ogg/Sfx_mob_archillagerHargh-003_soundWave.ogg.mp3?f1ea3",
+        "/images/Sfx_mob_archillagerHargh-004_soundWave.ogg?bc908",
+        "/images/transcoded/Sfx_mob_archillagerHargh-004_soundWave.ogg/Sfx_mob_archillagerHargh-004_soundWave.ogg.mp3?f1ea3"
+      ],
+      "text": "\tHargh\tsfx_mob_archillagerHargh"
+    },
+    {
+      "sources": [
+        "/images/Sfx_mob_archIllagerLaugh-001_soundWave.ogg?8fc33",
+        "/images/transcoded/Sfx_mob_archIllagerLaugh-001_soundWave.ogg/Sfx_mob_archIllagerLaugh-001_soundWave.ogg.mp3?b7b4a"
+      ],
+      "text": "\tLaugh\tsfx_mob_archIllagerLaugh"
+    },
+    {
+      "sources": [
+        "/images/Sfx_boss_ArchillagerHurt-001.ogg?79ed5",
+        "/images/transcoded/Sfx_boss_ArchillagerHurt-001.ogg/Sfx_boss_ArchillagerHurt-001.ogg.mp3?95846",
+        "/images/Sfx_boss_ArchillagerHurt-002.ogg?d5c7e",
+        "/images/transcoded/Sfx_boss_ArchillagerHurt-002.ogg/Sfx_boss_ArchillagerHurt-002.ogg.mp3?95846",
+        "/images/Sfx_boss_ArchillagerHurt-003.ogg?0dc89",
+        "/images/transcoded/Sfx_boss_ArchillagerHurt-003.ogg/Sfx_boss_ArchillagerHurt-003.ogg.mp3?5801b",
+        "/images/Sfx_boss_ArchillagerHurt-004.ogg?4c125",
+        "/images/transcoded/Sfx_boss_ArchillagerHurt-004.ogg/Sfx_boss_ArchillagerHurt-004.ogg.mp3?5801b",
+        "/images/Sfx_boss_ArchillagerHurt-005.ogg?1e7b7",
+        "/images/transcoded/Sfx_boss_ArchillagerHurt-005.ogg/Sfx_boss_ArchillagerHurt-005.ogg.mp3?5801b",
+        "/images/Sfx_boss_ArchillagerHurt-006.ogg?79ed5",
+        "/images/transcoded/Sfx_boss_ArchillagerHurt-006.ogg/Sfx_boss_ArchillagerHurt-006.ogg.mp3?5801b"
+      ],
+      "text": "\tHurt\tsfx_boss_ArchillagerHurt"
+    },
+    {
+      "sources": [
+        "/images/Sfx_boss_ArchillagerIdle-001.ogg?42200",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-001.ogg/Sfx_boss_ArchillagerIdle-001.ogg.mp3?5801b",
+        "/images/Sfx_boss_ArchillagerIdle-002.ogg?42200",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-002.ogg/Sfx_boss_ArchillagerIdle-002.ogg.mp3?5801b",
+        "/images/Sfx_boss_ArchillagerIdle-003.ogg?47f9f",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-003.ogg/Sfx_boss_ArchillagerIdle-003.ogg.mp3?5a7dd",
+        "/images/Sfx_boss_ArchillagerIdle-004.ogg?f722a",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-004.ogg/Sfx_boss_ArchillagerIdle-004.ogg.mp3?5a7dd",
+        "/images/Sfx_boss_ArchillagerIdle-005.ogg?f722a",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-005.ogg/Sfx_boss_ArchillagerIdle-005.ogg.mp3?5a7dd",
+        "/images/Sfx_boss_ArchillagerIdle-006.ogg?b753d",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-006.ogg/Sfx_boss_ArchillagerIdle-006.ogg.mp3?5a7dd",
+        "/images/Sfx_boss_ArchillagerIdle-007.ogg?73bea",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-007.ogg/Sfx_boss_ArchillagerIdle-007.ogg.mp3?bc6a9",
+        "/images/Sfx_boss_ArchillagerIdle-008.ogg?1c93b",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-008.ogg/Sfx_boss_ArchillagerIdle-008.ogg.mp3?18429",
+        "/images/Sfx_boss_ArchillagerIdle-009.ogg?bcd83",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-009.ogg/Sfx_boss_ArchillagerIdle-009.ogg.mp3?18429",
+        "/images/Sfx_boss_ArchillagerIdle-010.ogg?bcd83",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-010.ogg/Sfx_boss_ArchillagerIdle-010.ogg.mp3?18429",
+        "/images/Sfx_boss_ArchillagerIdle-011.ogg?302db",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-011.ogg/Sfx_boss_ArchillagerIdle-011.ogg.mp3?18429",
+        "/images/Sfx_boss_ArchillagerIdle-012.ogg?f245f",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-012.ogg/Sfx_boss_ArchillagerIdle-012.ogg.mp3?18429",
+        "/images/Sfx_boss_ArchillagerIdle-013.ogg?04212",
+        "/images/transcoded/Sfx_boss_ArchillagerIdle-013.ogg/Sfx_boss_ArchillagerIdle-013.ogg.mp3?d33b5"
+      ],
+      "text": "\tIdle\tsfx_boss_ArchillagerIdle"
+    },
+    {
+      "sources": [
+        "/images/Sfx_boss_archillagerIntroFinalBlow.ogg?8d89c",
+        "/images/transcoded/Sfx_boss_archillagerIntroFinalBlow.ogg/Sfx_boss_archillagerIntroFinalBlow.ogg.mp3?27766"
+      ],
+      "text": "\tIntro final blow\tsfx_boss_archillagerIntroFinalBlow"
+    },
+    {
+      "sources": [
+        "/images/Sfx_boss_archIllagerIntroGreetings-001.ogg?0f51a",
+        "/images/transcoded/Sfx_boss_archIllagerIntroGreetings-001.ogg/Sfx_boss_archIllagerIntroGreetings-001.ogg.mp3?4b728"
+      ],
+      "text": "\tIntro greetings\tsfx_boss_archIllagerIntroGreetings"
+    },
+    {
+      "sources": [
+        "/images/Sfx_boss_archillagerIntroLaugh-002.ogg?2eada",
+        "/images/transcoded/Sfx_boss_archillagerIntroLaugh-002.ogg/Sfx_boss_archillagerIntroLaugh-002.ogg.mp3?3f931"
+      ],
+      "text": "\tIntro laugh\tsfx_boss_archillagerIntroLaugh"
+    },
+    {
+      "sources": [
+        "/images/Sfx_boss_ArchillagerMagicImpact-001.ogg?ff9c6",
+        "/images/transcoded/Sfx_boss_ArchillagerMagicImpact-001.ogg/Sfx_boss_ArchillagerMagicImpact-001.ogg.mp3?d33b5"
+      ],
+      "text": "\tMagic impact\tsfx_boss_ArchillagerMagicImpact"
+    },
+    {
+      "sources": [
+        "/images/Sfx_boss_archillagerSummonMobs-001.ogg?43338",
+        "/images/transcoded/Sfx_boss_archillagerSummonMobs-001.ogg/Sfx_boss_archillagerSummonMobs-001.ogg.mp3?9a651",
+        "/images/Sfx_boss_archillagerSummonMobs-002.ogg?43338",
+        "/images/transcoded/Sfx_boss_archillagerSummonMobs-002.ogg/Sfx_boss_archillagerSummonMobs-002.ogg.mp3?9a651"
+      ],
+      "text": "\tSummon mobs\tsfx_boss_archillagerSummonMobs"
+    },
+    {
+      "sources": [
+        "/images/Sfx_boss_ArchillagerWhirlwind.ogg?9f87f",
+        "/images/transcoded/Sfx_boss_ArchillagerWhirlwind.ogg/Sfx_boss_ArchillagerWhirlwind.ogg.mp3?6c13e"
+      ],
+      "text": "\tWhirlwind\tsfx_boss_ArchillagerWhirlwind"
+    }
+  ]
+}

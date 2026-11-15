@@ -424,6 +424,8 @@ HOLY_TAGS = {"驱魔调查", "调查档案", "罪证", "镇压", "真名确证",
 PILLAR_TAGS = {"反仪式・吞媒": "别西卜"}
 # Whoever speaks in the Pope fight: tag colour and blackletter gloss.
 BOSS_VOICES = {"教皇": (BROADCAST_HOLY, "The Pope"), "末影之心": (BROADCAST_VOID, "Heart of Ender")}
+# 篡夺者战（docs/USURPER-DESIGN.md §6）：二阶段的篡夺白金，亮、中、深；比教皇的圣金（HOLY）更白、更冷。
+WHITE_GOLD = ("#FFF6DC", "#F0CF7A", "#B8902F")
 # Tags shared by all seven lords; the line names the lord ("别西卜 · 司祭 巴钦").
 SPEAKER_TAGS = {"罪群", "罪仆术式", "显形", "弱点媒介", "封印逃逸"}
 

@@ -1,0 +1,23 @@
+{
+  "engine": "Blockbench native WebGL",
+  "model_sha256": "4f2d24f9c5da774cbf0be44d7895c7a449bd7a1f8f1442dcbd1f2eed83c575aa",
+  "before_sha256": "453284d284859b4829a0f51e0603fc0b6e6d8de1323f794f78676fe749213dcf",
+  "selected_expression": "B",
+  "selected_by_user": true,
+  "temporary_candidate_restored": true,
+  "non_eye_elements_unchanged": 36,
+  "existing_groups_unchanged": 15,
+  "head_normalized_for_review_only": true,
+  "expressions": {
+    "A": "primary render / ordinary Idle: outer white1x1, inner pupil2x1",
+    "B": "throne / front Idle: white3x1, inner pupil1.1x0.5 with0.3 inner margin"
+  },
+  "eye_span": [
+    1,
+    4
+  ],
+  "brow_rest_degrees": [
+    8,
+    -8
+  ]
+}

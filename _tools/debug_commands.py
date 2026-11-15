@@ -31,6 +31,8 @@ GIVE = [
     command("/function rpg:command/give/weapon_up_item", "发放全部武器分支唱片。", "会发给所有在线玩家（@a），多人服慎用。", "全体背包", "群体发放"),
     command("/function rpg:command/give/extra", "发放额外／导入内容测试物品。", "会发给所有在线玩家（@a），可能占用较多背包格。", "全体背包", "群体发放"),
     command("/function rpg:command/give/michael", "只发放米迦勒脊骨与米迦勒肋骨（[神圣] 双持圣骸）。", "必须由玩家执行；主手一把、副手一把即触发［骨中之骨］。", "自身背包"),
+    command("/function rpg:command/give/armor", "只发放全部护甲（八套，含四套新护甲与神圣套补全）。", "必须由玩家执行；穿齐同一套四件即触发套装加成。", "自身背包"),
+    command("/function rpg:command/give/dungeons", "只发放坟墓克星与竖琴弩（Minecraft Dungeons 原作武器）。", "必须由玩家执行。", "自身背包"),
     command("/function rpg:inquest/give/all_tools", "发放七罪媒介、仪式工具、三类粉笔和真名残页。", "必须由玩家执行；用于驱魔流程联调。", "自身背包"),
     command("/function rpg:ritual/life_tree/give/all", "发放卡巴拉血契、十源质与真·十字架。", "必须由玩家执行；仅测试／管理入口。", "自身背包"),
 ]
@@ -62,6 +64,16 @@ BOSSES.extend([
     command("/function rpg:lucifer_boss/summon", "在执行位置开始最终 Boss 路西法：晨星之蛇 → 知善恶树（古龙待做）。", "同一时间只允许一场；战场半径 40 格，没人满 60 秒判负清场。与七罪领主路西法是两个 Boss。", "最终 Boss", "生成战斗"),
     command("/function rpg:lucifer_boss/debug/stage2", "召唤后直接打到一阶段底线，走变身演出进入知善恶树。", "同一时间只允许一场。", "最终 Boss", "生成战斗"),
     command("/function rpg:lucifer_boss/clear", "清除最终 Boss 路西法的全部实体。", "战斗卡住或测试收尾时使用。", "最终 Boss", "清理"),
+    command("/function rpg:usurper_boss/summon", "在执行位置开始篡夺者（达里奥·所罗门）战：所罗门之裔 → 篡夺圣灵。", "同一时间只允许一场；战场半径 40 格。", "篡夺者", "生成战斗"),
+    command("/function rpg:usurper_boss/debug/stage2", "召唤后直接打到一阶段底线，走变身进入二阶段。", "同一时间只允许一场。", "篡夺者", "生成战斗"),
+    command("/function rpg:usurper_boss/clear", "清除篡夺者战的全部实体。", "战斗卡住或测试收尾时使用。", "篡夺者", "清理"),
+    command("/function rpg:jacques_boss/summon", "在执行位置开始圣殿大团长雅克战：圣殿之誓 → 火刑柱。", "同一时间只允许一场；战场半径 40 格。", "雅克", "生成战斗"),
+    command("/function rpg:jacques_boss/debug/stage2", "召唤后直接打到一阶段底线，走火刑柱变身进入二阶段。", "同一时间只允许一场。", "雅克", "生成战斗"),
+    command("/function rpg:jacques_boss/clear", "清除雅克战的全部实体（含大卫的幽灵与召来的圣卫）。", "战斗卡住或测试收尾时使用。", "雅克", "清理"),
+    command("/function rpg:jacques_ally/give", "给自己一件圣殿誓约（右键召友军雅克 20 秒，冷却 3 分钟）。", "必须由玩家执行；正常由击败雅克发放。", "雅克", "发放"),
+    command("/function rpg:jacques_ally/debug/summon", "在身前召一个友军雅克，不走冷却。", "必须由玩家执行。", "雅克", "生成单位"),
+    command("/function rpg:jacques_ally/debug/reset_cd", "清掉自己的圣殿誓约冷却。", "必须由玩家执行。", "雅克"),
+    command("/function rpg:jacques_ally/clear", "清掉所有友军雅克。", "测试收尾时使用。", "雅克", "清理"),
 ])
 
 MINIONS = []

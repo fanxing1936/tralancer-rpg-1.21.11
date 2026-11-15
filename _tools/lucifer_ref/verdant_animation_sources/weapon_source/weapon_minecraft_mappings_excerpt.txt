@@ -1,0 +1,125 @@
+net.minecraft.client.renderer.block.model.BlockElement -> hqb:
+# {"fileName":"BlockElement.java","id":"sourceFile"}
+    org.joml.Vector3fc from -> a
+    org.joml.Vector3fc to -> b
+    java.util.Map faces -> c
+    net.minecraft.client.renderer.block.model.BlockElementRotation rotation -> d
+    boolean shade -> e
+    int lightEmission -> f
+    boolean DEFAULT_RESCALE -> g
+    float MIN_EXTENT -> h
+    float MAX_EXTENT -> i
+    34:35:void <init>(org.joml.Vector3fc,org.joml.Vector3fc,java.util.Map) -> <init>
+    21:21:void <init>(org.joml.Vector3fc,org.joml.Vector3fc,java.util.Map,net.minecraft.client.renderer.block.model.BlockElementRotation,boolean,int) -> <init>
+    21:21:java.lang.String toString() -> toString
+    21:21:int hashCode() -> hashCode
+    21:21:boolean equals(java.lang.Object) -> equals
+    21:21:org.joml.Vector3fc from() -> a
+    21:21:org.joml.Vector3fc to() -> b
+    21:21:java.util.Map faces() -> c
+    21:21:net.minecraft.client.renderer.block.model.BlockElementRotation rotation() -> d
+    21:21:boolean shade() -> e
+    21:21:int lightEmission() -> f
+net.minecraft.client.renderer.block.model.BlockElement$Deserializer -> hqb$a:
+# {"fileName":"BlockElement.java","id":"sourceFile"}
+    boolean DEFAULT_SHADE -> a
+    int DEFAULT_LIGHT_EMISSION -> b
+    java.lang.String FIELD_SHADE -> c
+    java.lang.String FIELD_LIGHT_EMISSION -> d
+    java.lang.String FIELD_ROTATION -> e
+    java.lang.String FIELD_ORIGIN -> f
+    java.lang.String FIELD_ANGLE -> g
+    java.lang.String FIELD_X -> h
+    java.lang.String FIELD_Y -> i
+    java.lang.String FIELD_Z -> j
+    java.lang.String FIELD_AXIS -> k
+    java.lang.String FIELD_RESCALE -> l
+    java.lang.String FIELD_FACES -> m
+    java.lang.String FIELD_TO -> n
+    java.lang.String FIELD_FROM -> o
+    37:37:void <init>() -> <init>
+    57:77:net.minecraft.client.renderer.block.model.BlockElement deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext) -> a
+    81:103:net.minecraft.client.renderer.block.model.BlockElementRotation getRotation(com.google.gson.JsonObject) -> a
+    107:112:net.minecraft.core.Direction$Axis getAxis(com.google.gson.JsonObject) -> b
+    116:122:java.util.Map getFaces(com.google.gson.JsonDeserializationContext,com.google.gson.JsonObject) -> a
+    126:132:java.util.Map filterNullFromFaces(com.google.gson.JsonDeserializationContext,com.google.gson.JsonObject) -> b
+    136:140:net.minecraft.core.Direction getFacing(java.lang.String) -> a
+    144:150:org.joml.Vector3f getPosition(com.google.gson.JsonObject,java.lang.String) -> a
+    154:163:org.joml.Vector3f getVector3f(com.google.gson.JsonObject,java.lang.String) -> b
+    37:37:java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext) -> deserialize
+net.minecraft.client.renderer.block.model.ItemModelGenerator -> hqj:
+# {"fileName":"ItemModelGenerator.java","id":"sourceFile"}
+    net.minecraft.resources.Identifier GENERATED_ITEM_MODEL_ID -> a
+    java.util.List LAYERS -> b
+    float MIN_Z -> d
+    float MAX_Z -> e
+    net.minecraft.client.renderer.block.model.TextureSlots$Data TEXTURE_SLOTS -> f
+    net.minecraft.client.renderer.block.model.BlockElementFace$UVs SOUTH_FACE_UVS -> g
+    net.minecraft.client.renderer.block.model.BlockElementFace$UVs NORTH_FACE_UVS -> h
+    float UV_SHRINK -> i
+    25:25:void <init>() -> <init>
+    40:40:net.minecraft.client.renderer.block.model.TextureSlots$Data textureSlots() -> e
+    45:45:net.minecraft.client.resources.model.UnbakedGeometry geometry() -> a
+    50:50:net.minecraft.client.resources.model.UnbakedModel$GuiLight guiLight() -> b
+    54:66:net.minecraft.client.resources.model.QuadCollection bake(net.minecraft.client.renderer.block.model.TextureSlots,net.minecraft.client.resources.model.ModelBaker,net.minecraft.client.resources.model.ModelState,net.minecraft.client.resources.model.ModelDebugName) -> a
+    70:80:java.util.List processFrames(int,java.lang.String,net.minecraft.client.renderer.texture.SpriteContents) -> a
+    84:148:java.util.List createSideElements(net.minecraft.client.renderer.texture.SpriteContents,java.lang.String,int) -> a
+    152:170:java.util.Collection getSideFaces(net.minecraft.client.renderer.texture.SpriteContents) -> a
+    174:177:void checkTransition(net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection,java.util.Set,net.minecraft.client.renderer.texture.SpriteContents,int,int,int,int,int) -> a
+    180:183:boolean isTransparent(net.minecraft.client.renderer.texture.SpriteContents,int,int,int,int,int) -> a
+    157:169:void lambda$getSideFaces$0(int,int,net.minecraft.client.renderer.texture.SpriteContents,java.util.Set,int) -> a
+    26:35:void <clinit>() -> <clinit>
+net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection -> hqj$a:
+# {"fileName":"ItemModelGenerator.java","id":"sourceFile"}
+    net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection UP -> a
+    net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection DOWN -> b
+    net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection LEFT -> c
+    net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection RIGHT -> d
+    net.minecraft.core.Direction direction -> e
+    net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection[] $VALUES -> f
+    186:186:net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection[] values() -> values
+    186:186:net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection valueOf(java.lang.String) -> valueOf
+    194:196:void <init>(java.lang.String,int,net.minecraft.core.Direction) -> <init>
+    199:199:net.minecraft.core.Direction getDirection() -> a
+    203:203:boolean isHorizontal() -> b
+    186:186:net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection[] $values() -> c
+    186:190:void <clinit>() -> <clinit>
+net.minecraft.client.renderer.block.model.ItemModelGenerator$SideFace -> hqj$b:
+# {"fileName":"ItemModelGenerator.java","id":"sourceFile"}
+    net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection facing -> a
+    int x -> b
+    int y -> c
+    207:207:void <init>(net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection,int,int) -> <init>
+    207:207:java.lang.String toString() -> toString
+    207:207:int hashCode() -> hashCode
+    207:207:boolean equals(java.lang.Object) -> equals
+    207:207:net.minecraft.client.renderer.block.model.ItemModelGenerator$SideDirection facing() -> a
+    207:207:int x() -> b
+    207:207:int y() -> c
+net.minecraft.client.renderer.block.model.ItemTransform -> hqk:
+# {"fileName":"ItemTransform.java","id":"sourceFile"}
+    org.joml.Vector3fc rotation -> b
+    org.joml.Vector3fc translation -> c
+    org.joml.Vector3fc scale -> d
+    net.minecraft.client.renderer.block.model.ItemTransform NO_TRANSFORM -> a
+    19:19:void <init>(org.joml.Vector3fc,org.joml.Vector3fc,org.joml.Vector3fc) -> <init>
+    23:50:void apply(boolean,com.mojang.blaze3d.vertex.PoseStack$Pose) -> a
+    19:19:java.lang.String toString() -> toString
+    19:19:int hashCode() -> hashCode
+    19:19:boolean equals(java.lang.Object) -> equals
+    19:19:org.joml.Vector3fc rotation() -> a
+    19:19:org.joml.Vector3fc translation() -> b
+    19:19:org.joml.Vector3fc scale() -> c
+    20:20:void <clinit>() -> <clinit>
+net.minecraft.client.renderer.block.model.ItemTransform$Deserializer -> hqk$a:
+# {"fileName":"ItemTransform.java","id":"sourceFile"}
+    org.joml.Vector3f DEFAULT_ROTATION -> c
+    org.joml.Vector3f DEFAULT_TRANSLATION -> d
+    org.joml.Vector3f DEFAULT_SCALE -> e
+    float MAX_TRANSLATION -> a
+    float MAX_SCALE -> b
+    52:52:void <init>() -> <init>
+    61:80:net.minecraft.client.renderer.block.model.ItemTransform deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext) -> a
+    84:96:org.joml.Vector3f getVector3f(com.google.gson.JsonObject,java.lang.String,org.joml.Vector3f) -> a
+    52:52:java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext) -> deserialize
+    53:55:void <clinit>() -> <clinit>

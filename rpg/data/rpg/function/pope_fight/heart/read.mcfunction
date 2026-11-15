@@ -11,5 +11,5 @@ execute if score #hp rpg_pf matches ..5 run return run function rpg:pope_fight/h
 execute if score #ultl rpg_pf matches 750 if score #hp rpg_pf matches ..750 run function rpg:pope_fight/heart/ult_due
 execute if score #ultl rpg_pf matches 500 if score #hp rpg_pf matches ..500 run function rpg:pope_fight/heart/ult_due
 execute if score #ultl rpg_pf matches 250 if score #hp rpg_pf matches ..250 run function rpg:pope_fight/heart/ult_due
-tag @a[tag=rpg.pf.tgt] remove rpg.pf.tgt
-tag @a[distance=..48,gamemode=!spectator,gamemode=!creative,sort=nearest,limit=1] add rpg.pf.tgt
+tag @e[tag=rpg.unit,tag=rpg.pf.tgt] remove rpg.pf.tgt
+tag @e[tag=rpg.unit.f,distance=..48,sort=nearest,limit=1] add rpg.pf.tgt

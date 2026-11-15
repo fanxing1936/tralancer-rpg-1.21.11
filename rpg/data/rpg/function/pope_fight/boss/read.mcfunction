@@ -9,4 +9,4 @@ execute if score #next rpg_pf matches 500 if score #hp rpg_pf matches ..500 run 
 execute if score #next rpg_pf matches 250 if score #hp rpg_pf matches ..250 run function rpg:pope_fight/boss/wave_due
 execute if score #ultl rpg_pf matches 625 if score #hp rpg_pf matches ..625 run function rpg:pope_fight/boss/ult_due
 execute if score #ultl rpg_pf matches 375 if score #hp rpg_pf matches ..375 run function rpg:pope_fight/boss/ult_due
-execute if score #sk rpg_pf matches 0 facing entity @a[distance=..32,gamemode=!spectator,gamemode=!creative,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ 0
+execute if score #sk rpg_pf matches 0 facing entity @e[tag=rpg.unit.f,distance=..32,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ 0

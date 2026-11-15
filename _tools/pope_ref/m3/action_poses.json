@@ -1,0 +1,4329 @@
+{
+  "method": "人工点约束的最小二乘重建；固定已确认几何/相机，保留各点残差",
+  "clips": {
+    "attack": [
+      {
+        "time": 0.0,
+        "source_frame": 0,
+        "source_time_seconds": 0.0,
+        "pose": {
+          "body": {
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0.0,
+              0
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.21429,
+        "source_frame": 5,
+        "source_time_seconds": 0.2,
+        "pose": {
+          "body": {
+            "rotation": [
+              6,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              1
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              0.944577118525661,
+              0.0,
+              -0.47943246380151305
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              48
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              16.100893911077208,
+              -19.187432551663363
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              47.58011448327161,
+              15.56570981511508,
+              20.68997635053832
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              59,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -6,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -12,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              6.992206483531207,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              7.411937816635453e-33,
+              0
+            ],
+            "rotation": [
+              0,
+              18.14517,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.7543157280247682,
+              -0.555351836925605,
+              0.46081083625489594
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.3,
+        "source_frame": 7,
+        "source_time_seconds": 0.28,
+        "pose": {
+          "body": {
+            "rotation": [
+              8,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              -2.3736684079252437,
+              0.0,
+              0.6869230575954921
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              48
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              19.959035254219643,
+              -29.188914308533143
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              39.88537012269849,
+              26.333801024268435,
+              36.02950748559392
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              62,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -8,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -15,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              6.854115984323683,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              3.642947475583588e-06,
+              0
+            ],
+            "rotation": [
+              0,
+              25.40322,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.7852029671542802,
+              -0.5890541337145251,
+              0.4746118981421653
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.4,
+        "source_frame": 10,
+        "source_time_seconds": 0.4,
+        "pose": {
+          "body": {
+            "rotation": [
+              -8,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -5,
+              0,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              21.244953708862194,
+              0.0,
+              -1.7108347985386612
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              13
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -34.15758257493662,
+              -47.261340738834825
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              61.974477311141094,
+              -39.32839019210998,
+              -59.65127085020468
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              33,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              8,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -24,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              9.999999857104905,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              1.173917006154312,
+              0
+            ],
+            "rotation": [
+              0,
+              36.29034,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              1.6231461568464798,
+              -1.8500783736190074,
+              -2.399364818570798
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.45,
+        "source_frame": 11,
+        "source_time_seconds": 0.44,
+        "pose": {
+          "body": {
+            "rotation": [
+              -65,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -28,
+              0,
+              -4
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              -5.880389678448932,
+              0.0,
+              -2.981240231290666
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              33
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -158.4753308511933,
+              16.919994031779275
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -16.211296633532267,
+              -2.2685735014977166,
+              -113.23204770028877
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              35,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              20,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -10,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              1.2048936208787562,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              5.882200347090277e-07,
+              0
+            ],
+            "rotation": [
+              0,
+              39.91932,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.6664873290704557,
+              -1.140044231623463,
+              0.10695132734241204
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.5,
+        "source_frame": 13,
+        "source_time_seconds": 0.52,
+        "pose": {
+          "body": {
+            "rotation": [
+              -75,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -32,
+              0,
+              -5
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              3.682659646400632,
+              0.0,
+              -7.291130750067032
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              33
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -148.5144208633848,
+              -11.097291003766575
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -96.03446240241087,
+              -1.7385259746355994,
+              -33.27621908193801
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              25,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              10,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -8,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              9.999999999990534,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              1.318803614711754,
+              0
+            ],
+            "rotation": [
+              0,
+              47.17746,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.5838341566467872,
+              -1.0104845443479187,
+              0.08822306838652563
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.7,
+        "source_frame": 18,
+        "source_time_seconds": 0.72,
+        "pose": {
+          "body": {
+            "rotation": [
+              -75,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -8,
+              0,
+              -8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              -16.419712598198977,
+              0.0,
+              -1.9892899236670403
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              33
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -46.76338902044018,
+              -87.10132870332511
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -79.72536648297202,
+              -1.406175885649555,
+              103.32479688179667
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              25,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              10,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -5,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              9.999999999999998,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              3.607279127768892,
+              0
+            ],
+            "rotation": [
+              0,
+              65.32253999999999,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.06821706330078647,
+              -2.346743524692149,
+              -1.0200378792758893
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.9,
+        "source_frame": 23,
+        "source_time_seconds": 0.92,
+        "pose": {
+          "body": {
+            "rotation": [
+              -25,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -3,
+              0,
+              0
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              -9.742730415934235,
+              0.0,
+              10.261979493176131
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              13
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -19.743237653440993,
+              6.381649166366106
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -68.34609826497486,
+              28.530678176975734,
+              -12.567859406575653
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              33,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              20,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -25,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              -1.8560987011647436,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              4.950559265778804,
+              0
+            ],
+            "rotation": [
+              0,
+              83.46771,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.768973635446303,
+              -1.7114092190011325,
+              -1.5227081704271284
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.075,
+        "source_frame": 27,
+        "source_time_seconds": 1.08,
+        "pose": {
+          "body": {
+            "rotation": [
+              -3,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              18.00720368113729,
+              0.0,
+              -5.7586926295424785
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -3.682572436016312,
+              -0.25551110239231567
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -13.993763359966625,
+              25.86315689080887,
+              -0.44644061476422386
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              3,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              3,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -8,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              -0.02160444539681891,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              7.677297001719701e-42,
+              0
+            ],
+            "rotation": [
+              0,
+              97.9839,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.11292673086537663,
+              -0.3816264455327188,
+              -0.2838546972889598
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.25,
+        "source_frame": 31,
+        "source_time_seconds": 1.24,
+        "pose": {
+          "body": {
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              112.5,
+              0
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      }
+    ],
+    "summon": [
+      {
+        "time": 0.0,
+        "source_frame": 0,
+        "source_time_seconds": 0.0,
+        "pose": {
+          "body": {
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0.0,
+              0
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.2,
+        "source_frame": 5,
+        "source_time_seconds": 0.2,
+        "pose": {
+          "body": {
+            "rotation": [
+              6,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              9.86679371326248,
+              0.0,
+              -10.362773327698102
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              48
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              12.184332239510137,
+              -28.315339723130414
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              33.710115020357804,
+              -2.3943007804419376,
+              10.491532372844599
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              59,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -6,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -12,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              8.36170713025477,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              7.188268878261616e-06,
+              0
+            ],
+            "rotation": [
+              0,
+              18.0,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -1.0025860404673914,
+              -0.8328054709754956,
+              0.5328173404422204
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.3,
+        "source_frame": 8,
+        "source_time_seconds": 0.32,
+        "pose": {
+          "body": {
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -3,
+              0,
+              16
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              27.847010061519022,
+              0.0,
+              3.1087088055874736
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              13
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              30.036077700335824,
+              26.892931901400477
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              59.3410016099215,
+              13.963309588502785,
+              39.31019347270368
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              20,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -18,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              9.999999999414975,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              1.2990196738163873e-18,
+              0
+            ],
+            "rotation": [
+              0,
+              28.8,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.7769866129562963,
+              -1.6601276332194639,
+              -1.524159011769419
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.35,
+        "source_frame": 9,
+        "source_time_seconds": 0.36,
+        "pose": {
+          "body": {
+            "rotation": [
+              -10,
+              -25,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -8,
+              -25,
+              18
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              42.341019013455494,
+              -25.0,
+              -0.058745279587779364
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              28
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              23.449185749011722,
+              9.368323702453427
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              123.93583882274037,
+              -33.16480980938599,
+              -55.17342107009854
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              20,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              5,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -25,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              5.685847857021753,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              6.302618363400595e-36,
+              0
+            ],
+            "rotation": [
+              0,
+              32.4,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              2.365920455701021,
+              -1.1958821468995566,
+              -2.780980148226968
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.4,
+        "source_frame": 10,
+        "source_time_seconds": 0.4,
+        "pose": {
+          "body": {
+            "rotation": [
+              -25,
+              -80,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -15,
+              -80,
+              10
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              86.73739599479364,
+              -80.0,
+              -46.419928048100914
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              43
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -60,
+              -80,
+              -30
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              45,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              15,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -32,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              1,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              36.0,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              2.165989602995649,
+              -3.2887245913536365,
+              -3.603402204676046
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.45,
+        "source_frame": 11,
+        "source_time_seconds": 0.44,
+        "pose": {
+          "body": {
+            "rotation": [
+              -35,
+              -130,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -15,
+              -130,
+              5
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              8.027201630039269,
+              -130.0,
+              24.33132416429399
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              58
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -29.018769129616217,
+              -17.10482430754345
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -73.50148741331041,
+              19.192477550215777,
+              -11.469230778092093
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              60,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              20,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -40,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              9.999999999993449,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              1.3486811277290745e-27,
+              0
+            ],
+            "rotation": [
+              0,
+              39.6,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              1.819922878928792,
+              -1.2169896958174888,
+              -2.2823889929682513
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.49,
+        "source_frame": 12,
+        "source_time_seconds": 0.48,
+        "pose": {
+          "body": {
+            "rotation": [
+              -35,
+              -185,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -12,
+              -185,
+              -8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              7.730697439209772,
+              -185.0,
+              -10.871175344522355
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              53
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              9.239035142178324,
+              -10.647191705906653
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              24.462290843187876,
+              -207.93467309069598,
+              -33.84537189836227
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              60,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              20,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -45,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              3.550871126045053,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0.6384815569361603,
+              0
+            ],
+            "rotation": [
+              0,
+              43.199999999999996,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.6174282098500232,
+              -1.3822072527363605,
+              -1.2415277642023657
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.53,
+        "source_frame": 13,
+        "source_time_seconds": 0.52,
+        "pose": {
+          "body": {
+            "rotation": [
+              -40,
+              -235,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -15,
+              -235,
+              -8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              -18.184813506109123,
+              -235.0,
+              -32.09328882450062
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              48
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              5.569769891587309,
+              -23.462796730865385
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -74.00177096038178,
+              -295.0050207420348,
+              -75.85249864109716
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              60,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              30,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -45,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              3.8381258836711276,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              1.216143585796073,
+              0
+            ],
+            "rotation": [
+              0,
+              46.800000000000004,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -3.1697591590404643,
+              -3.364000034929657,
+              1.3322072978974204
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.57,
+        "source_frame": 14,
+        "source_time_seconds": 0.56,
+        "pose": {
+          "body": {
+            "rotation": [
+              -50,
+              -275,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -20,
+              -275,
+              -6
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              72.29654631710706,
+              -275.0,
+              65.70034389456562
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              43
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -0.2801737214069391,
+              -24.3572422503868
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -15.619147816764347,
+              -226.15901610588284,
+              17.1890880089956
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              65,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              45,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -35,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              5.298700632257932,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              5.3240876304503025e-43,
+              0
+            ],
+            "rotation": [
+              0,
+              50.400000000000006,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -3.991306448793536,
+              -4.702066408546541,
+              1.4528030667877534
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.65,
+        "source_frame": 16,
+        "source_time_seconds": 0.64,
+        "pose": {
+          "body": {
+            "rotation": [
+              -60,
+              -315,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -22,
+              -315,
+              -3
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              -35.869151463097616,
+              -315.0,
+              -2.4865323869558362
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              43
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -22.12628975786414,
+              -21.064470910155375
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -62.33971127585201,
+              -180.69367959882314,
+              49.60057147934491
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              72,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              50,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -20,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              0.19287203245596224,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0.10015499408008312,
+              0
+            ],
+            "rotation": [
+              0,
+              57.6,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -2.7305521263388757,
+              -0.9730355834271258,
+              2.0753603988167724
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.73,
+        "source_frame": 18,
+        "source_time_seconds": 0.72,
+        "pose": {
+          "body": {
+            "rotation": [
+              -70,
+              -340,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -25,
+              -340,
+              -3
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              -21.196592587546412,
+              -340.0,
+              8.176174997186138
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              43
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -85,
+              0
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -95,
+              -340,
+              -4
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              80,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              60,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -15,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              64.8,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -2.217964668716044,
+              -1.4044048592175844,
+              1.389813900778117
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.85,
+        "source_frame": 21,
+        "source_time_seconds": 0.84,
+        "pose": {
+          "body": {
+            "rotation": [
+              -75,
+              -360,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -30,
+              -360,
+              -5
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              -10.291582743110729,
+              -360.0,
+              -2.084442680509391
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              43
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -91.10403380491101,
+              4.855986075993516
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -106.24029509345745,
+              -372.30888639483607,
+              85.35324828821976
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              85,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              65,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -8,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              9.999999999999998,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              3.490372017790013e-39,
+              0
+            ],
+            "rotation": [
+              0,
+              75.6,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.6077201995332595,
+              -1.5177261840115006,
+              -0.16524330962395017
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.0,
+        "source_frame": 25,
+        "source_time_seconds": 1.0,
+        "pose": {
+          "body": {
+            "rotation": [
+              -75,
+              -390,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -18,
+              -390,
+              -7
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              1.137633145270055,
+              -390.0,
+              -21.771508392285305
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              43
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -130.7655438162876,
+              81.69564508724115
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -146.34090767655084,
+              -390.7435756468707,
+              79.62432714682392
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              87,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              67,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -10,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              9.999999999999998,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              1.4187686102085105e-37,
+              0
+            ],
+            "rotation": [
+              0,
+              90.0,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.3473153619352537,
+              -2.3002844207497315,
+              -0.7850720212810088
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.15,
+        "source_frame": 29,
+        "source_time_seconds": 1.16,
+        "pose": {
+          "body": {
+            "rotation": [
+              -65,
+              -415,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -10,
+              -415,
+              -6
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              21.460000664181972,
+              -415.0,
+              -32.71250880848138
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              43
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -123.87185309535882,
+              44.590718616667594
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -45.77440130583906,
+              -463.0248943444857,
+              -10.95061844494542
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              77,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              55,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -15,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              5.056093699285971,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              4.094838963634753e-42,
+              0
+            ],
+            "rotation": [
+              0,
+              104.39999999999999,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.5763873039895798,
+              -4.519880956196648,
+              -2.7155979095870646
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.325,
+        "source_frame": 33,
+        "source_time_seconds": 1.32,
+        "pose": {
+          "body": {
+            "rotation": [
+              -45,
+              -405,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -6,
+              -405,
+              -2
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              22.57350969514997,
+              -405.0,
+              -27.725721433392113
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              38
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -131.2630106700134,
+              32.53863605452849
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -74.46241746335555,
+              -413.5797019395326,
+              1.9154853226012059
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              55,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              37,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -25,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              3.3242083619235596,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0.5010038849426821,
+              0
+            ],
+            "rotation": [
+              0,
+              118.80000000000001,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.8794223082246506,
+              -5.060646074023151,
+              -1.6197042725138193
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.5,
+        "source_frame": 37,
+        "source_time_seconds": 1.48,
+        "pose": {
+          "body": {
+            "rotation": [
+              -15,
+              -375,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              -2,
+              -375,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              20.74088282188331,
+              -375.0,
+              -12.421649262726822
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              13
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -15.04081363650216,
+              -2.7559691848057275
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -51.54208392243932,
+              -328.21343145100104,
+              -21.877994656819848
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              23,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              11,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -20,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              -0.9238989181986547,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              3.2096574168518893e-10,
+              0
+            ],
+            "rotation": [
+              0,
+              133.2,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.027741493888845604,
+              -3.0191444738927284,
+              -1.42933330066564
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.73077,
+        "source_frame": 43,
+        "source_time_seconds": 1.72,
+        "pose": {
+          "body": {
+            "rotation": [
+              -2,
+              -360,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              -360,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              14.994362535941809,
+              -360.0,
+              -0.7571425546074415
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -2.5686637147988884,
+              5.8103041764764045
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -2.2910605610872845,
+              -340.47302770459265,
+              0.6547972888325765
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              2,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              2,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -5,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              -0.5501722296317094,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0.08878125320279184,
+              0
+            ],
+            "rotation": [
+              0,
+              154.8,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              -0.08443075291026174,
+              0.047022961027789856,
+              0.10133758830284936
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 2.0,
+        "source_frame": 50,
+        "source_time_seconds": 2.0,
+        "pose": {
+          "body": {
+            "rotation": [
+              0,
+              -360,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              -360,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              0,
+              -360,
+              8
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              0,
+              -360,
+              0
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              180.0,
+              0
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      }
+    ],
+    "cast": [
+      {
+        "time": 0.0,
+        "source_frame": 0,
+        "source_time_seconds": 0.0,
+        "pose": {
+          "body": {
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0.0,
+              0
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.1,
+        "source_frame": 3,
+        "source_time_seconds": 0.12,
+        "pose": {
+          "body": {
+            "rotation": [
+              2,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              12
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              23.410159497877398,
+              0.0,
+              -1.5506927301581803
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -119.92173746022807,
+              -32.79986824918741
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -81.6023032795747,
+              -46.13961589712685,
+              90.19832342837702
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              3,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -2,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -10,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              -1.0368175033526346,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              1.8500001417735719,
+              0
+            ],
+            "rotation": [
+              0,
+              10.887120000000001,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.14457207159746305,
+              0.43850779837478965,
+              0.06578979722531156
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.25,
+        "source_frame": 6,
+        "source_time_seconds": 0.24,
+        "pose": {
+          "body": {
+            "rotation": [
+              4,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              14
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              27.857172812075046,
+              0.0,
+              4.395469078752304
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -85.99552840976044,
+              -2.3589752483304767
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              34.673256702371354,
+              -1.6144192957138042,
+              -45.10444229733119
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              4,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -4,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -20,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              5.310831440863219,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              1.0733188764910018,
+              0
+            ],
+            "rotation": [
+              0,
+              21.774150000000002,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.5105334372185006,
+              0.2989017198363339,
+              -0.34338904315297325
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.40556,
+        "source_frame": 10,
+        "source_time_seconds": 0.4,
+        "pose": {
+          "body": {
+            "rotation": [
+              6,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              16
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              27.561421992470454,
+              0.0,
+              4.061625746919191
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -88.93544009688883,
+              -0.38374778798573017
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              32.229078159558114,
+              -6.424305684843475,
+              -40.61143140389709
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              4,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -6,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -30,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              4.52654068076521,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              1.4196124177611538,
+              0
+            ],
+            "rotation": [
+              0,
+              36.29034,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.6325390669255473,
+              0.40275450644482175,
+              -0.41051372179411993
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.6,
+        "source_frame": 15,
+        "source_time_seconds": 0.6,
+        "pose": {
+          "body": {
+            "rotation": [
+              8,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              1,
+              0,
+              17
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              26.883574698587566,
+              0.0,
+              3.1385442390002427
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -87.85997003776967,
+              -0.44500842667596674
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              29.449405490085443,
+              -4.540390443692738,
+              -33.27122490744667
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              2,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -8,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -42,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              3.9282176533766586,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              3.4011044558398553,
+              0
+            ],
+            "rotation": [
+              0,
+              54.43551,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.8414555229919858,
+              0.6305592042266805,
+              -0.5024318717718534
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 0.9,
+        "source_frame": 23,
+        "source_time_seconds": 0.92,
+        "pose": {
+          "body": {
+            "rotation": [
+              9,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              2,
+              0,
+              17
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              27.32134182654372,
+              0.0,
+              3.7026437420449128
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -76.80485525740441,
+              -50.22124309144659
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              -0.4068741921617104,
+              -152.36644856097234,
+              5.250897700419664
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              1,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -9,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -50,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              2.344366788322669,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              7.029022864500303,
+              0
+            ],
+            "rotation": [
+              0,
+              83.46771,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.8427335646577565,
+              0.2985830046651679,
+              -0.6565818305064658
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.19615,
+        "source_frame": 30,
+        "source_time_seconds": 1.2,
+        "pose": {
+          "body": {
+            "rotation": [
+              9,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              2,
+              0,
+              18
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              29.01136263030217,
+              0.0,
+              6.239081569644137
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -89.89608309656413,
+              -0.008747400428185967
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              1.392109326875447,
+              -37.80679417307129,
+              8.863636298590924
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              1,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -9,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -48,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              3.3507989534303784,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              7.6766961876679805,
+              0
+            ],
+            "rotation": [
+              0,
+              108.87092999999999,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.8442862356756782,
+              0.17122666590150062,
+              -0.7167196425310018
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.45,
+        "source_frame": 36,
+        "source_time_seconds": 1.44,
+        "pose": {
+          "body": {
+            "rotation": [
+              9,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              2,
+              0,
+              18
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              30.036928573605834,
+              0.0,
+              8.36888489504421
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -92.53567156348826,
+              -0.04387294405994389
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              21.84225903600144,
+              -52.0622189544457,
+              -15.223954815075336
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              1,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -9,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -45,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              2.8498224762434723,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              6.8972962975002226,
+              0
+            ],
+            "rotation": [
+              0,
+              130.64517,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.8084382844449138,
+              0.015332565317168532,
+              -0.7547610032929859
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 1.8,
+        "source_frame": 45,
+        "source_time_seconds": 1.8,
+        "pose": {
+          "body": {
+            "rotation": [
+              8,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              1,
+              0,
+              16
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              -7.877566419878047,
+              0.0,
+              22.072717066646987
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -98.31754396279285,
+              0.06281609610424534
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              24.1084149657538,
+              -10.309651441382558,
+              -5.903031474473375
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -8,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -55,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              2.409374880491493,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              7.031542708543637,
+              0
+            ],
+            "rotation": [
+              0,
+              163.30644,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.6427528552688411,
+              -0.09866310779317639,
+              -0.6511479941662478
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 2.05,
+        "source_frame": 51,
+        "source_time_seconds": 2.04,
+        "pose": {
+          "body": {
+            "rotation": [
+              6,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              13
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              13.462188475584034,
+              0.0,
+              -12.83327004468248
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -96.37758420052543,
+              -0.41281103202331504
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              24.128449872446737,
+              -66.77911119400056,
+              -7.564395554329947
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              1,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -6,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -38,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              1.3636948184917657,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              4.384359144360932,
+              0
+            ],
+            "rotation": [
+              0,
+              185.08068000000003,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.4131163240846085,
+              -0.1428414893729058,
+              -0.4551055069536205
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 2.3,
+        "source_frame": 57,
+        "source_time_seconds": 2.28,
+        "pose": {
+          "body": {
+            "rotation": [
+              3,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              10
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              8.562475015387554,
+              0.0,
+              -17.76402065424205
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              -94.62188103778038,
+              0.49631525841053153
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              10.23414958589237,
+              -78.45174449109675,
+              12.587408300069166
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              1,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              -3,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              -18,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              1.159728819683271,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              4.076972347831814,
+              0
+            ],
+            "rotation": [
+              0,
+              206.85483,
+              0
+            ]
+          },
+          "root": {
+            "position": [
+              0.1684571425124466,
+              -0.17013833193099598,
+              -0.2371290163462656
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      },
+      {
+        "time": 2.5,
+        "source_frame": 62,
+        "source_time_seconds": 2.48,
+        "pose": {
+          "body": {
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "head": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "crown": {
+            "world_rotation": [
+              0,
+              0,
+              8
+            ]
+          },
+          "right_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_hand": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_arm": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_hand": {
+            "world_rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "right_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "left_leg": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "cape": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "staff_glow": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              225.0,
+              0
+            ]
+          }
+        },
+        "evidence": "有动图；3D欧拉、深度、幅度为需原生并排验收的数值起始解"
+      }
+    ]
+  }
+}

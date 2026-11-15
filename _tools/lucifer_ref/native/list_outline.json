@@ -1,0 +1,110 @@
+{
+  "counts": {
+    "groups": 16,
+    "cubes": 63,
+    "meshes": 0
+  },
+  "roots": [
+    {
+      "name": "root",
+      "uuid": "c4487c4a-986c-5a5e-a50a-dfb567f09b80",
+      "type": "group",
+      "children": [
+        {
+          "name": "body",
+          "uuid": "81ca75c3-a1dd-5ce4-93c3-1c63c5b89dba",
+          "type": "group",
+          "children": [
+            {
+              "name": "head",
+              "uuid": "e43770dd-4f6b-580b-81cf-c10ca816bd31",
+              "type": "group",
+              "children": [
+                {
+                  "name": "eyes_glow",
+                  "uuid": "0b27f898-18b7-5f32-9af3-446db7363d03",
+                  "type": "group",
+                  "children": []
+                },
+                {
+                  "name": "sprout_left",
+                  "uuid": "8637fdb2-0f16-5ccb-bb70-cc088b4f294c",
+                  "type": "group",
+                  "children": []
+                },
+                {
+                  "name": "sprout_right",
+                  "uuid": "f1f48b08-f934-5c15-9191-8438095130a0",
+                  "type": "group",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "right_arm",
+              "uuid": "0ca1aec2-24ad-5518-ae3b-6abc6113dcb5",
+              "type": "group",
+              "children": [
+                {
+                  "name": "cuff_roots_right",
+                  "uuid": "1ea8d66c-1f51-5326-8104-7940df827cf6",
+                  "type": "group",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "left_arm",
+              "uuid": "dc10d4ef-ce84-580a-ac45-ec8dd28dfe31",
+              "type": "group",
+              "children": [
+                {
+                  "name": "cuff_roots_left",
+                  "uuid": "a0e4a15e-571d-5f2f-a4d7-4f0cc7859905",
+                  "type": "group",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "root_front_right",
+              "uuid": "d285be02-9e40-5627-a102-6e9de0125b5c",
+              "type": "group",
+              "children": []
+            },
+            {
+              "name": "root_front_left",
+              "uuid": "ea954ad4-d3a4-5f99-a69d-044226ee6794",
+              "type": "group",
+              "children": []
+            },
+            {
+              "name": "root_back_right",
+              "uuid": "02e5525e-eb5c-5a27-bc6e-d938bebad48a",
+              "type": "group",
+              "children": []
+            },
+            {
+              "name": "root_back_left",
+              "uuid": "20fd256b-7f2f-55a8-9b80-634e4aee951d",
+              "type": "group",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "right_leg",
+          "uuid": "6553d0c3-82c3-5118-84d7-a8d4f9aa6d25",
+          "type": "group",
+          "children": []
+        },
+        {
+          "name": "left_leg",
+          "uuid": "a0d8e317-d101-5936-a591-d90899b4708b",
+          "type": "group",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

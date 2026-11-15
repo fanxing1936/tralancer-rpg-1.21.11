@@ -1,0 +1,321 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:mace",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "坟墓克星",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "来自黑暗年代的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[遗物]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "刀上的魔力足以",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[驱散亡灵]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🗡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[三段连斩]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "每第三下化作横扫，前方敌人受8点伤害",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "亡灵受14点；两下间隔超过2秒重新计数",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "原作：Minecraft Dungeons · Grave Bane",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:enchantments": {
+                  "minecraft:smite": 5,
+                  "minecraft:density": 3,
+                  "minecraft:looting": 2,
+                  "minecraft:unbreaking": 3
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:attack_damage",
+                    "amount": 9,
+                    "operation": "add_value",
+                    "slot": "mainhand",
+                    "id": "rpg:grave_bane/0"
+                  },
+                  {
+                    "type": "minecraft:attack_speed",
+                    "amount": -2.8,
+                    "operation": "add_value",
+                    "slot": "mainhand",
+                    "id": "rpg:grave_bane/1"
+                  },
+                  {
+                    "type": "minecraft:entity_interaction_range",
+                    "amount": 1,
+                    "operation": "add_value",
+                    "slot": "mainhand",
+                    "id": "rpg:grave_bane/2"
+                  }
+                ],
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    1110042.0
+                  ]
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{grave_bane_tag:1b,sword_tag:1b}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crossbow",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "竖琴弩",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "一半是",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[乐器]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "，一半是杀器",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "有它在，派对才算",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[开场]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🏹被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[齐奏]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "每次射出五支箭：多重射击之外",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "再向两侧各补一支，扇面更宽",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "原作：Minecraft Dungeons · Harp Crossbow",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:enchantments": {
+                  "minecraft:multishot": 1,
+                  "minecraft:quick_charge": 2,
+                  "minecraft:unbreaking": 3
+                },
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    1110043.0
+                  ]
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{harp_crossbow_tag:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

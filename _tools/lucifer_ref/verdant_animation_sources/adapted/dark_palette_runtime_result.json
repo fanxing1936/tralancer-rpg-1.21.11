@@ -1,0 +1,191 @@
+{
+  "project": "lucifer_verdant",
+  "plugin_version": "1.1.0",
+  "status": {
+    "project": "lucifer_verdant",
+    "configured": true,
+    "active": true,
+    "parameters": {
+      "Emissive": [
+        1,
+        1,
+        1
+      ],
+      "EmissivePower": 1,
+      "NaturalEmissive": 0.699999988079071,
+      "DeathEmissive": 1,
+      "OpacityMaskClipValue": 0.33329999446868896
+    },
+    "preview": {
+      "exposure": 1,
+      "tone_mapping": "Three.js ACESFilmicToneMapping",
+      "surface_lighting": "Blockbench studio light; not original scene lighting",
+      "bloom": false,
+      "note": "Only the static linear emissive equation is ported from DXBC. Preview tone mapping and scene light are explicitly separate.",
+      "material_limit": "Original static emissive equation ported; original specular/roughness sampling and full game lighting are not represented by the Blockbench studio surface light."
+    },
+    "palette_tint_linear": [
+      0.4,
+      0.4,
+      0.4
+    ]
+  },
+  "config": {
+    "schema": "dungeons-static-emissive-v1",
+    "original_material": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2",
+    "original_parent": "/Game/Actors/Equipment/M_MasterEquipment",
+    "source_pixel_shader_hash": "17d7f0ed06ee1cba9b4141f6a8466432829f043d",
+    "source_pixel_shader_dxbc_sha256": "aa019d9b6d7e6c0946ded730c32928010dc71772622312cb7d925c7257b623f9",
+    "source_auxiliary_png_sha256": "ff22dd2243f670a3144597e5dfaa966344eef5015497f2a1fd4808ba3cb8d9fa",
+    "parameters": {
+      "Emissive": [
+        1,
+        1,
+        1
+      ],
+      "EmissivePower": 1,
+      "NaturalEmissive": 0.699999988079071,
+      "DeathEmissive": 1,
+      "OpacityMaskClipValue": 0.33329999446868896
+    },
+    "formula": "max((sRGBDecode(auxiliary.rgb).b * Emissive * EmissivePower + sRGBDecode(albedo.rgb) * NaturalEmissive) * DeathEmissive, 0)",
+    "texture_srgb": {
+      "albedo": true,
+      "auxiliary": true,
+      "provenance": "SRGB is absent in both original texture packages; UE texture parser default is true"
+    },
+    "static_defaults": {
+      "Power": 0,
+      "EnchantmentAdd": 0,
+      "Flash Timestamp": -100,
+      "Flash Seconds": 0.10000000149011612,
+      "SelectionColor": [
+        0,
+        0,
+        0
+      ],
+      "StatusColor": [
+        1,
+        1,
+        1
+      ],
+      "DissolveStart": -50,
+      "AlphaOverride": 1,
+      "game_time_domain": "time >= 0; no active runtime damage/enchantment/selection override"
+    },
+    "preview": {
+      "exposure": 1,
+      "tone_mapping": "Three.js ACESFilmicToneMapping",
+      "surface_lighting": "Blockbench studio light; not original scene lighting",
+      "bloom": false,
+      "note": "Only the static linear emissive equation is ported from DXBC. Preview tone mapping and scene light are explicitly separate.",
+      "material_limit": "Original static emissive equation ported; original specular/roughness sampling and full game lighting are not represented by the Blockbench studio surface light."
+    },
+    "preservation": "Original albedo and auxiliary PNG bytes embedded unchanged; no emission baked into albedo; HDR parameters remain floating point.",
+    "albedo_uuid": "801a6ca1-4bff-0950-bbfc-dc7f4dff6092",
+    "auxiliary_uuid": "fd1157a7-b9fc-41ec-2818-73f3519d1a3f",
+    "original_effective_switches": {
+      "ConstantEmissive": true,
+      "FlashBehavior": true,
+      "EnchantmentMask": true,
+      "Desaturation": false,
+      "SpecularTexture": true,
+      "ConstantSpecular": false
+    },
+    "palette_tint_linear": [
+      0.4,
+      0.4,
+      0.4
+    ]
+  },
+  "active_uniforms": {
+    "palette_tint_linear": [
+      0.4,
+      0.4,
+      0.4
+    ],
+    "emissive": [
+      1,
+      1,
+      1
+    ],
+    "emissive_power": 1,
+    "natural": 0.699999988079071
+  },
+  "protected_geometry_texture_animation_unchanged": true,
+  "other_project_configs_unchanged": true,
+  "source_projects": [
+    {
+      "name": "root_rot_armor_original",
+      "has_palette_override": false,
+      "uniform": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "verdant_robe_original",
+      "has_palette_override": false,
+      "uniform": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "shader_contains_tint": true,
+  "auxiliary_expression_unchanged": true,
+  "saved_by_this_task": false,
+  "plugin_sha256": "3bf2684900a167412d76721eb2dc7c66910e053b99c94763bc4668ff4b84a395",
+  "previous_palette_tint_linear": [
+    0.24,
+    0.24,
+    0.24
+  ],
+  "candidate_history": [
+    {
+      "palette_tint_linear": [
+        0.24,
+        0.24,
+        0.24
+      ],
+      "preview": {
+        "before": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\native\\lucifer_verdant_idle_0.000.png",
+        "after": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\native\\lucifer_verdant_darkpalette_idle_0.000.png",
+        "after_sha256": "43defc625a0139e4e8da5f9995786757e3ce2e61b1c499770cf2e5faf9e3021a",
+        "size": [
+          594,
+          495
+        ],
+        "alpha_differing_pixels": 0,
+        "rgb_differing_pixels": 13771,
+        "changed_region_bbox_xyxy": [
+          216,
+          79,
+          375,
+          350
+        ],
+        "view": "Both actual native animation.idle at t=0; same camera, lighting and model pose.",
+        "observed": "Green hat and robe are darker; source body and spear retain their original appearance. Auxiliary primary-emissive term is unchanged by shader formula; total emission also contains deliberately darkened albedo-natural term."
+      },
+      "decision": "Too dark; green pattern contrast hard to read, superseded by 0.40."
+    }
+  ],
+  "current_preview": {
+    "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\native\\lucifer_verdant_darkpalette_040_idle_0.000.png",
+    "sha256": "6640a3c5550cd11838689780aa0aa268d58d7fd3981095efb254e37288767c95",
+    "clip": "animation.idle",
+    "time": 0,
+    "palette_tint_linear": [
+      0.4,
+      0.4,
+      0.4
+    ],
+    "background": "Native transparent screenshot; neutral gray can be provided by the comparison page, no PNG background edit.",
+    "rgba_size": [
+      594,
+      495
+    ]
+  }
+}

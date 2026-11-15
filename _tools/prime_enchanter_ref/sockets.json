@@ -1,0 +1,1812 @@
+{
+  "bbmodel_sha256": "aa5b93b04be4e4ebd7b650f688d45f0ff0603148de5aefaf42e249a76cece369",
+  "coordinate_system": "+Y up, facing -Z",
+  "units": "unscaled model units; origin at model ground reference, 16 units per block at scale 1",
+  "model_scale": null,
+  "carrier_seat": null,
+  "carrier_yaw_zero": "For default 180° base turn, from carrier feet: [-x,y,-z] * model_scale / 16.",
+  "note": "原作没有提供发射骨或触发判定。拳、额纹和帽顶取自 M2 模型表面；样本按 GIF 帧起点求姿态。",
+  "samples": [
+    {
+      "clip": "idle",
+      "event": "rest",
+      "source_frame": 0,
+      "time": 0,
+      "suggested_tick": 0,
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            6.246875,
+            27.26038,
+            -8.982315
+          ],
+          "posed_model_direction": [
+            0.210305,
+            0.429498,
+            -0.878239
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -1.477523,
+            25.19118,
+            -10.77571
+          ],
+          "posed_model_direction": [
+            0.569509,
+            0.303364,
+            -0.763957
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -0.891463,
+            32.899097,
+            -3.476147
+          ],
+          "posed_model_direction": [
+            -0.008939,
+            -0.005042,
+            -0.999947
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            -0.739545,
+            36.077297,
+            0.546683
+          ],
+          "posed_model_direction": [
+            0.036647,
+            0.999314,
+            -0.005366
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "appear",
+      "event": "landing",
+      "source_frame": 7,
+      "time": 0.29,
+      "suggested_tick": 6,
+      "basis": "首次低伏落地候选",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            8.298516,
+            0.440012,
+            -8.466267
+          ],
+          "posed_model_direction": [
+            0.081588,
+            -0.996635,
+            0.007916
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -4.914132,
+            0.215218,
+            -11.215071
+          ],
+          "posed_model_direction": [
+            -0.035984,
+            -0.998196,
+            -0.048063
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            2.383528,
+            11.615019,
+            -20.750287
+          ],
+          "posed_model_direction": [
+            -0.107864,
+            -0.954073,
+            -0.27948
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            3.227781,
+            16.307744,
+            -22.640465
+          ],
+          "posed_model_direction": [
+            0.129267,
+            0.265275,
+            -0.955468
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            -1.0
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "death",
+      "event": "fall",
+      "source_frame": 112,
+      "time": 4.67,
+      "suggested_tick": 93,
+      "basis": "俯卧落定候选",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            16.250337,
+            3.93091,
+            -9.959049
+          ],
+          "posed_model_direction": [
+            0.946998,
+            -0.15903,
+            0.279113
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -17.958443,
+            3.280676,
+            -9.454203
+          ],
+          "posed_model_direction": [
+            -0.922428,
+            -0.213764,
+            0.321608
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -1.0,
+            2.375338,
+            -24.169872
+          ],
+          "posed_model_direction": [
+            0,
+            -0.99863,
+            -0.052336
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            -1.0,
+            6.575183,
+            -27.114104
+          ],
+          "posed_model_direction": [
+            0,
+            0.052336,
+            -0.99863
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            -1.0,
+            0,
+            -3.0
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "forward_strike",
+      "event": "strike",
+      "source_frame": 36,
+      "time": 1.5,
+      "suggested_tick": 30,
+      "basis": "右拳最大前伸",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            2.352548,
+            21.51027,
+            -32.917147
+          ],
+          "posed_model_direction": [
+            -0.104606,
+            0.027163,
+            -0.994143
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -6.715735,
+            21.419368,
+            8.858685
+          ],
+          "posed_model_direction": [
+            -0.118007,
+            -0.013081,
+            0.992927
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -2.799849,
+            31.060046,
+            -11.305262
+          ],
+          "posed_model_direction": [
+            -0.53158,
+            -0.171248,
+            -0.829516
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            -0.783963,
+            34.85959,
+            -8.511184
+          ],
+          "posed_model_direction": [
+            -0.041676,
+            0.98345,
+            -0.176319
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            -4.6
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "fury_fist",
+      "event": "first_forward_reach",
+      "source_frame": 18,
+      "time": 0.75,
+      "suggested_tick": 15,
+      "basis": "第一串向前伸拳轮廓",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            7.501238,
+            21.722678,
+            -16.599009
+          ],
+          "posed_model_direction": [
+            0.134003,
+            0.030337,
+            -0.990516
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -12.63969,
+            12.864994,
+            -2.012818
+          ],
+          "posed_model_direction": [
+            -0.614489,
+            -0.781471,
+            -0.108197
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -0.933917,
+            31.809607,
+            -8.046858
+          ],
+          "posed_model_direction": [
+            -0.347899,
+            -0.132489,
+            -0.928123
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            0.52065,
+            35.470149,
+            -4.76176
+          ],
+          "posed_model_direction": [
+            0.015524,
+            0.989015,
+            -0.147
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            -1.6
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "fury_fist",
+      "event": "first_turning_reach",
+      "source_frame": 33,
+      "time": 1.38,
+      "suggested_tick": 28,
+      "basis": "第一串转身伸拳轮廓",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            8.289178,
+            11.738039,
+            3.567368
+          ],
+          "posed_model_direction": [
+            0.243416,
+            -0.888036,
+            0.390051
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -0.818407,
+            22.373304,
+            -14.51347
+          ],
+          "posed_model_direction": [
+            0.454494,
+            0.075556,
+            -0.88754
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -0.20776,
+            32.002416,
+            -7.829571
+          ],
+          "posed_model_direction": [
+            0.041017,
+            -0.123127,
+            -0.991543
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            -0.336797,
+            35.635737,
+            -4.211626
+          ],
+          "posed_model_direction": [
+            0.011604,
+            0.99237,
+            -0.12275
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            -1.3
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "fury_fist",
+      "event": "second_first_reach",
+      "source_frame": 90,
+      "time": 3.75,
+      "suggested_tick": 75,
+      "basis": "第二串首个迅速伸拳轮廓",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            6.568148,
+            23.147678,
+            -16.812193
+          ],
+          "posed_model_direction": [
+            0.07794,
+            0.096377,
+            -0.992289
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -10.896868,
+            15.900341,
+            -7.305312
+          ],
+          "posed_model_direction": [
+            -0.494365,
+            -0.576449,
+            -0.650622
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -1.4364,
+            32.565914,
+            -7.112548
+          ],
+          "posed_model_direction": [
+            -0.458185,
+            -0.107474,
+            -0.882335
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            0.433781,
+            36.135659,
+            -3.939766
+          ],
+          "posed_model_direction": [
+            0.006048,
+            0.992263,
+            -0.124004
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            -1.5
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "fury_fist",
+      "event": "second_wide_reach",
+      "source_frame": 95,
+      "time": 3.96,
+      "suggested_tick": 79,
+      "basis": "第二串前臂拉开轮廓",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -7.853493,
+            16.318583,
+            -4.663809
+          ],
+          "posed_model_direction": [
+            -0.903698,
+            -0.382557,
+            0.192301
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -3.802543,
+            22.829122,
+            13.845385
+          ],
+          "posed_model_direction": [
+            0.098362,
+            0.119242,
+            0.987981
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -4.908038,
+            30.849884,
+            -7.037135
+          ],
+          "posed_model_direction": [
+            -0.662053,
+            -0.194537,
+            -0.723769
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            -2.590306,
+            34.734489,
+            -4.619457
+          ],
+          "posed_model_direction": [
+            -0.112962,
+            0.980594,
+            -0.160237
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            -0.9
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "fury_fist",
+      "event": "second_turning_reach",
+      "source_frame": 108,
+      "time": 4.5,
+      "suggested_tick": 90,
+      "basis": "第二串转身伸拳轮廓",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            4.862476,
+            12.446054,
+            7.411984
+          ],
+          "posed_model_direction": [
+            -0.005703,
+            -0.826325,
+            0.563165
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            2.438689,
+            22.44102,
+            -15.475867
+          ],
+          "posed_model_direction": [
+            0.614552,
+            0.087118,
+            -0.784051
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            2.226884,
+            31.870173,
+            -7.714633
+          ],
+          "posed_model_direction": [
+            0.377777,
+            -0.138832,
+            -0.915429
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            0.932759,
+            35.559682,
+            -4.395
+          ],
+          "posed_model_direction": [
+            0.073448,
+            0.990072,
+            -0.119842
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            -1.4
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "fury_fist",
+      "event": "slam",
+      "source_frame": 132,
+      "time": 5.5,
+      "suggested_tick": 110,
+      "basis": "双拳落地候选",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            4.46263,
+            0.699286,
+            -11.430179
+          ],
+          "posed_model_direction": [
+            0.033703,
+            -0.999409,
+            0.006702
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -6.697682,
+            0.12716,
+            -9.850986
+          ],
+          "posed_model_direction": [
+            0.087675,
+            -0.995507,
+            -0.035771
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -3.283346,
+            9.149436,
+            -21.354291
+          ],
+          "posed_model_direction": [
+            0.035821,
+            -0.995682,
+            -0.085641
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            -3.879635,
+            13.423881,
+            -24.12571
+          ],
+          "posed_model_direction": [
+            -0.142902,
+            0.079712,
+            -0.986522
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            -0.4
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "launch",
+      "event": "off_frame_begin",
+      "source_frame": 27,
+      "time": 1.13,
+      "suggested_tick": 23,
+      "basis": "源 GIF 从此完全透明",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            6.672543,
+            135.579862,
+            0.2791
+          ],
+          "posed_model_direction": [
+            0.078837,
+            -0.994971,
+            -0.06178
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -6.496385,
+            135.328312,
+            -1.153836
+          ],
+          "posed_model_direction": [
+            -0.02954,
+            -0.998688,
+            -0.041819
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -0.263311,
+            158.073678,
+            -3.654445
+          ],
+          "posed_model_direction": [
+            -0.00035,
+            0.019708,
+            -0.999806
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            -0.270099,
+            161.153433,
+            0.44705
+          ],
+          "posed_model_direction": [
+            -0.002595,
+            0.999802,
+            0.019709
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "launch",
+      "event": "return_landing",
+      "source_frame": 53,
+      "time": 2.21,
+      "suggested_tick": 44,
+      "basis": "首个回归可见帧，低伏触地",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            8.298516,
+            0.440012,
+            -8.466267
+          ],
+          "posed_model_direction": [
+            0.081588,
+            -0.996635,
+            0.007916
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -4.914132,
+            0.215218,
+            -11.215071
+          ],
+          "posed_model_direction": [
+            -0.035984,
+            -0.998196,
+            -0.048063
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            2.383528,
+            11.615019,
+            -20.750287
+          ],
+          "posed_model_direction": [
+            -0.107864,
+            -0.954073,
+            -0.27948
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            3.227781,
+            16.307744,
+            -22.640465
+          ],
+          "posed_model_direction": [
+            0.129267,
+            0.265275,
+            -0.955468
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            -1.0
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "lightning_slam",
+      "event": "jump",
+      "source_frame": 47,
+      "time": 1.96,
+      "suggested_tick": 39,
+      "basis": "开始明显离地",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            7.853605,
+            59.093308,
+            -3.411833
+          ],
+          "posed_model_direction": [
+            0.167257,
+            -0.900049,
+            -0.402415
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -3.783798,
+            80.754397,
+            -4.281248
+          ],
+          "posed_model_direction": [
+            0.187949,
+            0.923275,
+            -0.335019
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            0.162101,
+            80.48298,
+            -3.41165
+          ],
+          "posed_model_direction": [
+            0.069852,
+            -0.000127,
+            -0.997557
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            -0.131582,
+            83.643473,
+            0.617274
+          ],
+          "posed_model_direction": [
+            -0.003633,
+            0.999993,
+            -0.000382
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "lightning_slam",
+      "event": "slam",
+      "source_frame": 64,
+      "time": 2.67,
+      "suggested_tick": 53,
+      "basis": "进入低伏着地端姿",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            4.64702,
+            1.121502,
+            -10.574084
+          ],
+          "posed_model_direction": [
+            0.05041,
+            -0.997987,
+            0.038487
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -7.791909,
+            0.480638,
+            -9.135036
+          ],
+          "posed_model_direction": [
+            -0.003246,
+            -0.99987,
+            -0.015783
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            -3.477397,
+            11.81522,
+            -21.348909
+          ],
+          "posed_model_direction": [
+            0.00098,
+            -0.952325,
+            -0.305084
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            -3.945872,
+            16.615771,
+            -23.093168
+          ],
+          "posed_model_direction": [
+            -0.146999,
+            0.301632,
+            -0.942024
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "overcharge",
+      "event": "charge_hold",
+      "source_frame": 46,
+      "time": 1.92,
+      "suggested_tick": 38,
+      "basis": "完整举拳端势，实机电波发出时刻待确认",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            9.09882,
+            9.99074,
+            -3.946426
+          ],
+          "posed_model_direction": [
+            0.143894,
+            -0.98528,
+            0.092291
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -1.640546,
+            34.664069,
+            -3.364712
+          ],
+          "posed_model_direction": [
+            0.067623,
+            0.947332,
+            -0.313031
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            3.717755,
+            33.858383,
+            -4.725665
+          ],
+          "posed_model_direction": [
+            -0.268274,
+            0.377196,
+            -0.886427
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            5.468501,
+            35.244288,
+            -0.108159
+          ],
+          "posed_model_direction": [
+            0.211051,
+            0.920816,
+            0.327956
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            1.7,
+            0,
+            -3.3
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "hurt",
+      "event": "recoil",
+      "source_frame": 11,
+      "time": 0.46,
+      "suggested_tick": 9,
+      "basis": "后仰失衡端势",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            9.758075,
+            23.817243,
+            -3.026935
+          ],
+          "posed_model_direction": [
+            0.247688,
+            0.342135,
+            -0.906418
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -12.714693,
+            12.934674,
+            3.466628
+          ],
+          "posed_model_direction": [
+            -0.639391,
+            -0.67949,
+            -0.359822
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            1.398136,
+            31.509695,
+            7.710246
+          ],
+          "posed_model_direction": [
+            0.062054,
+            0.305228,
+            -0.950255
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            1.203265,
+            33.283644,
+            12.518814
+          ],
+          "posed_model_direction": [
+            0.017667,
+            0.951605,
+            0.306816
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            1.4
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    },
+    {
+      "clip": "summon",
+      "event": "raised_fists",
+      "source_frame": 14,
+      "time": 0.58,
+      "suggested_tick": 12,
+      "basis": "双拳首次完整举起，实机生成时刻待确认",
+      "sockets": [
+        {
+          "name": "right_ice_fist",
+          "bone": "right_hand",
+          "local_unposed_point": [
+            6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            7.967726,
+            34.132404,
+            -0.379705
+          ],
+          "posed_model_direction": [
+            0.12784,
+            0.980962,
+            -0.146187
+          ]
+        },
+        {
+          "name": "left_electric_fist",
+          "bone": "left_hand",
+          "local_unposed_point": [
+            -6,
+            10.42,
+            0
+          ],
+          "posed_model_point": [
+            -11.863777,
+            32.547596,
+            2.369881
+          ],
+          "posed_model_direction": [
+            -0.501601,
+            0.86294,
+            -0.061088
+          ]
+        },
+        {
+          "name": "head_core",
+          "bone": "head_glow",
+          "local_unposed_point": [
+            0,
+            33,
+            -4.04
+          ],
+          "posed_model_point": [
+            0.501659,
+            33.884786,
+            1.890083
+          ],
+          "posed_model_direction": [
+            -0.22567,
+            0.515763,
+            -0.826475
+          ]
+        },
+        {
+          "name": "head_top",
+          "bone": "head",
+          "local_unposed_point": [
+            0,
+            36.16,
+            0
+          ],
+          "posed_model_point": [
+            1.936996,
+            34.507071,
+            6.774729
+          ],
+          "posed_model_direction": [
+            0.165706,
+            0.856319,
+            0.489141
+          ]
+        },
+        {
+          "name": "ground_impact",
+          "bone": "root",
+          "local_unposed_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_point": [
+            0,
+            0,
+            0
+          ],
+          "posed_model_direction": [
+            0,
+            1,
+            0
+          ],
+          "note": "取模型根投影到 y=0 的候选中心；实际地形与判定由玩法决定。"
+        }
+      ]
+    }
+  ]
+}

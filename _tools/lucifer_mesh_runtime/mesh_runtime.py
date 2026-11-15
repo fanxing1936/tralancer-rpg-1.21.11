@@ -32,6 +32,9 @@ CUBE_FACE_CORNERS={
 }
 
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def material_mode():
+    import os
+    return os.environ.get('LUCIFER_MATERIAL','plain').lower()
 OUTPUT_ROOTS=()
 def set_output_roots(rp,dp):
     global OUTPUT_ROOTS
@@ -480,7 +483,14 @@ def build(model,rp,dp,weapon_source=None,model_scale=None,defer_shaders=False):
     if rp==dp:raise ValueError('RP and DP roots must differ')
     rig=NativeRig(model);weapon_source=Path(weapon_source or HERE/'weapon_calibration.json')
     geo=rig.source_geometry();vertices=np.array([v for p in geo if p['texture']!=5 for v in p['vertices'].values()]);height=float(np.ptp(vertices[:,1]));model_scale=float(model_scale or 2.4*16/height)
-    parts,records,geometry=export_geometry(rig,rp);weapon=weapon_calibration(rig,weapon_source,rp)
+    # LUCIFER_MATERIAL=shader keeps the metadata-atlas + core-shader material; the default 'plain'
+    # bakes real texels per triangle so the look survives Iris / shader packs (plain_material.py)
+    plain=material_mode()=='plain'
+    if plain:
+        import plain_material
+        parts,records,geometry=plain_material.export_geometry_plain(rig,rp,KEY)
+    else:parts,records,geometry=export_geometry(rig,rp)
+    weapon=weapon_calibration(rig,weapon_source,rp)
     baked,refs=export_runtime(rig,rp,dp,parts,weapon,model_scale)
     import production
     dependencies=production.dependencies(sys.modules[__name__],rp)
@@ -490,7 +500,8 @@ def build(model,rp,dp,weapon_source=None,model_scale=None,defer_shaders=False):
         if sha(target)!=expected:raise ValueError('Target held-weapon dependency differs from native calibration: '+str(target))
     runtime=production.runtime(sys.modules[__name__],rig,rp,dp,baked,parts)
     from shader_io import prepare_deferred_shaders
-    if defer_shaders:
+    if plain:material={'plain':True}
+    elif defer_shaders:
         prepare_deferred_shaders(rp,REPO,HERE/'vanilla_1_21_11');material={'deferred':True}
     else:material=export_shaders(rig,rp,None)
     if not (rp/'pack.mcmeta').exists():js(rp/'pack.mcmeta',{'pack':{'description':'Lucifer mesh runtime','min_format':[75,0],'max_format':75,'pack_format':75}})

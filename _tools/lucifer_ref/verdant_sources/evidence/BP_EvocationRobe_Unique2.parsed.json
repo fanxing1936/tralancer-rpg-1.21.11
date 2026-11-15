@@ -1,0 +1,4207 @@
+{
+  "package": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2",
+  "summary": {
+    "header_size": 7187,
+    "name_count": 136,
+    "name_offset": 193,
+    "export_count": 18,
+    "export_offset": 4839,
+    "import_count": 34,
+    "import_offset": 3887,
+    "depends_offset": 6711,
+    "package_flags": 2147483648,
+    "version_assumption": "UE4.22 / UE4 package version 517; unversioned header"
+  },
+  "sources": [
+    {
+      "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\raw\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique2\\BP_EvocationRobe_Unique2.uasset",
+      "bytes": 7187,
+      "sha256": "99bd8d3088299a82cb24b9b762998d12e03bbd5633fe00cb804f4530a1cd2b20"
+    },
+    {
+      "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\raw\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique2\\BP_EvocationRobe_Unique2.uexp",
+      "bytes": 11530,
+      "sha256": "5c27a30d9516396331f1aa29e0f17857ea1058e8c586f931254883f4c6b76a2b"
+    }
+  ],
+  "imports": [
+    {
+      "index": -1,
+      "class_package": "/Script/Engine",
+      "class_name": "AnimSequence",
+      "outer": -16,
+      "name": "Player_Master_Idle_Hammer",
+      "object_path": "/Game/Actors/Characters/Player/Master/Animations/Player_Master_Idle_Hammer.Player_Master_Idle_Hammer"
+    },
+    {
+      "index": -2,
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer": -25,
+      "name": "Default__BlueprintGeneratedClass",
+      "object_path": "/Script/Engine.Default__BlueprintGeneratedClass"
+    },
+    {
+      "index": -3,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -22,
+      "name": "ClothingSimulationFactoryNv",
+      "object_path": "/Script/ClothingSystemRuntime.ClothingSimulationFactoryNv"
+    },
+    {
+      "index": -4,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -23,
+      "name": "Object",
+      "object_path": "/Script/CoreUObject.Object"
+    },
+    {
+      "index": -5,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -23,
+      "name": "ObjectProperty",
+      "object_path": "/Script/CoreUObject.ObjectProperty"
+    },
+    {
+      "index": -6,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -24,
+      "name": "GearActor",
+      "object_path": "/Script/Dungeons.GearActor"
+    },
+    {
+      "index": -7,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -24,
+      "name": "PaperdollComponent",
+      "object_path": "/Script/Dungeons.PaperdollComponent"
+    },
+    {
+      "index": -8,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -25,
+      "name": "BlueprintGeneratedClass",
+      "object_path": "/Script/Engine.BlueprintGeneratedClass"
+    },
+    {
+      "index": -9,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -25,
+      "name": "SceneComponent",
+      "object_path": "/Script/Engine.SceneComponent"
+    },
+    {
+      "index": -10,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -25,
+      "name": "SCS_Node",
+      "object_path": "/Script/Engine.SCS_Node"
+    },
+    {
+      "index": -11,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -25,
+      "name": "SimpleConstructionScript",
+      "object_path": "/Script/Engine.SimpleConstructionScript"
+    },
+    {
+      "index": -12,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -25,
+      "name": "StaticMeshComponent",
+      "object_path": "/Script/Engine.StaticMeshComponent"
+    },
+    {
+      "index": -13,
+      "class_package": "/Script/Dungeons",
+      "class_name": "GearActor",
+      "outer": -24,
+      "name": "Default__GearActor",
+      "object_path": "/Script/Dungeons.Default__GearActor"
+    },
+    {
+      "index": -14,
+      "class_package": "/Script/Engine",
+      "class_name": "MaterialInstanceConstant",
+      "outer": -20,
+      "name": "MI_EvocationRobe_Unique2",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.MI_EvocationRobe_Unique2"
+    },
+    {
+      "index": -15,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "ObjectProperty",
+      "outer": -23,
+      "name": "Default__ObjectProperty",
+      "object_path": "/Script/CoreUObject.Default__ObjectProperty"
+    },
+    {
+      "index": -16,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Game/Actors/Characters/Player/Master/Animations/Player_Master_Idle_Hammer",
+      "object_path": "/Game/Actors/Characters/Player/Master/Animations/Player_Master_Idle_Hammer"
+    },
+    {
+      "index": -17,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe"
+    },
+    {
+      "index": -18,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation"
+    },
+    {
+      "index": -19,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe"
+    },
+    {
+      "index": -20,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2"
+    },
+    {
+      "index": -21,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat"
+    },
+    {
+      "index": -22,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Script/ClothingSystemRuntime",
+      "object_path": "/Script/ClothingSystemRuntime"
+    },
+    {
+      "index": -23,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Script/CoreUObject",
+      "object_path": "/Script/CoreUObject"
+    },
+    {
+      "index": -24,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Script/Dungeons",
+      "object_path": "/Script/Dungeons"
+    },
+    {
+      "index": -25,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Script/Engine",
+      "object_path": "/Script/Engine"
+    },
+    {
+      "index": -26,
+      "class_package": "/Script/Dungeons",
+      "class_name": "PaperdollComponent",
+      "outer": -13,
+      "name": "Paperdoll",
+      "object_path": "/Script/Dungeons.Default__GearActor.Paperdoll"
+    },
+    {
+      "index": -27,
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer": -25,
+      "name": "Default__SceneComponent",
+      "object_path": "/Script/Engine.Default__SceneComponent"
+    },
+    {
+      "index": -28,
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer": -25,
+      "name": "Default__SCS_Node",
+      "object_path": "/Script/Engine.Default__SCS_Node"
+    },
+    {
+      "index": -29,
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer": -25,
+      "name": "Default__SimpleConstructionScript",
+      "object_path": "/Script/Engine.Default__SimpleConstructionScript"
+    },
+    {
+      "index": -30,
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMesh",
+      "outer": -17,
+      "name": "L_Arm_EvocationRobe",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.L_Arm_EvocationRobe"
+    },
+    {
+      "index": -31,
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMesh",
+      "outer": -18,
+      "name": "MageRobe_Evocation",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.MageRobe_Evocation"
+    },
+    {
+      "index": -32,
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMesh",
+      "outer": -19,
+      "name": "R_Arm_EvocationRobe",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.R_Arm_EvocationRobe"
+    },
+    {
+      "index": -33,
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMesh",
+      "outer": -21,
+      "name": "SageHat",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.SageHat"
+    },
+    {
+      "index": -34,
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer": -25,
+      "name": "Default__StaticMeshComponent",
+      "object_path": "/Script/Engine.Default__StaticMeshComponent"
+    }
+  ],
+  "exports": [
+    {
+      "index": 1,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -15,
+      "outer": 2,
+      "name": "StaticMesh1",
+      "object_flags": 1,
+      "serial_bytes": 36,
+      "serial_offset": 7187,
+      "uexp_offset": 0,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh1",
+      "class_path": "/Script/CoreUObject.ObjectProperty",
+      "super_path": null,
+      "template_path": "/Script/CoreUObject.Default__ObjectProperty",
+      "properties": [],
+      "tagged_property_bytes": 8,
+      "remaining_native_bytes": 28
+    },
+    {
+      "index": 2,
+      "class_index": -8,
+      "super_index": -6,
+      "template_index": -2,
+      "outer": 0,
+      "name": "BP_EvocationRobe_Unique2_C",
+      "object_flags": 9,
+      "serial_bytes": 121,
+      "serial_offset": 7223,
+      "uexp_offset": 36,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C",
+      "class_path": "/Script/Engine.BlueprintGeneratedClass",
+      "super_path": "/Script/Dungeons.GearActor",
+      "template_path": "/Script/Engine.Default__BlueprintGeneratedClass",
+      "properties": [
+        {
+          "name": "SimpleConstructionScript",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 14,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0"
+          }
+        }
+      ],
+      "tagged_property_bytes": 37,
+      "remaining_native_bytes": 84
+    },
+    {
+      "index": 3,
+      "class_index": 2,
+      "super_index": 0,
+      "template_index": -13,
+      "outer": 0,
+      "name": "Default__BP_EvocationRobe_Unique2_C",
+      "object_flags": 57,
+      "serial_bytes": 107,
+      "serial_offset": 7344,
+      "uexp_offset": 157,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.Default__BP_EvocationRobe_Unique2_C",
+      "class_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C",
+      "super_path": null,
+      "template_path": "/Script/Dungeons.Default__GearActor",
+      "properties": [
+        {
+          "name": "Paperdoll",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 7,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.Default__BP_EvocationRobe_Unique2_C.Paperdoll"
+          }
+        },
+        {
+          "name": "SlotType",
+          "type": "EnumProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 62,
+          "size": 8,
+          "metadata": {
+            "enum": "ESlotType"
+          },
+          "value": "ESlotType::Armor"
+        },
+        {
+          "name": "RootComponent",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 70,
+          "value_offset": 95,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 7,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.Default__BP_EvocationRobe_Unique2_C.Paperdoll"
+          }
+        }
+      ],
+      "tagged_property_bytes": 107,
+      "remaining_native_bytes": 0
+    },
+    {
+      "index": 4,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -15,
+      "outer": 2,
+      "name": "StaticMesh",
+      "object_flags": 1,
+      "serial_bytes": 36,
+      "serial_offset": 7451,
+      "uexp_offset": 264,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh",
+      "class_path": "/Script/CoreUObject.ObjectProperty",
+      "super_path": null,
+      "template_path": "/Script/CoreUObject.Default__ObjectProperty",
+      "properties": [],
+      "tagged_property_bytes": 8,
+      "remaining_native_bytes": 28
+    },
+    {
+      "index": 5,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -15,
+      "outer": 2,
+      "name": "StaticMesh3",
+      "object_flags": 1,
+      "serial_bytes": 36,
+      "serial_offset": 7487,
+      "uexp_offset": 300,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh3",
+      "class_path": "/Script/CoreUObject.ObjectProperty",
+      "super_path": null,
+      "template_path": "/Script/CoreUObject.Default__ObjectProperty",
+      "properties": [],
+      "tagged_property_bytes": 8,
+      "remaining_native_bytes": 28
+    },
+    {
+      "index": 6,
+      "class_index": -5,
+      "super_index": 0,
+      "template_index": -15,
+      "outer": 2,
+      "name": "StaticMesh4",
+      "object_flags": 1,
+      "serial_bytes": 36,
+      "serial_offset": 7523,
+      "uexp_offset": 336,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh4",
+      "class_path": "/Script/CoreUObject.ObjectProperty",
+      "super_path": null,
+      "template_path": "/Script/CoreUObject.Default__ObjectProperty",
+      "properties": [],
+      "tagged_property_bytes": 8,
+      "remaining_native_bytes": 28
+    },
+    {
+      "index": 7,
+      "class_index": -7,
+      "super_index": 0,
+      "template_index": -26,
+      "outer": 3,
+      "name": "Paperdoll",
+      "object_flags": 262185,
+      "serial_bytes": 197,
+      "serial_offset": 7559,
+      "uexp_offset": 372,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.Default__BP_EvocationRobe_Unique2_C.Paperdoll",
+      "class_path": "/Script/Dungeons.PaperdollComponent",
+      "super_path": null,
+      "template_path": "/Script/Dungeons.Default__GearActor.Paperdoll",
+      "properties": [
+        {
+          "name": "AnimationData",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 49,
+          "size": 66,
+          "metadata": {
+            "struct": "SingleAnimationPlayData",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "AnimToPlay",
+                "type": "ObjectProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 25,
+                "size": 4,
+                "metadata": {},
+                "value": {
+                  "index": -1,
+                  "path": "/Game/Actors/Characters/Player/Master/Animations/Player_Master_Idle_Hammer.Player_Master_Idle_Hammer"
+                }
+              },
+              {
+                "name": "SavedPosition",
+                "type": "FloatProperty",
+                "array_index": 0,
+                "tag_offset": 29,
+                "value_offset": 54,
+                "size": 4,
+                "metadata": {},
+                "value": 0.7523810267448425
+              }
+            ]
+          }
+        },
+        {
+          "name": "AnimationMode",
+          "type": "ByteProperty",
+          "array_index": 0,
+          "tag_offset": 115,
+          "value_offset": 148,
+          "size": 8,
+          "metadata": {
+            "enum": "EAnimationMode"
+          },
+          "value": "EAnimationMode::AnimationSingleNode"
+        },
+        {
+          "name": "ClothingSimulationFactory",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 156,
+          "value_offset": 181,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -3,
+            "path": "/Script/ClothingSystemRuntime.ClothingSimulationFactoryNv"
+          }
+        }
+      ],
+      "tagged_property_bytes": 193,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 8,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -27,
+      "outer": 2,
+      "name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_bytes": 12,
+      "serial_offset": 7756,
+      "uexp_offset": 569,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.DefaultSceneRoot_GEN_VARIABLE",
+      "class_path": "/Script/Engine.SceneComponent",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SceneComponent",
+      "properties": [],
+      "tagged_property_bytes": 8,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 9,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -28,
+      "outer": 14,
+      "name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_bytes": 168,
+      "serial_offset": 7768,
+      "uexp_offset": 581,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_0",
+      "class_path": "/Script/Engine.SCS_Node",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SCS_Node",
+      "properties": [
+        {
+          "name": "ComponentClass",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -9,
+            "path": "/Script/Engine.SceneComponent"
+          }
+        },
+        {
+          "name": "ComponentTemplate",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 54,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 8,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.DefaultSceneRoot_GEN_VARIABLE"
+          }
+        },
+        {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 58,
+          "value_offset": 107,
+          "size": 16,
+          "metadata": {
+            "struct": "Guid",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": "c519efd2f7469a46853c78faa73067b6"
+        },
+        {
+          "name": "InternalVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 123,
+          "value_offset": 148,
+          "size": 8,
+          "metadata": {},
+          "value": "DefaultSceneRoot"
+        }
+      ],
+      "tagged_property_bytes": 164,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 10,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -28,
+      "outer": 14,
+      "name": "SCS_Node_1",
+      "object_flags": 8,
+      "serial_bytes": 260,
+      "serial_offset": 7936,
+      "uexp_offset": 749,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_1",
+      "class_path": "/Script/Engine.SCS_Node",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SCS_Node",
+      "properties": [
+        {
+          "name": "ComponentClass",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -12,
+            "path": "/Script/Engine.StaticMeshComponent"
+          }
+        },
+        {
+          "name": "ComponentTemplate",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 54,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 18,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh_GEN_VARIABLE"
+          }
+        },
+        {
+          "name": "AttachToName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 58,
+          "value_offset": 83,
+          "size": 8,
+          "metadata": {},
+          "value": "J_Head_Socket"
+        },
+        {
+          "name": "ParentComponentOrVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 91,
+          "value_offset": 116,
+          "size": 8,
+          "metadata": {},
+          "value": "Paperdoll"
+        },
+        {
+          "name": "bIsParentComponentNative",
+          "type": "BoolProperty",
+          "array_index": 0,
+          "tag_offset": 124,
+          "value_offset": 150,
+          "size": 0,
+          "metadata": {
+            "bool_value": true
+          },
+          "value": true
+        },
+        {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 150,
+          "value_offset": 199,
+          "size": 16,
+          "metadata": {
+            "struct": "Guid",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": "f12917682fa28442b3f0794b0bc8f36e"
+        },
+        {
+          "name": "InternalVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 215,
+          "value_offset": 240,
+          "size": 8,
+          "metadata": {},
+          "value": "StaticMesh"
+        }
+      ],
+      "tagged_property_bytes": 256,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 11,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -28,
+      "outer": 14,
+      "name": "SCS_Node_2",
+      "object_flags": 8,
+      "serial_bytes": 260,
+      "serial_offset": 8196,
+      "uexp_offset": 1009,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_2",
+      "class_path": "/Script/Engine.SCS_Node",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SCS_Node",
+      "properties": [
+        {
+          "name": "ComponentClass",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -12,
+            "path": "/Script/Engine.StaticMeshComponent"
+          }
+        },
+        {
+          "name": "ComponentTemplate",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 54,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 16,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh3_GEN_VARIABLE"
+          }
+        },
+        {
+          "name": "AttachToName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 58,
+          "value_offset": 83,
+          "size": 8,
+          "metadata": {},
+          "value": "J_R_Hand"
+        },
+        {
+          "name": "ParentComponentOrVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 91,
+          "value_offset": 116,
+          "size": 8,
+          "metadata": {},
+          "value": "Paperdoll"
+        },
+        {
+          "name": "bIsParentComponentNative",
+          "type": "BoolProperty",
+          "array_index": 0,
+          "tag_offset": 124,
+          "value_offset": 150,
+          "size": 0,
+          "metadata": {
+            "bool_value": true
+          },
+          "value": true
+        },
+        {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 150,
+          "value_offset": 199,
+          "size": 16,
+          "metadata": {
+            "struct": "Guid",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": "1473f94a44b2dc438645c7a448130638"
+        },
+        {
+          "name": "InternalVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 215,
+          "value_offset": 240,
+          "size": 8,
+          "metadata": {},
+          "value": "StaticMesh3"
+        }
+      ],
+      "tagged_property_bytes": 256,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 12,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -28,
+      "outer": 14,
+      "name": "SCS_Node_3",
+      "object_flags": 8,
+      "serial_bytes": 260,
+      "serial_offset": 8456,
+      "uexp_offset": 1269,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_3",
+      "class_path": "/Script/Engine.SCS_Node",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SCS_Node",
+      "properties": [
+        {
+          "name": "ComponentClass",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -12,
+            "path": "/Script/Engine.StaticMeshComponent"
+          }
+        },
+        {
+          "name": "ComponentTemplate",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 54,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 17,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh4_GEN_VARIABLE"
+          }
+        },
+        {
+          "name": "AttachToName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 58,
+          "value_offset": 83,
+          "size": 8,
+          "metadata": {},
+          "value": "J_Spine"
+        },
+        {
+          "name": "ParentComponentOrVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 91,
+          "value_offset": 116,
+          "size": 8,
+          "metadata": {},
+          "value": "Paperdoll"
+        },
+        {
+          "name": "bIsParentComponentNative",
+          "type": "BoolProperty",
+          "array_index": 0,
+          "tag_offset": 124,
+          "value_offset": 150,
+          "size": 0,
+          "metadata": {
+            "bool_value": true
+          },
+          "value": true
+        },
+        {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 150,
+          "value_offset": 199,
+          "size": 16,
+          "metadata": {
+            "struct": "Guid",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": "69da7c2e99417548b3b8ff8ee943177a"
+        },
+        {
+          "name": "InternalVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 215,
+          "value_offset": 240,
+          "size": 8,
+          "metadata": {},
+          "value": "StaticMesh4"
+        }
+      ],
+      "tagged_property_bytes": 256,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 13,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -28,
+      "outer": 14,
+      "name": "SCS_Node_4",
+      "object_flags": 8,
+      "serial_bytes": 260,
+      "serial_offset": 8716,
+      "uexp_offset": 1529,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_4",
+      "class_path": "/Script/Engine.SCS_Node",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SCS_Node",
+      "properties": [
+        {
+          "name": "ComponentClass",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -12,
+            "path": "/Script/Engine.StaticMeshComponent"
+          }
+        },
+        {
+          "name": "ComponentTemplate",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 54,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 15,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh1_GEN_VARIABLE"
+          }
+        },
+        {
+          "name": "AttachToName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 58,
+          "value_offset": 83,
+          "size": 8,
+          "metadata": {},
+          "value": "J_L_Hand"
+        },
+        {
+          "name": "ParentComponentOrVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 91,
+          "value_offset": 116,
+          "size": 8,
+          "metadata": {},
+          "value": "Paperdoll"
+        },
+        {
+          "name": "bIsParentComponentNative",
+          "type": "BoolProperty",
+          "array_index": 0,
+          "tag_offset": 124,
+          "value_offset": 150,
+          "size": 0,
+          "metadata": {
+            "bool_value": true
+          },
+          "value": true
+        },
+        {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 150,
+          "value_offset": 199,
+          "size": 16,
+          "metadata": {
+            "struct": "Guid",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": "fcf60173daa05147b86d0182c0946375"
+        },
+        {
+          "name": "InternalVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 215,
+          "value_offset": 240,
+          "size": 8,
+          "metadata": {},
+          "value": "StaticMesh1"
+        }
+      ],
+      "tagged_property_bytes": 256,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 14,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -29,
+      "outer": 2,
+      "name": "SimpleConstructionScript_0",
+      "object_flags": 8,
+      "serial_bytes": 147,
+      "serial_offset": 8976,
+      "uexp_offset": 1789,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0",
+      "class_path": "/Script/Engine.SimpleConstructionScript",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SimpleConstructionScript",
+      "properties": [
+        {
+          "name": "RootNodes",
+          "type": "ArrayProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 33,
+          "size": 20,
+          "metadata": {
+            "inner": "ObjectProperty"
+          },
+          "value": [
+            {
+              "index": 10,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_1"
+            },
+            {
+              "index": 11,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_2"
+            },
+            {
+              "index": 12,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_3"
+            },
+            {
+              "index": 13,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_4"
+            }
+          ]
+        },
+        {
+          "name": "AllNodes",
+          "type": "ArrayProperty",
+          "array_index": 0,
+          "tag_offset": 53,
+          "value_offset": 86,
+          "size": 20,
+          "metadata": {
+            "inner": "ObjectProperty"
+          },
+          "value": [
+            {
+              "index": 10,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_1"
+            },
+            {
+              "index": 11,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_2"
+            },
+            {
+              "index": 12,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_3"
+            },
+            {
+              "index": 13,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_4"
+            }
+          ]
+        },
+        {
+          "name": "DefaultSceneRootNode",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 106,
+          "value_offset": 131,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 9,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.SimpleConstructionScript_0.SCS_Node_0"
+          }
+        }
+      ],
+      "tagged_property_bytes": 143,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 15,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -34,
+      "outer": 2,
+      "name": "StaticMesh1_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_bytes": 2354,
+      "serial_offset": 9123,
+      "uexp_offset": 1936,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh1_GEN_VARIABLE",
+      "class_path": "/Script/Engine.StaticMeshComponent",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__StaticMeshComponent",
+      "properties": [
+        {
+          "name": "StaticMesh",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -30,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.L_Arm_EvocationRobe"
+          }
+        },
+        {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 62,
+          "size": 8,
+          "metadata": {
+            "inner": "ObjectProperty"
+          },
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.MI_EvocationRobe_Unique2"
+            }
+          ]
+        },
+        {
+          "name": "bGenerateOverlapEvents",
+          "type": "BoolProperty",
+          "array_index": 0,
+          "tag_offset": 70,
+          "value_offset": 96,
+          "size": 0,
+          "metadata": {
+            "bool_value": false
+          },
+          "value": false
+        },
+        {
+          "name": "LightingChannels",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 96,
+          "value_offset": 145,
+          "size": 34,
+          "metadata": {
+            "struct": "LightingChannels",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "bChannel1",
+                "type": "BoolProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 26,
+                "size": 0,
+                "metadata": {
+                  "bool_value": true
+                },
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 179,
+          "value_offset": 228,
+          "size": 1988,
+          "metadata": {
+            "struct": "BodyInstance",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "ObjectType",
+                "type": "ByteProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 33,
+                "size": 8,
+                "metadata": {
+                  "enum": "ECollisionChannel"
+                },
+                "value": "ECC_WorldStatic"
+              },
+              {
+                "name": "CollisionEnabled",
+                "type": "ByteProperty",
+                "array_index": 0,
+                "tag_offset": 41,
+                "value_offset": 74,
+                "size": 8,
+                "metadata": {
+                  "enum": "ECollisionEnabled"
+                },
+                "value": "ECollisionEnabled::NoCollision"
+              },
+              {
+                "name": "CollisionProfileName",
+                "type": "NameProperty",
+                "array_index": 0,
+                "tag_offset": 82,
+                "value_offset": 107,
+                "size": 8,
+                "metadata": {},
+                "value": "NoCollision"
+              },
+              {
+                "name": "CollisionResponses",
+                "type": "StructProperty",
+                "array_index": 0,
+                "tag_offset": 115,
+                "value_offset": 164,
+                "size": 1816,
+                "metadata": {
+                  "struct": "CollisionResponse",
+                  "struct_guid": "00000000000000000000000000000000"
+                },
+                "value": {
+                  "properties": [
+                    {
+                      "name": "ResponseArray",
+                      "type": "ArrayProperty",
+                      "array_index": 0,
+                      "tag_offset": 0,
+                      "value_offset": 33,
+                      "size": 1775,
+                      "metadata": {
+                        "inner": "StructProperty"
+                      },
+                      "value": {
+                        "count": 21,
+                        "struct": "ResponseChannel",
+                        "items": [
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 53,
+                                "value_offset": 78,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "WorldStatic"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 86,
+                                "value_offset": 119,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 135,
+                                "value_offset": 160,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "WorldDynamic"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 168,
+                                "value_offset": 201,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 217,
+                                "value_offset": 242,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Pawn"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 250,
+                                "value_offset": 283,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 299,
+                                "value_offset": 324,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Visibility"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 332,
+                                "value_offset": 365,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 381,
+                                "value_offset": 406,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Camera"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 414,
+                                "value_offset": 447,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 463,
+                                "value_offset": 488,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "PhysicsBody"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 496,
+                                "value_offset": 529,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 545,
+                                "value_offset": 570,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Vehicle"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 578,
+                                "value_offset": 611,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 627,
+                                "value_offset": 652,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Destructible"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 660,
+                                "value_offset": 693,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 709,
+                                "value_offset": 734,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel2"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 742,
+                                "value_offset": 775,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 791,
+                                "value_offset": 816,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel3"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 824,
+                                "value_offset": 857,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 873,
+                                "value_offset": 898,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel4"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 906,
+                                "value_offset": 939,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 955,
+                                "value_offset": 980,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel5"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 988,
+                                "value_offset": 1021,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1037,
+                                "value_offset": 1062,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel6"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1070,
+                                "value_offset": 1103,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1119,
+                                "value_offset": 1144,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "IgnoreTerrain"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1152,
+                                "value_offset": 1185,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1201,
+                                "value_offset": 1226,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "FromMob"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1234,
+                                "value_offset": 1267,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1283,
+                                "value_offset": 1308,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "IgnorePlayer"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1316,
+                                "value_offset": 1349,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1365,
+                                "value_offset": 1390,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "TargetSelect"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1398,
+                                "value_offset": 1431,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1447,
+                                "value_offset": 1472,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Projectile"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1480,
+                                "value_offset": 1513,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1529,
+                                "value_offset": 1554,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "PlayerPawn"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1562,
+                                "value_offset": 1595,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1611,
+                                "value_offset": 1636,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "GameTraceChannel17"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1644,
+                                "value_offset": 1677,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1693,
+                                "value_offset": 1718,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "GameTraceChannel18"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1726,
+                                "value_offset": 1759,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2216,
+          "value_offset": 2265,
+          "size": 12,
+          "metadata": {
+            "struct": "Vector",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            -1.0,
+            -0.0,
+            -0.0
+          ]
+        },
+        {
+          "name": "RelativeScale3D",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2277,
+          "value_offset": 2326,
+          "size": 12,
+          "metadata": {
+            "struct": "Vector",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            1.475000023841858,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "tagged_property_bytes": 2346,
+      "remaining_native_bytes": 8
+    },
+    {
+      "index": 16,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -34,
+      "outer": 2,
+      "name": "StaticMesh3_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_bytes": 2415,
+      "serial_offset": 11477,
+      "uexp_offset": 4290,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh3_GEN_VARIABLE",
+      "class_path": "/Script/Engine.StaticMeshComponent",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__StaticMeshComponent",
+      "properties": [
+        {
+          "name": "StaticMesh",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -32,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.R_Arm_EvocationRobe"
+          }
+        },
+        {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 62,
+          "size": 8,
+          "metadata": {
+            "inner": "ObjectProperty"
+          },
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.MI_EvocationRobe_Unique2"
+            }
+          ]
+        },
+        {
+          "name": "bGenerateOverlapEvents",
+          "type": "BoolProperty",
+          "array_index": 0,
+          "tag_offset": 70,
+          "value_offset": 96,
+          "size": 0,
+          "metadata": {
+            "bool_value": false
+          },
+          "value": false
+        },
+        {
+          "name": "LightingChannels",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 96,
+          "value_offset": 145,
+          "size": 34,
+          "metadata": {
+            "struct": "LightingChannels",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "bChannel1",
+                "type": "BoolProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 26,
+                "size": 0,
+                "metadata": {
+                  "bool_value": true
+                },
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 179,
+          "value_offset": 228,
+          "size": 1988,
+          "metadata": {
+            "struct": "BodyInstance",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "ObjectType",
+                "type": "ByteProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 33,
+                "size": 8,
+                "metadata": {
+                  "enum": "ECollisionChannel"
+                },
+                "value": "ECC_WorldStatic"
+              },
+              {
+                "name": "CollisionEnabled",
+                "type": "ByteProperty",
+                "array_index": 0,
+                "tag_offset": 41,
+                "value_offset": 74,
+                "size": 8,
+                "metadata": {
+                  "enum": "ECollisionEnabled"
+                },
+                "value": "ECollisionEnabled::NoCollision"
+              },
+              {
+                "name": "CollisionProfileName",
+                "type": "NameProperty",
+                "array_index": 0,
+                "tag_offset": 82,
+                "value_offset": 107,
+                "size": 8,
+                "metadata": {},
+                "value": "NoCollision"
+              },
+              {
+                "name": "CollisionResponses",
+                "type": "StructProperty",
+                "array_index": 0,
+                "tag_offset": 115,
+                "value_offset": 164,
+                "size": 1816,
+                "metadata": {
+                  "struct": "CollisionResponse",
+                  "struct_guid": "00000000000000000000000000000000"
+                },
+                "value": {
+                  "properties": [
+                    {
+                      "name": "ResponseArray",
+                      "type": "ArrayProperty",
+                      "array_index": 0,
+                      "tag_offset": 0,
+                      "value_offset": 33,
+                      "size": 1775,
+                      "metadata": {
+                        "inner": "StructProperty"
+                      },
+                      "value": {
+                        "count": 21,
+                        "struct": "ResponseChannel",
+                        "items": [
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 53,
+                                "value_offset": 78,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "WorldStatic"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 86,
+                                "value_offset": 119,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 135,
+                                "value_offset": 160,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "WorldDynamic"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 168,
+                                "value_offset": 201,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 217,
+                                "value_offset": 242,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Pawn"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 250,
+                                "value_offset": 283,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 299,
+                                "value_offset": 324,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Visibility"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 332,
+                                "value_offset": 365,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 381,
+                                "value_offset": 406,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Camera"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 414,
+                                "value_offset": 447,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 463,
+                                "value_offset": 488,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "PhysicsBody"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 496,
+                                "value_offset": 529,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 545,
+                                "value_offset": 570,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Vehicle"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 578,
+                                "value_offset": 611,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 627,
+                                "value_offset": 652,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Destructible"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 660,
+                                "value_offset": 693,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 709,
+                                "value_offset": 734,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel2"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 742,
+                                "value_offset": 775,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 791,
+                                "value_offset": 816,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel3"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 824,
+                                "value_offset": 857,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 873,
+                                "value_offset": 898,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel4"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 906,
+                                "value_offset": 939,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 955,
+                                "value_offset": 980,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel5"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 988,
+                                "value_offset": 1021,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1037,
+                                "value_offset": 1062,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel6"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1070,
+                                "value_offset": 1103,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1119,
+                                "value_offset": 1144,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "IgnoreTerrain"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1152,
+                                "value_offset": 1185,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1201,
+                                "value_offset": 1226,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "FromMob"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1234,
+                                "value_offset": 1267,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1283,
+                                "value_offset": 1308,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "IgnorePlayer"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1316,
+                                "value_offset": 1349,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1365,
+                                "value_offset": 1390,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "TargetSelect"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1398,
+                                "value_offset": 1431,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1447,
+                                "value_offset": 1472,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Projectile"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1480,
+                                "value_offset": 1513,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1529,
+                                "value_offset": 1554,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "PlayerPawn"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1562,
+                                "value_offset": 1595,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1611,
+                                "value_offset": 1636,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "GameTraceChannel17"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1644,
+                                "value_offset": 1677,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1693,
+                                "value_offset": 1718,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "GameTraceChannel18"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1726,
+                                "value_offset": 1759,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2216,
+          "value_offset": 2265,
+          "size": 12,
+          "metadata": {
+            "struct": "Vector",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            1.9733409881591797,
+            -4.5000000682193786e-05,
+            0.6101760268211365
+          ]
+        },
+        {
+          "name": "RelativeRotation",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2277,
+          "value_offset": 2326,
+          "size": 12,
+          "metadata": {
+            "struct": "Rotator",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            4.99898099899292,
+            -358.4013366699219,
+            180.13931274414062
+          ]
+        },
+        {
+          "name": "RelativeScale3D",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2338,
+          "value_offset": 2387,
+          "size": 12,
+          "metadata": {
+            "struct": "Vector",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            1.475000023841858,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "tagged_property_bytes": 2407,
+      "remaining_native_bytes": 8
+    },
+    {
+      "index": 17,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -34,
+      "outer": 2,
+      "name": "StaticMesh4_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_bytes": 2467,
+      "serial_offset": 13892,
+      "uexp_offset": 6705,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh4_GEN_VARIABLE",
+      "class_path": "/Script/Engine.StaticMeshComponent",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__StaticMeshComponent",
+      "properties": [
+        {
+          "name": "StaticMesh",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -31,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.MageRobe_Evocation"
+          }
+        },
+        {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 62,
+          "size": 8,
+          "metadata": {
+            "inner": "ObjectProperty"
+          },
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.MI_EvocationRobe_Unique2"
+            }
+          ]
+        },
+        {
+          "name": "bGenerateOverlapEvents",
+          "type": "BoolProperty",
+          "array_index": 0,
+          "tag_offset": 70,
+          "value_offset": 96,
+          "size": 0,
+          "metadata": {
+            "bool_value": false
+          },
+          "value": false
+        },
+        {
+          "name": "bApplyImpulseOnDamage",
+          "type": "BoolProperty",
+          "array_index": 0,
+          "tag_offset": 96,
+          "value_offset": 122,
+          "size": 0,
+          "metadata": {
+            "bool_value": false
+          },
+          "value": false
+        },
+        {
+          "name": "LightingChannels",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 122,
+          "value_offset": 171,
+          "size": 34,
+          "metadata": {
+            "struct": "LightingChannels",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "bChannel1",
+                "type": "BoolProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 26,
+                "size": 0,
+                "metadata": {
+                  "bool_value": true
+                },
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 205,
+          "value_offset": 254,
+          "size": 2014,
+          "metadata": {
+            "struct": "BodyInstance",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "ObjectType",
+                "type": "ByteProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 33,
+                "size": 8,
+                "metadata": {
+                  "enum": "ECollisionChannel"
+                },
+                "value": "ECC_WorldStatic"
+              },
+              {
+                "name": "CollisionEnabled",
+                "type": "ByteProperty",
+                "array_index": 0,
+                "tag_offset": 41,
+                "value_offset": 74,
+                "size": 8,
+                "metadata": {
+                  "enum": "ECollisionEnabled"
+                },
+                "value": "ECollisionEnabled::NoCollision"
+              },
+              {
+                "name": "bEnableGravity",
+                "type": "BoolProperty",
+                "array_index": 0,
+                "tag_offset": 82,
+                "value_offset": 108,
+                "size": 0,
+                "metadata": {
+                  "bool_value": false
+                },
+                "value": false
+              },
+              {
+                "name": "CollisionProfileName",
+                "type": "NameProperty",
+                "array_index": 0,
+                "tag_offset": 108,
+                "value_offset": 133,
+                "size": 8,
+                "metadata": {},
+                "value": "NoCollision"
+              },
+              {
+                "name": "CollisionResponses",
+                "type": "StructProperty",
+                "array_index": 0,
+                "tag_offset": 141,
+                "value_offset": 190,
+                "size": 1816,
+                "metadata": {
+                  "struct": "CollisionResponse",
+                  "struct_guid": "00000000000000000000000000000000"
+                },
+                "value": {
+                  "properties": [
+                    {
+                      "name": "ResponseArray",
+                      "type": "ArrayProperty",
+                      "array_index": 0,
+                      "tag_offset": 0,
+                      "value_offset": 33,
+                      "size": 1775,
+                      "metadata": {
+                        "inner": "StructProperty"
+                      },
+                      "value": {
+                        "count": 21,
+                        "struct": "ResponseChannel",
+                        "items": [
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 53,
+                                "value_offset": 78,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "WorldStatic"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 86,
+                                "value_offset": 119,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 135,
+                                "value_offset": 160,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "WorldDynamic"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 168,
+                                "value_offset": 201,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 217,
+                                "value_offset": 242,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Pawn"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 250,
+                                "value_offset": 283,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 299,
+                                "value_offset": 324,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Visibility"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 332,
+                                "value_offset": 365,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 381,
+                                "value_offset": 406,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Camera"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 414,
+                                "value_offset": 447,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 463,
+                                "value_offset": 488,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "PhysicsBody"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 496,
+                                "value_offset": 529,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 545,
+                                "value_offset": 570,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Vehicle"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 578,
+                                "value_offset": 611,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 627,
+                                "value_offset": 652,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Destructible"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 660,
+                                "value_offset": 693,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 709,
+                                "value_offset": 734,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel2"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 742,
+                                "value_offset": 775,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 791,
+                                "value_offset": 816,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel3"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 824,
+                                "value_offset": 857,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 873,
+                                "value_offset": 898,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel4"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 906,
+                                "value_offset": 939,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 955,
+                                "value_offset": 980,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel5"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 988,
+                                "value_offset": 1021,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1037,
+                                "value_offset": 1062,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel6"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1070,
+                                "value_offset": 1103,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1119,
+                                "value_offset": 1144,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "IgnoreTerrain"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1152,
+                                "value_offset": 1185,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1201,
+                                "value_offset": 1226,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "FromMob"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1234,
+                                "value_offset": 1267,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1283,
+                                "value_offset": 1308,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "IgnorePlayer"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1316,
+                                "value_offset": 1349,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1365,
+                                "value_offset": 1390,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "TargetSelect"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1398,
+                                "value_offset": 1431,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1447,
+                                "value_offset": 1472,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Projectile"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1480,
+                                "value_offset": 1513,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1529,
+                                "value_offset": 1554,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "PlayerPawn"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1562,
+                                "value_offset": 1595,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1611,
+                                "value_offset": 1636,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "GameTraceChannel17"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1644,
+                                "value_offset": 1677,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1693,
+                                "value_offset": 1718,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "GameTraceChannel18"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1726,
+                                "value_offset": 1759,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2268,
+          "value_offset": 2317,
+          "size": 12,
+          "metadata": {
+            "struct": "Vector",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            -0.0002739999908953905,
+            -64.82764434814453,
+            3.1952579021453857
+          ]
+        },
+        {
+          "name": "RelativeRotation",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2329,
+          "value_offset": 2378,
+          "size": 12,
+          "metadata": {
+            "struct": "Rotator",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            0.0,
+            0.0,
+            5.044641017913818
+          ]
+        },
+        {
+          "name": "RelativeScale3D",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2390,
+          "value_offset": 2439,
+          "size": 12,
+          "metadata": {
+            "struct": "Vector",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            1.0,
+            0.949999988079071,
+            1.437474012374878
+          ]
+        }
+      ],
+      "tagged_property_bytes": 2459,
+      "remaining_native_bytes": 8
+    },
+    {
+      "index": 18,
+      "class_index": -12,
+      "super_index": 0,
+      "template_index": -34,
+      "outer": 2,
+      "name": "StaticMesh_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_bytes": 2354,
+      "serial_offset": 16359,
+      "uexp_offset": 9172,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh_GEN_VARIABLE",
+      "class_path": "/Script/Engine.StaticMeshComponent",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__StaticMeshComponent",
+      "properties": [
+        {
+          "name": "StaticMesh",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -33,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.SageHat"
+          }
+        },
+        {
+          "name": "OverrideMaterials",
+          "type": "ArrayProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 62,
+          "size": 8,
+          "metadata": {
+            "inner": "ObjectProperty"
+          },
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.MI_EvocationRobe_Unique2"
+            }
+          ]
+        },
+        {
+          "name": "bGenerateOverlapEvents",
+          "type": "BoolProperty",
+          "array_index": 0,
+          "tag_offset": 70,
+          "value_offset": 96,
+          "size": 0,
+          "metadata": {
+            "bool_value": false
+          },
+          "value": false
+        },
+        {
+          "name": "LightingChannels",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 96,
+          "value_offset": 145,
+          "size": 34,
+          "metadata": {
+            "struct": "LightingChannels",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "bChannel1",
+                "type": "BoolProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 26,
+                "size": 0,
+                "metadata": {
+                  "bool_value": true
+                },
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "BodyInstance",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 179,
+          "value_offset": 228,
+          "size": 1988,
+          "metadata": {
+            "struct": "BodyInstance",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "ObjectType",
+                "type": "ByteProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 33,
+                "size": 8,
+                "metadata": {
+                  "enum": "ECollisionChannel"
+                },
+                "value": "ECC_WorldStatic"
+              },
+              {
+                "name": "CollisionEnabled",
+                "type": "ByteProperty",
+                "array_index": 0,
+                "tag_offset": 41,
+                "value_offset": 74,
+                "size": 8,
+                "metadata": {
+                  "enum": "ECollisionEnabled"
+                },
+                "value": "ECollisionEnabled::NoCollision"
+              },
+              {
+                "name": "CollisionProfileName",
+                "type": "NameProperty",
+                "array_index": 0,
+                "tag_offset": 82,
+                "value_offset": 107,
+                "size": 8,
+                "metadata": {},
+                "value": "NoCollision"
+              },
+              {
+                "name": "CollisionResponses",
+                "type": "StructProperty",
+                "array_index": 0,
+                "tag_offset": 115,
+                "value_offset": 164,
+                "size": 1816,
+                "metadata": {
+                  "struct": "CollisionResponse",
+                  "struct_guid": "00000000000000000000000000000000"
+                },
+                "value": {
+                  "properties": [
+                    {
+                      "name": "ResponseArray",
+                      "type": "ArrayProperty",
+                      "array_index": 0,
+                      "tag_offset": 0,
+                      "value_offset": 33,
+                      "size": 1775,
+                      "metadata": {
+                        "inner": "StructProperty"
+                      },
+                      "value": {
+                        "count": 21,
+                        "struct": "ResponseChannel",
+                        "items": [
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 53,
+                                "value_offset": 78,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "WorldStatic"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 86,
+                                "value_offset": 119,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 135,
+                                "value_offset": 160,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "WorldDynamic"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 168,
+                                "value_offset": 201,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 217,
+                                "value_offset": 242,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Pawn"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 250,
+                                "value_offset": 283,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 299,
+                                "value_offset": 324,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Visibility"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 332,
+                                "value_offset": 365,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 381,
+                                "value_offset": 406,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Camera"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 414,
+                                "value_offset": 447,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 463,
+                                "value_offset": 488,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "PhysicsBody"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 496,
+                                "value_offset": 529,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 545,
+                                "value_offset": 570,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Vehicle"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 578,
+                                "value_offset": 611,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 627,
+                                "value_offset": 652,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Destructible"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 660,
+                                "value_offset": 693,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 709,
+                                "value_offset": 734,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel2"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 742,
+                                "value_offset": 775,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 791,
+                                "value_offset": 816,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel3"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 824,
+                                "value_offset": 857,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 873,
+                                "value_offset": 898,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel4"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 906,
+                                "value_offset": 939,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 955,
+                                "value_offset": 980,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel5"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 988,
+                                "value_offset": 1021,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1037,
+                                "value_offset": 1062,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "EngineTraceChannel6"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1070,
+                                "value_offset": 1103,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1119,
+                                "value_offset": 1144,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "IgnoreTerrain"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1152,
+                                "value_offset": 1185,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1201,
+                                "value_offset": 1226,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "FromMob"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1234,
+                                "value_offset": 1267,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1283,
+                                "value_offset": 1308,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "IgnorePlayer"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1316,
+                                "value_offset": 1349,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1365,
+                                "value_offset": 1390,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "TargetSelect"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1398,
+                                "value_offset": 1431,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1447,
+                                "value_offset": 1472,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "Projectile"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1480,
+                                "value_offset": 1513,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1529,
+                                "value_offset": 1554,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "PlayerPawn"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1562,
+                                "value_offset": 1595,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1611,
+                                "value_offset": 1636,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "GameTraceChannel17"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1644,
+                                "value_offset": 1677,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          },
+                          {
+                            "properties": [
+                              {
+                                "name": "Channel",
+                                "type": "NameProperty",
+                                "array_index": 0,
+                                "tag_offset": 1693,
+                                "value_offset": 1718,
+                                "size": 8,
+                                "metadata": {},
+                                "value": "GameTraceChannel18"
+                              },
+                              {
+                                "name": "Response",
+                                "type": "ByteProperty",
+                                "array_index": 0,
+                                "tag_offset": 1726,
+                                "value_offset": 1759,
+                                "size": 8,
+                                "metadata": {
+                                  "enum": "ECollisionResponse"
+                                },
+                                "value": "ECR_Ignore"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "RelativeLocation",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2216,
+          "value_offset": 2265,
+          "size": 12,
+          "metadata": {
+            "struct": "Vector",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            0.0003512701077852398,
+            149.92242431640625,
+            13.890192985534668
+          ]
+        },
+        {
+          "name": "RelativeRotation",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 2277,
+          "value_offset": 2326,
+          "size": 12,
+          "metadata": {
+            "struct": "Rotator",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": [
+            0.0,
+            1.2180165221960335e-14,
+            -2.6690335273742676
+          ]
+        }
+      ],
+      "tagged_property_bytes": 2346,
+      "remaining_native_bytes": 8
+    }
+  ]
+}

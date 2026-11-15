@@ -1,0 +1,58 @@
+{
+  "model_sha256": "a419cc8dce1e796113a02c362ad184faea3bf09d5c908b26ac81e963babc624a",
+  "accepted_m2_sha256": "4f2d24f9c5da774cbf0be44d7895c7a449bd7a1f8f1442dcbd1f2eed83c575aa",
+  "native_project": {
+    "uuid": "b48dc040-d6f1-06c2-fe4d-6d9322bc8c94",
+    "name": "pope_m3_motion",
+    "animations": 9
+  },
+  "unrecorded_manual_edits": false,
+  "native_roundtrip_numeric_tracks": true,
+  "clips": [
+    {
+      "clip": "idle",
+      "samples": 81,
+      "keyframes": 567
+    },
+    {
+      "clip": "walk",
+      "samples": 37,
+      "keyframes": 407
+    },
+    {
+      "clip": "attack",
+      "samples": 91,
+      "keyframes": 1183
+    },
+    {
+      "clip": "summon",
+      "samples": 47,
+      "keyframes": 611
+    },
+    {
+      "clip": "cast",
+      "samples": 53,
+      "keyframes": 636
+    },
+    {
+      "clip": "appear",
+      "samples": 37,
+      "keyframes": 407
+    },
+    {
+      "clip": "teleport_in",
+      "samples": 19,
+      "keyframes": 209
+    },
+    {
+      "clip": "teleport_out",
+      "samples": 19,
+      "keyframes": 209
+    },
+    {
+      "clip": "whirlwind",
+      "samples": 141,
+      "keyframes": 3243
+    }
+  ]
+}

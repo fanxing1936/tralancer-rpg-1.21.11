@@ -1,0 +1,507 @@
+{
+  "bbmodel_sha256": "ebc5d7cfc16cc5e3e5f3357b82c6c99da29b468faafffe8c9d7f4ab9f1a1e106",
+  "coordinate_system": "+Y up, facing -Z; unscaled model units, not Minecraft blocks",
+  "model_scale": 1,
+  "carrier_seat": -0.291488125,
+  "mouth_note": "mouth_center跟随上颅的闭嘴缝参考点；张口后仍是上唇出口候选，不谎称上下颚动态中点",
+  "cross_note": "cross_north/east/south/west是小人躯干四面候选；顺时针光束扫描属于未来特效，未生成光束",
+  "samples": [
+    {
+      "clip": "idle",
+      "time": 0,
+      "sockets": [
+        {
+          "name": "mouth_center",
+          "bone": "shell_head",
+          "local_unposed_point": [
+            0,
+            26,
+            -10.808
+          ],
+          "posed_model_point": [
+            5.183161,
+            22.067629,
+            -10.588643
+          ],
+          "bone_forward_minus_z": [
+            -0.003823,
+            -0.308738,
+            -0.95114
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_beam_center",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            -1.094208,
+            -1.369285,
+            1.797604
+          ],
+          "bone_forward_minus_z": [
+            0.022945,
+            -0.36072,
+            -0.932392
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_north",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            2.025
+          ],
+          "posed_model_point": [
+            -1.074131,
+            -1.684915,
+            0.981761
+          ],
+          "bone_forward_minus_z": [
+            0.022945,
+            -0.36072,
+            -0.932392
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_east",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            1.4,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            0.302404,
+            -1.271998,
+            1.794335
+          ],
+          "bone_forward_minus_z": [
+            0.022945,
+            -0.36072,
+            -0.932392
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_south",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            3.775
+          ],
+          "posed_model_point": [
+            -1.114285,
+            -1.053655,
+            2.613447
+          ],
+          "bone_forward_minus_z": [
+            0.022945,
+            -0.36072,
+            -0.932392
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_west",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            -1.4,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            -2.49082,
+            -1.466573,
+            1.800873
+          ],
+          "bone_forward_minus_z": [
+            0.022945,
+            -0.36072,
+            -0.932392
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        }
+      ]
+    },
+    {
+      "clip": "mortar",
+      "time": 1.2,
+      "sockets": [
+        {
+          "name": "mouth_center",
+          "bone": "shell_head",
+          "local_unposed_point": [
+            0,
+            26,
+            -10.808
+          ],
+          "posed_model_point": [
+            5.600413,
+            29.263059,
+            -5.653582
+          ],
+          "bone_forward_minus_z": [
+            0.041846,
+            0.38759,
+            -0.920882
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        }
+      ]
+    },
+    {
+      "clip": "mortar",
+      "time": 2.0,
+      "sockets": [
+        {
+          "name": "mouth_center",
+          "bone": "shell_head",
+          "local_unposed_point": [
+            0,
+            26,
+            -10.808
+          ],
+          "posed_model_point": [
+            5.59618,
+            28.925941,
+            -5.826413
+          ],
+          "bone_forward_minus_z": [
+            0.04132,
+            0.355199,
+            -0.933877
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        }
+      ]
+    },
+    {
+      "clip": "cross_beam",
+      "time": 1.0,
+      "sockets": [
+        {
+          "name": "cross_beam_center",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            0.85474,
+            5.100404,
+            2.081526
+          ],
+          "bone_forward_minus_z": [
+            0.014677,
+            0.190165,
+            -0.981643
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_north",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            2.025
+          ],
+          "posed_model_point": [
+            0.867582,
+            5.266798,
+            1.222589
+          ],
+          "bone_forward_minus_z": [
+            0.014677,
+            0.190165,
+            -0.981643
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_east",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            1.4,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            2.252536,
+            5.170917,
+            2.116085
+          ],
+          "bone_forward_minus_z": [
+            0.014677,
+            0.190165,
+            -0.981643
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_south",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            3.775
+          ],
+          "posed_model_point": [
+            0.841897,
+            4.93401,
+            2.940463
+          ],
+          "bone_forward_minus_z": [
+            0.014677,
+            0.190165,
+            -0.981643
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_west",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            -1.4,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            -0.543056,
+            5.029891,
+            2.046968
+          ],
+          "bone_forward_minus_z": [
+            0.014677,
+            0.190165,
+            -0.981643
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        }
+      ]
+    },
+    {
+      "clip": "cross_beam",
+      "time": 2.0,
+      "sockets": [
+        {
+          "name": "cross_beam_center",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            0.170639,
+            5.845057,
+            2.534548
+          ],
+          "bone_forward_minus_z": [
+            0.027654,
+            0.264204,
+            -0.96407
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_north",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            2.025
+          ],
+          "posed_model_point": [
+            0.194837,
+            6.076235,
+            1.690987
+          ],
+          "bone_forward_minus_z": [
+            0.027654,
+            0.264204,
+            -0.96407
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_east",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            1.4,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            1.499569,
+            6.25859,
+            2.685998
+          ],
+          "bone_forward_minus_z": [
+            0.027654,
+            0.264204,
+            -0.96407
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_south",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            3.775
+          ],
+          "posed_model_point": [
+            0.146441,
+            5.613879,
+            3.37811
+          ],
+          "bone_forward_minus_z": [
+            0.027654,
+            0.264204,
+            -0.96407
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_west",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            -1.4,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            -1.158291,
+            5.431524,
+            2.383099
+          ],
+          "bone_forward_minus_z": [
+            0.027654,
+            0.264204,
+            -0.96407
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        }
+      ]
+    },
+    {
+      "clip": "cross_beam",
+      "time": 3.0,
+      "sockets": [
+        {
+          "name": "cross_beam_center",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            0.090455,
+            4.888509,
+            2.452337
+          ],
+          "bone_forward_minus_z": [
+            -0.105867,
+            0.326707,
+            -0.939178
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_north",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            2.025
+          ],
+          "posed_model_point": [
+            -0.002178,
+            5.174377,
+            1.630557
+          ],
+          "bone_forward_minus_z": [
+            -0.105867,
+            0.326707,
+            -0.939178
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_east",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            1.4,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            1.394236,
+            5.397672,
+            2.482491
+          ],
+          "bone_forward_minus_z": [
+            -0.105867,
+            0.326707,
+            -0.939178
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_south",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            0.0,
+            -1.25,
+            3.775
+          ],
+          "posed_model_point": [
+            0.183089,
+            4.60264,
+            3.274118
+          ],
+          "bone_forward_minus_z": [
+            -0.105867,
+            0.326707,
+            -0.939178
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        },
+        {
+          "name": "cross_west",
+          "bone": "inner_body",
+          "local_unposed_point": [
+            -1.4,
+            -1.25,
+            2.9
+          ],
+          "posed_model_point": [
+            -1.213325,
+            4.379346,
+            2.422184
+          ],
+          "bone_forward_minus_z": [
+            -0.105867,
+            0.326707,
+            -0.939178
+          ],
+          "status": "模型表面预留锚点；原作准确发射骨与特效方向未知"
+        }
+      ]
+    }
+  ],
+  "placement_note": "physical Marker armor_stand seat=0; pipeline seat parameter additionally compensates research ground_y/16"
+}

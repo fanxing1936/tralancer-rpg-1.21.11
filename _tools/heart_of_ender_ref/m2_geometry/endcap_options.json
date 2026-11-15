@@ -1,0 +1,457 @@
+{
+  "stage": "M2 unselected endcap roll options; no fact-source edit",
+  "source_file": "MCD_Heart_of_Ender.png",
+  "source_canvas": [
+    1000,
+    840
+  ],
+  "source_points": {
+    "A": {
+      "corners": [
+        [
+          66,
+          44
+        ],
+        [
+          107,
+          20
+        ],
+        [
+          64,
+          87
+        ]
+      ],
+      "uncertainty_px": 3,
+      "note": "Three outer silhouette vertices only; fourth cap corner not independently measured."
+    },
+    "B": {
+      "corners": [
+        [
+          49,
+          416
+        ],
+        [
+          31,
+          451
+        ],
+        [
+          61,
+          492
+        ]
+      ],
+      "uncertainty_px": 3,
+      "note": "Three outer silhouette vertices; interior cap border is low contrast."
+    },
+    "E": {
+      "edge": [
+        [
+          602,
+          800
+        ],
+        [
+          657,
+          787
+        ]
+      ],
+      "uncertainty_px": 2,
+      "note": "Visible bottom edge only; do not invent the hidden cap corners."
+    }
+  },
+  "fit_results": {
+    "A": {
+      "roll_degrees": 12.204101,
+      "three_corner_rms_px": 4.47036,
+      "note": "This error is to supplied fitted silhouette vertices, not an independent accuracy score."
+    },
+    "B": {
+      "roll_degrees": 29.059932,
+      "three_corner_rms_px": 10.786031,
+      "note": "This error is to supplied fitted silhouette vertices, not an independent accuracy score."
+    }
+  },
+  "convention": "Replacement Euler XYZ, Rz*Ry*Rx. New local matrix = old local matrix @ Ry(delta). All cubes/pivots/centerlines unchanged.",
+  "limitations": [
+    "A/B cap hidden edge is not independently observed.",
+    "E roll-only cannot simultaneously match bottom edge slope and position at the fixed centerline/depth/4x4 section.",
+    "R2 E visible bottom-edge direction is closer, but its lower edge is about 10 pixels too low.",
+    "B best three-corner residual remains about 10.8 pixels; source cap center and section/depth remain uncertain.",
+    "No option is automatically accepted. Native Blockbench comparisons should be offered to the user."
+  ],
+  "options": [
+    {
+      "id": "R0",
+      "label": "现状；保留当前中心线、截面和滚转",
+      "bone_rest_replacements": {
+        "limb_left_upper_distal": [
+          -33.003852,
+          2.941839,
+          6.404004
+        ],
+        "limb_left_middle_distal": [
+          -39.612804,
+          -10.169609,
+          -11.25659
+        ],
+        "limb_right_middle_distal": [
+          26.371092,
+          -12.568117,
+          -54.47746
+        ]
+      },
+      "details": [
+        {
+          "source_id": "A",
+          "bone": "limb_left_upper_distal",
+          "axial_roll_delta_degrees": 0,
+          "old_rest_rotation": [
+            -33.003852,
+            2.941839,
+            6.404004
+          ],
+          "rest_rotation": [
+            -33.003852,
+            2.941839,
+            6.404004
+          ],
+          "projected_cap_corners_xz_order": [
+            [
+              56.804653,
+              86.313451
+            ],
+            [
+              106.129164,
+              72.4506
+            ],
+            [
+              65.870561,
+              35.54947
+            ],
+            [
+              115.195072,
+              21.686619
+            ]
+          ],
+          "tip_center_3d_delta": 0.0
+        },
+        {
+          "source_id": "B",
+          "bone": "limb_left_middle_distal",
+          "axial_roll_delta_degrees": 0,
+          "old_rest_rotation": [
+            -39.612804,
+            -10.169609,
+            -11.25659
+          ],
+          "rest_rotation": [
+            -39.612804,
+            -10.169609,
+            -11.25659
+          ],
+          "projected_cap_corners_xz_order": [
+            [
+              38.499392,
+              489.86232
+            ],
+            [
+              80.720444,
+              471.849465
+            ],
+            [
+              17.279278,
+              432.150679
+            ],
+            [
+              59.50033,
+              414.137824
+            ]
+          ],
+          "tip_center_3d_delta": 0.0
+        },
+        {
+          "source_id": "E",
+          "bone": "limb_right_middle_distal",
+          "axial_roll_delta_degrees": 0,
+          "old_rest_rotation": [
+            26.371092,
+            -12.568117,
+            -54.47746
+          ],
+          "rest_rotation": [
+            26.371092,
+            -12.568117,
+            -54.47746
+          ],
+          "projected_cap_corners_xz_order": [
+            [
+              598.218958,
+              751.737269
+            ],
+            [
+              658.745435,
+              750.906075
+            ],
+            [
+              593.254641,
+              805.093686
+            ],
+            [
+              653.781119,
+              804.262492
+            ]
+          ],
+          "tip_center_3d_delta": 0.0
+        }
+      ]
+    },
+    {
+      "id": "R1",
+      "label": "中间角度：A轮廓拟合，B/E取折中滚转",
+      "bone_rest_replacements": {
+        "limb_left_upper_distal": [
+          -33.95815,
+          13.13296,
+          -0.386432
+        ],
+        "limb_left_middle_distal": [
+          -38.887012,
+          1.473105,
+          -20.758274
+        ],
+        "limb_right_middle_distal": [
+          27.259387,
+          -18.817146,
+          -57.755932
+        ]
+      },
+      "details": [
+        {
+          "source_id": "A",
+          "bone": "limb_left_upper_distal",
+          "axial_roll_delta_degrees": 12.204101,
+          "old_rest_rotation": [
+            -33.003852,
+            2.941839,
+            6.404004
+          ],
+          "rest_rotation": [
+            -33.95815,
+            13.13296,
+            -0.386432
+          ],
+          "projected_cap_corners_xz_order": [
+            [
+              61.719672,
+              89.483545
+            ],
+            [
+              111.845972,
+              65.202744
+            ],
+            [
+              60.153753,
+              42.797325
+            ],
+            [
+              110.280054,
+              18.516525
+            ]
+          ],
+          "tip_center_3d_delta": 0.0
+        },
+        {
+          "source_id": "B",
+          "bone": "limb_left_middle_distal",
+          "axial_roll_delta_degrees": 15,
+          "old_rest_rotation": [
+            -39.612804,
+            -10.169609,
+            -11.25659
+          ],
+          "rest_rotation": [
+            -38.887012,
+            1.473105,
+            -20.758274
+          ],
+          "projected_cap_corners_xz_order": [
+            [
+              47.067078,
+              493.709597
+            ],
+            [
+              82.357313,
+              461.373643
+            ],
+            [
+              15.642409,
+              442.626501
+            ],
+            [
+              50.932645,
+              410.290547
+            ]
+          ],
+          "tip_center_3d_delta": 0.0
+        },
+        {
+          "source_id": "E",
+          "bone": "limb_right_middle_distal",
+          "axial_roll_delta_degrees": -7,
+          "old_rest_rotation": [
+            26.371092,
+            -12.568117,
+            -54.47746
+          ],
+          "rest_rotation": [
+            27.259387,
+            -18.817146,
+            -57.755932
+          ],
+          "projected_cap_corners_xz_order": [
+            [
+              594.435374,
+              755.23493
+            ],
+            [
+              655.115694,
+              747.907421
+            ],
+            [
+              596.884383,
+              808.09234
+            ],
+            [
+              657.564703,
+              800.76483
+            ]
+          ],
+          "tip_center_3d_delta": 0.0
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "label": "边线方向优先：A/B三角点拟合，E底边斜率拟合",
+      "bone_rest_replacements": {
+        "limb_left_upper_distal": [
+          -33.95815,
+          13.13296,
+          -0.386432
+        ],
+        "limb_left_middle_distal": [
+          -39.975413,
+          12.355309,
+          -29.740521
+        ],
+        "limb_right_middle_distal": [
+          28.579364,
+          -25.004494,
+          -61.287082
+        ]
+      },
+      "details": [
+        {
+          "source_id": "A",
+          "bone": "limb_left_upper_distal",
+          "axial_roll_delta_degrees": 12.204101,
+          "old_rest_rotation": [
+            -33.003852,
+            2.941839,
+            6.404004
+          ],
+          "rest_rotation": [
+            -33.95815,
+            13.13296,
+            -0.386432
+          ],
+          "projected_cap_corners_xz_order": [
+            [
+              61.719672,
+              89.483545
+            ],
+            [
+              111.845972,
+              65.202744
+            ],
+            [
+              60.153753,
+              42.797325
+            ],
+            [
+              110.280054,
+              18.516525
+            ]
+          ],
+          "tip_center_3d_delta": 0.0
+        },
+        {
+          "source_id": "B",
+          "bone": "limb_left_middle_distal",
+          "axial_roll_delta_degrees": 29.059932,
+          "old_rest_rotation": [
+            -39.612804,
+            -10.169609,
+            -11.25659
+          ],
+          "rest_rotation": [
+            -39.975413,
+            12.355309,
+            -29.740521
+          ],
+          "projected_cap_corners_xz_order": [
+            [
+              55.228729,
+              494.737253
+            ],
+            [
+              81.827539,
+              450.960056
+            ],
+            [
+              16.172183,
+              453.040088
+            ],
+            [
+              42.770993,
+              409.262891
+            ]
+          ],
+          "tip_center_3d_delta": 0.0
+        },
+        {
+          "source_id": "E",
+          "bone": "limb_right_middle_distal",
+          "axial_roll_delta_degrees": -14,
+          "old_rest_rotation": [
+            26.371092,
+            -12.568117,
+            -54.47746
+          ],
+          "rest_rotation": [
+            28.579364,
+            -25.004494,
+            -61.287082
+          ],
+          "projected_cap_corners_xz_order": [
+            [
+              591.122347,
+              759.071965
+            ],
+            [
+              651.051906,
+              745.357376
+            ],
+            [
+              600.948171,
+              810.642385
+            ],
+            [
+              660.87773,
+              796.927795
+            ]
+          ],
+          "tip_center_3d_delta": 0.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "resource_manager_loaded": [
+    "vanilla",
+    "file/LuciferP2-Isolated"
+  ],
+  "item_atlas_observed": "8192x8192x0",
+  "shader_or_pipeline_error_matches": [],
+  "texture_model_or_compile_error_matches": [],
+  "shader_files": {
+    "assets\\minecraft\\shaders\\core\\rendertype_item_entity_translucent_cull.vsh": {
+      "runtime_sha256": "98469a32687dd01989a9d90aad05cccd576c1b38e2d6199cb420f2c0dd26b7ba",
+      "build_sha256": "98469a32687dd01989a9d90aad05cccd576c1b38e2d6199cb420f2c0dd26b7ba",
+      "equal": true
+    },
+    "assets\\minecraft\\shaders\\core\\rendertype_item_entity_translucent_cull.fsh": {
+      "runtime_sha256": "9572baa72a12a329606fdb2ecd00e4ea5debcc402735d0ae4bd659a319972d5a",
+      "build_sha256": "9572baa72a12a329606fdb2ecd00e4ea5debcc402735d0ae4bd659a319972d5a",
+      "equal": true
+    }
+  },
+  "all_error_headers": [
+    "[14:32:24] [Download-2/ERROR]: Failed to fetch user properties",
+    "[14:32:36] [Download-1/ERROR]: Failed to fetch Realms feature flags",
+    "[14:32:39] [IO-Worker-1/ERROR]: Couldn't connect to realms",
+    "[14:37:04] [Render thread/ERROR]: Failed to load function p2_visual:setup"
+  ],
+  "all_warning_headers": [
+    "[14:32:18] [main/WARN]: Failed retrieving storage space for org.lwjgl.system.SharedLibraryExtractPath",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:30] [Render thread/WARN]: Received passengers for unknown entity",
+    "[14:37:34] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2023ms or 40 ticks behind",
+    "[14:37:54] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 4859ms or 97 ticks behind",
+    "[14:38:16] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 7408ms or 148 ticks behind",
+    "[14:38:35] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 4411ms or 88 ticks behind",
+    "[14:38:55] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 4744ms or 94 ticks behind"
+  ],
+  "known_error_explanations": {
+    "offline_auth": "Dummy token 0 caused expected user-properties/Realms authentication failures; no login attempted.",
+    "test_helper": "First p2_visual:setup contained tick freeze, unavailable at function permission level 2. Removed before /reload at 14:37:55; later reloads and setup succeeded. Not a production RPG function.",
+    "temporary_path": "Initial LWJGL extract directory did not yet exist at early storage-space probe. The subsequent renderer initialized; launcher now creates this isolated directory.",
+    "initial_passengers": "39 Received passengers for unknown entity warnings occurred together at first singleplayer join 14:37:30. They did not recur after reload/scene setup; displayed model was visibly complete. This is retained as an integration warning, not silently treated as no-warning.",
+    "performance": "Full RPG ticking initially reported 40-148 ticks behind. Visual fixture later replaces tick list to isolate material/pose; this test is not a production performance pass."
+  }
+}

@@ -1,0 +1,40 @@
+[12:02:27] [main/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[12:02:27] [main/INFO]: Found new data pack file/rpg, loading it automatically
+[12:02:28] [main/INFO]: No existing world data, creating new world
+[12:02:30] [main/INFO]: Loaded 1470 recipes
+[12:02:30] [main/INFO]: Loaded 1627 advancements
+[12:02:30] [Server thread/INFO]: Starting minecraft server version 1.21.11
+[12:02:30] [Server thread/INFO]: Loading properties
+[12:02:30] [Server thread/INFO]: Default game type: SURVIVAL
+[12:02:30] [Server thread/INFO]: Generating keypair
+[12:02:30] [Server thread/INFO]: Starting Minecraft server on 127.0.0.1:25676
+[12:02:30] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[12:02:30] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[12:02:30] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[12:02:30] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[12:02:30] [Server thread/INFO]: Preparing level "packtest"
+[12:02:30] [Server thread/INFO]: Selecting global world spawn...
+[12:02:31] [Server thread/INFO]: Loading 0 persistent chunks...
+[12:02:31] [Server thread/INFO]: Preparing spawn area: 100%
+[12:02:31] [Server thread/INFO]: Time elapsed: 585 ms
+[12:02:31] [Server thread/INFO]: Done (0.723s)! For help, type "help"
+[12:02:31] [Server thread/INFO]: There are 2 data pack(s) enabled: [vanilla (built-in)], [file/rpg (world)]
+[12:02:31] [Server thread/INFO]: There are no more data packs available
+[12:02:31] [Server thread/INFO]: Running function rpg:command/index
+[12:02:32] [Server thread/INFO]: Running function rpg:command/tick
+[12:02:33] [Server thread/INFO]: Running function rpg:item/sword/legend/legend1
+[12:02:34] [Server thread/INFO]: Running function rpg:entities/warden/warden
+[12:02:34] [Server thread/INFO]: Running function rpg:command/tick_end
+[12:02:35] [Server thread/INFO]: Gamerule send_command_feedback is now set to: true
+[12:02:36] [Server thread/INFO]: Marked chunk [0, 0] in minecraft:overworld to be force loaded
+[12:02:36] [Server thread/INFO]: Stopping the server
+[12:02:36] [Server thread/INFO]: Stopping server
+[12:02:36] [Server thread/INFO]: Saving players
+[12:02:36] [Server thread/INFO]: Saving worlds
+[12:02:37] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[12:02:37] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[12:02:37] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[12:02:37] [Server thread/INFO]: ThreadedAnvilChunkStorage (packtest): All chunks are saved
+[12:02:37] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[12:02:37] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[12:02:37] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved

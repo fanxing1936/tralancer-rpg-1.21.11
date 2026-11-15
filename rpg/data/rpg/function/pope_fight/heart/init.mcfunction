@@ -13,6 +13,6 @@ scoreboard players set #ultq rpg_pf 0
 scoreboard players set #ulti rpg_pf 0
 scoreboard players set #ultcd rpg_pf 1200
 scoreboard players set #ultl rpg_pf 750
-execute facing entity @a[distance=..48,gamemode=!spectator,gamemode=!creative,sort=nearest,limit=1] feet rotated ~ 0 run tp @s ~ ~ ~ ~ 0
+execute facing entity @e[tag=rpg.unit.f,distance=..48,sort=nearest,limit=1] feet rotated ~ 0 run tp @s ~ ~ ~ ~ 0
 tp @e[type=minecraft:armor_stand,tag=rpg.pf.rig,limit=1] @s
 function rpg:pope_fight/heart/start_rise

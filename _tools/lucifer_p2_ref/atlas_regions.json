@@ -1,0 +1,5099 @@
+[
+  {
+    "kind": "original_texture",
+    "source": "T_Jungle_Abomination_M6.png",
+    "original_size": [
+      512,
+      512
+    ],
+    "tile": 0,
+    "offset": [
+      2,
+      2
+    ],
+    "size": [
+      512,
+      512
+    ],
+    "source_tile": 0,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      0
+    ],
+    "original_vertex_indices": [
+      0,
+      1,
+      2
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519753501388274,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 1,
+    "offset": [
+      518,
+      2
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 1,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      1
+    ],
+    "original_vertex_indices": [
+      3,
+      4,
+      5
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519758375947717,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 2,
+    "offset": [
+      584,
+      2
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 2,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      2
+    ],
+    "original_vertex_indices": [
+      6,
+      7,
+      8
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519871472222173,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 3,
+    "offset": [
+      650,
+      2
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 3,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      3
+    ],
+    "original_vertex_indices": [
+      9,
+      10,
+      11
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519916861724089,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 4,
+    "offset": [
+      716,
+      2
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 4,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      4
+    ],
+    "original_vertex_indices": [
+      12,
+      13,
+      14
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519772710907194,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 5,
+    "offset": [
+      782,
+      2
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 5,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      5
+    ],
+    "original_vertex_indices": [
+      15,
+      16,
+      17
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519823619779576,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 6,
+    "offset": [
+      909,
+      2
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 6,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      6
+    ],
+    "original_vertex_indices": [
+      18,
+      19,
+      20
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519786221966374,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 7,
+    "offset": [
+      1036,
+      2
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 7,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      7
+    ],
+    "original_vertex_indices": [
+      21,
+      22,
+      23
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1751988548807577,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 8,
+    "offset": [
+      1163,
+      2
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 8,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      38,
+      39
+    ],
+    "original_vertex_indices": [
+      84,
+      85,
+      86,
+      87
+    ],
+    "bake": {
+      "width": 87,
+      "height": 87,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1758551386058967,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 7569
+    },
+    "tile": 9,
+    "offset": [
+      1290,
+      2
+    ],
+    "size": [
+      87,
+      87
+    ],
+    "source_tile": 9,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      46,
+      47
+    ],
+    "original_vertex_indices": [
+      100,
+      101,
+      102,
+      103
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1758321451149644,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 10,
+    "offset": [
+      1381,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 10,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      50,
+      51
+    ],
+    "original_vertex_indices": [
+      108,
+      109,
+      110,
+      111
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583277189817823,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 11,
+    "offset": [
+      1444,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 11,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      62,
+      63
+    ],
+    "original_vertex_indices": [
+      132,
+      133,
+      134,
+      135
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583365489945463,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 12,
+    "offset": [
+      1507,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 12,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      68,
+      69
+    ],
+    "original_vertex_indices": [
+      144,
+      145,
+      146,
+      147
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583256661157115,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 13,
+    "offset": [
+      1570,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 13,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      72,
+      73
+    ],
+    "original_vertex_indices": [
+      152,
+      153,
+      154,
+      155
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583312881725555,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 14,
+    "offset": [
+      1633,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 14,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      80,
+      81
+    ],
+    "original_vertex_indices": [
+      168,
+      169,
+      170,
+      171
+    ],
+    "bake": {
+      "width": 67,
+      "height": 67,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17438453457313877,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4489
+    },
+    "tile": 15,
+    "offset": [
+      1696,
+      2
+    ],
+    "size": [
+      67,
+      67
+    ],
+    "source_tile": 15,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      84,
+      85
+    ],
+    "original_vertex_indices": [
+      176,
+      177,
+      178,
+      179
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583207045116644,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 16,
+    "offset": [
+      1767,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 16,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      92,
+      93
+    ],
+    "original_vertex_indices": [
+      192,
+      193,
+      194,
+      195
+    ],
+    "bake": {
+      "width": 57,
+      "height": 57,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17431644632398618,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3249
+    },
+    "tile": 17,
+    "offset": [
+      1830,
+      2
+    ],
+    "size": [
+      57,
+      57
+    ],
+    "source_tile": 17,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      100
+    ],
+    "original_vertex_indices": [
+      208,
+      209,
+      210
+    ],
+    "bake": {
+      "width": 60,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1760446638050199,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3688
+    },
+    "tile": 18,
+    "offset": [
+      1891,
+      2
+    ],
+    "size": [
+      60,
+      123
+    ],
+    "source_tile": 18,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      101
+    ],
+    "original_vertex_indices": [
+      208,
+      209,
+      211
+    ],
+    "bake": {
+      "width": 72,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17603990905904715,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4431
+    },
+    "tile": 19,
+    "offset": [
+      1955,
+      2
+    ],
+    "size": [
+      72,
+      123
+    ],
+    "source_tile": 19,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      114,
+      115
+    ],
+    "original_vertex_indices": [
+      236,
+      237,
+      238,
+      239
+    ],
+    "bake": {
+      "width": 82,
+      "height": 82,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17579882084232812,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 6724
+    },
+    "tile": 20,
+    "offset": [
+      2,
+      518
+    ],
+    "size": [
+      82,
+      82
+    ],
+    "source_tile": 20,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      120,
+      121
+    ],
+    "original_vertex_indices": [
+      248,
+      249,
+      250,
+      251
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583262646137404,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 21,
+    "offset": [
+      88,
+      518
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 21,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      124,
+      125
+    ],
+    "original_vertex_indices": [
+      256,
+      257,
+      258,
+      259
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583241420016646,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 22,
+    "offset": [
+      151,
+      518
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 22,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      158,
+      159
+    ],
+    "original_vertex_indices": [
+      324,
+      325,
+      326,
+      327
+    ],
+    "bake": {
+      "width": 87,
+      "height": 87,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17585529570053643,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 7569
+    },
+    "tile": 23,
+    "offset": [
+      214,
+      518
+    ],
+    "size": [
+      87,
+      87
+    ],
+    "source_tile": 23,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      164,
+      165
+    ],
+    "original_vertex_indices": [
+      336,
+      337,
+      338,
+      339
+    ],
+    "bake": {
+      "width": 75,
+      "height": 75,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1762060872031403,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5625
+    },
+    "tile": 24,
+    "offset": [
+      305,
+      518
+    ],
+    "size": [
+      75,
+      75
+    ],
+    "source_tile": 24,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      230
+    ],
+    "original_vertex_indices": [
+      468,
+      469,
+      470
+    ],
+    "bake": {
+      "width": 223,
+      "height": 446,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1765927076847521,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 49729
+    },
+    "tile": 25,
+    "offset": [
+      384,
+      518
+    ],
+    "size": [
+      223,
+      446
+    ],
+    "source_tile": 25,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      231
+    ],
+    "original_vertex_indices": [
+      468,
+      469,
+      471
+    ],
+    "bake": {
+      "width": 223,
+      "height": 446,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17659262352726562,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 49729
+    },
+    "tile": 26,
+    "offset": [
+      611,
+      518
+    ],
+    "size": [
+      223,
+      446
+    ],
+    "source_tile": 26,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      236,
+      237
+    ],
+    "original_vertex_indices": [
+      480,
+      481,
+      482,
+      483
+    ],
+    "bake": {
+      "width": 316,
+      "height": 316,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17633615510477396,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 99856
+    },
+    "tile": 27,
+    "offset": [
+      838,
+      518
+    ],
+    "size": [
+      316,
+      316
+    ],
+    "source_tile": 27,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      300,
+      301
+    ],
+    "original_vertex_indices": [
+      608,
+      609,
+      610,
+      611
+    ],
+    "bake": {
+      "width": 19,
+      "height": 167,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17449918265147138,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3173
+    },
+    "tile": 28,
+    "offset": [
+      1158,
+      518
+    ],
+    "size": [
+      19,
+      167
+    ],
+    "source_tile": 28,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      302,
+      303
+    ],
+    "original_vertex_indices": [
+      612,
+      613,
+      614,
+      615
+    ],
+    "bake": {
+      "width": 19,
+      "height": 167,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1744991826512783,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3173
+    },
+    "tile": 29,
+    "offset": [
+      1181,
+      518
+    ],
+    "size": [
+      19,
+      167
+    ],
+    "source_tile": 29,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      342,
+      343
+    ],
+    "original_vertex_indices": [
+      692,
+      693,
+      694,
+      695
+    ],
+    "bake": {
+      "width": 82,
+      "height": 82,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1757988584811712,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 6724
+    },
+    "tile": 30,
+    "offset": [
+      1204,
+      518
+    ],
+    "size": [
+      82,
+      82
+    ],
+    "source_tile": 30,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      346,
+      347
+    ],
+    "original_vertex_indices": [
+      700,
+      701,
+      702,
+      703
+    ],
+    "bake": {
+      "width": 492,
+      "height": 195,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17642557422185146,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 95940
+    },
+    "tile": 31,
+    "offset": [
+      1290,
+      518
+    ],
+    "size": [
+      492,
+      195
+    ],
+    "source_tile": 31,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      444,
+      445
+    ],
+    "original_vertex_indices": [
+      896,
+      897,
+      898,
+      899
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17579320108085594,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 32,
+    "offset": [
+      1786,
+      518
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 32,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      446,
+      447
+    ],
+    "original_vertex_indices": [
+      900,
+      901,
+      902,
+      903
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17594535414274093,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 33,
+    "offset": [
+      1846,
+      518
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 33,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      450,
+      451
+    ],
+    "original_vertex_indices": [
+      908,
+      909,
+      910,
+      911
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1757937007849246,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 34,
+    "offset": [
+      1906,
+      518
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 34,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      452,
+      453
+    ],
+    "original_vertex_indices": [
+      912,
+      913,
+      914,
+      915
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1759461607007003,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 35,
+    "offset": [
+      1966,
+      518
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 35,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      462,
+      463
+    ],
+    "original_vertex_indices": [
+      932,
+      933,
+      934,
+      935
+    ],
+    "bake": {
+      "width": 316,
+      "height": 93,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1762694402015531,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 29388
+    },
+    "tile": 36,
+    "offset": [
+      2,
+      968
+    ],
+    "size": [
+      316,
+      93
+    ],
+    "source_tile": 36,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      472
+    ],
+    "original_vertex_indices": [
+      952,
+      953,
+      954
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17599507422325344,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 37,
+    "offset": [
+      322,
+      968
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 37,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      473
+    ],
+    "original_vertex_indices": [
+      952,
+      953,
+      955
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17599437317778532,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 38,
+    "offset": [
+      403,
+      968
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 38,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      474
+    ],
+    "original_vertex_indices": [
+      956,
+      957,
+      958
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17599427847378518,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 39,
+    "offset": [
+      484,
+      968
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 39,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      475
+    ],
+    "original_vertex_indices": [
+      956,
+      957,
+      959
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1759942832392443,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 40,
+    "offset": [
+      565,
+      968
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 40,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      478,
+      479
+    ],
+    "original_vertex_indices": [
+      964,
+      965,
+      966,
+      967
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583405375857847,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 41,
+    "offset": [
+      646,
+      968
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 41,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489
+    ],
+    "original_vertex_indices": [
+      968,
+      969,
+      970,
+      971,
+      972,
+      973,
+      974,
+      975,
+      976,
+      977,
+      978,
+      979
+    ],
+    "bake": {
+      "width": 149,
+      "height": 260,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17647614504899514,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 30424
+    },
+    "tile": 42,
+    "offset": [
+      709,
+      968
+    ],
+    "size": [
+      149,
+      260
+    ],
+    "source_tile": 42,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      490,
+      491,
+      492,
+      493
+    ],
+    "original_vertex_indices": [
+      980,
+      981,
+      982,
+      983,
+      984,
+      985
+    ],
+    "bake": {
+      "width": 149,
+      "height": 75,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17537343097404678,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 11175
+    },
+    "tile": 43,
+    "offset": [
+      862,
+      968
+    ],
+    "size": [
+      149,
+      75
+    ],
+    "source_tile": 43,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      494,
+      495,
+      496,
+      497
+    ],
+    "original_vertex_indices": [
+      986,
+      987,
+      988,
+      989,
+      990,
+      991
+    ],
+    "bake": {
+      "width": 149,
+      "height": 75,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17524190511067583,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 11175
+    },
+    "tile": 44,
+    "offset": [
+      1015,
+      968
+    ],
+    "size": [
+      149,
+      75
+    ],
+    "source_tile": 44,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      498
+    ],
+    "original_vertex_indices": [
+      992,
+      993,
+      994
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17566307928810862,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 45,
+    "offset": [
+      1168,
+      968
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 45,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      499
+    ],
+    "original_vertex_indices": [
+      992,
+      993,
+      995
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1756631733520091,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 46,
+    "offset": [
+      1277,
+      968
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 46,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      500
+    ],
+    "original_vertex_indices": [
+      993,
+      995,
+      996
+    ],
+    "bake": {
+      "width": 134,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17607672744607503,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4144
+    },
+    "tile": 47,
+    "offset": [
+      1386,
+      968
+    ],
+    "size": [
+      134,
+      62
+    ],
+    "source_tile": 47,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      501
+    ],
+    "original_vertex_indices": [
+      993,
+      996,
+      997
+    ],
+    "bake": {
+      "width": 134,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17607678023694595,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4144
+    },
+    "tile": 48,
+    "offset": [
+      1524,
+      968
+    ],
+    "size": [
+      134,
+      62
+    ],
+    "source_tile": 48,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      502
+    ],
+    "original_vertex_indices": [
+      996,
+      997,
+      998
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1756638281232007,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 49,
+    "offset": [
+      1662,
+      968
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 49,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      503
+    ],
+    "original_vertex_indices": [
+      996,
+      998,
+      999
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17566364621512165,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 50,
+    "offset": [
+      1771,
+      968
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 50,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513
+    ],
+    "original_vertex_indices": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011
+    ],
+    "bake": {
+      "width": 149,
+      "height": 260,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1764752698463291,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 30424
+    },
+    "tile": 51,
+    "offset": [
+      1880,
+      968
+    ],
+    "size": [
+      149,
+      260
+    ],
+    "source_tile": 51,
+    "layer": "reference",
+    "layer_partition": "unchanged_reference"
+  },
+  {
+    "kind": "original_texture",
+    "source": "T_Jungle_Abomination_M6.png",
+    "original_size": [
+      512,
+      512
+    ],
+    "tile": 52,
+    "offset": [
+      2050,
+      2
+    ],
+    "size": [
+      512,
+      512
+    ],
+    "source_tile": 0,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      0
+    ],
+    "original_vertex_indices": [
+      0,
+      1,
+      2
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519753501388274,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 53,
+    "offset": [
+      2566,
+      2
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 1,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      1
+    ],
+    "original_vertex_indices": [
+      3,
+      4,
+      5
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519758375947717,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 54,
+    "offset": [
+      2632,
+      2
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 2,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      2
+    ],
+    "original_vertex_indices": [
+      6,
+      7,
+      8
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519871472222173,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 55,
+    "offset": [
+      2698,
+      2
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 3,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      3
+    ],
+    "original_vertex_indices": [
+      9,
+      10,
+      11
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519916861724089,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 56,
+    "offset": [
+      2764,
+      2
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 4,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      4
+    ],
+    "original_vertex_indices": [
+      12,
+      13,
+      14
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519772710907194,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 57,
+    "offset": [
+      2830,
+      2
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 5,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      5
+    ],
+    "original_vertex_indices": [
+      15,
+      16,
+      17
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519823619779576,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 58,
+    "offset": [
+      2957,
+      2
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 6,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      6
+    ],
+    "original_vertex_indices": [
+      18,
+      19,
+      20
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519786221966374,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 59,
+    "offset": [
+      3084,
+      2
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 7,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      7
+    ],
+    "original_vertex_indices": [
+      21,
+      22,
+      23
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1751988548807577,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 60,
+    "offset": [
+      3211,
+      2
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 8,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      38,
+      39
+    ],
+    "original_vertex_indices": [
+      84,
+      85,
+      86,
+      87
+    ],
+    "bake": {
+      "width": 87,
+      "height": 87,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1758551386058967,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 7569
+    },
+    "tile": 61,
+    "offset": [
+      3338,
+      2
+    ],
+    "size": [
+      87,
+      87
+    ],
+    "source_tile": 9,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      46,
+      47
+    ],
+    "original_vertex_indices": [
+      100,
+      101,
+      102,
+      103
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1758321451149644,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 62,
+    "offset": [
+      3429,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 10,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      50,
+      51
+    ],
+    "original_vertex_indices": [
+      108,
+      109,
+      110,
+      111
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583277189817823,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 63,
+    "offset": [
+      3492,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 11,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      62,
+      63
+    ],
+    "original_vertex_indices": [
+      132,
+      133,
+      134,
+      135
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583365489945463,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 64,
+    "offset": [
+      3555,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 12,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      68,
+      69
+    ],
+    "original_vertex_indices": [
+      144,
+      145,
+      146,
+      147
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583256661157115,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 65,
+    "offset": [
+      3618,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 13,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      72,
+      73
+    ],
+    "original_vertex_indices": [
+      152,
+      153,
+      154,
+      155
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583312881725555,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 66,
+    "offset": [
+      3681,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 14,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      80,
+      81
+    ],
+    "original_vertex_indices": [
+      168,
+      169,
+      170,
+      171
+    ],
+    "bake": {
+      "width": 67,
+      "height": 67,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17438453457313877,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4489
+    },
+    "tile": 67,
+    "offset": [
+      3744,
+      2
+    ],
+    "size": [
+      67,
+      67
+    ],
+    "source_tile": 15,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      84,
+      85
+    ],
+    "original_vertex_indices": [
+      176,
+      177,
+      178,
+      179
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583207045116644,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 68,
+    "offset": [
+      3815,
+      2
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 16,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      92,
+      93
+    ],
+    "original_vertex_indices": [
+      192,
+      193,
+      194,
+      195
+    ],
+    "bake": {
+      "width": 57,
+      "height": 57,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17431644632398618,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3249
+    },
+    "tile": 69,
+    "offset": [
+      3878,
+      2
+    ],
+    "size": [
+      57,
+      57
+    ],
+    "source_tile": 17,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      100
+    ],
+    "original_vertex_indices": [
+      208,
+      209,
+      210
+    ],
+    "bake": {
+      "width": 60,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1760446638050199,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3688
+    },
+    "tile": 70,
+    "offset": [
+      3939,
+      2
+    ],
+    "size": [
+      60,
+      123
+    ],
+    "source_tile": 18,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      101
+    ],
+    "original_vertex_indices": [
+      208,
+      209,
+      211
+    ],
+    "bake": {
+      "width": 72,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17603990905904715,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4431
+    },
+    "tile": 71,
+    "offset": [
+      4003,
+      2
+    ],
+    "size": [
+      72,
+      123
+    ],
+    "source_tile": 19,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      114,
+      115
+    ],
+    "original_vertex_indices": [
+      236,
+      237,
+      238,
+      239
+    ],
+    "bake": {
+      "width": 82,
+      "height": 82,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17579882084232812,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 6724
+    },
+    "tile": 72,
+    "offset": [
+      2050,
+      518
+    ],
+    "size": [
+      82,
+      82
+    ],
+    "source_tile": 20,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      120,
+      121
+    ],
+    "original_vertex_indices": [
+      248,
+      249,
+      250,
+      251
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583262646137404,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 73,
+    "offset": [
+      2136,
+      518
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 21,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      124,
+      125
+    ],
+    "original_vertex_indices": [
+      256,
+      257,
+      258,
+      259
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583241420016646,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 74,
+    "offset": [
+      2199,
+      518
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 22,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      158,
+      159
+    ],
+    "original_vertex_indices": [
+      324,
+      325,
+      326,
+      327
+    ],
+    "bake": {
+      "width": 87,
+      "height": 87,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17585529570053643,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 7569
+    },
+    "tile": 75,
+    "offset": [
+      2262,
+      518
+    ],
+    "size": [
+      87,
+      87
+    ],
+    "source_tile": 23,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      164,
+      165
+    ],
+    "original_vertex_indices": [
+      336,
+      337,
+      338,
+      339
+    ],
+    "bake": {
+      "width": 75,
+      "height": 75,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1762060872031403,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5625
+    },
+    "tile": 76,
+    "offset": [
+      2353,
+      518
+    ],
+    "size": [
+      75,
+      75
+    ],
+    "source_tile": 24,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      230
+    ],
+    "original_vertex_indices": [
+      468,
+      469,
+      470
+    ],
+    "bake": {
+      "width": 223,
+      "height": 446,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1765927076847521,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 49729
+    },
+    "tile": 77,
+    "offset": [
+      2432,
+      518
+    ],
+    "size": [
+      223,
+      446
+    ],
+    "source_tile": 25,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      231
+    ],
+    "original_vertex_indices": [
+      468,
+      469,
+      471
+    ],
+    "bake": {
+      "width": 223,
+      "height": 446,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17659262352726562,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 49729
+    },
+    "tile": 78,
+    "offset": [
+      2659,
+      518
+    ],
+    "size": [
+      223,
+      446
+    ],
+    "source_tile": 26,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      236,
+      237
+    ],
+    "original_vertex_indices": [
+      480,
+      481,
+      482,
+      483
+    ],
+    "bake": {
+      "width": 316,
+      "height": 316,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17633615510477396,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 99856
+    },
+    "tile": 79,
+    "offset": [
+      2886,
+      518
+    ],
+    "size": [
+      316,
+      316
+    ],
+    "source_tile": 27,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      300,
+      301
+    ],
+    "original_vertex_indices": [
+      608,
+      609,
+      610,
+      611
+    ],
+    "bake": {
+      "width": 19,
+      "height": 167,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17449918265147138,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3173
+    },
+    "tile": 80,
+    "offset": [
+      3206,
+      518
+    ],
+    "size": [
+      19,
+      167
+    ],
+    "source_tile": 28,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      302,
+      303
+    ],
+    "original_vertex_indices": [
+      612,
+      613,
+      614,
+      615
+    ],
+    "bake": {
+      "width": 19,
+      "height": 167,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1744991826512783,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3173
+    },
+    "tile": 81,
+    "offset": [
+      3229,
+      518
+    ],
+    "size": [
+      19,
+      167
+    ],
+    "source_tile": 29,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      342,
+      343
+    ],
+    "original_vertex_indices": [
+      692,
+      693,
+      694,
+      695
+    ],
+    "bake": {
+      "width": 82,
+      "height": 82,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1757988584811712,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 6724
+    },
+    "tile": 82,
+    "offset": [
+      3252,
+      518
+    ],
+    "size": [
+      82,
+      82
+    ],
+    "source_tile": 30,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      346,
+      347
+    ],
+    "original_vertex_indices": [
+      700,
+      701,
+      702,
+      703
+    ],
+    "bake": {
+      "width": 492,
+      "height": 195,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17642557422185146,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 95940
+    },
+    "tile": 83,
+    "offset": [
+      3338,
+      518
+    ],
+    "size": [
+      492,
+      195
+    ],
+    "source_tile": 31,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      444,
+      445
+    ],
+    "original_vertex_indices": [
+      896,
+      897,
+      898,
+      899
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17579320108085594,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 84,
+    "offset": [
+      3834,
+      518
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 32,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      446,
+      447
+    ],
+    "original_vertex_indices": [
+      900,
+      901,
+      902,
+      903
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17594535414274093,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 85,
+    "offset": [
+      3894,
+      518
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 33,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      450,
+      451
+    ],
+    "original_vertex_indices": [
+      908,
+      909,
+      910,
+      911
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1757937007849246,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 86,
+    "offset": [
+      3954,
+      518
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 34,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      452,
+      453
+    ],
+    "original_vertex_indices": [
+      912,
+      913,
+      914,
+      915
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1759461607007003,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 87,
+    "offset": [
+      4014,
+      518
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 35,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      462,
+      463
+    ],
+    "original_vertex_indices": [
+      932,
+      933,
+      934,
+      935
+    ],
+    "bake": {
+      "width": 316,
+      "height": 93,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1762694402015531,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 29388
+    },
+    "tile": 88,
+    "offset": [
+      2050,
+      968
+    ],
+    "size": [
+      316,
+      93
+    ],
+    "source_tile": 36,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      472
+    ],
+    "original_vertex_indices": [
+      952,
+      953,
+      954
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17599507422325344,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 89,
+    "offset": [
+      2370,
+      968
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 37,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      473
+    ],
+    "original_vertex_indices": [
+      952,
+      953,
+      955
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17599437317778532,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 90,
+    "offset": [
+      2451,
+      968
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 38,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      474
+    ],
+    "original_vertex_indices": [
+      956,
+      957,
+      958
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17599427847378518,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 91,
+    "offset": [
+      2532,
+      968
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 39,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      475
+    ],
+    "original_vertex_indices": [
+      956,
+      957,
+      959
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1759942832392443,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 92,
+    "offset": [
+      2613,
+      968
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 40,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      478,
+      479
+    ],
+    "original_vertex_indices": [
+      964,
+      965,
+      966,
+      967
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583405375857847,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 93,
+    "offset": [
+      2694,
+      968
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 41,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489
+    ],
+    "original_vertex_indices": [
+      968,
+      969,
+      970,
+      971,
+      972,
+      973,
+      974,
+      975,
+      976,
+      977,
+      978,
+      979
+    ],
+    "bake": {
+      "width": 149,
+      "height": 260,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17647614504899514,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 30424
+    },
+    "tile": 94,
+    "offset": [
+      2757,
+      968
+    ],
+    "size": [
+      149,
+      260
+    ],
+    "source_tile": 42,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      490,
+      491,
+      492,
+      493
+    ],
+    "original_vertex_indices": [
+      980,
+      981,
+      982,
+      983,
+      984,
+      985
+    ],
+    "bake": {
+      "width": 149,
+      "height": 75,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17537343097404678,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 11175
+    },
+    "tile": 95,
+    "offset": [
+      2910,
+      968
+    ],
+    "size": [
+      149,
+      75
+    ],
+    "source_tile": 43,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      494,
+      495,
+      496,
+      497
+    ],
+    "original_vertex_indices": [
+      986,
+      987,
+      988,
+      989,
+      990,
+      991
+    ],
+    "bake": {
+      "width": 149,
+      "height": 75,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17524190511067583,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 11175
+    },
+    "tile": 96,
+    "offset": [
+      3063,
+      968
+    ],
+    "size": [
+      149,
+      75
+    ],
+    "source_tile": 44,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      498
+    ],
+    "original_vertex_indices": [
+      992,
+      993,
+      994
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17566307928810862,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 97,
+    "offset": [
+      3216,
+      968
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 45,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      499
+    ],
+    "original_vertex_indices": [
+      992,
+      993,
+      995
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1756631733520091,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 98,
+    "offset": [
+      3325,
+      968
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 46,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      500
+    ],
+    "original_vertex_indices": [
+      993,
+      995,
+      996
+    ],
+    "bake": {
+      "width": 134,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17607672744607503,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4144
+    },
+    "tile": 99,
+    "offset": [
+      3434,
+      968
+    ],
+    "size": [
+      134,
+      62
+    ],
+    "source_tile": 47,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      501
+    ],
+    "original_vertex_indices": [
+      993,
+      996,
+      997
+    ],
+    "bake": {
+      "width": 134,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17607678023694595,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4144
+    },
+    "tile": 100,
+    "offset": [
+      3572,
+      968
+    ],
+    "size": [
+      134,
+      62
+    ],
+    "source_tile": 48,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      502
+    ],
+    "original_vertex_indices": [
+      996,
+      997,
+      998
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1756638281232007,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 101,
+    "offset": [
+      3710,
+      968
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 49,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      503
+    ],
+    "original_vertex_indices": [
+      996,
+      998,
+      999
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17566364621512165,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 102,
+    "offset": [
+      3819,
+      968
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 50,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513
+    ],
+    "original_vertex_indices": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011
+    ],
+    "bake": {
+      "width": 149,
+      "height": 260,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1764752698463291,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 30424
+    },
+    "tile": 103,
+    "offset": [
+      3928,
+      968
+    ],
+    "size": [
+      149,
+      260
+    ],
+    "source_tile": 51,
+    "layer": "nonglow",
+    "layer_partition": "alpha & !support"
+  },
+  {
+    "kind": "original_texture",
+    "source": "T_Jungle_Abomination_M6.png",
+    "original_size": [
+      512,
+      512
+    ],
+    "tile": 104,
+    "offset": [
+      2,
+      2050
+    ],
+    "size": [
+      512,
+      512
+    ],
+    "source_tile": 0,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      0
+    ],
+    "original_vertex_indices": [
+      0,
+      1,
+      2
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519753501388274,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 105,
+    "offset": [
+      518,
+      2050
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 1,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      1
+    ],
+    "original_vertex_indices": [
+      3,
+      4,
+      5
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519758375947717,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 106,
+    "offset": [
+      584,
+      2050
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 2,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      2
+    ],
+    "original_vertex_indices": [
+      6,
+      7,
+      8
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519871472222173,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 107,
+    "offset": [
+      650,
+      2050
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 3,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      3
+    ],
+    "original_vertex_indices": [
+      9,
+      10,
+      11
+    ],
+    "bake": {
+      "width": 62,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519916861724089,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 108,
+    "offset": [
+      716,
+      2050
+    ],
+    "size": [
+      62,
+      123
+    ],
+    "source_tile": 4,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      4
+    ],
+    "original_vertex_indices": [
+      12,
+      13,
+      14
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519772710907194,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 109,
+    "offset": [
+      782,
+      2050
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 5,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      5
+    ],
+    "original_vertex_indices": [
+      15,
+      16,
+      17
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519823619779576,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 110,
+    "offset": [
+      909,
+      2050
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 6,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      6
+    ],
+    "original_vertex_indices": [
+      18,
+      19,
+      20
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17519786221966374,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 111,
+    "offset": [
+      1036,
+      2050
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 7,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      7
+    ],
+    "original_vertex_indices": [
+      21,
+      22,
+      23
+    ],
+    "bake": {
+      "width": 123,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1751988548807577,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3844
+    },
+    "tile": 112,
+    "offset": [
+      1163,
+      2050
+    ],
+    "size": [
+      123,
+      62
+    ],
+    "source_tile": 8,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      38,
+      39
+    ],
+    "original_vertex_indices": [
+      84,
+      85,
+      86,
+      87
+    ],
+    "bake": {
+      "width": 87,
+      "height": 87,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1758551386058967,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 7569
+    },
+    "tile": 113,
+    "offset": [
+      1290,
+      2050
+    ],
+    "size": [
+      87,
+      87
+    ],
+    "source_tile": 9,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      46,
+      47
+    ],
+    "original_vertex_indices": [
+      100,
+      101,
+      102,
+      103
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1758321451149644,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 114,
+    "offset": [
+      1381,
+      2050
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 10,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      50,
+      51
+    ],
+    "original_vertex_indices": [
+      108,
+      109,
+      110,
+      111
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583277189817823,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 115,
+    "offset": [
+      1444,
+      2050
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 11,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      62,
+      63
+    ],
+    "original_vertex_indices": [
+      132,
+      133,
+      134,
+      135
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583365489945463,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 116,
+    "offset": [
+      1507,
+      2050
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 12,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      68,
+      69
+    ],
+    "original_vertex_indices": [
+      144,
+      145,
+      146,
+      147
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583256661157115,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 117,
+    "offset": [
+      1570,
+      2050
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 13,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      72,
+      73
+    ],
+    "original_vertex_indices": [
+      152,
+      153,
+      154,
+      155
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583312881725555,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 118,
+    "offset": [
+      1633,
+      2050
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 14,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      80,
+      81
+    ],
+    "original_vertex_indices": [
+      168,
+      169,
+      170,
+      171
+    ],
+    "bake": {
+      "width": 67,
+      "height": 67,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17438453457313877,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4489
+    },
+    "tile": 119,
+    "offset": [
+      1696,
+      2050
+    ],
+    "size": [
+      67,
+      67
+    ],
+    "source_tile": 15,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      84,
+      85
+    ],
+    "original_vertex_indices": [
+      176,
+      177,
+      178,
+      179
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583207045116644,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 120,
+    "offset": [
+      1767,
+      2050
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 16,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      92,
+      93
+    ],
+    "original_vertex_indices": [
+      192,
+      193,
+      194,
+      195
+    ],
+    "bake": {
+      "width": 57,
+      "height": 57,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17431644632398618,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3249
+    },
+    "tile": 121,
+    "offset": [
+      1830,
+      2050
+    ],
+    "size": [
+      57,
+      57
+    ],
+    "source_tile": 17,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      100
+    ],
+    "original_vertex_indices": [
+      208,
+      209,
+      210
+    ],
+    "bake": {
+      "width": 60,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1760446638050199,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3688
+    },
+    "tile": 122,
+    "offset": [
+      1891,
+      2050
+    ],
+    "size": [
+      60,
+      123
+    ],
+    "source_tile": 18,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      101
+    ],
+    "original_vertex_indices": [
+      208,
+      209,
+      211
+    ],
+    "bake": {
+      "width": 72,
+      "height": 123,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17603990905904715,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4431
+    },
+    "tile": 123,
+    "offset": [
+      1955,
+      2050
+    ],
+    "size": [
+      72,
+      123
+    ],
+    "source_tile": 19,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      114,
+      115
+    ],
+    "original_vertex_indices": [
+      236,
+      237,
+      238,
+      239
+    ],
+    "bake": {
+      "width": 82,
+      "height": 82,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17579882084232812,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 6724
+    },
+    "tile": 124,
+    "offset": [
+      2,
+      2566
+    ],
+    "size": [
+      82,
+      82
+    ],
+    "source_tile": 20,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      120,
+      121
+    ],
+    "original_vertex_indices": [
+      248,
+      249,
+      250,
+      251
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583262646137404,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 125,
+    "offset": [
+      88,
+      2566
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 21,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      124,
+      125
+    ],
+    "original_vertex_indices": [
+      256,
+      257,
+      258,
+      259
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583241420016646,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 126,
+    "offset": [
+      151,
+      2566
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 22,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      158,
+      159
+    ],
+    "original_vertex_indices": [
+      324,
+      325,
+      326,
+      327
+    ],
+    "bake": {
+      "width": 87,
+      "height": 87,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17585529570053643,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 7569
+    },
+    "tile": 127,
+    "offset": [
+      214,
+      2566
+    ],
+    "size": [
+      87,
+      87
+    ],
+    "source_tile": 23,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      164,
+      165
+    ],
+    "original_vertex_indices": [
+      336,
+      337,
+      338,
+      339
+    ],
+    "bake": {
+      "width": 75,
+      "height": 75,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1762060872031403,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5625
+    },
+    "tile": 128,
+    "offset": [
+      305,
+      2566
+    ],
+    "size": [
+      75,
+      75
+    ],
+    "source_tile": 24,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      230
+    ],
+    "original_vertex_indices": [
+      468,
+      469,
+      470
+    ],
+    "bake": {
+      "width": 223,
+      "height": 446,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1765927076847521,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 49729
+    },
+    "tile": 129,
+    "offset": [
+      384,
+      2566
+    ],
+    "size": [
+      223,
+      446
+    ],
+    "source_tile": 25,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      231
+    ],
+    "original_vertex_indices": [
+      468,
+      469,
+      471
+    ],
+    "bake": {
+      "width": 223,
+      "height": 446,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17659262352726562,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 49729
+    },
+    "tile": 130,
+    "offset": [
+      611,
+      2566
+    ],
+    "size": [
+      223,
+      446
+    ],
+    "source_tile": 26,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      236,
+      237
+    ],
+    "original_vertex_indices": [
+      480,
+      481,
+      482,
+      483
+    ],
+    "bake": {
+      "width": 316,
+      "height": 316,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17633615510477396,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 99856
+    },
+    "tile": 131,
+    "offset": [
+      838,
+      2566
+    ],
+    "size": [
+      316,
+      316
+    ],
+    "source_tile": 27,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      300,
+      301
+    ],
+    "original_vertex_indices": [
+      608,
+      609,
+      610,
+      611
+    ],
+    "bake": {
+      "width": 19,
+      "height": 167,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17449918265147138,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3173
+    },
+    "tile": 132,
+    "offset": [
+      1158,
+      2566
+    ],
+    "size": [
+      19,
+      167
+    ],
+    "source_tile": 28,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      302,
+      303
+    ],
+    "original_vertex_indices": [
+      612,
+      613,
+      614,
+      615
+    ],
+    "bake": {
+      "width": 19,
+      "height": 167,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1744991826512783,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3173
+    },
+    "tile": 133,
+    "offset": [
+      1181,
+      2566
+    ],
+    "size": [
+      19,
+      167
+    ],
+    "source_tile": 29,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      342,
+      343
+    ],
+    "original_vertex_indices": [
+      692,
+      693,
+      694,
+      695
+    ],
+    "bake": {
+      "width": 82,
+      "height": 82,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1757988584811712,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 6724
+    },
+    "tile": 134,
+    "offset": [
+      1204,
+      2566
+    ],
+    "size": [
+      82,
+      82
+    ],
+    "source_tile": 30,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      346,
+      347
+    ],
+    "original_vertex_indices": [
+      700,
+      701,
+      702,
+      703
+    ],
+    "bake": {
+      "width": 492,
+      "height": 195,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17642557422185146,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 95940
+    },
+    "tile": 135,
+    "offset": [
+      1290,
+      2566
+    ],
+    "size": [
+      492,
+      195
+    ],
+    "source_tile": 31,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      444,
+      445
+    ],
+    "original_vertex_indices": [
+      896,
+      897,
+      898,
+      899
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17579320108085594,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 136,
+    "offset": [
+      1786,
+      2566
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 32,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      446,
+      447
+    ],
+    "original_vertex_indices": [
+      900,
+      901,
+      902,
+      903
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17594535414274093,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 137,
+    "offset": [
+      1846,
+      2566
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 33,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      450,
+      451
+    ],
+    "original_vertex_indices": [
+      908,
+      909,
+      910,
+      911
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1757937007849246,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 138,
+    "offset": [
+      1906,
+      2566
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 34,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      452,
+      453
+    ],
+    "original_vertex_indices": [
+      912,
+      913,
+      914,
+      915
+    ],
+    "bake": {
+      "width": 56,
+      "height": 105,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1759461607007003,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 5880
+    },
+    "tile": 139,
+    "offset": [
+      1966,
+      2566
+    ],
+    "size": [
+      56,
+      105
+    ],
+    "source_tile": 35,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      462,
+      463
+    ],
+    "original_vertex_indices": [
+      932,
+      933,
+      934,
+      935
+    ],
+    "bake": {
+      "width": 316,
+      "height": 93,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1762694402015531,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 29388
+    },
+    "tile": 140,
+    "offset": [
+      2,
+      3016
+    ],
+    "size": [
+      316,
+      93
+    ],
+    "source_tile": 36,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      472
+    ],
+    "original_vertex_indices": [
+      952,
+      953,
+      954
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17599507422325344,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 141,
+    "offset": [
+      322,
+      3016
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 37,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      473
+    ],
+    "original_vertex_indices": [
+      952,
+      953,
+      955
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17599437317778532,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 142,
+    "offset": [
+      403,
+      3016
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 38,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      474
+    ],
+    "original_vertex_indices": [
+      956,
+      957,
+      958
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17599427847378518,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 143,
+    "offset": [
+      484,
+      3016
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 39,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      475
+    ],
+    "original_vertex_indices": [
+      956,
+      957,
+      959
+    ],
+    "bake": {
+      "width": 77,
+      "height": 18,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1759942832392443,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 698
+    },
+    "tile": 144,
+    "offset": [
+      565,
+      3016
+    ],
+    "size": [
+      77,
+      18
+    ],
+    "source_tile": 40,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      478,
+      479
+    ],
+    "original_vertex_indices": [
+      964,
+      965,
+      966,
+      967
+    ],
+    "bake": {
+      "width": 59,
+      "height": 59,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17583405375857847,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 3481
+    },
+    "tile": 145,
+    "offset": [
+      646,
+      3016
+    ],
+    "size": [
+      59,
+      59
+    ],
+    "source_tile": 41,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489
+    ],
+    "original_vertex_indices": [
+      968,
+      969,
+      970,
+      971,
+      972,
+      973,
+      974,
+      975,
+      976,
+      977,
+      978,
+      979
+    ],
+    "bake": {
+      "width": 149,
+      "height": 260,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17647614504899514,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 30424
+    },
+    "tile": 146,
+    "offset": [
+      709,
+      3016
+    ],
+    "size": [
+      149,
+      260
+    ],
+    "source_tile": 42,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      490,
+      491,
+      492,
+      493
+    ],
+    "original_vertex_indices": [
+      980,
+      981,
+      982,
+      983,
+      984,
+      985
+    ],
+    "bake": {
+      "width": 149,
+      "height": 75,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17537343097404678,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 11175
+    },
+    "tile": 147,
+    "offset": [
+      862,
+      3016
+    ],
+    "size": [
+      149,
+      75
+    ],
+    "source_tile": 43,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      494,
+      495,
+      496,
+      497
+    ],
+    "original_vertex_indices": [
+      986,
+      987,
+      988,
+      989,
+      990,
+      991
+    ],
+    "bake": {
+      "width": 149,
+      "height": 75,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17524190511067583,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 11175
+    },
+    "tile": 148,
+    "offset": [
+      1015,
+      3016
+    ],
+    "size": [
+      149,
+      75
+    ],
+    "source_tile": 44,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      498
+    ],
+    "original_vertex_indices": [
+      992,
+      993,
+      994
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17566307928810862,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 149,
+    "offset": [
+      1168,
+      3016
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 45,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      499
+    ],
+    "original_vertex_indices": [
+      992,
+      993,
+      995
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1756631733520091,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 150,
+    "offset": [
+      1277,
+      3016
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 46,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      500
+    ],
+    "original_vertex_indices": [
+      993,
+      995,
+      996
+    ],
+    "bake": {
+      "width": 134,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17607672744607503,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4144
+    },
+    "tile": 151,
+    "offset": [
+      1386,
+      3016
+    ],
+    "size": [
+      134,
+      62
+    ],
+    "source_tile": 47,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      501
+    ],
+    "original_vertex_indices": [
+      993,
+      996,
+      997
+    ],
+    "bake": {
+      "width": 134,
+      "height": 62,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17607678023694595,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 4144
+    },
+    "tile": 152,
+    "offset": [
+      1524,
+      3016
+    ],
+    "size": [
+      134,
+      62
+    ],
+    "source_tile": 48,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      502
+    ],
+    "original_vertex_indices": [
+      996,
+      997,
+      998
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1756638281232007,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 153,
+    "offset": [
+      1662,
+      3016
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 49,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      503
+    ],
+    "original_vertex_indices": [
+      996,
+      998,
+      999
+    ],
+    "bake": {
+      "width": 105,
+      "height": 53,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.17566364621512165,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 2809
+    },
+    "tile": 154,
+    "offset": [
+      1771,
+      3016
+    ],
+    "size": [
+      105,
+      53
+    ],
+    "source_tile": 50,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  },
+  {
+    "kind": "source_triangle_cutout",
+    "source_triangle_indices": [
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513
+    ],
+    "original_vertex_indices": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011
+    ],
+    "bake": {
+      "width": 149,
+      "height": 260,
+      "maximum_cutout_cell_diagonal_visual_pixels": 0.1764752698463291,
+      "source_texture_sampling": "nearest original RGBA texel, no color interpolation",
+      "source_uv_samples_per_texel_minimum": 4,
+      "covered_tile_pixels": 30424
+    },
+    "tile": 155,
+    "offset": [
+      1880,
+      3016
+    ],
+    "size": [
+      149,
+      260
+    ],
+    "source_tile": 51,
+    "layer": "glow",
+    "layer_partition": "alpha & support"
+  }
+]

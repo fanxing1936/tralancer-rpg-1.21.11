@@ -4,5 +4,5 @@
 particle dust_color_transition{from_color:532802,to_color:1195644,scale:2} ~ ~0.3 ~ 3.5 0.25 3.5 0.02 9
 particle bubble_column_up ~ ~ ~ 0.8 0.1 0.8 0.03 3
 particle dust_color_transition{from_color:1195644,to_color:16559622,scale:1} ~ ~1.4 ~ 0.2 0.5 0.2 0.02 1
-execute as @e[distance=1.2..7,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker] at @s facing entity @e[tag=rpg.levi.anchor,limit=1,sort=nearest] feet run tp @s ^ ^ ^0.55
-execute as @e[distance=..7,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker] run effect give @s minecraft:slowness 2 2 true
+execute as @e[distance=1.2..7,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker,tag=!rpg.ally] at @s facing entity @e[tag=rpg.levi.anchor,limit=1,sort=nearest] feet run tp @s ^ ^ ^0.55
+execute as @e[distance=..7,type=!player,type=!minecraft:item,type=!minecraft:experience_orb,type=!minecraft:marker,tag=!rpg.ally] run effect give @s minecraft:slowness 2 2 true

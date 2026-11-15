@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:iron_golem",
+              "nbt": "{Tags:[\"rpg.ally\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:jacques_ally/friendly"
+  }
+}

@@ -1,0 +1,25 @@
+# 预警：内外两圈火（at 树）。贴着树干、或者站到 14 格外都安全
+particle minecraft:flame ~14.00 ~0.3 ~0.00 0.1 0.1 0.1 0 2
+particle minecraft:flame ~3.00 ~0.3 ~0.00 0.05 0.1 0.05 0 2
+particle minecraft:flame ~12.93 ~0.3 ~5.36 0.1 0.1 0.1 0 2
+particle minecraft:flame ~9.90 ~0.3 ~9.90 0.1 0.1 0.1 0 2
+particle minecraft:flame ~2.12 ~0.3 ~2.12 0.05 0.1 0.05 0 2
+particle minecraft:flame ~5.36 ~0.3 ~12.93 0.1 0.1 0.1 0 2
+particle minecraft:flame ~0.00 ~0.3 ~14.00 0.1 0.1 0.1 0 2
+particle minecraft:flame ~0.00 ~0.3 ~3.00 0.05 0.1 0.05 0 2
+particle minecraft:flame ~-5.36 ~0.3 ~12.93 0.1 0.1 0.1 0 2
+particle minecraft:flame ~-9.90 ~0.3 ~9.90 0.1 0.1 0.1 0 2
+particle minecraft:flame ~-2.12 ~0.3 ~2.12 0.05 0.1 0.05 0 2
+particle minecraft:flame ~-12.93 ~0.3 ~5.36 0.1 0.1 0.1 0 2
+particle minecraft:flame ~-14.00 ~0.3 ~0.00 0.1 0.1 0.1 0 2
+particle minecraft:flame ~-3.00 ~0.3 ~0.00 0.05 0.1 0.05 0 2
+particle minecraft:flame ~-12.93 ~0.3 ~-5.36 0.1 0.1 0.1 0 2
+particle minecraft:flame ~-9.90 ~0.3 ~-9.90 0.1 0.1 0.1 0 2
+particle minecraft:flame ~-2.12 ~0.3 ~-2.12 0.05 0.1 0.05 0 2
+particle minecraft:flame ~-5.36 ~0.3 ~-12.93 0.1 0.1 0.1 0 2
+particle minecraft:flame ~-0.00 ~0.3 ~-14.00 0.1 0.1 0.1 0 2
+particle minecraft:flame ~-0.00 ~0.3 ~-3.00 0.05 0.1 0.05 0 2
+particle minecraft:flame ~5.36 ~0.3 ~-12.93 0.1 0.1 0.1 0 2
+particle minecraft:flame ~9.90 ~0.3 ~-9.90 0.1 0.1 0.1 0 2
+particle minecraft:flame ~2.12 ~0.3 ~-2.12 0.05 0.1 0.05 0 2
+particle minecraft:flame ~12.93 ~0.3 ~-5.36 0.1 0.1 0.1 0 2

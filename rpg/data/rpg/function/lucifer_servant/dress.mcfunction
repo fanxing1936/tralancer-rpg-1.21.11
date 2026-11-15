@@ -1,0 +1,19 @@
+# 路西法罪仆（as 罪仆，at 其脚下）。只加 rpg.lcs 标签、隐身与部件，手上的物品不换，只把它的模型设成空的。
+tag @s add rpg.lcs
+tag @s add rpg.lcs.dressing
+effect give @s minecraft:invisibility infinite 0 true
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lcs.part","rpg.lcs.p.r_leg","rpg.lcs.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:lucifer_servant/r_leg"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1f,transformation:{translation:[-0.14593f,-1.61258f,-0.14138f],left_rotation:[-0.60778f,-0.10644f,-0.20413f,0.76001f],scale:[8.33333f,8.33333f,8.33333f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lcs.part","rpg.lcs.p.l_leg","rpg.lcs.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:lucifer_servant/l_leg"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1f,transformation:{translation:[0.11363f,-1.625f,0.0521f],left_rotation:[0.69083f,-0.15083f,0.15083f,0.69083f],scale:[8.33333f,8.33333f,8.33333f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lcs.part","rpg.lcs.p.l_arm","rpg.lcs.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:lucifer_servant/l_arm"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1f,transformation:{translation:[0.29475f,-0.86865f,0.17398f],left_rotation:[0.6421f,-0.138f,0.18503f,0.73105f],scale:[8.33333f,8.33333f,8.33333f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lcs.part","rpg.lcs.p.r_arm","rpg.lcs.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:lucifer_servant/r_arm"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1f,transformation:{translation:[-0.28326f,-0.8645f,-0.1968f],left_rotation:[-0.60378f,-0.19517f,-0.24512f,0.73299f],scale:[8.33333f,8.33333f,8.33333f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lcs.part","rpg.lcs.p.body","rpg.lcs.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:lucifer_servant/body"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1f,transformation:{translation:[0f,-0.875f,0f],left_rotation:[0.69083f,-0.15083f,0.15083f,0.69083f],scale:[8.33333f,8.33333f,8.33333f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lcs.part","rpg.lcs.p.lucifer_servant_head_004","rpg.lcs.new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:lucifer_servant/lucifer_servant_head_004"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1f,transformation:{translation:[0f,-0.25f,0f],left_rotation:[0.70611f,0.0376f,-0.0376f,0.70611f],scale:[8.33333f,8.33333f,8.33333f],right_rotation:[0f,0f,0f,1f]}}
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.lcs.part","rpg.lcs.p.weapon","rpg.lcs.new"],item_display:"thirdperson_righthand",teleport_duration:2,interpolation_duration:2,view_range:1f,transformation:{translation:[-0.30701f,-1.16806f,-0.27141f],left_rotation:[0.70711f,0f,0f,0.70711f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}
+execute as @e[type=minecraft:item_display,tag=rpg.lcs.new,distance=..1] run ride @s mount @e[tag=rpg.lcs.dressing,limit=1]
+# 手里的原版物品复制到 weapon 部件上画出来，载体自己的那份只把模型设成空的
+item replace entity @e[type=minecraft:item_display,tag=rpg.lcs.new,tag=rpg.lcs.p.weapon,distance=..1,limit=1] contents from entity @s weapon.mainhand
+item modify entity @s weapon.mainhand {function:"minecraft:set_components",components:{"minecraft:item_model":"rpg:empty"}}
+tag @e[type=minecraft:item_display,tag=rpg.lcs.new,distance=..1] remove rpg.lcs.new
+tag @s remove rpg.lcs.dressing
+scoreboard players set @s rpg_lcs 0
+function rpg:lucifer_servant/anim/init

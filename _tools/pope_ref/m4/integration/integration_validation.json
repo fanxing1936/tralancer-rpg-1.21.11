@@ -1,0 +1,85 @@
+{
+  "model_sha256": "a419cc8dce1e796113a02c362ad184faea3bf09d5c908b26ac81e963babc624a",
+  "parts": 12,
+  "clips": [
+    {
+      "id": 0,
+      "name": "idle",
+      "seconds": 4,
+      "ticks": 80,
+      "sample_step": 4,
+      "frames": 20
+    },
+    {
+      "id": 1,
+      "name": "walk",
+      "seconds": 1.8,
+      "ticks": 36,
+      "sample_step": 1,
+      "frames": 36
+    },
+    {
+      "id": 2,
+      "name": "attack",
+      "seconds": 1.25,
+      "ticks": 25,
+      "sample_step": 1,
+      "frames": 26
+    },
+    {
+      "id": 3,
+      "name": "summon",
+      "seconds": 2,
+      "ticks": 40,
+      "sample_step": 1,
+      "frames": 41
+    },
+    {
+      "id": 4,
+      "name": "cast",
+      "seconds": 2.5,
+      "ticks": 50,
+      "sample_step": 1,
+      "frames": 51
+    },
+    {
+      "id": 5,
+      "name": "appear",
+      "seconds": 1.8,
+      "ticks": 36,
+      "sample_step": 1,
+      "frames": 37
+    },
+    {
+      "id": 6,
+      "name": "teleport_in",
+      "seconds": 0.9,
+      "ticks": 18,
+      "sample_step": 1,
+      "frames": 19
+    },
+    {
+      "id": 7,
+      "name": "teleport_out",
+      "seconds": 0.9,
+      "ticks": 18,
+      "sample_step": 1,
+      "frames": 19
+    },
+    {
+      "id": 8,
+      "name": "whirlwind",
+      "seconds": 7,
+      "ticks": 140,
+      "sample_step": 1,
+      "frames": 141
+    }
+  ],
+  "sound_groups": 17,
+  "sound_files_byte_identical": 39,
+  "all_passed": true,
+  "protected_file_count": 5942,
+  "shared_nonpope_entries_unchanged": true,
+  "deterministic_runs": 2,
+  "generated_file_count": 749
+}

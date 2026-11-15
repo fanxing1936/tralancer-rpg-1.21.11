@@ -1,0 +1,3834 @@
+{
+  "schema_version": 1,
+  "stage": "M1：可追溯UV研究，不是最终映射",
+  "coordinate_convention": "原PNG像素，左上为(0,0)，矩形[u0,v0,u1,v1)右下界不含；Java north=-Z/east=+X/south=+Z/west=-X/up=+Y/down=-Y。候选面方向非官方事实。",
+  "sources": {
+    "arch": {
+      "path_relative_to_tools": "heart_of_ender_ref/MCD_Arch-Illager_(texture).png",
+      "file_sha256": "1a21fa3f274e5883a6b05eee2deccf6ea95c27b81a830feacb0972c92261fbf7",
+      "size": [
+        64,
+        64
+      ],
+      "rgba_sha256": "a78d69d0030c0b140d69d4a34141432d4edebb3464850e99d951c7107d8b5b5f",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_pixels": 3923,
+      "transparent_pixels": 173,
+      "partial_alpha_pixels": 0,
+      "top_rgba": [
+        {
+          "rgba": [
+            43,
+            43,
+            43,
+            255
+          ],
+          "count": 2427
+        },
+        {
+          "rgba": [
+            3,
+            69,
+            231,
+            255
+          ],
+          "count": 216
+        },
+        {
+          "rgba": [
+            138,
+            144,
+            144,
+            255
+          ],
+          "count": 207
+        },
+        {
+          "rgba": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "count": 173
+        },
+        {
+          "rgba": [
+            255,
+            196,
+            68,
+            255
+          ],
+          "count": 135
+        },
+        {
+          "rgba": [
+            112,
+            118,
+            118,
+            255
+          ],
+          "count": 98
+        },
+        {
+          "rgba": [
+            125,
+            131,
+            131,
+            255
+          ],
+          "count": 85
+        },
+        {
+          "rgba": [
+            2,
+            61,
+            217,
+            255
+          ],
+          "count": 78
+        }
+      ]
+    },
+    "shadow": {
+      "path_relative_to_tools": "heart_of_ender_ref/MCD_Arch-Illager_(shadow_texture).png",
+      "file_sha256": "f38b696236f5b93e092b138703cc5185e07f77195c23d38b353253d916f59f29",
+      "size": [
+        64,
+        64
+      ],
+      "rgba_sha256": "21ae2225102309f51c0ef7709be0f2b512c0856b13dc426332c60bba7e854808",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_pixels": 2,
+      "transparent_pixels": 4094,
+      "partial_alpha_pixels": 0,
+      "top_rgba": [
+        {
+          "rgba": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "count": 4094
+        },
+        {
+          "rgba": [
+            0,
+            255,
+            0,
+            255
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "staff": {
+      "path_relative_to_tools": "pope_ref/T_SuperStaff.png",
+      "file_sha256": "bd6e849011d39eb1f148debabfc0eb5fbdd1c5bda0ce4d8748b6ad54b4d71c79",
+      "size": [
+        32,
+        32
+      ],
+      "rgba_sha256": "148e47803d57e9695c7a8a5f8a9e4f2f307fa6bf28d8d9e5904dd8ccc1ed4c7e",
+      "alpha_values": [
+        0,
+        255
+      ],
+      "opaque_pixels": 103,
+      "transparent_pixels": 921,
+      "partial_alpha_pixels": 0,
+      "top_rgba": [
+        {
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ],
+          "count": 921
+        },
+        {
+          "rgba": [
+            141,
+            141,
+            141,
+            255
+          ],
+          "count": 52
+        },
+        {
+          "rgba": [
+            255,
+            0,
+            0,
+            255
+          ],
+          "count": 20
+        },
+        {
+          "rgba": [
+            126,
+            126,
+            126,
+            255
+          ],
+          "count": 14
+        },
+        {
+          "rgba": [
+            167,
+            0,
+            1,
+            255
+          ],
+          "count": 8
+        },
+        {
+          "rgba": [
+            255,
+            196,
+            68,
+            255
+          ],
+          "count": 5
+        },
+        {
+          "rgba": [
+            162,
+            162,
+            162,
+            255
+          ],
+          "count": 4
+        }
+      ]
+    },
+    "cube": {
+      "path_relative_to_tools": "pope_ref/T_SuperCube.png",
+      "file_sha256": "73870f54fb750f689ac0b90ef0eae42c671aac04d932f1cbaefb337e96544a94",
+      "size": [
+        32,
+        32
+      ],
+      "rgba_sha256": "7a2d56818532b67905e47921ea64643f2b2d350279c306f1e4e8b3329a4afc04",
+      "alpha_values": [
+        255
+      ],
+      "opaque_pixels": 1024,
+      "transparent_pixels": 0,
+      "partial_alpha_pixels": 0,
+      "top_rgba": [
+        {
+          "rgba": [
+            255,
+            110,
+            2,
+            255
+          ],
+          "count": 218
+        },
+        {
+          "rgba": [
+            255,
+            255,
+            96,
+            255
+          ],
+          "count": 32
+        },
+        {
+          "rgba": [
+            255,
+            187,
+            8,
+            255
+          ],
+          "count": 31
+        },
+        {
+          "rgba": [
+            255,
+            232,
+            53,
+            255
+          ],
+          "count": 31
+        },
+        {
+          "rgba": [
+            255,
+            245,
+            66,
+            255
+          ],
+          "count": 30
+        },
+        {
+          "rgba": [
+            229,
+            86,
+            21,
+            255
+          ],
+          "count": 29
+        },
+        {
+          "rgba": [
+            255,
+            234,
+            55,
+            255
+          ],
+          "count": 28
+        },
+        {
+          "rgba": [
+            238,
+            98,
+            9,
+            255
+          ],
+          "count": 28
+        }
+      ]
+    }
+  },
+  "regions": [
+    {
+      "id": "A01",
+      "label": "眼/眉图样候选",
+      "rect": [
+        0,
+        0,
+        6,
+        6
+      ],
+      "evidence": "语义推断",
+      "note": "可见暗灰阶梯、灰皮和1个白像素；不能据此认定矩形整体就是一只眼。",
+      "pixel_stats": {
+        "size": [
+          6,
+          6
+        ],
+        "rgba_sha256": "7e66b82d14017ffee8e9da1bd3ec6faab979b356b73c508fc1411e23ea6532aa",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 36,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              43,
+              43,
+              43,
+              255
+            ],
+            "count": 25
+          },
+          {
+            "rgba": [
+              57,
+              57,
+              57,
+              255
+            ],
+            "count": 8
+          },
+          {
+            "rgba": [
+              37,
+              37,
+              37,
+              255
+            ],
+            "count": 2
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "A02",
+      "label": "灰头上方区域",
+      "rect": [
+        6,
+        0,
+        36,
+        6
+      ],
+      "evidence": "像素确认；面名推断",
+      "note": "30×6灰色块；标准12×7×6盒网只需要其中两个12×6端面，额外6×6尚未分配。",
+      "pixel_stats": {
+        "size": [
+          30,
+          6
+        ],
+        "rgba_sha256": "b0d8f778ce35231e11611146212bc3b55eb7f2c9870e9ab782aac7eaf4d4a6e0",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 180,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              112,
+              118,
+              118,
+              255
+            ],
+            "count": 80
+          },
+          {
+            "rgba": [
+              158,
+              162,
+              162,
+              255
+            ],
+            "count": 46
+          },
+          {
+            "rgba": [
+              83,
+              89,
+              89,
+              255
+            ],
+            "count": 28
+          },
+          {
+            "rgba": [
+              138,
+              144,
+              144,
+              255
+            ],
+            "count": 26
+          }
+        ]
+      }
+    },
+    {
+      "id": "A03",
+      "label": "灰头侧带候选",
+      "rect": [
+        0,
+        6,
+        36,
+        13
+      ],
+      "evidence": "像素确认；语义高置信推断",
+      "note": "36×7灰带；6+12+6+12可闭合盒网，但不含主渲染中的黑白眼纹。",
+      "pixel_stats": {
+        "size": [
+          36,
+          7
+        ],
+        "rgba_sha256": "bd0318dd3d610ac08b7bcefcc871f48ec2b7882d5df0ba5fb066f11882b33d08",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 252,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              138,
+              144,
+              144,
+              255
+            ],
+            "count": 181
+          },
+          {
+            "rgba": [
+              125,
+              131,
+              131,
+              255
+            ],
+            "count": 53
+          },
+          {
+            "rgba": [
+              112,
+              118,
+              118,
+              255
+            ],
+            "count": 18
+          }
+        ]
+      }
+    },
+    {
+      "id": "A04",
+      "label": "白色小片",
+      "rect": [
+        2,
+        13,
+        4,
+        14
+      ],
+      "evidence": "像素确认；语义未定",
+      "note": "2×1纯白；可能与鼻上表面/眼睛有关，不当作任意白材质池。",
+      "pixel_stats": {
+        "size": [
+          2,
+          1
+        ],
+        "rgba_sha256": "6fc0c052be3ccbfaf764b5dd3b29da2bad3635317cc6c1874cb33a7d796dac75",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 2,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              230,
+              230,
+              230,
+              255
+            ],
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "A05",
+      "label": "小灰侧带候选",
+      "rect": [
+        0,
+        14,
+        8,
+        18
+      ],
+      "evidence": "像素确认；语义未定",
+      "note": "8×4灰带，可分四块2×4；与鼻2×4×2相容但端面没有独立、无歧义的完整盒网。",
+      "pixel_stats": {
+        "size": [
+          8,
+          4
+        ],
+        "rgba_sha256": "26aa5e50782f97d6f6b6c6a5464bb400890dd6b4d5d4e677f942dc40fc0213c2",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 32,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              182,
+              182,
+              182,
+              255
+            ],
+            "count": 8
+          },
+          {
+            "rgba": [
+              165,
+              165,
+              165,
+              255
+            ],
+            "count": 8
+          },
+          {
+            "rgba": [
+              125,
+              131,
+              131,
+              255
+            ],
+            "count": 8
+          },
+          {
+            "rgba": [
+              57,
+              57,
+              57,
+              255
+            ],
+            "count": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "A06",
+      "label": "连续灰细条",
+      "rect": [
+        6,
+        13,
+        10,
+        21
+      ],
+      "evidence": "像素确认；臂语义中置信推断",
+      "note": "4×8灰条；主渲染细灰臂相容。与A05局部重叠，必须注明共享，不能当两个独立岛。",
+      "pixel_stats": {
+        "size": [
+          4,
+          8
+        ],
+        "rgba_sha256": "081a5a743bf6cefebe6f609bf370e697083d013cf3361cbc5d1156faaf2137be",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 32,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              125,
+              131,
+              131,
+              255
+            ],
+            "count": 32
+          }
+        ]
+      }
+    },
+    {
+      "id": "A07",
+      "label": "暗青十字网",
+      "rect": [
+        10,
+        13,
+        22,
+        22
+      ],
+      "evidence": "像素确认；语义未定",
+      "note": "六块3×3组成十字；可能躯干下方/小部件。主渲染脚是灰白末端与红尖，不宜直接命名蓝鞋。",
+      "pixel_stats": {
+        "size": [
+          12,
+          9
+        ],
+        "rgba_sha256": "3ae45fe3b8c2020335f9591e5e57d109988f51632ea8499457e6c97fe08a4274",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 108,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              43,
+              43,
+              43,
+              255
+            ],
+            "count": 41
+          },
+          {
+            "rgba": [
+              16,
+              45,
+              61,
+              255
+            ],
+            "count": 22
+          },
+          {
+            "rgba": [
+              10,
+              29,
+              40,
+              255
+            ],
+            "count": 22
+          },
+          {
+            "rgba": [
+              12,
+              38,
+              51,
+              255
+            ],
+            "count": 10
+          },
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "count": 6
+          },
+          {
+            "rgba": [
+              220,
+              59,
+              5,
+              255
+            ],
+            "count": 2
+          },
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "count": 2
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "A08",
+      "label": "金红小片",
+      "rect": [
+        0,
+        18,
+        5,
+        22
+      ],
+      "evidence": "像素确认；语义未定",
+      "note": "金、红、灰交界，不能因为有红像素就确定为脚尖。",
+      "pixel_stats": {
+        "size": [
+          5,
+          4
+        ],
+        "rgba_sha256": "e843b73d774ca4f669837311074b4aaee6dbe31be891bab8ee6c7fc07d62cb17",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 20,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "count": 8
+          },
+          {
+            "rgba": [
+              255,
+              0,
+              0,
+              255
+            ],
+            "count": 4
+          },
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "count": 4
+          },
+          {
+            "rgba": [
+              182,
+              182,
+              182,
+              255
+            ],
+            "count": 2
+          },
+          {
+            "rgba": [
+              43,
+              43,
+              43,
+              255
+            ],
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "A09",
+      "label": "红宝石/金属饰品候选",
+      "rect": [
+        17,
+        19,
+        22,
+        23
+      ],
+      "evidence": "语义中高置信推断",
+      "note": "红色2×2核心及金色外圈与项链吊坠相容，原几何前后/侧面UV未取得。",
+      "pixel_stats": {
+        "size": [
+          5,
+          4
+        ],
+        "rgba_sha256": "2f764bca2e3812a83783757fdfe5ce946ddb072c0e73d235f973577f85163df6",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 20,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "count": 8
+          },
+          {
+            "rgba": [
+              43,
+              43,
+              43,
+              255
+            ],
+            "count": 6
+          },
+          {
+            "rgba": [
+              220,
+              59,
+              5,
+              255
+            ],
+            "count": 2
+          },
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "count": 2
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "count": 1
+          },
+          {
+            "rgba": [
+              110,
+              29,
+              2,
+              255
+            ],
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "A10",
+      "label": "金属环/饰品候选",
+      "rect": [
+        22,
+        16,
+        25,
+        20
+      ],
+      "evidence": "语义中置信推断",
+      "note": "3×4金色矩形有透明孔；与金属项链相容，不能填孔。",
+      "pixel_stats": {
+        "size": [
+          3,
+          4
+        ],
+        "rgba_sha256": "0066a29542a4fe971765d586c9a2bb5f7790abcab25eda463acdbbbf1e8bb712",
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_pixels": 10,
+        "transparent_pixels": 2,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "count": 5
+          },
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "count": 5
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "A11",
+      "label": "内衣上片",
+      "rect": [
+        5,
+        22,
+        14,
+        27
+      ],
+      "evidence": "像素确认；语义中置信推断",
+      "note": "9×5绿片，和下方侧带相接。",
+      "pixel_stats": {
+        "size": [
+          9,
+          5
+        ],
+        "rgba_sha256": "98b59ac01c0f8dc4c257979a7948d69045b51b0582a9f859d8785a8fdf2e32bf",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 45,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              15,
+              42,
+              10,
+              255
+            ],
+            "count": 45
+          }
+        ]
+      }
+    },
+    {
+      "id": "A12",
+      "label": "躯干服装侧带",
+      "rect": [
+        0,
+        27,
+        27,
+        36
+      ],
+      "evidence": "像素确认；语义中高置信推断",
+      "note": "27×9蓝金绿侧带；胸前绿色夹金边支持front候选，后蓝面没有唯一左右分界。",
+      "pixel_stats": {
+        "size": [
+          27,
+          9
+        ],
+        "rgba_sha256": "48502a896da7ccc6f30470a65f9832725e56fe4a123d291ce7d54f61a60ad4aa",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 243,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              3,
+              69,
+              231,
+              255
+            ],
+            "count": 107
+          },
+          {
+            "rgba": [
+              2,
+              61,
+              217,
+              255
+            ],
+            "count": 50
+          },
+          {
+            "rgba": [
+              21,
+              59,
+              13,
+              255
+            ],
+            "count": 26
+          },
+          {
+            "rgba": [
+              18,
+              51,
+              12,
+              255
+            ],
+            "count": 16
+          },
+          {
+            "rgba": [
+              3,
+              83,
+              249,
+              255
+            ],
+            "count": 16
+          },
+          {
+            "rgba": [
+              2,
+              54,
+              203,
+              255
+            ],
+            "count": 10
+          },
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "count": 6
+          },
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "count": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "A13",
+      "label": "内衣下片",
+      "rect": [
+        5,
+        36,
+        14,
+        40
+      ],
+      "evidence": "像素确认；语义中置信推断",
+      "note": "9×4绿片；与A11深度不相等，不能声称标准9×9×5盒网。",
+      "pixel_stats": {
+        "size": [
+          9,
+          4
+        ],
+        "rgba_sha256": "f9284871078dc643cb0c388d965e7f5983204f4134d3d52f16fe6800c3b6061d",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 36,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              21,
+              59,
+              13,
+              255
+            ],
+            "count": 36
+          }
+        ]
+      }
+    },
+    {
+      "id": "A14",
+      "label": "高金冠",
+      "rect": [
+        36,
+        4,
+        52,
+        15
+      ],
+      "evidence": "像素确认；语义高置信推断",
+      "note": "四块4×11侧面；含红/蓝宝石的一块[36,4,40,15]对应主渲染冠正面。",
+      "pixel_stats": {
+        "size": [
+          16,
+          11
+        ],
+        "rgba_sha256": "0f5f31498807f820e236fec909552acb2ff3d8889c5407d5e0dbb16544aa59fa",
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_pixels": 168,
+        "transparent_pixels": 8,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "count": 88
+          },
+          {
+            "rgba": [
+              255,
+              212,
+              118,
+              255
+            ],
+            "count": 27
+          },
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "count": 24
+          },
+          {
+            "rgba": [
+              255,
+              204,
+              93,
+              255
+            ],
+            "count": 21
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": 8
+          },
+          {
+            "rgba": [
+              5,
+              166,
+              220,
+              255
+            ],
+            "count": 2
+          },
+          {
+            "rgba": [
+              220,
+              59,
+              5,
+              255
+            ],
+            "count": 2
+          },
+          {
+            "rgba": [
+              165,
+              223,
+              242,
+              255
+            ],
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "A15",
+      "label": "金冠顶环",
+      "rect": [
+        40,
+        0,
+        44,
+        4
+      ],
+      "evidence": "像素确认；语义高置信推断",
+      "note": "4×4金环，中心2×2透明；是空心冠口，不能补实。",
+      "pixel_stats": {
+        "size": [
+          4,
+          4
+        ],
+        "rgba_sha256": "7dd4b9de5cfed49214a20c5310fd552db7532f96ad2aa2b541c0c2b7b24a0682",
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_pixels": 12,
+        "transparent_pixels": 4,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "count": 12
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "A16",
+      "label": "蓝金细长饰片",
+      "rect": [
+        52,
+        0,
+        60,
+        15
+      ],
+      "evidence": "像素确认；语义未定",
+      "note": "每4列为3蓝+1金，连续15行；可能袖口/袍边折片，不能用UV15高认定手臂15长。",
+      "pixel_stats": {
+        "size": [
+          8,
+          15
+        ],
+        "rgba_sha256": "c263b4778c7e495d260a205aa9087bc485a1694c84c1f71f5f805d509f9ca8e7",
+        "alpha_values": [
+          255
+        ],
+        "opaque_pixels": 120,
+        "transparent_pixels": 0,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              2,
+              54,
+              203,
+              255
+            ],
+            "count": 36
+          },
+          {
+            "rgba": [
+              3,
+              69,
+              231,
+              255
+            ],
+            "count": 36
+          },
+          {
+            "rgba": [
+              3,
+              83,
+              249,
+              255
+            ],
+            "count": 18
+          },
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "count": 14
+          },
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "count": 6
+          },
+          {
+            "rgba": [
+              43,
+              43,
+              43,
+              255
+            ],
+            "count": 6
+          },
+          {
+            "rgba": [
+              255,
+              212,
+              118,
+              255
+            ],
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "A17",
+      "label": "蓝袍左片",
+      "rect": [
+        32,
+        15,
+        38,
+        29
+      ],
+      "evidence": "像素确认；语义中置信推断",
+      "note": "蓝金长片带灰白上下边；右缘部分透明，不能画成实心长方体。",
+      "pixel_stats": {
+        "size": [
+          6,
+          14
+        ],
+        "rgba_sha256": "fa7bdd998d9dc54e7ca246d766478c6e6e9e641b13e5d1a43aac4ef507010913",
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_pixels": 78,
+        "transparent_pixels": 6,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              3,
+              69,
+              231,
+              255
+            ],
+            "count": 25
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "count": 12
+          },
+          {
+            "rgba": [
+              204,
+              204,
+              204,
+              255
+            ],
+            "count": 9
+          },
+          {
+            "rgba": [
+              2,
+              54,
+              203,
+              255
+            ],
+            "count": 9
+          },
+          {
+            "rgba": [
+              2,
+              61,
+              217,
+              255
+            ],
+            "count": 8
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": 6
+          },
+          {
+            "rgba": [
+              3,
+              83,
+              249,
+              255
+            ],
+            "count": 5
+          },
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "count": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "A18",
+      "label": "蓝袍大片",
+      "rect": [
+        42,
+        15,
+        59,
+        29
+      ],
+      "evidence": "像素确认；语义中置信推断",
+      "note": "蓝金/白边与不规则透明区，可能含前片、侧片与背片，不能整体命名背面。",
+      "pixel_stats": {
+        "size": [
+          17,
+          14
+        ],
+        "rgba_sha256": "b78d72ab268e23e8080f61f7ad0781209353685df97d997d0def859788f83703",
+        "alpha_values": [
+          0,
+          255
+        ],
+        "opaque_pixels": 218,
+        "transparent_pixels": 20,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "count": 54
+          },
+          {
+            "rgba": [
+              3,
+              69,
+              231,
+              255
+            ],
+            "count": 48
+          },
+          {
+            "rgba": [
+              204,
+              204,
+              204,
+              255
+            ],
+            "count": 20
+          },
+          {
+            "rgba": [
+              2,
+              61,
+              217,
+              255
+            ],
+            "count": 20
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": 20
+          },
+          {
+            "rgba": [
+              43,
+              43,
+              43,
+              255
+            ],
+            "count": 20
+          },
+          {
+            "rgba": [
+              2,
+              54,
+              203,
+              255
+            ],
+            "count": 19
+          },
+          {
+            "rgba": [
+              3,
+              68,
+              230,
+              255
+            ],
+            "count": 15
+          }
+        ]
+      }
+    },
+    {
+      "id": "A19",
+      "label": "袍区透明缺口",
+      "rect": [
+        38,
+        16,
+        42,
+        29
+      ],
+      "evidence": "像素确认",
+      "note": "全透明4×13；接邻的1px边缘并不全透明；不能用这块填内衬。",
+      "pixel_stats": {
+        "size": [
+          4,
+          13
+        ],
+        "rgba_sha256": "46f531b7ea0428fbf2c3ca2b60e8dc33d6bbfa000e0fd1b489c5e39140a47006",
+        "alpha_values": [
+          0
+        ],
+        "opaque_pixels": 0,
+        "transparent_pixels": 52,
+        "partial_alpha_pixels": 0,
+        "top_rgba": [
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": 52
+          }
+        ]
+      }
+    }
+  ],
+  "box_candidates": [
+    {
+      "id": "head_shell",
+      "label": "灰头外壳（不含独立眼眉）",
+      "candidate_dimensions_whd": [
+        12,
+        7,
+        6
+      ],
+      "source": "arch",
+      "faces": {
+        "north": [
+          6,
+          6,
+          18,
+          13
+        ],
+        "east": [
+          18,
+          6,
+          24,
+          13
+        ],
+        "south": [
+          24,
+          6,
+          36,
+          13
+        ],
+        "west": [
+          0,
+          6,
+          6,
+          13
+        ],
+        "up": [
+          6,
+          0,
+          18,
+          6
+        ],
+        "down": [
+          18,
+          0,
+          30,
+          6
+        ]
+      },
+      "official_uv_recovered": false,
+      "evidence": "六个矩形的尺寸满足12×7×6盒网；主渲染为宽头、短面高。",
+      "cautions": [
+        "灰侧带纹样不能唯一证明前后/左右；候选方向不是官方恢复。",
+        "不能漏掉眼眉；A01如何拆到眼眉几何需M2两个方案比较。"
+      ],
+      "face_pixel_stats": {
+        "north": {
+          "size": [
+            12,
+            7
+          ],
+          "rgba_sha256": "395a076ea6ece682eb49c7e5a8e05c15f30fb06cc329a8c903e7cd9470da6b0d",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 84,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                138,
+                144,
+                144,
+                255
+              ],
+              "count": 48
+            },
+            {
+              "rgba": [
+                125,
+                131,
+                131,
+                255
+              ],
+              "count": 18
+            },
+            {
+              "rgba": [
+                112,
+                118,
+                118,
+                255
+              ],
+              "count": 18
+            }
+          ]
+        },
+        "east": {
+          "size": [
+            6,
+            7
+          ],
+          "rgba_sha256": "7fec0413d904530a5472adcbb1246af90959c801669c8472bd37fb36aa5bfbe1",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 42,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                138,
+                144,
+                144,
+                255
+              ],
+              "count": 34
+            },
+            {
+              "rgba": [
+                125,
+                131,
+                131,
+                255
+              ],
+              "count": 8
+            }
+          ]
+        },
+        "south": {
+          "size": [
+            12,
+            7
+          ],
+          "rgba_sha256": "15d3cacf2a7432736864caca82c8ccb6945105a103163b9b65a825e5e7d56136",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 84,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                138,
+                144,
+                144,
+                255
+              ],
+              "count": 66
+            },
+            {
+              "rgba": [
+                125,
+                131,
+                131,
+                255
+              ],
+              "count": 18
+            }
+          ]
+        },
+        "west": {
+          "size": [
+            6,
+            7
+          ],
+          "rgba_sha256": "86b738ad0b367389928eed70b5378293fa8171bd384427a8a20224af41748b2b",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 42,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                138,
+                144,
+                144,
+                255
+              ],
+              "count": 33
+            },
+            {
+              "rgba": [
+                125,
+                131,
+                131,
+                255
+              ],
+              "count": 9
+            }
+          ]
+        },
+        "up": {
+          "size": [
+            12,
+            6
+          ],
+          "rgba_sha256": "65471cb6a34d5bbf7de8dca75f84de0011101e56e3663d01ecfc86c619a7b2c4",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 72,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                158,
+                162,
+                162,
+                255
+              ],
+              "count": 46
+            },
+            {
+              "rgba": [
+                138,
+                144,
+                144,
+                255
+              ],
+              "count": 26
+            }
+          ]
+        },
+        "down": {
+          "size": [
+            12,
+            6
+          ],
+          "rgba_sha256": "2892c6b4d9f034af01d27d95a18b64f8ca51293f2d0824199f95ea136dc13445",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 72,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                112,
+                118,
+                118,
+                255
+              ],
+              "count": 44
+            },
+            {
+              "rgba": [
+                83,
+                89,
+                89,
+                255
+              ],
+              "count": 28
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "crown",
+      "label": "高金冠四壁与顶环",
+      "candidate_dimensions_whd": [
+        4,
+        11,
+        4
+      ],
+      "source": "arch",
+      "faces": {
+        "north": [
+          36,
+          4,
+          40,
+          15
+        ],
+        "east": [
+          40,
+          4,
+          44,
+          15
+        ],
+        "south": [
+          44,
+          4,
+          48,
+          15
+        ],
+        "west": [
+          48,
+          4,
+          52,
+          15
+        ],
+        "up": [
+          40,
+          0,
+          44,
+          4
+        ],
+        "down": null
+      },
+      "official_uv_recovered": false,
+      "evidence": "16×11侧带分四个4×11，4×4空心顶环；主渲染红/蓝宝石列位于冠正面。",
+      "cautions": [
+        "正面归属有纹样证据；左右/背顺序和各面转向仍是候选。",
+        "底面无可证明原岛，先texture=null；透明口保留，不添加半透明。"
+      ],
+      "face_pixel_stats": {
+        "north": {
+          "size": [
+            4,
+            11
+          ],
+          "rgba_sha256": "668f0a795943f086bf580322ccb547052cf4f48081944b61b4a5c25e4be0bedb",
+          "alpha_values": [
+            0,
+            255
+          ],
+          "opaque_pixels": 42,
+          "transparent_pixels": 2,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 22
+            },
+            {
+              "rgba": [
+                225,
+                170,
+                50,
+                255
+              ],
+              "count": 10
+            },
+            {
+              "rgba": [
+                255,
+                212,
+                118,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                220,
+                59,
+                5,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                5,
+                166,
+                220,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                165,
+                223,
+                242,
+                255
+              ],
+              "count": 1
+            },
+            {
+              "rgba": [
+                242,
+                184,
+                165,
+                255
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "east": {
+          "size": [
+            4,
+            11
+          ],
+          "rgba_sha256": "2e4690e8edd7bfa4ff74bf8b169a5e6f0de6a25da875706f4dc3f2e49e8bb927",
+          "alpha_values": [
+            0,
+            255
+          ],
+          "opaque_pixels": 42,
+          "transparent_pixels": 2,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 18
+            },
+            {
+              "rgba": [
+                255,
+                212,
+                118,
+                255
+              ],
+              "count": 14
+            },
+            {
+              "rgba": [
+                255,
+                204,
+                93,
+                255
+              ],
+              "count": 8
+            },
+            {
+              "rgba": [
+                225,
+                170,
+                50,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "count": 2
+            }
+          ]
+        },
+        "south": {
+          "size": [
+            4,
+            11
+          ],
+          "rgba_sha256": "fd0e31f5f44f1f3ace1e236f0cb5326b4b28e351ea7ada0ffcd9e1fbde775956",
+          "alpha_values": [
+            0,
+            255
+          ],
+          "opaque_pixels": 42,
+          "transparent_pixels": 2,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 30
+            },
+            {
+              "rgba": [
+                225,
+                170,
+                50,
+                255
+              ],
+              "count": 10
+            },
+            {
+              "rgba": [
+                255,
+                212,
+                118,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "count": 2
+            }
+          ]
+        },
+        "west": {
+          "size": [
+            4,
+            11
+          ],
+          "rgba_sha256": "30122dd3612e28789db26e78c8bef6a98b0549ee71528b34f277a6bbf8a755a2",
+          "alpha_values": [
+            0,
+            255
+          ],
+          "opaque_pixels": 42,
+          "transparent_pixels": 2,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 18
+            },
+            {
+              "rgba": [
+                255,
+                204,
+                93,
+                255
+              ],
+              "count": 13
+            },
+            {
+              "rgba": [
+                255,
+                212,
+                118,
+                255
+              ],
+              "count": 9
+            },
+            {
+              "rgba": [
+                225,
+                170,
+                50,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "count": 2
+            }
+          ]
+        },
+        "up": {
+          "size": [
+            4,
+            4
+          ],
+          "rgba_sha256": "7dd4b9de5cfed49214a20c5310fd552db7532f96ad2aa2b541c0c2b7b24a0682",
+          "alpha_values": [
+            0,
+            255
+          ],
+          "opaque_pixels": 12,
+          "transparent_pixels": 4,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                225,
+                170,
+                50,
+                255
+              ],
+              "count": 12
+            },
+            {
+              "rgba": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "count": 4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "nose_sides",
+      "label": "鼻部四侧候选",
+      "candidate_dimensions_whd": [
+        2,
+        4,
+        2
+      ],
+      "source": "arch",
+      "faces": {
+        "north": [
+          2,
+          14,
+          4,
+          18
+        ],
+        "east": [
+          4,
+          14,
+          6,
+          18
+        ],
+        "south": [
+          6,
+          14,
+          8,
+          18
+        ],
+        "west": [
+          0,
+          14,
+          2,
+          18
+        ],
+        "up": null,
+        "down": null
+      },
+      "official_uv_recovered": false,
+      "evidence": "8×4灰矩形可形成四个2×4面；主渲染鼻为前突灰色长方体。",
+      "cautions": [
+        "上下端面未定，不能借相邻红金像素封面。",
+        "A04可能是上端面但只有2×1，不能擅称2×2。"
+      ],
+      "face_pixel_stats": {
+        "north": {
+          "size": [
+            2,
+            4
+          ],
+          "rgba_sha256": "b0a7fa5aa4d9cf860aca1f9c329ddeb8af48ef615b666798e1c8e0baa3f54eb9",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 8,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                165,
+                165,
+                165,
+                255
+              ],
+              "count": 8
+            }
+          ]
+        },
+        "east": {
+          "size": [
+            2,
+            4
+          ],
+          "rgba_sha256": "4f9b379a48ea8f7eba3fe93da083cde337603b9c6f6be613975e6e6ac94eee0f",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 8,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                182,
+                182,
+                182,
+                255
+              ],
+              "count": 8
+            }
+          ]
+        },
+        "south": {
+          "size": [
+            2,
+            4
+          ],
+          "rgba_sha256": "2679094ff7aaa48277bb950bc0148e5447e2cc51e3dbd6574135456386dd4282",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 8,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                125,
+                131,
+                131,
+                255
+              ],
+              "count": 8
+            }
+          ]
+        },
+        "west": {
+          "size": [
+            2,
+            4
+          ],
+          "rgba_sha256": "329b58c6a13324d54b1b491977e3b48b730daba026082fc723399e10cfc8170a",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 8,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                57,
+                57,
+                57,
+                255
+              ],
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "thin_arm_sides",
+      "label": "细灰臂四侧候选（左右有意共享）",
+      "candidate_dimensions_whd": [
+        1,
+        8,
+        1
+      ],
+      "source": "arch",
+      "faces": {
+        "north": [
+          7,
+          13,
+          8,
+          21
+        ],
+        "east": [
+          8,
+          13,
+          9,
+          21
+        ],
+        "south": [
+          9,
+          13,
+          10,
+          21
+        ],
+        "west": [
+          6,
+          13,
+          7,
+          21
+        ],
+        "up": null,
+        "down": null
+      },
+      "official_uv_recovered": false,
+      "evidence": "4×8连续灰条可分四个1×8；主渲染可见细灰手臂。",
+      "cautions": [
+        "无独立端面证据；若M2复用条端1px必须记录为明确复用。",
+        "1×8 UV不强制几何长度；手的朝向由原图/动图约束，不由贴图猜。"
+      ],
+      "face_pixel_stats": {
+        "north": {
+          "size": [
+            1,
+            8
+          ],
+          "rgba_sha256": "2679094ff7aaa48277bb950bc0148e5447e2cc51e3dbd6574135456386dd4282",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 8,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                125,
+                131,
+                131,
+                255
+              ],
+              "count": 8
+            }
+          ]
+        },
+        "east": {
+          "size": [
+            1,
+            8
+          ],
+          "rgba_sha256": "2679094ff7aaa48277bb950bc0148e5447e2cc51e3dbd6574135456386dd4282",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 8,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                125,
+                131,
+                131,
+                255
+              ],
+              "count": 8
+            }
+          ]
+        },
+        "south": {
+          "size": [
+            1,
+            8
+          ],
+          "rgba_sha256": "2679094ff7aaa48277bb950bc0148e5447e2cc51e3dbd6574135456386dd4282",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 8,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                125,
+                131,
+                131,
+                255
+              ],
+              "count": 8
+            }
+          ]
+        },
+        "west": {
+          "size": [
+            1,
+            8
+          ],
+          "rgba_sha256": "2679094ff7aaa48277bb950bc0148e5447e2cc51e3dbd6574135456386dd4282",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 8,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                125,
+                131,
+                131,
+                255
+              ],
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dark_teal_box",
+      "label": "暗青3×3×3盒网（部位未定）",
+      "candidate_dimensions_whd": [
+        3,
+        3,
+        3
+      ],
+      "source": "arch",
+      "faces": {
+        "north": [
+          13,
+          16,
+          16,
+          19
+        ],
+        "east": [
+          16,
+          16,
+          19,
+          19
+        ],
+        "south": [
+          19,
+          16,
+          22,
+          19
+        ],
+        "west": [
+          10,
+          16,
+          13,
+          19
+        ],
+        "up": [
+          13,
+          13,
+          16,
+          16
+        ],
+        "down": [
+          13,
+          19,
+          16,
+          22
+        ]
+      },
+      "official_uv_recovered": false,
+      "evidence": "六块3×3构成完整十字网，尺寸关系可复核。",
+      "cautions": [
+        "完整盒网不等于鞋；主渲染鞋末端灰白+红，暂不分配给鞋。"
+      ],
+      "face_pixel_stats": {
+        "north": {
+          "size": [
+            3,
+            3
+          ],
+          "rgba_sha256": "4a7fd103482227940c02cdcba109871f5122cac0746c1d4ebcf5dd3d572756c1",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 9,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                16,
+                45,
+                61,
+                255
+              ],
+              "count": 4
+            },
+            {
+              "rgba": [
+                10,
+                29,
+                40,
+                255
+              ],
+              "count": 3
+            },
+            {
+              "rgba": [
+                12,
+                38,
+                51,
+                255
+              ],
+              "count": 2
+            }
+          ]
+        },
+        "east": {
+          "size": [
+            3,
+            3
+          ],
+          "rgba_sha256": "e27f763ce9cccff007957d092b23ca0f3d45e2dc3ca677c630d5de10494a4642",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 9,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                16,
+                45,
+                61,
+                255
+              ],
+              "count": 6
+            },
+            {
+              "rgba": [
+                10,
+                29,
+                40,
+                255
+              ],
+              "count": 3
+            }
+          ]
+        },
+        "south": {
+          "size": [
+            3,
+            3
+          ],
+          "rgba_sha256": "e27f763ce9cccff007957d092b23ca0f3d45e2dc3ca677c630d5de10494a4642",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 9,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                16,
+                45,
+                61,
+                255
+              ],
+              "count": 6
+            },
+            {
+              "rgba": [
+                10,
+                29,
+                40,
+                255
+              ],
+              "count": 3
+            }
+          ]
+        },
+        "west": {
+          "size": [
+            3,
+            3
+          ],
+          "rgba_sha256": "e27f763ce9cccff007957d092b23ca0f3d45e2dc3ca677c630d5de10494a4642",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 9,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                16,
+                45,
+                61,
+                255
+              ],
+              "count": 6
+            },
+            {
+              "rgba": [
+                10,
+                29,
+                40,
+                255
+              ],
+              "count": 3
+            }
+          ]
+        },
+        "up": {
+          "size": [
+            3,
+            3
+          ],
+          "rgba_sha256": "839ac747d8cbe47d9391722996aa37bd7f77a618440224130a7f63cb52c0d5dc",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 9,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                10,
+                29,
+                40,
+                255
+              ],
+              "count": 9
+            }
+          ]
+        },
+        "down": {
+          "size": [
+            3,
+            3
+          ],
+          "rgba_sha256": "fda1c05a0c4859a44c8943da55ecc599a36276c4b22585f4dbbaba0d176e4e60",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 9,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                12,
+                38,
+                51,
+                255
+              ],
+              "count": 8
+            },
+            {
+              "rgba": [
+                10,
+                29,
+                40,
+                255
+              ],
+              "count": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "torso_candidate",
+      "label": "内衣/躯干六面工作候选",
+      "candidate_dimensions_whd": null,
+      "source": "arch",
+      "faces": {
+        "north": [
+          5,
+          27,
+          14,
+          36
+        ],
+        "east": [
+          14,
+          27,
+          19,
+          36
+        ],
+        "south": [
+          19,
+          27,
+          27,
+          36
+        ],
+        "west": [
+          0,
+          27,
+          5,
+          36
+        ],
+        "up": [
+          5,
+          22,
+          14,
+          27
+        ],
+        "down": [
+          5,
+          36,
+          14,
+          40
+        ]
+      },
+      "official_uv_recovered": false,
+      "evidence": "前候选含绿色中心和金边，与参考开襟区域相容；所有采样坐标可复查。",
+      "cautions": [
+        "前宽9、后宽8、上下深5/4，不是严格标准盒网。",
+        "侧面方向和裁切边界仍需M2前后视图比较；不能称全部恢复。"
+      ],
+      "face_pixel_stats": {
+        "north": {
+          "size": [
+            9,
+            9
+          ],
+          "rgba_sha256": "5954c72787f4a319ff4a2040cb946591a1338e15f45ec824cb375385f8eca0c7",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 81,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                21,
+                59,
+                13,
+                255
+              ],
+              "count": 26
+            },
+            {
+              "rgba": [
+                18,
+                51,
+                12,
+                255
+              ],
+              "count": 16
+            },
+            {
+              "rgba": [
+                3,
+                69,
+                231,
+                255
+              ],
+              "count": 9
+            },
+            {
+              "rgba": [
+                3,
+                83,
+                249,
+                255
+              ],
+              "count": 7
+            },
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 6
+            },
+            {
+              "rgba": [
+                225,
+                170,
+                50,
+                255
+              ],
+              "count": 6
+            },
+            {
+              "rgba": [
+                255,
+                204,
+                93,
+                255
+              ],
+              "count": 4
+            },
+            {
+              "rgba": [
+                2,
+                54,
+                203,
+                255
+              ],
+              "count": 3
+            }
+          ]
+        },
+        "east": {
+          "size": [
+            5,
+            9
+          ],
+          "rgba_sha256": "309efa36104cbe2cade667aa8fb53a8b3b28455def58be11463f223b45915672",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 45,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                3,
+                69,
+                231,
+                255
+              ],
+              "count": 28
+            },
+            {
+              "rgba": [
+                2,
+                61,
+                217,
+                255
+              ],
+              "count": 15
+            },
+            {
+              "rgba": [
+                3,
+                83,
+                249,
+                255
+              ],
+              "count": 2
+            }
+          ]
+        },
+        "south": {
+          "size": [
+            8,
+            9
+          ],
+          "rgba_sha256": "f5d63375b8e04d3a93199c1270d1b17e9897e4745bdbc806a0b09303b47b2e0a",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 72,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                3,
+                69,
+                231,
+                255
+              ],
+              "count": 44
+            },
+            {
+              "rgba": [
+                2,
+                61,
+                217,
+                255
+              ],
+              "count": 22
+            },
+            {
+              "rgba": [
+                3,
+                83,
+                249,
+                255
+              ],
+              "count": 4
+            },
+            {
+              "rgba": [
+                2,
+                54,
+                203,
+                255
+              ],
+              "count": 2
+            }
+          ]
+        },
+        "west": {
+          "size": [
+            5,
+            9
+          ],
+          "rgba_sha256": "ff444fc4edc4807a1e77fb97ca7ceb258580dbfe115b920eb8b50d86271f8b45",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 45,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                3,
+                69,
+                231,
+                255
+              ],
+              "count": 26
+            },
+            {
+              "rgba": [
+                2,
+                61,
+                217,
+                255
+              ],
+              "count": 11
+            },
+            {
+              "rgba": [
+                2,
+                54,
+                203,
+                255
+              ],
+              "count": 5
+            },
+            {
+              "rgba": [
+                3,
+                83,
+                249,
+                255
+              ],
+              "count": 3
+            }
+          ]
+        },
+        "up": {
+          "size": [
+            9,
+            5
+          ],
+          "rgba_sha256": "98b59ac01c0f8dc4c257979a7948d69045b51b0582a9f859d8785a8fdf2e32bf",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 45,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                15,
+                42,
+                10,
+                255
+              ],
+              "count": 45
+            }
+          ]
+        },
+        "down": {
+          "size": [
+            9,
+            4
+          ],
+          "rgba_sha256": "f9284871078dc643cb0c388d965e7f5983204f4134d3d52f16fe6800c3b6061d",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 36,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                21,
+                59,
+                13,
+                255
+              ],
+              "count": 36
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "staff": {
+    "id": "staff",
+    "source": "staff",
+    "official_uv_recovered": false,
+    "rod": {
+      "candidate_dimensions_whd": [
+        1,
+        18,
+        1
+      ],
+      "faces": {
+        "north": [
+          0,
+          0,
+          1,
+          18
+        ],
+        "east": [
+          1,
+          0,
+          2,
+          18
+        ],
+        "south": [
+          2,
+          0,
+          3,
+          18
+        ],
+        "west": [
+          3,
+          0,
+          4,
+          18
+        ],
+        "down": [
+          0,
+          18,
+          1,
+          19
+        ],
+        "up": null
+      },
+      "evidence": "四条1×18像素列；灰5行、红7行、灰5行、金1行；唯一额外金色1×1在[0,18,1,19]。",
+      "caution": "四条侧面的循环起点未证实；顶端被托盘遮挡，无独立顶端岛，不任意补色。",
+      "face_pixel_stats": {
+        "north": {
+          "size": [
+            1,
+            18
+          ],
+          "rgba_sha256": "bd98b211f3fa6920aeac12167b251b13a66aa9cc1ecc62afe8b3fdaa02603375",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 18,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 6
+            },
+            {
+              "rgba": [
+                255,
+                0,
+                0,
+                255
+              ],
+              "count": 5
+            },
+            {
+              "rgba": [
+                126,
+                126,
+                126,
+                255
+              ],
+              "count": 3
+            },
+            {
+              "rgba": [
+                167,
+                0,
+                1,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 1
+            },
+            {
+              "rgba": [
+                162,
+                162,
+                162,
+                255
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "east": {
+          "size": [
+            1,
+            18
+          ],
+          "rgba_sha256": "bd98b211f3fa6920aeac12167b251b13a66aa9cc1ecc62afe8b3fdaa02603375",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 18,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 6
+            },
+            {
+              "rgba": [
+                255,
+                0,
+                0,
+                255
+              ],
+              "count": 5
+            },
+            {
+              "rgba": [
+                126,
+                126,
+                126,
+                255
+              ],
+              "count": 3
+            },
+            {
+              "rgba": [
+                167,
+                0,
+                1,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 1
+            },
+            {
+              "rgba": [
+                162,
+                162,
+                162,
+                255
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "south": {
+          "size": [
+            1,
+            18
+          ],
+          "rgba_sha256": "bd98b211f3fa6920aeac12167b251b13a66aa9cc1ecc62afe8b3fdaa02603375",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 18,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 6
+            },
+            {
+              "rgba": [
+                255,
+                0,
+                0,
+                255
+              ],
+              "count": 5
+            },
+            {
+              "rgba": [
+                126,
+                126,
+                126,
+                255
+              ],
+              "count": 3
+            },
+            {
+              "rgba": [
+                167,
+                0,
+                1,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 1
+            },
+            {
+              "rgba": [
+                162,
+                162,
+                162,
+                255
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "west": {
+          "size": [
+            1,
+            18
+          ],
+          "rgba_sha256": "bd98b211f3fa6920aeac12167b251b13a66aa9cc1ecc62afe8b3fdaa02603375",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 18,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 6
+            },
+            {
+              "rgba": [
+                255,
+                0,
+                0,
+                255
+              ],
+              "count": 5
+            },
+            {
+              "rgba": [
+                126,
+                126,
+                126,
+                255
+              ],
+              "count": 3
+            },
+            {
+              "rgba": [
+                167,
+                0,
+                1,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 1
+            },
+            {
+              "rgba": [
+                162,
+                162,
+                162,
+                255
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "down": {
+          "size": [
+            1,
+            1
+          ],
+          "rgba_sha256": "2f982de537a862f469a1144a9dfd4595de78a1f2e3d4a0604683c7c8b272e04a",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 1,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                255,
+                196,
+                68,
+                255
+              ],
+              "count": 1
+            }
+          ]
+        }
+      }
+    },
+    "collar": {
+      "candidate_dimensions_whd": [
+        3,
+        1,
+        3
+      ],
+      "faces": {
+        "up": [
+          5,
+          1,
+          8,
+          4
+        ],
+        "north": [
+          5,
+          0,
+          8,
+          1
+        ],
+        "south": [
+          5,
+          4,
+          8,
+          5
+        ],
+        "west": [
+          4,
+          1,
+          5,
+          4
+        ],
+        "east": [
+          8,
+          1,
+          9,
+          4
+        ],
+        "down": [
+          9,
+          1,
+          12,
+          4
+        ]
+      },
+      "evidence": "透明背景勾出精确3×3中心、四条3×1边和第二3×3端面；面积30=2×9+4×3。",
+      "caution": "up/down可交换，第二3×3面含中心深灰像素，可能为接杆凹点。左右边UV为1×3，转到Java矩形面时要旋转90°；最终方向须M2核验。",
+      "face_pixel_stats": {
+        "up": {
+          "size": [
+            3,
+            3
+          ],
+          "rgba_sha256": "db201b6382afd4e17611ffc8cf8c59eb40648113419cc8a9804be9c6704bf6a8",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 9,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 9
+            }
+          ]
+        },
+        "north": {
+          "size": [
+            3,
+            1
+          ],
+          "rgba_sha256": "25df087d3a5dc9779c11f493ecdda96229cdd8b37c791518ed25ac39fe63392d",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 3,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 3
+            }
+          ]
+        },
+        "south": {
+          "size": [
+            3,
+            1
+          ],
+          "rgba_sha256": "25df087d3a5dc9779c11f493ecdda96229cdd8b37c791518ed25ac39fe63392d",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 3,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 3
+            }
+          ]
+        },
+        "west": {
+          "size": [
+            1,
+            3
+          ],
+          "rgba_sha256": "25df087d3a5dc9779c11f493ecdda96229cdd8b37c791518ed25ac39fe63392d",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 3,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 3
+            }
+          ]
+        },
+        "east": {
+          "size": [
+            1,
+            3
+          ],
+          "rgba_sha256": "25df087d3a5dc9779c11f493ecdda96229cdd8b37c791518ed25ac39fe63392d",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 3,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 3
+            }
+          ]
+        },
+        "down": {
+          "size": [
+            3,
+            3
+          ],
+          "rgba_sha256": "50e7bf9c160a450fe87977ecfea649fcbbfbcd1c421657906af96cf749c2a1a1",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 9,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                141,
+                141,
+                141,
+                255
+              ],
+              "count": 7
+            },
+            {
+              "rgba": [
+                126,
+                126,
+                126,
+                255
+              ],
+              "count": 2
+            }
+          ]
+        }
+      }
+    }
+  },
+  "cube": {
+    "id": "staff_cube",
+    "source": "cube",
+    "official_uv_recovered": false,
+    "source_rect": [
+      0,
+      0,
+      32,
+      32
+    ],
+    "candidate_faces": {
+      "north": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "east": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "south": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "west": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "up": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "down": [
+        0,
+        0,
+        32,
+        32
+      ]
+    },
+    "evidence": "T_SuperCube是32×32全不透明彩色橙黄渐变；无六面独立岛。图库称The texture of the cube，权杖渲染顶部可见斜放方块。",
+    "status": "顶部方块材质的高置信候选；全图六面复用是工作映射，不是原UV证明。",
+    "cautions": [
+      "不是黑白发光遮罩，不能将其整图当半透明光晕。",
+      "无发光参考渲染颜色受光照影响；原RGBA不能重着色追黄绿。",
+      "发光骨骼可预留，但发光强度/哪些面发光没有仅凭此贴图证明。"
+    ]
+  },
+  "eye_candidate": {
+    "source": "arch",
+    "outer_rect": [
+      0,
+      0,
+      6,
+      6
+    ],
+    "official_uv_recovered": false,
+    "status": "M1二维裁片候选，未做眼眉几何、UV朝向或3D模型",
+    "pieces": [
+      {
+        "id": "brow_vertical",
+        "label": "眉竖块",
+        "rect": [
+          4,
+          2,
+          6,
+          4
+        ],
+        "pixel_fact": "2×2，4个像素均为(57,57,57,255)",
+        "pixel_stats": {
+          "size": [
+            2,
+            2
+          ],
+          "rgba_sha256": "20cbe958ef711ae4ee88e6395c60acfc1cb2a7b8e5167c49b3d6bbdf460dda45",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 4,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                57,
+                57,
+                57,
+                255
+              ],
+              "count": 4
+            }
+          ]
+        }
+      },
+      {
+        "id": "brow_horizontal",
+        "label": "眉横块",
+        "rect": [
+          2,
+          4,
+          6,
+          5
+        ],
+        "pixel_fact": "4×1，4个像素均为(57,57,57,255)",
+        "pixel_stats": {
+          "size": [
+            4,
+            1
+          ],
+          "rgba_sha256": "20cbe958ef711ae4ee88e6395c60acfc1cb2a7b8e5167c49b3d6bbdf460dda45",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 4,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                57,
+                57,
+                57,
+                255
+              ],
+              "count": 4
+            }
+          ]
+        }
+      },
+      {
+        "id": "eye_strip",
+        "label": "眼横条",
+        "rect": [
+          3,
+          5,
+          6,
+          6
+        ],
+        "pixel_fact": "3×1，左到右为(37,37,37,255)、(37,37,37,255)、(255,255,255,255)",
+        "pixel_stats": {
+          "size": [
+            3,
+            1
+          ],
+          "rgba_sha256": "99e5b3a18ba188d8a509347fcf0bf3acf5582a4ec6e4054be559e492f28d4367",
+          "alpha_values": [
+            255
+          ],
+          "opaque_pixels": 3,
+          "transparent_pixels": 0,
+          "partial_alpha_pixels": 0,
+          "top_rgba": [
+            {
+              "rgba": [
+                37,
+                37,
+                37,
+                255
+              ],
+              "count": 2
+            },
+            {
+              "rgba": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "count": 1
+            }
+          ]
+        }
+      }
+    ],
+    "retained_pixel_count": 11,
+    "excluded_background_pixel_count": 25,
+    "evidence": "原像素确认三块共11px；外侧竖眉接向内横眉、黑眼横条带一白端，可与主渲染眼眉外形作比较。",
+    "candidate_options": [
+      "A：三块各自保留原UV，在几何中分别定位；两眼镜像几何或UV端点，须M2核验白眼端方向。",
+      "B：三块使用相同原像素，但镜像另一侧方向，作为M2眼睛左右朝向对照；未提前决定。"
+    ],
+    "cautions": [
+      "整块A01有25px不透明(43,43,43,255)背景，直接贴6×6会出现深灰矩形，不能视作透明眼片。",
+      "小图的透明区域仅为展示未选像素；未来本体图集仍保存完整原64×64，不修改源alpha。",
+      "三块是否原作独立mesh、厚度、眉角和实际旋转尚未取得，不声称官方拓扑。"
+    ]
+  },
+  "unresolved": [
+    "眼眉几何与A01的面裁切/镜像",
+    "鼻上下端面",
+    "左右手末端面与朝向",
+    "袍A17/A18的前后侧拆分与袖口A16语义",
+    "腿、白鞋、红脚尖逐面绑定",
+    "项链环、吊坠六面与厚度",
+    "托盘上下方向",
+    "方块全图六面复用/方向及发光"
+  ],
+  "atlas_plan": {
+    "size": [
+      128,
+      64
+    ],
+    "rects": {
+      "arch": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "staff": [
+        64,
+        0,
+        96,
+        32
+      ],
+      "cube": [
+        96,
+        0,
+        128,
+        32
+      ]
+    },
+    "status": "仅布局计划，M1不生成图集或模型。全原图1:1复制，无重采样/重着色；shadow只归档不默认作为发光层。"
+  },
+  "no_model_or_animation_generated": true
+}

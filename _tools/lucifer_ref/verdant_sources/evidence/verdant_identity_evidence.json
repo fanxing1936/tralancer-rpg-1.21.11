@@ -1,0 +1,647 @@
+{
+  "requested_name": "Verdant Robe",
+  "internal_item_id": "EvocationRobe_Unique2",
+  "internal_wiki_name": "SageRobe",
+  "original_item_instance": {
+    "source": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\BP_EvocationRobe_Unique2Instance.parsed.json",
+    "cdo_values": {
+      "GearActor": {
+        "index": -2,
+        "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C"
+      },
+      "InventoryDropSound": {
+        "unparsed_hex": "040000000000000000000000"
+      },
+      "ItemIdName": "EvocationRobe_Unique2",
+      "ItemId": {
+        "properties": [
+          {
+            "name": "SerializedId",
+            "type": "NameProperty",
+            "array_index": 0,
+            "tag_offset": 0,
+            "value_offset": 25,
+            "size": 8,
+            "metadata": {},
+            "value": "EvocationRobe_Unique2"
+          }
+        ]
+      },
+      "RootComponent": {
+        "index": 0,
+        "path": null
+      }
+    }
+  },
+  "web_reference": {
+    "requested_url": "https://minecraft.wiki/w/Dungeons:Verdant_Robe",
+    "direct_fetch": "blocked by robots/restricted URL",
+    "search_index_evidence": [
+      "Wiki Verdant Robe text states internal SageRobe",
+      "Wiki Ancient Hunt table states Verdant Robe = EvocationRobe_Unique2"
+    ],
+    "supporting_url": "https://minecraft.wiki/w/Dungeons:Ancient_Hunt"
+  },
+  "image_evidence": {
+    "origin": "Local original-game T_EvocationRobe_Unique2_Icon, not a downloaded wiki image",
+    "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\exported\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique2\\T_EvocationRobe_Unique2_Icon.png",
+    "observed": "Green wizard hat with silver buckle, green robe with silver edging; exact wiki-image pixel match not performed."
+  },
+  "blueprint": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2",
+  "components": [
+    {
+      "name": "SageHat",
+      "semantic_part": "head",
+      "scs_export": 10,
+      "component_export": 18,
+      "mesh": {
+        "serialized": true,
+        "value": {
+          "index": -33,
+          "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.SageHat"
+        },
+        "type": "ObjectProperty",
+        "export_index": 18,
+        "tag_offset_in_export": 0,
+        "value_offset_in_uexp": 9197,
+        "bytes": 4
+      },
+      "override_materials": {
+        "serialized": true,
+        "value": [
+          {
+            "index": -14,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.MI_EvocationRobe_Unique2"
+          }
+        ],
+        "type": "ArrayProperty",
+        "export_index": 18,
+        "tag_offset_in_export": 29,
+        "value_offset_in_uexp": 9234,
+        "bytes": 8
+      },
+      "attachment": {
+        "serialized": true,
+        "value": "J_Head_Socket",
+        "type": "NameProperty",
+        "export_index": 10,
+        "tag_offset_in_export": 58,
+        "value_offset_in_uexp": 832,
+        "bytes": 8
+      },
+      "parent": {
+        "serialized": true,
+        "value": "Paperdoll",
+        "type": "NameProperty",
+        "export_index": 10,
+        "tag_offset_in_export": 91,
+        "value_offset_in_uexp": 865,
+        "bytes": 8
+      },
+      "component_template": "/Script/Engine.Default__StaticMeshComponent",
+      "resolved_transform": {
+        "location": {
+          "value": [
+            0.0003512701077852398,
+            149.92242431640625,
+            13.890192985534668
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              0.0003512701077852398,
+              149.92242431640625,
+              13.890192985534668
+            ],
+            "type": "StructProperty",
+            "export_index": 18,
+            "tag_offset_in_export": 2216,
+            "value_offset_in_uexp": 11437,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        },
+        "rotation": {
+          "value": [
+            0.0,
+            1.2180165221960335e-14,
+            -2.6690335273742676
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              0.0,
+              1.2180165221960335e-14,
+              -2.6690335273742676
+            ],
+            "type": "StructProperty",
+            "export_index": 18,
+            "tag_offset_in_export": 2277,
+            "value_offset_in_uexp": 11498,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        },
+        "scale": {
+          "value": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "evidence": {
+            "serialized": false,
+            "value": null,
+            "note": "No local override; not a measured identity."
+          },
+          "provenance": "standard_engine_native_template_default_not_serialized"
+        }
+      },
+      "attachment_kind": "original_skeleton_socket",
+      "socket_evidence": {
+        "source": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\Player_Master_Skeleton.parsed.json",
+        "socket_name": {
+          "serialized": true,
+          "value": "J_Head_Socket",
+          "type": "NameProperty",
+          "export_index": 2,
+          "tag_offset_in_export": 0,
+          "value_offset_in_uexp": 164,
+          "bytes": 8
+        },
+        "bone": {
+          "serialized": true,
+          "value": "J_Head",
+          "type": "NameProperty",
+          "export_index": 2,
+          "tag_offset_in_export": 33,
+          "value_offset_in_uexp": 197,
+          "bytes": 8
+        },
+        "resolved": {
+          "location": {
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "evidence": {
+              "serialized": false,
+              "value": null,
+              "note": "No local override; not a measured identity."
+            },
+            "provenance": "standard_engine_native_template_default_not_serialized"
+          },
+          "rotation": {
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "evidence": {
+              "serialized": false,
+              "value": null,
+              "note": "No local override; not a measured identity."
+            },
+            "provenance": "standard_engine_native_template_default_not_serialized"
+          },
+          "scale": {
+            "value": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "evidence": {
+              "serialized": false,
+              "value": null,
+              "note": "No local override; not a measured identity."
+            },
+            "provenance": "standard_engine_native_template_default_not_serialized"
+          }
+        }
+      }
+    },
+    {
+      "name": "R_Arm_EvocationRobe",
+      "semantic_part": "right_arm",
+      "scs_export": 11,
+      "component_export": 16,
+      "mesh": {
+        "serialized": true,
+        "value": {
+          "index": -32,
+          "path": "/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.R_Arm_EvocationRobe"
+        },
+        "type": "ObjectProperty",
+        "export_index": 16,
+        "tag_offset_in_export": 0,
+        "value_offset_in_uexp": 4315,
+        "bytes": 4
+      },
+      "override_materials": {
+        "serialized": true,
+        "value": [
+          {
+            "index": -14,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.MI_EvocationRobe_Unique2"
+          }
+        ],
+        "type": "ArrayProperty",
+        "export_index": 16,
+        "tag_offset_in_export": 29,
+        "value_offset_in_uexp": 4352,
+        "bytes": 8
+      },
+      "attachment": {
+        "serialized": true,
+        "value": "J_R_Hand",
+        "type": "NameProperty",
+        "export_index": 11,
+        "tag_offset_in_export": 58,
+        "value_offset_in_uexp": 1092,
+        "bytes": 8
+      },
+      "parent": {
+        "serialized": true,
+        "value": "Paperdoll",
+        "type": "NameProperty",
+        "export_index": 11,
+        "tag_offset_in_export": 91,
+        "value_offset_in_uexp": 1125,
+        "bytes": 8
+      },
+      "component_template": "/Script/Engine.Default__StaticMeshComponent",
+      "resolved_transform": {
+        "location": {
+          "value": [
+            1.9733409881591797,
+            -4.5000000682193786e-05,
+            0.6101760268211365
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              1.9733409881591797,
+              -4.5000000682193786e-05,
+              0.6101760268211365
+            ],
+            "type": "StructProperty",
+            "export_index": 16,
+            "tag_offset_in_export": 2216,
+            "value_offset_in_uexp": 6555,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        },
+        "rotation": {
+          "value": [
+            4.99898099899292,
+            -358.4013366699219,
+            180.13931274414062
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              4.99898099899292,
+              -358.4013366699219,
+              180.13931274414062
+            ],
+            "type": "StructProperty",
+            "export_index": 16,
+            "tag_offset_in_export": 2277,
+            "value_offset_in_uexp": 6616,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        },
+        "scale": {
+          "value": [
+            1.475000023841858,
+            1.0,
+            1.0
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              1.475000023841858,
+              1.0,
+              1.0
+            ],
+            "type": "StructProperty",
+            "export_index": 16,
+            "tag_offset_in_export": 2338,
+            "value_offset_in_uexp": 6677,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        }
+      },
+      "attachment_kind": "direct_existing_bone_name",
+      "socket_evidence": {
+        "socket_definition_found": false,
+        "attachment_bone_name": "J_R_Hand",
+        "source_joint_node": 19,
+        "provenance": "SCS AttachToName equals existing original bone name; identity socket offset is direct-bone attachment semantics, not an invented socket."
+      }
+    },
+    {
+      "name": "MageRobe_Evocation",
+      "semantic_part": "body",
+      "scs_export": 12,
+      "component_export": 17,
+      "mesh": {
+        "serialized": true,
+        "value": {
+          "index": -31,
+          "path": "/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.MageRobe_Evocation"
+        },
+        "type": "ObjectProperty",
+        "export_index": 17,
+        "tag_offset_in_export": 0,
+        "value_offset_in_uexp": 6730,
+        "bytes": 4
+      },
+      "override_materials": {
+        "serialized": true,
+        "value": [
+          {
+            "index": -14,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.MI_EvocationRobe_Unique2"
+          }
+        ],
+        "type": "ArrayProperty",
+        "export_index": 17,
+        "tag_offset_in_export": 29,
+        "value_offset_in_uexp": 6767,
+        "bytes": 8
+      },
+      "attachment": {
+        "serialized": true,
+        "value": "J_Spine",
+        "type": "NameProperty",
+        "export_index": 12,
+        "tag_offset_in_export": 58,
+        "value_offset_in_uexp": 1352,
+        "bytes": 8
+      },
+      "parent": {
+        "serialized": true,
+        "value": "Paperdoll",
+        "type": "NameProperty",
+        "export_index": 12,
+        "tag_offset_in_export": 91,
+        "value_offset_in_uexp": 1385,
+        "bytes": 8
+      },
+      "component_template": "/Script/Engine.Default__StaticMeshComponent",
+      "resolved_transform": {
+        "location": {
+          "value": [
+            -0.0002739999908953905,
+            -64.82764434814453,
+            3.1952579021453857
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              -0.0002739999908953905,
+              -64.82764434814453,
+              3.1952579021453857
+            ],
+            "type": "StructProperty",
+            "export_index": 17,
+            "tag_offset_in_export": 2268,
+            "value_offset_in_uexp": 9022,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        },
+        "rotation": {
+          "value": [
+            0.0,
+            0.0,
+            5.044641017913818
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              0.0,
+              0.0,
+              5.044641017913818
+            ],
+            "type": "StructProperty",
+            "export_index": 17,
+            "tag_offset_in_export": 2329,
+            "value_offset_in_uexp": 9083,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        },
+        "scale": {
+          "value": [
+            1.0,
+            0.949999988079071,
+            1.437474012374878
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              1.0,
+              0.949999988079071,
+              1.437474012374878
+            ],
+            "type": "StructProperty",
+            "export_index": 17,
+            "tag_offset_in_export": 2390,
+            "value_offset_in_uexp": 9144,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        }
+      },
+      "attachment_kind": "direct_existing_bone_name",
+      "socket_evidence": {
+        "socket_definition_found": false,
+        "attachment_bone_name": "J_Spine",
+        "source_joint_node": 11,
+        "provenance": "SCS AttachToName equals existing original bone name; identity socket offset is direct-bone attachment semantics, not an invented socket."
+      }
+    },
+    {
+      "name": "L_Arm_EvocationRobe",
+      "semantic_part": "left_arm",
+      "scs_export": 13,
+      "component_export": 15,
+      "mesh": {
+        "serialized": true,
+        "value": {
+          "index": -30,
+          "path": "/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.L_Arm_EvocationRobe"
+        },
+        "type": "ObjectProperty",
+        "export_index": 15,
+        "tag_offset_in_export": 0,
+        "value_offset_in_uexp": 1961,
+        "bytes": 4
+      },
+      "override_materials": {
+        "serialized": true,
+        "value": [
+          {
+            "index": -14,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.MI_EvocationRobe_Unique2"
+          }
+        ],
+        "type": "ArrayProperty",
+        "export_index": 15,
+        "tag_offset_in_export": 29,
+        "value_offset_in_uexp": 1998,
+        "bytes": 8
+      },
+      "attachment": {
+        "serialized": true,
+        "value": "J_L_Hand",
+        "type": "NameProperty",
+        "export_index": 13,
+        "tag_offset_in_export": 58,
+        "value_offset_in_uexp": 1612,
+        "bytes": 8
+      },
+      "parent": {
+        "serialized": true,
+        "value": "Paperdoll",
+        "type": "NameProperty",
+        "export_index": 13,
+        "tag_offset_in_export": 91,
+        "value_offset_in_uexp": 1645,
+        "bytes": 8
+      },
+      "component_template": "/Script/Engine.Default__StaticMeshComponent",
+      "resolved_transform": {
+        "location": {
+          "value": [
+            -1.0,
+            -0.0,
+            -0.0
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              -1.0,
+              -0.0,
+              -0.0
+            ],
+            "type": "StructProperty",
+            "export_index": 15,
+            "tag_offset_in_export": 2216,
+            "value_offset_in_uexp": 4201,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        },
+        "rotation": {
+          "value": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "evidence": {
+            "serialized": false,
+            "value": null,
+            "note": "No local override; not a measured identity."
+          },
+          "provenance": "standard_engine_native_template_default_not_serialized"
+        },
+        "scale": {
+          "value": [
+            1.475000023841858,
+            1.0,
+            1.0
+          ],
+          "evidence": {
+            "serialized": true,
+            "value": [
+              1.475000023841858,
+              1.0,
+              1.0
+            ],
+            "type": "StructProperty",
+            "export_index": 15,
+            "tag_offset_in_export": 2277,
+            "value_offset_in_uexp": 4262,
+            "bytes": 12
+          },
+          "provenance": "serialized_property"
+        }
+      },
+      "attachment_kind": "direct_existing_bone_name",
+      "socket_evidence": {
+        "socket_definition_found": false,
+        "attachment_bone_name": "J_L_Hand",
+        "source_joint_node": 14,
+        "provenance": "SCS AttachToName equals existing original bone name; identity socket offset is direct-bone attachment semantics, not an invented socket."
+      }
+    }
+  ],
+  "material": {
+    "source": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\MI_EvocationRobe_Unique2.parsed.json",
+    "parent": {
+      "serialized": true,
+      "value": {
+        "index": -2,
+        "path": "/Game/Actors/Equipment/M_MasterEquipment.M_MasterEquipment"
+      },
+      "type": "ObjectProperty",
+      "export_index": 1,
+      "tag_offset_in_export": 0,
+      "value_offset_in_uexp": 25,
+      "bytes": 4
+    },
+    "serialized_parameters": {
+      "scalar": {
+        "NaturalEmissive": 0.699999988079071,
+        "RefractionDepthBias": 0.0
+      },
+      "vector": {
+        "Emissive": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "EnchantmentColor": [
+          1.0,
+          0.33935999870300293,
+          0.0,
+          1.0
+        ]
+      },
+      "texture": {
+        "Albedo": {
+          "index": -9,
+          "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.T_EvocationRobe_Unique2"
+        },
+        "Specular": {
+          "index": -8,
+          "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.T_EvocationRobe_Unique1_S"
+        }
+      }
+    },
+    "compiled_descriptions": [
+      {
+        "offset": 11093,
+        "text": "Compiling M_MasterEquipment: Platform=PCD3D_SM5, Usage=LightingModel=MSM_DefaultLit, BlendMode=BLEND_Masked, SpecialEngine=0, TwoSided=1, TSNormal=1, Masked=1, Distorted=0, WritesEveryPixel=0, ModifiesMeshPosition=0, Usage={bUsedWithSkeletalMesh,bUsedWithInstancedStaticMeshes}, StaticSwitch'ConstantEmissive2-1'=True, StaticSwitch'FlashBehavior2-1'=True, StaticSwitch'EnchantmentMask2-1'=True, StaticSwitch'Desaturation2-1'=False, StaticSwitch'SpecularTexture2-1'=True, StaticSwitch'ConstantSpecular2-1'=False, StaticMaterialLayers="
+      },
+      {
+        "offset": 87602,
+        "text": "Compiling M_MasterEquipment: Platform=PCD3D_SM4, Usage=LightingModel=MSM_DefaultLit, BlendMode=BLEND_Masked, SpecialEngine=0, TwoSided=1, TSNormal=1, Masked=1, Distorted=0, WritesEveryPixel=0, ModifiesMeshPosition=0, Usage={bUsedWithSkeletalMesh,bUsedWithInstancedStaticMeshes}, StaticSwitch'ConstantEmissive2-1'=True, StaticSwitch'FlashBehavior2-1'=True, StaticSwitch'EnchantmentMask2-1'=True, StaticSwitch'Desaturation2-1'=False, StaticSwitch'SpecularTexture2-1'=True, StaticSwitch'ConstantSpecular2-1'=False, StaticMaterialLayers="
+      }
+    ],
+    "albedo_png": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\exported\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique2\\T_EvocationRobe_Unique2.png",
+    "specular_png": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\exported\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique1\\T_EvocationRobe_Unique1_S.png",
+    "albedo_sha256": "d893884fbfebf404a16037a28753b773b5a7de9733df8742cb5c59f8ea8dd48b",
+    "specular_sha256": "ff22dd2243f670a3144597e5dfaa966344eef5015497f2a1fd4808ba3cb8d9fa",
+    "interpretation": "Compiled descriptions establish this material permutation has SpecularTexture=True and ConstantEmissive=True. They do not alone establish the full shading equation. RootRot constants are not reused."
+  },
+  "raw_integrity_manifest": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\raw_manifest.json",
+  "assembly_status": "Original-player bind assembly with actual Verdant Blueprint component TRS; native GearActor Paperdoll skeletal assignment and runtime/reference image pose remain unproven. Omitted fields use explicit standard native defaults."
+}

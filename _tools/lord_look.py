@@ -24,7 +24,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 class LordLook:
     def __init__(self, key, lord, label, tag, clips, skills, sounds, generator, arrive="rise",
-                 arrive_sound=None, gone_sound=None, cues=None, enter_cues=None):
+                 arrive_sound=None, gone_sound=None, cues=None, enter_cues=None, carriers=None,
+                 carrier_type="minecraft:vindicator"):
+        """carriers: a selector for who gets dressed, instead of the lord-N vindicator (a boss that is
+        not one of the seven, e.g. the Usurper); then skills / gone_sound are usually empty.
+        carrier_type: the carriers' entity type; None when they come in more than one type (Jacques the boss is a
+        vindicator, Jacques the ally an iron golem), then only the look tag picks them."""
+        self.carriers = carriers
+        self.ct = ("type=%s," % carrier_type) if carrier_type else ""
         self.key, self.lord, self.tag, self.skills = key, lord, tag, skills
         self.arrive, self.arrive_sound, self.gone_sound = arrive, arrive_sound, gone_sound
         self.mark = "# %s外观（%s）" % (label, generator)
@@ -59,7 +66,7 @@ class LordLook:
                 'view_range:1.5f,transformation:%s}' % (t, t, part, t, m.key, part, snbt_components(m, comp)))
         lines += [
             "execute as @e[type=minecraft:item_display,tag=%s.new,distance=..1] run "
-            "ride @s mount @e[type=minecraft:vindicator,tag=%s.dressing,limit=1]" % (t, t),
+            "ride @s mount @e[%stag=%s.dressing,limit=1]" % (t, self.ct, t),
             "tag @e[type=minecraft:item_display,tag=%s.new,distance=..1] remove %s.new" % (t, t),
             "tag @s remove %s.dressing" % t,
             "function rpg:%s/anim/init" % m.key,
@@ -74,12 +81,12 @@ class LordLook:
         taint = os.path.join(dp, "data", NS, "function", "taint")
         first = baked[self.arrive]["frames"][0][1]
         self.dress([(p, first[p]) for p, _ in m.parts])
-        lord = "type=minecraft:vindicator,tag=rpg.advent,tag=!%s,scores={rpg_dm_lord=%d}" % (t, self.lord)
+        lord = (self.carriers + ",tag=!" + t) if self.carriers else             "type=minecraft:vindicator,tag=rpg.advent,tag=!%s,scores={rpg_dm_lord=%d}" % (t, self.lord)
         write_rig_runtime(m, [
             "# %s每刻入口。任何召唤路径落地的第 %d 柱都在这里换装（含封印逃逸、调试召唤）。" % (m.label, self.lord),
             "execute if entity @e[%s,limit=1] as @e[%s] at @s run function %s/dress" % (lord, lord, fn),
-            "execute if entity @e[type=minecraft:vindicator,tag=%s,limit=1] as @e[type=minecraft:vindicator,tag=%s] "
-            "at @s run function %s/follow" % (t, t, fn),
+            "execute if entity @e[%stag=%s,limit=1] as @e[%stag=%s] "
+            "at @s run function %s/follow" % (self.ct, t, self.ct, t, fn),
         ], follow_extra=[
             "# 被法阵束缚时载体发光：部件一起发光",
             "execute if predicate %s/glowing unless entity @s[tag=%s.glow] run function %s/glow_on" % (fn, t, fn),
@@ -99,8 +106,8 @@ class LordLook:
         # after rpg:command/tick_end, the last thing that clears the lord's invisibility
         wf(os.path.join(m.func, "tick_late.mcfunction"), [
             "# %s的身体是模型：载体本身始终隐身（驱魔的显形只清隐身效果，没有逻辑读它）。" % m.label,
-            "execute as @e[type=minecraft:vindicator,tag=%s] unless predicate %s/invisible "
-            "run effect give @s minecraft:invisibility infinite 0 true" % (t, fn),
+            "execute as @e[%stag=%s] unless predicate %s/invisible "
+            "run effect give @s minecraft:invisibility infinite 0 true" % (self.ct, t, fn),
         ])
         hook_tag(dp, "tick", fn + "/tick_late", False)
 

@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/samael_lord/atlas",
+    "particle": "rpg:item/samael_lord/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.7546,
+        8.0,
+        7.76
+      ],
+      "to": [
+        8.2454,
+        8.0,
+        8.24
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            9.9219,
+            8.0,
+            10.0469,
+            8.1406
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            9.9219,
+            8.1406,
+            10.0469,
+            8.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          9.3146,
+          3.9757,
+          -0.16
+        ],
+        "axis": "x",
+        "angle": -4.2710564998532764e-05
+      }
+    }
+  ]
+}

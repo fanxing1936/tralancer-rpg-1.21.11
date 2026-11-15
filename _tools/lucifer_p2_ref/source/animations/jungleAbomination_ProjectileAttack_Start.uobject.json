@@ -1,0 +1,29 @@
+{
+  "Type": "AnimComposite",
+  "Name": "jungleAbomination_ProjectileAttack_Start",
+  "Class": "UScriptClass'AnimComposite'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "AnimationTrack": {
+      "AnimSegments": [
+        {
+          "AnimReference": {
+            "ObjectName": "AnimSequence'jungleAbomination_ProjectileAttack'",
+            "ObjectPath": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_ProjectileAttack.0"
+          },
+          "StartPos": 0.0,
+          "AnimStartTime": 0.0,
+          "AnimEndTime": 1.13,
+          "AnimPlayRate": 1.0,
+          "LoopingCount": 1
+        }
+      ]
+    },
+    "SequenceLength": 1.13,
+    "Skeleton": {
+      "ObjectName": "Skeleton'SK_Abomination_02_Skeleton'",
+      "ObjectPath": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/SK_Abomination_02_Skeleton.1"
+    }
+  },
+  "SkeletonGuid": "711A0357-4E43D5E6-45FD7BBC-46DD421E"
+}

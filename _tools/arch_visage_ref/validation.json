@@ -1,0 +1,36 @@
+{
+  "bbmodel_sha256": "e80846861ae9a42c964192642e0c8a8828b5e761f4752bbef0de50b735cd5da3",
+  "HE_model_sha256": "ebc5d7cfc16cc5e3e5f3357b82c6c99da29b468faafffe8c9d7f4ab9f1a1e106",
+  "element_count": 12,
+  "bone_count": 6,
+  "part_count": 5,
+  "keyframe_count": 988,
+  "checks": {
+    "HE_source_unchanged": true,
+    "exact_source_atlas_png": true,
+    "unchanged_other_keyframes": true,
+    "all_parts_bake": true,
+    "single_atlas": true,
+    "no_scale_channels": true
+  },
+  "success": true,
+  "clips": {
+    "idle": {
+      "source_length": 1.0,
+      "baked_ticks": 20,
+      "baked_frames": 20
+    },
+    "walk": {
+      "source_length": 1.0,
+      "baked_ticks": 20,
+      "baked_frames": 20
+    },
+    "spawn_attack": {
+      "source_length": 4.88,
+      "baked_ticks": 98,
+      "baked_frames": 99
+    }
+  },
+  "real_game_seen": false,
+  "native_blockbench_export_verified": false
+}

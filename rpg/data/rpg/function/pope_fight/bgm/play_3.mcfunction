@@ -3,6 +3,6 @@ stopsound @a[distance=..48] music
 stopsound @a[distance=..48] record minecraft:boss3
 stopsound @a[distance=..48] record minecraft:boss2
 stopsound @a[distance=..48] record minecraft:boss1
-execute as @a[distance=..48] at @s run playsound minecraft:boss1 record @s ~ ~ ~ 1 1
+execute as @e[tag=rpg.unit,distance=..48] at @s run playsound minecraft:boss1 record @s ~ ~ ~ 1 1
 scoreboard players set #bgm rpg_pf 2943
 scoreboard players set #track rpg_pf 3

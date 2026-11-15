@@ -5,7 +5,7 @@ scoreboard players add @s devil 1
 execute if entity @s[tag=rpg.boss.minion] run scoreboard players add @s rpg_boss_fx 1
 execute if entity @s[tag=rpg.boss.minion,scores={rpg_boss_fx=1200..}] run return run kill @s
 execute if score @s devil matches 50..51 run effect give @a[distance=..15] minecraft:blindness 5 10 true
-execute if score @s devil matches 50 at @a[distance=..15] run particle minecraft:elder_guardian
+execute if score @s devil matches 50 at @e[tag=rpg.unit,distance=..15] run particle minecraft:elder_guardian
 execute if score @s devil matches 50..51 run playsound minecraft:entity.allay.death player @a[distance=..15]
 execute if score @s devil matches 100 run effect give @a[distance=..15] minecraft:nausea 5 2 true
 execute if score @s devil matches 150..151 run playsound minecraft:entity.allay.ambient_with_item player @a[distance=..15]

@@ -1,0 +1,160 @@
+{
+  "textures": {
+    "0": "rpg:item/heart_of_ender/atlas",
+    "particle": "rpg:item/heart_of_ender/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        6.0,
+        -0.9954,
+        6.0
+      ],
+      "to": [
+        10.0,
+        8.0,
+        10.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3.1562,
+            2.3281,
+            3.9688,
+            4.1553
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            5.375,
+            0.2812,
+            6.1875,
+            2.1084
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            5.375,
+            0.1875,
+            6.1875,
+            2.0147
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            1.2188,
+            2.2656,
+            2.0312,
+            4.0928
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            4.9375,
+            1.0781,
+            5.75,
+            1.8906
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            0.9062,
+            2.2812,
+            1.7188,
+            3.0938
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    },
+    {
+      "from": [
+        6.0,
+        8.0,
+        6.0
+      ],
+      "to": [
+        10.0,
+        16.9954,
+        10.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            6.7656,
+            8.1406,
+            7.5781,
+            9.9678
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            7.6094,
+            8.1406,
+            8.4219,
+            9.9678
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            8.4531,
+            8.1406,
+            9.2656,
+            9.9678
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            9.2969,
+            8.1406,
+            10.1094,
+            9.9678
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            10.1406,
+            8.1406,
+            10.9531,
+            8.9531
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            1.2031,
+            2.6094,
+            2.0156,
+            3.4219
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "light_emission": 15,
+      "shade": false
+    }
+  ]
+}

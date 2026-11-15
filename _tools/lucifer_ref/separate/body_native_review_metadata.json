@@ -1,0 +1,68 @@
+{
+  "project": "mossy_skeleton_body",
+  "model_sha256": "742a2114592c5b840071f7759a945835576b5d519c043a7ff7be20d22ee96906",
+  "source": "native Blockbench viewport",
+  "pose": "neutral arms; geometry inspection; not reference pose",
+  "views": {
+    "front": {
+      "position": [
+        0,
+        16,
+        -80
+      ],
+      "target": [
+        0,
+        16,
+        0
+      ],
+      "zoom": 0.34,
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\native\\body_strict_front.png",
+      "sha256": "919ec683acf15e07d995633ae13a6adb353ed2560145986f22c11c732b9dd821"
+    },
+    "side": {
+      "position": [
+        -80,
+        16,
+        0
+      ],
+      "target": [
+        0,
+        16,
+        0
+      ],
+      "zoom": 0.34,
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\native\\body_strict_side.png",
+      "sha256": "27b99efb42a7a66a106ac37ca868080879ed6e4da606deb0b80f9b0076475df7"
+    },
+    "back": {
+      "position": [
+        0,
+        16,
+        80
+      ],
+      "target": [
+        0,
+        16,
+        0
+      ],
+      "zoom": 0.34,
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\native\\body_strict_back.png",
+      "sha256": "afe6ba69d96c7c842fd94ec034b59c2239125dcbbdd0021861f98d15484c6184"
+    },
+    "three_quarter": {
+      "position": [
+        -50,
+        48,
+        -80
+      ],
+      "target": [
+        0,
+        16,
+        0
+      ],
+      "zoom": 0.34,
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\native\\body_strict_three_quarter.png",
+      "sha256": "c4f44b412be75767a307e83561156b999ab8ba9516410fec7aaf8eb7734eac2e"
+    }
+  }
+}

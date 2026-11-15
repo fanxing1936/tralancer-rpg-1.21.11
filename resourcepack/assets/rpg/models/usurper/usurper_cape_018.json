@@ -1,0 +1,44 @@
+{
+  "textures": {
+    "0": "rpg:item/usurper/atlas",
+    "particle": "rpg:item/usurper/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        8.0,
+        7.9347,
+        6.68
+      ],
+      "to": [
+        8.0,
+        8.0653,
+        9.32
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            12.375,
+            4.0,
+            12.1875,
+            6.9375
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            12.375,
+            6.9375,
+            12.1875,
+            4.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    }
+  ]
+}

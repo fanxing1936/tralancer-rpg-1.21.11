@@ -4,5 +4,5 @@ scoreboard players set @e[tag=rpg.lu2f.pnew] rpg_l2_k 10
 scoreboard players set @e[tag=rpg.lu2f.pnew] rpg_l2_t 34
 tag @e[tag=rpg.lu2f.pnew] remove rpg.lu2f.pnew
 particle block{block_state:{Name:"minecraft:rooted_dirt"}} ~ ~0.3 ~ 0.6 0.2 0.6 0.12 16
-execute positioned ~ ~1 ~ as @a[distance=..1.8,tag=!rpg.lu2f.hit,gamemode=!spectator,gamemode=!creative] run function rpg:lucifer_fight/ult/hit_once
+execute positioned ~ ~1 ~ as @e[tag=rpg.unit.f,distance=..1.8,tag=!rpg.lu2f.hit] run function rpg:lucifer_fight/ult/hit_once
 kill @s

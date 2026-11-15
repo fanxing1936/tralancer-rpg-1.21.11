@@ -1,0 +1,139 @@
+{
+  "package": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S",
+  "summary": {
+    "header_size": 1000,
+    "name_count": 25,
+    "name_offset": 193,
+    "export_count": 1,
+    "export_offset": 880,
+    "import_count": 3,
+    "import_offset": 796,
+    "depends_offset": 984,
+    "package_flags": 2147483648,
+    "version_assumption": "UE4.22 / UE4 package version 517; unversioned header"
+  },
+  "sources": [
+    {
+      "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\raw\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique1\\T_EvocationRobe_Unique1_S.uasset",
+      "bytes": 1000,
+      "sha256": "2b49354aa547e1f9d8309169c3dba69f90d7949693c6507264e747557c8264a1"
+    },
+    {
+      "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\raw\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique1\\T_EvocationRobe_Unique1_S.uexp",
+      "bytes": 16749,
+      "sha256": "d56fb240ced8a665c6b433ed512253d1d3d404d449dd605e86ce244351450f1d"
+    }
+  ],
+  "imports": [
+    {
+      "index": -1,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -2,
+      "name": "Texture2D",
+      "object_path": "/Script/Engine.Texture2D"
+    },
+    {
+      "index": -2,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Script/Engine",
+      "object_path": "/Script/Engine"
+    },
+    {
+      "index": -3,
+      "class_package": "/Script/Engine",
+      "class_name": "Texture2D",
+      "outer": -2,
+      "name": "Default__Texture2D",
+      "object_path": "/Script/Engine.Default__Texture2D"
+    }
+  ],
+  "exports": [
+    {
+      "index": 1,
+      "class_index": -1,
+      "super_index": 0,
+      "template_index": -3,
+      "outer": 0,
+      "name": "T_EvocationRobe_Unique1_S",
+      "object_flags": 11,
+      "serial_bytes": 16745,
+      "serial_offset": 1000,
+      "uexp_offset": 0,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.T_EvocationRobe_Unique1_S",
+      "class_path": "/Script/Engine.Texture2D",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__Texture2D",
+      "properties": [
+        {
+          "name": "ImportedSize",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 49,
+          "size": 8,
+          "metadata": {
+            "struct": "IntPoint",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "unparsed_hex": "4000000040000000"
+          }
+        },
+        {
+          "name": "LightingGuid",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 57,
+          "value_offset": 106,
+          "size": 16,
+          "metadata": {
+            "struct": "Guid",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": "c91c84d9c1219343964a97ccb4fca232"
+        },
+        {
+          "name": "CompressionSettings",
+          "type": "ByteProperty",
+          "array_index": 0,
+          "tag_offset": 122,
+          "value_offset": 155,
+          "size": 8,
+          "metadata": {
+            "enum": "TextureCompressionSettings"
+          },
+          "value": "TC_EditorIcon"
+        },
+        {
+          "name": "Filter",
+          "type": "ByteProperty",
+          "array_index": 0,
+          "tag_offset": 163,
+          "value_offset": 196,
+          "size": 8,
+          "metadata": {
+            "enum": "TextureFilter"
+          },
+          "value": "TF_Nearest"
+        },
+        {
+          "name": "LODGroup",
+          "type": "ByteProperty",
+          "array_index": 0,
+          "tag_offset": 204,
+          "value_offset": 237,
+          "size": 8,
+          "metadata": {
+            "enum": "TextureGroup"
+          },
+          "value": "TEXTUREGROUP_Pixels2D"
+        }
+      ],
+      "tagged_property_bytes": 253,
+      "remaining_native_bytes": 16492
+    }
+  ]
+}

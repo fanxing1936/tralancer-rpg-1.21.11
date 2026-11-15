@@ -5,4 +5,4 @@ execute unless score @s rpg_l2_st matches 2 if score @s rpg_dm_cd matches ..29 r
 execute if score @s rpg_l2_st matches 3 run return run function rpg:lucifer_fight/p1/skill
 scoreboard players set @s rpg_l2_st 2
 execute if score @s rpg_l2_mc matches 1.. run scoreboard players remove @s rpg_l2_mc 1
-execute if score @s rpg_l2_mc matches ..0 if score @s rpg_dm_ult matches ..0 if entity @a[distance=..4,gamemode=!spectator,gamemode=!creative] run function rpg:lucifer_fight/p1/jab/start
+execute if score @s rpg_l2_mc matches ..0 if score @s rpg_dm_ult matches ..0 if entity @e[tag=rpg.unit.f,distance=..4] run function rpg:lucifer_fight/p1/jab/start

@@ -1,0 +1,2598 @@
+[
+  {
+    "start": 8426,
+    "UniformVectorExpressions": {
+      "start": 8426,
+      "count": 13,
+      "expressions": [
+        {
+          "start": 8430,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "SelectionColor",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "end": 8467
+        },
+        {
+          "start": 8467,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "Flash Color",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "end": 8504
+        },
+        {
+          "start": 8504,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 8512,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "Flash Color",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 8549
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 8554
+        },
+        {
+          "start": 8554,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "Emissive",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "end": 8591
+        },
+        {
+          "start": 8591,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 8599,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "Emissive",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 8636
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 8641
+        },
+        {
+          "start": 8641,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "EnchantmentColor",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            0.9352309703826904,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "end": 8678
+        },
+        {
+          "start": 8678,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 8686,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "EnchantmentColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.9352309703826904,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "end": 8723
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 8728
+        },
+        {
+          "start": 8728,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 8736,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "SelectionColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 8773
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 8778
+        },
+        {
+          "start": 8778,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "StatusColor",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "end": 8815
+        },
+        {
+          "start": 8815,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 8823,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "StatusColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 8860
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 8865
+        },
+        {
+          "start": 8865,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "DissolveTextureSize",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            2.0,
+            2.0,
+            0.0,
+            1.0
+          ],
+          "end": 8902
+        },
+        {
+          "start": 8902,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 8910,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "DissolveTextureSize",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              2.0,
+              2.0,
+              0.0,
+              1.0
+            ],
+            "end": 8947
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 8952
+        },
+        {
+          "start": 8952,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 8960,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 8968,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "DissolveTextureSize",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                2.0,
+                2.0,
+                0.0,
+                1.0
+              ],
+              "end": 9005
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 9010
+          },
+          "indices": [
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "num_elements": 2,
+          "end": 9015
+        }
+      ],
+      "end": 9015
+    },
+    "UniformScalarExpressions": {
+      "start": 9015,
+      "count": 19,
+      "expressions": [
+        {
+          "start": 9019,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "Flash Timestamp",
+            "association": 2,
+            "index": -1
+          },
+          "default": -100.0,
+          "end": 9044
+        },
+        {
+          "start": 9044,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "Flash Seconds",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.10000000149011612,
+          "end": 9069
+        },
+        {
+          "start": 9069,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "EmissivePower",
+            "association": 2,
+            "index": -1
+          },
+          "default": 1.0,
+          "end": 9094
+        },
+        {
+          "start": 9094,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "NaturalEmissive",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.20000000298023224,
+          "end": 9119
+        },
+        {
+          "start": 9119,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "Power",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.0,
+          "end": 9144
+        },
+        {
+          "start": 9144,
+          "type": "FoldedMath",
+          "a": {
+            "start": 9152,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Power",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 9177
+          },
+          "b": {
+            "start": 9177,
+            "type": "Constant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "value_type": 15,
+            "end": 9202
+          },
+          "operation": 0,
+          "value_type": 15,
+          "end": 9207
+        },
+        {
+          "start": 9207,
+          "type": "FoldedMath",
+          "a": {
+            "start": 9215,
+            "type": "FoldedMath",
+            "a": {
+              "start": 9223,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Power",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 9248
+            },
+            "b": {
+              "start": 9248,
+              "type": "Constant",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "value_type": 15,
+              "end": 9273
+            },
+            "operation": 0,
+            "value_type": 15,
+            "end": 9278
+          },
+          "b": {
+            "start": 9278,
+            "type": "Constant",
+            "value": [
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "value_type": 15,
+            "end": 9303
+          },
+          "operation": 3,
+          "value_type": 15,
+          "end": 9308
+        },
+        {
+          "start": 9308,
+          "type": "Floor",
+          "x": {
+            "start": 9316,
+            "type": "FoldedMath",
+            "a": {
+              "start": 9324,
+              "type": "FoldedMath",
+              "a": {
+                "start": 9332,
+                "type": "ScalarParameter",
+                "parameter": {
+                  "name": "Power",
+                  "association": 2,
+                  "index": -1
+                },
+                "default": 0.0,
+                "end": 9357
+              },
+              "b": {
+                "start": 9357,
+                "type": "Constant",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "value_type": 15,
+                "end": 9382
+              },
+              "operation": 0,
+              "value_type": 15,
+              "end": 9387
+            },
+            "b": {
+              "start": 9387,
+              "type": "Constant",
+              "value": [
+                4.0,
+                4.0,
+                4.0,
+                4.0
+              ],
+              "value_type": 15,
+              "end": 9412
+            },
+            "operation": 3,
+            "value_type": 15,
+            "end": 9417
+          },
+          "end": 9417
+        },
+        {
+          "start": 9417,
+          "type": "FoldedMath",
+          "a": {
+            "start": 9425,
+            "type": "Floor",
+            "x": {
+              "start": 9433,
+              "type": "FoldedMath",
+              "a": {
+                "start": 9441,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 9449,
+                  "type": "ScalarParameter",
+                  "parameter": {
+                    "name": "Power",
+                    "association": 2,
+                    "index": -1
+                  },
+                  "default": 0.0,
+                  "end": 9474
+                },
+                "b": {
+                  "start": 9474,
+                  "type": "Constant",
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "value_type": 15,
+                  "end": 9499
+                },
+                "operation": 0,
+                "value_type": 15,
+                "end": 9504
+              },
+              "b": {
+                "start": 9504,
+                "type": "Constant",
+                "value": [
+                  4.0,
+                  4.0,
+                  4.0,
+                  4.0
+                ],
+                "value_type": 15,
+                "end": 9529
+              },
+              "operation": 3,
+              "value_type": 15,
+              "end": 9534
+            },
+            "end": 9534
+          },
+          "b": {
+            "start": 9534,
+            "type": "Constant",
+            "value": [
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "value_type": 15,
+            "end": 9559
+          },
+          "operation": 2,
+          "value_type": 15,
+          "end": 9564
+        },
+        {
+          "start": 9564,
+          "type": "Min",
+          "a": {
+            "start": 9572,
+            "type": "FoldedMath",
+            "a": {
+              "start": 9580,
+              "type": "Floor",
+              "x": {
+                "start": 9588,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 9596,
+                  "type": "FoldedMath",
+                  "a": {
+                    "start": 9604,
+                    "type": "ScalarParameter",
+                    "parameter": {
+                      "name": "Power",
+                      "association": 2,
+                      "index": -1
+                    },
+                    "default": 0.0,
+                    "end": 9629
+                  },
+                  "b": {
+                    "start": 9629,
+                    "type": "Constant",
+                    "value": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ],
+                    "value_type": 15,
+                    "end": 9654
+                  },
+                  "operation": 0,
+                  "value_type": 15,
+                  "end": 9659
+                },
+                "b": {
+                  "start": 9659,
+                  "type": "Constant",
+                  "value": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                  ],
+                  "value_type": 15,
+                  "end": 9684
+                },
+                "operation": 3,
+                "value_type": 15,
+                "end": 9689
+              },
+              "end": 9689
+            },
+            "b": {
+              "start": 9689,
+              "type": "Constant",
+              "value": [
+                4.0,
+                4.0,
+                4.0,
+                4.0
+              ],
+              "value_type": 15,
+              "end": 9714
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 9719
+          },
+          "b": {
+            "start": 9719,
+            "type": "Constant",
+            "value": [
+              9.0,
+              9.0,
+              9.0,
+              9.0
+            ],
+            "value_type": 15,
+            "end": 9744
+          },
+          "end": 9744
+        },
+        {
+          "start": 9744,
+          "type": "FoldedMath",
+          "a": {
+            "start": 9752,
+            "type": "Min",
+            "a": {
+              "start": 9760,
+              "type": "FoldedMath",
+              "a": {
+                "start": 9768,
+                "type": "Floor",
+                "x": {
+                  "start": 9776,
+                  "type": "FoldedMath",
+                  "a": {
+                    "start": 9784,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 9792,
+                      "type": "ScalarParameter",
+                      "parameter": {
+                        "name": "Power",
+                        "association": 2,
+                        "index": -1
+                      },
+                      "default": 0.0,
+                      "end": 9817
+                    },
+                    "b": {
+                      "start": 9817,
+                      "type": "Constant",
+                      "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ],
+                      "value_type": 15,
+                      "end": 9842
+                    },
+                    "operation": 0,
+                    "value_type": 15,
+                    "end": 9847
+                  },
+                  "b": {
+                    "start": 9847,
+                    "type": "Constant",
+                    "value": [
+                      4.0,
+                      4.0,
+                      4.0,
+                      4.0
+                    ],
+                    "value_type": 15,
+                    "end": 9872
+                  },
+                  "operation": 3,
+                  "value_type": 15,
+                  "end": 9877
+                },
+                "end": 9877
+              },
+              "b": {
+                "start": 9877,
+                "type": "Constant",
+                "value": [
+                  4.0,
+                  4.0,
+                  4.0,
+                  4.0
+                ],
+                "value_type": 15,
+                "end": 9902
+              },
+              "operation": 2,
+              "value_type": 15,
+              "end": 9907
+            },
+            "b": {
+              "start": 9907,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 9932
+            },
+            "end": 9932
+          },
+          "b": {
+            "start": 9932,
+            "type": "Constant",
+            "value": [
+              9.0,
+              9.0,
+              9.0,
+              9.0
+            ],
+            "value_type": 15,
+            "end": 9957
+          },
+          "operation": 3,
+          "value_type": 15,
+          "end": 9962
+        },
+        {
+          "start": 9962,
+          "type": "FoldedMath",
+          "a": {
+            "start": 9970,
+            "type": "FoldedMath",
+            "a": {
+              "start": 9978,
+              "type": "Min",
+              "a": {
+                "start": 9986,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 9994,
+                  "type": "Floor",
+                  "x": {
+                    "start": 10002,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 10010,
+                      "type": "FoldedMath",
+                      "a": {
+                        "start": 10018,
+                        "type": "ScalarParameter",
+                        "parameter": {
+                          "name": "Power",
+                          "association": 2,
+                          "index": -1
+                        },
+                        "default": 0.0,
+                        "end": 10043
+                      },
+                      "b": {
+                        "start": 10043,
+                        "type": "Constant",
+                        "value": [
+                          1.0,
+                          1.0,
+                          1.0,
+                          1.0
+                        ],
+                        "value_type": 15,
+                        "end": 10068
+                      },
+                      "operation": 0,
+                      "value_type": 15,
+                      "end": 10073
+                    },
+                    "b": {
+                      "start": 10073,
+                      "type": "Constant",
+                      "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                      ],
+                      "value_type": 15,
+                      "end": 10098
+                    },
+                    "operation": 3,
+                    "value_type": 15,
+                    "end": 10103
+                  },
+                  "end": 10103
+                },
+                "b": {
+                  "start": 10103,
+                  "type": "Constant",
+                  "value": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                  ],
+                  "value_type": 15,
+                  "end": 10128
+                },
+                "operation": 2,
+                "value_type": 15,
+                "end": 10133
+              },
+              "b": {
+                "start": 10133,
+                "type": "Constant",
+                "value": [
+                  9.0,
+                  9.0,
+                  9.0,
+                  9.0
+                ],
+                "value_type": 15,
+                "end": 10158
+              },
+              "end": 10158
+            },
+            "b": {
+              "start": 10158,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 10183
+            },
+            "operation": 3,
+            "value_type": 15,
+            "end": 10188
+          },
+          "b": {
+            "start": 10188,
+            "type": "Constant",
+            "value": [
+              3.0,
+              3.0,
+              3.0,
+              3.0
+            ],
+            "value_type": 15,
+            "end": 10213
+          },
+          "operation": 2,
+          "value_type": 15,
+          "end": 10218
+        },
+        {
+          "start": 10218,
+          "type": "FoldedMath",
+          "a": {
+            "start": 10226,
+            "type": "FoldedMath",
+            "a": {
+              "start": 10234,
+              "type": "Min",
+              "a": {
+                "start": 10242,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 10250,
+                  "type": "Floor",
+                  "x": {
+                    "start": 10258,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 10266,
+                      "type": "FoldedMath",
+                      "a": {
+                        "start": 10274,
+                        "type": "ScalarParameter",
+                        "parameter": {
+                          "name": "Power",
+                          "association": 2,
+                          "index": -1
+                        },
+                        "default": 0.0,
+                        "end": 10299
+                      },
+                      "b": {
+                        "start": 10299,
+                        "type": "Constant",
+                        "value": [
+                          1.0,
+                          1.0,
+                          1.0,
+                          1.0
+                        ],
+                        "value_type": 15,
+                        "end": 10324
+                      },
+                      "operation": 0,
+                      "value_type": 15,
+                      "end": 10329
+                    },
+                    "b": {
+                      "start": 10329,
+                      "type": "Constant",
+                      "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                      ],
+                      "value_type": 15,
+                      "end": 10354
+                    },
+                    "operation": 3,
+                    "value_type": 15,
+                    "end": 10359
+                  },
+                  "end": 10359
+                },
+                "b": {
+                  "start": 10359,
+                  "type": "Constant",
+                  "value": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                  ],
+                  "value_type": 15,
+                  "end": 10384
+                },
+                "operation": 2,
+                "value_type": 15,
+                "end": 10389
+              },
+              "b": {
+                "start": 10389,
+                "type": "Constant",
+                "value": [
+                  9.0,
+                  9.0,
+                  9.0,
+                  9.0
+                ],
+                "value_type": 15,
+                "end": 10414
+              },
+              "end": 10414
+            },
+            "b": {
+              "start": 10414,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 10439
+            },
+            "operation": 3,
+            "value_type": 15,
+            "end": 10444
+          },
+          "b": {
+            "start": 10444,
+            "type": "Constant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "value_type": 15,
+            "end": 10469
+          },
+          "operation": 2,
+          "value_type": 15,
+          "end": 10474
+        },
+        {
+          "start": 10474,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "EnchantmentAdd",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.0,
+          "end": 10499
+        },
+        {
+          "start": 10499,
+          "type": "FoldedMath",
+          "a": {
+            "start": 10507,
+            "type": "FoldedMath",
+            "a": {
+              "start": 10515,
+              "type": "Min",
+              "a": {
+                "start": 10523,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 10531,
+                  "type": "Floor",
+                  "x": {
+                    "start": 10539,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 10547,
+                      "type": "FoldedMath",
+                      "a": {
+                        "start": 10555,
+                        "type": "ScalarParameter",
+                        "parameter": {
+                          "name": "Power",
+                          "association": 2,
+                          "index": -1
+                        },
+                        "default": 0.0,
+                        "end": 10580
+                      },
+                      "b": {
+                        "start": 10580,
+                        "type": "Constant",
+                        "value": [
+                          1.0,
+                          1.0,
+                          1.0,
+                          1.0
+                        ],
+                        "value_type": 15,
+                        "end": 10605
+                      },
+                      "operation": 0,
+                      "value_type": 15,
+                      "end": 10610
+                    },
+                    "b": {
+                      "start": 10610,
+                      "type": "Constant",
+                      "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                      ],
+                      "value_type": 15,
+                      "end": 10635
+                    },
+                    "operation": 3,
+                    "value_type": 15,
+                    "end": 10640
+                  },
+                  "end": 10640
+                },
+                "b": {
+                  "start": 10640,
+                  "type": "Constant",
+                  "value": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                  ],
+                  "value_type": 15,
+                  "end": 10665
+                },
+                "operation": 2,
+                "value_type": 15,
+                "end": 10670
+              },
+              "b": {
+                "start": 10670,
+                "type": "Constant",
+                "value": [
+                  9.0,
+                  9.0,
+                  9.0,
+                  9.0
+                ],
+                "value_type": 15,
+                "end": 10695
+              },
+              "end": 10695
+            },
+            "b": {
+              "start": 10695,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 10720
+            },
+            "operation": 3,
+            "value_type": 15,
+            "end": 10725
+          },
+          "b": {
+            "start": 10725,
+            "type": "Constant",
+            "value": [
+              8.0,
+              8.0,
+              8.0,
+              8.0
+            ],
+            "value_type": 15,
+            "end": 10750
+          },
+          "operation": 2,
+          "value_type": 15,
+          "end": 10755
+        },
+        {
+          "start": 10755,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "AlphaOverride",
+            "association": 2,
+            "index": -1
+          },
+          "default": 1.0,
+          "end": 10780
+        },
+        {
+          "start": 10780,
+          "type": "FoldedMath",
+          "a": {
+            "start": 10788,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "AlphaOverride",
+              "association": 2,
+              "index": -1
+            },
+            "default": 1.0,
+            "end": 10813
+          },
+          "b": {
+            "start": 10813,
+            "type": "Constant",
+            "value": [
+              0.10000000149011612,
+              0.10000000149011612,
+              0.10000000149011612,
+              0.10000000149011612
+            ],
+            "value_type": 15,
+            "end": 10838
+          },
+          "operation": 0,
+          "value_type": 15,
+          "end": 10843
+        },
+        {
+          "start": 10843,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "DissolveStart",
+            "association": 2,
+            "index": -1
+          },
+          "default": -50.0,
+          "end": 10868
+        },
+        {
+          "start": 10868,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "DissolveDuration",
+            "association": 2,
+            "index": -1
+          },
+          "default": 4.0,
+          "end": 10893
+        }
+      ],
+      "end": 10893
+    },
+    "Uniform2DTextureExpressions": {
+      "start": 10893,
+      "count": 5,
+      "expressions": [
+        {
+          "start": 10897,
+          "type": "TextureParameter",
+          "parameter": {
+            "name": "Specular",
+            "association": 2,
+            "index": -1
+          },
+          "texture_index": 1,
+          "sampler_source": 0,
+          "end": 10926
+        },
+        {
+          "start": 10926,
+          "type": "TextureParameter",
+          "parameter": {
+            "name": "Albedo",
+            "association": 2,
+            "index": -1
+          },
+          "texture_index": 0,
+          "sampler_source": 0,
+          "end": 10955
+        },
+        {
+          "start": 10955,
+          "type": "Texture",
+          "texture_index": 2,
+          "sampler_source": 0,
+          "end": 10971
+        },
+        {
+          "start": 10971,
+          "type": "Texture",
+          "texture_index": 5,
+          "sampler_source": 0,
+          "end": 10987
+        },
+        {
+          "start": 10987,
+          "type": "Texture",
+          "texture_index": 4,
+          "sampler_source": 0,
+          "end": 11003
+        }
+      ],
+      "end": 11003
+    },
+    "UniformCubeTextureExpressions": {
+      "start": 11003,
+      "count": 0,
+      "expressions": [],
+      "end": 11007
+    },
+    "end": 11007
+  },
+  {
+    "start": 84935,
+    "UniformVectorExpressions": {
+      "start": 84935,
+      "count": 13,
+      "expressions": [
+        {
+          "start": 84939,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "SelectionColor",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "end": 84976
+        },
+        {
+          "start": 84976,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "Flash Color",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "end": 85013
+        },
+        {
+          "start": 85013,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 85021,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "Flash Color",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 85058
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 85063
+        },
+        {
+          "start": 85063,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "Emissive",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "end": 85100
+        },
+        {
+          "start": 85100,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 85108,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "Emissive",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 85145
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 85150
+        },
+        {
+          "start": 85150,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "EnchantmentColor",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            0.9352309703826904,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "end": 85187
+        },
+        {
+          "start": 85187,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 85195,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "EnchantmentColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.9352309703826904,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "end": 85232
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 85237
+        },
+        {
+          "start": 85237,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 85245,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "SelectionColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end": 85282
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 85287
+        },
+        {
+          "start": 85287,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "StatusColor",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "end": 85324
+        },
+        {
+          "start": 85324,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 85332,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "StatusColor",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "end": 85369
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 85374
+        },
+        {
+          "start": 85374,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "DissolveTextureSize",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            2.0,
+            2.0,
+            0.0,
+            1.0
+          ],
+          "end": 85411
+        },
+        {
+          "start": 85411,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 85419,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "DissolveTextureSize",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              2.0,
+              2.0,
+              0.0,
+              1.0
+            ],
+            "end": 85456
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 85461
+        },
+        {
+          "start": 85461,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 85469,
+            "type": "ComponentSwizzle",
+            "x": {
+              "start": 85477,
+              "type": "VectorParameter",
+              "parameter": {
+                "name": "DissolveTextureSize",
+                "association": 2,
+                "index": -1
+              },
+              "default": [
+                2.0,
+                2.0,
+                0.0,
+                1.0
+              ],
+              "end": 85514
+            },
+            "indices": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "num_elements": 3,
+            "end": 85519
+          },
+          "indices": [
+            0,
+            1,
+            -1,
+            -1
+          ],
+          "num_elements": 2,
+          "end": 85524
+        }
+      ],
+      "end": 85524
+    },
+    "UniformScalarExpressions": {
+      "start": 85524,
+      "count": 19,
+      "expressions": [
+        {
+          "start": 85528,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "Flash Timestamp",
+            "association": 2,
+            "index": -1
+          },
+          "default": -100.0,
+          "end": 85553
+        },
+        {
+          "start": 85553,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "Flash Seconds",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.10000000149011612,
+          "end": 85578
+        },
+        {
+          "start": 85578,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "EmissivePower",
+            "association": 2,
+            "index": -1
+          },
+          "default": 1.0,
+          "end": 85603
+        },
+        {
+          "start": 85603,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "NaturalEmissive",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.20000000298023224,
+          "end": 85628
+        },
+        {
+          "start": 85628,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "Power",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.0,
+          "end": 85653
+        },
+        {
+          "start": 85653,
+          "type": "FoldedMath",
+          "a": {
+            "start": 85661,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Power",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 85686
+          },
+          "b": {
+            "start": 85686,
+            "type": "Constant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "value_type": 15,
+            "end": 85711
+          },
+          "operation": 0,
+          "value_type": 15,
+          "end": 85716
+        },
+        {
+          "start": 85716,
+          "type": "FoldedMath",
+          "a": {
+            "start": 85724,
+            "type": "FoldedMath",
+            "a": {
+              "start": 85732,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Power",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 85757
+            },
+            "b": {
+              "start": 85757,
+              "type": "Constant",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "value_type": 15,
+              "end": 85782
+            },
+            "operation": 0,
+            "value_type": 15,
+            "end": 85787
+          },
+          "b": {
+            "start": 85787,
+            "type": "Constant",
+            "value": [
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "value_type": 15,
+            "end": 85812
+          },
+          "operation": 3,
+          "value_type": 15,
+          "end": 85817
+        },
+        {
+          "start": 85817,
+          "type": "Floor",
+          "x": {
+            "start": 85825,
+            "type": "FoldedMath",
+            "a": {
+              "start": 85833,
+              "type": "FoldedMath",
+              "a": {
+                "start": 85841,
+                "type": "ScalarParameter",
+                "parameter": {
+                  "name": "Power",
+                  "association": 2,
+                  "index": -1
+                },
+                "default": 0.0,
+                "end": 85866
+              },
+              "b": {
+                "start": 85866,
+                "type": "Constant",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "value_type": 15,
+                "end": 85891
+              },
+              "operation": 0,
+              "value_type": 15,
+              "end": 85896
+            },
+            "b": {
+              "start": 85896,
+              "type": "Constant",
+              "value": [
+                4.0,
+                4.0,
+                4.0,
+                4.0
+              ],
+              "value_type": 15,
+              "end": 85921
+            },
+            "operation": 3,
+            "value_type": 15,
+            "end": 85926
+          },
+          "end": 85926
+        },
+        {
+          "start": 85926,
+          "type": "FoldedMath",
+          "a": {
+            "start": 85934,
+            "type": "Floor",
+            "x": {
+              "start": 85942,
+              "type": "FoldedMath",
+              "a": {
+                "start": 85950,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 85958,
+                  "type": "ScalarParameter",
+                  "parameter": {
+                    "name": "Power",
+                    "association": 2,
+                    "index": -1
+                  },
+                  "default": 0.0,
+                  "end": 85983
+                },
+                "b": {
+                  "start": 85983,
+                  "type": "Constant",
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "value_type": 15,
+                  "end": 86008
+                },
+                "operation": 0,
+                "value_type": 15,
+                "end": 86013
+              },
+              "b": {
+                "start": 86013,
+                "type": "Constant",
+                "value": [
+                  4.0,
+                  4.0,
+                  4.0,
+                  4.0
+                ],
+                "value_type": 15,
+                "end": 86038
+              },
+              "operation": 3,
+              "value_type": 15,
+              "end": 86043
+            },
+            "end": 86043
+          },
+          "b": {
+            "start": 86043,
+            "type": "Constant",
+            "value": [
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "value_type": 15,
+            "end": 86068
+          },
+          "operation": 2,
+          "value_type": 15,
+          "end": 86073
+        },
+        {
+          "start": 86073,
+          "type": "Min",
+          "a": {
+            "start": 86081,
+            "type": "FoldedMath",
+            "a": {
+              "start": 86089,
+              "type": "Floor",
+              "x": {
+                "start": 86097,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 86105,
+                  "type": "FoldedMath",
+                  "a": {
+                    "start": 86113,
+                    "type": "ScalarParameter",
+                    "parameter": {
+                      "name": "Power",
+                      "association": 2,
+                      "index": -1
+                    },
+                    "default": 0.0,
+                    "end": 86138
+                  },
+                  "b": {
+                    "start": 86138,
+                    "type": "Constant",
+                    "value": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ],
+                    "value_type": 15,
+                    "end": 86163
+                  },
+                  "operation": 0,
+                  "value_type": 15,
+                  "end": 86168
+                },
+                "b": {
+                  "start": 86168,
+                  "type": "Constant",
+                  "value": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                  ],
+                  "value_type": 15,
+                  "end": 86193
+                },
+                "operation": 3,
+                "value_type": 15,
+                "end": 86198
+              },
+              "end": 86198
+            },
+            "b": {
+              "start": 86198,
+              "type": "Constant",
+              "value": [
+                4.0,
+                4.0,
+                4.0,
+                4.0
+              ],
+              "value_type": 15,
+              "end": 86223
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 86228
+          },
+          "b": {
+            "start": 86228,
+            "type": "Constant",
+            "value": [
+              9.0,
+              9.0,
+              9.0,
+              9.0
+            ],
+            "value_type": 15,
+            "end": 86253
+          },
+          "end": 86253
+        },
+        {
+          "start": 86253,
+          "type": "FoldedMath",
+          "a": {
+            "start": 86261,
+            "type": "Min",
+            "a": {
+              "start": 86269,
+              "type": "FoldedMath",
+              "a": {
+                "start": 86277,
+                "type": "Floor",
+                "x": {
+                  "start": 86285,
+                  "type": "FoldedMath",
+                  "a": {
+                    "start": 86293,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 86301,
+                      "type": "ScalarParameter",
+                      "parameter": {
+                        "name": "Power",
+                        "association": 2,
+                        "index": -1
+                      },
+                      "default": 0.0,
+                      "end": 86326
+                    },
+                    "b": {
+                      "start": 86326,
+                      "type": "Constant",
+                      "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ],
+                      "value_type": 15,
+                      "end": 86351
+                    },
+                    "operation": 0,
+                    "value_type": 15,
+                    "end": 86356
+                  },
+                  "b": {
+                    "start": 86356,
+                    "type": "Constant",
+                    "value": [
+                      4.0,
+                      4.0,
+                      4.0,
+                      4.0
+                    ],
+                    "value_type": 15,
+                    "end": 86381
+                  },
+                  "operation": 3,
+                  "value_type": 15,
+                  "end": 86386
+                },
+                "end": 86386
+              },
+              "b": {
+                "start": 86386,
+                "type": "Constant",
+                "value": [
+                  4.0,
+                  4.0,
+                  4.0,
+                  4.0
+                ],
+                "value_type": 15,
+                "end": 86411
+              },
+              "operation": 2,
+              "value_type": 15,
+              "end": 86416
+            },
+            "b": {
+              "start": 86416,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 86441
+            },
+            "end": 86441
+          },
+          "b": {
+            "start": 86441,
+            "type": "Constant",
+            "value": [
+              9.0,
+              9.0,
+              9.0,
+              9.0
+            ],
+            "value_type": 15,
+            "end": 86466
+          },
+          "operation": 3,
+          "value_type": 15,
+          "end": 86471
+        },
+        {
+          "start": 86471,
+          "type": "FoldedMath",
+          "a": {
+            "start": 86479,
+            "type": "FoldedMath",
+            "a": {
+              "start": 86487,
+              "type": "Min",
+              "a": {
+                "start": 86495,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 86503,
+                  "type": "Floor",
+                  "x": {
+                    "start": 86511,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 86519,
+                      "type": "FoldedMath",
+                      "a": {
+                        "start": 86527,
+                        "type": "ScalarParameter",
+                        "parameter": {
+                          "name": "Power",
+                          "association": 2,
+                          "index": -1
+                        },
+                        "default": 0.0,
+                        "end": 86552
+                      },
+                      "b": {
+                        "start": 86552,
+                        "type": "Constant",
+                        "value": [
+                          1.0,
+                          1.0,
+                          1.0,
+                          1.0
+                        ],
+                        "value_type": 15,
+                        "end": 86577
+                      },
+                      "operation": 0,
+                      "value_type": 15,
+                      "end": 86582
+                    },
+                    "b": {
+                      "start": 86582,
+                      "type": "Constant",
+                      "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                      ],
+                      "value_type": 15,
+                      "end": 86607
+                    },
+                    "operation": 3,
+                    "value_type": 15,
+                    "end": 86612
+                  },
+                  "end": 86612
+                },
+                "b": {
+                  "start": 86612,
+                  "type": "Constant",
+                  "value": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                  ],
+                  "value_type": 15,
+                  "end": 86637
+                },
+                "operation": 2,
+                "value_type": 15,
+                "end": 86642
+              },
+              "b": {
+                "start": 86642,
+                "type": "Constant",
+                "value": [
+                  9.0,
+                  9.0,
+                  9.0,
+                  9.0
+                ],
+                "value_type": 15,
+                "end": 86667
+              },
+              "end": 86667
+            },
+            "b": {
+              "start": 86667,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 86692
+            },
+            "operation": 3,
+            "value_type": 15,
+            "end": 86697
+          },
+          "b": {
+            "start": 86697,
+            "type": "Constant",
+            "value": [
+              3.0,
+              3.0,
+              3.0,
+              3.0
+            ],
+            "value_type": 15,
+            "end": 86722
+          },
+          "operation": 2,
+          "value_type": 15,
+          "end": 86727
+        },
+        {
+          "start": 86727,
+          "type": "FoldedMath",
+          "a": {
+            "start": 86735,
+            "type": "FoldedMath",
+            "a": {
+              "start": 86743,
+              "type": "Min",
+              "a": {
+                "start": 86751,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 86759,
+                  "type": "Floor",
+                  "x": {
+                    "start": 86767,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 86775,
+                      "type": "FoldedMath",
+                      "a": {
+                        "start": 86783,
+                        "type": "ScalarParameter",
+                        "parameter": {
+                          "name": "Power",
+                          "association": 2,
+                          "index": -1
+                        },
+                        "default": 0.0,
+                        "end": 86808
+                      },
+                      "b": {
+                        "start": 86808,
+                        "type": "Constant",
+                        "value": [
+                          1.0,
+                          1.0,
+                          1.0,
+                          1.0
+                        ],
+                        "value_type": 15,
+                        "end": 86833
+                      },
+                      "operation": 0,
+                      "value_type": 15,
+                      "end": 86838
+                    },
+                    "b": {
+                      "start": 86838,
+                      "type": "Constant",
+                      "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                      ],
+                      "value_type": 15,
+                      "end": 86863
+                    },
+                    "operation": 3,
+                    "value_type": 15,
+                    "end": 86868
+                  },
+                  "end": 86868
+                },
+                "b": {
+                  "start": 86868,
+                  "type": "Constant",
+                  "value": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                  ],
+                  "value_type": 15,
+                  "end": 86893
+                },
+                "operation": 2,
+                "value_type": 15,
+                "end": 86898
+              },
+              "b": {
+                "start": 86898,
+                "type": "Constant",
+                "value": [
+                  9.0,
+                  9.0,
+                  9.0,
+                  9.0
+                ],
+                "value_type": 15,
+                "end": 86923
+              },
+              "end": 86923
+            },
+            "b": {
+              "start": 86923,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 86948
+            },
+            "operation": 3,
+            "value_type": 15,
+            "end": 86953
+          },
+          "b": {
+            "start": 86953,
+            "type": "Constant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "value_type": 15,
+            "end": 86978
+          },
+          "operation": 2,
+          "value_type": 15,
+          "end": 86983
+        },
+        {
+          "start": 86983,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "EnchantmentAdd",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.0,
+          "end": 87008
+        },
+        {
+          "start": 87008,
+          "type": "FoldedMath",
+          "a": {
+            "start": 87016,
+            "type": "FoldedMath",
+            "a": {
+              "start": 87024,
+              "type": "Min",
+              "a": {
+                "start": 87032,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 87040,
+                  "type": "Floor",
+                  "x": {
+                    "start": 87048,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 87056,
+                      "type": "FoldedMath",
+                      "a": {
+                        "start": 87064,
+                        "type": "ScalarParameter",
+                        "parameter": {
+                          "name": "Power",
+                          "association": 2,
+                          "index": -1
+                        },
+                        "default": 0.0,
+                        "end": 87089
+                      },
+                      "b": {
+                        "start": 87089,
+                        "type": "Constant",
+                        "value": [
+                          1.0,
+                          1.0,
+                          1.0,
+                          1.0
+                        ],
+                        "value_type": 15,
+                        "end": 87114
+                      },
+                      "operation": 0,
+                      "value_type": 15,
+                      "end": 87119
+                    },
+                    "b": {
+                      "start": 87119,
+                      "type": "Constant",
+                      "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                      ],
+                      "value_type": 15,
+                      "end": 87144
+                    },
+                    "operation": 3,
+                    "value_type": 15,
+                    "end": 87149
+                  },
+                  "end": 87149
+                },
+                "b": {
+                  "start": 87149,
+                  "type": "Constant",
+                  "value": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                  ],
+                  "value_type": 15,
+                  "end": 87174
+                },
+                "operation": 2,
+                "value_type": 15,
+                "end": 87179
+              },
+              "b": {
+                "start": 87179,
+                "type": "Constant",
+                "value": [
+                  9.0,
+                  9.0,
+                  9.0,
+                  9.0
+                ],
+                "value_type": 15,
+                "end": 87204
+              },
+              "end": 87204
+            },
+            "b": {
+              "start": 87204,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 87229
+            },
+            "operation": 3,
+            "value_type": 15,
+            "end": 87234
+          },
+          "b": {
+            "start": 87234,
+            "type": "Constant",
+            "value": [
+              8.0,
+              8.0,
+              8.0,
+              8.0
+            ],
+            "value_type": 15,
+            "end": 87259
+          },
+          "operation": 2,
+          "value_type": 15,
+          "end": 87264
+        },
+        {
+          "start": 87264,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "AlphaOverride",
+            "association": 2,
+            "index": -1
+          },
+          "default": 1.0,
+          "end": 87289
+        },
+        {
+          "start": 87289,
+          "type": "FoldedMath",
+          "a": {
+            "start": 87297,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "AlphaOverride",
+              "association": 2,
+              "index": -1
+            },
+            "default": 1.0,
+            "end": 87322
+          },
+          "b": {
+            "start": 87322,
+            "type": "Constant",
+            "value": [
+              0.10000000149011612,
+              0.10000000149011612,
+              0.10000000149011612,
+              0.10000000149011612
+            ],
+            "value_type": 15,
+            "end": 87347
+          },
+          "operation": 0,
+          "value_type": 15,
+          "end": 87352
+        },
+        {
+          "start": 87352,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "DissolveStart",
+            "association": 2,
+            "index": -1
+          },
+          "default": -50.0,
+          "end": 87377
+        },
+        {
+          "start": 87377,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "DissolveDuration",
+            "association": 2,
+            "index": -1
+          },
+          "default": 4.0,
+          "end": 87402
+        }
+      ],
+      "end": 87402
+    },
+    "Uniform2DTextureExpressions": {
+      "start": 87402,
+      "count": 5,
+      "expressions": [
+        {
+          "start": 87406,
+          "type": "TextureParameter",
+          "parameter": {
+            "name": "Specular",
+            "association": 2,
+            "index": -1
+          },
+          "texture_index": 1,
+          "sampler_source": 0,
+          "end": 87435
+        },
+        {
+          "start": 87435,
+          "type": "TextureParameter",
+          "parameter": {
+            "name": "Albedo",
+            "association": 2,
+            "index": -1
+          },
+          "texture_index": 0,
+          "sampler_source": 0,
+          "end": 87464
+        },
+        {
+          "start": 87464,
+          "type": "Texture",
+          "texture_index": 2,
+          "sampler_source": 0,
+          "end": 87480
+        },
+        {
+          "start": 87480,
+          "type": "Texture",
+          "texture_index": 5,
+          "sampler_source": 0,
+          "end": 87496
+        },
+        {
+          "start": 87496,
+          "type": "Texture",
+          "texture_index": 4,
+          "sampler_source": 0,
+          "end": 87512
+        }
+      ],
+      "end": 87512
+    },
+    "UniformCubeTextureExpressions": {
+      "start": 87512,
+      "count": 0,
+      "expressions": [],
+      "end": 87516
+    },
+    "end": 87516
+  }
+]

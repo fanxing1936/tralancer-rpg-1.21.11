@@ -1,0 +1,1167 @@
+{
+  "status": "PASS",
+  "scope": "Read-only native-saved Generic assembly preservation and material-configuration audit. No Blockbench operations or model modification.",
+  "sources": {
+    "assembly": {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\separate\\lucifer_original_assembly.bbmodel",
+      "bytes": 178980,
+      "sha256": "6edd3c8fbe961de7da84add78aea57d3c22a381428c7c25dff3aa30e34c6e061"
+    },
+    "body": {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\separate\\mossy_skeleton_body_original.bbmodel",
+      "bytes": 76259,
+      "sha256": "b380f1ec1a30d62bb690cf1099acd5de0aa41f41c3d38070ed10cfb92488ae5e"
+    },
+    "armor": {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\separate\\root_rot_armor_original.bbmodel",
+      "bytes": 134406,
+      "sha256": "8c0a2041aba3552c2006c5453ffe2c92aba8f9cfcca7e4648ae94bcc7404acfd"
+    }
+  },
+  "expected_saved_revision": "6edd3c8fbe961de7da84add78aea57d3c22a381428c7c25dff3aa30e34c6e061",
+  "payload": {
+    "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\lucifer_original_assembly_input.json",
+    "bytes": 182753,
+    "sha256": "ba80eafe5a45a989e49eb1a3c2bb433231d31e350fc72b6694f3ff57b9522edb"
+  },
+  "expected": {
+    "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\lucifer_original_assembly_expected.json",
+    "bytes": 61772,
+    "sha256": "ead58b04cb30e6ad47f594ee494654053316f0ff815d395a9f376c1b6e5a9799"
+  },
+  "counts": {
+    "armatures": 1,
+    "bones": 22,
+    "meshes": 12,
+    "vertices": 468,
+    "triangles": 210,
+    "weight_records": 468,
+    "textures": 3
+  },
+  "parts": [
+    {
+      "name": "body__R_Leg",
+      "source_project": "mossy_skeleton_body_original.bbmodel",
+      "source_mesh": "R_Leg",
+      "vertices": 36,
+      "triangles": 12,
+      "textureIndex": 0,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "R_Leg"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "body__L_Leg",
+      "source_project": "mossy_skeleton_body_original.bbmodel",
+      "source_mesh": "L_Leg",
+      "vertices": 36,
+      "triangles": 12,
+      "textureIndex": 0,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "L_Leg"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "body__L_Arm",
+      "source_project": "mossy_skeleton_body_original.bbmodel",
+      "source_mesh": "L_Arm",
+      "vertices": 36,
+      "triangles": 12,
+      "textureIndex": 0,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "L_Arm"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "body__R_Arm",
+      "source_project": "mossy_skeleton_body_original.bbmodel",
+      "source_mesh": "R_Arm",
+      "vertices": 36,
+      "triangles": 12,
+      "textureIndex": 0,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "R_Arm"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "body__Head",
+      "source_project": "mossy_skeleton_body_original.bbmodel",
+      "source_mesh": "Head",
+      "vertices": 36,
+      "triangles": 12,
+      "textureIndex": 0,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "Head"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "body__Body",
+      "source_project": "mossy_skeleton_body_original.bbmodel",
+      "source_mesh": "Body",
+      "vertices": 36,
+      "triangles": 12,
+      "textureIndex": 0,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "Body"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "armor__SproutARmor_SproutArmor",
+      "source_project": "root_rot_armor_original.bbmodel",
+      "source_mesh": "SproutARmor_SproutArmor",
+      "vertices": 94,
+      "triangles": 58,
+      "textureIndex": 1,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "J_Shoulders"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "armor__SM_Helmet_NatureArmor",
+      "source_project": "root_rot_armor_original.bbmodel",
+      "source_mesh": "SM_Helmet_NatureArmor",
+      "vertices": 70,
+      "triangles": 36,
+      "textureIndex": 1,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "J_Head"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "armor__R_Leg_SproutArmor",
+      "source_project": "root_rot_armor_original.bbmodel",
+      "source_mesh": "R_Leg_SproutArmor",
+      "vertices": 24,
+      "triangles": 12,
+      "textureIndex": 1,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "J_R_Foot"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "armor__L_Arm_SproutARmor",
+      "source_project": "root_rot_armor_original.bbmodel",
+      "source_mesh": "L_Arm_SproutARmor",
+      "vertices": 20,
+      "triangles": 10,
+      "textureIndex": 1,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "J_L_Hand"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "armor__R_Arm_SproutArmor",
+      "source_project": "root_rot_armor_original.bbmodel",
+      "source_mesh": "R_Arm_SproutArmor",
+      "vertices": 20,
+      "triangles": 10,
+      "textureIndex": 1,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "J_R_Hand"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    },
+    {
+      "name": "armor__L_Leg_SproutArmor",
+      "source_project": "root_rot_armor_original.bbmodel",
+      "source_mesh": "L_Leg_SproutArmor",
+      "vertices": 24,
+      "triangles": 12,
+      "textureIndex": 1,
+      "ordered_vertex_keys_exact": true,
+      "vertices_source_and_input_exact": true,
+      "face_sequence_and_corner_order_exact": true,
+      "per_corner_UV_exact": true,
+      "source_weight_bone_names_exact": true,
+      "input_remapped_weights_exact": true,
+      "weight_bone_names": [
+        "J_L_Foot"
+      ],
+      "identity_mesh_transform": true,
+      "parent_is_armature": true,
+      "coordinate_max_abs_error_java_px": 0,
+      "uv_max_abs_error_px": 0
+    }
+  ],
+  "bones": [
+    {
+      "name": "J_Root",
+      "parent_name": "SK_Skeleton_original",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 3.8285686989269494e-16,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_L_Hip",
+      "parent_name": "J_Root",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.597017211338539e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          12.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.015821408000001928
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_R_Leg",
+      "parent_name": "J_L_Hip",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.597017211338539e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          2.83276944882399e-16,
+          -1.0,
+          12.0
+        ],
+        [
+          0.0,
+          1.0,
+          2.83276944882399e-16,
+          -0.015821413991473927
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_R_Foot",
+      "parent_name": "J_R_Leg",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 1.7763568394002505e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          2.83276944882399e-16,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          2.83276944882399e-16,
+          -0.015821413991472
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "R_Leg",
+      "parent_name": "J_R_Foot",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 1.7763568394002505e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          2.83276944882399e-16,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          2.83276944882399e-16,
+          -0.015821413991472
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_L_Leg",
+      "parent_name": "J_L_Hip",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.597017211338539e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          12.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.01582140800000193
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_L_Foot",
+      "parent_name": "J_L_Leg",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 3.8285686989269494e-16,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.015821408
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "L_Leg",
+      "parent_name": "J_L_Foot",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 3.8285686989269494e-16,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.015821408
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_L_Spine",
+      "parent_name": "J_L_Hip",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.978656376053436e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          13.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.015821408000002087
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_Shoulders",
+      "parent_name": "J_L_Spine",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 8.808925811010226e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.583088e-15
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          23.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.015821407999997594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_L_Arm",
+      "parent_name": "J_Shoulders",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 8.808925811010226e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.436400000000005
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          22.999999999999996
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.01582140800000056
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_L_Hand",
+      "parent_name": "J_L_Arm",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.98212582300539e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396400000000005
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          12.999999999999996
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.015821407999998958
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_L_Weapon",
+      "parent_name": "J_L_Hand",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.98212582300539e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396400000000008
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          13.000000000000002
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.015821408000000675
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "L_Arm",
+      "parent_name": "J_L_Hand",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.98212582300539e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.396400000000005
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          12.999999999999996
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.015821407999998958
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_R_Arm",
+      "parent_name": "J_Shoulders",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 8.808925811010226e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.436399999999995
+        ],
+        [
+          0.0,
+          2.83276944882399e-16,
+          -1.0,
+          22.999999999999996
+        ],
+        [
+          0.0,
+          1.0,
+          2.83276944882399e-16,
+          -0.015821413991469593
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_R_Hand",
+      "parent_name": "J_R_Arm",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.98212582300539e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623999999995
+        ],
+        [
+          0.0,
+          2.83276944882399e-16,
+          -1.0,
+          12.999999999999996
+        ],
+        [
+          0.0,
+          1.0,
+          2.83276944882399e-16,
+          -0.015821413991467987
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_R_Weapon",
+      "parent_name": "J_R_Hand",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.98212582300539e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.3996239999999895
+        ],
+        [
+          0.0,
+          2.83276944882399e-16,
+          -1.0,
+          13.000000000000002
+        ],
+        [
+          0.0,
+          1.0,
+          2.83276944882399e-16,
+          -0.0158214139914696
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "R_Arm",
+      "parent_name": "J_R_Hand",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 4.98212582300539e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.399623999999995
+        ],
+        [
+          0.0,
+          2.83276944882399e-16,
+          -1.0,
+          12.999999999999996
+        ],
+        [
+          0.0,
+          1.0,
+          2.83276944882399e-16,
+          -0.015821413991467987
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_Neck",
+      "parent_name": "J_Shoulders",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 9.398731792842341e-15,
+      "world_matrix_java_px": [
+        [
+          0.9999465308899393,
+          -0.010210545401198463,
+          -0.0016371083610186878,
+          -5.6218656e-15
+        ],
+        [
+          0.0016324385610462892,
+          -0.0004656681882621373,
+          0.9999985591477034,
+          24.5474096
+        ],
+        [
+          -0.010211293038595137,
+          -0.9999477625935009,
+          -0.0004489752013562971,
+          2.1545265571631944e-15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "J_Head",
+      "parent_name": "J_Neck",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 9.39873141326312e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          -4.180274118512362e-19,
+          -3.249207429132666e-19,
+          -6.361438116821987e-15
+        ],
+        [
+          1.087595012108591e-19,
+          -1.6067119937458468e-16,
+          1.0,
+          24.54740860836497
+        ],
+        [
+          -2.7885485761148353e-18,
+          -1.0,
+          -1.6063188300524013e-16,
+          2.2493618799442938e-15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Head",
+      "parent_name": "J_Neck",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 9.398731792842341e-15,
+      "world_matrix_java_px": [
+        [
+          0.9999465308899393,
+          -0.010210545401198465,
+          -0.0016371083610186876,
+          -5.6218656e-15
+        ],
+        [
+          0.001632438561046289,
+          -0.0004656681882621372,
+          0.9999985591477034,
+          24.5474096
+        ],
+        [
+          -0.010211293038595139,
+          -0.9999477625935009,
+          -0.000448975201356297,
+          2.1545265571631944e-15
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Body",
+      "parent_name": "J_Shoulders",
+      "parent_matches": true,
+      "local_translation_input_exact": true,
+      "local_origin_and_Euler_standalone_exact": true,
+      "world_matrix_standalone_max_abs_difference": 0,
+      "world_matrix_normalized_input_max_abs_difference": 8.808925811010226e-15,
+      "world_matrix_java_px": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.583088e-15
+        ],
+        [
+          0.0,
+          -1.6081226496766366e-16,
+          1.0,
+          23.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.6081226496766366e-16,
+          -0.015821407999997594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "textureIndex": 0,
+      "name": "T_MossySkeleton.png",
+      "uuid": "8f1326f2-b94b-83b3-9b73-8a73a4e3213d",
+      "dimensions": [
+        64,
+        32
+      ],
+      "uv_dimensions": [
+        64,
+        32
+      ],
+      "png_sha256": "fdcbe40f0556da0c54983d7a9ccfbf30ec98e9ddd609045548e240c2105a97c0",
+      "png_bytes_original_exact": true,
+      "png_bytes_standalone_exact": true,
+      "rgba_difference_pixels": 0,
+      "alpha_min": 0,
+      "alpha_max": 255
+    },
+    {
+      "textureIndex": 1,
+      "name": "T_NatureArmor.png",
+      "uuid": "20ae1e77-5127-6596-0002-43d6ab1b5464",
+      "dimensions": [
+        64,
+        64
+      ],
+      "uv_dimensions": [
+        64,
+        64
+      ],
+      "png_sha256": "8835cc05d9cda7a98b651293e7b5614e90c40a84046643c89abc3bd6c99f43e8",
+      "png_bytes_original_exact": true,
+      "png_bytes_standalone_exact": true,
+      "rgba_difference_pixels": 0,
+      "alpha_min": 0,
+      "alpha_max": 255
+    },
+    {
+      "textureIndex": 2,
+      "name": "T_NatureArmor_S.png",
+      "uuid": "86a627e3-8a27-6c6a-6db4-cecaef598aed",
+      "dimensions": [
+        64,
+        64
+      ],
+      "uv_dimensions": [
+        64,
+        64
+      ],
+      "png_sha256": "00917716e88e979996af2dc44ac4df331fccc91c96cebabd13bd127553c2a385",
+      "png_bytes_original_exact": true,
+      "png_bytes_standalone_exact": true,
+      "rgba_difference_pixels": 0,
+      "alpha_min": 255,
+      "alpha_max": 255
+    }
+  ],
+  "root_world_equals_standalone_body": true,
+  "all_bone_world_matrices_equal_standalone_body": true,
+  "max_bone_world_error_vs_normalized_input": 9.398731792842341e-15,
+  "material": {
+    "config_equal_standalone_except_texture_UUIDs": true,
+    "albedo_texture_index": 1,
+    "auxiliary_texture_index": 2,
+    "source_shader_hash_and_DXBC_SHA_verified": true,
+    "parameters": {
+      "Emissive": [
+        0.693310022354126,
+        8,
+        0
+      ],
+      "EmissivePower": 1,
+      "NaturalEmissive": 0.699999988079071,
+      "DeathEmissive": 1,
+      "OpacityMaskClipValue": 0.33329999446868896
+    },
+    "raw_HDR_preserved": true,
+    "independent_cpu_static_HDR_max": 8.074916170808972,
+    "previous_GPU_validation": {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\separate\\emissive_gpu_validation.json",
+      "bytes": 3414,
+      "sha256": "76b54048c95b08385d3e7c806c74194fba67eb92ff1e994f6e2d63bcac80b1a5"
+    },
+    "previous_GPU_project": "root_rot_armor_original",
+    "previous_GPU_max_error": 2.2666444987606837e-06,
+    "previous_GPU_passed": true,
+    "scope": "Saved configuration/texture identity verified here. GPU measurement belongs to the standalone armor project and was not rerun on this combined project by this read-only audit."
+  },
+  "files_unchanged_during_validation": {
+    "assembly": true,
+    "body": true,
+    "armor": true
+  },
+  "limitations": [
+    "Native Euler rotations equal the standalone body exactly; comparison to normalized input quaternion matrices has explicitly reported floating-point residuals, not a claim of raw quaternion identity.",
+    "No source geometry/UV fitting, no atlas, no quantization; original three PNGs preserved.",
+    "This checks Generic assembly data preservation, not Java limited-format conversion, animations, full UE runtime scene equivalence, or a newly measured combined-project GPU render."
+  ]
+}

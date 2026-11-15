@@ -188,6 +188,7 @@ python _tools/package.py --install
 |---|---|---|---|
 | 圣卫 | Tower Guard | <https://minecraft.wiki/w/Dungeons:Tower_Guard> | 本体、盾牌、长戟贴图及其发光层；全部 13 组共 56 段音效 |
 | 教皇（12 部件、9 段动作） | Arch-Illager | [角色与音效](https://minecraft.wiki/w/Dungeons:Arch-Illager)；[图库](https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery) | 原作本体贴图复用现有档案，权杖贴图、渲染图、10 段 GIF、截图；17 组共 39 段音效，不含 Music；版权归 Mojang 所有，本项目非商业，与 Mojang 无关联；[逐文件来源与校验](_tools/pope_ref/SOURCES.md) |
+| 首席附魔师 | The Prime Enchanter，《Minecraft Dungeons II》 | [角色与图库](https://minecraft.wiki/w/Dungeons_II:The_Prime_Enchanter#Gallery) | 原作 64×64 贴图、渲染、11 段动作 GIF 和官方参考图。原作素材版权归 Mojang 及相关权利人所有。本项目非商业，与 Mojang 无关联。[来源与校验](_tools/prime_enchanter_ref/SOURCES.md) |
 | 教皇战特效 | Heart of Ender | <https://minecraft.wiki/w/Dungeons:Heart_of_Ender> | 黑色拖痕的星空取自 `MCD_Decal_Puddle` 贴图；其余特效贴图为本项目绘制，光束和拖痕边缘参考原作截图 |
 | 别西卜 | Nameless One | <https://minecraft.wiki/w/Dungeons:Nameless_One> | 本体贴图与发光层；全部 16 组共 40 段音效 |
 | 别西卜麾下罪仆 | Vanguard | <https://minecraft.wiki/w/Dungeons:Vanguard>（另有 [Skeleton](https://minecraft.wiki/w/Dungeons:Skeleton)、[Glaive](https://minecraft.wiki/w/Dungeons:Glaive) 页） | 骷髅本体、沙漠盔甲、沙漠盾牌、长戟贴图；先锋全部 6 组共 18 段音效 |

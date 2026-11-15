@@ -1,0 +1,243 @@
+{
+  "scope": "Approved rigid translation of original existing spear only; not a source Dungeons weapon pose.",
+  "native_result": {
+    "project": "lucifer_verdant",
+    "mesh": "weapon__LuciferSerpentSpear",
+    "vertices": 552,
+    "applied": true,
+    "already_aligned": false,
+    "before_error": 0,
+    "after_error": 0,
+    "nonvertex_fields_unchanged": true,
+    "saved_final": false
+  },
+  "immutable_adapter_input": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\weapon_native_input.json",
+  "immutable_adapter_sha256": "2206a51586751a714e91e2563e0b2759b68e48558653afd0294fb2b02e260498",
+  "combined_input": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\lucifer_verdant_input.json",
+  "combined_input_sha256_before": "b8d8da115d1d87cc26a7968cad7aefb92179765e7c85dc7e56a35e708fa10921",
+  "combined_input_sha256_after": "30fbc901e7d3352f6409532ce73f54230347c0567a79f49aa651fa7f17bf25eb",
+  "source_png": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\resourcepack\\assets\\rpg\\textures\\item\\lucifer_in_hand.png",
+  "source_png_sha256": "f3e429eda393da49c249b8f118f7e764951de265b630d738a32a522013b90dee",
+  "grip_pixel_xy": [
+    18,
+    19
+  ],
+  "grip_pixel_rgba": [
+    54,
+    46,
+    46,
+    255
+  ],
+  "grip_uv_pixel_center": [
+    18.5,
+    19.5
+  ],
+  "grip_source_model_xyz": [
+    9.25,
+    6.25,
+    8.0
+  ],
+  "translation_global_bind": [
+    8.881784197001252e-16,
+    -1.3989585340023023,
+    -1.6062441766262074
+  ],
+  "translation_socket_local": [
+    8.881784197001252e-16,
+    -1.6062441766262079,
+    1.3989585340023019
+  ],
+  "translation_matrix_global_bind": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      8.881784197001252e-16
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      -1.3989585340023023
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      -1.6062441766262074
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "world_matrix_before": [
+    [
+      -1.472125190111886e-16,
+      -1.4721250441226113e-16,
+      -0.8499999046325684,
+      12.199623237060539
+    ],
+    [
+      1.2020814418792725,
+      1.202081322669983,
+      -1.0409496624838303e-16,
+      -4.233303070068359
+    ],
+    [
+      1.202081322669983,
+      -1.2020814418792725,
+      6.373978361171702e-33,
+      -2.015820460317152
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "world_matrix_after": [
+    [
+      -1.472125190111886e-16,
+      -1.4721250441226113e-16,
+      -0.8499999046325684,
+      12.199623237060539
+    ],
+    [
+      1.2020814418792725,
+      1.202081322669983,
+      -1.0409496624838303e-16,
+      -5.632261604070662
+    ],
+    [
+      1.202081322669983,
+      -1.2020814418792725,
+      6.373978361171702e-33,
+      -3.6220646369433593
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "socket_local_matrix_after": [
+    [
+      -1.472125190111886e-16,
+      -1.4721250441226113e-16,
+      -0.8499999046325684,
+      6.7999992370605495
+    ],
+    [
+      1.2020813226699834,
+      -1.202081441879272,
+      -2.3113725655306681e-32,
+      -3.6062432229518953
+    ],
+    [
+      -1.202081441879272,
+      -1.2020813226699834,
+      1.0409496624838303e-16,
+      18.632261604070663
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "grip_world_before": [
+    5.399623999999989,
+    14.398958534002304,
+    1.5904227626347378
+  ],
+  "semantic_points_world_after": {
+    "grip": [
+      5.399623999999989,
+      13.000000000000002,
+      -0.01582141399147119
+    ],
+    "tip": [
+      5.39962399999999,
+      14.202080368995667,
+      -20.451204972264787
+    ],
+    "base": [
+      5.39962399999999,
+      12.398959934711458,
+      12.606033129694442
+    ]
+  },
+  "base_to_tip_unit_direction_after": [
+    0.0,
+    0.05446444364893392,
+    -0.9985157106315412
+  ],
+  "grip_eight_corners_world_after": [
+    [
+      5.824623952316275,
+      12.398959308862688,
+      -0.015821384189147913
+    ],
+    [
+      4.974624047683706,
+      12.398959308862688,
+      -0.015821384189147913
+    ],
+    [
+      5.824623952316274,
+      12.99999997019768,
+      -0.6168621051287841
+    ],
+    [
+      4.974624047683705,
+      12.99999997019768,
+      -0.6168621051287841
+    ],
+    [
+      5.824623952316274,
+      13.000000029802324,
+      0.5852192771458435
+    ],
+    [
+      4.974624047683705,
+      13.000000029802324,
+      0.5852192771458435
+    ],
+    [
+      5.824623952316274,
+      13.601040691137316,
+      -0.01582144379379269
+    ],
+    [
+      4.974624047683705,
+      13.601040691137316,
+      -0.01582144379379269
+    ]
+  ],
+  "right_arm_bind_aabb": [
+    [
+      4.0,
+      12.0,
+      -1.0
+    ],
+    [
+      6.0,
+      24.0,
+      0.9999998807907104
+    ]
+  ],
+  "all_grip_corners_inside_right_arm_bind_volume": true,
+  "minimum_bind_clearance": 0.1753760476837254,
+  "requirements": [
+    "Geometry shape, UV, topology, texture and bone weights remain unchanged.",
+    "Animation J_R_Weapon and J_L_Weapon position channels must be zero to retain hand socket location.",
+    "Dynamic grip retention requires independent animation validation; this result proves bind alignment only."
+  ],
+  "final_project_saved_by_this_script": false
+}

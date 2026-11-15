@@ -1,0 +1,175 @@
+{
+  "command": [
+    "C:\\Users\\zhaoy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\server_test.py",
+    "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_pope_m4_qa_20261105\\server_smoke_1793851306943615500",
+    "240"
+  ],
+  "run_directory": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_pope_m4_qa_20261105\\server_smoke_1793851306943615500",
+  "snapshot": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_pope_m4_qa_20261105\\build_1793851086149543000",
+  "build_result_sha256": "523c1046bd68b397fd01af6ca4094beec84ac09c429ad2c470b4b9fb82a4a387",
+  "port": 25676,
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 16.95,
+  "reached_done": true,
+  "datapack_enabled": true,
+  "datapack_lines": [
+    "[12:02:27] [main/INFO]: Found new data pack file/rpg, loading it automatically",
+    "[12:02:31] [Server thread/INFO]: There are 2 data pack(s) enabled: [vanilla (built-in)], [file/rpg (world)]"
+  ],
+  "pack_files": 5657,
+  "complete_pack_copy_verified": true,
+  "pope_products_equal": true,
+  "pope_product_file_count": 749,
+  "original_script_sha256": "88be8973758c0e7982bce32e2704b6913fa381b8c47cd2642bad34f2019d346d",
+  "script_matches_build_snapshot": true,
+  "eula_source": "D:\\minecraft\\本地部署\\eula.txt",
+  "eula_source_unchanged": true,
+  "eula_sha256": "ee27072e4a23e088522f740ddaab0c7c4145c186969e90a86254faa3a5ec5ce6",
+  "console": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\pope_ref\\m4\\server_smoke\\server_test_console.log",
+  "console_sha256": "11ce7b689f3369b3240ac0ae8bd1aeadb2cd57f250724a3a33a8df2f446dc65e",
+  "server_log": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\pope_ref\\m4\\server_smoke\\server_latest.log",
+  "server_log_sha256": "53afa1a785987a51fd76d072e8d0e6580f914af1fe7daa8c01ce45f96b779522",
+  "in_game_visual_verified": false,
+  "client_sync_performed": false,
+  "original_tool_output_classification": {
+    "known_environment_warnings": [
+      {
+        "line": 5,
+        "text": "  [12:02:30] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 6,
+        "text": "  [12:02:30] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 7,
+        "text": "  [12:02:30] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 8,
+        "text": "  [12:02:30] [Server thread/WARN]: To change this, set \"online-mode\" to \"true\" in the server.properties file.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 21,
+        "text": "  [12:02:30] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 22,
+        "text": "  [12:02:30] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 23,
+        "text": "  [12:02:30] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 24,
+        "text": "  [12:02:30] [Server thread/WARN]: To change this, set \"online-mode\" to \"true\" in the server.properties file.",
+        "classification": "expected_localhost_offline_notice"
+      }
+    ],
+    "unexpected_issues": [],
+    "all_warning_lines": [
+      {
+        "line": 5,
+        "text": "  [12:02:30] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 6,
+        "text": "  [12:02:30] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 7,
+        "text": "  [12:02:30] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 8,
+        "text": "  [12:02:30] [Server thread/WARN]: To change this, set \"online-mode\" to \"true\" in the server.properties file.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 21,
+        "text": "  [12:02:30] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 22,
+        "text": "  [12:02:30] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 23,
+        "text": "  [12:02:30] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.",
+        "classification": "expected_localhost_offline_notice"
+      },
+      {
+        "line": 24,
+        "text": "  [12:02:30] [Server thread/WARN]: To change this, set \"online-mode\" to \"true\" in the server.properties file.",
+        "classification": "expected_localhost_offline_notice"
+      }
+    ],
+    "error_or_parse_lines": []
+  },
+  "known_environment_warnings": [
+    {
+      "line": 11,
+      "text": "[12:02:30] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!",
+      "classification": "expected_localhost_offline_notice"
+    },
+    {
+      "line": 12,
+      "text": "[12:02:30] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.",
+      "classification": "expected_localhost_offline_notice"
+    },
+    {
+      "line": 13,
+      "text": "[12:02:30] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.",
+      "classification": "expected_localhost_offline_notice"
+    },
+    {
+      "line": 14,
+      "text": "[12:02:30] [Server thread/WARN]: To change this, set \"online-mode\" to \"true\" in the server.properties file.",
+      "classification": "expected_localhost_offline_notice"
+    }
+  ],
+  "unexpected_issues": [],
+  "all_warning_lines": [
+    {
+      "line": 11,
+      "text": "[12:02:30] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!",
+      "classification": "expected_localhost_offline_notice"
+    },
+    {
+      "line": 12,
+      "text": "[12:02:30] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.",
+      "classification": "expected_localhost_offline_notice"
+    },
+    {
+      "line": 13,
+      "text": "[12:02:30] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.",
+      "classification": "expected_localhost_offline_notice"
+    },
+    {
+      "line": 14,
+      "text": "[12:02:30] [Server thread/WARN]: To change this, set \"online-mode\" to \"true\" in the server.properties file.",
+      "classification": "expected_localhost_offline_notice"
+    }
+  ],
+  "error_or_parse_lines": [],
+  "ok": true,
+  "port_available_after_shutdown": true,
+  "server_saved_all_dimensions": true
+}

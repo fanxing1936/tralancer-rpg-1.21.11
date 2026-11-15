@@ -1,0 +1,4 @@
+# cast：40 刻，播完回到 idle。由 add_belial_model.py 生成。
+execute if score @s rpg_bll_t matches 41.. run return run function rpg:belial_lord/anim/enter/idle
+scoreboard players add @s rpg_bll_t 1
+function rpg:belial_lord/anim/cast/at

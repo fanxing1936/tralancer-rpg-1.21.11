@@ -1,0 +1,1001 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-07T13:47:52.098355+00:00",
+  "source_installation": {
+    "root": "D:\\XboxGames\\Minecraft Dungeons",
+    "identity": "Microsoft.Lovika",
+    "version": "1.17.0.0",
+    "metadata_file": "D:\\XboxGames\\Minecraft Dungeons\\Content\\MicrosoftGame.config",
+    "metadata_sha256": "842083eaf7c5d9c9a2f279f8fb7e226bc8518c5ec1e64ef354b7bf8f66e1cc7c"
+  },
+  "upstream_raw_manifest": {
+    "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw_manifest.json",
+    "sha256": "4df09cace64262dbbeece70f6ff59bee441752791e5a6ab7ec5e5948835df425"
+  },
+  "extractor": {
+    "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\pak_index.py",
+    "sha256": "72dd0bd365830fd9667f6b60ea6b8e3ced1e86277d3de5ddb5c66c6410e0977b",
+    "format_reference": "https://github.com/FabianFG/CUE4Parse/tree/master/CUE4Parse/UE4/Pak"
+  },
+  "exporter": {
+    "name": "UE Viewer / UModel",
+    "gltf_generator": "UE Viewer (umodel) build 1590",
+    "sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+    "source_url": "https://raw.githubusercontent.com/gildor2/UEViewer/master/umodel.exe",
+    "repository": "https://github.com/gildor2/UEViewer",
+    "engine_override": "ue4.22",
+    "export_options": [
+      "-export",
+      "-gltf",
+      "-png"
+    ]
+  },
+  "scope": {
+    "raw_packages": 21,
+    "raw_files": 42,
+    "mesh_files_gltf_bin": 14,
+    "textures_png": 4,
+    "material_props_mat": 8,
+    "excluded": [
+      "GrimSpooky",
+      "SproutArmor_Unique1",
+      "NatureArmor_Unique1",
+      "unreferenced SproutArmor helmet/albedo/material",
+      "whole PAKs",
+      "game executable",
+      "keys"
+    ]
+  },
+  "copy_verification": {
+    "raw_size_sha1_sha256_before_copy": true,
+    "all_copied_file_sha256_after_copy": true
+  },
+  "files": [
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/BP_MobCharacter.uasset",
+      "kind": "raw_original_package",
+      "bytes": 16523,
+      "sha256": "20853de7f4c1aeb63f74694665f34e181e5ab76f47ccf8f288357c3f23ba3302",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\BP_MobCharacter.uasset",
+      "logical_package": "Game/Actors/Characters/Enemies/BP_MobCharacter",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/BP_MobCharacter.uasset",
+      "pak_entry_sha1": "ac23e03809f3143cdb961bcf1425e34e4562f29e",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "ac23e03809f3143cdb961bcf1425e34e4562f29e"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/BP_MobCharacter.uexp",
+      "kind": "raw_original_package",
+      "bytes": 7787,
+      "sha256": "46c4eae160eb970f2ebd5345a891330155bdc82d1cb3e935d70962c04063f188",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\BP_MobCharacter.uexp",
+      "logical_package": "Game/Actors/Characters/Enemies/BP_MobCharacter",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/BP_MobCharacter.uexp",
+      "pak_entry_sha1": "de9428b4a6ee64df1353df16b8f089ddd46496b1",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "de9428b4a6ee64df1353df16b8f089ddd46496b1"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/MossySkeleton/BP_MossySkeletonCharacter.uasset",
+      "kind": "raw_original_package",
+      "bytes": 18630,
+      "sha256": "51564391e22db8eee2cef6a59a13b472bff102d0d6d11c0ecc5f81eb3962d922",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\BP_MossySkeletonCharacter.uasset",
+      "logical_package": "Game/Actors/Characters/Enemies/MossySkeleton/BP_MossySkeletonCharacter",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/MossySkeleton/BP_MossySkeletonCharacter.uasset",
+      "pak_entry_sha1": "57b93604ff6e9fa2def89a3753d417fd34846efc",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "57b93604ff6e9fa2def89a3753d417fd34846efc"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/MossySkeleton/BP_MossySkeletonCharacter.uexp",
+      "kind": "raw_original_package",
+      "bytes": 9169,
+      "sha256": "166f0bb09b56aec0e305e01cecee2acf84eb3b0787f7673428ed5f36769b463d",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\BP_MossySkeletonCharacter.uexp",
+      "logical_package": "Game/Actors/Characters/Enemies/MossySkeleton/BP_MossySkeletonCharacter",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/MossySkeleton/BP_MossySkeletonCharacter.uexp",
+      "pak_entry_sha1": "a124b4d3f8d9f4ef785def52daa1ae4922e5f02d",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "a124b4d3f8d9f4ef785def52daa1ae4922e5f02d"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.uasset",
+      "kind": "raw_original_package",
+      "bytes": 2298,
+      "sha256": "c6282fa4f19f5f51e81f7243b4c19670893522d930d4020e7426350afae516a3",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\M_MossySkeleton.uasset",
+      "logical_package": "Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.uasset",
+      "pak_entry_sha1": "6db19719d94f9a5eee037ac57b94bb2e138fdbb5",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "6db19719d94f9a5eee037ac57b94bb2e138fdbb5"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.uexp",
+      "kind": "raw_original_package",
+      "bytes": 204217,
+      "sha256": "c3a7877bcdb65f0fec1b7f904b0f34fad09b9e2a48628979ec9f8888ca5fd56d",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\M_MossySkeleton.uexp",
+      "logical_package": "Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.uexp",
+      "pak_entry_sha1": "09da1b82870eb4ce1996295409b59cbc71289f71",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "09da1b82870eb4ce1996295409b59cbc71289f71"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton.uasset",
+      "kind": "raw_original_package",
+      "bytes": 830,
+      "sha256": "4f510f96499cc6b6beca19ade30167791f531db8bcb127cdedb4d69dc5843f4a",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\T_MossySkeleton.uasset",
+      "logical_package": "Game/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton.uasset",
+      "pak_entry_sha1": "06351031046ea7c05fab59ab7da3e3045c09a340",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "06351031046ea7c05fab59ab7da3e3045c09a340"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton.uexp",
+      "kind": "raw_original_package",
+      "bytes": 3263,
+      "sha256": "cb8ce62032141e371132e8c7fbd26138e9ccbf55c4b329252ece213e07ee44db",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\T_MossySkeleton.uexp",
+      "logical_package": "Game/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton.uexp",
+      "pak_entry_sha1": "ab50c94c97c09c89035373c98c56982cf36a0c6e",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "ab50c94c97c09c89035373c98c56982cf36a0c6e"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton.uasset",
+      "kind": "raw_original_package",
+      "bytes": 3104,
+      "sha256": "9b4e77debd3c105aa5c7be77da0930cfb643a409e1e0d6e051cd235b69c19327",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\SK_Skeleton.uasset",
+      "logical_package": "Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/Skeleton/SK_Skeleton.uasset",
+      "pak_entry_sha1": "a07956f8d6d15bb078677e4854288ff2ab9621d1",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "a07956f8d6d15bb078677e4854288ff2ab9621d1"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton.uexp",
+      "kind": "raw_original_package",
+      "bytes": 14170,
+      "sha256": "f18f1894317dc51cc98de6bbf66467f47b3ad3f260fe5877e5929ee9889ff69a",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\SK_Skeleton.uexp",
+      "logical_package": "Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/Skeleton/SK_Skeleton.uexp",
+      "pak_entry_sha1": "8a058aab9cb45b4a2ee6f40b063c36fc44b594e7",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "8a058aab9cb45b4a2ee6f40b063c36fc44b594e7"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/Skeleton/Skeleton_Skeleton.uasset",
+      "kind": "raw_original_package",
+      "bytes": 2852,
+      "sha256": "a52d4a20d153cde32d8851029a3fd70651d97627f21b0ec5a7a510113f40f50e",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\Skeleton_Skeleton.uasset",
+      "logical_package": "Game/Actors/Characters/Enemies/Skeleton/Skeleton_Skeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/Skeleton/Skeleton_Skeleton.uasset",
+      "pak_entry_sha1": "b5688b0eb77c7013d212f43b8856ae19b326649b",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "b5688b0eb77c7013d212f43b8856ae19b326649b"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/Skeleton/Skeleton_Skeleton.uexp",
+      "kind": "raw_original_package",
+      "bytes": 4555,
+      "sha256": "4b068327e88529ad721381ce0868ca94922b82b1885057ef615935620192457e",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\Skeleton_Skeleton.uexp",
+      "logical_package": "Game/Actors/Characters/Enemies/Skeleton/Skeleton_Skeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/Skeleton/Skeleton_Skeleton.uexp",
+      "pak_entry_sha1": "b9b9feafc866ce11e69a08534273e99441649969",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "b9b9feafc866ce11e69a08534273e99441649969"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/Skeleton/T_Skeleton_S.uasset",
+      "kind": "raw_original_package",
+      "bytes": 964,
+      "sha256": "07cdc748d975ec1c76eec2a9a8ec7aa69fde19ff6393f0d5e8f2f9a6ee64c523",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\T_Skeleton_S.uasset",
+      "logical_package": "Game/Actors/Characters/Enemies/Skeleton/T_Skeleton_S",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/Skeleton/T_Skeleton_S.uasset",
+      "pak_entry_sha1": "78ec4f3d99d4459d251e2779f5725e589bc188fd",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "78ec4f3d99d4459d251e2779f5725e589bc188fd"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Enemies/Skeleton/T_Skeleton_S.uexp",
+      "kind": "raw_original_package",
+      "bytes": 8557,
+      "sha256": "18bfcc72d17f3240befac97adb0bfd2342b7baecb830af16acd78bf66a86f060",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\T_Skeleton_S.uexp",
+      "logical_package": "Game/Actors/Characters/Enemies/Skeleton/T_Skeleton_S",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Enemies/Skeleton/T_Skeleton_S.uexp",
+      "pak_entry_sha1": "afc3b9233f1bd1dfa0ba61ff906acfd49f7117b4",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "afc3b9233f1bd1dfa0ba61ff906acfd49f7117b4"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Player/Master/Player_Master_Skeleton.uasset",
+      "kind": "raw_original_package",
+      "bytes": 3877,
+      "sha256": "ddb5c70cf5ea3a751a1574c99860a2a8b965baba48b303be6f1de6facaf273d8",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Player\\Master\\Player_Master_Skeleton.uasset",
+      "logical_package": "Game/Actors/Characters/Player/Master/Player_Master_Skeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Player/Master/Player_Master_Skeleton.uasset",
+      "pak_entry_sha1": "32c3a8d5f034ece90ea7297af5675cc92921582c",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "32c3a8d5f034ece90ea7297af5675cc92921582c"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Player/Master/Player_Master_Skeleton.uexp",
+      "kind": "raw_original_package",
+      "bytes": 6310,
+      "sha256": "da3a61afc14db2cf08a3cdd946c00a3032bdbc1c0cd0ab57db182c6a34f28298",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Player\\Master\\Player_Master_Skeleton.uexp",
+      "logical_package": "Game/Actors/Characters/Player/Master/Player_Master_Skeleton",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Player/Master/Player_Master_Skeleton.uexp",
+      "pak_entry_sha1": "4cbe97ac13d437b5e22522ea4413ab132ba3997a",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "4cbe97ac13d437b5e22522ea4413ab132ba3997a"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Player/Master/SK_Player_Master.uasset",
+      "kind": "raw_original_package",
+      "bytes": 3436,
+      "sha256": "f8a5ff8f958c220c9c0f8bf1b4226e48a56674ae3be7c0671667fc9a8effe57a",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Player\\Master\\SK_Player_Master.uasset",
+      "logical_package": "Game/Actors/Characters/Player/Master/SK_Player_Master",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master.uasset",
+      "pak_entry_sha1": "6ec7dea9ccac648b147bd1490e5e2021916777cd",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "6ec7dea9ccac648b147bd1490e5e2021916777cd"
+    },
+    {
+      "path": "raw/Game/Actors/Characters/Player/Master/SK_Player_Master.uexp",
+      "kind": "raw_original_package",
+      "bytes": 24274,
+      "sha256": "f6f8ed8f4c78aaf9118b6833614c3ffa73e048bd0520e1b80ae36e23601c7178",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Player\\Master\\SK_Player_Master.uexp",
+      "logical_package": "Game/Actors/Characters/Player/Master/SK_Player_Master",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master.uexp",
+      "pak_entry_sha1": "793826d95df23fc7219bb93b7a177372c0eabc29",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "793826d95df23fc7219bb93b7a177372c0eabc29"
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/M_MasterEquipment.uasset",
+      "kind": "raw_original_package",
+      "bytes": 8892,
+      "sha256": "736b2b7077aeb54190038172a59507f115f8eb35cab0343aa0fc8324836a2173",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Equipment\\M_MasterEquipment.uasset",
+      "logical_package": "Game/Actors/Equipment/M_MasterEquipment",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/M_MasterEquipment.uasset",
+      "pak_entry_sha1": "2368f94638dd56d66a4f5f928cb28bbf9473abab",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "2368f94638dd56d66a4f5f928cb28bbf9473abab"
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/M_MasterEquipment.uexp",
+      "kind": "raw_original_package",
+      "bytes": 146959,
+      "sha256": "67a6c92cb48c94412c7f5ef28eb6bf30812ea9beb2f84d414972d05bb06df5c8",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Equipment\\M_MasterEquipment.uexp",
+      "logical_package": "Game/Actors/Equipment/M_MasterEquipment",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/M_MasterEquipment.uexp",
+      "pak_entry_sha1": "eaa1d847fe50d13cab783c90965762eba313a715",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "eaa1d847fe50d13cab783c90965762eba313a715"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.uasset",
+      "kind": "raw_original_package",
+      "bytes": 3194,
+      "sha256": "4bd83bb3aa6bcbfcd3dc123888426b6bb68de3447358ecf438a1abb7a03ecbe0",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\L_Arm_SproutARmor.uasset",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.uasset",
+      "pak_entry_sha1": "9e14b8b78cdc029dc399dde25ebd9fefd160c94a",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "9e14b8b78cdc029dc399dde25ebd9fefd160c94a"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.uexp",
+      "kind": "raw_original_package",
+      "bytes": 6499,
+      "sha256": "0ef468d9e538a300988ee1799e900594883c2276f2531f31071b8bc3948b76fd",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\L_Arm_SproutARmor.uexp",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.uexp",
+      "pak_entry_sha1": "b2e4d79fe5615c7955f05f004b40d50e8fee49b3",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "b2e4d79fe5615c7955f05f004b40d50e8fee49b3"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.uasset",
+      "kind": "raw_original_package",
+      "bytes": 3194,
+      "sha256": "dc08c35657fd80c64f42217e64cb73dcab3a0875b67fa7aaad3e273a9d1ae128",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\L_Leg_SproutArmor.uasset",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.uasset",
+      "pak_entry_sha1": "9e39a9c60b89fe9711467e7650c746ebb460263a",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "9e39a9c60b89fe9711467e7650c746ebb460263a"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.uexp",
+      "kind": "raw_original_package",
+      "bytes": 6635,
+      "sha256": "d47f007af8ee3aeb07d5bd99588430cfb6f0016cc4b4901b1bb6e3ad4ff088be",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\L_Leg_SproutArmor.uexp",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.uexp",
+      "pak_entry_sha1": "821369dd1ff807bb0eae9d5caa3d70689a896e75",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "821369dd1ff807bb0eae9d5caa3d70689a896e75"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.uasset",
+      "kind": "raw_original_package",
+      "bytes": 3194,
+      "sha256": "7c163aadfa2ca983b04057bf676fcc96defa3b5e241705a0fd65b442634b6cb4",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\R_Arm_SproutArmor.uasset",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.uasset",
+      "pak_entry_sha1": "33ed3fffd7dd5b8398887bfbc76b58d39708c660",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "33ed3fffd7dd5b8398887bfbc76b58d39708c660"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.uexp",
+      "kind": "raw_original_package",
+      "bytes": 6863,
+      "sha256": "b9478f927649e501d3d29ecacd47f0b2a8cddaa5d04b204b1ad8da97d028dd9a",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\R_Arm_SproutArmor.uexp",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.uexp",
+      "pak_entry_sha1": "51c1f046819073d17ccc2ca55cd61315147c36a3",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "51c1f046819073d17ccc2ca55cd61315147c36a3"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.uasset",
+      "kind": "raw_original_package",
+      "bytes": 3194,
+      "sha256": "6977de289e153d74e2591f77d5416d8dbfadcbf535eb085670cd8a584c2fc4ba",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\R_Leg_SproutArmor.uasset",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.uasset",
+      "pak_entry_sha1": "e20a64fd4d3845b7c35730f400f2678afb4cc197",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "e20a64fd4d3845b7c35730f400f2678afb4cc197"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.uexp",
+      "kind": "raw_original_package",
+      "bytes": 6635,
+      "sha256": "e0e0b6d8f07531b51c61cce56b19d553ff07e9f70bb9f712d1300b06ac498be1",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\R_Leg_SproutArmor.uexp",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.uexp",
+      "pak_entry_sha1": "36391e5de8bad2b80f27146d703802b820e09daa",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "36391e5de8bad2b80f27146d703802b820e09daa"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.uasset",
+      "kind": "raw_original_package",
+      "bytes": 3206,
+      "sha256": "04ebd1bd545cb90cdf8d71a2913409225544c9c3be4722ff9d68973965ec7823",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\SproutARmor_SproutArmor.uasset",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.uasset",
+      "pak_entry_sha1": "42b8b56f229fc8b85cdcd1577a4d934abe7496c6",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "42b8b56f229fc8b85cdcd1577a4d934abe7496c6"
+    },
+    {
+      "path": "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.uexp",
+      "kind": "raw_original_package",
+      "bytes": 14019,
+      "sha256": "5eba62187bab4f3e1dcdd7d55dbe5146485b58fd2de15174d17c091ce1a1f41c",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\SproutARmor_SproutArmor.uexp",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.uexp",
+      "pak_entry_sha1": "5e49106e76b2cdea27c98de54761d4e92c6e5d7f",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "5e49106e76b2cdea27c98de54761d4e92c6e5d7f"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.uasset",
+      "kind": "raw_original_package",
+      "bytes": 8444,
+      "sha256": "301da929e7f38fe8e5ae3909e08b5c818dc81bc607fc114288d1d9378d3788bd",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\BP_NatureArmor.uasset",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.uasset",
+      "pak_entry_sha1": "490a3138343f0fbcd120d71937b31e961e2f84d8",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "490a3138343f0fbcd120d71937b31e961e2f84d8"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.uexp",
+      "kind": "raw_original_package",
+      "bytes": 16357,
+      "sha256": "17c551f9c26e9fe234559bcf1efabb2a09ede4fc5a82467480e55ef0c8ac0ad1",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\BP_NatureArmor.uexp",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.uexp",
+      "pak_entry_sha1": "ce70a6786cbc2f6e47484e26a6fcb50eda3807e3",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "ce70a6786cbc2f6e47484e26a6fcb50eda3807e3"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.uasset",
+      "kind": "raw_original_package",
+      "bytes": 2555,
+      "sha256": "ea22b959646281220009cbd469ad79ac6a4e3da57cc8b87866bd3f37a354397f",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\MI_NatureArmor.uasset",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.uasset",
+      "pak_entry_sha1": "34222a87f4b93f8d10c287d1aa533137ead4ad44",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "34222a87f4b93f8d10c287d1aa533137ead4ad44"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.uexp",
+      "kind": "raw_original_package",
+      "bytes": 144026,
+      "sha256": "2cf238d8861e1de0f18c300e38ac6b78d44b83021744c2f136ea1e555129db9b",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\MI_NatureArmor.uexp",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.uexp",
+      "pak_entry_sha1": "ec28b3560e36048e952d15b98e491c8d663d291d",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "ec28b3560e36048e952d15b98e491c8d663d291d"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.uasset",
+      "kind": "raw_original_package",
+      "bytes": 3189,
+      "sha256": "5168cc3887e67ef61ffe7663fceb216eecb2a1eb6537b47b8f94fb55a4452601",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\SM_Helmet_NatureArmor.uasset",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.uasset",
+      "pak_entry_sha1": "7a8c58575f7e61b2127db1b0b06a743eec0592f9",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "7a8c58575f7e61b2127db1b0b06a743eec0592f9"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.uexp",
+      "kind": "raw_original_package",
+      "bytes": 11387,
+      "sha256": "f2e3ba37ce6110a55ccb033113208301d54d60868a07fb3a48f7e71a6091d380",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\SM_Helmet_NatureArmor.uexp",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.uexp",
+      "pak_entry_sha1": "84bc6b5f335852643197d1d3ce6fb75bded4ca59",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "84bc6b5f335852643197d1d3ce6fb75bded4ca59"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor.uasset",
+      "kind": "raw_original_package",
+      "bytes": 926,
+      "sha256": "42fbef9aa19064891af0a26d3185863eb23908db9c2884670c1ff7d81d4b4ecf",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\T_NatureArmor.uasset",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor.uasset",
+      "pak_entry_sha1": "a46a064187978d71bc58c4d28bee4d8dac281747",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "a46a064187978d71bc58c4d28bee4d8dac281747"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor.uexp",
+      "kind": "raw_original_package",
+      "bytes": 22384,
+      "sha256": "4d17fedd9ef9fda7c97035d0f6d7feb0f1933062dcef2b315a798faa0326805e",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\T_NatureArmor.uexp",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor.uexp",
+      "pak_entry_sha1": "26e58583001dfd2abcfd020c38c409469f96093d",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "26e58583001dfd2abcfd020c38c409469f96093d"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S.uasset",
+      "kind": "raw_original_package",
+      "bytes": 930,
+      "sha256": "8c642ea2d94c3cd0a6b8ff35446acea13d4c8c8cf85fa2d5dfec3df67ceee93c",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\T_NatureArmor_S.uasset",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S.uasset",
+      "pak_entry_sha1": "645f9d2d59dd7a87b8a1d17b258d7071b6750f8e",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "645f9d2d59dd7a87b8a1d17b258d7071b6750f8e"
+    },
+    {
+      "path": "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S.uexp",
+      "kind": "raw_original_package",
+      "bytes": 22384,
+      "sha256": "6f1e72c450ce3922bcf2ad2b0c47579b8c8b2246b0b8e1360851e830d835767c",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\T_NatureArmor_S.uexp",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S.uexp",
+      "pak_entry_sha1": "3097d29b0b91076645e5453f622d7acadd7138c5",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "3097d29b0b91076645e5453f622d7acadd7138c5"
+    },
+    {
+      "path": "raw/Game/Models/Master_ModelMaterial.uasset",
+      "kind": "raw_original_package",
+      "bytes": 11941,
+      "sha256": "b0ce829aa4fd7a491dbcfd693ba4c73b0082735c0aaf197df4d9fd48d6e12653",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Models\\Master_ModelMaterial.uasset",
+      "logical_package": "Game/Models/Master_ModelMaterial",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Models/Master_ModelMaterial.uasset",
+      "pak_entry_sha1": "230563fa355ee7b1a0550c6f4e4b5b9cfe943ad7",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "230563fa355ee7b1a0550c6f4e4b5b9cfe943ad7"
+    },
+    {
+      "path": "raw/Game/Models/Master_ModelMaterial.uexp",
+      "kind": "raw_original_package",
+      "bytes": 210985,
+      "sha256": "120e9cd544003903d534807267752bde24b4c2b7576ecef72247ebecbe68de35",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Models\\Master_ModelMaterial.uexp",
+      "logical_package": "Game/Models/Master_ModelMaterial",
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Models/Master_ModelMaterial.uexp",
+      "pak_entry_sha1": "771c9030247034eea98a487112c3d55b26316061",
+      "pak_entry_sha1_verified_upstream": true,
+      "local_sha1_reverified": "771c9030247034eea98a487112c3d55b26316061"
+    },
+    {
+      "path": "exported/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton.gltf",
+      "kind": "umodel_export",
+      "bytes": 6427,
+      "sha256": "386eef0d7b268c173a6767421fb920a416fc5866d3978bcc27d5c0821c2fb440",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Characters\\Enemies\\Skeleton\\SK_Skeleton.gltf",
+      "logical_package": "Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton",
+      "source_originals": [
+        "raw/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton.uasset",
+        "raw/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "M_MossySkeleton"
+    },
+    {
+      "path": "exported/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton.bin",
+      "kind": "umodel_export",
+      "bytes": 14800,
+      "sha256": "645e0916de995d7c5c8c61ad7615207defe350370f3ab146dc6937168da40ac8",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Characters\\Enemies\\Skeleton\\SK_Skeleton.bin",
+      "logical_package": "Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton",
+      "source_originals": [
+        "raw/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton.uasset",
+        "raw/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "M_MossySkeleton"
+    },
+    {
+      "path": "exported/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.gltf",
+      "kind": "umodel_export",
+      "bytes": 2363,
+      "sha256": "2c7b2ec4e63d5906e719ad3be4b021729f13634d7cf3f4aed11ca877b0bd428d",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\SM_Helmet_NatureArmor.gltf",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor",
+      "source_originals": [
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.uasset",
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.bin",
+      "kind": "umodel_export",
+      "bytes": 4136,
+      "sha256": "71b5c255bc4f2a047db97c70edcd46a1c80893f17f49cae3a217a44c8c175b45",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\SM_Helmet_NatureArmor.bin",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor",
+      "source_originals": [
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.uasset",
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.gltf",
+      "kind": "umodel_export",
+      "bytes": 2372,
+      "sha256": "f961e05f8cafaff2e1a1f8787c2b19eb2b2925542993b267d684e6fa4c68b7b8",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\SproutARmor_SproutArmor.gltf",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.bin",
+      "kind": "umodel_export",
+      "bytes": 5612,
+      "sha256": "221a859bb40d6a457fa265983127a31ef6e1716fa7757dc4cd1c86cb9cee6c1e",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\SproutARmor_SproutArmor.bin",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.gltf",
+      "kind": "umodel_export",
+      "bytes": 2346,
+      "sha256": "9f1ea5ed8991b14b5d41cb2c12905e973fbddd7e18f8314cebef2fcac73afe56",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\L_Arm_SproutARmor.gltf",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.bin",
+      "kind": "umodel_export",
+      "bytes": 1180,
+      "sha256": "10c673c596e6242e62ffedf73b7c692acd7230ecec98b9d97b00b7d0b580642d",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\L_Arm_SproutARmor.bin",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.gltf",
+      "kind": "umodel_export",
+      "bytes": 2346,
+      "sha256": "fb4662d89bc73987806ebe5515be21d0559a0c7d580e63526ea68a2d3f4a8f44",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\R_Arm_SproutArmor.gltf",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.bin",
+      "kind": "umodel_export",
+      "bytes": 1180,
+      "sha256": "49401e548d09548af95a5354e15da58d85f9bfec9d310ef01607805c31ad3070",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\R_Arm_SproutArmor.bin",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.gltf",
+      "kind": "umodel_export",
+      "bytes": 2348,
+      "sha256": "bb93f785444e4e79143fea302a89f66e7e8254abf49dfee0cf496efb9dea3d8c",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\L_Leg_SproutArmor.gltf",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.bin",
+      "kind": "umodel_export",
+      "bytes": 1416,
+      "sha256": "d4c00897016be9e0716c704f569e77d8c346ba998de9ed62449032b58e4e9e16",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\L_Leg_SproutArmor.bin",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.gltf",
+      "kind": "umodel_export",
+      "bytes": 2346,
+      "sha256": "150baddbc7c51194ec08ff0f43bef1e0be6a63b29af2ff06e91a72629c53557f",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\R_Leg_SproutArmor.gltf",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.bin",
+      "kind": "umodel_export",
+      "bytes": 1416,
+      "sha256": "689316b6e27ef9421bd910a5d20eabf746db1441fb40bab348dda3a10d45e885",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_DLC4\\Actors\\Equipment\\Armor\\SproutArmor\\R_Leg_SproutArmor.bin",
+      "logical_package": "Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor",
+      "source_originals": [
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.uasset",
+        "raw/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": "MI_NatureArmor"
+    },
+    {
+      "path": "exported/Game/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton.png",
+      "kind": "umodel_export",
+      "bytes": 2366,
+      "sha256": "fdcbe40f0556da0c54983d7a9ccfbf30ec98e9ddd609045548e240c2105a97c0",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\T_MossySkeleton.png",
+      "logical_package": "Game/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton",
+      "source_originals": [
+        "raw/Game/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton.uasset",
+        "raw/Game/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Actors/Characters/Enemies/Skeleton/T_Skeleton_S.png",
+      "kind": "umodel_export",
+      "bytes": 204,
+      "sha256": "a98ae55ad29ecb51975198764e6ff6f15bfe523aeb3d1d778d5b46aa233eb806",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Characters\\Enemies\\Skeleton\\T_Skeleton_S.png",
+      "logical_package": "Game/Actors/Characters/Enemies/Skeleton/T_Skeleton_S",
+      "source_originals": [
+        "raw/Game/Actors/Characters/Enemies/Skeleton/T_Skeleton_S.uasset",
+        "raw/Game/Actors/Characters/Enemies/Skeleton/T_Skeleton_S.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor.png",
+      "kind": "umodel_export",
+      "bytes": 2046,
+      "sha256": "8835cc05d9cda7a98b651293e7b5614e90c40a84046643c89abc3bd6c99f43e8",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\T_NatureArmor.png",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor",
+      "source_originals": [
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor.uasset",
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S.png",
+      "kind": "umodel_export",
+      "bytes": 1075,
+      "sha256": "00917716e88e979996af2dc44ac4df331fccc91c96cebabd13bd127553c2a385",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\T_NatureArmor_S.png",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S",
+      "source_originals": [
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S.uasset",
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.props.txt",
+      "kind": "umodel_export",
+      "bytes": 2396,
+      "sha256": "7eef28b1f8e600f27979ad27fa05f5e2363e5299de8d99e378be0ff4e854453b",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\M_MossySkeleton.props.txt",
+      "logical_package": "Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton",
+      "source_originals": [
+        "raw/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.uasset",
+        "raw/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.mat",
+      "kind": "umodel_export",
+      "bytes": 100,
+      "sha256": "b56586a99592796713cb6f2a2420f51b6aeca5a9216ab94f0618dd7e6148abb2",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\M_MossySkeleton.mat",
+      "logical_package": "Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton",
+      "source_originals": [
+        "raw/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.uasset",
+        "raw/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Models/Master_ModelMaterial.props.txt",
+      "kind": "umodel_export",
+      "bytes": 12429,
+      "sha256": "fa8d69547b03f7d40ed0fd6c3b2773d621c6b93511695d290f0b80f1545f7e9f",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Models\\Master_ModelMaterial.props.txt",
+      "logical_package": "Game/Models/Master_ModelMaterial",
+      "source_originals": [
+        "raw/Game/Models/Master_ModelMaterial.uasset",
+        "raw/Game/Models/Master_ModelMaterial.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Models/Master_ModelMaterial.mat",
+      "kind": "umodel_export",
+      "bytes": 50,
+      "sha256": "ec40280e2cd689501b3367c4d77f4514c3e7e7a2ddeba33e4b34a3c08d03b0bc",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Models\\Master_ModelMaterial.mat",
+      "logical_package": "Game/Models/Master_ModelMaterial",
+      "source_originals": [
+        "raw/Game/Models/Master_ModelMaterial.uasset",
+        "raw/Game/Models/Master_ModelMaterial.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.props.txt",
+      "kind": "umodel_export",
+      "bytes": 3459,
+      "sha256": "0e7e1194d42d8188780206d8435e9e083ac5c64e5443f20e74ea467522c858ef",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\MI_NatureArmor.props.txt",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor",
+      "source_originals": [
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.uasset",
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.mat",
+      "kind": "umodel_export",
+      "bytes": 101,
+      "sha256": "f21d66efe4b02d44751aadda3fe1623adfd23c32d5d5765d9c4ba18e55e0ee91",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\MI_NatureArmor.mat",
+      "logical_package": "Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor",
+      "source_originals": [
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.uasset",
+        "raw/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/M_MasterEquipment.props.txt",
+      "kind": "umodel_export",
+      "bytes": 8833,
+      "sha256": "892718eff5edb9b661a6b7b1caaf160a0acd6890e2780b7321279dd098a40953",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Equipment\\M_MasterEquipment.props.txt",
+      "logical_package": "Game/Actors/Equipment/M_MasterEquipment",
+      "source_originals": [
+        "raw/Game/Actors/Equipment/M_MasterEquipment.uasset",
+        "raw/Game/Actors/Equipment/M_MasterEquipment.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/M_MasterEquipment.mat",
+      "kind": "umodel_export",
+      "bytes": 50,
+      "sha256": "39cdd73b21d9addd330124fe13774c87d5c4cf5d179030bdb3a267389b5a9e65",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Equipment\\M_MasterEquipment.mat",
+      "logical_package": "Game/Actors/Equipment/M_MasterEquipment",
+      "source_originals": [
+        "raw/Game/Actors/Equipment/M_MasterEquipment.uasset",
+        "raw/Game/Actors/Equipment/M_MasterEquipment.uexp"
+      ],
+      "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+      "material_override": null
+    },
+    {
+      "path": "evidence/bp_reference_evidence.json",
+      "kind": "property_analysis",
+      "bytes": 46248,
+      "sha256": "8797bef1a51795936fa179ce6a1f8b484b262f89571cc392f3a8c95097392851",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\bp_reference_evidence.json"
+    },
+    {
+      "path": "evidence/bp_reference_evidence.md",
+      "kind": "property_analysis",
+      "bytes": 5343,
+      "sha256": "bfa9d9140ae474e89068742fc69edb169d5576a4f5c248013a64591f57f93f0a",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\bp_reference_evidence.md"
+    },
+    {
+      "path": "evidence/armor_original_analysis.json",
+      "kind": "geometry_texture_analysis",
+      "bytes": 361326,
+      "sha256": "96325ba57434fa198d34b6f3de5606d2cc93b149bc28c9972b7513955a065734",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\scratch_armor_texture\\armor_original_analysis.json"
+    },
+    {
+      "path": "evidence/armor_original_analysis.md",
+      "kind": "geometry_texture_analysis",
+      "bytes": 5242,
+      "sha256": "79ac3b24e14c826e9b7d72c2170d0e78a210af17799b2eeb63926c77cf76b3ca",
+      "copied_from": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\scratch_armor_texture\\armor_original_analysis.md"
+    },
+    {
+      "path": "SOURCES.md",
+      "kind": "generated_provenance_document",
+      "bytes": 5473,
+      "sha256": "1f75f43496458731f1d161b568f0d39f18ba4f6285ec1f62b990c951e24053df",
+      "revision_note": "Added verified static emissive port follow-up and effective static-switch clarification; original asset entries unchanged."
+    }
+  ],
+  "additional_material_port_manifest": "material_port/manifest.json"
+}

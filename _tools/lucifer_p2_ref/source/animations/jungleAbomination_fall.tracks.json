@@ -1,0 +1,1384 @@
+{
+  "source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/Animation/jungleAbomination_fall.uasset",
+  "representation": "CUE4Parse ConvertAnims decoded tracks, before PSA frame resampling and mirror conversion. Ordinary clips retain decoded key arrays; additive clips are expanded by CUE4Parse. Accumulated rest scale is applied by CUE4Parse to key translations.",
+  "timing": "key time arrays are in source frame coordinates; empty arrays use CUE4Parse CAnimTrack implicit spacing",
+  "sequences": [
+    {
+      "Name": "jungleAbomination_fall",
+      "NumFrames": 9,
+      "FramesPerSecond": 27,
+      "AnimEndTime": 0.33333334,
+      "IsAdditive": false,
+      "tracks": [
+        {
+          "boneIndex": 0,
+          "boneName": "J_Root",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              -0.7071067,
+              0,
+              0,
+              0.7071069
+            ]
+          ],
+          "position": [
+            [
+              44.27237,
+              10.121833,
+              -2.2737368E-13
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 1,
+          "boneName": "J_Spine",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              -0.39538103,
+              0.586237,
+              -0.3953809,
+              0.58623713
+            ]
+          ],
+          "position": [
+            [
+              -44.272346,
+              -144.3171,
+              -8.649612
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 2,
+          "boneName": "J_Spine_01",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              -2.9802322E-08,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              183.81104,
+              0,
+              0
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 3,
+          "boneName": "J_Neck",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              -0.0019077808,
+              0.0023554862,
+              -0.62143195,
+              0.7834623
+            ]
+          ],
+          "position": [
+            [
+              131.45813,
+              2.2888184E-05,
+              0
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 4,
+          "boneName": "J_Head",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 5,
+          "boneName": "Head",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              -1.4901161E-08,
+              0,
+              0.15066713,
+              0.9885845
+            ],
+            [
+              -2.9802322E-08,
+              0,
+              0.15054433,
+              0.98860323
+            ],
+            [
+              0,
+              -2.980232E-08,
+              0.1502207,
+              0.98865247
+            ],
+            [
+              -1.4901161E-08,
+              -2.9802322E-08,
+              0.14976306,
+              0.9887219
+            ],
+            [
+              1.4901161E-08,
+              -5.9604645E-08,
+              0.14923842,
+              0.98880124
+            ],
+            [
+              -1.4901161E-08,
+              0,
+              0.14871374,
+              0.9888803
+            ],
+            [
+              0,
+              -2.980232E-08,
+              0.14825597,
+              0.98894906
+            ],
+            [
+              0,
+              -2.9802322E-08,
+              0.14793222,
+              0.9889975
+            ],
+            [
+              0,
+              0,
+              0.14780943,
+              0.9890159
+            ]
+          ],
+          "position": [
+            [
+              40.069965,
+              42.022713,
+              7.6293945E-06
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 6,
+          "boneName": "J_leftEye",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.7026165,
+              -0.07956174,
+              0.7030859,
+              0.07530046
+            ]
+          ],
+          "position": [
+            [
+              217.78151,
+              17.0652,
+              42.637222
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 7,
+          "boneName": "J_l_eyelidTop",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              -1.0356307E-06,
+              -6.0325093,
+              -0.0107450485
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 8,
+          "boneName": "J_l_eyelidBottom",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              6.798655E-07,
+              6.0325007,
+              -1.2636185E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 9,
+          "boneName": "J_rightEye",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.7026165,
+              -0.07956174,
+              0.7030859,
+              0.07530046
+            ]
+          ],
+          "position": [
+            [
+              217.92484,
+              17.707672,
+              -65.94577
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 10,
+          "boneName": "J_r_eyelidBottom",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              -6.593764E-06,
+              6.0325093,
+              0.0107450485
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 11,
+          "boneName": "J_r_eyelidTop",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              -9.899959E-07,
+              -6.0325613,
+              -0.010712028
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 12,
+          "boneName": "J_Jaw_01",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              -0.9894596,
+              0.14480133,
+              -0.0001142025,
+              0.001519762
+            ],
+            [
+              -0.98934114,
+              0.14560781,
+              -0.0001128912,
+              0.0015704891
+            ],
+            [
+              -0.9890424,
+              0.1476236,
+              -0.00010976195,
+              0.0015540202
+            ],
+            [
+              -0.9886479,
+              0.1502432,
+              -0.00010570883,
+              0.0015331862
+            ],
+            [
+              -0.9882464,
+              0.1528617,
+              -0.00010159611,
+              0.0015377096
+            ],
+            [
+              -0.9879328,
+              0.15487523,
+              -9.852648E-05,
+              0.0015607516
+            ],
+            [
+              -0.9878062,
+              0.15568046,
+              -9.7215176E-05,
+              0.0015709447
+            ],
+            [
+              -0.988661,
+              0.15015708,
+              -0.00010579826,
+              0.0015136169
+            ],
+            [
+              -0.99016625,
+              0.13988705,
+              -0.00012177229,
+              0.0015573172
+            ]
+          ],
+          "position": [
+            [
+              -1.2409511,
+              -20.782692,
+              -12.24764
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 13,
+          "boneName": "Je_JawEnd",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              207.42987,
+              0,
+              1.5258789E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 14,
+          "boneName": "J_L_Clavicle",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              -0.052838765,
+              -0.571245,
+              0.045418244,
+              0.81781685
+            ]
+          ],
+          "position": [
+            [
+              149.8869,
+              -23.818775,
+              95.8013
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 15,
+          "boneName": "Je_L_Clavicle",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              3.7252903E-09,
+              1
+            ]
+          ],
+          "position": [
+            [
+              178.74704,
+              -7.6293945E-06,
+              1.5258789E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 16,
+          "boneName": "J_L_Arm",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.77627355,
+              -0.24484052,
+              -0.5279418,
+              0.24234256
+            ]
+          ],
+          "position": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 17,
+          "boneName": "J_L_Elbow",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              3.520399E-07,
+              6.834743E-07,
+              -0.17501698,
+              0.98456544
+            ]
+          ],
+          "position": [
+            [
+              202.13455,
+              -1.66893E-06,
+              -1.5258789E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 18,
+          "boneName": "J_L_Wrist",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              -5.1409006E-07,
+              6.197952E-07,
+              1.3932586E-06,
+              1
+            ]
+          ],
+          "position": [
+            [
+              176.84134,
+              0.0002593994,
+              3.0517578E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 19,
+          "boneName": "J_R_Clavicle",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.028240442,
+              0.5888793,
+              0.046919122,
+              0.80636364
+            ]
+          ],
+          "position": [
+            [
+              149.8872,
+              -23.818783,
+              -95.80151
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 20,
+          "boneName": "Je_R_ClavicleEnd",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              186.85329,
+              0,
+              1.5258789E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 21,
+          "boneName": "J_R_arm_01",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              -0.98219264,
+              0.11435043,
+              -0.14906746,
+              0.0007078499
+            ]
+          ],
+          "position": [
+            [
+              -5.7468696,
+              6.258403,
+              -54.933567
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 22,
+          "boneName": "J_R_arm_02",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              5.9262675E-09,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              64.61904,
+              -9.536743E-07,
+              -1.5258789E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 23,
+          "boneName": "J_R_arm_04",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              1.4901161E-08,
+              -4.6449713E-08,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              -4.6449713E-08,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              -4.6449713E-08,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              -4.6449713E-08,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              -4.6449713E-08,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              -4.6449713E-08,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              -4.6449713E-08,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              -4.6449713E-08,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              0,
+              -2.8871E-08,
+              -0.08118439,
+              0.9966991
+            ]
+          ],
+          "position": [
+            [
+              264.47586,
+              3.8146973E-06,
+              0
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 24,
+          "boneName": "J_R_arm_06",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              1.4901161E-08,
+              3.958121E-09,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              3.958121E-09,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              3.958121E-09,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              3.958121E-09,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              3.958121E-09,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              3.958121E-09,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              3.958121E-09,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              1.4901161E-08,
+              3.958121E-09,
+              -0.008726537,
+              0.9999619
+            ],
+            [
+              0,
+              -3.72529E-09,
+              -0.11249713,
+              0.99365205
+            ]
+          ],
+          "position": [
+            [
+              229.24835,
+              1.5258789E-05,
+              1.5258789E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 25,
+          "boneName": "J_R_arm_08",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              1.4901161E-08,
+              -1.6298145E-08,
+              -0.008726537,
+              0.9999619
+            ]
+          ],
+          "position": [
+            [
+              193.27423,
+              -7.6293945E-06,
+              1.5258789E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 26,
+          "boneName": "J_flower1",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.50254375,
+              -0.49744323,
+              0.5025436,
+              0.49744338
+            ]
+          ],
+          "position": [
+            [
+              -63.912796,
+              -77.379776,
+              -0.9722614
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 27,
+          "boneName": "J_Petal_01",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              -0.36946157,
+              -0.602908,
+              -0.60290766,
+              0.3694624
+            ]
+          ],
+          "position": [
+            [
+              54.382305,
+              0.07655668,
+              -11.580163
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 28,
+          "boneName": "J_PetalEnd_01",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              -9.313226E-09,
+              1
+            ]
+          ],
+          "position": [
+            [
+              71.318665,
+              8.392334E-05,
+              -7.6293945E-06
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 29,
+          "boneName": "J_Petal_03",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.16734304,
+              -0.6870199,
+              -0.1673427,
+              0.68701994
+            ]
+          ],
+          "position": [
+            [
+              0.089834794,
+              54.401276,
+              -16.331348
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 30,
+          "boneName": "J_PetalEnd_03",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              7.450581E-09,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              72.390015,
+              1.9073486E-06,
+              -7.6293945E-06
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 31,
+          "boneName": "J_Petal_05",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.6029079,
+              -0.36946192,
+              0.36946213,
+              0.60290766
+            ]
+          ],
+          "position": [
+            [
+              -54.202312,
+              0.076305866,
+              -11.580131
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 32,
+          "boneName": "J_PetalEnd_05",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              2.9802322E-08,
+              1
+            ]
+          ],
+          "position": [
+            [
+              72.38987,
+              4.5776367E-05,
+              -9.584427E-05
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 33,
+          "boneName": "J_Petal_07",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.6881013,
+              0.16283908,
+              0.6881013,
+              0.16283941
+            ]
+          ],
+          "position": [
+            [
+              0.090129055,
+              -58.13907,
+              -10.149113
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 34,
+          "boneName": "J_PetalEnd_07",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              72.38984,
+              7.6293945E-06,
+              0
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 35,
+          "boneName": "J_Pelvis",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              -2.9802322E-08,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 36,
+          "boneName": "J_R_Leg",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.19576329,
+              0.9792452,
+              -0.0070553976,
+              0.05201734
+            ],
+            [
+              0.16255625,
+              0.9859309,
+              -0.005189792,
+              0.038584355
+            ],
+            [
+              0.0926181,
+              0.995429,
+              -0.0029657742,
+              0.02311282
+            ],
+            [
+              0.026561022,
+              0.9992697,
+              -0.0033589825,
+              0.027262656
+            ],
+            [
+              -0.0024545116,
+              0.9993691,
+              -0.0043398435,
+              0.035164736
+            ],
+            [
+              0.026561022,
+              0.9992697,
+              -0.0033589825,
+              0.027262656
+            ],
+            [
+              0.0926181,
+              0.995429,
+              -0.0029657742,
+              0.02311282
+            ],
+            [
+              0.16255625,
+              0.9859309,
+              -0.005189792,
+              0.038584355
+            ],
+            [
+              0.19576329,
+              0.9792452,
+              -0.0070553976,
+              0.05201734
+            ]
+          ],
+          "position": [
+            [
+              34.271133,
+              18.038986,
+              -153.98697
+            ],
+            [
+              28.488785,
+              4.140877,
+              -158.58592
+            ],
+            [
+              15.355255,
+              -27.425968,
+              -163.776
+            ],
+            [
+              2.087799,
+              -59.31469,
+              -162.05093
+            ],
+            [
+              -3.8429108,
+              -73.5694,
+              -158.98926
+            ],
+            [
+              2.087799,
+              -59.31469,
+              -162.05093
+            ],
+            [
+              15.355255,
+              -27.425968,
+              -163.776
+            ],
+            [
+              28.488785,
+              4.140877,
+              -158.58592
+            ],
+            [
+              34.271133,
+              18.038986,
+              -153.98697
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 37,
+          "boneName": "Je_R_Leg",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "position": [
+            [
+              169.07515,
+              4.7683716E-07,
+              0
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 38,
+          "boneName": "J_L_Leg",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.029340928,
+              -0.99956685,
+              -0.0013731046,
+              0.0018329737
+            ],
+            [
+              0.022552019,
+              0.9996868,
+              -0.00066056097,
+              0.01082972
+            ],
+            [
+              0.13530746,
+              0.9906344,
+              -0.0024071147,
+              0.018154921
+            ],
+            [
+              -0.23422249,
+              -0.97216713,
+              -5.321018E-05,
+              0.0055562914
+            ],
+            [
+              -0.25620532,
+              -0.9661782,
+              -0.0030324124,
+              0.029143605
+            ],
+            [
+              -0.11201228,
+              -0.99359095,
+              -0.002160944,
+              0.015019422
+            ],
+            [
+              -0.10578074,
+              0.9943019,
+              -0.00010843575,
+              0.013194446
+            ],
+            [
+              -0.23107176,
+              0.9726231,
+              -0.0008046179,
+              0.024688568
+            ],
+            [
+              -0.26898116,
+              0.96279943,
+              -0.00070495903,
+              0.025804708
+            ]
+          ],
+          "position": [
+            [
+              -8.056274,
+              -83.69623,
+              194.9151
+            ],
+            [
+              2.5311432,
+              -66.396454,
+              199.52504
+            ],
+            [
+              27.975266,
+              -26.72028,
+              202.22723
+            ],
+            [
+              57.58052,
+              14.06929,
+              193.49013
+            ],
+            [
+              80.927986,
+              35.37407,
+              183.52524
+            ],
+            [
+              91.75683,
+              26.589828,
+              188.83499
+            ],
+            [
+              92.27603,
+              -2.5298553,
+              202.89453
+            ],
+            [
+              87.47259,
+              -35.55465,
+              212.8522
+            ],
+            [
+              84.25463,
+              -51.43653,
+              215.52037
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        },
+        {
+          "boneIndex": 39,
+          "boneName": "Je_L_Leg",
+          "sourceTrackPresent": true,
+          "rotation": [
+            [
+              0.5896983,
+              0,
+              0,
+              0.8076236
+            ]
+          ],
+          "position": [
+            [
+              169.08884,
+              -7.6293945E-06,
+              0
+            ]
+          ],
+          "scale": [],
+          "time": [],
+          "rotationTime": [],
+          "positionTime": [],
+          "scaleTime": []
+        }
+      ]
+    }
+  ]
+}

@@ -19,3 +19,4 @@ execute if entity @a[tag=rpg.h.lucifer_tag1] run function rpg:item/extra/lucifer
 execute if entity @a[tag=rpg.h.leviathan_tag1] run function rpg:item/extra/leviathan
 execute unless entity @a[tag=rpg.h.leviathan_tag1] if entity @e[type=minecraft:marker,tag=rpg.levi.anchor] run function rpg:item/extra/leviathan
 function rpg:item/extra/michael_guard
+function rpg:item/extra/grave_bane_guard

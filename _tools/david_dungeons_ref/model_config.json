@@ -1,0 +1,94 @@
+{
+ "model_scale": 8.418679523257076,
+ "height_blocks": 2.1,
+ "source_height_cm": 207.87107944488525,
+ "turn": 0,
+ "merge": {
+  "head": [
+   "mouth",
+   "l_eye_pupil",
+   "l_eye_iris",
+   "r_eye_pupil",
+   "r_eye_iris"
+  ]
+ },
+ "held_bone": null,
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\jacques"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Player_Master_Idle",
+   "seconds": 3.3333333,
+   "loop": true,
+   "ticks": 67,
+   "max_bone_error_px": 7.69322022356814e-08,
+   "max_vertex_error_px": 2.1592365777853855e-07,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Player_Master_Walk",
+   "seconds": 4.3333335,
+   "loop": true,
+   "ticks": 87,
+   "max_bone_error_px": 6.396811749757744e-05,
+   "max_vertex_error_px": 0.00010258799283796963,
+   "notifies": []
+  },
+  {
+   "clip": "throw",
+   "source": "Player_Master_ShowOff",
+   "seconds": 0.875,
+   "loop": false,
+   "ticks": 18,
+   "max_bone_error_px": 0.0016486055896489519,
+   "max_vertex_error_px": 0.0014812446843304448,
+   "notifies": []
+  },
+  {
+   "clip": "hero",
+   "source": "Player_Master_Emote_HeroPose",
+   "seconds": 2.0,
+   "loop": false,
+   "ticks": 40,
+   "max_bone_error_px": 0.005859451546496385,
+   "max_vertex_error_px": 0.0071462918591909475,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_Player_ShowWeaponSlot_C",
+     null
+    ],
+    [
+     0.0001,
+     "TimedSoundEffect",
+     null
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "david",
+  "source_mesh_sha256": "c69a08825b0f3a9acbef6e7b8588b0cdb78eee6d7a31deee2cc02bcb58ceb24d",
+  "triangles": 154,
+  "all_triangles_covered_once": true,
+  "bones": 38,
+  "plane_groups": 25,
+  "display_parts": 21,
+  "elements": 79,
+  "direct_uv_elements": 60,
+  "baked_elements": 19,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Valorie": 0
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

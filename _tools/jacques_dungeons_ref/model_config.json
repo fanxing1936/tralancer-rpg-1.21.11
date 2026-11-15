@@ -1,0 +1,615 @@
+{
+ "model_scale": 9.621348026579515,
+ "height_blocks": 2.4,
+ "source_height_cm": 207.87107944488525,
+ "turn": 0,
+ "merge": {
+  "head": [
+   "mouth",
+   "l_eye_pupil",
+   "l_eye_iris",
+   "r_eye_pupil",
+   "r_eye_iris",
+   "helmet",
+   "jacques_head_000",
+   "jacques_head_002",
+   "jacques_head_011",
+   "jacques_head_012",
+   "jacques_head_armor_013"
+  ],
+  "body": [
+   "body_armor",
+   "armor"
+  ],
+  "l_arm": [
+   "l_arm_armor",
+   "l_pauldron",
+   "jacques_l_pauldron_029"
+  ],
+  "r_arm": [
+   "r_arm_armor",
+   "r_pauldron",
+   "jacques_r_pauldron_031"
+  ],
+  "l_leg": [
+   "l_leg_armor",
+   "l_greave"
+  ],
+  "r_leg": [
+   "r_leg_armor",
+   "r_greave"
+  ]
+ },
+ "held_bone": null,
+ "attachments": [
+  {
+   "name": "armor",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ChampionsArmor\\ChampionsArmor_ChampionsArmor.glb",
+   "bone": "J_Shoulders",
+   "material": "HEROS",
+   "component": "armor",
+   "attach": "J_Shoulders"
+  },
+  {
+   "name": "helmet",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ChampionsArmor\\Helmet_ChampionsArmor.glb",
+   "bone": "J_Head",
+   "material": "HEROS",
+   "component": "helmet",
+   "attach": "J_Head"
+  },
+  {
+   "name": "l_pauldron",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ChampionsArmor\\L_Arm_ChampionsArmor.glb",
+   "bone": "J_L_Hand",
+   "material": "HEROS",
+   "component": "l_pauldron",
+   "attach": "J_L_Hand"
+  },
+  {
+   "name": "r_pauldron",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ChampionsArmor\\R_Arm_ChampionsArmor.glb",
+   "bone": "J_R_Hand",
+   "material": "HEROS",
+   "component": "r_pauldron",
+   "attach": "J_R_Hand"
+  },
+  {
+   "name": "l_greave",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ChampionsArmor\\L_Leg_ChampionsArmor.glb",
+   "bone": "J_L_Foot",
+   "material": "HEROS",
+   "component": "l_greave",
+   "attach": "J_L_Foot"
+  },
+  {
+   "name": "r_greave",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ChampionsArmor\\R_Leg_ChampionsArmor.glb",
+   "bone": "J_R_Foot",
+   "material": "HEROS",
+   "component": "r_greave",
+   "attach": "J_R_Foot"
+  },
+  {
+   "name": "glaive",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\MeleeWeapons\\Glaive_Unique1\\SM_Glaive_Unique1.glb",
+   "bone": "J_R_Weapon",
+   "material": "GLAIVE",
+   "component": "glaive",
+   "attach": "J_R_Weapon"
+  },
+  {
+   "name": "harp1",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\RangedWeapons\\ScatterCrossbow_Unique1\\SM_HarpCrossbow1.glb",
+   "bone": "J_L_Weapon",
+   "material": "HARP",
+   "component": "harp1",
+   "attach": "J_L_Weapon"
+  },
+  {
+   "name": "harp2",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\RangedWeapons\\ScatterCrossbow_Unique1\\SM_HarpCrossbow2.glb",
+   "bone": "J_L_Weapon",
+   "material": "HARP",
+   "component": "harp2",
+   "attach": "J_L_Weapon"
+  },
+  {
+   "name": "harp3",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\RangedWeapons\\ScatterCrossbow_Unique1\\SM_HarpCrossbow3.glb",
+   "bone": "J_L_Weapon",
+   "material": "HARP",
+   "component": "harp3",
+   "attach": "J_L_Weapon"
+  },
+  {
+   "name": "harp4",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\RangedWeapons\\ScatterCrossbow_Unique1\\SM_HarpCrossbow4.glb",
+   "bone": "J_L_Weapon",
+   "material": "HARP",
+   "component": "harp4",
+   "attach": "J_L_Weapon"
+  },
+  {
+   "name": "cape",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\jacques\\assets\\Dungeons\\Content\\Actors\\Equipment\\..\\Characters\\Player\\Capes\\SK_Cape.glb",
+   "bone": "J_Shoulders",
+   "material": "CAPE",
+   "component": "cape",
+   "attach": "J_Shoulders"
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\jacques"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Player_Master_Idle_Glaive",
+   "seconds": 3.3333333,
+   "loop": true,
+   "ticks": 67,
+   "max_bone_error_px": 6.913758202232877e-08,
+   "max_vertex_error_px": 2.1592365777853855e-07,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Player_Master_Walk_Glaive",
+   "seconds": 4.3333335,
+   "loop": true,
+   "ticks": 87,
+   "max_bone_error_px": 6.828624145520085e-05,
+   "max_vertex_error_px": 0.00011005184773152175,
+   "notifies": []
+  },
+  {
+   "clip": "run",
+   "source": "Player_Master_Run_Glaive",
+   "seconds": 2.1666667,
+   "loop": true,
+   "ticks": 44,
+   "max_bone_error_px": 0.0016771373237610024,
+   "max_vertex_error_px": 0.0017218872013281567,
+   "notifies": [
+    [
+     0.1704,
+     "step",
+     null
+    ],
+    [
+     0.4691,
+     "step",
+     null
+    ],
+    [
+     0.7093,
+     "step",
+     null
+    ],
+    [
+     0.9967,
+     "step",
+     null
+    ],
+    [
+     1.271,
+     "step",
+     null
+    ],
+    [
+     1.5356,
+     "step",
+     null
+    ],
+    [
+     1.8001,
+     "step",
+     null
+    ],
+    [
+     2.0745,
+     "step",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "slash1",
+   "source": "Player_Master_GlaiveUnique1Combo_Attack1",
+   "seconds": 0.79999995,
+   "loop": false,
+   "ticks": 16,
+   "max_bone_error_px": 0.013103811318924425,
+   "max_vertex_error_px": 0.02980596274314393,
+   "notifies": [
+    [
+     0.2557,
+     "Play Particle Effect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.305,
+     "P_Slash",
+     null
+    ],
+    [
+     0.3412,
+     "glaive_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "slash2",
+   "source": "Player_Master_GlaiveUnique1Combo_Attack2",
+   "seconds": 1.0999999,
+   "loop": false,
+   "ticks": 22,
+   "max_bone_error_px": 0.006141208000633536,
+   "max_vertex_error_px": 0.011955048213949312,
+   "notifies": [
+    [
+     0.2993,
+     "Play Particle Effect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.4081,
+     "P_Slash",
+     null
+    ],
+    [
+     0.4515,
+     "glaive_second_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "sweep",
+   "source": "Player_Master_GlaiveUnique1Combo_Attack3",
+   "seconds": 0.95000005,
+   "loop": false,
+   "ticks": 20,
+   "max_bone_error_px": 0.05962890731061955,
+   "max_vertex_error_px": 0.1536346634568927,
+   "notifies": [
+    [
+     0.1478,
+     "glaive_third_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1646,
+     "Play Particle Effect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.216,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "load",
+   "source": "Player_Master_Crossbow_Load",
+   "seconds": 0.7,
+   "loop": false,
+   "ticks": 14,
+   "max_bone_error_px": 0.050636514032066426,
+   "max_vertex_error_px": 0.05217908394812406,
+   "notifies": [
+    [
+     0.0703,
+     "AnimNS_BowLoad_C",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "charge",
+   "source": "Player_Master_Crossbow_Charge",
+   "seconds": 0.00999999,
+   "loop": true,
+   "ticks": 1,
+   "max_bone_error_px": 5.926257857415843e-08,
+   "max_vertex_error_px": 5.973748174285282e-08,
+   "notifies": []
+  },
+  {
+   "clip": "shoot",
+   "source": "Player_Master_Crossbow_Shoot",
+   "seconds": 0.24000007,
+   "loop": false,
+   "ticks": 5,
+   "max_bone_error_px": 0.0025303478152615723,
+   "max_vertex_error_px": 0.006055333391246237,
+   "notifies": [
+    [
+     0.0383,
+     "AnimNS_BowFire_C",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "roll_f",
+   "source": "Player_Master_DodgeRollForward",
+   "seconds": 0.625,
+   "loop": false,
+   "ticks": 13,
+   "max_bone_error_px": 0.09373483565936451,
+   "max_vertex_error_px": 0.09828031849652777,
+   "notifies": []
+  },
+  {
+   "clip": "roll_b",
+   "source": "Player_Master_DodgeRollBackward",
+   "seconds": 0.5833333,
+   "loop": false,
+   "ticks": 12,
+   "max_bone_error_px": 0.008855053393601011,
+   "max_vertex_error_px": 0.029532907574163502,
+   "notifies": []
+  },
+  {
+   "clip": "horn",
+   "source": "Player_Master_HornBlow",
+   "seconds": 0.625,
+   "loop": false,
+   "ticks": 13,
+   "max_bone_error_px": 0.00014801048349294066,
+   "max_vertex_error_px": 0.0027358638071345288,
+   "notifies": []
+  },
+  {
+   "clip": "gong",
+   "source": "Player_Master_Gong",
+   "seconds": 0.625,
+   "loop": false,
+   "ticks": 13,
+   "max_bone_error_px": 0.0002976472853123561,
+   "max_vertex_error_px": 0.002479028589338172,
+   "notifies": []
+  },
+  {
+   "clip": "mighty",
+   "source": "Player_Master_Emote_MightySword",
+   "seconds": 4.266667,
+   "loop": false,
+   "ticks": 86,
+   "max_bone_error_px": 0.007707059379028082,
+   "max_vertex_error_px": 0.012652009166953197,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_Player_HideWeapon_C",
+     null
+    ],
+    [
+     0.0001,
+     "TimedSoundEffect",
+     null
+    ],
+    [
+     0.6667,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "showoff",
+   "source": "Player_Master_ShowOff",
+   "seconds": 0.875,
+   "loop": false,
+   "ticks": 18,
+   "max_bone_error_px": 0.0016486055896489519,
+   "max_vertex_error_px": 0.0014812446843304448,
+   "notifies": []
+  },
+  {
+   "clip": "kneel",
+   "source": "Player_Master_Emote_KneelPose",
+   "seconds": 1.9333333,
+   "loop": false,
+   "ticks": 39,
+   "max_bone_error_px": 0.061056059039704194,
+   "max_vertex_error_px": 0.07267376651542043,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_Player_HideWeapon_C",
+     null
+    ],
+    [
+     0.0001,
+     "TimedSoundEffect",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "hero",
+   "source": "Player_Master_Emote_HeroPose",
+   "seconds": 2.0,
+   "loop": false,
+   "ticks": 40,
+   "max_bone_error_px": 0.005859451546496385,
+   "max_vertex_error_px": 0.0071462918591909475,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_Player_ShowWeaponSlot_C",
+     null
+    ],
+    [
+     0.0001,
+     "TimedSoundEffect",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "leap",
+   "source": "Player_Master_TeleportInitiate_Start",
+   "seconds": 1.92,
+   "loop": false,
+   "ticks": 39,
+   "max_bone_error_px": 0.0008096895419490051,
+   "max_vertex_error_px": 0.008570196465226922,
+   "notifies": [
+    [
+     0.0001,
+     "PS_Player_TeleportInitiate",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.1337,
+     "PS_Player_TeleportSocket",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3024,
+     "Player_Teleport_Start_Magic-Spark",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.7611,
+     "Player_Teleport_Start_Swoosh-slow_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.2384,
+     "Teleport_Start_Swoosh-Slow_02",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "land",
+   "source": "Player_Master_TeleportLanding",
+   "seconds": 1.4166666,
+   "loop": false,
+   "ticks": 29,
+   "max_bone_error_px": 0.030025930319203937,
+   "max_vertex_error_px": 0.06759396531087358,
+   "notifies": [
+    [
+     0.0366,
+     "Player_Teleport_Landing",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0561,
+     "PS_Player_TeleportLanding",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "curse",
+   "source": "Player_Master_Powershake",
+   "seconds": 0.8333333,
+   "loop": false,
+   "ticks": 17,
+   "max_bone_error_px": 0.0035338541704969697,
+   "max_vertex_error_px": 0.0066796276242144965,
+   "notifies": [
+    [
+     0.0114,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "stun",
+   "source": "Player_Master_Stun",
+   "seconds": 1.6666666,
+   "loop": true,
+   "ticks": 34,
+   "max_bone_error_px": 0.0010855692951094544,
+   "max_vertex_error_px": 0.003354343073883152,
+   "notifies": []
+  },
+  {
+   "clip": "hurt",
+   "source": "Player_Master_GetHitFront",
+   "seconds": 1.875,
+   "loop": false,
+   "ticks": 38,
+   "max_bone_error_px": 0.002832619394622411,
+   "max_vertex_error_px": 0.008149240501074406,
+   "notifies": []
+  },
+  {
+   "clip": "fall",
+   "source": "Player_Master_DownedFloor_Initiate",
+   "seconds": 1.2,
+   "loop": false,
+   "ticks": 24,
+   "max_bone_error_px": 0.10753379186891107,
+   "max_vertex_error_px": 0.1641401526701175,
+   "notifies": [
+    [
+     0.0365,
+     "gong_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0512,
+     "Play Sound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0556,
+     "PS_DownedInitiate",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.1881,
+     "Play Sound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "down",
+   "source": "Player_Master_DownedFloored_Loop",
+   "seconds": 0.416,
+   "loop": true,
+   "ticks": 9,
+   "max_bone_error_px": 6.638933213093438e-08,
+   "max_vertex_error_px": 6.640126185564212e-08,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "jacques",
+  "source_mesh_sha256": "c69a08825b0f3a9acbef6e7b8588b0cdb78eee6d7a31deee2cc02bcb58ceb24d",
+  "triangles": 5116,
+  "all_triangles_covered_once": true,
+  "bones": 38,
+  "plane_groups": 45,
+  "display_parts": 35,
+  "elements": 1040,
+  "direct_uv_elements": 904,
+  "baked_elements": 136,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Valorie": 0,
+   "HEROS": 1,
+   "GLAIVE": 2,
+   "HARP": 3,
+   "CAPE": 4
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ }
+}

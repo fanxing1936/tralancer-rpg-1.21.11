@@ -1,6 +1,6 @@
 # TRALANCER RPG 调试指令手册
 
-> 共 75 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
+> 共 90 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
 
 所有命令默认需要开启作弊或拥有管理员权限。带 `@s` 的入口必须由目标玩家自己执行；命令方块或服务器控制台不会自动获得玩家上下文。
 
@@ -27,6 +27,8 @@
 | `/function rpg:command/give/weapon_up_item` | 发放全部武器分支唱片。 | 会发给所有在线玩家（@a），多人服慎用。 影响：全体背包；标记：群体发放。 |
 | `/function rpg:command/give/extra` | 发放额外／导入内容测试物品。 | 会发给所有在线玩家（@a），可能占用较多背包格。 影响：全体背包；标记：群体发放。 |
 | `/function rpg:command/give/michael` | 只发放米迦勒脊骨与米迦勒肋骨（[神圣] 双持圣骸）。 | 必须由玩家执行；主手一把、副手一把即触发［骨中之骨］。 影响：自身背包；标记：常规。 |
+| `/function rpg:command/give/armor` | 只发放全部护甲（八套，含四套新护甲与神圣套补全）。 | 必须由玩家执行；穿齐同一套四件即触发套装加成。 影响：自身背包；标记：常规。 |
+| `/function rpg:command/give/dungeons` | 只发放坟墓克星与竖琴弩（Minecraft Dungeons 原作武器）。 | 必须由玩家执行。 影响：自身背包；标记：常规。 |
 | `/function rpg:inquest/give/all_tools` | 发放七罪媒介、仪式工具、三类粉笔和真名残页。 | 必须由玩家执行；用于驱魔流程联调。 影响：自身背包；标记：常规。 |
 | `/function rpg:ritual/life_tree/give/all` | 发放卡巴拉血契、十源质与真·十字架。 | 必须由玩家执行；仅测试／管理入口。 影响：自身背包；标记：常规。 |
 
@@ -66,6 +68,19 @@
 | `/function rpg:pact/debug/up` | 让执行者直接升一阶。 | 需要已立约，第三阶时无效。 影响：七十二柱契约；标记：常规。 |
 | `/function rpg:pact/debug/lords` | 把七位领主记为已被执行者击败。 | 只影响真名阶的条件。 影响：七十二柱契约；标记：常规。 |
 | `/function rpg:pope_fight/clear` | 清除教皇战的全部实体。 | 战斗卡住或测试收尾时使用。 影响：教皇战；标记：清理。 |
+| `/function rpg:lucifer_boss/summon` | 在执行位置开始最终 Boss 路西法：晨星之蛇 → 知善恶树（古龙待做）。 | 同一时间只允许一场；战场半径 40 格，没人满 60 秒判负清场。与七罪领主路西法是两个 Boss。 影响：最终 Boss；标记：生成战斗。 |
+| `/function rpg:lucifer_boss/debug/stage2` | 召唤后直接打到一阶段底线，走变身演出进入知善恶树。 | 同一时间只允许一场。 影响：最终 Boss；标记：生成战斗。 |
+| `/function rpg:lucifer_boss/clear` | 清除最终 Boss 路西法的全部实体。 | 战斗卡住或测试收尾时使用。 影响：最终 Boss；标记：清理。 |
+| `/function rpg:usurper_boss/summon` | 在执行位置开始篡夺者（达里奥·所罗门）战：所罗门之裔 → 篡夺圣灵。 | 同一时间只允许一场；战场半径 40 格。 影响：篡夺者；标记：生成战斗。 |
+| `/function rpg:usurper_boss/debug/stage2` | 召唤后直接打到一阶段底线，走变身进入二阶段。 | 同一时间只允许一场。 影响：篡夺者；标记：生成战斗。 |
+| `/function rpg:usurper_boss/clear` | 清除篡夺者战的全部实体。 | 战斗卡住或测试收尾时使用。 影响：篡夺者；标记：清理。 |
+| `/function rpg:jacques_boss/summon` | 在执行位置开始圣殿大团长雅克战：圣殿之誓 → 火刑柱。 | 同一时间只允许一场；战场半径 40 格。 影响：雅克；标记：生成战斗。 |
+| `/function rpg:jacques_boss/debug/stage2` | 召唤后直接打到一阶段底线，走火刑柱变身进入二阶段。 | 同一时间只允许一场。 影响：雅克；标记：生成战斗。 |
+| `/function rpg:jacques_boss/clear` | 清除雅克战的全部实体（含大卫的幽灵与召来的圣卫）。 | 战斗卡住或测试收尾时使用。 影响：雅克；标记：清理。 |
+| `/function rpg:jacques_ally/give` | 给自己一件圣殿誓约（右键召友军雅克 20 秒，冷却 3 分钟）。 | 必须由玩家执行；正常由击败雅克发放。 影响：雅克；标记：发放。 |
+| `/function rpg:jacques_ally/debug/summon` | 在身前召一个友军雅克，不走冷却。 | 必须由玩家执行。 影响：雅克；标记：生成单位。 |
+| `/function rpg:jacques_ally/debug/reset_cd` | 清掉自己的圣殿誓约冷却。 | 必须由玩家执行。 影响：雅克；标记：常规。 |
+| `/function rpg:jacques_ally/clear` | 清掉所有友军雅克。 | 测试收尾时使用。 影响：雅克；标记：清理。 |
 
 ## 七柱罪仆
 

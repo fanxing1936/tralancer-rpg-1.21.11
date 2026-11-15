@@ -7,4 +7,4 @@ particle trial_omen ~ ~1 ~ 4 1 4 0.1 72 normal
 particle reverse_portal ~ ~1 ~ 4 1.5 4 0.3 72 normal
 playsound minecraft:entity.warden.roar hostile @a[distance=..36] ~ ~ ~ 1.1 0.55
 playsound minecraft:entity.wither.spawn hostile @a[distance=..40] ~ ~ ~ 0.7 0.45
-execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult0_hit
+execute as @e[tag=rpg.unit.f,distance=..10] run function rpg:taint/ult0_hit

@@ -1,0 +1,1269 @@
+{
+  "scope": "Read-only original cooked package maps and tagged default/component properties; no Blueprint bytecode or native constructors executed; no models modified.",
+  "format_assumption": "UE4.22 package layout / effective version 517; unversioned package headers. Full import/export table boundaries checked. All selected top-level export property streams parsed to None terminators.",
+  "parser": "ue4_bp.py",
+  "format_references": [
+    "https://github.com/gildor2/UEViewer/blob/master/Unreal/UnrealPackage/UnPackage4.cpp",
+    "https://github.com/gildor2/UEViewer/blob/master/Unreal/UnObject.cpp"
+  ],
+  "mossy_skeleton": {
+    "evidence_level": "Actual serialized ObjectProperty assignments, stronger than name/import presence",
+    "generated_class_super": "/Game/Actors/Characters/Enemies/BP_MobCharacter.BP_MobCharacter_C",
+    "cdo_mesh": {
+      "serialized": true,
+      "value": {
+        "index": 46,
+        "path": "/Game/Actors/Characters/Enemies/MossySkeleton/BP_MossySkeletonCharacter.Default__BP_MossySkeletonCharacter_C.CharacterMesh0"
+      },
+      "type": "ObjectProperty",
+      "export_index": 3,
+      "property_tag_offset_in_export": 463,
+      "value_offset_in_uexp": 864,
+      "size": 4
+    },
+    "component_template": "/Game/Actors/Characters/Enemies/BP_MobCharacter.Default__BP_MobCharacter_C.CharacterMesh0",
+    "skeletal_mesh": {
+      "serialized": true,
+      "value": {
+        "index": -110,
+        "path": "/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton.SK_Skeleton"
+      },
+      "type": "ObjectProperty",
+      "export_index": 46,
+      "property_tag_offset_in_export": 29,
+      "value_offset_in_uexp": 6555,
+      "size": 4
+    },
+    "override_materials": {
+      "serialized": true,
+      "value": [
+        {
+          "index": -69,
+          "path": "/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton.M_MossySkeleton"
+        }
+      ],
+      "type": "ArrayProperty",
+      "export_index": 46,
+      "property_tag_offset_in_export": 58,
+      "value_offset_in_uexp": 6592,
+      "size": 8
+    },
+    "attach_parent": {
+      "serialized": true,
+      "value": {
+        "index": 14,
+        "path": "/Game/Actors/Characters/Enemies/MossySkeleton/BP_MossySkeletonCharacter.Default__BP_MossySkeletonCharacter_C.CollisionCylinder"
+      },
+      "type": "ObjectProperty",
+      "export_index": 46,
+      "property_tag_offset_in_export": 99,
+      "value_offset_in_uexp": 6625,
+      "size": 4
+    },
+    "relative_location": {
+      "serialized": true,
+      "value": [
+        0.0,
+        0.0,
+        -90.0
+      ],
+      "type": "StructProperty",
+      "export_index": 46,
+      "property_tag_offset_in_export": 128,
+      "value_offset_in_uexp": 6678,
+      "size": 12
+    },
+    "relative_rotation_pitch_yaw_roll": {
+      "serialized": true,
+      "value": [
+        0.0,
+        -90.00020599365234,
+        0.0
+      ],
+      "type": "StructProperty",
+      "export_index": 46,
+      "property_tag_offset_in_export": 189,
+      "value_offset_in_uexp": 6739,
+      "size": 12
+    },
+    "relative_scale": {
+      "serialized": false,
+      "value": null,
+      "note": "No local serialized override; do not label as a measured identity transform."
+    },
+    "material": {
+      "parent": {
+        "serialized": true,
+        "value": {
+          "index": -2,
+          "path": "/Game/Models/Master_ModelMaterial.Master_ModelMaterial"
+        },
+        "type": "ObjectProperty",
+        "export_index": 1,
+        "property_tag_offset_in_export": 0,
+        "value_offset_in_uexp": 25,
+        "size": 4
+      },
+      "texture_parameter_assignments": [
+        {
+          "name": "Specular",
+          "value": {
+            "index": -9,
+            "path": "/Game/Actors/Characters/Enemies/Skeleton/T_Skeleton_S.T_Skeleton_S"
+          }
+        },
+        {
+          "name": "Texture",
+          "value": {
+            "index": -8,
+            "path": "/Game/Actors/Characters/Enemies/MossySkeleton/T_MossySkeleton.T_MossySkeleton"
+          }
+        }
+      ],
+      "stored_base_property_overrides": {
+        "properties": [
+          {
+            "name": "TwoSided",
+            "type": "BoolProperty",
+            "array_index": 0,
+            "tag_offset": 0,
+            "value_offset": 26,
+            "size": 0,
+            "metadata": {
+              "bool_value": true
+            },
+            "value": true
+          },
+          {
+            "name": "BlendMode",
+            "type": "ByteProperty",
+            "array_index": 0,
+            "tag_offset": 26,
+            "value_offset": 59,
+            "size": 8,
+            "metadata": {
+              "enum": "EBlendMode"
+            },
+            "value": "BLEND_Masked"
+          },
+          {
+            "name": "OpacityMaskClipValue",
+            "type": "FloatProperty",
+            "array_index": 0,
+            "tag_offset": 67,
+            "value_offset": 92,
+            "size": 4,
+            "metadata": {},
+            "value": 0.10000000149011612
+          }
+        ]
+      },
+      "caution": "Stored override values alone do not establish bOverride flags or runtime shader behavior."
+    },
+    "skeletal_mesh_skeleton": {
+      "serialized": true,
+      "value": {
+        "index": -9,
+        "path": "/Game/Actors/Characters/Enemies/Skeleton/Skeleton_Skeleton.Skeleton_Skeleton"
+      },
+      "type": "ObjectProperty",
+      "export_index": 1,
+      "property_tag_offset_in_export": 0,
+      "value_offset_in_uexp": 25,
+      "size": 4
+    }
+  },
+  "nature_armor": {
+    "identity_scope": "Root Rot identity was established by parent task texture comparison; this report independently proves NatureArmor asset assignments.",
+    "blueprint": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor",
+    "generated_class_super": "/Script/Dungeons.GearActor",
+    "construction_root_nodes": {
+      "serialized": true,
+      "value": [
+        {
+          "index": 12,
+          "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.BP_NatureArmor_C.SimpleConstructionScript_0.SCS_Node_1"
+        },
+        {
+          "index": 13,
+          "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.BP_NatureArmor_C.SimpleConstructionScript_0.SCS_Node_2"
+        },
+        {
+          "index": 14,
+          "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.BP_NatureArmor_C.SimpleConstructionScript_0.SCS_Node_3"
+        },
+        {
+          "index": 15,
+          "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.BP_NatureArmor_C.SimpleConstructionScript_0.SCS_Node_4"
+        },
+        {
+          "index": 16,
+          "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.BP_NatureArmor_C.SimpleConstructionScript_0.SCS_Node_6"
+        },
+        {
+          "index": 17,
+          "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor.BP_NatureArmor_C.SimpleConstructionScript_0.SCS_Node_7"
+        }
+      ],
+      "type": "ArrayProperty",
+      "export_index": 18,
+      "property_tag_offset_in_export": 0,
+      "value_offset_in_uexp": 2352,
+      "size": 28
+    },
+    "components": [
+      {
+        "scs_export": 12,
+        "component_export": 19,
+        "component_name": "FurArmor_FurArmor_GEN_VARIABLE",
+        "template": "/Script/Engine.Default__StaticMeshComponent",
+        "mesh": {
+          "serialized": true,
+          "value": {
+            "index": -36,
+            "path": "/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/SproutARmor_SproutArmor.SproutARmor_SproutArmor"
+          },
+          "type": "ObjectProperty",
+          "export_index": 19,
+          "property_tag_offset_in_export": 0,
+          "value_offset_in_uexp": 2507,
+          "size": 4
+        },
+        "materials": {
+          "serialized": true,
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.MI_NatureArmor"
+            }
+          ],
+          "type": "ArrayProperty",
+          "export_index": 19,
+          "property_tag_offset_in_export": 29,
+          "value_offset_in_uexp": 2544,
+          "size": 8
+        },
+        "socket": {
+          "serialized": true,
+          "value": "J_ShouldersSocket",
+          "type": "NameProperty",
+          "export_index": 12,
+          "property_tag_offset_in_export": 58,
+          "value_offset_in_uexp": 842,
+          "size": 8
+        },
+        "parent": {
+          "serialized": true,
+          "value": "Paperdoll",
+          "type": "NameProperty",
+          "export_index": 12,
+          "property_tag_offset_in_export": 91,
+          "value_offset_in_uexp": 875,
+          "size": 8
+        },
+        "parent_is_native": {
+          "serialized": true,
+          "value": true,
+          "type": "BoolProperty",
+          "export_index": 12,
+          "property_tag_offset_in_export": 124,
+          "value_offset_in_uexp": 909,
+          "size": 0
+        },
+        "relative_location": {
+          "serialized": true,
+          "value": [
+            0.0,
+            141.0,
+            -0.00206890725530684
+          ],
+          "type": "StructProperty",
+          "export_index": 19,
+          "property_tag_offset_in_export": 2268,
+          "value_offset_in_uexp": 4799,
+          "size": 12
+        },
+        "relative_rotation_pitch_yaw_roll": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        },
+        "relative_scale": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        }
+      },
+      {
+        "scs_export": 13,
+        "component_export": 20,
+        "component_name": "Helmet_FurArmor_GEN_VARIABLE",
+        "template": "/Script/Engine.Default__StaticMeshComponent",
+        "mesh": {
+          "serialized": true,
+          "value": {
+            "index": -37,
+            "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/SM_Helmet_NatureArmor.SM_Helmet_NatureArmor"
+          },
+          "type": "ObjectProperty",
+          "export_index": 20,
+          "property_tag_offset_in_export": 0,
+          "value_offset_in_uexp": 4852,
+          "size": 4
+        },
+        "materials": {
+          "serialized": true,
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.MI_NatureArmor"
+            }
+          ],
+          "type": "ArrayProperty",
+          "export_index": 20,
+          "property_tag_offset_in_export": 29,
+          "value_offset_in_uexp": 4889,
+          "size": 8
+        },
+        "socket": {
+          "serialized": true,
+          "value": "J_Head_Socket",
+          "type": "NameProperty",
+          "export_index": 13,
+          "property_tag_offset_in_export": 58,
+          "value_offset_in_uexp": 1102,
+          "size": 8
+        },
+        "parent": {
+          "serialized": true,
+          "value": "Paperdoll",
+          "type": "NameProperty",
+          "export_index": 13,
+          "property_tag_offset_in_export": 91,
+          "value_offset_in_uexp": 1135,
+          "size": 8
+        },
+        "parent_is_native": {
+          "serialized": true,
+          "value": true,
+          "type": "BoolProperty",
+          "export_index": 13,
+          "property_tag_offset_in_export": 124,
+          "value_offset_in_uexp": 1169,
+          "size": 0
+        },
+        "relative_location": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        },
+        "relative_rotation_pitch_yaw_roll": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        },
+        "relative_scale": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        }
+      },
+      {
+        "scs_export": 14,
+        "component_export": 21,
+        "component_name": "L_LegGuard_FurArmor_GEN_VARIABLE",
+        "template": "/Script/Engine.Default__StaticMeshComponent",
+        "mesh": {
+          "serialized": true,
+          "value": {
+            "index": -35,
+            "path": "/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Leg_SproutArmor.R_Leg_SproutArmor"
+          },
+          "type": "ObjectProperty",
+          "export_index": 21,
+          "property_tag_offset_in_export": 0,
+          "value_offset_in_uexp": 7084,
+          "size": 4
+        },
+        "materials": {
+          "serialized": true,
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.MI_NatureArmor"
+            }
+          ],
+          "type": "ArrayProperty",
+          "export_index": 21,
+          "property_tag_offset_in_export": 29,
+          "value_offset_in_uexp": 7121,
+          "size": 8
+        },
+        "socket": {
+          "serialized": true,
+          "value": "J_R_Leg_Socket",
+          "type": "NameProperty",
+          "export_index": 14,
+          "property_tag_offset_in_export": 58,
+          "value_offset_in_uexp": 1362,
+          "size": 8
+        },
+        "parent": {
+          "serialized": true,
+          "value": "Paperdoll",
+          "type": "NameProperty",
+          "export_index": 14,
+          "property_tag_offset_in_export": 91,
+          "value_offset_in_uexp": 1395,
+          "size": 8
+        },
+        "parent_is_native": {
+          "serialized": true,
+          "value": true,
+          "type": "BoolProperty",
+          "export_index": 14,
+          "property_tag_offset_in_export": 124,
+          "value_offset_in_uexp": 1429,
+          "size": 0
+        },
+        "relative_location": {
+          "serialized": true,
+          "value": [
+            0.0,
+            6.67572021484375e-06,
+            0.0
+          ],
+          "type": "StructProperty",
+          "export_index": 21,
+          "property_tag_offset_in_export": 2216,
+          "value_offset_in_uexp": 9324,
+          "size": 12
+        },
+        "relative_rotation_pitch_yaw_roll": {
+          "serialized": true,
+          "value": [
+            0.0,
+            0.0,
+            -180.0
+          ],
+          "type": "StructProperty",
+          "export_index": 21,
+          "property_tag_offset_in_export": 2277,
+          "value_offset_in_uexp": 9385,
+          "size": 12
+        },
+        "relative_scale": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        }
+      },
+      {
+        "scs_export": 15,
+        "component_export": 22,
+        "component_name": "L_ShoulderPad_FurArmor_GEN_VARIABLE",
+        "template": "/Script/Engine.Default__StaticMeshComponent",
+        "mesh": {
+          "serialized": true,
+          "value": {
+            "index": -32,
+            "path": "/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Arm_SproutARmor.L_Arm_SproutARmor"
+          },
+          "type": "ObjectProperty",
+          "export_index": 22,
+          "property_tag_offset_in_export": 0,
+          "value_offset_in_uexp": 9438,
+          "size": 4
+        },
+        "materials": {
+          "serialized": true,
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.MI_NatureArmor"
+            }
+          ],
+          "type": "ArrayProperty",
+          "export_index": 22,
+          "property_tag_offset_in_export": 29,
+          "value_offset_in_uexp": 9475,
+          "size": 8
+        },
+        "socket": {
+          "serialized": true,
+          "value": "J_L_Shoulder_Socket",
+          "type": "NameProperty",
+          "export_index": 15,
+          "property_tag_offset_in_export": 58,
+          "value_offset_in_uexp": 1622,
+          "size": 8
+        },
+        "parent": {
+          "serialized": true,
+          "value": "Paperdoll",
+          "type": "NameProperty",
+          "export_index": 15,
+          "property_tag_offset_in_export": 91,
+          "value_offset_in_uexp": 1655,
+          "size": 8
+        },
+        "parent_is_native": {
+          "serialized": true,
+          "value": true,
+          "type": "BoolProperty",
+          "export_index": 15,
+          "property_tag_offset_in_export": 124,
+          "value_offset_in_uexp": 1689,
+          "size": 0
+        },
+        "relative_location": {
+          "serialized": true,
+          "value": [
+            -3.305845260620117,
+            4.653480052947998,
+            -2.2016467937646667e-06
+          ],
+          "type": "StructProperty",
+          "export_index": 22,
+          "property_tag_offset_in_export": 2216,
+          "value_offset_in_uexp": 11678,
+          "size": 12
+        },
+        "relative_rotation_pitch_yaw_roll": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        },
+        "relative_scale": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        }
+      },
+      {
+        "scs_export": 16,
+        "component_export": 24,
+        "component_name": "R_ShoulderPad_FurArmor_GEN_VARIABLE",
+        "template": "/Script/Engine.Default__StaticMeshComponent",
+        "mesh": {
+          "serialized": true,
+          "value": {
+            "index": -34,
+            "path": "/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/R_Arm_SproutArmor.R_Arm_SproutArmor"
+          },
+          "type": "ObjectProperty",
+          "export_index": 24,
+          "property_tag_offset_in_export": 0,
+          "value_offset_in_uexp": 14024,
+          "size": 4
+        },
+        "materials": {
+          "serialized": true,
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.MI_NatureArmor"
+            }
+          ],
+          "type": "ArrayProperty",
+          "export_index": 24,
+          "property_tag_offset_in_export": 29,
+          "value_offset_in_uexp": 14061,
+          "size": 8
+        },
+        "socket": {
+          "serialized": true,
+          "value": "J_R_Shoulder_Socket",
+          "type": "NameProperty",
+          "export_index": 16,
+          "property_tag_offset_in_export": 58,
+          "value_offset_in_uexp": 1882,
+          "size": 8
+        },
+        "parent": {
+          "serialized": true,
+          "value": "Paperdoll",
+          "type": "NameProperty",
+          "export_index": 16,
+          "property_tag_offset_in_export": 91,
+          "value_offset_in_uexp": 1915,
+          "size": 8
+        },
+        "parent_is_native": {
+          "serialized": true,
+          "value": true,
+          "type": "BoolProperty",
+          "export_index": 16,
+          "property_tag_offset_in_export": 124,
+          "value_offset_in_uexp": 1949,
+          "size": 0
+        },
+        "relative_location": {
+          "serialized": true,
+          "value": [
+            -0.27732276916503906,
+            -4.629638671875,
+            0.0006945380591787398
+          ],
+          "type": "StructProperty",
+          "export_index": 24,
+          "property_tag_offset_in_export": 2216,
+          "value_offset_in_uexp": 16264,
+          "size": 12
+        },
+        "relative_rotation_pitch_yaw_roll": {
+          "serialized": true,
+          "value": [
+            4.0981132769957185e-05,
+            2.0324996512499638e-05,
+            -179.99966430664062
+          ],
+          "type": "StructProperty",
+          "export_index": 24,
+          "property_tag_offset_in_export": 2277,
+          "value_offset_in_uexp": 16325,
+          "size": 12
+        },
+        "relative_scale": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        }
+      },
+      {
+        "scs_export": 17,
+        "component_export": 23,
+        "component_name": "R_Leg_FurArmor_GEN_VARIABLE",
+        "template": "/Script/Engine.Default__StaticMeshComponent",
+        "mesh": {
+          "serialized": true,
+          "value": {
+            "index": -33,
+            "path": "/Game/Content_DLC4/Actors/Equipment/Armor/SproutArmor/L_Leg_SproutArmor.L_Leg_SproutArmor"
+          },
+          "type": "ObjectProperty",
+          "export_index": 23,
+          "property_tag_offset_in_export": 0,
+          "value_offset_in_uexp": 11731,
+          "size": 4
+        },
+        "materials": {
+          "serialized": true,
+          "value": [
+            {
+              "index": -14,
+              "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor.MI_NatureArmor"
+            }
+          ],
+          "type": "ArrayProperty",
+          "export_index": 23,
+          "property_tag_offset_in_export": 29,
+          "value_offset_in_uexp": 11768,
+          "size": 8
+        },
+        "socket": {
+          "serialized": true,
+          "value": "J_L_Leg_Socket",
+          "type": "NameProperty",
+          "export_index": 17,
+          "property_tag_offset_in_export": 58,
+          "value_offset_in_uexp": 2142,
+          "size": 8
+        },
+        "parent": {
+          "serialized": true,
+          "value": "Paperdoll",
+          "type": "NameProperty",
+          "export_index": 17,
+          "property_tag_offset_in_export": 91,
+          "value_offset_in_uexp": 2175,
+          "size": 8
+        },
+        "parent_is_native": {
+          "serialized": true,
+          "value": true,
+          "type": "BoolProperty",
+          "export_index": 17,
+          "property_tag_offset_in_export": 124,
+          "value_offset_in_uexp": 2209,
+          "size": 0
+        },
+        "relative_location": {
+          "serialized": true,
+          "value": [
+            0.0,
+            7.000000096013537e-06,
+            0.0
+          ],
+          "type": "StructProperty",
+          "export_index": 23,
+          "property_tag_offset_in_export": 2216,
+          "value_offset_in_uexp": 13971,
+          "size": 12
+        },
+        "relative_rotation_pitch_yaw_roll": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        },
+        "relative_scale": {
+          "serialized": false,
+          "value": null,
+          "note": "No local serialized override; do not label as a measured identity transform."
+        }
+      }
+    ],
+    "material": {
+      "parent": {
+        "serialized": true,
+        "value": {
+          "index": -2,
+          "path": "/Game/Actors/Equipment/M_MasterEquipment.M_MasterEquipment"
+        },
+        "type": "ObjectProperty",
+        "export_index": 1,
+        "property_tag_offset_in_export": 0,
+        "value_offset_in_uexp": 25,
+        "size": 4
+      },
+      "texture_parameter_assignments": [
+        {
+          "name": "Albedo",
+          "value": {
+            "index": -8,
+            "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor.T_NatureArmor"
+          }
+        },
+        {
+          "name": "Specular",
+          "value": {
+            "index": -9,
+            "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S.T_NatureArmor_S"
+          }
+        }
+      ],
+      "stored_base_property_overrides": {
+        "properties": [
+          {
+            "name": "TwoSided",
+            "type": "BoolProperty",
+            "array_index": 0,
+            "tag_offset": 0,
+            "value_offset": 26,
+            "size": 0,
+            "metadata": {
+              "bool_value": true
+            },
+            "value": true
+          },
+          {
+            "name": "BlendMode",
+            "type": "ByteProperty",
+            "array_index": 0,
+            "tag_offset": 26,
+            "value_offset": 59,
+            "size": 8,
+            "metadata": {
+              "enum": "EBlendMode"
+            },
+            "value": "BLEND_Masked"
+          },
+          {
+            "name": "OpacityMaskClipValue",
+            "type": "FloatProperty",
+            "array_index": 0,
+            "tag_offset": 67,
+            "value_offset": 92,
+            "size": 4,
+            "metadata": {},
+            "value": 0.33329999446868896
+          }
+        ]
+      },
+      "caution": "Stored override values alone do not establish bOverride flags or runtime shader behavior."
+    },
+    "master_material_actual_serialized_properties": {
+      "BlendMode": {
+        "serialized": true,
+        "value": "BLEND_Masked",
+        "type": "ByteProperty",
+        "export_index": 1,
+        "property_tag_offset_in_export": 291,
+        "value_offset_in_uexp": 324,
+        "size": 8
+      },
+      "TwoSided": {
+        "serialized": true,
+        "value": true,
+        "type": "BoolProperty",
+        "export_index": 1,
+        "property_tag_offset_in_export": 332,
+        "value_offset_in_uexp": 358,
+        "size": 0
+      },
+      "OpacityMaskClipValue": {
+        "serialized": false,
+        "value": null,
+        "note": "No local serialized override; do not label as a measured identity transform."
+      }
+    },
+    "component_name_warning": "FurArmor labels are legacy variable names. L_LegGuard uses the R_Leg mesh/R socket; R_Leg uses the L_Leg mesh/L socket. Follow object assignments and sockets.",
+    "transform_space": "Unreal component-local relative to the named Paperdoll socket. Vector order XYZ; FRotator order Pitch,Yaw,Roll; degrees. Not glTF/Blockbench world coordinates.",
+    "socket_definition_candidate": {
+      "source": "/Game/Actors/Characters/Player/Master/Player_Master_Skeleton",
+      "player_mesh_skeleton_assignment": {
+        "serialized": true,
+        "value": {
+          "index": -9,
+          "path": "/Game/Actors/Characters/Player/Master/Player_Master_Skeleton.Player_Master_Skeleton"
+        },
+        "type": "ObjectProperty",
+        "export_index": 1,
+        "property_tag_offset_in_export": 0,
+        "value_offset_in_uexp": 25,
+        "size": 4
+      },
+      "matching_original_socket_definitions": [
+        {
+          "export_index": 2,
+          "object_path": "/Game/Actors/Characters/Player/Master/Player_Master_Skeleton.Player_Master_Skeleton.SkeletalMeshSocket_1",
+          "socket_name": {
+            "serialized": true,
+            "value": "J_Head_Socket",
+            "type": "NameProperty",
+            "export_index": 2,
+            "property_tag_offset_in_export": 0,
+            "value_offset_in_uexp": 164,
+            "size": 8
+          },
+          "bone": {
+            "serialized": true,
+            "value": "J_Head",
+            "type": "NameProperty",
+            "export_index": 2,
+            "property_tag_offset_in_export": 33,
+            "value_offset_in_uexp": 197,
+            "size": 8
+          },
+          "relative_location": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_rotation_pitch_yaw_roll": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_scale": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          }
+        },
+        {
+          "export_index": 5,
+          "object_path": "/Game/Actors/Characters/Player/Master/Player_Master_Skeleton.Player_Master_Skeleton.SkeletalMeshSocket_2",
+          "socket_name": {
+            "serialized": true,
+            "value": "J_ShouldersSocket",
+            "type": "NameProperty",
+            "export_index": 5,
+            "property_tag_offset_in_export": 0,
+            "value_offset_in_uexp": 581,
+            "size": 8
+          },
+          "bone": {
+            "serialized": true,
+            "value": "J_Shoulders",
+            "type": "NameProperty",
+            "export_index": 5,
+            "property_tag_offset_in_export": 33,
+            "value_offset_in_uexp": 614,
+            "size": 8
+          },
+          "relative_location": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_rotation_pitch_yaw_roll": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_scale": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          }
+        },
+        {
+          "export_index": 6,
+          "object_path": "/Game/Actors/Characters/Player/Master/Player_Master_Skeleton.Player_Master_Skeleton.SkeletalMeshSocket_3",
+          "socket_name": {
+            "serialized": true,
+            "value": "J_R_Shoulder_Socket",
+            "type": "NameProperty",
+            "export_index": 6,
+            "property_tag_offset_in_export": 0,
+            "value_offset_in_uexp": 659,
+            "size": 8
+          },
+          "bone": {
+            "serialized": true,
+            "value": "J_R_Hand",
+            "type": "NameProperty",
+            "export_index": 6,
+            "property_tag_offset_in_export": 33,
+            "value_offset_in_uexp": 692,
+            "size": 8
+          },
+          "relative_location": {
+            "serialized": true,
+            "value": [
+              7.0,
+              65.0,
+              0.0
+            ],
+            "type": "StructProperty",
+            "export_index": 6,
+            "property_tag_offset_in_export": 66,
+            "value_offset_in_uexp": 749,
+            "size": 12
+          },
+          "relative_rotation_pitch_yaw_roll": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_scale": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          }
+        },
+        {
+          "export_index": 7,
+          "object_path": "/Game/Actors/Characters/Player/Master/Player_Master_Skeleton.Player_Master_Skeleton.SkeletalMeshSocket_4",
+          "socket_name": {
+            "serialized": true,
+            "value": "J_L_Shoulder_Socket",
+            "type": "NameProperty",
+            "export_index": 7,
+            "property_tag_offset_in_export": 0,
+            "value_offset_in_uexp": 798,
+            "size": 8
+          },
+          "bone": {
+            "serialized": true,
+            "value": "J_L_Hand",
+            "type": "NameProperty",
+            "export_index": 7,
+            "property_tag_offset_in_export": 33,
+            "value_offset_in_uexp": 831,
+            "size": 8
+          },
+          "relative_location": {
+            "serialized": true,
+            "value": [
+              -4.0,
+              -65.0,
+              0.0
+            ],
+            "type": "StructProperty",
+            "export_index": 7,
+            "property_tag_offset_in_export": 66,
+            "value_offset_in_uexp": 888,
+            "size": 12
+          },
+          "relative_rotation_pitch_yaw_roll": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_scale": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          }
+        },
+        {
+          "export_index": 8,
+          "object_path": "/Game/Actors/Characters/Player/Master/Player_Master_Skeleton.Player_Master_Skeleton.SkeletalMeshSocket_5",
+          "socket_name": {
+            "serialized": true,
+            "value": "J_L_Leg_Socket",
+            "type": "NameProperty",
+            "export_index": 8,
+            "property_tag_offset_in_export": 0,
+            "value_offset_in_uexp": 937,
+            "size": 8
+          },
+          "bone": {
+            "serialized": true,
+            "value": "J_L_Foot",
+            "type": "NameProperty",
+            "export_index": 8,
+            "property_tag_offset_in_export": 33,
+            "value_offset_in_uexp": 970,
+            "size": 8
+          },
+          "relative_location": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_rotation_pitch_yaw_roll": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_scale": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          }
+        },
+        {
+          "export_index": 10,
+          "object_path": "/Game/Actors/Characters/Player/Master/Player_Master_Skeleton.Player_Master_Skeleton.SkeletalMeshSocket_7",
+          "socket_name": {
+            "serialized": true,
+            "value": "J_R_Leg_Socket",
+            "type": "NameProperty",
+            "export_index": 10,
+            "property_tag_offset_in_export": 0,
+            "value_offset_in_uexp": 1154,
+            "size": 8
+          },
+          "bone": {
+            "serialized": true,
+            "value": "J_R_Foot",
+            "type": "NameProperty",
+            "export_index": 10,
+            "property_tag_offset_in_export": 33,
+            "value_offset_in_uexp": 1187,
+            "size": 8
+          },
+          "relative_location": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_rotation_pitch_yaw_roll": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          },
+          "relative_scale": {
+            "serialized": false,
+            "value": null,
+            "note": "No local serialized override; do not label as a measured identity transform."
+          }
+        }
+      ],
+      "assignment_boundary": "BP_NatureArmor Paperdoll has no serialized SkeletalMesh override. Its native template is /Script/Dungeons.Default__GearActor.Paperdoll. Native constructor assignment has not been read; matching socket names and original player skeleton data are not claimed as proof of that native assignment."
+    }
+  },
+  "limitations": [
+    "Original Mossy skeletal rig has none of the six armor attachment sockets. Armor player rig composition and adaptation to Mossy are separate steps.",
+    "Missing serialized transform properties remain null/unknown locally; native class defaults require separate justification, not invented measured values.",
+    "StaticMesh component transforms must compose with socket-relative transforms and skeletal bone world transforms before rendering.",
+    "No runtime animation, Blueprint bytecode execution, construction/native modifications, or game scene pose verified.",
+    "SproutArmor_Unique1 is excluded as Root Rot identity; five ordinary SproutArmor mesh dependencies are positively assigned by NatureArmor."
+  ],
+  "sources": {
+    "BP_MossySkeletonCharacter": {
+      "package": "/Game/Actors/Characters/Enemies/MossySkeleton/BP_MossySkeletonCharacter",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\BP_MossySkeletonCharacter.uasset",
+          "bytes": 18630,
+          "sha256": "51564391e22db8eee2cef6a59a13b472bff102d0d6d11c0ecc5f81eb3962d922"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\BP_MossySkeletonCharacter.uexp",
+          "bytes": 9169,
+          "sha256": "166f0bb09b56aec0e305e01cecee2acf84eb3b0787f7673428ed5f36769b463d"
+        }
+      ],
+      "parsed_dump": "BP_MossySkeletonCharacter.parsed.json",
+      "import_count": 121,
+      "export_count": 49,
+      "top_level_property_parse_failures": 0
+    },
+    "BP_MobCharacter": {
+      "package": "/Game/Actors/Characters/Enemies/BP_MobCharacter",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\BP_MobCharacter.uasset",
+          "bytes": 16523,
+          "sha256": "20853de7f4c1aeb63f74694665f34e181e5ab76f47ccf8f288357c3f23ba3302"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\BP_MobCharacter.uexp",
+          "bytes": 7787,
+          "sha256": "46c4eae160eb970f2ebd5345a891330155bdc82d1cb3e935d70962c04063f188"
+        }
+      ],
+      "parsed_dump": "BP_MobCharacter.parsed.json",
+      "import_count": 81,
+      "export_count": 61,
+      "top_level_property_parse_failures": 0
+    },
+    "M_MossySkeleton": {
+      "package": "/Game/Actors/Characters/Enemies/MossySkeleton/M_MossySkeleton",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\M_MossySkeleton.uasset",
+          "bytes": 2298,
+          "sha256": "c6282fa4f19f5f51e81f7243b4c19670893522d930d4020e7426350afae516a3"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\MossySkeleton\\M_MossySkeleton.uexp",
+          "bytes": 204217,
+          "sha256": "c3a7877bcdb65f0fec1b7f904b0f34fad09b9e2a48628979ec9f8888ca5fd56d"
+        }
+      ],
+      "parsed_dump": "M_MossySkeleton.parsed.json",
+      "import_count": 9,
+      "export_count": 1,
+      "top_level_property_parse_failures": 0
+    },
+    "SK_Skeleton": {
+      "package": "/Game/Actors/Characters/Enemies/Skeleton/SK_Skeleton",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\SK_Skeleton.uasset",
+          "bytes": 3104,
+          "sha256": "9b4e77debd3c105aa5c7be77da0930cfb643a409e1e0d6e051cd235b69c19327"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\SK_Skeleton.uexp",
+          "bytes": 14170,
+          "sha256": "f18f1894317dc51cc98de6bbf66467f47b3ad3f260fe5877e5929ee9889ff69a"
+        }
+      ],
+      "parsed_dump": "SK_Skeleton.parsed.json",
+      "import_count": 9,
+      "export_count": 1,
+      "top_level_property_parse_failures": 0
+    },
+    "BP_NatureArmor": {
+      "package": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/BP_NatureArmor",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\BP_NatureArmor.uasset",
+          "bytes": 8444,
+          "sha256": "301da929e7f38fe8e5ae3909e08b5c818dc81bc607fc114288d1d9378d3788bd"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\BP_NatureArmor.uexp",
+          "bytes": 16357,
+          "sha256": "17c551f9c26e9fe234559bcf1efabb2a09ede4fc5a82467480e55ef0c8ac0ad1"
+        }
+      ],
+      "parsed_dump": "BP_NatureArmor.parsed.json",
+      "import_count": 38,
+      "export_count": 24,
+      "top_level_property_parse_failures": 0
+    },
+    "MI_NatureArmor": {
+      "package": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/MI_NatureArmor",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\MI_NatureArmor.uasset",
+          "bytes": 2555,
+          "sha256": "ea22b959646281220009cbd469ad79ac6a4e3da57cc8b87866bd3f37a354397f"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\MI_NatureArmor.uexp",
+          "bytes": 144026,
+          "sha256": "2cf238d8861e1de0f18c300e38ac6b78d44b83021744c2f136ea1e555129db9b"
+        }
+      ],
+      "parsed_dump": "MI_NatureArmor.parsed.json",
+      "import_count": 9,
+      "export_count": 1,
+      "top_level_property_parse_failures": 0
+    },
+    "M_MasterEquipment": {
+      "package": "/Game/Actors/Equipment/M_MasterEquipment",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Equipment\\M_MasterEquipment.uasset",
+          "bytes": 8892,
+          "sha256": "736b2b7077aeb54190038172a59507f115f8eb35cab0343aa0fc8324836a2173"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Equipment\\M_MasterEquipment.uexp",
+          "bytes": 146959,
+          "sha256": "67a6c92cb48c94412c7f5ef28eb6bf30812ea9beb2f84d414972d05bb06df5c8"
+        }
+      ],
+      "parsed_dump": "M_MasterEquipment.parsed.json",
+      "import_count": 31,
+      "export_count": 36,
+      "top_level_property_parse_failures": 0
+    },
+    "Player_Master_Skeleton": {
+      "package": "/Game/Actors/Characters/Player/Master/Player_Master_Skeleton",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Player\\Master\\Player_Master_Skeleton.uasset",
+          "bytes": 3877,
+          "sha256": "ddb5c70cf5ea3a751a1574c99860a2a8b965baba48b303be6f1de6facaf273d8"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Player\\Master\\Player_Master_Skeleton.uexp",
+          "bytes": 6310,
+          "sha256": "da3a61afc14db2cf08a3cdd946c00a3032bdbc1c0cd0ab57db182c6a34f28298"
+        }
+      ],
+      "parsed_dump": "Player_Master_Skeleton.parsed.json",
+      "import_count": 5,
+      "export_count": 13,
+      "top_level_property_parse_failures": 0
+    },
+    "SK_Player_Master": {
+      "package": "/Game/Actors/Characters/Player/Master/SK_Player_Master",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Player\\Master\\SK_Player_Master.uasset",
+          "bytes": 3436,
+          "sha256": "f8a5ff8f958c220c9c0f8bf1b4226e48a56674ae3be7c0671667fc9a8effe57a"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Player\\Master\\SK_Player_Master.uexp",
+          "bytes": 24274,
+          "sha256": "f6f8ed8f4c78aaf9118b6833614c3ffa73e048bd0520e1b80ae36e23601c7178"
+        }
+      ],
+      "parsed_dump": "SK_Player_Master.parsed.json",
+      "import_count": 9,
+      "export_count": 1,
+      "top_level_property_parse_failures": 0
+    },
+    "Skeleton_Skeleton": {
+      "package": "/Game/Actors/Characters/Enemies/Skeleton/Skeleton_Skeleton",
+      "files": [
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\Skeleton_Skeleton.uasset",
+          "bytes": 2852,
+          "sha256": "a52d4a20d153cde32d8851029a3fd70651d97627f21b0ec5a7a510113f40f50e"
+        },
+        {
+          "path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Actors\\Characters\\Enemies\\Skeleton\\Skeleton_Skeleton.uexp",
+          "bytes": 4555,
+          "sha256": "4b068327e88529ad721381ce0868ca94922b82b1885057ef615935620192457e"
+        }
+      ],
+      "parsed_dump": "Skeleton_Skeleton.parsed.json",
+      "import_count": 5,
+      "export_count": 8,
+      "top_level_property_parse_failures": 0
+    }
+  },
+  "raw_payload_integrity": "All source .uasset/.uexp entries extracted by pak_index.py and checked against PAK entry SHA1; see raw_manifest.json."
+}

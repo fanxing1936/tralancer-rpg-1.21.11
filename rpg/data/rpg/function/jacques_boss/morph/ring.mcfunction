@@ -1,0 +1,43 @@
+scoreboard players operation #m rpg_jq = @s rpg_jq_c
+scoreboard players set #k rpg_jq 4
+scoreboard players operation #m rpg_jq %= #k rpg_jq
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~2.20 ~0.15 ~0.00 0 0 0 0 1 force
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~1.78 ~0.15 ~1.29 0 0 0 0 1 force
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~0.68 ~0.15 ~2.09 0 0 0 0 1 force
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~-0.68 ~0.15 ~2.09 0 0 0 0 1 force
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~-1.78 ~0.15 ~1.29 0 0 0 0 1 force
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~-2.20 ~0.15 ~0.00 0 0 0 0 1 force
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~-1.78 ~0.15 ~-1.29 0 0 0 0 1 force
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~-0.68 ~0.15 ~-2.09 0 0 0 0 1 force
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~0.68 ~0.15 ~-2.09 0 0 0 0 1 force
+execute if score #m rpg_jq matches 0 run particle minecraft:flame ~1.78 ~0.15 ~-1.29 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~2.17 ~0.15 ~0.34 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~1.56 ~0.15 ~1.56 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~0.34 ~0.15 ~2.17 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~-1.00 ~0.15 ~1.96 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~-1.96 ~0.15 ~1.00 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~-2.17 ~0.15 ~-0.34 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~-1.56 ~0.15 ~-1.56 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~-0.34 ~0.15 ~-2.17 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~1.00 ~0.15 ~-1.96 0 0 0 0 1 force
+execute if score #m rpg_jq matches 1 run particle minecraft:flame ~1.96 ~0.15 ~-1.00 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~2.09 ~0.15 ~0.68 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~1.29 ~0.15 ~1.78 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~0.00 ~0.15 ~2.20 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~-1.29 ~0.15 ~1.78 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~-2.09 ~0.15 ~0.68 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~-2.09 ~0.15 ~-0.68 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~-1.29 ~0.15 ~-1.78 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~-0.00 ~0.15 ~-2.20 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~1.29 ~0.15 ~-1.78 0 0 0 0 1 force
+execute if score #m rpg_jq matches 2 run particle minecraft:flame ~2.09 ~0.15 ~-0.68 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~1.96 ~0.15 ~1.00 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~1.00 ~0.15 ~1.96 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~-0.34 ~0.15 ~2.17 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~-1.56 ~0.15 ~1.56 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~-2.17 ~0.15 ~0.34 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~-1.96 ~0.15 ~-1.00 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~-1.00 ~0.15 ~-1.96 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~0.34 ~0.15 ~-2.17 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~1.56 ~0.15 ~-1.56 0 0 0 0 1 force
+execute if score #m rpg_jq matches 3 run particle minecraft:flame ~2.17 ~0.15 ~-0.34 0 0 0 0 1 force

@@ -12,9 +12,12 @@ def main():
     parser.add_argument('resourcepack',nargs='?',type=Path,default=REPO/'resourcepack')
     parser.add_argument('datapack',nargs='?',type=Path,default=REPO/'rpg')
     mode=parser.add_mutually_exclusive_group();mode.add_argument('--defer-shaders',action='store_true');mode.add_argument('--finalize-shaders',action='store_true')
-    parser.add_argument('--model',type=Path,default=REPO/'_tools/lucifer_ref/lucifer.bbmodel')
+    parser.add_argument('--model',type=Path,default=REPO/'_tools/lucifer_ref/separate/lucifer_verdant.bbmodel')
     parser.add_argument('--model-scale',type=float)
     args=parser.parse_args()
+    from mesh_runtime import material_mode
+    if args.finalize_shaders and material_mode()=='plain':
+        print(json.dumps({'mode':'finalize-shaders','skipped':'plain material, no core shader'}));return
     if args.finalize_shaders:
         set_output_roots(args.resourcepack,args.datapack);rig=NativeRig(args.model);result=export_shaders(rig,args.resourcepack.resolve(),None)
         if sha(args.model)!=rig.sha:raise ValueError('Native changed during shader finalization')

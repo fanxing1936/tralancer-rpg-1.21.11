@@ -1,4 +1,4 @@
-execute at @s as @a[distance=..18,gamemode=!spectator,gamemode=!creative] run function rpg:hud/demon/m50
+execute at @s as @e[tag=rpg.unit.f,distance=..18] run function rpg:hud/demon/m50
 function rpg:lucifer_fight/cancel
 scoreboard players set @s rpg_l2_st 3
 scoreboard players set @s rpg_l2_sk 6

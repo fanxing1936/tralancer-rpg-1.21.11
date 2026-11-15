@@ -1,0 +1,289 @@
+== 1. version migration 1.21 -> 1.21.11 ==
+creeper Fuse:0 -> ignited:1b in 12 file(s)
+files rewritten: 128
+
+  ArmorItems -> equipment                    83
+  Count -> count                             14
+  CustomName -> SNBT                         113
+  HandItems -> equipment                     57
+  SaddleItem -> equipment.saddle             8
+  advancement background -> sprite id        1
+  attribute id renamed                       629
+  attribute modifier id quoted               111
+  attribute_modifiers flattened              45
+  body_armor_item -> equipment.body          5
+  custom_model_data -> floats                66
+  custom_name -> SNBT                        111
+  drop chances -> drop_chances               87
+  dyed_color flattened                       48
+  enchantments.levels flattened              80
+  fire_resistant -> damage_resistant         6
+  food.eat_seconds -> consumable             26
+  hide_additional_tooltip -> tooltip_display 1
+  lore -> SNBT                               110
+  player armour Inventory slot -> equipment  39
+  set_custom_model_data -> set_components    6
+  short Motion vector padded                 10
+  short Rotation vector padded               38
+  show_in_tooltip -> tooltip_display         27
+  tooltip_display added                      26
+  trim_material.ingredient removed           1
+  trim_material.item_model_index removed     1
+
+== 2. tick-path optimisation ==
+indexed flags: 88
+  @e narrowed to @a                      10
+  Tags nbt match -> tag=                 105
+  compound nbt match -> tag=             6
+  held nbt match -> tag=                 649
+  hurt test -> tag=rpg.hurt              178
+  item nbt match -> tag=                 498
+  nbt match left as-is                   2
+  per-entity health scan removed         2
+  worn nbt match -> tag=                 33
+split out: creeper, skeleton, skeleton_gear, zombie, zombie_gear
+spawn batches capped: 3
+cascade: 12 summon(s) marked as already-processed, 9 replace-the-original line(s)
+magic-circle proximity guards added: 1
+com sections gated: 2
+limited-legend prefix normalised: 3
+belial devil_tag added: 1
+creeper variants: 删掉 2 个文件，摘掉 1 行分派
+Retired mob content removed: zombie/skeleton variants, wind raiders, drowned and piglin armies
+pseudo boom: 24 处瞬爆改成无地形破坏效果（12 个文件）
+models written: 19   item definitions updated: 5   give lines: 5   教条战斧 appended: True
+skill functions written: 6
+objectives added: truth, rpg_vine_lash
+tick hook added: True
+index flags registered: 5
+give appended: True
+objectives added: boaz, rpg_boaz_stack
+index: 2 main-hand flags added, off-hand block added: True
+lucifer: art 32x32 from 1254x1254, 13 colours (+ mirrored in-hand)
+lucifer: base=netherite_spear cmd=1110014 give=added index=registered objectives=['rpg_luci_sin', 'rpg_luci_cd', 'rpg_luci_use']
+leviathan: art 32x32 from 128x128, 12 colours
+leviathan: base=mace cmd=1110007 consume=100110 give=added index=registered objectives=['rpg_levi_time', 'rpg_levi_beat', 'rpg_levi_hp', 'rpg_levi_charge', 'rpg_levi_hold']
+runes: 7 new items (4 符文 + 3 符石), 7 tinted sprites
+runes: repaired 3 original stones, inlay carries components: True, holder-guarded 3 triggers
+runes: index flags +7, objectives ['rpg_rune_roll', 'rpg_rune_ebb', 'rpg_tide', 'rpg_quake', 'rpg_shade']
+runes: retinted 12 original sprites
+epics: art forge 32x32, dawn 32x32, chime 32x32
+epics: 3 items, index +3, objectives ['rpg_forge', 'rpg_forge_chg', 'rpg_forge_hold', 'rpg_saw']
+exorcism: HUD 199 branches, actionbar writers routed: 3
+exorcism: give +2, objectives ['rpg_taint', 'rpg_hud', 'rpg_hud_p', 'rpg_hud_t', 'rpg_taint_t', 'rpg_vac', 'rpg_rite', 'rpg_totem', 'rpg_holy', 'rpg_vac_x', 'rpg_hud_on', 'rpg_fall', 'rpg_dm_cd', 'rpg_dm_lord', 'rpg_dm_casts', 'rpg_dm_ult', 'rpg_dm_last'], 图腾模型 +1
+pact: 7 pillars, 27 functions, give +7, tick +4, lords 7, 召唤清单 8 位
+pact: objectives ['rpg_pact', 'rpg_pact_cd', 'rpg_pact_t', 'rpg_hud_dm', 'rpg_hud_dmt'], 书的模型分派 7 档
+pact: actionbar 契约对象 7 位，16 行
+pact: 双层 actionbar 恶魔提示 44 条
+combat prompt font: 44 raised Unifont notices, two-layer spacing wired
+mammon: 18 functions, give +1, tick +1, models +1, 爆裂弓避让 4 处
+mammon: objectives ['rpg_mam', 'rpg_mam_c', 'rpg_mam_win', 'rpg_mam_dw']
+mammon: currency tagged give 1, loot tables 6
+holy items: doll tagged x1, taint hook 1, rite gate 1, star extended 1, tick +3, marked as holy x4
+holy items: old 圣水 lines merged away x1, re-prefixed as 驱魔 x2
+holy items: [HOLY] quality marked x3, exorcism now reads rpg.holy (worn counts) x6
+longinus: give rewritten=1  mace branch dropped=0  base=netherite_spear cmd=1110003 lunge=3
+wukong: give rewritten=1  mace branch dropped=0  base=netherite_spear cmd=1110004 lunge=3
+michael: give appended: True
+michael: objectives added: rpg_mi_dmg, rpg_mi_flame, rpg_mi_ttl, rpg_mi_fuse, rpg_mi_hold, rpg_mi_last, rpg_mi_cd, rpg_mi_tmp
+michael: index flags added: 8
+legacy weapons: 14/17 old cards modernised (A/B/C batches; D/E separate)
+legacy advanced: 3 original cards + 6 epic loot weapons + doctrine trims + 3 runes; joint original Lore 17/17
+book: 《破碎大陆手记》39 页
+actionbar: 39 call site(s) in 39 file(s) routed through the HUD, 38 distinct message(s)
+  double_handheld          [1.46,0.85] -> 1.195 uniform   translation [0,7.0,2.0] -> [0,6.85,2.0]
+  huge_sword_handheld      [2.5,1.5] -> 2.062 uniform   translation [0,6.75,2.0] -> [0,6.46,2.0]
+  long_handheld            [2.23,2.33] -> 2.281 uniform   translation [0,7.0,1.0] -> [0,7.11,1.0]
+  stick_handheld           [1.46,0.85] -> 1.195 uniform   translation [0,7.0,2.0] -> [0,6.85,2.0]
+  sword_handheld           [1.46,0.85] -> 1.195 uniform   translation [0,6.75,2.0] -> [0,6.6,2.0]
+  twin_handheld            [1.46,0.85] -> 1.195 uniform   translation [0,6.75,2.0] -> [0,6.6,2.0]
+  weapon_sword_handheld    [1.46,1.46] -> 1.460 uniform   translation [0,7.5,1.0] -> [0,7.5,1.0]
+display parents made uniform: 7
+import_art: 找不到原图目录 F:/筑梦 MCBE/新建文件夹，改用 _art_crops 里已裁好的 5 张
+art placeholder: 新补 0 张，作者已有的 11 张原样保留
+
+== 2b. guard the empty-tag entity walks ==
+multiplayer: 41 fixes
+  command/damage_scan            每人 3 次全表遍历 → 全场 1 次/人
+  exorcism.mcfunction            萨麦尔附毒不再按人数放大（2N 次遍历 → 1 次）
+  rite/inv_fail.mcfunction       仪式失败不再波及全世界的受术者
+  rite/light_inv.mcfunction      受术者标签带上寿命，死在圈外不再留下幽灵
+  rite/inv_grant.mcfunction      仪式收场时把寿命一并清零
+  rite/inv_abort.mcfunction      仪式收场时把寿命一并清零
+  exorcism                       受术者标签过期自动收场
+  rite/inv_fail.mcfunction       仪式失败按唯一 id 收尾，不再串场
+  rite/light.mcfunction          已在另一场逆圣化中的玩家不会被新图腾抢走
+  rite/light.mcfunction          已在另一场逆圣化中的玩家不会被新图腾抢走
+  rite/light_inv.mcfunction      图腾与本批受术者写入同一个唯一仪式 id
+  rite/light_inv.mcfunction      逆圣化开场提示只发给本场新受术者
+  rite/light_inv.mcfunction      逆圣化开场提示只发给本场新受术者
+  rite/light_inv.mcfunction      逆圣化开场提示只发给本场新受术者
+  rite/light_inv                 本场临时受术者标签当场回收
+  rite/beat_inv.mcfunction       图腾只承认与自己 id 相同的受术者
+  rite/beat_inv.mcfunction       逆圣化 HUD 按仪式 id 隔离
+  rite/v1                        节拍伤害按仪式 id 隔离
+  rite/v2                        节拍伤害按仪式 id 隔离
+  rite/v3                        节拍伤害按仪式 id 隔离
+  rite/v4                        节拍伤害按仪式 id 隔离
+  rite/v5                        节拍伤害按仪式 id 隔离
+  rite/inv_burst.mcfunction      圣痕只授予完成本场仪式的玩家
+  rite/inv_grant.mcfunction      仪式收场时把寿命与归属 id 一并清掉
+  rite/inv_abort.mcfunction      仪式收场时把寿命与归属 id 一并清掉
+  item/epic/saw_cut              獠牙与伤害归属锁定到真正的施法者
+  item/epic/chime_wave.mcfunction 震荡伤害归属跟随调用处的 8 格判定
+  entities/warden/action.mcfunction Boss 出生函数不再直接覆盖全局血条观众
+  entities/warden/action2.mcfunction Boss 出生函数不再直接覆盖全局血条观众
+  entities/warden/warden.mcfunction 四个稳定槽并行追踪 Boss，远处分场玩家也能看到各自血条
+  minecraft/load                 Boss 血条在全新存档上也会被建出来
+  item/chestplate/off            8 行全世界绑定 → 折进选择器，交给 opt_invert 再并
+  pact/mammon.mcfunction         玛门吸附锁定真正的契约者，不再吸向最近路人
+  item/epic/forge_ring1          伤害/击退锁定同步调用的真实施法者
+  item/epic/forge_ring2          伤害/击退锁定同步调用的真实施法者
+  item/epic/forge_ring3          伤害/击退锁定同步调用的真实施法者
+  item/epic/forge_push.mcfunction 热浪击退朝远离真正施法者的方向，不再朝最近持锤者
+  item/rune/quake_burst          伤害/击退锁定同步调用的真实施法者
+  item/rune/shade_burst          伤害/击退锁定同步调用的真实施法者
+  item/rune/tide_burst           伤害/击退锁定同步调用的真实施法者
+  item/rune/tide_burst.mcfunction 潮汐爆发伤害归属真正施法者，不再成为无来源环境伤害
+index folded: 226 lines -> 2 population walks
+holy worn: rpg.holy set from 6 slot(s) x 3 level(s) (held + worn)
+holy effects: blindness + darkness cleared per holy player at tick_end
+type index: 58 selector(s) narrowed across 14 file(s)
+  dev                      -> vindicator
+  devil2                   -> vindicator
+  rpg.advent               -> vindicator
+  rpg.advent.new           -> vindicator
+  rpg.bossbar.new          -> marker
+  rpg.bossbar.probe        -> marker
+  rpg.demon                -> vindicator
+  rpg.demon.fly            -> vex
+  rpg.health700            -> vindicator
+  rpg.levi.new             -> marker
+  rpg.luci.fang            -> evoker_fangs
+  rpg.mam.new              -> arrow
+  rpg.pseudo_boom.center   -> marker
+  rpg.pseudo_boom.minion_new -> vindicator
+  rpg.saw.fang             -> evoker_fangs
+  rpg.totem                -> item_display
+  rpg.vac.shard            -> vex
+  tick                     -> vindicator
+guards inserted: 31, covering 214 lines across 19 functions
+hoist: 1 guard(s) lifted out of per-entity loops, covering 2 line(s)
+inverted blocks: 5  (27 lines -> 5 walks, 22 fewer)
+runtime hot paths: boss bodies collapsed, bars 10Hz, slash TTL 20t
+runtime hot paths: level change-driven, player values 5t, hurt scans indexed
+runtime hot paths: demon burst particle lines capped: 75
+true-name rite: 7 lords, 35 unique clues (any 3), 4 ritual stages, hp=700
+true-name rite: objectives +12; multiplayer anchor ids enabled
+exorcism expansion: 7 counter-rites, 4 verdicts, 5 career levels / 3 paths
+exorcism expansion: pages, nail, bell, incense, lantern, 3 chalks, strong holy water
+exorcism expansion: 16 ritual ground displays, rite-bound cleanup + timed lantern
+ritual phase2: 50 stability, shockwave + 21 rotating pressure fields, attack/tool contest
+ritual phase2: persistent actionbar, 0 forced eliminate, 100 verdict
+ritual input: 7 media + pages + nail/incense/chalk/lantern support right-click
+goetic legions: 35 persistent minions / 5 roles / phase-two rotation / manual summons
+life tree: 10 Sephiroth + dashed Daath / 22 paths / 1-block rings / 10-tick refresh
+kabbalah covenant: blood pact + 10 dye Sephiroth (rewards owned by divine generator)
+player panel: lore=11 lines, menu=5 buttons, multiplayer scope=PASS
+recent UI: verdict=2 screens, explicit non-italic=144 lines/109 files, style=PASS
+divine covenants: Old Covenant / Daath True Cross / New Covenant
+texture grid: 11 stored at native size: dawn 32->16, new_covenant 192->16 (reconstructed), old_covenant 128->16, pact_abaddon 128->16, pact_beelzebub 128->16, pact_belial 128->16, pact_leviathan 128->16, pact_lucifer 128->16, pact_mammon 128->16, pact_samael 128->16, true_cross 128->16
+drop policy generated: 98 vanilla entity tables suppressed, 7 authored tables preserved, 89 entity types equipment-guarded
+  武器          34 types / 34 slots -> 2 box(es)
+  防具          14 types / 14 slots -> 1 box(es)
+  符文镶嵌        25 types / 25 slots -> 1 box(es)
+  锻造升级        13 types / 13 slots -> 1 box(es)
+  药剂功能        11 types / 11 slots -> 1 box(es)
+  测试物         24 types / 24 slots -> 1 box(es)
+  罪约契约         7 types / 7 slots -> 1 box(es)
+  上位契约         2 types / 2 slots -> 1 box(es)
+  卡巴拉秘仪       12 types / 12 slots -> 1 box(es)
+  驱魔器具        19 types / 20 slots -> 1 box(es)
+  真名档案         7 types / 7 slots -> 1 box(es)
+  裁决遗物        14 types / 14 slots -> 1 box(es)
+boxes: 13, holding 182 unique types from 182 give lines; global missing=0 extra=0 -> rpg:command/give/box
+物品名：269 个前缀换成规范标签，505 个本名改为白色
+七柱色：320 处旧色并入色板，96 处领主名染亮色；命中 路西法=65, 利维坦=68, 亚巴顿=64, 别西卜=64, 萨麦尔=64, 贝利尔=64, 玛门=68
+粒子：93 处七柱旧色并入色板
+仪式播报：163 行改为〖〗暗色样式（85 行带哥特体英文，4 行整句拆出标签），另 20 个加粗标签换连接点
+Lore：199 处强调色提亮到 4.5:1；共改 354 文件
+跳过 2 处非 JSON 文本（SNBT）：[{text:"《破碎大陆手记》",italic:false,color:"#FFFFFF",bold:false}]
+tower_guard: 9 parts, atlas 128x128, clips idle(24), walk(8), attack(33), charge(6), normal_stop(21), collide_stop(33), shield_break(27), stun(15)
+beelzebub: 7 parts, atlas 128x128, clips idle(16), walk(16), cast(25), summon(33), rise(25)
+vanguard: 8 parts, atlas 128x128, clips idle(10), walk(10), attack(21), break(17)
+leviathan: 7 parts, atlas 128x128, clips idle(16), walk(16), cast(25), summon(33), rise(25)
+sunken_skeleton: 7 parts, atlas 64x32, clips idle(10), walk(10), attack(17), shoot(21)
+abaddon: 6 parts, atlas 256x256, clips idle(20), walk(20), cast(37), spread(25)
+tower_wraith: 7 parts, atlas 64x64, clips idle(20), walk(20), attack(21), cast(37)
+pope: 12 parts, atlas 128x64, clips idle(20), walk(36), attack(26), summon(41), cast(51), appear(37), teleport_in(19), teleport_out(19), whirlwind(141)
+heart_of_ender: 21 parts; debug-only; clips idle, walk, mortar, cross_beam, sink, rise, death
+arch_visage: 5 parts; debug-only; clips idle, walk, spawn_attack
+seal relics: deterministic agitation, 2 slots, 3 abilities and two-layer HUD wired
+仪式播报（末尾补一遍）：8 行，6 个文件
+特效收口：172 个函数；force→normal 152，数量 48，速度 5，尺寸 26，闪光折色 14
+
+== 3. validation ==
+functions: 5367   loot tables: 167   item modifiers: 27   advancements: 43
+
+no problems found
+advancement fields: 43 criteria checked against 54 vanilla triggers
+  no unknown condition fields
+ritual phase2 audit: 7 lords x 3 reachable pressure fields = 21
+ritual phase2 audit: 21 triple-wave AOE fields + centre-locked boss = PASS
+ritual phase2 audit: 50/100/0 state gates, right-click kit, persistent HUD = PASS
+GOETIC LEGION AUDIT: PASS
+  35 unique Goetic minions / 7 lords / 5 persistent roles
+  manual all/individual summons and phase-two capped rotation present
+  35 named audiovisual abilities, 35 two-pool loot tables, career reward present
+  one ten-tick ecology pass / two casts per beat / 10-20 tick telegraph then resolve
+  exact rite ownership / <=12 particles per pulse
+LIFE TREE PARTICLE AUDIT: PASS
+  10 Sephiroth + dashed Daath / 22 paths / diameter exactly 1 block
+  footprint 3.900 x 8.460 blocks / 418 particle commands per 10-tick redraw
+  player-yaw placement, local clear, global clear and guarded runtime present
+KABBALAH COVENANT AUDIT: PASS
+  flower banner-pattern Blood Covenant + 10 legible dye offerings + True Cross
+  position-aware placement, duplicate/wrong-node safety and 10 ground displays
+  completion handoff is closed for the divine-covenant reward stage
+DIVINE COVENANT AUDIT PASS
+seal-relic check PASS
+  agitation 100 is the sole escape trigger; 99 is safe
+  three warning tiers, ordered two-slot index and all three abilities wired
+  holy-water purification and suppression costs are statically visible
+drop-policy check PASS
+  98 vanilla entity loot tables empty; 7 authored tables preserved
+  charged-creeper heads suppressed; ordinary item entities untouched
+Retired mob content check OK: vanilla zombies/skeletons; no wind, drowned or piglin armies
+pseudo boom check: 全部攻击瞬爆无爆炸实体、无地形破坏
+effect duration check PASS: 没有带刻后缀的 effect give
+palette: self-check ok, no pillar legacy colour in built text
+palette: [warn] 44 generators still spell 344 unregistered hex literals: pope_m2_reference.py=33, modernize_legacy_weapons.py=32, add_exorcism_expansion.py=29, modernize_legacy_advanced.py=21, pope_uv_study.py=21, emit_guide.py=19, add_player_panel.py=14, add_runes.py=13, heart_of_ender_texture_study.py=13, add_kabbalah_covenant.py=12, add_book.py=11, pope_m3_attack_study.py=11, pope_m3_report.py=10, add_epics.py=9, add_lucifer.py=8, add_ritual_phase2.py=7, heart_of_ender_shell_motion.py=7, add_true_name_rite.py=6, polish_ui.py=6, add_leviathan.py=5, heart_of_ender_materials.py=5, pope_m2_uv.py=5, add_twins.py=4, opt_misc.py=4, pope_m2_report.py=4, pope_motion_study.py=4, arch_visage_report.py=3, rpg_vfx.py=3, add_skills.py=2, heart_of_ender_fetch.py=2, heart_of_ender_final_review.py=2, heart_of_ender_m3_review.py=2, heart_of_ender_material_review.py=2, heart_of_ender_review_board.py=2, polish_vfx.py=2, pope_eye_review.py=2, pope_motion_preview.py=2, add_holy_items.py=1, add_pact.py=1, add_pope_model.py=1, add_tower_guard.py=1, build_combat_prompt_font.py=1, pope_preview_static.py=1, pope_static_candidates.py=1
+特效预算：1257 个函数、2520 条粒子命令受规范约束；常驻每刻合计 17（每类一只）
+特效预算审计通过（0 条警告）
+
+== 4. per-tick profile ==
+  rpg:command/index                          commands=277    selector_cost=162     nbt_sel=3     data_get=1    particles=0
+  rpg:command/tick                           commands=38509  selector_cost=16256   nbt_sel=11    data_get=57   particles=3236
+  rpg:item/sword/legend/legend1              commands=877    selector_cost=1548    nbt_sel=0     data_get=0    particles=184
+  rpg:entities/warden/warden                 commands=324    selector_cost=490     nbt_sel=0     data_get=8    particles=23
+  rpg:tower_guard/tick                       commands=5318   selector_cost=182     nbt_sel=1     data_get=0    particles=1
+  rpg:beelzebub/tick                         commands=2130   selector_cost=72      nbt_sel=1     data_get=0    particles=0
+  rpg:vanguard/tick                          commands=1530   selector_cost=70      nbt_sel=1     data_get=0    particles=1
+  rpg:leviathan/tick                         commands=2132   selector_cost=80      nbt_sel=1     data_get=0    particles=0
+  rpg:sunken_skeleton/tick                   commands=1578   selector_cost=100     nbt_sel=1     data_get=0    particles=0
+  rpg:abaddon/tick                           commands=1865   selector_cost=76      nbt_sel=1     data_get=0    particles=0
+  rpg:tower_wraith/tick                      commands=5828   selector_cost=148     nbt_sel=1     data_get=0    particles=0
+  rpg:pope/tick                              commands=24363  selector_cost=120     nbt_sel=3     data_get=0    particles=0
+  rpg:heart_of_ender/tick                    commands=16075  selector_cost=52      nbt_sel=0     data_get=0    particles=0
+  rpg:arch_visage/tick                       commands=633    selector_cost=16      nbt_sel=0     data_get=0    particles=0
+  rpg:pope_fight/tick                        commands=3801   selector_cost=1906    nbt_sel=0     data_get=3    particles=68
+  rpg:command/tick_end                       commands=5      selector_cost=10      nbt_sel=0     data_get=0    particles=0
+  rpg:beelzebub/tick_late                    commands=1      selector_cost=2       nbt_sel=0     data_get=0    particles=0
+  rpg:vanguard/tick_late                     commands=1      selector_cost=2       nbt_sel=0     data_get=0    particles=0
+  rpg:leviathan/tick_late                    commands=1      selector_cost=2       nbt_sel=0     data_get=0    particles=0
+  rpg:sunken_skeleton/tick_late              commands=1      selector_cost=2       nbt_sel=0     data_get=0    particles=0
+  rpg:abaddon/tick_late                      commands=1      selector_cost=2       nbt_sel=0     data_get=0    particles=0
+  rpg:tower_wraith/tick_late                 commands=1      selector_cost=2       nbt_sel=0     data_get=0    particles=0
+  rpg:pope/tick_late                         commands=3      selector_cost=6       nbt_sel=0     data_get=0    particles=0
+
+  TOTAL per tick: commands=105254  selector_cost=21306  nbt-matching selectors=24  data-get-entity=69  particle cmds=3513

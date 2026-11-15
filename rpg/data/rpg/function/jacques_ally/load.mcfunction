@@ -1,0 +1,13 @@
+scoreboard objectives add rpg_al dummy
+scoreboard objectives add rpg_al_id dummy
+scoreboard objectives add rpg_al_own dummy
+scoreboard objectives add rpg_al_cd dummy
+scoreboard objectives add rpg_al_lu dummy
+scoreboard objectives add rpg_al_t dummy
+scoreboard objectives add rpg_al_hp dummy
+scoreboard objectives add rpg_al_b dummy
+scoreboard objectives add rpg_al_cb dummy
+scoreboard objectives add rpg_al_sk dummy
+scoreboard objectives add rpg_al_mt dummy
+scoreboard objectives add rpg_al_life dummy
+scoreboard objectives add rpg_al_kd dummy

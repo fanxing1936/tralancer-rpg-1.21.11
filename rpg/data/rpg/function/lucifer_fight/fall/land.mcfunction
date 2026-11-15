@@ -3,7 +3,7 @@ function rpg:lucifer_p2/play/jungleabomination_land
 scoreboard players operation #id rpg_l2_id = @s rpg_l2_id
 execute as @e[type=minecraft:marker,tag=rpg.lu2f.lmark] if score @s rpg_l2_id = #id rpg_l2_id run kill @s
 tag @s add rpg.dm.cast
-execute as @a[distance=..5.5,gamemode=!spectator,gamemode=!creative] run function rpg:lucifer_fight/fall/hit
+execute as @e[tag=rpg.unit.f,distance=..5.5] run function rpg:lucifer_fight/fall/hit
 tag @s remove rpg.dm.cast
 particle block{block_state:{Name:"minecraft:rooted_dirt"}} ~ ~0.3 ~ 3 0.2 3 0.2 120
 particle dust_color_transition{from_color:[0.37,0.84,0.55],to_color:[0.0,0.29,0.11],scale:2.4} ~ ~0.6 ~ 3 0.4 3 0.06 60

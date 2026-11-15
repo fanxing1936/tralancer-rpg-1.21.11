@@ -1,0 +1,42 @@
+{
+  "textures": {
+    "0": "rpg:item/david/atlas",
+    "particle": "rpg:item/david/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.52,
+        8.0,
+        7.5203
+      ],
+      "to": [
+        8.48,
+        8.0,
+        8.4797
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            10.0,
+            2.125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            8.0,
+            2.125,
+            10.0,
+            0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

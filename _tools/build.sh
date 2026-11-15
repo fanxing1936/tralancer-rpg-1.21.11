@@ -54,6 +54,9 @@ python retype_wukong.py ../resourcepack ../rpg
 # 米迦勒脊骨／肋骨：[神圣] 双持圣骸。要在 add_twins 之后（借它的副手索引块），
 # 早于 opt_index、make_boxes、polish_ui 与 polish_vfx。
 python add_michael.py ../resourcepack ../rpg
+# Minecraft Dungeons 原作武器：坟墓克星、竖琴弩（[传说]，圣殿大团长雅克的武器）。
+# 同米迦勒：早于 opt_index、make_boxes、polish_ui 与 polish_vfx。
+python add_dungeons_weapons.py ../resourcepack ../rpg
 # 更新前旧武器的首批现代化：统一命中入口、玩家独立状态与 HUD 反馈。
 # 必须早于 opt_actionbar，让新增提示也进入唯一 actionbar 出口。
 python modernize_legacy_weapons.py ../rpg
@@ -116,6 +119,9 @@ python add_pact_depth.py ../rpg ../resourcepack
 # 的无损还原，新约按 ART-STYLE D6 重建；单独重建数据包也要收回来
 python fix_texture_grid.py ../resourcepack
 python add_drop_policy.py ../rpg
+# 批量护甲与套装加成：要在 add_demon_minions 之后（往罪仆掉落表里追加），
+# 早于 make_boxes 与 polish_ui；也晚于全部 opt_*，套装检测不会被改写。
+python add_armor_sets.py ../rpg
 # 全量领取箱必须在所有 give 生成器之后运行，才能收齐驱魔工具、真名残页
 # 与裁决奖励，并将旧目录中的物品按语义重新分类。
 python make_boxes.py ../rpg
@@ -125,6 +131,8 @@ python polish_ui.py ../rpg
 # 圣卫（塔卫，展示实体生物）：只写 rpg:tower_guard/ 与 #minecraft:tick 一条入口，
 # 放在所有选择器优化之后，免得被改写；仍早于封印遗物这一最终层。
 python add_tower_guard.py ../resourcepack ../rpg
+# 圣卫的另外两种：重盾（原作皇家卫兵）、术士（原作终末灾厄村民，唤魔者网格褐袍）；rpg:holy_guard/summon 三选一
+python add_holy_guards.py ../resourcepack ../rpg
 # 别西卜换上无名者模型：只加外观与音效，挂进 sk4_*、ult4*、advent_gone 末尾，
 # 不动标签、血量与招式；共用 display_mob.py 管线。
 python add_beelzebub.py ../resourcepack ../rpg
@@ -139,6 +147,12 @@ python add_mammon_model.py ../resourcepack ../rpg
 python add_samael_model.py ../resourcepack ../rpg
 python add_belial_model.py ../resourcepack ../rpg
 python add_lord_servants.py ../resourcepack ../rpg
+# 篡夺者一阶段外观：附魔师（usurper_dungeons_ref/）
+python add_usurper_model.py ../resourcepack ../rpg
+# 圣殿大团长雅克：原作玩家英雄网格 + 赫克斯皮肤 + 英雄铠甲，坟墓克星与竖琴弩（jacques_dungeons_ref/）
+python add_jacques_model.py ../resourcepack ../rpg
+# 篡夺者战的特效素材：原作附魔台符文、灵魂图腾法阵、六芒星、唤魔者尖牙（usurper_fx_ref/）
+python add_usurper_fx_art.py ../resourcepack
 python add_lucifer_model.py ../resourcepack ../rpg --defer-shaders
 python add_lucifer_p2_model.py ../resourcepack ../rpg
 # 原作 Abomination Vine：缠枝破土的藤蔓（dungeons_conversion/generic.py 转换）
@@ -148,6 +162,9 @@ python add_sunken_skeleton.py ../resourcepack ../rpg
 python add_abaddon_model.py ../resourcepack ../rpg
 python add_tower_wraith.py ../resourcepack ../rpg
 python add_pope_model.py ../resourcepack ../rpg
+python add_prime_enchanter_model.py ../resourcepack ../rpg
+# 篡夺者二阶段外观：首席附魔师的冰电改篡夺白金，帽顶加原作王冠（须在上面两步之后）
+python add_usurper_holy_look.py ../resourcepack
 # 末影之心与灾厄面容：仅调试模型/动作，不绑定现有怪物或接入战斗逻辑。
 python add_heart_of_ender.py ../resourcepack ../rpg
 python add_arch_visage.py ../resourcepack ../rpg
@@ -159,6 +176,10 @@ python add_lucifer_p2_fx_art.py ../resourcepack
 python add_lucifer_props.py ../resourcepack
 # 最终 Boss 路西法的位图血条：饰物与标题在 lucifer_boss_ref/bar/（Codex 绘制）
 python add_lucifer_boss_art.py ../resourcepack
+# 篡夺者的位图血条：饰物与标题在 usurper_boss_ref/bar/（占位，正式稿见 BAR-BRIEF.md）
+python add_usurper_boss_art.py ../resourcepack
+# 雅克的位图血条：饰物与标题在 jacques_boss_ref/bar/（占位：原作图标与哥特字体）
+python add_jacques_boss_art.py ../resourcepack
 # 教皇战（docs/POPE-DESIGN.md）：调用各模型的函数，放在所有模型之后。
 python add_pope_fight.py ../rpg
 # 路西法二阶段「知善恶树」的变身与招式（docs/LUCIFER-P2-DESIGN.md）；要在两阶段外观、
@@ -166,6 +187,12 @@ python add_pope_fight.py ../rpg
 python add_lucifer_fight.py ../rpg
 # 最终 Boss 路西法（docs/LUCIFER-BOSS-DESIGN.md）：复用上面的招式时间线，要在它之后
 python add_lucifer_boss.py ../rpg
+# 篡夺者（达里奥·所罗门）Boss：docs/USURPER-DESIGN.md
+python add_usurper_boss.py ../rpg
+# 圣殿大团长雅克 Boss：docs/JACQUES-DESIGN.md
+python add_jacques_boss.py ../rpg
+# 友军雅克：圣殿誓约召他并肩作战 20 秒（docs/JACQUES-ALLY.md）
+python add_jacques_ally.py ../rpg ../resourcepack
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.
@@ -177,6 +204,9 @@ python add_panel_dialog.py ../rpg
 # 特效收口（docs/VFX-SPEC.md）：force 只留给预警和大招，数量／速度／尺寸收进各档上限，
 # 旧柱色闪光折回亮色。放在最后，前面所有生成器（含封印遗物层）写的粒子都经过这一道。
 python polish_vfx.py ../rpg
+# 友军单位接入：敌方技能里选玩家的 @a/@p/@r 也算上友军，玩家的范围技能避开友军。
+# 要在所有生成器与收口之后（它改写的是最终产物）。
+python add_ally_units.py ../rpg
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg

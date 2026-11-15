@@ -5,6 +5,7 @@ import html
 import io
 import json
 
+import guide_bestiary
 import rpg_ui_style as ui
 
 from debug_commands import ALL_COMMANDS, render_html as render_debug_commands
@@ -407,7 +408,7 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 def build():
     p = []
     a = p.append
-    a(HEAD.replace("@@TIER_TOKENS@@", tier_tokens()))
+    a(HEAD.replace("@@TIER_TOKENS@@", tier_tokens()).replace("</style>", guide_bestiary.CSS + "</style>", 1))
     a('<div class="wrap">')
 
     # masthead ------------------------------------------------------------
@@ -505,8 +506,8 @@ def build():
 
     # IV armour -----------------------------------------------------------
     a('''<section class="plate" id="s4">
-<div class="plate-h"><span class="num">IV</span><h2>护甲图鉴</h2><span class="sub">14 件 · 4 套</span></div>
-<p>护甲共四套：<strong>神圣</strong>（圣荆棘冠 / 都灵裹尸布）走减伤与回复，<strong>森焱</strong>套抗火与击退，<strong>王者</strong>套堆生命与伤害吸收，<strong>冰霜</strong>套是过渡装。护甲的被动技能由胸甲上的镶嵌符文提供（见下一节）。</p>
+<div class="plate-h"><span class="num">IV</span><h2>护甲图鉴</h2><span class="sub">''' + str(n_of("armour")) + ''' 件 · 8 套</span></div>
+<p>护甲共八套：<strong>神圣</strong>（圣荆棘冠 / 都灵裹尸布 / 无缝圣袍 / 各各他之履）走减伤与回复，<strong>森焱</strong>套抗火与击退，<strong>王者</strong>套堆生命与伤害吸收，<strong>冰霜</strong>与<strong>圣卫残甲</strong>是过渡装（圣卫残甲出自试炼宝库），<strong>驱魔人法衣</strong>重机动（不祥宝库），<strong>渊海</strong>套专精水下（利维坦麾下罪仆），<strong>恶魔枷甲</strong>以生命换攻击（七柱罪仆）。新四套与神圣套<b>穿齐四件</b>另有套装加成，写在每件描述的末尾。护甲的被动技能由胸甲上的镶嵌符文提供（见下一节）。</p>
 <div class="grid">''' + F["armour"] + '</div></section>')
 
     # V runes -------------------------------------------------------------
@@ -539,21 +540,16 @@ def build():
 <div class="note"><b>死亡掉落：</b>保留本包定制战利品，屏蔽其余原版死亡表、充能苦力怕头颅和普通装备随机掉落。不清理玩家投掷物，也不修改玩家死亡背包。凋灵之星、坐骑内部库存等原版硬编码掉落仍保留，边界详见 <a href="DROP-POLICY.md">掉落策略</a>。</div>
 </section>''')
 
-    # VII bestiary --------------------------------------------------------
-    a('''<section class="plate" id="s9">
-<div class="plate-h"><span class="num">VIII</span><h2>生物图鉴</h2><span class="sub">领主 · 罪仆生态</span></div>
-<p>僵尸、骷髅、苦力怕与溺尸保持原版生成和装备逻辑；旧版强化变种、风袭掠夺者、溺尸军团与猪灵军团已经完整退役。当前自定义生物内容集中在七宗罪领主、驱魔战役和所罗门罪仆生态。</p>
-
-<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">恶魔 · rpg:entities/warden</h3>
+    # VIII bestiary -------------------------------------------------------
+    # 领主、罪仆、圣卫、四场 Boss 战、友军与实装记录都在 guide_bestiary.py
+    a(guide_bestiary.section('''<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">恶魔 · rpg:entities/warden</h3>
 <div class="tw"><table>
 <thead><tr><th>单位</th><th>生命</th><th>阶段</th><th>特征</th></tr></thead>
 <tbody>
 <tr class="boss"><td><span class="nm">恶魔（唤魔者形态）</span><span class="sm">标签 devil + boss</span></td><td class="num">1000</td><td>第一形态</td><td>护甲 15、击退抗性 0.5、体型 ×1.2，常驻隐身并持续散出烟雾与墨汁粒子；被<b>替死人偶</b>攻击会强制显形</td></tr>
 <tr><td><span class="nm">恶魔（卫道士形态）</span><span class="sm">标签 devil2 + boss</span></td><td class="num">1000</td><td>第二形态</td><td>双持下界合金剑，按 <code>devil</code> 计分推进技能序列，390 刻时召唤三名分身</td></tr>
 <tr><td><span class="nm">恶魔护卫</span></td><td class="num">100</td><td>随从</td><td>Johnny 卫道士，击退 2、速度加成</td></tr>
-</tbody></table></div>
-
-</section>''')
+</tbody></table></div>'''))
 
     # IX exorcism ---------------------------------------------------------
     a('''<section class="plate" id="s8">
@@ -694,7 +690,7 @@ def build():
 <p>外表与常人无异的空壳。平时和普通村民毫无分别，<strong>只有当持圣器的人走进 16 格内才会显形</strong>（发光 + 幽匿之魂粒子）。它不是靶子——放着不管会烂开，动手打反而更糟。</p>
 <div class="note"><b>什么算「圣器」。</b>三类，<b>手持或穿戴</b>都算——护甲当然是穿着算：
 <br>① 四件<b>驱魔道具</b>（图腾、圣水、替死人偶、天启星，见下一节）；
-<br>② <b>神圣品质</b>的武具：<b>朗基努斯之枪</b>、<b>圣荆棘冠</b>、<b>都灵裹尸布</b>；
+<br>② <b>神圣品质</b>的武具：<b>朗基努斯之枪</b>、<b>米迦勒脊骨</b>、<b>米迦勒肋骨</b>、<b>圣荆棘冠</b>、<b>都灵裹尸布</b>、<b>无缝圣袍</b>、<b>各各他之履</b>；
 <br>③ 任何加过<b>神圣分支</b>的武器（丢神圣唱片给武器）——<b>一、二、三级都算</b>。
 <br>身上带着圣器时魔化会缓慢消退；但魔化一旦到 <b>91 以上</b>，圣器<b>会灼手</b>。</div>
 <div class="note"><b>圣器还能护住视野。</b>身上带着圣器时：
@@ -744,7 +740,7 @@ def build():
 <div class="plate-h"><span class="num">X</span><h2>驱魔道具</h2><span class="sub">基础四件 · 七种仪式工具</span></div>
 <p>这些道具组成同一套<strong>显形、净化、仪式与封印</strong>工具链，因此从普通药剂与材料里摘出，单列一族。
 它们也是最容易到手的<strong>「圣器」</strong>：<b>手持或穿戴</b>任何一件圣器，空缺者就会在 16 格内显形，魔化也会缓慢消退。
-神圣品质的<b>朗基努斯之枪</b>、<b>圣荆棘冠</b>、<b>都灵裹尸布</b>同样算圣器——后两件<b>穿在身上</b>即可。</p>
+神圣品质的<b>朗基努斯之枪</b>、<b>米迦勒脊骨</b>、<b>米迦勒肋骨</b>与四件神圣护甲同样算圣器——护甲<b>穿在身上</b>即可。</p>
 
 <div class="note"><b>为什么这件事要紧。</b>「持圣器」这个前提原本<b>只有神圣分支武器</b>能满足——也就是说在拿到神圣唱片、
 改造过武器之前，空缺者<b>全程隐形</b>：蔓延、撕壳、附身转移全都在照常运转，你却一个也看不见，整套驱魔体系像是没生效。

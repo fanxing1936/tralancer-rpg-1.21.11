@@ -204,6 +204,13 @@ scoreboard objectives add rpg_mi_last dummy
 scoreboard objectives add rpg_mi_cd dummy
 scoreboard objectives add rpg_mi_tmp dummy
 
+##Dungeons 原作武器
+scoreboard objectives add rpg_gb_dmg minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add rpg_gb_combo dummy
+scoreboard objectives add rpg_gb_last dummy
+scoreboard objectives add rpg_gb_tmp dummy
+scoreboard objectives add rpg_hc_tmp dummy
+
 # 老武器现代化：状态全部归玩家，不再 reset * 互踩
 scoreboard objectives add rpg_leg_cd dummy
 scoreboard objectives add rpg_pen_mode dummy
@@ -324,6 +331,11 @@ scoreboard objectives add rpg_ps_food food
 scoreboard players set #five rpg_pact 5
 scoreboard players set #ten rpg_pact 10
 scoreboard players set #twenty_t rpg_pact 20
+
+##套装护甲
+scoreboard objectives add rpg_as_clock dummy
+scoreboard objectives add rpg_as_hp dummy
+scoreboard objectives add rpg_as_max dummy
 scoreboard objectives add rpg_agit dummy
 scoreboard objectives add rpg_rel_n dummy
 scoreboard objectives add rpg_rel_1 dummy

@@ -4,12 +4,12 @@ execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s d
 execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 250 run particle minecraft:sweep_attack ~5 ~1.2 ~5 -10 -1 -10 0 300 force
 execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 250 run playsound minecraft:entity.ghast.death player @a[distance=..15]
 execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 250 run function rpg:entities/warden/pseudo_burst_players
-execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 250 as @a[distance=..10] at @s run particle squid_ink ~1 ~1 ~1 -2 -1 -2 1 100
+execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 250 as @e[tag=rpg.unit,distance=..10] at @s run particle squid_ink ~1 ~1 ~1 -2 -1 -2 1 100
 
 
-execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 350 as @a[distance=..10] at @s run summon lightning_bolt ~ ~ ~
-execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 350 as @a[distance=..10] at @s run particle sculk_soul ~0.25 ~1.2 ~0.25 -0.5 -1 -0.5 0.1 50
-execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 350 as @a[distance=..10] at @s run particle trial_spawner_detection_ominous ~0.25 ~1.2 ~0.25 -0.5 -1 -0.5 0.1 50
+execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 350 as @e[tag=rpg.unit,distance=..10] at @s run summon lightning_bolt ~ ~ ~
+execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 350 as @e[tag=rpg.unit,distance=..10] at @s run particle sculk_soul ~0.25 ~1.2 ~0.25 -0.5 -1 -0.5 0.1 50
+execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 350 as @e[tag=rpg.unit,distance=..10] at @s run particle trial_spawner_detection_ominous ~0.25 ~1.2 ~0.25 -0.5 -1 -0.5 0.1 50
 
 
 execute as @e[type=minecraft:vindicator,tag=devil2,tag=boss] at @s if score @s devil matches 390 run function rpg:entities/warden/pseudo_burst_minions

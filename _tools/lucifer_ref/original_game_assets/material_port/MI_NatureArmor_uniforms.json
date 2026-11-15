@@ -1,0 +1,1988 @@
+{
+  "start": 8734,
+  "UniformVectorExpressions": {
+    "start": 8734,
+    "count": 13,
+    "expressions": [
+      {
+        "start": 8738,
+        "type": "VectorParameter",
+        "parameter": {
+          "name": "SelectionColor",
+          "association": 2,
+          "index": -1
+        },
+        "default": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "end": 8775
+      },
+      {
+        "start": 8775,
+        "type": "VectorParameter",
+        "parameter": {
+          "name": "Flash Color",
+          "association": 2,
+          "index": -1
+        },
+        "default": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "end": 8812
+      },
+      {
+        "start": 8812,
+        "type": "ComponentSwizzle",
+        "x": {
+          "start": 8820,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "Flash Color",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "end": 8857
+        },
+        "indices": [
+          0,
+          1,
+          2,
+          -1
+        ],
+        "num_elements": 3,
+        "end": 8862
+      },
+      {
+        "start": 8862,
+        "type": "VectorParameter",
+        "parameter": {
+          "name": "Emissive",
+          "association": 2,
+          "index": -1
+        },
+        "default": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "end": 8899
+      },
+      {
+        "start": 8899,
+        "type": "ComponentSwizzle",
+        "x": {
+          "start": 8907,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "Emissive",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "end": 8944
+        },
+        "indices": [
+          0,
+          1,
+          2,
+          -1
+        ],
+        "num_elements": 3,
+        "end": 8949
+      },
+      {
+        "start": 8949,
+        "type": "VectorParameter",
+        "parameter": {
+          "name": "EnchantmentColor",
+          "association": 2,
+          "index": -1
+        },
+        "default": [
+          0.9352309703826904,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "end": 8986
+      },
+      {
+        "start": 8986,
+        "type": "ComponentSwizzle",
+        "x": {
+          "start": 8994,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "EnchantmentColor",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            0.9352309703826904,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "end": 9031
+        },
+        "indices": [
+          0,
+          1,
+          2,
+          -1
+        ],
+        "num_elements": 3,
+        "end": 9036
+      },
+      {
+        "start": 9036,
+        "type": "ComponentSwizzle",
+        "x": {
+          "start": 9044,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "SelectionColor",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "end": 9081
+        },
+        "indices": [
+          0,
+          1,
+          2,
+          -1
+        ],
+        "num_elements": 3,
+        "end": 9086
+      },
+      {
+        "start": 9086,
+        "type": "VectorParameter",
+        "parameter": {
+          "name": "StatusColor",
+          "association": 2,
+          "index": -1
+        },
+        "default": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "end": 9123
+      },
+      {
+        "start": 9123,
+        "type": "ComponentSwizzle",
+        "x": {
+          "start": 9131,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "StatusColor",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "end": 9168
+        },
+        "indices": [
+          0,
+          1,
+          2,
+          -1
+        ],
+        "num_elements": 3,
+        "end": 9173
+      },
+      {
+        "start": 9173,
+        "type": "VectorParameter",
+        "parameter": {
+          "name": "DissolveTextureSize",
+          "association": 2,
+          "index": -1
+        },
+        "default": [
+          2.0,
+          2.0,
+          0.0,
+          1.0
+        ],
+        "end": 9210
+      },
+      {
+        "start": 9210,
+        "type": "ComponentSwizzle",
+        "x": {
+          "start": 9218,
+          "type": "VectorParameter",
+          "parameter": {
+            "name": "DissolveTextureSize",
+            "association": 2,
+            "index": -1
+          },
+          "default": [
+            2.0,
+            2.0,
+            0.0,
+            1.0
+          ],
+          "end": 9255
+        },
+        "indices": [
+          0,
+          1,
+          2,
+          -1
+        ],
+        "num_elements": 3,
+        "end": 9260
+      },
+      {
+        "start": 9260,
+        "type": "ComponentSwizzle",
+        "x": {
+          "start": 9268,
+          "type": "ComponentSwizzle",
+          "x": {
+            "start": 9276,
+            "type": "VectorParameter",
+            "parameter": {
+              "name": "DissolveTextureSize",
+              "association": 2,
+              "index": -1
+            },
+            "default": [
+              2.0,
+              2.0,
+              0.0,
+              1.0
+            ],
+            "end": 9313
+          },
+          "indices": [
+            0,
+            1,
+            2,
+            -1
+          ],
+          "num_elements": 3,
+          "end": 9318
+        },
+        "indices": [
+          0,
+          1,
+          -1,
+          -1
+        ],
+        "num_elements": 2,
+        "end": 9323
+      }
+    ],
+    "end": 9323
+  },
+  "UniformScalarExpressions": {
+    "start": 9323,
+    "count": 23,
+    "expressions": [
+      {
+        "start": 9327,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "Flash Timestamp",
+          "association": 2,
+          "index": -1
+        },
+        "default": -100.0,
+        "end": 9352
+      },
+      {
+        "start": 9352,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "Flash Seconds",
+          "association": 2,
+          "index": -1
+        },
+        "default": 0.10000000149011612,
+        "end": 9377
+      },
+      {
+        "start": 9377,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "EmissivePower",
+          "association": 2,
+          "index": -1
+        },
+        "default": 1.0,
+        "end": 9402
+      },
+      {
+        "start": 9402,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "NaturalEmissive",
+          "association": 2,
+          "index": -1
+        },
+        "default": 0.20000000298023224,
+        "end": 9427
+      },
+      {
+        "start": 9427,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "Power",
+          "association": 2,
+          "index": -1
+        },
+        "default": 0.0,
+        "end": 9452
+      },
+      {
+        "start": 9452,
+        "type": "FoldedMath",
+        "a": {
+          "start": 9460,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "Power",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.0,
+          "end": 9485
+        },
+        "b": {
+          "start": 9485,
+          "type": "Constant",
+          "value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "value_type": 15,
+          "end": 9510
+        },
+        "operation": 0,
+        "value_type": 15,
+        "end": 9515
+      },
+      {
+        "start": 9515,
+        "type": "FoldedMath",
+        "a": {
+          "start": 9523,
+          "type": "FoldedMath",
+          "a": {
+            "start": 9531,
+            "type": "ScalarParameter",
+            "parameter": {
+              "name": "Power",
+              "association": 2,
+              "index": -1
+            },
+            "default": 0.0,
+            "end": 9556
+          },
+          "b": {
+            "start": 9556,
+            "type": "Constant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "value_type": 15,
+            "end": 9581
+          },
+          "operation": 0,
+          "value_type": 15,
+          "end": 9586
+        },
+        "b": {
+          "start": 9586,
+          "type": "Constant",
+          "value": [
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "value_type": 15,
+          "end": 9611
+        },
+        "operation": 3,
+        "value_type": 15,
+        "end": 9616
+      },
+      {
+        "start": 9616,
+        "type": "Floor",
+        "x": {
+          "start": 9624,
+          "type": "FoldedMath",
+          "a": {
+            "start": 9632,
+            "type": "FoldedMath",
+            "a": {
+              "start": 9640,
+              "type": "ScalarParameter",
+              "parameter": {
+                "name": "Power",
+                "association": 2,
+                "index": -1
+              },
+              "default": 0.0,
+              "end": 9665
+            },
+            "b": {
+              "start": 9665,
+              "type": "Constant",
+              "value": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "value_type": 15,
+              "end": 9690
+            },
+            "operation": 0,
+            "value_type": 15,
+            "end": 9695
+          },
+          "b": {
+            "start": 9695,
+            "type": "Constant",
+            "value": [
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "value_type": 15,
+            "end": 9720
+          },
+          "operation": 3,
+          "value_type": 15,
+          "end": 9725
+        },
+        "end": 9725
+      },
+      {
+        "start": 9725,
+        "type": "FoldedMath",
+        "a": {
+          "start": 9733,
+          "type": "Floor",
+          "x": {
+            "start": 9741,
+            "type": "FoldedMath",
+            "a": {
+              "start": 9749,
+              "type": "FoldedMath",
+              "a": {
+                "start": 9757,
+                "type": "ScalarParameter",
+                "parameter": {
+                  "name": "Power",
+                  "association": 2,
+                  "index": -1
+                },
+                "default": 0.0,
+                "end": 9782
+              },
+              "b": {
+                "start": 9782,
+                "type": "Constant",
+                "value": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "value_type": 15,
+                "end": 9807
+              },
+              "operation": 0,
+              "value_type": 15,
+              "end": 9812
+            },
+            "b": {
+              "start": 9812,
+              "type": "Constant",
+              "value": [
+                4.0,
+                4.0,
+                4.0,
+                4.0
+              ],
+              "value_type": 15,
+              "end": 9837
+            },
+            "operation": 3,
+            "value_type": 15,
+            "end": 9842
+          },
+          "end": 9842
+        },
+        "b": {
+          "start": 9842,
+          "type": "Constant",
+          "value": [
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "value_type": 15,
+          "end": 9867
+        },
+        "operation": 2,
+        "value_type": 15,
+        "end": 9872
+      },
+      {
+        "start": 9872,
+        "type": "Min",
+        "a": {
+          "start": 9880,
+          "type": "FoldedMath",
+          "a": {
+            "start": 9888,
+            "type": "Floor",
+            "x": {
+              "start": 9896,
+              "type": "FoldedMath",
+              "a": {
+                "start": 9904,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 9912,
+                  "type": "ScalarParameter",
+                  "parameter": {
+                    "name": "Power",
+                    "association": 2,
+                    "index": -1
+                  },
+                  "default": 0.0,
+                  "end": 9937
+                },
+                "b": {
+                  "start": 9937,
+                  "type": "Constant",
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "value_type": 15,
+                  "end": 9962
+                },
+                "operation": 0,
+                "value_type": 15,
+                "end": 9967
+              },
+              "b": {
+                "start": 9967,
+                "type": "Constant",
+                "value": [
+                  4.0,
+                  4.0,
+                  4.0,
+                  4.0
+                ],
+                "value_type": 15,
+                "end": 9992
+              },
+              "operation": 3,
+              "value_type": 15,
+              "end": 9997
+            },
+            "end": 9997
+          },
+          "b": {
+            "start": 9997,
+            "type": "Constant",
+            "value": [
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "value_type": 15,
+            "end": 10022
+          },
+          "operation": 2,
+          "value_type": 15,
+          "end": 10027
+        },
+        "b": {
+          "start": 10027,
+          "type": "Constant",
+          "value": [
+            9.0,
+            9.0,
+            9.0,
+            9.0
+          ],
+          "value_type": 15,
+          "end": 10052
+        },
+        "end": 10052
+      },
+      {
+        "start": 10052,
+        "type": "FoldedMath",
+        "a": {
+          "start": 10060,
+          "type": "Min",
+          "a": {
+            "start": 10068,
+            "type": "FoldedMath",
+            "a": {
+              "start": 10076,
+              "type": "Floor",
+              "x": {
+                "start": 10084,
+                "type": "FoldedMath",
+                "a": {
+                  "start": 10092,
+                  "type": "FoldedMath",
+                  "a": {
+                    "start": 10100,
+                    "type": "ScalarParameter",
+                    "parameter": {
+                      "name": "Power",
+                      "association": 2,
+                      "index": -1
+                    },
+                    "default": 0.0,
+                    "end": 10125
+                  },
+                  "b": {
+                    "start": 10125,
+                    "type": "Constant",
+                    "value": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ],
+                    "value_type": 15,
+                    "end": 10150
+                  },
+                  "operation": 0,
+                  "value_type": 15,
+                  "end": 10155
+                },
+                "b": {
+                  "start": 10155,
+                  "type": "Constant",
+                  "value": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                  ],
+                  "value_type": 15,
+                  "end": 10180
+                },
+                "operation": 3,
+                "value_type": 15,
+                "end": 10185
+              },
+              "end": 10185
+            },
+            "b": {
+              "start": 10185,
+              "type": "Constant",
+              "value": [
+                4.0,
+                4.0,
+                4.0,
+                4.0
+              ],
+              "value_type": 15,
+              "end": 10210
+            },
+            "operation": 2,
+            "value_type": 15,
+            "end": 10215
+          },
+          "b": {
+            "start": 10215,
+            "type": "Constant",
+            "value": [
+              9.0,
+              9.0,
+              9.0,
+              9.0
+            ],
+            "value_type": 15,
+            "end": 10240
+          },
+          "end": 10240
+        },
+        "b": {
+          "start": 10240,
+          "type": "Constant",
+          "value": [
+            9.0,
+            9.0,
+            9.0,
+            9.0
+          ],
+          "value_type": 15,
+          "end": 10265
+        },
+        "operation": 3,
+        "value_type": 15,
+        "end": 10270
+      },
+      {
+        "start": 10270,
+        "type": "FoldedMath",
+        "a": {
+          "start": 10278,
+          "type": "FoldedMath",
+          "a": {
+            "start": 10286,
+            "type": "Min",
+            "a": {
+              "start": 10294,
+              "type": "FoldedMath",
+              "a": {
+                "start": 10302,
+                "type": "Floor",
+                "x": {
+                  "start": 10310,
+                  "type": "FoldedMath",
+                  "a": {
+                    "start": 10318,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 10326,
+                      "type": "ScalarParameter",
+                      "parameter": {
+                        "name": "Power",
+                        "association": 2,
+                        "index": -1
+                      },
+                      "default": 0.0,
+                      "end": 10351
+                    },
+                    "b": {
+                      "start": 10351,
+                      "type": "Constant",
+                      "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ],
+                      "value_type": 15,
+                      "end": 10376
+                    },
+                    "operation": 0,
+                    "value_type": 15,
+                    "end": 10381
+                  },
+                  "b": {
+                    "start": 10381,
+                    "type": "Constant",
+                    "value": [
+                      4.0,
+                      4.0,
+                      4.0,
+                      4.0
+                    ],
+                    "value_type": 15,
+                    "end": 10406
+                  },
+                  "operation": 3,
+                  "value_type": 15,
+                  "end": 10411
+                },
+                "end": 10411
+              },
+              "b": {
+                "start": 10411,
+                "type": "Constant",
+                "value": [
+                  4.0,
+                  4.0,
+                  4.0,
+                  4.0
+                ],
+                "value_type": 15,
+                "end": 10436
+              },
+              "operation": 2,
+              "value_type": 15,
+              "end": 10441
+            },
+            "b": {
+              "start": 10441,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 10466
+            },
+            "end": 10466
+          },
+          "b": {
+            "start": 10466,
+            "type": "Constant",
+            "value": [
+              9.0,
+              9.0,
+              9.0,
+              9.0
+            ],
+            "value_type": 15,
+            "end": 10491
+          },
+          "operation": 3,
+          "value_type": 15,
+          "end": 10496
+        },
+        "b": {
+          "start": 10496,
+          "type": "Constant",
+          "value": [
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "value_type": 15,
+          "end": 10521
+        },
+        "operation": 2,
+        "value_type": 15,
+        "end": 10526
+      },
+      {
+        "start": 10526,
+        "type": "FoldedMath",
+        "a": {
+          "start": 10534,
+          "type": "FoldedMath",
+          "a": {
+            "start": 10542,
+            "type": "Min",
+            "a": {
+              "start": 10550,
+              "type": "FoldedMath",
+              "a": {
+                "start": 10558,
+                "type": "Floor",
+                "x": {
+                  "start": 10566,
+                  "type": "FoldedMath",
+                  "a": {
+                    "start": 10574,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 10582,
+                      "type": "ScalarParameter",
+                      "parameter": {
+                        "name": "Power",
+                        "association": 2,
+                        "index": -1
+                      },
+                      "default": 0.0,
+                      "end": 10607
+                    },
+                    "b": {
+                      "start": 10607,
+                      "type": "Constant",
+                      "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ],
+                      "value_type": 15,
+                      "end": 10632
+                    },
+                    "operation": 0,
+                    "value_type": 15,
+                    "end": 10637
+                  },
+                  "b": {
+                    "start": 10637,
+                    "type": "Constant",
+                    "value": [
+                      4.0,
+                      4.0,
+                      4.0,
+                      4.0
+                    ],
+                    "value_type": 15,
+                    "end": 10662
+                  },
+                  "operation": 3,
+                  "value_type": 15,
+                  "end": 10667
+                },
+                "end": 10667
+              },
+              "b": {
+                "start": 10667,
+                "type": "Constant",
+                "value": [
+                  4.0,
+                  4.0,
+                  4.0,
+                  4.0
+                ],
+                "value_type": 15,
+                "end": 10692
+              },
+              "operation": 2,
+              "value_type": 15,
+              "end": 10697
+            },
+            "b": {
+              "start": 10697,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 10722
+            },
+            "end": 10722
+          },
+          "b": {
+            "start": 10722,
+            "type": "Constant",
+            "value": [
+              9.0,
+              9.0,
+              9.0,
+              9.0
+            ],
+            "value_type": 15,
+            "end": 10747
+          },
+          "operation": 3,
+          "value_type": 15,
+          "end": 10752
+        },
+        "b": {
+          "start": 10752,
+          "type": "Constant",
+          "value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "value_type": 15,
+          "end": 10777
+        },
+        "operation": 2,
+        "value_type": 15,
+        "end": 10782
+      },
+      {
+        "start": 10782,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "EnchantmentAdd",
+          "association": 2,
+          "index": -1
+        },
+        "default": 0.0,
+        "end": 10807
+      },
+      {
+        "start": 10807,
+        "type": "FoldedMath",
+        "a": {
+          "start": 10815,
+          "type": "FoldedMath",
+          "a": {
+            "start": 10823,
+            "type": "Min",
+            "a": {
+              "start": 10831,
+              "type": "FoldedMath",
+              "a": {
+                "start": 10839,
+                "type": "Floor",
+                "x": {
+                  "start": 10847,
+                  "type": "FoldedMath",
+                  "a": {
+                    "start": 10855,
+                    "type": "FoldedMath",
+                    "a": {
+                      "start": 10863,
+                      "type": "ScalarParameter",
+                      "parameter": {
+                        "name": "Power",
+                        "association": 2,
+                        "index": -1
+                      },
+                      "default": 0.0,
+                      "end": 10888
+                    },
+                    "b": {
+                      "start": 10888,
+                      "type": "Constant",
+                      "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ],
+                      "value_type": 15,
+                      "end": 10913
+                    },
+                    "operation": 0,
+                    "value_type": 15,
+                    "end": 10918
+                  },
+                  "b": {
+                    "start": 10918,
+                    "type": "Constant",
+                    "value": [
+                      4.0,
+                      4.0,
+                      4.0,
+                      4.0
+                    ],
+                    "value_type": 15,
+                    "end": 10943
+                  },
+                  "operation": 3,
+                  "value_type": 15,
+                  "end": 10948
+                },
+                "end": 10948
+              },
+              "b": {
+                "start": 10948,
+                "type": "Constant",
+                "value": [
+                  4.0,
+                  4.0,
+                  4.0,
+                  4.0
+                ],
+                "value_type": 15,
+                "end": 10973
+              },
+              "operation": 2,
+              "value_type": 15,
+              "end": 10978
+            },
+            "b": {
+              "start": 10978,
+              "type": "Constant",
+              "value": [
+                9.0,
+                9.0,
+                9.0,
+                9.0
+              ],
+              "value_type": 15,
+              "end": 11003
+            },
+            "end": 11003
+          },
+          "b": {
+            "start": 11003,
+            "type": "Constant",
+            "value": [
+              9.0,
+              9.0,
+              9.0,
+              9.0
+            ],
+            "value_type": 15,
+            "end": 11028
+          },
+          "operation": 3,
+          "value_type": 15,
+          "end": 11033
+        },
+        "b": {
+          "start": 11033,
+          "type": "Constant",
+          "value": [
+            8.0,
+            8.0,
+            8.0,
+            8.0
+          ],
+          "value_type": 15,
+          "end": 11058
+        },
+        "operation": 2,
+        "value_type": 15,
+        "end": 11063
+      },
+      {
+        "start": 11063,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "SpecularScalar",
+          "association": 2,
+          "index": -1
+        },
+        "default": 0.0,
+        "end": 11088
+      },
+      {
+        "start": 11088,
+        "type": "FoldedMath",
+        "a": {
+          "start": 11096,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "SpecularScalar",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.0,
+          "end": 11121
+        },
+        "b": {
+          "start": 11121,
+          "type": "Constant",
+          "value": [
+            0.30000001192092896,
+            0.30000001192092896,
+            0.30000001192092896,
+            0.30000001192092896
+          ],
+          "value_type": 15,
+          "end": 11146
+        },
+        "operation": 2,
+        "value_type": 15,
+        "end": 11151
+      },
+      {
+        "start": 11151,
+        "type": "FoldedMath",
+        "a": {
+          "start": 11159,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "SpecularScalar",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.0,
+          "end": 11184
+        },
+        "b": {
+          "start": 11184,
+          "type": "Constant",
+          "value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "value_type": 15,
+          "end": 11209
+        },
+        "operation": 2,
+        "value_type": 15,
+        "end": 11214
+      },
+      {
+        "start": 11214,
+        "type": "FoldedMath",
+        "a": {
+          "start": 11222,
+          "type": "Constant",
+          "value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "value_type": 15,
+          "end": 11247
+        },
+        "b": {
+          "start": 11247,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "SpecularScalar",
+            "association": 2,
+            "index": -1
+          },
+          "default": 0.0,
+          "end": 11272
+        },
+        "operation": 1,
+        "value_type": 15,
+        "end": 11277
+      },
+      {
+        "start": 11277,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "AlphaOverride",
+          "association": 2,
+          "index": -1
+        },
+        "default": 1.0,
+        "end": 11302
+      },
+      {
+        "start": 11302,
+        "type": "FoldedMath",
+        "a": {
+          "start": 11310,
+          "type": "ScalarParameter",
+          "parameter": {
+            "name": "AlphaOverride",
+            "association": 2,
+            "index": -1
+          },
+          "default": 1.0,
+          "end": 11335
+        },
+        "b": {
+          "start": 11335,
+          "type": "Constant",
+          "value": [
+            0.10000000149011612,
+            0.10000000149011612,
+            0.10000000149011612,
+            0.10000000149011612
+          ],
+          "value_type": 15,
+          "end": 11360
+        },
+        "operation": 0,
+        "value_type": 15,
+        "end": 11365
+      },
+      {
+        "start": 11365,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "DissolveStart",
+          "association": 2,
+          "index": -1
+        },
+        "default": -50.0,
+        "end": 11390
+      },
+      {
+        "start": 11390,
+        "type": "ScalarParameter",
+        "parameter": {
+          "name": "DissolveDuration",
+          "association": 2,
+          "index": -1
+        },
+        "default": 4.0,
+        "end": 11415
+      }
+    ],
+    "end": 11415
+  },
+  "Uniform2DTextureExpressions": {
+    "start": 11415,
+    "count": 5,
+    "expressions": [
+      {
+        "start": 11419,
+        "type": "TextureParameter",
+        "parameter": {
+          "name": "Specular",
+          "association": 2,
+          "index": -1
+        },
+        "texture_index": 1,
+        "sampler_source": 0,
+        "end": 11448
+      },
+      {
+        "start": 11448,
+        "type": "TextureParameter",
+        "parameter": {
+          "name": "Albedo",
+          "association": 2,
+          "index": -1
+        },
+        "texture_index": 0,
+        "sampler_source": 0,
+        "end": 11477
+      },
+      {
+        "start": 11477,
+        "type": "Texture",
+        "texture_index": 2,
+        "sampler_source": 0,
+        "end": 11493
+      },
+      {
+        "start": 11493,
+        "type": "Texture",
+        "texture_index": 5,
+        "sampler_source": 0,
+        "end": 11509
+      },
+      {
+        "start": 11509,
+        "type": "Texture",
+        "texture_index": 4,
+        "sampler_source": 0,
+        "end": 11525
+      }
+    ],
+    "end": 11525
+  },
+  "UniformCubeTextureExpressions": {
+    "start": 11525,
+    "count": 0,
+    "expressions": [],
+    "end": 11529
+  },
+  "end": 11529,
+  "_evidence": {
+    "raw_path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\raw\\Game\\Content_Season2\\Actors\\Equipment\\Armor\\NatureArmor\\MI_NatureArmor.uexp",
+    "raw_sha256": "2cf238d8861e1de0f18c300e38ac6b78d44b83021744c2f136ea1e555129db9b",
+    "SM4_start": 85458,
+    "SM4_end": 88253,
+    "SM5_SM4_expression_bytes_identical": true,
+    "matched_bytes": 2795,
+    "material_overrides": {
+      "NaturalEmissive": 0.699999988079071,
+      "RefractionDepthBias": 0.0,
+      "Emissive": [
+        0.693310022354126,
+        8.0,
+        0.0,
+        1.0
+      ],
+      "EnchantmentColor": [
+        0.0,
+        0.23574799299240112,
+        1.0,
+        1.0
+      ],
+      "Albedo": {
+        "index": -8,
+        "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor.T_NatureArmor"
+      },
+      "Specular": {
+        "index": -9,
+        "path": "/Game/Content_Season2/Actors/Equipment/Armor/NatureArmor/T_NatureArmor_S.T_NatureArmor_S"
+      }
+    },
+    "buffer_float4_count": 19,
+    "slots": [
+      {
+        "source_kind": "vector",
+        "index": 0,
+        "buffer": "cb3[0]",
+        "expression": "SelectionColor",
+        "static_value": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "uexp_start": 8738,
+        "uexp_end": 8775
+      },
+      {
+        "source_kind": "vector",
+        "index": 1,
+        "buffer": "cb3[1]",
+        "expression": "Flash Color",
+        "static_value": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "uexp_start": 8775,
+        "uexp_end": 8812
+      },
+      {
+        "source_kind": "vector",
+        "index": 2,
+        "buffer": "cb3[2]",
+        "expression": "Flash Color.swizzle[0, 1, 2]",
+        "static_value": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "uexp_start": 8812,
+        "uexp_end": 8862
+      },
+      {
+        "source_kind": "vector",
+        "index": 3,
+        "buffer": "cb3[3]",
+        "expression": "Emissive",
+        "static_value": [
+          0.693310022354126,
+          8.0,
+          0.0,
+          1.0
+        ],
+        "uexp_start": 8862,
+        "uexp_end": 8899
+      },
+      {
+        "source_kind": "vector",
+        "index": 4,
+        "buffer": "cb3[4]",
+        "expression": "Emissive.swizzle[0, 1, 2]",
+        "static_value": [
+          0.693310022354126,
+          8.0,
+          0.0,
+          0.0
+        ],
+        "uexp_start": 8899,
+        "uexp_end": 8949
+      },
+      {
+        "source_kind": "vector",
+        "index": 5,
+        "buffer": "cb3[5]",
+        "expression": "EnchantmentColor",
+        "static_value": [
+          0.0,
+          0.23574799299240112,
+          1.0,
+          1.0
+        ],
+        "uexp_start": 8949,
+        "uexp_end": 8986
+      },
+      {
+        "source_kind": "vector",
+        "index": 6,
+        "buffer": "cb3[6]",
+        "expression": "EnchantmentColor.swizzle[0, 1, 2]",
+        "static_value": [
+          0.0,
+          0.23574799299240112,
+          1.0,
+          0.0
+        ],
+        "uexp_start": 8986,
+        "uexp_end": 9036
+      },
+      {
+        "source_kind": "vector",
+        "index": 7,
+        "buffer": "cb3[7]",
+        "expression": "SelectionColor.swizzle[0, 1, 2]",
+        "static_value": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "uexp_start": 9036,
+        "uexp_end": 9086
+      },
+      {
+        "source_kind": "vector",
+        "index": 8,
+        "buffer": "cb3[8]",
+        "expression": "StatusColor",
+        "static_value": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "uexp_start": 9086,
+        "uexp_end": 9123
+      },
+      {
+        "source_kind": "vector",
+        "index": 9,
+        "buffer": "cb3[9]",
+        "expression": "StatusColor.swizzle[0, 1, 2]",
+        "static_value": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "uexp_start": 9123,
+        "uexp_end": 9173
+      },
+      {
+        "source_kind": "vector",
+        "index": 10,
+        "buffer": "cb3[10]",
+        "expression": "DissolveTextureSize",
+        "static_value": [
+          2.0,
+          2.0,
+          0.0,
+          1.0
+        ],
+        "uexp_start": 9173,
+        "uexp_end": 9210
+      },
+      {
+        "source_kind": "vector",
+        "index": 11,
+        "buffer": "cb3[11]",
+        "expression": "DissolveTextureSize.swizzle[0, 1, 2]",
+        "static_value": [
+          2.0,
+          2.0,
+          0.0,
+          0.0
+        ],
+        "uexp_start": 9210,
+        "uexp_end": 9260
+      },
+      {
+        "source_kind": "vector",
+        "index": 12,
+        "buffer": "cb3[12]",
+        "expression": "DissolveTextureSize.swizzle[0, 1, 2].swizzle[0, 1]",
+        "static_value": [
+          2.0,
+          2.0,
+          0.0,
+          0.0
+        ],
+        "uexp_start": 9260,
+        "uexp_end": 9323
+      },
+      {
+        "source_kind": "scalar",
+        "index": 0,
+        "buffer": "cb3[13].x",
+        "expression": "Flash Timestamp",
+        "static_value": -100.0,
+        "uexp_start": 9327,
+        "uexp_end": 9352
+      },
+      {
+        "source_kind": "scalar",
+        "index": 1,
+        "buffer": "cb3[13].y",
+        "expression": "Flash Seconds",
+        "static_value": 0.10000000149011612,
+        "uexp_start": 9352,
+        "uexp_end": 9377
+      },
+      {
+        "source_kind": "scalar",
+        "index": 2,
+        "buffer": "cb3[13].z",
+        "expression": "EmissivePower",
+        "static_value": 1.0,
+        "uexp_start": 9377,
+        "uexp_end": 9402
+      },
+      {
+        "source_kind": "scalar",
+        "index": 3,
+        "buffer": "cb3[13].w",
+        "expression": "NaturalEmissive",
+        "static_value": 0.699999988079071,
+        "uexp_start": 9402,
+        "uexp_end": 9427
+      },
+      {
+        "source_kind": "scalar",
+        "index": 4,
+        "buffer": "cb3[14].x",
+        "expression": "Power",
+        "static_value": 0.0,
+        "uexp_start": 9427,
+        "uexp_end": 9452
+      },
+      {
+        "source_kind": "scalar",
+        "index": 5,
+        "buffer": "cb3[14].y",
+        "expression": "FoldedMath[0](Power,[1.0, 1.0, 1.0, 1.0])",
+        "static_value": 1.0,
+        "uexp_start": 9452,
+        "uexp_end": 9515
+      },
+      {
+        "source_kind": "scalar",
+        "index": 6,
+        "buffer": "cb3[14].z",
+        "expression": "FoldedMath[3](FoldedMath[0](Power,[1.0, 1.0, 1.0, 1.0]),[4.0, 4.0, 4.0, 4.0])",
+        "static_value": 0.25,
+        "uexp_start": 9515,
+        "uexp_end": 9616
+      },
+      {
+        "source_kind": "scalar",
+        "index": 7,
+        "buffer": "cb3[14].w",
+        "expression": "Floor(FoldedMath[3](FoldedMath[0](Power,[1.0, 1.0, 1.0, 1.0]),[4.0, 4.0, 4.0, 4.0]))",
+        "static_value": 0,
+        "uexp_start": 9616,
+        "uexp_end": 9725
+      },
+      {
+        "source_kind": "scalar",
+        "index": 8,
+        "buffer": "cb3[15].x",
+        "expression": "FoldedMath[2](Floor(FoldedMath[3](FoldedMath[0](Power,[1.0, 1.0, 1.0, 1.0]),[4.0, 4.0, 4.0, 4.0])),[4.0, 4.0, 4.0, 4.0])",
+        "static_value": 0.0,
+        "uexp_start": 9725,
+        "uexp_end": 9872
+      },
+      {
+        "source_kind": "scalar",
+        "index": 9,
+        "buffer": "cb3[15].y",
+        "expression": "Min[](FoldedMath[2](Floor(FoldedMath[3](FoldedMath[0](Power,[1.0, 1.0, 1.0, 1.0]),[4.0, 4.0, 4.0, 4.0])),[4.0, 4.0, 4.0, 4.0]),[9.0, 9.0, 9.0, 9.0])",
+        "static_value": 0.0,
+        "uexp_start": 9872,
+        "uexp_end": 10052
+      },
+      {
+        "source_kind": "scalar",
+        "index": 10,
+        "buffer": "cb3[15].z",
+        "expression": "FoldedMath[3](Min[](FoldedMath[2](Floor(FoldedMath[3](FoldedMath[0](Power,[1.0, 1.0, 1.0, 1.0]),[4.0, 4.0, 4.0, 4.0])),[4.0, 4.0, 4.0, 4.0]),[9.0, 9.0, 9.0, 9.0]),[9.0, 9.0, 9.0, 9.0])",
+        "static_value": 0.0,
+        "uexp_start": 10052,
+        "uexp_end": 10270
+      },
+      {
+        "source_kind": "scalar",
+        "index": 11,
+        "buffer": "cb3[15].w",
+        "expression": "FoldedMath[2](FoldedMath[3](Min[](FoldedMath[2](Floor(FoldedMath[3](FoldedMath[0](Power,[1.0, 1.0, 1.0, 1.0]),[4.0, 4.0, 4.0, 4.0])),[4.0, 4.0, 4.0, 4.0]),[9.0, 9.0, 9.0, 9.0]),[9.0, 9.0, 9.0, 9.0]),[3.0, 3.0, 3.0, 3.0])",
+        "static_value": 0.0,
+        "uexp_start": 10270,
+        "uexp_end": 10526
+      },
+      {
+        "source_kind": "scalar",
+        "index": 12,
+        "buffer": "cb3[16].x",
+        "expression": "FoldedMath[2](FoldedMath[3](Min[](FoldedMath[2](Floor(FoldedMath[3](FoldedMath[0](Power,[1.0, 1.0, 1.0, 1.0]),[4.0, 4.0, 4.0, 4.0])),[4.0, 4.0, 4.0, 4.0]),[9.0, 9.0, 9.0, 9.0]),[9.0, 9.0, 9.0, 9.0]),[1.0, 1.0, 1.0, 1.0])",
+        "static_value": 0.0,
+        "uexp_start": 10526,
+        "uexp_end": 10782
+      },
+      {
+        "source_kind": "scalar",
+        "index": 13,
+        "buffer": "cb3[16].y",
+        "expression": "EnchantmentAdd",
+        "static_value": 0.0,
+        "uexp_start": 10782,
+        "uexp_end": 10807
+      },
+      {
+        "source_kind": "scalar",
+        "index": 14,
+        "buffer": "cb3[16].z",
+        "expression": "FoldedMath[2](FoldedMath[3](Min[](FoldedMath[2](Floor(FoldedMath[3](FoldedMath[0](Power,[1.0, 1.0, 1.0, 1.0]),[4.0, 4.0, 4.0, 4.0])),[4.0, 4.0, 4.0, 4.0]),[9.0, 9.0, 9.0, 9.0]),[9.0, 9.0, 9.0, 9.0]),[8.0, 8.0, 8.0, 8.0])",
+        "static_value": 0.0,
+        "uexp_start": 10807,
+        "uexp_end": 11063
+      },
+      {
+        "source_kind": "scalar",
+        "index": 15,
+        "buffer": "cb3[16].w",
+        "expression": "SpecularScalar",
+        "static_value": 0.0,
+        "uexp_start": 11063,
+        "uexp_end": 11088
+      },
+      {
+        "source_kind": "scalar",
+        "index": 16,
+        "buffer": "cb3[17].x",
+        "expression": "FoldedMath[2](SpecularScalar,[0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896])",
+        "static_value": 0.0,
+        "uexp_start": 11088,
+        "uexp_end": 11151
+      },
+      {
+        "source_kind": "scalar",
+        "index": 17,
+        "buffer": "cb3[17].y",
+        "expression": "FoldedMath[2](SpecularScalar,[1.0, 1.0, 1.0, 1.0])",
+        "static_value": 0.0,
+        "uexp_start": 11151,
+        "uexp_end": 11214
+      },
+      {
+        "source_kind": "scalar",
+        "index": 18,
+        "buffer": "cb3[17].z",
+        "expression": "FoldedMath[1]([1.0, 1.0, 1.0, 1.0],SpecularScalar)",
+        "static_value": 1.0,
+        "uexp_start": 11214,
+        "uexp_end": 11277
+      },
+      {
+        "source_kind": "scalar",
+        "index": 19,
+        "buffer": "cb3[17].w",
+        "expression": "AlphaOverride",
+        "static_value": 1.0,
+        "uexp_start": 11277,
+        "uexp_end": 11302
+      },
+      {
+        "source_kind": "scalar",
+        "index": 20,
+        "buffer": "cb3[18].x",
+        "expression": "FoldedMath[0](AlphaOverride,[0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612])",
+        "static_value": 1.1000000014901161,
+        "uexp_start": 11302,
+        "uexp_end": 11365
+      },
+      {
+        "source_kind": "scalar",
+        "index": 21,
+        "buffer": "cb3[18].y",
+        "expression": "DissolveStart",
+        "static_value": -50.0,
+        "uexp_start": 11365,
+        "uexp_end": 11390
+      },
+      {
+        "source_kind": "scalar",
+        "index": 22,
+        "buffer": "cb3[18].z",
+        "expression": "DissolveDuration",
+        "static_value": 4.0,
+        "uexp_start": 11390,
+        "uexp_end": 11415
+      }
+    ],
+    "buffer_layout_basis": "Legacy vector float4 array followed by scalar expressions packed 4-per-float4; exact 19 float4 slots and all shader uses agree. Inferred from legacy format + compiled shader, not a live GPU buffer capture.",
+    "shader_path": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\shader\\MI_NatureArmor\\762fe3b6f361f38e14e6ec6c1b4e1f6f8a25d76c.bin",
+    "shader_code_sha256": "edd3ba3005e07e44796e6414c1438646f784b9b0bccaf8a57639b9efcaa39aaa",
+    "shader_resource_table": {
+      "ResourceTableBits": 24,
+      "ShaderResourceViewMap": {
+        "start": 4,
+        "count": 6,
+        "raw_u32": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4294967295
+        ]
+      },
+      "SamplerMap": {
+        "start": 32,
+        "count": 12,
+        "raw_u32": [
+          0,
+          0,
+          0,
+          5,
+          10,
+          50331905,
+          50332418,
+          50332931,
+          50333444,
+          50333957,
+          67117312,
+          4294967295
+        ],
+        "decoded_material_entries": [
+          {
+            "token": "0x03000101",
+            "uniform_buffer_index": 3,
+            "resource_index": 1,
+            "bind_index": 1
+          },
+          {
+            "token": "0x03000302",
+            "uniform_buffer_index": 3,
+            "resource_index": 3,
+            "bind_index": 2
+          },
+          {
+            "token": "0x03000503",
+            "uniform_buffer_index": 3,
+            "resource_index": 5,
+            "bind_index": 3
+          },
+          {
+            "token": "0x03000704",
+            "uniform_buffer_index": 3,
+            "resource_index": 7,
+            "bind_index": 4
+          },
+          {
+            "token": "0x03000905",
+            "uniform_buffer_index": 3,
+            "resource_index": 9,
+            "bind_index": 5
+          }
+        ]
+      },
+      "UnorderedAccessViewMap": {
+        "start": 84,
+        "count": 6,
+        "raw_u32": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4294967295
+        ]
+      },
+      "ResourceTableLayoutHashes": {
+        "start": 112,
+        "count": 5,
+        "raw_u32": [
+          0,
+          0,
+          0,
+          77006599,
+          96471035
+        ]
+      },
+      "TextureMap": {
+        "start": 136,
+        "count": 14,
+        "raw_u32": [
+          0,
+          0,
+          0,
+          5,
+          10,
+          50331651,
+          50332164,
+          50332677,
+          50333190,
+          50333703,
+          67117056,
+          67117569,
+          67118082,
+          4294967295
+        ],
+        "decoded_material_entries": [
+          {
+            "token": "0x03000003",
+            "uniform_buffer_index": 3,
+            "resource_index": 0,
+            "bind_index": 3
+          },
+          {
+            "token": "0x03000204",
+            "uniform_buffer_index": 3,
+            "resource_index": 2,
+            "bind_index": 4
+          },
+          {
+            "token": "0x03000405",
+            "uniform_buffer_index": 3,
+            "resource_index": 4,
+            "bind_index": 5
+          },
+          {
+            "token": "0x03000606",
+            "uniform_buffer_index": 3,
+            "resource_index": 6,
+            "bind_index": 6
+          },
+          {
+            "token": "0x03000807",
+            "uniform_buffer_index": 3,
+            "resource_index": 8,
+            "bind_index": 7
+          }
+        ]
+      },
+      "dxbc_offset": 196
+    },
+    "collection_state_id_offset": 11545,
+    "collection_state_id": "8c7e6ed2fcf7474b800a708faccedb12",
+    "death_emissive": {
+      "DefaultValue": 1.0,
+      "ParameterName": "DeathEmissive",
+      "Id": "8de1de92877c294fb9b6a0407c548a99"
+    },
+    "unparsed_uniform_set_tail": {
+      "start": 11529,
+      "debug_description_length_offset": 11611,
+      "note": "Extra arrays/flags in this later UE4 version are not fully assigned semantic names. The collection state GUID is exact-matched, and subsequent DebugDescription FString is independently validated."
+    },
+    "debug_description": "Compiling M_MasterEquipment: Platform=PCD3D_SM5, Usage=LightingModel=MSM_DefaultLit, BlendMode=BLEND_Masked, SpecialEngine=0, TwoSided=1, TSNormal=1, Masked=1, Distorted=0, WritesEveryPixel=0, ModifiesMeshPosition=0, Usage={bUsedWithSkeletalMesh,bUsedWithInstancedStaticMeshes}, StaticSwitch'ConstantEmissive2-1'=True, StaticSwitch'FlashBehavior2-1'=True, StaticSwitch'EnchantmentMask2-1'=True, StaticSwitch'Desaturation2-1'=False, StaticSwitch'SpecularTexture2-1'=False, StaticSwitch'ConstantSpecular2-1'=False, StaticMaterialLayers=",
+    "static_emissive_formula": "linear(T_NatureArmor_S).B * [0.693310022354126,8,0] + linear(T_NatureArmor).RGB * 0.699999988079071",
+    "static_conditions": "Original cooked defaults + MI overrides; Time >= 0, Power=0, EnchantmentAdd=0, Flash Timestamp=-100, SelectionColor.rgb=0, DeathEmissive=1. Runtime overrides and scene exposure are outside this snapshot.",
+    "srgb": {
+      "resolved_value": true,
+      "serialized_on_assets": false,
+      "basis": "CUE4Parse UTexture.Deserialize GetOrDefault(SRGB,true), standard UE interpretation; direct game-native constructor not inspected",
+      "primary_source": "https://github.com/FabianFG/CUE4Parse/blob/master/CUE4Parse/UE4/Assets/Exports/Texture/UTexture.cs"
+    }
+  }
+}

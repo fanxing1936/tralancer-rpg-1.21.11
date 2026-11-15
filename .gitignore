@@ -28,3 +28,33 @@ Dungeons GUI *.zip
 # 部署前的整包备份（每份都是一整套数据包，目前 782 MB）。
 # 它是本地保险，不是版本历史 —— 版本历史 git 自己就是。
 /backups/
+
+# 模型交付时留下的审阅素材（验证截图、逐帧预览、对照图、视频）：约 768 MB、4.5 万个文件。
+# 构建不读它们（2026-11-15 逐个核对过生成器的读取路径），本地保留，不进仓库。
+# 构建真正要用的参考文件（*.bbmodel、atlas、m2/m3 里的规格与音频时刻等）不在这些目录里，照常提交。
+/_tools/*_ref/**/validation/
+/_tools/*_ref/**/build_validation/
+/_tools/*_ref/**/final_validation/
+/_tools/*_ref/**/frames/
+/_tools/*_ref/**/preview/
+/_tools/*_ref/**/previews/
+/_tools/*_ref/**/m3_preview/
+/_tools/*_ref/**/animations_preview/
+/_tools/*_ref/**/contact_sheets/
+/_tools/*_ref/**/gallery_followup/
+/_tools/*_ref/**/head_match_v1/
+/_tools/*_ref/**/m3_material/
+/_tools/*_ref/**/m3_material_v*/
+/_tools/*_ref/**/m3_motion/
+/_tools/*_ref/**/history/
+/_tools/*_ref/**/analysis_*/
+/_tools/*_ref/**/motion_transition/
+/_tools/*_ref/**/motion_review/
+/_tools/*_ref/**/pose_analysis/
+/_tools/*_ref/**/review_v*/
+/_tools/*_ref/**/*.mp4
+/_tools/*_ref/**/*.gif
+/_tools/*_ref/**/*.webm
+# 构建日志
+/_tools/*.log.tmp
+/logs/

@@ -1,0 +1,859 @@
+{
+  "schema_version": 1,
+  "atlas_file": "m2_atlas/atlas.png",
+  "atlas_size": [
+    512,
+    512
+  ],
+  "coordinate_convention": "all rects are [x0,y0,x1,y1), origin top-left; source_file relative to heart_of_ender_ref",
+  "pixel_sha256_definition": "SHA-256 of width*height*4 RGBA bytes in row-major order, not PNG container bytes",
+  "atlas_png_sha256": "0a9cbf8d364388e784a89745b68f86f198218d5a8ead7b12ce332d939967b79f",
+  "atlas_rgba_sha256": "4cbb5627b92468ba6109294b42d500bbe28df5bf947868de8d3adec20c7e4025",
+  "source_files": {
+    "MCD_Decal_Puddle_(texture).png": {
+      "png_sha256": "fb28326ab01670ec720fc104a37394976f63cd3ec5c40611fd0b89adc6175bbb",
+      "size": [
+        711,
+        711
+      ],
+      "rgba_sha256": "5d8614c245d4eff0f9bb4f1e875fe5e2eed5235acb431d977ff051f17d6774c2"
+    },
+    "MCD_Heart_of_Ender.png": {
+      "png_sha256": "8b32af4ca6b42239198b35e59dfd3a6fbb42a693a866bf883dbfe8a967052aaf",
+      "size": [
+        1000,
+        840
+      ],
+      "rgba_sha256": "04db746ff775d500f5fa3b47c1f888bd63fbbbb1a9df7aaf8c96475df66abb5f"
+    },
+    "MCD_Heart_of_Ender_(glow_effect_texture).png": {
+      "png_sha256": "242e52383f566481df5cfec5984d373464e8f474e7ac217ba844d0f4a6d145df",
+      "size": [
+        44,
+        44
+      ],
+      "rgba_sha256": "167fddc8dbe352dd5969eb763a54c92cf6b54789cb5a35ed0eabfa4efdfcdada"
+    },
+    "T_ArchIllagerUndressed.png": {
+      "png_sha256": "f2574b5da488e2cd0ce47e989673e52d6bd5a291a9a72e767dffa7d01fd479b2",
+      "size": [
+        64,
+        64
+      ],
+      "rgba_sha256": "236322b734df5d466999ac15047c0bdde2bcc1d0ae8712e89ad87e2b39123fbf"
+    }
+  },
+  "regions": [
+    {
+      "kind": "source_copy",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_rect": [
+        24,
+        24,
+        152,
+        152
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "flip": [
+        false,
+        false
+      ],
+      "source_rgba_sha256": "8c82f0183345810176433329b6404be7bf974913d556528cc90a51eb2ed708eb",
+      "note": "原 RGB/alpha 的128×128窗口；不缩整张711图，不重映射成紫色。",
+      "name": "stars_A",
+      "atlas_rect": [
+        8,
+        8,
+        136,
+        136
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "8c82f0183345810176433329b6404be7bf974913d556528cc90a51eb2ed708eb",
+      "opaque_pixels": 16384,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 16384
+    },
+    {
+      "kind": "source_copy",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_rect": [
+        260,
+        32,
+        388,
+        160
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "flip": [
+        false,
+        false
+      ],
+      "source_rgba_sha256": "8e90190ec4d2aa8c80cb2118f5d1bff62be76ffb4ab100e6787f54ee26251556",
+      "note": "原 RGB/alpha 的128×128窗口；不缩整张711图，不重映射成紫色。",
+      "name": "stars_B",
+      "atlas_rect": [
+        144,
+        8,
+        272,
+        136
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "8e90190ec4d2aa8c80cb2118f5d1bff62be76ffb4ab100e6787f54ee26251556",
+      "opaque_pixels": 16384,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 16384
+    },
+    {
+      "kind": "source_copy",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_rect": [
+        472,
+        112,
+        600,
+        240
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "flip": [
+        false,
+        false
+      ],
+      "source_rgba_sha256": "62b41ea27826d78e97f7a854613cb4fe6b12b3ab6fa78e3d206f993826e04931",
+      "note": "原 RGB/alpha 的128×128窗口；不缩整张711图，不重映射成紫色。",
+      "name": "stars_C",
+      "atlas_rect": [
+        280,
+        8,
+        408,
+        136
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "62b41ea27826d78e97f7a854613cb4fe6b12b3ab6fa78e3d206f993826e04931",
+      "opaque_pixels": 16384,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 16384
+    },
+    {
+      "kind": "source_copy",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_rect": [
+        72,
+        440,
+        200,
+        568
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "flip": [
+        false,
+        false
+      ],
+      "source_rgba_sha256": "82b785ccd4d9154cd4fe0d127804d1dc57ceffcf14db1cb6e8605e4283145687",
+      "note": "原 RGB/alpha 的128×128窗口；不缩整张711图，不重映射成紫色。",
+      "name": "stars_D",
+      "atlas_rect": [
+        8,
+        144,
+        136,
+        272
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "82b785ccd4d9154cd4fe0d127804d1dc57ceffcf14db1cb6e8605e4283145687",
+      "opaque_pixels": 16384,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 16384
+    },
+    {
+      "kind": "source_copy",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_rect": [
+        290,
+        346,
+        418,
+        474
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "flip": [
+        false,
+        false
+      ],
+      "source_rgba_sha256": "f4ab5a7cd0efc374735e43d5da18909b7dde5b2c30fd75d1025f74382c46012d",
+      "note": "原 RGB/alpha 的128×128窗口；不缩整张711图，不重映射成紫色。",
+      "name": "stars_E",
+      "atlas_rect": [
+        144,
+        144,
+        272,
+        272
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "f4ab5a7cd0efc374735e43d5da18909b7dde5b2c30fd75d1025f74382c46012d",
+      "opaque_pixels": 16384,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 16384
+    },
+    {
+      "kind": "source_copy",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_rect": [
+        498,
+        478,
+        626,
+        606
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "flip": [
+        false,
+        false
+      ],
+      "source_rgba_sha256": "2817f666f15f4d76ac0cb9d85068e231ece105d991159a7566c0df95acf49c0c",
+      "note": "原 RGB/alpha 的128×128窗口；不缩整张711图，不重映射成紫色。",
+      "name": "stars_F",
+      "atlas_rect": [
+        280,
+        144,
+        408,
+        272
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "2817f666f15f4d76ac0cb9d85068e231ece105d991159a7566c0df95acf49c0c",
+      "opaque_pixels": 16384,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 16384
+    },
+    {
+      "kind": "source_copy",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "flip": [
+        false,
+        false
+      ],
+      "source_rgba_sha256": "236322b734df5d466999ac15047c0bdde2bcc1d0ae8712e89ad87e2b39123fbf",
+      "note": "无外袍小人原贴图；64×64全图1:1；_S仅存档，不作发光。",
+      "name": "arch_undressed",
+      "atlas_rect": [
+        432,
+        8,
+        496,
+        72
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "236322b734df5d466999ac15047c0bdde2bcc1d0ae8712e89ad87e2b39123fbf",
+      "opaque_pixels": 3923,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 3923
+    },
+    {
+      "kind": "source_copy",
+      "source_file": "MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "source_rect": [
+        0,
+        0,
+        44,
+        44
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "flip": [
+        false,
+        false
+      ],
+      "source_rgba_sha256": "167fddc8dbe352dd5969eb763a54c92cf6b54789cb5a35ed0eabfa4efdfcdada",
+      "note": "用户指定44×44效果遮罩原样保留RGBA；不是眼齿图案；半透明游戏渲染尚未验证。",
+      "name": "glow_mask_raw",
+      "atlas_rect": [
+        432,
+        88,
+        476,
+        132
+      ],
+      "size": [
+        44,
+        44
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "167fddc8dbe352dd5969eb763a54c92cf6b54789cb5a35ed0eabfa4efdfcdada",
+      "opaque_pixels": 88,
+      "semitransparent_pixels": 1848,
+      "visible_pixels": 1936
+    },
+    {
+      "kind": "projection_extract",
+      "source_file": "MCD_Heart_of_Ender.png",
+      "source_rect": [
+        218,
+        211,
+        403,
+        440
+      ],
+      "source_quad": [
+        [
+          218,
+          211
+        ],
+        [
+          348,
+          262
+        ],
+        [
+          402,
+          439
+        ],
+        [
+          272,
+          388
+        ]
+      ],
+      "quad_order": [
+        "TL",
+        "TR",
+        "BR",
+        "BL"
+      ],
+      "scale": null,
+      "flip": [
+        false,
+        false
+      ],
+      "sampling_rule": {
+        "destination_coordinates": "u=(pixel_x+0.5)/width; v=(pixel_y+0.5)/height",
+        "inverse_homography": [
+          [
+            130.0,
+            54.0,
+            218.0
+          ],
+          [
+            51.0,
+            177.0,
+            211.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "homogeneous_divide": true,
+        "nearest": "floor(source_coordinate + 0.5)",
+        "source_mask": {
+          "rgb_min": [
+            230,
+            180,
+            230
+          ],
+          "alpha_min": 1,
+          "union_rects": [
+            [
+              248,
+              292,
+              301,
+              334
+            ],
+            [
+              322,
+              321,
+              372,
+              364
+            ]
+          ],
+          "halfplanes_ax_by_c_ge_0": []
+        },
+        "retained_rgba": "copy source[y,x] without recoloring or alpha change",
+        "discarded_rgba": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "note": "只提取已有亮形；四角是与结构量测一致的二维拟合，不是原作UV。全头front包括闭合下颚。",
+      "name": "front_eyes",
+      "atlas_rect": [
+        8,
+        288,
+        136,
+        448
+      ],
+      "size": [
+        128,
+        160
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "94ce4327b4fc45f800f919a170bc0d0fddf94a59cf8224780ec90104e4eebf62",
+      "opaque_pixels": 967,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 967
+    },
+    {
+      "kind": "projection_extract",
+      "source_file": "MCD_Heart_of_Ender.png",
+      "source_rect": [
+        218,
+        211,
+        403,
+        440
+      ],
+      "source_quad": [
+        [
+          218,
+          211
+        ],
+        [
+          348,
+          262
+        ],
+        [
+          402,
+          439
+        ],
+        [
+          272,
+          388
+        ]
+      ],
+      "quad_order": [
+        "TL",
+        "TR",
+        "BR",
+        "BL"
+      ],
+      "scale": null,
+      "flip": [
+        false,
+        false
+      ],
+      "sampling_rule": {
+        "destination_coordinates": "u=(pixel_x+0.5)/width; v=(pixel_y+0.5)/height",
+        "inverse_homography": [
+          [
+            130.0,
+            54.0,
+            218.0
+          ],
+          [
+            51.0,
+            177.0,
+            211.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "homogeneous_divide": true,
+        "nearest": "floor(source_coordinate + 0.5)",
+        "source_mask": {
+          "rgb_min": [
+            230,
+            180,
+            230
+          ],
+          "alpha_min": 1,
+          "union_rects": [
+            [
+              272,
+              350,
+              407,
+              431
+            ]
+          ],
+          "halfplanes_ax_by_c_ge_0": [
+            [
+              -0.4,
+              1,
+              -239.2
+            ]
+          ]
+        },
+        "retained_rgba": "copy source[y,x] without recoloring or alpha change",
+        "discarded_rgba": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "note": "只提取已有亮形；四角是与结构量测一致的二维拟合，不是原作UV。全头front包括闭合下颚。",
+      "name": "front_teeth",
+      "atlas_rect": [
+        144,
+        288,
+        272,
+        448
+      ],
+      "size": [
+        128,
+        160
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "53ab7f386d10d433b8a20fa24771828f78dd561b3b32ad3684829f05338be477",
+      "opaque_pixels": 463,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 463
+    },
+    {
+      "kind": "projection_extract",
+      "source_file": "MCD_Heart_of_Ender.png",
+      "source_rect": [
+        348,
+        154,
+        531,
+        440
+      ],
+      "source_quad": [
+        [
+          348,
+          262
+        ],
+        [
+          476,
+          154
+        ],
+        [
+          530,
+          331
+        ],
+        [
+          402,
+          439
+        ]
+      ],
+      "quad_order": [
+        "TL",
+        "TR",
+        "BR",
+        "BL"
+      ],
+      "scale": null,
+      "flip": [
+        false,
+        false
+      ],
+      "sampling_rule": {
+        "destination_coordinates": "u=(pixel_x+0.5)/width; v=(pixel_y+0.5)/height",
+        "inverse_homography": [
+          [
+            128.0,
+            54.0,
+            348.0
+          ],
+          [
+            -108.0,
+            177.0,
+            262.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "homogeneous_divide": true,
+        "nearest": "floor(source_coordinate + 0.5)",
+        "source_mask": {
+          "rgb_min": [
+            230,
+            180,
+            230
+          ],
+          "alpha_min": 1,
+          "union_rects": [
+            [
+              389,
+              350,
+              447,
+              420
+            ]
+          ],
+          "halfplanes_ax_by_c_ge_0": []
+        },
+        "retained_rgba": "copy source[y,x] without recoloring or alpha change",
+        "discarded_rgba": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "note": "只提取已有亮形；四角是与结构量测一致的二维拟合，不是原作UV。全头front包括闭合下颚。",
+      "name": "side_teeth",
+      "atlas_rect": [
+        280,
+        288,
+        408,
+        448
+      ],
+      "size": [
+        128,
+        160
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "4258b9d31aeaca9e2a7af5f690c84e0c57623a3013890a3b677a1dd45a8f8ead",
+      "opaque_pixels": 277,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 277
+    },
+    {
+      "kind": "projection_extract",
+      "source_file": "MCD_Heart_of_Ender.png",
+      "source_rect": [
+        254,
+        297,
+        297,
+        330
+      ],
+      "source_quad": [
+        [
+          254,
+          297
+        ],
+        [
+          289,
+          311
+        ],
+        [
+          296,
+          329
+        ],
+        [
+          261,
+          315
+        ]
+      ],
+      "quad_order": [
+        "TL",
+        "TR",
+        "BR",
+        "BL"
+      ],
+      "scale": null,
+      "flip": [
+        false,
+        false
+      ],
+      "sampling_rule": {
+        "destination_coordinates": "u=(pixel_x+0.5)/width; v=(pixel_y+0.5)/height",
+        "inverse_homography": [
+          [
+            35.0,
+            7.0,
+            254.0
+          ],
+          [
+            14.0,
+            18.0,
+            297.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "homogeneous_divide": true,
+        "nearest": "floor(source_coordinate + 0.5)",
+        "source_mask": {
+          "rgb_min": [
+            230,
+            180,
+            230
+          ],
+          "alpha_min": 1,
+          "union_rects": [
+            [
+              248,
+              292,
+              301,
+              334
+            ]
+          ],
+          "halfplanes_ax_by_c_ge_0": []
+        },
+        "retained_rgba": "copy source[y,x] without recoloring or alpha change",
+        "discarded_rgba": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "note": "只提取已有亮形；四角是与结构量测一致的二维拟合，不是原作UV。全头front包括闭合下颚。",
+      "name": "left_eye_local",
+      "atlas_rect": [
+        432,
+        160,
+        496,
+        184
+      ],
+      "size": [
+        64,
+        24
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "64b8cb443f0fcf8ee58fde5accd877f4ff7f43bdc47b1220bd6af40d32c833ca",
+      "opaque_pixels": 1367,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 1367
+    },
+    {
+      "kind": "projection_extract",
+      "source_file": "MCD_Heart_of_Ender.png",
+      "source_rect": [
+        325,
+        325,
+        367,
+        358
+      ],
+      "source_quad": [
+        [
+          325,
+          325
+        ],
+        [
+          358,
+          338
+        ],
+        [
+          366,
+          357
+        ],
+        [
+          333,
+          344
+        ]
+      ],
+      "quad_order": [
+        "TL",
+        "TR",
+        "BR",
+        "BL"
+      ],
+      "scale": null,
+      "flip": [
+        false,
+        false
+      ],
+      "sampling_rule": {
+        "destination_coordinates": "u=(pixel_x+0.5)/width; v=(pixel_y+0.5)/height",
+        "inverse_homography": [
+          [
+            33.0,
+            8.0,
+            325.0
+          ],
+          [
+            13.0,
+            19.0,
+            325.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "homogeneous_divide": true,
+        "nearest": "floor(source_coordinate + 0.5)",
+        "source_mask": {
+          "rgb_min": [
+            230,
+            180,
+            230
+          ],
+          "alpha_min": 1,
+          "union_rects": [
+            [
+              322,
+              321,
+              372,
+              364
+            ]
+          ],
+          "halfplanes_ax_by_c_ge_0": []
+        },
+        "retained_rgba": "copy source[y,x] without recoloring or alpha change",
+        "discarded_rgba": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "note": "只提取已有亮形；四角是与结构量测一致的二维拟合，不是原作UV。全头front包括闭合下颚。",
+      "name": "right_eye_local",
+      "atlas_rect": [
+        432,
+        200,
+        496,
+        224
+      ],
+      "size": [
+        64,
+        24
+      ],
+      "resampling": "nearest",
+      "output_rgba_sha256": "d979d46e2390726200df295eac8d69d629839ace416cc7f7a541abbf37448739",
+      "opaque_pixels": 1296,
+      "semitransparent_pixels": 0,
+      "visible_pixels": 1296
+    }
+  ],
+  "no_model_or_animation_generated": true
+}

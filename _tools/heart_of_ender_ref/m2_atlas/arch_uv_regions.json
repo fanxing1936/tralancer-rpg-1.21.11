@@ -1,0 +1,765 @@
+{
+  "schema_version": 1,
+  "source_file": "T_ArchIllagerUndressed.png",
+  "source_size": [
+    64,
+    64
+  ],
+  "atlas_offset": [
+    432,
+    8
+  ],
+  "coordinate_convention": "UV rects [u0,v0,u1,v1), origin top-left; faces are proposed Java-facing assignments, not recovered original UV orientation",
+  "source_png_sha256": "f2574b5da488e2cd0ce47e989673e52d6bd5a291a9a72e767dffa7d01fd479b2",
+  "status": "M2 provisional UV assignment; source geometry and original face orientation unavailable",
+  "head": {
+    "label": "宽灰头候选",
+    "evidence": "inferred",
+    "pixel_boundaries": "confirmed_by_source_pixels",
+    "semantic_confidence": "high",
+    "candidate_uv_box_dimensions_whd": [
+      12,
+      7,
+      6
+    ],
+    "faces": {
+      "north": [
+        6,
+        6,
+        18,
+        13
+      ],
+      "east": [
+        18,
+        6,
+        24,
+        13
+      ],
+      "south": [
+        24,
+        6,
+        36,
+        13
+      ],
+      "west": [
+        0,
+        6,
+        6,
+        13
+      ],
+      "up": [
+        6,
+        0,
+        18,
+        6
+      ],
+      "down": [
+        18,
+        0,
+        30,
+        6
+      ]
+    },
+    "atlas_faces": {
+      "north": [
+        438,
+        14,
+        450,
+        21
+      ],
+      "east": [
+        450,
+        14,
+        456,
+        21
+      ],
+      "south": [
+        456,
+        14,
+        468,
+        21
+      ],
+      "west": [
+        432,
+        14,
+        438,
+        21
+      ],
+      "up": [
+        438,
+        8,
+        450,
+        14
+      ],
+      "down": [
+        450,
+        8,
+        462,
+        14
+      ]
+    },
+    "evidence_notes": [
+      "灰色横带宽36、高7；两块12×6顶/底候选与12/6/12/6侧带可构成12×7×6盒网。",
+      "Docile/Anxious可见宽头、短面高；与普通村民8×10头比例不同。"
+    ],
+    "cautions": [
+      "黑灰的面边界部分连续，网络并非源geometry证明。",
+      "north/east方向为工作映射；原图没有足够纹样证明所有面的朝向。"
+    ]
+  },
+  "nose": {
+    "label": "鼻部候选",
+    "evidence": "inferred",
+    "pixel_boundaries": "confirmed_by_source_pixels",
+    "semantic_confidence": "medium",
+    "candidate_uv_box_dimensions_whd": [
+      2,
+      4,
+      2
+    ],
+    "faces": {
+      "north": [
+        2,
+        14,
+        4,
+        18
+      ],
+      "east": [
+        4,
+        14,
+        6,
+        18
+      ],
+      "south": [
+        6,
+        14,
+        8,
+        18
+      ],
+      "west": [
+        0,
+        14,
+        2,
+        18
+      ],
+      "up": [
+        2,
+        12,
+        4,
+        14
+      ],
+      "down": [
+        4,
+        12,
+        6,
+        14
+      ]
+    },
+    "atlas_faces": {
+      "north": [
+        434,
+        22,
+        436,
+        26
+      ],
+      "east": [
+        436,
+        22,
+        438,
+        26
+      ],
+      "south": [
+        438,
+        22,
+        440,
+        26
+      ],
+      "west": [
+        432,
+        22,
+        434,
+        26
+      ],
+      "up": [
+        434,
+        20,
+        436,
+        22
+      ],
+      "down": [
+        436,
+        20,
+        438,
+        22
+      ]
+    },
+    "evidence_notes": [
+      "小灰色块有2×4侧面与2×2端面候选，可拟合2×4×2。",
+      "Anxious侧面有脸下突起，但强光下难以拆分鼻与同侧细肢。"
+    ],
+    "cautions": [
+      "与宽头末行、灰细条相邻/部分共用灰像素，不主张已识别独立官方鼻UV。",
+      "如几何鼻更短，保持几何测量；不得用UV盒候选强行拉长鼻。"
+    ]
+  },
+  "crown": {
+    "label": "顶部长条/高冠候选",
+    "evidence": "inferred",
+    "pixel_boundaries": "confirmed_by_source_pixels",
+    "semantic_confidence": "high",
+    "candidate_uv_box_dimensions_whd": [
+      4,
+      11,
+      4
+    ],
+    "faces": {
+      "north": [
+        36,
+        4,
+        40,
+        15
+      ],
+      "east": [
+        40,
+        4,
+        44,
+        15
+      ],
+      "south": [
+        44,
+        4,
+        48,
+        15
+      ],
+      "west": [
+        48,
+        4,
+        52,
+        15
+      ],
+      "up": [
+        40,
+        0,
+        44,
+        4
+      ],
+      "down": [
+        44,
+        0,
+        48,
+        4
+      ]
+    },
+    "atlas_faces": {
+      "north": [
+        468,
+        12,
+        472,
+        23
+      ],
+      "east": [
+        472,
+        12,
+        476,
+        23
+      ],
+      "south": [
+        476,
+        12,
+        480,
+        23
+      ],
+      "west": [
+        480,
+        12,
+        484,
+        23
+      ],
+      "up": [
+        472,
+        8,
+        476,
+        12
+      ],
+      "down": [
+        476,
+        8,
+        480,
+        12
+      ]
+    },
+    "evidence_notes": [
+      "金色侧带[36,4,52,15]可分四块4×11；[40,0,44,4]为4×4金色圈，中心2×2透明。",
+      "Docile/Anxious顶部竖条宽约主头三分之一，与4:12候选比相容。"
+    ],
+    "cautions": [
+      "名称冠是语义推断；更可靠称呼为头顶长条。没有原geometry。",
+      "将含红/蓝细点的一面朝north是待核对方案，不能称原作朝向已证实。",
+      "down区域原图全透明，可保留透明或texture=null，不能填新颜色封底。"
+    ]
+  },
+  "torso": {
+    "label": "绿中心/蓝金侧衣的躯干候选",
+    "evidence": "inferred",
+    "pixel_boundaries": "confirmed_by_source_pixels",
+    "semantic_confidence": "medium_low",
+    "candidate_uv_box_dimensions_whd": null,
+    "faces": {
+      "north": [
+        5,
+        27,
+        14,
+        36
+      ],
+      "east": [
+        14,
+        27,
+        19,
+        36
+      ],
+      "south": [
+        19,
+        27,
+        27,
+        36
+      ],
+      "west": [
+        0,
+        27,
+        5,
+        36
+      ],
+      "up": [
+        5,
+        22,
+        14,
+        27
+      ],
+      "down": [
+        5,
+        36,
+        14,
+        40
+      ]
+    },
+    "atlas_faces": {
+      "north": [
+        437,
+        35,
+        446,
+        44
+      ],
+      "east": [
+        446,
+        35,
+        451,
+        44
+      ],
+      "south": [
+        451,
+        35,
+        459,
+        44
+      ],
+      "west": [
+        432,
+        35,
+        437,
+        44
+      ],
+      "up": [
+        437,
+        30,
+        446,
+        35
+      ],
+      "down": [
+        437,
+        44,
+        446,
+        48
+      ]
+    },
+    "evidence_notes": [
+      "可直接量到9×5上方绿色矩形、约27×9横带、9×4下方绿色矩形。",
+      "Docile显示比宽头明显窄的躯干；此岛可作为保守服装来源候选。"
+    ],
+    "cautions": [
+      "north宽9、south宽8，up深5、down深4，不能冒称完美9×9×5标准盒网。",
+      "像素边界/补边与实际三维尺寸可能不同；几何以Docile轮廓拟合为准。",
+      "若映射出与参考不符的金边，需对照渲染选择候选，而非移动到不明UV区补色。"
+    ]
+  },
+  "arm": {
+    "label": "灰细肢皮肤候选",
+    "evidence": "inferred",
+    "pixel_boundaries": "confirmed_by_source_pixels",
+    "semantic_confidence": "low",
+    "candidate_uv_box_dimensions_whd": [
+      1,
+      8,
+      1
+    ],
+    "faces": {
+      "north": [
+        7,
+        13,
+        8,
+        21
+      ],
+      "east": [
+        8,
+        13,
+        9,
+        21
+      ],
+      "south": [
+        9,
+        13,
+        10,
+        21
+      ],
+      "west": [
+        6,
+        13,
+        7,
+        21
+      ],
+      "up": [
+        7,
+        13,
+        8,
+        14
+      ],
+      "down": [
+        7,
+        20,
+        8,
+        21
+      ]
+    },
+    "atlas_faces": {
+      "north": [
+        439,
+        21,
+        440,
+        29
+      ],
+      "east": [
+        440,
+        21,
+        441,
+        29
+      ],
+      "south": [
+        441,
+        21,
+        442,
+        29
+      ],
+      "west": [
+        438,
+        21,
+        439,
+        29
+      ],
+      "up": [
+        439,
+        21,
+        440,
+        22
+      ],
+      "down": [
+        439,
+        28,
+        440,
+        29
+      ]
+    },
+    "evidence_notes": [
+      "灰色连续条[6,13,10,21]中可取四个1×8细长面，且无杂色条。",
+      "Docile侧面细肢与宽头相比很细，Anxious可见细条抬起。"
+    ],
+    "cautions": [
+      "这是受源颜色约束的暂定分配，不是已恢复官方arm UV。",
+      "端面取条内端部1px，明确复用灰色，未宣称找到独立端面岛。",
+      "使用相同纹理的左右臂可共享此区域；实际朝向需几何姿态确认。"
+    ]
+  },
+  "leg": {
+    "label": "灰细肢皮肤候选（与arm有意复用）",
+    "evidence": "inferred",
+    "pixel_boundaries": "confirmed_by_source_pixels",
+    "semantic_confidence": "low",
+    "candidate_uv_box_dimensions_whd": null,
+    "faces": {
+      "north": [
+        7,
+        13,
+        8,
+        21
+      ],
+      "east": [
+        8,
+        13,
+        9,
+        21
+      ],
+      "south": [
+        9,
+        13,
+        10,
+        21
+      ],
+      "west": [
+        6,
+        13,
+        7,
+        21
+      ],
+      "up": [
+        7,
+        13,
+        8,
+        14
+      ],
+      "down": [
+        7,
+        20,
+        8,
+        21
+      ]
+    },
+    "atlas_faces": {
+      "north": [
+        439,
+        21,
+        440,
+        29
+      ],
+      "east": [
+        440,
+        21,
+        441,
+        29
+      ],
+      "south": [
+        441,
+        21,
+        442,
+        29
+      ],
+      "west": [
+        438,
+        21,
+        439,
+        29
+      ],
+      "up": [
+        439,
+        21,
+        440,
+        22
+      ],
+      "down": [
+        439,
+        28,
+        440,
+        29
+      ]
+    },
+    "evidence_notes": [
+      "Docile可见两条细腿与两个前伸末端，证明腿要分开；颜色被强光覆盖。",
+      "未找到可无歧义绑定腿的独立UV岛，暂时有意复用灰细条。"
+    ],
+    "cautions": [
+      "不把8像素UV高当作已确认腿长；可见腿只有较短一段。",
+      "不能将蓝金15像素长条直接定为腿并据此拉长模型。"
+    ]
+  },
+  "foot": {
+    "label": "暗蓝十字岛的鞋/末端候选",
+    "evidence": "inferred",
+    "pixel_boundaries": "confirmed_by_source_pixels",
+    "semantic_confidence": "low",
+    "candidate_uv_box_dimensions_whd": [
+      3,
+      3,
+      3
+    ],
+    "faces": {
+      "north": [
+        13,
+        16,
+        16,
+        19
+      ],
+      "east": [
+        16,
+        16,
+        19,
+        19
+      ],
+      "south": [
+        19,
+        16,
+        22,
+        19
+      ],
+      "west": [
+        10,
+        16,
+        13,
+        19
+      ],
+      "up": [
+        13,
+        13,
+        16,
+        16
+      ],
+      "down": [
+        13,
+        19,
+        16,
+        22
+      ]
+    },
+    "atlas_faces": {
+      "north": [
+        445,
+        24,
+        448,
+        27
+      ],
+      "east": [
+        448,
+        24,
+        451,
+        27
+      ],
+      "south": [
+        451,
+        24,
+        454,
+        27
+      ],
+      "west": [
+        442,
+        24,
+        445,
+        27
+      ],
+      "up": [
+        445,
+        21,
+        448,
+        24
+      ],
+      "down": [
+        445,
+        27,
+        448,
+        30
+      ]
+    },
+    "evidence_notes": [
+      "暗蓝区域确为六块3×3组成的十字候选网。",
+      "Docile/Anxious看见脚尖前伸，支持腿末端需要方向，而不支持立方大鞋。"
+    ],
+    "cautions": [
+      "该岛的鞋语义未经原geometry证实；可能属于别的小部件。",
+      "3×3面是采样区，不要求几何脚为3×3×3；脚的长宽高仍按轮廓。",
+      "若这个候选造成明显蓝鞋偏差，可用灰细肢延伸方案对照，不得称其已复刻。"
+    ]
+  },
+  "alternatives": [
+    {
+      "id": "A",
+      "label": "宽头+窄躯干+灰细肢（建议首轮对照）",
+      "torso_dimensions_candidates_whd": [
+        [
+          8,
+          9,
+          4
+        ],
+        [
+          9,
+          9,
+          5
+        ]
+      ],
+      "limbs": "几何按Docile可见轮廓，灰条只供表面采样；左右腿独立。",
+      "foot": "前伸短段，可用暗蓝3×3面候选，但不做3³鞋块。",
+      "basis": "宽头/长顶条/细肢/双脚可见；四肢具体UV语义未证实。"
+    },
+    {
+      "id": "B",
+      "label": "蓝金衣袖候选（供必要时比较，不是默认事实）",
+      "arm_uv_source_rect": [
+        52,
+        0,
+        60,
+        15
+      ],
+      "dimensions_hypotheses_whd": [
+        [
+          2,
+          15,
+          2
+        ],
+        [
+          1,
+          15,
+          1
+        ]
+      ],
+      "basis": "该区域可以解释为四个2×15面，或两个四面1×15细条；仅凭贴图无法确定。",
+      "caution": "这些UV尺寸不能直接成为手臂长度；它也可能是衣饰，GIF高亮无法识别蓝金颜色。"
+    },
+    {
+      "id": "C",
+      "label": "腿与脚同皮肤候选",
+      "foot_uv_reuse": "arm/leg灰细条，几何保留脚尖前伸但不使用暗蓝岛。",
+      "basis": "保留已经看见的末端朝向，避免给无法辨认的鞋岛过高置信；颜色还原仍未证实。"
+    }
+  ],
+  "unused_or_unassigned": [
+    {
+      "rect": [
+        32,
+        15,
+        55,
+        29
+      ],
+      "note": "蓝金长片，白灰上/下边与中间透明开口；疑似衣片/外袍，不能直接称左右腿。"
+    },
+    {
+      "rect": [
+        52,
+        0,
+        60,
+        15
+      ],
+      "note": "蓝金细条；保留为衣袖/衣饰候选，不在默认灰细肢方案中使用。"
+    },
+    {
+      "rect": [
+        0,
+        0,
+        6,
+        6
+      ],
+      "note": "小灰/黑/白图形；不能因包含白像素就任意拼成眼睛。"
+    },
+    {
+      "rect": [
+        18,
+        16,
+        24,
+        23
+      ],
+      "note": "零散金红区域；未给新模型追加缺乏证据的饰品。"
+    }
+  ]
+}

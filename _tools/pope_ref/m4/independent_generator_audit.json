@@ -1,0 +1,262 @@
+{
+  "stage": "M4 thin configuration independent review",
+  "timestamp_utc": "2026-11-05T03:58:44.741981+00:00",
+  "ok": true,
+  "checks": [
+    {
+      "name": "identity_carrier",
+      "ok": true,
+      "details": {
+        "key": "pope",
+        "label": "教皇",
+        "tag": "rpg.pope",
+        "score": "rpg_pp",
+        "carrier": "minecraft:vindicator"
+      }
+    },
+    {
+      "name": "M3_geometry_config",
+      "ok": true,
+      "details": {
+        "parts": 12,
+        "scale": 1.3593362401199063,
+        "seat": 2.0,
+        "glow": [
+          "staff_glow"
+        ]
+      }
+    },
+    {
+      "name": "clips",
+      "ok": true,
+      "details": [
+        [
+          "idle",
+          4,
+          true
+        ],
+        [
+          "walk",
+          1,
+          true
+        ],
+        [
+          "attack",
+          1,
+          false
+        ],
+        [
+          "summon",
+          1,
+          false
+        ],
+        [
+          "cast",
+          1,
+          false
+        ],
+        [
+          "appear",
+          1,
+          false
+        ],
+        [
+          "teleport_in",
+          1,
+          false
+        ],
+        [
+          "teleport_out",
+          1,
+          false
+        ],
+        [
+          "whirlwind",
+          1,
+          false
+        ]
+      ]
+    },
+    {
+      "name": "M3_sound_binding",
+      "ok": true,
+      "details": {
+        "sound_events": 17,
+        "cues": {
+          "attack": [
+            [
+              0.0,
+              "load_spell",
+              1.0,
+              1.0
+            ],
+            [
+              0.5,
+              "spell",
+              1.0,
+              1.0
+            ]
+          ],
+          "summon": [
+            [
+              0.0,
+              "load_spell",
+              1.0,
+              1.0
+            ],
+            [
+              0.65,
+              "summon_mobs",
+              1.0,
+              1.0
+            ]
+          ],
+          "cast": [
+            [
+              0.0,
+              "load_spell",
+              1.0,
+              1.0
+            ],
+            [
+              0.9,
+              "spell",
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "enter_cues": {
+          "appear": [
+            [
+              "appear",
+              1.0,
+              1.0
+            ]
+          ],
+          "teleport_in": [
+            [
+              "mirror_in",
+              1.0,
+              1.0
+            ]
+          ],
+          "teleport_out": [
+            [
+              "mirror_out",
+              1.0,
+              1.0
+            ]
+          ],
+          "whirlwind": [
+            [
+              "whirlwind",
+              1.0,
+              1.0
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "voice_no_death_callback",
+      "ok": true,
+      "details": {
+        "hurt": "hurt",
+        "death": null,
+        "ambient": [
+          "idle",
+          0.006
+        ],
+        "note": "ambient .006 是 M4 项目配置，不是原作采样频率"
+      }
+    },
+    {
+      "name": "cue_rounding",
+      "ok": true,
+      "details": {
+        "attack_tick": 10,
+        "summon_tick": 13,
+        "cast_tick": 18
+      }
+    },
+    {
+      "name": "source_runtime_scope",
+      "ok": true,
+      "details": {
+        "max_health": 1000,
+        "dimensions": [
+          "overworld",
+          "the_nether",
+          "the_end"
+        ],
+        "note": "静态代码审阅：召唤只含 max_health 一项 attributes；隐身 late-hook；通用 hurt 不变"
+      }
+    },
+    {
+      "name": "build_order",
+      "ok": true,
+      "details": {
+        "build": "add_tower_wraith.py -> add_pope_model.py -> ... -> add_pope_fight.py",
+        "rp_build": "add_tower_guard.py -> add_pope_model.py"
+      }
+    },
+    {
+      "name": "protected_file_hashes",
+      "ok": true,
+      "details": {
+        "_tools/display_mob.py": {
+          "before": "356687477549ac50df3506d68a344f3dc50dbd13e08144bae17fb089c13c2e84",
+          "now": "356687477549ac50df3506d68a344f3dc50dbd13e08144bae17fb089c13c2e84",
+          "unchanged": true
+        },
+        "_tools/opt_runtime_hotpaths.py": {
+          "before": "570574b7b902d5e57c3ecda0cdfb572b7fe5138e44e751bdbdbbe7945e8c31d6",
+          "now": "570574b7b902d5e57c3ecda0cdfb572b7fe5138e44e751bdbdbbe7945e8c31d6",
+          "unchanged": true
+        },
+        "_tools/add_pope_fight.py": {
+          "before": "52be892db481156e237485ae0006f07ae619e845d2ef2661df2f6b3ba9ea8b37",
+          "now": "52be892db481156e237485ae0006f07ae619e845d2ef2661df2f6b3ba9ea8b37",
+          "unchanged": true
+        }
+      }
+    },
+    {
+      "name": "59_original_source_hashes",
+      "ok": true,
+      "details": {
+        "count": 59
+      }
+    },
+    {
+      "name": "dimension_scope_of_all_generated_selectors",
+      "ok": true,
+      "details": {
+        "tick_dimension_selector_count": 4,
+        "tick_late_selector_count": 3,
+        "all_have_distance_zero_to_infinity": true,
+        "scope": "Only Pope output is rewritten; shared display_mob.py unchanged",
+        "runtime_verification": "Separate runtime agent verifies actual clock cadence"
+      }
+    },
+    {
+      "name": "model_unchanged_after_dimension_fix",
+      "ok": true,
+      "details": {
+        "sha256": "a419cc8dce1e796113a02c362ad184faea3bf09d5c908b26ac81e963babc624a"
+      }
+    }
+  ],
+  "generator_sha256": "b0ce51d8f0da5f82b5d0589fd4add5f020337b952f7dd834b2410423e2c2946f",
+  "bbmodel_sha256": "a419cc8dce1e796113a02c362ad184faea3bf09d5c908b26ac81e963babc624a",
+  "not_performed": [
+    "No build, generated-output audit, dedicated-server test or client validation by this reviewer"
+  ],
+  "review_revision": 2,
+  "previous_review": {
+    "file": "independent_generator_audit_attempt1.json",
+    "generator_sha256": "c76a3d6aac033ce10f8632c21f1320580e8a19b3eac3073212e6e00d930a3054",
+    "limitation": "Initial static review did not detect unrestricted @e selection across dimensions; runtime found triple animation advancement. Fixed all seven Pope dimension selectors with distance=0..; final runtime check pending independently."
+  }
+}

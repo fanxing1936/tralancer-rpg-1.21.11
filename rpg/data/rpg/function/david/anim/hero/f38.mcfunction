@@ -1,0 +1,3 @@
+# hero 第 38 刻的姿势（每 2 刻一帧，补间 2 刻）。由 add_jacques_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.jqdm.p.l_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:2,transformation:{translation:[0.36926f,-0.81041f,0.2487f],left_rotation:[0.52287f,-0.02286f,0.16003f,0.83695f],scale:[8.41868f,8.41868f,8.41868f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.jqdm.p.l_arm_armor] run data merge entity @s {start_interpolation:0,interpolation_duration:2,transformation:{translation:[0.36926f,-0.81041f,0.2487f],left_rotation:[0.52287f,-0.02286f,0.16003f,0.83695f],scale:[8.41868f,8.41868f,8.41868f],right_rotation:[0f,0f,0f,1f]}}

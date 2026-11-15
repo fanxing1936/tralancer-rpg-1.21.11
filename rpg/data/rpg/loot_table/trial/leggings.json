@@ -1009,6 +1009,163 @@
               }
             }
           ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_leggings",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[史诗]",
+                    "color": "#B85CF0",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "圣卫腿甲",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "圣塔之下的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[守望]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "从未终结",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "残甲仍记得那句",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[誓言]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［圣卫之誓］",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "护甲韧性 +4，击退抗性 +0.2",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:sentry",
+                  "material": "minecraft:gold"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 2,
+                  "minecraft:projectile_protection": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 6,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/sentinel/legs/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 2,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/sentinel/legs/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.05,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/sentinel/legs/2"
+                  }
+                ],
+                "minecraft:max_damage": 495
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"sentinel\"}"
+            }
+          ],
+          "weight": 1
         }
       ]
     }

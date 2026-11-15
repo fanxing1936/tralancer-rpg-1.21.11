@@ -1,0 +1,3 @@
+# shoot 第 10 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_lord_servants.py 烘焙。
+execute on passengers if entity @s[tag=rpg.lcs.p.r_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.17367f,-0.5636f,0.06355f],left_rotation:[-0.99619f,-0.00034f,0.08716f,-0.00003f],scale:[8.33333f,8.33333f,8.33333f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.lcs.p.weapon] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.14401f,-0.56259f,0.37564f],left_rotation:[-0.11819f,0.11753f,-0.30186f,0.93867f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}

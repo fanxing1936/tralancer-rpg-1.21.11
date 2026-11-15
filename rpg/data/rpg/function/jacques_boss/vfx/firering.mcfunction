@@ -1,0 +1,25 @@
+# 火圈环上一圈火舌（as/at 圆心）
+particle minecraft:flame ~3.80 ~0.20 ~0.00 0 0 0 0 1 force
+particle minecraft:flame ~3.51 ~0.20 ~1.45 0 0 0 0 1 force
+particle minecraft:flame ~2.69 ~0.20 ~2.69 0 0 0 0 1 force
+particle minecraft:flame ~1.45 ~0.20 ~3.51 0 0 0 0 1 force
+particle minecraft:flame ~0.00 ~0.20 ~3.80 0 0 0 0 1 force
+particle minecraft:flame ~-1.45 ~0.20 ~3.51 0 0 0 0 1 force
+particle minecraft:flame ~-2.69 ~0.20 ~2.69 0 0 0 0 1 force
+particle minecraft:flame ~-3.51 ~0.20 ~1.45 0 0 0 0 1 force
+particle minecraft:flame ~-3.80 ~0.20 ~0.00 0 0 0 0 1 force
+particle minecraft:flame ~-3.51 ~0.20 ~-1.45 0 0 0 0 1 force
+particle minecraft:flame ~-2.69 ~0.20 ~-2.69 0 0 0 0 1 force
+particle minecraft:flame ~-1.45 ~0.20 ~-3.51 0 0 0 0 1 force
+particle minecraft:flame ~-0.00 ~0.20 ~-3.80 0 0 0 0 1 force
+particle minecraft:flame ~1.45 ~0.20 ~-3.51 0 0 0 0 1 force
+particle minecraft:flame ~2.69 ~0.20 ~-2.69 0 0 0 0 1 force
+particle minecraft:flame ~3.51 ~0.20 ~-1.45 0 0 0 0 1 force
+particle minecraft:small_flame ~3.14 ~0.70 ~1.30 0 0 0 0 1 force
+particle minecraft:small_flame ~1.30 ~0.70 ~3.14 0 0 0 0 1 force
+particle minecraft:small_flame ~-1.30 ~0.70 ~3.14 0 0 0 0 1 force
+particle minecraft:small_flame ~-3.14 ~0.70 ~1.30 0 0 0 0 1 force
+particle minecraft:small_flame ~-3.14 ~0.70 ~-1.30 0 0 0 0 1 force
+particle minecraft:small_flame ~-1.30 ~0.70 ~-3.14 0 0 0 0 1 force
+particle minecraft:small_flame ~1.30 ~0.70 ~-3.14 0 0 0 0 1 force
+particle minecraft:small_flame ~3.14 ~0.70 ~-1.30 0 0 0 0 1 force

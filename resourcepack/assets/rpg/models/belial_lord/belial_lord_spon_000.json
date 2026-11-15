@@ -1,0 +1,116 @@
+{
+  "textures": {
+    "0": "rpg:item/belial_lord/atlas",
+    "particle": "rpg:item/belial_lord/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        8.072,
+        5.7821,
+        5.5734
+      ],
+      "to": [
+        8.072,
+        10.2179,
+        10.4266
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            6.5625,
+            0.0,
+            4.5,
+            2.125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            6.5625,
+            2.125,
+            4.5,
+            0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "from": [
+        7.928,
+        5.7821,
+        5.5734
+      ],
+      "to": [
+        7.928,
+        10.2179,
+        10.4266
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            8.625,
+            0.0,
+            6.5625,
+            2.125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            8.625,
+            2.125,
+            6.5625,
+            0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "from": [
+        7.928,
+        7.4367,
+        8.7504
+      ],
+      "to": [
+        8.072,
+        7.4367,
+        8.8938
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3.0938,
+            3.9688,
+            3.0625,
+            4.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "up": {
+          "uv": [
+            3.0625,
+            3.9687,
+            3.0938,
+            4.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    }
+  ]
+}

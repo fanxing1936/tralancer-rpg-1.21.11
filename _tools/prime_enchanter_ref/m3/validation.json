@@ -1,0 +1,225 @@
+{
+  "model_sha256": "f7c6643d7d5227c7a89bc36f7630c3a7d6ce34a968d4e9c117326e617c7fce34",
+  "m2_static_payload_equal": true,
+  "original_texture_sha256": "19c0d1bb329bff391558a4a4f7a23c002835c108af39064f7034c2a5acdf25a3",
+  "part_count": 12,
+  "authored_source_keyposes": 193,
+  "animation_track_keys": 2611,
+  "affine_parts": [
+    "left_arm",
+    "left_hand",
+    "right_arm",
+    "right_hand"
+  ],
+  "native_reopen": {
+    "version": "5.2.2",
+    "uuid": "38f8d593-6c24-e59d-c172-37e00169cbd1",
+    "disk_read": true
+  },
+  "clips": [
+    {
+      "clip": "idle",
+      "ticks": 20,
+      "baked_frames": 20,
+      "comparison_pairs": 6,
+      "playback_frames": 24,
+      "matched_blank_frames": [],
+      "scale_bones": [],
+      "scaled_bake_frames": 0,
+      "preserved_peak_source_times": {},
+      "max_java_affine_matrix_error": 1.8879485732425927e-05,
+      "max_wrist_gap_model_units_during_scale": {},
+      "max_blockbench_matrix_error": 1.4210854715202004e-14
+    },
+    {
+      "clip": "walk",
+      "ticks": 18,
+      "baked_frames": 18,
+      "comparison_pairs": 6,
+      "playback_frames": 22,
+      "matched_blank_frames": [],
+      "scale_bones": [],
+      "scaled_bake_frames": 0,
+      "preserved_peak_source_times": {},
+      "max_java_affine_matrix_error": 1.1200928020822787e-05,
+      "max_wrist_gap_model_units_during_scale": {},
+      "max_blockbench_matrix_error": 8.659739592076221e-15
+    },
+    {
+      "clip": "appear",
+      "ticks": 47,
+      "baked_frames": 48,
+      "comparison_pairs": 10,
+      "playback_frames": 57,
+      "matched_blank_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scale_bones": [],
+      "scaled_bake_frames": 0,
+      "preserved_peak_source_times": {},
+      "max_java_affine_matrix_error": 1.877585155568573e-05,
+      "max_wrist_gap_model_units_during_scale": {},
+      "max_blockbench_matrix_error": 2.842170943040401e-14
+    },
+    {
+      "clip": "death",
+      "ticks": 114,
+      "baked_frames": 115,
+      "comparison_pairs": 11,
+      "playback_frames": 137,
+      "matched_blank_frames": [],
+      "scale_bones": [],
+      "scaled_bake_frames": 0,
+      "preserved_peak_source_times": {},
+      "max_java_affine_matrix_error": 1.6459157520180845e-05,
+      "max_wrist_gap_model_units_during_scale": {},
+      "max_blockbench_matrix_error": 8.881784197001252e-15
+    },
+    {
+      "clip": "forward_strike",
+      "ticks": 50,
+      "baked_frames": 51,
+      "comparison_pairs": 13,
+      "playback_frames": 60,
+      "matched_blank_frames": [],
+      "scale_bones": [
+        "right_arm"
+      ],
+      "scaled_bake_frames": 3,
+      "preserved_peak_source_times": {
+        "29": 1.46,
+        "30": 1.5
+      },
+      "max_java_affine_matrix_error": 2.7718528773118534e-05,
+      "max_wrist_gap_model_units_during_scale": {
+        "right": 0.3438087409056903
+      },
+      "max_blockbench_matrix_error": 1.0658141036401503e-14
+    },
+    {
+      "clip": "fury_fist",
+      "ticks": 138,
+      "baked_frames": 139,
+      "comparison_pairs": 19,
+      "playback_frames": 166,
+      "matched_blank_frames": [],
+      "scale_bones": [],
+      "scaled_bake_frames": 0,
+      "preserved_peak_source_times": {},
+      "max_java_affine_matrix_error": 2.024324650506948e-05,
+      "max_wrist_gap_model_units_during_scale": {},
+      "max_blockbench_matrix_error": 1.4210854715202004e-14
+    },
+    {
+      "clip": "launch",
+      "ticks": 79,
+      "baked_frames": 80,
+      "comparison_pairs": 11,
+      "playback_frames": 95,
+      "matched_blank_frames": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "scale_bones": [],
+      "scaled_bake_frames": 0,
+      "preserved_peak_source_times": {},
+      "max_java_affine_matrix_error": 1.8402276559914554e-05,
+      "max_wrist_gap_model_units_during_scale": {},
+      "max_blockbench_matrix_error": 5.684341886080802e-14
+    },
+    {
+      "clip": "lightning_slam",
+      "ticks": 88,
+      "baked_frames": 89,
+      "comparison_pairs": 15,
+      "playback_frames": 106,
+      "matched_blank_frames": [],
+      "scale_bones": [
+        "left_arm"
+      ],
+      "scaled_bake_frames": 3,
+      "preserved_peak_source_times": {
+        "53": 2.67
+      },
+      "max_java_affine_matrix_error": 1.9989626196981192e-05,
+      "max_wrist_gap_model_units_during_scale": {
+        "left": 0.08170543539765793
+      },
+      "max_blockbench_matrix_error": 2.842170943040401e-14
+    },
+    {
+      "clip": "overcharge",
+      "ticks": 72,
+      "baked_frames": 73,
+      "comparison_pairs": 9,
+      "playback_frames": 86,
+      "matched_blank_frames": [],
+      "scale_bones": [],
+      "scaled_bake_frames": 0,
+      "preserved_peak_source_times": {},
+      "max_java_affine_matrix_error": 2.0312589076088017e-05,
+      "max_wrist_gap_model_units_during_scale": {},
+      "max_blockbench_matrix_error": 7.105427357601002e-15
+    },
+    {
+      "clip": "hurt",
+      "ticks": 46,
+      "baked_frames": 47,
+      "comparison_pairs": 8,
+      "playback_frames": 55,
+      "matched_blank_frames": [],
+      "scale_bones": [],
+      "scaled_bake_frames": 0,
+      "preserved_peak_source_times": {},
+      "max_java_affine_matrix_error": 1.8989135374847255e-05,
+      "max_wrist_gap_model_units_during_scale": {},
+      "max_blockbench_matrix_error": 1.0658141036401503e-14
+    },
+    {
+      "clip": "summon",
+      "ticks": 45,
+      "baked_frames": 46,
+      "comparison_pairs": 9,
+      "playback_frames": 54,
+      "matched_blank_frames": [],
+      "scale_bones": [],
+      "scaled_bake_frames": 0,
+      "preserved_peak_source_times": {},
+      "max_java_affine_matrix_error": 2.0893918654452115e-05,
+      "max_wrist_gap_model_units_during_scale": {},
+      "max_blockbench_matrix_error": 1.4210854715202004e-14
+    }
+  ],
+  "socket_samples": 17,
+  "java_bake_in_memory": true,
+  "real_game": false
+}

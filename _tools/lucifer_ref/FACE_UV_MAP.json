@@ -1,0 +1,7609 @@
+{
+  "atlas_size": [
+    128,
+    128
+  ],
+  "body_offset": [
+    0,
+    0
+  ],
+  "armor_offset": [
+    64,
+    0
+  ],
+  "material_candidate_offset": [
+    64,
+    64
+  ],
+  "lining_atlas_uv": [
+    0,
+    33,
+    1,
+    34
+  ],
+  "material_formula": "E=min(shadow.G,shadow.B) if shadow.R<32 and E>=64 else0; RGB=clamp(diffuse+E*[0.75,1,0.60]); alpha保持",
+  "faces": [
+    {
+      "element": "mossy_right_arm_exposed",
+      "bone": "right_arm",
+      "face": "north",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        2,
+        28.0,
+        4,
+        30.0
+      ],
+      "atlas_uv": [
+        2,
+        28.0,
+        4,
+        30.0
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_right_arm_exposed",
+      "bone": "right_arm",
+      "face": "east",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        0,
+        28.0,
+        2,
+        30.0
+      ],
+      "atlas_uv": [
+        0,
+        28.0,
+        2,
+        30.0
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_right_arm_exposed",
+      "bone": "right_arm",
+      "face": "south",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        6,
+        28.0,
+        8,
+        30.0
+      ],
+      "atlas_uv": [
+        6,
+        28.0,
+        8,
+        30.0
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_right_arm_exposed",
+      "bone": "right_arm",
+      "face": "west",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        4,
+        28.0,
+        6,
+        30.0
+      ],
+      "atlas_uv": [
+        4,
+        28.0,
+        6,
+        30.0
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_left_arm_exposed",
+      "bone": "left_arm",
+      "face": "north",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        4,
+        28.0,
+        2,
+        30.0
+      ],
+      "atlas_uv": [
+        4,
+        28.0,
+        2,
+        30.0
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_left_arm_exposed",
+      "bone": "left_arm",
+      "face": "east",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        6,
+        28.0,
+        4,
+        30.0
+      ],
+      "atlas_uv": [
+        6,
+        28.0,
+        4,
+        30.0
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_left_arm_exposed",
+      "bone": "left_arm",
+      "face": "south",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        8,
+        28.0,
+        6,
+        30.0
+      ],
+      "atlas_uv": [
+        8,
+        28.0,
+        6,
+        30.0
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_left_arm_exposed",
+      "bone": "left_arm",
+      "face": "west",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        2,
+        28.0,
+        0,
+        30.0
+      ],
+      "atlas_uv": [
+        2,
+        28.0,
+        0,
+        30.0
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_right_leg_exposed",
+      "bone": "right_leg",
+      "face": "north",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        42,
+        18.0,
+        44,
+        23.5
+      ],
+      "atlas_uv": [
+        42,
+        18.0,
+        44,
+        23.5
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_right_leg_exposed",
+      "bone": "right_leg",
+      "face": "east",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        40,
+        18.0,
+        42,
+        23.5
+      ],
+      "atlas_uv": [
+        40,
+        18.0,
+        42,
+        23.5
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_right_leg_exposed",
+      "bone": "right_leg",
+      "face": "south",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        46,
+        18.0,
+        48,
+        23.5
+      ],
+      "atlas_uv": [
+        46,
+        18.0,
+        48,
+        23.5
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_right_leg_exposed",
+      "bone": "right_leg",
+      "face": "west",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        44,
+        18.0,
+        46,
+        23.5
+      ],
+      "atlas_uv": [
+        44,
+        18.0,
+        46,
+        23.5
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_left_leg_exposed",
+      "bone": "left_leg",
+      "face": "north",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        44,
+        18.0,
+        42,
+        23.5
+      ],
+      "atlas_uv": [
+        44,
+        18.0,
+        42,
+        23.5
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_left_leg_exposed",
+      "bone": "left_leg",
+      "face": "east",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        46,
+        18.0,
+        44,
+        23.5
+      ],
+      "atlas_uv": [
+        46,
+        18.0,
+        44,
+        23.5
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_left_leg_exposed",
+      "bone": "left_leg",
+      "face": "south",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        48,
+        18.0,
+        46,
+        23.5
+      ],
+      "atlas_uv": [
+        48,
+        18.0,
+        46,
+        23.5
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "mossy_left_leg_exposed",
+      "bone": "left_leg",
+      "face": "west",
+      "source_file": "T_MossySkeleton.png",
+      "source_uv": [
+        42,
+        18.0,
+        40,
+        23.5
+      ],
+      "atlas_uv": [
+        42,
+        18.0,
+        40,
+        23.5
+      ],
+      "evidence": "继承Sunken原逐面UV，仅按露出长度裁切；见UV_BODY_ANALYSIS.md",
+      "processing": "alpha>=128二值化；RGB不改",
+      "source_geometry": "Sunken骨架裁切"
+    },
+    {
+      "element": "root_rot_hood",
+      "bone": "head",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        0,
+        18,
+        10,
+        28
+      ],
+      "atlas_uv": [
+        64,
+        18,
+        74,
+        28
+      ],
+      "evidence": "暗脸/双眼图案像素定位；平面与外框厚度为候选",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_hood",
+      "bone": "head",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        0,
+        8,
+        10,
+        18
+      ],
+      "atlas_uv": [
+        64,
+        8,
+        74,
+        18
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_hood",
+      "bone": "head",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        20,
+        8,
+        30,
+        18
+      ],
+      "atlas_uv": [
+        84,
+        8,
+        94,
+        18
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_hood",
+      "bone": "head",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        8,
+        20,
+        18
+      ],
+      "atlas_uv": [
+        74,
+        8,
+        84,
+        18
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_hood",
+      "bone": "head",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        0,
+        20,
+        8
+      ],
+      "atlas_uv": [
+        74,
+        0,
+        84,
+        8
+      ],
+      "evidence": "候选顶面：10x8源区映射10x10面，V拉伸1.25；原网格未确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_hood",
+      "bone": "head",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "已数值核对#14250D；内衬几何为候选",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_brow",
+      "bone": "head",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        8,
+        20,
+        10
+      ],
+      "atlas_uv": [
+        74,
+        8,
+        84,
+        10
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_brow",
+      "bone": "head",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_brow",
+      "bone": "head",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        0,
+        20,
+        1
+      ],
+      "atlas_uv": [
+        74,
+        0,
+        84,
+        1
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_brow",
+      "bone": "head",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_brow",
+      "bone": "head",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        8,
+        11,
+        10
+      ],
+      "atlas_uv": [
+        74,
+        8,
+        75,
+        10
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_brow",
+      "bone": "head",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        19,
+        8,
+        20,
+        10
+      ],
+      "atlas_uv": [
+        83,
+        8,
+        84,
+        10
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_right",
+      "bone": "head",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        10,
+        11,
+        18
+      ],
+      "atlas_uv": [
+        74,
+        10,
+        75,
+        18
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_right",
+      "bone": "head",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        10,
+        11,
+        18
+      ],
+      "atlas_uv": [
+        74,
+        10,
+        75,
+        18
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_right",
+      "bone": "head",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        10,
+        11,
+        18
+      ],
+      "atlas_uv": [
+        74,
+        10,
+        75,
+        18
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_right",
+      "bone": "head",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_right",
+      "bone": "head",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_right",
+      "bone": "head",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_left",
+      "bone": "head",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        19,
+        10,
+        20,
+        18
+      ],
+      "atlas_uv": [
+        83,
+        10,
+        84,
+        18
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_left",
+      "bone": "head",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        19,
+        10,
+        20,
+        18
+      ],
+      "atlas_uv": [
+        83,
+        10,
+        84,
+        18
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_left",
+      "bone": "head",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        19,
+        10,
+        20,
+        18
+      ],
+      "atlas_uv": [
+        83,
+        10,
+        84,
+        18
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_left",
+      "bone": "head",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_left",
+      "bone": "head",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_rim_left",
+      "bone": "head",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_0",
+      "bone": "head",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        10,
+        11,
+        14
+      ],
+      "atlas_uv": [
+        74,
+        10,
+        75,
+        14
+      ],
+      "evidence": "帽檐苔区精确裁片；条长与分布为轮廓重建推断",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_0",
+      "bone": "head",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        10,
+        11,
+        14
+      ],
+      "atlas_uv": [
+        74,
+        10,
+        75,
+        14
+      ],
+      "evidence": "帽檐苔区精确裁片；条长与分布为轮廓重建推断",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_0",
+      "bone": "head",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        10,
+        11,
+        14
+      ],
+      "atlas_uv": [
+        74,
+        10,
+        75,
+        14
+      ],
+      "evidence": "帽檐苔区精确裁片；条长与分布为轮廓重建推断",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_0",
+      "bone": "head",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_0",
+      "bone": "head",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_0",
+      "bone": "head",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_1",
+      "bone": "head",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        14,
+        10,
+        15,
+        14
+      ],
+      "atlas_uv": [
+        78,
+        10,
+        79,
+        14
+      ],
+      "evidence": "帽檐苔区精确裁片；条长与分布为轮廓重建推断",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_1",
+      "bone": "head",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        14,
+        10,
+        15,
+        14
+      ],
+      "atlas_uv": [
+        78,
+        10,
+        79,
+        14
+      ],
+      "evidence": "帽檐苔区精确裁片；条长与分布为轮廓重建推断",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_1",
+      "bone": "head",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        14,
+        10,
+        15,
+        14
+      ],
+      "atlas_uv": [
+        78,
+        10,
+        79,
+        14
+      ],
+      "evidence": "帽檐苔区精确裁片；条长与分布为轮廓重建推断",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_1",
+      "bone": "head",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_1",
+      "bone": "head",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_1",
+      "bone": "head",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_2",
+      "bone": "head",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        18,
+        10,
+        19,
+        14
+      ],
+      "atlas_uv": [
+        82,
+        10,
+        83,
+        14
+      ],
+      "evidence": "帽檐苔区精确裁片；条长与分布为轮廓重建推断",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_2",
+      "bone": "head",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        18,
+        10,
+        19,
+        14
+      ],
+      "atlas_uv": [
+        82,
+        10,
+        83,
+        14
+      ],
+      "evidence": "帽檐苔区精确裁片；条长与分布为轮廓重建推断",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_2",
+      "bone": "head",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        18,
+        10,
+        19,
+        14
+      ],
+      "atlas_uv": [
+        82,
+        10,
+        83,
+        14
+      ],
+      "evidence": "帽檐苔区精确裁片；条长与分布为轮廓重建推断",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_2",
+      "bone": "head",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_2",
+      "bone": "head",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "hood_moss_drop_2",
+      "bone": "head",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "green_eye_right",
+      "bone": "eyes_glow",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        2,
+        24,
+        4,
+        25
+      ],
+      "atlas_uv": [
+        66,
+        88,
+        68,
+        89
+      ],
+      "evidence": "原暗脸双眼精确区域；绿色材质亮度补偿为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "green_eye_left",
+      "bone": "eyes_glow",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        6,
+        24,
+        8,
+        25
+      ],
+      "atlas_uv": [
+        70,
+        88,
+        72,
+        89
+      ],
+      "evidence": "原暗脸双眼精确区域；绿色材质亮度补偿为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_47",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        47,
+        37,
+        48
+      ],
+      "atlas_uv": [
+        100,
+        111,
+        101,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_47",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        47,
+        37,
+        48
+      ],
+      "atlas_uv": [
+        100,
+        111,
+        101,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_47",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        47,
+        37,
+        48
+      ],
+      "atlas_uv": [
+        100,
+        111,
+        101,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_47",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        47,
+        37,
+        48
+      ],
+      "atlas_uv": [
+        100,
+        111,
+        101,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_47",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        47,
+        37,
+        48
+      ],
+      "atlas_uv": [
+        100,
+        111,
+        101,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_47",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        47,
+        37,
+        48
+      ],
+      "atlas_uv": [
+        100,
+        111,
+        101,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_47",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        47,
+        38,
+        48
+      ],
+      "atlas_uv": [
+        101,
+        111,
+        102,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_47",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        47,
+        38,
+        48
+      ],
+      "atlas_uv": [
+        101,
+        111,
+        102,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_47",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        47,
+        38,
+        48
+      ],
+      "atlas_uv": [
+        101,
+        111,
+        102,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_47",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        47,
+        38,
+        48
+      ],
+      "atlas_uv": [
+        101,
+        111,
+        102,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_47",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        47,
+        38,
+        48
+      ],
+      "atlas_uv": [
+        101,
+        111,
+        102,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_47",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        47,
+        38,
+        48
+      ],
+      "atlas_uv": [
+        101,
+        111,
+        102,
+        112
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_48",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        48,
+        36,
+        49
+      ],
+      "atlas_uv": [
+        99,
+        112,
+        100,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_48",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        48,
+        36,
+        49
+      ],
+      "atlas_uv": [
+        99,
+        112,
+        100,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_48",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        48,
+        36,
+        49
+      ],
+      "atlas_uv": [
+        99,
+        112,
+        100,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_48",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        48,
+        36,
+        49
+      ],
+      "atlas_uv": [
+        99,
+        112,
+        100,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_48",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        48,
+        36,
+        49
+      ],
+      "atlas_uv": [
+        99,
+        112,
+        100,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_48",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        48,
+        36,
+        49
+      ],
+      "atlas_uv": [
+        99,
+        112,
+        100,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_48",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        48,
+        37,
+        49
+      ],
+      "atlas_uv": [
+        100,
+        112,
+        101,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_48",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        48,
+        37,
+        49
+      ],
+      "atlas_uv": [
+        100,
+        112,
+        101,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_48",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        48,
+        37,
+        49
+      ],
+      "atlas_uv": [
+        100,
+        112,
+        101,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_48",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        48,
+        37,
+        49
+      ],
+      "atlas_uv": [
+        100,
+        112,
+        101,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_48",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        48,
+        37,
+        49
+      ],
+      "atlas_uv": [
+        100,
+        112,
+        101,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_48",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        48,
+        37,
+        49
+      ],
+      "atlas_uv": [
+        100,
+        112,
+        101,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_48",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        48,
+        38,
+        49
+      ],
+      "atlas_uv": [
+        101,
+        112,
+        102,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_48",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        48,
+        38,
+        49
+      ],
+      "atlas_uv": [
+        101,
+        112,
+        102,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_48",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        48,
+        38,
+        49
+      ],
+      "atlas_uv": [
+        101,
+        112,
+        102,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_48",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        48,
+        38,
+        49
+      ],
+      "atlas_uv": [
+        101,
+        112,
+        102,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_48",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        48,
+        38,
+        49
+      ],
+      "atlas_uv": [
+        101,
+        112,
+        102,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_48",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        48,
+        38,
+        49
+      ],
+      "atlas_uv": [
+        101,
+        112,
+        102,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_48",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        48,
+        39,
+        49
+      ],
+      "atlas_uv": [
+        102,
+        112,
+        103,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_48",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        48,
+        39,
+        49
+      ],
+      "atlas_uv": [
+        102,
+        112,
+        103,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_48",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        48,
+        39,
+        49
+      ],
+      "atlas_uv": [
+        102,
+        112,
+        103,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_48",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        48,
+        39,
+        49
+      ],
+      "atlas_uv": [
+        102,
+        112,
+        103,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_48",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        48,
+        39,
+        49
+      ],
+      "atlas_uv": [
+        102,
+        112,
+        103,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_48",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        48,
+        39,
+        49
+      ],
+      "atlas_uv": [
+        102,
+        112,
+        103,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_34_49",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        34,
+        49,
+        35,
+        50
+      ],
+      "atlas_uv": [
+        98,
+        113,
+        99,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_34_49",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        34,
+        49,
+        35,
+        50
+      ],
+      "atlas_uv": [
+        98,
+        113,
+        99,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_34_49",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        34,
+        49,
+        35,
+        50
+      ],
+      "atlas_uv": [
+        98,
+        113,
+        99,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_34_49",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        34,
+        49,
+        35,
+        50
+      ],
+      "atlas_uv": [
+        98,
+        113,
+        99,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_34_49",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        34,
+        49,
+        35,
+        50
+      ],
+      "atlas_uv": [
+        98,
+        113,
+        99,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_34_49",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        34,
+        49,
+        35,
+        50
+      ],
+      "atlas_uv": [
+        98,
+        113,
+        99,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_49",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        49,
+        36,
+        50
+      ],
+      "atlas_uv": [
+        99,
+        113,
+        100,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_49",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        49,
+        36,
+        50
+      ],
+      "atlas_uv": [
+        99,
+        113,
+        100,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_49",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        49,
+        36,
+        50
+      ],
+      "atlas_uv": [
+        99,
+        113,
+        100,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_49",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        49,
+        36,
+        50
+      ],
+      "atlas_uv": [
+        99,
+        113,
+        100,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_49",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        49,
+        36,
+        50
+      ],
+      "atlas_uv": [
+        99,
+        113,
+        100,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_35_49",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        35,
+        49,
+        36,
+        50
+      ],
+      "atlas_uv": [
+        99,
+        113,
+        100,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_49",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        49,
+        37,
+        50
+      ],
+      "atlas_uv": [
+        100,
+        113,
+        101,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_49",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        49,
+        37,
+        50
+      ],
+      "atlas_uv": [
+        100,
+        113,
+        101,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_49",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        49,
+        37,
+        50
+      ],
+      "atlas_uv": [
+        100,
+        113,
+        101,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_49",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        49,
+        37,
+        50
+      ],
+      "atlas_uv": [
+        100,
+        113,
+        101,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_49",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        49,
+        37,
+        50
+      ],
+      "atlas_uv": [
+        100,
+        113,
+        101,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_49",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        49,
+        37,
+        50
+      ],
+      "atlas_uv": [
+        100,
+        113,
+        101,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_49",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        49,
+        38,
+        50
+      ],
+      "atlas_uv": [
+        101,
+        113,
+        102,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_49",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        49,
+        38,
+        50
+      ],
+      "atlas_uv": [
+        101,
+        113,
+        102,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_49",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        49,
+        38,
+        50
+      ],
+      "atlas_uv": [
+        101,
+        113,
+        102,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_49",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        49,
+        38,
+        50
+      ],
+      "atlas_uv": [
+        101,
+        113,
+        102,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_49",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        49,
+        38,
+        50
+      ],
+      "atlas_uv": [
+        101,
+        113,
+        102,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_49",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        49,
+        38,
+        50
+      ],
+      "atlas_uv": [
+        101,
+        113,
+        102,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_49",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        49,
+        39,
+        50
+      ],
+      "atlas_uv": [
+        102,
+        113,
+        103,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_49",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        49,
+        39,
+        50
+      ],
+      "atlas_uv": [
+        102,
+        113,
+        103,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_49",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        49,
+        39,
+        50
+      ],
+      "atlas_uv": [
+        102,
+        113,
+        103,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_49",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        49,
+        39,
+        50
+      ],
+      "atlas_uv": [
+        102,
+        113,
+        103,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_49",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        49,
+        39,
+        50
+      ],
+      "atlas_uv": [
+        102,
+        113,
+        103,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_38_49",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        49,
+        39,
+        50
+      ],
+      "atlas_uv": [
+        102,
+        113,
+        103,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_50",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        50,
+        37,
+        51
+      ],
+      "atlas_uv": [
+        100,
+        114,
+        101,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_50",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        50,
+        37,
+        51
+      ],
+      "atlas_uv": [
+        100,
+        114,
+        101,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_50",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        50,
+        37,
+        51
+      ],
+      "atlas_uv": [
+        100,
+        114,
+        101,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_50",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        50,
+        37,
+        51
+      ],
+      "atlas_uv": [
+        100,
+        114,
+        101,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_50",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        50,
+        37,
+        51
+      ],
+      "atlas_uv": [
+        100,
+        114,
+        101,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_50",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        50,
+        37,
+        51
+      ],
+      "atlas_uv": [
+        100,
+        114,
+        101,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_50",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        50,
+        38,
+        51
+      ],
+      "atlas_uv": [
+        101,
+        114,
+        102,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_50",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        50,
+        38,
+        51
+      ],
+      "atlas_uv": [
+        101,
+        114,
+        102,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_50",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        50,
+        38,
+        51
+      ],
+      "atlas_uv": [
+        101,
+        114,
+        102,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_50",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        50,
+        38,
+        51
+      ],
+      "atlas_uv": [
+        101,
+        114,
+        102,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_50",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        50,
+        38,
+        51
+      ],
+      "atlas_uv": [
+        101,
+        114,
+        102,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_50",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        50,
+        38,
+        51
+      ],
+      "atlas_uv": [
+        101,
+        114,
+        102,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_51",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        51,
+        37,
+        52
+      ],
+      "atlas_uv": [
+        100,
+        115,
+        101,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_51",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        51,
+        37,
+        52
+      ],
+      "atlas_uv": [
+        100,
+        115,
+        101,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_51",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        51,
+        37,
+        52
+      ],
+      "atlas_uv": [
+        100,
+        115,
+        101,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_51",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        51,
+        37,
+        52
+      ],
+      "atlas_uv": [
+        100,
+        115,
+        101,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_51",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        51,
+        37,
+        52
+      ],
+      "atlas_uv": [
+        100,
+        115,
+        101,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_36_51",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        36,
+        51,
+        37,
+        52
+      ],
+      "atlas_uv": [
+        100,
+        115,
+        101,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_51",
+      "bone": "sprout_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        51,
+        38,
+        52
+      ],
+      "atlas_uv": [
+        101,
+        115,
+        102,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_51",
+      "bone": "sprout_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        51,
+        38,
+        52
+      ],
+      "atlas_uv": [
+        101,
+        115,
+        102,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_51",
+      "bone": "sprout_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        51,
+        38,
+        52
+      ],
+      "atlas_uv": [
+        101,
+        115,
+        102,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_51",
+      "bone": "sprout_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        51,
+        38,
+        52
+      ],
+      "atlas_uv": [
+        101,
+        115,
+        102,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_51",
+      "bone": "sprout_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        51,
+        38,
+        52
+      ],
+      "atlas_uv": [
+        101,
+        115,
+        102,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_left_37_51",
+      "bone": "sprout_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        51,
+        38,
+        52
+      ],
+      "atlas_uv": [
+        101,
+        115,
+        102,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_48",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        48,
+        44,
+        49
+      ],
+      "atlas_uv": [
+        107,
+        112,
+        108,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_48",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        48,
+        44,
+        49
+      ],
+      "atlas_uv": [
+        107,
+        112,
+        108,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_48",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        48,
+        44,
+        49
+      ],
+      "atlas_uv": [
+        107,
+        112,
+        108,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_48",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        48,
+        44,
+        49
+      ],
+      "atlas_uv": [
+        107,
+        112,
+        108,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_48",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        48,
+        44,
+        49
+      ],
+      "atlas_uv": [
+        107,
+        112,
+        108,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_48",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        48,
+        44,
+        49
+      ],
+      "atlas_uv": [
+        107,
+        112,
+        108,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_48",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        48,
+        45,
+        49
+      ],
+      "atlas_uv": [
+        108,
+        112,
+        109,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_48",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        48,
+        45,
+        49
+      ],
+      "atlas_uv": [
+        108,
+        112,
+        109,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_48",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        48,
+        45,
+        49
+      ],
+      "atlas_uv": [
+        108,
+        112,
+        109,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_48",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        48,
+        45,
+        49
+      ],
+      "atlas_uv": [
+        108,
+        112,
+        109,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_48",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        48,
+        45,
+        49
+      ],
+      "atlas_uv": [
+        108,
+        112,
+        109,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_48",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        48,
+        45,
+        49
+      ],
+      "atlas_uv": [
+        108,
+        112,
+        109,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_48",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        48,
+        46,
+        49
+      ],
+      "atlas_uv": [
+        109,
+        112,
+        110,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_48",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        48,
+        46,
+        49
+      ],
+      "atlas_uv": [
+        109,
+        112,
+        110,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_48",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        48,
+        46,
+        49
+      ],
+      "atlas_uv": [
+        109,
+        112,
+        110,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_48",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        48,
+        46,
+        49
+      ],
+      "atlas_uv": [
+        109,
+        112,
+        110,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_48",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        48,
+        46,
+        49
+      ],
+      "atlas_uv": [
+        109,
+        112,
+        110,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_48",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        48,
+        46,
+        49
+      ],
+      "atlas_uv": [
+        109,
+        112,
+        110,
+        113
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_49",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        49,
+        43,
+        50
+      ],
+      "atlas_uv": [
+        106,
+        113,
+        107,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_49",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        49,
+        43,
+        50
+      ],
+      "atlas_uv": [
+        106,
+        113,
+        107,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_49",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        49,
+        43,
+        50
+      ],
+      "atlas_uv": [
+        106,
+        113,
+        107,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_49",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        49,
+        43,
+        50
+      ],
+      "atlas_uv": [
+        106,
+        113,
+        107,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_49",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        49,
+        43,
+        50
+      ],
+      "atlas_uv": [
+        106,
+        113,
+        107,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_49",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        49,
+        43,
+        50
+      ],
+      "atlas_uv": [
+        106,
+        113,
+        107,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_49",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        49,
+        44,
+        50
+      ],
+      "atlas_uv": [
+        107,
+        113,
+        108,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_49",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        49,
+        44,
+        50
+      ],
+      "atlas_uv": [
+        107,
+        113,
+        108,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_49",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        49,
+        44,
+        50
+      ],
+      "atlas_uv": [
+        107,
+        113,
+        108,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_49",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        49,
+        44,
+        50
+      ],
+      "atlas_uv": [
+        107,
+        113,
+        108,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_49",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        49,
+        44,
+        50
+      ],
+      "atlas_uv": [
+        107,
+        113,
+        108,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_49",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        49,
+        44,
+        50
+      ],
+      "atlas_uv": [
+        107,
+        113,
+        108,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_49",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        49,
+        45,
+        50
+      ],
+      "atlas_uv": [
+        108,
+        113,
+        109,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_49",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        49,
+        45,
+        50
+      ],
+      "atlas_uv": [
+        108,
+        113,
+        109,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_49",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        49,
+        45,
+        50
+      ],
+      "atlas_uv": [
+        108,
+        113,
+        109,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_49",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        49,
+        45,
+        50
+      ],
+      "atlas_uv": [
+        108,
+        113,
+        109,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_49",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        49,
+        45,
+        50
+      ],
+      "atlas_uv": [
+        108,
+        113,
+        109,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_49",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        49,
+        45,
+        50
+      ],
+      "atlas_uv": [
+        108,
+        113,
+        109,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_49",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        49,
+        46,
+        50
+      ],
+      "atlas_uv": [
+        109,
+        113,
+        110,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_49",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        49,
+        46,
+        50
+      ],
+      "atlas_uv": [
+        109,
+        113,
+        110,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_49",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        49,
+        46,
+        50
+      ],
+      "atlas_uv": [
+        109,
+        113,
+        110,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_49",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        49,
+        46,
+        50
+      ],
+      "atlas_uv": [
+        109,
+        113,
+        110,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_49",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        49,
+        46,
+        50
+      ],
+      "atlas_uv": [
+        109,
+        113,
+        110,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_49",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        49,
+        46,
+        50
+      ],
+      "atlas_uv": [
+        109,
+        113,
+        110,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_49",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        49,
+        47,
+        50
+      ],
+      "atlas_uv": [
+        110,
+        113,
+        111,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_49",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        49,
+        47,
+        50
+      ],
+      "atlas_uv": [
+        110,
+        113,
+        111,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_49",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        49,
+        47,
+        50
+      ],
+      "atlas_uv": [
+        110,
+        113,
+        111,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_49",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        49,
+        47,
+        50
+      ],
+      "atlas_uv": [
+        110,
+        113,
+        111,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_49",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        49,
+        47,
+        50
+      ],
+      "atlas_uv": [
+        110,
+        113,
+        111,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_49",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        49,
+        47,
+        50
+      ],
+      "atlas_uv": [
+        110,
+        113,
+        111,
+        114
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_50",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        50,
+        43,
+        51
+      ],
+      "atlas_uv": [
+        106,
+        114,
+        107,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_50",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        50,
+        43,
+        51
+      ],
+      "atlas_uv": [
+        106,
+        114,
+        107,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_50",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        50,
+        43,
+        51
+      ],
+      "atlas_uv": [
+        106,
+        114,
+        107,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_50",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        50,
+        43,
+        51
+      ],
+      "atlas_uv": [
+        106,
+        114,
+        107,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_50",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        50,
+        43,
+        51
+      ],
+      "atlas_uv": [
+        106,
+        114,
+        107,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_42_50",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        42,
+        50,
+        43,
+        51
+      ],
+      "atlas_uv": [
+        106,
+        114,
+        107,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_50",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        50,
+        44,
+        51
+      ],
+      "atlas_uv": [
+        107,
+        114,
+        108,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_50",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        50,
+        44,
+        51
+      ],
+      "atlas_uv": [
+        107,
+        114,
+        108,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_50",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        50,
+        44,
+        51
+      ],
+      "atlas_uv": [
+        107,
+        114,
+        108,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_50",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        50,
+        44,
+        51
+      ],
+      "atlas_uv": [
+        107,
+        114,
+        108,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_50",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        50,
+        44,
+        51
+      ],
+      "atlas_uv": [
+        107,
+        114,
+        108,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_50",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        50,
+        44,
+        51
+      ],
+      "atlas_uv": [
+        107,
+        114,
+        108,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_50",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        50,
+        45,
+        51
+      ],
+      "atlas_uv": [
+        108,
+        114,
+        109,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_50",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        50,
+        45,
+        51
+      ],
+      "atlas_uv": [
+        108,
+        114,
+        109,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_50",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        50,
+        45,
+        51
+      ],
+      "atlas_uv": [
+        108,
+        114,
+        109,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_50",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        50,
+        45,
+        51
+      ],
+      "atlas_uv": [
+        108,
+        114,
+        109,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_50",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        50,
+        45,
+        51
+      ],
+      "atlas_uv": [
+        108,
+        114,
+        109,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_50",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        50,
+        45,
+        51
+      ],
+      "atlas_uv": [
+        108,
+        114,
+        109,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_50",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        50,
+        46,
+        51
+      ],
+      "atlas_uv": [
+        109,
+        114,
+        110,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_50",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        50,
+        46,
+        51
+      ],
+      "atlas_uv": [
+        109,
+        114,
+        110,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_50",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        50,
+        46,
+        51
+      ],
+      "atlas_uv": [
+        109,
+        114,
+        110,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_50",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        50,
+        46,
+        51
+      ],
+      "atlas_uv": [
+        109,
+        114,
+        110,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_50",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        50,
+        46,
+        51
+      ],
+      "atlas_uv": [
+        109,
+        114,
+        110,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_50",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        50,
+        46,
+        51
+      ],
+      "atlas_uv": [
+        109,
+        114,
+        110,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_50",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        50,
+        47,
+        51
+      ],
+      "atlas_uv": [
+        110,
+        114,
+        111,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_50",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        50,
+        47,
+        51
+      ],
+      "atlas_uv": [
+        110,
+        114,
+        111,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_50",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        50,
+        47,
+        51
+      ],
+      "atlas_uv": [
+        110,
+        114,
+        111,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_50",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        50,
+        47,
+        51
+      ],
+      "atlas_uv": [
+        110,
+        114,
+        111,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_50",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        50,
+        47,
+        51
+      ],
+      "atlas_uv": [
+        110,
+        114,
+        111,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_46_50",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        46,
+        50,
+        47,
+        51
+      ],
+      "atlas_uv": [
+        110,
+        114,
+        111,
+        115
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_51",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        51,
+        44,
+        52
+      ],
+      "atlas_uv": [
+        107,
+        115,
+        108,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_51",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        51,
+        44,
+        52
+      ],
+      "atlas_uv": [
+        107,
+        115,
+        108,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_51",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        51,
+        44,
+        52
+      ],
+      "atlas_uv": [
+        107,
+        115,
+        108,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_51",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        51,
+        44,
+        52
+      ],
+      "atlas_uv": [
+        107,
+        115,
+        108,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_51",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        51,
+        44,
+        52
+      ],
+      "atlas_uv": [
+        107,
+        115,
+        108,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_51",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        51,
+        44,
+        52
+      ],
+      "atlas_uv": [
+        107,
+        115,
+        108,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_51",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        51,
+        45,
+        52
+      ],
+      "atlas_uv": [
+        108,
+        115,
+        109,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_51",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        51,
+        45,
+        52
+      ],
+      "atlas_uv": [
+        108,
+        115,
+        109,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_51",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        51,
+        45,
+        52
+      ],
+      "atlas_uv": [
+        108,
+        115,
+        109,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_51",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        51,
+        45,
+        52
+      ],
+      "atlas_uv": [
+        108,
+        115,
+        109,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_51",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        51,
+        45,
+        52
+      ],
+      "atlas_uv": [
+        108,
+        115,
+        109,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_51",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        51,
+        45,
+        52
+      ],
+      "atlas_uv": [
+        108,
+        115,
+        109,
+        116
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_52",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        52,
+        44,
+        53
+      ],
+      "atlas_uv": [
+        107,
+        116,
+        108,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_52",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        52,
+        44,
+        53
+      ],
+      "atlas_uv": [
+        107,
+        116,
+        108,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_52",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        52,
+        44,
+        53
+      ],
+      "atlas_uv": [
+        107,
+        116,
+        108,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_52",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        52,
+        44,
+        53
+      ],
+      "atlas_uv": [
+        107,
+        116,
+        108,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_52",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        52,
+        44,
+        53
+      ],
+      "atlas_uv": [
+        107,
+        116,
+        108,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_43_52",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        43,
+        52,
+        44,
+        53
+      ],
+      "atlas_uv": [
+        107,
+        116,
+        108,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_52",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        52,
+        45,
+        53
+      ],
+      "atlas_uv": [
+        108,
+        116,
+        109,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_52",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        52,
+        45,
+        53
+      ],
+      "atlas_uv": [
+        108,
+        116,
+        109,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_52",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        52,
+        45,
+        53
+      ],
+      "atlas_uv": [
+        108,
+        116,
+        109,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_52",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        52,
+        45,
+        53
+      ],
+      "atlas_uv": [
+        108,
+        116,
+        109,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_52",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        52,
+        45,
+        53
+      ],
+      "atlas_uv": [
+        108,
+        116,
+        109,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_44_52",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        44,
+        52,
+        45,
+        53
+      ],
+      "atlas_uv": [
+        108,
+        116,
+        109,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_52",
+      "bone": "sprout_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        52,
+        46,
+        53
+      ],
+      "atlas_uv": [
+        109,
+        116,
+        110,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_52",
+      "bone": "sprout_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        52,
+        46,
+        53
+      ],
+      "atlas_uv": [
+        109,
+        116,
+        110,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_52",
+      "bone": "sprout_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        52,
+        46,
+        53
+      ],
+      "atlas_uv": [
+        109,
+        116,
+        110,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_52",
+      "bone": "sprout_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        52,
+        46,
+        53
+      ],
+      "atlas_uv": [
+        109,
+        116,
+        110,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_52",
+      "bone": "sprout_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        52,
+        46,
+        53
+      ],
+      "atlas_uv": [
+        109,
+        116,
+        110,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "sprout_right_45_52",
+      "bone": "sprout_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        52,
+        46,
+        53
+      ],
+      "atlas_uv": [
+        109,
+        116,
+        110,
+        117
+      ],
+      "evidence": "嫩芽连通域精确像素；体积/位置/倾斜为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_torso",
+      "bone": "body",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        10,
+        47,
+        24
+      ],
+      "atlas_uv": [
+        101,
+        10,
+        111,
+        24
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_torso",
+      "bone": "body",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        33,
+        10,
+        37,
+        24
+      ],
+      "atlas_uv": [
+        97,
+        10,
+        101,
+        24
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_torso",
+      "bone": "body",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        51,
+        10,
+        61,
+        24
+      ],
+      "atlas_uv": [
+        115,
+        10,
+        125,
+        24
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_torso",
+      "bone": "body",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        47,
+        10,
+        51,
+        24
+      ],
+      "atlas_uv": [
+        111,
+        10,
+        115,
+        24
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_torso",
+      "bone": "body",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        37,
+        6,
+        47,
+        10
+      ],
+      "atlas_uv": [
+        101,
+        6,
+        111,
+        10
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_torso",
+      "bone": "body",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "内衬专用单像素；不复用衣袖纹理",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_right",
+      "bone": "right_arm",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        3,
+        31,
+        7,
+        41
+      ],
+      "atlas_uv": [
+        67,
+        31,
+        71,
+        41
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_right",
+      "bone": "right_arm",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        0,
+        31,
+        3,
+        41
+      ],
+      "atlas_uv": [
+        64,
+        31,
+        67,
+        41
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_right",
+      "bone": "right_arm",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        10,
+        31,
+        14,
+        41
+      ],
+      "atlas_uv": [
+        74,
+        31,
+        78,
+        41
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_right",
+      "bone": "right_arm",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        7,
+        31,
+        10,
+        41
+      ],
+      "atlas_uv": [
+        71,
+        31,
+        74,
+        41
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_right",
+      "bone": "right_arm",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        3,
+        28,
+        7,
+        31
+      ],
+      "atlas_uv": [
+        67,
+        28,
+        71,
+        31
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_right",
+      "bone": "right_arm",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "袖口内衬专用单像素",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_left",
+      "bone": "left_arm",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        17,
+        31,
+        21,
+        41
+      ],
+      "atlas_uv": [
+        81,
+        31,
+        85,
+        41
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_left",
+      "bone": "left_arm",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        14,
+        31,
+        17,
+        41
+      ],
+      "atlas_uv": [
+        78,
+        31,
+        81,
+        41
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_left",
+      "bone": "left_arm",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        24,
+        31,
+        28,
+        41
+      ],
+      "atlas_uv": [
+        88,
+        31,
+        92,
+        41
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_left",
+      "bone": "left_arm",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        21,
+        31,
+        24,
+        41
+      ],
+      "atlas_uv": [
+        85,
+        31,
+        88,
+        41
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_left",
+      "bone": "left_arm",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        17,
+        28,
+        21,
+        31
+      ],
+      "atlas_uv": [
+        81,
+        28,
+        85,
+        31
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_sleeve_left",
+      "bone": "left_arm",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        1,
+        13,
+        2
+      ],
+      "atlas_uv": [
+        0,
+        33,
+        1,
+        34
+      ],
+      "evidence": "袖口内衬专用单像素",
+      "processing": "独立复制原像素，无改色",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_right",
+      "bone": "right_leg",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        4,
+        46,
+        8,
+        52
+      ],
+      "atlas_uv": [
+        68,
+        46,
+        72,
+        52
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_right",
+      "bone": "right_leg",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        0,
+        46,
+        4,
+        52
+      ],
+      "atlas_uv": [
+        64,
+        46,
+        68,
+        52
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_right",
+      "bone": "right_leg",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        46,
+        16,
+        52
+      ],
+      "atlas_uv": [
+        76,
+        46,
+        80,
+        52
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_right",
+      "bone": "right_leg",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        8,
+        46,
+        12,
+        52
+      ],
+      "atlas_uv": [
+        72,
+        46,
+        76,
+        52
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_right",
+      "bone": "right_leg",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        4,
+        42,
+        8,
+        46
+      ],
+      "atlas_uv": [
+        68,
+        42,
+        72,
+        46
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_right",
+      "bone": "right_leg",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        4,
+        52,
+        8,
+        56
+      ],
+      "atlas_uv": [
+        68,
+        52,
+        72,
+        56
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_left",
+      "bone": "left_leg",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        4,
+        46,
+        8,
+        52
+      ],
+      "atlas_uv": [
+        68,
+        46,
+        72,
+        52
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_left",
+      "bone": "left_leg",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        0,
+        46,
+        4,
+        52
+      ],
+      "atlas_uv": [
+        64,
+        46,
+        68,
+        52
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_left",
+      "bone": "left_leg",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        12,
+        46,
+        16,
+        52
+      ],
+      "atlas_uv": [
+        76,
+        46,
+        80,
+        52
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_left",
+      "bone": "left_leg",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        8,
+        46,
+        12,
+        52
+      ],
+      "atlas_uv": [
+        72,
+        46,
+        76,
+        52
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_left",
+      "bone": "left_leg",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        4,
+        42,
+        8,
+        46
+      ],
+      "atlas_uv": [
+        68,
+        42,
+        72,
+        46
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_rot_boot_left",
+      "bone": "left_leg",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        4,
+        52,
+        8,
+        56
+      ],
+      "atlas_uv": [
+        68,
+        52,
+        72,
+        56
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "原像素不改",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_0",
+      "bone": "root_front_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_0",
+      "bone": "root_front_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_0",
+      "bone": "root_front_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_0",
+      "bone": "root_front_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_0",
+      "bone": "root_front_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        23,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        87,
+        103,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_0",
+      "bone": "root_front_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        23,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        87,
+        103,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_1",
+      "bone": "root_front_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_1",
+      "bone": "root_front_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_1",
+      "bone": "root_front_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_1",
+      "bone": "root_front_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_1",
+      "bone": "root_front_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        23,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        87,
+        110,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_right_1",
+      "bone": "root_front_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        23,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        87,
+        110,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_0",
+      "bone": "root_front_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_0",
+      "bone": "root_front_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_0",
+      "bone": "root_front_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_0",
+      "bone": "root_front_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_0",
+      "bone": "root_front_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        23,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        87,
+        103,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_0",
+      "bone": "root_front_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        23,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        87,
+        103,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_1",
+      "bone": "root_front_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_1",
+      "bone": "root_front_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_1",
+      "bone": "root_front_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_1",
+      "bone": "root_front_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_1",
+      "bone": "root_front_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        23,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        87,
+        110,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_front_left_1",
+      "bone": "root_front_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        23,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        87,
+        110,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_0",
+      "bone": "root_back_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_0",
+      "bone": "root_back_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_0",
+      "bone": "root_back_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_0",
+      "bone": "root_back_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_0",
+      "bone": "root_back_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        23,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        87,
+        103,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_0",
+      "bone": "root_back_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        23,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        87,
+        103,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_1",
+      "bone": "root_back_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_1",
+      "bone": "root_back_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_1",
+      "bone": "root_back_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_1",
+      "bone": "root_back_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_1",
+      "bone": "root_back_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        23,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        87,
+        110,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_right_1",
+      "bone": "root_back_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        23,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        87,
+        110,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_0",
+      "bone": "root_back_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_0",
+      "bone": "root_back_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_0",
+      "bone": "root_back_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_0",
+      "bone": "root_back_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_0",
+      "bone": "root_back_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        23,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        87,
+        103,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_0",
+      "bone": "root_back_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        23,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        87,
+        103,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_1",
+      "bone": "root_back_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_1",
+      "bone": "root_back_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_1",
+      "bone": "root_back_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_1",
+      "bone": "root_back_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "袍子根须列；细柱长度、厚度和18度外张为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_1",
+      "bone": "root_back_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        23,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        87,
+        110,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "root_back_left_1",
+      "bone": "root_back_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        23,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        87,
+        110,
+        88
+      ],
+      "evidence": "候选重建：展开尺寸与图案支持，未由原作网格确认",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_0",
+      "bone": "cuff_roots_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_0",
+      "bone": "cuff_roots_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_0",
+      "bone": "cuff_roots_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_0",
+      "bone": "cuff_roots_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_0",
+      "bone": "cuff_roots_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_0",
+      "bone": "cuff_roots_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_1",
+      "bone": "cuff_roots_right",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_1",
+      "bone": "cuff_roots_right",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_1",
+      "bone": "cuff_roots_right",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_1",
+      "bone": "cuff_roots_right",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_1",
+      "bone": "cuff_roots_right",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_right_1",
+      "bone": "cuff_roots_right",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_0",
+      "bone": "cuff_roots_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_0",
+      "bone": "cuff_roots_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_0",
+      "bone": "cuff_roots_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_0",
+      "bone": "cuff_roots_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_0",
+      "bone": "cuff_roots_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_0",
+      "bone": "cuff_roots_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        38,
+        20,
+        39,
+        24
+      ],
+      "atlas_uv": [
+        102,
+        84,
+        103,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_1",
+      "bone": "cuff_roots_left",
+      "face": "north",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_1",
+      "bone": "cuff_roots_left",
+      "face": "east",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_1",
+      "bone": "cuff_roots_left",
+      "face": "south",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_1",
+      "bone": "cuff_roots_left",
+      "face": "west",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_1",
+      "bone": "cuff_roots_left",
+      "face": "up",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    },
+    {
+      "element": "cuff_roots_left_1",
+      "bone": "cuff_roots_left",
+      "face": "down",
+      "source_file": "Root_Rot_Armor_texture.png",
+      "source_uv": [
+        45,
+        20,
+        46,
+        24
+      ],
+      "atlas_uv": [
+        109,
+        84,
+        110,
+        88
+      ],
+      "evidence": "原根须像素复用到袖口；几何为候选",
+      "processing": "ShadowTexture青色区域的候选绿色亮部补偿；非原版材质还原",
+      "source_geometry": "用户已允许的候选重建"
+    }
+  ],
+  "removed_source_elements": [
+    {
+      "element": "body",
+      "reason": "兜帽/衣身遮挡"
+    },
+    {
+      "element": "head",
+      "reason": "兜帽/衣身遮挡"
+    },
+    {
+      "element": "coral",
+      "reason": "Sunken独有附属物不属于Mossy"
+    },
+    {
+      "element": "coral",
+      "reason": "Sunken独有附属物不属于Mossy"
+    },
+    {
+      "element": "sprig",
+      "reason": "Sunken独有附属物不属于Mossy"
+    }
+  ]
+}

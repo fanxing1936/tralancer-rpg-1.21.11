@@ -1,0 +1,6715 @@
+{
+  "source_manifest": "source_manifest.json",
+  "observation_date": "2026-11-04",
+  "verification_scope": "本地完整性、格式、可解码性和参数检验；SHA-256为新算存档指纹，未与发行者提供的校验值比对",
+  "generator": "../heart_of_ender_materials.py",
+  "reference_fps": 25,
+  "decoder": "C:\\Users\\zhaoy\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "summary": {
+    "expected_assets": 84,
+    "present_assets": 84,
+    "category_counts": {
+      "image": 23,
+      "texture": 4,
+      "sound": 56,
+      "video": 1
+    },
+    "assets_with_errors": 0,
+    "gif_frames": 1042,
+    "total_bytes": 48072678
+  },
+  "assets": [
+    {
+      "file": "MCD_Heart_of_Ender.png",
+      "category": "image",
+      "description": "The Heart of Ender",
+      "path": "heart_of_ender_ref/MCD_Heart_of_Ender.png",
+      "url": "https://minecraft.wiki/images/MCD_Heart_of_Ender.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 318059,
+      "sha256": "8b32af4ca6b42239198b35e59dfd3a6fbb42a693a866bf883dbfe8a967052aaf",
+      "format": "PNG",
+      "width": 1000,
+      "height": 840,
+      "source_mode": "RGBA",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 840000,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255
+        ],
+        "transparent_pixels": 572266,
+        "translucent_pixels": 55260,
+        "opaque_pixels": 212474,
+        "unique_rgba_colors": 36614,
+        "mean_visible_rgb": [
+          31.0754,
+          14.183,
+          34.9961
+        ],
+        "visible_rgb_max_at_most_16_pixels": 149387,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "pixels": 86212
+          },
+          {
+            "rgba": [
+              3,
+              1,
+              4,
+              0
+            ],
+            "pixels": 43481
+          },
+          {
+            "rgba": [
+              2,
+              1,
+              3,
+              0
+            ],
+            "pixels": 25709
+          },
+          {
+            "rgba": [
+              1,
+              0,
+              1,
+              0
+            ],
+            "pixels": 23947
+          },
+          {
+            "rgba": [
+              4,
+              1,
+              5,
+              0
+            ],
+            "pixels": 17769
+          },
+          {
+            "rgba": [
+              3,
+              1,
+              3,
+              0
+            ],
+            "pixels": 14647
+          },
+          {
+            "rgba": [
+              2,
+              0,
+              3,
+              0
+            ],
+            "pixels": 12825
+          },
+          {
+            "rgba": [
+              16,
+              3,
+              19,
+              0
+            ],
+            "pixels": 10920
+          },
+          {
+            "rgba": [
+              3,
+              0,
+              4,
+              0
+            ],
+            "pixels": 9595
+          },
+          {
+            "rgba": [
+              4,
+              1,
+              5,
+              255
+            ],
+            "pixels": 9446
+          },
+          {
+            "rgba": [
+              41,
+              13,
+              46,
+              0
+            ],
+            "pixels": 9435
+          },
+          {
+            "rgba": [
+              3,
+              1,
+              4,
+              255
+            ],
+            "pixels": 9126
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "MCD_Arch-Visage.png",
+      "category": "image",
+      "description": "Arch-Visage",
+      "path": "heart_of_ender_ref/MCD_Arch-Visage.png",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Visage.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 236861,
+      "sha256": "ec1a117e355f9181cf81b279d7b065707f57d135c93d9b762d93e86d4a06c04f",
+      "format": "PNG",
+      "width": 800,
+      "height": 800,
+      "source_mode": "RGBA",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 640000,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          24,
+          28,
+          32,
+          36,
+          40,
+          44,
+          48,
+          52,
+          56,
+          60,
+          64,
+          68,
+          72,
+          76,
+          80,
+          84,
+          87,
+          88,
+          92,
+          95,
+          96,
+          99,
+          100,
+          103,
+          104,
+          107,
+          108,
+          111,
+          112,
+          115,
+          116,
+          119,
+          120,
+          123,
+          124,
+          127,
+          128,
+          131,
+          132,
+          135,
+          136,
+          139,
+          140,
+          143,
+          144,
+          147,
+          148,
+          151,
+          152,
+          155,
+          156,
+          159,
+          160,
+          163,
+          164,
+          167,
+          168,
+          171,
+          172,
+          175,
+          176,
+          179,
+          180,
+          183,
+          187,
+          188,
+          191,
+          195,
+          196,
+          199,
+          203,
+          204,
+          207,
+          208,
+          211,
+          212,
+          215,
+          216,
+          219,
+          220,
+          223,
+          227,
+          231,
+          235,
+          239,
+          243,
+          247,
+          251,
+          255
+        ],
+        "transparent_pixels": 333306,
+        "translucent_pixels": 35068,
+        "opaque_pixels": 271626,
+        "unique_rgba_colors": 11815,
+        "mean_visible_rgb": [
+          102.3486,
+          67.0157,
+          109.5763
+        ],
+        "visible_rgb_max_at_most_16_pixels": 19165,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "pixels": 47200
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 32039
+          },
+          {
+            "rgba": [
+              255,
+              146,
+              255,
+              0
+            ],
+            "pixels": 13121
+          },
+          {
+            "rgba": [
+              12,
+              2,
+              15,
+              0
+            ],
+            "pixels": 9387
+          },
+          {
+            "rgba": [
+              255,
+              147,
+              255,
+              0
+            ],
+            "pixels": 8853
+          },
+          {
+            "rgba": [
+              7,
+              2,
+              9,
+              0
+            ],
+            "pixels": 7869
+          },
+          {
+            "rgba": [
+              11,
+              2,
+              14,
+              0
+            ],
+            "pixels": 7485
+          },
+          {
+            "rgba": [
+              255,
+              145,
+              255,
+              0
+            ],
+            "pixels": 6086
+          },
+          {
+            "rgba": [
+              255,
+              148,
+              255,
+              0
+            ],
+            "pixels": 5184
+          },
+          {
+            "rgba": [
+              255,
+              150,
+              255,
+              0
+            ],
+            "pixels": 5097
+          },
+          {
+            "rgba": [
+              12,
+              2,
+              14,
+              0
+            ],
+            "pixels": 4787
+          },
+          {
+            "rgba": [
+              7,
+              1,
+              9,
+              0
+            ],
+            "pixels": 4456
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "MCD_Heart_of_Ender_Idle.gif",
+      "category": "image",
+      "description": "Heart of Ender idle",
+      "path": "heart_of_ender_ref/MCD_Heart_of_Ender_Idle.gif",
+      "url": "https://minecraft.wiki/images/MCD_Heart_of_Ender_Idle.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 11180822,
+      "sha256": "c6cd9ce19807318aaab2424d41fc5f52cc9fc7432071afa7e289abec22ffedf8",
+      "extraction": {
+        "frames": "frames/MCD_Heart_of_Ender_Idle",
+        "overview_stride_frames": 20,
+        "overview_pages": 1,
+        "all_frames_pages": 16
+      },
+      "format": "GIF",
+      "width": 500,
+      "height": 500,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 250000,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          255
+        ],
+        "transparent_pixels": 190226,
+        "translucent_pixels": 0,
+        "opaque_pixels": 59774,
+        "unique_rgba_colors": 222,
+        "mean_visible_rgb": [
+          24.6018,
+          10.9576,
+          27.766
+        ],
+        "visible_rgb_max_at_most_16_pixels": 35030,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              176,
+              92,
+              195,
+              0
+            ],
+            "pixels": 190226
+          },
+          {
+            "rgba": [
+              2,
+              1,
+              3,
+              255
+            ],
+            "pixels": 5406
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "pixels": 3643
+          },
+          {
+            "rgba": [
+              4,
+              0,
+              5,
+              255
+            ],
+            "pixels": 3341
+          },
+          {
+            "rgba": [
+              5,
+              2,
+              7,
+              255
+            ],
+            "pixels": 2790
+          },
+          {
+            "rgba": [
+              7,
+              1,
+              7,
+              255
+            ],
+            "pixels": 2187
+          },
+          {
+            "rgba": [
+              2,
+              0,
+              0,
+              255
+            ],
+            "pixels": 2123
+          },
+          {
+            "rgba": [
+              9,
+              2,
+              12,
+              255
+            ],
+            "pixels": 2083
+          },
+          {
+            "rgba": [
+              11,
+              3,
+              15,
+              255
+            ],
+            "pixels": 1995
+          },
+          {
+            "rgba": [
+              6,
+              2,
+              9,
+              255
+            ],
+            "pixels": 1924
+          },
+          {
+            "rgba": [
+              3,
+              1,
+              1,
+              255
+            ],
+            "pixels": 1827
+          },
+          {
+            "rgba": [
+              1,
+              0,
+              2,
+              255
+            ],
+            "pixels": 1797
+          }
+        ]
+      },
+      "storage_frames": 400,
+      "frames": 400,
+      "sampled_frames_25fps": 400,
+      "source_frame_durations_ms": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "duration_ms_histogram": {
+        "40": 400
+      },
+      "duration_seconds": 16.0,
+      "storage_strict_25_fps": true,
+      "resampled_strict_25_fps": true,
+      "frame_time_definition": "零基采样帧 n，时间 n*0.04 s；按源帧累计duration选择覆盖此时刻的已合成帧，长持帧重复采样",
+      "full_decode": "通过 Pillow 顺序解码全部帧，LOAD_TRUNCATED_IMAGES=False"
+    },
+    {
+      "file": "MCD_Arch-Visage_Spawn_Attack_in_game.gif",
+      "category": "image",
+      "description": "Arch-Visage spawn attack (in game)",
+      "path": "heart_of_ender_ref/MCD_Arch-Visage_Spawn_Attack_in_game.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Visage_Spawn_Attack_in_game.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [
+        "源GIF采用变时长持帧；已按累计duration展开25fps，不能把存储索引直接乘0.04"
+      ],
+      "bytes": 1674295,
+      "sha256": "c3f7196e815ace778a10a58b50e05d8056170a6a63b8caa59cec0ce240305dfb",
+      "extraction": {
+        "frames": "frames/MCD_Arch-Visage_Spawn_Attack_in_game",
+        "overview_stride_frames": 5,
+        "overview_pages": 2,
+        "all_frames_pages": 5
+      },
+      "format": "GIF",
+      "width": 500,
+      "height": 500,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 250000,
+        "alpha_min": 0,
+        "alpha_max": 0,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0
+        ],
+        "transparent_pixels": 250000,
+        "translucent_pixels": 0,
+        "opaque_pixels": 0,
+        "unique_rgba_colors": 1,
+        "mean_visible_rgb": [],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              138,
+              4,
+              155,
+              0
+            ],
+            "pixels": 250000
+          }
+        ]
+      },
+      "storage_frames": 92,
+      "frames": 122,
+      "sampled_frames_25fps": 122,
+      "source_frame_durations_ms": [
+        80,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        1200
+      ],
+      "duration_ms_histogram": {
+        "40": 90,
+        "80": 1,
+        "1200": 1
+      },
+      "duration_seconds": 4.88,
+      "storage_strict_25_fps": false,
+      "resampled_strict_25_fps": true,
+      "frame_time_definition": "零基采样帧 n，时间 n*0.04 s；按源帧累计duration选择覆盖此时刻的已合成帧，长持帧重复采样",
+      "full_decode": "通过 Pillow 顺序解码全部帧，LOAD_TRUNCATED_IMAGES=False"
+    },
+    {
+      "file": "MCD_Arch-Visage_Spawn_Attack.gif",
+      "category": "image",
+      "description": "Arch-Visage spawn attack (unused version with eyes)",
+      "path": "heart_of_ender_ref/MCD_Arch-Visage_Spawn_Attack.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Visage_Spawn_Attack.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [
+        "源GIF采用变时长持帧；已按累计duration展开25fps，不能把存储索引直接乘0.04"
+      ],
+      "bytes": 2438126,
+      "sha256": "63084c7d3fc0835a176e6c813dc66561b412414107240155fafab9284bccdf71",
+      "extraction": {
+        "frames": "frames/MCD_Arch-Visage_Spawn_Attack",
+        "overview_stride_frames": 5,
+        "overview_pages": 2,
+        "all_frames_pages": 6
+      },
+      "format": "GIF",
+      "width": 500,
+      "height": 500,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 250000,
+        "alpha_min": 0,
+        "alpha_max": 0,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0
+        ],
+        "transparent_pixels": 250000,
+        "translucent_pixels": 0,
+        "opaque_pixels": 0,
+        "unique_rgba_colors": 1,
+        "mean_visible_rgb": [],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              139,
+              5,
+              156,
+              0
+            ],
+            "pixels": 250000
+          }
+        ]
+      },
+      "storage_frames": 120,
+      "frames": 150,
+      "sampled_frames_25fps": 150,
+      "source_frame_durations_ms": [
+        80,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        1200
+      ],
+      "duration_ms_histogram": {
+        "40": 118,
+        "80": 1,
+        "1200": 1
+      },
+      "duration_seconds": 6.0,
+      "storage_strict_25_fps": false,
+      "resampled_strict_25_fps": true,
+      "frame_time_definition": "零基采样帧 n，时间 n*0.04 s；按源帧累计duration选择覆盖此时刻的已合成帧，长持帧重复采样",
+      "full_decode": "通过 Pillow 顺序解码全部帧，LOAD_TRUNCATED_IMAGES=False"
+    },
+    {
+      "file": "MCD_Arch-Illager_Docile.gif",
+      "category": "image",
+      "description": "The Arch-Illager within the Heart of Ender (idle animation)",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_Docile.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Docile.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 1374161,
+      "sha256": "afb57d48a6c58ce768fe513c5e8581d6922429478e43e86612c0e224f23cb10b",
+      "extraction": {
+        "frames": "frames/MCD_Arch-Illager_Docile",
+        "overview_stride_frames": 10,
+        "overview_pages": 1,
+        "all_frames_pages": 5
+      },
+      "format": "GIF",
+      "width": 500,
+      "height": 500,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 250000,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          255
+        ],
+        "transparent_pixels": 211757,
+        "translucent_pixels": 0,
+        "opaque_pixels": 38243,
+        "unique_rgba_colors": 41,
+        "mean_visible_rgb": [
+          254.2274,
+          195.3768,
+          255.0
+        ],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              231,
+              98,
+              255,
+              0
+            ],
+            "pixels": 211757
+          },
+          {
+            "rgba": [
+              255,
+              199,
+              255,
+              255
+            ],
+            "pixels": 8106
+          },
+          {
+            "rgba": [
+              255,
+              198,
+              255,
+              255
+            ],
+            "pixels": 6582
+          },
+          {
+            "rgba": [
+              255,
+              196,
+              255,
+              255
+            ],
+            "pixels": 5915
+          },
+          {
+            "rgba": [
+              255,
+              201,
+              255,
+              255
+            ],
+            "pixels": 3800
+          },
+          {
+            "rgba": [
+              255,
+              197,
+              255,
+              255
+            ],
+            "pixels": 3355
+          },
+          {
+            "rgba": [
+              255,
+              195,
+              255,
+              255
+            ],
+            "pixels": 3090
+          },
+          {
+            "rgba": [
+              255,
+              200,
+              255,
+              255
+            ],
+            "pixels": 2620
+          },
+          {
+            "rgba": [
+              255,
+              202,
+              255,
+              255
+            ],
+            "pixels": 1461
+          },
+          {
+            "rgba": [
+              255,
+              194,
+              255,
+              255
+            ],
+            "pixels": 974
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 402
+          },
+          {
+            "rgba": [
+              255,
+              191,
+              255,
+              255
+            ],
+            "pixels": 291
+          }
+        ]
+      },
+      "storage_frames": 120,
+      "frames": 120,
+      "sampled_frames_25fps": 120,
+      "source_frame_durations_ms": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "duration_ms_histogram": {
+        "40": 120
+      },
+      "duration_seconds": 4.8,
+      "storage_strict_25_fps": true,
+      "resampled_strict_25_fps": true,
+      "frame_time_definition": "零基采样帧 n，时间 n*0.04 s；按源帧累计duration选择覆盖此时刻的已合成帧，长持帧重复采样",
+      "full_decode": "通过 Pillow 顺序解码全部帧，LOAD_TRUNCATED_IMAGES=False"
+    },
+    {
+      "file": "MCD_Arch-Illager_Anxious.gif",
+      "category": "image",
+      "description": "The Arch-Illager looking around",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_Anxious.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Anxious.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 2597287,
+      "sha256": "0a71f6dcd8fbb6354138960fd10ff24513009d5ffafca2c0f380a8ab17709715",
+      "extraction": {
+        "frames": "frames/MCD_Arch-Illager_Anxious",
+        "overview_stride_frames": 10,
+        "overview_pages": 1,
+        "all_frames_pages": 8
+      },
+      "format": "GIF",
+      "width": 500,
+      "height": 500,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 250000,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          255
+        ],
+        "transparent_pixels": 202704,
+        "translucent_pixels": 0,
+        "opaque_pixels": 47296,
+        "unique_rgba_colors": 41,
+        "mean_visible_rgb": [
+          253.7125,
+          193.9932,
+          255.0
+        ],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              229,
+              99,
+              255,
+              0
+            ],
+            "pixels": 202704
+          },
+          {
+            "rgba": [
+              255,
+              199,
+              255,
+              255
+            ],
+            "pixels": 9751
+          },
+          {
+            "rgba": [
+              255,
+              198,
+              255,
+              255
+            ],
+            "pixels": 7018
+          },
+          {
+            "rgba": [
+              255,
+              196,
+              255,
+              255
+            ],
+            "pixels": 6745
+          },
+          {
+            "rgba": [
+              255,
+              201,
+              255,
+              255
+            ],
+            "pixels": 5319
+          },
+          {
+            "rgba": [
+              255,
+              200,
+              255,
+              255
+            ],
+            "pixels": 4080
+          },
+          {
+            "rgba": [
+              255,
+              197,
+              255,
+              255
+            ],
+            "pixels": 3814
+          },
+          {
+            "rgba": [
+              255,
+              195,
+              255,
+              255
+            ],
+            "pixels": 3205
+          },
+          {
+            "rgba": [
+              255,
+              202,
+              255,
+              255
+            ],
+            "pixels": 2245
+          },
+          {
+            "rgba": [
+              255,
+              194,
+              255,
+              255
+            ],
+            "pixels": 1128
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 829
+          },
+          {
+            "rgba": [
+              231,
+              99,
+              255,
+              255
+            ],
+            "pixels": 462
+          }
+        ]
+      },
+      "storage_frames": 200,
+      "frames": 200,
+      "sampled_frames_25fps": 200,
+      "source_frame_durations_ms": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "duration_ms_histogram": {
+        "40": 200
+      },
+      "duration_seconds": 8.0,
+      "storage_strict_25_fps": true,
+      "resampled_strict_25_fps": true,
+      "frame_time_definition": "零基采样帧 n，时间 n*0.04 s；按源帧累计duration选择覆盖此时刻的已合成帧，长持帧重复采样",
+      "full_decode": "通过 Pillow 顺序解码全部帧，LOAD_TRUNCATED_IMAGES=False"
+    },
+    {
+      "file": "MCD_Arch-Illager_Fourside.gif",
+      "category": "image",
+      "description": "The Arch-Illager shooting beams",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_Fourside.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Fourside.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 567816,
+      "sha256": "c76343bac93d07a3f2ff2d3ace86326d05ba0f3127de45de25bf93f30f3e6552",
+      "extraction": {
+        "frames": "frames/MCD_Arch-Illager_Fourside",
+        "overview_stride_frames": 5,
+        "overview_pages": 1,
+        "all_frames_pages": 2
+      },
+      "format": "GIF",
+      "width": 500,
+      "height": 500,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 250000,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          255
+        ],
+        "transparent_pixels": 212664,
+        "translucent_pixels": 0,
+        "opaque_pixels": 37336,
+        "unique_rgba_colors": 66,
+        "mean_visible_rgb": [
+          253.5389,
+          195.3091,
+          254.9932
+        ],
+        "visible_rgb_max_at_most_16_pixels": 1,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              255,
+              246,
+              255,
+              0
+            ],
+            "pixels": 212664
+          },
+          {
+            "rgba": [
+              255,
+              196,
+              255,
+              255
+            ],
+            "pixels": 8706
+          },
+          {
+            "rgba": [
+              255,
+              193,
+              255,
+              255
+            ],
+            "pixels": 6190
+          },
+          {
+            "rgba": [
+              255,
+              195,
+              255,
+              255
+            ],
+            "pixels": 4350
+          },
+          {
+            "rgba": [
+              255,
+              198,
+              255,
+              255
+            ],
+            "pixels": 2905
+          },
+          {
+            "rgba": [
+              255,
+              192,
+              255,
+              255
+            ],
+            "pixels": 2467
+          },
+          {
+            "rgba": [
+              255,
+              194,
+              255,
+              255
+            ],
+            "pixels": 2045
+          },
+          {
+            "rgba": [
+              255,
+              197,
+              255,
+              255
+            ],
+            "pixels": 2028
+          },
+          {
+            "rgba": [
+              223,
+              95,
+              255,
+              255
+            ],
+            "pixels": 874
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 865
+          },
+          {
+            "rgba": [
+              224,
+              95,
+              255,
+              255
+            ],
+            "pixels": 417
+          },
+          {
+            "rgba": [
+              223,
+              94,
+              255,
+              255
+            ],
+            "pixels": 397
+          }
+        ]
+      },
+      "storage_frames": 50,
+      "frames": 50,
+      "sampled_frames_25fps": 50,
+      "source_frame_durations_ms": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "duration_ms_histogram": {
+        "40": 50
+      },
+      "duration_seconds": 2.0,
+      "storage_strict_25_fps": true,
+      "resampled_strict_25_fps": true,
+      "frame_time_definition": "零基采样帧 n，时间 n*0.04 s；按源帧累计duration选择覆盖此时刻的已合成帧，长持帧重复采样",
+      "full_decode": "通过 Pillow 顺序解码全部帧，LOAD_TRUNCATED_IMAGES=False"
+    },
+    {
+      "file": "MCD_Decal_Puddle_(texture).png",
+      "category": "image",
+      "description": "Heart of Ender texture file",
+      "path": "heart_of_ender_ref/MCD_Decal_Puddle_(texture).png",
+      "url": "https://minecraft.wiki/images/MCD_Decal_Puddle_(texture).png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 14896,
+      "sha256": "fb28326ab01670ec720fc104a37394976f63cd3ec5c40611fd0b89adc6175bbb",
+      "format": "PNG",
+      "width": 711,
+      "height": 711,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 505521,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          255
+        ],
+        "transparent_pixels": 840,
+        "translucent_pixels": 0,
+        "opaque_pixels": 504681,
+        "unique_rgba_colors": 185,
+        "mean_visible_rgb": [
+          0.1097,
+          1.0373,
+          0.2757
+        ],
+        "visible_rgb_max_at_most_16_pixels": 499271,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "pixels": 414468
+          },
+          {
+            "rgba": [
+              0,
+              1,
+              0,
+              255
+            ],
+            "pixels": 58839
+          },
+          {
+            "rgba": [
+              0,
+              2,
+              0,
+              255
+            ],
+            "pixels": 18282
+          },
+          {
+            "rgba": [
+              0,
+              3,
+              0,
+              255
+            ],
+            "pixels": 6609
+          },
+          {
+            "rgba": [
+              0,
+              4,
+              0,
+              255
+            ],
+            "pixels": 957
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "pixels": 840
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              255,
+              255
+            ],
+            "pixels": 254
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              127,
+              255
+            ],
+            "pixels": 191
+          },
+          {
+            "rgba": [
+              64,
+              0,
+              0,
+              255
+            ],
+            "pixels": 180
+          },
+          {
+            "rgba": [
+              255,
+              0,
+              0,
+              255
+            ],
+            "pixels": 115
+          },
+          {
+            "rgba": [
+              0,
+              71,
+              0,
+              255
+            ],
+            "pixels": 111
+          },
+          {
+            "rgba": [
+              0,
+              98,
+              0,
+              255
+            ],
+            "pixels": 90
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "category": "image",
+      "description": "Heart of Ender and Arch-Visage glowing effect texture file",
+      "path": "heart_of_ender_ref/MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "url": "https://minecraft.wiki/images/MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 2730,
+      "sha256": "242e52383f566481df5cfec5984d373464e8f474e7ac217ba844d0f4a6d145df",
+      "format": "PNG",
+      "width": 44,
+      "height": 44,
+      "source_mode": "RGBA",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 1936,
+        "alpha_min": 146,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 1848,
+        "opaque_pixels": 88,
+        "unique_rgba_colors": 61,
+        "mean_visible_rgb": [
+          183.6384,
+          183.6384,
+          183.6436
+        ],
+        "visible_rgb_max_at_most_16_pixels": 534,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              162
+            ],
+            "pixels": 189
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              161
+            ],
+            "pixels": 176
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              160
+            ],
+            "pixels": 173
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              159
+            ],
+            "pixels": 160
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              163
+            ],
+            "pixels": 115
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "pixels": 72
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              156
+            ],
+            "pixels": 69
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              158
+            ],
+            "pixels": 69
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              165
+            ],
+            "pixels": 63
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              157
+            ],
+            "pixels": 61
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              164
+            ],
+            "pixels": 42
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              170
+            ],
+            "pixels": 36
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Heart_of_Ender_in_game.png",
+      "category": "image",
+      "description": "The close view of Heart of Ender",
+      "path": "heart_of_ender_ref/Heart_of_Ender_in_game.png",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_in_game.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 566557,
+      "sha256": "1e9730beab83a87a391359b88f3b6577b78a2acf5723f110941bbc4b5a9116d6",
+      "format": "PNG",
+      "width": 831,
+      "height": 642,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 533502,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 533502,
+        "unique_rgba_colors": 65252,
+        "mean_visible_rgb": [
+          77.4037,
+          80.0133,
+          101.0268
+        ],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              23,
+              27,
+              35,
+              255
+            ],
+            "pixels": 5700
+          },
+          {
+            "rgba": [
+              22,
+              26,
+              34,
+              255
+            ],
+            "pixels": 4789
+          },
+          {
+            "rgba": [
+              21,
+              25,
+              33,
+              255
+            ],
+            "pixels": 4442
+          },
+          {
+            "rgba": [
+              28,
+              34,
+              42,
+              255
+            ],
+            "pixels": 3575
+          },
+          {
+            "rgba": [
+              23,
+              29,
+              36,
+              255
+            ],
+            "pixels": 3553
+          },
+          {
+            "rgba": [
+              24,
+              30,
+              37,
+              255
+            ],
+            "pixels": 2859
+          },
+          {
+            "rgba": [
+              24,
+              25,
+              36,
+              255
+            ],
+            "pixels": 2685
+          },
+          {
+            "rgba": [
+              20,
+              27,
+              32,
+              255
+            ],
+            "pixels": 2544
+          },
+          {
+            "rgba": [
+              24,
+              28,
+              36,
+              255
+            ],
+            "pixels": 2213
+          },
+          {
+            "rgba": [
+              25,
+              26,
+              37,
+              255
+            ],
+            "pixels": 2096
+          },
+          {
+            "rgba": [
+              25,
+              31,
+              39,
+              255
+            ],
+            "pixels": 2023
+          },
+          {
+            "rgba": [
+              20,
+              23,
+              32,
+              255
+            ],
+            "pixels": 1701
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Heart_of_Ender_prepare_to_shoot_beams.png",
+      "category": "image",
+      "description": "The Heart of Ender begins to shoot its beam. Its head focuses on and follows the hero's position",
+      "path": "heart_of_ender_ref/Heart_of_Ender_prepare_to_shoot_beams.png",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_prepare_to_shoot_beams.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 1529109,
+      "sha256": "5a708b07684cae909014a894e7f3fcab254be40bd8e8099a88a1bd14cc8ff9f8",
+      "format": "PNG",
+      "width": 1622,
+      "height": 817,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 1325174,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 1325174,
+        "unique_rgba_colors": 195342,
+        "mean_visible_rgb": [
+          124.2612,
+          99.1325,
+          143.9123
+        ],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 24396
+          },
+          {
+            "rgba": [
+              255,
+              250,
+              255,
+              255
+            ],
+            "pixels": 2859
+          },
+          {
+            "rgba": [
+              255,
+              251,
+              255,
+              255
+            ],
+            "pixels": 2731
+          },
+          {
+            "rgba": [
+              117,
+              130,
+              159,
+              255
+            ],
+            "pixels": 2125
+          },
+          {
+            "rgba": [
+              120,
+              132,
+              161,
+              255
+            ],
+            "pixels": 1723
+          },
+          {
+            "rgba": [
+              113,
+              127,
+              156,
+              255
+            ],
+            "pixels": 1696
+          },
+          {
+            "rgba": [
+              121,
+              133,
+              162,
+              255
+            ],
+            "pixels": 1673
+          },
+          {
+            "rgba": [
+              124,
+              135,
+              164,
+              255
+            ],
+            "pixels": 1638
+          },
+          {
+            "rgba": [
+              255,
+              235,
+              255,
+              255
+            ],
+            "pixels": 1591
+          },
+          {
+            "rgba": [
+              119,
+              131,
+              160,
+              255
+            ],
+            "pixels": 1587
+          },
+          {
+            "rgba": [
+              125,
+              136,
+              165,
+              255
+            ],
+            "pixels": 1571
+          },
+          {
+            "rgba": [
+              118,
+              130,
+              159,
+              255
+            ],
+            "pixels": 1534
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Minecraft-dungeons-heart-of-ender.jpg",
+      "category": "image",
+      "description": "The Heart of Ender firing explosive projectiles at a hero in its boss fight",
+      "path": "heart_of_ender_ref/Minecraft-dungeons-heart-of-ender.jpg",
+      "url": "https://minecraft.wiki/images/Minecraft-dungeons-heart-of-ender.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 108723,
+      "sha256": "6c3911c7799a84a8544d656f7a5bc352faaf78056eccb4a723413a7a3b535fd9",
+      "format": "JPEG",
+      "width": 1092,
+      "height": 614,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 670488,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 670488,
+        "unique_rgba_colors": 66553,
+        "mean_visible_rgb": [
+          85.5325,
+          91.8713,
+          106.1152
+        ],
+        "visible_rgb_max_at_most_16_pixels": 4887,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "pixels": 3633
+          },
+          {
+            "rgba": [
+              124,
+              131,
+              160,
+              255
+            ],
+            "pixels": 2405
+          },
+          {
+            "rgba": [
+              55,
+              65,
+              77,
+              255
+            ],
+            "pixels": 1946
+          },
+          {
+            "rgba": [
+              122,
+              129,
+              158,
+              255
+            ],
+            "pixels": 1923
+          },
+          {
+            "rgba": [
+              56,
+              66,
+              78,
+              255
+            ],
+            "pixels": 1911
+          },
+          {
+            "rgba": [
+              63,
+              73,
+              85,
+              255
+            ],
+            "pixels": 1761
+          },
+          {
+            "rgba": [
+              57,
+              67,
+              79,
+              255
+            ],
+            "pixels": 1753
+          },
+          {
+            "rgba": [
+              62,
+              72,
+              84,
+              255
+            ],
+            "pixels": 1732
+          },
+          {
+            "rgba": [
+              61,
+              71,
+              83,
+              255
+            ],
+            "pixels": 1722
+          },
+          {
+            "rgba": [
+              54,
+              64,
+              76,
+              255
+            ],
+            "pixels": 1698
+          },
+          {
+            "rgba": [
+              64,
+              74,
+              86,
+              255
+            ],
+            "pixels": 1685
+          },
+          {
+            "rgba": [
+              121,
+              128,
+              157,
+              255
+            ],
+            "pixels": 1646
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Heart_Of_Ender_laser.jpg",
+      "category": "image",
+      "description": "The Heart of Ender using its shadow beam attack in a cross formation on a hero during its boss fight",
+      "path": "heart_of_ender_ref/Heart_Of_Ender_laser.jpg",
+      "url": "https://minecraft.wiki/images/Heart_Of_Ender_laser.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 1702205,
+      "sha256": "d05bf99a0f8cfc918b2f2a3144dd3dcc6d34897a4ef270d29d5543df9e96d4d6",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 2073600,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2073600,
+        "unique_rgba_colors": 120789,
+        "mean_visible_rgb": [
+          76.1039,
+          75.3383,
+          107.4262
+        ],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 20435
+          },
+          {
+            "rgba": [
+              42,
+              52,
+              64,
+              255
+            ],
+            "pixels": 3569
+          },
+          {
+            "rgba": [
+              41,
+              51,
+              63,
+              255
+            ],
+            "pixels": 3522
+          },
+          {
+            "rgba": [
+              43,
+              53,
+              65,
+              255
+            ],
+            "pixels": 3359
+          },
+          {
+            "rgba": [
+              44,
+              54,
+              66,
+              255
+            ],
+            "pixels": 3234
+          },
+          {
+            "rgba": [
+              45,
+              53,
+              66,
+              255
+            ],
+            "pixels": 3218
+          },
+          {
+            "rgba": [
+              45,
+              55,
+              67,
+              255
+            ],
+            "pixels": 3184
+          },
+          {
+            "rgba": [
+              40,
+              48,
+              59,
+              255
+            ],
+            "pixels": 3179
+          },
+          {
+            "rgba": [
+              46,
+              54,
+              67,
+              255
+            ],
+            "pixels": 3174
+          },
+          {
+            "rgba": [
+              44,
+              52,
+              65,
+              255
+            ],
+            "pixels": 3169
+          },
+          {
+            "rgba": [
+              46,
+              56,
+              68,
+              255
+            ],
+            "pixels": 3160
+          },
+          {
+            "rgba": [
+              41,
+              49,
+              60,
+              255
+            ],
+            "pixels": 3148
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Arch-Vessel.jpg",
+      "category": "image",
+      "description": "The Heart of Ender using its shadow beam attack on a hero during its boss fight",
+      "path": "heart_of_ender_ref/Arch-Vessel.jpg",
+      "url": "https://minecraft.wiki/images/Arch-Vessel.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 531675,
+      "sha256": "af6409cfbe92ee816663127a33f0d04c091cdb3d5997d41289554ad316711061",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 2073600,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2073600,
+        "unique_rgba_colors": 216807,
+        "mean_visible_rgb": [
+          92.1321,
+          92.9787,
+          117.996
+        ],
+        "visible_rgb_max_at_most_16_pixels": 15304,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "pixels": 10877
+          },
+          {
+            "rgba": [
+              19,
+              18,
+              23,
+              255
+            ],
+            "pixels": 5765
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 3591
+          },
+          {
+            "rgba": [
+              57,
+              67,
+              79,
+              255
+            ],
+            "pixels": 2977
+          },
+          {
+            "rgba": [
+              55,
+              65,
+              77,
+              255
+            ],
+            "pixels": 2929
+          },
+          {
+            "rgba": [
+              56,
+              66,
+              78,
+              255
+            ],
+            "pixels": 2919
+          },
+          {
+            "rgba": [
+              58,
+              68,
+              80,
+              255
+            ],
+            "pixels": 2808
+          },
+          {
+            "rgba": [
+              54,
+              64,
+              76,
+              255
+            ],
+            "pixels": 2736
+          },
+          {
+            "rgba": [
+              53,
+              63,
+              75,
+              255
+            ],
+            "pixels": 2548
+          },
+          {
+            "rgba": [
+              59,
+              69,
+              81,
+              255
+            ],
+            "pixels": 2527
+          },
+          {
+            "rgba": [
+              52,
+              62,
+              74,
+              255
+            ],
+            "pixels": 2495
+          },
+          {
+            "rgba": [
+              60,
+              70,
+              82,
+              255
+            ],
+            "pixels": 2286
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Heart_of_ender_crawling_with_decal_trail.png",
+      "category": "image",
+      "description": "The Heart of Ender crawling and leaving behind a decal trail",
+      "path": "heart_of_ender_ref/Heart_of_ender_crawling_with_decal_trail.png",
+      "url": "https://minecraft.wiki/images/Heart_of_ender_crawling_with_decal_trail.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 114861,
+      "sha256": "4dbdac4f598462739ccb2ac85653aed182f4a835b153f54b1943a664b05ec225",
+      "format": "PNG",
+      "width": 353,
+      "height": 255,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 90015,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 90015,
+        "unique_rgba_colors": 26315,
+        "mean_visible_rgb": [
+          108.5296,
+          116.6624,
+          138.66
+        ],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              48,
+              48,
+              62,
+              255
+            ],
+            "pixels": 1087
+          },
+          {
+            "rgba": [
+              53,
+              47,
+              67,
+              255
+            ],
+            "pixels": 928
+          },
+          {
+            "rgba": [
+              47,
+              47,
+              61,
+              255
+            ],
+            "pixels": 670
+          },
+          {
+            "rgba": [
+              52,
+              50,
+              66,
+              255
+            ],
+            "pixels": 571
+          },
+          {
+            "rgba": [
+              50,
+              49,
+              65,
+              255
+            ],
+            "pixels": 505
+          },
+          {
+            "rgba": [
+              43,
+              48,
+              60,
+              255
+            ],
+            "pixels": 458
+          },
+          {
+            "rgba": [
+              50,
+              50,
+              63,
+              255
+            ],
+            "pixels": 360
+          },
+          {
+            "rgba": [
+              48,
+              50,
+              63,
+              255
+            ],
+            "pixels": 312
+          },
+          {
+            "rgba": [
+              45,
+              48,
+              56,
+              255
+            ],
+            "pixels": 310
+          },
+          {
+            "rgba": [
+              48,
+              48,
+              64,
+              255
+            ],
+            "pixels": 308
+          },
+          {
+            "rgba": [
+              47,
+              49,
+              62,
+              255
+            ],
+            "pixels": 303
+          },
+          {
+            "rgba": [
+              46,
+              48,
+              61,
+              255
+            ],
+            "pixels": 294
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Arch-Illager_inside_the_Heart_of_Ender.jpg",
+      "category": "image",
+      "description": "The Arch-Illager inside the Heart of Ender",
+      "path": "heart_of_ender_ref/Arch-Illager_inside_the_Heart_of_Ender.jpg",
+      "url": "https://minecraft.wiki/images/Arch-Illager_inside_the_Heart_of_Ender.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 375433,
+      "sha256": "f14bd700b0600049e7298aa1602cdd38b2f2cfaed9ee885f54788410495adac9",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 2073600,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2073600,
+        "unique_rgba_colors": 121907,
+        "mean_visible_rgb": [
+          93.9317,
+          85.0741,
+          110.5494
+        ],
+        "visible_rgb_max_at_most_16_pixels": 143920,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              3,
+              5,
+              17,
+              255
+            ],
+            "pixels": 22233
+          },
+          {
+            "rgba": [
+              5,
+              5,
+              17,
+              255
+            ],
+            "pixels": 21934
+          },
+          {
+            "rgba": [
+              5,
+              5,
+              15,
+              255
+            ],
+            "pixels": 21302
+          },
+          {
+            "rgba": [
+              8,
+              8,
+              20,
+              255
+            ],
+            "pixels": 11612
+          },
+          {
+            "rgba": [
+              3,
+              6,
+              15,
+              255
+            ],
+            "pixels": 11354
+          },
+          {
+            "rgba": [
+              3,
+              5,
+              18,
+              255
+            ],
+            "pixels": 10734
+          },
+          {
+            "rgba": [
+              252,
+              211,
+              255,
+              255
+            ],
+            "pixels": 10373
+          },
+          {
+            "rgba": [
+              5,
+              8,
+              17,
+              255
+            ],
+            "pixels": 9823
+          },
+          {
+            "rgba": [
+              5,
+              4,
+              18,
+              255
+            ],
+            "pixels": 9155
+          },
+          {
+            "rgba": [
+              5,
+              7,
+              19,
+              255
+            ],
+            "pixels": 8185
+          },
+          {
+            "rgba": [
+              6,
+              6,
+              18,
+              255
+            ],
+            "pixels": 7317
+          },
+          {
+            "rgba": [
+              251,
+              210,
+              254,
+              255
+            ],
+            "pixels": 7299
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Arch-Illager_inside_the_Heart_of_Ender_idle_variant.jpg",
+      "category": "image",
+      "description": "The Arch-Illager inside the Heart of Ender looking around",
+      "path": "heart_of_ender_ref/Arch-Illager_inside_the_Heart_of_Ender_idle_variant.jpg",
+      "url": "https://minecraft.wiki/images/Arch-Illager_inside_the_Heart_of_Ender_idle_variant.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 434158,
+      "sha256": "ddb06095cc381cf7cf8e3dd71d3115006dec3cec6a83b3ebc944fc33a7d3e77b",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 2073600,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2073600,
+        "unique_rgba_colors": 130563,
+        "mean_visible_rgb": [
+          68.0438,
+          61.1306,
+          87.6715
+        ],
+        "visible_rgb_max_at_most_16_pixels": 145979,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              5,
+              10,
+              14,
+              255
+            ],
+            "pixels": 26623
+          },
+          {
+            "rgba": [
+              6,
+              11,
+              15,
+              255
+            ],
+            "pixels": 25791
+          },
+          {
+            "rgba": [
+              43,
+              59,
+              72,
+              255
+            ],
+            "pixels": 14049
+          },
+          {
+            "rgba": [
+              42,
+              58,
+              71,
+              255
+            ],
+            "pixels": 14028
+          },
+          {
+            "rgba": [
+              49,
+              65,
+              80,
+              255
+            ],
+            "pixels": 10931
+          },
+          {
+            "rgba": [
+              50,
+              66,
+              81,
+              255
+            ],
+            "pixels": 10861
+          },
+          {
+            "rgba": [
+              3,
+              8,
+              12,
+              255
+            ],
+            "pixels": 10579
+          },
+          {
+            "rgba": [
+              44,
+              60,
+              73,
+              255
+            ],
+            "pixels": 10465
+          },
+          {
+            "rgba": [
+              49,
+              67,
+              81,
+              255
+            ],
+            "pixels": 10365
+          },
+          {
+            "rgba": [
+              51,
+              69,
+              83,
+              255
+            ],
+            "pixels": 9979
+          },
+          {
+            "rgba": [
+              50,
+              68,
+              82,
+              255
+            ],
+            "pixels": 9785
+          },
+          {
+            "rgba": [
+              41,
+              57,
+              70,
+              255
+            ],
+            "pixels": 9572
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Heart_of_Ender_start_using_ArchBeam.jpg",
+      "category": "image",
+      "description": "The Heart of Ender starting to use its \"Shadow Beam\" attack",
+      "path": "heart_of_ender_ref/Heart_of_Ender_start_using_ArchBeam.jpg",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_start_using_ArchBeam.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 274450,
+      "sha256": "e660169380e37a73fbe670394ab6777357c9f5a94868c64df350474cc230b121",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 2073600,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2073600,
+        "unique_rgba_colors": 160640,
+        "mean_visible_rgb": [
+          149.3732,
+          104.4862,
+          173.158
+        ],
+        "visible_rgb_max_at_most_16_pixels": 12727,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 273375
+          },
+          {
+            "rgba": [
+              255,
+              254,
+              255,
+              255
+            ],
+            "pixels": 19963
+          },
+          {
+            "rgba": [
+              255,
+              253,
+              255,
+              255
+            ],
+            "pixels": 6812
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "pixels": 6431
+          },
+          {
+            "rgba": [
+              255,
+              252,
+              255,
+              255
+            ],
+            "pixels": 4920
+          },
+          {
+            "rgba": [
+              255,
+              251,
+              255,
+              255
+            ],
+            "pixels": 4481
+          },
+          {
+            "rgba": [
+              254,
+              255,
+              255,
+              255
+            ],
+            "pixels": 4131
+          },
+          {
+            "rgba": [
+              255,
+              250,
+              255,
+              255
+            ],
+            "pixels": 3596
+          },
+          {
+            "rgba": [
+              255,
+              248,
+              255,
+              255
+            ],
+            "pixels": 3529
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              253,
+              255
+            ],
+            "pixels": 2910
+          },
+          {
+            "rgba": [
+              255,
+              249,
+              255,
+              255
+            ],
+            "pixels": 2730
+          },
+          {
+            "rgba": [
+              255,
+              247,
+              255,
+              255
+            ],
+            "pixels": 2596
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Heart_of_Ender_ArchBeam_Glitchy_Arch-Illager.jpg",
+      "category": "image",
+      "description": "The glitchy, strong light and random pose Arch-Illager during the \"Shadow Beam\"",
+      "path": "heart_of_ender_ref/Heart_of_Ender_ArchBeam_Glitchy_Arch-Illager.jpg",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_ArchBeam_Glitchy_Arch-Illager.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 192048,
+      "sha256": "3daa1bdfc488d0f902c9e923f058ef253edb89c3ac66c19e3a1b27a2d947f535",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 2073600,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2073600,
+        "unique_rgba_colors": 136046,
+        "mean_visible_rgb": [
+          218.4781,
+          190.8625,
+          225.7413
+        ],
+        "visible_rgb_max_at_most_16_pixels": 9962,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 574993
+          },
+          {
+            "rgba": [
+              254,
+              254,
+              254,
+              255
+            ],
+            "pixels": 82082
+          },
+          {
+            "rgba": [
+              255,
+              253,
+              255,
+              255
+            ],
+            "pixels": 42094
+          },
+          {
+            "rgba": [
+              254,
+              252,
+              255,
+              255
+            ],
+            "pixels": 41748
+          },
+          {
+            "rgba": [
+              253,
+              248,
+              254,
+              255
+            ],
+            "pixels": 22026
+          },
+          {
+            "rgba": [
+              254,
+              249,
+              255,
+              255
+            ],
+            "pixels": 18732
+          },
+          {
+            "rgba": [
+              255,
+              254,
+              255,
+              255
+            ],
+            "pixels": 18487
+          },
+          {
+            "rgba": [
+              255,
+              251,
+              255,
+              255
+            ],
+            "pixels": 18288
+          },
+          {
+            "rgba": [
+              255,
+              241,
+              255,
+              255
+            ],
+            "pixels": 14653
+          },
+          {
+            "rgba": [
+              254,
+              247,
+              254,
+              255
+            ],
+            "pixels": 13113
+          },
+          {
+            "rgba": [
+              253,
+              246,
+              254,
+              255
+            ],
+            "pixels": 11854
+          },
+          {
+            "rgba": [
+              254,
+              237,
+              255,
+              255
+            ],
+            "pixels": 11741
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Glitchy_Arch-Illager_random_pose.jpg",
+      "category": "image",
+      "description": "After the beam is gone, the Arch-Illager is still posing randomly, glitching with a ghosting effect in every frame for a while (highlighted by hero)",
+      "path": "heart_of_ender_ref/Glitchy_Arch-Illager_random_pose.jpg",
+      "url": "https://minecraft.wiki/images/Glitchy_Arch-Illager_random_pose.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 401604,
+      "sha256": "f21684603cdc68e2d15834495193568067164e94305ae9fb751616519694c598",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 2073600,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2073600,
+        "unique_rgba_colors": 147849,
+        "mean_visible_rgb": [
+          64.9117,
+          59.4889,
+          86.1079
+        ],
+        "visible_rgb_max_at_most_16_pixels": 216430,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              3,
+              6,
+              11,
+              255
+            ],
+            "pixels": 22923
+          },
+          {
+            "rgba": [
+              4,
+              9,
+              13,
+              255
+            ],
+            "pixels": 20763
+          },
+          {
+            "rgba": [
+              5,
+              10,
+              14,
+              255
+            ],
+            "pixels": 13926
+          },
+          {
+            "rgba": [
+              5,
+              8,
+              13,
+              255
+            ],
+            "pixels": 11615
+          },
+          {
+            "rgba": [
+              5,
+              9,
+              18,
+              255
+            ],
+            "pixels": 11097
+          },
+          {
+            "rgba": [
+              4,
+              8,
+              17,
+              255
+            ],
+            "pixels": 7568
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "pixels": 6627
+          },
+          {
+            "rgba": [
+              4,
+              7,
+              12,
+              255
+            ],
+            "pixels": 6270
+          },
+          {
+            "rgba": [
+              5,
+              8,
+              17,
+              255
+            ],
+            "pixels": 6124
+          },
+          {
+            "rgba": [
+              5,
+              5,
+              15,
+              255
+            ],
+            "pixels": 5983
+          },
+          {
+            "rgba": [
+              3,
+              6,
+              15,
+              255
+            ],
+            "pixels": 5653
+          },
+          {
+            "rgba": [
+              50,
+              66,
+              81,
+              255
+            ],
+            "pixels": 5405
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Heart_of_Ender_start_finish_ArchBeam.jpg",
+      "category": "image",
+      "description": "Another glitchy pose",
+      "path": "heart_of_ender_ref/Heart_of_Ender_start_finish_ArchBeam.jpg",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_start_finish_ArchBeam.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 378992,
+      "sha256": "f17f28438d6e1fd9707357cc8271bacb812157d9704e04f4756c9eabeff42765",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 2073600,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2073600,
+        "unique_rgba_colors": 136148,
+        "mean_visible_rgb": [
+          67.7056,
+          70.8016,
+          91.7759
+        ],
+        "visible_rgb_max_at_most_16_pixels": 55065,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              5,
+              9,
+              18,
+              255
+            ],
+            "pixels": 21386
+          },
+          {
+            "rgba": [
+              6,
+              9,
+              18,
+              255
+            ],
+            "pixels": 19702
+          },
+          {
+            "rgba": [
+              6,
+              8,
+              20,
+              255
+            ],
+            "pixels": 18931
+          },
+          {
+            "rgba": [
+              7,
+              10,
+              19,
+              255
+            ],
+            "pixels": 10315
+          },
+          {
+            "rgba": [
+              7,
+              9,
+              21,
+              255
+            ],
+            "pixels": 8897
+          },
+          {
+            "rgba": [
+              5,
+              10,
+              14,
+              255
+            ],
+            "pixels": 7689
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "pixels": 6457
+          },
+          {
+            "rgba": [
+              8,
+              8,
+              20,
+              255
+            ],
+            "pixels": 6378
+          },
+          {
+            "rgba": [
+              62,
+              65,
+              74,
+              255
+            ],
+            "pixels": 6118
+          },
+          {
+            "rgba": [
+              8,
+              7,
+              21,
+              255
+            ],
+            "pixels": 5849
+          },
+          {
+            "rgba": [
+              61,
+              64,
+              73,
+              255
+            ],
+            "pixels": 5351
+          },
+          {
+            "rgba": [
+              4,
+              9,
+              13,
+              255
+            ],
+            "pixels": 5273
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "Hero_kills_Heart_of_Ender_Arch-Illager_disappear.jpg",
+      "category": "image",
+      "description": "The Arch-Illager disappearing when the hero kills the Heart of Ender",
+      "path": "heart_of_ender_ref/Hero_kills_Heart_of_Ender_Arch-Illager_disappear.jpg",
+      "url": "https://minecraft.wiki/images/Hero_kills_Heart_of_Ender_Arch-Illager_disappear.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 246178,
+      "sha256": "6c7dc9d6e58bba74f441db1a30f54bc66c8f1f2c7458eedba68cb673ba2be6e9",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "source_mode": "RGB",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 2073600,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2073600,
+        "unique_rgba_colors": 149769,
+        "mean_visible_rgb": [
+          219.7286,
+          185.9407,
+          228.0756
+        ],
+        "visible_rgb_max_at_most_16_pixels": 10312,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 525661
+          },
+          {
+            "rgba": [
+              254,
+              254,
+              254,
+              255
+            ],
+            "pixels": 71078
+          },
+          {
+            "rgba": [
+              255,
+              253,
+              255,
+              255
+            ],
+            "pixels": 68290
+          },
+          {
+            "rgba": [
+              254,
+              252,
+              255,
+              255
+            ],
+            "pixels": 47727
+          },
+          {
+            "rgba": [
+              255,
+              251,
+              255,
+              255
+            ],
+            "pixels": 27992
+          },
+          {
+            "rgba": [
+              254,
+              249,
+              255,
+              255
+            ],
+            "pixels": 25199
+          },
+          {
+            "rgba": [
+              255,
+              254,
+              255,
+              255
+            ],
+            "pixels": 23037
+          },
+          {
+            "rgba": [
+              255,
+              253,
+              254,
+              255
+            ],
+            "pixels": 17899
+          },
+          {
+            "rgba": [
+              253,
+              248,
+              254,
+              255
+            ],
+            "pixels": 13371
+          },
+          {
+            "rgba": [
+              254,
+              237,
+              255,
+              255
+            ],
+            "pixels": 12111
+          },
+          {
+            "rgba": [
+              254,
+              247,
+              254,
+              255
+            ],
+            "pixels": 10239
+          },
+          {
+            "rgba": [
+              255,
+              241,
+              255,
+              255
+            ],
+            "pixels": 9988
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "T_ArchIllagerUndressed.png",
+      "category": "texture",
+      "description": "无外袍大灾厄村民本体贴图；图库实证",
+      "path": "heart_of_ender_ref/T_ArchIllagerUndressed.png",
+      "url": "https://minecraft.wiki/images/T_ArchIllagerUndressed.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "errors": [],
+      "warnings": [],
+      "bytes": 727,
+      "sha256": "f2574b5da488e2cd0ce47e989673e52d6bd5a291a9a72e767dffa7d01fd479b2",
+      "format": "PNG",
+      "width": 64,
+      "height": 64,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 4096,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          255
+        ],
+        "transparent_pixels": 173,
+        "translucent_pixels": 0,
+        "opaque_pixels": 3923,
+        "unique_rgba_colors": 41,
+        "mean_visible_rgb": [
+          67.9276,
+          72.729,
+          79.598
+        ],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              43,
+              43,
+              43,
+              255
+            ],
+            "pixels": 2427
+          },
+          {
+            "rgba": [
+              138,
+              144,
+              144,
+              255
+            ],
+            "pixels": 207
+          },
+          {
+            "rgba": [
+              3,
+              69,
+              231,
+              255
+            ],
+            "pixels": 200
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "pixels": 173
+          },
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "pixels": 133
+          },
+          {
+            "rgba": [
+              112,
+              118,
+              118,
+              255
+            ],
+            "pixels": 98
+          },
+          {
+            "rgba": [
+              125,
+              131,
+              131,
+              255
+            ],
+            "pixels": 85
+          },
+          {
+            "rgba": [
+              21,
+              59,
+              13,
+              255
+            ],
+            "pixels": 81
+          },
+          {
+            "rgba": [
+              2,
+              54,
+              203,
+              255
+            ],
+            "pixels": 74
+          },
+          {
+            "rgba": [
+              2,
+              61,
+              217,
+              255
+            ],
+            "pixels": 70
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 68
+          },
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "pixels": 65
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "T_ArchIllagerUndressed_S.png",
+      "category": "texture",
+      "description": "无外袍大灾厄村民 shadow texture；图库实证，不当成发光贴图",
+      "path": "heart_of_ender_ref/T_ArchIllagerUndressed_S.png",
+      "url": "https://minecraft.wiki/images/T_ArchIllagerUndressed_S.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "errors": [],
+      "warnings": [],
+      "bytes": 176,
+      "sha256": "b940ae78a5cef3031296abc3d5ce25daa0556ce655539fa2521fab8a6976da79",
+      "format": "PNG",
+      "width": 64,
+      "height": 64,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 4096,
+        "alpha_min": 255,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          255
+        ],
+        "transparent_pixels": 0,
+        "translucent_pixels": 0,
+        "opaque_pixels": 4096,
+        "unique_rgba_colors": 5,
+        "mean_visible_rgb": [
+          0.0,
+          0.0,
+          57.4907
+        ],
+        "visible_rgb_max_at_most_16_pixels": 173,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              0,
+              0,
+              60,
+              255
+            ],
+            "pixels": 3912
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "pixels": 173
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              19,
+              255
+            ],
+            "pixels": 8
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              255,
+              255
+            ],
+            "pixels": 2
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              100,
+              255
+            ],
+            "pixels": 1
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "MCD_Arch-Illager_(texture).png",
+      "category": "texture",
+      "description": "大灾厄村民本体贴图，参照",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_(texture).png",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_(texture).png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "errors": [],
+      "warnings": [],
+      "bytes": 723,
+      "sha256": "1a21fa3f274e5883a6b05eee2deccf6ea95c27b81a830feacb0972c92261fbf7",
+      "format": "PNG",
+      "width": 64,
+      "height": 64,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 4096,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          255
+        ],
+        "transparent_pixels": 173,
+        "translucent_pixels": 0,
+        "opaque_pixels": 3923,
+        "unique_rgba_colors": 40,
+        "mean_visible_rgb": [
+          67.6503,
+          72.6638,
+          81.0008
+        ],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              43,
+              43,
+              43,
+              255
+            ],
+            "pixels": 2427
+          },
+          {
+            "rgba": [
+              3,
+              69,
+              231,
+              255
+            ],
+            "pixels": 216
+          },
+          {
+            "rgba": [
+              138,
+              144,
+              144,
+              255
+            ],
+            "pixels": 207
+          },
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "pixels": 173
+          },
+          {
+            "rgba": [
+              255,
+              196,
+              68,
+              255
+            ],
+            "pixels": 135
+          },
+          {
+            "rgba": [
+              112,
+              118,
+              118,
+              255
+            ],
+            "pixels": 98
+          },
+          {
+            "rgba": [
+              125,
+              131,
+              131,
+              255
+            ],
+            "pixels": 85
+          },
+          {
+            "rgba": [
+              2,
+              61,
+              217,
+              255
+            ],
+            "pixels": 78
+          },
+          {
+            "rgba": [
+              2,
+              54,
+              203,
+              255
+            ],
+            "pixels": 74
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "pixels": 68
+          },
+          {
+            "rgba": [
+              225,
+              170,
+              50,
+              255
+            ],
+            "pixels": 67
+          },
+          {
+            "rgba": [
+              21,
+              59,
+              13,
+              255
+            ],
+            "pixels": 62
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "file": "MCD_Arch-Illager_(shadow_texture).png",
+      "category": "texture",
+      "description": "大灾厄村民 shadow texture，参照",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_(shadow_texture).png",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_(shadow_texture).png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery",
+      "errors": [],
+      "warnings": [],
+      "bytes": 105,
+      "sha256": "f38b696236f5b93e092b138703cc5185e07f77195c23d38b353253d916f59f29",
+      "format": "PNG",
+      "width": 64,
+      "height": 64,
+      "source_mode": "P",
+      "pixel_statistics": {
+        "statistics_scope": "静态图或动图第 0 帧，解码后的 RGBA 像素；不作颜色修正",
+        "pixels": 4096,
+        "alpha_min": 0,
+        "alpha_max": 255,
+        "alpha_definition": "alpha/255 为不透明度；透明度=1-alpha/255，不可混淆",
+        "alpha_levels": [
+          0,
+          255
+        ],
+        "transparent_pixels": 4094,
+        "translucent_pixels": 0,
+        "opaque_pixels": 2,
+        "unique_rgba_colors": 2,
+        "mean_visible_rgb": [
+          0.0,
+          255.0,
+          0.0
+        ],
+        "visible_rgb_max_at_most_16_pixels": 0,
+        "most_common_rgba": [
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "pixels": 4094
+          },
+          {
+            "rgba": [
+              0,
+              255,
+              0,
+              255
+            ],
+            "pixels": 2
+          }
+        ]
+      },
+      "full_decode": "通过 Pillow verify 与完整像素解码"
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-001.ogg?77e1f",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 14787,
+      "sha256": "0fb560bef75093a53454808c0667f6998e8d946a934138d8e545ad180f38230a",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 69843,
+      "duration_seconds": 1.583741,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.58, start: 0.000000, bitrate: 74 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-002.ogg?f32d2",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 15450,
+      "sha256": "0fde0dda9332af3c708f84d4d3d9f78afe5f6f5e34fddbcc99f4130a3b8264c5",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 79396,
+      "duration_seconds": 1.800363,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.80, start: 0.000000, bitrate: 68 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-003.ogg?f32d2",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 17715,
+      "sha256": "dc3f6844b991caa0927c7907aeffb4989de18a3580fd35f505c851638507d03c",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 85995,
+      "duration_seconds": 1.95,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.95, start: 0.000000, bitrate: 72 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-004.ogg?ad554",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 22041,
+      "sha256": "91f66369ff7c8b8a17b14cb866f1a52d3bac8ab0a17f60e69d4b57508d6f9956",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 94013,
+      "duration_seconds": 2.131814,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.13, start: 0.000000, bitrate: 82 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-005.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-005.ogg?c3251",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-005.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-005.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 17324,
+      "sha256": "3f7e106f2b32328ffd7364ac08a06831afd45141ec3b228356712471560b3123",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 94317,
+      "duration_seconds": 2.138707,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.14, start: 0.000000, bitrate: 64 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-006.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-006.ogg?69281",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-006.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-006.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 19297,
+      "sha256": "b463b73712df5d79756940ae3a3811c248fa38562826fdf46a405d28c1db7602",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 106720,
+      "duration_seconds": 2.419955,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.42, start: 0.000000, bitrate: 63 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-001.ogg?72c8c",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 20355,
+      "sha256": "7422275b63e5783c1d5f1226979869a83d7227453566eff315a09f76a025ccdf",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 121374,
+      "duration_seconds": 2.752245,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.75, start: 0.000000, bitrate: 59 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-002.ogg?09afa",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 18213,
+      "sha256": "8eea8fd9dc7c18cdcfcc3b61dcf09866218c774caa8a06054ba52031a8e2916a",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 106931,
+      "duration_seconds": 2.424739,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.42, start: 0.000000, bitrate: 60 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-003.ogg?ed28f",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 21481,
+      "sha256": "17f01a8f469a33e84bda62fb3c510c35f132c3039ed0a5da4687ee7eccf81e6d",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 135884,
+      "duration_seconds": 3.08127,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:03.08, start: 0.000000, bitrate: 55 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-004.ogg?a048d",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 16212,
+      "sha256": "c8b864abe4ae2c7c4b643fc0775a7ddce373aca40eca6f1d3a51ceca6329e6e5",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 110308,
+      "duration_seconds": 2.501315,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.50, start: 0.000000, bitrate: 51 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-005.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-005.ogg?7e025",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-005.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-005.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 22603,
+      "sha256": "58f502207836bac5dffcb8e3b3cf48474dc27fb47566a1a3325abe35a0989496",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 127187,
+      "duration_seconds": 2.884059,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.88, start: 0.000000, bitrate: 62 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-006.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-006.ogg?dd346",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-006.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-006.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 20176,
+      "sha256": "c81c3178f2c3bb639902263d4b1bc4872dbe1d4e5566793b1aeef7f193f30824",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 112522,
+      "duration_seconds": 2.551519,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.55, start: 0.000000, bitrate: 63 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-007.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-007.ogg?4fad5",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-007.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-007.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 20940,
+      "sha256": "948a38522de2d8a3a8ec833faae8537db3a21471a8fa3aeba11bda50879bed7a",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 124039,
+      "duration_seconds": 2.812676,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.81, start: 0.000000, bitrate: 59 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-008.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-008.ogg?2ef05",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-008.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-008.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 20317,
+      "sha256": "d888cb39c6f01fecb5a6baa10cee1141b979df1fbab8a73ea4647280e4094bc3",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 126203,
+      "duration_seconds": 2.861746,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.86, start: 0.000000, bitrate: 56 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-009.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-009.ogg?1edc9",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-009.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-009.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 17688,
+      "sha256": "0190eb42d1522efd3aa131380518f56693c379af3edd4d94aa4f954c76fbb8c4",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 106488,
+      "duration_seconds": 2.414694,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.41, start: 0.000000, bitrate: 58 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-010.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-010.ogg?13f1d",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-010.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-010.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 24036,
+      "sha256": "918f76df8d405a365d3d6f3bdaccbcf361b706cf3ea4dfa5029d99260207f125",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 137190,
+      "duration_seconds": 3.110884,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:03.11, start: 0.000000, bitrate: 61 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "DeathSfx_boss_ArchvesselDeath",
+      "file": "Sfx_boss_ArchvesselDeath.ogg",
+      "src": "/images/Sfx_boss_ArchvesselDeath.ogg?e67b3",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselDeath.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselDeath.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 77543,
+      "sha256": "bf915e347cfef37c2ef29382e17effc1d9a1e3ea3b26a965026f8a8478ae4765",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 334012,
+      "duration_seconds": 7.573968,
+      "ogg_pages": 20,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:07.57, start: 0.000000, bitrate: 81 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Arch Beam attacksfx_boss_ArchvesselFourside",
+      "file": "Sfx_boss_ArchvesselFourside-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselFourside-001.ogg?65a27",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselFourside-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselFourside-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 30061,
+      "sha256": "845508eca3f37c8f79ef6e319f2f873dd59a5bd625fc97bb50fe03848451bea5",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 134294,
+      "duration_seconds": 3.045215,
+      "ogg_pages": 9,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:03.05, start: 0.000000, bitrate: 78 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Arch Beam attacksfx_boss_ArchvesselFourside",
+      "file": "Sfx_boss_ArchvesselFourside-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselFourside-002.ogg?864a6",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselFourside-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselFourside-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 17674,
+      "sha256": "31ec9f7c5f295d2d13495ef0d2598b1080c6795dd11849a9e3e71b6849f22895",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 153112,
+      "duration_seconds": 3.471927,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:03.47, start: 0.000000, bitrate: 40 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Arch Beam attacksfx_boss_ArchvesselFourside",
+      "file": "Sfx_boss_ArchvesselFourside-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselFourside-003.ogg?7c122",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselFourside-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselFourside-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 32799,
+      "sha256": "d9d7191a1d1705e4861265d69f8d8c10d2e770d5302f6687809c6e6d5d37116f",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 150526,
+      "duration_seconds": 3.413288,
+      "ogg_pages": 9,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:03.41, start: 0.000000, bitrate: 76 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Arch Beam attacksfx_boss_ArchvesselFourside",
+      "file": "Sfx_boss_ArchvesselFourside-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselFourside-004.ogg?a8cc9",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselFourside-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselFourside-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 26373,
+      "sha256": "5268da374bd561d29c5eafb319e207a9b415deb697c574795e4de632322e2249",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 128164,
+      "duration_seconds": 2.906213,
+      "ogg_pages": 8,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.91, start: 0.000000, bitrate: 72 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-001.ogg?9c9da",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 16368,
+      "sha256": "c516a1980c102000762cdf7f69fa416189aee4a521030c428f1db091e1a06880",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 82384,
+      "duration_seconds": 1.868118,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.87, start: 0.000000, bitrate: 70 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-002.ogg?efb6a",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 16384,
+      "sha256": "e9964e8aa43fd01a9a00ba8fed3c0034d29ced98bffd0d7fae37f8d81a623c45",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 86934,
+      "duration_seconds": 1.971293,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.97, start: 0.000000, bitrate: 66 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-003.ogg?869dc",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 15510,
+      "sha256": "908978bc2d8e14ebdca0725d4a4faf0477009662f2e65d0dfdf42e03867f9576",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 106609,
+      "duration_seconds": 2.417438,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.42, start: 0.000000, bitrate: 51 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-004.ogg?30db6",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 16060,
+      "sha256": "edb51b15b84c3b7cb2c406f495991a4c761899b7b6f631d65029ab39c27de305",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 100208,
+      "duration_seconds": 2.27229,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.27, start: 0.000000, bitrate: 56 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-005.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-005.ogg?a2e58",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-005.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-005.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 15859,
+      "sha256": "997d40ea3e710b33a7f6d3a1f26b84811979245b30f027cc70f38037db1906b4",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 64744,
+      "duration_seconds": 1.468118,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.47, start: 0.000000, bitrate: 86 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-006.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-006.ogg?d573c",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-006.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-006.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 15617,
+      "sha256": "68a0baed6fef7cb11197161a882e56557c5421a01c8c55d32e5f81017db7de7c",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 69294,
+      "duration_seconds": 1.571293,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.57, start: 0.000000, bitrate: 79 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-007.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-007.ogg?717fc",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-007.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-007.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 14890,
+      "sha256": "35a312a7eaa27d3de27feb0d496d4a5f158f05f25794ab3a516194d6035e122b",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 88969,
+      "duration_seconds": 2.017438,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.02, start: 0.000000, bitrate: 59 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-008.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-008.ogg?da536",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-008.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-008.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 15631,
+      "sha256": "e166d0ca36e56ade3a2633176115f4d3fff155e6db90864543086acd7b4b9801",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 82568,
+      "duration_seconds": 1.87229,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.87, start: 0.000000, bitrate: 66 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar barragesfx_boss_ArchvesselMortarBarrage",
+      "file": "Sfx_boss_ArchvesselMortarBarrage-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarBarrage-001.ogg?7e8f1",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarBarrage-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarBarrage-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 22146,
+      "sha256": "2662306d6619a4d82cecff4c2dd655bf753639ba4e008f6e23cda32a8ad80f83",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 95832,
+      "duration_seconds": 2.173061,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.17, start: 0.000000, bitrate: 81 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar barragesfx_boss_ArchvesselMortarBarrage",
+      "file": "Sfx_boss_ArchvesselMortarBarrage-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarBarrage-002.ogg?d2b1b",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarBarrage-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarBarrage-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 21721,
+      "sha256": "0f4c4d3626489e271f9847d22edb8b775437cc221b7188e3076838156f434c7e",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 95832,
+      "duration_seconds": 2.173061,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.17, start: 0.000000, bitrate: 79 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar barragesfx_boss_ArchvesselMortarBarrage",
+      "file": "Sfx_boss_ArchvesselMortarBarrage-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarBarrage-003.ogg?f5c05",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarBarrage-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarBarrage-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 21473,
+      "sha256": "a24b086ea208d033fae75e9d232f3e547359f913beafb4baae845cfde6907250",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 89702,
+      "duration_seconds": 2.034059,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.03, start: 0.000000, bitrate: 84 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar barragesfx_boss_ArchvesselMortarBarrage",
+      "file": "Sfx_boss_ArchvesselMortarBarrage-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarBarrage-004.ogg?3ab59",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarBarrage-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarBarrage-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 19661,
+      "sha256": "508e7e4dc24254e6dcaebe1f77f0ef413cf6f2f77109c0756113af20e2f0a943",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 89702,
+      "duration_seconds": 2.034059,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.03, start: 0.000000, bitrate: 77 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar landsfx_boss_ArchvesselMortarLand",
+      "file": "Sfx_boss_ArchvesselMortarLand-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarLand-001.ogg?11f81",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarLand-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarLand-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 9507,
+      "sha256": "3d4af987fa889f3dc9c81628e5313ae9b259af8e84639b66f725e2718dfba7b7",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 64689,
+      "duration_seconds": 1.466871,
+      "ogg_pages": 4,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.47, start: 0.000000, bitrate: 51 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar landsfx_boss_ArchvesselMortarLand",
+      "file": "Sfx_boss_ArchvesselMortarLand-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarLand-002.ogg?29680",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarLand-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarLand-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 9093,
+      "sha256": "f4e63242c6644b92118cae993edefa5083e481e65bd87731e5130e2b78ff987e",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 69643,
+      "duration_seconds": 1.579206,
+      "ogg_pages": 4,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.58, start: 0.000000, bitrate: 46 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar landsfx_boss_ArchvesselMortarLand",
+      "file": "Sfx_boss_ArchvesselMortarLand-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarLand-003.ogg?edb64",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarLand-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarLand-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 9717,
+      "sha256": "23e2e22f4baece0cbf41c61452adc1631fc18cead91fac55836520c518006a1f",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 57697,
+      "duration_seconds": 1.308322,
+      "ogg_pages": 4,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.31, start: 0.000000, bitrate: 59 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar explodesfx_mob_witchBottleBreak",
+      "file": "Sfx_mob_witchBottleBreak-001_soundWave.ogg",
+      "src": "/images/Sfx_mob_witchBottleBreak-001_soundWave.ogg?d97c9",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_mob_witchBottleBreak-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_witchBottleBreak-001_soundWave.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 9113,
+      "sha256": "a84063f5d6a12d5c835ea0e5d284ee7c4a1c24a912ceff9fc3412306b0d45897",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 30495,
+      "duration_seconds": 0.691497,
+      "ogg_pages": 4,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:00.69, start: 0.000000, bitrate: 105 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar explodesfx_mob_witchBottleBreak",
+      "file": "Sfx_mob_witchBottleBreak-002_soundWave.ogg",
+      "src": "/images/Sfx_mob_witchBottleBreak-002_soundWave.ogg?7ed63",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_mob_witchBottleBreak-002_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_witchBottleBreak-002_soundWave.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 8969,
+      "sha256": "38f7a6882cdd89142ca1abe94161aa58d57a14cb3c85c7e5011c4e9c9fed918b",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 30495,
+      "duration_seconds": 0.691497,
+      "ogg_pages": 4,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:00.69, start: 0.000000, bitrate: 103 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar explodesfx_mob_witchBottleBreak",
+      "file": "Sfx_mob_witchBottleBreak-003_soundWave.ogg",
+      "src": "/images/Sfx_mob_witchBottleBreak-003_soundWave.ogg?bf5aa",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_mob_witchBottleBreak-003_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_witchBottleBreak-003_soundWave.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 8665,
+      "sha256": "3e62efe8f5ff881d6bab65a0d444de6b2e4d2b15efd0ea2d4cb941664efa00b2",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 30495,
+      "duration_seconds": 0.691497,
+      "ogg_pages": 4,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:00.69, start: 0.000000, bitrate: 100 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Orb deathsfx_boss_archVesselOrbDeath",
+      "file": "Sfx_boss_archVesselOrbDeath-003.ogg",
+      "src": "/images/Sfx_boss_archVesselOrbDeath-003.ogg?bf0f5",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_archVesselOrbDeath-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_archVesselOrbDeath-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 118416,
+      "sha256": "d3751ff3939b684a1f925b16306c53f25796cdb8ce933c2dbefbb6a7f607effc",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 456367,
+      "duration_seconds": 10.348458,
+      "ogg_pages": 29,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:10.35, start: 0.000000, bitrate: 91 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Stepsfx_boss_ArchvesselStep",
+      "file": "Sfx_boss_ArchvesselStep-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselStep-001.ogg?56615",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselStep-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselStep-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 23713,
+      "sha256": "86724e9ecdd4745377fa07130a240ab14c7f828b271e205dfde128dd0ffbb09c",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 108035,
+      "duration_seconds": 2.449773,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.45, start: 0.000000, bitrate: 77 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Stepsfx_boss_ArchvesselStep",
+      "file": "Sfx_boss_ArchvesselStep-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselStep-002.ogg?06901",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselStep-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselStep-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 25354,
+      "sha256": "418734ad7d8c385cd43b147e108fc3e47b9a1a7acd848b21e406303f0db41ef8",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 116637,
+      "duration_seconds": 2.64483,
+      "ogg_pages": 8,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.64, start: 0.000000, bitrate: 76 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Stepsfx_boss_ArchvesselStep",
+      "file": "Sfx_boss_ArchvesselStep-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselStep-003.ogg?74a6b",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselStep-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselStep-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 24189,
+      "sha256": "5133db4246e48540a18ccf09a7c9319a21f6b386ee95b2cfaa6f9a065148585c",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 106675,
+      "duration_seconds": 2.418934,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.42, start: 0.000000, bitrate: 79 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Stepsfx_boss_ArchvesselStep",
+      "file": "Sfx_boss_ArchvesselStep-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselStep-004.ogg?543e2",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselStep-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselStep-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 25098,
+      "sha256": "d3f326858b52b4755dafe6a6df2447b4ab8b244ea1d5e624455ccb0f5279b8ff",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 118525,
+      "duration_seconds": 2.687642,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.69, start: 0.000000, bitrate: 74 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Teleport insfx_boss_ArchvesselTeleIn",
+      "file": "Sfx_boss_ArchvesselTeleIn.ogg",
+      "src": "/images/Sfx_boss_ArchvesselTeleIn.ogg?36beb",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselTeleIn.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselTeleIn.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 25005,
+      "sha256": "700ada6802844dd8f25ecc5c7aa8a5da212175ab02dbe1ce1090ec6e4ff17372",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 83374,
+      "duration_seconds": 1.890567,
+      "ogg_pages": 7,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.89, start: 0.000000, bitrate: 105 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Teleport outsfx_boss_ArchvesselTeleOut",
+      "file": "Sfx_boss_ArchvesselTeleOut.ogg",
+      "src": "/images/Sfx_boss_ArchvesselTeleOut.ogg?89d8c",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselTeleOut.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselTeleOut.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 31082,
+      "sha256": "5558d07a2c0803179de2a5094b0c7ed9431464c9c7665eb3655d8b13fa318277",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 111944,
+      "duration_seconds": 2.538413,
+      "ogg_pages": 9,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.54, start: 0.000000, bitrate: 97 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Ambient loopsfx_env_archVessel2dAmbientLoop",
+      "file": "Sfx_env_archVessel2dAmbientLoop.ogg",
+      "src": "/images/Sfx_env_archVessel2dAmbientLoop.ogg?0c553",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_env_archVessel2dAmbientLoop.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_env_archVessel2dAmbientLoop.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 185143,
+      "sha256": "98d0d62d9aa1c604e5bdece62560a48b3d84e81349464d59bdce1d23202a323d",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 1011972,
+      "duration_seconds": 22.947211,
+      "ogg_pages": 45,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:22.95, start: 0.000000, bitrate: 64 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Beam attacksfx_boss_ArchvisageBeamAttack",
+      "file": "Sfx_boss_ArchvisageBeamAttack-001.ogg",
+      "src": "/images/Sfx_boss_ArchvisageBeamAttack-001.ogg?22bfb",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageBeamAttack-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageBeamAttack-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 17275,
+      "sha256": "97d9a71862a44c7509326b246f6f3ead5f9204fdeeeaed1947acfe6b74d6eba0",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 131806,
+      "duration_seconds": 2.988798,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.99, start: 0.000000, bitrate: 46 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Beam attacksfx_boss_ArchvisageBeamAttack",
+      "file": "Sfx_boss_ArchvisageBeamAttack-002.ogg",
+      "src": "/images/Sfx_boss_ArchvisageBeamAttack-002.ogg?ce23d",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageBeamAttack-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageBeamAttack-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 16515,
+      "sha256": "cc58c516881b25d59c46e45a62c8992c7757de0fc35b20ba9628077325d49887",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 123561,
+      "duration_seconds": 2.801837,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.80, start: 0.000000, bitrate: 47 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Beam attacksfx_boss_ArchvisageBeamAttack",
+      "file": "Sfx_boss_ArchvisageBeamAttack-003.ogg",
+      "src": "/images/Sfx_boss_ArchvisageBeamAttack-003.ogg?66d81",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageBeamAttack-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageBeamAttack-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 16620,
+      "sha256": "b5437848b70f4295408b43c2cf69dc8dbbfad33f9c4b52878d3882b4af1160e3",
+      "codec": "vorbis",
+      "channels": 2,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 120996,
+      "duration_seconds": 2.743673,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.74, start: 0.000000, bitrate: 48 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, stereo, fltp, 118 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s"
+      ]
+    },
+    {
+      "description": "Beam loopsfx_boss_ArchvisageBeamLoop",
+      "file": "Sfx_boss_ArchvisageBeamLoop-001.ogg",
+      "src": "/images/Sfx_boss_ArchvisageBeamLoop-001.ogg?66d81",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageBeamLoop-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageBeamLoop-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 19311,
+      "sha256": "85b33dc2f8c677b5016ca2d3785e9cc0984a5141184264fd9c99c54a5ad5d7a3",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 78418,
+      "duration_seconds": 1.778186,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:01.78, start: 0.000000, bitrate: 86 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar shootsfx_boss_ArchvisageMortarShoot",
+      "file": "Sfx_boss_ArchvisageMortarShoot-001.ogg",
+      "src": "/images/Sfx_boss_ArchvisageMortarShoot-001.ogg?870eb",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageMortarShoot-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageMortarShoot-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 8931,
+      "sha256": "59e995105c3c7e2fd750b29b5e86c1378e8ac6cec04071239749c7beb769697a",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 33289,
+      "duration_seconds": 0.754853,
+      "ogg_pages": 4,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:00.75, start: 0.000000, bitrate: 94 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar shootsfx_boss_ArchvisageMortarShoot",
+      "file": "Sfx_boss_ArchvisageMortarShoot-002.ogg",
+      "src": "/images/Sfx_boss_ArchvisageMortarShoot-002.ogg?b32a2",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageMortarShoot-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageMortarShoot-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 7885,
+      "sha256": "e2b2df378c9c88da8cc2c835533b6088f69c87762874842472b109057500075a",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 26217,
+      "duration_seconds": 0.59449,
+      "ogg_pages": 4,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:00.59, start: 0.000000, bitrate: 106 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Mortar shootsfx_boss_ArchvisageMortarShoot",
+      "file": "Sfx_boss_ArchvisageMortarShoot-003.ogg",
+      "src": "/images/Sfx_boss_ArchvisageMortarShoot-003.ogg?688ff",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageMortarShoot-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageMortarShoot-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 8735,
+      "sha256": "07b8678243300ee5765c7336880be9251e4d72076c0b6f7e3604bcfd219424eb",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 33065,
+      "duration_seconds": 0.749773,
+      "ogg_pages": 4,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:00.75, start: 0.000000, bitrate: 93 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Teleport insfx_boss_ArchvisageTeleIn",
+      "file": "Sfx_boss_ArchvisageTeleIn.ogg",
+      "src": "/images/Sfx_boss_ArchvisageTeleIn.ogg?31cbb",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageTeleIn.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageTeleIn.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 12599,
+      "sha256": "e1edcf540f14e959eae016909c4bb7d80ce8fd9d6ff9df8f6702439b7e003c0f",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 112852,
+      "duration_seconds": 2.559002,
+      "ogg_pages": 5,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:02.56, start: 0.000000, bitrate: 39 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "Teleport outsfx_boss_ArchvisageTeleOut",
+      "file": "Sfx_boss_ArchvisageTeleOut.ogg",
+      "src": "/images/Sfx_boss_ArchvisageTeleOut.ogg?ff9c6",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageTeleOut.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageTeleOut.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 17550,
+      "sha256": "920d0193812bc8cc6501a863136144766f379d55800a74bfa14685bbf768d1a3",
+      "codec": "vorbis",
+      "channels": 1,
+      "sample_rate": 44100,
+      "samples_from_final_granule": 144242,
+      "duration_seconds": 3.270794,
+      "ogg_pages": 6,
+      "ogg_crc_all_pages_valid": true,
+      "ogg_eos_present": true,
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:03.27, start: 0.000000, bitrate: 42 kb/s",
+        "Stream #0:0: Audio: vorbis, 44100 Hz, mono, fltp, 82 kb/s",
+        "Stream #0:0 -> #0:0 (vorbis (native) -> pcm_s16le (native))",
+        "Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s"
+      ]
+    },
+    {
+      "description": "The in-game idle behavior of the Heart of Ender",
+      "file": "Heart_of_Ender_idle.mp4",
+      "src": "/images/Heart_of_Ender_idle.mp4?80d4c",
+      "category": "video",
+      "path": "heart_of_ender_ref/Heart_of_Ender_idle.mp4",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_idle.mp4",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+      "errors": [],
+      "warnings": [],
+      "bytes": 19467011,
+      "sha256": "145ad36195c7cc74df861af96ed7a7a90acc6b79e72990408e0f79e8382d9fa6",
+      "extraction": {
+        "sample_count": 19,
+        "nominal_step_seconds": 1,
+        "frames": "frames/Heart_of_Ender_idle_video"
+      },
+      "full_decode": "通过 ffmpeg -xerror 全量解码到 null",
+      "decoder_metadata": [
+        "Duration: 00:00:18.94, start: 0.000000, bitrate: 8220 kb/s",
+        "Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 8089 kb/s, 24.18 fps, 24.17 tbr, 24136 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)",
+        "Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))",
+        "Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 24.17 fps, 24.17 tbn (default)"
+      ]
+    }
+  ]
+}

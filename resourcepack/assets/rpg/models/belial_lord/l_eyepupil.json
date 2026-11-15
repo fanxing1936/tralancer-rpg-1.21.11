@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/belial_lord/atlas",
+    "particle": "rpg:item/belial_lord/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.88,
+        8.0,
+        7.88
+      ],
+      "to": [
+        8.12,
+        8.0,
+        8.12
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            4.0,
+            0.8438,
+            3.9688,
+            0.8125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            4.0,
+            0.8125,
+            3.9688,
+            0.8438
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.0335,
+          8.0289,
+          7.8786
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      }
+    }
+  ]
+}

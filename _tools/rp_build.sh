@@ -20,9 +20,15 @@ python retype_wukong.py ../resourcepack ../rpg
 # 米迦勒脊骨／肋骨：[神圣] 双持圣骸。要在 add_twins 之后（借它的副手索引块），
 # 早于 opt_index、make_boxes、polish_ui 与 polish_vfx。
 python add_michael.py ../resourcepack ../rpg
+# Minecraft Dungeons 原作武器：坟墓克星、竖琴弩（[传说]，圣殿大团长雅克的武器）。
+# 同米迦勒：早于 opt_index、make_boxes、polish_ui 与 polish_vfx。
+python add_dungeons_weapons.py ../resourcepack ../rpg
 python build_combat_prompt_font.py ../resourcepack
 # 圣卫（塔卫）与别西卜：从 *_ref/*.bbmodel 生成部件模型、图集与音效（sounds.json）
 python add_tower_guard.py ../resourcepack ../rpg
+# 圣卫的另外两种：重盾（原作皇家卫兵）、术士（原作终末灾厄村民，唤魔者网格褐袍）；rpg:holy_guard/summon 三选一
+python add_holy_guards.py ../resourcepack ../rpg
+python add_prime_enchanter_model.py ../resourcepack ../rpg
 python add_pope_model.py ../resourcepack ../rpg
 python add_beelzebub.py ../resourcepack ../rpg
 python add_vanguard.py ../resourcepack ../rpg
@@ -33,6 +39,14 @@ python add_mammon_model.py ../resourcepack ../rpg
 python add_samael_model.py ../resourcepack ../rpg
 python add_belial_model.py ../resourcepack ../rpg
 python add_lord_servants.py ../resourcepack ../rpg
+# 篡夺者一阶段外观：附魔师（usurper_dungeons_ref/）
+python add_usurper_model.py ../resourcepack ../rpg
+# 圣殿大团长雅克：原作玩家英雄网格 + 赫克斯皮肤 + 英雄铠甲，坟墓克星与竖琴弩（jacques_dungeons_ref/）
+python add_jacques_model.py ../resourcepack ../rpg
+# 篡夺者战的特效素材：原作附魔台符文、灵魂图腾法阵、六芒星、唤魔者尖牙（usurper_fx_ref/）
+python add_usurper_fx_art.py ../resourcepack
+# 篡夺者二阶段外观：首席附魔师的冰电改篡夺白金，帽顶加原作王冠（须在上面两步之后）
+python add_usurper_holy_look.py ../resourcepack
 python add_lucifer_model.py ../resourcepack ../rpg --defer-shaders
 python add_lucifer_p2_model.py ../resourcepack ../rpg
 # 原作 Abomination Vine：缠枝破土的藤蔓（dungeons_conversion/generic.py 转换）
@@ -51,6 +65,10 @@ python add_lucifer_p2_fx_art.py ../resourcepack
 python add_lucifer_props.py ../resourcepack
 # 最终 Boss 路西法的位图血条：饰物与标题在 lucifer_boss_ref/bar/（Codex 绘制）
 python add_lucifer_boss_art.py ../resourcepack
+# 篡夺者的位图血条：饰物与标题在 usurper_boss_ref/bar/（占位，正式稿见 BAR-BRIEF.md）
+python add_usurper_boss_art.py ../resourcepack
+# 雅克的位图血条：饰物与标题在 jacques_boss_ref/bar/（占位：原作图标与哥特字体）
+python add_jacques_boss_art.py ../resourcepack
 # last, so every hand transform in the pack has exactly one owner
 python fix_display.py ../resourcepack
 # 物品贴图按原生网格存储（整数倍放大的无损还原，新约按 D6 重建）

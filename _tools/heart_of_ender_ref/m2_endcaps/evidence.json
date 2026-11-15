@@ -1,0 +1,37 @@
+{
+  "source_bbmodel_sha256": "8b4738fdd60f8bab39d16716e5414c0b34ee23219a9c8d33b6906f7fc81942ed",
+  "options": [
+    {
+      "id": "R0",
+      "model": "../heart_of_ender.bbmodel",
+      "render": "../m2_preview/reference_three_quarter.png"
+    },
+    {
+      "id": "R1",
+      "model": "R1.bbmodel",
+      "model_sha256": "2af0dcc44f2c633bba2084c444b64daba320a4ca1a95046fe85453351c93fdd0",
+      "export_audit": {
+        "passed": true,
+        "checked_fields": 772,
+        "method": "by UUID; exact nonnumeric equality, numeric tolerance for Blockbench 5-decimal export",
+        "numeric_tolerance": 5.01e-06,
+        "max_numeric_difference": 4.999999999810711e-06
+      },
+      "render": "R1/reference_three_quarter.png"
+    },
+    {
+      "id": "R2",
+      "model": "R2.bbmodel",
+      "model_sha256": "944ff2a34497fcf9e3a437694d8481f56c5e4235a3368f91669d3dd877acb518",
+      "export_audit": {
+        "passed": true,
+        "checked_fields": 772,
+        "method": "by UUID; exact nonnumeric equality, numeric tolerance for Blockbench 5-decimal export",
+        "numeric_tolerance": 5.01e-06,
+        "max_numeric_difference": 4.000000000559112e-06
+      },
+      "render": "R2/reference_three_quarter.png"
+    }
+  ],
+  "main_model_unchanged": true
+}

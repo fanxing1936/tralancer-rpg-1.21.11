@@ -1,0 +1,32 @@
+{
+  "scope": "User-authorized dark palette for lucifer_verdant only; source textures and source emissive mask remain intact.",
+  "target_project": "lucifer_verdant",
+  "config_patch": {
+    "palette_tint_linear": [
+      0.4,
+      0.4,
+      0.4
+    ]
+  },
+  "plugin_default": [
+    1,
+    1,
+    1
+  ],
+  "linear_formula": {
+    "graded_albedo": "sRGBDecode(original_albedo.rgb) * palette_tint_linear",
+    "surface": "graded_albedo * studio_light * LIGHTCOLOR",
+    "natural_emissive": "graded_albedo * NaturalEmissive",
+    "primary_emissive": "sRGBDecode(original_auxiliary.rgb).b * sourceEmissiveColor * sourceEmissivePower",
+    "total_emissive": "max((primary_emissive + natural_emissive) * sourceDeathEmissive, 0)"
+  },
+  "invariants": [
+    "Original PNG bytes unchanged",
+    "Original auxiliary emissive contribution receives no palette multiplier",
+    "Source Emissive remains white [1,1,1] in lucifer_verdant",
+    "verdant_robe_original and prior Root Rot projects retain identity tint by default",
+    "No rest mesh, bones, weights, animation keyframes or model saves by this task"
+  ],
+  "runtime_action": "Reload changed material plugin; set only lucifer_verdant material config; capture animation.idle time 0 preview; final model save is owned by parent.",
+  "revision": "0.24 superseded by 0.40 to preserve visible green texture detail."
+}

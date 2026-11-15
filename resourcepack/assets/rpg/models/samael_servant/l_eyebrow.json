@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/samael_servant/atlas",
+    "particle": "rpg:item/samael_servant/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.82,
+        8.0,
+        7.88
+      ],
+      "to": [
+        8.18,
+        8.0,
+        8.12
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7.875,
+            8.0,
+            8.625,
+            8.625
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            7.875,
+            8.625,
+            8.625,
+            8.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.07,
+          7.9943,
+          7.88
+        ],
+        "axis": "x",
+        "angle": -8.102840891710604e-06
+      }
+    }
+  ]
+}

@@ -1,7 +1,52 @@
 {
- "model_scale": 14.183344670717245,
- "height_blocks": 3.71,
+ "model_scale": 7.646007908742451,
+ "height_blocks": 2.0,
  "source_height_cm": 217.9786741733551,
+ "turn": 0,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [
+  {
+   "name": "orb_spin",
+   "bone": "J_R_Weapon",
+   "cubes": [
+    {
+     "size": 29.4,
+     "uv": [
+      0,
+      0,
+      8,
+      8
+     ]
+    },
+    {
+     "size": 22.0,
+     "uv": [
+      8,
+      0,
+      14,
+      6
+     ]
+    },
+    {
+     "size": 11.0,
+     "uv": [
+      14,
+      0,
+      17,
+      3
+     ]
+    }
+   ],
+   "texture_size": [
+    17,
+    8
+   ],
+   "material": "__orb__",
+   "attach": "J_R_Weapon",
+   "mesh": "synthetic orb"
+  }
+ ],
  "source": {
   "mesh": "Dungeons/Content/Actors/Characters/Enemies/NamelessKing/SK_NamelessKing",
   "export_root": "D:\\agent\\dungeons_extract\\upgrade\\nameless"
@@ -141,21 +186,22 @@
  "conversion": {
   "name": "beelzebub",
   "source_mesh_sha256": "213b456ac0cf38f03ef14e25c684bbe7f680fd069059cfc3b4d7f98da250c2a9",
-  "triangles": 135,
+  "triangles": 171,
   "all_triangles_covered_once": true,
   "bones": 32,
-  "plane_groups": 10,
-  "display_parts": 10,
-  "elements": 62,
-  "direct_uv_elements": 35,
+  "plane_groups": 12,
+  "display_parts": 11,
+  "elements": 82,
+  "direct_uv_elements": 53,
   "baked_elements": 27,
-  "glow_groups": 10,
+  "glow_groups": 1,
   "textures": {
-   "MI_NamelessKing": 0
+   "MI_NamelessKing": 0,
+   "__orb__": 1
   },
   "atlas": [
-   128,
-   128
+   256,
+   256
   ]
  }
 }

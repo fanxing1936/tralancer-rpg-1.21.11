@@ -140,7 +140,7 @@ def write_datapack(rest):
     wf(os.path.join(MOB.func, "summon.mcfunction"), [
         "# 圣卫：教皇直属的军团，借神之名行压迫的武装。",
         "# 隐形卫道士承载九个展示实体部件。由 _tools/add_tower_guard.py 生成。",
-        "summon minecraft:vindicator ~ ~ ~ {Tags:[\"rpg.tg\"],Silent:1b,PersistenceRequired:1b,"
+        "summon minecraft:vindicator ~ ~ ~ {Tags:[\"rpg.tg\",\"rpg.hg\"],Silent:1b,PersistenceRequired:1b,"
         "CanPickUpLoot:0b,Health:%df,CustomName:%s,"
         "active_effects:[{id:\"minecraft:invisibility\",duration:-1,amplifier:0,show_particles:0b}],"
         "attributes:%s,Passengers:[%s]}" % (MAX_HEALTH, name, attrs, passengers),

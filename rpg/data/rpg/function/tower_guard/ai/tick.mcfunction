@@ -10,5 +10,5 @@ execute if score @s rpg_tg_st matches 5 run return run function rpg:tower_guard/
 execute if entity @s[tag=!rpg.tg.broken] positioned ^ ^1.2 ^1.2 as @e[type=#minecraft:impact_projectiles,distance=..2.5] at @s run function rpg:tower_guard/ai/deflect
 scoreboard players remove @s[scores={rpg_tg_cd=1..}] rpg_tg_cd 1
 scoreboard players remove @s[scores={rpg_tg_cc=1..}] rpg_tg_cc 1
-execute if score @s rpg_tg_cd matches 0 if entity @a[distance=..3.2,gamemode=!spectator,gamemode=!creative] run return run function rpg:tower_guard/ai/attack_start
-execute if score @s rpg_tg_cc matches 0 if entity @a[distance=6..16,gamemode=!spectator,gamemode=!creative] run function rpg:tower_guard/ai/charge_start
+execute if score @s rpg_tg_cd matches 0 if entity @e[tag=rpg.unit.f,distance=..3.2] run return run function rpg:tower_guard/ai/attack_start
+execute if score @s rpg_tg_cc matches 0 if entity @e[tag=rpg.unit.f,distance=6..16] run function rpg:tower_guard/ai/charge_start

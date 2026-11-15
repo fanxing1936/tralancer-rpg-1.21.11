@@ -1,0 +1,21 @@
+{
+  "status": "historical_failed_attempt_before_dimension_selector_fix",
+  "model_sha256": "a419cc8dce1e796113a02c362ad184faea3bf09d5c908b26ac81e963babc624a",
+  "passed": 85,
+  "failed": 70,
+  "checks": 155,
+  "elapsed_server_ticks": 5,
+  "observed_body_translation": [
+    -0.01199,
+    -1.61873,
+    0.15479
+  ],
+  "baked_f15_body_translation": [
+    -0.01199,
+    -1.61873,
+    0.15479
+  ],
+  "exact_match": true,
+  "cause": "三维包装每次均以无空间限制的 @e 选全部维度载体，导致每服务器刻推进三次。",
+  "resolution": "只在教皇自己的 tick_dimension 与 tick_late 中给选择器加 distance=0..，不修改 display_mob.py。修复后必须以新隔离包重测。"
+}

@@ -1,0 +1,72 @@
+[14:34:12] [main/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[14:34:13] [main/INFO]: Found new data pack file/rpg, loading it automatically
+[14:34:13] [main/INFO]: No existing world data, creating new world
+[14:34:13] [main/ERROR]: No key layers in MapLike[{}]
+[14:34:17] [main/INFO]: Loaded 1470 recipes
+[14:34:17] [main/INFO]: Loaded 1632 advancements
+[14:34:17] [Server thread/INFO]: Starting minecraft server version 1.21.11
+[14:34:17] [Server thread/INFO]: Loading properties
+[14:34:17] [Server thread/INFO]: Default game type: CREATIVE
+[14:34:17] [Server thread/INFO]: Generating keypair
+[14:34:17] [Server thread/INFO]: Starting Minecraft server on 127.0.0.1:54590
+[14:34:17] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[14:34:17] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[14:34:17] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[14:34:17] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[14:34:17] [Server thread/INFO]: Preparing level "packtest"
+[14:34:17] [Server thread/INFO]: Selecting global world spawn...
+[14:34:18] [Server thread/INFO]: Loading 0 persistent chunks...
+[14:34:18] [Server thread/INFO]: Preparing spawn area: 100%
+[14:34:18] [Server thread/INFO]: Time elapsed: 913 ms
+[14:34:18] [Server thread/INFO]: Done (1.095s)! For help, type "help"
+[14:35:18] [Server thread/INFO]: Server empty for 60 seconds, pausing
+>>> gamerule advance_time false
+[14:35:42] [Server thread/INFO]: Gamerule advance_time is now set to: false
+>>> gamerule advance_weather false
+[14:35:42] [Server thread/INFO]: Gamerule advance_weather is now set to: false
+>>> gamerule spawn_mobs false
+[14:35:42] [Server thread/INFO]: Gamerule spawn_mobs is now set to: false
+>>> weather clear
+[14:35:42] [Server thread/INFO]: Set the weather to clear
+>>> time set midnight
+[14:35:42] [Server thread/INFO]: Set the time to 18000
+>>> forceload add -32 -32 32 32
+>>> fill -20 63 -20 20 63 20 minecraft:gray_concrete
+>>> setworldspawn 0 70 28 180
+>>> summon minecraft:vindicator 0 64 0 {Tags:["p2_client_npc","rpg.lu.phase2"],NoAI:1b,NoGravity:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,Rotation:[0f,0f]}
+[14:35:43] [Server thread/INFO]: Marked 25 chunks in minecraft:overworld from [-2, -2] to [2, 2] to be force loaded
+>>> scoreboard players set @e[tag=p2_client_npc,limit=1] rpg_dm_lord 1
+[14:35:43] [Server thread/INFO]: Successfully filled 1681 block(s)
+[14:35:43] [Server thread/INFO]: Incomplete (expected 2 coordinates)
+[14:35:43] [Server thread/INFO]: ...n 0 70 28 180<--[HERE]
+>>> execute as @e[tag=p2_client_npc,limit=1] at @s run function rpg:lucifer_p2/dress
+[14:35:43] [Server thread/INFO]: Summoned new Vindicator
+[14:35:43] [Server thread/INFO]: Set [rpg_dm_lord] for Vindicator to 1
+[14:35:43] [Server thread/INFO]: Running function rpg:lucifer_p2/dress
+>>> execute as @e[tag=p2_client_npc,limit=1] at @s run function rpg:lucifer_p2/anim/jungleabomination_idle/f0
+>>> scoreboard players set @e[tag=p2_client_npc,limit=1] rpg_lu2_anim 99
+[14:35:43] [Server thread/INFO]: Running function rpg:lucifer_p2/anim/jungleabomination_idle/f0
+[14:35:43] [Server thread/INFO]: Set [rpg_lu2_anim] for Vindicator to 99
+>>> execute as @e[tag=p2_client_npc,limit=1] run data merge entity @s {active_effects:[{id:"minecraft:invisibility",duration:-1,amplifier:0b,show_particles:0b}]}
+[14:35:43] [Server thread/INFO]: Modified entity data of Vindicator
+>>> defaultgamemode spectator
+[14:35:43] [Server thread/INFO]: The default game mode is now Spectator Mode
+>>> save-all flush
+[14:35:43] [Server thread/INFO]: Saving the game (this may take a moment!)
+[14:35:44] [Server thread/INFO]: ThreadedAnvilChunkStorage (packtest): All chunks are saved
+[14:35:44] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:35:44] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14:35:44] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[14:35:44] [Server thread/INFO]: Saved the game
+>>> stop
+[14:36:22] [Server thread/INFO]: Stopping the server
+[14:36:22] [Server thread/INFO]: Stopping server
+[14:36:22] [Server thread/INFO]: Saving players
+[14:36:22] [Server thread/INFO]: Saving worlds
+[14:36:22] [Server thread/INFO]: Saving chunks for level 'ServerLevel[packtest]'/minecraft:overworld
+[14:36:23] [Server thread/INFO]: Saving chunks for level 'ServerLevel[packtest]'/minecraft:the_nether
+[14:36:23] [Server thread/INFO]: Saving chunks for level 'ServerLevel[packtest]'/minecraft:the_end
+[14:36:23] [Server thread/INFO]: ThreadedAnvilChunkStorage (packtest): All chunks are saved
+[14:36:23] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:36:23] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14:36:23] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved

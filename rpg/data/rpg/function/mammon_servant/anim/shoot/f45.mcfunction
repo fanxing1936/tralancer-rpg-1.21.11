@@ -1,0 +1,3 @@
+# shoot 第 45 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_lord_servants.py 烘焙。
+execute on passengers if entity @s[tag=rpg.mms.p.r_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.41673f,-0.90452f,0.4384f],left_rotation:[0.01542f,-0.5872f,0.76175f,0.27333f],scale:[8.33333f,8.33333f,8.33333f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.mms.p.weapon] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.5097f,-1.18672f,0.53525f],left_rotation:[0f,-0.70711f,0.70711f,0f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}

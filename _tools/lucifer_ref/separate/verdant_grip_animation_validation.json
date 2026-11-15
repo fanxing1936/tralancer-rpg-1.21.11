@@ -1,0 +1,925 @@
+{
+  "scope": "Read-only saved-file numerical audit; no native renderer execution and no game runtime claim.",
+  "model": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\separate\\lucifer_verdant.bbmodel",
+  "sha256": "14931c0cb1584e5da36ff107e0b5bd953d013b0d3f2f385d57a729e36628f197",
+  "equations": "Local=T(rest_origin+position)*Rz(rest_z+rot_z)*Ry(rest_y+rot_y)*Rx(rest_x+rot_x)*S(scale); world=parent_world*local; rigid deformation=posed_world*inverse(bind_world).",
+  "supported_track_format": "ArmatureBone numeric fixed decimal single data point linear/step, local Euler ZYX; unsupported formats explicitly rejected.",
+  "weapon_saved_vertices_max_error_vs_approved_rigid_translation": 0.0,
+  "weapon_and_right_arm_weight_errors": [],
+  "unsupported_or_invalid_tracks": [],
+  "clips": [
+    {
+      "animation": "animation.idle",
+      "duration": 6.2083336499498225,
+      "loop": "loop",
+      "sample_count": 1120,
+      "weapon_position_channels_max_abs": 0.0,
+      "grip_center_min_clearance": 0.6003760000000069,
+      "full_grip_texel_prism_min_clearance": 0.1753760382446945,
+      "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+      "grip_to_right_hand_max_abs_error": 7.993605777301127e-15,
+      "grip_center_always_inside_arm_volume": true,
+      "full_grip_texel_prism_always_inside_arm_volume": true,
+      "first": {
+        "t": 0.0,
+        "grip_world": [
+          6.89322202421844,
+          21.324311024390745,
+          -11.915250724720577
+        ],
+        "tip_world": [
+          5.90875848337377,
+          41.75638547194575,
+          -12.696956355754233
+        ],
+        "base_world": [
+          7.4792971425947865,
+          8.717084887524104,
+          -11.293297051547425
+        ],
+        "base_to_tip_unit": [
+          -0.047439157516714535,
+          0.9979738960668834,
+          -0.04239845637744213
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000105,
+        "grip_to_tip_unit": [
+          -0.04809132768241782,
+          0.9981127250744578,
+          -0.038186545355428515
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.57001898645333,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.81154002384581,
+        "tip_forward_reach_from_grip_java_pixels": 0.7817056310336561,
+        "tip_forward_reach_from_model_origin_java_pixels": 12.696956355754233,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537603824469983,
+        "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "last": {
+        "t": 6.2083336499498225,
+        "grip_world": [
+          6.89322202421844,
+          21.324311024390745,
+          -11.915250724720577
+        ],
+        "tip_world": [
+          5.90875848337377,
+          41.75638547194575,
+          -12.696956355754233
+        ],
+        "base_world": [
+          7.4792971425947865,
+          8.717084887524104,
+          -11.293297051547425
+        ],
+        "base_to_tip_unit": [
+          -0.047439157516714535,
+          0.9979738960668834,
+          -0.04239845637744213
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000105,
+        "grip_to_tip_unit": [
+          -0.04809132768241782,
+          0.9981127250744578,
+          -0.038186545355428515
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.57001898645333,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.81154002384581,
+        "tip_forward_reach_from_grip_java_pixels": 0.7817056310336561,
+        "tip_forward_reach_from_model_origin_java_pixels": 12.696956355754233,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537603824469983,
+        "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "grip_tip_base_loop_endpoint_max_difference": 0.0
+    },
+    {
+      "animation": "animation.walk",
+      "duration": 0.7916666981246748,
+      "loop": "loop",
+      "sample_count": 105,
+      "weapon_position_channels_max_abs": 0.0,
+      "grip_center_min_clearance": 0.6003760000000087,
+      "full_grip_texel_prism_min_clearance": 0.17537604768372272,
+      "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+      "grip_to_right_hand_max_abs_error": 8.881784197001252e-15,
+      "grip_center_always_inside_arm_volume": true,
+      "full_grip_texel_prism_always_inside_arm_volume": true,
+      "first": {
+        "t": 0.0,
+        "grip_world": [
+          5.826181388305653,
+          21.192593673204247,
+          -10.703651042426191
+        ],
+        "tip_world": [
+          5.826181388305654,
+          41.64826547503749,
+          -11.488118710948404
+        ],
+        "base_world": [
+          5.826181388305654,
+          8.571916717372849,
+          -10.078371538049838
+        ],
+        "base_to_tip_unit": [
+          0.0,
+          0.9990929606093967,
+          -0.042582344472213755
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000113,
+        "grip_to_tip_unit": [
+          8.677554353227214e-17,
+          0.9992654626314618,
+          -0.03832147168273499
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.55947345076962,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.8038036520837,
+        "tip_forward_reach_from_grip_java_pixels": 0.784467668522213,
+        "tip_forward_reach_from_model_origin_java_pixels": 11.488118710948404,
+        "grip_texel_full_prism_clearance_inside_arm": 0.1753760476837254,
+        "grip_to_socket_max_abs_error": 8.881784197001252e-16,
+        "grip_to_right_hand_max_abs_error": 6.217248937900877e-15,
+        "foot_min_y_java_pixels": {
+          "R_Leg": 3.3680479363886425e-15,
+          "L_Leg": 3.490512562090155e-15
+        },
+        "lowest_foot_y_java_pixels": 3.3680479363886425e-15
+      },
+      "last": {
+        "t": 0.7916666981246748,
+        "grip_world": [
+          5.826181388305653,
+          21.192593673204247,
+          -10.703651042426191
+        ],
+        "tip_world": [
+          5.826181388305654,
+          41.64826547503749,
+          -11.488118710948404
+        ],
+        "base_world": [
+          5.826181388305654,
+          8.571916717372849,
+          -10.078371538049838
+        ],
+        "base_to_tip_unit": [
+          0.0,
+          0.9990929606093967,
+          -0.042582344472213755
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000113,
+        "grip_to_tip_unit": [
+          8.677554353227214e-17,
+          0.9992654626314618,
+          -0.03832147168273499
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.55947345076962,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.8038036520837,
+        "tip_forward_reach_from_grip_java_pixels": 0.784467668522213,
+        "tip_forward_reach_from_model_origin_java_pixels": 11.488118710948404,
+        "grip_texel_full_prism_clearance_inside_arm": 0.1753760476837254,
+        "grip_to_socket_max_abs_error": 8.881784197001252e-16,
+        "grip_to_right_hand_max_abs_error": 6.217248937900877e-15,
+        "foot_min_y_java_pixels": {
+          "R_Leg": 3.3680479363886425e-15,
+          "L_Leg": 3.384135992999087e-15
+        },
+        "lowest_foot_y_java_pixels": 3.3680479363886425e-15
+      },
+      "grip_tip_base_loop_endpoint_max_difference": 0.0,
+      "lowest_foot_y_range_java_pixels": [
+        -0.019185958868224523,
+        5.10702591327572e-15
+      ],
+      "lowest_foot_abs_y_max_java_pixels": 0.019185958868224523,
+      "foot_samples_at_author_key_times": [
+        {
+          "t": 0.0,
+          "R_Leg": 3.3680479363886425e-15,
+          "L_Leg": 3.490512562090155e-15
+        },
+        {
+          "t": 0.032986112421861453,
+          "R_Leg": 2.345346139520643e-15,
+          "L_Leg": 0.0035658548543596874
+        },
+        {
+          "t": 0.06597222484372291,
+          "R_Leg": 5.10702591327572e-15,
+          "L_Leg": 0.006848734374139687
+        },
+        {
+          "t": 0.09895833726558435,
+          "R_Leg": 4.551914400963142e-15,
+          "L_Leg": 0.009608678417347194
+        },
+        {
+          "t": 0.13194444968744581,
+          "R_Leg": 9.43689570931383e-16,
+          "L_Leg": 0.011674451720781631
+        },
+        {
+          "t": 0.16493056210930726,
+          "R_Leg": 1.3322676295501878e-15,
+          "L_Leg": 0.012944946516573685
+        },
+        {
+          "t": 0.1979166745311687,
+          "R_Leg": 1.7763568394002505e-15,
+          "L_Leg": 0.013372784046589037
+        },
+        {
+          "t": 0.23090278695303018,
+          "R_Leg": 1.3322676295501878e-15,
+          "L_Leg": 0.012944946516573685
+        },
+        {
+          "t": 0.26388889937489163,
+          "R_Leg": 9.43689570931383e-16,
+          "L_Leg": 0.011674451720781631
+        },
+        {
+          "t": 0.2968750117967531,
+          "R_Leg": 4.551914400963142e-15,
+          "L_Leg": 0.009608678417347194
+        },
+        {
+          "t": 0.3298611242186145,
+          "R_Leg": 4.191091917959966e-15,
+          "L_Leg": 0.006848734374139714
+        },
+        {
+          "t": 0.36284723664047597,
+          "R_Leg": 2.345346139520643e-15,
+          "L_Leg": 0.003565854854359618
+        },
+        {
+          "t": 0.3958333490623374,
+          "R_Leg": 3.3680479363886425e-15,
+          "L_Leg": 3.543700846635689e-15
+        },
+        {
+          "t": 0.4288194614841989,
+          "R_Leg": 0.0035658682881969245,
+          "L_Leg": -7.91033905045424e-16
+        },
+        {
+          "t": 0.46180557390606036,
+          "R_Leg": 0.006848760175747648,
+          "L_Leg": 1.0269562977782698e-15
+        },
+        {
+          "t": 0.4947916863279218,
+          "R_Leg": 0.00960871461664553,
+          "L_Leg": 0.0
+        },
+        {
+          "t": 0.5277777987497833,
+          "R_Leg": 0.011674495702579557,
+          "L_Leg": -1.9984014443252818e-15
+        },
+        {
+          "t": 0.5607639111716447,
+          "R_Leg": 0.012944995284779215,
+          "L_Leg": 5.551115123125783e-17
+        },
+        {
+          "t": 0.5937500235935061,
+          "R_Leg": 0.013372834426610303,
+          "L_Leg": 2.220446049250313e-15
+        },
+        {
+          "t": 0.6267361360153676,
+          "R_Leg": 0.012944995284779215,
+          "L_Leg": 5.551115123125783e-17
+        },
+        {
+          "t": 0.659722248437229,
+          "R_Leg": 0.011674495702581333,
+          "L_Leg": -1.887379141862766e-15
+        },
+        {
+          "t": 0.6927083608590905,
+          "R_Leg": 0.00960871461664553,
+          "L_Leg": 0.0
+        },
+        {
+          "t": 0.7256944732809519,
+          "R_Leg": 0.006848760175747648,
+          "L_Leg": 9.159339953157541e-16
+        },
+        {
+          "t": 0.7586805857028134,
+          "R_Leg": 0.0035658682881969245,
+          "L_Leg": -7.355227538141662e-16
+        },
+        {
+          "t": 0.7916666981246748,
+          "R_Leg": 3.3680479363886425e-15,
+          "L_Leg": 3.384135992999087e-15
+        }
+      ]
+    },
+    {
+      "animation": "animation.attack",
+      "duration": 0.9,
+      "loop": "once",
+      "sample_count": 127,
+      "weapon_position_channels_max_abs": 0.0,
+      "grip_center_min_clearance": 0.600376000000006,
+      "full_grip_texel_prism_min_clearance": 0.002594739338674934,
+      "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+      "grip_to_right_hand_max_abs_error": 8.881784197001252e-15,
+      "grip_center_always_inside_arm_volume": true,
+      "full_grip_texel_prism_always_inside_arm_volume": true,
+      "first": {
+        "t": 0.0,
+        "grip_world": [
+          1.3925462122029018,
+          19.834235359130865,
+          -13.12832344906594
+        ],
+        "tip_world": [
+          1.392546212202907,
+          19.834235359130904,
+          -33.59903175110747
+        ],
+        "base_world": [
+          1.3925462122029018,
+          19.975412657765613,
+          -0.49295522125409796
+        ],
+        "base_to_tip_unit": [
+          1.6096809476564974e-16,
+          -0.004264353550544285,
+          -0.9999909076030621
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000087,
+        "grip_to_tip_unit": [
+          2.6032663059681656e-16,
+          1.909061957709988e-15,
+          -1.0
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 0.24433020131472022,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 0.0,
+        "tip_forward_reach_from_grip_java_pixels": 20.47070830204153,
+        "tip_forward_reach_from_model_origin_java_pixels": 33.59903175110747,
+        "grip_texel_full_prism_clearance_inside_arm": 0.00991829656472376,
+        "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+        "grip_to_right_hand_max_abs_error": 4.884981308350689e-15
+      },
+      "last": {
+        "t": 0.9,
+        "grip_world": [
+          6.89322202421844,
+          21.32431102439075,
+          -11.915250724720575
+        ],
+        "tip_world": [
+          5.908758483373763,
+          41.75638547194575,
+          -12.696956355754313
+        ],
+        "base_world": [
+          7.479297142594792,
+          8.71708488752411,
+          -11.293297051547372
+        ],
+        "base_to_tip_unit": [
+          -0.04743915751671491,
+          0.9979738960668831,
+          -0.04239845637744615
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000096,
+        "grip_to_tip_unit": [
+          -0.04809132768241816,
+          0.9981127250744575,
+          -0.038186545355432505
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.5700189864531,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.81154002384558,
+        "tip_forward_reach_from_grip_java_pixels": 0.7817056310337378,
+        "tip_forward_reach_from_model_origin_java_pixels": 12.696956355754313,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537603824469805,
+        "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "grip_tip_base_loop_endpoint_max_difference": 21.922150112814844,
+      "immediate_damage_and_hold_samples": [
+        {
+          "t": 0.0,
+          "grip_world": [
+            1.3925462122029018,
+            19.834235359130865,
+            -13.12832344906594
+          ],
+          "tip_world": [
+            1.392546212202907,
+            19.834235359130904,
+            -33.59903175110747
+          ],
+          "base_world": [
+            1.3925462122029018,
+            19.975412657765613,
+            -0.49295522125409796
+          ],
+          "base_to_tip_unit": [
+            1.6096809476564974e-16,
+            -0.004264353550544285,
+            -0.9999909076030621
+          ],
+          "grip_center_clearance_inside_arm": 0.6003760000000087,
+          "grip_to_tip_unit": [
+            2.6032663059681656e-16,
+            1.909061957709988e-15,
+            -1.0
+          ],
+          "base_to_tip_angle_from_java_negative_z_degrees": 0.24433020131472022,
+          "grip_to_tip_angle_from_java_negative_z_degrees": 0.0,
+          "tip_forward_reach_from_grip_java_pixels": 20.47070830204153,
+          "tip_forward_reach_from_model_origin_java_pixels": 33.59903175110747,
+          "grip_texel_full_prism_clearance_inside_arm": 0.00991829656472376,
+          "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+          "grip_to_right_hand_max_abs_error": 4.884981308350689e-15
+        },
+        {
+          "t": 0.06,
+          "grip_world": [
+            1.4195726470935819,
+            19.8961536138946,
+            -13.045688139320262
+          ],
+          "tip_world": [
+            1.4195726470935925,
+            19.896153613894633,
+            -33.516396441361785
+          ],
+          "base_world": [
+            1.4195726470935792,
+            20.03733091252935,
+            -0.41031991150842373
+          ],
+          "base_to_tip_unit": [
+            4.0242023691412444e-16,
+            -0.004264353550544501,
+            -0.9999909076030621
+          ],
+          "grip_center_clearance_inside_arm": 0.6003760000000096,
+          "grip_to_tip_unit": [
+            5.206532611936333e-16,
+            1.5619597835808999e-15,
+            -1.0
+          ],
+          "base_to_tip_angle_from_java_negative_z_degrees": 0.24433020131472022,
+          "grip_to_tip_angle_from_java_negative_z_degrees": 0.0,
+          "tip_forward_reach_from_grip_java_pixels": 20.470708302041523,
+          "tip_forward_reach_from_model_origin_java_pixels": 33.516396441361785,
+          "grip_texel_full_prism_clearance_inside_arm": 0.009918296037088048,
+          "grip_to_socket_max_abs_error": 1.7763568394002505e-15,
+          "grip_to_right_hand_max_abs_error": 5.329070518200751e-15
+        }
+      ]
+    },
+    {
+      "animation": "animation.strong",
+      "duration": 1.1166666806733776,
+      "loop": "once",
+      "sample_count": 237,
+      "weapon_position_channels_max_abs": 0.0,
+      "grip_center_min_clearance": 0.6003760000000069,
+      "full_grip_texel_prism_min_clearance": 0.018083567893896202,
+      "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+      "grip_to_right_hand_max_abs_error": 1.0658141036401503e-14,
+      "grip_center_always_inside_arm_volume": true,
+      "full_grip_texel_prism_always_inside_arm_volume": true,
+      "first": {
+        "t": 0.0,
+        "grip_world": [
+          8.02180442907512,
+          17.98094573995686,
+          -15.4431421866518
+        ],
+        "tip_world": [
+          5.993264035787405,
+          20.734564638499386,
+          -35.62611781517748
+        ],
+        "base_world": [
+          9.34733861067967,
+          16.401535026149773,
+          -2.9763510111906495
+        ],
+        "base_to_tip_unit": [
+          -0.1013120378456917,
+          0.13088202133578605,
+          -0.9862077709481973
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000113,
+        "grip_to_tip_unit": [
+          -0.09909478281635274,
+          0.13451507675813593,
+          -0.9859441759771861
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 9.52698069385544,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 9.617801268256223,
+        "tip_forward_reach_from_grip_java_pixels": 20.182975628525682,
+        "tip_forward_reach_from_model_origin_java_pixels": 35.62611781517748,
+        "grip_texel_full_prism_clearance_inside_arm": 0.018083567893896202,
+        "grip_to_socket_max_abs_error": 1.7763568394002505e-15,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "last": {
+        "t": 1.1166666806733776,
+        "grip_world": [
+          6.893222024285244,
+          21.324311024390767,
+          -11.91525080101452
+        ],
+        "tip_world": [
+          5.9087584834405735,
+          41.75638547194577,
+          -12.696956432048177
+        ],
+        "base_world": [
+          7.47929714266159,
+          8.717084887524125,
+          -11.293297127841369
+        ],
+        "base_to_tip_unit": [
+          -0.047439157516714535,
+          0.9979738960668834,
+          -0.04239845637744213
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000087,
+        "grip_to_tip_unit": [
+          -0.04809132768241782,
+          0.9981127250744578,
+          -0.038186545355428515
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.57001898645333,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.81154002384581,
+        "tip_forward_reach_from_grip_java_pixels": 0.7817056310336561,
+        "tip_forward_reach_from_model_origin_java_pixels": 12.696956432048177,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537603824469983,
+        "grip_to_socket_max_abs_error": 1.7763568394002505e-15,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "grip_tip_base_loop_endpoint_max_difference": 22.929161383129305
+    },
+    {
+      "animation": "animation.cast",
+      "duration": 0.5499999999999999,
+      "loop": "once",
+      "sample_count": 99,
+      "weapon_position_channels_max_abs": 0.0,
+      "grip_center_min_clearance": 0.6003760000000078,
+      "full_grip_texel_prism_min_clearance": 0.17537603824469805,
+      "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+      "grip_to_right_hand_max_abs_error": 8.881784197001252e-15,
+      "grip_center_always_inside_arm_volume": true,
+      "full_grip_texel_prism_always_inside_arm_volume": true,
+      "first": {
+        "t": 0.0,
+        "grip_world": [
+          5.935446231102719,
+          20.355444834379515,
+          -12.224621303143454
+        ],
+        "tip_world": [
+          -1.019076180970004,
+          38.76191952371125,
+          -17.871408524054175
+        ],
+        "base_world": [
+          10.222487362635752,
+          9.0336503298442,
+          -8.603750024616042
+        ],
+        "base_to_tip_unit": [
+          -0.3395588517023706,
+          0.897962006033426,
+          -0.2799357461114833
+        ],
+        "grip_center_clearance_inside_arm": 0.600376000000014,
+        "grip_to_tip_unit": [
+          -0.3397304240507962,
+          0.8991615931284638,
+          -0.2758471830868485
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 73.74363012574914,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 73.98749290291661,
+        "tip_forward_reach_from_grip_java_pixels": 5.646787220910721,
+        "tip_forward_reach_from_model_origin_java_pixels": 17.871408524054175,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537604768372805,
+        "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+        "grip_to_right_hand_max_abs_error": 7.993605777301127e-15
+      },
+      "last": {
+        "t": 0.5499999999999999,
+        "grip_world": [
+          6.893222024218442,
+          21.32431102439074,
+          -11.915250724720584
+        ],
+        "tip_world": [
+          5.9087584833737745,
+          41.75638547194575,
+          -12.696956355754264
+        ],
+        "base_world": [
+          7.479297142594788,
+          8.7170848875241,
+          -11.293297051547418
+        ],
+        "base_to_tip_unit": [
+          -0.047439157516714445,
+          0.9979738960668831,
+          -0.042398456377443244
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000078,
+        "grip_to_tip_unit": [
+          -0.048091327682417674,
+          0.9981127250744577,
+          -0.03818654535542963
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.57001898645328,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.81154002384574,
+        "tip_forward_reach_from_grip_java_pixels": 0.7817056310336792,
+        "tip_forward_reach_from_model_origin_java_pixels": 12.696956355754264,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537603824469805,
+        "grip_to_socket_max_abs_error": 8.881784197001252e-16,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "grip_tip_base_loop_endpoint_max_difference": 6.927834664343779
+    },
+    {
+      "animation": "animation.laugh",
+      "duration": 3.291666738011622,
+      "loop": "once",
+      "sample_count": 435,
+      "weapon_position_channels_max_abs": 0.0,
+      "grip_center_min_clearance": 0.6003760000000042,
+      "full_grip_texel_prism_min_clearance": -0.1095893864928108,
+      "grip_to_socket_max_abs_error": 7.105427357601002e-15,
+      "grip_to_right_hand_max_abs_error": 8.881784197001252e-15,
+      "grip_center_always_inside_arm_volume": true,
+      "full_grip_texel_prism_always_inside_arm_volume": false,
+      "first": {
+        "t": 0.0,
+        "grip_world": [
+          6.89322202421844,
+          21.324311024390745,
+          -11.915250724720577
+        ],
+        "tip_world": [
+          5.90875848337377,
+          41.75638547194575,
+          -12.696956355754233
+        ],
+        "base_world": [
+          7.4792971425947865,
+          8.717084887524104,
+          -11.293297051547425
+        ],
+        "base_to_tip_unit": [
+          -0.047439157516714535,
+          0.9979738960668834,
+          -0.04239845637744213
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000105,
+        "grip_to_tip_unit": [
+          -0.04809132768241782,
+          0.9981127250744578,
+          -0.038186545355428515
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.57001898645333,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.81154002384581,
+        "tip_forward_reach_from_grip_java_pixels": 0.7817056310336561,
+        "tip_forward_reach_from_model_origin_java_pixels": 12.696956355754233,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537603824469983,
+        "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "last": {
+        "t": 3.291666738011622,
+        "grip_world": [
+          6.89322202421844,
+          21.32431102439075,
+          -11.915250724720577
+        ],
+        "tip_world": [
+          5.908757634842278,
+          41.756385638377665,
+          -12.696950936946276
+        ],
+        "base_world": [
+          7.479297667436658,
+          8.717084746983746,
+          -11.29330039492605
+        ],
+        "base_to_tip_unit": [
+          -0.04743919900036407,
+          0.9979739053391837,
+          -0.042398191709809144
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000096,
+        "grip_to_tip_unit": [
+          -0.04809136913342575,
+          0.9981127332047048,
+          -0.03818628064509817
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.57003416443992,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.81155520170076,
+        "tip_forward_reach_from_grip_java_pixels": 0.7817002122256991,
+        "tip_forward_reach_from_model_origin_java_pixels": 12.696950936946276,
+        "grip_texel_full_prism_clearance_inside_arm": 0.1753760413914609,
+        "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "grip_tip_base_loop_endpoint_max_difference": 5.4188079570138825e-06
+    },
+    {
+      "animation": "animation.stun",
+      "duration": 1.6249999683730463,
+      "loop": "once",
+      "sample_count": 293,
+      "weapon_position_channels_max_abs": 0.0,
+      "grip_center_min_clearance": 0.6003760000000069,
+      "full_grip_texel_prism_min_clearance": 0.17537603758236742,
+      "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+      "grip_to_right_hand_max_abs_error": 9.769962616701378e-15,
+      "grip_center_always_inside_arm_volume": true,
+      "full_grip_texel_prism_always_inside_arm_volume": true,
+      "first": {
+        "t": 0.0,
+        "grip_world": [
+          7.298484446247928,
+          16.61709433397062,
+          -13.874242712044003
+        ],
+        "tip_world": [
+          7.057893342600025,
+          35.61404175796507,
+          -21.497103256361225
+        ],
+        "base_world": [
+          7.4242889716496965,
+          4.943035717819412,
+          -9.039680691539886
+        ],
+        "base_to_tip_unit": [
+          -0.011067221973729875,
+          0.9264379951374473,
+          -0.3762846764930659
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000113,
+        "grip_to_tip_unit": [
+          -0.011752944749054379,
+          0.9280063563848395,
+          -0.37237893441904
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 67.8962640377156,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 68.13759265948772,
+        "tip_forward_reach_from_grip_java_pixels": 7.622860544317222,
+        "tip_forward_reach_from_model_origin_java_pixels": 21.497103256361225,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537603758237008,
+        "grip_to_socket_max_abs_error": 1.7763568394002505e-15,
+        "grip_to_right_hand_max_abs_error": 7.993605777301127e-15
+      },
+      "last": {
+        "t": 1.6249999683730463,
+        "grip_world": [
+          7.241863398730603,
+          16.646009139480935,
+          -13.896349615835165
+        ],
+        "tip_world": [
+          6.552761332584602,
+          35.547849791375334,
+          -21.725491120502053
+        ],
+        "base_world": [
+          7.642919462861581,
+          5.031473594040128,
+          -8.935081695317002
+        ],
+        "base_to_tip_unit": [
+          -0.03292894635652441,
+          0.9217672986048904,
+          -0.38634276454269423
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000113,
+        "grip_to_tip_unit": [
+          -0.03366283452328208,
+          0.9233603631589694,
+          -0.38245581878014895
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 67.27287394508845,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 67.5141150789628,
+        "tip_forward_reach_from_grip_java_pixels": 7.829141504666888,
+        "tip_forward_reach_from_model_origin_java_pixels": 21.725491120502053,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537603758237097,
+        "grip_to_socket_max_abs_error": 8.881784197001252e-16,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "grip_tip_base_loop_endpoint_max_difference": 0.5051320100154228
+    },
+    {
+      "animation": "animation.rise",
+      "duration": 2.4,
+      "loop": "once",
+      "sample_count": 308,
+      "weapon_position_channels_max_abs": 0.0,
+      "grip_center_min_clearance": 0.600376000000006,
+      "full_grip_texel_prism_min_clearance": 0.17537603824469805,
+      "grip_to_socket_max_abs_error": 3.552713678800501e-15,
+      "grip_to_right_hand_max_abs_error": 8.881784197001252e-15,
+      "grip_center_always_inside_arm_volume": true,
+      "full_grip_texel_prism_always_inside_arm_volume": true,
+      "first": {
+        "t": 0.0,
+        "grip_world": [
+          6.237818470168401,
+          -1.6756020615399887,
+          -2.556535193180236
+        ],
+        "tip_world": [
+          5.675647637201285,
+          -4.062596351063446,
+          -22.879825296005997
+        ],
+        "base_world": [
+          6.573135937124301,
+          -0.062480340568010106,
+          9.971747282551602
+        ],
+        "base_to_tip_unit": [
+          -0.027109226875430083,
+          -0.1208261461078241,
+          -0.9923034476585008
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000105,
+        "grip_to_tip_unit": [
+          -0.027462207202232018,
+          -0.11660535895015434,
+          -0.9927985784839175
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 7.113194520020675,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 6.880305450539147,
+        "tip_forward_reach_from_grip_java_pixels": 20.323290102825762,
+        "tip_forward_reach_from_model_origin_java_pixels": 22.879825296005997,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537604768372717,
+        "grip_to_socket_max_abs_error": 1.9984014443252818e-15,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "last": {
+        "t": 2.4,
+        "grip_world": [
+          6.893222024218442,
+          21.32431102439074,
+          -11.915250724720584
+        ],
+        "tip_world": [
+          5.9087584833737745,
+          41.75638547194575,
+          -12.696956355754264
+        ],
+        "base_world": [
+          7.479297142594788,
+          8.7170848875241,
+          -11.293297051547418
+        ],
+        "base_to_tip_unit": [
+          -0.047439157516714445,
+          0.9979738960668831,
+          -0.042398456377443244
+        ],
+        "grip_center_clearance_inside_arm": 0.6003760000000078,
+        "grip_to_tip_unit": [
+          -0.048091327682417674,
+          0.9981127250744577,
+          -0.03818654535542963
+        ],
+        "base_to_tip_angle_from_java_negative_z_degrees": 87.57001898645328,
+        "grip_to_tip_angle_from_java_negative_z_degrees": 87.81154002384574,
+        "tip_forward_reach_from_grip_java_pixels": 0.7817056310336792,
+        "tip_forward_reach_from_model_origin_java_pixels": 12.696956355754264,
+        "grip_texel_full_prism_clearance_inside_arm": 0.17537603824469805,
+        "grip_to_socket_max_abs_error": 8.881784197001252e-16,
+        "grip_to_right_hand_max_abs_error": 7.105427357601002e-15
+      },
+      "grip_tip_base_loop_endpoint_max_difference": 45.818981823009196
+    }
+  ],
+  "source_model_changed_during_read": false,
+  "limits": [
+    "Checks all stored times, segment midpoints and 120 Hz samples, not symbolic continuous collision proof.",
+    "Arm volume is the actual source R_Arm cuboid transformed by its original rigid bone. No separate hand mesh is invented.",
+    "Grip center inside arm proves intersection/contact; the full texel prism need not be wholly hidden inside the arm.",
+    "Aiming direction is measured in model world coordinates; report alone does not accept visual appeal or combat behavior.",
+    "Original generated weapon topology/UV/texture preservation is covered by the separate geometry audit."
+  ],
+  "numeric_grip_checks_pass": true
+}

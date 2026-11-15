@@ -1,0 +1,873 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_helmet",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[恶魔]",
+                    "color": "#DC4450",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "恶魔枷冠",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "以",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "为锁，以",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[血]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "为钥",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "戴上它的人，再也",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[摘不下]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪契]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "攻击力 +5%，生命上限 −5%",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［困兽之枷］",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "生命低于一半时获得力量 II 与抗性提升 I",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:snout",
+                  "material": "minecraft:redstone"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 4,
+                  "minecraft:fire_protection": 3,
+                  "minecraft:thorns": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 4,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/demon/head/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 3.5,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/demon/head/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/demon/head/2"
+                  },
+                  {
+                    "type": "minecraft:attack_damage",
+                    "amount": 0.05,
+                    "operation": "add_multiplied_base",
+                    "slot": "head",
+                    "id": "rpg:armor/demon/head/3"
+                  },
+                  {
+                    "type": "minecraft:max_health",
+                    "amount": -0.05,
+                    "operation": "add_multiplied_base",
+                    "slot": "head",
+                    "id": "rpg:armor/demon/head/4"
+                  }
+                ],
+                "minecraft:max_damage": 407
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"demon\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[恶魔]",
+                    "color": "#DC4450",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "恶魔枷甲",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "以",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "为锁，以",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[血]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "为钥",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "戴上它的人，再也",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[摘不下]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪契]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "攻击力 +5%，生命上限 −5%",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［困兽之枷］",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "生命低于一半时获得力量 II 与抗性提升 I",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:rib",
+                  "material": "minecraft:netherite"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 4,
+                  "minecraft:blast_protection": 3,
+                  "minecraft:thorns": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 9.5,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/demon/chest/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 4.5,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/demon/chest/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/demon/chest/2"
+                  },
+                  {
+                    "type": "minecraft:attack_damage",
+                    "amount": 0.05,
+                    "operation": "add_multiplied_base",
+                    "slot": "chest",
+                    "id": "rpg:armor/demon/chest/3"
+                  },
+                  {
+                    "type": "minecraft:max_health",
+                    "amount": -0.05,
+                    "operation": "add_multiplied_base",
+                    "slot": "chest",
+                    "id": "rpg:armor/demon/chest/4"
+                  }
+                ],
+                "minecraft:max_damage": 592
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"demon\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_leggings",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[恶魔]",
+                    "color": "#DC4450",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "恶魔枷胫",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "以",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "为锁，以",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[血]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "为钥",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "戴上它的人，再也",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[摘不下]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪契]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "攻击力 +5%，生命上限 −5%",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［困兽之枷］",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "生命低于一半时获得力量 II 与抗性提升 I",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:rib",
+                  "material": "minecraft:redstone"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 4,
+                  "minecraft:projectile_protection": 3,
+                  "minecraft:thorns": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 7.5,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/demon/legs/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 4,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/demon/legs/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/demon/legs/2"
+                  },
+                  {
+                    "type": "minecraft:attack_damage",
+                    "amount": 0.05,
+                    "operation": "add_multiplied_base",
+                    "slot": "legs",
+                    "id": "rpg:armor/demon/legs/3"
+                  },
+                  {
+                    "type": "minecraft:max_health",
+                    "amount": -0.05,
+                    "operation": "add_multiplied_base",
+                    "slot": "legs",
+                    "id": "rpg:armor/demon/legs/4"
+                  }
+                ],
+                "minecraft:max_damage": 555
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"demon\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_boots",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[恶魔]",
+                    "color": "#DC4450",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "恶魔枷镣",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "以",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "为锁，以",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[血]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "为钥",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "戴上它的人，再也",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[摘不下]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[罪契]",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "攻击力 +5%，生命上限 −5%",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［困兽之枷］",
+                      "color": "#DC4450",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "生命低于一半时获得力量 II 与抗性提升 I",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:silence",
+                  "material": "minecraft:redstone"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 4,
+                  "minecraft:feather_falling": 3,
+                  "minecraft:thorns": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 4,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/demon/feet/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 3.5,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/demon/feet/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/demon/feet/2"
+                  },
+                  {
+                    "type": "minecraft:attack_damage",
+                    "amount": 0.05,
+                    "operation": "add_multiplied_base",
+                    "slot": "feet",
+                    "id": "rpg:armor/demon/feet/3"
+                  },
+                  {
+                    "type": "minecraft:max_health",
+                    "amount": -0.05,
+                    "operation": "add_multiplied_base",
+                    "slot": "feet",
+                    "id": "rpg:armor/demon/feet/4"
+                  }
+                ],
+                "minecraft:max_damage": 481
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"demon\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2844 @@
+{
+  "stage": "M2_static",
+  "generator": "heart_of_ender_validate.py",
+  "scope": "静态模型格式、现有管线几何转换与图集像素来源；不包含动画、构建、游戏表现或视觉还原度判定",
+  "limitations": [
+    "44遮罩的原始RGBalpha保留检查不证明半透明实际渲染效果",
+    "透视采样按登记矩阵独立重算，可证明像素来源，不能证明四边形拟合等同原作UV",
+    "model_scale和seat仅使用配置值，未验证实际游戏体型或载体座高"
+  ],
+  "inputs": {
+    "bbmodel": {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\heart_of_ender_ref\\heart_of_ender.bbmodel",
+      "sha256": "8b4738fdd60f8bab39d16716e5414c0b34ee23219a9c8d33b6906f7fc81942ed"
+    },
+    "geometry_spec": {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\heart_of_ender_ref\\m2_geometry\\geometry_spec.json",
+      "sha256": "5edc9eed078036c654902845e444b9f78a55831b7f3ae7e4084a3ad166dbf513"
+    },
+    "atlas_regions": {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\heart_of_ender_ref\\m2_atlas\\atlas_regions.json",
+      "sha256": "15921ce81ac36394ca9df51975571f61ede491548ff679d3cf1e2b6a9e4bf063"
+    }
+  },
+  "parts": [
+    {
+      "part": "shell_body",
+      "bones": [
+        "shell_body"
+      ],
+      "elements": 7,
+      "glow_elements": 0,
+      "offset": [
+        -8.0,
+        6.25,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          0.9781476007338057,
+          -0.20791169081775934,
+          -2.6761470815034764e-18,
+          -0.18517134963456688
+        ],
+        [
+          0.20791169081775934,
+          0.9781476007338057,
+          2.5461838666528314e-17,
+          0.8711627069035457
+        ],
+        [
+          -2.6761470815034764e-18,
+          -2.5461838666528314e-17,
+          1.0,
+          -0.25
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "shell_head",
+      "bones": [
+        "shell_head",
+        "shell_eyes_glow"
+      ],
+      "elements": 2,
+      "glow_elements": 1,
+      "offset": [
+        -8.0,
+        24.0,
+        -12.598745000000001
+      ],
+      "display_matrix": [
+        [
+          0.9996363987952059,
+          -0.026691791980440843,
+          0.0038234074626050025,
+          -0.3354407461472158
+        ],
+        [
+          0.026568007719980368,
+          0.9507760845298273,
+          -0.3087377172486735,
+          1.8555822860340738
+        ],
+        [
+          0.004605558548460031,
+          0.3087270401616996,
+          0.9511395289353992,
+          0.40844608963286994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "shell_jaw",
+      "bones": [
+        "shell_jaw",
+        "shell_teeth_front_glow",
+        "shell_teeth_side_glow"
+      ],
+      "elements": 3,
+      "glow_elements": 2,
+      "offset": [
+        -8.004,
+        17.061355,
+        -12.598745000000001
+      ],
+      "display_matrix": [
+        [
+          0.9996363987952059,
+          -0.026691791980440843,
+          0.0038234074626050025,
+          -0.32361553273713417
+        ],
+        [
+          0.026568007719980368,
+          0.9507760845298273,
+          -0.3087377172486735,
+          1.44327032022085
+        ],
+        [
+          0.004605558548460031,
+          0.3087270401616996,
+          0.9511395289353992,
+          0.27456303267358356
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_left_upper_proximal",
+      "bones": [
+        "limb_left_upper_proximal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -3.5,
+        13.0,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          -0.08664299220925833,
+          0.904820388119432,
+          0.41688494473226906,
+          -1.034808391439713
+        ],
+        [
+          -0.996239424988304,
+          -0.07869227403797069,
+          -0.03625650432276281,
+          1.6877110081332773
+        ],
+        [
+          -1.2183752230400053e-16,
+          -0.41845858964792865,
+          0.9082358772641975,
+          -0.06692436702903136
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_left_upper_distal",
+      "bones": [
+        "limb_left_upper_distal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -3.5,
+        -2.0,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          -0.20817348551199508,
+          0.9675214399284401,
+          -0.14340872779780692,
+          -1.9144280312061848
+        ],
+        [
+          -0.9780919179350095,
+          -0.2059237102888074,
+          0.030522542671048307,
+          1.8251007331692932
+        ],
+        [
+          -4.288055211002188e-08,
+          0.14662090171489733,
+          0.9891927573432333,
+          0.04284081508448874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_left_middle_proximal",
+      "bones": [
+        "limb_left_middle_proximal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -3.5,
+        2.404325,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          0.2425106759307396,
+          0.7143380577915307,
+          0.6564371342712412,
+          -0.8769424524651327
+        ],
+        [
+          -0.9701487370808745,
+          0.17856499587818825,
+          0.16409134708267475,
+          0.9821577394930835
+        ],
+        [
+          -6.047396598052912e-17,
+          -0.6766355602816382,
+          0.7363180824632474,
+          0.09236384934269062
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_left_middle_distal",
+      "bones": [
+        "limb_left_middle_distal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -3.5,
+        -13.69135,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          0.4872613908949348,
+          0.8727433557266868,
+          0.029922766885017774,
+          -1.6747546775791917
+        ],
+        [
+          -0.8732561691411824,
+          0.48697524999960784,
+          0.01669637519600688,
+          0.648319853680395
+        ],
+        [
+          3.6325233304728565e-09,
+          -0.03426573978102527,
+          0.9994127571115244,
+          0.4518605685758939
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_left_lower_proximal",
+      "bones": [
+        "limb_left_lower_proximal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -3.5,
+        -6.62865,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          0.3866211472293161,
+          0.5232982365217418,
+          0.7593964999710775,
+          -0.6415580320439717
+        ],
+        [
+          -0.9222386288347977,
+          0.2193772394924866,
+          0.318354422425021,
+          0.3871358512418735
+        ],
+        [
+          -2.2141685268408332e-17,
+          -0.8234273388987587,
+          0.5674217281300644,
+          0.142602435555626
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_left_lower_distal",
+      "bones": [
+        "limb_left_lower_distal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -3.5,
+        -22.2573,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          0.6945200230786125,
+          0.2080610706616506,
+          0.6887325521695714,
+          -0.9950922606273961
+        ],
+        [
+          -0.7194733751452403,
+          0.2008449459972378,
+          0.6648453730939873,
+          0.18211636711485724
+        ],
+        [
+          -1.209665768141409e-08,
+          -0.9572731577467815,
+          0.2891852372744944,
+          1.0138414499846427
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_right_upper_proximal",
+      "bones": [
+        "limb_right_upper_proximal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -12.5,
+        10.97898,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          0.8841999735661734,
+          -0.4667428163923265,
+          0.018481073879445586,
+          0.174414571371023
+        ],
+        [
+          0.4671085599146932,
+          0.883507649681405,
+          -0.03498322753636665,
+          1.2720997032060952
+        ],
+        [
+          -1.4085523977172037e-17,
+          0.0395648366684197,
+          0.9992170053093579,
+          -0.27230719893015926
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_right_upper_distal",
+      "bones": [
+        "limb_right_upper_distal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -12.5,
+        -6.04204,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          0.9510267396357123,
+          0.2663520771523163,
+          -0.15685889039042106,
+          0.3043945503905841
+        ],
+        [
+          -0.3091086224903207,
+          0.8194786475664227,
+          -0.4826039843234236,
+          0.3642266183023247
+        ],
+        [
+          -6.23106157325795e-08,
+          0.5074557292802531,
+          0.8616778300621658,
+          -0.548342262500445
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_right_middle_proximal",
+      "bones": [
+        "limb_right_middle_proximal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -12.5,
+        1.5045549999999999,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          0.8829244852043602,
+          -0.45283338895308173,
+          -0.12404142564434924,
+          0.2892959854790396
+        ],
+        [
+          0.4695150193834225,
+          0.8515546261966123,
+          0.23326029489935174,
+          0.7107012761130086
+        ],
+        [
+          -9.986507500361486e-18,
+          -0.26419053815838134,
+          0.9644705073498022,
+          -0.10146803402974246
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_right_middle_distal",
+      "bones": [
+        "limb_right_middle_distal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -12.5,
+        -15.49089,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          0.1139917645859334,
+          -0.8118090037206857,
+          -0.5726884136112873,
+          0.9497903526200735
+        ],
+        [
+          0.9934816946509789,
+          0.09314673844720026,
+          0.06571002594785848,
+          0.18537085661145938
+        ],
+        [
+          6.717520123204898e-08,
+          -0.5764458574703063,
+          0.8171353458303704,
+          0.33528686067566826
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_right_lower_proximal",
+      "bones": [
+        "limb_right_lower_proximal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -12.5,
+        -6.0,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          -0.2543756054351086,
+          -0.9593931995831706,
+          0.12189232934474854,
+          0.5778882114390304
+        ],
+        [
+          0.9671055016695551,
+          -0.25234705580000083,
+          0.03206106781673613,
+          0.7190850253677609
+        ],
+        [
+          -1.5264009732015496e-16,
+          0.126038295857402,
+          0.9920253766801341,
+          -0.3051417544376134
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "limb_right_lower_distal",
+      "bones": [
+        "limb_right_lower_distal"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -12.5,
+        -21.0,
+        -4.0
+      ],
+      "display_matrix": [
+        [
+          -0.31542777379291786,
+          -0.8165089541103894,
+          0.4835477715568567,
+          1.4058772133118622
+        ],
+        [
+          0.9489495874492193,
+          -0.2714049347470892,
+          0.1607297168381891,
+          0.9651893296538058
+        ],
+        [
+          -1.6035197128645503e-09,
+          0.5095610750955046,
+          0.8604344895153341,
+          -0.6150640464229791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "inner_body",
+      "bones": [
+        "inner_body"
+      ],
+      "elements": 1,
+      "glow_elements": 0,
+      "offset": [
+        -8.0,
+        -9.25,
+        -5.1
+      ],
+      "display_matrix": [
+        [
+          0.9902680687415704,
+          -0.13917310096006544,
+          -1.1918178465157993e-18,
+          0.02934639453676037
+        ],
+        [
+          0.13917310096006544,
+          0.9902680687415704,
+          1.7043789261815557e-17,
+          -0.07410731709334843
+        ],
+        [
+          -1.1918178465157993e-18,
+          -1.7043789261815557e-17,
+          1.0,
+          -0.18125000000000002
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "inner_head",
+      "bones": [
+        "inner_head"
+      ],
+      "elements": 3,
+      "glow_elements": 0,
+      "offset": [
+        -8.0,
+        -4.65,
+        -5.45
+      ],
+      "display_matrix": [
+        [
+          0.9781476007338057,
+          -0.20791169081775931,
+          -2.6761470815034764e-18,
+          -0.024198781867491925
+        ],
+        [
+          0.20791169081775931,
+          0.9781476007338057,
+          2.546183866652831e-17,
+          0.20820853553082436
+        ],
+        [
+          -2.6761470815034764e-18,
+          -2.546183866652831e-17,
+          1.0,
+          -0.159375
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "inner_arm_left",
+      "bones": [
+        "inner_arm_left"
+      ],
+      "elements": 1,
+      "glow_elements": 0,
+      "offset": [
+        -6.45,
+        -9.4,
+        -5.1
+      ],
+      "display_matrix": [
+        [
+          0.9271838545667875,
+          -0.3709609477998339,
+          -0.05213516124577892,
+          -0.04789698828809599
+        ],
+        [
+          0.37460659341591207,
+          0.9181605650302177,
+          0.12903905220016618,
+          -0.09146541161495556
+        ],
+        [
+          -7.725588096587385e-18,
+          -0.1391731009600655,
+          0.9902680687415704,
+          -0.17081201742799512
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "inner_leg_left",
+      "bones": [
+        "inner_leg_left"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -7.28,
+        -11.55,
+        -5.4
+      ],
+      "display_matrix": [
+        [
+          0.9998476951563912,
+          -0.01718726516815699,
+          0.003030578573736885,
+          -0.0023956209454878722
+        ],
+        [
+          0.017452406437283526,
+          0.9846577620214009,
+          -0.17362173020838784,
+          -0.22564343699804937
+        ],
+        [
+          1.8418617006235358e-18,
+          0.17364817766693033,
+          0.984807753012208,
+          -0.17309521517999507
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "inner_arm_right",
+      "bones": [
+        "inner_arm_right"
+      ],
+      "elements": 1,
+      "glow_elements": 0,
+      "offset": [
+        -9.55,
+        -9.4,
+        -5.1
+      ],
+      "display_matrix": [
+        [
+          0.9945218953682734,
+          0.1035111994485834,
+          0.01454755037154963,
+          0.10838203898695199
+        ],
+        [
+          -0.10452846326765351,
+          0.9848432766475462,
+          0.13841069615108434,
+          -0.06950182667524253
+        ],
+        [
+          5.209435162519687e-19,
+          -0.13917310096006544,
+          0.9902680687415704,
+          -0.17081201742799512
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "part": "inner_leg_right",
+      "bones": [
+        "inner_leg_right"
+      ],
+      "elements": 2,
+      "glow_elements": 0,
+      "offset": [
+        -8.72,
+        -11.55,
+        -5.4
+      ],
+      "display_matrix": [
+        [
+          0.9659258262890683,
+          -0.2548870022441788,
+          0.044943455527547777,
+          0.10162779357302626
+        ],
+        [
+          0.25881904510252074,
+          0.9512512425641978,
+          -0.1677312594965206,
+          -0.21102389949302452
+        ],
+        [
+          -2.312369112322778e-18,
+          0.1736481776669303,
+          0.984807753012208,
+          -0.17309521517999507
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check": "single_embedded_texture",
+      "passed": true,
+      "severity": "error",
+      "detail": 1
+    },
+    {
+      "check": "embedded_png_data_uri",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "bbmodel_resolution_matches_embedded_png",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        512,
+        512
+      ]
+    },
+    {
+      "check": "region_manifest_atlas_size",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        512,
+        512
+      ]
+    },
+    {
+      "check": "embedded_atlas_matches_external_rgba",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "file": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\heart_of_ender_ref\\m2_atlas\\atlas.png",
+        "embedded_png_sha256": "0a9cbf8d364388e784a89745b68f86f198218d5a8ead7b12ce332d939967b79f"
+      }
+    },
+    {
+      "check": "atlas_region_bounds:stars_A",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        8,
+        8,
+        136,
+        136
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:stars_A",
+      "passed": true,
+      "severity": "error",
+      "detail": "8c82f0183345810176433329b6404be7bf974913d556528cc90a51eb2ed708eb"
+    },
+    {
+      "check": "source_region_bounds:stars_A",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        24,
+        24,
+        152,
+        152
+      ]
+    },
+    {
+      "check": "region_source_rgba_sha256:stars_A",
+      "passed": true,
+      "severity": "error",
+      "detail": "8c82f0183345810176433329b6404be7bf974913d556528cc90a51eb2ed708eb"
+    },
+    {
+      "check": "nearest_only:stars_A",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "source_copy_exact_rgba:stars_A",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "source_file": "MCD_Decal_Puddle_(texture).png",
+        "source_rect": [
+          24,
+          24,
+          152,
+          152
+        ],
+        "atlas_rect": [
+          8,
+          8,
+          136,
+          136
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "flip": [
+          false,
+          false
+        ],
+        "rgba_sha256": "8c82f0183345810176433329b6404be7bf974913d556528cc90a51eb2ed708eb"
+      }
+    },
+    {
+      "check": "star_window_is_crop_not_whole_texture:stars_A",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        24,
+        24,
+        152,
+        152
+      ]
+    },
+    {
+      "check": "atlas_region_bounds:stars_B",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        144,
+        8,
+        272,
+        136
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:stars_B",
+      "passed": true,
+      "severity": "error",
+      "detail": "8e90190ec4d2aa8c80cb2118f5d1bff62be76ffb4ab100e6787f54ee26251556"
+    },
+    {
+      "check": "source_region_bounds:stars_B",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        260,
+        32,
+        388,
+        160
+      ]
+    },
+    {
+      "check": "region_source_rgba_sha256:stars_B",
+      "passed": true,
+      "severity": "error",
+      "detail": "8e90190ec4d2aa8c80cb2118f5d1bff62be76ffb4ab100e6787f54ee26251556"
+    },
+    {
+      "check": "nearest_only:stars_B",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "source_copy_exact_rgba:stars_B",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "source_file": "MCD_Decal_Puddle_(texture).png",
+        "source_rect": [
+          260,
+          32,
+          388,
+          160
+        ],
+        "atlas_rect": [
+          144,
+          8,
+          272,
+          136
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "flip": [
+          false,
+          false
+        ],
+        "rgba_sha256": "8e90190ec4d2aa8c80cb2118f5d1bff62be76ffb4ab100e6787f54ee26251556"
+      }
+    },
+    {
+      "check": "star_window_is_crop_not_whole_texture:stars_B",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        260,
+        32,
+        388,
+        160
+      ]
+    },
+    {
+      "check": "atlas_region_bounds:stars_C",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        280,
+        8,
+        408,
+        136
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:stars_C",
+      "passed": true,
+      "severity": "error",
+      "detail": "62b41ea27826d78e97f7a854613cb4fe6b12b3ab6fa78e3d206f993826e04931"
+    },
+    {
+      "check": "source_region_bounds:stars_C",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        472,
+        112,
+        600,
+        240
+      ]
+    },
+    {
+      "check": "region_source_rgba_sha256:stars_C",
+      "passed": true,
+      "severity": "error",
+      "detail": "62b41ea27826d78e97f7a854613cb4fe6b12b3ab6fa78e3d206f993826e04931"
+    },
+    {
+      "check": "nearest_only:stars_C",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "source_copy_exact_rgba:stars_C",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "source_file": "MCD_Decal_Puddle_(texture).png",
+        "source_rect": [
+          472,
+          112,
+          600,
+          240
+        ],
+        "atlas_rect": [
+          280,
+          8,
+          408,
+          136
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "flip": [
+          false,
+          false
+        ],
+        "rgba_sha256": "62b41ea27826d78e97f7a854613cb4fe6b12b3ab6fa78e3d206f993826e04931"
+      }
+    },
+    {
+      "check": "star_window_is_crop_not_whole_texture:stars_C",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        472,
+        112,
+        600,
+        240
+      ]
+    },
+    {
+      "check": "atlas_region_bounds:stars_D",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        8,
+        144,
+        136,
+        272
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:stars_D",
+      "passed": true,
+      "severity": "error",
+      "detail": "82b785ccd4d9154cd4fe0d127804d1dc57ceffcf14db1cb6e8605e4283145687"
+    },
+    {
+      "check": "source_region_bounds:stars_D",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        72,
+        440,
+        200,
+        568
+      ]
+    },
+    {
+      "check": "region_source_rgba_sha256:stars_D",
+      "passed": true,
+      "severity": "error",
+      "detail": "82b785ccd4d9154cd4fe0d127804d1dc57ceffcf14db1cb6e8605e4283145687"
+    },
+    {
+      "check": "nearest_only:stars_D",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "source_copy_exact_rgba:stars_D",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "source_file": "MCD_Decal_Puddle_(texture).png",
+        "source_rect": [
+          72,
+          440,
+          200,
+          568
+        ],
+        "atlas_rect": [
+          8,
+          144,
+          136,
+          272
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "flip": [
+          false,
+          false
+        ],
+        "rgba_sha256": "82b785ccd4d9154cd4fe0d127804d1dc57ceffcf14db1cb6e8605e4283145687"
+      }
+    },
+    {
+      "check": "star_window_is_crop_not_whole_texture:stars_D",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        72,
+        440,
+        200,
+        568
+      ]
+    },
+    {
+      "check": "atlas_region_bounds:stars_E",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        144,
+        144,
+        272,
+        272
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:stars_E",
+      "passed": true,
+      "severity": "error",
+      "detail": "f4ab5a7cd0efc374735e43d5da18909b7dde5b2c30fd75d1025f74382c46012d"
+    },
+    {
+      "check": "source_region_bounds:stars_E",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        290,
+        346,
+        418,
+        474
+      ]
+    },
+    {
+      "check": "region_source_rgba_sha256:stars_E",
+      "passed": true,
+      "severity": "error",
+      "detail": "f4ab5a7cd0efc374735e43d5da18909b7dde5b2c30fd75d1025f74382c46012d"
+    },
+    {
+      "check": "nearest_only:stars_E",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "source_copy_exact_rgba:stars_E",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "source_file": "MCD_Decal_Puddle_(texture).png",
+        "source_rect": [
+          290,
+          346,
+          418,
+          474
+        ],
+        "atlas_rect": [
+          144,
+          144,
+          272,
+          272
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "flip": [
+          false,
+          false
+        ],
+        "rgba_sha256": "f4ab5a7cd0efc374735e43d5da18909b7dde5b2c30fd75d1025f74382c46012d"
+      }
+    },
+    {
+      "check": "star_window_is_crop_not_whole_texture:stars_E",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        290,
+        346,
+        418,
+        474
+      ]
+    },
+    {
+      "check": "atlas_region_bounds:stars_F",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        280,
+        144,
+        408,
+        272
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:stars_F",
+      "passed": true,
+      "severity": "error",
+      "detail": "2817f666f15f4d76ac0cb9d85068e231ece105d991159a7566c0df95acf49c0c"
+    },
+    {
+      "check": "source_region_bounds:stars_F",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        498,
+        478,
+        626,
+        606
+      ]
+    },
+    {
+      "check": "region_source_rgba_sha256:stars_F",
+      "passed": true,
+      "severity": "error",
+      "detail": "2817f666f15f4d76ac0cb9d85068e231ece105d991159a7566c0df95acf49c0c"
+    },
+    {
+      "check": "nearest_only:stars_F",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "source_copy_exact_rgba:stars_F",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "source_file": "MCD_Decal_Puddle_(texture).png",
+        "source_rect": [
+          498,
+          478,
+          626,
+          606
+        ],
+        "atlas_rect": [
+          280,
+          144,
+          408,
+          272
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "flip": [
+          false,
+          false
+        ],
+        "rgba_sha256": "2817f666f15f4d76ac0cb9d85068e231ece105d991159a7566c0df95acf49c0c"
+      }
+    },
+    {
+      "check": "star_window_is_crop_not_whole_texture:stars_F",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        498,
+        478,
+        626,
+        606
+      ]
+    },
+    {
+      "check": "atlas_region_bounds:arch_undressed",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        432,
+        8,
+        496,
+        72
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:arch_undressed",
+      "passed": true,
+      "severity": "error",
+      "detail": "236322b734df5d466999ac15047c0bdde2bcc1d0ae8712e89ad87e2b39123fbf"
+    },
+    {
+      "check": "source_region_bounds:arch_undressed",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        0,
+        0,
+        64,
+        64
+      ]
+    },
+    {
+      "check": "region_source_rgba_sha256:arch_undressed",
+      "passed": true,
+      "severity": "error",
+      "detail": "236322b734df5d466999ac15047c0bdde2bcc1d0ae8712e89ad87e2b39123fbf"
+    },
+    {
+      "check": "nearest_only:arch_undressed",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "source_copy_exact_rgba:arch_undressed",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "source_file": "T_ArchIllagerUndressed.png",
+        "source_rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "atlas_rect": [
+          432,
+          8,
+          496,
+          72
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "flip": [
+          false,
+          false
+        ],
+        "rgba_sha256": "236322b734df5d466999ac15047c0bdde2bcc1d0ae8712e89ad87e2b39123fbf"
+      }
+    },
+    {
+      "check": "required_full_original_rgba:T_ArchIllagerUndressed.png",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "atlas_region_bounds:glow_mask_raw",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        432,
+        88,
+        476,
+        132
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:glow_mask_raw",
+      "passed": true,
+      "severity": "error",
+      "detail": "167fddc8dbe352dd5969eb763a54c92cf6b54789cb5a35ed0eabfa4efdfcdada"
+    },
+    {
+      "check": "source_region_bounds:glow_mask_raw",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        0,
+        0,
+        44,
+        44
+      ]
+    },
+    {
+      "check": "region_source_rgba_sha256:glow_mask_raw",
+      "passed": true,
+      "severity": "error",
+      "detail": "167fddc8dbe352dd5969eb763a54c92cf6b54789cb5a35ed0eabfa4efdfcdada"
+    },
+    {
+      "check": "nearest_only:glow_mask_raw",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "source_copy_exact_rgba:glow_mask_raw",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "source_file": "MCD_Heart_of_Ender_(glow_effect_texture).png",
+        "source_rect": [
+          0,
+          0,
+          44,
+          44
+        ],
+        "atlas_rect": [
+          432,
+          88,
+          476,
+          132
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "flip": [
+          false,
+          false
+        ],
+        "rgba_sha256": "167fddc8dbe352dd5969eb763a54c92cf6b54789cb5a35ed0eabfa4efdfcdada"
+      }
+    },
+    {
+      "check": "required_full_original_rgba:MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "atlas_region_bounds:front_eyes",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        8,
+        288,
+        136,
+        448
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:front_eyes",
+      "passed": true,
+      "severity": "error",
+      "detail": "94ce4327b4fc45f800f919a170bc0d0fddf94a59cf8224780ec90104e4eebf62"
+    },
+    {
+      "check": "source_region_bounds:front_eyes",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        218,
+        211,
+        403,
+        440
+      ]
+    },
+    {
+      "check": "projection_provenance_registered:front_eyes",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_sampling_convention:front_eyes",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_matrix_matches_source_quad:front_eyes",
+      "passed": true,
+      "severity": "error",
+      "detail": 0.0
+    },
+    {
+      "check": "projection_discards_to_transparent:front_eyes",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_source_pixels_exact_rgba:front_eyes",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "retained_pixels": 967,
+        "total_pixels": 20480,
+        "independent_rgba_sha256": "94ce4327b4fc45f800f919a170bc0d0fddf94a59cf8224780ec90104e4eebf62",
+        "method": "按登记矩阵逐像素计算源坐标和最近邻；保留原RGBalpha，其余透明，不依赖生成器或缓存映射"
+      }
+    },
+    {
+      "check": "atlas_region_bounds:front_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        144,
+        288,
+        272,
+        448
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:front_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": "53ab7f386d10d433b8a20fa24771828f78dd561b3b32ad3684829f05338be477"
+    },
+    {
+      "check": "source_region_bounds:front_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        218,
+        211,
+        403,
+        440
+      ]
+    },
+    {
+      "check": "projection_provenance_registered:front_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_sampling_convention:front_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_matrix_matches_source_quad:front_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": 0.0
+    },
+    {
+      "check": "projection_discards_to_transparent:front_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_source_pixels_exact_rgba:front_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "retained_pixels": 463,
+        "total_pixels": 20480,
+        "independent_rgba_sha256": "53ab7f386d10d433b8a20fa24771828f78dd561b3b32ad3684829f05338be477",
+        "method": "按登记矩阵逐像素计算源坐标和最近邻；保留原RGBalpha，其余透明，不依赖生成器或缓存映射"
+      }
+    },
+    {
+      "check": "atlas_region_bounds:side_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        280,
+        288,
+        408,
+        448
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:side_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": "4258b9d31aeaca9e2a7af5f690c84e0c57623a3013890a3b677a1dd45a8f8ead"
+    },
+    {
+      "check": "source_region_bounds:side_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        348,
+        154,
+        531,
+        440
+      ]
+    },
+    {
+      "check": "projection_provenance_registered:side_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_sampling_convention:side_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_matrix_matches_source_quad:side_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": 0.0
+    },
+    {
+      "check": "projection_discards_to_transparent:side_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_source_pixels_exact_rgba:side_teeth",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "retained_pixels": 277,
+        "total_pixels": 20480,
+        "independent_rgba_sha256": "4258b9d31aeaca9e2a7af5f690c84e0c57623a3013890a3b677a1dd45a8f8ead",
+        "method": "按登记矩阵逐像素计算源坐标和最近邻；保留原RGBalpha，其余透明，不依赖生成器或缓存映射"
+      }
+    },
+    {
+      "check": "atlas_region_bounds:left_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        432,
+        160,
+        496,
+        184
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:left_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": "64b8cb443f0fcf8ee58fde5accd877f4ff7f43bdc47b1220bd6af40d32c833ca"
+    },
+    {
+      "check": "source_region_bounds:left_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        254,
+        297,
+        297,
+        330
+      ]
+    },
+    {
+      "check": "projection_provenance_registered:left_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_sampling_convention:left_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_matrix_matches_source_quad:left_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": 0.0
+    },
+    {
+      "check": "projection_discards_to_transparent:left_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_source_pixels_exact_rgba:left_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "retained_pixels": 1367,
+        "total_pixels": 1536,
+        "independent_rgba_sha256": "64b8cb443f0fcf8ee58fde5accd877f4ff7f43bdc47b1220bd6af40d32c833ca",
+        "method": "按登记矩阵逐像素计算源坐标和最近邻；保留原RGBalpha，其余透明，不依赖生成器或缓存映射"
+      }
+    },
+    {
+      "check": "atlas_region_bounds:right_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        432,
+        200,
+        496,
+        224
+      ]
+    },
+    {
+      "check": "region_output_rgba_sha256:right_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": "d979d46e2390726200df295eac8d69d629839ace416cc7f7a541abbf37448739"
+    },
+    {
+      "check": "source_region_bounds:right_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        325,
+        325,
+        367,
+        358
+      ]
+    },
+    {
+      "check": "projection_provenance_registered:right_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_sampling_convention:right_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_matrix_matches_source_quad:right_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": 0.0
+    },
+    {
+      "check": "projection_discards_to_transparent:right_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "projection_source_pixels_exact_rgba:right_eye_local",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "retained_pixels": 1296,
+        "total_pixels": 1536,
+        "independent_rgba_sha256": "d979d46e2390726200df295eac8d69d629839ace416cc7f7a541abbf37448739",
+        "method": "按登记矩阵逐像素计算源坐标和最近邻；保留原RGBalpha，其余透明，不依赖生成器或缓存映射"
+      }
+    },
+    {
+      "check": "unique_region_names",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "both_required_raw_textures_preserved",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        "MCD_Heart_of_Ender_(glow_effect_texture).png",
+        "T_ArchIllagerUndressed.png"
+      ]
+    },
+    {
+      "check": "multiple_original_star_windows_verified",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        {
+          "name": "stars_A",
+          "source_rect": [
+            24,
+            24,
+            152,
+            152
+          ],
+          "exact": true
+        },
+        {
+          "name": "stars_B",
+          "source_rect": [
+            260,
+            32,
+            388,
+            160
+          ],
+          "exact": true
+        },
+        {
+          "name": "stars_C",
+          "source_rect": [
+            472,
+            112,
+            600,
+            240
+          ],
+          "exact": true
+        },
+        {
+          "name": "stars_D",
+          "source_rect": [
+            72,
+            440,
+            200,
+            568
+          ],
+          "exact": true
+        },
+        {
+          "name": "stars_E",
+          "source_rect": [
+            290,
+            346,
+            418,
+            474
+          ],
+          "exact": true
+        },
+        {
+          "name": "stars_F",
+          "source_rect": [
+            498,
+            478,
+            626,
+            606
+          ],
+          "exact": true
+        }
+      ]
+    },
+    {
+      "check": "atlas_regions_do_not_overlap",
+      "passed": true,
+      "severity": "error",
+      "detail": []
+    },
+    {
+      "check": "static_transform_scale",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "math_scale": 1.0,
+        "status": "static_normalization_only_game_scale_undecided",
+        "note": "null仅用1.0进行归一化静态矩阵检查，不把它当作游戏体型决定"
+      }
+    },
+    {
+      "check": "m2_static_has_no_animations",
+      "passed": true,
+      "severity": "error",
+      "detail": 0
+    },
+    {
+      "check": "expected_display_part_count",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "actual": 21,
+        "expected": 21,
+        "glow_does_not_add_parts": true
+      }
+    },
+    {
+      "check": "unique_part_names",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "unique_group_uuids",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "unique_bone_names",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "unique_element_uuids",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "every_group_in_outliner_once",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "every_element_in_outliner_once",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:shell_root",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:shell_body",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:shell_head",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:shell_jaw",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_left_upper_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_left_upper_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_left_middle_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_left_middle_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_left_lower_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_left_lower_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_right_upper_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_right_upper_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_right_middle_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_right_middle_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_right_lower_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:limb_right_lower_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:inner_root",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:inner_body",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:inner_head",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:inner_arm_left",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:inner_leg_left",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:inner_arm_right",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:inner_leg_right",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:shell_eyes_glow",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:shell_teeth_front_glow",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "finite_bone_transform:shell_teeth_side_glow",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "only_cubes_without_ignored_element_rotations",
+      "passed": true,
+      "severity": "error",
+      "detail": []
+    },
+    {
+      "check": "finite_cube_coordinates",
+      "passed": true,
+      "severity": "error",
+      "detail": []
+    },
+    {
+      "check": "all_nonnull_faces_use_registered_single_atlas_regions",
+      "passed": true,
+      "severity": "error",
+      "detail": []
+    },
+    {
+      "check": "configured_bones_exist",
+      "passed": true,
+      "severity": "error",
+      "detail": []
+    },
+    {
+      "check": "each_rendered_bone_owned_by_one_part",
+      "passed": true,
+      "severity": "error",
+      "detail": []
+    },
+    {
+      "check": "all_geometry_bones_assigned_to_parts",
+      "passed": true,
+      "severity": "error",
+      "detail": []
+    },
+    {
+      "check": "explicit_nonempty_glow_bones",
+      "passed": true,
+      "severity": "error",
+      "detail": [
+        "shell_eyes_glow",
+        "shell_teeth_front_glow",
+        "shell_teeth_side_glow"
+      ]
+    },
+    {
+      "check": "glow_bones_rigidly_merged_no_extra_display",
+      "passed": true,
+      "severity": "error",
+      "detail": []
+    },
+    {
+      "check": "pipeline_part_bounds:shell_body",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": -7.75,
+        "max": 23.75,
+        "offset": [
+          -8.0,
+          6.25,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:shell_body",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:shell_body",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:shell_head",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 1.7907,
+        "max": 14.2093,
+        "offset": [
+          -8.0,
+          24.0,
+          -12.598745000000001
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:shell_head",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "check": "finite_display_matrix:shell_head",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:shell_jaw",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 1.7907,
+        "max": 14.2093,
+        "offset": [
+          -8.004,
+          17.061355,
+          -12.598745000000001
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:shell_jaw",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 2,
+        "actual": 2
+      }
+    },
+    {
+      "check": "finite_display_matrix:shell_jaw",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_left_upper_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 1.0,
+        "max": 15.0,
+        "offset": [
+          -3.5,
+          13.0,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_left_upper_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_left_upper_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_left_upper_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 0.0,
+        "max": 16.0,
+        "offset": [
+          -3.5,
+          -2.0,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_left_upper_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_left_upper_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_left_middle_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": -0.0957,
+        "max": 16.0957,
+        "offset": [
+          -3.5,
+          2.404325,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_left_middle_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_left_middle_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_left_middle_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 0.0,
+        "max": 16.0,
+        "offset": [
+          -3.5,
+          -13.69135,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_left_middle_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_left_middle_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_left_lower_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 0.3714,
+        "max": 15.6287,
+        "offset": [
+          -3.5,
+          -6.62865,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_left_lower_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_left_lower_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_left_lower_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 0.0,
+        "max": 16.0,
+        "offset": [
+          -3.5,
+          -22.2573,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_left_lower_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_left_lower_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_right_upper_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": -1.021,
+        "max": 17.021,
+        "offset": [
+          -12.5,
+          10.97898,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_right_upper_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_right_upper_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_right_upper_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 0.0,
+        "max": 16.0,
+        "offset": [
+          -12.5,
+          -6.04204,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_right_upper_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_right_upper_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_right_middle_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": -0.9954,
+        "max": 16.9954,
+        "offset": [
+          -12.5,
+          1.5045549999999999,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_right_middle_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_right_middle_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_right_middle_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 0.0,
+        "max": 16.0,
+        "offset": [
+          -12.5,
+          -15.49089,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_right_middle_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_right_middle_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_right_lower_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 1.0,
+        "max": 15.0,
+        "offset": [
+          -12.5,
+          -6.0,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_right_lower_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_right_lower_proximal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:limb_right_lower_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 0.0,
+        "max": 16.0,
+        "offset": [
+          -12.5,
+          -21.0,
+          -4.0
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:limb_right_lower_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:limb_right_lower_distal",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:inner_body",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 6.45,
+        "max": 9.55,
+        "offset": [
+          -8.0,
+          -9.25,
+          -5.1
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:inner_body",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:inner_body",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:inner_head",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 4.85,
+        "max": 11.15,
+        "offset": [
+          -8.0,
+          -4.65,
+          -5.45
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:inner_head",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:inner_head",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:inner_arm_left",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 6.8,
+        "max": 9.2,
+        "offset": [
+          -6.45,
+          -9.4,
+          -5.1
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:inner_arm_left",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:inner_arm_left",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:inner_leg_left",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 7.05,
+        "max": 8.95,
+        "offset": [
+          -7.28,
+          -11.55,
+          -5.4
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:inner_leg_left",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:inner_leg_left",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:inner_arm_right",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 6.8,
+        "max": 9.2,
+        "offset": [
+          -9.55,
+          -9.4,
+          -5.1
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:inner_arm_right",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:inner_arm_right",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "pipeline_part_bounds:inner_leg_right",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "min": 7.05,
+        "max": 8.95,
+        "offset": [
+          -8.72,
+          -11.55,
+          -5.4
+        ]
+      }
+    },
+    {
+      "check": "pipeline_glow_elements:inner_leg_right",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "check": "finite_display_matrix:inner_leg_right",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "face_mapping_declared_bbmodel_hash",
+      "passed": true,
+      "severity": "error",
+      "detail": "8b4738fdd60f8bab39d16716e5414c0b34ee23219a9c8d33b6906f7fc81942ed"
+    },
+    {
+      "check": "unique_element_names_for_mapping",
+      "passed": true,
+      "severity": "error",
+      "detail": null
+    },
+    {
+      "check": "face_mapping_exact_coverage",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "actual_nonnull_faces": 261,
+        "mapped_faces": 261,
+        "missing": [],
+        "extra": [],
+        "duplicate": []
+      }
+    },
+    {
+      "check": "face_mapping_matches_actual_bbmodel",
+      "passed": true,
+      "severity": "error",
+      "detail": {
+        "bbmodel_sha256": "8b4738fdd60f8bab39d16716e5414c0b34ee23219a9c8d33b6906f7fc81942ed",
+        "mapping_sha256": "e382907195103ecfa3e8b83bf52fab326e4a88338871b4dba6f1a19c96d14300",
+        "matched_faces": 261,
+        "differences": [],
+        "scope": "按实际元素name/UUID、outliner归属骨、导出UV及登记源区域核对；不从生成前document推定"
+      }
+    }
+  ],
+  "summary": {
+    "checks": 215,
+    "errors": 0,
+    "warnings": 0,
+    "parts_checked": 21
+  },
+  "passed": true
+}

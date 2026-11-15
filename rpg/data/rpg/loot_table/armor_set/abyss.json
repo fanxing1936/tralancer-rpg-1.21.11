@@ -1,0 +1,794 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:turtle_helmet",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "渊海之盔",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "沉入",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[深渊]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "的甲胄",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "至今仍听得见",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[潮声]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[鳃息]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "水下憋气时间延长，等同水下呼吸 III",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［渊海之主］",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "身处水中时获得潮涌能量与海豚的恩惠",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:tide",
+                  "material": "minecraft:lapis"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 3,
+                  "minecraft:aqua_affinity": 1
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 3.5,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/abyss/head/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/abyss/head/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/abyss/head/2"
+                  },
+                  {
+                    "type": "minecraft:oxygen_bonus",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/abyss/head/3"
+                  }
+                ],
+                "minecraft:max_damage": 407
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"abyss\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "渊海之铠",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "沉入",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[深渊]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "的甲胄",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "至今仍听得见",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[潮声]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[潮涌]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "生命上限 +20%",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［渊海之主］",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "身处水中时获得潮涌能量与海豚的恩惠",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:tide",
+                  "material": "minecraft:lapis"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 3,
+                  "minecraft:blast_protection": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 9,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/abyss/chest/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 4,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/abyss/chest/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/abyss/chest/2"
+                  },
+                  {
+                    "type": "minecraft:max_health",
+                    "amount": 0.2,
+                    "operation": "add_multiplied_base",
+                    "slot": "chest",
+                    "id": "rpg:armor/abyss/chest/3"
+                  }
+                ],
+                "minecraft:max_damage": 592
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"abyss\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_leggings",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "渊海之胫",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "沉入",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[深渊]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "的甲胄",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "至今仍听得见",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[潮声]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[逆流]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "水中移动效率 +50%",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［渊海之主］",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "身处水中时获得潮涌能量与海豚的恩惠",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:coast",
+                  "material": "minecraft:diamond"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 3,
+                  "minecraft:projectile_protection": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 6,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/abyss/legs/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/abyss/legs/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.1,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/abyss/legs/2"
+                  },
+                  {
+                    "type": "minecraft:water_movement_efficiency",
+                    "amount": 0.5,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/abyss/legs/3"
+                  }
+                ],
+                "minecraft:max_damage": 555
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"abyss\"}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_boots",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[传说]",
+                    "color": "#FFAA00",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "渊海之履",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "沉入",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[深渊]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "的甲胄",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "至今仍听得见",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[潮声]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🛡被动技能",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[踏浪]",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "击退抗性 +0.2，爆炸击退抗性 +50%",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［渊海之主］",
+                      "color": "#FFAA00",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "身处水中时获得潮涌能量与海豚的恩惠",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:coast",
+                  "material": "minecraft:lapis"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 3,
+                  "minecraft:feather_falling": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 3.5,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/abyss/feet/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/abyss/feet/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.3,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/abyss/feet/2"
+                  },
+                  {
+                    "type": "minecraft:explosion_knockback_resistance",
+                    "amount": 0.5,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/abyss/feet/3"
+                  }
+                ],
+                "minecraft:dyed_color": 1789810,
+                "minecraft:max_damage": 481
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"abyss\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "snapshot": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_pope_m4_qa_20261105\\build_1793849708556716200",
+  "steps": [
+    {
+      "name": "rp_build",
+      "command": [
+        "C:\\Program Files\\Git\\bin\\bash.exe",
+        "_tools/rp_build.sh"
+      ],
+      "cwd": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_pope_m4_qa_20261105\\build_1793849708556716200",
+      "exit_code": 0,
+      "seconds": 17.12,
+      "log": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\pope_ref\\m4\\build\\rp_build.log",
+      "log_sha256": "d476c000ea91bc4c70e6a75e3875fcee8da965bf06e7e5dcb7297d93968ea28d",
+      "error": null
+    },
+    {
+      "name": "build",
+      "command": [
+        "C:\\Program Files\\Git\\bin\\bash.exe",
+        "_tools/build.sh"
+      ],
+      "cwd": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_pope_m4_qa_20261105\\build_1793849708556716200",
+      "exit_code": 0,
+      "seconds": 77.84,
+      "log": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\pope_ref\\m4\\build\\build.log",
+      "log_sha256": "efd91f1a2a89ae0f067379778f20908c01064d1743499d038bf91cb64f00914f",
+      "error": null
+    },
+    {
+      "name": "rp_validate",
+      "command": [
+        "C:\\Users\\zhaoy\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "_tools/rp_validate.py",
+        "resourcepack"
+      ],
+      "cwd": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_pope_m4_qa_20261105\\build_1793849708556716200",
+      "exit_code": 0,
+      "seconds": 1.11,
+      "log": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\pope_ref\\m4\\build\\rp_validate.log",
+      "log_sha256": "7fa0d7b91e7681322ab066ce4636e877adc56b00e2ec71991f8eb8f2794eb94f",
+      "error": null
+    }
+  ],
+  "all_passed": true,
+  "workspace_build_performed": false,
+  "client_sync_performed": false
+}

@@ -13,6 +13,6 @@ execute positioned ^ ^ ^11 run summon minecraft:evoker_fangs ~ ~ ~ {Warmup:20,Ta
 execute positioned ^ ^ ^12 run summon minecraft:evoker_fangs ~ ~ ~ {Warmup:22,Tags:["rpg.luci.fang"]}
 
 # 认主：不设 Owner 的尖牙会连施法者一起咬
-execute as @e[tag=rpg.luci.fang] run data modify entity @s Owner set from entity @a[tag=rpg.luci.cast,limit=1,sort=nearest] UUID
-tag @e[tag=rpg.luci.fang] remove rpg.luci.fang
+execute as @e[type=minecraft:evoker_fangs,tag=rpg.luci.fang] run data modify entity @s Owner set from entity @a[tag=rpg.luci.cast,limit=1,sort=nearest] UUID
+tag @e[type=minecraft:evoker_fangs,tag=rpg.luci.fang] remove rpg.luci.fang
 playsound minecraft:entity.evoker_fangs.attack hostile @a[distance=..24] ~ ~ ~ 1 0.6

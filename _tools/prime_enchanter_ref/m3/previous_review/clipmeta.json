@@ -1,0 +1,1241 @@
+{
+  "project": {
+    "uuid": "1b6323e3-36f2-a540-1af9-f4c5028e9260",
+    "version": "5.2.2"
+  },
+  "model_sha256": "5992090efd9e203f9ef77a3517bcada13c3d2d047e27b0461453bfaa68f45223",
+  "accepted_m2_sha256": "9ba6a1c3c06e6bb3cf46b078ea81c3a4c5688e7201b5c82b12d58824c8e4d40d",
+  "clips": [
+    {
+      "id": 0,
+      "name": "idle",
+      "source": "idle",
+      "gif": "MCD2_Prime_Enchanter_Idle.gif",
+      "source_duration_ms": 1000,
+      "length": 1.0,
+      "ticks": 20,
+      "loop": true,
+      "source_sha256": "95d51d22d2f3d9ff208394fdab9f365c11ac82d09173c2c80c00356b7fd8dc87",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/idle/0000.png",
+          "pose": "双拳抬至胸脸前，重心平稳，披风沿背下垂"
+        },
+        {
+          "frame": 4,
+          "start_ms": 170,
+          "nearest_tick": 3,
+          "image": "frames/idle/0004.png",
+          "pose": "头与肩一同轻抬，拳位随之略升"
+        },
+        {
+          "frame": 9,
+          "start_ms": 380,
+          "nearest_tick": 8,
+          "image": "frames/idle/0009.png",
+          "pose": "披风靠近背后，头身回落"
+        },
+        {
+          "frame": 14,
+          "start_ms": 580,
+          "nearest_tick": 12,
+          "image": "frames/idle/0014.png",
+          "pose": "披风下段向后分开，拳架基本保持"
+        },
+        {
+          "frame": 19,
+          "start_ms": 790,
+          "nearest_tick": 16,
+          "image": "frames/idle/0019.png",
+          "pose": "肩与前臂回到起势附近"
+        },
+        {
+          "frame": 23,
+          "start_ms": 960,
+          "nearest_tick": 19,
+          "image": "frames/idle/0023.png",
+          "pose": "最后一帧仍维持拳架，循环接回首姿"
+        }
+      ],
+      "cues": [],
+      "authored_source_frames": [
+        0,
+        4,
+        9,
+        14,
+        19,
+        23
+      ],
+      "track_keys": 63
+    },
+    {
+      "id": 1,
+      "name": "walk",
+      "source": "walk",
+      "gif": "MCD2_Prime_Enchanter_Walk.gif",
+      "source_duration_ms": 920,
+      "length": 0.9,
+      "ticks": 18,
+      "loop": true,
+      "source_sha256": "8f20ee79f8bf97021d9dfefd29704cd7b97a2fe785b1e239239a81bdb7888fd8",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/walk/0000.png",
+          "pose": "侧视方向朝左，躯干略前倾，一腿前摆"
+        },
+        {
+          "frame": 4,
+          "start_ms": 170,
+          "nearest_tick": 3,
+          "image": "frames/walk/0004.png",
+          "pose": "前腿回收，反侧臂在肩下回摆"
+        },
+        {
+          "frame": 8,
+          "start_ms": 330,
+          "nearest_tick": 7,
+          "image": "frames/walk/0008.png",
+          "pose": "腿在身体下交会，披风向后拖曳"
+        },
+        {
+          "frame": 12,
+          "start_ms": 500,
+          "nearest_tick": 10,
+          "image": "frames/walk/0012.png",
+          "pose": "前后腿交换并张开，反相摆臂"
+        },
+        {
+          "frame": 16,
+          "start_ms": 670,
+          "nearest_tick": 13,
+          "image": "frames/walk/0016.png",
+          "pose": "张步缩回，膝脚向下接近中位"
+        },
+        {
+          "frame": 21,
+          "start_ms": 880,
+          "nearest_tick": 18,
+          "image": "frames/walk/0021.png",
+          "pose": "回到与首帧相近的跨步相位"
+        }
+      ],
+      "cues": [],
+      "authored_source_frames": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        19,
+        21
+      ],
+      "track_keys": 104
+    },
+    {
+      "id": 2,
+      "name": "appear",
+      "source": "spawn",
+      "gif": "MCD2_Prime_Enchanter_Spawn.gif",
+      "source_duration_ms": 2370,
+      "length": 2.35,
+      "ticks": 47,
+      "loop": false,
+      "source_sha256": "03b0a879b4e3706f4098f887c136102eeab77a1d4f8bf7599e9665f42cc89161",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/spawn/0000.png",
+          "pose": "空帧，模型还未进入 GIF 可见范围"
+        },
+        {
+          "frame": 6,
+          "start_ms": 250,
+          "nearest_tick": 5,
+          "image": "frames/spawn/0006.png",
+          "pose": "首帧可见，从上方低头折体下坠，披风近竖直"
+        },
+        {
+          "frame": 7,
+          "start_ms": 290,
+          "nearest_tick": 6,
+          "image": "frames/spawn/0007.png",
+          "pose": "双拳朝下进入最低伏姿候选，披风仍上翘"
+        },
+        {
+          "frame": 10,
+          "start_ms": 420,
+          "nearest_tick": 8,
+          "image": "frames/spawn/0010.png",
+          "pose": "低伏稳定，披风被甩至后方近水平"
+        },
+        {
+          "frame": 26,
+          "start_ms": 1080,
+          "nearest_tick": 22,
+          "image": "frames/spawn/0026.png",
+          "pose": "低头屈膝的保持段收尾"
+        },
+        {
+          "frame": 32,
+          "start_ms": 1330,
+          "nearest_tick": 27,
+          "image": "frames/spawn/0032.png",
+          "pose": "头肩与髋一起抬起，双拳先垂在身侧"
+        },
+        {
+          "frame": 38,
+          "start_ms": 1580,
+          "nearest_tick": 32,
+          "image": "frames/spawn/0038.png",
+          "pose": "双拳抬回前方，接近常态拳架"
+        },
+        {
+          "frame": 42,
+          "start_ms": 1750,
+          "nearest_tick": 35,
+          "image": "frames/spawn/0042.png",
+          "pose": "举拳后有一次短暂的不对称回摆"
+        },
+        {
+          "frame": 49,
+          "start_ms": 2040,
+          "nearest_tick": 41,
+          "image": "frames/spawn/0049.png",
+          "pose": "另一拳补回胸前"
+        },
+        {
+          "frame": 56,
+          "start_ms": 2330,
+          "nearest_tick": 47,
+          "image": "frames/spawn/0056.png",
+          "pose": "回归待机"
+        }
+      ],
+      "cues": [
+        {
+          "frame": 7,
+          "start_ms": 290,
+          "suggested_tick": 6,
+          "event": "landing",
+          "basis": "首次低伏落地候选"
+        }
+      ],
+      "authored_source_frames": [
+        0,
+        5,
+        6,
+        7,
+        10,
+        17,
+        26,
+        32,
+        38,
+        42,
+        49,
+        56
+      ],
+      "track_keys": 169
+    },
+    {
+      "id": 3,
+      "name": "death",
+      "source": "death",
+      "gif": "MCD2_Prime_Enchanter_Death.gif",
+      "source_duration_ms": 5710,
+      "length": 5.7,
+      "ticks": 114,
+      "loop": false,
+      "source_sha256": "b7deadb0695559874fd7a239a84506c91c85540cd66fafe1c931ef3f7795d7fd",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/death/0000.png",
+          "pose": "双臂较松，身体直立"
+        },
+        {
+          "frame": 5,
+          "start_ms": 210,
+          "nearest_tick": 4,
+          "image": "frames/death/0005.png",
+          "pose": "仰头挺胸，两臂向侧前弹开"
+        },
+        {
+          "frame": 22,
+          "start_ms": 920,
+          "nearest_tick": 18,
+          "image": "frames/death/0022.png",
+          "pose": "肩身前栽，双拳降低，跨腿站稳"
+        },
+        {
+          "frame": 34,
+          "start_ms": 1420,
+          "nearest_tick": 28,
+          "image": "frames/death/0034.png",
+          "pose": "上身反向仰起，腿收拢，披风向后"
+        },
+        {
+          "frame": 45,
+          "start_ms": 1880,
+          "nearest_tick": 38,
+          "image": "frames/death/0045.png",
+          "pose": "身体降低，屈腿的支撑姿势保持"
+        },
+        {
+          "frame": 68,
+          "start_ms": 2830,
+          "nearest_tick": 57,
+          "image": "frames/death/0068.png",
+          "pose": "头胸俯至较低，双拳与披风向前后分开"
+        },
+        {
+          "frame": 80,
+          "start_ms": 3330,
+          "nearest_tick": 67,
+          "image": "frames/death/0080.png",
+          "pose": "头肩短暂恢复，髋仍低"
+        },
+        {
+          "frame": 103,
+          "start_ms": 4290,
+          "nearest_tick": 86,
+          "image": "frames/death/0103.png",
+          "pose": "一拳再次抬起，头仰起"
+        },
+        {
+          "frame": 110,
+          "start_ms": 4580,
+          "nearest_tick": 92,
+          "image": "frames/death/0110.png",
+          "pose": "向前失去支撑，身体开始转为水平"
+        },
+        {
+          "frame": 112,
+          "start_ms": 4670,
+          "nearest_tick": 93,
+          "image": "frames/death/0112.png",
+          "pose": "俯卧落定，双拳向两侧，两片披风搭在背上"
+        },
+        {
+          "frame": 136,
+          "start_ms": 5670,
+          "nearest_tick": 113,
+          "image": "frames/death/0136.png",
+          "pose": "末帧保持倒地"
+        }
+      ],
+      "cues": [
+        {
+          "frame": 112,
+          "start_ms": 4670,
+          "suggested_tick": 93,
+          "event": "fall",
+          "basis": "俯卧落定候选"
+        }
+      ],
+      "authored_source_frames": [
+        0,
+        5,
+        12,
+        22,
+        34,
+        45,
+        57,
+        68,
+        80,
+        92,
+        103,
+        110,
+        112,
+        119,
+        136
+      ],
+      "track_keys": 208
+    },
+    {
+      "id": 4,
+      "name": "forward_strike",
+      "source": "forward_strike",
+      "gif": "MCD2_Prime_Enchanter_Forward_Strike.gif",
+      "source_duration_ms": 2500,
+      "length": 2.5,
+      "ticks": 50,
+      "loop": false,
+      "source_sha256": "b173270bc7bfcf6909d1f93909df6d5a2b0736b4cd368249038f2bfab19e322e",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/forward_strike/0000.png",
+          "pose": "待机拳架"
+        },
+        {
+          "frame": 7,
+          "start_ms": 290,
+          "nearest_tick": 6,
+          "image": "frames/forward_strike/0007.png",
+          "pose": "近侧拳后撤，前腿开始屈抬"
+        },
+        {
+          "frame": 14,
+          "start_ms": 580,
+          "nearest_tick": 12,
+          "image": "frames/forward_strike/0014.png",
+          "pose": "身向前预载，披风折向后方"
+        },
+        {
+          "frame": 32,
+          "start_ms": 1330,
+          "nearest_tick": 27,
+          "image": "frames/forward_strike/0032.png",
+          "pose": "末段蓄势，仍处于短时间持姿"
+        },
+        {
+          "frame": 34,
+          "start_ms": 1420,
+          "nearest_tick": 28,
+          "image": "frames/forward_strike/0034.png",
+          "pose": "抬拳并转胸，准备爆发"
+        },
+        {
+          "frame": 36,
+          "start_ms": 1500,
+          "nearest_tick": 30,
+          "image": "frames/forward_strike/0036.png",
+          "pose": "右拳向前最大伸展，腿打开，披风被甩起"
+        },
+        {
+          "frame": 39,
+          "start_ms": 1630,
+          "nearest_tick": 33,
+          "image": "frames/forward_strike/0039.png",
+          "pose": "肩胯保持在冲拳端势，披风端继续滞后摆动"
+        },
+        {
+          "frame": 50,
+          "start_ms": 2080,
+          "nearest_tick": 42,
+          "image": "frames/forward_strike/0050.png",
+          "pose": "冲拳保持结束，准备收回"
+        },
+        {
+          "frame": 55,
+          "start_ms": 2290,
+          "nearest_tick": 46,
+          "image": "frames/forward_strike/0055.png",
+          "pose": "胸与拳回转，披风反摆"
+        },
+        {
+          "frame": 59,
+          "start_ms": 2460,
+          "nearest_tick": 49,
+          "image": "frames/forward_strike/0059.png",
+          "pose": "归待机拳架"
+        }
+      ],
+      "cues": [
+        {
+          "frame": 36,
+          "start_ms": 1500,
+          "suggested_tick": 30,
+          "event": "strike",
+          "basis": "右拳最大前伸"
+        }
+      ],
+      "authored_source_frames": [
+        0,
+        7,
+        14,
+        25,
+        32,
+        34,
+        35,
+        36,
+        39,
+        43,
+        50,
+        55,
+        59
+      ],
+      "track_keys": 182
+    },
+    {
+      "id": 5,
+      "name": "fury_fist",
+      "source": "fury_fist",
+      "gif": "MCD2_Prime_Enchanter_Fury_Fist.gif",
+      "source_duration_ms": 6920,
+      "length": 6.9,
+      "ticks": 138,
+      "loop": false,
+      "source_sha256": "b7ec9f12f4a6b17b7b5cfb21368dc321951c338092d5781960a52c5ec3316cf3",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/fury_fist/0000.png",
+          "pose": "起手为待机拳架"
+        },
+        {
+          "frame": 13,
+          "start_ms": 540,
+          "nearest_tick": 11,
+          "image": "frames/fury_fist/0013.png",
+          "pose": "拳在身前平伸，身体换重"
+        },
+        {
+          "frame": 18,
+          "start_ms": 750,
+          "nearest_tick": 15,
+          "image": "frames/fury_fist/0018.png",
+          "pose": "第一串中向前的拳达到伸出轮廓"
+        },
+        {
+          "frame": 27,
+          "start_ms": 1130,
+          "nearest_tick": 23,
+          "image": "frames/fury_fist/0027.png",
+          "pose": "收拳并交叠于胸前，脚步仍开"
+        },
+        {
+          "frame": 33,
+          "start_ms": 1380,
+          "nearest_tick": 28,
+          "image": "frames/fury_fist/0033.png",
+          "pose": "再一次转体向前出拳，披风向侧后甩开"
+        },
+        {
+          "frame": 47,
+          "start_ms": 1960,
+          "nearest_tick": 39,
+          "image": "frames/fury_fist/0047.png",
+          "pose": "两拳靠近头胸，身体短暂低伏"
+        },
+        {
+          "frame": 53,
+          "start_ms": 2210,
+          "nearest_tick": 44,
+          "image": "frames/fury_fist/0053.png",
+          "pose": "拳放下，短暂停顿开始"
+        },
+        {
+          "frame": 76,
+          "start_ms": 3170,
+          "nearest_tick": 63,
+          "image": "frames/fury_fist/0076.png",
+          "pose": "重新举起拳架，准备第二串"
+        },
+        {
+          "frame": 90,
+          "start_ms": 3750,
+          "nearest_tick": 75,
+          "image": "frames/fury_fist/0090.png",
+          "pose": "第二串首次迅速向前伸拳"
+        },
+        {
+          "frame": 95,
+          "start_ms": 3960,
+          "nearest_tick": 79,
+          "image": "frames/fury_fist/0095.png",
+          "pose": "手臂在前方达到极端，远臂向侧展开"
+        },
+        {
+          "frame": 103,
+          "start_ms": 4290,
+          "nearest_tick": 86,
+          "image": "frames/fury_fist/0103.png",
+          "pose": "前拳回收，反侧拳高举，身体有扭转"
+        },
+        {
+          "frame": 108,
+          "start_ms": 4500,
+          "nearest_tick": 90,
+          "image": "frames/fury_fist/0108.png",
+          "pose": "再向前伸拳，披风和头巾带反甩"
+        },
+        {
+          "frame": 120,
+          "start_ms": 5000,
+          "nearest_tick": 100,
+          "image": "frames/fury_fist/0120.png",
+          "pose": "收拢下蹲后蓄力，头胸低"
+        },
+        {
+          "frame": 126,
+          "start_ms": 5250,
+          "nearest_tick": 105,
+          "image": "frames/fury_fist/0126.png",
+          "pose": "起跳达到高点，双拳在头侧，双腿向后收"
+        },
+        {
+          "frame": 130,
+          "start_ms": 5420,
+          "nearest_tick": 108,
+          "image": "frames/fury_fist/0130.png",
+          "pose": "开始急落，披风竖向上甩"
+        },
+        {
+          "frame": 132,
+          "start_ms": 5500,
+          "nearest_tick": 110,
+          "image": "frames/fury_fist/0132.png",
+          "pose": "双拳向下，进入地击的低伏姿势"
+        },
+        {
+          "frame": 145,
+          "start_ms": 6040,
+          "nearest_tick": 121,
+          "image": "frames/fury_fist/0145.png",
+          "pose": "低伏保持，披风贴近背面"
+        },
+        {
+          "frame": 159,
+          "start_ms": 6630,
+          "nearest_tick": 133,
+          "image": "frames/fury_fist/0159.png",
+          "pose": "先抬头与一拳，起身收势"
+        },
+        {
+          "frame": 165,
+          "start_ms": 6880,
+          "nearest_tick": 138,
+          "image": "frames/fury_fist/0165.png",
+          "pose": "回到待机首姿"
+        }
+      ],
+      "cues": [
+        {
+          "frame": 18,
+          "start_ms": 750,
+          "suggested_tick": 15,
+          "event": "first_forward_reach",
+          "basis": "第一串向前伸拳轮廓"
+        },
+        {
+          "frame": 33,
+          "start_ms": 1380,
+          "suggested_tick": 28,
+          "event": "first_turning_reach",
+          "basis": "第一串转身伸拳轮廓"
+        },
+        {
+          "frame": 90,
+          "start_ms": 3750,
+          "suggested_tick": 75,
+          "event": "second_first_reach",
+          "basis": "第二串首个迅速伸拳轮廓"
+        },
+        {
+          "frame": 95,
+          "start_ms": 3960,
+          "suggested_tick": 79,
+          "event": "second_wide_reach",
+          "basis": "第二串前臂拉开轮廓"
+        },
+        {
+          "frame": 108,
+          "start_ms": 4500,
+          "suggested_tick": 90,
+          "event": "second_turning_reach",
+          "basis": "第二串转身伸拳轮廓"
+        },
+        {
+          "frame": 132,
+          "start_ms": 5500,
+          "suggested_tick": 110,
+          "event": "slam",
+          "basis": "双拳落地候选"
+        }
+      ],
+      "authored_source_frames": [
+        0,
+        13,
+        17,
+        18,
+        21,
+        27,
+        31,
+        33,
+        39,
+        47,
+        53,
+        69,
+        76,
+        89,
+        90,
+        92,
+        95,
+        103,
+        106,
+        108,
+        114,
+        120,
+        123,
+        126,
+        129,
+        130,
+        131,
+        132,
+        134,
+        145,
+        152,
+        159,
+        165
+      ],
+      "track_keys": 442
+    },
+    {
+      "id": 6,
+      "name": "launch",
+      "source": "launch",
+      "gif": "MCD2_Prime_Enchanter_Launch.gif",
+      "source_duration_ms": 3960,
+      "length": 3.95,
+      "ticks": 79,
+      "loop": false,
+      "source_sha256": "e255564888cd5e5fa103d12019704ea2c9adbb1af4335e82fbb8bcf90e322fa8",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/launch/0000.png",
+          "pose": "起手为待机拳架"
+        },
+        {
+          "frame": 8,
+          "start_ms": 330,
+          "nearest_tick": 7,
+          "image": "frames/launch/0008.png",
+          "pose": "身体降低，腿收拢，前臂向脸前"
+        },
+        {
+          "frame": 23,
+          "start_ms": 960,
+          "nearest_tick": 19,
+          "image": "frames/launch/0023.png",
+          "pose": "低伏持势即将结束"
+        },
+        {
+          "frame": 26,
+          "start_ms": 1080,
+          "nearest_tick": 22,
+          "image": "frames/launch/0026.png",
+          "pose": "从上边界离开，双腿与躯干延展"
+        },
+        {
+          "frame": 27,
+          "start_ms": 1130,
+          "nearest_tick": 23,
+          "image": "frames/launch/0027.png",
+          "pose": "从此帧开始完全透明"
+        },
+        {
+          "frame": 52,
+          "start_ms": 2170,
+          "nearest_tick": 43,
+          "image": "frames/launch/0052.png",
+          "pose": "末个完全透明帧"
+        },
+        {
+          "frame": 53,
+          "start_ms": 2210,
+          "nearest_tick": 44,
+          "image": "frames/launch/0053.png",
+          "pose": "重新可见且已经进入低伏触地姿，披风竖起"
+        },
+        {
+          "frame": 57,
+          "start_ms": 2380,
+          "nearest_tick": 48,
+          "image": "frames/launch/0057.png",
+          "pose": "冲击后披风回摆，身体保持低伏"
+        },
+        {
+          "frame": 75,
+          "start_ms": 3130,
+          "nearest_tick": 63,
+          "image": "frames/launch/0075.png",
+          "pose": "身体进一步贴低，两臂朝地"
+        },
+        {
+          "frame": 83,
+          "start_ms": 3460,
+          "nearest_tick": 69,
+          "image": "frames/launch/0083.png",
+          "pose": "抬头肩，拳逐渐离地"
+        },
+        {
+          "frame": 94,
+          "start_ms": 3920,
+          "nearest_tick": 78,
+          "image": "frames/launch/0094.png",
+          "pose": "回到待机拳架"
+        }
+      ],
+      "cues": [
+        {
+          "frame": 27,
+          "start_ms": 1130,
+          "suggested_tick": 23,
+          "event": "off_frame_begin",
+          "basis": "源 GIF 从此完全透明"
+        },
+        {
+          "frame": 53,
+          "start_ms": 2210,
+          "suggested_tick": 44,
+          "event": "return_landing",
+          "basis": "首个回归可见帧，低伏触地"
+        }
+      ],
+      "authored_source_frames": [
+        0,
+        8,
+        23,
+        26,
+        27,
+        52,
+        53,
+        55,
+        57,
+        66,
+        75,
+        83,
+        89,
+        94
+      ],
+      "track_keys": 195
+    },
+    {
+      "id": 7,
+      "name": "lightning_slam",
+      "source": "lightning_slam",
+      "gif": "MCD2_Prime_Enchanter_Lightning_Slam.gif",
+      "source_duration_ms": 4420,
+      "length": 4.4,
+      "ticks": 88,
+      "loop": false,
+      "source_sha256": "bd0039e4712363b4abbe3bafb01131a74e77143c52c7b9e758661415fb2876ec",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/lightning_slam/0000.png",
+          "pose": "起手为待机拳架"
+        },
+        {
+          "frame": 13,
+          "start_ms": 540,
+          "nearest_tick": 11,
+          "image": "frames/lightning_slam/0013.png",
+          "pose": "腿打开，右臂侧伸，左拳保持在头侧"
+        },
+        {
+          "frame": 35,
+          "start_ms": 1460,
+          "nearest_tick": 29,
+          "image": "frames/lightning_slam/0035.png",
+          "pose": "延长蓄势姿，重量略移动"
+        },
+        {
+          "frame": 47,
+          "start_ms": 1960,
+          "nearest_tick": 39,
+          "image": "frames/lightning_slam/0047.png",
+          "pose": "迅速升空，双腿收起，拳靠近头"
+        },
+        {
+          "frame": 52,
+          "start_ms": 2170,
+          "nearest_tick": 43,
+          "image": "frames/lightning_slam/0052.png",
+          "pose": "接近跃升高点，身体直立，左拳保持头侧"
+        },
+        {
+          "frame": 56,
+          "start_ms": 2330,
+          "nearest_tick": 47,
+          "image": "frames/lightning_slam/0056.png",
+          "pose": "开始前旋，头肩与胸髋转向地面"
+        },
+        {
+          "frame": 61,
+          "start_ms": 2540,
+          "nearest_tick": 51,
+          "image": "frames/lightning_slam/0061.png",
+          "pose": "折体急落，披风和头巾带被甩直"
+        },
+        {
+          "frame": 64,
+          "start_ms": 2670,
+          "nearest_tick": 53,
+          "image": "frames/lightning_slam/0064.png",
+          "pose": "进入最低伏落点，拳朝地，披风仍竖立"
+        },
+        {
+          "frame": 68,
+          "start_ms": 2830,
+          "nearest_tick": 57,
+          "image": "frames/lightning_slam/0068.png",
+          "pose": "披风恢复为向后弯，身体仍低伏"
+        },
+        {
+          "frame": 88,
+          "start_ms": 3670,
+          "nearest_tick": 73,
+          "image": "frames/lightning_slam/0088.png",
+          "pose": "短暂再低头，作恢复前的反摆"
+        },
+        {
+          "frame": 97,
+          "start_ms": 4040,
+          "nearest_tick": 81,
+          "image": "frames/lightning_slam/0097.png",
+          "pose": "双拳离地，抬起躯干"
+        },
+        {
+          "frame": 105,
+          "start_ms": 4380,
+          "nearest_tick": 88,
+          "image": "frames/lightning_slam/0105.png",
+          "pose": "回待机"
+        }
+      ],
+      "cues": [
+        {
+          "frame": 47,
+          "start_ms": 1960,
+          "suggested_tick": 39,
+          "event": "jump",
+          "basis": "开始明显离地"
+        },
+        {
+          "frame": 64,
+          "start_ms": 2670,
+          "suggested_tick": 53,
+          "event": "slam",
+          "basis": "进入低伏着地端姿"
+        }
+      ],
+      "authored_source_frames": [
+        0,
+        7,
+        13,
+        22,
+        35,
+        44,
+        46,
+        47,
+        48,
+        52,
+        55,
+        56,
+        61,
+        63,
+        64,
+        68,
+        79,
+        88,
+        97,
+        105
+      ],
+      "track_keys": 273
+    },
+    {
+      "id": 8,
+      "name": "overcharge",
+      "source": "overcharge",
+      "gif": "MCD2_Prime_Enchanter_Overcharge.gif",
+      "source_duration_ms": 3580,
+      "length": 3.6,
+      "ticks": 72,
+      "loop": false,
+      "source_sha256": "c4985fc250bfd2ae550a252a43a9919b176905e85577e64926cdd1ac838453a2",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/overcharge/0000.png",
+          "pose": "起手为待机拳架"
+        },
+        {
+          "frame": 10,
+          "start_ms": 420,
+          "nearest_tick": 8,
+          "image": "frames/overcharge/0010.png",
+          "pose": "跨步降低肩身，左拳移到脸侧，右拳下探"
+        },
+        {
+          "frame": 28,
+          "start_ms": 1170,
+          "nearest_tick": 23,
+          "image": "frames/overcharge/0028.png",
+          "pose": "延续带有细微晃动的预载"
+        },
+        {
+          "frame": 39,
+          "start_ms": 1630,
+          "nearest_tick": 33,
+          "image": "frames/overcharge/0039.png",
+          "pose": "左拳抬到额侧，右臂向外压下"
+        },
+        {
+          "frame": 46,
+          "start_ms": 1920,
+          "nearest_tick": 38,
+          "image": "frames/overcharge/0046.png",
+          "pose": "单拳在头侧接近竖直，进入完整端势"
+        },
+        {
+          "frame": 60,
+          "start_ms": 2500,
+          "nearest_tick": 50,
+          "image": "frames/overcharge/0060.png",
+          "pose": "保持头侧举拳，腿仍分开"
+        },
+        {
+          "frame": 68,
+          "start_ms": 2830,
+          "nearest_tick": 57,
+          "image": "frames/overcharge/0068.png",
+          "pose": "持势即将结束"
+        },
+        {
+          "frame": 78,
+          "start_ms": 3250,
+          "nearest_tick": 65,
+          "image": "frames/overcharge/0078.png",
+          "pose": "左拳离开头侧，右拳抬回"
+        },
+        {
+          "frame": 85,
+          "start_ms": 3540,
+          "nearest_tick": 71,
+          "image": "frames/overcharge/0085.png",
+          "pose": "回到待机拳架"
+        }
+      ],
+      "cues": [
+        {
+          "frame": 46,
+          "start_ms": 1920,
+          "suggested_tick": 38,
+          "event": "charge_hold",
+          "basis": "完整举拳端势，实机电波发出时刻待确认"
+        }
+      ],
+      "authored_source_frames": [
+        0,
+        10,
+        28,
+        39,
+        46,
+        60,
+        68,
+        78,
+        85
+      ],
+      "track_keys": 130
+    },
+    {
+      "id": 9,
+      "name": "hurt",
+      "source": "staggered",
+      "gif": "MCD2_Prime_Enchanter_Staggered.gif",
+      "source_duration_ms": 2290,
+      "length": 2.3,
+      "ticks": 46,
+      "loop": false,
+      "source_sha256": "24950280434688e5860ee05155cc7dced8b27733da402b08c5116217f4164ec7",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/staggered/0000.png",
+          "pose": "双臂初始较松，身体直立"
+        },
+        {
+          "frame": 4,
+          "start_ms": 170,
+          "nearest_tick": 3,
+          "image": "frames/staggered/0004.png",
+          "pose": "躯干迅速前折，披风被甩起"
+        },
+        {
+          "frame": 11,
+          "start_ms": 460,
+          "nearest_tick": 9,
+          "image": "frames/staggered/0011.png",
+          "pose": "转为明显后仰，抬一脚，双臂拉开"
+        },
+        {
+          "frame": 22,
+          "start_ms": 920,
+          "nearest_tick": 18,
+          "image": "frames/staggered/0022.png",
+          "pose": "维持失衡姿，头胸后仰"
+        },
+        {
+          "frame": 34,
+          "start_ms": 1420,
+          "nearest_tick": 28,
+          "image": "frames/staggered/0034.png",
+          "pose": "逐渐收回抬起的腿"
+        },
+        {
+          "frame": 38,
+          "start_ms": 1580,
+          "nearest_tick": 32,
+          "image": "frames/staggered/0038.png",
+          "pose": "重新支撑时身体前倾，披风向后甩"
+        },
+        {
+          "frame": 45,
+          "start_ms": 1880,
+          "nearest_tick": 38,
+          "image": "frames/staggered/0045.png",
+          "pose": "拳从侧面补回至脸前"
+        },
+        {
+          "frame": 54,
+          "start_ms": 2250,
+          "nearest_tick": 45,
+          "image": "frames/staggered/0054.png",
+          "pose": "回归待机拳架"
+        }
+      ],
+      "cues": [
+        {
+          "frame": 11,
+          "start_ms": 460,
+          "suggested_tick": 9,
+          "event": "recoil",
+          "basis": "后仰失衡端势"
+        }
+      ],
+      "authored_source_frames": [
+        0,
+        4,
+        11,
+        22,
+        34,
+        38,
+        45,
+        54
+      ],
+      "track_keys": 117
+    },
+    {
+      "id": 10,
+      "name": "summon",
+      "source": "summon",
+      "gif": "MCD2_Prime_Enchanter_Summon.gif",
+      "source_duration_ms": 2250,
+      "length": 2.25,
+      "ticks": 45,
+      "loop": false,
+      "source_sha256": "6a3c5a0c2ff18dd32d2c4fa700808068b11e2f9ac5c01ae75de493777feb6930",
+      "keyposes": [
+        {
+          "frame": 0,
+          "start_ms": 0,
+          "nearest_tick": 0,
+          "image": "frames/summon/0000.png",
+          "pose": "起手为待机拳架"
+        },
+        {
+          "frame": 8,
+          "start_ms": 330,
+          "nearest_tick": 7,
+          "image": "frames/summon/0008.png",
+          "pose": "屈膝低身，双拳预载，披风向后"
+        },
+        {
+          "frame": 13,
+          "start_ms": 540,
+          "nearest_tick": 11,
+          "image": "frames/summon/0013.png",
+          "pose": "开始仰头举拳，双臂迅速张开"
+        },
+        {
+          "frame": 14,
+          "start_ms": 580,
+          "nearest_tick": 12,
+          "image": "frames/summon/0014.png",
+          "pose": "双拳首次完整举起，抬头挺胸"
+        },
+        {
+          "frame": 24,
+          "start_ms": 1000,
+          "nearest_tick": 20,
+          "image": "frames/summon/0024.png",
+          "pose": "双拳高举的保持段，披风小摆"
+        },
+        {
+          "frame": 33,
+          "start_ms": 1380,
+          "nearest_tick": 28,
+          "image": "frames/summon/0033.png",
+          "pose": "最后一段完整高举姿势"
+        },
+        {
+          "frame": 38,
+          "start_ms": 1580,
+          "nearest_tick": 32,
+          "image": "frames/summon/0038.png",
+          "pose": "两臂下放，开始回身"
+        },
+        {
+          "frame": 44,
+          "start_ms": 1830,
+          "nearest_tick": 37,
+          "image": "frames/summon/0044.png",
+          "pose": "拳架下沉后弹回，披风向后反摆"
+        },
+        {
+          "frame": 53,
+          "start_ms": 2210,
+          "nearest_tick": 44,
+          "image": "frames/summon/0053.png",
+          "pose": "回归待机"
+        }
+      ],
+      "cues": [
+        {
+          "frame": 14,
+          "start_ms": 580,
+          "suggested_tick": 12,
+          "event": "raised_fists",
+          "basis": "双拳首次完整举起，实机生成时刻待确认"
+        }
+      ],
+      "authored_source_frames": [
+        0,
+        8,
+        13,
+        14,
+        24,
+        33,
+        38,
+        44,
+        53
+      ],
+      "track_keys": 130
+    }
+  ]
+}

@@ -10,6 +10,6 @@ particle dragon_breath ~ ~1 ~ 4 1 4 0.08 72 normal
 particle enchanted_hit ~ ~1 ~ 4 1 4 0.12 72 normal
 playsound minecraft:entity.evoker.prepare_attack hostile @a[distance=..32] ~ ~ ~ 1.2 0.55
 playsound minecraft:entity.ender_dragon.growl hostile @a[distance=..40] ~ ~ ~ 0.8 0.7
-execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult1_hit
+execute as @e[tag=rpg.unit.f,distance=..10] run function rpg:taint/ult1_hit
 # Lucifer mesh appearance (add_lucifer_model.py)
 execute if entity @s[tag=rpg.lu,tag=!rpg.lu.phase2] run function rpg:lucifer_lord/skill/ult1

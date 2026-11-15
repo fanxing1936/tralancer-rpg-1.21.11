@@ -1,0 +1,1 @@
+这些真实客户端截图使用校准前 model_scale=10。最终同比例校准仅统一缩小实体 transformation，内部几何、UV、动作和图集保持不变；最终尺寸与序列化坐标由 validation/scale_alignment 和 runtime_numeric_scaled 另验。本目录图像用于证明实际客户端材质与动作执行，不能当作最终尺寸截图。

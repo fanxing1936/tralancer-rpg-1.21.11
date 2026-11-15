@@ -1,4 +1,7 @@
 scoreboard players add @s rpg_l2_t 1
+# 最终 Boss 路西法（add_lucifer_boss.py）
+execute if score @s rpg_l2_sk matches 7 run return run function rpg:lucifer_boss/fs/thorn/tick
+execute if score @s rpg_l2_sk matches 8 run return run function rpg:lucifer_boss/fs/sword/tick
 execute if score @s rpg_l2_sk matches 1 run return run function rpg:lucifer_fight/vine/tick
 execute if score @s rpg_l2_sk matches 2 run return run function rpg:lucifer_fight/fruit/tick
 execute if score @s rpg_l2_sk matches 3 run return run function rpg:lucifer_fight/tempt/tick

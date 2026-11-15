@@ -1,0 +1,61 @@
+# 收拢（at 圆心）：一圈火向圆心卷进来
+particle minecraft:flame ~9.00 ~0.3 ~0.00 -1.000 0 -0.000 0.55 0 force
+particle minecraft:flame ~9.00 ~1.4 ~0.00 -1.000 0 -0.000 0.55 0 force
+particle minecraft:flame ~8.77 ~0.3 ~2.00 -0.975 0 -0.223 0.55 0 force
+particle minecraft:flame ~8.77 ~1.4 ~2.00 -0.975 0 -0.223 0.55 0 force
+particle minecraft:flame ~8.11 ~0.3 ~3.90 -0.901 0 -0.434 0.55 0 force
+particle minecraft:flame ~8.11 ~1.4 ~3.90 -0.901 0 -0.434 0.55 0 force
+particle minecraft:flame ~7.04 ~0.3 ~5.61 -0.782 0 -0.623 0.55 0 force
+particle minecraft:flame ~7.04 ~1.4 ~5.61 -0.782 0 -0.623 0.55 0 force
+particle minecraft:flame ~5.61 ~0.3 ~7.04 -0.623 0 -0.782 0.55 0 force
+particle minecraft:flame ~5.61 ~1.4 ~7.04 -0.623 0 -0.782 0.55 0 force
+particle minecraft:flame ~3.90 ~0.3 ~8.11 -0.434 0 -0.901 0.55 0 force
+particle minecraft:flame ~3.90 ~1.4 ~8.11 -0.434 0 -0.901 0.55 0 force
+particle minecraft:flame ~2.00 ~0.3 ~8.77 -0.223 0 -0.975 0.55 0 force
+particle minecraft:flame ~2.00 ~1.4 ~8.77 -0.223 0 -0.975 0.55 0 force
+particle minecraft:flame ~0.00 ~0.3 ~9.00 -0.000 0 -1.000 0.55 0 force
+particle minecraft:flame ~0.00 ~1.4 ~9.00 -0.000 0 -1.000 0.55 0 force
+particle minecraft:flame ~-2.00 ~0.3 ~8.77 0.223 0 -0.975 0.55 0 force
+particle minecraft:flame ~-2.00 ~1.4 ~8.77 0.223 0 -0.975 0.55 0 force
+particle minecraft:flame ~-3.90 ~0.3 ~8.11 0.434 0 -0.901 0.55 0 force
+particle minecraft:flame ~-3.90 ~1.4 ~8.11 0.434 0 -0.901 0.55 0 force
+particle minecraft:flame ~-5.61 ~0.3 ~7.04 0.623 0 -0.782 0.55 0 force
+particle minecraft:flame ~-5.61 ~1.4 ~7.04 0.623 0 -0.782 0.55 0 force
+particle minecraft:flame ~-7.04 ~0.3 ~5.61 0.782 0 -0.623 0.55 0 force
+particle minecraft:flame ~-7.04 ~1.4 ~5.61 0.782 0 -0.623 0.55 0 force
+particle minecraft:flame ~-8.11 ~0.3 ~3.90 0.901 0 -0.434 0.55 0 force
+particle minecraft:flame ~-8.11 ~1.4 ~3.90 0.901 0 -0.434 0.55 0 force
+particle minecraft:flame ~-8.77 ~0.3 ~2.00 0.975 0 -0.223 0.55 0 force
+particle minecraft:flame ~-8.77 ~1.4 ~2.00 0.975 0 -0.223 0.55 0 force
+particle minecraft:flame ~-9.00 ~0.3 ~0.00 1.000 0 -0.000 0.55 0 force
+particle minecraft:flame ~-9.00 ~1.4 ~0.00 1.000 0 -0.000 0.55 0 force
+particle minecraft:flame ~-8.77 ~0.3 ~-2.00 0.975 0 0.223 0.55 0 force
+particle minecraft:flame ~-8.77 ~1.4 ~-2.00 0.975 0 0.223 0.55 0 force
+particle minecraft:flame ~-8.11 ~0.3 ~-3.90 0.901 0 0.434 0.55 0 force
+particle minecraft:flame ~-8.11 ~1.4 ~-3.90 0.901 0 0.434 0.55 0 force
+particle minecraft:flame ~-7.04 ~0.3 ~-5.61 0.782 0 0.623 0.55 0 force
+particle minecraft:flame ~-7.04 ~1.4 ~-5.61 0.782 0 0.623 0.55 0 force
+particle minecraft:flame ~-5.61 ~0.3 ~-7.04 0.623 0 0.782 0.55 0 force
+particle minecraft:flame ~-5.61 ~1.4 ~-7.04 0.623 0 0.782 0.55 0 force
+particle minecraft:flame ~-3.90 ~0.3 ~-8.11 0.434 0 0.901 0.55 0 force
+particle minecraft:flame ~-3.90 ~1.4 ~-8.11 0.434 0 0.901 0.55 0 force
+particle minecraft:flame ~-2.00 ~0.3 ~-8.77 0.223 0 0.975 0.55 0 force
+particle minecraft:flame ~-2.00 ~1.4 ~-8.77 0.223 0 0.975 0.55 0 force
+particle minecraft:flame ~-0.00 ~0.3 ~-9.00 0.000 0 1.000 0.55 0 force
+particle minecraft:flame ~-0.00 ~1.4 ~-9.00 0.000 0 1.000 0.55 0 force
+particle minecraft:flame ~2.00 ~0.3 ~-8.77 -0.223 0 0.975 0.55 0 force
+particle minecraft:flame ~2.00 ~1.4 ~-8.77 -0.223 0 0.975 0.55 0 force
+particle minecraft:flame ~3.90 ~0.3 ~-8.11 -0.434 0 0.901 0.55 0 force
+particle minecraft:flame ~3.90 ~1.4 ~-8.11 -0.434 0 0.901 0.55 0 force
+particle minecraft:flame ~5.61 ~0.3 ~-7.04 -0.623 0 0.782 0.55 0 force
+particle minecraft:flame ~5.61 ~1.4 ~-7.04 -0.623 0 0.782 0.55 0 force
+particle minecraft:flame ~7.04 ~0.3 ~-5.61 -0.782 0 0.623 0.55 0 force
+particle minecraft:flame ~7.04 ~1.4 ~-5.61 -0.782 0 0.623 0.55 0 force
+particle minecraft:flame ~8.11 ~0.3 ~-3.90 -0.901 0 0.434 0.55 0 force
+particle minecraft:flame ~8.11 ~1.4 ~-3.90 -0.901 0 0.434 0.55 0 force
+particle minecraft:flame ~8.77 ~0.3 ~-2.00 -0.975 0 0.223 0.55 0 force
+particle minecraft:flame ~8.77 ~1.4 ~-2.00 -0.975 0 0.223 0.55 0 force
+summon minecraft:item_display ~ ~0.04 ~ {Tags:["rpg.jqb.fx","rpg.jqb.fxnew","rpg.jqb.ult"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:usurper_fx/glow","minecraft:custom_model_data":{colors:[12727834]}}},brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:2f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[18f,1f,18f],right_rotation:[0f,0f,0f,1f]}}
+scoreboard players set @e[tag=rpg.jqb.fxnew] rpg_jq_life 17
+scoreboard players set @e[tag=rpg.jqb.fxnew] rpg_jq_kd 0
+tag @e[tag=rpg.jqb.fxnew] remove rpg.jqb.fxnew

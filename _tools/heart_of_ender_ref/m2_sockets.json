@@ -1,0 +1,128 @@
+{
+  "bbmodel_sha256": "8b4738fdd60f8bab39d16716e5414c0b34ee23219a9c8d33b6906f7fc81942ed",
+  "coordinate_system": "+y up, facing -z; unscaled model units, not blocks",
+  "model_scale": null,
+  "seat": null,
+  "sockets": [
+    {
+      "name": "mouth_center",
+      "bone": "shell_head",
+      "bbmodel_unrotated_point": [
+        0,
+        26,
+        -10.808
+      ],
+      "offset_from_bone_pivot": [
+        0,
+        1,
+        -10.808
+      ],
+      "rest_model_point": [
+        5.183161,
+        22.067629,
+        -10.588643
+      ],
+      "status": "闭嘴缝中心候选；未制作特效"
+    },
+    {
+      "name": "cross_beam_center",
+      "bone": "inner_body",
+      "bbmodel_unrotated_point": [
+        0.0,
+        -1.25,
+        2.9
+      ],
+      "offset_from_bone_pivot": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "rest_model_point": [
+        -0.469542,
+        -1.185717,
+        2.9
+      ],
+      "status": "小人躯干中心候选；准确发射姿态与帧待M3"
+    },
+    {
+      "name": "cross_north",
+      "bone": "inner_body",
+      "bbmodel_unrotated_point": [
+        0.0,
+        -1.25,
+        2.025
+      ],
+      "offset_from_bone_pivot": [
+        0.0,
+        0.05,
+        -0.875
+      ],
+      "rest_model_point": [
+        -0.469542,
+        -1.185717,
+        2.025
+      ],
+      "status": "躯干表面接口候选；不是原作骨骼数据"
+    },
+    {
+      "name": "cross_east",
+      "bone": "inner_body",
+      "bbmodel_unrotated_point": [
+        1.4,
+        -1.25,
+        2.9
+      ],
+      "offset_from_bone_pivot": [
+        1.4,
+        0.05,
+        0.0
+      ],
+      "rest_model_point": [
+        0.916833,
+        -1.380559,
+        2.9
+      ],
+      "status": "躯干表面接口候选；不是原作骨骼数据"
+    },
+    {
+      "name": "cross_south",
+      "bone": "inner_body",
+      "bbmodel_unrotated_point": [
+        0.0,
+        -1.25,
+        3.775
+      ],
+      "offset_from_bone_pivot": [
+        0.0,
+        0.05,
+        0.875
+      ],
+      "rest_model_point": [
+        -0.469542,
+        -1.185717,
+        3.775
+      ],
+      "status": "躯干表面接口候选；不是原作骨骼数据"
+    },
+    {
+      "name": "cross_west",
+      "bone": "inner_body",
+      "bbmodel_unrotated_point": [
+        -1.4,
+        -1.25,
+        2.9
+      ],
+      "offset_from_bone_pivot": [
+        -1.4,
+        0.05,
+        0.0
+      ],
+      "rest_model_point": [
+        -1.855918,
+        -0.990875,
+        2.9
+      ],
+      "status": "躯干表面接口候选；不是原作骨骼数据"
+    }
+  ]
+}

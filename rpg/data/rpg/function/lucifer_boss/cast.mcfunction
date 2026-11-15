@@ -7,6 +7,9 @@ execute if score @s rpg_lub matches 2 if score @s rpg_lub_h matches ..668 unless
 execute if score @s rpg_lub matches 2 if score @s rpg_lub_h matches ..334 unless entity @s[tag=rpg.lub.u2] run scoreboard players set #ult rpg_lub 2
 execute if score @s rpg_lub matches 2 if score #ult rpg_lub matches 0 if score @s rpg_lub_c matches 1200.. run scoreboard players set #ult rpg_lub 9
 execute if score #ult rpg_lub matches 1.. run return run function rpg:lucifer_boss/ult
+# 每三次出招一次最终 Boss 独有的新招（fs/）
+scoreboard players add @s rpg_lub_k 1
+execute if score @s rpg_lub_k matches 3.. run return run function rpg:lucifer_boss/fs/pick
 tag @s add rpg.dm.cast
 execute if entity @s[tag=rpg.lu.phase2] run function rpg:lucifer_fight/cast
 execute unless entity @s[tag=rpg.lu.phase2] run function rpg:lucifer_fight/p1/cast

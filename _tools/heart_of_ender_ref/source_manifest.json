@@ -1,0 +1,753 @@
+{
+  "page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender",
+  "observed_date": "2026-11-04",
+  "behavior": [
+    {
+      "section": "Crawl",
+      "summary_zh": "攻击间隙有时在场内爬行。"
+    },
+    {
+      "section": "Mortar barrage",
+      "summary_zh": "身体后仰，从嘴中吐出13个紫色弹体；之后紧接十字光束。"
+    },
+    {
+      "section": "Cross beam",
+      "summary_zh": "身体抬起，四道光束从体内大灾厄村民处以十字形发出，顺时针转动。"
+    },
+    {
+      "section": "Arch-Visages",
+      "summary_zh": "本体沉入地面，面容升起、从嘴中发射光束后沉下；所有头开始发射后，本体再次升起。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "MCD_Heart_of_Ender.png",
+      "category": "image",
+      "description": "The Heart of Ender",
+      "path": "heart_of_ender_ref/MCD_Heart_of_Ender.png",
+      "url": "https://minecraft.wiki/images/MCD_Heart_of_Ender.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "MCD_Arch-Visage.png",
+      "category": "image",
+      "description": "Arch-Visage",
+      "path": "heart_of_ender_ref/MCD_Arch-Visage.png",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Visage.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "MCD_Heart_of_Ender_Idle.gif",
+      "category": "image",
+      "description": "Heart of Ender idle",
+      "path": "heart_of_ender_ref/MCD_Heart_of_Ender_Idle.gif",
+      "url": "https://minecraft.wiki/images/MCD_Heart_of_Ender_Idle.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "MCD_Arch-Visage_Spawn_Attack_in_game.gif",
+      "category": "image",
+      "description": "Arch-Visage spawn attack (in game)",
+      "path": "heart_of_ender_ref/MCD_Arch-Visage_Spawn_Attack_in_game.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Visage_Spawn_Attack_in_game.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "MCD_Arch-Visage_Spawn_Attack.gif",
+      "category": "image",
+      "description": "Arch-Visage spawn attack (unused version with eyes)",
+      "path": "heart_of_ender_ref/MCD_Arch-Visage_Spawn_Attack.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Visage_Spawn_Attack.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "MCD_Arch-Illager_Docile.gif",
+      "category": "image",
+      "description": "The Arch-Illager within the Heart of Ender (idle animation)",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_Docile.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Docile.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "MCD_Arch-Illager_Anxious.gif",
+      "category": "image",
+      "description": "The Arch-Illager looking around",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_Anxious.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Anxious.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "MCD_Arch-Illager_Fourside.gif",
+      "category": "image",
+      "description": "The Arch-Illager shooting beams",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_Fourside.gif",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_Fourside.gif",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "MCD_Decal_Puddle_(texture).png",
+      "category": "image",
+      "description": "Heart of Ender texture file",
+      "path": "heart_of_ender_ref/MCD_Decal_Puddle_(texture).png",
+      "url": "https://minecraft.wiki/images/MCD_Decal_Puddle_(texture).png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "category": "image",
+      "description": "Heart of Ender and Arch-Visage glowing effect texture file",
+      "path": "heart_of_ender_ref/MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "url": "https://minecraft.wiki/images/MCD_Heart_of_Ender_(glow_effect_texture).png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Heart_of_Ender_in_game.png",
+      "category": "image",
+      "description": "The close view of Heart of Ender",
+      "path": "heart_of_ender_ref/Heart_of_Ender_in_game.png",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_in_game.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Heart_of_Ender_prepare_to_shoot_beams.png",
+      "category": "image",
+      "description": "The Heart of Ender begins to shoot its beam. Its head focuses on and follows the hero's position",
+      "path": "heart_of_ender_ref/Heart_of_Ender_prepare_to_shoot_beams.png",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_prepare_to_shoot_beams.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Minecraft-dungeons-heart-of-ender.jpg",
+      "category": "image",
+      "description": "The Heart of Ender firing explosive projectiles at a hero in its boss fight",
+      "path": "heart_of_ender_ref/Minecraft-dungeons-heart-of-ender.jpg",
+      "url": "https://minecraft.wiki/images/Minecraft-dungeons-heart-of-ender.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Heart_Of_Ender_laser.jpg",
+      "category": "image",
+      "description": "The Heart of Ender using its shadow beam attack in a cross formation on a hero during its boss fight",
+      "path": "heart_of_ender_ref/Heart_Of_Ender_laser.jpg",
+      "url": "https://minecraft.wiki/images/Heart_Of_Ender_laser.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Arch-Vessel.jpg",
+      "category": "image",
+      "description": "The Heart of Ender using its shadow beam attack on a hero during its boss fight",
+      "path": "heart_of_ender_ref/Arch-Vessel.jpg",
+      "url": "https://minecraft.wiki/images/Arch-Vessel.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Heart_of_ender_crawling_with_decal_trail.png",
+      "category": "image",
+      "description": "The Heart of Ender crawling and leaving behind a decal trail",
+      "path": "heart_of_ender_ref/Heart_of_ender_crawling_with_decal_trail.png",
+      "url": "https://minecraft.wiki/images/Heart_of_ender_crawling_with_decal_trail.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Arch-Illager_inside_the_Heart_of_Ender.jpg",
+      "category": "image",
+      "description": "The Arch-Illager inside the Heart of Ender",
+      "path": "heart_of_ender_ref/Arch-Illager_inside_the_Heart_of_Ender.jpg",
+      "url": "https://minecraft.wiki/images/Arch-Illager_inside_the_Heart_of_Ender.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Arch-Illager_inside_the_Heart_of_Ender_idle_variant.jpg",
+      "category": "image",
+      "description": "The Arch-Illager inside the Heart of Ender looking around",
+      "path": "heart_of_ender_ref/Arch-Illager_inside_the_Heart_of_Ender_idle_variant.jpg",
+      "url": "https://minecraft.wiki/images/Arch-Illager_inside_the_Heart_of_Ender_idle_variant.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Heart_of_Ender_start_using_ArchBeam.jpg",
+      "category": "image",
+      "description": "The Heart of Ender starting to use its \"Shadow Beam\" attack",
+      "path": "heart_of_ender_ref/Heart_of_Ender_start_using_ArchBeam.jpg",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_start_using_ArchBeam.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Heart_of_Ender_ArchBeam_Glitchy_Arch-Illager.jpg",
+      "category": "image",
+      "description": "The glitchy, strong light and random pose Arch-Illager during the \"Shadow Beam\"",
+      "path": "heart_of_ender_ref/Heart_of_Ender_ArchBeam_Glitchy_Arch-Illager.jpg",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_ArchBeam_Glitchy_Arch-Illager.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Glitchy_Arch-Illager_random_pose.jpg",
+      "category": "image",
+      "description": "After the beam is gone, the Arch-Illager is still posing randomly, glitching with a ghosting effect in every frame for a while (highlighted by hero)",
+      "path": "heart_of_ender_ref/Glitchy_Arch-Illager_random_pose.jpg",
+      "url": "https://minecraft.wiki/images/Glitchy_Arch-Illager_random_pose.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Heart_of_Ender_start_finish_ArchBeam.jpg",
+      "category": "image",
+      "description": "Another glitchy pose",
+      "path": "heart_of_ender_ref/Heart_of_Ender_start_finish_ArchBeam.jpg",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_start_finish_ArchBeam.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "Hero_kills_Heart_of_Ender_Arch-Illager_disappear.jpg",
+      "category": "image",
+      "description": "The Arch-Illager disappearing when the hero kills the Heart of Ender",
+      "path": "heart_of_ender_ref/Hero_kills_Heart_of_Ender_Arch-Illager_disappear.jpg",
+      "url": "https://minecraft.wiki/images/Hero_kills_Heart_of_Ender_Arch-Illager_disappear.jpg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "file": "T_ArchIllagerUndressed.png",
+      "category": "texture",
+      "description": "无外袍大灾厄村民本体贴图；图库实证",
+      "path": "heart_of_ender_ref/T_ArchIllagerUndressed.png",
+      "url": "https://minecraft.wiki/images/T_ArchIllagerUndressed.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery"
+    },
+    {
+      "file": "T_ArchIllagerUndressed_S.png",
+      "category": "texture",
+      "description": "无外袍大灾厄村民 shadow texture；图库实证，不当成发光贴图",
+      "path": "heart_of_ender_ref/T_ArchIllagerUndressed_S.png",
+      "url": "https://minecraft.wiki/images/T_ArchIllagerUndressed_S.png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery"
+    },
+    {
+      "file": "MCD_Arch-Illager_(texture).png",
+      "category": "texture",
+      "description": "大灾厄村民本体贴图，参照",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_(texture).png",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_(texture).png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery"
+    },
+    {
+      "file": "MCD_Arch-Illager_(shadow_texture).png",
+      "category": "texture",
+      "description": "大灾厄村民 shadow texture，参照",
+      "path": "heart_of_ender_ref/MCD_Arch-Illager_(shadow_texture).png",
+      "url": "https://minecraft.wiki/images/MCD_Arch-Illager_(shadow_texture).png",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Arch-Illager/Gallery"
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-001.ogg?77e1f",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-002.ogg?f32d2",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-003.ogg?f32d2",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-004.ogg?ad554",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-005.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-005.ogg?c3251",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-005.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-005.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (vessel voice)sfx_boss_ArchvesselVesselVoice",
+      "file": "Sfx_boss_ArchvesselVesselVoice-006.ogg",
+      "src": "/images/Sfx_boss_ArchvesselVesselVoice-006.ogg?69281",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselVesselVoice-006.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselVesselVoice-006.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-001.ogg?72c8c",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-002.ogg?09afa",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-003.ogg?ed28f",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-004.ogg?a048d",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-005.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-005.ogg?7e025",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-005.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-005.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-006.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-006.ogg?dd346",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-006.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-006.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-007.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-007.ogg?4fad5",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-007.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-007.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-008.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-008.ogg?2ef05",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-008.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-008.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-009.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-009.ogg?1edc9",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-009.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-009.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Idle (Arch-Illager voice)sfx_boss_ArchvesselArchieVoice",
+      "file": "Sfx_boss_ArchvesselArchieVoice-010.ogg",
+      "src": "/images/Sfx_boss_ArchvesselArchieVoice-010.ogg?13f1d",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselArchieVoice-010.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselArchieVoice-010.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "DeathSfx_boss_ArchvesselDeath",
+      "file": "Sfx_boss_ArchvesselDeath.ogg",
+      "src": "/images/Sfx_boss_ArchvesselDeath.ogg?e67b3",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselDeath.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselDeath.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Arch Beam attacksfx_boss_ArchvesselFourside",
+      "file": "Sfx_boss_ArchvesselFourside-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselFourside-001.ogg?65a27",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselFourside-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselFourside-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Arch Beam attacksfx_boss_ArchvesselFourside",
+      "file": "Sfx_boss_ArchvesselFourside-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselFourside-002.ogg?864a6",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselFourside-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselFourside-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Arch Beam attacksfx_boss_ArchvesselFourside",
+      "file": "Sfx_boss_ArchvesselFourside-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselFourside-003.ogg?7c122",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselFourside-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselFourside-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Arch Beam attacksfx_boss_ArchvesselFourside",
+      "file": "Sfx_boss_ArchvesselFourside-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselFourside-004.ogg?a8cc9",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselFourside-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselFourside-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-001.ogg?9c9da",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-002.ogg?efb6a",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-003.ogg?869dc",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-004.ogg?30db6",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-005.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-005.ogg?a2e58",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-005.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-005.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-006.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-006.ogg?d573c",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-006.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-006.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-007.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-007.ogg?717fc",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-007.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-007.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Hurtsfx_boss_ArchvesselHurt",
+      "file": "Sfx_boss_ArchvesselHurt-008.ogg",
+      "src": "/images/Sfx_boss_ArchvesselHurt-008.ogg?da536",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselHurt-008.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselHurt-008.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar barragesfx_boss_ArchvesselMortarBarrage",
+      "file": "Sfx_boss_ArchvesselMortarBarrage-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarBarrage-001.ogg?7e8f1",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarBarrage-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarBarrage-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar barragesfx_boss_ArchvesselMortarBarrage",
+      "file": "Sfx_boss_ArchvesselMortarBarrage-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarBarrage-002.ogg?d2b1b",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarBarrage-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarBarrage-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar barragesfx_boss_ArchvesselMortarBarrage",
+      "file": "Sfx_boss_ArchvesselMortarBarrage-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarBarrage-003.ogg?f5c05",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarBarrage-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarBarrage-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar barragesfx_boss_ArchvesselMortarBarrage",
+      "file": "Sfx_boss_ArchvesselMortarBarrage-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarBarrage-004.ogg?3ab59",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarBarrage-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarBarrage-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar landsfx_boss_ArchvesselMortarLand",
+      "file": "Sfx_boss_ArchvesselMortarLand-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarLand-001.ogg?11f81",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarLand-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarLand-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar landsfx_boss_ArchvesselMortarLand",
+      "file": "Sfx_boss_ArchvesselMortarLand-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarLand-002.ogg?29680",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarLand-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarLand-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar landsfx_boss_ArchvesselMortarLand",
+      "file": "Sfx_boss_ArchvesselMortarLand-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselMortarLand-003.ogg?edb64",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselMortarLand-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselMortarLand-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar explodesfx_mob_witchBottleBreak",
+      "file": "Sfx_mob_witchBottleBreak-001_soundWave.ogg",
+      "src": "/images/Sfx_mob_witchBottleBreak-001_soundWave.ogg?d97c9",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_mob_witchBottleBreak-001_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_witchBottleBreak-001_soundWave.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar explodesfx_mob_witchBottleBreak",
+      "file": "Sfx_mob_witchBottleBreak-002_soundWave.ogg",
+      "src": "/images/Sfx_mob_witchBottleBreak-002_soundWave.ogg?7ed63",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_mob_witchBottleBreak-002_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_witchBottleBreak-002_soundWave.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar explodesfx_mob_witchBottleBreak",
+      "file": "Sfx_mob_witchBottleBreak-003_soundWave.ogg",
+      "src": "/images/Sfx_mob_witchBottleBreak-003_soundWave.ogg?bf5aa",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_mob_witchBottleBreak-003_soundWave.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_mob_witchBottleBreak-003_soundWave.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Orb deathsfx_boss_archVesselOrbDeath",
+      "file": "Sfx_boss_archVesselOrbDeath-003.ogg",
+      "src": "/images/Sfx_boss_archVesselOrbDeath-003.ogg?bf0f5",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_archVesselOrbDeath-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_archVesselOrbDeath-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Stepsfx_boss_ArchvesselStep",
+      "file": "Sfx_boss_ArchvesselStep-001.ogg",
+      "src": "/images/Sfx_boss_ArchvesselStep-001.ogg?56615",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselStep-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselStep-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Stepsfx_boss_ArchvesselStep",
+      "file": "Sfx_boss_ArchvesselStep-002.ogg",
+      "src": "/images/Sfx_boss_ArchvesselStep-002.ogg?06901",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselStep-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselStep-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Stepsfx_boss_ArchvesselStep",
+      "file": "Sfx_boss_ArchvesselStep-003.ogg",
+      "src": "/images/Sfx_boss_ArchvesselStep-003.ogg?74a6b",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselStep-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselStep-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Stepsfx_boss_ArchvesselStep",
+      "file": "Sfx_boss_ArchvesselStep-004.ogg",
+      "src": "/images/Sfx_boss_ArchvesselStep-004.ogg?543e2",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselStep-004.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselStep-004.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Teleport insfx_boss_ArchvesselTeleIn",
+      "file": "Sfx_boss_ArchvesselTeleIn.ogg",
+      "src": "/images/Sfx_boss_ArchvesselTeleIn.ogg?36beb",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselTeleIn.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselTeleIn.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Teleport outsfx_boss_ArchvesselTeleOut",
+      "file": "Sfx_boss_ArchvesselTeleOut.ogg",
+      "src": "/images/Sfx_boss_ArchvesselTeleOut.ogg?89d8c",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvesselTeleOut.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvesselTeleOut.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Ambient loopsfx_env_archVessel2dAmbientLoop",
+      "file": "Sfx_env_archVessel2dAmbientLoop.ogg",
+      "src": "/images/Sfx_env_archVessel2dAmbientLoop.ogg?0c553",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_env_archVessel2dAmbientLoop.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_env_archVessel2dAmbientLoop.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Beam attacksfx_boss_ArchvisageBeamAttack",
+      "file": "Sfx_boss_ArchvisageBeamAttack-001.ogg",
+      "src": "/images/Sfx_boss_ArchvisageBeamAttack-001.ogg?22bfb",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageBeamAttack-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageBeamAttack-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Beam attacksfx_boss_ArchvisageBeamAttack",
+      "file": "Sfx_boss_ArchvisageBeamAttack-002.ogg",
+      "src": "/images/Sfx_boss_ArchvisageBeamAttack-002.ogg?ce23d",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageBeamAttack-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageBeamAttack-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Beam attacksfx_boss_ArchvisageBeamAttack",
+      "file": "Sfx_boss_ArchvisageBeamAttack-003.ogg",
+      "src": "/images/Sfx_boss_ArchvisageBeamAttack-003.ogg?66d81",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageBeamAttack-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageBeamAttack-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Beam loopsfx_boss_ArchvisageBeamLoop",
+      "file": "Sfx_boss_ArchvisageBeamLoop-001.ogg",
+      "src": "/images/Sfx_boss_ArchvisageBeamLoop-001.ogg?66d81",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageBeamLoop-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageBeamLoop-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar shootsfx_boss_ArchvisageMortarShoot",
+      "file": "Sfx_boss_ArchvisageMortarShoot-001.ogg",
+      "src": "/images/Sfx_boss_ArchvisageMortarShoot-001.ogg?870eb",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageMortarShoot-001.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageMortarShoot-001.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar shootsfx_boss_ArchvisageMortarShoot",
+      "file": "Sfx_boss_ArchvisageMortarShoot-002.ogg",
+      "src": "/images/Sfx_boss_ArchvisageMortarShoot-002.ogg?b32a2",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageMortarShoot-002.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageMortarShoot-002.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Mortar shootsfx_boss_ArchvisageMortarShoot",
+      "file": "Sfx_boss_ArchvisageMortarShoot-003.ogg",
+      "src": "/images/Sfx_boss_ArchvisageMortarShoot-003.ogg?688ff",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageMortarShoot-003.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageMortarShoot-003.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Teleport insfx_boss_ArchvisageTeleIn",
+      "file": "Sfx_boss_ArchvisageTeleIn.ogg",
+      "src": "/images/Sfx_boss_ArchvisageTeleIn.ogg?31cbb",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageTeleIn.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageTeleIn.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "Teleport outsfx_boss_ArchvisageTeleOut",
+      "file": "Sfx_boss_ArchvisageTeleOut.ogg",
+      "src": "/images/Sfx_boss_ArchvisageTeleOut.ogg?ff9c6",
+      "category": "sound",
+      "path": "heart_of_ender_ref/sounds/Sfx_boss_ArchvisageTeleOut.ogg",
+      "url": "https://minecraft.wiki/images/Sfx_boss_ArchvisageTeleOut.ogg",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    },
+    {
+      "description": "The in-game idle behavior of the Heart of Ender",
+      "file": "Heart_of_Ender_idle.mp4",
+      "src": "/images/Heart_of_Ender_idle.mp4?80d4c",
+      "category": "video",
+      "path": "heart_of_ender_ref/Heart_of_Ender_idle.mp4",
+      "url": "https://minecraft.wiki/images/Heart_of_Ender_idle.mp4",
+      "source_page": "https://minecraft.wiki/w/Dungeons:Heart_of_Ender"
+    }
+  ]
+}

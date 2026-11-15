@@ -15,6 +15,7 @@
 读载体血量要序列化它身上的全部乘客（二阶段有 102 个部件），所以每 4 刻读一次。
 """
 
+import math
 import os
 import sys
 
@@ -78,6 +79,8 @@ def build():
         "scoreboard objectives add rpg_lub_h dummy",
         "scoreboard objectives add rpg_lub_c dummy",
         "scoreboard objectives add rpg_lub_s dummy",
+        "scoreboard objectives add rpg_lub_k dummy",     # 出招计数：每三次一次最终 Boss 独有的新招
+        "scoreboard objectives add rpg_lub_j dummy",     # 同一阶段两招轮流
         "bossbar add rpg:lucifer_boss \"路西法\"",
         "# 粉色档的原版贴图已由教皇战改成全透明：只显示名字里的位图横幅。",
         "bossbar set rpg:lucifer_boss color pink",
@@ -212,6 +215,9 @@ def build():
                     % (O, s, O, clock, O))
     cast += [
         "execute if score #ult %s matches 1.. run return run function %s/ult" % (O, B),
+        "# 每三次出招一次最终 Boss 独有的新招（fs/）",
+        "scoreboard players add @s rpg_lub_k 1",
+        "execute if score @s rpg_lub_k matches 3.. run return run function %s/fs/pick" % B,
         "tag @s add rpg.dm.cast",
         "execute if entity @s[tag=rpg.lu.phase2] run function %s/cast" % FIGHT,
         "execute unless entity @s[tag=rpg.lu.phase2] run function %s/p1/cast" % FIGHT,
@@ -281,6 +287,11 @@ def build():
     w("clear", [
         "# 清除最终 Boss 的全部实体。模型部件随载体一起清掉；特效按寿命、罪仆按主人自行消失。",
         "execute as @e[%s] run function %s/clear_unit" % (UNIT, B),
+        "# 「蛇之后裔」召来的罪仆可以独立存活，这里一并带走",
+        "execute as @e[tag=rpg.lub.unit] run function %s/clear_unit" % B,
+        "kill @e[tag=rpg.lub.sword]",
+        "kill @e[type=minecraft:marker,tag=rpg.lub.star]",
+        "kill @e[type=minecraft:marker,tag=rpg.lub.thorn]",
         "kill @e[type=minecraft:marker,tag=rpg.lub.center]",
         "bossbar set rpg:lucifer_boss visible false",
         "bossbar set rpg:lucifer_boss players",
@@ -352,6 +363,223 @@ def prepend(rel, new):
         fh.write("\n".join(lines))
 
 
+# =====================================================================================
+# 最终 Boss 独有的四招（用户 2026-11-15「给最终 BOSS 路西法多一些技能」）。领主战不变：
+# 这些招只由最终 Boss 的 cast 选出，挂在领主战同一套招式状态机上（rpg_l2_st=3、rpg_l2_sk=招式号），
+# 特效走同一套展示实体寿命（rpg.lu2f.fx、rpg_l2_k/rpg_l2_t，add_lucifer_fight.py）。
+#   一阶段（蛇，招式号 17、18）：蛇之后裔、晨星坠落
+#   二阶段（树，招式号 7、8）  ：荆棘与蒺藜、火焰的剑
+# 每三次出招换一次新招，同一阶段两招轮流；场上罪仆满 4 名时「蛇之后裔」改放晨星坠落。
+# =====================================================================================
+FS = B + "/fs"
+BROOD_CAP, BROOD_AT, BROOD_END = 4, 18, 40
+STAR_MARK, STAR_FALL, STAR_HIT, STAR_END, STAR_R, STAR_DMG, STAR_N = 4, 14, 34, 52, 3, 14, 4
+THORN_AT, THORN_STEPS, THORN_STEP, THORN_END, THORN_DMG, THORN_N, THORN_RANGE = 10, 16, 1.2, 60, 8, 4, 20
+SWORD_WARN, SWORD_TURN, SWORD_END, SWORD_IN, SWORD_OUT, SWORD_DMG, SWORD_SPIN = 30, 60, 94, 3, 14, 10, 6
+FIRE = 0xFF7A2A
+
+
+def final_skills():
+    import add_lucifer_fight as lf
+
+    def life(lines, kind, ticks):
+        """lf.prop / lf.sprite with a lifetime other than the kind's default."""
+        return [lines[0]] + lf.born(kind, ticks)
+
+    def say_skill(text, name):
+        return say(text, name=name)
+
+    # ---- 选招：每三次出招一次新招
+    w("fs/pick", [
+        "scoreboard players set @s rpg_lub_k 0",
+        "scoreboard players add @s rpg_lub_j 1",
+        "execute if score @s rpg_lub_j matches 2.. run scoreboard players set @s rpg_lub_j 0",
+        "execute store result score #n %s if entity @e[tag=rpg.lub.unit]" % O,
+        "execute if entity @s[tag=rpg.lu.phase2] if score @s rpg_lub_j matches 0 run return run function %s/thorn/start" % FS,
+        "execute if entity @s[tag=rpg.lu.phase2] run return run function %s/sword/start" % FS,
+        "execute if score @s rpg_lub_j matches 0 if score #n %s matches ..%d run return run function %s/brood/start" % (O, BROOD_CAP - 1, FS),
+        "function %s/star/start" % FS,
+    ])
+
+    def begin1(pick):
+        return ["scoreboard players set #pick rpg_l2_v %d" % pick, "function rpg:lucifer_fight/p1/begin",
+                "scoreboard players set @s rpg_dm_cd 30"]
+
+    def begin2(sk):
+        return ["scoreboard players set @s rpg_l2_st 3", "scoreboard players set @s rpg_l2_t 0",
+                "scoreboard players set @s rpg_l2_sk %d" % sk, "function rpg:lucifer_fight/hold",
+                "scoreboard players set @s rpg_dm_cd 30"]
+
+    # ---- 一阶段：蛇之后裔
+    w("fs/brood/start", begin1(7) + ["function rpg:lucifer_lord/play/strong",
+                                     say_skill("起来，我的后裔。", "蛇之后裔 · ")]
+      + lf.prop("sigil", "root_sigil", lf.flat(0.01)) + [
+        "particle %s ~ ~0.3 ~ 2 0.2 2 0.1 40" % lf.ROOT,
+        "playsound minecraft:block.rooted_dirt.break hostile @a[distance=..32] ~ ~ ~ 1.2 0.6",
+    ])
+    w("fs/brood/tick", [
+        "execute if score @s rpg_l2_t matches %d at @s positioned ^2.5 ^ ^1 run function %s/brood/one" % (BROOD_AT, FS),
+        "execute if score @s rpg_l2_t matches %d at @s positioned ^-2.5 ^ ^1 run function %s/brood/one" % (BROOD_AT, FS),
+        "execute if score @s rpg_l2_t matches %d.. run function rpg:lucifer_fight/free" % BROOD_END,
+    ])
+    one = ["# 一名罪仆从根须里爬出来（at 落点）：路西法柱下五名随机一名，穿苔藓骷髅（add_lord_servants.py）",
+           "execute store result score #n %s if entity @e[tag=rpg.lub.unit]" % O,
+           "execute if score #n %s matches %d.. run return 0" % (O, BROOD_CAP),
+           "execute store result score #s %s run random value 1..5" % O]
+    for i, sp in enumerate(lf.SPIRITS, 1):
+        one.append("execute if score #s %s matches %d run function rpg:minion/summon/lucifer/%s" % (O, i, sp))
+    one += ["tag @e[tag=rpg.demon.minion,tag=!rpg.lub.unit,distance=..2,limit=1,sort=nearest] add rpg.lub.unit"]
+    one += lf.prop("vmark", "vine_mark", lf.flat(0.01)) + lf.sprite("burst", lf.xf(s=(lf.glyph_scale("burst", 2),) * 3)) + [
+        "particle %s ~ ~0.4 ~ 0.6 0.3 0.6 0.1 30" % lf.ROOT,
+        "particle %s ~ ~0.6 ~ 0.4 0.4 0.4 0.1 20" % lf.MOSS,
+        "playsound minecraft:entity.skeleton.ambient hostile @a[distance=..24] ~ ~ ~ 1 0.6",
+    ]
+    w("fs/brood/one", one)
+
+    # ---- 一阶段：晨星坠落（以赛亚书 14:12）
+    w("fs/star/start", begin1(8) + ["function rpg:lucifer_lord/play/cast",
+                                    say_skill("看哪，明亮之星，早晨之子，从天坠落。", "晨星坠落 · "),
+                                    "playsound minecraft:block.beacon.activate hostile @a[distance=..40] ~ ~ ~ 1.2 1.6"])
+    w("fs/star/tick", [
+        "execute if score @s rpg_l2_t matches %d as @a[distance=..24,%s,sort=nearest,limit=%d] at @s run function %s/star/mark"
+        % (STAR_MARK, SURV, STAR_N, FS),
+        "execute if score @s rpg_l2_t matches %d as @e[type=minecraft:marker,tag=rpg.lub.star] at @s run function %s/star/fall"
+        % (STAR_FALL, FS),
+        "execute if score @s rpg_l2_t matches %d as @e[type=minecraft:marker,tag=rpg.lub.star] at @s run function %s/star/hit"
+        % (STAR_HIT, FS),
+        "execute if score @s rpg_l2_t matches %d.. run function rpg:lucifer_fight/free" % STAR_END,
+    ])
+    life_left = STAR_HIT - STAR_MARK + 2
+    w("fs/star/mark", [
+        "# 落点（at 玩家脚下）：淡绿的预警圈，半径 %d 格" % STAR_R,
+        'summon minecraft:marker ~ ~ ~ {Tags:["rpg.lu2f.fx","rpg.lu2f.pnew","rpg.lub.star"]}',
+    ] + lf.born("line", life_left)
+      + life(lf.prop("line", "fall_mark", lf.flat(STAR_R * 2)), "line", life_left)
+      + life(lf.prop("line", "crown_ring", lf.flat(STAR_R * 2 + 0.6, 0.08)), "line", life_left) + [
+        "particle %s ~ ~0.2 ~ %d 0.05 %d 0 20" % (lf.DUST, STAR_R - 1, STAR_R - 1),
+        "playsound minecraft:block.amethyst_block.chime hostile @a[distance=..24] ~ ~ ~ 1.2 1.4",
+    ])
+    star = lf.sprite("glint", lf.xf(s=(lf.glyph_scale("glint", 2.6),) * 3))
+    star = [star[0]] + lf.born("feather", 22)
+    w("fs/star/fall", ["# 一颗晨星从 7 格高处落下（feather 的下落插值：20 刻落 6 格）",
+                       "execute positioned ~ ~7 ~ run %s" % star[0]] + star[1:] + [
+        "particle minecraft:end_rod ~ ~7 ~ 0.2 0.2 0.2 0.05 12 force",
+        "playsound minecraft:entity.firework_rocket.launch hostile @a[distance=..32] ~ ~ ~ 1 0.6",
+    ])
+    w("fs/star/hit", ["# 落地（as/at 落点标记）：圈内 %d" % STAR_DMG,
+                      "tag @e[%s,limit=1,sort=nearest] add rpg.dm.cast" % UNIT,
+                      "execute as @a[distance=..%s,%s] run function %s/star/dmg" % (STAR_R, SURV, FS),
+                      "tag @e[%s] remove rpg.dm.cast" % UNIT]
+      + lf.sprite("burst", lf.xf(s=(lf.glyph_scale("burst", 4),) * 3))
+      + lf.prop("shock6", "shock_ring", lf.flat(0.5, 0.06)) + lf.prop("crack", "crack", lf.flat(3.5, 0.04)) + [
+        "particle minecraft:flash{color:%d} ~ ~1 ~ 0 0 0 0 1 force" % int(ui.pillar(1)["lit"].lstrip("#"), 16),
+        "particle %s ~ ~0.5 ~ 1.5 0.5 1.5 0.1 40" % lf.DUST_BIG,
+        "particle minecraft:end_rod ~ ~0.5 ~ 0.5 0.5 0.5 0.15 20",
+        "playsound minecraft:entity.generic.explode hostile @a[distance=..40] ~ ~ ~ 0.9 1.2",
+        "playsound minecraft:block.amethyst_block.break hostile @a[distance=..40] ~ ~ ~ 1.2 0.6",
+        "kill @s",
+    ])
+    w("fs/star/dmg", lf.hit_lines(STAR_DMG, [("slowness", 2, 1)]))
+
+    # ---- 二阶段：荆棘与蒺藜（创世记 3:18）
+    w("fs/thorn/start", begin2(7) + ["function rpg:lucifer_p2/play/jungleabomination_vineattack",
+                                     say_skill("地必给你长出荆棘和蒺藜来。", "荆棘与蒺藜 · "),
+                                     "playsound minecraft:block.rooted_dirt.break hostile @a[distance=..40] ~ ~ ~ 1.4 0.5",
+                                     "tag @a remove rpg.lub.thit"])
+    w("fs/thorn/tick", every_n(2, "@s rpg_l2_t") + [
+        "execute if score @s rpg_l2_t matches %d as @a[distance=..%d,%s,sort=nearest,limit=%d] run function %s/thorn/aim"
+        % (THORN_AT - 2, THORN_RANGE, SURV, THORN_N, FS),
+        "execute if score @s rpg_l2_t matches %d..%d if score #m %s matches 0 as @e[type=minecraft:marker,tag=rpg.lub.thorn] at @s run function %s/thorn/step"
+        % (THORN_AT, THORN_AT + THORN_STEPS * 2, O, FS),
+        "execute if score @s rpg_l2_t matches %d run kill @e[type=minecraft:marker,tag=rpg.lub.thorn]" % (THORN_AT + THORN_STEPS * 2 + 1),
+        "execute if score @s rpg_l2_t matches %d.. run function rpg:lucifer_fight/free" % THORN_END,
+    ])
+    w("fs/thorn/aim", [
+        "# 一条荆棘线（as 玩家）：从树根出发，朝这名玩家此刻的方向",
+        "execute at @e[%s,limit=1,sort=nearest] facing entity @s feet rotated ~ 0 run function %s/thorn/root" % (UNIT, FS),
+    ])
+    w("fs/thorn/root", ['summon minecraft:marker ~ ~ ~ {Tags:["rpg.lu2f.fx","rpg.lu2f.pnew","rpg.lub.thorn"]}',
+                        "execute as @e[type=minecraft:marker,tag=rpg.lu2f.pnew,tag=rpg.lub.thorn] run tp @s ^ ^ ^2 ~ ~"]
+      + lf.born("line", THORN_STEPS * 2 + 8))
+    spike = lf.prop("spike", "rpg:lucifer_props/spike", lf.xf(t=(0, -3.9, 0), s=(lf.props.SCALE * 0.55,) * 3))
+    w("fs/thorn/step", [
+        "# 荆棘线前进一步（as/at 标记）：落在地面上，钻出一根原作的藤刺；碰到的人挨一下",
+        "execute positioned ^ ^ ^%s positioned over motion_blocking_no_leaves run tp @s ~ ~ ~ ~ 0" % THORN_STEP,
+        "execute at @s run %s" % spike[0],
+    ] + spike[1:] + [
+        "execute at @s run particle %s ~ ~0.2 ~ 0.4 0.1 0.4 0.1 8" % lf.ROOT,
+        "tag @e[%s,limit=1,sort=nearest] add rpg.dm.cast" % UNIT,
+        "execute at @s as @a[distance=..1.4,%s,tag=!rpg.lub.thit] run function %s/thorn/dmg" % (SURV, FS),
+        "tag @e[%s] remove rpg.dm.cast" % UNIT,
+        "execute at @s run playsound minecraft:block.big_dripleaf.break hostile @a[distance=..20] ~ ~ ~ 0.5 0.6",
+    ])
+    w("fs/thorn/dmg", ["tag @s add rpg.lub.thit"] + lf.hit_lines(THORN_DMG, [("slowness", 3, 1)]))
+
+    # ---- 二阶段：火焰的剑（创世记 3:24）
+    blade = ('summon minecraft:item_display ~ ~1.2 ~ {Tags:["rpg.lu2f.fx","rpg.lu2f.pnew","rpg.lub.sword"],'
+             'item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:usurper_fx/beam",'
+             '"minecraft:custom_model_data":{colors:[%d]}}},brightness:{sky:15,block:15},teleport_duration:1,view_range:3f,'
+             'interpolation_duration:6,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],'
+             'translation:[0f,0f,%gf],scale:[0.05f,0.4f,%gf]}}' % (FIRE, (SWORD_IN + SWORD_OUT) / 2.0, SWORD_OUT - SWORD_IN))
+    w("fs/sword/start", begin2(8) + ["function rpg:lucifer_p2/play/jungleabomination_summon",
+                                     say_skill("基路伯和四面转动发火焰的剑，要把守生命树的道路。", "火焰的剑 · "),
+                                     "playsound minecraft:item.firecharge.use hostile @a[distance=..40] ~ ~ ~ 1.4 0.5",
+                                     "tag @a remove rpg.lub.shit",
+                                     blade,
+                                     "execute as @e[tag=rpg.lu2f.pnew,tag=rpg.lub.sword] at @s rotated as @e[%s,limit=1,sort=nearest] run tp @s ~ ~ ~ ~ 0" % UNIT]
+      + lf.born("line", SWORD_END - 2) + lf.prop("cring12", "crown_ring", lf.flat(0.01)))
+    ring = []
+    for k in range(16):
+        a = 2 * math.pi * k / 16
+        ring.append("particle minecraft:flame ~%.2f ~0.3 ~%.2f 0.1 0.1 0.1 0 2" % (SWORD_OUT * math.cos(a), SWORD_OUT * math.sin(a)))
+        if k % 2 == 0:
+            ring.append("particle minecraft:flame ~%.2f ~0.3 ~%.2f 0.05 0.1 0.05 0 2" % (SWORD_IN * math.cos(a), SWORD_IN * math.sin(a)))
+    w("fs/sword/warn", ["# 预警：内外两圈火（at 树）。贴着树干、或者站到 %d 格外都安全" % SWORD_OUT] + ring)
+    reach = []
+    d = SWORD_IN + 0.5
+    while d <= SWORD_OUT:
+        reach.append("execute positioned ^ ^ ^%s positioned ~ ~-1.2 ~ as @a[distance=..1.5,%s,tag=!rpg.lub.shit] run function %s/sword/dmg" % (d, SURV, FS))
+        d += 1.5
+    w("fs/sword/tick", every_n(4, "@s rpg_l2_t") + [
+        "execute if score @s rpg_l2_t matches 2..%d if score #m %s matches 0 at @s run function %s/sword/warn" % (SWORD_WARN, O, FS),
+        "execute if score @s rpg_l2_t matches %d as @e[tag=rpg.lub.sword] run data merge entity @s "
+        "{start_interpolation:0,interpolation_duration:6,transformation:{scale:[0.9f,0.9f,%gf]}}" % (SWORD_WARN - 6, SWORD_OUT - SWORD_IN),
+        "execute if score @s rpg_l2_t matches %d..%d as @e[tag=rpg.lub.sword] at @s run function %s/sword/turn"
+        % (SWORD_WARN, SWORD_WARN + SWORD_TURN, FS),
+        "execute if score @s rpg_l2_t matches %d run kill @e[tag=rpg.lub.sword]" % (SWORD_WARN + SWORD_TURN + 1),
+        "execute if score @s rpg_l2_t matches %d.. run function rpg:lucifer_fight/free" % SWORD_END,
+    ])
+    w("fs/sword/turn", [
+        "# 剑转一格（as/at 剑）：每刻 %d°，一圈 %d 刻；扫到的人挨一下" % (SWORD_SPIN, SWORD_TURN),
+        "tp @s ~ ~ ~ ~%d 0" % SWORD_SPIN,
+        "tag @e[%s,limit=1,sort=nearest] add rpg.dm.cast" % UNIT,
+        "execute rotated as @s run function %s/sword/reach" % FS,
+        "tag @e[%s] remove rpg.dm.cast" % UNIT,
+        "execute rotated as @s positioned ^ ^ ^%g run particle minecraft:flame ~ ~ ~ 1 0.3 1 0.02 6" % ((SWORD_IN + SWORD_OUT) / 2.0),
+        "execute rotated as @s positioned ^ ^ ^%d run particle minecraft:lava ~ ~ ~ 0.3 0.2 0.3 0 1" % (SWORD_OUT - 1),
+    ])
+    w("fs/sword/reach", reach)
+    w("fs/sword/dmg", ["tag @s add rpg.lub.shit", "execute at @s run particle minecraft:flame ~ ~1 ~ 0.3 0.5 0.3 0.05 12"]
+      + lf.hit_lines(SWORD_DMG, []) + ["data merge entity @s {Fire:80s}"])
+
+    # ---- 挂进领主战的招式分派（一阶段 p1/skill、二阶段 skill/tick），只在最终 Boss 身上会出现这几个招式号
+    tick1 = "scoreboard players add @s rpg_l2_t 1"
+    insert_after("lucifer_fight/p1/skill", tick1, "\n".join([
+        "execute if score @s rpg_l2_sk matches 17 run return run function %s/brood/tick" % FS,
+        "execute if score @s rpg_l2_sk matches 18 run return run function %s/star/tick" % FS]))
+    insert_after("lucifer_fight/skill/tick", tick1, "\n".join([
+        "execute if score @s rpg_l2_sk matches 7 run return run function %s/thorn/tick" % FS,
+        "execute if score @s rpg_l2_sk matches 8 run return run function %s/sword/tick" % FS]))
+
+
+def every_n(n, score):
+    who, obj = score.split()
+    return ["scoreboard players operation #m %s = %s %s" % (O, who, obj),
+            "scoreboard players set #k %s %d" % (O, n),
+            "scoreboard players operation #m %s %%= #k %s" % (O, O)]
+
+
+
 def hook():
     # 一阶段外观只给带 rpg.advent 的领主换装，这里给最终 Boss 加一条换装入口。
     insert_after("lucifer_lord/tick",
@@ -367,6 +595,7 @@ def hook():
 
 def main():
     build()
+    final_skills()
     hook()
     count = sum(len(fs) for _, _, fs in os.walk(OUT))
     print("lucifer_boss: %d functions; HP pool %d (%s)" % (

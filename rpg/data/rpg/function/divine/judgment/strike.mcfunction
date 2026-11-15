@@ -1,4 +1,6 @@
 # 最终 Boss 路西法（add_lucifer_boss.py）
+# 篡夺者（add_usurper_boss.py）
+execute if entity @s[tag=rpg.usb] run return run function rpg:usurper_boss/divine/judgment
 execute if entity @s[tag=rpg.lub] run return run function rpg:pope_fight/heart/judgment_target
 execute if entity @s[tag=rpg.pf.heart] run return run function rpg:pope_fight/heart/judgment_target
 execute if entity @s[tag=rpg.exorcism.bound] run return run function rpg:divine/ritual/judgment

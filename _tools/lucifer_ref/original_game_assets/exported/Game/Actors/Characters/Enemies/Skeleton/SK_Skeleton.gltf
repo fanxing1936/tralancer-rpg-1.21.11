@@ -1,0 +1,282 @@
+{
+  "asset" : {
+    "generator" : "UE Viewer (umodel) build 1590",
+    "version" : "2.0"
+  },
+  "scene" : 0,
+  "scenes" : [
+    {
+      "nodes" : [ 0 ]
+    }
+  ],
+  "nodes" : [
+    {
+      "name" : "SK_Skeleton",
+      "mesh" : 0,
+      "skin" : 0,
+      "children" : [ 1 ]
+    },
+    {
+      "name" : "J_Root",
+      "children" : [ 2 ],
+      "translation" : [ 0, 0, 0 ],
+      "rotation" : [ 0.707107, -0, -0, 0.707107 ]
+    },
+    {
+      "name" : "J_L_Hip",
+      "children" : [ 3, 6, 9 ],
+      "translation" : [ 0, 0.000988838, -0.75 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_R_Leg",
+      "children" : [ 4 ],
+      "translation" : [ -0.125, 3.74467e-10, -0 ],
+      "rotation" : [ -1, -0, 0, 6.12323e-17 ]
+    },
+    {
+      "name" : "J_R_Foot",
+      "children" : [ 5 ],
+      "translation" : [ 0, -9.21485e-17, -0.75 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "R_Leg",
+      "translation" : [ 0, 0, -0 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_L_Leg",
+      "children" : [ 7 ],
+      "translation" : [ 0.125, 2.77556e-19, -0 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_L_Foot",
+      "children" : [ 8 ],
+      "translation" : [ 0, -1.38778e-19, 0.75 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "L_Leg",
+      "translation" : [ 0, 0, -0 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_L_Spine",
+      "children" : [ 10 ],
+      "translation" : [ 0, 0, -0.0625 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_Shoulders",
+      "children" : [ 11, 15, 19, 22 ],
+      "translation" : [ 3.48943e-16, -3.81362e-16, -0.625 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_L_Arm",
+      "children" : [ 12 ],
+      "translation" : [ 0.277275, 1.85407e-16, 2.84217e-16 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_L_Hand",
+      "children" : [ 13, 14 ],
+      "translation" : [ 0.06, 2.77556e-19, 0.625 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_L_Weapon",
+      "translation" : [ 1.42109e-16, 1.07414e-16, -2.84217e-16 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "L_Arm",
+      "translation" : [ 0, 0, -0 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_R_Arm",
+      "children" : [ 16 ],
+      "translation" : [ -0.277275, 3.74467e-10, 2.84217e-16 ],
+      "rotation" : [ -1, -0, 0, 6.12323e-17 ]
+    },
+    {
+      "name" : "J_R_Hand",
+      "children" : [ 17, 18 ],
+      "translation" : [ -0.0602015, -7.66054e-17, -0.625 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_R_Weapon",
+      "translation" : [ 3.55271e-16, -1.00892e-16, 2.84217e-16 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "R_Arm",
+      "translation" : [ 0, 0, -0 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    },
+    {
+      "name" : "J_Neck",
+      "children" : [ 20, 21 ],
+      "translation" : [ 2.4236e-18, -0.000988838, -0.0967131 ],
+      "rotation" : [ -0.000228664, 0.000817398, 0.00510553, -0.999987 ]
+    },
+    {
+      "name" : "J_Head",
+      "translation" : [ 1.01174e-10, 2.88608e-11, 6.19771e-08 ],
+      "rotation" : [ 0.000228664, -0.000817398, -0.00510553, -0.999987 ]
+    },
+    {
+      "name" : "Head",
+      "translation" : [ 0, 0, -0 ],
+      "rotation" : [ 5.42101e-20, -1.0842e-19, 1.1301e-18, -1 ]
+    },
+    {
+      "name" : "Body",
+      "translation" : [ 0, 0, -0 ],
+      "rotation" : [ -0, -0, 0, -1 ]
+    }
+  ],
+  "skins" : [
+    {
+      "inverseBindMatrices" : 0,
+      "skeleton" : 1,
+      "joints" : [
+        1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22
+      ]
+    }
+  ],
+  "materials" : [
+    {
+      "name" : "MI_Skeleton",
+      "pbrMetallicRoughness" : {
+        "baseColorFactor" : [ 0.3, 0.3, 0.3, 1.0 ],
+        "metallicFactor" : 0.1,
+        "roughnessFactor" : 0.5
+      }
+    }
+  ],
+  "meshes" : [
+    {
+      "primitives" : [
+        {
+          "attributes" : {
+            "POSITION" : 2,
+            "NORMAL" : 3,
+            "TANGENT" : 4,
+            "JOINTS_0" : 5,
+            "WEIGHTS_0" : 6,
+            "TEXCOORD_0" : 7
+          },
+          "indices" : 1,
+          "material" : 0
+        }
+      ],
+      "name" : "SK_Skeleton"
+    }
+  ],
+  "buffers" : [
+    {
+      "uri" : "SK_Skeleton.bin",
+      "byteLength" : 14800
+    }
+  ],
+  "bufferViews" : [
+    {
+      "buffer" : 0,
+      "byteOffset" : 0,
+      "byteLength" : 1408
+    },
+    {
+      "buffer" : 0,
+      "byteOffset" : 1408,
+      "byteLength" : 432
+    },
+    {
+      "buffer" : 0,
+      "byteOffset" : 1840,
+      "byteLength" : 2592
+    },
+    {
+      "buffer" : 0,
+      "byteOffset" : 4432,
+      "byteLength" : 2592
+    },
+    {
+      "buffer" : 0,
+      "byteOffset" : 7024,
+      "byteLength" : 3456
+    },
+    {
+      "buffer" : 0,
+      "byteOffset" : 10480,
+      "byteLength" : 1728
+    },
+    {
+      "buffer" : 0,
+      "byteOffset" : 12208,
+      "byteLength" : 864
+    },
+    {
+      "buffer" : 0,
+      "byteOffset" : 13072,
+      "byteLength" : 1728
+    }
+  ],
+  "accessors" : [
+    {
+      "bufferView" : 0,
+      "componentType" : 5126,
+      "count" : 22,
+      "type" : "MAT4"
+    },
+    {
+      "bufferView" : 1,
+      "componentType" : 5123,
+      "count" : 216,
+      "type" : "SCALAR"
+    },
+    {
+      "bufferView" : 2,
+      "min" : [ -0.375, -1.15416e-17, -0.25 ],
+      "max" : [ 0.375, 2, 0.25 ],
+      "componentType" : 5126,
+      "count" : 216,
+      "type" : "VEC3"
+    },
+    {
+      "bufferView" : 3,
+      "componentType" : 5126,
+      "count" : 216,
+      "type" : "VEC3"
+    },
+    {
+      "bufferView" : 4,
+      "componentType" : 5126,
+      "count" : 216,
+      "type" : "VEC4"
+    },
+    {
+      "bufferView" : 5,
+      "componentType" : 5123,
+      "count" : 216,
+      "type" : "VEC4"
+    },
+    {
+      "bufferView" : 6,
+      "normalized" : true,
+      "componentType" : 5121,
+      "count" : 216,
+      "type" : "VEC4"
+    },
+    {
+      "bufferView" : 7,
+      "componentType" : 5126,
+      "count" : 216,
+      "type" : "VEC2"
+    }
+  ]
+}

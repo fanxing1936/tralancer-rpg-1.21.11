@@ -1,0 +1,410 @@
+Compiled from "SourceFile"
+public class ddw extends cgk implements cik {
+  public static final int a;
+
+  public static final int b;
+
+  public static final int c;
+
+  private static final int d;
+
+  private int e;
+
+  private boolean f;
+
+  private int g;
+
+  private boolean h;
+
+  private cgr<chl> i;
+
+  public ddw(cgu<? extends ddw>, dwo);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: invokespecial #34                 // Method cgk."<init>":(Lcgu;Ldwo;)V
+       6: aload_0
+       7: iconst_0
+       8: putfield      #36                 // Field e:I
+      11: aload_0
+      12: bipush        22
+      14: putfield      #38                 // Field g:I
+      17: return
+
+  public ddw(dwo, double, double, double, float, int, chl);
+    Code:
+       0: aload_0
+       1: getstatic     #51                 // Field cgu.X:Lcgu;
+       4: aload_1
+       5: invokespecial #52                 // Method "<init>":(Lcgu;Ldwo;)V
+       8: aload_0
+       9: iload         9
+      11: putfield      #36                 // Field e:I
+      14: aload_0
+      15: aload         10
+      17: invokevirtual #55                 // Method a:(Lchl;)V
+      20: aload_0
+      21: fload         8
+      23: ldc           #56                 // float 57.295776f
+      25: fmul
+      26: invokevirtual #60                 // Method v:(F)V
+      29: aload_0
+      30: dload_2
+      31: dload         4
+      33: dload         6
+      35: invokevirtual #64                 // Method a_:(DDD)V
+      38: return
+
+  protected void a(ama$a);
+    Code:
+       0: return
+
+  public void a(chl);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #79                 // Method cgr.a:(Letd;)Lcgr;
+       5: putfield      #81                 // Field i:Lcgr;
+       8: return
+
+  public chl e();
+    Code:
+       0: aload_0
+       1: getfield      #81                 // Field i:Lcgr;
+       4: aload_0
+       5: invokevirtual #86                 // Method ao:()Ldwo;
+       8: invokestatic  #89                 // Method cgr.b:(Lcgr;Ldwo;)Lchl;
+      11: areturn
+
+  protected void a(fnq);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: ldc           #92                 // String Warmup
+       4: iconst_0
+       5: invokeinterface #97,  3           // InterfaceMethod fnq.a:(Ljava/lang/String;I)I
+      10: putfield      #36                 // Field e:I
+      13: aload_0
+      14: aload_1
+      15: ldc           #99                 // String Owner
+      17: invokestatic  #102                // Method cgr.a:(Lfnq;Ljava/lang/String;)Lcgr;
+      20: putfield      #81                 // Field i:Lcgr;
+      23: return
+
+  protected void a(fns);
+    Code:
+       0: aload_1
+       1: ldc           #92                 // String Warmup
+       3: aload_0
+       4: getfield      #36                 // Field e:I
+       7: invokeinterface #109,  3          // InterfaceMethod fns.a:(Ljava/lang/String;I)V
+      12: aload_0
+      13: getfield      #81                 // Field i:Lcgr;
+      16: aload_1
+      17: ldc           #99                 // String Owner
+      19: invokestatic  #112                // Method cgr.a:(Lcgr;Lfns;Ljava/lang/String;)V
+      22: return
+
+  public void g();
+    Code:
+       0: aload_0
+       1: invokespecial #116                // Method cgk.g:()V
+       4: aload_0
+       5: invokevirtual #86                 // Method ao:()Ldwo;
+       8: invokevirtual #122                // Method dwo.B_:()Z
+      11: ifeq          224
+      14: aload_0
+      15: getfield      #124                // Field h:Z
+      18: ifeq          344
+      21: aload_0
+      22: dup
+      23: getfield      #38                 // Field g:I
+      26: iconst_1
+      27: isub
+      28: putfield      #38                 // Field g:I
+      31: aload_0
+      32: getfield      #38                 // Field g:I
+      35: bipush        14
+      37: if_icmpne     344
+      40: iconst_0
+      41: istore_1
+      42: iload_1
+      43: bipush        12
+      45: if_icmpge     221
+      48: aload_0
+      49: invokevirtual #128                // Method dP:()D
+      52: aload_0
+      53: getfield      #132                // Field as:Lbgr;
+      56: invokeinterface #137,  1          // InterfaceMethod bgr.j:()D
+      61: ldc2_w        #138                // double 2.0d
+      64: dmul
+      65: dconst_1
+      66: dsub
+      67: aload_0
+      68: invokevirtual #143                // Method dF:()F
+      71: f2d
+      72: dmul
+      73: ldc2_w        #144                // double 0.5d
+      76: dmul
+      77: dadd
+      78: dstore_2
+      79: aload_0
+      80: invokevirtual #148                // Method dR:()D
+      83: ldc2_w        #149                // double 0.05d
+      86: dadd
+      87: aload_0
+      88: getfield      #132                // Field as:Lbgr;
+      91: invokeinterface #137,  1          // InterfaceMethod bgr.j:()D
+      96: dadd
+      97: dstore        4
+      99: aload_0
+     100: invokevirtual #153                // Method dV:()D
+     103: aload_0
+     104: getfield      #132                // Field as:Lbgr;
+     107: invokeinterface #137,  1          // InterfaceMethod bgr.j:()D
+     112: ldc2_w        #138                // double 2.0d
+     115: dmul
+     116: dconst_1
+     117: dsub
+     118: aload_0
+     119: invokevirtual #143                // Method dF:()F
+     122: f2d
+     123: dmul
+     124: ldc2_w        #144                // double 0.5d
+     127: dmul
+     128: dadd
+     129: dstore        6
+     131: aload_0
+     132: getfield      #132                // Field as:Lbgr;
+     135: invokeinterface #137,  1          // InterfaceMethod bgr.j:()D
+     140: ldc2_w        #138                // double 2.0d
+     143: dmul
+     144: dconst_1
+     145: dsub
+     146: ldc2_w        #154                // double 0.3d
+     149: dmul
+     150: dstore        8
+     152: ldc2_w        #154                // double 0.3d
+     155: aload_0
+     156: getfield      #132                // Field as:Lbgr;
+     159: invokeinterface #137,  1          // InterfaceMethod bgr.j:()D
+     164: ldc2_w        #154                // double 0.3d
+     167: dmul
+     168: dadd
+     169: dstore        10
+     171: aload_0
+     172: getfield      #132                // Field as:Lbgr;
+     175: invokeinterface #137,  1          // InterfaceMethod bgr.j:()D
+     180: ldc2_w        #138                // double 2.0d
+     183: dmul
+     184: dconst_1
+     185: dsub
+     186: ldc2_w        #154                // double 0.3d
+     189: dmul
+     190: dstore        12
+     192: aload_0
+     193: invokevirtual #86                 // Method ao:()Ldwo;
+     196: getstatic     #160                // Field ly.g:Lmd;
+     199: dload_2
+     200: dload         4
+     202: dconst_1
+     203: dadd
+     204: dload         6
+     206: dload         8
+     208: dload         10
+     210: dload         12
+     212: invokevirtual #163                // Method dwo.a:(Llw;DDDDDD)V
+     215: iinc          1, 1
+     218: goto          42
+     221: goto          344
+     224: aload_0
+     225: dup
+     226: getfield      #36                 // Field e:I
+     229: iconst_1
+     230: isub
+     231: dup_x1
+     232: putfield      #36                 // Field e:I
+     235: ifge          344
+     238: aload_0
+     239: getfield      #36                 // Field e:I
+     242: bipush        -8
+     244: if_icmpne     305
+     247: aload_0
+     248: invokevirtual #86                 // Method ao:()Ldwo;
+     251: ldc           #165                // class chl
+     253: aload_0
+     254: invokevirtual #169                // Method dj:()Lfth;
+     257: ldc2_w        #170                // double 0.2d
+     260: dconst_0
+     261: ldc2_w        #170                // double 0.2d
+     264: invokevirtual #176                // Method fth.c:(DDD)Lfth;
+     267: invokevirtual #179                // Method dwo.a:(Ljava/lang/Class;Lfth;)Ljava/util/List;
+     270: astore_1
+     271: aload_1
+     272: invokeinterface #185,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+     277: astore_2
+     278: aload_2
+     279: invokeinterface #190,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     284: ifeq          305
+     287: aload_2
+     288: invokeinterface #194,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     293: checkcast     #165                // class chl
+     296: astore_3
+     297: aload_0
+     298: aload_3
+     299: invokevirtual #196                // Method c:(Lchl;)V
+     302: goto          278
+     305: aload_0
+     306: getfield      #198                // Field f:Z
+     309: ifne          326
+     312: aload_0
+     313: invokevirtual #86                 // Method ao:()Ldwo;
+     316: aload_0
+     317: iconst_4
+     318: invokevirtual #201                // Method dwo.a:(Lcgk;B)V
+     321: aload_0
+     322: iconst_1
+     323: putfield      #198                // Field f:Z
+     326: aload_0
+     327: dup
+     328: getfield      #38                 // Field g:I
+     331: iconst_1
+     332: isub
+     333: dup_x1
+     334: putfield      #38                 // Field g:I
+     337: ifge          344
+     340: aload_0
+     341: invokevirtual #204                // Method aC:()V
+     344: return
+
+  private void c(chl);
+    Code:
+       0: aload_0
+       1: invokevirtual #210                // Method e:()Lchl;
+       4: astore_2
+       5: aload_1
+       6: invokevirtual #213                // Method chl.cb:()Z
+       9: ifeq          24
+      12: aload_1
+      13: invokevirtual #216                // Method chl.cU:()Z
+      16: ifne          24
+      19: aload_1
+      20: aload_2
+      21: if_acmpne     25
+      24: return
+      25: aload_2
+      26: ifnonnull     45
+      29: aload_1
+      30: aload_0
+      31: invokevirtual #220                // Method en:()Lcey;
+      34: invokevirtual #226                // Method cey.q:()Lcex;
+      37: ldc           #227                // float 6.0f
+      39: invokevirtual #230                // Method chl.a:(Lcex;F)V
+      42: goto          104
+      45: aload_2
+      46: aload_1
+      47: invokevirtual #234                // Method chl.t:(Lcgk;)Z
+      50: ifeq          54
+      53: return
+      54: aload_0
+      55: invokevirtual #220                // Method en:()Lcey;
+      58: aload_0
+      59: aload_2
+      60: invokevirtual #237                // Method cey.c:(Lcgk;Lcgk;)Lcex;
+      63: astore_3
+      64: aload_0
+      65: invokevirtual #86                 // Method ao:()Ldwo;
+      68: astore        5
+      70: aload         5
+      72: instanceof    #239                // class axf
+      75: ifeq          104
+      78: aload         5
+      80: checkcast     #239                // class axf
+      83: astore        4
+      85: aload_1
+      86: aload         4
+      88: aload_3
+      89: ldc           #227                // float 6.0f
+      91: invokevirtual #242                // Method chl.a:(Laxf;Lcex;F)Z
+      94: ifeq          104
+      97: aload         4
+      99: aload_1
+     100: aload_3
+     101: invokestatic  #247                // Method dsq.a:(Laxf;Lcgk;Lcex;)V
+     104: return
+
+  public void b(byte);
+    Code:
+       0: aload_0
+       1: iload_1
+       2: invokespecial #252                // Method cgk.b:(B)V
+       5: iload_1
+       6: iconst_4
+       7: if_icmpne     67
+      10: aload_0
+      11: iconst_1
+      12: putfield      #124                // Field h:Z
+      15: aload_0
+      16: invokevirtual #255                // Method bq:()Z
+      19: ifne          67
+      22: aload_0
+      23: invokevirtual #86                 // Method ao:()Ldwo;
+      26: aload_0
+      27: invokevirtual #128                // Method dP:()D
+      30: aload_0
+      31: invokevirtual #148                // Method dR:()D
+      34: aload_0
+      35: invokevirtual #153                // Method dV:()D
+      38: getstatic     #261                // Field bda.kj:Lbcz;
+      41: aload_0
+      42: invokevirtual #265                // Method dB:()Lbdb;
+      45: fconst_1
+      46: aload_0
+      47: getfield      #132                // Field as:Lbgr;
+      50: invokeinterface #267,  1          // InterfaceMethod bgr.i:()F
+      55: ldc_w         #268                // float 0.2f
+      58: fmul
+      59: ldc_w         #269                // float 0.85f
+      62: fadd
+      63: iconst_0
+      64: invokevirtual #272                // Method dwo.a:(DDDLbcz;Lbdb;FFZ)V
+      67: return
+
+  public float a(float);
+    Code:
+       0: aload_0
+       1: getfield      #124                // Field h:Z
+       4: ifne          9
+       7: fconst_0
+       8: freturn
+       9: aload_0
+      10: getfield      #38                 // Field g:I
+      13: iconst_2
+      14: isub
+      15: istore_2
+      16: iload_2
+      17: ifgt          22
+      20: fconst_1
+      21: freturn
+      22: fconst_1
+      23: iload_2
+      24: i2f
+      25: fload_1
+      26: fsub
+      27: ldc_w         #275                // float 20.0f
+      30: fdiv
+      31: fsub
+      32: freturn
+
+  public boolean a(axf, cex, float);
+    Code:
+       0: iconst_0
+       1: ireturn
+
+  public cgk p();
+    Code:
+       0: aload_0
+       1: invokevirtual #210                // Method e:()Lchl;
+       4: areturn
+}

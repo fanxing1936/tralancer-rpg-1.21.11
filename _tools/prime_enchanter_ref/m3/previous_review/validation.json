@@ -1,0 +1,93 @@
+{
+  "model_sha256": "5992090efd9e203f9ef77a3517bcada13c3d2d047e27b0461453bfaa68f45223",
+  "m2_static_payload_equal": true,
+  "original_texture_sha256": "19c0d1bb329bff391558a4a4f7a23c002835c108af39064f7034c2a5acdf25a3",
+  "part_count": 12,
+  "native_reopen": {
+    "version": "5.2.2",
+    "uuid": "abac4319-efcd-f9f6-8b23-02b0201faa2a",
+    "disk_read": true
+  },
+  "clips": [
+    {
+      "clip": "idle",
+      "ticks": 20,
+      "baked_frames": 20,
+      "comparison_pairs": 6,
+      "max_blockbench_matrix_error": 7.105427357601002e-15
+    },
+    {
+      "clip": "walk",
+      "ticks": 18,
+      "baked_frames": 18,
+      "comparison_pairs": 6,
+      "max_blockbench_matrix_error": 7.105427357601002e-15
+    },
+    {
+      "clip": "appear",
+      "ticks": 47,
+      "baked_frames": 48,
+      "comparison_pairs": 10,
+      "max_blockbench_matrix_error": 1.0658141036401503e-14
+    },
+    {
+      "clip": "death",
+      "ticks": 114,
+      "baked_frames": 115,
+      "comparison_pairs": 11,
+      "max_blockbench_matrix_error": 1.4210854715202004e-14
+    },
+    {
+      "clip": "forward_strike",
+      "ticks": 50,
+      "baked_frames": 51,
+      "comparison_pairs": 10,
+      "max_blockbench_matrix_error": 7.549516567451064e-15
+    },
+    {
+      "clip": "fury_fist",
+      "ticks": 138,
+      "baked_frames": 139,
+      "comparison_pairs": 19,
+      "max_blockbench_matrix_error": 2.1316282072803006e-14
+    },
+    {
+      "clip": "launch",
+      "ticks": 79,
+      "baked_frames": 80,
+      "comparison_pairs": 11,
+      "max_blockbench_matrix_error": 1.4210854715202004e-14
+    },
+    {
+      "clip": "lightning_slam",
+      "ticks": 88,
+      "baked_frames": 89,
+      "comparison_pairs": 12,
+      "max_blockbench_matrix_error": 2.842170943040401e-14
+    },
+    {
+      "clip": "overcharge",
+      "ticks": 72,
+      "baked_frames": 73,
+      "comparison_pairs": 9,
+      "max_blockbench_matrix_error": 1.7763568394002505e-14
+    },
+    {
+      "clip": "hurt",
+      "ticks": 46,
+      "baked_frames": 47,
+      "comparison_pairs": 8,
+      "max_blockbench_matrix_error": 1.0658141036401503e-14
+    },
+    {
+      "clip": "summon",
+      "ticks": 45,
+      "baked_frames": 46,
+      "comparison_pairs": 9,
+      "max_blockbench_matrix_error": 1.4210854715202004e-14
+    }
+  ],
+  "socket_samples": 17,
+  "java_bake_in_memory": true,
+  "real_game": false
+}

@@ -1,0 +1,225 @@
+{
+  "Type": "MaterialInstanceConstant",
+  "Name": "M_JungleAbomination",
+  "Class": "UScriptClass'MaterialInstanceConstant'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Parent": {
+      "ObjectName": "Material'Master_ModelMaterial'",
+      "ObjectPath": "Dungeons/Content/Models/Master_ModelMaterial.0"
+    },
+    "bHasStaticPermutationResource": true,
+    "ScalarParameterValues": [
+      {
+        "ParameterInfo": {
+          "Name": "EmissiveB_SinusTempo",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": 0.1,
+        "ExpressionGUID": "D0EA9CE5-41D54575-668DE4B7-8D10EB86"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "EmissiveB_SinusVariation",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": 3.0,
+        "ExpressionGUID": "5168B055-402ACD0E-16717797-37793FE8"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "EmissiveBPower",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": 10.0,
+        "ExpressionGUID": "B10D036F-40949F95-27BB52B2-31829BD0"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "Flash Timestamp",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": -100.0,
+        "ExpressionGUID": "628036D5-4A7123A1-4FE7638B-9AA2E6BF"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "RefractionDepthBias",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": 0.0,
+        "ExpressionGUID": "00000000-00000000-00000000-00000000"
+      }
+    ],
+    "VectorParameterValues": [
+      {
+        "ParameterInfo": {
+          "Name": "ConstantEmissiveColor",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        },
+        "ExpressionGUID": "F39C616E-4DCCED71-8886AB90-FBF9509E"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "EmissiveBColor",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": {
+          "R": 1.0,
+          "G": 0.136,
+          "B": 0.98612,
+          "A": 1.0,
+          "Hex": "FF67FE"
+        },
+        "ExpressionGUID": "ABAF3FB4-49F0522C-0DEAEEA5-24B46493"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "EnchantmentColor",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": {
+          "R": 0.016807,
+          "G": 0.0,
+          "B": 0.020289,
+          "A": 1.0,
+          "Hex": "230027"
+        },
+        "ExpressionGUID": "8CF4F314-4FD5B358-BA8CDA84-D70E5ABA"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "ExtraEmissiveColor",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": {
+          "R": 1.0,
+          "G": 0.061246,
+          "B": 0.991102,
+          "A": 1.0,
+          "Hex": "FF46FE"
+        },
+        "ExpressionGUID": "EFCA235C-42455CA0-FB8F85A6-49966B61"
+      }
+    ],
+    "TextureParameterValues": [
+      {
+        "ParameterInfo": {
+          "Name": "Specular",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": {
+          "ObjectName": "Texture2D'T_Jungle_Abomination_E_M6'",
+          "ObjectPath": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/T_Jungle_Abomination_E_M6.0"
+        },
+        "ExpressionGUID": "04D4A098-4041EA0C-467B3382-96748613"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "Texture",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "ParameterValue": {
+          "ObjectName": "Texture2D'T_Jungle_Abomination_M6'",
+          "ObjectPath": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/T_Jungle_Abomination_M6.0"
+        },
+        "ExpressionGUID": "BD8CDDBE-404BA268-0F18A797-190556E0"
+      }
+    ],
+    "BasePropertyOverrides": {
+      "TwoSided": true,
+      "BlendMode": "BLEND_Masked",
+      "OpacityMaskClipValue": 0.1
+    },
+    "StaticParameters": {
+      "StaticSwitchParameters": [
+        {
+          "ParameterInfo": {
+            "Name": "ConstantEmissive",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "Value": true,
+          "bOverride": true,
+          "ExpressionGUID": "7CF2A1DF-453A6CAD-90E58C8F-5CB6BDEB"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "EnchantmentMask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "Value": true,
+          "bOverride": true,
+          "ExpressionGUID": "523C2D5A-4F58BC61-48841FA6-6690C58E"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "ExtraEmissive",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "Value": true,
+          "bOverride": true,
+          "ExpressionGUID": "DAA025AE-44E19713-58381590-FC79736A"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "SinusEmissive",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "Value": true,
+          "bOverride": true,
+          "ExpressionGUID": "1962C30F-4BC52586-10EBDFB2-123AFB7A"
+        }
+      ]
+    },
+    "TextureStreamingData": [
+      {
+        "SamplingScale": 1.0,
+        "UVChannelIndex": 0,
+        "TextureName": "Good64x64TilingNoiseHighFreq"
+      },
+      {
+        "SamplingScale": 0.5,
+        "UVChannelIndex": 0,
+        "TextureName": "T_Clouds_64"
+      },
+      {
+        "SamplingScale": 1.0,
+        "UVChannelIndex": 0,
+        "TextureName": "T_Jungle_Abomination_E_M6"
+      },
+      {
+        "SamplingScale": 1.0,
+        "UVChannelIndex": 0,
+        "TextureName": "T_Jungle_Abomination_M6"
+      },
+      {
+        "SamplingScale": 2.0,
+        "UVChannelIndex": 0,
+        "TextureName": "T_SmoothClouds_512"
+      }
+    ]
+  },
+  "LoadedMaterialResources": []
+}

@@ -1821,6 +1821,2826 @@
    "conditions": 0
   }
  ],
+ "rpg:armor_set/abyss": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:turtle_helmet",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "abyss"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "渊海之盔",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "沉入",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[深渊]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "的甲胄",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "至今仍听得见",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[潮声]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[鳃息]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "水下憋气时间延长，等同水下呼吸 III",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［渊海之主］",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "身处水中时获得潮涌能量与海豚的恩惠",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:tide",
+       "material": "minecraft:lapis"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 3,
+       "minecraft:aqua_affinity": 1
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 3.5,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/abyss/head/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/abyss/head/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/abyss/head/2"
+       },
+       {
+        "type": "minecraft:oxygen_bonus",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/abyss/head/3"
+       }
+      ],
+      "minecraft:max_damage": 407
+     }
+    },
+    {
+     "item": "minecraft:diamond_chestplate",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "abyss"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "渊海之铠",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "沉入",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[深渊]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "的甲胄",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "至今仍听得见",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[潮声]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[潮涌]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "生命上限 +20%",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［渊海之主］",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "身处水中时获得潮涌能量与海豚的恩惠",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:tide",
+       "material": "minecraft:lapis"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 3,
+       "minecraft:blast_protection": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 9,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/abyss/chest/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 4,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/abyss/chest/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/abyss/chest/2"
+       },
+       {
+        "type": "minecraft:max_health",
+        "amount": 0.2,
+        "operation": "add_multiplied_base",
+        "slot": "chest",
+        "id": "rpg:armor/abyss/chest/3"
+       }
+      ],
+      "minecraft:max_damage": 592
+     }
+    },
+    {
+     "item": "minecraft:chainmail_leggings",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "abyss"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "渊海之胫",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "沉入",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[深渊]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "的甲胄",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "至今仍听得见",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[潮声]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[逆流]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "水中移动效率 +50%",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［渊海之主］",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "身处水中时获得潮涌能量与海豚的恩惠",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:coast",
+       "material": "minecraft:diamond"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 3,
+       "minecraft:projectile_protection": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 6,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/abyss/legs/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/abyss/legs/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/abyss/legs/2"
+       },
+       {
+        "type": "minecraft:water_movement_efficiency",
+        "amount": 0.5,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/abyss/legs/3"
+       }
+      ],
+      "minecraft:max_damage": 555
+     }
+    },
+    {
+     "item": "minecraft:leather_boots",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "abyss"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "渊海之履",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "沉入",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[深渊]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "的甲胄",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "至今仍听得见",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[潮声]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[踏浪]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "击退抗性 +0.2，爆炸击退抗性 +50%",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［渊海之主］",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "身处水中时获得潮涌能量与海豚的恩惠",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:coast",
+       "material": "minecraft:lapis"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 3,
+       "minecraft:feather_falling": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 3.5,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/abyss/feet/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/abyss/feet/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.3,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/abyss/feet/2"
+       },
+       {
+        "type": "minecraft:explosion_knockback_resistance",
+        "amount": 0.5,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/abyss/feet/3"
+       }
+      ],
+      "minecraft:dyed_color": 1789810,
+      "minecraft:max_damage": 481
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:armor_set/demon": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:netherite_helmet",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "demon"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[恶魔]",
+        "color": "#DC4450",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "恶魔枷冠",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "以",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "为锁，以",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[血]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "为钥",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "戴上它的人，再也",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[摘不下]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪契]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "攻击力 +5%，生命上限 −5%",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［困兽之枷］",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "生命低于一半时获得力量 II 与抗性提升 I",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:snout",
+       "material": "minecraft:redstone"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 4,
+       "minecraft:fire_protection": 3,
+       "minecraft:thorns": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 4,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/demon/head/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 3.5,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/demon/head/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/demon/head/2"
+       },
+       {
+        "type": "minecraft:attack_damage",
+        "amount": 0.05,
+        "operation": "add_multiplied_base",
+        "slot": "head",
+        "id": "rpg:armor/demon/head/3"
+       },
+       {
+        "type": "minecraft:max_health",
+        "amount": -0.05,
+        "operation": "add_multiplied_base",
+        "slot": "head",
+        "id": "rpg:armor/demon/head/4"
+       }
+      ],
+      "minecraft:max_damage": 407
+     }
+    },
+    {
+     "item": "minecraft:chainmail_chestplate",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "demon"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[恶魔]",
+        "color": "#DC4450",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "恶魔枷甲",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "以",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "为锁，以",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[血]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "为钥",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "戴上它的人，再也",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[摘不下]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪契]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "攻击力 +5%，生命上限 −5%",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［困兽之枷］",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "生命低于一半时获得力量 II 与抗性提升 I",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:rib",
+       "material": "minecraft:netherite"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 4,
+       "minecraft:blast_protection": 3,
+       "minecraft:thorns": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 9.5,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/demon/chest/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 4.5,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/demon/chest/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/demon/chest/2"
+       },
+       {
+        "type": "minecraft:attack_damage",
+        "amount": 0.05,
+        "operation": "add_multiplied_base",
+        "slot": "chest",
+        "id": "rpg:armor/demon/chest/3"
+       },
+       {
+        "type": "minecraft:max_health",
+        "amount": -0.05,
+        "operation": "add_multiplied_base",
+        "slot": "chest",
+        "id": "rpg:armor/demon/chest/4"
+       }
+      ],
+      "minecraft:max_damage": 592
+     }
+    },
+    {
+     "item": "minecraft:netherite_leggings",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "demon"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[恶魔]",
+        "color": "#DC4450",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "恶魔枷胫",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "以",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "为锁，以",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[血]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "为钥",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "戴上它的人，再也",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[摘不下]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪契]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "攻击力 +5%，生命上限 −5%",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［困兽之枷］",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "生命低于一半时获得力量 II 与抗性提升 I",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:rib",
+       "material": "minecraft:redstone"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 4,
+       "minecraft:projectile_protection": 3,
+       "minecraft:thorns": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 7.5,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/demon/legs/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 4,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/demon/legs/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/demon/legs/2"
+       },
+       {
+        "type": "minecraft:attack_damage",
+        "amount": 0.05,
+        "operation": "add_multiplied_base",
+        "slot": "legs",
+        "id": "rpg:armor/demon/legs/3"
+       },
+       {
+        "type": "minecraft:max_health",
+        "amount": -0.05,
+        "operation": "add_multiplied_base",
+        "slot": "legs",
+        "id": "rpg:armor/demon/legs/4"
+       }
+      ],
+      "minecraft:max_damage": 555
+     }
+    },
+    {
+     "item": "minecraft:chainmail_boots",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "demon"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[恶魔]",
+        "color": "#DC4450",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "恶魔枷镣",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "以",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "为锁，以",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[血]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "为钥",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "戴上它的人，再也",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[摘不下]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪契]",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "攻击力 +5%，生命上限 −5%",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［困兽之枷］",
+         "color": "#DC4450",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "生命低于一半时获得力量 II 与抗性提升 I",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:silence",
+       "material": "minecraft:redstone"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 4,
+       "minecraft:feather_falling": 3,
+       "minecraft:thorns": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 4,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/demon/feet/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 3.5,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/demon/feet/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/demon/feet/2"
+       },
+       {
+        "type": "minecraft:attack_damage",
+        "amount": 0.05,
+        "operation": "add_multiplied_base",
+        "slot": "feet",
+        "id": "rpg:armor/demon/feet/3"
+       },
+       {
+        "type": "minecraft:max_health",
+        "amount": -0.05,
+        "operation": "add_multiplied_base",
+        "slot": "feet",
+        "id": "rpg:armor/demon/feet/4"
+       }
+      ],
+      "minecraft:max_damage": 481
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:armor_set/exorcist": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:leather_helmet",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "exorcist"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "驱魔人兜帽",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "行走于",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪仆]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "之间的",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "最后一盏",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[圣灯]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[明察]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "攻击距离 +0.5 格",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［驱魔圣职］",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "免疫失明与黑暗",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:eye",
+       "material": "minecraft:gold"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 3,
+       "minecraft:fire_protection": 2,
+       "minecraft:projectile_protection": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/exorcist/head/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/exorcist/head/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/exorcist/head/2"
+       },
+       {
+        "type": "minecraft:entity_interaction_range",
+        "amount": 0.5,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/exorcist/head/3"
+       }
+      ],
+      "minecraft:dyed_color": 13938487,
+      "minecraft:max_damage": 407
+     }
+    },
+    {
+     "item": "minecraft:leather_chestplate",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "exorcist"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "驱魔人法衣",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "行走于",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪仆]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "之间的",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "最后一盏",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[圣灯]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[誓约]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "生命上限 +30%",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［驱魔圣职］",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "免疫失明与黑暗",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:host",
+       "material": "minecraft:gold"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 3,
+       "minecraft:blast_protection": 2,
+       "minecraft:fire_protection": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 7,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/exorcist/chest/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/exorcist/chest/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/exorcist/chest/2"
+       },
+       {
+        "type": "minecraft:max_health",
+        "amount": 0.3,
+        "operation": "add_multiplied_base",
+        "slot": "chest",
+        "id": "rpg:armor/exorcist/chest/3"
+       }
+      ],
+      "minecraft:dyed_color": 4865299,
+      "minecraft:max_damage": 592
+     }
+    },
+    {
+     "item": "minecraft:chainmail_leggings",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "exorcist"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "驱魔人绑腿",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "行走于",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪仆]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "之间的",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "最后一盏",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[圣灯]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[行脚]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "潜行速度 +30%，可直接跨上一格高的台阶",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［驱魔圣职］",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "免疫失明与黑暗",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:wayfinder",
+       "material": "minecraft:gold"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 3,
+       "minecraft:projectile_protection": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 5,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/exorcist/legs/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/exorcist/legs/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/exorcist/legs/2"
+       },
+       {
+        "type": "minecraft:sneaking_speed",
+        "amount": 0.3,
+        "operation": "add_multiplied_base",
+        "slot": "legs",
+        "id": "rpg:armor/exorcist/legs/3"
+       },
+       {
+        "type": "minecraft:step_height",
+        "amount": 0.5,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/exorcist/legs/4"
+       }
+      ],
+      "minecraft:max_damage": 555
+     }
+    },
+    {
+     "item": "minecraft:netherite_boots",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "exorcist"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "驱魔人长靴",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "行走于",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[罪仆]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "之间的",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "最后一盏",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[圣灯]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🛡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[巡礼]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "移动速度 +10%，安全摔落高度 +3 格",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［驱魔圣职］",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "免疫失明与黑暗",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:wayfinder",
+       "material": "minecraft:gold"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 3,
+       "minecraft:feather_falling": 3
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/exorcist/feet/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/exorcist/feet/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/exorcist/feet/2"
+       },
+       {
+        "type": "minecraft:movement_speed",
+        "amount": 0.1,
+        "operation": "add_multiplied_base",
+        "slot": "feet",
+        "id": "rpg:armor/exorcist/feet/3"
+       },
+       {
+        "type": "minecraft:safe_fall_distance",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/exorcist/feet/4"
+       }
+      ],
+      "minecraft:max_damage": 481
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:dungeons_weapons/jacques": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "minecraft:mace",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "grave_bane_tag": 1,
+      "sword_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "坟墓克星",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "来自黑暗年代的",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[遗物]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "刀上的魔力足以",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[驱散亡灵]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🗡被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[三段连斩]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "每第三下化作横扫，前方敌人受8点伤害",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "亡灵受14点；两下间隔超过2秒重新计数",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "原作：Minecraft Dungeons · Grave Bane",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:enchantments": {
+       "minecraft:smite": 5,
+       "minecraft:density": 3,
+       "minecraft:looting": 2,
+       "minecraft:unbreaking": 3
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:attack_damage",
+        "amount": 9,
+        "operation": "add_value",
+        "slot": "mainhand",
+        "id": "rpg:grave_bane/0"
+       },
+       {
+        "type": "minecraft:attack_speed",
+        "amount": -2.8,
+        "operation": "add_value",
+        "slot": "mainhand",
+        "id": "rpg:grave_bane/1"
+       },
+       {
+        "type": "minecraft:entity_interaction_range",
+        "amount": 1,
+        "operation": "add_value",
+        "slot": "mainhand",
+        "id": "rpg:grave_bane/2"
+       }
+      ],
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110042.0
+       ]
+      }
+     }
+    },
+    {
+     "item": "minecraft:crossbow",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "harp_crossbow_tag": 1
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[传说]",
+        "color": "#FFAA00",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "竖琴弩",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "一半是",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[乐器]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "，一半是杀器",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "有它在，派对才算",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[开场]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "🏹被动技能",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[齐奏]",
+         "color": "#FFAA00",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "每次射出五支箭：多重射击之外",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "再向两侧各补一支，扇面更宽",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "原作：Minecraft Dungeons · Harp Crossbow",
+         "color": "#797979",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:enchantments": {
+       "minecraft:multishot": 1,
+       "minecraft:quick_charge": 2,
+       "minecraft:unbreaking": 3
+      },
+      "minecraft:custom_model_data": {
+       "floats": [
+        1110043.0
+       ]
+      }
+     }
+    }
+   ],
+   "conditions": 0
+  }
+ ],
  "rpg:loot/loot": [
   {
    "rolls": [
@@ -2125,6 +4945,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/abaddon/eligos": [
@@ -2378,6 +5220,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:15}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -2637,6 +5501,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/abaddon/leraje": [
@@ -2890,6 +5776,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:14}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -3149,6 +6057,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/beelzebub/bathin": [
@@ -3402,6 +6332,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:18}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -3661,6 +6613,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/beelzebub/purson": [
@@ -3914,6 +6888,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:20}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -4173,6 +7169,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/beelzebub/zepar": [
@@ -4426,6 +7444,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:16}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -4685,6 +7725,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/belial/berith": [
@@ -4938,6 +8000,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:28}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -5197,6 +8281,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/belial/forneus": [
@@ -5450,6 +8556,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:30}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -5709,6 +8837,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/leviathan/amon": [
@@ -5962,6 +9112,50 @@
       },
       "minecraft:custom_data": "{rpg_seal:7}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/abyss",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -6221,6 +9415,50 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/abyss",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/leviathan/buer": [
@@ -6474,6 +9712,50 @@
       },
       "minecraft:custom_data": "{rpg_seal:10}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/abyss",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -6733,6 +10015,50 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/abyss",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/leviathan/valefor": [
@@ -6986,6 +10312,50 @@
       },
       "minecraft:custom_data": "{rpg_seal:6}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/abyss",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -7245,6 +10615,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/lucifer/bael": [
@@ -7498,6 +10890,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:1}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -7757,6 +11171,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/lucifer/samigina": [
@@ -8010,6 +11446,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:4}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -8269,6 +11727,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/mammon/asmoday": [
@@ -8522,6 +12002,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:32}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -8781,6 +12283,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/mammon/furfur": [
@@ -9034,6 +12558,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:34}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -9293,6 +12839,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/mammon/marchosias": [
@@ -9546,6 +13114,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:35}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -9805,6 +13395,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/samael/glasya_labolas": [
@@ -10058,6 +13670,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:25}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -10317,6 +13951,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/samael/marax": [
@@ -10573,6 +14229,28 @@
     }
    ],
    "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 2
   }
  ],
  "rpg:minion/samael/naberius": [
@@ -10826,6 +14504,28 @@
       },
       "minecraft:custom_data": "{rpg_seal:24}"
      }
+    }
+   ],
+   "conditions": 2
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:armor_set/demon",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
     }
    ],
    "conditions": 2
@@ -11633,6 +15333,165 @@
       1
      ],
      "components": {}
+    },
+    {
+     "item": "minecraft:leather_boots",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "sentinel"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[史诗]",
+        "color": "#B85CF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "圣卫战靴",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "圣塔之下的",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[守望]",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "从未终结",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "残甲仍记得那句",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[誓言]",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［圣卫之誓］",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "护甲韧性 +4，击退抗性 +0.2",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:ward",
+       "material": "minecraft:gold"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 2,
+       "minecraft:projectile_protection": 2,
+       "minecraft:feather_falling": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/sentinel/feet/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 2,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/sentinel/feet/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.05,
+        "operation": "add_value",
+        "slot": "feet",
+        "id": "rpg:armor/sentinel/feet/2"
+       }
+      ],
+      "minecraft:dyed_color": 16773800,
+      "minecraft:max_damage": 429
+     }
     }
    ],
    "conditions": 0
@@ -12044,6 +15903,164 @@
       1
      ],
      "components": {}
+    },
+    {
+     "item": "minecraft:chainmail_chestplate",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "sentinel"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[史诗]",
+        "color": "#B85CF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "圣卫胸铠",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "圣塔之下的",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[守望]",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "从未终结",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "残甲仍记得那句",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[誓言]",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［圣卫之誓］",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "护甲韧性 +4，击退抗性 +0.2",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:sentry",
+       "material": "minecraft:gold"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 2,
+       "minecraft:projectile_protection": 2,
+       "minecraft:blast_protection": 1
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 7.5,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/sentinel/chest/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 2.5,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/sentinel/chest/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.05,
+        "operation": "add_value",
+        "slot": "chest",
+        "id": "rpg:armor/sentinel/chest/2"
+       }
+      ],
+      "minecraft:max_damage": 528
+     }
     }
    ],
    "conditions": 0
@@ -12700,6 +16717,163 @@
       1
      ],
      "components": {}
+    },
+    {
+     "item": "minecraft:golden_helmet",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "sentinel"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[史诗]",
+        "color": "#B85CF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "圣卫残盔",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "圣塔之下的",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[守望]",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "从未终结",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "残甲仍记得那句",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[誓言]",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［圣卫之誓］",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "护甲韧性 +4，击退抗性 +0.2",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:ward",
+       "material": "minecraft:quartz"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 2,
+       "minecraft:projectile_protection": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/sentinel/head/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 2,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/sentinel/head/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.05,
+        "operation": "add_value",
+        "slot": "head",
+        "id": "rpg:armor/sentinel/head/2"
+       }
+      ],
+      "minecraft:max_damage": 363
+     }
     }
    ],
    "conditions": 0
@@ -13014,6 +17188,163 @@
       1
      ],
      "components": {}
+    },
+    {
+     "item": "minecraft:iron_leggings",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {
+      "chestplate_tag": 1,
+      "armor_set": "sentinel"
+     },
+     "damage": null,
+     "count": null,
+     "components": {
+      "minecraft:custom_name": [
+       "",
+       {
+        "text": "[史诗]",
+        "color": "#B85CF0",
+        "bold": true,
+        "italic": false
+       },
+       {
+        "text": "圣卫腿甲",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false
+       }
+      ],
+      "minecraft:lore": [
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "圣塔之下的",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[守望]",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        },
+        {
+         "text": "从未终结",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "残甲仍记得那句",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "[誓言]",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "套装 · 穿齐四件",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        },
+        {
+         "text": "［圣卫之誓］",
+         "color": "#B85CF0",
+         "bold": true,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "护甲韧性 +4，击退抗性 +0.2",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ],
+       [
+        "",
+        {
+         "text": "+------------------+",
+         "color": "#FFFFFF",
+         "bold": false,
+         "italic": false
+        }
+       ]
+      ],
+      "minecraft:trim": {
+       "pattern": "minecraft:sentry",
+       "material": "minecraft:gold"
+      },
+      "minecraft:tooltip_display": {
+       "hidden_components": [
+        "minecraft:trim"
+       ]
+      },
+      "minecraft:enchantments": {
+       "minecraft:protection": 2,
+       "minecraft:projectile_protection": 2
+      },
+      "minecraft:attribute_modifiers": [
+       {
+        "type": "minecraft:armor",
+        "amount": 6,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/sentinel/legs/0"
+       },
+       {
+        "type": "minecraft:armor_toughness",
+        "amount": 2,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/sentinel/legs/1"
+       },
+       {
+        "type": "minecraft:knockback_resistance",
+        "amount": 0.05,
+        "operation": "add_value",
+        "slot": "legs",
+        "id": "rpg:armor/sentinel/legs/2"
+       }
+      ],
+      "minecraft:max_damage": 495
+     }
     }
    ],
    "conditions": 0
@@ -13740,6 +18071,32 @@
     {
      "item": "→ rpg:trial/leggings",
      "weight": 2,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:dungeons_weapons/jacques",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:armor_set/exorcist",
+     "weight": 1,
      "name": null,
      "lore": [],
      "attrs": [],

@@ -1,0 +1,479 @@
+{
+  "package": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance",
+  "summary": {
+    "header_size": 3353,
+    "name_count": 55,
+    "name_offset": 193,
+    "export_count": 5,
+    "export_offset": 2713,
+    "import_count": 25,
+    "import_offset": 2013,
+    "depends_offset": 3233,
+    "package_flags": 2147483648,
+    "version_assumption": "UE4.22 / UE4 package version 517; unversioned header"
+  },
+  "sources": [
+    {
+      "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\raw\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique2\\BP_EvocationRobe_Unique2Instance.uasset",
+      "bytes": 3353,
+      "sha256": "9c6b30b5897b5e6274e6e26a5e418d80c77f0ae8926a16da08e72fe5f470d0f0"
+    },
+    {
+      "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\raw\\Game\\Actors\\Equipment\\Armor\\EvocationRobe_Unique2\\BP_EvocationRobe_Unique2Instance.uexp",
+      "bytes": 556,
+      "sha256": "6bb470180750b067a16bb3f787cd212420df7f484987a4406b014834d496b25b"
+    }
+  ],
+  "imports": [
+    {
+      "index": -1,
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer": -12,
+      "name": "BP_EvocationRobeInstance_C",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/BP_EvocationRobeInstance.BP_EvocationRobeInstance_C"
+    },
+    {
+      "index": -2,
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer": -13,
+      "name": "BP_EvocationRobe_Unique2_C",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C"
+    },
+    {
+      "index": -3,
+      "class_package": "/Script/Engine",
+      "class_name": "BlueprintGeneratedClass",
+      "outer": -15,
+      "name": "Default__BlueprintGeneratedClass",
+      "object_path": "/Script/Engine.Default__BlueprintGeneratedClass"
+    },
+    {
+      "index": -4,
+      "class_package": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2",
+      "class_name": "BP_EvocationRobe_Unique2_C",
+      "outer": -13,
+      "name": "Default__BP_EvocationRobe_Unique2_C",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.Default__BP_EvocationRobe_Unique2_C"
+    },
+    {
+      "index": -5,
+      "class_package": "/Game/Actors/Equipment/Armor/EvocationRobe/BP_EvocationRobeInstance",
+      "class_name": "BP_EvocationRobeInstance_C",
+      "outer": -12,
+      "name": "Default__BP_EvocationRobeInstance_C",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/BP_EvocationRobeInstance.Default__BP_EvocationRobeInstance_C"
+    },
+    {
+      "index": -6,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -14,
+      "name": "Object",
+      "object_path": "/Script/CoreUObject.Object"
+    },
+    {
+      "index": -7,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -15,
+      "name": "BillboardComponent",
+      "object_path": "/Script/Engine.BillboardComponent"
+    },
+    {
+      "index": -8,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -15,
+      "name": "BlueprintGeneratedClass",
+      "object_path": "/Script/Engine.BlueprintGeneratedClass"
+    },
+    {
+      "index": -9,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -15,
+      "name": "SceneComponent",
+      "object_path": "/Script/Engine.SceneComponent"
+    },
+    {
+      "index": -10,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -15,
+      "name": "SCS_Node",
+      "object_path": "/Script/Engine.SCS_Node"
+    },
+    {
+      "index": -11,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Class",
+      "outer": -15,
+      "name": "SimpleConstructionScript",
+      "object_path": "/Script/Engine.SimpleConstructionScript"
+    },
+    {
+      "index": -12,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Game/Actors/Equipment/Armor/EvocationRobe/BP_EvocationRobeInstance",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/BP_EvocationRobeInstance"
+    },
+    {
+      "index": -13,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2"
+    },
+    {
+      "index": -14,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Script/CoreUObject",
+      "object_path": "/Script/CoreUObject"
+    },
+    {
+      "index": -15,
+      "class_package": "/Script/CoreUObject",
+      "class_name": "Package",
+      "outer": 0,
+      "name": "/Script/Engine",
+      "object_path": "/Script/Engine"
+    },
+    {
+      "index": -16,
+      "class_package": "/Script/Dungeons",
+      "class_name": "PaperdollComponent",
+      "outer": -4,
+      "name": "Paperdoll",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.Default__BP_EvocationRobe_Unique2_C.Paperdoll"
+    },
+    {
+      "index": -17,
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer": -1,
+      "name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe/BP_EvocationRobeInstance.BP_EvocationRobeInstance_C.DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "index": -18,
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer": -2,
+      "name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.DefaultSceneRoot_GEN_VARIABLE"
+    },
+    {
+      "index": -19,
+      "class_package": "/Script/Engine",
+      "class_name": "SceneComponent",
+      "outer": -15,
+      "name": "Default__SceneComponent",
+      "object_path": "/Script/Engine.Default__SceneComponent"
+    },
+    {
+      "index": -20,
+      "class_package": "/Script/Engine",
+      "class_name": "SCS_Node",
+      "outer": -15,
+      "name": "Default__SCS_Node",
+      "object_path": "/Script/Engine.Default__SCS_Node"
+    },
+    {
+      "index": -21,
+      "class_package": "/Script/Engine",
+      "class_name": "SimpleConstructionScript",
+      "outer": -15,
+      "name": "Default__SimpleConstructionScript",
+      "object_path": "/Script/Engine.Default__SimpleConstructionScript"
+    },
+    {
+      "index": -22,
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer": -2,
+      "name": "StaticMesh1_GEN_VARIABLE",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh1_GEN_VARIABLE"
+    },
+    {
+      "index": -23,
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer": -2,
+      "name": "StaticMesh3_GEN_VARIABLE",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh3_GEN_VARIABLE"
+    },
+    {
+      "index": -24,
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer": -2,
+      "name": "StaticMesh4_GEN_VARIABLE",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh4_GEN_VARIABLE"
+    },
+    {
+      "index": -25,
+      "class_package": "/Script/Engine",
+      "class_name": "StaticMeshComponent",
+      "outer": -2,
+      "name": "StaticMesh_GEN_VARIABLE",
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C.StaticMesh_GEN_VARIABLE"
+    }
+  ],
+  "exports": [
+    {
+      "index": 1,
+      "class_index": -8,
+      "super_index": -1,
+      "template_index": -3,
+      "outer": 0,
+      "name": "BP_EvocationRobe_Unique2Instance_C",
+      "object_flags": 9,
+      "serial_bytes": 105,
+      "serial_offset": 3353,
+      "uexp_offset": 0,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.BP_EvocationRobe_Unique2Instance_C",
+      "class_path": "/Script/Engine.BlueprintGeneratedClass",
+      "super_path": "/Game/Actors/Equipment/Armor/EvocationRobe/BP_EvocationRobeInstance.BP_EvocationRobeInstance_C",
+      "template_path": "/Script/Engine.Default__BlueprintGeneratedClass",
+      "properties": [
+        {
+          "name": "SimpleConstructionScript",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 5,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.BP_EvocationRobe_Unique2Instance_C.SimpleConstructionScript_0"
+          }
+        }
+      ],
+      "tagged_property_bytes": 37,
+      "remaining_native_bytes": 68
+    },
+    {
+      "index": 2,
+      "class_index": 1,
+      "super_index": 0,
+      "template_index": -5,
+      "outer": 0,
+      "name": "Default__BP_EvocationRobe_Unique2Instance_C",
+      "object_flags": 57,
+      "serial_bytes": 226,
+      "serial_offset": 3458,
+      "uexp_offset": 105,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.Default__BP_EvocationRobe_Unique2Instance_C",
+      "class_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.BP_EvocationRobe_Unique2Instance_C",
+      "super_path": null,
+      "template_path": "/Game/Actors/Equipment/Armor/EvocationRobe/BP_EvocationRobeInstance.Default__BP_EvocationRobeInstance_C",
+      "properties": [
+        {
+          "name": "GearActor",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -2,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.BP_EvocationRobe_Unique2_C"
+          }
+        },
+        {
+          "name": "InventoryDropSound",
+          "type": "SoftObjectProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 54,
+          "size": 12,
+          "metadata": {},
+          "value": {
+            "unparsed_hex": "040000000000000000000000"
+          }
+        },
+        {
+          "name": "ItemIdName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 66,
+          "value_offset": 91,
+          "size": 8,
+          "metadata": {},
+          "value": "EvocationRobe_Unique2"
+        },
+        {
+          "name": "ItemId",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 99,
+          "value_offset": 148,
+          "size": 41,
+          "metadata": {
+            "struct": "SerializableItemId",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": {
+            "properties": [
+              {
+                "name": "SerializedId",
+                "type": "NameProperty",
+                "array_index": 0,
+                "tag_offset": 0,
+                "value_offset": 25,
+                "size": 8,
+                "metadata": {},
+                "value": "EvocationRobe_Unique2"
+              }
+            ]
+          }
+        },
+        {
+          "name": "RootComponent",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 189,
+          "value_offset": 214,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 0,
+            "path": null
+          }
+        }
+      ],
+      "tagged_property_bytes": 226,
+      "remaining_native_bytes": 0
+    },
+    {
+      "index": 3,
+      "class_index": -9,
+      "super_index": 0,
+      "template_index": -19,
+      "outer": 1,
+      "name": "DefaultSceneRoot_GEN_VARIABLE",
+      "object_flags": 41,
+      "serial_bytes": 12,
+      "serial_offset": 3684,
+      "uexp_offset": 331,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.BP_EvocationRobe_Unique2Instance_C.DefaultSceneRoot_GEN_VARIABLE",
+      "class_path": "/Script/Engine.SceneComponent",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SceneComponent",
+      "properties": [],
+      "tagged_property_bytes": 8,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 4,
+      "class_index": -10,
+      "super_index": 0,
+      "template_index": -20,
+      "outer": 5,
+      "name": "SCS_Node_0",
+      "object_flags": 8,
+      "serial_bytes": 168,
+      "serial_offset": 3696,
+      "uexp_offset": 343,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.BP_EvocationRobe_Unique2Instance_C.SimpleConstructionScript_0.SCS_Node_0",
+      "class_path": "/Script/Engine.SCS_Node",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SCS_Node",
+      "properties": [
+        {
+          "name": "ComponentClass",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": -9,
+            "path": "/Script/Engine.SceneComponent"
+          }
+        },
+        {
+          "name": "ComponentTemplate",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 29,
+          "value_offset": 54,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 3,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.BP_EvocationRobe_Unique2Instance_C.DefaultSceneRoot_GEN_VARIABLE"
+          }
+        },
+        {
+          "name": "VariableGuid",
+          "type": "StructProperty",
+          "array_index": 0,
+          "tag_offset": 58,
+          "value_offset": 107,
+          "size": 16,
+          "metadata": {
+            "struct": "Guid",
+            "struct_guid": "00000000000000000000000000000000"
+          },
+          "value": "ac7ac8c01c8dcf4eb16631c1a0d37092"
+        },
+        {
+          "name": "InternalVariableName",
+          "type": "NameProperty",
+          "array_index": 0,
+          "tag_offset": 123,
+          "value_offset": 148,
+          "size": 8,
+          "metadata": {},
+          "value": "DefaultSceneRoot"
+        }
+      ],
+      "tagged_property_bytes": 164,
+      "remaining_native_bytes": 4
+    },
+    {
+      "index": 5,
+      "class_index": -11,
+      "super_index": 0,
+      "template_index": -21,
+      "outer": 1,
+      "name": "SimpleConstructionScript_0",
+      "object_flags": 8,
+      "serial_bytes": 41,
+      "serial_offset": 3864,
+      "uexp_offset": 511,
+      "object_path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.BP_EvocationRobe_Unique2Instance_C.SimpleConstructionScript_0",
+      "class_path": "/Script/Engine.SimpleConstructionScript",
+      "super_path": null,
+      "template_path": "/Script/Engine.Default__SimpleConstructionScript",
+      "properties": [
+        {
+          "name": "DefaultSceneRootNode",
+          "type": "ObjectProperty",
+          "array_index": 0,
+          "tag_offset": 0,
+          "value_offset": 25,
+          "size": 4,
+          "metadata": {},
+          "value": {
+            "index": 4,
+            "path": "/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.BP_EvocationRobe_Unique2Instance_C.SimpleConstructionScript_0.SCS_Node_0"
+          }
+        }
+      ],
+      "tagged_property_bytes": 37,
+      "remaining_native_bytes": 4
+    }
+  ]
+}

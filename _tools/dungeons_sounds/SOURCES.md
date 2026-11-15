@@ -224,3 +224,69 @@
 - `D4_sfx_mob_piglinIdle-003.ogg` sha256:4d694d474d3c5f8c
 - `D4_sfx_mob_piglinIdle-004.ogg` sha256:8c8dea3725124124
 
+
+## enchanter
+
+页面：<https://minecraft.wiki/w/Dungeons:Enchanter>（2026-11-14 经用户同意下载）
+
+- `Sfx_mob_bodyFall-001_soundWave.ogg` sha256:ea7c2cf5905b8ba6
+- `Sfx_mob_bodyFall-002_soundWave.ogg` sha256:9fe6a84dfbffca03
+- `Sfx_mob_bodyFall-003_soundWave.ogg` sha256:22e95bea400d8e06
+- `Sfx_mob_bodyFall-004_soundWave.ogg` sha256:3504c0b0672c6718
+- `Sfx_mob_enchanterAttack-001_soundWave.ogg` sha256:e62c43ec172f8a50
+- `Sfx_mob_enchanterAttack-002_soundWave.ogg` sha256:94e64cb205bdf791
+- `Sfx_mob_enchanterAttack-003_soundWave.ogg` sha256:6a49a26aad53012b
+- `Sfx_mob_enchanterBeam-001_soundWave.ogg` sha256:8c39928fa8661da2
+- `Sfx_mob_enchanterBeamLoop-001_soundWave.ogg` sha256:db46f1838078c017
+- `Sfx_mob_enchanterDeath-001_soundWave.ogg` sha256:9566e43930041d8b
+- `Sfx_mob_enchanterDeath-002_soundWave.ogg` sha256:ca4453db4ae699ec
+- `Sfx_mob_enchanterDeath-003_soundWave.ogg` sha256:d0c76f563401f52b
+- `Sfx_mob_enchanterHurt-001_soundWave.ogg` sha256:71e1d6c3d6bfba70
+- `Sfx_mob_enchanterHurt-002_soundWave.ogg` sha256:8f78bd966816afbb
+- `Sfx_mob_enchanterHurt-003_soundWave.ogg` sha256:5e2fda4351eaa84a
+- `Sfx_mob_enchanterIdle-001_soundWave.ogg` sha256:e610f4bbf507f06a
+- `Sfx_mob_enchanterIdle-002_soundWave.ogg` sha256:bd89164b450559b7
+- `Sfx_mob_enchanterIdle-003_soundWave.ogg` sha256:0e6462f375fcdced
+- `Sfx_mob_enchanterPreAttack-001_soundWave.ogg` sha256:667ef518e8148511
+- `Sfx_mob_enchanterPreAttack-002_soundWave.ogg` sha256:0101d86d799813ac
+- `Sfx_mob_enchanterPreAttack-003_soundWave.ogg` sha256:3bb31a044f8feee6
+- `Sfx_mob_enchanterSpell-001_soundWave.ogg` sha256:8c464068f6ca13b7
+- `Sfx_mob_enchanterSpell-002_soundWave.ogg` sha256:5353f7482db73946
+- `Sfx_mob_redstoneGolemJumpScare-001_soundWave.ogg` sha256:0563dcf922f352f4
+- `Sfx_player_stepGravel-001_soundWave.ogg` sha256:7a0ca5e6bf35de85
+- `Sfx_player_stepGravel-002_soundWave.ogg` sha256:0f22fc366eb13660
+- `Sfx_player_stepGravel-003_soundWave.ogg` sha256:d23a8786b1eaec86
+- `Sfx_player_stepGravel-004_soundWave.ogg` sha256:62eaf2229f1f27eb
+- `Sfx_ui_enchantBook-001_soundWave.ogg` sha256:9b5853b615702103
+- `Sfx_ui_enchantBook-002_soundWave.ogg` sha256:9f160a6e48f51bb4
+- `Sfx_ui_enchantBook-003_soundWave.ogg` sha256:3e2fca5a4ae93b8e
+- `Sfx_ui_enchantBookBladder-001_soundWave.ogg` sha256:b66f210cafe2a3fc
+- `Sfx_ui_enchantBookBladder-002_soundWave.ogg` sha256:a0a871b3ec051917
+- `Sfx_ui_enchantBookBladder-003_soundWave.ogg` sha256:0c2e1bd5a4340e5c
+- `Sfx_ui_enchantBookBladder-004_soundWave.ogg` sha256:ec932cdd6c530765
+- `Sfx_ui_enchantBookClose-001_soundWave.ogg` sha256:8ae8d7b5c1da84b8
+- `Sfx_ui_enchantChime-001_soundWave.ogg` sha256:490f61301f97c8b7
+- `Sfx_ui_enchantChime-002_soundWave.ogg` sha256:798a2d02a1298325
+- `Sfx_ui_enchantChime-003_soundWave.ogg` sha256:7d72508f04bc2e97
+
+## jacques（圣殿大团长雅克：坟墓克星、竖琴弩）
+
+2026-11-15 经用户同意下载。页面：<https://minecraft.wiki/w/Dungeons:Grave_Bane>、<https://minecraft.wiki/w/Dungeons:Harp_Crossbow>
+
+- `Sfx_item_glaiveShing-001_soundWave.ogg` sha256:1b619917bf8d82da
+- `Sfx_item_glaiveShing-002_soundWave.ogg` sha256:a017ed3c6e44e1fb
+- `Sfx_item_glaiveShing-003_soundWave.ogg` sha256:df4c1f305e3c4b5d
+- `Sfx_item_glaiveShing-004_soundWave.ogg` sha256:6664633c591e37ce
+- `Sfx_item_glaiveSwing-001_soundWave.ogg` sha256:9cfdb71cb4215b84
+- `Sfx_item_glaiveSwing-002_soundWave.ogg` sha256:c24e0a327b3a2546
+- `Sfx_item_glaiveSwing-003_soundWave.ogg` sha256:129833ed8009ab7c
+- `Sfx_item_glaiveSwing-004_soundWave.ogg` sha256:f4f8cb4beee5173f
+- `Sfx_item_glaiveSwing-005_soundWave.ogg` sha256:89dfc6733a4bf6f8
+- `Sfx_item_scatterCrossbowUnique1Arrow-001.ogg` sha256:565eb4d06ceec625
+- `Sfx_item_scatterCrossbowUnique1Place-001.ogg` sha256:7da63fc8f7ab1171
+- `Sfx_item_scatterCrossbowUnique1Place-002.ogg` sha256:a47bf8197cd9126a
+- `Sfx_item_scatterCrossbowUnique1Place-003.ogg` sha256:91b30ed16a2604ee
+- `Sfx_item_scatterCrossbowUnique1Shoot-001.ogg` sha256:1bda89266047e90d
+- `Sfx_item_scatterCrossbowUnique1Shoot-002.ogg` sha256:05c4e16a500c2b91
+- `Sfx_item_scatterCrossbowUnique1Shoot-003.ogg` sha256:6e5d480faee52a34
+- `Sfx_item_scatterCrossbowUnique1Shoot-004.ogg` sha256:e721da94a3c8a3e7

@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{rpg_jq_oath:1b}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:jacques_ally/use"
+  }
+}

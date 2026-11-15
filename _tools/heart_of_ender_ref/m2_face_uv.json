@@ -1,0 +1,4956 @@
+{
+  "source": "heart_of_ender_geo.py",
+  "pixels_per_model_unit_stars": {
+    "head_and_jaw": 4.5,
+    "body_and_limbs": 13
+  },
+  "game_model_scale": "not decided",
+  "faces": [
+    {
+      "element": "shell_body_upper_uvsegment_1",
+      "bone": "shell_body",
+      "face": "north",
+      "atlas_uv": [
+        146,
+        172,
+        263,
+        258.66667
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        292,
+        374,
+        409,
+        460.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_1",
+      "bone": "shell_body",
+      "face": "east",
+      "atlas_uv": [
+        148,
+        146,
+        252,
+        232.66667
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        294,
+        348,
+        398,
+        434.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_1",
+      "bone": "shell_body",
+      "face": "south",
+      "atlas_uv": [
+        12,
+        180,
+        129,
+        266.66667
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        76,
+        476,
+        193,
+        562.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_1",
+      "bone": "shell_body",
+      "face": "west",
+      "atlas_uv": [
+        285,
+        48,
+        389,
+        134.66667
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        477,
+        152,
+        581,
+        238.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_1",
+      "bone": "shell_body",
+      "face": "up",
+      "atlas_uv": [
+        148,
+        144,
+        265,
+        248
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        294,
+        346,
+        411,
+        450
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_1",
+      "bone": "shell_body",
+      "face": "down",
+      "atlas_uv": [
+        287,
+        32,
+        404,
+        136
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        479,
+        136,
+        596,
+        240
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_2",
+      "bone": "shell_body",
+      "face": "north",
+      "atlas_uv": [
+        153,
+        172,
+        270,
+        258.66667
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        299,
+        374,
+        416,
+        460.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_2",
+      "bone": "shell_body",
+      "face": "east",
+      "atlas_uv": [
+        304,
+        169,
+        408,
+        255.66667
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        522,
+        503,
+        626,
+        589.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_2",
+      "bone": "shell_body",
+      "face": "south",
+      "atlas_uv": [
+        149,
+        43,
+        266,
+        129.66667
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        265,
+        67,
+        382,
+        153.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_2",
+      "bone": "shell_body",
+      "face": "west",
+      "atlas_uv": [
+        302,
+        168,
+        406,
+        254.66667
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        520,
+        502,
+        624,
+        588.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_2",
+      "bone": "shell_body",
+      "face": "up",
+      "atlas_uv": [
+        282,
+        161,
+        399,
+        265
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        500,
+        495,
+        617,
+        599
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_2",
+      "bone": "shell_body",
+      "face": "down",
+      "atlas_uv": [
+        289,
+        164,
+        406,
+        268
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        507,
+        498,
+        624,
+        602
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_3",
+      "bone": "shell_body",
+      "face": "north",
+      "atlas_uv": [
+        144,
+        177,
+        261,
+        263.66667
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        290,
+        379,
+        407,
+        465.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_3",
+      "bone": "shell_body",
+      "face": "east",
+      "atlas_uv": [
+        23,
+        12,
+        127,
+        98.66667
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        39,
+        28,
+        143,
+        114.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_3",
+      "bone": "shell_body",
+      "face": "south",
+      "atlas_uv": [
+        11,
+        45,
+        128,
+        131.66667
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        27,
+        61,
+        144,
+        147.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_3",
+      "bone": "shell_body",
+      "face": "west",
+      "atlas_uv": [
+        159,
+        27,
+        263,
+        113.66667
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        275,
+        51,
+        379,
+        137.66667
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_3",
+      "bone": "shell_body",
+      "face": "up",
+      "atlas_uv": [
+        149,
+        22,
+        266,
+        126
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        265,
+        46,
+        382,
+        150
+      ]
+    },
+    {
+      "element": "shell_body_upper_uvsegment_3",
+      "bone": "shell_body",
+      "face": "down",
+      "atlas_uv": [
+        144,
+        158,
+        261,
+        262
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        290,
+        360,
+        407,
+        464
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_1",
+      "bone": "shell_body",
+      "face": "north",
+      "atlas_uv": [
+        283,
+        12,
+        400,
+        86.75
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        475,
+        116,
+        592,
+        190.75
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_1",
+      "bone": "shell_body",
+      "face": "east",
+      "atlas_uv": [
+        172,
+        42,
+        191.5,
+        116.75
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        288,
+        66,
+        307.5,
+        140.75
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_1",
+      "bone": "shell_body",
+      "face": "south",
+      "atlas_uv": [
+        152,
+        179,
+        269,
+        253.75
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        298,
+        381,
+        415,
+        455.75
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_1",
+      "bone": "shell_body",
+      "face": "west",
+      "atlas_uv": [
+        21,
+        11,
+        40.5,
+        85.75
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        37,
+        27,
+        56.5,
+        101.75
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_1",
+      "bone": "shell_body",
+      "face": "up",
+      "atlas_uv": [
+        16,
+        188,
+        133,
+        207.5
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        80,
+        484,
+        197,
+        503.5
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_1",
+      "bone": "shell_body",
+      "face": "down",
+      "atlas_uv": [
+        150,
+        181,
+        267,
+        200.5
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        296,
+        383,
+        413,
+        402.5
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_2",
+      "bone": "shell_body",
+      "face": "north",
+      "atlas_uv": [
+        17,
+        58,
+        134,
+        132.75
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        33,
+        74,
+        150,
+        148.75
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_2",
+      "bone": "shell_body",
+      "face": "east",
+      "atlas_uv": [
+        66,
+        161,
+        85.5,
+        235.75
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        130,
+        457,
+        149.5,
+        531.75
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_2",
+      "bone": "shell_body",
+      "face": "south",
+      "atlas_uv": [
+        287,
+        170,
+        404,
+        244.75
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        505,
+        504,
+        622,
+        578.75
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_2",
+      "bone": "shell_body",
+      "face": "west",
+      "atlas_uv": [
+        315,
+        30,
+        334.5,
+        104.75
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        507,
+        134,
+        526.5,
+        208.75
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_2",
+      "bone": "shell_body",
+      "face": "up",
+      "atlas_uv": [
+        10,
+        80,
+        127,
+        99.5
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        26,
+        96,
+        143,
+        115.5
+      ]
+    },
+    {
+      "element": "shell_body_lower_back_uvsegment_2",
+      "bone": "shell_body",
+      "face": "down",
+      "atlas_uv": [
+        290,
+        237,
+        407,
+        256.5
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        508,
+        571,
+        625,
+        590.5
+      ]
+    },
+    {
+      "element": "shell_body_lower_left_rim",
+      "bone": "shell_body",
+      "face": "north",
+      "atlas_uv": [
+        43,
+        21,
+        57.3,
+        112
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        59,
+        37,
+        73.3,
+        128
+      ]
+    },
+    {
+      "element": "shell_body_lower_left_rim",
+      "bone": "shell_body",
+      "face": "east",
+      "atlas_uv": [
+        284,
+        28,
+        388,
+        119
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        476,
+        132,
+        580,
+        223
+      ]
+    },
+    {
+      "element": "shell_body_lower_left_rim",
+      "bone": "shell_body",
+      "face": "south",
+      "atlas_uv": [
+        246,
+        162,
+        260.3,
+        253
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        392,
+        364,
+        406.3,
+        455
+      ]
+    },
+    {
+      "element": "shell_body_lower_left_rim",
+      "bone": "shell_body",
+      "face": "west",
+      "atlas_uv": [
+        19,
+        22,
+        123,
+        113
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        35,
+        38,
+        139,
+        129
+      ]
+    },
+    {
+      "element": "shell_body_lower_left_rim",
+      "bone": "shell_body",
+      "face": "up",
+      "atlas_uv": [
+        65,
+        165,
+        79.3,
+        269
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        129,
+        461,
+        143.3,
+        565
+      ]
+    },
+    {
+      "element": "shell_body_lower_left_rim",
+      "bone": "shell_body",
+      "face": "down",
+      "atlas_uv": [
+        213,
+        150,
+        227.3,
+        254
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        359,
+        352,
+        373.3,
+        456
+      ]
+    },
+    {
+      "element": "shell_body_lower_right_rim",
+      "bone": "shell_body",
+      "face": "north",
+      "atlas_uv": [
+        19,
+        166,
+        33.3,
+        257
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        83,
+        462,
+        97.3,
+        553
+      ]
+    },
+    {
+      "element": "shell_body_lower_right_rim",
+      "bone": "shell_body",
+      "face": "east",
+      "atlas_uv": [
+        24,
+        169,
+        128,
+        260
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        88,
+        465,
+        192,
+        556
+      ]
+    },
+    {
+      "element": "shell_body_lower_right_rim",
+      "bone": "shell_body",
+      "face": "south",
+      "atlas_uv": [
+        30,
+        30,
+        44.3,
+        121
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        46,
+        46,
+        60.3,
+        137
+      ]
+    },
+    {
+      "element": "shell_body_lower_right_rim",
+      "bone": "shell_body",
+      "face": "west",
+      "atlas_uv": [
+        18,
+        20,
+        122,
+        111
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        34,
+        36,
+        138,
+        127
+      ]
+    },
+    {
+      "element": "shell_body_lower_right_rim",
+      "bone": "shell_body",
+      "face": "up",
+      "atlas_uv": [
+        146,
+        168,
+        160.3,
+        272
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        292,
+        370,
+        306.3,
+        474
+      ]
+    },
+    {
+      "element": "shell_body_lower_right_rim",
+      "bone": "shell_body",
+      "face": "down",
+      "atlas_uv": [
+        255,
+        150,
+        269.3,
+        254
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        401,
+        352,
+        415.3,
+        456
+      ]
+    },
+    {
+      "element": "shell_skull",
+      "bone": "shell_head",
+      "face": "north",
+      "atlas_uv": [
+        148,
+        8,
+        202,
+        62
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        264,
+        32,
+        318,
+        86
+      ]
+    },
+    {
+      "element": "shell_skull",
+      "bone": "shell_head",
+      "face": "east",
+      "atlas_uv": [
+        344,
+        178,
+        399.84729,
+        232
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        562,
+        512,
+        617.84729,
+        566
+      ]
+    },
+    {
+      "element": "shell_skull",
+      "bone": "shell_head",
+      "face": "south",
+      "atlas_uv": [
+        285,
+        205,
+        339,
+        259
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        503,
+        539,
+        557,
+        593
+      ]
+    },
+    {
+      "element": "shell_skull",
+      "bone": "shell_head",
+      "face": "west",
+      "atlas_uv": [
+        308,
+        172,
+        363.84729,
+        226
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        526,
+        506,
+        581.84729,
+        560
+      ]
+    },
+    {
+      "element": "shell_skull",
+      "bone": "shell_head",
+      "face": "up",
+      "atlas_uv": [
+        331,
+        207,
+        385,
+        262.84729
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        549,
+        541,
+        603,
+        596.84729
+      ]
+    },
+    {
+      "element": "shell_skull",
+      "bone": "shell_head",
+      "face": "down",
+      "atlas_uv": [
+        199,
+        28,
+        253,
+        83.84729
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        315,
+        52,
+        369,
+        107.84729
+      ]
+    },
+    {
+      "element": "shell_lower_jaw",
+      "bone": "shell_jaw",
+      "face": "north",
+      "atlas_uv": [
+        354,
+        250,
+        408,
+        262.54159
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        572,
+        584,
+        626,
+        596.54159
+      ]
+    },
+    {
+      "element": "shell_lower_jaw",
+      "bone": "shell_jaw",
+      "face": "east",
+      "atlas_uv": [
+        210,
+        70,
+        265.84729,
+        82.54159
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        326,
+        94,
+        381.84729,
+        106.54159
+      ]
+    },
+    {
+      "element": "shell_lower_jaw",
+      "bone": "shell_jaw",
+      "face": "south",
+      "atlas_uv": [
+        49,
+        180,
+        103,
+        192.54159
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        113,
+        476,
+        167,
+        488.54159
+      ]
+    },
+    {
+      "element": "shell_lower_jaw",
+      "bone": "shell_jaw",
+      "face": "west",
+      "atlas_uv": [
+        312,
+        156,
+        367.84729,
+        168.54159
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        530,
+        490,
+        585.84729,
+        502.54159
+      ]
+    },
+    {
+      "element": "shell_lower_jaw",
+      "bone": "shell_jaw",
+      "face": "up",
+      "atlas_uv": [
+        312,
+        145,
+        366,
+        200.84729
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        530,
+        479,
+        584,
+        534.84729
+      ]
+    },
+    {
+      "element": "shell_lower_jaw",
+      "bone": "shell_jaw",
+      "face": "down",
+      "atlas_uv": [
+        207,
+        216,
+        261,
+        271.84729
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        353,
+        418,
+        407,
+        473.84729
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_left_upper_proximal",
+      "face": "north",
+      "atlas_uv": [
+        33,
+        164,
+        85,
+        255
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        97,
+        460,
+        149,
+        551
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_left_upper_proximal",
+      "face": "east",
+      "atlas_uv": [
+        153,
+        24,
+        205,
+        115
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        269,
+        48,
+        321,
+        139
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_left_upper_proximal",
+      "face": "south",
+      "atlas_uv": [
+        319,
+        165,
+        371,
+        256
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        537,
+        499,
+        589,
+        590
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_left_upper_proximal",
+      "face": "west",
+      "atlas_uv": [
+        68,
+        149,
+        120,
+        240
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        132,
+        445,
+        184,
+        536
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_left_upper_proximal",
+      "face": "up",
+      "atlas_uv": [
+        313,
+        220,
+        365,
+        272
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        531,
+        554,
+        583,
+        606
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_left_upper_proximal",
+      "face": "down",
+      "atlas_uv": [
+        10,
+        186,
+        62,
+        238
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        74,
+        482,
+        126,
+        534
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_left_upper_proximal",
+      "face": "north",
+      "atlas_uv": [
+        63,
+        43,
+        115,
+        134
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        79,
+        59,
+        131,
+        150
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_left_upper_proximal",
+      "face": "east",
+      "atlas_uv": [
+        83,
+        180,
+        135,
+        271
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        147,
+        476,
+        199,
+        567
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_left_upper_proximal",
+      "face": "south",
+      "atlas_uv": [
+        292,
+        160,
+        344,
+        251
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        510,
+        494,
+        562,
+        585
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_left_upper_proximal",
+      "face": "west",
+      "atlas_uv": [
+        356,
+        19,
+        408,
+        110
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        548,
+        123,
+        600,
+        214
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_left_upper_proximal",
+      "face": "up",
+      "atlas_uv": [
+        220,
+        204,
+        272,
+        256
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        366,
+        406,
+        418,
+        458
+      ]
+    },
+    {
+      "element": "limb_left_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_left_upper_proximal",
+      "face": "down",
+      "atlas_uv": [
+        42,
+        50,
+        94,
+        102
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        58,
+        66,
+        110,
+        118
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_1",
+      "bone": "limb_left_upper_distal",
+      "face": "north",
+      "atlas_uv": [
+        68,
+        166,
+        120,
+        270
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        132,
+        462,
+        184,
+        566
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_1",
+      "bone": "limb_left_upper_distal",
+      "face": "east",
+      "atlas_uv": [
+        156,
+        18,
+        208,
+        122
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        272,
+        42,
+        324,
+        146
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_1",
+      "bone": "limb_left_upper_distal",
+      "face": "south",
+      "atlas_uv": [
+        34,
+        26,
+        86,
+        130
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        50,
+        42,
+        102,
+        146
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_1",
+      "bone": "limb_left_upper_distal",
+      "face": "west",
+      "atlas_uv": [
+        19,
+        30,
+        71,
+        134
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        35,
+        46,
+        87,
+        150
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_1",
+      "bone": "limb_left_upper_distal",
+      "face": "up",
+      "atlas_uv": [
+        166,
+        44,
+        218,
+        96
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        282,
+        68,
+        334,
+        120
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_1",
+      "bone": "limb_left_upper_distal",
+      "face": "down",
+      "atlas_uv": [
+        199,
+        175,
+        251,
+        227
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        345,
+        377,
+        397,
+        429
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_2",
+      "bone": "limb_left_upper_distal",
+      "face": "north",
+      "atlas_uv": [
+        181,
+        156,
+        233,
+        260
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        327,
+        358,
+        379,
+        462
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_2",
+      "bone": "limb_left_upper_distal",
+      "face": "east",
+      "atlas_uv": [
+        345,
+        160,
+        397,
+        264
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        563,
+        494,
+        615,
+        598
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_2",
+      "bone": "limb_left_upper_distal",
+      "face": "south",
+      "atlas_uv": [
+        30,
+        161,
+        82,
+        265
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        94,
+        457,
+        146,
+        561
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_2",
+      "bone": "limb_left_upper_distal",
+      "face": "west",
+      "atlas_uv": [
+        209,
+        24,
+        261,
+        128
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        325,
+        48,
+        377,
+        152
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_2",
+      "bone": "limb_left_upper_distal",
+      "face": "up",
+      "atlas_uv": [
+        27,
+        16,
+        79,
+        68
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        43,
+        32,
+        95,
+        84
+      ]
+    },
+    {
+      "element": "limb_left_upper_distal_cube_uvsegment_2",
+      "bone": "limb_left_upper_distal",
+      "face": "down",
+      "atlas_uv": [
+        353,
+        45,
+        405,
+        97
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        545,
+        149,
+        597,
+        201
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_left_middle_proximal",
+      "face": "north",
+      "atlas_uv": [
+        219,
+        11,
+        271,
+        116.24379
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        335,
+        35,
+        387,
+        140.24379
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_left_middle_proximal",
+      "face": "east",
+      "atlas_uv": [
+        17,
+        9,
+        69,
+        114.24379
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        33,
+        25,
+        85,
+        130.24379
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_left_middle_proximal",
+      "face": "south",
+      "atlas_uv": [
+        208,
+        145,
+        260,
+        250.24379
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        354,
+        347,
+        406,
+        452.24379
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_left_middle_proximal",
+      "face": "west",
+      "atlas_uv": [
+        217,
+        14,
+        269,
+        119.24379
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        333,
+        38,
+        385,
+        143.24379
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_left_middle_proximal",
+      "face": "up",
+      "atlas_uv": [
+        192,
+        195,
+        244,
+        247
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        338,
+        397,
+        390,
+        449
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_left_middle_proximal",
+      "face": "down",
+      "atlas_uv": [
+        179,
+        159,
+        231,
+        211
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        325,
+        361,
+        377,
+        413
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_left_middle_proximal",
+      "face": "north",
+      "atlas_uv": [
+        281,
+        24,
+        333,
+        129.24379
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        473,
+        128,
+        525,
+        233.24379
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_left_middle_proximal",
+      "face": "east",
+      "atlas_uv": [
+        328,
+        18,
+        380,
+        123.24379
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        520,
+        122,
+        572,
+        227.24379
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_left_middle_proximal",
+      "face": "south",
+      "atlas_uv": [
+        164,
+        150,
+        216,
+        255.24379
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        310,
+        352,
+        362,
+        457.24379
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_left_middle_proximal",
+      "face": "west",
+      "atlas_uv": [
+        47,
+        152,
+        99,
+        257.24379
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        111,
+        448,
+        163,
+        553.24379
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_left_middle_proximal",
+      "face": "up",
+      "atlas_uv": [
+        199,
+        155,
+        251,
+        207
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        345,
+        357,
+        397,
+        409
+      ]
+    },
+    {
+      "element": "limb_left_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_left_middle_proximal",
+      "face": "down",
+      "atlas_uv": [
+        163,
+        61,
+        215,
+        113
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        279,
+        85,
+        331,
+        137
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_1",
+      "bone": "limb_left_middle_distal",
+      "face": "north",
+      "atlas_uv": [
+        46,
+        157,
+        98,
+        261
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        110,
+        453,
+        162,
+        557
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_1",
+      "bone": "limb_left_middle_distal",
+      "face": "east",
+      "atlas_uv": [
+        178,
+        166,
+        230,
+        270
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        324,
+        368,
+        376,
+        472
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_1",
+      "bone": "limb_left_middle_distal",
+      "face": "south",
+      "atlas_uv": [
+        311,
+        158,
+        363,
+        262
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        529,
+        492,
+        581,
+        596
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_1",
+      "bone": "limb_left_middle_distal",
+      "face": "west",
+      "atlas_uv": [
+        345,
+        20,
+        397,
+        124
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        537,
+        124,
+        589,
+        228
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_1",
+      "bone": "limb_left_middle_distal",
+      "face": "up",
+      "atlas_uv": [
+        351,
+        151,
+        403,
+        203
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        569,
+        485,
+        621,
+        537
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_1",
+      "bone": "limb_left_middle_distal",
+      "face": "down",
+      "atlas_uv": [
+        27,
+        158,
+        79,
+        210
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        91,
+        454,
+        143,
+        506
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_2",
+      "bone": "limb_left_middle_distal",
+      "face": "north",
+      "atlas_uv": [
+        165,
+        23,
+        217,
+        127
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        281,
+        47,
+        333,
+        151
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_2",
+      "bone": "limb_left_middle_distal",
+      "face": "east",
+      "atlas_uv": [
+        28,
+        162,
+        80,
+        266
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        92,
+        458,
+        144,
+        562
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_2",
+      "bone": "limb_left_middle_distal",
+      "face": "south",
+      "atlas_uv": [
+        156,
+        158,
+        208,
+        262
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        302,
+        360,
+        354,
+        464
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_2",
+      "bone": "limb_left_middle_distal",
+      "face": "west",
+      "atlas_uv": [
+        163,
+        146,
+        215,
+        250
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        309,
+        348,
+        361,
+        452
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_2",
+      "bone": "limb_left_middle_distal",
+      "face": "up",
+      "atlas_uv": [
+        202,
+        210,
+        254,
+        262
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        348,
+        412,
+        400,
+        464
+      ]
+    },
+    {
+      "element": "limb_left_middle_distal_cube_uvsegment_2",
+      "bone": "limb_left_middle_distal",
+      "face": "down",
+      "atlas_uv": [
+        41,
+        35,
+        93,
+        87
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        57,
+        51,
+        109,
+        103
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_left_lower_proximal",
+      "face": "north",
+      "atlas_uv": [
+        211,
+        155,
+        263,
+        254.17246
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        357,
+        357,
+        409,
+        456.17246
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_left_lower_proximal",
+      "face": "east",
+      "atlas_uv": [
+        205,
+        144,
+        257,
+        243.17246
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        351,
+        346,
+        403,
+        445.17246
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_left_lower_proximal",
+      "face": "south",
+      "atlas_uv": [
+        170,
+        10,
+        222,
+        109.17246
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        286,
+        34,
+        338,
+        133.17246
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_left_lower_proximal",
+      "face": "west",
+      "atlas_uv": [
+        295,
+        157,
+        347,
+        256.17246
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        513,
+        491,
+        565,
+        590.17246
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_left_lower_proximal",
+      "face": "up",
+      "atlas_uv": [
+        65,
+        172,
+        117,
+        224
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        129,
+        468,
+        181,
+        520
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_left_lower_proximal",
+      "face": "down",
+      "atlas_uv": [
+        169,
+        153,
+        221,
+        205
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        315,
+        355,
+        367,
+        407
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_left_lower_proximal",
+      "face": "north",
+      "atlas_uv": [
+        158,
+        16,
+        210,
+        115.17246
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        274,
+        40,
+        326,
+        139.17246
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_left_lower_proximal",
+      "face": "east",
+      "atlas_uv": [
+        26,
+        16,
+        78,
+        115.17246
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        42,
+        32,
+        94,
+        131.17246
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_left_lower_proximal",
+      "face": "south",
+      "atlas_uv": [
+        35,
+        172,
+        87,
+        271.17246
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        99,
+        468,
+        151,
+        567.17246
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_left_lower_proximal",
+      "face": "west",
+      "atlas_uv": [
+        188,
+        170,
+        240,
+        269.17246
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        334,
+        372,
+        386,
+        471.17246
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_left_lower_proximal",
+      "face": "up",
+      "atlas_uv": [
+        293,
+        74,
+        345,
+        126
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        485,
+        178,
+        537,
+        230
+      ]
+    },
+    {
+      "element": "limb_left_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_left_lower_proximal",
+      "face": "down",
+      "atlas_uv": [
+        351,
+        205,
+        403,
+        257
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        569,
+        539,
+        621,
+        591
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_1",
+      "bone": "limb_left_lower_distal",
+      "face": "north",
+      "atlas_uv": [
+        35,
+        14,
+        87,
+        118
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        51,
+        30,
+        103,
+        134
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_1",
+      "bone": "limb_left_lower_distal",
+      "face": "east",
+      "atlas_uv": [
+        218,
+        158,
+        270,
+        262
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        364,
+        360,
+        416,
+        464
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_1",
+      "bone": "limb_left_lower_distal",
+      "face": "south",
+      "atlas_uv": [
+        177,
+        20,
+        229,
+        124
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        293,
+        44,
+        345,
+        148
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_1",
+      "bone": "limb_left_lower_distal",
+      "face": "west",
+      "atlas_uv": [
+        76,
+        148,
+        128,
+        252
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        140,
+        444,
+        192,
+        548
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_1",
+      "bone": "limb_left_lower_distal",
+      "face": "up",
+      "atlas_uv": [
+        21,
+        43,
+        73,
+        95
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        37,
+        59,
+        89,
+        111
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_1",
+      "bone": "limb_left_lower_distal",
+      "face": "down",
+      "atlas_uv": [
+        22,
+        37,
+        74,
+        89
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        38,
+        53,
+        90,
+        105
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_2",
+      "bone": "limb_left_lower_distal",
+      "face": "north",
+      "atlas_uv": [
+        208,
+        20,
+        260,
+        124
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        324,
+        44,
+        376,
+        148
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_2",
+      "bone": "limb_left_lower_distal",
+      "face": "east",
+      "atlas_uv": [
+        198,
+        145,
+        250,
+        249
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        344,
+        347,
+        396,
+        451
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_2",
+      "bone": "limb_left_lower_distal",
+      "face": "south",
+      "atlas_uv": [
+        353,
+        17,
+        405,
+        121
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        545,
+        121,
+        597,
+        225
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_2",
+      "bone": "limb_left_lower_distal",
+      "face": "west",
+      "atlas_uv": [
+        282,
+        9,
+        334,
+        113
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        474,
+        113,
+        526,
+        217
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_2",
+      "bone": "limb_left_lower_distal",
+      "face": "up",
+      "atlas_uv": [
+        285,
+        212,
+        337,
+        264
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        503,
+        546,
+        555,
+        598
+      ]
+    },
+    {
+      "element": "limb_left_lower_distal_cube_uvsegment_2",
+      "bone": "limb_left_lower_distal",
+      "face": "down",
+      "atlas_uv": [
+        315,
+        35,
+        367,
+        87
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        507,
+        139,
+        559,
+        191
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_right_upper_proximal",
+      "face": "north",
+      "atlas_uv": [
+        16,
+        149,
+        68,
+        266.27325
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        80,
+        445,
+        132,
+        562.27325
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_right_upper_proximal",
+      "face": "east",
+      "atlas_uv": [
+        333,
+        144,
+        385,
+        261.27325
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        551,
+        478,
+        603,
+        595.27325
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_right_upper_proximal",
+      "face": "south",
+      "atlas_uv": [
+        77,
+        10,
+        129,
+        127.27325
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        93,
+        26,
+        145,
+        143.27325
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_right_upper_proximal",
+      "face": "west",
+      "atlas_uv": [
+        329,
+        17,
+        381,
+        134.27325
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        521,
+        121,
+        573,
+        238.27325
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_right_upper_proximal",
+      "face": "up",
+      "atlas_uv": [
+        184,
+        186,
+        236,
+        238
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        330,
+        388,
+        382,
+        440
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_1",
+      "bone": "limb_right_upper_proximal",
+      "face": "down",
+      "atlas_uv": [
+        350,
+        53,
+        402,
+        105
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        542,
+        157,
+        594,
+        209
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_right_upper_proximal",
+      "face": "north",
+      "atlas_uv": [
+        186,
+        152,
+        238,
+        269.27325
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        332,
+        354,
+        384,
+        471.27325
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_right_upper_proximal",
+      "face": "east",
+      "atlas_uv": [
+        145,
+        154,
+        197,
+        271.27325
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        291,
+        356,
+        343,
+        473.27325
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_right_upper_proximal",
+      "face": "south",
+      "atlas_uv": [
+        156,
+        154,
+        208,
+        271.27325
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        302,
+        356,
+        354,
+        473.27325
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_right_upper_proximal",
+      "face": "west",
+      "atlas_uv": [
+        291,
+        150,
+        343,
+        267.27325
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        509,
+        484,
+        561,
+        601.27325
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_right_upper_proximal",
+      "face": "up",
+      "atlas_uv": [
+        165,
+        179,
+        217,
+        231
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        311,
+        381,
+        363,
+        433
+      ]
+    },
+    {
+      "element": "limb_right_upper_proximal_cube_uvsegment_2",
+      "bone": "limb_right_upper_proximal",
+      "face": "down",
+      "atlas_uv": [
+        152,
+        78,
+        204,
+        130
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        268,
+        102,
+        320,
+        154
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_1",
+      "bone": "limb_right_upper_distal",
+      "face": "north",
+      "atlas_uv": [
+        336,
+        149,
+        388,
+        253
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        554,
+        483,
+        606,
+        587
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_1",
+      "bone": "limb_right_upper_distal",
+      "face": "east",
+      "atlas_uv": [
+        318,
+        29,
+        370,
+        133
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        510,
+        133,
+        562,
+        237
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_1",
+      "bone": "limb_right_upper_distal",
+      "face": "south",
+      "atlas_uv": [
+        76,
+        160,
+        128,
+        264
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        140,
+        456,
+        192,
+        560
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_1",
+      "bone": "limb_right_upper_distal",
+      "face": "west",
+      "atlas_uv": [
+        185,
+        146,
+        237,
+        250
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        331,
+        348,
+        383,
+        452
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_1",
+      "bone": "limb_right_upper_distal",
+      "face": "up",
+      "atlas_uv": [
+        28,
+        21,
+        80,
+        73
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        44,
+        37,
+        96,
+        89
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_1",
+      "bone": "limb_right_upper_distal",
+      "face": "down",
+      "atlas_uv": [
+        289,
+        69,
+        341,
+        121
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        481,
+        173,
+        533,
+        225
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_2",
+      "bone": "limb_right_upper_distal",
+      "face": "north",
+      "atlas_uv": [
+        27,
+        9,
+        79,
+        113
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        43,
+        25,
+        95,
+        129
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_2",
+      "bone": "limb_right_upper_distal",
+      "face": "east",
+      "atlas_uv": [
+        45,
+        158,
+        97,
+        262
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        109,
+        454,
+        161,
+        558
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_2",
+      "bone": "limb_right_upper_distal",
+      "face": "south",
+      "atlas_uv": [
+        144,
+        163,
+        196,
+        267
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        290,
+        365,
+        342,
+        469
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_2",
+      "bone": "limb_right_upper_distal",
+      "face": "west",
+      "atlas_uv": [
+        67,
+        20,
+        119,
+        124
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        83,
+        36,
+        135,
+        140
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_2",
+      "bone": "limb_right_upper_distal",
+      "face": "up",
+      "atlas_uv": [
+        302,
+        21,
+        354,
+        73
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        494,
+        125,
+        546,
+        177
+      ]
+    },
+    {
+      "element": "limb_right_upper_distal_cube_uvsegment_2",
+      "bone": "limb_right_upper_distal",
+      "face": "down",
+      "atlas_uv": [
+        43,
+        156,
+        95,
+        208
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        107,
+        452,
+        159,
+        504
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_right_middle_proximal",
+      "face": "north",
+      "atlas_uv": [
+        202,
+        149,
+        254,
+        265.94079
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        348,
+        351,
+        400,
+        467.94079
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_right_middle_proximal",
+      "face": "east",
+      "atlas_uv": [
+        344,
+        18,
+        396,
+        134.94079
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        536,
+        122,
+        588,
+        238.94079
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_right_middle_proximal",
+      "face": "south",
+      "atlas_uv": [
+        344,
+        12,
+        396,
+        128.94079
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        536,
+        116,
+        588,
+        232.94079
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_right_middle_proximal",
+      "face": "west",
+      "atlas_uv": [
+        78,
+        145,
+        130,
+        261.94079
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        142,
+        441,
+        194,
+        557.94079
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_right_middle_proximal",
+      "face": "up",
+      "atlas_uv": [
+        316,
+        69,
+        368,
+        121
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        508,
+        173,
+        560,
+        225
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_1",
+      "bone": "limb_right_middle_proximal",
+      "face": "down",
+      "atlas_uv": [
+        58,
+        146,
+        110,
+        198
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        122,
+        442,
+        174,
+        494
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_right_middle_proximal",
+      "face": "north",
+      "atlas_uv": [
+        67,
+        155,
+        119,
+        271.94079
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        131,
+        451,
+        183,
+        567.94079
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_right_middle_proximal",
+      "face": "east",
+      "atlas_uv": [
+        80,
+        14,
+        132,
+        130.94079
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        96,
+        30,
+        148,
+        146.94079
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_right_middle_proximal",
+      "face": "south",
+      "atlas_uv": [
+        296,
+        8,
+        348,
+        124.94079
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        488,
+        112,
+        540,
+        228.94079
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_right_middle_proximal",
+      "face": "west",
+      "atlas_uv": [
+        149,
+        146,
+        201,
+        262.94079
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        295,
+        348,
+        347,
+        464.94079
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_right_middle_proximal",
+      "face": "up",
+      "atlas_uv": [
+        322,
+        47,
+        374,
+        99
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        514,
+        151,
+        566,
+        203
+      ]
+    },
+    {
+      "element": "limb_right_middle_proximal_cube_uvsegment_2",
+      "bone": "limb_right_middle_proximal",
+      "face": "down",
+      "atlas_uv": [
+        77,
+        167,
+        129,
+        219
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        141,
+        463,
+        193,
+        515
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_1",
+      "bone": "limb_right_middle_distal",
+      "face": "north",
+      "atlas_uv": [
+        189,
+        11,
+        241,
+        115
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        305,
+        35,
+        357,
+        139
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_1",
+      "bone": "limb_right_middle_distal",
+      "face": "east",
+      "atlas_uv": [
+        307,
+        158,
+        359,
+        262
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        525,
+        492,
+        577,
+        596
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_1",
+      "bone": "limb_right_middle_distal",
+      "face": "south",
+      "atlas_uv": [
+        291,
+        153,
+        343,
+        257
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        509,
+        487,
+        561,
+        591
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_1",
+      "bone": "limb_right_middle_distal",
+      "face": "west",
+      "atlas_uv": [
+        79,
+        156,
+        131,
+        260
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        143,
+        452,
+        195,
+        556
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_1",
+      "bone": "limb_right_middle_distal",
+      "face": "up",
+      "atlas_uv": [
+        186,
+        157,
+        238,
+        209
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        332,
+        359,
+        384,
+        411
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_1",
+      "bone": "limb_right_middle_distal",
+      "face": "down",
+      "atlas_uv": [
+        32,
+        59,
+        84,
+        111
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        48,
+        75,
+        100,
+        127
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_2",
+      "bone": "limb_right_middle_distal",
+      "face": "north",
+      "atlas_uv": [
+        341,
+        10,
+        393,
+        114
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        533,
+        114,
+        585,
+        218
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_2",
+      "bone": "limb_right_middle_distal",
+      "face": "east",
+      "atlas_uv": [
+        196,
+        155,
+        248,
+        259
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        342,
+        357,
+        394,
+        461
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_2",
+      "bone": "limb_right_middle_distal",
+      "face": "south",
+      "atlas_uv": [
+        215,
+        19,
+        267,
+        123
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        331,
+        43,
+        383,
+        147
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_2",
+      "bone": "limb_right_middle_distal",
+      "face": "west",
+      "atlas_uv": [
+        57,
+        9,
+        109,
+        113
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        73,
+        25,
+        125,
+        129
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_2",
+      "bone": "limb_right_middle_distal",
+      "face": "up",
+      "atlas_uv": [
+        213,
+        32,
+        265,
+        84
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        329,
+        56,
+        381,
+        108
+      ]
+    },
+    {
+      "element": "limb_right_middle_distal_cube_uvsegment_2",
+      "bone": "limb_right_middle_distal",
+      "face": "down",
+      "atlas_uv": [
+        219,
+        63,
+        271,
+        115
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        335,
+        87,
+        387,
+        139
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_right_lower_proximal",
+      "face": "north",
+      "atlas_uv": [
+        47,
+        180,
+        99,
+        271
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        111,
+        476,
+        163,
+        567
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_right_lower_proximal",
+      "face": "east",
+      "atlas_uv": [
+        23,
+        45,
+        75,
+        136
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        39,
+        61,
+        91,
+        152
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_right_lower_proximal",
+      "face": "south",
+      "atlas_uv": [
+        333,
+        176,
+        385,
+        267
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        551,
+        510,
+        603,
+        601
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_right_lower_proximal",
+      "face": "west",
+      "atlas_uv": [
+        146,
+        43,
+        198,
+        134
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        262,
+        67,
+        314,
+        158
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_right_lower_proximal",
+      "face": "up",
+      "atlas_uv": [
+        337,
+        161,
+        389,
+        213
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        555,
+        495,
+        607,
+        547
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_1",
+      "bone": "limb_right_lower_proximal",
+      "face": "down",
+      "atlas_uv": [
+        21,
+        202,
+        73,
+        254
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        85,
+        498,
+        137,
+        550
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_right_lower_proximal",
+      "face": "north",
+      "atlas_uv": [
+        305,
+        173,
+        357,
+        264
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        523,
+        507,
+        575,
+        598
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_right_lower_proximal",
+      "face": "east",
+      "atlas_uv": [
+        212,
+        179,
+        264,
+        270
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        358,
+        381,
+        410,
+        472
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_right_lower_proximal",
+      "face": "south",
+      "atlas_uv": [
+        43,
+        19,
+        95,
+        110
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        59,
+        35,
+        111,
+        126
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_right_lower_proximal",
+      "face": "west",
+      "atlas_uv": [
+        54,
+        22,
+        106,
+        113
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        70,
+        38,
+        122,
+        129
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_right_lower_proximal",
+      "face": "up",
+      "atlas_uv": [
+        289,
+        173,
+        341,
+        225
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        507,
+        507,
+        559,
+        559
+      ]
+    },
+    {
+      "element": "limb_right_lower_proximal_cube_uvsegment_2",
+      "bone": "limb_right_lower_proximal",
+      "face": "down",
+      "atlas_uv": [
+        331,
+        22,
+        383,
+        74
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        523,
+        126,
+        575,
+        178
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_1",
+      "bone": "limb_right_lower_distal",
+      "face": "north",
+      "atlas_uv": [
+        157,
+        158,
+        209,
+        262
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        303,
+        360,
+        355,
+        464
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_1",
+      "bone": "limb_right_lower_distal",
+      "face": "east",
+      "atlas_uv": [
+        182,
+        32,
+        234,
+        136
+      ],
+      "region": "stars_B",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        298,
+        56,
+        350,
+        160
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_1",
+      "bone": "limb_right_lower_distal",
+      "face": "south",
+      "atlas_uv": [
+        36,
+        147,
+        88,
+        251
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        100,
+        443,
+        152,
+        547
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_1",
+      "bone": "limb_right_lower_distal",
+      "face": "west",
+      "atlas_uv": [
+        314,
+        31,
+        366,
+        135
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        506,
+        135,
+        558,
+        239
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_1",
+      "bone": "limb_right_lower_distal",
+      "face": "up",
+      "atlas_uv": [
+        340,
+        81,
+        392,
+        133
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        532,
+        185,
+        584,
+        237
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_1",
+      "bone": "limb_right_lower_distal",
+      "face": "down",
+      "atlas_uv": [
+        319,
+        18,
+        371,
+        70
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        511,
+        122,
+        563,
+        174
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_2",
+      "bone": "limb_right_lower_distal",
+      "face": "north",
+      "atlas_uv": [
+        55,
+        26,
+        107,
+        130
+      ],
+      "region": "stars_A",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        71,
+        42,
+        123,
+        146
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_2",
+      "bone": "limb_right_lower_distal",
+      "face": "east",
+      "atlas_uv": [
+        72,
+        146,
+        124,
+        250
+      ],
+      "region": "stars_D",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        136,
+        442,
+        188,
+        546
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_2",
+      "bone": "limb_right_lower_distal",
+      "face": "south",
+      "atlas_uv": [
+        175,
+        150,
+        227,
+        254
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        321,
+        352,
+        373,
+        456
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_2",
+      "bone": "limb_right_lower_distal",
+      "face": "west",
+      "atlas_uv": [
+        356,
+        156,
+        408,
+        260
+      ],
+      "region": "stars_F",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        574,
+        490,
+        626,
+        594
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_2",
+      "bone": "limb_right_lower_distal",
+      "face": "up",
+      "atlas_uv": [
+        307,
+        17,
+        359,
+        69
+      ],
+      "region": "stars_C",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        499,
+        121,
+        551,
+        173
+      ]
+    },
+    {
+      "element": "limb_right_lower_distal_cube_uvsegment_2",
+      "bone": "limb_right_lower_distal",
+      "face": "down",
+      "atlas_uv": [
+        178,
+        166,
+        230,
+        218
+      ],
+      "region": "stars_E",
+      "source_file": "MCD_Decal_Puddle_(texture).png",
+      "source_uv": [
+        324,
+        368,
+        376,
+        420
+      ]
+    },
+    {
+      "element": "inner_torso",
+      "bone": "inner_body",
+      "face": "north",
+      "atlas_uv": [
+        437,
+        35,
+        446,
+        44
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        5,
+        27,
+        14,
+        36
+      ]
+    },
+    {
+      "element": "inner_torso",
+      "bone": "inner_body",
+      "face": "east",
+      "atlas_uv": [
+        446,
+        35,
+        451,
+        44
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        14,
+        27,
+        19,
+        36
+      ]
+    },
+    {
+      "element": "inner_torso",
+      "bone": "inner_body",
+      "face": "south",
+      "atlas_uv": [
+        451,
+        35,
+        459,
+        44
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        19,
+        27,
+        27,
+        36
+      ]
+    },
+    {
+      "element": "inner_torso",
+      "bone": "inner_body",
+      "face": "west",
+      "atlas_uv": [
+        432,
+        35,
+        437,
+        44
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        0,
+        27,
+        5,
+        36
+      ]
+    },
+    {
+      "element": "inner_torso",
+      "bone": "inner_body",
+      "face": "up",
+      "atlas_uv": [
+        437,
+        30,
+        446,
+        35
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        5,
+        22,
+        14,
+        27
+      ]
+    },
+    {
+      "element": "inner_torso",
+      "bone": "inner_body",
+      "face": "down",
+      "atlas_uv": [
+        437,
+        44,
+        446,
+        48
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        5,
+        36,
+        14,
+        40
+      ]
+    },
+    {
+      "element": "inner_head_core",
+      "bone": "inner_head",
+      "face": "north",
+      "atlas_uv": [
+        438,
+        14,
+        450,
+        21
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        6,
+        6,
+        18,
+        13
+      ]
+    },
+    {
+      "element": "inner_head_core",
+      "bone": "inner_head",
+      "face": "east",
+      "atlas_uv": [
+        450,
+        14,
+        456,
+        21
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        18,
+        6,
+        24,
+        13
+      ]
+    },
+    {
+      "element": "inner_head_core",
+      "bone": "inner_head",
+      "face": "south",
+      "atlas_uv": [
+        456,
+        14,
+        468,
+        21
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        24,
+        6,
+        36,
+        13
+      ]
+    },
+    {
+      "element": "inner_head_core",
+      "bone": "inner_head",
+      "face": "west",
+      "atlas_uv": [
+        432,
+        14,
+        438,
+        21
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        0,
+        6,
+        6,
+        13
+      ]
+    },
+    {
+      "element": "inner_head_core",
+      "bone": "inner_head",
+      "face": "up",
+      "atlas_uv": [
+        438,
+        8,
+        450,
+        14
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        6,
+        0,
+        18,
+        6
+      ]
+    },
+    {
+      "element": "inner_head_core",
+      "bone": "inner_head",
+      "face": "down",
+      "atlas_uv": [
+        450,
+        8,
+        462,
+        14
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        18,
+        0,
+        30,
+        6
+      ]
+    },
+    {
+      "element": "inner_head_upper_strip",
+      "bone": "inner_head",
+      "face": "north",
+      "atlas_uv": [
+        468,
+        12,
+        472,
+        23
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        36,
+        4,
+        40,
+        15
+      ]
+    },
+    {
+      "element": "inner_head_upper_strip",
+      "bone": "inner_head",
+      "face": "east",
+      "atlas_uv": [
+        472,
+        12,
+        476,
+        23
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        40,
+        4,
+        44,
+        15
+      ]
+    },
+    {
+      "element": "inner_head_upper_strip",
+      "bone": "inner_head",
+      "face": "south",
+      "atlas_uv": [
+        476,
+        12,
+        480,
+        23
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        44,
+        4,
+        48,
+        15
+      ]
+    },
+    {
+      "element": "inner_head_upper_strip",
+      "bone": "inner_head",
+      "face": "west",
+      "atlas_uv": [
+        480,
+        12,
+        484,
+        23
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        48,
+        4,
+        52,
+        15
+      ]
+    },
+    {
+      "element": "inner_head_upper_strip",
+      "bone": "inner_head",
+      "face": "up",
+      "atlas_uv": [
+        472,
+        8,
+        476,
+        12
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        40,
+        0,
+        44,
+        4
+      ]
+    },
+    {
+      "element": "inner_head_upper_strip",
+      "bone": "inner_head",
+      "face": "down",
+      "atlas_uv": [
+        476,
+        8,
+        480,
+        12
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        44,
+        0,
+        48,
+        4
+      ]
+    },
+    {
+      "element": "inner_nose",
+      "bone": "inner_head",
+      "face": "north",
+      "atlas_uv": [
+        434,
+        22,
+        436,
+        26
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        2,
+        14,
+        4,
+        18
+      ]
+    },
+    {
+      "element": "inner_nose",
+      "bone": "inner_head",
+      "face": "east",
+      "atlas_uv": [
+        436,
+        22,
+        438,
+        26
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        4,
+        14,
+        6,
+        18
+      ]
+    },
+    {
+      "element": "inner_nose",
+      "bone": "inner_head",
+      "face": "south",
+      "atlas_uv": [
+        438,
+        22,
+        440,
+        26
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        6,
+        14,
+        8,
+        18
+      ]
+    },
+    {
+      "element": "inner_nose",
+      "bone": "inner_head",
+      "face": "west",
+      "atlas_uv": [
+        432,
+        22,
+        434,
+        26
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        0,
+        14,
+        2,
+        18
+      ]
+    },
+    {
+      "element": "inner_nose",
+      "bone": "inner_head",
+      "face": "up",
+      "atlas_uv": [
+        434,
+        20,
+        436,
+        22
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        2,
+        12,
+        4,
+        14
+      ]
+    },
+    {
+      "element": "inner_nose",
+      "bone": "inner_head",
+      "face": "down",
+      "atlas_uv": [
+        436,
+        20,
+        438,
+        22
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        4,
+        12,
+        6,
+        14
+      ]
+    },
+    {
+      "element": "inner_arm_left_cube",
+      "bone": "inner_arm_left",
+      "face": "north",
+      "atlas_uv": [
+        439,
+        21,
+        440,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        13,
+        8,
+        21
+      ]
+    },
+    {
+      "element": "inner_arm_left_cube",
+      "bone": "inner_arm_left",
+      "face": "east",
+      "atlas_uv": [
+        440,
+        21,
+        441,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        8,
+        13,
+        9,
+        21
+      ]
+    },
+    {
+      "element": "inner_arm_left_cube",
+      "bone": "inner_arm_left",
+      "face": "south",
+      "atlas_uv": [
+        441,
+        21,
+        442,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        9,
+        13,
+        10,
+        21
+      ]
+    },
+    {
+      "element": "inner_arm_left_cube",
+      "bone": "inner_arm_left",
+      "face": "west",
+      "atlas_uv": [
+        438,
+        21,
+        439,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        6,
+        13,
+        7,
+        21
+      ]
+    },
+    {
+      "element": "inner_arm_left_cube",
+      "bone": "inner_arm_left",
+      "face": "up",
+      "atlas_uv": [
+        439,
+        21,
+        440,
+        22
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        13,
+        8,
+        14
+      ]
+    },
+    {
+      "element": "inner_arm_left_cube",
+      "bone": "inner_arm_left",
+      "face": "down",
+      "atlas_uv": [
+        439,
+        28,
+        440,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        20,
+        8,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_left_shin",
+      "bone": "inner_leg_left",
+      "face": "north",
+      "atlas_uv": [
+        439,
+        21,
+        440,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        13,
+        8,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_left_shin",
+      "bone": "inner_leg_left",
+      "face": "east",
+      "atlas_uv": [
+        440,
+        21,
+        441,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        8,
+        13,
+        9,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_left_shin",
+      "bone": "inner_leg_left",
+      "face": "south",
+      "atlas_uv": [
+        441,
+        21,
+        442,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        9,
+        13,
+        10,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_left_shin",
+      "bone": "inner_leg_left",
+      "face": "west",
+      "atlas_uv": [
+        438,
+        21,
+        439,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        6,
+        13,
+        7,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_left_shin",
+      "bone": "inner_leg_left",
+      "face": "up",
+      "atlas_uv": [
+        439,
+        21,
+        440,
+        22
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        13,
+        8,
+        14
+      ]
+    },
+    {
+      "element": "inner_leg_left_shin",
+      "bone": "inner_leg_left",
+      "face": "down",
+      "atlas_uv": [
+        439,
+        28,
+        440,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        20,
+        8,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_left_foot",
+      "bone": "inner_leg_left",
+      "face": "north",
+      "atlas_uv": [
+        445,
+        24,
+        448,
+        27
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        13,
+        16,
+        16,
+        19
+      ]
+    },
+    {
+      "element": "inner_leg_left_foot",
+      "bone": "inner_leg_left",
+      "face": "east",
+      "atlas_uv": [
+        448,
+        24,
+        451,
+        27
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        16,
+        16,
+        19,
+        19
+      ]
+    },
+    {
+      "element": "inner_leg_left_foot",
+      "bone": "inner_leg_left",
+      "face": "south",
+      "atlas_uv": [
+        451,
+        24,
+        454,
+        27
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        19,
+        16,
+        22,
+        19
+      ]
+    },
+    {
+      "element": "inner_leg_left_foot",
+      "bone": "inner_leg_left",
+      "face": "west",
+      "atlas_uv": [
+        442,
+        24,
+        445,
+        27
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        10,
+        16,
+        13,
+        19
+      ]
+    },
+    {
+      "element": "inner_leg_left_foot",
+      "bone": "inner_leg_left",
+      "face": "up",
+      "atlas_uv": [
+        445,
+        21,
+        448,
+        24
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        13,
+        13,
+        16,
+        16
+      ]
+    },
+    {
+      "element": "inner_leg_left_foot",
+      "bone": "inner_leg_left",
+      "face": "down",
+      "atlas_uv": [
+        445,
+        27,
+        448,
+        30
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        13,
+        19,
+        16,
+        22
+      ]
+    },
+    {
+      "element": "inner_arm_right_cube",
+      "bone": "inner_arm_right",
+      "face": "north",
+      "atlas_uv": [
+        439,
+        21,
+        440,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        13,
+        8,
+        21
+      ]
+    },
+    {
+      "element": "inner_arm_right_cube",
+      "bone": "inner_arm_right",
+      "face": "east",
+      "atlas_uv": [
+        440,
+        21,
+        441,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        8,
+        13,
+        9,
+        21
+      ]
+    },
+    {
+      "element": "inner_arm_right_cube",
+      "bone": "inner_arm_right",
+      "face": "south",
+      "atlas_uv": [
+        441,
+        21,
+        442,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        9,
+        13,
+        10,
+        21
+      ]
+    },
+    {
+      "element": "inner_arm_right_cube",
+      "bone": "inner_arm_right",
+      "face": "west",
+      "atlas_uv": [
+        438,
+        21,
+        439,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        6,
+        13,
+        7,
+        21
+      ]
+    },
+    {
+      "element": "inner_arm_right_cube",
+      "bone": "inner_arm_right",
+      "face": "up",
+      "atlas_uv": [
+        439,
+        21,
+        440,
+        22
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        13,
+        8,
+        14
+      ]
+    },
+    {
+      "element": "inner_arm_right_cube",
+      "bone": "inner_arm_right",
+      "face": "down",
+      "atlas_uv": [
+        439,
+        28,
+        440,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        20,
+        8,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_right_shin",
+      "bone": "inner_leg_right",
+      "face": "north",
+      "atlas_uv": [
+        439,
+        21,
+        440,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        13,
+        8,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_right_shin",
+      "bone": "inner_leg_right",
+      "face": "east",
+      "atlas_uv": [
+        440,
+        21,
+        441,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        8,
+        13,
+        9,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_right_shin",
+      "bone": "inner_leg_right",
+      "face": "south",
+      "atlas_uv": [
+        441,
+        21,
+        442,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        9,
+        13,
+        10,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_right_shin",
+      "bone": "inner_leg_right",
+      "face": "west",
+      "atlas_uv": [
+        438,
+        21,
+        439,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        6,
+        13,
+        7,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_right_shin",
+      "bone": "inner_leg_right",
+      "face": "up",
+      "atlas_uv": [
+        439,
+        21,
+        440,
+        22
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        13,
+        8,
+        14
+      ]
+    },
+    {
+      "element": "inner_leg_right_shin",
+      "bone": "inner_leg_right",
+      "face": "down",
+      "atlas_uv": [
+        439,
+        28,
+        440,
+        29
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        7,
+        20,
+        8,
+        21
+      ]
+    },
+    {
+      "element": "inner_leg_right_foot",
+      "bone": "inner_leg_right",
+      "face": "north",
+      "atlas_uv": [
+        445,
+        24,
+        448,
+        27
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        13,
+        16,
+        16,
+        19
+      ]
+    },
+    {
+      "element": "inner_leg_right_foot",
+      "bone": "inner_leg_right",
+      "face": "east",
+      "atlas_uv": [
+        448,
+        24,
+        451,
+        27
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        16,
+        16,
+        19,
+        19
+      ]
+    },
+    {
+      "element": "inner_leg_right_foot",
+      "bone": "inner_leg_right",
+      "face": "south",
+      "atlas_uv": [
+        451,
+        24,
+        454,
+        27
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        19,
+        16,
+        22,
+        19
+      ]
+    },
+    {
+      "element": "inner_leg_right_foot",
+      "bone": "inner_leg_right",
+      "face": "west",
+      "atlas_uv": [
+        442,
+        24,
+        445,
+        27
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        10,
+        16,
+        13,
+        19
+      ]
+    },
+    {
+      "element": "inner_leg_right_foot",
+      "bone": "inner_leg_right",
+      "face": "up",
+      "atlas_uv": [
+        445,
+        21,
+        448,
+        24
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        13,
+        13,
+        16,
+        16
+      ]
+    },
+    {
+      "element": "inner_leg_right_foot",
+      "bone": "inner_leg_right",
+      "face": "down",
+      "atlas_uv": [
+        445,
+        27,
+        448,
+        30
+      ],
+      "region": "arch_undressed",
+      "source_file": "T_ArchIllagerUndressed.png",
+      "source_uv": [
+        13,
+        19,
+        16,
+        22
+      ]
+    },
+    {
+      "element": "front_eyes_surface",
+      "bone": "shell_eyes_glow",
+      "face": "north",
+      "atlas_uv": [
+        20,
+        362,
+        123,
+        379
+      ],
+      "region": "front_eyes",
+      "source_file": "MCD_Heart_of_Ender.png",
+      "source_sampling": "见 atlas_regions.json 中该区单应矩阵与逐像素源坐标"
+    },
+    {
+      "element": "front_teeth_surface",
+      "bone": "shell_teeth_front_glow",
+      "face": "north",
+      "atlas_uv": [
+        159,
+        408,
+        272,
+        432
+      ],
+      "region": "front_teeth",
+      "source_file": "MCD_Heart_of_Ender.png",
+      "source_sampling": "见 atlas_regions.json 中该区单应矩阵与逐像素源坐标"
+    },
+    {
+      "element": "side_teeth_surface",
+      "bone": "shell_teeth_side_glow",
+      "face": "west",
+      "atlas_uv": [
+        280,
+        408,
+        324,
+        426
+      ],
+      "region": "side_teeth",
+      "source_file": "MCD_Heart_of_Ender.png",
+      "source_sampling": "见 atlas_regions.json 中该区单应矩阵与逐像素源坐标"
+    }
+  ],
+  "bbmodel_sha256": "8b4738fdd60f8bab39d16716e5414c0b34ee23219a9c8d33b6906f7fc81942ed",
+  "verified_against_blockbench_export": true
+}

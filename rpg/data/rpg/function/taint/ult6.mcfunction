@@ -6,4 +6,6 @@ particle witch ~ ~1 ~ 5 1.5 5 0.18 72 normal
 particle reverse_portal ~ ~1 ~ 4 1 4 0.28 72 normal
 playsound minecraft:entity.evoker.prepare_summon hostile @a[distance=..36] ~ ~ ~ 1.2 0.5
 playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..36] ~ ~ ~ 1.1 0.55
-execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult6_hit
+execute as @e[tag=rpg.unit.f,distance=..10] run function rpg:taint/ult6_hit
+# 贝利尔外观（add_belial_model.py）
+execute if entity @s[tag=rpg.bll] run function rpg:belial_lord/skill/ult6

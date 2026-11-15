@@ -1,0 +1,190 @@
+{
+ "model_scale": 8.311716312394042,
+ "height_blocks": 2.4,
+ "source_height_cm": 240.62418937683105,
+ "turn": 0,
+ "merge": {
+  "head": [
+   "nose",
+   "l_eyepupil",
+   "l_eyeiris",
+   "r_eyepupil",
+   "r_eyeiris",
+   "l_eyebrow",
+   "r_eyebrow"
+  ]
+ },
+ "held_bone": null,
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/Illagers/Enchanter/SK_IllagerEnchanter",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\usurper"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "IllagerEnchanter_Idle",
+   "seconds": 2.0833333,
+   "loop": true,
+   "ticks": 42,
+   "max_bone_error_px": 6.160115657813823e-08,
+   "max_vertex_error_px": 7.910886614524038e-08,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "IllagerEnchanter_Walk",
+   "seconds": 0.8333333,
+   "loop": true,
+   "ticks": 17,
+   "max_bone_error_px": 4.6552101431583175e-05,
+   "max_vertex_error_px": 8.93891873833884e-05,
+   "notifies": [
+    [
+     0.2067,
+     "step_gravel_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.6266,
+     "step_gravel_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "attack",
+   "source": "IllagerEnchanter_BasicAttack",
+   "seconds": 1.0416666,
+   "loop": false,
+   "ticks": 21,
+   "max_bone_error_px": 0.007429455860148569,
+   "max_vertex_error_px": 0.014330848236401777,
+   "notifies": [
+    [
+     0.431,
+     "enchant_book_close_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.4415,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "enchant",
+   "source": "IllagerEnchanter_Enchance",
+   "seconds": 4.1666665,
+   "loop": false,
+   "ticks": 84,
+   "max_bone_error_px": 0.021258081590295907,
+   "max_vertex_error_px": 0.1520368648599793,
+   "notifies": [
+    [
+     0.1377,
+     "skeleton_necromancer_prepare_summon_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1432,
+     "P_EnchantingSpell_BookLaunch",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3746,
+     "P_Enchanted_Book",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.4386,
+     "enchant_book_bladder_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.6283,
+     "enchant_chime_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.6283,
+     "enchanter_attack_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.6721,
+     "P_EnchantingSpell_Book",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     2.3736,
+     "enchant_book_close_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "rise",
+   "source": "IllagerEnchanter_Novelty",
+   "seconds": 5.0833335,
+   "loop": false,
+   "ticks": 102,
+   "max_bone_error_px": 0.0053067392406458075,
+   "max_vertex_error_px": 0.047602473005284175,
+   "notifies": [
+    [
+     0.3269,
+     "throw_book_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.4871,
+     "enchanter_novelty_CueCue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.4627,
+     "enchant_book_bladder_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     2.3359,
+     "enchant_book_bladder_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     3.4324,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     4.4267,
+     "enchant_book_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "usurper",
+  "source_mesh_sha256": "a56c10b7c336b02d785c8c7235556e12b44f55a95781d8fe37af662b696b950b",
+  "triangles": 236,
+  "all_triangles_covered_once": true,
+  "bones": 61,
+  "plane_groups": 35,
+  "display_parts": 28,
+  "elements": 147,
+  "direct_uv_elements": 73,
+  "baked_elements": 38,
+  "glow_groups": 7,
+  "textures": {
+   "M_IllagerEnchanter_Inst": 0,
+   "M_EnchantedBook": 1
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ }
+}

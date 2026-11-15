@@ -1,0 +1,736 @@
+{
+  "stage": "M4 independent pre-integration audit",
+  "timestamp_utc": "2026-11-05T03:35:23.052516+00:00",
+  "ok": true,
+  "checks": [
+    {
+      "name": "clip_order_names_lengths",
+      "ok": true,
+      "details": {
+        "names": [
+          "idle",
+          "walk",
+          "attack",
+          "summon",
+          "cast",
+          "appear",
+          "teleport_in",
+          "teleport_out",
+          "whirlwind"
+        ],
+        "length_seconds": [
+          4,
+          1.8,
+          1.25,
+          2,
+          2.5,
+          1.8,
+          0.9,
+          0.9,
+          7
+        ]
+      }
+    },
+    {
+      "name": "model_identity",
+      "ok": true,
+      "details": {
+        "key": "pope",
+        "label": "教皇",
+        "tag": "rpg.pope",
+        "score": "rpg_pp",
+        "eye_expression": "B"
+      }
+    },
+    {
+      "name": "scale_seat",
+      "ok": true,
+      "details": {
+        "model_scale": 1.3593362401199063,
+        "seat": 2.0,
+        "seat_runtime_verified": false
+      }
+    },
+    {
+      "name": "parts_glow",
+      "ok": true,
+      "details": {
+        "parts": [
+          [
+            "body",
+            [
+              "body",
+              "chain_right",
+              "chain_left"
+            ]
+          ],
+          [
+            "head",
+            [
+              "head",
+              "right_brow",
+              "left_brow"
+            ]
+          ],
+          [
+            "crown",
+            [
+              "crown"
+            ]
+          ],
+          [
+            "right_arm",
+            [
+              "right_arm"
+            ]
+          ],
+          [
+            "right_hand",
+            [
+              "right_hand"
+            ]
+          ],
+          [
+            "left_arm",
+            [
+              "left_arm"
+            ]
+          ],
+          [
+            "left_hand",
+            [
+              "left_hand"
+            ]
+          ],
+          [
+            "right_leg",
+            [
+              "right_leg"
+            ]
+          ],
+          [
+            "left_leg",
+            [
+              "left_leg"
+            ]
+          ],
+          [
+            "cape",
+            [
+              "cape"
+            ]
+          ],
+          [
+            "staff",
+            [
+              "staff"
+            ]
+          ],
+          [
+            "staff_glow",
+            [
+              "staff_glow"
+            ]
+          ]
+        ],
+        "glow": [
+          "staff_glow"
+        ]
+      }
+    },
+    {
+      "name": "17_sound_events_39_files",
+      "ok": true,
+      "details": {
+        "groups": 17,
+        "files": 39,
+        "unique": 39
+      }
+    },
+    {
+      "name": "release_cues",
+      "ok": true,
+      "details": {
+        "attack": [
+          0.5
+        ],
+        "summon": [
+          0.65
+        ],
+        "cast": [
+          0.9
+        ]
+      }
+    },
+    {
+      "name": "sockets_identity",
+      "ok": true,
+      "details": {
+        "sample_count": 525,
+        "model_sha256": "a419cc8dce1e796113a02c362ad184faea3bf09d5c908b26ac81e963babc624a",
+        "alerts": []
+      }
+    },
+    {
+      "name": "59_original_assets_unchanged",
+      "ok": true,
+      "details": {
+        "files": 59,
+        "changed": []
+      }
+    },
+    {
+      "name": "part_model_conversion",
+      "ok": true,
+      "details": [
+        {
+          "part": "body",
+          "members": [
+            "body",
+            "chain_right",
+            "chain_left"
+          ],
+          "elements": 5,
+          "visible_faces": 19,
+          "offset": [
+            -8.0,
+            -0.5499999999999998,
+            -8.6
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "head",
+          "members": [
+            "head",
+            "right_brow",
+            "left_brow"
+          ],
+          "elements": 10,
+          "visible_faces": 20,
+          "offset": [
+            -8.0,
+            7.5,
+            -8.5
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "crown",
+          "members": [
+            "crown"
+          ],
+          "elements": 5,
+          "visible_faces": 25,
+          "offset": [
+            -8.0,
+            17.0,
+            -8.0
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "right_arm",
+          "members": [
+            "right_arm"
+          ],
+          "elements": 6,
+          "visible_faces": 18,
+          "offset": [
+            -1.0,
+            3.0,
+            -8.0
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "right_hand",
+          "members": [
+            "right_hand"
+          ],
+          "elements": 1,
+          "visible_faces": 5,
+          "offset": [
+            3.0,
+            3.0,
+            -8.0
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "left_arm",
+          "members": [
+            "left_arm"
+          ],
+          "elements": 6,
+          "visible_faces": 18,
+          "offset": [
+            -15.0,
+            3.0,
+            -8.0
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "left_hand",
+          "members": [
+            "left_hand"
+          ],
+          "elements": 1,
+          "visible_faces": 5,
+          "offset": [
+            -19.0,
+            3.0,
+            -8.0
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "right_leg",
+          "members": [
+            "right_leg"
+          ],
+          "elements": 3,
+          "visible_faces": 18,
+          "offset": [
+            -6.35,
+            -5.0,
+            -8.5
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "left_leg",
+          "members": [
+            "left_leg"
+          ],
+          "elements": 3,
+          "visible_faces": 18,
+          "offset": [
+            -9.65,
+            -5.0,
+            -8.5
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "cape",
+          "members": [
+            "cape"
+          ],
+          "elements": 1,
+          "visible_faces": 6,
+          "offset": [
+            -8.0,
+            -0.5499999999999998,
+            -5.8
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "staff",
+          "members": [
+            "staff"
+          ],
+          "elements": 2,
+          "visible_faces": 12,
+          "offset": [
+            -19.0,
+            1.0,
+            -8.0
+          ],
+          "light_emission_elements": 0
+        },
+        {
+          "part": "staff_glow",
+          "members": [
+            "staff_glow"
+          ],
+          "elements": 1,
+          "visible_faces": 6,
+          "offset": [
+            -19.0,
+            14.2645298841,
+            -8.0
+          ],
+          "light_emission_elements": 1
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "MCD_Arch-Illager.png",
+      "bytes": 374290,
+      "sha256": "87d37c5977b839024a393b33099ceda64b699b694500990ff703ecfbf7d55e3f",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illagers_Staff.png",
+      "bytes": 19716,
+      "sha256": "3e475ad3df12b1eb35a0e9f9f9f69dd9835ff7793245af07f616ac80dc57803d",
+      "matches_M1": true
+    },
+    {
+      "path": "T_SuperStaff.png",
+      "bytes": 265,
+      "sha256": "bd6e849011d39eb1f148debabfc0eb5fbdd1c5bda0ce4d8748b6ad54b4d71c79",
+      "matches_M1": true
+    },
+    {
+      "path": "T_SuperCube.png",
+      "bytes": 702,
+      "sha256": "73870f54fb750f689ac0b90ef0eae42c671aac04d932f1cbaefb337e96544a94",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Idle.gif",
+      "bytes": 5418448,
+      "sha256": "ac8fe53d4ff9ee121baacda1a4c73ef50ec4f8ac00bc5e738c406b0c468a18b2",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Idle_Highblock_Halls_(front_view).gif",
+      "bytes": 2171963,
+      "sha256": "bed1d2f23e06c7104799ecf8cccf79458655b333128c6dfdecd5e7898c59cd22",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Run.gif",
+      "bytes": 606747,
+      "sha256": "47c726c94d6a6191ff66d4b96157fed8a6f6c3e2b66d35a5e842837776da1c8a",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Basic_Attack.gif",
+      "bytes": 254042,
+      "sha256": "dc76c5272918cc2821922e6ffbfa180b11e5d8796536e4ae1279ea3cf6558506",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Summon_Circle.gif",
+      "bytes": 381930,
+      "sha256": "c8f7092c1e058b8ec90c246bf4bba1a26543219122ed61504ffc9f7f8daf6e44",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Summon_Single.gif",
+      "bytes": 867923,
+      "sha256": "30308a047b91e107b63d10421c80b680a577056d85df69a0523c1d9af976324f",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Appear.gif",
+      "bytes": 929651,
+      "sha256": "fa553963a4f1abdc30a2f06b56252f0ab619828940cad5f76c164d1b62f13784",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Teleport_(Appear_Short).gif",
+      "bytes": 308422,
+      "sha256": "fc9f309620ad2d9198d6e3543cc488c250a4fad283f149fd736b29b7fbc0f676",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Defeated_in_a_Whirlwind_in_game.gif",
+      "bytes": 701548,
+      "sha256": "53cadbbd0bfdf5bcc84387a7e3e46cfa19676b1827c6489840056ba6cdd86b87",
+      "matches_M1": true
+    },
+    {
+      "path": "MCD_Arch-Illager_Defeated_in_a_Whirlwind.gif",
+      "bytes": 879842,
+      "sha256": "674e8387d9caa21b3822b6c232fc5506467e17f6b46cbf391d9b35c5757d38a5",
+      "matches_M1": true
+    },
+    {
+      "path": "Arch-Illager_sit_in_his_throne_room_front_view.jpg",
+      "bytes": 185837,
+      "sha256": "7ca92ba3fc9680cd7ad5b017b005c8f0043c2da201ebcd931a553490349e39d3",
+      "matches_M1": true
+    },
+    {
+      "path": "Arch-Illager_ready_to_fight.png",
+      "bytes": 509870,
+      "sha256": "80302d9c77081da2be54e5f881e6363505c820a2260fe5c65d4828b127c27da2",
+      "matches_M1": true
+    },
+    {
+      "path": "Arch-Illager_defeated.png",
+      "bytes": 929720,
+      "sha256": "dcd77f8e2d86f2687cfa8b46ba2cf0fdfead9d684ee6c96db0d02d987eae6e70",
+      "matches_M1": true
+    },
+    {
+      "path": "Arch-Illager_defeated_in_a_whirlwind_lose_crowns.jpg",
+      "bytes": 308060,
+      "sha256": "daaec24b3ca9c9c00130c9a24a0c89f6ba343a40ca71c3787830bd95545596d2",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_loadSpell-001_soundWave.ogg",
+      "bytes": 12392,
+      "sha256": "3fefca3fa36d69d2a0db6b1ee9e675f2ebdfe32fa62997831be8852081664892",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_mirrorIn-001_soundWave.ogg",
+      "bytes": 22761,
+      "sha256": "ea58d5936ed7773dd6fd56b6a1cfdb500687d7c03932882c5d4e8dbbd0d92e1f",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_mirrorOut-001_soundWave.ogg",
+      "bytes": 21049,
+      "sha256": "cc2da37aed9605c2d9bb3b682684073214c3f6147f763f2ebcece8f6a259d91f",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_spell-001_soundWave.ogg",
+      "bytes": 23163,
+      "sha256": "9b7d7feb9352fef1b7fe58e30faa1e09bb022075248357ed5233772a58d7ef3f",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllager_spellDissapear-001_soundWave.ogg",
+      "bytes": 29783,
+      "sha256": "4e394caa8d8f6be7633d71fcb7f428b31398ec74d40fa8c7b6e04ee878919d3f",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllagerAppear-001_soundWave.ogg",
+      "bytes": 17444,
+      "sha256": "b38f32f29ee1cec9711d632f9bbd84647a2606c55c2485cf507ed6ac3ec820db",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllagerHaha-001_soundWave.ogg",
+      "bytes": 19325,
+      "sha256": "462269df06e492d44fe33e2e1fac5e9044e214040cf636281d34cac62073faf4",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllagerHaha-002_soundWave.ogg",
+      "bytes": 32847,
+      "sha256": "c80dede13909995fc1903c093e714c41c568afcb6e602c0de474cbce539335ef",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archillagerHargh-001_soundWave.ogg",
+      "bytes": 18618,
+      "sha256": "7ef7c371b148cf3bbdbdb1669a5273672ed331a231929461081cafa09e766873",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archillagerHargh-002_soundWave.ogg",
+      "bytes": 21171,
+      "sha256": "f89ec27c4d85cc2d651170eeadfd07d98a2d447699380371fb29273d5a9f4ade",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archillagerHargh-003_soundWave.ogg",
+      "bytes": 13472,
+      "sha256": "9db4aed76d0872c2a795588f51f4e090723a2a764bda3cd8faaf2ff79eddbb87",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archillagerHargh-004_soundWave.ogg",
+      "bytes": 20033,
+      "sha256": "cf67479e5c225a44b58290b3bf1f4d2c52d82fcac41d468137aa5b4d60afa21f",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_mob_archIllagerLaugh-001_soundWave.ogg",
+      "bytes": 35653,
+      "sha256": "f73596dca957f00dd9ec6881ce845990cd8de12cac671df4e8c218da6a4da229",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-001.ogg",
+      "bytes": 10894,
+      "sha256": "122268f0ba08b73a5f8596a91442252d66111d69af0ee773d7e052c479f319cc",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-002.ogg",
+      "bytes": 11893,
+      "sha256": "e398ab312dccd2437948eb72bb351902ed3c5316fd4f08a5759ccd95a04bdd05",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-003.ogg",
+      "bytes": 14300,
+      "sha256": "8720a49ce1a322e8e768678a01210eb6e1d038cb24ebb4a2eb9696a2ffe0e06c",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-004.ogg",
+      "bytes": 12160,
+      "sha256": "a06da68091824f62d0fedc07dd76550a1607855a59975b019e2675f568ba21d6",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-005.ogg",
+      "bytes": 12820,
+      "sha256": "47c485d24374a94df33b024ac7e065ff5c87071bf6645fe5167e6c30a374ee6b",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerHurt-006.ogg",
+      "bytes": 13892,
+      "sha256": "e87cf7571f9b57542a1b443b1fd87cb6c1d4583837e486809e3db0eef2d95983",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-001.ogg",
+      "bytes": 22282,
+      "sha256": "45308736f7144b45665203ba5cfd1a886eebf514c8f0008ae8560e6e6c1c6f0f",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-002.ogg",
+      "bytes": 14192,
+      "sha256": "1b0f5b4bf529b0355ce7119c0ee2a2e8471441183bfd8d969a026f0284de8b95",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-003.ogg",
+      "bytes": 21089,
+      "sha256": "ac422f1b56440424ee43ab139c6f748d2da8eeaba4b087b444f4180a633dcee1",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-004.ogg",
+      "bytes": 18559,
+      "sha256": "4c11d62a6e761951b095790fd5be8e3592a01cefc99d7e0f2c2ab3d249919052",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-005.ogg",
+      "bytes": 22128,
+      "sha256": "8e7d1c9674fa56e666663d521d62bbc5fb759ba77cda969f3d994ed744aa5839",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-006.ogg",
+      "bytes": 23961,
+      "sha256": "747a76bab0573924aa495077db93c259b21445ae8284ab9da730e5fb7970c7f7",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-007.ogg",
+      "bytes": 16676,
+      "sha256": "9b414bd9b9694f7dc3e4b81a44cc4d166d63c96896da3486006c6b513eda2f41",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-008.ogg",
+      "bytes": 16376,
+      "sha256": "e6d383c380f1bea0fb8549fb9df4c53362e8ea972d7a86a20150ae467bf5ff22",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-009.ogg",
+      "bytes": 26793,
+      "sha256": "fff67174954a481b0607c816dabd33569f5c922e213b3897aab03c0ba1ec70ff",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-010.ogg",
+      "bytes": 18897,
+      "sha256": "a01af2ef7e806b58d399059bc060bdddbc3094d3cb08f54fd5e68ccfb90e7a46",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-011.ogg",
+      "bytes": 27928,
+      "sha256": "feaffbe1e1f71b8137e23636769c365e110f70daee50d7ff1dcbaa6dc72659ed",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-012.ogg",
+      "bytes": 12836,
+      "sha256": "ba1d3042498ae0220ada4d5ee8fe0c3a28f719818e35d2d9aaabe13a1caea272",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerIdle-013.ogg",
+      "bytes": 20386,
+      "sha256": "e862d9bb3af34fe216d4e910018c4cc28191a99c3c0f53e8249bf01cf26537b1",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_archillagerIntroFinalBlow.ogg",
+      "bytes": 45725,
+      "sha256": "eac7e62e01018e7640e53472762111a5090e3e21a00be93c3e99424117b0dc66",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_archIllagerIntroGreetings-001.ogg",
+      "bytes": 30984,
+      "sha256": "07f884b107c6db72ec328efc89ea46ccff5a134103e897e4fa45040b9e5c2b22",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_archillagerIntroLaugh-002.ogg",
+      "bytes": 39481,
+      "sha256": "8f97dc37eb1717409a7c4a2d3d439900eadab1686830bf84031d528410672e49",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerMagicImpact-001.ogg",
+      "bytes": 11009,
+      "sha256": "92c54fafbd1e95af5d4725e2440df6e7f17de31bc2a08669513f36d633dd945d",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_archillagerSummonMobs-001.ogg",
+      "bytes": 21966,
+      "sha256": "b189f5c9aa97d969561b15f2435ad0cdec84106aa34ce50e90f6e4a98c1777b4",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_archillagerSummonMobs-002.ogg",
+      "bytes": 21633,
+      "sha256": "89acacaf313864352dafee8c053037a8ec4f5df9280e69dcf53eb1d8e6612989",
+      "matches_M1": true
+    },
+    {
+      "path": "sounds/Sfx_boss_ArchillagerWhirlwind.ogg",
+      "bytes": 143720,
+      "sha256": "10c83b457a84c5115c02b3de5572c1614f52e325b3813dd93396e8cf06f68f33",
+      "matches_M1": true
+    },
+    {
+      "path": "../heart_of_ender_ref/MCD_Arch-Illager_(texture).png",
+      "bytes": 723,
+      "sha256": "1a21fa3f274e5883a6b05eee2deccf6ea95c27b81a830feacb0972c92261fbf7",
+      "matches_M1": true
+    },
+    {
+      "path": "../heart_of_ender_ref/MCD_Arch-Illager_(shadow_texture).png",
+      "bytes": 105,
+      "sha256": "f38b696236f5b93e092b138703cc5185e07f77195c23d38b353253d916f59f29",
+      "matches_M1": true
+    }
+  ],
+  "artifacts": {
+    "pope.bbmodel": "a419cc8dce1e796113a02c362ad184faea3bf09d5c908b26ac81e963babc624a",
+    "m3/clipmeta.json": "acd157e1187636d010e3a21f4721aeb7ad8d49934ec962c0e6d7c3b853ec0959",
+    "m3/audio_cues.json": "21f2711af9bbe3cbb7e7b2ab1d3d9364f58923062d2af5df2edce22ca2789de1",
+    "m2/model_spec.json": "97c344ee3bf2adf10e4738dc0a4aa399276d90159790722f218521d760b9c906",
+    "sockets.json": "ad33f741418d6471d3833ce00c709e3d96a124157ca234a0ded8bc09b7d69ad3",
+    "m3/validation/motion_validation.json": "fa6cc1d49f3c8fc31fc19fb10f5d564f3395c107c81e21840d37103e7a97c15a"
+  },
+  "protected_files": {
+    "_tools/display_mob.py": "356687477549ac50df3506d68a344f3dc50dbd13e08144bae17fb089c13c2e84",
+    "_tools/opt_runtime_hotpaths.py": "570574b7b902d5e57c3ecda0cdfb572b7fe5138e44e751bdbdbbe7945e8c31d6",
+    "_tools/add_pope_fight.py": "52be892db481156e237485ae0006f07ae619e845d2ef2661df2f6b3ba9ea8b37"
+  },
+  "not_performed": [
+    "No build or generation",
+    "No server or client tests",
+    "No Blockbench access",
+    "No gameplay file edits"
+  ]
+}

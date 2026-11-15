@@ -1,5 +1,5 @@
 tag @s add rpg.dm.cast
-execute as @a[distance=..6,gamemode=!spectator,gamemode=!creative] at @s run function rpg:taint/sk1e_reject
+execute as @e[tag=rpg.unit.f,distance=..6] at @s run function rpg:taint/sk1e_reject
 tag @s remove rpg.dm.cast
 playsound minecraft:block.beacon.deactivate hostile @a[distance=..32] ~ ~ ~ 1 0.55
 particle end_rod ~ ~1.5 ~ 2.5 1 2.5 0.08 30

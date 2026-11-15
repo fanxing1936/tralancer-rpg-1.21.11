@@ -1,0 +1,10 @@
+{
+  "engine": "Blockbench native WebGL",
+  "source_bbmodel_sha256": "4f2d24f9c5da774cbf0be44d7895c7a449bd7a1f8f1442dcbd1f2eed83c575aa",
+  "candidates": {
+    "A": "source geometry; hand expands 0.05 in XYZ to prevent coplanar staff faces",
+    "B": "temporary hand from[-10.5,10.5,-.5] to[-9.5,11.5,.5]; forearm minX=-9.5"
+  },
+  "restored": true,
+  "no_file_model_edits": true
+}

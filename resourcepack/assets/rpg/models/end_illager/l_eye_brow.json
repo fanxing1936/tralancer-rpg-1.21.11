@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/end_illager/atlas",
+    "particle": "rpg:item/end_illager/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.82,
+        8.0,
+        7.88
+      ],
+      "to": [
+        8.18,
+        8.0,
+        8.12
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            9.25,
+            0.0,
+            10.125,
+            0.625
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            9.25,
+            0.625,
+            10.125,
+            0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.3196,
+          7.5128,
+          8.1527
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      }
+    }
+  ]
+}

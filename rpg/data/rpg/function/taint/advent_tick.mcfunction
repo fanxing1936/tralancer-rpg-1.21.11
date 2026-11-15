@@ -23,4 +23,4 @@ scoreboard players add @s rpg_dm_ult 0
 execute at @s if entity @s[scores={rpg_dm_ult=1..}] run return run function rpg:taint/ult_tick
 scoreboard players add @s rpg_dm_cd 0
 execute if entity @s[scores={rpg_dm_cd=1..}] run return run scoreboard players remove @s rpg_dm_cd 1
-execute at @s if entity @a[distance=..12,gamemode=!spectator,gamemode=!creative] run function rpg:taint/cast
+execute at @s if entity @e[tag=rpg.unit.f,distance=..12] run function rpg:taint/cast

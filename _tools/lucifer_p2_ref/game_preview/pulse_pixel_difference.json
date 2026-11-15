@@ -1,0 +1,35 @@
+{
+  "resolution": [
+    1280,
+    800
+  ],
+  "mask_method": "4-connected components of max(peak,trough).RGB >45, area >=8, within x430..890/y150..730; excludes isolated sky stars",
+  "model_mask_pixels": 74098,
+  "changed_model_pixels": 795,
+  "positive_difference_pixels": 795,
+  "negative_difference_pixels": 0,
+  "max_delta_rgb": [
+    3,
+    20,
+    4
+  ],
+  "min_delta_rgb": [
+    0,
+    0,
+    0
+  ],
+  "mean_delta_rgb": [
+    0.00493940457232314,
+    0.121946611244568,
+    0.005762638667710329
+  ],
+  "change_bbox": [
+    549,
+    325,
+    702,
+    475
+  ],
+  "peak_sha256": "d6621f348d49324e9ad0375575de40c25d3bda0d8a1a622e1d4ba60130caf58e",
+  "trough_sha256": "8419fbe9675743269d224d69c260dc87ca7a92258ec6e7f971a9d203f3386187",
+  "note": "Positive = phase50 minus phase150. Diagnostic mask is not a complete silhouette/visible-texel mask. Original full F2 screenshots are preserved unmodified."
+}

@@ -1,0 +1,57 @@
+{
+  "scope": "Exact two material packages only; existing reader/key/index reused read-only; all new files confined to material_port.",
+  "pak_lengths_and_mtime_unchanged": true,
+  "source_paks": {
+    "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak": [
+      1191543250,
+      1794056998520525300
+    ],
+    "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak": [
+      93595976,
+      1794057694093384600
+    ]
+  },
+  "materials": [
+    {
+      "package": "/Game/Actors/Characters/Enemies/JungleAbomination/M_JungleAbomination",
+      "object": "M_JungleAbomination",
+      "class": "/Script/Engine.MaterialInstanceConstant",
+      "header_bytes": 2727,
+      "uexp_bytes": 207909,
+      "export_serial_offset": 2727,
+      "export_uexp_offset": 0,
+      "export_serial_bytes": 207905,
+      "tagged_property_bytes": 5364,
+      "post_tagged_native_start_uexp": 5364,
+      "remaining_native_bytes": 202541,
+      "note": "Post-tagged native offset is an evidence boundary, not a claimed material-resource start. Guid/cooked/resource headers must still be parsed.",
+      "native_prefix_hex": "000000000200000060000000090000004d6574616c6c696300771b199a0900000053706563756c6172004170bb780a000000526f7567686e657373005ee3dc6a0e00000053696e7573456d69737369766500f3c8ff7911000000436f6e737461",
+      "parsed_file": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\M_JungleAbomination.parsed.json",
+      "raw_uasset": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\raw\\Game\\Actors\\Characters\\Enemies\\JungleAbomination\\M_JungleAbomination.uasset",
+      "raw_uexp": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\raw\\Game\\Actors\\Characters\\Enemies\\JungleAbomination\\M_JungleAbomination.uexp"
+    },
+    {
+      "package": "/Game/Models/Master_ModelMaterial",
+      "object": "Master_ModelMaterial",
+      "class": "/Script/Engine.Material",
+      "header_bytes": 11941,
+      "uexp_bytes": 210985,
+      "export_serial_offset": 11941,
+      "export_uexp_offset": 0,
+      "export_serial_bytes": 199025,
+      "tagged_property_bytes": 1661,
+      "post_tagged_native_start_uexp": 1661,
+      "remaining_native_bytes": 197364,
+      "note": "Post-tagged native offset is an evidence boundary, not a claimed material-resource start. Guid/cooked/resource headers must still be parsed.",
+      "native_prefix_hex": "0000000002000000510000003d00000054536861646f7744657074685653466f724753566572746578536861646f7744657074685f5065727370656374697665436f727265637466616c736500e518c8163c00000054536861646f7744657074",
+      "parsed_file": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\Master_ModelMaterial.parsed.json",
+      "raw_uasset": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\raw\\Game\\Models\\Master_ModelMaterial.uasset",
+      "raw_uexp": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\raw\\Game\\Models\\Master_ModelMaterial.uexp"
+    }
+  ],
+  "tool_sources": {
+    "pak_index.py": "72dd0bd365830fd9667f6b60ea6b8e3ced1e86277d3de5ddb5c66c6410e0977b",
+    "ue4_bp.py": "0186445348e98d468e5fbde4caee1a0a5db17d929cf584950da05dcfe236a040"
+  },
+  "raw_manifest": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\raw_manifest.json"
+}

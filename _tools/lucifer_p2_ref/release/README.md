@@ -1,0 +1,7 @@
+# 二阶段完整构建包
+
+两份zip来自最终完整隔离构建，需成对使用；包含构建时冻结仓库的完整内容和二阶段，也包含该快照的一期生成器输出。未安装到用户PCL实例。二阶段全部数值和接入验证范围见上级REPORT.md，一期视觉质量由一期会话负责。
+
+此目录不含服务器测试harness或私有helper。release_manifest.json记录包哈希、数量与CRC检查。
+
+一期在快照后只改了laugh插值时长；差异归档在上级validation/final_build/source_drift_classified.json，不影响本次二期生命周期验证。

@@ -8,6 +8,6 @@ particle spore_blossom_air ~ ~2 ~ 5 2 5 0.08 72 normal
 playsound minecraft:entity.bee.loop_aggressive hostile @a[distance=..36] ~ ~ ~ 1.25 0.45
 playsound minecraft:entity.ravager.roar hostile @a[distance=..40] ~ ~ ~ 0.65 0.55
 function rpg:taint/ult4_swarm
-execute as @a[distance=..10,gamemode=!spectator,gamemode=!creative] run function rpg:taint/ult4_hit
+execute as @e[tag=rpg.unit.f,distance=..10] run function rpg:taint/ult4_hit
 # 别西卜外观（add_beelzebub.py）
 execute if entity @s[tag=rpg.bz] run function rpg:beelzebub/skill/ult4

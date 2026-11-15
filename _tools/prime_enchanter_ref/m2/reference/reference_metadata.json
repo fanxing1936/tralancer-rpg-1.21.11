@@ -1,0 +1,264 @@
+{
+  "coordinates": "source pixel xyxy, right and bottom excluded",
+  "single_reference_edit": "lossless crop of decoded source pixels",
+  "references": {
+    "guard_3q": {
+      "name": "guard_3q",
+      "label": "Guard / front three-quarter",
+      "source": "originals/MCD2_Prime_Enchanter_Render.png",
+      "crop_xyxy": [
+        148,
+        19,
+        767,
+        984
+      ],
+      "view": "前侧四分之三，高于头顶",
+      "pose": "双拳抬起的静态拳架",
+      "notes": "与本次模型的拳架最接近。全身完整且背景透明，便于核对头、肩、拳、腿的相对比例。画面仍有三维照明，摄影机参数未知。",
+      "source_url": "https://minecraft.wiki/w/Dungeons_II:Prime_Enchanter",
+      "role": "primary_guard",
+      "image": "guard_3q.png",
+      "source_size": [
+        1000,
+        1000
+      ],
+      "crop_size": [
+        619,
+        965
+      ],
+      "source_sha256": "2992bf8410abcde516d66d48ffe28badab1d39d79b732aae135e0e86fd12acc0",
+      "crop_sha256": "48e0de48c1570f32eef2f4142a447f066be1617294020e638682ec290da7686f"
+    },
+    "neutral_front": {
+      "name": "neutral_front",
+      "label": "Neutral / near front",
+      "source": "originals/Prime_Enchanter_render.webp",
+      "crop_xyxy": [
+        96,
+        15,
+        417,
+        498
+      ],
+      "view": "近正面，稍转侧",
+      "pose": "双臂自然下垂的中立姿",
+      "notes": "画面干净且保留头脚。核对正面几何、胸衣不对称线条与腿面。来源清单按第三方静态渲染注明，拳架与披风张角不可直接比较。",
+      "source_url": "https://metabot.gg/en/minecraft-dungeons-2/bosses/the-prime-enchanter",
+      "role": "geometry_front",
+      "image": "neutral_front.png",
+      "source_size": [
+        512,
+        512
+      ],
+      "crop_size": [
+        321,
+        483
+      ],
+      "source_sha256": "e38565247898021103943e16bf22723c17117770819f9f0524b24a5e457d2fb8",
+      "crop_sha256": "fe9f791be4cc76733c12cd86c74cd0c3c3dac92dcd43b0f2ef6c3e1530f94dae"
+    },
+    "guard_gif": {
+      "name": "guard_gif",
+      "label": "Idle / source frame 0",
+      "source": "m1/motion/frames/idle/0000.png",
+      "crop_xyxy": [
+        0,
+        0,
+        288,
+        464
+      ],
+      "view": "前侧四分之三",
+      "pose": "Idle 起始双拳架",
+      "notes": "与主渲染的拳架、视角相近。源 GIF 左缘已贴近轮廓，未人为补像素。",
+      "source_url": "https://minecraft.wiki/w/Dungeons_II:Prime_Enchanter",
+      "gif": "originals/MCD2_Prime_Enchanter_Idle.gif",
+      "frame": 0,
+      "seconds": 0.0,
+      "role": "guard_crosscheck",
+      "image": "guard_gif.png",
+      "source_size": [
+        288,
+        464
+      ],
+      "crop_size": [
+        288,
+        464
+      ],
+      "source_sha256": "cd4a18aa9d61ad29bd34ac94aa6d4ce8325b3c69af59dd4385e743653ae03dca",
+      "crop_sha256": "cd4a18aa9d61ad29bd34ac94aa6d4ce8325b3c69af59dd4385e743653ae03dca"
+    },
+    "front_guard": {
+      "name": "front_guard",
+      "label": "Cutscene / near front / 13.000 s",
+      "source": "m1/motion/gameplay/intro/f00780.png",
+      "crop_xyxy": [
+        665,
+        169,
+        1245,
+        904
+      ],
+      "view": "近正面",
+      "pose": "起身后右拳靠脸，左臂横挡",
+      "notes": "保留原画中的蓝色粒子和场景照明。用于胸衣正面、头鼻及肩甲核对。头顶与脚已贴近原视频画框。",
+      "source_url": "https://www.youtube.com/watch?v=KorV2SgmFWU",
+      "frame": 780,
+      "seconds": 13.0,
+      "role": "game_front",
+      "image": "front_guard.png",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop_size": [
+        580,
+        735
+      ],
+      "source_sha256": "81b2ae8819a7aa989a509ec80df2b3c5a2959a4f68115a239d312e241a10e02a",
+      "crop_sha256": "e755a737254cf0a8b6a2c98aa83bbc89aea681a1d891f7c191853fbb8a3e90dd"
+    },
+    "side_guard": {
+      "name": "side_guard",
+      "label": "Cutscene / side-front / 20.500 s",
+      "source": "m1/motion/gameplay/intro/f01230.png",
+      "crop_xyxy": [
+        410,
+        164,
+        1275,
+        906
+      ],
+      "view": "侧前接近侧面",
+      "pose": "双拳举起，黄拳横在胸前，青拳斜举",
+      "notes": "核对鼻与头盔侧片、肩膀和拳套厚度。脚及头顶部分由原镜头裁切。透视与照明来自游戏过场。",
+      "source_url": "https://www.youtube.com/watch?v=KorV2SgmFWU",
+      "frame": 1230,
+      "seconds": 20.5,
+      "role": "game_side",
+      "image": "side_guard.png",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop_size": [
+        865,
+        742
+      ],
+      "source_sha256": "b446c6c2ed1cc3dffbecc694c0537491d008968b7a47040167d98069857c8380",
+      "crop_sha256": "0de8a5ec75991a00cfce4cab414c6f61127178a53a4efeb75836244e6c616bcb"
+    },
+    "side_rear": {
+      "name": "side_rear",
+      "label": "Cutscene / side-rear / 15.500 s",
+      "source": "m1/motion/gameplay/intro/f00930.png",
+      "crop_xyxy": [
+        774,
+        238,
+        1374,
+        886
+      ],
+      "view": "侧偏背",
+      "pose": "迈步，黄拳前伸，披风下摆沿后侧落下",
+      "notes": "全身较完整，可核对侧肩、分条披风和腿脚；与本次静态拳架姿势不同。",
+      "source_url": "https://www.youtube.com/watch?v=KorV2SgmFWU",
+      "frame": 930,
+      "seconds": 15.5,
+      "role": "game_side_full",
+      "image": "side_rear.png",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop_size": [
+        600,
+        648
+      ],
+      "source_sha256": "ea5a844af3a71050941de34412c69ad1bcb885dbf67486b4cd61bd6851c114b9",
+      "crop_sha256": "b83ed786136310f0b7cf58dc63da3fdb338cb032803f794f44486de6dd80d33d"
+    },
+    "rear": {
+      "name": "rear",
+      "label": "Cutscene / near rear / 15.000 s",
+      "source": "m1/motion/gameplay/intro/f00900.png",
+      "crop_xyxy": [
+        577,
+        180,
+        1447,
+        881
+      ],
+      "view": "近背面，少量侧面",
+      "pose": "转身迈步，披风条带横向甩开",
+      "notes": "最清楚的背面布料证据。核对披风条带内外侧和头巾带的接点，转身造成的张角不当作静态夹角。",
+      "source_url": "https://www.youtube.com/watch?v=KorV2SgmFWU",
+      "frame": 900,
+      "seconds": 15.0,
+      "role": "game_rear",
+      "image": "rear.png",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop_size": [
+        870,
+        701
+      ],
+      "source_sha256": "9591b9db4448f16420814c95d84d0a9339f259719da0de81147c8da8810b6e7c",
+      "crop_sha256": "ddbc91e2a2b7627c91d342a9af9681764701e5c20fad07cc30b9a53dba89e712"
+    },
+    "emissive": {
+      "name": "emissive",
+      "label": "Cutscene / fist lighting / 14.500 s",
+      "source": "m1/motion/gameplay/intro/f00870.png",
+      "crop_xyxy": [
+        570,
+        167,
+        1325,
+        915
+      ],
+      "view": "近正面",
+      "pose": "转身落稳后举拳，双拳发光",
+      "notes": "角色右拳为青、左拳为黄，额纹为青、眼睛为白。保留火花和光晕，供核对颜色分工。",
+      "source_url": "https://www.youtube.com/watch?v=KorV2SgmFWU",
+      "frame": 870,
+      "seconds": 14.5,
+      "role": "emissive_color",
+      "image": "emissive.png",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop_size": [
+        755,
+        748
+      ],
+      "source_sha256": "33ae0c6651cff29ba0b34d608f2ebca3174faf6964f2016bdf18ce7f52adf24a",
+      "crop_sha256": "9fa61ed7b2f1f157d3bc47f8503bd5c6c912ecb438d40fa911b1462080b74d56"
+    },
+    "eyes": {
+      "name": "eyes",
+      "label": "Cutscene / eye detail / 10.300 s",
+      "source": "m1/motion/gameplay/intro/f00618.png",
+      "crop_xyxy": [
+        245,
+        194,
+        1680,
+        888
+      ],
+      "view": "近正面特写",
+      "pose": "睁眼时头部接近正向",
+      "notes": "用于核对眉眼与长鼻。游戏中此时白眼受发光照亮，肤色受环境光影响。",
+      "source_url": "https://www.youtube.com/watch?v=KorV2SgmFWU",
+      "frame": 618,
+      "seconds": 10.3,
+      "role": "eyes",
+      "image": "eyes.png",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "crop_size": [
+        1435,
+        694
+      ],
+      "source_sha256": "d6e2964cf51e440878bb323230b8c83836052d017036bc3477c7925085eb92f3",
+      "crop_sha256": "22153b8b446be3f0ee855da82ae19951bae7419ecb47dbdaeac97cbb95c34901"
+    }
+  }
+}

@@ -1,0 +1,1103 @@
+{
+  "source_gltf": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\exported\\Game\\Actors\\Characters\\Enemies\\Skeleton\\SK_Skeleton.gltf",
+  "source_gltf_sha256": "386eef0d7b268c173a6767421fb920a416fc5866d3978bcc27d5c0821c2fb440",
+  "source_bin_sha256": "645e0916de995d7c5c8c61ad7615207defe350370f3ab146dc6937168da40ac8",
+  "native_bbmodel": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\separate\\mossy_skeleton_body_original.bbmodel",
+  "native_bbmodel_sha256": "b380f1ec1a30d62bb690cf1099acd5de0aa41f41c3d38070ed10cfb92488ae5e",
+  "summary": {
+    "source_wedges": 216,
+    "saved_mesh_vertices": 216,
+    "source_triangles": 72,
+    "saved_triangles": 72,
+    "saved_bones": 22,
+    "all_vertex_indices_exact": true,
+    "point_max_abs_error_java_pixels": 0.0,
+    "uv_max_abs_error_source_pixels": 0.0,
+    "triangle_topology_differences": 0,
+    "weight_differing_vertices": 0,
+    "parent_mismatches": 0,
+    "bone_local_origin_max_abs_error": 0.0,
+    "bone_rotation_matrix_max_error_vs_normalized_source": 3.8285686989269494e-16,
+    "bone_raw_quaternion_component_max_difference": 3.935108000563403e-07,
+    "bone_world_origin_max_abs_error_vs_normalized_source": 9.398731792842341e-15,
+    "texture_png_bytes_equal": true,
+    "texture_rgba_differing_pixels": 0
+  },
+  "parts": [
+    {
+      "name": "R_Leg",
+      "native_uuid": "7dffc2ea-8b67-a9b9-ab22-6fe81ec995ac",
+      "source_wedges": 36,
+      "saved_vertices": 36,
+      "source_triangles": 12,
+      "saved_triangles": 12,
+      "vertex_indices_exact": true,
+      "point_max_abs_error_java_pixels": 0.0,
+      "point_differing_vertices": 0,
+      "point_differences": [],
+      "uv_max_abs_error_source_pixels": 0.0,
+      "uv_differing_face_corners": 0,
+      "uv_differences": [],
+      "unexpected_triangles": [],
+      "missing_triangles": [],
+      "reversed_triangles": [],
+      "weight_differing_vertices": 0,
+      "weight_differences": [],
+      "texture_reference_differences": [],
+      "mesh_origin": [
+        0,
+        0,
+        0
+      ],
+      "mesh_rotation": [
+        0,
+        0,
+        0
+      ],
+      "mesh_parent_is_armature": true
+    },
+    {
+      "name": "L_Leg",
+      "native_uuid": "704f3551-d5e1-edb8-eae1-dd7c9202d252",
+      "source_wedges": 36,
+      "saved_vertices": 36,
+      "source_triangles": 12,
+      "saved_triangles": 12,
+      "vertex_indices_exact": true,
+      "point_max_abs_error_java_pixels": 0.0,
+      "point_differing_vertices": 0,
+      "point_differences": [],
+      "uv_max_abs_error_source_pixels": 0.0,
+      "uv_differing_face_corners": 0,
+      "uv_differences": [],
+      "unexpected_triangles": [],
+      "missing_triangles": [],
+      "reversed_triangles": [],
+      "weight_differing_vertices": 0,
+      "weight_differences": [],
+      "texture_reference_differences": [],
+      "mesh_origin": [
+        0,
+        0,
+        0
+      ],
+      "mesh_rotation": [
+        0,
+        0,
+        0
+      ],
+      "mesh_parent_is_armature": true
+    },
+    {
+      "name": "L_Arm",
+      "native_uuid": "3009ceef-f565-4c41-c597-d94214513fab",
+      "source_wedges": 36,
+      "saved_vertices": 36,
+      "source_triangles": 12,
+      "saved_triangles": 12,
+      "vertex_indices_exact": true,
+      "point_max_abs_error_java_pixels": 0.0,
+      "point_differing_vertices": 0,
+      "point_differences": [],
+      "uv_max_abs_error_source_pixels": 0.0,
+      "uv_differing_face_corners": 0,
+      "uv_differences": [],
+      "unexpected_triangles": [],
+      "missing_triangles": [],
+      "reversed_triangles": [],
+      "weight_differing_vertices": 0,
+      "weight_differences": [],
+      "texture_reference_differences": [],
+      "mesh_origin": [
+        0,
+        0,
+        0
+      ],
+      "mesh_rotation": [
+        0,
+        0,
+        0
+      ],
+      "mesh_parent_is_armature": true
+    },
+    {
+      "name": "R_Arm",
+      "native_uuid": "afb2af98-fad8-9ce2-14f0-3df4b32f7bb2",
+      "source_wedges": 36,
+      "saved_vertices": 36,
+      "source_triangles": 12,
+      "saved_triangles": 12,
+      "vertex_indices_exact": true,
+      "point_max_abs_error_java_pixels": 0.0,
+      "point_differing_vertices": 0,
+      "point_differences": [],
+      "uv_max_abs_error_source_pixels": 0.0,
+      "uv_differing_face_corners": 0,
+      "uv_differences": [],
+      "unexpected_triangles": [],
+      "missing_triangles": [],
+      "reversed_triangles": [],
+      "weight_differing_vertices": 0,
+      "weight_differences": [],
+      "texture_reference_differences": [],
+      "mesh_origin": [
+        0,
+        0,
+        0
+      ],
+      "mesh_rotation": [
+        0,
+        0,
+        0
+      ],
+      "mesh_parent_is_armature": true
+    },
+    {
+      "name": "Head",
+      "native_uuid": "416bfe5c-f7c9-3b99-be0a-aa1337de7725",
+      "source_wedges": 36,
+      "saved_vertices": 36,
+      "source_triangles": 12,
+      "saved_triangles": 12,
+      "vertex_indices_exact": true,
+      "point_max_abs_error_java_pixels": 0.0,
+      "point_differing_vertices": 0,
+      "point_differences": [],
+      "uv_max_abs_error_source_pixels": 0.0,
+      "uv_differing_face_corners": 0,
+      "uv_differences": [],
+      "unexpected_triangles": [],
+      "missing_triangles": [],
+      "reversed_triangles": [],
+      "weight_differing_vertices": 0,
+      "weight_differences": [],
+      "texture_reference_differences": [],
+      "mesh_origin": [
+        0,
+        0,
+        0
+      ],
+      "mesh_rotation": [
+        0,
+        0,
+        0
+      ],
+      "mesh_parent_is_armature": true
+    },
+    {
+      "name": "Body",
+      "native_uuid": "6372cde0-da2e-6bf6-5d6a-619990dbc686",
+      "source_wedges": 36,
+      "saved_vertices": 36,
+      "source_triangles": 12,
+      "saved_triangles": 12,
+      "vertex_indices_exact": true,
+      "point_max_abs_error_java_pixels": 0.0,
+      "point_differing_vertices": 0,
+      "point_differences": [],
+      "uv_max_abs_error_source_pixels": 0.0,
+      "uv_differing_face_corners": 0,
+      "uv_differences": [],
+      "unexpected_triangles": [],
+      "missing_triangles": [],
+      "reversed_triangles": [],
+      "weight_differing_vertices": 0,
+      "weight_differences": [],
+      "texture_reference_differences": [],
+      "mesh_origin": [
+        0,
+        0,
+        0
+      ],
+      "mesh_rotation": [
+        0,
+        0,
+        0
+      ],
+      "mesh_parent_is_armature": true
+    }
+  ],
+  "bones": [
+    {
+      "name": "J_Root",
+      "index": 0,
+      "source_local_origin_java": [
+        0,
+        0,
+        0
+      ],
+      "saved_local_origin": [
+        0,
+        0,
+        0
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        -0.707107,
+        0.0,
+        -0.0,
+        0.707107
+      ],
+      "source_raw_quaternion_norm": 1.0000003094489522,
+      "saved_euler_zyx_degrees": [
+        -90.00000000000001,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865475
+      ],
+      "raw_quaternion_component_max_abs_difference": 2.1881345257934726e-07,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 3.8285686989269494e-16,
+      "world_origin_max_abs_error_vs_normalized_source": 0.0,
+      "expected_parent": "SK_Skeleton_original",
+      "saved_parent": "SK_Skeleton_original",
+      "parent_matches": true
+    },
+    {
+      "name": "J_L_Hip",
+      "index": 1,
+      "source_local_origin_java": [
+        -0.0,
+        0.015821408,
+        12.0
+      ],
+      "saved_local_origin": [
+        0,
+        0.015821408,
+        12
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 4.597017211338539e-15,
+      "expected_parent": "J_Root",
+      "saved_parent": "J_Root",
+      "parent_matches": true
+    },
+    {
+      "name": "J_R_Leg",
+      "index": 2,
+      "source_local_origin_java": [
+        2.0,
+        5.991472e-09,
+        -0.0
+      ],
+      "saved_local_origin": [
+        2,
+        5.991472e-09,
+        0
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        1.0,
+        0.0,
+        -0.0,
+        6.12323e-17
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        180,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        1.0,
+        0.0,
+        0.0,
+        6.123233995736766e-17
+      ],
+      "raw_quaternion_component_max_abs_difference": 3.99573676568532e-23,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 7.99147353137064e-23,
+      "world_origin_max_abs_error_vs_normalized_source": 4.597017211338539e-15,
+      "expected_parent": "J_L_Hip",
+      "saved_parent": "J_L_Hip",
+      "parent_matches": true
+    },
+    {
+      "name": "J_R_Foot",
+      "index": 3,
+      "source_local_origin_java": [
+        -0.0,
+        -1.474376e-15,
+        12.0
+      ],
+      "saved_local_origin": [
+        0,
+        -1.474376e-15,
+        12
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 1.7763568394002505e-15,
+      "expected_parent": "J_R_Leg",
+      "saved_parent": "J_R_Leg",
+      "parent_matches": true
+    },
+    {
+      "name": "R_Leg",
+      "index": 4,
+      "source_local_origin_java": [
+        0,
+        0,
+        0
+      ],
+      "saved_local_origin": [
+        0,
+        0,
+        0
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 1.7763568394002505e-15,
+      "expected_parent": "J_R_Foot",
+      "saved_parent": "J_R_Foot",
+      "parent_matches": true
+    },
+    {
+      "name": "J_L_Leg",
+      "index": 5,
+      "source_local_origin_java": [
+        -2.0,
+        4.440896e-18,
+        -0.0
+      ],
+      "saved_local_origin": [
+        -2,
+        4.440896e-18,
+        0
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 4.597017211338539e-15,
+      "expected_parent": "J_L_Hip",
+      "saved_parent": "J_L_Hip",
+      "parent_matches": true
+    },
+    {
+      "name": "J_L_Foot",
+      "index": 6,
+      "source_local_origin_java": [
+        -0.0,
+        -2.220448e-18,
+        -12.0
+      ],
+      "saved_local_origin": [
+        0,
+        -2.220448e-18,
+        -12
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 3.469446951953614e-18,
+      "expected_parent": "J_L_Leg",
+      "saved_parent": "J_L_Leg",
+      "parent_matches": true
+    },
+    {
+      "name": "L_Leg",
+      "index": 7,
+      "source_local_origin_java": [
+        0,
+        0,
+        0
+      ],
+      "saved_local_origin": [
+        0,
+        0,
+        0
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 3.469446951953614e-18,
+      "expected_parent": "J_L_Foot",
+      "saved_parent": "J_L_Foot",
+      "parent_matches": true
+    },
+    {
+      "name": "J_L_Spine",
+      "index": 8,
+      "source_local_origin_java": [
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "saved_local_origin": [
+        0,
+        0,
+        1
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 4.978656376053436e-15,
+      "expected_parent": "J_L_Hip",
+      "saved_parent": "J_L_Hip",
+      "parent_matches": true
+    },
+    {
+      "name": "J_Shoulders",
+      "index": 9,
+      "source_local_origin_java": [
+        -5.583088e-15,
+        -6.101792e-15,
+        10.0
+      ],
+      "saved_local_origin": [
+        -5.583088e-15,
+        -6.101792e-15,
+        10
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 8.808925811010226e-15,
+      "expected_parent": "J_L_Spine",
+      "saved_parent": "J_L_Spine",
+      "parent_matches": true
+    },
+    {
+      "name": "J_L_Arm",
+      "index": 10,
+      "source_local_origin_java": [
+        -4.4364,
+        2.966512e-15,
+        -4.547472e-15
+      ],
+      "saved_local_origin": [
+        -4.4364,
+        2.966512e-15,
+        -4.547472e-15
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 8.808925811010226e-15,
+      "expected_parent": "J_Shoulders",
+      "saved_parent": "J_Shoulders",
+      "parent_matches": true
+    },
+    {
+      "name": "J_L_Hand",
+      "index": 11,
+      "source_local_origin_java": [
+        -0.96,
+        4.440896e-18,
+        -10.0
+      ],
+      "saved_local_origin": [
+        -0.96,
+        4.440896e-18,
+        -10
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 4.98212582300539e-15,
+      "expected_parent": "J_L_Arm",
+      "saved_parent": "J_L_Arm",
+      "parent_matches": true
+    },
+    {
+      "name": "J_L_Weapon",
+      "index": 12,
+      "source_local_origin_java": [
+        -2.273744e-15,
+        1.718624e-15,
+        4.547472e-15
+      ],
+      "saved_local_origin": [
+        -2.273744e-15,
+        1.718624e-15,
+        4.547472e-15
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 4.98212582300539e-15,
+      "expected_parent": "J_L_Hand",
+      "saved_parent": "J_L_Hand",
+      "parent_matches": true
+    },
+    {
+      "name": "L_Arm",
+      "index": 13,
+      "source_local_origin_java": [
+        0,
+        0,
+        0
+      ],
+      "saved_local_origin": [
+        0,
+        0,
+        0
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 4.98212582300539e-15,
+      "expected_parent": "J_L_Hand",
+      "saved_parent": "J_L_Hand",
+      "parent_matches": true
+    },
+    {
+      "name": "J_R_Arm",
+      "index": 14,
+      "source_local_origin_java": [
+        4.4364,
+        5.991472e-09,
+        -4.547472e-15
+      ],
+      "saved_local_origin": [
+        4.4364,
+        5.991472e-09,
+        -4.547472e-15
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        1.0,
+        0.0,
+        -0.0,
+        6.12323e-17
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        180,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        1.0,
+        0.0,
+        0.0,
+        6.123233995736766e-17
+      ],
+      "raw_quaternion_component_max_abs_difference": 3.99573676568532e-23,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 7.99147353137064e-23,
+      "world_origin_max_abs_error_vs_normalized_source": 8.808925811010226e-15,
+      "expected_parent": "J_Shoulders",
+      "saved_parent": "J_Shoulders",
+      "parent_matches": true
+    },
+    {
+      "name": "J_R_Hand",
+      "index": 15,
+      "source_local_origin_java": [
+        0.963224,
+        -1.2256864e-15,
+        10.0
+      ],
+      "saved_local_origin": [
+        0.963224,
+        -1.2256864e-15,
+        10
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 4.98212582300539e-15,
+      "expected_parent": "J_R_Arm",
+      "saved_parent": "J_R_Arm",
+      "parent_matches": true
+    },
+    {
+      "name": "J_R_Weapon",
+      "index": 16,
+      "source_local_origin_java": [
+        -5.684336e-15,
+        -1.614272e-15,
+        -4.547472e-15
+      ],
+      "saved_local_origin": [
+        -5.684336e-15,
+        -1.614272e-15,
+        -4.547472e-15
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 4.98212582300539e-15,
+      "expected_parent": "J_R_Hand",
+      "saved_parent": "J_R_Hand",
+      "parent_matches": true
+    },
+    {
+      "name": "R_Arm",
+      "index": 17,
+      "source_local_origin_java": [
+        0,
+        0,
+        0
+      ],
+      "saved_local_origin": [
+        0,
+        0,
+        0
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 4.98212582300539e-15,
+      "expected_parent": "J_R_Hand",
+      "saved_parent": "J_R_Hand",
+      "parent_matches": true
+    },
+    {
+      "name": "J_Neck",
+      "index": 18,
+      "source_local_origin_java": [
+        -3.87776e-17,
+        -0.015821408,
+        1.5474096
+      ],
+      "saved_local_origin": [
+        -3.87776e-17,
+        -0.015821408,
+        1.5474096
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0.000228664,
+        0.000817398,
+        -0.00510553,
+        -0.999987
+      ],
+      "source_raw_quaternion_norm": 1.0000003935160706,
+      "saved_euler_zyx_degrees": [
+        -0.02668085835553462,
+        -0.09353188140388688,
+        0.585074942044087
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        0.0002286639100170766,
+        0.0008173976783408775,
+        -0.005105527990892687,
+        -0.9999866064891999
+      ],
+      "raw_quaternion_component_max_abs_difference": 3.935108000563403e-07,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 1.734723475976807e-18,
+      "world_origin_max_abs_error_vs_normalized_source": 9.398731792842341e-15,
+      "expected_parent": "J_Shoulders",
+      "saved_parent": "J_Shoulders",
+      "parent_matches": true
+    },
+    {
+      "name": "J_Head",
+      "index": 19,
+      "source_local_origin_java": [
+        -1.618784e-09,
+        4.617728e-10,
+        -9.916336e-07
+      ],
+      "saved_local_origin": [
+        -1.618784e-09,
+        4.617728e-10,
+        -9.916336e-07
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        -0.000228664,
+        -0.000817398,
+        0.00510553,
+        -0.999987
+      ],
+      "source_raw_quaternion_norm": 1.0000003935160706,
+      "saved_euler_zyx_degrees": [
+        0.025724419480330808,
+        0.09379944159100119,
+        -0.5850321077526051
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0002286639100170767,
+        -0.0008173976783408773,
+        0.005105527990892686,
+        -0.9999866064891999
+      ],
+      "raw_quaternion_component_max_abs_difference": 3.935108000563403e-07,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 1.734723475976807e-18,
+      "world_origin_max_abs_error_vs_normalized_source": 9.39873141326312e-15,
+      "expected_parent": "J_Neck",
+      "saved_parent": "J_Neck",
+      "parent_matches": true
+    },
+    {
+      "name": "Head",
+      "index": 20,
+      "source_local_origin_java": [
+        0,
+        0,
+        0
+      ],
+      "saved_local_origin": [
+        0,
+        0,
+        0
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        -5.42101e-20,
+        -1.0842e-19,
+        -1.1301e-18,
+        -1.0
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        6.212019873964288e-18,
+        1.242401682961677e-17,
+        1.2949992085546867e-16
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -5.42101e-20,
+        -1.0842e-19,
+        -1.1301e-18,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 9.398731792842341e-15,
+      "expected_parent": "J_Neck",
+      "saved_parent": "J_Neck",
+      "parent_matches": true
+    },
+    {
+      "name": "Body",
+      "index": 21,
+      "source_local_origin_java": [
+        0,
+        0,
+        0
+      ],
+      "saved_local_origin": [
+        0,
+        0,
+        0
+      ],
+      "local_origin_max_abs_error": 0.0,
+      "source_raw_quaternion_java": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "source_raw_quaternion_norm": 1.0,
+      "saved_euler_zyx_degrees": [
+        0,
+        0,
+        0
+      ],
+      "saved_euler_as_quaternion_sign_aligned": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "raw_quaternion_component_max_abs_difference": 0.0,
+      "rotation_matrix_max_abs_error_vs_normalized_source": 0.0,
+      "world_origin_max_abs_error_vs_normalized_source": 8.808925811010226e-15,
+      "expected_parent": "J_Shoulders",
+      "saved_parent": "J_Shoulders",
+      "parent_matches": true
+    }
+  ],
+  "texture": {
+    "source_png_sha256": "fdcbe40f0556da0c54983d7a9ccfbf30ec98e9ddd609045548e240c2105a97c0",
+    "embedded_png_sha256": "fdcbe40f0556da0c54983d7a9ccfbf30ec98e9ddd609045548e240c2105a97c0",
+    "png_bytes_equal": true,
+    "rgba_differing_pixels": 0,
+    "resolution": {
+      "width": 64,
+      "height": 32
+    }
+  },
+  "reference_scope": "Direct independent decode of UModel-exported glTF/bin versus read-back of actual native-saved bbmodel. Not a claim of full-precision original UE asset recovery.",
+  "rotation_scope": "Native stores Euler only. Importer normalizes the glTF raw quaternion then converts to ZYX Euler. Report distinguishes saved matrix versus normalized source and quaternion components versus raw source; neither is mislabeled raw-quaternion zero difference.",
+  "observed_serialization": "Previously observed 5-decimal native serialization loss has been corrected in this saved file. Point coordinates, UV and local bone origins now preserve the exported source values exactly.",
+  "historical_five_decimal_save": {
+    "native_bbmodel_sha256": "3493dbf55d8391913b680109c3b1a8951ba86b8bf550dd2941944b5774d6fd36",
+    "point_max_abs_error_java_pixels": 4.76837158203125e-07,
+    "uv_max_abs_error_source_pixels": 3.4375e-06,
+    "bone_local_origin_max_abs_error": 4e-06,
+    "corrected_in_current_file": true
+  },
+  "mesh_texture_topology_weights_parents_and_local_origins_exact": true,
+  "zero_difference_acceptance": false,
+  "input_changed_during_validation": false
+}

@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "item": {
+          "items": "minecraft:crossbow",
+          "predicates": {
+            "minecraft:custom_data": "{harp_crossbow_tag:1b}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:item/extra/harp_crossbow_shot"
+  }
+}

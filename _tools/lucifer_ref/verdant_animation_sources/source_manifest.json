@@ -1,0 +1,491 @@
+{
+  "scope": "Final source/adaptation evidence archive; no keys, game PAKs, client JAR/classes/classpath/large mappings or full shader library.",
+  "final_model_sha256": "14931c0cb1584e5da36ff107e0b5bd953d013b0d3f2f385d57a729e36628f197",
+  "source_game_version": "1.17.0.0",
+  "java_target_version": "1.21.11",
+  "source_tool": {
+    "name": "UE Viewer",
+    "build": 1590,
+    "sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+    "official_repository": "https://github.com/gildor2/UEViewer"
+  },
+  "final_validation_index": "FINAL_VALIDATION_INDEX.json",
+  "files": [
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Idle.psa",
+      "kind": "original_game_motion_umodel_export",
+      "bytes": 226176,
+      "sha256": "4684eb55a93273715081f55af701217a5e142491e74f6fff2b85bf17215c434a",
+      "original_package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_Idle",
+      "export_sha256_verified": true
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Idle.props.txt",
+      "kind": "original_animation_export_metadata",
+      "bytes": 10369,
+      "sha256": "bda4749f9d6f0fc1c080cb96ed5d52d52ae2bd532ae56be87c42866507ee74fb"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Idle.config",
+      "kind": "original_animation_export_metadata",
+      "bytes": 485,
+      "sha256": "21588674b5775ccd9fdda987660e58c6da0e5c79505b4023d053bc0a51123b50"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Walk.psa",
+      "kind": "original_game_motion_umodel_export",
+      "bytes": 33184,
+      "sha256": "93891ef107cbc48ca4cfd808b98880fe3b54ab5159c1f5028bf692305a5e7f2d",
+      "original_package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_Walk",
+      "export_sha256_verified": true
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Walk.props.txt",
+      "kind": "original_animation_export_metadata",
+      "bytes": 12699,
+      "sha256": "8801ce3cd10ecfff02e528e51845d6db199918e23d639e5bfb9457ab18975c42"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Walk.config",
+      "kind": "original_animation_export_metadata",
+      "bytes": 485,
+      "sha256": "c2ae53b6ed8831f21241d0b85bb4ed19dca9450b89f5398c551367bb46559d37"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_BasicAttack.psa",
+      "kind": "original_game_motion_umodel_export",
+      "bytes": 56864,
+      "sha256": "9ea1bc34db0103bca49b55611d9473d37f72905068f734f0ecbd2951995c725e",
+      "original_package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_BasicAttack",
+      "export_sha256_verified": true
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_BasicAttack.props.txt",
+      "kind": "original_animation_export_metadata",
+      "bytes": 15036,
+      "sha256": "ea956f146bbe730f430f6ff49893d8cdefaeaaa9148185727bee51ce487cac93"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_BasicAttack.config",
+      "kind": "original_animation_export_metadata",
+      "bytes": 499,
+      "sha256": "df99ddac790651704b6061d9539413353322dc7b7813942d70f36ff9acb88035"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_StrongAttack.psa",
+      "kind": "original_game_motion_umodel_export",
+      "bytes": 107776,
+      "sha256": "fe7a8c2ffa0f33015b4bd823af711c840939c6bb0c938829ccefcb39d68b37f8",
+      "original_package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_StrongAttack",
+      "export_sha256_verified": true
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_StrongAttack.props.txt",
+      "kind": "original_animation_export_metadata",
+      "bytes": 15023,
+      "sha256": "a09b6f5cef629e15d520d5db453f373a60a4af195ab9e085128f225ae992fd72"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_StrongAttack.config",
+      "kind": "original_animation_export_metadata",
+      "bytes": 501,
+      "sha256": "9699d7ba0acc41a10fcdd5f32e59da4f8c052c316a76abcf8b5fd336fd29433d"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Stun.psa",
+      "kind": "original_game_motion_umodel_export",
+      "bytes": 62784,
+      "sha256": "b9d78d6eeebdfc726064248aa3a525489b66e15e8ad135b758ce64c4f2727e1e",
+      "original_package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_Stun",
+      "export_sha256_verified": true
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Stun.props.txt",
+      "kind": "original_animation_export_metadata",
+      "bytes": 10851,
+      "sha256": "49a5f95a4ca3b957875a31bcc6c188bae19a12230ab9387e60e041f6d0f169bd"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Stun.config",
+      "kind": "original_animation_export_metadata",
+      "bytes": 401,
+      "sha256": "0c84a4da08926c8e9f9f661d7f498eeef340b6bc6c01d3605a9c12d9dc45976b"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Novelty.psa",
+      "kind": "original_game_motion_umodel_export",
+      "bytes": 121984,
+      "sha256": "8b42799ba29b8ca7d93b0d6e336376b0d0f9216205eb7ddb89bf296d0142a447",
+      "original_package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_Novelty",
+      "export_sha256_verified": true
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Novelty.props.txt",
+      "kind": "original_animation_export_metadata",
+      "bytes": 10370,
+      "sha256": "f6678ceeb59f0b0f5de9ad6412375677a0663c199ece0d4c0aab009ae9cff299"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_Novelty.config",
+      "kind": "original_animation_export_metadata",
+      "bytes": 491,
+      "sha256": "5da3b5a0b6f65c9f12c865d4f9a7d6bf6271722f3c803bbf055bd559c8fe3a33"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_GetHitFront.psa",
+      "kind": "original_game_motion_umodel_export",
+      "bytes": 55680,
+      "sha256": "c4d9dba7bd55ebbb4dd376438b7a9f7a13a7ae938a5166a53a80464e0a8588a8",
+      "original_package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_GetHitFront",
+      "export_sha256_verified": true
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_GetHitFront.props.txt",
+      "kind": "original_animation_export_metadata",
+      "bytes": 10374,
+      "sha256": "5456a54f7207243e3066f6be7a3f2d3da33c7d26f1c95a0c10e73bef7c338feb"
+    },
+    {
+      "path": "original_game_exports/animations/SkeletonNecromancer_GetHitFront.config",
+      "kind": "original_animation_export_metadata",
+      "bytes": 499,
+      "sha256": "307b02875de391b0f42c9baa47c8362753cc044c479722ffd3087133099d60f7"
+    },
+    {
+      "path": "original_game_exports/rig/SK_SkeletonNecromancer.gltf",
+      "kind": "original_animation_rig_dependency",
+      "bytes": 8720,
+      "sha256": "f9b99bed7bef5a98e8d7b8142b01c03b8180bb4288c2afb5f1c13776b5385341"
+    },
+    {
+      "path": "original_game_exports/rig/SK_SkeletonNecromancer.bin",
+      "kind": "original_animation_rig_dependency",
+      "bytes": 32596,
+      "sha256": "d7e180695f77f406233f3b85fcf2efe7cc7a71208b5550e581d8deb1b8e72f38"
+    },
+    {
+      "path": "source_evidence/necromancer_export_manifest.json",
+      "kind": "source_parsing_or_source_audit",
+      "bytes": 4506,
+      "sha256": "419d503b6bd020fa70ed97894c36cd3350260f2a0e2de8cba918cffcb9a6e7e4"
+    },
+    {
+      "path": "source_evidence/necromancer_animation_source.json",
+      "kind": "source_parsing_or_source_audit",
+      "bytes": 3973042,
+      "sha256": "930867a3022a9544915e48f83c192d18be970d29777e731b6b4bec9f478bfcd1"
+    },
+    {
+      "path": "source_evidence/necromancer_animation_summary.json",
+      "kind": "source_parsing_or_source_audit",
+      "bytes": 17894,
+      "sha256": "bb00d8c5372902a64a7c80dcd5fcbf594be515f4cd2302412d1ce2d03e8578d5"
+    },
+    {
+      "path": "source_evidence/necromancer_animation_source_audit.json",
+      "kind": "source_parsing_or_source_audit",
+      "bytes": 19586,
+      "sha256": "14a9243cf7d5fc8b5c660ef88231c1195b8872acd22b5c33d33d4d46f5752b14"
+    },
+    {
+      "path": "source_evidence/animation_timing.json",
+      "kind": "existing_project_reference_and_timing",
+      "bytes": 74198,
+      "sha256": "52b18a0314a172df8d2b65d69170f898d3e20f3875cd286841be3a5ec01ad2ae"
+    },
+    {
+      "path": "source_evidence/animation_source_and_timing.md",
+      "kind": "existing_project_reference_and_timing",
+      "bytes": 7449,
+      "sha256": "d13b904776ae518a99a00a78ee28fdc9eee5cc034abf7566ecb2109f574ef0cc"
+    },
+    {
+      "path": "source_evidence/leviathan_cast_rise_reference.json",
+      "kind": "existing_project_reference_and_timing",
+      "bytes": 22498,
+      "sha256": "bf8ed5a4f520912af7923d13028adc81575c6e16f1f977804d6ee93c5fc624c6"
+    },
+    {
+      "path": "source_evidence/format_and_timing/Psk.h",
+      "kind": "format_or_timing_primary_implementation_evidence",
+      "bytes": 7187,
+      "sha256": "1619107c54268058854f71bee201ccf6daa0ee0bdbe96845e5e0eb5d4162334a"
+    },
+    {
+      "path": "source_evidence/format_and_timing/ExportPsk.cpp",
+      "kind": "format_or_timing_primary_implementation_evidence",
+      "bytes": 26177,
+      "sha256": "f9d499e1e5af4aae41101dcd196542806e3bd46c22c2cce01ad156003067f21e"
+    },
+    {
+      "path": "source_evidence/format_and_timing/ExportGLTF.cpp",
+      "kind": "format_or_timing_primary_implementation_evidence",
+      "bytes": 25614,
+      "sha256": "299f649d1d037b173fd150063f80653767ff512ee58e00802875b34d60a45e2c"
+    },
+    {
+      "path": "source_evidence/format_and_timing/UnAnim4.cpp",
+      "kind": "format_or_timing_primary_implementation_evidence",
+      "bytes": 49804,
+      "sha256": "9938ee178e71a1691a345cb9bd467084d496ee815e1f138bfb3863c8606c024f"
+    },
+    {
+      "path": "source_evidence/format_and_timing/EvokerFangs.javap.txt",
+      "kind": "format_or_timing_primary_implementation_evidence",
+      "bytes": 13617,
+      "sha256": "3578580501aa9550e1c115869d391ed138034b3bc16dbbd86f025a323efd142b"
+    },
+    {
+      "path": "source_evidence/format_and_timing/fangs_source.json",
+      "kind": "format_or_timing_primary_implementation_evidence",
+      "bytes": 432,
+      "sha256": "9d98014babf470e77c7a4495009d68cb9ccdff30064be6fc7c9b2c435fe70a64"
+    },
+    {
+      "path": "weapon_source/weapon_source_review.md",
+      "kind": "existing_java_resourcepack_weapon_evidence",
+      "bytes": 6796,
+      "sha256": "0d7e3350d65a646d83ad7f3a3550037900df6b65e8b8c515a471308e50c9c54f"
+    },
+    {
+      "path": "weapon_source/weapon_existing_generated.json",
+      "kind": "existing_java_resourcepack_weapon_evidence",
+      "bytes": 206580,
+      "sha256": "710f546550015df769eb719ba8913225b3013c86b180417d2fd35d193bb79ac9"
+    },
+    {
+      "path": "weapon_source/weapon_native_input.json",
+      "kind": "existing_java_resourcepack_weapon_evidence",
+      "bytes": 312371,
+      "sha256": "2206a51586751a714e91e2563e0b2759b68e48558653afd0294fb2b02e260498"
+    },
+    {
+      "path": "weapon_source/weapon_native_validation.json",
+      "kind": "existing_java_resourcepack_weapon_evidence",
+      "bytes": 1493,
+      "sha256": "ef85911ad402bc3078251e7d3ab49f03fabc779d163564b05fa28342069df8f6"
+    },
+    {
+      "path": "weapon_source/spear_in_hand.original.json",
+      "kind": "existing_java_resourcepack_weapon_evidence",
+      "bytes": 656,
+      "sha256": "8cdd1011e3a8c936094dc3e32e92060ec07f1592e4c0b5083230e07984858f87"
+    },
+    {
+      "path": "weapon_source/weapon_minecraft_mappings_excerpt.txt",
+      "kind": "existing_java_resourcepack_weapon_evidence",
+      "bytes": 8384,
+      "sha256": "8a63783a25bf075620869b2741e5384a7d50c557c69cfbf6914076cbb308b596"
+    },
+    {
+      "path": "adapted/weapon_grip_alignment.json",
+      "kind": "explicit_user_authorized_adaptation",
+      "bytes": 5400,
+      "sha256": "5e48471e16f9ea82d383c32d0a4198727fe653cce914eddf981a31807eaf0ccc"
+    },
+    {
+      "path": "adapted/lucifer_verdant_input.json",
+      "kind": "explicit_user_authorized_adaptation",
+      "bytes": 327624,
+      "sha256": "30fbc901e7d3352f6409532ce73f54230347c0567a79f49aa651fa7f17bf25eb"
+    },
+    {
+      "path": "adapted/animation_payload.json",
+      "kind": "explicit_user_authorized_adaptation",
+      "bytes": 1194338,
+      "sha256": "4e614de79c7a37ebc0be235e86fb62eb82ca8abf2a1bd21e1c2538f92b81f017"
+    },
+    {
+      "path": "adapted/animation_pose_reference.npz",
+      "kind": "explicit_user_authorized_adaptation",
+      "bytes": 354434,
+      "sha256": "a970b6b48e8a073d316bcd0d5d10ed3fb52755dc21b21f62b229db131c907ef5"
+    },
+    {
+      "path": "adapted/dark_palette_plan.json",
+      "kind": "explicit_user_authorized_adaptation",
+      "bytes": 1393,
+      "sha256": "ff2d35aa7e2af0793cc6beaf13897d055aa76a86449b1136f4d84e8b694d8e29"
+    },
+    {
+      "path": "adapted/dark_palette_config.json",
+      "kind": "explicit_user_authorized_adaptation",
+      "bytes": 2534,
+      "sha256": "98303482a505e3882a4e6f9eab6354259ad1228b7ecd576879fdeb2f6ed49b3f"
+    },
+    {
+      "path": "adapted/dark_palette_runtime_result.json",
+      "kind": "explicit_user_authorized_adaptation",
+      "bytes": 6441,
+      "sha256": "73b957de4b2ca822519f7af1973881e73118fd22de10dd55097cb705d07e8d17"
+    },
+    {
+      "path": "validation/animation_payload_math_validation.json",
+      "kind": "independent_source_and_payload_math_validation",
+      "bytes": 4718,
+      "sha256": "1d5fdf24326d6d40daa8303d76bf3332394d62e6cd8b259bf747100acf4631d3"
+    },
+    {
+      "path": "validation/verdant_native_animation_validation.json",
+      "kind": "final_native_or_saved_file_validation",
+      "bytes": 117224,
+      "sha256": "35b6a5f9fff4f950d71232fa80643ce11372821a0a8def6e710fbecedd6c1a9c"
+    },
+    {
+      "path": "validation/verdant_grip_animation_validation.json",
+      "kind": "final_native_or_saved_file_validation",
+      "bytes": 34076,
+      "sha256": "c4f96b616f9e12c4c5bc4c632f173037b4bbbdbc1eeeef01d6f48d84752d77d5"
+    },
+    {
+      "path": "validation/verdant_grip_animation_validation.md",
+      "kind": "final_native_or_saved_file_validation",
+      "bytes": 2683,
+      "sha256": "9712c6a9a0b6849e1dc9252bed44bbabe1868dda2646aa09df7144dd582bc877"
+    },
+    {
+      "path": "validation/verdant_grip_animation_validation.samples.json",
+      "kind": "final_native_or_saved_file_validation",
+      "bytes": 2445990,
+      "sha256": "bb1ccff837d230d8970b2527cc5fbe6c15488130c07880606bae244dea7f7fdd"
+    },
+    {
+      "path": "validation/verdant_assembly_validation.json",
+      "kind": "final_native_or_saved_file_validation",
+      "bytes": 327909,
+      "sha256": "28d4aaa44d6b2092e6e835f16308482545e01b0d7252aae234568ef4fb0d64a4"
+    },
+    {
+      "path": "validation/verdant_assembly_validation.md",
+      "kind": "final_native_or_saved_file_validation",
+      "bytes": 3700,
+      "sha256": "2b6abfd1de6e584ec467a9ea1d6c7f840f6f34ac7a32af364ca9facc6caea813"
+    },
+    {
+      "path": "scripts/parse_necromancer_psa.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 13714,
+      "sha256": "14a01cff30f36b87a1d25dcc254794d11947e2f71eb39543efd85fff584ed561"
+    },
+    {
+      "path": "scripts/audit_animation_source.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 9185,
+      "sha256": "d0a4d1e07bebe5ebfe1a058181d8a60c7adb3bbc09fe19e9b7fb839418ed2759"
+    },
+    {
+      "path": "scripts/write_animation_timing_report.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 19139,
+      "sha256": "d5da080677dafb5ad4655142eee01314b4acc71b0720f7646c07390e414118b5"
+    },
+    {
+      "path": "scripts/build_animations.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 12155,
+      "sha256": "704b534af83ec9a6f49da6eca70b510e5ba79be5a2afad435cd0c7e0e6b1aa17"
+    },
+    {
+      "path": "scripts/import_animations.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 2151,
+      "sha256": "62bc2aa19753b814d483fb021c337a94039bd760fa6046d48d35f8bfde130786"
+    },
+    {
+      "path": "scripts/import_assembly.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 2530,
+      "sha256": "170edfc5b1ea61a4811f7f70bdf2e0865eb50d90ba9424408066a5853379560a"
+    },
+    {
+      "path": "scripts/validate_animation_payload_math.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 5219,
+      "sha256": "80930811eee22cc7f7f7bd71a03a6b7c8ce0bebcb8cbc447790c22e7952f7425"
+    },
+    {
+      "path": "scripts/validate_native_motion.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 3417,
+      "sha256": "2ef018256d8da68604144c29b967f62fc4866c86fca99e0ca6c51ca102b6702f"
+    },
+    {
+      "path": "scripts/validate_grip_animation.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 15826,
+      "sha256": "56a911053b0b0f40c352c5e9b981cd125625ebbd5f0102add77ecf62598bd1e0"
+    },
+    {
+      "path": "scripts/validate_verdant_assembly.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 19665,
+      "sha256": "5e01a610684c99a595e82f1497797e5cf94af5779903876cf18eea1b5dfcf420"
+    },
+    {
+      "path": "scripts/capture_motion.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 1678,
+      "sha256": "e42ff63783c3bc39b674ad1607019e8dd6fececddc7bcdb733ab5277b4599049"
+    },
+    {
+      "path": "scripts/prepare_existing_weapon.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 11496,
+      "sha256": "0fd3ae472ed4715660c08e6a03f5805be46969d0bf86ac19c27cf7d48489da2a"
+    },
+    {
+      "path": "scripts/extract_existing_weapon.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 1981,
+      "sha256": "50bc5a981e31e52cac4d634a3a4829625152273b7c98329827c1f311b0ce7267"
+    },
+    {
+      "path": "scripts/ExistingWeaponExtractor.java",
+      "kind": "implementation_or_validation_script",
+      "bytes": 3332,
+      "sha256": "a200454fb3e0eddb825e9d4f3ee620b93b8adb52274b10dbc6d2903d4ec63f16"
+    },
+    {
+      "path": "scripts/align_existing_spear_grip.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 7752,
+      "sha256": "ad51cfb2f36c83a0f7e91dc51ed5e2dd0fb42f1d84c3d7c4eb380a04ce8ccdd1"
+    },
+    {
+      "path": "scripts/adjust_dark_palette_040.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 3736,
+      "sha256": "d0e8c36754f8f2e565707ca18298299577f43af8abade241c4036588aa49f96d"
+    },
+    {
+      "path": "scripts/package_final_animation_evidence.py",
+      "kind": "implementation_or_validation_script",
+      "bytes": 13588,
+      "sha256": "e7f5ce2d330d844e481e638e0913dc32b517e8be3e078ee965527703c8658e52"
+    },
+    {
+      "path": "dependencies/body_for_blockbench.json",
+      "kind": "verified_target_bind_rig_import_data",
+      "bytes": 20150,
+      "sha256": "11acbd4716e5d6584cf32c8bb93cf1c32124a451100623e4791c90dc21e6b377"
+    },
+    {
+      "path": "FINAL_VALIDATION_INDEX.json",
+      "kind": "final_evidence_index",
+      "bytes": 3852,
+      "sha256": "94915b041c563a5bfd09faf65d9f9ae16eef077db49e4a4174a2d2b058948fc6"
+    },
+    {
+      "path": "README.md",
+      "kind": "archive_documentation",
+      "bytes": 5613,
+      "sha256": "bebd18c95377f813ea8903b15a77423ee8b8da5d55a9b9cd27f6a39de22a4b40"
+    }
+  ],
+  "counts": {
+    "files_excluding_manifest": 76,
+    "total_bytes_excluding_manifest": 10576327,
+    "original_psa": 7,
+    "final_clips": 8
+  }
+}

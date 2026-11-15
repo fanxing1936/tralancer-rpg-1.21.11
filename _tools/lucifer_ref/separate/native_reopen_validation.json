@@ -1,0 +1,43 @@
+{
+  "source_path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\separate\\lucifer_original_assembly.bbmodel",
+  "source_sha256": "6edd3c8fbe961de7da84add78aea57d3c22a381428c7c25dff3aa30e34c6e061",
+  "opened": {
+    "uuid": "6a13200c-ea0d-52b1-948b-a5668c8e5500",
+    "name": "lucifer_original_assembly",
+    "config": true
+  },
+  "checks": {
+    "elements": true,
+    "groups": true,
+    "outliner": true,
+    "dungeons_material_source": true,
+    "texture_png_sources_equal": true,
+    "texture_uv_sizes_equal": true,
+    "material_restored_without_reapply": true
+  },
+  "material_status": {
+    "project": "lucifer_original_assembly",
+    "configured": true,
+    "active": true,
+    "parameters": {
+      "Emissive": [
+        0.693310022354126,
+        8,
+        0
+      ],
+      "EmissivePower": 1,
+      "NaturalEmissive": 0.699999988079071,
+      "DeathEmissive": 1,
+      "OpacityMaskClipValue": 0.33329999446868896
+    },
+    "preview": {
+      "exposure": 1,
+      "tone_mapping": "Three.js ACESFilmicToneMapping",
+      "surface_lighting": "Blockbench studio light; not original scene lighting",
+      "bloom": false,
+      "note": "Only the static linear emissive equation is ported from DXBC. Preview tone mapping and scene light are explicitly separate."
+    }
+  },
+  "passed": true,
+  "method": "Native Codecs.project.load of saved JSON into a temporary project, automatic parsed-hook material restoration, raw native recompile and exact field comparison; temporary project closed without saving"
+}

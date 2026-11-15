@@ -1,20 +1,21 @@
 {
  "name": "beelzebub",
  "source_mesh_sha256": "213b456ac0cf38f03ef14e25c684bbe7f680fd069059cfc3b4d7f98da250c2a9",
- "triangles": 135,
+ "triangles": 171,
  "all_triangles_covered_once": true,
  "bones": 32,
- "plane_groups": 10,
- "display_parts": 10,
- "elements": 62,
- "direct_uv_elements": 35,
+ "plane_groups": 12,
+ "display_parts": 11,
+ "elements": 82,
+ "direct_uv_elements": 53,
  "baked_elements": 27,
- "glow_groups": 10,
+ "glow_groups": 1,
  "textures": {
-  "MI_NamelessKing": 0
+  "MI_NamelessKing": 0,
+  "__orb__": 1
  },
  "atlas": [
-  128,
-  128
+  256,
+  256
  ]
 }

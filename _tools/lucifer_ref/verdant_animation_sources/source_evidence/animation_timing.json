@@ -1,0 +1,2425 @@
+{
+  "schema": "lucifer-animation-source-timing-v1",
+  "status": "SOURCE_AND_TIMING_VERIFIED_FINAL_ANIMATION_NOT_YET_ACCEPTED",
+  "scope": "只读原游戏动画、现有项目函数与Java1.21.11字节码；写 scratch 分析数据，不操作 Blockbench、不修改技能代码、不写最终动作。",
+  "source_payload": {
+    "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_animation_source.json",
+    "bytes": 3973042,
+    "sha256": "930867a3022a9544915e48f83c192d18be970d29777e731b6b4bec9f478bfcd1"
+  },
+  "source_audit": {
+    "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_animation_source_audit.json",
+    "bytes": 19586,
+    "sha256": "14a9243cf7d5fc8b5c660ef88231c1195b8872acd22b5c33d33d4d46f5752b14"
+  },
+  "original_animations": [
+    {
+      "name": "Idle",
+      "frames": 187,
+      "fps_including_RateScale": 30.120803833007812,
+      "duration_seconds": 6.2083336499498225,
+      "last_sample_seconds": 6.175134004762925,
+      "raw_SequenceLength_seconds": 6.20833,
+      "RateScale": 1.0,
+      "psa": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Idle.psa",
+        "bytes": 226176,
+        "sha256": "4684eb55a93273715081f55af701217a5e142491e74f6fff2b85bf17215c434a"
+      },
+      "props": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Idle.props.txt",
+        "bytes": 10369,
+        "sha256": "bda4749f9d6f0fc1c080cb96ed5d52d52ae2bd532ae56be87c42866507ee74fb"
+      },
+      "gif": {
+        "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\MCD_Necromancer_Idle.gif",
+        "sha256": "dbac771c04da6cad0bad6928239cefb83b44e2d3e4b0b3f2ff252020752f056e",
+        "frames": 187,
+        "duration_seconds": 6.2299999999999995,
+        "frame_durations_seconds": [
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03
+        ]
+      },
+      "notifies_boundary": "props 中的 NotifyName 不能证明事件的准确秒数；未得到可靠触发 time/link 值，不使用异常 EndLink 值推断出手帧。"
+    },
+    {
+      "name": "Walk",
+      "frames": 24,
+      "fps_including_RateScale": 30.31578826904297,
+      "duration_seconds": 0.7916666981246748,
+      "last_sample_seconds": 0.7586805857028134,
+      "raw_SequenceLength_seconds": 0.791667,
+      "RateScale": 1.0,
+      "psa": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Walk.psa",
+        "bytes": 33184,
+        "sha256": "93891ef107cbc48ca4cfd808b98880fe3b54ab5159c1f5028bf692305a5e7f2d"
+      },
+      "props": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Walk.props.txt",
+        "bytes": 12699,
+        "sha256": "8801ce3cd10ecfff02e528e51845d6db199918e23d639e5bfb9457ab18975c42"
+      },
+      "gif": {
+        "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\MCD_Necromancer_Walk.gif",
+        "sha256": "7e415c8076be325aaa7892f911b3e3529f2b9324ac10550ea4af3554ccc9d2aa",
+        "frames": 24,
+        "duration_seconds": 0.48,
+        "frame_durations_seconds": [
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02
+        ]
+      },
+      "notifies_boundary": "props 中的 NotifyName 不能证明事件的准确秒数；未得到可靠触发 time/link 值，不使用异常 EndLink 值推断出手帧。"
+    },
+    {
+      "name": "BasicAttack",
+      "frames": 44,
+      "fps_including_RateScale": 30.171428680419922,
+      "duration_seconds": 1.458333328065246,
+      "last_sample_seconds": 1.4251893887910358,
+      "raw_SequenceLength_seconds": 1.45833,
+      "RateScale": 1.0,
+      "psa": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_BasicAttack.psa",
+        "bytes": 56864,
+        "sha256": "9ea1bc34db0103bca49b55611d9473d37f72905068f734f0ecbd2951995c725e"
+      },
+      "props": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_BasicAttack.props.txt",
+        "bytes": 15036,
+        "sha256": "ea956f146bbe730f430f6ff49893d8cdefaeaaa9148185727bee51ce487cac93"
+      },
+      "gif": {
+        "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\MCD_Necromancer_BasicAttack.gif",
+        "sha256": "b788dc5b4768b649eb1e6d3687b3fddcaa81e55863db80c6bc6efbcf2305a10e",
+        "frames": 44,
+        "duration_seconds": 1.83,
+        "frame_durations_seconds": [
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04
+        ]
+      },
+      "notifies_boundary": "props 中的 NotifyName 不能证明事件的准确秒数；未得到可靠触发 time/link 值，不使用异常 EndLink 值推断出手帧。"
+    },
+    {
+      "name": "StrongAttack",
+      "frames": 87,
+      "fps_including_RateScale": 45.39130401611328,
+      "duration_seconds": 1.9166666806733776,
+      "last_sample_seconds": 1.8946360291713849,
+      "raw_SequenceLength_seconds": 2.875,
+      "RateScale": 1.5,
+      "psa": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_StrongAttack.psa",
+        "bytes": 107776,
+        "sha256": "fe7a8c2ffa0f33015b4bd823af711c840939c6bb0c938829ccefcb39d68b37f8"
+      },
+      "props": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_StrongAttack.props.txt",
+        "bytes": 15023,
+        "sha256": "a09b6f5cef629e15d520d5db453f373a60a4af195ab9e085128f225ae992fd72"
+      },
+      "gif": {
+        "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\MCD_Necromancer_StrongAttack.gif",
+        "sha256": "8357df84530b93a9c87834987032c23448dd09d2fb8457adab75bfdd1fabcf59",
+        "frames": 48,
+        "duration_seconds": 1.6,
+        "frame_durations_seconds": [
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.03
+        ]
+      },
+      "notifies_boundary": "props 中的 NotifyName 不能证明事件的准确秒数；未得到可靠触发 time/link 值，不使用异常 EndLink 值推断出手帧。"
+    },
+    {
+      "name": "Stun",
+      "frames": 49,
+      "fps_including_RateScale": 30.153846740722656,
+      "duration_seconds": 1.6249999683730463,
+      "last_sample_seconds": 1.5918367037123717,
+      "raw_SequenceLength_seconds": 1.625,
+      "RateScale": 1.0,
+      "psa": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Stun.psa",
+        "bytes": 62784,
+        "sha256": "b9d78d6eeebdfc726064248aa3a525489b66e15e8ad135b758ce64c4f2727e1e"
+      },
+      "props": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Stun.props.txt",
+        "bytes": 10851,
+        "sha256": "49a5f95a4ca3b957875a31bcc6c188bae19a12230ab9387e60e041f6d0f169bd"
+      },
+      "gif": {
+        "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\MCD_Necromancer_Stun.gif",
+        "sha256": "cdd7cf7815464233f2b7fd2024956ff1c57f9888a860980bf0d1c60dca2e42f7",
+        "frames": 49,
+        "duration_seconds": 2.04,
+        "frame_durations_seconds": [
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04
+        ]
+      },
+      "notifies_boundary": "props 中的 NotifyName 不能证明事件的准确秒数；未得到可靠触发 time/link 值，不使用异常 EndLink 值推断出手帧。"
+    },
+    {
+      "name": "Novelty",
+      "frames": 99,
+      "fps_including_RateScale": 30.07594871520996,
+      "duration_seconds": 3.291666738011622,
+      "last_sample_seconds": 3.2584175790418075,
+      "raw_SequenceLength_seconds": 3.29167,
+      "RateScale": 1.0,
+      "psa": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Novelty.psa",
+        "bytes": 121984,
+        "sha256": "8b42799ba29b8ca7d93b0d6e336376b0d0f9216205eb7ddb89bf296d0142a447"
+      },
+      "props": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Novelty.props.txt",
+        "bytes": 10370,
+        "sha256": "f6678ceeb59f0b0f5de9ad6412375677a0663c199ece0d4c0aab009ae9cff299"
+      },
+      "gif": {
+        "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\MCD_Necromancer_Novelty.gif",
+        "sha256": "58a77a06ad1e77c2dcf4d2b4e44a182e9258b392841cbf1d6cd0811e835d4794",
+        "frames": 99,
+        "duration_seconds": 4.12,
+        "frame_durations_seconds": [
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04
+        ]
+      },
+      "notifies_boundary": "props 中的 NotifyName 不能证明事件的准确秒数；未得到可靠触发 time/link 值，不使用异常 EndLink 值推断出手帧。"
+    },
+    {
+      "name": "GetHitFront",
+      "frames": 43,
+      "fps_including_RateScale": 30.352941513061523,
+      "duration_seconds": 1.4166666509569155,
+      "last_sample_seconds": 1.38372091488815,
+      "raw_SequenceLength_seconds": 1.41667,
+      "RateScale": 1.0,
+      "psa": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_GetHitFront.psa",
+        "bytes": 55680,
+        "sha256": "c4d9dba7bd55ebbb4dd376438b7a9f7a13a7ae938a5166a53a80464e0a8588a8"
+      },
+      "props": {
+        "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_GetHitFront.props.txt",
+        "bytes": 10374,
+        "sha256": "5456a54f7207243e3066f6be7a3f2d3da33c7d26f1c95a0c10e73bef7c338feb"
+      },
+      "gif": {
+        "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\lucifer_ref\\MCD_Necromancer_GetHitFront.gif",
+        "sha256": "95d21b96b136b87d67d392eea1f048f2a3311a516c50a191d947fb54b0a89b52",
+        "frames": 42,
+        "duration_seconds": 1.79,
+        "frame_durations_seconds": [
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.05,
+          0.04,
+          0.04,
+          0.08
+        ]
+      },
+      "notifies_boundary": "props 中的 NotifyName 不能证明事件的准确秒数；未得到可靠触发 time/link 值，不使用异常 EndLink 值推断出手帧。"
+    }
+  ],
+  "legacy_sources": [
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\leviathan_ref\\leviathan.bbmodel",
+      "bytes": 57510,
+      "sha256": "2826171e737bcae097e0712e4193f0c413fe9e023a163fba3e254f3830b5646b",
+      "animations": [
+        {
+          "name": "animation.idle",
+          "length_seconds": 3.2,
+          "loop": "loop"
+        },
+        {
+          "name": "animation.walk",
+          "length_seconds": 1.6,
+          "loop": "loop"
+        },
+        {
+          "name": "animation.cast",
+          "length_seconds": 1.2,
+          "loop": "once"
+        },
+        {
+          "name": "animation.summon",
+          "length_seconds": 1.6,
+          "loop": "once"
+        },
+        {
+          "name": "animation.rise",
+          "length_seconds": 2.4,
+          "loop": "once"
+        }
+      ],
+      "status": "项目重建动画，不是原游戏网格/动画导出"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\sunken_skeleton_ref\\sunken_skeleton.bbmodel",
+      "bytes": 29603,
+      "sha256": "c73ba99e7301c263fea4119852a9fc64348891d163f5b1eb4409354730644981",
+      "animations": [
+        {
+          "name": "animation.idle",
+          "length_seconds": 2,
+          "loop": "loop"
+        },
+        {
+          "name": "animation.walk",
+          "length_seconds": 1,
+          "loop": "loop"
+        },
+        {
+          "name": "animation.attack",
+          "length_seconds": 0.8,
+          "loop": "once"
+        },
+        {
+          "name": "animation.shoot",
+          "length_seconds": 1,
+          "loop": "once"
+        }
+      ],
+      "status": "项目重建动画，不是原游戏网格/动画导出"
+    }
+  ],
+  "required_clip_order": [
+    {
+      "index": 0,
+      "clip": "idle",
+      "loop": true,
+      "source": "original Necromancer Idle PSA",
+      "adaptation": "原动作重定向到 Mossy 22 骨；持矛姿态另记录。",
+      "original_source_duration": 6.2083336499498225,
+      "impact_tick": null,
+      "final_native_clip_duration_seconds": null,
+      "status": "动作来源/制作约束；最终 native 动作及视觉验证由主任务完成"
+    },
+    {
+      "index": 1,
+      "clip": "walk",
+      "loop": true,
+      "source": "original Necromancer Walk PSA upper body; project Sunken walk leg phase reference",
+      "adaptation": "原上身曲线保留；下身悬浮改成双腿交替行走，这是用户要求的适配。Sunken 腿关键点 R(+25,-25,+25)、L(-25,+25,-25) 度，t=0,.5,1s，只提供步态幅度/相位参考，不能直接加到新骨架欧拉角。",
+      "original_source_duration": 0.7916666981246748,
+      "impact_tick": null,
+      "final_native_clip_duration_seconds": null,
+      "status": "动作来源/制作约束；最终 native 动作及视觉验证由主任务完成"
+    },
+    {
+      "index": 2,
+      "clip": "attack",
+      "loop": false,
+      "source": "original Necromancer BasicAttack PSA",
+      "adaptation": "法杖动作改为握蛇矛向前刺；选定释放/有效帧裁为 t=0，再恢复。不得把未核实的源帧当原游戏伤害事件。",
+      "original_source_duration": 1.458333328065246,
+      "impact_tick": 0,
+      "final_native_clip_duration_seconds": null,
+      "status": "动作来源/制作约束；最终 native 动作及视觉验证由主任务完成"
+    },
+    {
+      "index": 3,
+      "clip": "strong",
+      "loop": false,
+      "source": "original Necromancer StrongAttack PSA",
+      "adaptation": "对立即生效的重招将释放/重击姿态放在 t=0；后续恢复保留源动作依据。",
+      "original_source_duration": 1.9166666806733776,
+      "impact_tick": 0,
+      "final_native_clip_duration_seconds": null,
+      "status": "动作来源/制作约束；最终 native 动作及视觉验证由主任务完成"
+    },
+    {
+      "index": 4,
+      "clip": "cast",
+      "loop": false,
+      "source": "project leviathan animation.cast",
+      "adaptation": "legacy cast 总长1.2s、原释放 cue 0.65s；不能原封不动接立即生效技能。将释放姿态裁首或调整时间为0，保留完整原时间映射。",
+      "original_source_duration": 1.2,
+      "impact_tick": 0,
+      "final_native_clip_duration_seconds": null,
+      "status": "动作来源/制作约束；最终 native 动作及视觉验证由主任务完成"
+    },
+    {
+      "index": 5,
+      "clip": "laugh",
+      "loop": false,
+      "source": "original Necromancer Novelty PSA",
+      "adaptation": "用于30tick/1.5s大招警告。可裁选/重定时覆盖1.5s，或被 strong 在第30tick明确接管；原3.2916667s整段不能被称已完整播完。",
+      "original_source_duration": 3.291666738011622,
+      "impact_tick": null,
+      "warning_window_ticks": 30,
+      "final_native_clip_duration_seconds": null,
+      "status": "动作来源/制作约束；最终 native 动作及视觉验证由主任务完成"
+    },
+    {
+      "index": 6,
+      "clip": "stun",
+      "loop": false,
+      "source": "original Necromancer Stun PSA",
+      "adaptation": "绑定驱魔束缚状态；结束/持有策略由运行时明确处理。未在本任务读取完整束缚运行时，不能声明已验证触发。",
+      "original_source_duration": 1.6249999683730463,
+      "impact_tick": null,
+      "final_native_clip_duration_seconds": null,
+      "status": "动作来源/制作约束；最终 native 动作及视觉验证由主任务完成"
+    },
+    {
+      "index": 7,
+      "clip": "rise",
+      "loop": false,
+      "source": "project leviathan animation.rise",
+      "adaptation": "沿用项目登场轨迹并重定向；原 SkeletonNecromancer/Animations 索引没有名为 Rise 或 Summon 的序列。Sleeping 不自动等同 Rise。",
+      "original_source_duration": 2.4,
+      "impact_tick": null,
+      "final_native_clip_duration_seconds": null,
+      "status": "动作来源/制作约束；最终 native 动作及视觉验证由主任务完成"
+    }
+  ],
+  "SKILLS": {
+    "sk1_1": "attack",
+    "sk1_2": "attack",
+    "sk1_3": "cast",
+    "sk1_4": "strong",
+    "sk1_5": "strong",
+    "ult1_warn": "laugh",
+    "ult1": "strong"
+  },
+  "skills": [
+    {
+      "hook": "sk1_1",
+      "clip": "attack",
+      "label": "原罪",
+      "immediate_effect_tick": 0,
+      "immediate_effect": "沿视线召唤8个尖牙；起手/蛇矛释放在0tick。",
+      "direct_damage_tick": null,
+      "fang_warmups": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "fang_damage_entity_updates": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ]
+    },
+    {
+      "hook": "sk1_2",
+      "clip": "attack",
+      "label": "王矛",
+      "immediate_effect_tick": 0,
+      "direct_damage_tick": 0,
+      "damage_command": 8,
+      "immediate_effect": "^1..9九个位置命令同步执行，不是9tick序列；同次函数里伤害/缓速。"
+    },
+    {
+      "hook": "sk1_3",
+      "clip": "cast",
+      "label": "高踞",
+      "immediate_effect_tick": 0,
+      "direct_damage_tick": 0,
+      "damage_command": 3,
+      "immediate_effect": "漂浮与魔法伤害立即下发。"
+    },
+    {
+      "hook": "sk1_4",
+      "clip": "strong",
+      "label": "失坠",
+      "immediate_effect_tick": 0,
+      "direct_damage_tick": 0,
+      "damage_command": 5,
+      "immediate_effect": "漂浮/虚弱与魔法伤害立即下发；后续跌落不是本函数延迟伤害命令。"
+    },
+    {
+      "hook": "sk1_5",
+      "clip": "strong",
+      "label": "王座回绝",
+      "immediate_effect_tick": 0,
+      "direct_damage_tick": 0,
+      "damage_command": 6,
+      "immediate_effect": "立即击退式传送、魔法伤害、缓速。"
+    },
+    {
+      "hook": "ult1_warn",
+      "clip": "laugh",
+      "label": "大招警告",
+      "immediate_effect_tick": 0,
+      "direct_damage_tick": null,
+      "immediate_effect": "只发提示、粒子、音效；30tick后由 ult1 接管。"
+    },
+    {
+      "hook": "ult1",
+      "clip": "strong",
+      "label": "大招结算",
+      "immediate_effect_tick": 0,
+      "direct_damage_tick": 0,
+      "warning_relative_direct_damage_tick": 30,
+      "damage_command": 18,
+      "fang_warmups": [
+        4,
+        8,
+        12
+      ],
+      "fang_damage_entity_updates": [
+        12,
+        16,
+        20
+      ],
+      "nominal_warning_relative_fang_ticks": [
+        42,
+        46,
+        50
+      ],
+      "immediate_effect": "立即18伤害和漂浮；尖牙另按自己的实体计时延迟伤害。"
+    }
+  ],
+  "ultimate_counter": {
+    "initial": 30,
+    "charge_called_before_decrement": true,
+    "extra_pulse_update_ordinals": [
+      11,
+      21
+    ],
+    "resolve_update_ordinal": 30,
+    "warning_to_resolution_seconds_at_20tps": 1.5,
+    "scope": "连续每tick正常执行 ult_tick 的序列；被驱魔状态暂停/跳过 tick 的情况需由主运行时验证。"
+  },
+  "fangs_engine_evidence": {
+    "mappings_url": "https://piston-data.mojang.com/v1/objects/031a68bebf55d824f66d6573d8c752f0e1bf232a/client.txt",
+    "mappings_sha1": "031a68bebf55d824f66d6573d8c752f0e1bf232a",
+    "original_class": "ddw",
+    "client_jar": "D:\\minecraft\\PCL启动器\\.minecraft\\versions\\1.21.11-Fabric 0.19.3\\1.21.11-Fabric 0.19.3.jar",
+    "client_jar_sha256": "1473c9489ac50fda3c435049a76a70d61a10b8610db27f5ba9d8756b686cd3bd",
+    "mapped_class": "net.minecraft.world.entity.projectile.EvokerFangs -> ddw",
+    "mapped_fields": {
+      "warmupDelayTicks": "e",
+      "tick": "g",
+      "dealDamageTo": "c"
+    },
+    "mappings_lines": [
+      110766,
+      110785
+    ],
+    "damage_predicate": "--warmupDelayTicks == -8",
+    "entity_update_ordinal": "initial Warmup + 8",
+    "bytecode_proof": {
+      "path": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\source_format\\EvokerFangs.javap.txt",
+      "bytes": 13617,
+      "sha256": "3578580501aa9550e1c115869d391ed138034b3bc16dbbd86f025a323efd142b"
+    },
+    "bytecode_offsets": {
+      "predecrement": 224,
+      "compare_minus8": 238,
+      "damage_call": 299
+    },
+    "boundary": "精确到实体 tick 调用次数；实体生成与世界 tick 阶段之间的相位未在真实游戏运行验证，不能把静态字节码审计写成游戏实测。"
+  },
+  "function_sources": [
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1_1.mcfunction",
+      "bytes": 709,
+      "sha256": "3dcf61754a3a95125ee66bd1b08013377a9033e682d06d075a46ef7547ee0c27"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1_2.mcfunction",
+      "bytes": 549,
+      "sha256": "5cdcb691fbc7b0e7199d4b32170deb1e9465c703a088468cbb1388d97c4d5ac6"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1_3.mcfunction",
+      "bytes": 571,
+      "sha256": "45de7f83b5201cda1834f4fa60c326e18346870181cc0aa5c21c8593b512d0d7"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1_4.mcfunction",
+      "bytes": 767,
+      "sha256": "7e970331c8e0696de145a157c89d1a0bea74a75e3c7e2d33b1909ee8e696f7f1"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1_5.mcfunction",
+      "bytes": 621,
+      "sha256": "900839267d3626dee08f80e7ee479d675e0e669344ac20585e5dc542986edc1f"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1_line.mcfunction",
+      "bytes": 740,
+      "sha256": "41f6f1285a1e67e237e1185ca95008b6fd741aea8a4f90be6d23fbbb7efd1f44"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1b_thrust.mcfunction",
+      "bytes": 2547,
+      "sha256": "47bc7754f1ee6a55a086085d5ea5f71e31d832378500f63a78617c9aa9009c7e"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1b_hit.mcfunction",
+      "bytes": 299,
+      "sha256": "9bd74949bb4c7bf465daf5323f3dfaaf5c114f49a66bdcd766a9094e48dfa89e"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1b_hit_holy.mcfunction",
+      "bytes": 232,
+      "sha256": "fa811219ce7ecc1f818c96d527aea85a0df3d3ece2f0f03ae7593eadf4b18458"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1c_lift.mcfunction",
+      "bytes": 303,
+      "sha256": "dffe481052757333f08354e5425ea6a7097c67722342b354b97c2138c979fb2d"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1c_lift_holy.mcfunction",
+      "bytes": 234,
+      "sha256": "3898292acf63f74f6d75d115e02218f5cb099d0e324ffe7c41a0047db35f3606"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1d_fall.mcfunction",
+      "bytes": 346,
+      "sha256": "e1628ff3d06d42fdc31b68b727b5ce8d272ad6e5987c68eb4ce2a08dd00ab847"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1d_fall_holy.mcfunction",
+      "bytes": 277,
+      "sha256": "07120ab5629f482c952e25c77166e2dd30e0470798c186f2f66547cfb0e5c8d9"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1e_reject.mcfunction",
+      "bytes": 378,
+      "sha256": "3b2b55f77897ae39d3522200335e510c84b6dc46876d3f29c5baf33840ab4c22"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\sk1e_reject_holy.mcfunction",
+      "bytes": 305,
+      "sha256": "1b528e7a75ad513f563f1683bfffa5848bd7fead4d7c9ce4151f1d441266a0a1"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\cast.mcfunction",
+      "bytes": 543,
+      "sha256": "792c489c49e7b5d0d4baac0220519d4b31c4076a47382edffbfbcdeb05b67d89"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\advent_tick.mcfunction",
+      "bytes": 1483,
+      "sha256": "d8570667331cca88414e53a51666ec3cd44882a5712a5968452d72f5cbf40256"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult_start.mcfunction",
+      "bytes": 160,
+      "sha256": "44be8ebb64cdd15a9423bd4f92219e4f4b8a0979614c50857be520ccec238ec1"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult_tick.mcfunction",
+      "bytes": 246,
+      "sha256": "a5eb66cfaea2cc046187b677d6306001979bbfb5e325949002eec9c9ff7ab34a"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult_charge.mcfunction",
+      "bytes": 719,
+      "sha256": "1c8765ceef720434e3fd683e819dd8ed1fa36bfef063a9e8460fdaeb7640e7ee"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult_warn.mcfunction",
+      "bytes": 697,
+      "sha256": "6b8769416ac6e8474268919cf0276f7f2bd3b74eaf19f2f648de451d65f286a8"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult_resolve.mcfunction",
+      "bytes": 158,
+      "sha256": "73626981d8a757370ca16c7c80de15a484a5f94ac878fdf8be516f6fd8aa889d"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ultimate.mcfunction",
+      "bytes": 657,
+      "sha256": "6eefbd3e56fbd5417bdd9abd522bc8441ada1cec4a3d56ca56e33bc8cd414ebd"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult1_warn.mcfunction",
+      "bytes": 280,
+      "sha256": "f571d0e059831ad1d4115a65f3ea2534520a0b7c702e07b1c6233154488a6bf1"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult1_charge.mcfunction",
+      "bytes": 631,
+      "sha256": "9887a524c0a8f4f176bdc50bbebe8c972b5ac83e37a357cdbd14f9de99cb6dcd"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult1.mcfunction",
+      "bytes": 778,
+      "sha256": "b7f3ead711e105b1fb30c87144efdc7d72e0cde83955f710e48b1b3918998227"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult1_fangs.mcfunction",
+      "bytes": 1562,
+      "sha256": "ae716ebfc40bcb94660da8f2d3339c9198c977c4e626142f8afb216a6437b652"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult1_hit.mcfunction",
+      "bytes": 302,
+      "sha256": "bcab0e7d2e69bf029263099e5aab8b43c119159b2c9a3df3933219253725082b"
+    },
+    {
+      "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\rpg\\data\\rpg\\function\\taint\\ult1_hit_holy.mcfunction",
+      "bytes": 235,
+      "sha256": "026f8f8edfb591ac24297eab4d6c99f3b30fd07cf5592abef90dca9082eb4ada"
+    }
+  ],
+  "rig": {
+    "gltf_actual_bones": 35,
+    "psa_tracks": 37,
+    "target_mossy_bones": 22,
+    "parents_from": "paired original mesh glTF; PSA BONENAMES ParentIndex placeholder is not hierarchy",
+    "missing_tracks": [
+      {
+        "index": 35,
+        "name": "Staff1"
+      },
+      {
+        "index": 36,
+        "name": "crown1"
+      }
+    ],
+    "missing_tracks_status": "仅保留原始PSA数据，不加入新骨骼。6clips的config标RemoveTracks=all；Stun未标，但两者仍不属于原35骨mesh。",
+    "mapping": [
+      {
+        "target_id": 0,
+        "target_name": "J_Root",
+        "source_index": 0,
+        "source_name": "J_Root",
+        "psa_track_index": 0,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "quaternion": [
+            -0.7071067811865475,
+            0.0,
+            -0.0,
+            0.7071067811865475
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 4.440892098500626e-16,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 1.685873965984186e-07
+      },
+      {
+        "target_id": 1,
+        "target_name": "J_L_Hip",
+        "source_index": 1,
+        "source_name": "J_L_Hip",
+        "psa_track_index": 1,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            0.015821408,
+            12.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            11.999999999999998
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.01582140799999733
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 5.336009412104659e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          3.552713678800501e-15,
+          -5.336009412104659e-15
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.014670532367313e-06
+      },
+      {
+        "target_id": 2,
+        "target_name": "J_R_Leg",
+        "source_index": 2,
+        "source_name": "J_R_Leg",
+        "psa_track_index": 2,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            2.0,
+            5.991472e-09,
+            -0.0
+          ],
+          "quaternion": [
+            1.0,
+            0.0,
+            -0.0,
+            6.12323e-17
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            2.0
+          ],
+          [
+            0.0,
+            -9.958000492503133e-17,
+            -0.9999999999999998,
+            11.999999999999998
+          ],
+          [
+            0.0,
+            0.9999999999999998,
+            -9.958000492503133e-17,
+            -0.01582141399146933
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 5.336009412104659e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          3.552713678800501e-15,
+          -5.336009412104659e-15
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.0146705300982948e-06
+      },
+      {
+        "target_id": 3,
+        "target_name": "J_R_Foot",
+        "source_index": 3,
+        "source_name": "J_R_Foot",
+        "psa_track_index": 3,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            -1.474376e-15,
+            12.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            2.0
+          ],
+          [
+            0.0,
+            -9.958000492503133e-17,
+            -0.9999999999999998,
+            1.7763568394002505e-15
+          ],
+          [
+            0.0,
+            0.9999999999999998,
+            -9.958000492503133e-17,
+            -0.015821413991471998
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 3.552713678800501e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          -3.552713678800501e-15,
+          -6.938893903907228e-18
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 1.6858739659841851e-07
+      },
+      {
+        "target_id": 4,
+        "target_name": "R_Leg",
+        "source_index": 4,
+        "source_name": "R_leg",
+        "psa_track_index": 4,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            2.0
+          ],
+          [
+            0.0,
+            -9.958000492503133e-17,
+            -0.9999999999999998,
+            1.7763568394002505e-15
+          ],
+          [
+            0.0,
+            0.9999999999999998,
+            -9.958000492503133e-17,
+            -0.015821413991471998
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 2.0,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          -2.0,
+          -5.82294305259748e-15,
+          0.015821423999999997
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 2.0,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.0
+      },
+      {
+        "target_id": 5,
+        "target_name": "J_L_Leg",
+        "source_index": 5,
+        "source_name": "J_L_Leg",
+        "psa_track_index": 5,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -2.0,
+            4.440896e-18,
+            -0.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -2.0
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            11.999999999999998
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.015821407999997334
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 5.336009412104659e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          3.552713678800501e-15,
+          -5.336009412104659e-15
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.014670532367313e-06
+      },
+      {
+        "target_id": 6,
+        "target_name": "J_L_Foot",
+        "source_index": 6,
+        "source_name": "J_L_Foot",
+        "psa_track_index": 6,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            -2.220448e-18,
+            -12.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -2.0
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.015821407999999995
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 4.440892098500626e-16,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          0.0,
+          -6.938893903907228e-18
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 1.685873965984186e-07
+      },
+      {
+        "target_id": 7,
+        "target_name": "L_Leg",
+        "source_index": 7,
+        "source_name": "L_leg",
+        "psa_track_index": 7,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -2.0
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.015821407999999995
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 2.0,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          2.0,
+          -2.2702309417112827e-15,
+          0.015821407999999995
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.0
+      },
+      {
+        "target_id": 8,
+        "target_name": "J_L_Spine",
+        "source_index": 8,
+        "source_name": "J_L_Spine",
+        "psa_track_index": 8,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            0.0,
+            1.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            12.999999999999998
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.01582140799999711
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 5.776629175002768e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          3.552713678800501e-15,
+          -5.776629175002768e-15
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.183257916104492e-06
+      },
+      {
+        "target_id": 9,
+        "target_name": "J_Shoulders",
+        "source_index": 9,
+        "source_name": "J_Shoulders",
+        "psa_track_index": 9,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -5.583088e-15,
+            -6.101792e-15,
+            10.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -5.583088e-15
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            22.999999999999996
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.015821407999988785
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 1.0220990720455347e-14,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          7.105427357601002e-15,
+          -1.0220990720455347e-14
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 3.869131779188351e-06
+      },
+      {
+        "target_id": 10,
+        "target_name": "J_L_Arm",
+        "source_index": 10,
+        "source_name": "J_L_Arm",
+        "psa_track_index": 10,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -4.4364,
+            2.966512e-15,
+            -4.547472e-15
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -4.436400000000005
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            22.999999999999993
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.015821407999991752
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 1.0220990720455347e-14,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          7.105427357601002e-15,
+          -1.0220990720455347e-14
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 3.869131779188351e-06
+      },
+      {
+        "target_id": 11,
+        "target_name": "J_L_Hand",
+        "source_index": 11,
+        "source_name": "J_L_Hand",
+        "psa_track_index": 11,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.96,
+            4.440896e-18,
+            -10.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -5.396400000000005
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            12.999999999999995
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.015821407999993976
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 5.780098621954721e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          3.552713678800501e-15,
+          -5.780098621954721e-15
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.893066406883804e-06
+      },
+      {
+        "target_id": 12,
+        "target_name": "J_L_Weapon",
+        "source_index": 12,
+        "source_name": "J_L_Weapon",
+        "psa_track_index": 12,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -2.273744e-15,
+            1.718624e-15,
+            4.547472e-15
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -5.396400000000008
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            13.0
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.015821407999995693
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 5.7870375158586285e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          3.552713678800501e-15,
+          -5.7870375158586285e-15
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.893066406883804e-06
+      },
+      {
+        "target_id": 13,
+        "target_name": "L_Arm",
+        "source_index": 13,
+        "source_name": "L_arm",
+        "psa_track_index": 13,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -5.396400000000005
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            12.999999999999995
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.015821407999993976
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 5.780098621954721e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          3.552713678800501e-15,
+          -5.780098621954721e-15
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.893066406883804e-06
+      },
+      {
+        "target_id": 14,
+        "target_name": "J_R_Arm",
+        "source_index": 16,
+        "source_name": "J_R_Arm",
+        "psa_track_index": 16,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            4.4364,
+            5.991472e-09,
+            -4.547472e-15
+          ],
+          "quaternion": [
+            1.0,
+            0.0,
+            -0.0,
+            6.12323e-17
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            4.436399999999995
+          ],
+          [
+            0.0,
+            -9.958000492503133e-17,
+            -0.9999999999999998,
+            22.999999999999993
+          ],
+          [
+            0.0,
+            0.9999999999999998,
+            -9.958000492503133e-17,
+            -0.015821413991460784
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 1.0658141036401503e-14,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          1.0658141036401503e-14,
+          -1.0220990720455347e-14
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 3.869131777488322e-06
+      },
+      {
+        "target_id": 15,
+        "target_name": "J_R_Hand",
+        "source_index": 17,
+        "source_name": "J_R_Hand",
+        "psa_track_index": 17,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            0.963224,
+            -1.2256864e-15,
+            10.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            5.399623999999995
+          ],
+          [
+            0.0,
+            -9.958000492503133e-17,
+            -0.9999999999999998,
+            12.999999999999995
+          ],
+          [
+            0.0,
+            0.9999999999999998,
+            -9.958000492503133e-17,
+            -0.015821413991463005
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 7.105427357601002e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          0.0,
+          7.105427357601002e-15,
+          -5.780098621954721e-15
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.1832579144009934e-06
+      },
+      {
+        "target_id": 16,
+        "target_name": "J_R_Weapon",
+        "source_index": 18,
+        "source_name": "J_R_Weapon",
+        "psa_track_index": 18,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -5.684336e-15,
+            -1.614272e-15,
+            -4.547472e-15
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            5.3996239999999895
+          ],
+          [
+            0.0,
+            -9.958000492503133e-17,
+            -0.9999999999999998,
+            13.0
+          ],
+          [
+            0.0,
+            0.9999999999999998,
+            -9.958000492503133e-17,
+            -0.015821413991464618
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 7.105427357601002e-15,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          -3.552713678800501e-15,
+          7.105427357601002e-15,
+          -5.783568068906675e-15
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 2.1832579144009934e-06
+      },
+      {
+        "target_id": 17,
+        "target_name": "R_Arm",
+        "source_index": 20,
+        "source_name": "R_arm",
+        "psa_track_index": 20,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            5.399623999999995
+          ],
+          [
+            0.0,
+            -9.958000492503133e-17,
+            -0.9999999999999998,
+            12.999999999999995
+          ],
+          [
+            0.0,
+            0.9999999999999998,
+            -9.958000492503133e-17,
+            -0.015821413991463005
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 12.999999999999996,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          -5.399616,
+          -12.999999999999996,
+          0.015821423999998703
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 2.0,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 13.00000007629394
+      },
+      {
+        "target_id": 18,
+        "target_name": "J_Neck",
+        "source_index": 23,
+        "source_name": "J_Neck",
+        "psa_track_index": 23,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -3.87776e-17,
+            -0.015821408,
+            1.5474096
+          ],
+          "quaternion": [
+            0.00022866391001707663,
+            0.0008173976783408775,
+            -0.005105527990892686,
+            -0.9999866064891999
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            0.9999465308899393,
+            -0.010210545401198463,
+            -0.0016371083610186876,
+            -5.6218656e-15
+          ],
+          [
+            0.001632438561046293,
+            -0.00046566818826175436,
+            0.9999985591477032,
+            24.547409599999995
+          ],
+          [
+            -0.010211293038595134,
+            -0.9999477625935007,
+            -0.0004489752013559142,
+            1.1553258350005535e-14
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 1.0901002323038256e-14,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          3.877759999999985e-17,
+          1.0658141036401503e-14,
+          -1.0901002323038256e-14
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.443060502845597e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 4.138383696224851e-06
+      },
+      {
+        "target_id": 19,
+        "target_name": "J_Head",
+        "source_index": 24,
+        "source_name": "J_Head",
+        "psa_track_index": 24,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -1.618784e-09,
+            4.617728e-10,
+            -9.916336e-07
+          ],
+          "quaternion": [
+            -0.00022866391001707663,
+            -0.0008173976783408775,
+            0.005105527990892686,
+            -0.9999866064891999
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            -4.1775256022933466e-19,
+            1.0875981364589714e-19,
+            -6.361438117037014e-15
+          ],
+          [
+            3.859002389355537e-20,
+            2.2211510547368247e-16,
+            0.9999999999999998,
+            24.547408608364965
+          ],
+          [
+            -4.78402101124421e-19,
+            -0.9999999999999998,
+            2.2203672209135023e-16,
+            1.1648093293207413e-14
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 1.0901001882656244e-14,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          3.877759999999985e-17,
+          1.0658141036401503e-14,
+          -1.0901001882656244e-14
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.441608753507715e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 4.138383528944602e-06
+      },
+      {
+        "target_id": 20,
+        "target_name": "Head",
+        "source_index": 25,
+        "source_name": "head",
+        "psa_track_index": 25,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "quaternion": [
+            -5.42101e-20,
+            -1.0842e-19,
+            -1.1301e-18,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            0.9999465308899393,
+            -0.010210545401198465,
+            -0.0016371083610186874,
+            -5.6218656e-15
+          ],
+          [
+            0.0016324385610462927,
+            -0.00046566818826175425,
+            0.9999985591477032,
+            24.547409599999995
+          ],
+          [
+            -0.010211293038595136,
+            -0.9999477625935007,
+            -0.0004489752013559141,
+            1.1553258350005535e-14
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 24.547395369246157,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          -4.525302142038363e-08,
+          -24.547395369246157,
+          -2.409926016611014e-09
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 0.010211293038595137,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 24.54740949257086
+      },
+      {
+        "target_id": 21,
+        "target_name": "Body",
+        "source_index": 28,
+        "source_name": "body",
+        "psa_track_index": 28,
+        "same_parent_by_casefold_name": true,
+        "target_restLocalJava": {
+          "translation": [
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "quaternion": [
+            -0.0,
+            0.0,
+            -0.0,
+            -1.0
+          ]
+        },
+        "target_restWorldJava": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -5.583088e-15
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.9999999999999998,
+            22.999999999999996
+          ],
+          [
+            0.0,
+            -0.9999999999999998,
+            2.220446049250313e-16,
+            -0.015821407999988785
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "source_gltf_vs_target_restworld_matrix_max_abs_difference": 22.999999999999996,
+        "source_gltf_vs_target_origin_delta_java_px": [
+          5.583088e-15,
+          -22.999999999999996,
+          0.015821407999994888
+        ],
+        "source_gltf_vs_target_linear_max_abs_difference": 4.440892098500626e-16,
+        "source_psa_reference_vs_target_restworld_matrix_max_abs_difference": 22.99999946594238
+      }
+    ],
+    "coordinate_rules": {
+      "psa_key_position_to_java": "[-0.16*px, +0.16*pz, +0.16*py]",
+      "psa_nonroot_key_quaternion_to_java": "normalize([-qx,+qz,+qy,-qw])",
+      "psa_root_key_quaternion_to_java": "normalize([+qx,-qz,-qy,-qw])",
+      "psa_bonenames_reference_position_to_java": "[-0.16*px,+0.16*pz,-0.16*py]",
+      "psa_bonenames_reference_quaternion_to_java": "normalize([+qx,-qz,+qy,+qw])",
+      "gltf_position_to_java": "[-16*x,+16*y,-16*z]",
+      "gltf_quaternion_to_java": "normalize([-qx,+qy,-qz,+qw])",
+      "reason": "PSA key mirror is undone; UModel animation nonroot FixRotationKeys differs from unmodified BONENAMES refpose; glTF conjugates root and swaps Y/Z. Java applies proper 180-degree Y rotation.",
+      "psa_time": "VQuatAnimKey.Time is 1 frame-unit for every key; seconds=f/AnimRate, not the stored Time=1 seconds.",
+      "psa_parent": "Exporter placeholder, never used. 35 real bone parents resolved from same original mesh glTF; 2 unused tracks remain raw data only."
+    }
+  },
+  "retarget": {
+    "world_rotation": "R_t_world(t)=R_s_world(t)*R_s_bind_world^-1*R_t_bind_world",
+    "local_rotation": "R_t_local(t)=R_t_parent_world(t)^-1*R_t_world(t)",
+    "local_translation": "p_t_local(t)=p_t_bind_local + R_t_parent_bind_world^-1*R_s_parent_bind_world*(p_s_local(t)-p_s_bind_local)",
+    "root_parent": "identity basis and transform",
+    "reference": "source PSA USkeleton refpose; target body input bind. Frozen JSON also retains exported glTF bind and differences.",
+    "initial_pose": "零动作参考输入严格回到目标bind；动画第0帧通常是原站姿，不能强制当bind。进入动画是否混合属于明确适配。",
+    "marker_translation": "六个网格marker在所有原动作里局部位置范围都是0；PSA参考误差最高约5e-6 px。保持目标偏移，源数值微差可保留。",
+    "full_SE3_world_delta_warning": "完整SE3对不同marker原点引入杠杆位移；当前7clip中与保留target offsets方法差异最大约0.00897239px，Walk/Stun右臂有轻微量化旋转时出现。",
+    "do_not_freeze_joint_translations": "J_* 动作含真实局部位移，尤其手部；仅复制旋转会破坏原姿态。",
+    "final_native_serialization": "解出最终local quaternion后转原生Euler顺序，连续解包，再减native rest Euler；此减法只是输出适配，不能替代旋转重定向。",
+    "validator_module": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\audit_animation_source.py",
+    "reference_frame_api": "reference_frame(data, original_clip_name, source_seconds) -> source_local/world and target_local/world matrices; source sampled with linear position+slerp rotation, clamp at last sample.",
+    "zero_motion_target_world_matrix_max_error": 5.3290705182007514e-14
+  },
+  "limits": [
+    "没有操作Blockbench，没有完成native动作的逐帧视口验证。",
+    "没有运行真实Minecraft；本机1.21.11 jar仅被只读核对。",
+    "七段原动作与GIF播放总长不同；按姿态/原秒数核对，不能宣称相同GIF帧号就是相同秒数。",
+    "GetHitFront只作为第七份参考原动作保存，不自动增加第九个交付clip。",
+    "本任务没有确认sound触发映射、游戏孤立display清理或构建；不能把来源数据审计PASS当检查点B通过。"
+  ],
+  "primary_sources": [
+    "https://github.com/gildor2/UEViewer/blob/master/Exporters/Psk.h",
+    "https://github.com/gildor2/UEViewer/blob/master/Exporters/ExportPsk.cpp",
+    "https://github.com/gildor2/UEViewer/blob/master/Exporters/ExportGLTF.cpp",
+    "https://github.com/gildor2/UEViewer/blob/master/Unreal/UnrealMesh/UnAnim4.cpp"
+  ]
+}

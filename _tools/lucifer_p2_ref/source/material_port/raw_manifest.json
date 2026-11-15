@@ -1,0 +1,41 @@
+{
+  "scope": "Exact named package extraction; local install read-only; all payloads SHA1 verified",
+  "files": [
+    {
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "package_path": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/M_JungleAbomination.uasset",
+      "output": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\raw\\Game\\Actors\\Characters\\Enemies\\JungleAbomination\\M_JungleAbomination.uasset",
+      "bytes": 2727,
+      "sha1": "91b24a22abe7dc2786ae2324ce6b1e6d476282af",
+      "pak_entry_sha1_verified": true,
+      "sha256": "d25952f8db83f8a8b78a71d330e75c710e54ef7249ad3bbd2e08e3e4dda540f6"
+    },
+    {
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk9-WindowsNoEditor.pak",
+      "package_path": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/M_JungleAbomination.uexp",
+      "output": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\raw\\Game\\Actors\\Characters\\Enemies\\JungleAbomination\\M_JungleAbomination.uexp",
+      "bytes": 207909,
+      "sha1": "5a559bc1b5045f890e503e6e4a7c94e02676c9c5",
+      "pak_entry_sha1_verified": true,
+      "sha256": "1c9839a7161f990ea4591362ad04df53cad6b3a250572129a5c131aa6c3b1140"
+    },
+    {
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "package_path": "Dungeons/Content/Models/Master_ModelMaterial.uasset",
+      "output": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\raw\\Game\\Models\\Master_ModelMaterial.uasset",
+      "bytes": 11941,
+      "sha1": "230563fa355ee7b1a0550c6f4e4b5b9cfe943ad7",
+      "pak_entry_sha1_verified": true,
+      "sha256": "b0ce829aa4fd7a491dbcfd693ba4c73b0082735c0aaf197df4d9fd48d6e12653"
+    },
+    {
+      "source_pak": "D:\\XboxGames\\Minecraft Dungeons\\Content\\Dungeons\\Content\\Paks\\pakchunk0-WindowsNoEditor.pak",
+      "package_path": "Dungeons/Content/Models/Master_ModelMaterial.uexp",
+      "output": "D:\\agent\\dungeons_extract\\phase2_analysis\\material_port\\raw\\Game\\Models\\Master_ModelMaterial.uexp",
+      "bytes": 210985,
+      "sha1": "771c9030247034eea98a487112c3d55b26316061",
+      "pak_entry_sha1_verified": true,
+      "sha256": "120e9cd544003903d534807267752bde24b4c2b7576ecef72247ebecbe68de35"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "checkpoint": "B_assets_generated",
+  "source_mesh_sha256": "04c5b58a2485dac4d5c5ede9870df9559d7d40cb1529c6669756b0a7aa14d130",
+  "blocks_per_cm": 0.008633902683354115,
+  "model_scale": 7.194918902795097,
+  "authoring_model_scale": 10.0,
+  "outputs": [
+    {
+      "file": "atlas.png",
+      "bytes": 409569,
+      "sha256": "c4f17c0fafb374762f67e6e1eb569fbcc7fe4138f214fd1ab1444a19fee718dc"
+    },
+    {
+      "file": "atlas_emission_support.png",
+      "bytes": 5369,
+      "sha256": "a79a0cb84c7ffa948b5188d3cb899facc3290483f8806f673d657b6918a0df0d"
+    },
+    {
+      "file": "atlas_glow.png",
+      "bytes": 162671,
+      "sha256": "1affced9a381691e75780393414bf341ed0200363cee672291d5998a5c977b4c"
+    },
+    {
+      "file": "atlas_nonglow.png",
+      "bytes": 166933,
+      "sha256": "e3a3486027bb7f510bf7f2f704fdaa9b8e899e484c7f980e102707c51d8b1d52"
+    },
+    {
+      "file": "atlas_reference.png",
+      "bytes": 166665,
+      "sha256": "d0d743b1882b292ef62f2fefcea16d8895f89aa2fac3bb51bd24cc6028a2257f"
+    },
+    {
+      "file": "atlas_regions.json",
+      "bytes": 110601,
+      "sha256": "aa88be583327eda4df428cccfab0a745b22e178cd31984380d2dba280a471796"
+    },
+    {
+      "file": "conversion_map.json",
+      "bytes": 607682,
+      "sha256": "fa4959e0fed4541bca80a51a675e05fd9d6fed1fe616be8870e5f6a61734bde7"
+    },
+    {
+      "file": "conversion_map_before_glow.json",
+      "bytes": 469219,
+      "sha256": "757a8b8f99820ebf45a01df58bc1b21359107ee3a85b06849b2dcc8607e5a09a"
+    },
+    {
+      "file": "glow_bones.json",
+      "bytes": 199,
+      "sha256": "bd098a5e738d07479acb6ded88fc6e6ae8e9d6f51f9044076ae3da5d6eb4a600"
+    },
+    {
+      "file": "glow_source_map.json",
+      "bytes": 186328,
+      "sha256": "a8fdc3068fcb6ac96a8e113211a223e5bba069232850bd35775fd50c732b6a5c"
+    },
+    {
+      "file": "lucifer_p2.bbmodel",
+      "bytes": 16244948,
+      "sha256": "a79f7c2172e10e3d6cb2faab828bf4e8fcddd99a7f7645468e7921e853f98eef"
+    },
+    {
+      "file": "material/atlas.png",
+      "bytes": 409569,
+      "sha256": "c4f17c0fafb374762f67e6e1eb569fbcc7fe4138f214fd1ab1444a19fee718dc"
+    },
+    {
+      "file": "material/auxiliary_atlas_data.png",
+      "bytes": 23964,
+      "sha256": "07cb8bbf887c5940126b244fef1b2bdf89ceae70f4f2b82102bb4adb50c47a87"
+    },
+    {
+      "file": "material/lucifer_p2_material_preview.bbmodel",
+      "bytes": 16244844,
+      "sha256": "d95285620ff965394a78f6049724d25bdf51f37c01250d59513b932dae7c254a"
+    },
+    {
+      "file": "material/material_contract.json",
+      "bytes": 3000,
+      "sha256": "891649caa55264b31d370f8c93798d208577abd2fa410be4e0c33e2f04c2c314"
+    },
+    {
+      "file": "material/rp/assets/minecraft/shaders/core/rendertype_item_entity_translucent_cull.fsh",
+      "bytes": 3181,
+      "sha256": "9572baa72a12a329606fdb2ecd00e4ea5debcc402735d0ae4bd659a319972d5a"
+    },
+    {
+      "file": "material/rp/assets/minecraft/shaders/core/rendertype_item_entity_translucent_cull.vsh",
+      "bytes": 1602,
+      "sha256": "98469a32687dd01989a9d90aad05cccd576c1b38e2d6199cb420f2c0dd26b7ba"
+    },
+    {
+      "file": "material/runtime_example.mcfunction",
+      "bytes": 746,
+      "sha256": "9678f1916ade56d466b6122e77d5d74606948f20942d3d97dd1a76f6466a92e8"
+    },
+    {
+      "file": "material/vanilla_rendertype_item_entity_translucent_cull.fsh",
+      "bytes": 603,
+      "sha256": "f7d2074126564aba5e1d5c4c3a509474e8b7191670ee15ea7dd67d140033272e"
+    },
+    {
+      "file": "material/vanilla_rendertype_item_entity_translucent_cull.vsh",
+      "bytes": 847,
+      "sha256": "1dd0553f4f42043e9d7603f108d2963a20081b77580c814e20fef0f1eefe48af"
+    },
+    {
+      "file": "parts.json",
+      "bytes": 31507,
+      "sha256": "6126a5f4c8af6c075112cacd24b8eb89b1382255e362a4de46c4f5303f19b007"
+    },
+    {
+      "file": "source/SK_Abomination_02.source.glb",
+      "bytes": 144316,
+      "sha256": "04c5b58a2485dac4d5c5ede9870df9559d7d40cb1529c6669756b0a7aa14d130"
+    },
+    {
+      "file": "source/skeleton.meta.json",
+      "bytes": 14710,
+      "sha256": "a44148e9b3ef05e671e9532561ad4c32ecbc3bb95047b4c718f5fa90d5200d69"
+    },
+    {
+      "file": "T_Jungle_Abomination_E_M6.png",
+      "bytes": 4447,
+      "sha256": "116be11eb6c1e54c38f658d2bf30258fdc06f081b788469c2ff38392e195e895"
+    },
+    {
+      "file": "T_Jungle_Abomination_M6.png",
+      "bytes": 90092,
+      "sha256": "b15c854c7b3f656c4365031648a98564840522289a39e7e5ede5f9b9c108a7b9"
+    },
+    {
+      "file": "transparent_source_elements.json",
+      "bytes": 4,
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "file": "validation/animation_conversion.json",
+      "bytes": 339057,
+      "sha256": "0eae079021d94802fcfa57c1c021c5fdd5a162c8c353c2d33530c110702bc675"
+    },
+    {
+      "file": "validation/box_merge_report.json",
+      "bytes": 72726,
+      "sha256": "87f3c7ebca3c91feb52b4196a89a9953dac8d90a9af988ca47434799c608443d"
+    },
+    {
+      "file": "validation/glow_layering.json",
+      "bytes": 3797,
+      "sha256": "e8dd57e44f9e44e2f8f8b91c43d80fd4d476e0aa39862152f98f0eb5439f5dc5"
+    },
+    {
+      "file": "validation/static_conversion.json",
+      "bytes": 33604,
+      "sha256": "0c4afde7b9e1e1d835a0ffff4e6b79e55339c072b5b82ca507ca725d8300cd79"
+    },
+    {
+      "file": "validation/static_conversion_before_box_merge.json",
+      "bytes": 32463,
+      "sha256": "139af1500f069e7f7b19f3c73618c6b95412320a9771ceea8fc30e54a55a9ea2"
+    },
+    {
+      "file": "validation/static_conversion_before_glow.json",
+      "bytes": 32804,
+      "sha256": "8dd0c2e40296c7d6fabe485c9c537872aaa42067e09a765b4f24c40ddbc53eb8"
+    }
+  ],
+  "animations_authored": 18,
+  "runtime_integrated": false,
+  "work_directory": "D:\\agent\\dungeons_extract\\phase2_b\\scale_alignment\\rebuild_authoring10"
+}

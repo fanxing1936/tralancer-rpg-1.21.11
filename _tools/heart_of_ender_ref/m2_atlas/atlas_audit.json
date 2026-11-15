@@ -1,0 +1,74 @@
+{
+  "atlas_size": [
+    512,
+    512
+  ],
+  "overlapping_rectangles": false,
+  "regions": [
+    {
+      "name": "stars_A",
+      "result": "RGBA exact source crop",
+      "visible_pixels": 16384
+    },
+    {
+      "name": "stars_B",
+      "result": "RGBA exact source crop",
+      "visible_pixels": 16384
+    },
+    {
+      "name": "stars_C",
+      "result": "RGBA exact source crop",
+      "visible_pixels": 16384
+    },
+    {
+      "name": "stars_D",
+      "result": "RGBA exact source crop",
+      "visible_pixels": 16384
+    },
+    {
+      "name": "stars_E",
+      "result": "RGBA exact source crop",
+      "visible_pixels": 16384
+    },
+    {
+      "name": "stars_F",
+      "result": "RGBA exact source crop",
+      "visible_pixels": 16384
+    },
+    {
+      "name": "arch_undressed",
+      "result": "RGBA exact source crop",
+      "visible_pixels": 3923
+    },
+    {
+      "name": "glow_mask_raw",
+      "result": "RGBA exact source crop",
+      "visible_pixels": 1936
+    },
+    {
+      "name": "front_eyes",
+      "result": "each retained RGBA pixel equals recorded nearest source coordinate; discarded RGBA zero",
+      "visible_pixels": 967
+    },
+    {
+      "name": "front_teeth",
+      "result": "each retained RGBA pixel equals recorded nearest source coordinate; discarded RGBA zero",
+      "visible_pixels": 463
+    },
+    {
+      "name": "side_teeth",
+      "result": "each retained RGBA pixel equals recorded nearest source coordinate; discarded RGBA zero",
+      "visible_pixels": 277
+    },
+    {
+      "name": "left_eye_local",
+      "result": "each retained RGBA pixel equals recorded nearest source coordinate; discarded RGBA zero",
+      "visible_pixels": 1367
+    },
+    {
+      "name": "right_eye_local",
+      "result": "each retained RGBA pixel equals recorded nearest source coordinate; discarded RGBA zero",
+      "visible_pixels": 1296
+    }
+  ]
+}

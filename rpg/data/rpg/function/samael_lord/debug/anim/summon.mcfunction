@@ -1,0 +1,2 @@
+# 调试：让所有萨麦尔播放 summon。
+execute as @e[type=minecraft:vindicator,tag=rpg.sml] run function rpg:samael_lord/anim/enter/summon

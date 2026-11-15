@@ -1,0 +1,71 @@
+{
+  "tool": "D:\\agent\\codex\\TRA\\work\\lucifer_original\\tools\\umodel\\umodel.exe",
+  "tool_sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0",
+  "animation_exports": [
+    {
+      "animation": "Idle",
+      "package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_Idle",
+      "output": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Idle.psa",
+      "bytes": 226176,
+      "sha256": "4684eb55a93273715081f55af701217a5e142491e74f6fff2b85bf17215c434a",
+      "log": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\animation_logs\\Idle.log",
+      "returncode": 0
+    },
+    {
+      "animation": "Walk",
+      "package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_Walk",
+      "output": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Walk.psa",
+      "bytes": 33184,
+      "sha256": "93891ef107cbc48ca4cfd808b98880fe3b54ab5159c1f5028bf692305a5e7f2d",
+      "log": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\animation_logs\\Walk.log",
+      "returncode": 0
+    },
+    {
+      "animation": "BasicAttack",
+      "package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_BasicAttack",
+      "output": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_BasicAttack.psa",
+      "bytes": 56864,
+      "sha256": "9ea1bc34db0103bca49b55611d9473d37f72905068f734f0ecbd2951995c725e",
+      "log": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\animation_logs\\BasicAttack.log",
+      "returncode": 0
+    },
+    {
+      "animation": "StrongAttack",
+      "package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_StrongAttack",
+      "output": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_StrongAttack.psa",
+      "bytes": 107776,
+      "sha256": "fe7a8c2ffa0f33015b4bd823af711c840939c6bb0c938829ccefcb39d68b37f8",
+      "log": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\animation_logs\\StrongAttack.log",
+      "returncode": 0
+    },
+    {
+      "animation": "Stun",
+      "package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_Stun",
+      "output": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Stun.psa",
+      "bytes": 62784,
+      "sha256": "b9d78d6eeebdfc726064248aa3a525489b66e15e8ad135b758ce64c4f2727e1e",
+      "log": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\animation_logs\\Stun.log",
+      "returncode": 0
+    },
+    {
+      "animation": "Novelty",
+      "package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_Novelty",
+      "output": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_Novelty.psa",
+      "bytes": 121984,
+      "sha256": "8b42799ba29b8ca7d93b0d6e336376b0d0f9216205eb7ddb89bf296d0142a447",
+      "log": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\animation_logs\\Novelty.log",
+      "returncode": 0
+    },
+    {
+      "animation": "GetHitFront",
+      "package": "/Game/Actors/Characters/Enemies/SkeletonNecromancer/Animations/SkeletonNecromancer_GetHitFront",
+      "output": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\Animations\\SkeletonNecromancer_GetHitFront.psa",
+      "bytes": 55680,
+      "sha256": "c4d9dba7bd55ebbb4dd376438b7a9f7a13a7ae938a5166a53a80464e0a8588a8",
+      "log": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\animation_logs\\GetHitFront.log",
+      "returncode": 0
+    }
+  ],
+  "rig_gltf": "D:\\agent\\codex\\TRA\\work\\lucifer_verdant\\necromancer_exported\\Game\\Actors\\Characters\\Enemies\\SkeletonNecromancer\\SK_SkeletonNecromancer.gltf",
+  "scope": "PAK read-only precise exports. No game files or Blockbench modified. Key file path only; key content never recorded."
+}

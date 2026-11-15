@@ -1,0 +1,492 @@
+{
+  "scope": "Minimal confirmed Verdant Robe source package; local authorized extraction, no keys or full PAKs.",
+  "game_version": "1.17.0.0",
+  "item_id": "EvocationRobe_Unique2",
+  "copyright": "Original game assets belong to Mojang Studios / Microsoft and respective rightsholders; no redistribution license asserted.",
+  "native_model_sha256": "9b925550ce92a88c28d8d8100d040fefaaca851c491aeae1a5af123cc6008354",
+  "native_geometry_validation_pass": true,
+  "counts": {
+    "raw_files": 24,
+    "raw_packages": 12,
+    "armor_gltf_bin_pairs": 4,
+    "material_png": 2,
+    "icon_png": 2,
+    "files_excluding_manifest": 62,
+    "total_bytes_excluding_manifest": 1920917
+  },
+  "umodel": {
+    "official_source": "https://raw.githubusercontent.com/gildor2/UEViewer/master/umodel.exe",
+    "build": 1590,
+    "sha256": "13502e5a4d8f6b5f32252afebd6360f7302ccfaccf6b8dda65beff0be2d364a0"
+  },
+  "files": [
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.uasset",
+      "kind": "verified_original_package",
+      "bytes": 2410,
+      "sha256": "8d826064fa1c7d548159c430c7a5291b7a15ece0a88d5e6e8ebe7b879920e268",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.uasset",
+      "pak_entry_sha1": "b0a2e5d5f154c7ce6dbbb1d0f6aa812bb515e741",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.uexp",
+      "kind": "verified_original_package",
+      "bytes": 2971,
+      "sha256": "71ab33cfa9cf724383e58d73bad941b628a0765e49c6be234d59b3dc58c1d54d",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.uexp",
+      "pak_entry_sha1": "60c8d82e99757a326a5fc8368f9a63eeef5e251e",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.uasset",
+      "kind": "verified_original_package",
+      "bytes": 2408,
+      "sha256": "95504d89bcbb83986946cd6553bb2d5e5ab526e46667dc5e8ca0373d3283b300",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.uasset",
+      "pak_entry_sha1": "02b4207b98a6f577c2ad10080cd3a69755e32b77",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.uexp",
+      "kind": "verified_original_package",
+      "bytes": 3595,
+      "sha256": "3052cca899eb6811f4dec3040d1d6afbd60999911010dc8356f2b0a3ebf92bbd",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.uexp",
+      "pak_entry_sha1": "3c8c40e8f97fecb60e03e0919c9c8e7a6e669bce",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.uasset",
+      "kind": "verified_original_package",
+      "bytes": 2410,
+      "sha256": "4602db6583b6441a557f2c5c4427108b600e06b41e10a0e4bef839f550426756",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.uasset",
+      "pak_entry_sha1": "2764e7727df357ca0e5eb2b12571728dd9de89b0",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.uexp",
+      "kind": "verified_original_package",
+      "bytes": 2971,
+      "sha256": "3c2dca0a493b70b30c4510afdbe50885fa790bc5fece3b609e0311fef12f53cf",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.uexp",
+      "pak_entry_sha1": "ef83e809fc80e77e8faed62d5746bdfae2e63122",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.uasset",
+      "kind": "verified_original_package",
+      "bytes": 1000,
+      "sha256": "2b49354aa547e1f9d8309169c3dba69f90d7949693c6507264e747557c8264a1",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.uasset",
+      "pak_entry_sha1": "e7a8f04701973797b5ebc91cf2001f7508b1553d",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.uexp",
+      "kind": "verified_original_package",
+      "bytes": 16749,
+      "sha256": "d56fb240ced8a665c6b433ed512253d1d3d404d449dd605e86ce244351450f1d",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.uexp",
+      "pak_entry_sha1": "fba30a29a89bfc30ca336ca7c130da19c2e0eb34",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.uasset",
+      "kind": "verified_original_package",
+      "bytes": 7187,
+      "sha256": "99bd8d3088299a82cb24b9b762998d12e03bbd5633fe00cb804f4530a1cd2b20",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.uasset",
+      "pak_entry_sha1": "83362418dd8593a001e275623fd61c0501949623",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.uexp",
+      "kind": "verified_original_package",
+      "bytes": 11530,
+      "sha256": "5c27a30d9516396331f1aa29e0f17857ea1058e8c586f931254883f4c6b76a2b",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2.uexp",
+      "pak_entry_sha1": "b537a82a089413413af1daec9af2d02b9dcf2339",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.uasset",
+      "kind": "verified_original_package",
+      "bytes": 3353,
+      "sha256": "9c6b30b5897b5e6274e6e26a5e418d80c77f0ae8926a16da08e72fe5f470d0f0",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.uasset",
+      "pak_entry_sha1": "a58d011062276ce8d734ff04826a033238a75cd2",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.uexp",
+      "kind": "verified_original_package",
+      "bytes": 556,
+      "sha256": "6bb470180750b067a16bb3f787cd212420df7f484987a4406b014834d496b25b",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/BP_EvocationRobe_Unique2Instance.uexp",
+      "pak_entry_sha1": "7fd2cff0798c409fcc51c2db24a64b44ad8cb47b",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.uasset",
+      "kind": "verified_original_package",
+      "bytes": 2573,
+      "sha256": "69c559ad389c2856a4c990e2eff81421a1fbe87a8e42218b16bc3e77bc69c8b1",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.uasset",
+      "pak_entry_sha1": "cd00fe22059ea2445968eeb5589af8d61748e637",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.uexp",
+      "kind": "verified_original_package",
+      "bytes": 143288,
+      "sha256": "3dfa11cb2a4149eefbdad86f9612d59c657509b91acd3a57567273690bc4ea13",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.uexp",
+      "pak_entry_sha1": "ae26abef4fe98873f590363e683057fbdd3dda69",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.uasset",
+      "kind": "verified_original_package",
+      "bytes": 2629,
+      "sha256": "4c5d0941d014c645531a9059571b09d35776c17a84a5092abbed5299f13cfef9",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.uasset",
+      "pak_entry_sha1": "4ea97e6104a103d78effddf3822565a0949205ba",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.uexp",
+      "kind": "verified_original_package",
+      "bytes": 7768,
+      "sha256": "e28366bb7e82cc2ee92594651c46d94e908bbd04421c07cd25adb71bd744c7e1",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.uexp",
+      "pak_entry_sha1": "241a7311925ebf421cdbd00d10791a01ef33ae9e",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.uasset",
+      "kind": "verified_original_package",
+      "bytes": 996,
+      "sha256": "0fc10fd4768b9ca03ecc7e169758f08491ee3845d1608412188793e5ce609129",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.uasset",
+      "pak_entry_sha1": "aef971b02ba1a69f8543093254baf4784fbf17a4",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.uexp",
+      "kind": "verified_original_package",
+      "bytes": 16749,
+      "sha256": "0dc1ed9e269db99488970e51414fa469bebf397d2f223f9cbca1e3f0f42546ec",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.uexp",
+      "pak_entry_sha1": "d6e682b18283eee474cda6a5a77bd16502e80574",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon.uasset",
+      "kind": "verified_original_package",
+      "bytes": 929,
+      "sha256": "3a7865fce0386a82f4718110bd59e98dc7235cb46cc5694e61c035198a3f2b78",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon.uasset",
+      "pak_entry_sha1": "c8e7ae4ea6dcd671ae1163be8605a23025dff102",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon.uexp",
+      "kind": "verified_original_package",
+      "bytes": 350237,
+      "sha256": "dfe4cd07815cdb3b7eaef226e19376130c43325eb5705f3ae1a6d6d23d828920",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon.uexp",
+      "pak_entry_sha1": "5b710877d526422f922b2a41d23949bac426dd7d",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon_inventory.uasset",
+      "kind": "verified_original_package",
+      "bytes": 1012,
+      "sha256": "d65c58c9b9e2e0bcd8dc4178c8c61d50bf9029423595d9440b76ad5ef41de4fa",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon_inventory.uasset",
+      "pak_entry_sha1": "17d1be2c8293bade278ba1e6a102936d2e143f17",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon_inventory.uexp",
+      "kind": "verified_original_package",
+      "bytes": 65938,
+      "sha256": "32f97ce7dad8ef41b55ff033db8b912e4e6977e374563d9b97696fd7ece21a59",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon_inventory.uexp",
+      "pak_entry_sha1": "aeb45f2329dfbf3dab49abd390427ce5234801fa",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/M_MasterEquipment.uasset",
+      "kind": "verified_original_package",
+      "bytes": 8892,
+      "sha256": "736b2b7077aeb54190038172a59507f115f8eb35cab0343aa0fc8324836a2173",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/M_MasterEquipment.uasset",
+      "pak_entry_sha1": "2368f94638dd56d66a4f5f928cb28bbf9473abab",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "raw/Game/Actors/Equipment/M_MasterEquipment.uexp",
+      "kind": "verified_original_package",
+      "bytes": 146959,
+      "sha256": "67a6c92cb48c94412c7f5ef28eb6bf30812ea9beb2f84d414972d05bb06df5c8",
+      "source_pak_filename": "pakchunk4-WindowsNoEditor.pak",
+      "pak_entry_path": "Dungeons/Content/Actors/Equipment/M_MasterEquipment.uexp",
+      "pak_entry_sha1": "eaa1d847fe50d13cab783c90965762eba313a715",
+      "pak_entry_sha1_verified": true
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.bin",
+      "kind": "umodel_original_export",
+      "bytes": 1416,
+      "sha256": "ff6ac1663e2fbdd1149a26035b5561367c810c8d3fe236eff56c8d9ee380fd91"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.gltf",
+      "kind": "umodel_original_export",
+      "bytes": 2354,
+      "sha256": "ea186fe7eebafba470939e5e9851e51af3be6d5bb5c255bac111ca479d6aa48f"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.bin",
+      "kind": "umodel_original_export",
+      "bytes": 2124,
+      "sha256": "6f274bd1e9483e576420405c2dfb397cd852532584b2ffc6e4fe78ac3dd35a78"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.gltf",
+      "kind": "umodel_original_export",
+      "bytes": 2351,
+      "sha256": "1fea20936ffc9d2af194cfc8b6b4a37289f3f387b8ff99b492480400d9538bbf"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.bin",
+      "kind": "umodel_original_export",
+      "bytes": 1416,
+      "sha256": "7cb7ab667cffbe5194a7d49237c22762b8e39f7822364d164edacd69e9fe6c20"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.gltf",
+      "kind": "umodel_original_export",
+      "bytes": 2354,
+      "sha256": "1e165dcb09fa7e320cf80996268e645be6631e41df8a0f1a5c1dfa06072cdd85"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.png",
+      "kind": "umodel_original_export",
+      "bytes": 474,
+      "sha256": "ff22dd2243f670a3144597e5dfaa966344eef5015497f2a1fd4808ba3cb8d9fa"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.mat",
+      "kind": "umodel_original_export",
+      "bytes": 70,
+      "sha256": "fdf53604edac269159a100fdd4f24f22cc06607148d548f649ab1e037d252a5f"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.props.txt",
+      "kind": "umodel_original_export",
+      "bytes": 3328,
+      "sha256": "9851f06fcf05e854a113671f9782e36aa9f9015dc9615c22b5661c380426d5fb"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.bin",
+      "kind": "umodel_original_export",
+      "bytes": 2596,
+      "sha256": "7c529594dfe92e23022ab0181bc6f09c8dd0db4d29608157be8a8d90c4e84b36"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.gltf",
+      "kind": "umodel_original_export",
+      "bytes": 2321,
+      "sha256": "46a3248a44b6b14adcd2511e3c031d2f0d39a873e897b235f7655d98d6320ed5"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.png",
+      "kind": "umodel_original_export",
+      "bytes": 1806,
+      "sha256": "d893884fbfebf404a16037a28753b773b5a7de9733df8742cb5c59f8ea8dd48b"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon.png",
+      "kind": "umodel_original_export",
+      "bytes": 56871,
+      "sha256": "63c38727e38fc15cad33cfe543268e2939c4b99b4756e92dc54a18c63444a6ed"
+    },
+    {
+      "path": "exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon_inventory.png",
+      "kind": "umodel_original_export",
+      "bytes": 22334,
+      "sha256": "63ff107447f02df14cae9403e08c77e0c5a5cc66c6a0ffdb3ec43eee4371d973"
+    },
+    {
+      "path": "material_port/uniform_expressions.json",
+      "kind": "frozen_original_shader_evidence",
+      "bytes": 68262,
+      "sha256": "8576a6fe47f579a4a3758b1e808410dd7eb067e9966f827accfa2706d40ac352"
+    },
+    {
+      "path": "material_port/disassembly_manifest.json",
+      "kind": "frozen_original_shader_evidence",
+      "bytes": 21154,
+      "sha256": "7f9d66167fe641282388ed6f5f7c063e719215624e2a3c212468ecf13f9b3e36"
+    },
+    {
+      "path": "material_port/shader_matches.json",
+      "kind": "frozen_original_shader_evidence",
+      "bytes": 52941,
+      "sha256": "02f0c19d4e0af21bd9a7b9b2d48fb5b22a6aacb2ccc277867476e42818217bdd"
+    },
+    {
+      "path": "material_port/17d7f0ed06ee1cba9b4141f6a8466432829f043d.asm",
+      "kind": "frozen_original_shader_evidence",
+      "bytes": 9312,
+      "sha256": "4e4d7a4b6b7be9a4fe3ffd80f995dfa343d18e0fd77ebcdf222929fc385ca700"
+    },
+    {
+      "path": "material_port/17d7f0ed06ee1cba9b4141f6a8466432829f043d.dxbc",
+      "kind": "frozen_original_shader_evidence",
+      "bytes": 6628,
+      "sha256": "aa019d9b6d7e6c0946ded730c32928010dc71772622312cb7d925c7257b623f9"
+    },
+    {
+      "path": "evidence/BP_EvocationRobe_Unique2.parsed.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 164703,
+      "sha256": "34c4c36d348796fe635f1494d03ce440c4946bd12eb839556ca0abfff18a720a"
+    },
+    {
+      "path": "evidence/BP_EvocationRobe_Unique2Instance.parsed.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 16603,
+      "sha256": "9940af76f7848186408d0e7014fd5a41c37186ba9cc8fd1f9a6031ad2a5e909a"
+    },
+    {
+      "path": "evidence/MI_EvocationRobe_Unique2.parsed.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 45392,
+      "sha256": "bbb9c870f96aed69bc492fa1410c3e56c3f7861fc960e8f4493b1a45cb3812f0"
+    },
+    {
+      "path": "evidence/T_EvocationRobe_Unique2.parsed.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 4133,
+      "sha256": "352d5d597fe3c5b9b9448e653213aaa274e4c3bc851de3b3e6f90820d2521426"
+    },
+    {
+      "path": "evidence/T_EvocationRobe_Unique1_S.parsed.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 4148,
+      "sha256": "2ca3fac1b7ac5009729aba641a03fbbb1f91a110b65a543b86cd82721dc27492"
+    },
+    {
+      "path": "evidence/verdant_compiled_descriptions.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 1167,
+      "sha256": "c61ea39aeb88b2d9918f8b5f8adf278ae4d562c770ba2b9951cca86005785a2c"
+    },
+    {
+      "path": "evidence/verdant_identity_evidence.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 21460,
+      "sha256": "a845f0fcca3612e526c856a732c604f7abdd986d152466dfe86f323821c6ad41"
+    },
+    {
+      "path": "evidence/verdant_material_source.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 3072,
+      "sha256": "6feb12a7185cca1c1b54a4ab22eb76250c7950f106fddc44a2dbdf47290b0970"
+    },
+    {
+      "path": "evidence/verdant_assembly.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 22374,
+      "sha256": "606e632e9befe4cdc00ee5c5776c9ef5be1326f96927ea79f5ec24948570399d"
+    },
+    {
+      "path": "evidence/verdant_for_blockbench.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 65479,
+      "sha256": "c70e27354f12521ae6bd7385df0988597b0d975a0cc100cde772509b02668c34"
+    },
+    {
+      "path": "evidence/verdant_for_blockbench_source_data.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 117168,
+      "sha256": "cc85d9de4960f13f04d4d6644875e60d1adef1c3b9defe335939ccf48cbaa18d"
+    },
+    {
+      "path": "evidence/verdant_payload_validation.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 1635,
+      "sha256": "b07ee181132ba95f538f5c5b1fdc8609d52717b6e45d414cbeb6d03160f939a7"
+    },
+    {
+      "path": "evidence/verdant_mossy_bind_comparison.json",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 5734,
+      "sha256": "c3bf278c726d453f10467b4e77aed2563d161aef2097dcbe5b017bf2e408ec18"
+    },
+    {
+      "path": "evidence/export.log",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 6678,
+      "sha256": "f965fceecbbefb1e014f4533422a6f33fc65ff9455e47079fee577f833d3d866"
+    },
+    {
+      "path": "evidence/validate_verdant_native.py",
+      "kind": "parsed_or_derived_evidence",
+      "bytes": 29411,
+      "sha256": "e29213742737a86ed8bd43cb3ebb314325690199c3334e5976b3b1a065486f84"
+    },
+    {
+      "path": "evidence/verdant_original_validation.json",
+      "kind": "actual_native_save_validation",
+      "bytes": 314208,
+      "sha256": "f008e3a94c884538ad24a71f95abfa4dd9dcb49b5896b4009e639e0f5f7c9093"
+    },
+    {
+      "path": "evidence/verdant_original_validation.md",
+      "kind": "actual_native_save_validation",
+      "bytes": 3746,
+      "sha256": "6bfa65f39572e9822b7c78079976d836445f074752c939fe45f865a4e47f1a32"
+    },
+    {
+      "path": "evidence/verdant_player_bind_source.json",
+      "kind": "original_binary_bind_dependency_extract",
+      "bytes": 23482,
+      "sha256": "8f5d0427d2e1b4088be083e34fef1ee09df6866d1cf425de73e96a16978c516d"
+    },
+    {
+      "path": "SOURCES.md",
+      "kind": "source_documentation",
+      "bytes": 5102,
+      "sha256": "46fe9000390a8760ef180ed9fd3b77036ee2283f9109c2f1595856fc6908a730"
+    }
+  ]
+}

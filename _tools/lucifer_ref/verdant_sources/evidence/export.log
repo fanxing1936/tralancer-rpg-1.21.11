@@ -1,0 +1,63 @@
+Found 22 game files (0 skipped) in 4 folders at path "D:/agent/codex/TRA/work/lucifer_verdant/raw"
+Scanned game directory in 0.0 sec, 43 allocs, 0.00 MBytes serialized in 0 calls.
+Loading package: Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 74 Exports: 1 Imports: 9 Game: 1000160
+Loading package: Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 79 Exports: 3 Imports: 10 Game: 1000160
+Loading package: Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 25 Exports: 1 Imports: 3 Game: 1000160
+Loading package: Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 23 Exports: 1 Imports: 3 Game: 1000160
+Loading package: Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon_inventory.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 26 Exports: 1 Imports: 3 Game: 1000160
+Loading package: Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 64 Exports: 3 Imports: 10 Game: 1000160
+Loading package: Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 64 Exports: 3 Imports: 10 Game: 1000160
+Loading package: Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 64 Exports: 3 Imports: 10 Game: 1000160
+Loading package: Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 25 Exports: 1 Imports: 3 Game: 1000160
+Loaded in 0.2 sec, 230 allocs, 0.02 MBytes serialized in 9 calls.
+Loading MaterialInstanceConstant MI_EvocationRobe_Unique2 from package Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.uasset
+Loading package: Game/Actors/Equipment/M_MasterEquipment.uasset Ver: 517/0 Engine: 0 [Unversioned] Names: 115 Exports: 36 Imports: 31 Game: 1000160
+Loading Material3 M_MasterEquipment from package Game/Actors/Equipment/M_MasterEquipment.uasset
+StructProperty: unknown UMaterial3 Metallic
+StructProperty: unknown UMaterial3 Specular
+ArrayProperty: unknown UMaterial3 MaterialFunctionInfos
+ArrayProperty: unknown UMaterial3 MaterialParameterCollectionInfos
+Loading Texture2D T_EvocationRobe_Unique2 from package Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.uasset
+Loading Texture2D T_EvocationRobe_Unique1_S from package Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.uasset
+WARNING: Import(Texture2D'T_Sword'): package /Game/Actors/Equipment/MeleeWeapons/Sword_Steel/T_Sword was not found
+WARNING: Import(Texture2D'T_Sword_S'): package /Game/Actors/Equipment/MeleeWeapons/Sword_Steel/T_Sword_S was not found
+WARNING: Import(Texture2D'T_Clouds_64'): package /Game/Effects/Materials/Noise/T_Clouds_64 was not found
+WARNING: Import(Texture2D'T_SmoothClouds_512'): package /Game/Effects/Materials/Noise/T_SmoothClouds_512 was not found
+Exporting objects ...
+Exporting MaterialInstanceConstant MI_EvocationRobe_Unique2 to D:/agent/codex/TRA/work/lucifer_verdant/exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/MI_EvocationRobe_Unique2.mat
+Exporting Texture2D T_EvocationRobe_Unique2 to D:/agent/codex/TRA/work/lucifer_verdant/exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2.png
+Exporting Texture2D T_EvocationRobe_Unique1_S to D:/agent/codex/TRA/work/lucifer_verdant/exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique1/T_EvocationRobe_Unique1_S.png
+Ignoring Material3'M_MasterEquipment' due to empty parameters
+Ignoring Material3'M_MasterEquipment' due to empty parameters
+Memory: allocated 300850 bytes in 132 blocks
+Loading StaticMesh4 SageHat from package Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.uasset
+Exporting objects ...
+Exporting StaticMesh4 SageHat to D:/agent/codex/TRA/work/lucifer_verdant/exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/SageHat.gltf
+Memory: allocated 259659 bytes in 127 blocks
+Exporting objects ...
+Loading Texture2D T_EvocationRobe_Unique2_Icon from package Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon.uasset
+Exporting objects ...
+Exporting Texture2D T_EvocationRobe_Unique2_Icon to D:/agent/codex/TRA/work/lucifer_verdant/exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon.png
+Memory: allocated 618351 bytes in 143 blocks
+Loading Texture2D T_EvocationRobe_Unique2_Icon_inventory from package Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon_inventory.uasset
+Exporting objects ...
+Exporting Texture2D T_EvocationRobe_Unique2_Icon_inventory to D:/agent/codex/TRA/work/lucifer_verdant/exported/Game/Actors/Equipment/Armor/EvocationRobe_Unique2/T_EvocationRobe_Unique2_Icon_inventory.png
+Memory: allocated 1741113 bytes in 153 blocks
+Loading StaticMesh4 L_Arm_EvocationRobe from package Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.uasset
+WARNING: Import(MaterialInstanceConstant'MI_EvocationRobe'): package /Game/Actors/Equipment/Armor/EvocationRobe/MI_EvocationRobe was not found
+Exporting objects ...
+Exporting StaticMesh4 L_Arm_EvocationRobe to D:/agent/codex/TRA/work/lucifer_verdant/exported/Game/Actors/Equipment/Armor/EvocationRobe/L_Arm_EvocationRobe.gltf
+Memory: allocated 3322197 bytes in 158 blocks
+Loading StaticMesh4 R_Arm_EvocationRobe from package Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.uasset
+WARNING: Import(MaterialInstanceConstant'MI_EvocationRobe'): package /Game/Actors/Equipment/Armor/EvocationRobe/MI_EvocationRobe was not found
+Exporting objects ...
+Exporting StaticMesh4 R_Arm_EvocationRobe to D:/agent/codex/TRA/work/lucifer_verdant/exported/Game/Actors/Equipment/Armor/EvocationRobe/R_Arm_EvocationRobe.gltf
+Memory: allocated 3330389 bytes in 160 blocks
+Loading StaticMesh4 MageRobe_Evocation from package Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.uasset
+WARNING: Import(MaterialInstanceConstant'MI_EvocationRobe'): package /Game/Actors/Equipment/Armor/EvocationRobe/MI_EvocationRobe was not found
+Exporting objects ...
+Exporting StaticMesh4 MageRobe_Evocation to D:/agent/codex/TRA/work/lucifer_verdant/exported/Game/Actors/Equipment/Armor/EvocationRobe/MageRobe_Evocation.gltf
+Memory: allocated 2744263 bytes in 154 blocks
+Exporting objects ...
+Exported 9/9 objects in 0.0 sec
+

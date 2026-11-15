@@ -1,0 +1,313 @@
+{
+  "instance_source": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/M_JungleAbomination.uasset",
+  "instance_metadata": "D:\\agent\\dungeons_extract\\phase2_full\\metadata\\Dungeons\\Content\\Actors\\Characters\\Enemies\\JungleAbomination\\M_JungleAbomination\\M_JungleAbomination.uobject.json",
+  "parent": {
+    "ObjectName": "Material'Master_ModelMaterial'",
+    "ObjectPath": "Dungeons/Content/Models/Master_ModelMaterial.0"
+  },
+  "texture_parameters": [
+    {
+      "ParameterInfo": {
+        "Name": "Specular",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": {
+        "ObjectName": "Texture2D'T_Jungle_Abomination_E_M6'",
+        "ObjectPath": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/T_Jungle_Abomination_E_M6.0"
+      },
+      "ExpressionGUID": "04D4A098-4041EA0C-467B3382-96748613"
+    },
+    {
+      "ParameterInfo": {
+        "Name": "Texture",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": {
+        "ObjectName": "Texture2D'T_Jungle_Abomination_M6'",
+        "ObjectPath": "Dungeons/Content/Actors/Characters/Enemies/JungleAbomination/T_Jungle_Abomination_M6.0"
+      },
+      "ExpressionGUID": "BD8CDDBE-404BA268-0F18A797-190556E0"
+    }
+  ],
+  "scalar_parameters": [
+    {
+      "ParameterInfo": {
+        "Name": "EmissiveB_SinusTempo",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": 0.1,
+      "ExpressionGUID": "D0EA9CE5-41D54575-668DE4B7-8D10EB86"
+    },
+    {
+      "ParameterInfo": {
+        "Name": "EmissiveB_SinusVariation",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": 3.0,
+      "ExpressionGUID": "5168B055-402ACD0E-16717797-37793FE8"
+    },
+    {
+      "ParameterInfo": {
+        "Name": "EmissiveBPower",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": 10.0,
+      "ExpressionGUID": "B10D036F-40949F95-27BB52B2-31829BD0"
+    },
+    {
+      "ParameterInfo": {
+        "Name": "Flash Timestamp",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": -100.0,
+      "ExpressionGUID": "628036D5-4A7123A1-4FE7638B-9AA2E6BF"
+    },
+    {
+      "ParameterInfo": {
+        "Name": "RefractionDepthBias",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": 0.0,
+      "ExpressionGUID": "00000000-00000000-00000000-00000000"
+    }
+  ],
+  "vector_parameters": [
+    {
+      "ParameterInfo": {
+        "Name": "ConstantEmissiveColor",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "ExpressionGUID": "F39C616E-4DCCED71-8886AB90-FBF9509E"
+    },
+    {
+      "ParameterInfo": {
+        "Name": "EmissiveBColor",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": {
+        "R": 1.0,
+        "G": 0.136,
+        "B": 0.98612,
+        "A": 1.0,
+        "Hex": "FF67FE"
+      },
+      "ExpressionGUID": "ABAF3FB4-49F0522C-0DEAEEA5-24B46493"
+    },
+    {
+      "ParameterInfo": {
+        "Name": "EnchantmentColor",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": {
+        "R": 0.016807,
+        "G": 0.0,
+        "B": 0.020289,
+        "A": 1.0,
+        "Hex": "230027"
+      },
+      "ExpressionGUID": "8CF4F314-4FD5B358-BA8CDA84-D70E5ABA"
+    },
+    {
+      "ParameterInfo": {
+        "Name": "ExtraEmissiveColor",
+        "Association": "GlobalParameter",
+        "Index": -1
+      },
+      "ParameterValue": {
+        "R": 1.0,
+        "G": 0.061246,
+        "B": 0.991102,
+        "A": 1.0,
+        "Hex": "FF46FE"
+      },
+      "ExpressionGUID": "EFCA235C-42455CA0-FB8F85A6-49966B61"
+    }
+  ],
+  "static_parameters": {
+    "StaticSwitchParameters": [
+      {
+        "ParameterInfo": {
+          "Name": "ConstantEmissive",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "Value": true,
+        "bOverride": true,
+        "ExpressionGUID": "7CF2A1DF-453A6CAD-90E58C8F-5CB6BDEB"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "EnchantmentMask",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "Value": true,
+        "bOverride": true,
+        "ExpressionGUID": "523C2D5A-4F58BC61-48841FA6-6690C58E"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "ExtraEmissive",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "Value": true,
+        "bOverride": true,
+        "ExpressionGUID": "DAA025AE-44E19713-58381590-FC79736A"
+      },
+      {
+        "ParameterInfo": {
+          "Name": "SinusEmissive",
+          "Association": "GlobalParameter",
+          "Index": -1
+        },
+        "Value": true,
+        "bOverride": true,
+        "ExpressionGUID": "1962C30F-4BC52586-10EBDFB2-123AFB7A"
+      }
+    ]
+  },
+  "base_overrides": {
+    "TwoSided": true,
+    "BlendMode": "BLEND_Masked",
+    "OpacityMaskClipValue": 0.1
+  },
+  "master_export_report": "D:\\agent\\dungeons_extract\\phase2_full\\material_probe\\export_report.json",
+  "packed_map_channel_reads": [
+    {
+      "node": "MaterialExpressionStaticSwitchParameter_10",
+      "input": "B",
+      "output_index": 1,
+      "mask": {
+        "R": 1,
+        "G": 0,
+        "B": 0,
+        "A": 0
+      },
+      "evidence": "D:\\agent\\dungeons_extract\\phase2_full\\material_probe\\metadata\\Dungeons\\Content\\Models\\Master_ModelMaterial\\MaterialExpressionStaticSwitchParameter_10.uobject.json"
+    },
+    {
+      "node": "MaterialExpressionStaticSwitchParameter_11",
+      "input": "B",
+      "output_index": 1,
+      "mask": {
+        "R": 1,
+        "G": 0,
+        "B": 0,
+        "A": 0
+      },
+      "evidence": "D:\\agent\\dungeons_extract\\phase2_full\\material_probe\\metadata\\Dungeons\\Content\\Models\\Master_ModelMaterial\\MaterialExpressionStaticSwitchParameter_11.uobject.json"
+    },
+    {
+      "node": "MaterialExpressionStaticSwitchParameter_12",
+      "input": "B",
+      "output_index": 2,
+      "mask": {
+        "R": 0,
+        "G": 1,
+        "B": 0,
+        "A": 0
+      },
+      "evidence": "D:\\agent\\dungeons_extract\\phase2_full\\material_probe\\metadata\\Dungeons\\Content\\Models\\Master_ModelMaterial\\MaterialExpressionStaticSwitchParameter_12.uobject.json"
+    },
+    {
+      "node": "MaterialExpressionStaticSwitchParameter_13",
+      "input": "B",
+      "output_index": 4,
+      "mask": {
+        "R": 0,
+        "G": 0,
+        "B": 0,
+        "A": 1
+      },
+      "evidence": "D:\\agent\\dungeons_extract\\phase2_full\\material_probe\\metadata\\Dungeons\\Content\\Models\\Master_ModelMaterial\\MaterialExpressionStaticSwitchParameter_13.uobject.json"
+    },
+    {
+      "node": "MaterialExpressionStaticSwitchParameter_14",
+      "input": "B",
+      "output_index": 3,
+      "mask": {
+        "R": 0,
+        "G": 0,
+        "B": 1,
+        "A": 0
+      },
+      "evidence": "D:\\agent\\dungeons_extract\\phase2_full\\material_probe\\metadata\\Dungeons\\Content\\Models\\Master_ModelMaterial\\MaterialExpressionStaticSwitchParameter_14.uobject.json"
+    },
+    {
+      "node": "MaterialExpressionStaticSwitchParameter_15",
+      "input": "B",
+      "output_index": 4,
+      "mask": {
+        "R": 0,
+        "G": 0,
+        "B": 0,
+        "A": 1
+      },
+      "evidence": "D:\\agent\\dungeons_extract\\phase2_full\\material_probe\\metadata\\Dungeons\\Content\\Models\\Master_ModelMaterial\\MaterialExpressionStaticSwitchParameter_15.uobject.json"
+    },
+    {
+      "node": "MaterialExpressionStaticSwitchParameter_9",
+      "input": "B",
+      "output_index": 1,
+      "mask": {
+        "R": 1,
+        "G": 0,
+        "B": 0,
+        "A": 0
+      },
+      "evidence": "D:\\agent\\dungeons_extract\\phase2_full\\material_probe\\metadata\\Dungeons\\Content\\Models\\Master_ModelMaterial\\MaterialExpressionStaticSwitchParameter_9.uobject.json"
+    }
+  ],
+  "packed_map_channel_pixel_counts": {
+    "R": {
+      "min": 0,
+      "max": 236,
+      "nonzero_pixels": 32060
+    },
+    "G": {
+      "min": 0,
+      "max": 208,
+      "nonzero_pixels": 32060
+    },
+    "B": {
+      "min": 0,
+      "max": 234,
+      "nonzero_pixels": 32060
+    },
+    "A": {
+      "min": 255,
+      "max": 255,
+      "nonzero_pixels": 262144
+    }
+  },
+  "known": [
+    "Base texture parameter Texture points to T_Jungle_Abomination_M6.",
+    "The _E texture is bound to parameter Specular and is a packed multi-channel map.",
+    "Master channel-select branches read R, G, B and A from that parameter.",
+    "The instance sets EmissiveBPower=10 and magenta emissive colors; its emissive-related static switches are enabled.",
+    "Source material is two-sided, BLEND_Masked, opacity-mask cutoff .1."
+  ],
+  "unresolved": [
+    "Cooked Master_ModelMaterial names the final EmissiveColor expression Multiply_12, but that expression and connecting math nodes are not retained as exports. The exact packed channel-to-emission routing is not proven from these metadata.",
+    "Do not treat all nonblack _E pixels or the whole body as emissive based on the filename."
+  ],
+  "missing_final_emissive_expression_export": true
+}

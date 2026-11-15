@@ -1,0 +1,64 @@
+== 1. resource pack migration 1.21 -> 1.21.11 ==
+  atlases rewritten                      2
+  axe trim models added                  3
+  dead `overrides` blocks removed        18
+  dead texture overrides removed         2
+  editor source files removed            4
+  item definitions written               9
+  stale blocks atlas removed             1
+  textures renamed for 1.21.11           1
+
+== 1b. wire up the unused weapon art ==
+twin art imported: jachin (from _tools/twin_art (upload no longer on disk)); boaz (from _tools/twin_art (upload no longer on disk))
+  baby_crossbow    32x32 -> 16x16   art fill 38% -> 75%   (6 frames)
+  vine_whip        32x32 -> 17x17   art fill 53% -> 100%   (2 frames)
+  truthseeker      32x32 -> 21x21   art fill 66% -> 100%   (1 frames)
+cropped 9 files
+models written: 19   item definitions updated: 5   give lines: 5   教条战斧 appended: False
+skill functions written: 6
+objectives added: (already present)
+tick hook added: False
+index flags registered: 5
+give appended: True
+objectives added: (already present)
+index: 2 main-hand flags added, off-hand block added: True
+lucifer: art 32x32 from 1254x1254, 13 colours (+ mirrored in-hand)
+lucifer: base=netherite_spear cmd=1110014 give=added index=registered objectives=-
+leviathan: art 32x32 from 128x128, 12 colours
+leviathan: base=mace cmd=1110007 consume=100110 give=added index=registered objectives=-
+runes: 0 new items (4 符文 + 3 符石), 7 tinted sprites
+runes: repaired 0 original stones, inlay carries components: False, holder-guarded 3 triggers
+runes: index flags +7, objectives -
+runes: retinted 12 original sprites
+epics: art forge 32x32, dawn 32x32, chime 32x32
+epics: 3 items, index +3, objectives -
+longinus: give rewritten=0  mace branch dropped=1  base=netherite_spear cmd=1110003 lunge=3
+wukong: give rewritten=0  mace branch dropped=1  base=netherite_spear cmd=1110004 lunge=3
+michael: give appended: False
+michael: objectives added: (already present)
+michael: index flags added: 8
+combat prompt font: 44 raised Unifont notices, two-layer spacing wired
+tower_guard: 9 parts, atlas 128x128, clips idle(24), walk(8), attack(33), charge(6), normal_stop(21), collide_stop(33), shield_break(27), stun(15)
+pope: 12 parts, atlas 128x64, clips idle(20), walk(36), attack(26), summon(41), cast(51), appear(37), teleport_in(19), teleport_out(19), whirlwind(141)
+beelzebub: 7 parts, atlas 128x128, clips idle(16), walk(16), cast(25), summon(33), rise(25)
+vanguard: 8 parts, atlas 128x128, clips idle(10), walk(10), attack(21), break(17)
+leviathan: 7 parts, atlas 128x128, clips idle(16), walk(16), cast(25), summon(33), rise(25)
+sunken_skeleton: 7 parts, atlas 64x32, clips idle(10), walk(10), attack(17), shoot(21)
+abaddon: 6 parts, atlas 256x256, clips idle(20), walk(20), cast(37), spread(25)
+tower_wraith: 7 parts, atlas 64x64, clips idle(20), walk(20), attack(21), cast(37)
+heart_of_ender: 21 parts; debug-only; clips idle, walk, mortar, cross_beam, sink, rise, death
+arch_visage: 5 parts; debug-only; clips idle, walk, spawn_attack
+  double_handheld          [1.46,0.85] -> 1.195 uniform   translation [0,7.0,2.0] -> [0,6.85,2.0]
+  huge_sword_handheld      [2.5,1.5] -> 2.062 uniform   translation [0,6.75,2.0] -> [0,6.46,2.0]
+  long_handheld            [2.23,2.33] -> 2.281 uniform   translation [0,7.0,1.0] -> [0,7.11,1.0]
+  stick_handheld           [1.46,0.85] -> 1.195 uniform   translation [0,7.0,2.0] -> [0,6.85,2.0]
+  sword_handheld           [1.46,0.85] -> 1.195 uniform   translation [0,6.75,2.0] -> [0,6.6,2.0]
+  twin_handheld            [1.46,0.85] -> 1.195 uniform   translation [0,6.75,2.0] -> [0,6.6,2.0]
+  weapon_sword_handheld    [1.46,1.46] -> 1.460 uniform   translation [0,7.5,1.0] -> [0,7.5,1.0]
+display parents made uniform: 7
+texture grid: 1 stored at native size: dawn 32->16
+
+== 2. validation against the real 1.21.11 client jar ==
+pack files: 818   vanilla assets: 10308   generated sprites: 692
+
+no problems found

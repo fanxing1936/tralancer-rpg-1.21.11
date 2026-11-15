@@ -1,0 +1,116 @@
+{
+  "textures": {
+    "0": "rpg:item/prime_enchanter/atlas",
+    "particle": "rpg:item/prime_enchanter/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        8.1,
+        4.6667,
+        7.972
+      ],
+      "to": [
+        13.45,
+        11.3333,
+        8.028
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            14.25,
+            0.5,
+            12.5,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            15.75,
+            0.5,
+            16.0,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            14.25,
+            0.5,
+            16.0,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            14.25,
+            0.5,
+            14.5,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        2.55,
+        4.6667,
+        7.972
+      ],
+      "to": [
+        7.9,
+        11.3333,
+        8.028
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            14.25,
+            0.5,
+            12.5,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            15.75,
+            0.5,
+            16.0,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            14.25,
+            0.5,
+            16.0,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            14.25,
+            0.5,
+            14.5,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

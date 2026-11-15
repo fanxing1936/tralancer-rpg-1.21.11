@@ -1,0 +1,43 @@
+{
+  "generated_elements": 137,
+  "generated_front_back_faces": 2,
+  "generated_side_faces": 136,
+  "independent_alpha_boundary_edges": 136,
+  "side_faces_equal_alpha_boundary_edges": true,
+  "quad_faces": 138,
+  "wedges": 552,
+  "triangles_if_split_each_quad": 276,
+  "texture_alpha_values": [
+    0,
+    255
+  ],
+  "opaque_texels": 161,
+  "in_hand_rgba_equals_horizontal_mirror_of_gui": true,
+  "additional_texture_mirror": false,
+  "source_uv_max_abs_error": 0.0,
+  "inverse_adapter_position_max_abs_error": 3.552713678800501e-15,
+  "socket_local_world_composition_max_abs_error": 1.7763568394002505e-15,
+  "native_vs_source_normalized_socket_bind_matrix_max_abs_error": 4.98212582300539e-15,
+  "binding_bone_id": 16,
+  "binding_bone_name": "J_R_Weapon",
+  "all_weights_one": true,
+  "model_space_bounds": [
+    [
+      4.974624047683704,
+      -4.23330307006836,
+      -21.24912353038551
+    ],
+    [
+      5.824623952316276,
+      34.23330116271973,
+      17.217480702402575
+    ]
+  ],
+  "input_sha256": "2206a51586751a714e91e2563e0b2759b68e48558653afd0294fb2b02e260498",
+  "limits": [
+    "No Blockbench import or runtime animation was performed in this task.",
+    "No Java game final render/atlas filtering or pose acceptability claim.",
+    "Bone bind TRS is normalized exported glTF/native Euler data, not raw UE full precision.",
+    "Cross-game grip orientation is an explicit adapter, not an original Mossy-with-Lucifer-spear asset."
+  ]
+}

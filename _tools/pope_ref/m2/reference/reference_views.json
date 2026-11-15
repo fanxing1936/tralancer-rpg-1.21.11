@@ -1,0 +1,688 @@
+{
+  "stage": "M2 静态参考分析，无动画制作",
+  "image_coordinate_system": "原图片左上原点，+x向右、+y向下，bbox右下界不含；未旋转原始图片",
+  "model_coordinate_system": "Java +Y向上，正脸-Z；角色左手位于-X",
+  "camera_note": "所有相机角是试拍起点。动态图自身俯仰/旋转与相机无法唯一分离，不是官方相机参数。",
+  "views": [
+    {
+      "id": "front",
+      "label": "正面 / 王座坐姿",
+      "source_file": "Arch-Illager_sit_in_his_throne_room_front_view.jpg",
+      "source_frame": null,
+      "source_time_seconds": null,
+      "crop_bbox": [
+        710,
+        145,
+        1175,
+        770
+      ],
+      "character_bbox_estimate": [
+        712,
+        150,
+        1163,
+        765
+      ],
+      "candidate_camera": {
+        "yaw_degrees": 0,
+        "yaw_error_degrees": 10,
+        "pitch_down_degrees": 5,
+        "pitch_error_degrees": 10,
+        "projection": "透视截图；非严格正交"
+      },
+      "pose": "坐姿，双臂较高，腿朝前；不能直接用于站姿腿角度验收",
+      "evidence": "高分辨率眉眼、鼻、冠正面红蓝宝石与项链；权杖在画面右=角色左手",
+      "occlusion": "王座与持杖手遮挡身体边界，头画面右缘受杖杆遮挡，不能把可见宽度当完整头宽",
+      "source_sha256": "7ca92ba3fc9680cd7ad5b017b005c8f0043c2da201ebcd931a553490349e39d3",
+      "decoded_image_sha256": "7ca92ba3fc9680cd7ad5b017b005c8f0043c2da201ebcd931a553490349e39d3",
+      "source_canvas": [
+        1920,
+        992
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1920,
+        992
+      ],
+      "bbox_note": "bbox采用[x0,y0,x1,y1)；JPEG alpha_bbox只代表整画布，不代表主体"
+    },
+    {
+      "id": "side",
+      "label": "侧面 / 转身动态",
+      "source_file": "MCD_Arch-Illager_Summon_Circle.gif",
+      "decoded_frame": "m1/motion/frames/summon/0013.png",
+      "source_frame": 13,
+      "source_time_seconds": 0.52,
+      "crop_bbox": [
+        198,
+        123,
+        376,
+        373
+      ],
+      "candidate_camera": {
+        "yaw_degrees": 90,
+        "yaw_error_degrees": 15,
+        "pitch_down_degrees": 25,
+        "pitch_error_degrees": 15,
+        "projection": "渲染图近侧视，身体自身在转动/前倾，不能唯一分离相机角与姿态角"
+      },
+      "pose": "施法转身，躯干前倾、披摆后扬，非静态正交侧面",
+      "evidence": "头深度、鼻凸出方向、后布与白下缘、细金腿和红尖分离",
+      "occlusion": "权杖和手臂存在重叠，背布掀起使自然下垂长度不可直接量取",
+      "source_sha256": "c8f7092c1e058b8ec90c246bf4bba1a26543219122ed61504ffc9f7f8daf6e44",
+      "decoded_image_sha256": "e9d93492f0e607eae0fe6ad591d0a6ec7c7340ffe15f941c451f3cef4ee50280",
+      "source_canvas": [
+        500,
+        500
+      ],
+      "alpha_bbox": [
+        208,
+        133,
+        366,
+        363
+      ],
+      "bbox_note": "bbox采用[x0,y0,x1,y1)；JPEG alpha_bbox只代表整画布，不代表主体"
+    },
+    {
+      "id": "back",
+      "label": "背面 / 瞬移动态",
+      "source_file": "MCD_Arch-Illager_Teleport_(Appear_Short).gif",
+      "decoded_frame": "m1/motion/frames/teleport/0038.png",
+      "source_frame": 38,
+      "source_time_seconds": 1.52,
+      "crop_bbox": [
+        129,
+        201,
+        316,
+        409
+      ],
+      "candidate_camera": {
+        "yaw_degrees": 180,
+        "yaw_error_degrees": 15,
+        "pitch_down_degrees": 20,
+        "pitch_error_degrees": 15,
+        "projection": "近背视，动态旋转/俯仰，非严格正交"
+      },
+      "pose": "瞬移离场转身，后布掀起、双脚弯曲，非站姿",
+      "evidence": "背头没有正脸眼眉；皇冠背壁无红蓝宝石列；蓝背布和白下缘清楚",
+      "occlusion": "腿部分遮挡；原帧主体仅约167×188像素，不宜从放大图补造细节",
+      "source_sha256": "fc9f309620ad2d9198d6e3543cc488c250a4fad283f149fd736b29b7fbc0f676",
+      "decoded_image_sha256": "cc8ea16f5ddde7c19ad3b3a09a624c960c380966cb16398ef75f02efb463d656",
+      "source_canvas": [
+        500,
+        500
+      ],
+      "alpha_bbox": [
+        139,
+        211,
+        306,
+        399
+      ],
+      "bbox_note": "bbox采用[x0,y0,x1,y1)；JPEG alpha_bbox只代表整画布，不代表主体"
+    },
+    {
+      "id": "three_quarter",
+      "label": "四分之三 / 主外形",
+      "source_file": "MCD_Arch-Illager.png",
+      "source_frame": null,
+      "source_time_seconds": 0.0,
+      "crop_bbox": [
+        53,
+        0,
+        625,
+        999
+      ],
+      "candidate_camera": {
+        "yaw_degrees": 42,
+        "yaw_error_degrees": 7,
+        "pitch_down_degrees": 23,
+        "pitch_error_degrees": 7,
+        "projection": "由头盒边投影反推的正交近似；不是官方相机参数",
+        "head_crown_screen_lean_degrees": 8,
+        "note": "头/冠竖线倾斜，杖杆近竖直；别把相机或整个模型连杖一起倾斜"
+      },
+      "pose": "站立，头与冠轻侧倾；左手持杖，空手自然垂出",
+      "evidence": "主要站姿、肩颈紧凑性、冠/头/身体比例和权杖相对尺寸",
+      "occlusion": "杖顶遮住一部分头盒后角；金属项链局部藏在下颌下",
+      "source_sha256": "87d37c5977b839024a393b33099ceda64b699b694500990ff703ecfbf7d55e3f",
+      "decoded_image_sha256": "87d37c5977b839024a393b33099ceda64b699b694500990ff703ecfbf7d55e3f",
+      "source_canvas": [
+        666,
+        999
+      ],
+      "alpha_bbox": [
+        63,
+        1,
+        615,
+        997
+      ],
+      "bbox_note": "bbox采用[x0,y0,x1,y1)；JPEG alpha_bbox只代表整画布，不代表主体"
+    },
+    {
+      "id": "front_gif_support",
+      "label": "正面 GIF 辅证",
+      "source_file": "MCD_Arch-Illager_Idle_Highblock_Halls_(front_view).gif",
+      "decoded_frame": "m1/motion/frames/idle_front/0000.png",
+      "source_frame": 0,
+      "source_time_seconds": 0.0,
+      "crop_bbox": [
+        116,
+        36,
+        364,
+        452
+      ],
+      "candidate_camera": {
+        "yaw_degrees": 0,
+        "yaw_error_degrees": 10,
+        "pitch_down_degrees": 10,
+        "pitch_error_degrees": 10,
+        "projection": "近正面渲染，不是严格正交站姿"
+      },
+      "pose": "王座坐姿",
+      "evidence": "再次确认持杖手与眼眉方向",
+      "occlusion": "王座遮挡",
+      "source_sha256": "bed1d2f23e06c7104799ecf8cccf79458655b333128c6dfdecd5e7898c59cd22",
+      "decoded_image_sha256": "4300ef988d9d4aaf6f1e7f4d5f13fd9c8885f9b2c861c2204ad9d2653e3197fd",
+      "source_canvas": [
+        500,
+        500
+      ],
+      "alpha_bbox": [
+        126,
+        46,
+        354,
+        442
+      ],
+      "bbox_note": "bbox采用[x0,y0,x1,y1)；JPEG alpha_bbox只代表整画布，不代表主体"
+    },
+    {
+      "id": "back_three_quarter_support",
+      "label": "背侧辅证 / 转身动态",
+      "source_file": "MCD_Arch-Illager_Summon_Circle.gif",
+      "decoded_frame": "m1/motion/frames/summon/0012.png",
+      "source_frame": 12,
+      "source_time_seconds": 0.48,
+      "crop_bbox": [
+        100,
+        105,
+        400,
+        400
+      ],
+      "candidate_camera": {
+        "yaw_degrees": 145,
+        "yaw_error_degrees": 20,
+        "pitch_down_degrees": 25,
+        "pitch_error_degrees": 15,
+        "projection": "动态背侧渲染，角度只作试拍起点"
+      },
+      "pose": "身体向前、后布后扬",
+      "evidence": "背布白下缘与腿相互独立",
+      "occlusion": "手臂与头侧部分重叠",
+      "source_sha256": "c8f7092c1e058b8ec90c246bf4bba1a26543219122ed61504ffc9f7f8daf6e44",
+      "decoded_image_sha256": "23d6e77c92c8466ff92bd50f4f13536f4a216b5b4e15c8983900507622cec8c1",
+      "source_canvas": [
+        500,
+        500
+      ],
+      "alpha_bbox": [
+        91,
+        139,
+        337,
+        363
+      ],
+      "bbox_note": "bbox采用[x0,y0,x1,y1)；JPEG alpha_bbox只代表整画布，不代表主体"
+    },
+    {
+      "id": "staff",
+      "label": "权杖 / 无发光单独渲染",
+      "source_file": "MCD_Arch-Illagers_Staff.png",
+      "source_frame": null,
+      "source_time_seconds": null,
+      "crop_bbox": [
+        0,
+        0,
+        342,
+        956
+      ],
+      "candidate_camera": {
+        "yaw_degrees": 45,
+        "yaw_error_degrees": 10,
+        "pitch_down_degrees": 25,
+        "pitch_error_degrees": 10,
+        "projection": "近等轴渲染，方块自身另有旋转"
+      },
+      "pose": "杖杆竖直、托盘水平、顶块斜置",
+      "evidence": "托盘与杆粗细，顶块明显大于托盘；不根据光照重绘原色",
+      "occlusion": "顶块遮住托盘部分上表面",
+      "source_sha256": "3e475ad3df12b1eb35a0e9f9f9f69dd9835ff7793245af07f616ac80dc57803d",
+      "decoded_image_sha256": "3e475ad3df12b1eb35a0e9f9f9f69dd9835ff7793245af07f616ac80dc57803d",
+      "source_canvas": [
+        342,
+        956
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        342,
+        956
+      ],
+      "bbox_note": "bbox采用[x0,y0,x1,y1)；JPEG alpha_bbox只代表整画布，不代表主体"
+    }
+  ],
+  "main_render_segments": [
+    {
+      "id": "H1",
+      "label": "头正面上缘",
+      "points": [
+        [
+          95,
+          296
+        ],
+        [
+          360,
+          427
+        ]
+      ],
+      "status": "可见边端点，人工定位约±4px",
+      "projected_length_pixels": 295.611
+    },
+    {
+      "id": "H2",
+      "label": "头正面右竖边",
+      "points": [
+        [
+          360,
+          427
+        ],
+        [
+          334,
+          625
+        ]
+      ],
+      "status": "可见边端点，人工定位约±3px",
+      "projected_length_pixels": 199.7
+    },
+    {
+      "id": "H3",
+      "label": "头顶深度边",
+      "points": [
+        [
+          95,
+          296
+        ],
+        [
+          228,
+          261
+        ]
+      ],
+      "status": "后端部分近冠遮挡，约±6px",
+      "projected_length_pixels": 137.528
+    },
+    {
+      "id": "C1",
+      "label": "冠正面上缘",
+      "points": [
+        [
+          249,
+          45
+        ],
+        [
+          335,
+          88
+        ]
+      ],
+      "status": "前壁可见边，不含上方冠齿，约±4px",
+      "projected_length_pixels": 96.151
+    },
+    {
+      "id": "C2",
+      "label": "冠正面右竖边",
+      "points": [
+        [
+          335,
+          88
+        ],
+        [
+          296,
+          377
+        ]
+      ],
+      "status": "11高侧壁候选，约±4px",
+      "projected_length_pixels": 291.62
+    },
+    {
+      "id": "N1",
+      "label": "鼻前面长边",
+      "points": [
+        [
+          212,
+          491
+        ],
+        [
+          195,
+          603
+        ]
+      ],
+      "status": "可见鼻前面边，约±4px",
+      "projected_length_pixels": 113.283
+    },
+    {
+      "id": "S1",
+      "label": "杖杆竖直参考",
+      "points": [
+        [
+          494,
+          519
+        ],
+        [
+          494,
+          995
+        ]
+      ],
+      "status": "托盘下至杆底，约±4px；不能用图片底差判断穿地",
+      "projected_length_pixels": 476.0
+    },
+    {
+      "id": "S2",
+      "label": "托盘投影宽",
+      "points": [
+        [
+          430,
+          474
+        ],
+        [
+          562,
+          474
+        ]
+      ],
+      "status": "包围盒横向宽，非同一条几何边，约±3px",
+      "projected_length_pixels": 132.0
+    },
+    {
+      "id": "S3",
+      "label": "顶部方块投影宽",
+      "points": [
+        [
+          390,
+          360
+        ],
+        [
+          615,
+          360
+        ]
+      ],
+      "status": "包围盒横向宽，非立方体边长，约±3px",
+      "projected_length_pixels": 225.0
+    }
+  ],
+  "main_render_regions": [
+    {
+      "id": "R1",
+      "name": "高冠外框",
+      "bbox": [
+        207,
+        1,
+        423,
+        378
+      ],
+      "status": "可见金冠及冠齿，边界约±3px"
+    },
+    {
+      "id": "R2",
+      "name": "头盒外框",
+      "bbox": [
+        68,
+        260,
+        494,
+        626
+      ],
+      "status": "被皇冠/权杖遮挡的后角有推定；不是分割mask"
+    },
+    {
+      "id": "R3",
+      "name": "鼻部",
+      "bbox": [
+        152,
+        464,
+        233,
+        605
+      ],
+      "status": "可见鼻轮廓，约±3px"
+    },
+    {
+      "id": "R4",
+      "name": "左持杖臂",
+      "bbox": [
+        388,
+        620,
+        496,
+        701
+      ],
+      "status": "袖内灰臂至握点，局部遮挡/旧渲染Z-fighting"
+    },
+    {
+      "id": "R5",
+      "name": "右空手末段",
+      "bbox": [
+        63,
+        568,
+        129,
+        650
+      ],
+      "status": "灰细臂露出部分，不代表完整臂长"
+    },
+    {
+      "id": "R6",
+      "name": "项链红宝石",
+      "bbox": [
+        179,
+        628,
+        266,
+        714
+      ],
+      "status": "含金色镶边的投影外框，非完整项链"
+    },
+    {
+      "id": "R7",
+      "name": "蓝袍/白下缘区域",
+      "bbox": [
+        154,
+        580,
+        374,
+        906
+      ],
+      "status": "粗分组边界，含遮挡，禁止当腿/靴的语义分割"
+    },
+    {
+      "id": "R8",
+      "name": "右侧图中红脚尖",
+      "bbox": [
+        251,
+        889,
+        294,
+        917
+      ],
+      "status": "可见脚尖像素，约±3px"
+    },
+    {
+      "id": "R9",
+      "name": "左侧图中红脚尖",
+      "bbox": [
+        170,
+        848,
+        235,
+        880
+      ],
+      "status": "可见脚尖像素，约±3px"
+    }
+  ],
+  "front_landmarks": [
+    {
+      "name": "冠口",
+      "pixel": [
+        946,
+        205
+      ],
+      "status": "人工可见特征定位，约±5px；非骨骼pivot"
+    },
+    {
+      "name": "冠底",
+      "pixel": [
+        949,
+        422
+      ],
+      "status": "人工可见特征定位，约±5px；非骨骼pivot"
+    },
+    {
+      "name": "眉",
+      "pixel": [
+        1014,
+        478
+      ],
+      "status": "人工可见特征定位，约±5px；非骨骼pivot"
+    },
+    {
+      "name": "鼻端",
+      "pixel": [
+        948,
+        591
+      ],
+      "status": "人工可见特征定位，约±5px；非骨骼pivot"
+    },
+    {
+      "name": "吊坠",
+      "pixel": [
+        941,
+        638
+      ],
+      "status": "人工可见特征定位，约±5px；非骨骼pivot"
+    },
+    {
+      "name": "角色左握点",
+      "pixel": [
+        1056,
+        603
+      ],
+      "status": "人工可见特征定位，约±5px；非骨骼pivot"
+    },
+    {
+      "name": "红脚底",
+      "pixel": [
+        857,
+        712
+      ],
+      "status": "人工可见特征定位，约±5px；非骨骼pivot"
+    },
+    {
+      "name": "金色杖底",
+      "pixel": [
+        1048,
+        757
+      ],
+      "status": "人工可见特征定位，约±5px；非骨骼pivot"
+    }
+  ],
+  "dimension_candidates": [
+    {
+      "part": "head",
+      "candidate_xyz_units": [
+        12,
+        7,
+        6
+      ],
+      "basis": "M1灰侧带6+12+6+12与主图头/冠前缘比例约3.1",
+      "confidence": "重建候选，非官方geometry"
+    },
+    {
+      "part": "crown",
+      "candidate_xyz_units": [
+        4,
+        11,
+        4
+      ],
+      "basis": "M1四个4×11侧面和4×4空心顶环；主图形状相符",
+      "confidence": "相对较强，冠齿和底部连接另核"
+    },
+    {
+      "part": "nose",
+      "candidate_xyz_units": [
+        2,
+        4,
+        2
+      ],
+      "basis": "M1侧带2×4与主图细长鼻，端面UV未唯一确定",
+      "confidence": "重建候选"
+    },
+    {
+      "part": "torso",
+      "candidate_xyz_units": [
+        9,
+        9,
+        5
+      ],
+      "basis": "图中窄于头，肩下紧接躯干；M1衣料拓扑不满足单一盒网",
+      "confidence": "低至中；仅布局起点，不是已证明立方体"
+    },
+    {
+      "part": "thin_arm",
+      "candidate_xyz_units": [
+        1,
+        8,
+        1
+      ],
+      "basis": "M1细灰条与原图细臂；姿态遮挡/透视使完整长度未能直接量取",
+      "confidence": "长度待模型并排确认，禁止从可见短段直接定总长"
+    },
+    {
+      "part": "staff_shaft",
+      "candidate_xyz_units": [
+        1,
+        18,
+        1
+      ],
+      "basis": "T_SuperStaff四个1×18侧面及主图杆宽",
+      "confidence": "相对较强"
+    },
+    {
+      "part": "staff_tray",
+      "candidate_xyz_units": [
+        3,
+        1,
+        3
+      ],
+      "basis": "T_SuperStaff完整薄板盒网；主图投影宽132px",
+      "confidence": "相对较强"
+    },
+    {
+      "part": "staff_cube",
+      "candidate_xyz_units": [
+        5,
+        5,
+        5
+      ],
+      "basis": "主图顶块投影宽225px/托盘132px≈1.70；单杖图342px/171px≈2.0；角度不同，不能直接按比值放大三维尺寸",
+      "confidence": "试模尺寸，必须与两个视角比较"
+    },
+    {
+      "part": "full_character",
+      "candidate_height_units": 29,
+      "candidate_model_scale": 1.434483,
+      "basis": "站姿布局假设：脚段约2+躯干约9+头7+冠11；以最后bbmodel冠顶到脚底真实包围盒重新计算",
+      "confidence": "布局建议，不能当最终比例验收值"
+    }
+  ],
+  "ratios": {
+    "head_front_edge_over_crown_front_edge": 3.074,
+    "main_cube_bbox_width_over_tray_bbox_width": 1.7045454545454546,
+    "staff_render_cube_bbox_width_over_tray_bbox_width": 2.0,
+    "projected_crown_to_red_toe_height_pixels": 916
+  },
+  "critical_findings": [
+    "左手持杖，不以画面右侧误名right_hand",
+    "头下沿与肩/项链几乎贴合，不留明显颈间隙",
+    "主图头冠有约8度画面侧倾，杖杆近竖直；不把整个模型一起倾斜",
+    "连续侧背帧显示白下缘随蓝布后摆，不能直接建成白靴；金细腿/红脚尖独立在其下",
+    "没有严格正交静态侧背素材；M2渲染需要四视图，但原参考中只能有条件核验轮廓、材质和部件朝向",
+    "杖底与脚底在投影图不同高度不直接证明穿地，深度投影与相机必须先匹配"
+  ]
+}

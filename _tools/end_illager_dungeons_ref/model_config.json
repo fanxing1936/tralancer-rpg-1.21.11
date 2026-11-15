@@ -1,0 +1,162 @@
+{
+ "model_scale": 8.627451060101764,
+ "height_blocks": 2.2,
+ "source_height_cm": 212.49999803669812,
+ "turn": 0,
+ "merge": {
+  "head": [
+   "nose",
+   "l_eyepupil",
+   "l_eyeiris",
+   "r_eyepupil",
+   "r_eyeiris",
+   "l_eyebrow",
+   "r_eyebrow"
+  ]
+ },
+ "held_bone": null,
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/Illagers/Evoker/SK_IllagerEvoker",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\evoker"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "IllagerEvoker_Idle",
+   "seconds": 1.9666667,
+   "loop": true,
+   "ticks": 40,
+   "max_bone_error_px": 2.517529149035499e-09,
+   "max_vertex_error_px": 2.5175295835383266e-09,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "IllagerEvoker_Walk",
+   "seconds": 1.3,
+   "loop": true,
+   "ticks": 26,
+   "max_bone_error_px": 0.0009615801960731974,
+   "max_vertex_error_px": 0.0009771405551175778,
+   "notifies": [
+    [
+     0.1313,
+     "step_gravel_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1313,
+     "step_stone_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.7629,
+     "step_gravel_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.7629,
+     "step_stone_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "cast",
+   "source": "IllagerEvoker_BasicAttack",
+   "seconds": 3.0666666,
+   "loop": false,
+   "ticks": 62,
+   "max_bone_error_px": 0.0015205257127227456,
+   "max_vertex_error_px": 0.0029367747483408516,
+   "notifies": []
+  },
+  {
+   "clip": "strong",
+   "source": "IllagerEvoker_StrongAttack",
+   "seconds": 3.6333334,
+   "loop": false,
+   "ticks": 73,
+   "max_bone_error_px": 0.0399410200178492,
+   "max_vertex_error_px": 0.05037794502658487,
+   "notifies": []
+  },
+  {
+   "clip": "summon",
+   "source": "IllagerEvoker_Summoning",
+   "seconds": 1.9832824,
+   "loop": false,
+   "ticks": 40,
+   "max_bone_error_px": 0.0017066981995529891,
+   "max_vertex_error_px": 0.0023776760907157153,
+   "notifies": [
+    [
+     0.1985,
+     "evoker_prepare_attack_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3006,
+     "PS_IllagerEvoker_Summon_Channeling",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3006,
+     "PS_IllagerEvoker_Summon_Channeling",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "rise",
+   "source": "IllagerEvoker_NoveltyAnimation",
+   "seconds": 2.9666667,
+   "loop": false,
+   "ticks": 60,
+   "max_bone_error_px": 0.03455828969991427,
+   "max_vertex_error_px": 0.045590057730260584,
+   "notifies": []
+  },
+  {
+   "clip": "hurt",
+   "source": "IllagerEvoker_GetHitFront",
+   "seconds": 0.8333333,
+   "loop": false,
+   "ticks": 17,
+   "max_bone_error_px": 0.012864352474476547,
+   "max_vertex_error_px": 0.025695545785192106,
+   "notifies": []
+  },
+  {
+   "clip": "stun",
+   "source": "IllagerEvoker_Stun",
+   "seconds": 1.3,
+   "loop": true,
+   "ticks": 26,
+   "max_bone_error_px": 0.0007496152474772269,
+   "max_vertex_error_px": 0.0012373145342296442,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "end_illager",
+  "source_mesh_sha256": "1dbbc6ad9e952be182177e300af3389b5b79668b2c3d7d054375d69c6ca2ee8a",
+  "triangles": 148,
+  "all_triangles_covered_once": true,
+  "bones": 42,
+  "plane_groups": 19,
+  "display_parts": 19,
+  "elements": 74,
+  "direct_uv_elements": 68,
+  "baked_elements": 6,
+  "glow_groups": 0,
+  "textures": {
+   "M_IllagerEvoker": 0
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

@@ -1,0 +1,81 @@
+{
+  "key": "lucifer_lord",
+  "label": "路西法",
+  "tag": "rpg.lu",
+  "score": "rpg_lu",
+  "seat": 2.0,
+  "held": "weapon",
+  "parts": [
+    [
+      "body",
+      [
+        "body",
+        "root_front_right",
+        "root_front_left",
+        "root_back_right",
+        "root_back_left"
+      ]
+    ],
+    [
+      "head",
+      [
+        "head",
+        "eyes_glow",
+        "sprout_left",
+        "sprout_right"
+      ]
+    ],
+    [
+      "right_arm",
+      [
+        "right_arm",
+        "cuff_roots_right"
+      ]
+    ],
+    [
+      "left_arm",
+      [
+        "left_arm",
+        "cuff_roots_left"
+      ]
+    ],
+    [
+      "weapon",
+      [
+        "right_arm"
+      ]
+    ],
+    [
+      "right_leg",
+      [
+        "right_leg"
+      ]
+    ],
+    [
+      "left_leg",
+      [
+        "left_leg"
+      ]
+    ]
+  ],
+  "glow": [
+    "eyes_glow"
+  ],
+  "model_scale": 1.0472011589323151,
+  "rest_bounds_java_px": {
+    "min": [
+      -7.0,
+      0.0,
+      -7.1939205399843695
+    ],
+    "max": [
+      7.0,
+      36.66917255816554,
+      5.1435415671426945
+    ]
+  },
+  "rest_height_blocks": 2.4,
+  "scale_height_includes": "兜帽/嫩芽/靴，不包含手持矛",
+  "stage": "checkpoint_A_candidate",
+  "animations": []
+}

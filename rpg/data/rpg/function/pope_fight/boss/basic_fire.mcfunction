@@ -1,3 +1,3 @@
 # 普攻：一发快弹。
-execute positioned ^0.93 ^2.84 ^1.02 facing entity @a[distance=..32,gamemode=!spectator,gamemode=!creative,sort=nearest,limit=1] eyes run function rpg:pope_fight/fx/blast_quick
+execute positioned ^0.93 ^2.84 ^1.02 facing entity @e[tag=rpg.unit.f,distance=..32,sort=nearest,limit=1] eyes run function rpg:pope_fight/fx/blast_quick
 playsound rpg:pope.spell hostile @a[distance=..32] ~ ~ ~ 0.5 1.4

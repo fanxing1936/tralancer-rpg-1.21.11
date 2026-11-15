@@ -1,0 +1,883 @@
+{
+  "source": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\leviathan_ref\\leviathan.bbmodel",
+  "sha256": "2826171e737bcae097e0712e4193f0c413fe9e023a163fba3e254f3830b5646b",
+  "source_convention": {
+    "space": "+Y up, front -Z; positions in Java model pixels, rotations degrees",
+    "euler": "ZYX: Rz Ry Rx",
+    "key_values": "stored rotations add componentwise to source rest Euler; positions are offsets",
+    "interpolation": "numeric linear/step/CatmullRom; if either segment endpoint is catmullrom, display_mob.py uses CatmullRom",
+    "native_armature_caution": "target bone origin is local and target bind axes differ; conjugate in matched parent frames, do not paste rest/offset Euler blindly"
+  },
+  "retarget_semantics": {
+    "root": {
+      "target": "J_Root",
+      "reason": "整体平移；root的父级在Java全局坐标中"
+    },
+    "body": {
+      "target": "J_L_Spine",
+      "reason": "驱动躯干、肩、头和双臂；需换基，不能直抄Euler"
+    },
+    "head": {
+      "target": "J_Neck",
+      "reason": "原Head网格权重骨Head位于J_Neck下；J_Head是同级辅助骨，直接动它不会驱动Head网格"
+    },
+    "right_arm": {
+      "target": "J_R_Arm",
+      "reason": "右上臂，持物通过J_R_Hand/J_R_Weapon继承"
+    },
+    "left_arm": {
+      "target": "J_L_Arm",
+      "reason": "左上臂"
+    },
+    "cape": {
+      "target": null,
+      "reason": "独立披风摆动；当前袍无对应独立骨时仅保留参考，不凭空新建"
+    },
+    "gem_spin": {
+      "target": null,
+      "reason": "原法杖宝石自转；现有蛇矛没有此部件，不移植"
+    }
+  },
+  "clips": {
+    "cast": {
+      "source_name": "animation.cast",
+      "duration_seconds": 1.2,
+      "loop": "once",
+      "tracks": [
+        {
+          "bone": "root",
+          "parent": null,
+          "source_rest_origin": [
+            0,
+            0,
+            0
+          ],
+          "source_rest_rotation": [
+            0,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": "J_Root",
+            "reason": "整体平移；root的父级在Java全局坐标中"
+          },
+          "channels": {
+            "position": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.4,
+                "value": [
+                  0.0,
+                  1.5,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.65,
+                "value": [
+                  0.0,
+                  0.5,
+                  -1.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "body",
+          "parent": "root",
+          "source_rest_origin": [
+            0,
+            14,
+            0
+          ],
+          "source_rest_rotation": [
+            0,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": "J_L_Spine",
+            "reason": "驱动躯干、肩、头和双臂；需换基，不能直抄Euler"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.4,
+                "value": [
+                  6.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.65,
+                "value": [
+                  -10.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "head",
+          "parent": "body",
+          "source_rest_origin": [
+            0,
+            26,
+            0
+          ],
+          "source_rest_rotation": [
+            0,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": "J_Neck",
+            "reason": "原Head网格权重骨Head位于J_Neck下；J_Head是同级辅助骨，直接动它不会驱动Head网格"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.4,
+                "value": [
+                  8.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.65,
+                "value": [
+                  -6.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "right_arm",
+          "parent": "body",
+          "source_rest_origin": [
+            5,
+            25,
+            0
+          ],
+          "source_rest_rotation": [
+            75,
+            0,
+            35
+          ],
+          "retarget": {
+            "target": "J_R_Arm",
+            "reason": "右上臂，持物通过J_R_Hand/J_R_Weapon继承"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.4,
+                "value": [
+                  60.0,
+                  0.0,
+                  -20.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.65,
+                "value": [
+                  5.0,
+                  0.0,
+                  -15.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 0.85,
+                "value": [
+                  10.0,
+                  0.0,
+                  -10.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "left_arm",
+          "parent": "body",
+          "source_rest_origin": [
+            -5,
+            25,
+            0
+          ],
+          "source_rest_rotation": [
+            12,
+            0,
+            -8
+          ],
+          "retarget": {
+            "target": "J_L_Arm",
+            "reason": "左上臂"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.4,
+                "value": [
+                  30.0,
+                  0.0,
+                  -25.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.65,
+                "value": [
+                  45.0,
+                  0.0,
+                  -20.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "cape",
+          "parent": "body",
+          "source_rest_origin": [
+            0,
+            27,
+            3
+          ],
+          "source_rest_rotation": [
+            -6,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": null,
+            "reason": "独立披风摆动；当前袍无对应独立骨时仅保留参考，不凭空新建"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 0.65,
+                "value": [
+                  -12.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "gem_spin",
+          "parent": "staff",
+          "source_rest_origin": [
+            5,
+            39,
+            0
+          ],
+          "source_rest_rotation": [
+            0,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": null,
+            "reason": "原法杖宝石自转；现有蛇矛没有此部件，不移植"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 0.4,
+                "value": [
+                  0.0,
+                  180.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 0.65,
+                "value": [
+                  0.0,
+                  270.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  0.0,
+                  360.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              }
+            ]
+          }
+        }
+      ],
+      "semantic": "raise/windup at .4; staff thrust/release at .65; recover at .85; return rest at1.2",
+      "cues": [
+        {
+          "time": 0,
+          "event": "cast"
+        },
+        {
+          "time": 0.65,
+          "event": "spell"
+        }
+      ]
+    },
+    "rise": {
+      "source_name": "animation.rise",
+      "duration_seconds": 2.4,
+      "loop": "once",
+      "tracks": [
+        {
+          "bone": "root",
+          "parent": null,
+          "source_rest_origin": [
+            0,
+            0,
+            0
+          ],
+          "source_rest_rotation": [
+            0,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": "J_Root",
+            "reason": "整体平移；root的父级在Java全局坐标中"
+          },
+          "channels": {
+            "position": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  -14.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  0.0,
+                  -2.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.8,
+                "value": [
+                  0.0,
+                  1.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 2.4,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "body",
+          "parent": "root",
+          "source_rest_origin": [
+            0,
+            14,
+            0
+          ],
+          "source_rest_rotation": [
+            0,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": "J_L_Spine",
+            "reason": "驱动躯干、肩、头和双臂；需换基，不能直抄Euler"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  -25.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  -15.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.8,
+                "value": [
+                  6.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 2.4,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "head",
+          "parent": "body",
+          "source_rest_origin": [
+            0,
+            26,
+            0
+          ],
+          "source_rest_rotation": [
+            0,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": "J_Neck",
+            "reason": "原Head网格权重骨Head位于J_Neck下；J_Head是同级辅助骨，直接动它不会驱动Head网格"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  -30.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  -20.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.8,
+                "value": [
+                  12.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 2.4,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "right_arm",
+          "parent": "body",
+          "source_rest_origin": [
+            5,
+            25,
+            0
+          ],
+          "source_rest_rotation": [
+            75,
+            0,
+            35
+          ],
+          "retarget": {
+            "target": "J_R_Arm",
+            "reason": "右上臂，持物通过J_R_Hand/J_R_Weapon继承"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  -60.0,
+                  0.0,
+                  -30.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  -40.0,
+                  0.0,
+                  -20.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.8,
+                "value": [
+                  5.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 2.4,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "left_arm",
+          "parent": "body",
+          "source_rest_origin": [
+            -5,
+            25,
+            0
+          ],
+          "source_rest_rotation": [
+            12,
+            0,
+            -8
+          ],
+          "retarget": {
+            "target": "J_L_Arm",
+            "reason": "左上臂"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  -10.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  -5.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.8,
+                "value": [
+                  40.0,
+                  0.0,
+                  -30.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 2.4,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "cape",
+          "parent": "body",
+          "source_rest_origin": [
+            0,
+            27,
+            3
+          ],
+          "source_rest_rotation": [
+            -6,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": null,
+            "reason": "独立披风摆动；当前袍无对应独立骨时仅保留参考，不凭空新建"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  10.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 1.8,
+                "value": [
+                  -14.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              },
+              {
+                "time": 2.4,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "catmullrom"
+              }
+            ]
+          }
+        },
+        {
+          "bone": "gem_spin",
+          "parent": "staff",
+          "source_rest_origin": [
+            5,
+            39,
+            0
+          ],
+          "source_rest_rotation": [
+            0,
+            0,
+            0
+          ],
+          "retarget": {
+            "target": null,
+            "reason": "原法杖宝石自转；现有蛇矛没有此部件，不移植"
+          },
+          "channels": {
+            "rotation": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 1.2,
+                "value": [
+                  0.0,
+                  180.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              },
+              {
+                "time": 2.4,
+                "value": [
+                  0.0,
+                  360.0,
+                  0.0
+                ],
+                "interpolation": "linear"
+              }
+            ]
+          }
+        }
+      ],
+      "semantic": "emerge from ground: root y -14→-2→+1→0; NOT a sustained flight loop",
+      "cues": [
+        {
+          "time": 0,
+          "event": "summoned (enter)"
+        },
+        {
+          "time": 1.6,
+          "event": "laugh"
+        }
+      ]
+    }
+  },
+  "source_staff": {
+    "own_cast_rise_keys": 0,
+    "parent": "right_arm",
+    "rest_rotation": [
+      -71.887,
+      -33.644,
+      -10.272
+    ],
+    "note": "法杖通过右臂继承，另有静止rest补偿；不要将补偿姿态当作蛇矛原始绑定"
+  }
+}

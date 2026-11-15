@@ -45,7 +45,8 @@ def read(rel):
         problems.append("missing function: " + rel)
         return ""
     with io.open(path, encoding="utf-8") as handle:
-        return handle.read()
+        # add_ally_units.py 把敌方技能里的 @a 改写成按单位标签选（玩家 + 友军）；这里按原来的 @a 判读
+        return re.sub(r"@e\[tag=rpg\.unit(?:\.\w+)?,", "@a[", handle.read())
 
 
 def particle_budget(data):
@@ -182,7 +183,11 @@ for lord_index, (lord, spirits) in enumerate(LORDS, 1):
             with io.open(loot, encoding="utf-8") as handle:
                 data = json.load(handle)
             # 领主材料、职业材料，加 add_pact_depth 的柱页和柱印。
-            if len(data.get("pools", [])) != 4:
+            # add_armor_sets 另挂的护甲掉落池（rpg:armor_set/…）不计在内。
+            pools = [p for p in data.get("pools", [])
+                     if not any(str(e.get("value", "")).startswith("rpg:armor_set/")
+                                for e in p.get("entries", []))]
+            if len(pools) != 4:
                 problems.append("%s/%s loot lacks lord, role, page and seal pools" % (lord, spirit))
         except Exception as exc:
             problems.append("%s/%s loot invalid: %s" % (lord, spirit, exc))

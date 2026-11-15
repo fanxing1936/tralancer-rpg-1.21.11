@@ -1,0 +1,311 @@
+{
+  "engine": "independent Python/NumPy CPU orthographic rasterizer",
+  "status": "OFFLINE SIMULATION; NOT Blockbench; NOT Minecraft; no bloom",
+  "generator_sha256": "8367db490eb5ac8c02cbe661cdebe4a014c0e0aa17579d5cb66d6a4043fb8d18",
+  "pose": {
+    "clip": "mortar",
+    "time": 1.2
+  },
+  "before": {
+    "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\heart_of_ender_ref\\gallery_followup\\pose_analysis\\candidate.bbmodel",
+    "bbmodel_sha256": "5a6f434080a8bae55fa6f26b073421d656d67c515b1058b575eee730dab8e75c",
+    "embedded_png_sha256": "8fe03a292ebf6c72b534d5591025c16a244ecdfd2009f739678026c19e2b4968",
+    "decoded_rgba_sha256": "2587b5bfad8e32f04e07117764e477423d6f0092c5f42077541bfbc580ca251a",
+    "atlas_size": [
+      1024,
+      1024
+    ],
+    "uv_resolution": [
+      1024.0,
+      1024.0
+    ],
+    "bone_count": 26,
+    "cube_count": 49,
+    "textured_face_count": 268,
+    "skipped_null_faces": 26,
+    "posed_geometry_sha256": "43289950ca82addf9162298361fe1afdfb1a7041ba15e359655ca741cdb7f805"
+  },
+  "after": {
+    "path": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\heart_of_ender_ref\\final_material\\heart_of_ender_final.bbmodel",
+    "bbmodel_sha256": "ebc5d7cfc16cc5e3e5f3357b82c6c99da29b468faafffe8c9d7f4ab9f1a1e106",
+    "embedded_png_sha256": "8fe03a292ebf6c72b534d5591025c16a244ecdfd2009f739678026c19e2b4968",
+    "decoded_rgba_sha256": "2587b5bfad8e32f04e07117764e477423d6f0092c5f42077541bfbc580ca251a",
+    "atlas_size": [
+      1024,
+      1024
+    ],
+    "uv_resolution": [
+      1024.0,
+      1024.0
+    ],
+    "bone_count": 26,
+    "cube_count": 51,
+    "textured_face_count": 270,
+    "skipped_null_faces": 36,
+    "posed_geometry_sha256": "bcb239b21c9d93f4f50d058b5532a2eca1af2a5859f77c298fab3feebe19d6a1"
+  },
+  "views": {
+    "front": {
+      "camera": {
+        "target": [
+          4.267759053077459,
+          17.76883528123672,
+          -2.461175119557174
+        ],
+        "viewer": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "right": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "up": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "height": 82.33307399500625,
+        "size": 800
+      },
+      "before": {
+        "outward_faces_drawn": 126,
+        "back_or_edge_faces_culled": 142,
+        "degenerate_faces_skipped": 0,
+        "retained_fragments": 155336,
+        "occupied_pixels": 104796,
+        "occupied_bbox_xyxy": [
+          72,
+          179,
+          728,
+          621
+        ]
+      },
+      "after": {
+        "outward_faces_drawn": 128,
+        "back_or_edge_faces_culled": 142,
+        "degenerate_faces_skipped": 0,
+        "retained_fragments": 160844,
+        "occupied_pixels": 104796,
+        "occupied_bbox_xyxy": [
+          72,
+          179,
+          728,
+          621
+        ]
+      },
+      "changed_pixels": 5392,
+      "max_channel_difference": 157
+    },
+    "right_side": {
+      "camera": {
+        "target": [
+          4.267759053077459,
+          17.76883528123672,
+          -2.461175119557174
+        ],
+        "viewer": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "right": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "up": [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        "height": 82.33307399500625,
+        "size": 800
+      },
+      "before": {
+        "outward_faces_drawn": 135,
+        "back_or_edge_faces_culled": 133,
+        "degenerate_faces_skipped": 0,
+        "retained_fragments": 149124,
+        "occupied_pixels": 66534,
+        "occupied_bbox_xyxy": [
+          199,
+          179,
+          601,
+          621
+        ]
+      },
+      "after": {
+        "outward_faces_drawn": 136,
+        "back_or_edge_faces_culled": 134,
+        "degenerate_faces_skipped": 0,
+        "retained_fragments": 149558,
+        "occupied_pixels": 66536,
+        "occupied_bbox_xyxy": [
+          199,
+          179,
+          601,
+          621
+        ]
+      },
+      "changed_pixels": 376,
+      "max_channel_difference": 125
+    },
+    "back": {
+      "camera": {
+        "target": [
+          4.267759053077459,
+          17.76883528123672,
+          -2.461175119557174
+        ],
+        "viewer": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "right": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "up": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "height": 82.33307399500625,
+        "size": 800
+      },
+      "before": {
+        "outward_faces_drawn": 122,
+        "back_or_edge_faces_culled": 146,
+        "degenerate_faces_skipped": 0,
+        "retained_fragments": 152849,
+        "occupied_pixels": 104918,
+        "occupied_bbox_xyxy": [
+          72,
+          179,
+          728,
+          621
+        ]
+      },
+      "after": {
+        "outward_faces_drawn": 122,
+        "back_or_edge_faces_culled": 148,
+        "degenerate_faces_skipped": 0,
+        "retained_fragments": 152849,
+        "occupied_pixels": 104918,
+        "occupied_bbox_xyxy": [
+          72,
+          179,
+          728,
+          621
+        ]
+      },
+      "changed_pixels": 0,
+      "max_channel_difference": 0
+    },
+    "three_quarter": {
+      "camera": {
+        "target": [
+          4.267759053077459,
+          17.76883528123672,
+          -2.461175119557174
+        ],
+        "viewer": [
+          -0.640856384707485,
+          0.4226182536986591,
+          -0.640856384707485
+        ],
+        "right": [
+          -0.7071067811865476,
+          0.0,
+          0.7071067811865476
+        ],
+        "up": [
+          0.2988362330435385,
+          0.9063077907867149,
+          0.2988362330435385
+        ],
+        "height": 82.33307399500625,
+        "size": 800
+      },
+      "before": {
+        "outward_faces_drawn": 137,
+        "back_or_edge_faces_culled": 131,
+        "degenerate_faces_skipped": 0,
+        "retained_fragments": 189019,
+        "occupied_pixels": 105329,
+        "occupied_bbox_xyxy": [
+          147,
+          108,
+          757,
+          617
+        ]
+      },
+      "after": {
+        "outward_faces_drawn": 138,
+        "back_or_edge_faces_culled": 132,
+        "degenerate_faces_skipped": 0,
+        "retained_fragments": 194395,
+        "occupied_pixels": 105329,
+        "occupied_bbox_xyxy": [
+          147,
+          108,
+          757,
+          617
+        ]
+      },
+      "changed_pixels": 4748,
+      "max_channel_difference": 106
+    }
+  },
+  "self_checks": [
+    "north: outward normal / four UV corners / mirrored U / back culling",
+    "east: outward normal / four UV corners / mirrored U / back culling",
+    "south: outward normal / four UV corners / mirrored U / back culling",
+    "west: outward normal / four UV corners / mirrored U / back culling",
+    "up: outward normal / four UV corners / mirrored U / back culling",
+    "down: outward normal / four UV corners / mirrored U / back culling",
+    "far-to-near normal alpha blending",
+    "8-bit alpha25 discarded / alpha26 retained"
+  ],
+  "rendering": {
+    "nearest_neighbor": true,
+    "alpha_cutoff": 0.1,
+    "culling": "draw outward-facing front faces; discard back and edge-on faces",
+    "sorting": "all model quads in one list, mean view-depth far-to-near",
+    "depth_test": "nearer-or-equal, depth write after alpha threshold",
+    "blend": "SRC_ALPHA / ONE_MINUS_SRC_ALPHA",
+    "lighting": "unlit original atlas RGB; no exposure, tint, directional shading or bloom",
+    "background_rgb": [
+      55,
+      60,
+      70
+    ],
+    "source_changes": "none; source bbmodel and atlas read only"
+  },
+  "limitations": [
+    "普通透明叠加仅模拟单批次按面中心排序；不证明游戏实体批次、交叉面和共面排序。",
+    "未模拟 Minecraft 方向光、光照贴图、雾、色彩空间转换、mipmap 或图集边缘缩进。",
+    "全亮原色方便比较微光像素；实际游戏可能更暗，没有泛光或动态照亮环境。",
+    "直接使用模型单位与 dm.posed_matrix；不是载体座高、世界体型或真实游戏截图。",
+    "拒绝非零元素旋转、UV旋转、stretch或第二贴图，避免偏离现有共用管线。"
+  ],
+  "image_sha256": {
+    "front_before.png": "a721ea924e918e148a84a126c7f9e3586ba5169dec91109ae7369fd3047e5895",
+    "front_after.png": "dd36da3b4886f87bb7b55d9d0fe4e5c1dc8413317b62c5b710d26fb977348f71",
+    "front_comparison.png": "4d8979942840ad733c2c1df1c6d5d1e5761ef239252b6dbf560220bb20686eab",
+    "right_side_before.png": "d3d56f26b3edb46eb5eb14a451ecde61376cfabc551963725e8fc5509becb48a",
+    "right_side_after.png": "71e9b83e0dc0af81c2b7c36eb809e36fce81818b99ab05db7967e38e44f4753b",
+    "right_side_comparison.png": "f54164c9096922613bac9442b0984b1c564355c556e42467d3da98ec6b447b86",
+    "back_before.png": "c443d48e933fc2fa0b73b1136298b6da1476a8bd784ed75c86a2a0744cbf11c9",
+    "back_after.png": "c443d48e933fc2fa0b73b1136298b6da1476a8bd784ed75c86a2a0744cbf11c9",
+    "back_comparison.png": "c84eee7d71118eabaf048206b774546a52bede2583983a805a699d0a526ca0c5",
+    "three_quarter_before.png": "0438806e54cbf66d53f2eca0a62a3cd8c09aecbaa46f143254f6e84807e07b87",
+    "three_quarter_after.png": "b792cb22eefb02ecef799a271e90bd702e22036ee008b4280bcacf76534ba402",
+    "three_quarter_comparison.png": "cf6f4eb957262c8cf3220557a87395e5fa04efc7129ceb10e2bd2a5bc239bc8e"
+  }
+}
