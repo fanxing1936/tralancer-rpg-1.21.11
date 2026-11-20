@@ -1,0 +1,146 @@
+{
+ "model_scale": 7.496633670709872,
+ "height_blocks": 1.87,
+ "source_height_cm": 207.87107944488525,
+ "turn": 0,
+ "merge": {
+  "head": [
+   "mouth",
+   "l_eye_pupil",
+   "l_eye_iris",
+   "r_eye_pupil",
+   "r_eye_iris"
+  ]
+ },
+ "held_bone": null,
+ "attachments": [
+  {
+   "name": "rapier",
+   "mesh": "D:\\agent\\dungeons_extract\\upgrade\\saul\\assets\\Dungeons\\Content\\Patch2\\Actors\\Equipment\\MeleeWeapons\\Rapier\\SM_Rapier.glb",
+   "bone": "J_R_Weapon",
+   "material": "RAPIER",
+   "component": "rapier",
+   "attach": "J_R_Weapon"
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\saul"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Player_Master_Idle_Katana",
+   "seconds": 3.3333333,
+   "loop": true,
+   "ticks": 67,
+   "max_bone_error_px": 6.743140377217148e-08,
+   "max_vertex_error_px": 2.147070057177381e-07,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Player_Master_Walk_Katana",
+   "seconds": 4.3333335,
+   "loop": true,
+   "ticks": 87,
+   "max_bone_error_px": 2.1536493874651314e-05,
+   "max_vertex_error_px": 2.8180250570486816e-05,
+   "notifies": []
+  },
+  {
+   "clip": "shadow",
+   "source": "Player_Master_Emote_Shadowboxing",
+   "seconds": 4.2,
+   "loop": false,
+   "ticks": 84,
+   "max_bone_error_px": 0.08497217181795857,
+   "max_vertex_error_px": 0.09821834367651809,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_Player_HideWeapon_C",
+     null
+    ],
+    [
+     0.0,
+     "TimedSoundEffect",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "thrust",
+   "source": "Player_Master_RapierCombo1Start",
+   "seconds": 0.339,
+   "loop": false,
+   "ticks": 7,
+   "max_bone_error_px": 0.00011525119662623141,
+   "max_vertex_error_px": 0.0010480317919107612,
+   "notifies": [
+    [
+     0.0371,
+     "Spear_Swing_Light_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0558,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "final",
+   "source": "Player_Master_RapierCombo5Final",
+   "seconds": 1.1890001,
+   "loop": false,
+   "ticks": 24,
+   "max_bone_error_px": 0.026341874186958714,
+   "max_vertex_error_px": 0.08637748359011824,
+   "notifies": [
+    [
+     0.2332,
+     "Spear_Swing_Light_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2828,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "roll_f",
+   "source": "Player_Master_DodgeRollForward",
+   "seconds": 0.625,
+   "loop": false,
+   "ticks": 13,
+   "max_bone_error_px": 0.09373483565936451,
+   "max_vertex_error_px": 0.09828031849652777,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "saul_ghost",
+  "source_mesh_sha256": "c69a08825b0f3a9acbef6e7b8588b0cdb78eee6d7a31deee2cc02bcb58ceb24d",
+  "triangles": 538,
+  "all_triangles_covered_once": true,
+  "bones": 38,
+  "plane_groups": 26,
+  "display_parts": 22,
+  "elements": 160,
+  "direct_uv_elements": 139,
+  "baked_elements": 21,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Valorie": 0,
+   "RAPIER": 1
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ }
+}

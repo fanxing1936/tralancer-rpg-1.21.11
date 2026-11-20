@@ -63,12 +63,25 @@ KINDS = {
 
 
 class Fx:
-    def __init__(self, fn, tag, life, kind, writer, kinds=None):
+    def __init__(self, fn, tag, life, kind, writer, kinds=None, arts=()):
+        """arts: extra (art module, font) pairs searched before the Usurper set; a module gives
+        glyph_table() and glyph_text(name, frame).  Item frames named "ns:path" are used as is."""
         self.fn, self.tag, self.life_obj, self.kind_obj, self.w = fn, tag, life, kind, writer
+        self.arts = list(arts) + [(art, FONT)]
         self.new = tag + "new"
         self.kinds = dict(KINDS)
         self.kinds.update(kinds or {})
         self.ids = dict((n, i + 1) for i, n in enumerate(self.kinds))
+
+    def art_of(self, name):
+        for mod, font in self.arts:
+            if name in mod.glyph_table():
+                return mod, font
+        raise KeyError(name)
+
+    def gscale(self, name, blocks):
+        mod, _f = self.art_of(name)
+        return round(blocks / (mod.glyph_table()[name][1] * 0.025), 4)
 
     # ---- birth
     def born(self, life=None, kind=None):
@@ -105,17 +118,18 @@ class Fx:
         return [self.disp(name, pos=pos, scale=(size, 1, size), color=color, tags=tags, yaw=yaw)] + self.born(life, kind)
 
     def glyph(self, name, blocks, color, pos="~ ~ ~", frame=0, kind=None, life=None, tags=(), billboard="center",
-              trans=(0, 0, 0), start=None, born_now=True, tpd=1):
+              trans=(0, 0, 0), start=None, born_now=True, tpd=1, lrot=None, view=2):
         """A glowing sprite: one text_display glyph, tinted by the text colour."""
-        k = gscale(name, blocks)
+        k = self.gscale(name, blocks)
+        mod, font = self.art_of(name)
         s = start if start is not None else (k, k, k)
         if not isinstance(s, tuple):
             s = (s, s, s)
         line = ('summon minecraft:text_display %s {Tags:[%s],text:{text:"%s",font:"%s",color:"%s"},background:0,'
-                'billboard:"%s",brightness:{sky:15,block:15},teleport_duration:%d,interpolation_duration:3,view_range:2f,'
+                'billboard:"%s",brightness:{sky:15,block:15},teleport_duration:%d,interpolation_duration:3,view_range:%gf,'
                 'transformation:{translation:[%sf,%sf,%sf],left_rotation:%s,scale:[%gf,%gf,%gf],right_rotation:%s}}'
-                % (pos, self._tags(tags), art.glyph_text(name, frame), FONT, color, billboard, tpd, trans[0], trans[1], trans[2],
-                   ID, s[0], s[1], s[2], ID))
+                % (pos, self._tags(tags), mod.glyph_text(name, frame), font, color, billboard, tpd, view, trans[0], trans[1],
+                   trans[2], lrot or ID, s[0], s[1], s[2], ID))
         return [line] + (self.born(life, kind) if born_now else [])
 
     # ---- shorthands
@@ -157,14 +171,31 @@ class Fx:
             for at_, ticks, frag in k.get("steps", []):
                 body.append("execute if score @s %s matches %d run data merge entity @s "
                             "{start_interpolation:0,interpolation_duration:%d,transformation:{%s}}" % (self.life_obj, at_, ticks, frag))
+            if "loop" in k:
+                # A looping flipbook: every `step` ticks, frame = (life / step) % count (one data modify per step).
+                how, seq, count, step = k["loop"]
+                body.append("function %s/fx/loop/%s" % (self.fn, name))
+                lp = ["scoreboard players operation #f %s = @s %s" % (self.life_obj, self.life_obj),
+                      "scoreboard players set #fk %s %d" % (self.life_obj, step),
+                      "scoreboard players operation #g %s = #f %s" % (self.life_obj, self.life_obj),
+                      "scoreboard players operation #g %s %%= #fk %s" % (self.life_obj, self.life_obj),
+                      "execute unless score #g %s matches 0 run return 0" % self.life_obj,
+                      "scoreboard players operation #f %s /= #fk %s" % (self.life_obj, self.life_obj),
+                      "scoreboard players set #fk %s %d" % (self.life_obj, count),
+                      "scoreboard players operation #f %s %%= #fk %s" % (self.life_obj, self.life_obj)]
+                for i in range(count):
+                    lp.append("execute if score #f %s matches %d run return run data modify entity @s text.text set value \"%s\""
+                              % (self.life_obj, i, self.art_of(seq)[0].glyph_text(seq, count - 1 - i)))
+                self.w("fx/loop/%s" % name, lp)
             if "frames" in k:
                 how, seq, count, step = k["frames"]
                 for i in range(1, count):
                     at_ = k["life"] - i * step
                     if how == "glyph":
                         body.append("execute if score @s %s matches %d run data modify entity @s text.text set value \"%s\""
-                                    % (self.life_obj, at_, art.glyph_text(seq, i)))
+                                    % (self.life_obj, at_, self.art_of(seq)[0].glyph_text(seq, i)))
                     else:
+                        item = seq if ":" in seq else "%s/%s" % (NS, seq)
                         body.append("execute if score @s %s matches %d run data modify entity @s "
-                                    "item.components.\"minecraft:item_model\" set value \"%s/%s_%d\"" % (self.life_obj, at_, NS, seq, i))
+                                    "item.components.\"minecraft:item_model\" set value \"%s_%d\"" % (self.life_obj, at_, item, i))
             self.w("fx/k/%s" % name, body)

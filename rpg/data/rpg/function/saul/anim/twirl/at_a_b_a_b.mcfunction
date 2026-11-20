@@ -1,0 +1,3 @@
+execute if score @s rpg_slm_t matches 25 run return run function rpg:saul/anim/twirl/f24
+execute if score @s rpg_slm_t matches 27 run return run function rpg:saul/anim/twirl/f26
+execute if score @s rpg_slm_t matches 29 run return run function rpg:saul/anim/twirl/f28

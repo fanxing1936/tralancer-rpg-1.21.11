@@ -350,8 +350,13 @@ def with_attachments(source, meta_doc, attachments):
     bones = [dict(b) for b in meta_doc['bones']]
     index = {b['name']: i for i, b in enumerate(bones)}
     for att in attachments:
-        m = np.asarray(att['matrix'], dtype=float)
+        m = np.asarray(att['matrix'], dtype=float).copy()
         s = float(np.cbrt(abs(np.linalg.det(m[:3, :3]))))
+        if np.linalg.det(m[:3, :3]) < 0:
+            # a mirrored component (RelativeScale3D with one negative axis): a bone can only rotate, so the
+            # bone takes m @ diag(1,-1,1) and the mesh is flipped in its own Y before it is placed (below)
+            m[:3, :3] = m[:3, :3] @ np.diag([1., -1., 1.])
+            att['_mirror_y'] = True
         bones.append({'name': att['name'], 'parent': index[att['bone']], 'translation': m[:3, 3].tolist(),
                       'rotation': matrix_quat(m[:3, :3] / s), 'scale': [s, s, s]})
         index[att['name']] = len(bones) - 1
@@ -372,8 +377,12 @@ def with_attachments(source, meta_doc, attachments):
         holder = att['child']['name'] if att.get('child') else att['name']
         static = cube_source(att['cubes'], att['texture_size']) if att.get('cubes') else load_static(att['mesh'])
         w = world[index[holder]]
-        v = static['vertices_ue_cm'] @ w[:3, :3].T + w[:3, 3]
-        vertices.append(v); uv.append(static['uv']); triangles.append(static['triangles'] + nv)
+        local, tris = static['vertices_ue_cm'], static['triangles']
+        if att.get('_mirror_y'):
+            local = local * np.array([1., -1., 1.])
+            tris = tris[:, ::-1]                    # a mirror turns the faces inside out; keep them facing out
+        v = local @ w[:3, :3].T + w[:3, 3]
+        vertices.append(v); uv.append(static['uv']); triangles.append(tris + nv)
         wt = np.zeros((len(v), k)); wt[:, 0] = 1
         jt = np.zeros((len(v), k), dtype=np.int64); jt[:, 0] = index[holder]
         weights.append(wt); joints.append(jt)

@@ -1,0 +1,25 @@
+scoreboard players add @s rpg_sl_t 1
+execute if score @s rpg_sl_sk matches 1 run return run function rpg:saul_boss/sk/thrust
+execute if score @s rpg_sl_sk matches 2 run return run function rpg:saul_boss/sk/left
+execute if score @s rpg_sl_sk matches 3 run return run function rpg:saul_boss/sk/right
+execute if score @s rpg_sl_sk matches 4 run return run function rpg:saul_boss/sk/double
+execute if score @s rpg_sl_sk matches 5 run return run function rpg:saul_boss/sk/final
+execute if score @s rpg_sl_sk matches 6 run return run function rpg:saul_boss/sk/lunge
+execute if score @s rpg_sl_sk matches 7 run return run function rpg:saul_boss/sk/guard
+execute if score @s rpg_sl_sk matches 8 run return run function rpg:saul_boss/sk/counter
+execute if score @s rpg_sl_sk matches 9 run return run function rpg:saul_boss/sk/shadow
+execute if score @s rpg_sl_sk matches 10 run return run function rpg:saul_boss/sk/line
+execute if score @s rpg_sl_sk matches 11 run return run function rpg:saul_boss/sk/circle
+execute if score @s rpg_sl_sk matches 12 run return run function rpg:saul_boss/sk/stagger
+execute if score @s rpg_sl_sk matches 13 run return run function rpg:saul_boss/sk/lunge3
+execute if score @s rpg_sl_sk matches 14 run return run function rpg:saul_boss/sk/web
+execute if score @s rpg_sl_sk matches 15 run return run function rpg:saul_boss/sk/feint
+execute if score @s rpg_sl_sk matches 16 run return run function rpg:saul_boss/sk/cuts
+execute if score @s rpg_sl_sk matches 17 run return run function rpg:saul_boss/sk/last
+execute if score @s rpg_sl_sk matches 18 run return run function rpg:saul_boss/sk/flash
+execute if score @s rpg_sl_sk matches 19 run return run function rpg:saul_boss/sk/echo
+execute if score @s rpg_sl_sk matches 20 run return run function rpg:saul_boss/sk/thrusts
+execute if score @s rpg_sl_sk matches 21 run return run function rpg:saul_boss/sk/step
+execute if score @s rpg_sl_sk matches 22 run return run function rpg:saul_boss/sk/echoes
+execute if score @s rpg_sl_sk matches 23 run return run function rpg:saul_boss/sk/rain
+execute if score @s rpg_sl_sk matches 24 run return run function rpg:saul_boss/sk/dance

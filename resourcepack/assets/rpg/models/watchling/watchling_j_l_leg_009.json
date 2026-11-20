@@ -1,0 +1,44 @@
+{
+  "textures": {
+    "0": "rpg:item/watchling/atlas",
+    "particle": "rpg:item/watchling/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        8.0,
+        7.8799,
+        7.88
+      ],
+      "to": [
+        8.0,
+        8.1201,
+        8.12
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            13.75,
+            6.875,
+            13.125,
+            7.5
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            13.75,
+            7.5,
+            13.125,
+            6.875
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    }
+  ]
+}

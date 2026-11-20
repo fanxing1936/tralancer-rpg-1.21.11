@@ -1,0 +1,166 @@
+{
+ "model_scale": 9.205640617600928,
+ "height_blocks": 2.9,
+ "source_height_cm": 262.52020549727604,
+ "turn": 0,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Content_DLC6/Actors/Characters/Enemies/Endling/SK_Enderling",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\watchling"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "WatcherOfTheEnd_Idle",
+   "seconds": 3.625,
+   "loop": true,
+   "ticks": 73,
+   "max_bone_error_px": 0.00021909420860832481,
+   "max_vertex_error_px": 0.00022210532448411235,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "WatcherOfTheEnd_Walk",
+   "seconds": 1.875,
+   "loop": true,
+   "ticks": 38,
+   "max_bone_error_px": 0.06526060523873504,
+   "max_vertex_error_px": 0.06612806352389332,
+   "notifies": [
+    [
+     0.0001,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.4733,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.9545,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.408,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "attack",
+   "source": "WatcherOfTheEnd_BasicAttack",
+   "seconds": 1.4166666,
+   "loop": false,
+   "ticks": 29,
+   "max_bone_error_px": 0.1653313631740937,
+   "max_vertex_error_px": 0.17693583245764324,
+   "notifies": [
+    [
+     0.4738,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.5811,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "heavy",
+   "source": "WatcherOfTheEnd_HeavyAttack",
+   "seconds": 1.5833334,
+   "loop": false,
+   "ticks": 32,
+   "max_bone_error_px": 0.10337396834653909,
+   "max_vertex_error_px": 0.10510892305247668,
+   "notifies": [
+    [
+     0.6709,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "tp_out",
+   "source": "WatcherOfTheEnd_TeleportOut",
+   "seconds": 0.41666666,
+   "loop": false,
+   "ticks": 9,
+   "max_bone_error_px": 0.024411549277821142,
+   "max_vertex_error_px": 0.024725558973792004,
+   "notifies": [
+    [
+     0.0001,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "tp_in",
+   "source": "WatcherOfTheEnd_TeleportIn",
+   "seconds": 0.5416667,
+   "loop": false,
+   "ticks": 11,
+   "max_bone_error_px": 0.013625468317267377,
+   "max_vertex_error_px": 0.01381773472516769,
+   "notifies": [
+    [
+     0.0001,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0194,
+     "AnimNS_Enderman_BodyFlash_C",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "stun",
+   "source": "WatcherOfTheEnd_Stun",
+   "seconds": 1.7916666,
+   "loop": true,
+   "ticks": 36,
+   "max_bone_error_px": 0.0024204346463311205,
+   "max_vertex_error_px": 0.0024562409674454364,
+   "notifies": [
+    [
+     0.0001,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "watchling",
+  "source_mesh_sha256": "4b4f8e81823288862b6f9ddf72388885ffb8075256093216009807e9d8ef7540",
+  "triangles": 100,
+  "all_triangles_covered_once": true,
+  "bones": 28,
+  "plane_groups": 27,
+  "display_parts": 24,
+  "elements": 52,
+  "direct_uv_elements": 32,
+  "baked_elements": 18,
+  "glow_groups": 16,
+  "textures": {
+   "MI_Endling": 0
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

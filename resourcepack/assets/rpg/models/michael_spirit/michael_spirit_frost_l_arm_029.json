@@ -1,0 +1,43 @@
+{
+  "textures": {
+    "0": "rpg:item/michael_spirit/atlas",
+    "particle": "rpg:item/michael_spirit/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.8847,
+        7.6394,
+        8.0
+      ],
+      "to": [
+        8.1153,
+        8.3606,
+        8.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            12.0,
+            4.0,
+            11.6875,
+            4.8125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            11.6875,
+            4.0,
+            12.0,
+            4.8125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "shade": false
+    }
+  ]
+}

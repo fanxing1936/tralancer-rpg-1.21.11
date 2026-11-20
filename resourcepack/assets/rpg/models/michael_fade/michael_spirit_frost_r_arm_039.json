@@ -1,0 +1,42 @@
+{
+  "textures": {
+    "0": "rpg:item/michael/atlas_fade",
+    "particle": "rpg:item/michael/atlas_fade"
+  },
+  "elements": [
+    {
+      "from": [
+        7.8854,
+        8.0,
+        7.64
+      ],
+      "to": [
+        8.1146,
+        8.0,
+        8.36
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            6.1875,
+            5.5625,
+            6.5,
+            6.375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            6.1875,
+            6.375,
+            6.5,
+            5.5625
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

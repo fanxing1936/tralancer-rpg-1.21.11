@@ -1,0 +1,1 @@
+summon minecraft:vindicator ~ ~ ~ {Tags:["rpg.michael_spirit.carrier","rpg.michael_spirit.preview","rpg.michael_spirit.dual_rib"],NoAI:1b,Silent:1b,PersistenceRequired:1b,Invulnerable:1b,CustomName:{text:"米迦勒",color:"#FF3300"},active_effects:[{id:"minecraft:invisibility",duration:-1,amplifier:0,show_particles:0b}]}

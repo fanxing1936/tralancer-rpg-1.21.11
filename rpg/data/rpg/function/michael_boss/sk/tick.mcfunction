@@ -1,0 +1,21 @@
+scoreboard players add @s rpg_mk_t 1
+execute if score @s rpg_mk_sk matches 1 run return run function rpg:michael_boss/sk/slash1
+execute if score @s rpg_mk_sk matches 2 run return run function rpg:michael_boss/sk/slash2
+execute if score @s rpg_mk_sk matches 3 run return run function rpg:michael_boss/sk/sweep
+execute if score @s rpg_mk_sk matches 4 run return run function rpg:michael_boss/sk/quis
+execute if score @s rpg_mk_sk matches 5 run return run function rpg:michael_boss/sk/dive
+execute if score @s rpg_mk_sk matches 6 run return run function rpg:michael_boss/sk/fold
+execute if score @s rpg_mk_sk matches 7 run return run function rpg:michael_boss/sk/feather
+execute if score @s rpg_mk_sk matches 8 run return run function rpg:michael_boss/sk/watch
+execute if score @s rpg_mk_sk matches 9 run return run function rpg:michael_boss/sk/gaze
+execute if score @s rpg_mk_sk matches 10 run return run function rpg:michael_boss/sk/rslash
+execute if score @s rpg_mk_sk matches 11 run return run function rpg:michael_boss/sk/dash
+execute if score @s rpg_mk_sk matches 12 run return run function rpg:michael_boss/sk/cross
+execute if score @s rpg_mk_sk matches 13 run return run function rpg:michael_boss/sk/rain
+execute if score @s rpg_mk_sk matches 14 run return run function rpg:michael_boss/sk/who
+execute if score @s rpg_mk_sk matches 15 run return run function rpg:michael_boss/sk/sanctus
+execute if score @s rpg_mk_sk matches 16 run return run function rpg:michael_boss/sk/trumpet
+execute if score @s rpg_mk_sk matches 17 run return run function rpg:michael_boss/sk/bones
+execute if score @s rpg_mk_sk matches 18 run return run function rpg:michael_boss/sk/seraph
+execute if score @s rpg_mk_sk matches 19 run return run function rpg:michael_boss/sk/stars
+execute if score @s rpg_mk_sk matches 20 run return run function rpg:michael_boss/sk/burn

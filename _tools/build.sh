@@ -151,6 +151,12 @@ python add_lord_servants.py ../resourcepack ../rpg
 python add_usurper_model.py ../resourcepack ../rpg
 # 圣殿大团长雅克：原作玩家英雄网格 + 赫克斯皮肤 + 英雄铠甲，坟墓克星与竖琴弩（jacques_dungeons_ref/）
 python add_jacques_model.py ../resourcepack ../rpg
+# 疯人王扫罗：原作玩家英雄网格 + 织网者皮肤 + 坚毅铠甲，千刀（saul_dungeons_ref/、saul_ghost_dungeons_ref/）
+python add_saul_model.py ../resourcepack ../rpg
+# 米迦勒灵体：原版 Cloudwatcher、霜冻护甲和双持武器及动作。
+python add_michael_spirit_model.py ../resourcepack ../rpg
+# 天使长米迦勒：半透明灵体 + 六翼（michael_dungeons_ref/，build_michael_model.py）；守望者（watchling_dungeons_ref/）
+python add_michael_model.py ../resourcepack ../rpg
 # 篡夺者战的特效素材：原作附魔台符文、灵魂图腾法阵、六芒星、唤魔者尖牙（usurper_fx_ref/）
 python add_usurper_fx_art.py ../resourcepack
 python add_lucifer_model.py ../resourcepack ../rpg --defer-shaders
@@ -180,6 +186,12 @@ python add_lucifer_boss_art.py ../resourcepack
 python add_usurper_boss_art.py ../resourcepack
 # 雅克的位图血条：饰物与标题在 jacques_boss_ref/bar/（占位：原作图标与哥特字体）
 python add_jacques_boss_art.py ../resourcepack
+# 扫罗的位图血条：饰物与标题在 saul_boss_ref/bar/（占位：原作图标与哥特字体）
+python add_saul_boss_art.py ../resourcepack
+# 米迦勒的位图血条、羽毛与骨头的物品模型（占位在 michael_boss_ref/bar/）
+# 米迦勒专属特效贴图：原作素材 + Codex 序列帧（michael_fx_ref/），字体 rpg:michael_vfx
+python add_michael_fx_art.py ../resourcepack
+python add_michael_boss_art.py ../resourcepack
 # 教皇战（docs/POPE-DESIGN.md）：调用各模型的函数，放在所有模型之后。
 python add_pope_fight.py ../rpg
 # 路西法二阶段「知善恶树」的变身与招式（docs/LUCIFER-P2-DESIGN.md）；要在两阶段外观、
@@ -193,6 +205,10 @@ python add_usurper_boss.py ../rpg
 python add_jacques_boss.py ../rpg
 # 友军雅克：圣殿誓约召他并肩作战 20 秒（docs/JACQUES-ALLY.md）
 python add_jacques_ally.py ../rpg ../resourcepack
+# 疯人王扫罗 Boss：docs/SAUL-DESIGN.md
+python add_saul_boss.py ../rpg
+# 天使长米迦勒 Boss（docs/MICHAEL-DESIGN.md）
+python add_michael_boss.py ../rpg
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.

@@ -33,10 +33,10 @@ HOSTILE = {
     "heart_of_ender", "jacques_boss", "leviathan", "lucifer_boss", "lucifer_fight", "lucifer_lord", "lucifer_p2",
     "lucifer_servant", "lucifer_vine", "mammon", "mammon_lord", "mammon_servant", "minion", "pope_fight",
     "prime_enchanter", "royal_guard", "samael_lord", "samael_servant", "sunken_skeleton", "taint", "tower_guard",
-    "tower_wraith", "usurper_boss", "vanguard", "vacant", "holy_guard",
+    "tower_wraith", "usurper_boss", "vanguard", "vacant", "holy_guard", "saul_boss", "michael_boss",
 }
 # 友军自己的函数、外观与动画：两道都不碰
-SKIP = {"jacques_ally", "jacques", "david", "pope", "usurper"}
+SKIP = {"jacques_ally", "jacques", "david", "pope", "usurper", "saul", "saul_ghost", "michael", "watchling"}
 # 无主的伪爆炸（传说怪物的攻击瞬爆）照样炸到友军，像炸到玩家一样；带射手的（玩家旧弓）才避开友军
 NO_GUARD = re.compile(r"effect[\\/]pseudo_explosion[\\/]p\d")
 

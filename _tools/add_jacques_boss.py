@@ -833,7 +833,7 @@ def skills():
         "execute if score #m %s matches 0 run function %s/stagger_star" % (O, B),
         "execute if score @s rpg_jq_t matches %d.. run function %s/stagger/end" % (STUN, B),
     ])
-    w("stagger_star", fx.twinkle("~0.3 ~2.7 ~", PALE, frame=2) + fx.twinkle("~-0.3 ~2.5 ~0.2", PALE, frame=0))
+    w("stagger_star", fx.twinkle("~0.3 ~2.25 ~", PALE, frame=2) + fx.twinkle("~-0.3 ~2.1 ~0.2", PALE, frame=0))
     w("stagger/end", ["function %s/sk/end" % B, anim("idle")])
 
 
@@ -1163,7 +1163,7 @@ def stage2():
     w("david/stone_fall", [
         "# 石子从高处落向他（as 石子）",
         "data merge entity @s {teleport_duration:%d}" % (STONE_AT - 22),
-        "execute at @e[%s,limit=1] run tp @s ~ ~2.2 ~" % UNIT,
+        "execute at @e[%s,limit=1] run tp @s ~ ~1.7 ~" % UNIT,
     ])
     w("david/hit", [
         "# 石子命中（as/at 雅克）：打断大招，眩晕 3 秒、护甲归零",
@@ -1171,14 +1171,27 @@ def stage2():
         "kill @e[tag=rpg.jqb.ult]",
         "kill @e[type=minecraft:marker,tag=rpg.jqb.stake]",
         "function %s/skill/stagger" % B,
-    ] + fx.glyph("burst", 2.8, GHOST_C, pos="~ ~2.3 ~", kind="burst") + fx.glyph("pop", 1.6, TEMPLAR_WHITE, pos="~ ~2.3 ~", kind="pop") + [
-        "particle minecraft:end_rod ~ ~2.3 ~ 0.3 0.3 0.3 0.2 30",
-        "particle minecraft:flash{color:%d} ~ ~2.3 ~ 0 0 0 0 1 force" % 0xD8ECFF,
-    ] + fx.decal("shock_0", 8, 0xD8ECFF, pos="~ ~0.1 ~", kind="shock") + wave("minecraft:end_rod", 24, 0.5, y=2.3)
-      + wave("minecraft:firework", 12, 0.3, y=2.3, up=0.3) + [
+    ] + fx.glyph("burst", 2.8, GHOST_C, pos="~ ~1.7 ~", kind="burst") + fx.glyph("pop", 1.6, TEMPLAR_WHITE, pos="~ ~1.7 ~", kind="pop") + [
+        "particle minecraft:end_rod ~ ~1.7 ~ 0.3 0.3 0.3 0.2 30",
+        "particle minecraft:flash{color:%d} ~ ~1.7 ~ 0 0 0 0 1 force" % 0xD8ECFF,
+    ] + fx.decal("shock_0", 8, 0xD8ECFF, pos="~ ~0.1 ~", kind="shock") + wave("minecraft:end_rod", 24, 0.5, y=1.7)
+      + wave("minecraft:firework", 12, 0.3, y=1.7, up=0.3) + [
         "playsound minecraft:block.stone.break hostile @a[distance=..40] ~ ~ ~ 1.4 0.6",
         "playsound minecraft:item.shield.break hostile @a[distance=..40] ~ ~ ~ 1.2 0.7",
         say("……石子？", stage=2),
+        "# 石子只有一颗：打断这一次之后，大卫的幽灵就消散了（之后的大招不再被打断）",
+        "execute as @e[%s] at @s run function %s/david/fade" % (GHOST, B),
+    ])
+    w("david/fade", [
+        "# 大卫的幽灵消散（as/at 它）：一道天光，光点升起，然后移除",
+    ] + light_pillar(0xD8ECFF) + fx.glyph("burst", 2.2, GHOST_C, pos="~ ~1.2 ~", kind="burst")
+      + wave("minecraft:end_rod", 18, 0.25, y=1.0) + fountain("minecraft:end_rod", 16, 0.25, y=1.2, up=0.8) + [
+        "particle minecraft:dust{color:[0.85,0.93,1.0],scale:1.4} ~ ~1 ~ 0.4 0.8 0.4 0 30",
+        "particle minecraft:flash{color:%d} ~ ~1.2 ~ 0 0 0 0 1 force" % 0xD8ECFF,
+        "playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..40] ~ ~ ~ 1.2 1.4",
+        "playsound minecraft:block.beacon.deactivate hostile @a[distance=..40] ~ ~ ~ 1 1.2",
+        say_david("剩下的，交给你了。"),
+        "function %s/clear_unit" % B,
     ])
     stone_check = ["execute if score @s rpg_jq_t matches %d if entity @e[tag=rpg.jqb.stone] run return run function %s/david/hit" % (STONE_AT, B),
                    "execute if score @s rpg_jq_t matches 2 as @e[tag=rpg.jqb.stone] run function %s/david/stone_up" % B,

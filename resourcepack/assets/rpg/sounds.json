@@ -1320,6 +1320,78 @@
       }
     ]
   },
+  "michael.chime": {
+    "subtitle": "subtitles.rpg.michael.chime",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:block.amethyst_block.resonate"
+      }
+    ]
+  },
+  "michael.death": {
+    "subtitle": "subtitles.rpg.michael.death",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:block.beacon.deactivate"
+      }
+    ]
+  },
+  "michael.flap": {
+    "subtitle": "subtitles.rpg.michael.flap",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.phantom.flap"
+      }
+    ]
+  },
+  "michael.gong": {
+    "subtitle": "subtitles.rpg.michael.gong",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:block.bell.use"
+      }
+    ]
+  },
+  "michael.horn": {
+    "subtitle": "subtitles.rpg.michael.horn",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:item.goat_horn.sound.0"
+      }
+    ]
+  },
+  "michael.hurt": {
+    "subtitle": "subtitles.rpg.michael.hurt",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:block.amethyst_block.hit"
+      }
+    ]
+  },
+  "michael.slash": {
+    "subtitle": "subtitles.rpg.michael.slash",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.player.attack.sweep"
+      }
+    ]
+  },
+  "michael.swing": {
+    "subtitle": "subtitles.rpg.michael.swing",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:item.trident.throw"
+      }
+    ]
+  },
   "pope.appear": {
     "subtitle": "subtitles.rpg.pope.appear",
     "sounds": [
@@ -1623,6 +1695,87 @@
       "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_002",
       "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_003",
       "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_004"
+    ]
+  },
+  "saul.death": {
+    "subtitle": "subtitles.rpg.saul.death",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.player.death"
+      }
+    ]
+  },
+  "saul.final": {
+    "subtitle": "subtitles.rpg.saul.final",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.player.attack.knockback"
+      }
+    ]
+  },
+  "saul.hurt": {
+    "subtitle": "subtitles.rpg.saul.hurt",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.player.hurt"
+      }
+    ]
+  },
+  "saul.laugh": {
+    "subtitle": "subtitles.rpg.saul.laugh",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.witch.celebrate"
+      }
+    ]
+  },
+  "saul.roll": {
+    "subtitle": "subtitles.rpg.saul.roll",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.player.attack.nodamage"
+      }
+    ]
+  },
+  "saul.stab": {
+    "subtitle": "subtitles.rpg.saul.stab",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.player.attack.sweep"
+      }
+    ]
+  },
+  "saul.stab2": {
+    "subtitle": "subtitles.rpg.saul.stab2",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.player.attack.strong"
+      }
+    ]
+  },
+  "saul.step": {
+    "subtitle": "subtitles.rpg.saul.step",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:block.chain.step"
+      }
+    ]
+  },
+  "saul_ghost.swish": {
+    "subtitle": "subtitles.rpg.saul_ghost.swish",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.player.attack.sweep"
+      }
     ]
   },
   "sunken_skeleton.death": {
@@ -2031,6 +2184,42 @@
       "rpg:vanguard/sfx_mob_vanguardstep_002_soundwave",
       "rpg:vanguard/sfx_mob_vanguardstep_003_soundwave",
       "rpg:vanguard/sfx_mob_vanguardstep_004_soundwave"
+    ]
+  },
+  "watchling.death": {
+    "subtitle": "subtitles.rpg.watchling.death",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.enderman.death"
+      }
+    ]
+  },
+  "watchling.hurt": {
+    "subtitle": "subtitles.rpg.watchling.hurt",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.enderman.hurt"
+      }
+    ]
+  },
+  "watchling.swing": {
+    "subtitle": "subtitles.rpg.watchling.swing",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.enderman.scream"
+      }
+    ]
+  },
+  "watchling.tp": {
+    "subtitle": "subtitles.rpg.watchling.tp",
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:entity.enderman.teleport"
+      }
     ]
   }
 }

@@ -2,7 +2,7 @@
 // 每个模型：打开 .bbmodel → 摆到待机动作第 0 刻 → 按包围盒正交取景（左前上方 35°/12°）→ 透明背景 900×900 PNG。
 // 原作转换出来的方块常只写了部分面，Blockbench 5.2 读取会报错，所以载入前把缺的面补成空面。
 // 出图后在 _tools 下运行：python guide_renders/make_web.py（裁边、缩到 360、存 webp）。
-// 只关闭自己打开的工程；你原来开着的工程不动。
+// 只关闭自己打开的工程；你原来开着的工程不动。在 MCP 里运行时，把末尾的 JOBS 循环换成想渲染的那几个。
 //
 // 特例：猪灵商人、坩埚、猪灵原作朝 +z，从背面取景；塔卫的大盾会挡住身体，改从右前方；
 // 雅克隐藏四个阶段的竖琴弩（常态只拿刀）；首席附魔师换成资源包里重着色后的白金贴图（王冠没有画进去）。
@@ -10,17 +10,18 @@
 const ROOT = 'D:/agent/claude/github-create/tralancer-rpg-1.21.11/';
 const T = ROOT + '_tools/';
 const OUT = T + 'guide_renders/';
-const fs = require('fs'), path = require('path');
+// 只用 Blockbench 自带的文件接口（插件里不一定有 require）
+const readText = p => new Promise((res, rej) => { Blockbench.read([p], {readtype: 'text', errorbox: false}, f => res(f[0].content)); setTimeout(() => rej('read timeout ' + p), 20000); });
 const wait = ms => new Promise(r => setTimeout(r, ms));
 
-function load(p) {
-  const m = JSON.parse(fs.readFileSync(p, 'utf8'));
+async function load(p) {
+  const m = JSON.parse(await readText(p));
   const F = ['north', 'east', 'south', 'west', 'up', 'down'];
   (m.elements || []).forEach(e => {
     if ((e.type || 'cube') === 'cube') { e.faces = e.faces || {}; F.forEach(f => { if (!e.faces[f]) e.faces[f] = {uv: [0, 0, 0, 0], texture: null}; }); }
   });
   setupProject(Formats[m.meta && m.meta.model_format] || Formats.free);
-  Codecs.project.load(m, {path: p, name: path.basename(p)});
+  Codecs.project.load(m, {path: p, name: p.split('/').pop()});
 }
 
 function pose(pref) {
@@ -53,14 +54,14 @@ function render(out, opt) {
   }
   const rad = m * 1.04; cam.left = -rad; cam.right = rad; cam.top = rad; cam.bottom = -rad; cam.updateProjectionMatrix();
   r.render(scene, cam);
-  fs.writeFileSync(out, Buffer.from(r.domElement.toDataURL('image/png').split(',')[1], 'base64'));
+  Blockbench.writeFile(out, {savetype: 'image', content: r.domElement.toDataURL('image/png')});
   hidden.forEach(o => o.visible = true); r.dispose(); r.forceContextLoss();
 }
 
 async function job(key, rel, opt = {}) {
   const before = new Set(ModelProject.all.map(x => x.uuid));
   try {
-    load(T + rel); await wait(1200);
+    await load(T + rel); await wait(1200);
     const t = ModelProject.all.filter(x => !before.has(x.uuid)).find(x => x.elements && x.elements.length);
     if (t && t !== Project) { t.select(); await wait(400); }
     if (opt.texture) { Texture.all[0].fromPath(ROOT + opt.texture); await wait(1500); }
@@ -98,6 +99,8 @@ const JOBS = [
   ['prime_enchanter', 'prime_enchanter_ref/prime_enchanter.bbmodel', {texture: 'resourcepack/assets/rpg/textures/item/prime_enchanter/atlas.png'}],
   ['jacques', 'jacques_dungeons_ref/jacques.bbmodel', {hide: /^harp\d/}],
   ['david', 'david_dungeons_ref/david.bbmodel'],
+  ['saul', 'saul_dungeons_ref/saul.bbmodel'],
+  ['saul_s2', 'saul_dungeons_ref/saul.bbmodel', {hide: /^(helmet|l_pauldron|saul_l_pauldron_030)$/}],
 ];
 
 // 一次跑几个即可（MCP 单次调用有超时；lucifer_p2 有 16 MB，单独跑）。

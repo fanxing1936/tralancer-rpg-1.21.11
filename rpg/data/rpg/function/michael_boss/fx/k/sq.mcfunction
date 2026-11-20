@@ -1,0 +1,7 @@
+execute if score @s rpg_mk_life matches 7 run data modify entity @s item.components."minecraft:item_model" set value "rpg:usurper_fx/sq_1"
+execute if score @s rpg_mk_life matches 6 run data modify entity @s item.components."minecraft:item_model" set value "rpg:usurper_fx/sq_2"
+execute if score @s rpg_mk_life matches 5 run data modify entity @s item.components."minecraft:item_model" set value "rpg:usurper_fx/sq_3"
+execute if score @s rpg_mk_life matches 4 run data modify entity @s item.components."minecraft:item_model" set value "rpg:usurper_fx/sq_4"
+execute if score @s rpg_mk_life matches 3 run data modify entity @s item.components."minecraft:item_model" set value "rpg:usurper_fx/sq_5"
+execute if score @s rpg_mk_life matches 2 run data modify entity @s item.components."minecraft:item_model" set value "rpg:usurper_fx/sq_6"
+execute if score @s rpg_mk_life matches 1 run data modify entity @s item.components."minecraft:item_model" set value "rpg:usurper_fx/sq_7"

@@ -176,6 +176,14 @@ MODELS = {
                            held_bone="J_RWeapon", height=2.1, merge={"head": FACE},
                            clips=[("Mountaineer_Idle", "idle", True), ("Mountaineer_Walk", "walk", True),
                                   ("Mountaineer_Attack", "attack", False), ("Mountaineer_Brace", "shoot", False)]),
+    # 米迦勒战的「众目」（docs/MICHAEL-DESIGN.md）：回响虚空的 Watchling（本体叫 WatcherOfTheEnd），
+    # 网格是末影族共用的 SK_Enderling，动作是它自己的；身体保持原作的漆黑，眼睛换成米迦勒的圣焰橙红并发光（_tools/michael_boss_ref/watchling.png）
+    "watchling": dict(root="watchling", mesh="Dungeons/Content/Content_DLC6/Actors/Characters/Enemies/Endling/SK_Enderling",
+                      anims=["watchling"], height=2.9, glow="red", material_override={"MI_Endling": ("michael_boss_ref/watchling.png", None)},
+                      clips=[("WatcherOfTheEnd_Idle", "idle", True), ("WatcherOfTheEnd_Walk", "walk", True),
+                             ("WatcherOfTheEnd_BasicAttack", "attack", False), ("WatcherOfTheEnd_HeavyAttack", "heavy", False),
+                             ("WatcherOfTheEnd_TeleportOut", "tp_out", False), ("WatcherOfTheEnd_TeleportIn", "tp_in", False),
+                             ("WatcherOfTheEnd_Stun", "stun", True)]),
     # 第一柱 路西法的罪仆：苔藓骷髅（用户 2026-11-15）。原作没有单独网格，是普通骷髅换苔藓贴图；走路和出手用它自己的动作
     "lucifer_servant": dict(root="mossy", mesh=E + "Skeleton/SK_Skeleton", anims=["mossy"],
                             material_override={"MI_Skeleton": "T_MossySkeleton"},
@@ -186,6 +194,7 @@ MODELS = {
                             custom_clips={"attack": dict(length=.7, loop=False, keys={
                                 "J_R_Arm": [(0, (0, 0, 0)), (.25, (150, 0, -8)), (.38, (40, 0, -4)), (.7, (0, 0, 0))],
                                 "J_L_Spine": [(0, (0, 0, 0)), (.25, (0, 12, 0)), (.38, (0, -10, 0)), (.7, (0, 0, 0))]})}),
+    # 用玩家英雄网格的几个（雅克、大卫、扫罗、老战友）都和玩家一样高：1.87 格（原版玩家模型 32 像素 × 0.9375；用户 2026-11-16）
     # 圣殿大团长雅克（docs/JACQUES-DESIGN.md）：原作玩家英雄网格 + 赫克斯皮肤 + 英雄铠甲（冠军铠甲第一个独特变体的贴图，
     # 网格是冠军铠甲的六件，各挂在玩家骨架的护甲插槽上）；坟墓克星挂右手武器插槽，竖琴弩四个上弦阶段挂左手武器插槽
     "jacques": dict(root="jacques", mesh=E.replace("Enemies/", "") + "Player/Master/SK_Player_Master", anims=["jacques"],
@@ -216,7 +225,7 @@ MODELS = {
                          {"quat": [0.0, 0.0, 1.0, 0.0]}]),)],
                     material_override={"MI_Valorie": ("dungeons_overrides/jacques_hex.png", None), "HEROS": "T_HerosArmor", "GLAIVE": "T_Glaive_Unique1",
                                        "HARP": "T_HarpCrossbow", "CAPE": "T_RedstoneMonstrosityGoldenCape"},
-                    height=2.4, merge={"head": ["mouth", "l_eye_pupil", "l_eye_iris", "r_eye_pupil", "r_eye_iris", "helmet",
+                    height=1.87, merge={"head": ["mouth", "l_eye_pupil", "l_eye_iris", "r_eye_pupil", "r_eye_iris", "helmet",
                                                 "jacques_head_000", "jacques_head_002", "jacques_head_011", "jacques_head_012",
                                                 "jacques_head_armor_013"],
                                        "body": ["body_armor", "armor"], "l_arm": ["l_arm_armor", "l_pauldron", "jacques_l_pauldron_029"],
@@ -239,10 +248,75 @@ MODELS = {
                            ("Player_Master_DownedFloor_Initiate", "fall", False), ("Player_Master_DownedFloored_Loop", "down", True)]),
     # 雅克战二阶段的大卫的幽灵：同一套原作英雄网格，不挂盔甲武器；贴图在 add_jacques_model.py 里转成半透明的白
     "david": dict(root="jacques", mesh=E.replace("Enemies/", "") + "Player/Master/SK_Player_Master", anims=["jacques"],
-                  material_override={"MI_Valorie": "T_Hex"}, height=2.1,
+                  material_override={"MI_Valorie": "T_Hex"}, height=1.87,
                   merge={"head": ["mouth", "l_eye_pupil", "l_eye_iris", "r_eye_pupil", "r_eye_iris"]},
                   clips=[("Player_Master_Idle", "idle", True), ("Player_Master_Walk", "walk", True),
                          ("Player_Master_ShowOff", "throw", False), ("Player_Master_Emote_HeroPose", "hero", False)]),
+    # 疯人王扫罗（docs/SAUL-DESIGN.md）：原作玩家英雄网格 + 织网者皮肤（wiki 叫 Web Crawler，本体是 Skins/Spider）
+    # + 坚毅铠甲（强化锁甲的独特变体 BP_ReinforcedMail_Unique1：头盔、胸甲、护腿沿用强化锁甲网格，左右臂甲是它自己的，
+    # 贴图全部换成 T_StalwartArmor）；千刀挂右手武器插槽（一代细剑 SM_Rapier，贴图按千刀配色重画）。
+    # 插槽取自 Player_Master_Skeleton 的 SkeletalMeshSocket，组件变换取自 BP_ReinforcedMail_Unique1 / BP_Rapier。
+    # 二阶段碎掉 helmet、l_pauldron（左臂甲连护肩，原作是一件），所以它们不并进别的部件
+    "saul": dict(root="saul", mesh=E.replace("Enemies/", "") + "Player/Master/SK_Player_Master", anims=["saul", "jacques"],
+                 socket_attach=[(n, "Dungeons/Content/" + rel, bone, mat, xf) for n, rel, bone, mat, xf in (
+                     ("armor", "Actors/Equipment/Armor/ReinforcedMail/ReinforcedMailArmor_ReinforcedMail", "J_Shoulders", "STALWART",
+                      [{"rel": {"RelativeRotation": {"Pitch": 0.0, "Yaw": 1.201487e-07, "Roll": 0.0},
+                                "RelativeScale3D": {"X": 1.0, "Y": 1.0, "Z": 1.2}}}]),
+                     ("helmet", "Actors/Equipment/Armor/ReinforcedMail/Helmet_ReinforcedMail", "J_Head", "STALWART",
+                      [{"rel": {"RelativeScale3D": {"X": 1.05, "Y": 1.05, "Z": 1.05}}}]),
+                     # 臂甲：原作网格是护肩 + 手上一大一小两块叠起来的护手，原点在手骨上、沿 -Y 往肩膀建好，挂手骨插槽。
+                     # 英雄的手臂方块本身也跟着手骨走，所以臂甲挂手骨才和手臂一起动（挂上臂骨会在细剑招式里离开手臂）。
+                     # 右臂甲在蓝图里是 Y 轴镜像（缩放 -1）；generic.with_attachments 把镜像折进网格、骨只取旋转
+                     ("l_pauldron", "Actors/Equipment/Armor/ReinforcedMail_Unique1/L_Arm_StalwartArmor", "J_L_Hand", "STALWART",
+                      [{"rel": {"RelativeRotation": {"Pitch": 0.00019598007, "Yaw": -179.9999, "Roll": 179.99997}}}]),
+                     ("r_pauldron", "Actors/Equipment/Armor/ReinforcedMail_Unique1/R_Arm_StalwartArmor", "J_R_Hand", "STALWART",
+                      [{"rel": {"RelativeRotation": {"Pitch": 0.00026750565, "Yaw": -179.99995, "Roll": 179.99998},
+                                "RelativeScale3D": {"X": 1.0, "Y": -1.0, "Z": 1.0}}}]),
+                     ("l_greave", "Actors/Equipment/Armor/ReinforcedMail/L_LegGuard_ReinforcedMail", "J_L_Foot", "STALWART",
+                      [{"rel": {"RelativeLocation": {"X": 0.0, "Y": 0.0, "Z": -1.0}}}]),
+                     ("r_greave", "Actors/Equipment/Armor/ReinforcedMail/R_LegGuard_ReinforcedMail", "J_R_Foot", "STALWART",
+                      [{"rel": {"RelativeLocation": {"X": 0.0, "Y": 0.0, "Z": 1.0}, "RelativeScale3D": {"X": 1.0, "Y": -1.0, "Z": -1.0}}}]),
+                     ("rapier", "Patch2/Actors/Equipment/MeleeWeapons/Rapier/SM_Rapier", "J_R_Weapon", "RAPIER",
+                      [{"rel": {"RelativeLocation": {"X": 0.0, "Y": 0.0165689, "Z": -6.0}}},
+                       {"rel": {"RelativeLocation": {"X": -3.9999695, "Y": 1.0803342e-05, "Z": -7.2436533},
+                                "RelativeRotation": {"Pitch": 0.0, "Yaw": -90.00018, "Roll": 2.8501184e-08}}}]))],
+                 material_override={"MI_Valorie": "T_Spider_Skin", "STALWART": "T_StalwartArmor",
+                                    "RAPIER": ("saul_boss_ref/thousand_cuts.png", None)},
+                 height=1.87, merge={"head": ["mouth", "l_eye_pupil", "l_eye_iris", "r_eye_pupil", "r_eye_iris",
+                                             "saul_head_000", "saul_head_002", "saul_head_011", "saul_head_012", "saul_head_armor_013"],
+                                    "body": ["body_armor", "armor"], "l_arm": ["l_arm_armor"],
+                                    "l_pauldron": ["saul_l_pauldron_030"],
+                                    "r_arm": ["r_arm_armor", "r_pauldron", "saul_r_pauldron_032"],
+                                    "l_leg": ["l_leg_armor", "l_greave"], "r_leg": ["r_leg_armor", "r_greave"]},
+                 clips=[("Player_Master_Idle_Katana", "idle", True), ("Player_Master_Walk_Katana", "walk", True),
+                        ("Player_Master_Run_Katana", "run", True),
+                        ("Player_Master_RapierCombo1Start", "thrust", False),
+                        ("Player_Master_RapierCombo2_Left", "left", False),
+                        ("Player_Master_RapierCombo2_Right", "right", False),
+                        ("Player_Master_RapierCombo2_MiddleDouble", "double", False),
+                        ("Player_Master_RapierCombo5Final", "final", False),
+                        ("Player_Master_DodgeRollForward", "roll_f", False), ("Player_Master_DodgeRollBackward", "roll_b", False),
+                        ("Player_Master_DodgeRollSidewayLeft", "roll_l", False), ("Player_Master_DodgeRollSidewayRight", "roll_r", False),
+                        ("Player_Master_Emote_MightySword", "mighty", False), ("Player_Master_Emote_TheTwirl", "twirl", False),
+                        ("Player_Master_Emote_Shadowboxing", "shadow", False),
+                        ("Player_Master_Emote_KneelPose", "kneel", False), ("Player_Master_Emote_HeroPose", "hero", False),
+                        ("Player_Master_Powershake", "web", False), ("Player_Master_ShowOff", "showoff", False),
+                        ("Player_Master_TeleportInitiate_Start", "vanish", False), ("Player_Master_TeleportLanding", "land", False),
+                        ("Player_Master_Stun", "stun", True), ("Player_Master_GetHitFront", "hurt", False),
+                        ("Player_Master_DownedFloor_Initiate", "fall", False), ("Player_Master_DownedFloored_Loop", "down", True)]),
+    # 扫罗对着空气练剑时对面那个看不见的老战友：原作英雄（默认皮肤），贴图在 add_saul_model.py 里转成半透明的白
+    # 也用作扫罗的残影（残影剑阵、第三课·残影）：手里同一把千刀，贴图一起转成半透明的白
+    "saul_ghost": dict(root="saul", mesh=E.replace("Enemies/", "") + "Player/Master/SK_Player_Master", anims=["saul"],
+                       socket_attach=[("rapier", "Dungeons/Content/Patch2/Actors/Equipment/MeleeWeapons/Rapier/SM_Rapier", "J_R_Weapon", "RAPIER",
+                                       [{"rel": {"RelativeLocation": {"X": 0.0, "Y": 0.0165689, "Z": -6.0}}},
+                                        {"rel": {"RelativeLocation": {"X": -3.9999695, "Y": 1.0803342e-05, "Z": -7.2436533},
+                                                 "RelativeRotation": {"Pitch": 0.0, "Yaw": -90.00018, "Roll": 2.8501184e-08}}}])],
+                       material_override={"RAPIER": ("saul_boss_ref/thousand_cuts.png", None)},
+                       height=1.87, merge={"head": ["mouth", "l_eye_pupil", "l_eye_iris", "r_eye_pupil", "r_eye_iris"]},
+                       clips=[("Player_Master_Idle_Katana", "idle", True), ("Player_Master_Walk_Katana", "walk", True),
+                              ("Player_Master_Emote_Shadowboxing", "shadow", False),
+                              ("Player_Master_RapierCombo1Start", "thrust", False), ("Player_Master_RapierCombo5Final", "final", False),
+                              ("Player_Master_DodgeRollForward", "roll_f", False)]),
     # 篡夺者（达里奥·所罗门）一阶段：附魔师（docs/USURPER-DESIGN.md）。附魔书是骨骼模型自带的，随「强化」飞出
     "usurper": dict(root="usurper", mesh=E + "Illagers/Enchanter/SK_IllagerEnchanter", anims=["usurper"],
                     glow="cyan", height=2.4, merge={"head": FACE},

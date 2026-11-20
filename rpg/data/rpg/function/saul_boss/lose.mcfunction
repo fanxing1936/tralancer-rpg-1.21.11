@@ -1,0 +1,2 @@
+execute at @e[type=minecraft:marker,tag=rpg.slb.center,limit=1] run tellraw @a[distance=..96] ["",{"text":"〖","color":"#8C96A2","bold":true,"italic":false},{"text":"扫罗","color":"#D8DEE6","bold":true,"italic":false},{"text":"〗","color":"#8C96A2","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"……又跑了。斯塔福德，你从来都跑得比我快。","color":"#9C9A94","bold":false,"italic":false}]
+function rpg:saul_boss/clear

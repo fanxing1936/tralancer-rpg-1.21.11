@@ -74,6 +74,13 @@ BOSSES.extend([
     command("/function rpg:jacques_ally/debug/summon", "在身前召一个友军雅克，不走冷却。", "必须由玩家执行。", "雅克", "生成单位"),
     command("/function rpg:jacques_ally/debug/reset_cd", "清掉自己的圣殿誓约冷却。", "必须由玩家执行。", "雅克"),
     command("/function rpg:jacques_ally/clear", "清掉所有友军雅克。", "测试收尾时使用。", "雅克", "清理"),
+    command("/function rpg:saul_boss/summon", "在执行位置开始疯人王扫罗战：十字军大元帅 → 甲碎 → 疯人王。", "同一时间只允许一场；战场半径 40 格。", "扫罗", "生成战斗"),
+    command("/function rpg:saul_boss/debug/stage2", "召唤后直接打到一阶段底线，走甲碎演出进入二阶段。", "同一时间只允许一场。", "扫罗", "生成战斗"),
+    command("/function rpg:saul_boss/clear", "清除扫罗战的全部实体（含碎甲、蛛网与老战友的幻影）。", "战斗卡住或测试收尾时使用。", "扫罗", "清理"),
+    command("/function rpg:michael_boss/summon", "在执行位置开始天使长米迦勒战：天使长·谁似神 → 骨中之骨 → 炽天使。", "同一时间只允许一场；战场半径 40 格。", "米迦勒", "生成战斗"),
+    command("/function rpg:michael_boss/debug/stage2", "召唤后直接打到一阶段底线，走骨中之骨演出进入二阶段。", "同一时间只允许一场。", "米迦勒", "生成战斗"),
+    command("/function rpg:michael_boss/clear", "清除米迦勒战的全部实体（含守望者、骨柱与注视的眼睛）。", "战斗卡住或测试收尾时使用。", "米迦勒", "清理"),
+    command("/function rpg:michael/debug/preview", "在脚下放一个不动的米迦勒外观（不是战斗）；preview_watchling 放守望者。", "清掉用 /function rpg:michael/debug/clear。", "米迦勒"),
 ])
 
 MINIONS = []
