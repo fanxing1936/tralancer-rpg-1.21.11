@@ -6,6 +6,7 @@ import io
 import json
 
 import guide_bestiary
+import guide_theme
 import rpg_ui_style as ui
 
 from debug_commands import ALL_COMMANDS, render_html as render_debug_commands
@@ -408,41 +409,12 @@ footer{margin-top:80px; padding-top:22px; border-top:1px solid var(--rule); font
 def build():
     p = []
     a = p.append
-    a(HEAD.replace("@@TIER_TOKENS@@", tier_tokens()).replace("</style>", guide_bestiary.CSS + "</style>", 1))
-    a('<div class="wrap">')
-
-    # masthead ------------------------------------------------------------
-    a('''<header class="mast">
-<p class="eyebrow">Eretz Ha-Shevarim · Data Pack Codex</p>
-<h1>Shevarim<span class="heb">אֶרֶץ הַשְּׁבָרִים</span><span class="cn">破碎大陆 · 碎片之地</span></h1>
-<p class="lede">这是破碎大陆的见证：世界曾经完整，后来因<strong>神陨</strong>、<strong>堕天</strong>与<strong>权柄的分裂</strong>而成为碎片。</p>
-<p class="lede sub">这是关于光、混沌、堕落、救赎与人的书；<br>是关于<strong>权</strong>与<strong>力</strong>如何分离，又如何在末后的日子重新相遇的见证。</p>
-<p class="lede meta">承载这段见证的是一套 Minecraft 生存 RPG 数据包：''' + str(n_of("weapons")) + ''' 件带主动／被动技能的武具（含<strong>六位魔神</strong>的罪遗武器）、''' + str(n_of("armour")) + ''' 件护甲、可洗练可镶嵌可升级的装备体系，以及七宗罪领主与所罗门罪仆生态。</p>
-<div class="chips">
-<span class="chip">Minecraft <b>1.21.11</b></span>
-<span class="chip">数据包格式 <b>94.1</b></span>
-<span class="chip">资源包格式 <b>75.0</b></span>
-<span class="chip">命名空间 <b>rpg</b></span>
-</div>
-</header>''')
-
+    # 外观在 guide_theme.py（2026-11-21 整版重做）；这里只拼内容
+    a(guide_theme.head(tier_tokens()))
+    a(guide_theme.hero('''承载这段见证的是一套 Minecraft 生存 RPG 数据包：''' + str(n_of("weapons")) + ''' 件带主动／被动技能的武具（含<strong>六位魔神</strong>的罪遗武器）、''' + str(n_of("armour")) + ''' 件护甲、可洗练可镶嵌可升级的装备体系，以及七宗罪领主与所罗门罪仆生态。'''))
+    a('<div class="wrap" id="codex">')
     a('<div class="layout">')
-    a('''<nav class="rail" aria-label="目录"><ol>
-<li><a href="#s1"><span class="num">I</span>安装与调试</a></li>
-<li><a href="#s2"><span class="num">II</span>核心系统</a></li>
-<li><a href="#s3"><span class="num">III</span>武器图鉴</a></li>
-<li><a href="#s4"><span class="num">IV</span>护甲图鉴</a></li>
-<li><a href="#s5"><span class="num">V</span>符文与符石</a></li>
-<li><a href="#s6"><span class="num">VI</span>药剂与材料</a></li>
-<li><a href="#s7"><span class="num">VII</span>掉落总表</a></li>
-<li><a href="#s9"><span class="num">VIII</span>生物图鉴</a></li>
-<li><a href="#s8"><span class="num">IX</span>驱魔体系</a></li>
-<li><a href="#s14"><span class="num">X</span>驱魔道具</a></li>
-<li><a href="#s12"><span class="num">XI</span>七十二柱契约</a></li>
-<li><a href="#s15"><span class="num">XII</span>卡巴拉上位契约</a></li>
-<li><a href="#s10"><span class="num">XIII</span>破碎大陆</a></li>
-<li><a href="#s11"><span class="num">XIV</span>调试指令</a></li>
-</ol></nav>''')
+    a(guide_theme.rail())
 
     a('<main>')
 
@@ -846,7 +818,7 @@ def build():
 <div class="note"><b>每刻运行的函数</b>由 <code>#minecraft:tick</code> 驱动，依次为 <code>rpg:command/index</code>（标志索引与伤害检测）→ <code>rpg:command/tick</code>（合成、试炼、等级）→ <code>rpg:item/sword/legend/legend1</code>（武器技能）→ <code>rpg:entities/warden/warden</code>（BOSS 战）→ <code>rpg:command/tick_end</code>。正常游玩无需手动调用。</div>
 </section>''')
 
-    a('<footer>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
+    a('<footer><span class="seal">Eretz Ha-Shevarim</span>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
     a('</main></div></div>')
 
     a('''<script>
@@ -875,7 +847,9 @@ def build():
   q.addEventListener('input',apply);
 })();
 </script>''')
-    return "\n".join(p)
+    a(guide_theme.SCRIPT)
+    a('</body>\n</html>')
+    return guide_theme.decorate("\n".join(p))
 
 
 if __name__ == "__main__":
