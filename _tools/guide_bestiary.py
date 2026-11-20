@@ -512,7 +512,7 @@ def records_html():
             + "</div>")
 
 
-def section(devil_table):
+def section(devil_table=""):
     return ('<section class="plate" id="s9">\n'
             '<div class="plate-h"><span class="num">VIII</span><h2>生物图鉴</h2><span class="sub">领主 · 罪仆 · 圣卫 · Boss 战</span></div>\n'
             '<p>僵尸、骷髅、苦力怕与溺尸保持原版生成和装备逻辑；旧版强化变种、风袭掠夺者、溺尸军团与猪灵军团已经完整退役。'

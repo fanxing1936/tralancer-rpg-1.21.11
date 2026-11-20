@@ -458,7 +458,6 @@ def build():
 /function rpg:command/give/item        # 符文、晶石、锻造材料
 /function rpg:command/give/weapon_up_item  # 武器分支唱片</code></div></li>
 <li><div><h3>布置试炼与宝库<span class="opt">可选</span></h3><p>在脚下生成一组不祥试炼刷怪笼与宝库，掉落表指向本包的 <code>rpg:trial/*</code> 与 <code>rpg:loot/*</code>。站在要放置的位置执行。</p><code class="cmd">/function rpg:command/setblock</code></div></li>
-<li><div><h3>召唤恶魔 BOSS<span class="opt">可选</span></h3><p>在脚下生成 1000 点生命的恶魔（唤魔者本体 + 卫道士护卫）。战斗全程由 <code>rpg:entities/warden/warden</code> 每刻驱动。</p><code class="cmd">/function rpg:command/summon</code></div></li>
 </ol>
 <div class="note"><b>完整调试手册：</b>本页末尾的<a href="#debug-catalog">调试指令总表</a>收录 <b>''' + str(len(ALL_COMMANDS)) + '''</b> 个公开入口，逐条标明执行者、前置条件、影响范围与风险。推荐先用 <code>/function rpg:command/give/box</code> 领取分类潜影盒。</div>
 <div class="note"><b>公共入口边界：</b><code>*_worker</code>、每刻 tick、伤害结算、UI 刷新与阶段内部函数不是调试接口。它们依赖调用上下文，手动执行容易留下半成品状态，因此未列入可复制命令。</div>
@@ -542,14 +541,8 @@ def build():
 
     # VIII bestiary -------------------------------------------------------
     # 领主、罪仆、圣卫、四场 Boss 战、友军与实装记录都在 guide_bestiary.py
-    a(guide_bestiary.section('''<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:32px 0 14px">恶魔 · rpg:entities/warden</h3>
-<div class="tw"><table>
-<thead><tr><th>单位</th><th>生命</th><th>阶段</th><th>特征</th></tr></thead>
-<tbody>
-<tr class="boss"><td><span class="nm">恶魔（唤魔者形态）</span><span class="sm">标签 devil + boss</span></td><td class="num">1000</td><td>第一形态</td><td>护甲 15、击退抗性 0.5、体型 ×1.2，常驻隐身并持续散出烟雾与墨汁粒子；被<b>替死人偶</b>攻击会强制显形</td></tr>
-<tr><td><span class="nm">恶魔（卫道士形态）</span><span class="sm">标签 devil2 + boss</span></td><td class="num">1000</td><td>第二形态</td><td>双持下界合金剑，按 <code>devil</code> 计分推进技能序列，390 刻时召唤三名分身</td></tr>
-<tr><td><span class="nm">恶魔护卫</span></td><td class="num">100</td><td>随从</td><td>Johnny 卫道士，击退 2、速度加成</td></tr>
-</tbody></table></div>'''))
+    # 旧版恶魔 Boss（rpg:entities/warden）的表 2026-11-21 起不再列出（用户：旧版内容可以删掉）；游戏里的函数未动
+    a(guide_bestiary.section(''))
 
     # IX exorcism ---------------------------------------------------------
     a('''<section class="plate" id="s8">
