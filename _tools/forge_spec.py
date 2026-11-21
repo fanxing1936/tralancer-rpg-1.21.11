@@ -80,6 +80,9 @@ SOURCE_BOSS = {  # 源 -> (boss 生成器目录, 胜利时的中心标记；None
 }
 BOSS_SOURCE_CHANCE = 0.30
 HOLY_SOURCE_LV = 5           # 神圣之源的武器到这一级才算圣器
+# 名字前的源图标（字体 rpg:forge_src 的码位）
+SOURCE_GLYPH = {"faith": chr(0xE000), "hope": chr(0xE001), "resolve": chr(0xE002),
+                "malice": chr(0xE003), "hatred": chr(0xE004), "pride": chr(0xE005)}
 BOSS_STONE_CHANCE = 0.25
 
 # ---------------------------------------------------------------------------

@@ -82,6 +82,7 @@ execute store result entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1
 execute if data storage rpg:forge e{kind:"melee"} run function rpg:forge/render/lines_melee with storage rpg:forge ui
 execute if data storage rpg:forge e{kind:"ranged"} run function rpg:forge/render/lines_ranged with storage rpg:forge ui
 execute if data storage rpg:forge e{kind:"armor"} run function rpg:forge/render/lines_armor with storage rpg:forge ui
+function rpg:forge/name/glyph
 execute store result score #ln rpg_fg run data get storage rpg:forge e.ln
 function rpg:forge/render/cut
 execute unless data entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:lore" run data modify entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:lore" set value []

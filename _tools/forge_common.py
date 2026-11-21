@@ -111,7 +111,8 @@ def all_items():
         rows.append([c("一把武器只有一个源，新源会覆盖旧源", ui.MUTED)])
         out["source_" + s["id"]] = (item_snbt(
             "source_" + s["id"],
-            [c(ui.tier_tag(tier), tag_colour, True), c(s["name"] + "之源")], rows,
+            [dict(text=S.SOURCE_GLYPH[s["id"]], font="rpg:forge_src", color=ui.WHITE, bold=False, italic=False),
+             c(" "), c(ui.tier_tag(tier), tag_colour, True), c(s["name"] + "之源")], rows,
             'rpg_mat:"source",rpg_src:"%s"' % s["id"], 16), "source")
     for r in S.RUNES:
         col = S.PART_COLOUR[r["part"]]

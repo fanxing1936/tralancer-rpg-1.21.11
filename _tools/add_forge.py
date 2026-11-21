@@ -65,6 +65,10 @@ def build_rp(items):
               J({"parent": "minecraft:item/generated", "textures": {"layer0": "rpg:item/forge/%s" % key}}) + "\n")
         write(os.path.join(RP, "assets/rpg/items/forge/%s.json" % key),
               J({"model": {"type": "minecraft:model", "model": "rpg:item/forge/%s" % key}}) + "\n")
+    # 武器名前的源图标：同一张 16x16 源贴图缩到文字高度，放在独立字体里，不占 default 的码位
+    providers = [{"type": "bitmap", "file": "rpg:item/forge/source_%s.png" % s["id"], "height": 8, "ascent": 7,
+                  "chars": [S.SOURCE_GLYPH[s["id"]]]} for s in S.SOURCES]
+    write(os.path.join(RP, "assets/rpg/font/forge_src.json"), J({"providers": providers}) + "\n")
     return missing
 
 

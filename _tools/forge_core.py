@@ -378,6 +378,7 @@ def build_render(out):
         'execute if data storage rpg:forge e{kind:"melee"} run function rpg:forge/render/lines_melee with storage rpg:forge ui',
         'execute if data storage rpg:forge e{kind:"ranged"} run function rpg:forge/render/lines_ranged with storage rpg:forge ui',
         'execute if data storage rpg:forge e{kind:"armor"} run function rpg:forge/render/lines_armor with storage rpg:forge ui',
+        "function rpg:forge/name/glyph",
         "execute store result score #ln rpg_fg run data get storage rpg:forge e.ln",
         "function rpg:forge/render/cut",
         'execute unless data entity %s item.components."minecraft:lore" run data modify entity %s item.components."minecraft:lore" set value []' % (WS, WS),
@@ -397,6 +398,24 @@ def build_render(out):
             'execute unless data entity %s item.components."minecraft:tooltip_display".hidden_components run data modify entity %s item.components."minecraft:tooltip_display".hidden_components set value []' % (WS, WS),
             'execute unless data entity %s item.components."minecraft:tooltip_display"{hidden_components:["minecraft:attribute_modifiers"]} run data modify entity %s item.components."minecraft:tooltip_display".hidden_components append value "minecraft:attribute_modifiers"' % (WS, WS),
         ]))
+    NAME = 'item.components."minecraft:custom_name"'
+    out.fn("name/glyph", "\n".join([
+        "# 武器名前的源图标：名字被包成 [图标, 空格, 原名]，ng:1b 记着包过。每次渲染先拆再按当前的源重包。",
+        "execute if data entity %s %s{ng:1b} run function rpg:forge/name/unwrap" % (WS, EQ),
+        'execute if data storage rpg:forge e{src:"none"} run return 0',
+        "execute unless data entity %s %s run return 0" % (WS, NAME),
+    ] + ['execute if data storage rpg:forge e{src:"%s"} run function rpg:forge/name/wrap {g:"%s"}' % (s["id"], S.SOURCE_GLYPH[s["id"]])
+         for s in S.SOURCES]))
+    out.fn("name/unwrap", "\n".join([
+        "data modify entity %s %s set from entity %s %s.extra[2]" % (WS, NAME, WS, NAME),
+        "data remove entity %s %s.ng" % (WS, EQ),
+    ]))
+    out.fn("name/wrap", "\n".join([
+        "data modify storage rpg:forge nm.old set from entity %s %s" % (WS, NAME),
+        '$data modify entity %s %s set value {text:"",italic:0b,extra:[{text:"$(g)",font:"rpg:forge_src",color:"#FFFFFF",italic:0b},{text:" ",italic:0b},""]}' % (WS, NAME),
+        "data modify entity %s %s.extra[2] set from storage rpg:forge nm.old" % (WS, NAME),
+        "data modify entity %s %s.ng set value 1b" % (WS, EQ),
+    ]))
     out.fn("render/cut", "\n".join([
         "execute if score #ln rpg_fg matches ..0 run return 0",
         'data remove entity %s item.components."minecraft:lore"[-1]' % WS,
