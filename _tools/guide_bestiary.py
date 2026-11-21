@@ -160,22 +160,22 @@ def overview_html():
              '大招后有破绽：护甲归零、不出手。</p></div>'
              '<div><h3>呈现</h3><p>专用位图血条（原版条隐藏），每 50 血一档，中央饰物按阶段换，花体英文标题。'
              '播报〖名字〗加粗，阶段切换、大招和结算带哥特体小注。</p></div>'
-             '<div><h3>音乐与重置</h3><p>Boss 音乐走<b>唱片机</b>音量（不少人把音乐音量关到 0），放完循环。'
+             '<div><h3>音乐与重置</h3><p>Boss 音乐走<b>唱片机</b>音量（不少人把音乐音量关到 0），放完循环。教皇之外每个 Boss、每一段都有自己的曲子（OpenGameArt 上的 CC0 / CC-BY 曲目，作者与许可见仓库 <code>_tools/bgm_ref/SOURCES.md</code>）。'
              '全员阵亡，或全员离开 40 格满 60 秒，就清场重置。</p></div>'
              '</div>')
     p.append(_table(["Boss", "阶段 · 生命", "原作外观", "音乐", "开战"], [
         ('<span class="nm">教皇</span>', "圣卫战（4 × 120）→ 教皇 1000 → 末影之心 1000", "Arch-Illager；末影之心、末影面容为手工模型",
          "boss3 → boss2 → boss1", "<code>rpg:pope_fight/summon</code>"),
         ('<span class="nm">路西法</span><span class="sm">最终 Boss</span>', "晨星之蛇 1000 → 知善恶树 1000 →（古龙，未做）",
-         "Mossy Skeleton + Root Rot Armor → Jungle Abomination", "boss2 → boss1", "<code>rpg:lucifer_boss/summon</code>"),
+         "Mossy Skeleton + Root Rot Armor → Jungle Abomination", "Ancient Power Of Serpents → Dark Shrine Loop", "<code>rpg:lucifer_boss/summon</code>"),
         ('<span class="nm">篡夺者</span><span class="sm">达里奥·所罗门</span>', "所罗门之裔 1000 → 篡夺圣灵 1000",
-         "Enchanter → Prime Enchanter（白金重着色 + 原作王冠）", "boss2 → boss3", "<code>rpg:usurper_boss/summon</code>"),
+         "Enchanter → Prime Enchanter（白金重着色 + 原作王冠）", "Boss Battle Theme → It's our battle", "<code>rpg:usurper_boss/summon</code>"),
         ('<span class="nm">圣殿大团长雅克</span>', "圣殿之誓 1000 → 火刑柱 1000",
-         "英雄网格 + 赫克斯皮肤 + 冠军铠甲 + 英雄披风", "boss3 → boss1", "<code>rpg:jacques_boss/summon</code>"),
+         "英雄网格 + 赫克斯皮肤 + 冠军铠甲 + 英雄披风", "War Theme → War Theme（ver 2）", "<code>rpg:jacques_boss/summon</code>"),
         ('<span class="nm">疯人王扫罗</span>', "十字军大元帅 1000 → 甲碎 → 疯人王 1000",
-         "英雄网格 + 织网者皮肤 + 坚毅铠甲，千刀", "boss1 → boss2", "<code>rpg:saul_boss/summon</code>"),
+         "英雄网格 + 织网者皮肤 + 坚毅铠甲，千刀", "Delusion → Red Curtain", "<code>rpg:saul_boss/summon</code>"),
         ('<span class="nm">天使长米迦勒</span>', "天使长·谁似神 1200 → 骨中之骨 → 炽天使 1200",
-         "半透明灵体：英雄网格 + 云端守望者皮肤 + 霜冻铠甲 + 六翼；守望者（Watchling）", "boss1 → boss2", "<code>rpg:michael_boss/summon</code>"),
+         "半透明灵体：英雄网格 + 云端守望者皮肤 + 霜冻铠甲 + 六翼；守望者（Watchling）", "Rise of Spirit → The Final Battle", "<code>rpg:michael_boss/summon</code>"),
     ]))
     p.append('<div class="note"><b>谁能被契约打到：</b>教皇本人、篡夺者、雅克都是人，不带 <code>rpg.demon</code>，七罪契约技能打不到；'
              '末影之心和路西法带着，契约照常生效。新约技能对末影之心改成固定伤害（新约 120、旧约 100、领域 80、裁决 100，外壳再减 70%）；'

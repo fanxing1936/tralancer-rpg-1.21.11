@@ -114,6 +114,11 @@ def category(source, item, block):
         return "verdict"
     if source.startswith("inquest/give/"):
         return "exorcism"
+    # 装备养成（add_forge.py）：符文、符石进符文盒，材料与六源进锻造盒
+    if 'rpg_rune:' in blob or 'rpg_stone:' in blob:
+        return "rune"
+    if 'rpg_mat:' in blob:
+        return "forge"
     if "pact_page:" in blob:
         return "pact_page"
     if "rpg_seal:" in blob:

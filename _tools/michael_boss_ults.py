@@ -374,9 +374,9 @@ def vfx():
       + [x for k in range(4) for x in mglyph("dove", 1.4, pos="^%.1f ^1.5 ^%.1f" % (2 * math.cos(k * 1.57), 2 * math.sin(k * 1.57)),
                                               kind="doverise", life=50)]
       + wave("minecraft:end_rod", 20, 0.3, y=1.2) + ["particle minecraft:flash{color:%d} ~ ~1.5 ~ 0 0 0 0 1 force" % PEACH_I])
-    w("vfx/blink", ["# 守望者传送（at 它）：一团黑烟，一只眼睛睁开"] + smoke_puff("~ ~1.4 ~", 2.6)
+    w("vfx/blink", ["# 守望者传送（at 它）：一团黑烟，一只眼睛睁开；不用末影人的紫色粒子（用户 2026-11-21）"] + smoke_puff("~ ~1.4 ~", 2.6)
       + mglyph("eye", 1.6, pos="~ ~2.6 ~", kind="eyeopen") + [
-                    "particle minecraft:reverse_portal ~ ~1.4 ~ 0.4 0.9 0.4 0.05 24",
+                    "particle minecraft:large_smoke ~ ~1.4 ~ 0.3 0.8 0.3 0.02 10",
                     "particle minecraft:flame ~ ~2.4 ~ 0.3 0.3 0.3 0.01 4",
                     "playsound minecraft:entity.enderman.teleport hostile @a[distance=..32] ~ ~ ~ 1 0.8"])
     w("vfx/wings", ["# 六翼全展（as/at 他）"] + wave("minecraft:end_rod", 16, 0.25, y=1.8) + wingburst("~ ~1.8 ~", 8)
@@ -389,10 +389,46 @@ def vfx():
          "particle minecraft:flash{color:%d} ~ ~1.6 ~ 0 0 0 0 1 force" % FIRE_I,
          "playsound minecraft:entity.blaze.shoot hostile @a[distance=..40] ~ ~ ~ 1.4 0.6",
          "playsound minecraft:item.firecharge.use hostile @a[distance=..40] ~ ~ ~ 1.2 0.5"])
-    w("vfx/death", ["# 他散去之前（as/at 他）：一道天光，白鸽升起，光环收拢"]
-      + light_pillar(PEACH_I) + fx.decal("ring", 2, PEACH_I, pos="~ ~0.06 ~", kind="ringm")
-      + mglyph("halo", 0.5, pos="~ ~2 ~", kind="haloin", life=40)
-      + [x for k in range(6) for x in mglyph("dove", 1.6, pos="^%.1f ^%.1f ^%.1f" % (1.5 * math.cos(k * 1.05), 0.8 + 0.3 * k, 1.5 * math.sin(k * 1.05)),
-                                              kind="doverise", life=60)]
-      + wave("minecraft:end_rod", 24, 0.2, y=0.8) + ["particle minecraft:flash{color:%d} ~ ~1 ~ 0 0 0 0 1 force" % PEACH_I,
-                                                     "playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..48] ~ ~ ~ 1.4 0.6"])
+    # ---- 死亡（用户 2026-11-21「米迦勒没有死亡特效」）。finale/tick 的时间线：76 光环降下、地上圣印转起来；
+    # 78..98 六翼一片片烧掉（每片一团火羽）；108 天光聚拢；124 一闪散开（全屏白光、光柱、白鸽、羽毛、冲击环）；
+    # 136 余光落下；200 结算。载体意外死掉时 ghost/tick 在他最后的位置补放同一套。
+    w("vfx/death/halo", ["# 光环降下（at 他）：头顶的光环长出来，脚下的炽天使圣印慢慢转，一圈白光向外推"]
+      + mglyph("halo", 0.5, pos="~ ~3.3 ~", kind="halodeath")
+      + fx.decal("sigil", 7, PEACH_I, pos="~ ~0.06 ~", kind="spins", life=124)
+      + fx.decal("glow", 6, PEACH_I, pos="~ ~0.05 ~", life=124)
+      + fx.decal("ring", 2, PEACH_I, pos="~ ~0.08 ~", kind="ringgrow")
+      + wave("minecraft:end_rod", 16, 0.12, y=0.3)
+      + ["playsound minecraft:block.beacon.power_select hostile @a[distance=..48] ~ ~ ~ 1.2 0.6",
+         "playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..48] ~ ~ ~ 1 0.5"])
+    w("vfx/death/wing", ["# 烧掉一片翼（as/at 他）：背后一团火、几根火羽"]
+      + mglyph("fburn", 2.2, pos="^ ^1.9 ^-0.5", kind="fburn") + feathers_out("^ ^1.9 ^-0.5", 2)
+      + ["particle minecraft:flame ^ ^1.9 ^-0.5 0.7 0.5 0.2 0.04 14",
+         "particle minecraft:white_ash ^ ^1.9 ^-0.5 0.9 0.6 0.3 0 12",
+         "playsound minecraft:item.firecharge.use hostile @a[distance=..40] ~ ~ ~ 0.8 0.7"])
+    w("vfx/death/gather", ["# 天光聚拢（at 他）：一道天光落下，光点往他身上收"]
+      + godray("~ ~ ~") + mglyph("column", 3.2, pos="~ ~1.6 ~", kind="columnloop", billboard="vertical")
+      + [x for k in range(6) for x in mglyph("star", 0.9, pos="^%.1f ^%.1f ^%.1f" % (
+          2.2 * math.cos(k * 1.05), 1.0 + 0.4 * (k % 3), 2.2 * math.sin(k * 1.05)), kind="twinkle", start=0.01)]
+      + ["particle minecraft:end_rod ~%.2f ~1.2 ~%.2f %.3f 0 %.3f 0.18 0 force" % (
+          3.6 * math.cos(a), 3.6 * math.sin(a), -math.cos(a), -math.sin(a)) for a in [k * math.pi / 12 for k in range(24)]]
+      + ["playsound minecraft:block.beacon.ambient hostile @a[distance=..48] ~ ~ ~ 1.6 1.4",
+         "playsound minecraft:block.bell.resonate hostile @a[distance=..48] ~ ~ ~ 1 1.2"])
+    w("vfx/death", ["# 散开（as/at 他）：一闪，光柱、白鸽升起、羽毛四散，冲击环推开"]
+      + light_pillar(PEACH_I) + godray("~ ~ ~")
+      + fx.decal("ring", 2, PEACH_I, pos="~ ~0.06 ~", kind="ringx")
+      + fx.decal("shock_0", 9, PEACH_I, pos="~ ~0.1 ~", kind="shock")
+      + wingburst("~ ~1.8 ~", 11) + impact("~ ~1.4 ~", False, 7) + feathers_out("~ ~1.6 ~", 8)
+      + [x for k in range(8) for x in mglyph("dove", 1.6, pos="^%.1f ^%.1f ^%.1f" % (
+          1.6 * math.cos(k * 0.785), 0.8 + 0.25 * k, 1.6 * math.sin(k * 0.785)), kind="doverise")]
+      + wave("minecraft:end_rod", 32, 0.32, y=1.0) + wave("minecraft:white_ash", 24, 0.2, y=0.4)
+      + ["particle minecraft:flash{color:%d} ~ ~1.2 ~ 0 0 0 0 1 force" % WHITE_I,
+         "particle minecraft:end_rod ~ ~1.4 ~ 0.4 0.8 0.4 0.25 60 force",
+         "playsound minecraft:block.amethyst_block.resonate hostile @a[distance=..48] ~ ~ ~ 1.6 0.6",
+         "playsound minecraft:block.beacon.deactivate hostile @a[distance=..48] ~ ~ ~ 1.4 0.8",
+         "playsound minecraft:entity.phantom.flap hostile @a[distance=..48] ~ ~ ~ 1.6 0.6"])
+    w("vfx/death/after", ["# 余光（at 他原来站的地方）：再推开一圈淡光，光点从天上慢慢落下"]
+      + fx.decal("ring", 2, WHITE_I, pos="~ ~0.07 ~", kind="ringx")
+      + [x for k in range(3) for x in mglyph("dove", 1.2, pos="^%.1f ^2.4 ^%.1f" % (
+          1.0 * math.cos(k * 2.09 + 0.5), 1.0 * math.sin(k * 2.09 + 0.5)), kind="doverise")]
+      + ["particle minecraft:end_rod ~ ~5 ~ 3 1 3 0.01 40",
+         "playsound minecraft:block.bell.resonate hostile @a[distance=..48] ~ ~ ~ 0.8 0.8"])

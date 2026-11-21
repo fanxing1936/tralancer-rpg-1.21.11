@@ -1,0 +1,125 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[恶魔]",
+                    "color": "#DC4450",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "傲慢之源",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "副手拿武器，主手右键",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🜏效果 ",
+                      "color": "#FFFFFF",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "[傲慢]",
+                      "color": "#5FD68C",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "满血时伤害 +30%",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "代价 ",
+                      "color": "#FFFFFF",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "自身受到伤害 +15%",
+                      "color": "#FF6B5E",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "一把武器只有一个源，新源会覆盖旧源",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:item_model": "rpg:forge/source_pride",
+                "minecraft:consumable": {
+                  "consume_seconds": 1234567.0,
+                  "animation": "none",
+                  "sound": "minecraft:intentionally_empty",
+                  "has_consume_particles": false
+                },
+                "minecraft:max_stack_size": 16
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{rpg_fm:1b,rpg_mat:\"source\",rpg_src:\"pride\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

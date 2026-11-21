@@ -482,15 +482,15 @@ def build_loot(items):
         wj(os.path.join(LOOT, "armor_set/%s.json" % key),
            {"pools": [{"rolls": 1, "entries": [loot_entry(it) for it in items[key]]}]})
 
-    # 圣卫残甲：试炼宝库按部位抽护甲时多一个候选
+    # 圣卫残甲：试炼之室的主表里各一个候选（按部位抽装备的四张旧表已随装备养成重置退役）
+    path = os.path.join(LOOT, "trial/trial.json")
+    doc = json.loads(read(path))
+    entries = doc["pools"][0]["entries"]
     for it in items["sentinel"]:
-        path = os.path.join(LOOT, "trial/%s.json" % TRIAL_TABLE[it["slot"]])
-        doc = json.loads(read(path))
-        entries = doc["pools"][0]["entries"]
         if not any(it["name"] in json.dumps(e, ensure_ascii=False) for e in entries):
             entries.append(loot_entry(it, 1))
-            wj(path, doc)
-            added.append("trial/" + TRIAL_TABLE[it["slot"]])
+            added.append("trial/trial:" + it["name"])
+    wj(path, doc)
 
     # 驱魔人法衣：不祥宝库
     path = os.path.join(LOOT, "trial/trial_ominous.json")

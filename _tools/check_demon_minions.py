@@ -183,9 +183,9 @@ for lord_index, (lord, spirits) in enumerate(LORDS, 1):
             with io.open(loot, encoding="utf-8") as handle:
                 data = json.load(handle)
             # 领主材料、职业材料，加 add_pact_depth 的柱页和柱印。
-            # add_armor_sets 另挂的护甲掉落池（rpg:armor_set/…）不计在内。
+            # add_armor_sets 另挂的护甲掉落池（rpg:armor_set/…）和装备养成的残魂、符文池（rpg:forge/…）不计在内。
             pools = [p for p in data.get("pools", [])
-                     if not any(str(e.get("value", "")).startswith("rpg:armor_set/")
+                     if not any(str(e.get("value", "")).startswith(("rpg:armor_set/", "rpg:forge/"))
                                 for e in p.get("entries", []))]
             if len(pools) != 4:
                 problems.append("%s/%s loot lacks lord, role, page and seal pools" % (lord, spirit))

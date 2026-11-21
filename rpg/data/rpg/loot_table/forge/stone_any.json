@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/stone_rift",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/stone_frost",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/stone_shadow",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/stone_blood",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/stone_gale",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/stone_volley",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/stone_banner",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

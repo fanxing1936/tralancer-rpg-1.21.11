@@ -27,12 +27,13 @@ SYSTEM = [
 GIVE = [
     command("/function rpg:command/give/box", "发放按类型整理的全套测试潜影盒。", "会发给所有在线玩家（@a）；盒内覆盖当前全部自定义物品。", "全体背包", "群体发放"),
     command("/function rpg:command/give/weapon", "发放全部武器、护甲与药剂。", "会发给所有在线玩家（@a），多人服慎用。", "全体背包", "群体发放"),
-    command("/function rpg:command/give/item", "发放符文、符石、晶石与锻造材料。", "会发给所有在线玩家（@a），多人服慎用。", "全体背包", "群体发放"),
-    command("/function rpg:command/give/weapon_up_item", "发放全部武器分支唱片。", "会发给所有在线玩家（@a），多人服慎用。", "全体背包", "群体发放"),
+    command("/function rpg:command/give/item", "发放属性晶石，以及装备养成的材料、符文与符石。", "会发给所有在线玩家（@a），多人服慎用。", "全体背包", "群体发放"),
+    command("/function rpg:command/give/weapon_up_item", "发放六源（信念、希望、不屈、邪念、仇恨、傲慢）。", "会发给所有在线玩家（@a），多人服慎用。", "全体背包", "群体发放"),
     command("/function rpg:command/give/extra", "发放额外／导入内容测试物品。", "会发给所有在线玩家（@a），可能占用较多背包格。", "全体背包", "群体发放"),
     command("/function rpg:command/give/michael", "只发放米迦勒脊骨与米迦勒肋骨（[神圣] 双持圣骸）。", "必须由玩家执行；主手一把、副手一把即触发［骨中之骨］。", "自身背包"),
     command("/function rpg:command/give/armor", "只发放全部护甲（八套，含四套新护甲与神圣套补全）。", "必须由玩家执行；穿齐同一套四件即触发套装加成。", "自身背包"),
     command("/function rpg:command/give/dungeons", "只发放坟墓克星与竖琴弩（Minecraft Dungeons 原作武器）。", "必须由玩家执行。", "自身背包"),
+    command("/function rpg:command/give/forge", "只发放装备养成的全部材料、六源、符文与符石各一件。", "必须由玩家执行；副手拿装备、主手拿材料右键，器胚对准灵魂营火右键。", "自身背包"),
     command("/function rpg:inquest/give/all_tools", "发放七罪媒介、仪式工具、三类粉笔和真名残页。", "必须由玩家执行；用于驱魔流程联调。", "自身背包"),
     command("/function rpg:ritual/life_tree/give/all", "发放卡巴拉血契、十源质与真·十字架。", "必须由玩家执行；仅测试／管理入口。", "自身背包"),
 ]

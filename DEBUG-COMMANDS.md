@@ -1,6 +1,6 @@
 # TRALANCER RPG 调试指令手册
 
-> 共 93 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
+> 共 98 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
 
 所有命令默认需要开启作弊或拥有管理员权限。带 `@s` 的入口必须由目标玩家自己执行；命令方块或服务器控制台不会自动获得玩家上下文。
 
@@ -23,12 +23,13 @@
 |---|---|---|
 | `/function rpg:command/give/box` | 发放按类型整理的全套测试潜影盒。 | 会发给所有在线玩家（@a）；盒内覆盖当前全部自定义物品。 影响：全体背包；标记：群体发放。 |
 | `/function rpg:command/give/weapon` | 发放全部武器、护甲与药剂。 | 会发给所有在线玩家（@a），多人服慎用。 影响：全体背包；标记：群体发放。 |
-| `/function rpg:command/give/item` | 发放符文、符石、晶石与锻造材料。 | 会发给所有在线玩家（@a），多人服慎用。 影响：全体背包；标记：群体发放。 |
-| `/function rpg:command/give/weapon_up_item` | 发放全部武器分支唱片。 | 会发给所有在线玩家（@a），多人服慎用。 影响：全体背包；标记：群体发放。 |
+| `/function rpg:command/give/item` | 发放属性晶石，以及装备养成的材料、符文与符石。 | 会发给所有在线玩家（@a），多人服慎用。 影响：全体背包；标记：群体发放。 |
+| `/function rpg:command/give/weapon_up_item` | 发放六源（信念、希望、不屈、邪念、仇恨、傲慢）。 | 会发给所有在线玩家（@a），多人服慎用。 影响：全体背包；标记：群体发放。 |
 | `/function rpg:command/give/extra` | 发放额外／导入内容测试物品。 | 会发给所有在线玩家（@a），可能占用较多背包格。 影响：全体背包；标记：群体发放。 |
 | `/function rpg:command/give/michael` | 只发放米迦勒脊骨与米迦勒肋骨（[神圣] 双持圣骸）。 | 必须由玩家执行；主手一把、副手一把即触发［骨中之骨］。 影响：自身背包；标记：常规。 |
 | `/function rpg:command/give/armor` | 只发放全部护甲（八套，含四套新护甲与神圣套补全）。 | 必须由玩家执行；穿齐同一套四件即触发套装加成。 影响：自身背包；标记：常规。 |
 | `/function rpg:command/give/dungeons` | 只发放坟墓克星与竖琴弩（Minecraft Dungeons 原作武器）。 | 必须由玩家执行。 影响：自身背包；标记：常规。 |
+| `/function rpg:command/give/forge` | 只发放装备养成的全部材料、六源、符文与符石各一件。 | 必须由玩家执行；副手拿装备、主手拿材料右键，器胚对准灵魂营火右键。 影响：自身背包；标记：常规。 |
 | `/function rpg:inquest/give/all_tools` | 发放七罪媒介、仪式工具、三类粉笔和真名残页。 | 必须由玩家执行；用于驱魔流程联调。 影响：自身背包；标记：常规。 |
 | `/function rpg:ritual/life_tree/give/all` | 发放卡巴拉血契、十源质与真·十字架。 | 必须由玩家执行；仅测试／管理入口。 影响：自身背包；标记：常规。 |
 
@@ -84,6 +85,10 @@
 | `/function rpg:saul_boss/summon` | 在执行位置开始疯人王扫罗战：十字军大元帅 → 甲碎 → 疯人王。 | 同一时间只允许一场；战场半径 40 格。 影响：扫罗；标记：生成战斗。 |
 | `/function rpg:saul_boss/debug/stage2` | 召唤后直接打到一阶段底线，走甲碎演出进入二阶段。 | 同一时间只允许一场。 影响：扫罗；标记：生成战斗。 |
 | `/function rpg:saul_boss/clear` | 清除扫罗战的全部实体（含碎甲、蛛网与老战友的幻影）。 | 战斗卡住或测试收尾时使用。 影响：扫罗；标记：清理。 |
+| `/function rpg:michael_boss/summon` | 在执行位置开始天使长米迦勒战：天使长·谁似神 → 骨中之骨 → 炽天使。 | 同一时间只允许一场；战场半径 40 格。 影响：米迦勒；标记：生成战斗。 |
+| `/function rpg:michael_boss/debug/stage2` | 召唤后直接打到一阶段底线，走骨中之骨演出进入二阶段。 | 同一时间只允许一场。 影响：米迦勒；标记：生成战斗。 |
+| `/function rpg:michael_boss/clear` | 清除米迦勒战的全部实体（含守望者、骨柱与注视的眼睛）。 | 战斗卡住或测试收尾时使用。 影响：米迦勒；标记：清理。 |
+| `/function rpg:michael/debug/preview` | 在脚下放一个不动的米迦勒外观（不是战斗）；preview_watchling 放守望者。 | 清掉用 /function rpg:michael/debug/clear。 影响：米迦勒；标记：常规。 |
 
 ## 七柱罪仆
 

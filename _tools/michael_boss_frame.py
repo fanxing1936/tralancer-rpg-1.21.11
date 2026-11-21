@@ -30,6 +30,7 @@ def build():
                       ui.comp("已经有一场米迦勒战；先用 /function %s/clear 清场。" % B, ui.BROADCAST_BODY))),
         "summon minecraft:marker ~ ~ ~ {Tags:[\"rpg.mkb.center\"]}",
         "summon minecraft:marker ~ ~ ~ {Tags:[\"rpg.mkb.lag\"]}",
+        "summon minecraft:marker ~ ~ ~ {Tags:[\"rpg.mkb.last\"]}",
         "summon minecraft:vindicator ~ ~ ~ {Tags:[\"rpg.mkb\",\"rpg.mkwear\",\"rpg.mkb.new\"],Silent:1b,PersistenceRequired:1b,"
         "DeathLootTable:\"minecraft:empty\",CustomName:{\"text\":\"米迦勒\",\"color\":\"%s\",\"bold\":true,\"italic\":false},"
         "Health:%df,active_effects:[{id:\"invisibility\",duration:-1,amplifier:0,show_particles:0b}],"
@@ -70,6 +71,7 @@ def build():
     w("arena", [
         "# 战场（as/at 战场中心）。",
         "scoreboard players add #tick %s 1" % O,
+        "execute if score #ghost %s matches 1.. run return run function %s/ghost/tick" % (O, B),
         "execute if entity @a[distance=..%d,%s] run scoreboard players set #empty %s 0" % (ARENA, SURV, O),
         "execute unless entity @a[distance=..%d,%s] run scoreboard players add #empty %s 1" % (ARENA, SURV, O),
         "execute if score #empty %s matches %d.. run return run function %s/lose" % (O, EMPTY_LIMIT, B),
@@ -92,8 +94,8 @@ def build():
         "function %s/music/tick" % B,
     ])
     w("lost_unit", [
-        "# 载体不见了：二阶段里按胜利结算；否则清场。",
-        "execute if score #stage %s matches 2.. run return run function %s/victory" % (O, B),
+        "# 载体不见了：二阶段里（比如被一下打穿了死亡保护）在他最后的位置补放死亡特效再结算；否则清场。",
+        "execute if score #stage %s matches 2.. run return run function %s/ghost/start" % (O, B),
         "function %s/clear" % B,
     ])
     w("unit", [
@@ -138,6 +140,7 @@ def build():
     ])
     step = MAX // art.STEPS
     w("read_hp", [
+        "tp @e[%s] @s" % LAST,
         "execute store result score @s rpg_mk_h run data get entity @s Health 1",
         "execute store result bossbar %s value run scoreboard players get @s rpg_mk_h" % BAR,
         "execute if entity @s[tag=rpg.mkb.morph] run return 0",
@@ -387,12 +390,22 @@ def build():
         at_c(44, anim("fall")),
         at_c(68, anim("down")),
         at_c(70, say("……主责备你吧。", stage=2)),
+        # 死亡特效（用户 2026-11-21「米迦勒没有死亡特效」：原来散开 16 刻后就结算清场，特效还没长出来就被收掉了）：
+        # 光环降下、六翼一片片烧掉，天光聚拢，一闪散成白光与白鸽，最后余光落下；结算挪到 200 刻，等特效放完
+        at_c(76, "function %s/vfx/death/halo" % B),
+    ] + [at_c(78 + 4 * k, "function %s/wings/burn/%d" % (LOOK, k + 1)) for k in range(6)] + [
+        at_c(78 + 4 * k, "function %s/vfx/death/wing" % B) for k in range(6)] + [
         at_c(100, "function %s/look/fade" % LOOK),
         "execute if score @s rpg_mk_c matches 70..130 run particle minecraft:end_rod ~ ~0.8 ~ 0.6 0.4 0.6 0.02 2",
         "execute if score @s rpg_mk_c matches 100..130 run particle minecraft:white_ash ~ ~0.8 ~ 0.7 0.4 0.7 0.02 6",
+        at_c(108, "function %s/vfx/death/gather" % B),
         at_c(124, "function %s/vfx/death" % B),
+    ] + [at_c(124 + 2 * k, c) for k, times in enumerate(((0, 3, 0), (0, 3, 0), (0, 3, 0), (0, 2, 14)))
+         for c in full_title("flash", k, times)] + [
         at_c(128, "execute on passengers run kill @s"),
-        "execute if score @s rpg_mk_c matches 140.. run function %s/victory" % B,
+        at_c(136, "function %s/vfx/death/after" % B),
+        "execute if score @s rpg_mk_c matches 130..190 run particle minecraft:end_rod ~ ~6 ~ 2.5 1.5 2.5 0 1",
+        "execute if score @s rpg_mk_c matches 200.. run function %s/victory" % B,
     ])
     rib = ('summon minecraft:item_display ~ ~0.6 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew","rpg.mkb.bones"],'
            'item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:michael_boss/rib"}},item_display:"none",'
@@ -441,22 +454,47 @@ def build():
         "execute as @e[%s] run function %s/clear_unit" % (WATCH, B),
         "kill @e[type=minecraft:marker,tag=rpg.mkb.center]",
         "kill @e[type=minecraft:marker,tag=rpg.mkb.lag]",
+        "kill @e[type=minecraft:marker,tag=rpg.mkb.last]",
+        "scoreboard players set #ghost %s 0" % O,
         "kill @e[tag=rpg.mkb.fx]",
         "bossbar set %s visible false" % BAR,
         "bossbar set %s players" % BAR,
-    ] + ["stopsound @a record minecraft:%s" % m for m in sorted({v[4] for v in STAGES.values()})] + [
+    ] + ["stopsound @a record %s" % m for m in sorted({v[4] for v in STAGES.values()})] + [
         "scoreboard players set #fight %s 0" % O,
         "scoreboard players set #stage %s 0" % O,
+    ])
+    w("ghost/start", [
+        "# 载体没走完结尾就死了（as/at 战场中心）：收掉没了坐骑的部件和守望者，在最后的位置放死亡特效",
+        "tag @e[tag=rpg.mkm.part] add rpg.mkb.orph",
+        "execute as @e[tag=rpg.mkm] on passengers run tag @s remove rpg.mkb.orph",
+        "kill @e[tag=rpg.mkb.orph]",
+        "execute as @e[%s] run function %s/watch/die" % (WATCH, B),
+        "kill @e[tag=rpg.mkb.fx,tag=!rpg.mkb.pillar]",
+        "bossbar set %s value 0" % BAR,
+        "scoreboard players set #ghost %s 1" % O,
+    ])
+    w("ghost/tick", [
+        "# 补放的死亡特效（as 战场中心），在最后的位置：聚光、一闪散开、余光，然后结算",
+        "scoreboard players add #ghost %s 1" % O,
+        "execute if score #ghost %s matches 2 at @e[%s] run function %s/vfx/death/halo" % (O, LAST, B),
+        "execute if score #ghost %s matches 4 at @e[%s] run function %s/vfx/death/gather" % (O, LAST, B),
+        "execute if score #ghost %s matches 20 at @e[%s] run function %s/vfx/death" % (O, LAST, B),
+    ] + ["execute if score #ghost %s matches %d run %s" % (O, 20 + 2 * k, c)
+         for k, times in enumerate(((0, 3, 0), (0, 3, 0), (0, 3, 0), (0, 2, 14))) for c in full_title("flash", k, times)] + [
+        "execute if score #ghost %s matches 46 at @e[%s] run function %s/vfx/death/after" % (O, LAST, B),
+        "execute if score #ghost %s matches 26..86 at @e[%s] run particle minecraft:end_rod ~ ~6 ~ 2.5 1.5 2.5 0 1" % (O, LAST),
+        "execute as @e[tag=rpg.mkb.fx,distance=..%d] at @s run function %s/fx/tick" % (ARENA * 3, B),
+        "execute if score #ghost %s matches 112.. run function %s/victory" % (O, B),
     ])
     w("clear_unit", ["execute on passengers run kill @s", "tp @s ~ -256 ~", "kill @s"])
 
     music = ["scoreboard players remove #bgm %s 1" % O]
     for s, v in STAGES.items():
         music.append("execute if score #bgm %s matches ..0 if score #stage %s matches %d run function %s/music/%d" % (O, O, s, B, s))
-        w("music/%d" % s, ["stopsound @a[distance=..%d] record minecraft:%s" % (BAR_RANGE, m)
+        w("music/%d" % s, ["stopsound @a[distance=..%d] record %s" % (BAR_RANGE, m)
                            for m in sorted({x[4] for x in STAGES.values()})] + [
             "stopsound @a[distance=..%d] music" % BAR_RANGE,
-            "execute as @a[distance=..%d] at @s run playsound minecraft:%s record @s ~ ~ ~ 1 1" % (BAR_RANGE, v[4]),
+            "execute as @a[distance=..%d] at @s run playsound %s record @s ~ ~ ~ 1 1" % (BAR_RANGE, v[4]),
             "scoreboard players set #bgm %s %d" % (O, v[5]),
         ])
     w("music/tick", music)

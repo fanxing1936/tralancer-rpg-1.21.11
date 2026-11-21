@@ -118,6 +118,7 @@ python add_pact_depth.py ../rpg ../resourcepack
 # 物品贴图按原生网格存储（最后一个写物品贴图的生成器之后）：整数倍放大
 # 的无损还原，新约按 ART-STYLE D6 重建；单独重建数据包也要收回来
 python fix_texture_grid.py ../resourcepack
+python add_forge.py ../resourcepack ../rpg
 python add_drop_policy.py ../rpg
 # 批量护甲与套装加成：要在 add_demon_minions 之后（往罪仆掉落表里追加），
 # 早于 make_boxes 与 polish_ui；也晚于全部 opt_*，套装检测不会被改写。
@@ -192,6 +193,7 @@ python add_saul_boss_art.py ../resourcepack
 # 米迦勒专属特效贴图：原作素材 + Codex 序列帧（michael_fx_ref/），字体 rpg:michael_vfx
 python add_michael_fx_art.py ../resourcepack
 python add_michael_boss_art.py ../resourcepack
+python add_boss_bgm.py ../resourcepack
 # 教皇战（docs/POPE-DESIGN.md）：调用各模型的函数，放在所有模型之后。
 python add_pope_fight.py ../rpg
 # 路西法二阶段「知善恶树」的变身与招式（docs/LUCIFER-P2-DESIGN.md）；要在两阶段外观、
@@ -223,6 +225,7 @@ python polish_vfx.py ../rpg
 # 友军单位接入：敌方技能里选玩家的 @a/@p/@r 也算上友军，玩家的范围技能避开友军。
 # 要在所有生成器与收口之后（它改写的是最终产物）。
 python add_ally_units.py ../rpg
+python add_forge.py ../resourcepack ../rpg --late
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg

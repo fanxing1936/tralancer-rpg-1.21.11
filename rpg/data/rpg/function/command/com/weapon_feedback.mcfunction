@@ -1,3 +1,1 @@
-
-playsound minecraft:entity.warden.attack_impact player @s
-particle crit ~0.25 ~1.5 ~0.25 -0.5 -0.5 -0.5 1 10
+# 已退役：装备养成重置（docs/EQUIP-REWORK.md）由 rpg:forge/* 接管。

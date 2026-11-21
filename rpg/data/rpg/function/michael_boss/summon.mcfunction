@@ -2,6 +2,7 @@
 execute if score #fight rpg_mk matches 1 run return run tellraw @s ["",{"text":"〖米迦勒〗","color":"#FFD0BD","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"已经有一场米迦勒战；先用 /function rpg:michael_boss/clear 清场。","color":"#9C9A94","bold":false,"italic":false}]
 summon minecraft:marker ~ ~ ~ {Tags:["rpg.mkb.center"]}
 summon minecraft:marker ~ ~ ~ {Tags:["rpg.mkb.lag"]}
+summon minecraft:marker ~ ~ ~ {Tags:["rpg.mkb.last"]}
 summon minecraft:vindicator ~ ~ ~ {Tags:["rpg.mkb","rpg.mkwear","rpg.mkb.new"],Silent:1b,PersistenceRequired:1b,DeathLootTable:"minecraft:empty",CustomName:{"text":"米迦勒","color":"#FFD0BD","bold":true,"italic":false},Health:1200f,active_effects:[{id:"invisibility",duration:-1,amplifier:0,show_particles:0b}],attributes:[{id:"max_health",base:1200f},{id:"attack_damage",base:1f},{id:"armor",base:12f},{id:"follow_range",base:48f},{id:"knockback_resistance",base:1f},{id:"movement_speed",base:0.3f}],drop_chances:{mainhand:0f,offhand:0f}}
 scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk 1
 scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_h 1200

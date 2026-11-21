@@ -8,7 +8,7 @@ kill @e[type=minecraft:marker,tag=rpg.slb.center]
 kill @e[tag=rpg.slb.fx]
 bossbar set rpg:saul_boss visible false
 bossbar set rpg:saul_boss players
-stopsound @a record minecraft:boss1
-stopsound @a record minecraft:boss2
+stopsound @a record rpg:bgm.saul1
+stopsound @a record rpg:bgm.saul2
 scoreboard players set #fight rpg_sl 0
 scoreboard players set #stage rpg_sl 0

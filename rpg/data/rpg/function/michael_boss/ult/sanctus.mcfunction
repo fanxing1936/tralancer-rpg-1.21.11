@@ -10,7 +10,7 @@ execute if score @s rpg_mk matches 2.. run tellraw @a[distance=..48] ["",{"text"
 playsound minecraft:block.bell.resonate hostile @a[distance=..48] ~ ~ ~ 1.6 0.8
 execute at @s run summon minecraft:text_display ~ ~2.2 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],text:{text:"",font:"rpg:michael_vfx",color:"white"},background:0,billboard:"center",brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:3f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[5.75f,5.75f,5.75f],right_rotation:[0f,0f,0f,1f]}}
 scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 148
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 44
+scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 45
 tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
 execute at @s run summon minecraft:item_display ~ ~0.06 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:michael_vfx/seal_seraph","minecraft:custom_model_data":{colors:[16777215]}}},brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:2f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[9f,1f,9f],right_rotation:[0f,0f,0f,1f]}}
 scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 148

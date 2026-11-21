@@ -1,0 +1,119 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[神圣]",
+                    "color": "#FF3300",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "信念之源",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "副手拿武器，主手右键",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🜏效果 ",
+                      "color": "#FFFFFF",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "[信念]",
+                      "color": "#FF3300",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "对亡灵与恶魔伤害 +25%",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "武器 Lv.5 起算圣器",
+                      "color": "#FFD85A",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "一把武器只有一个源，新源会覆盖旧源",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:item_model": "rpg:forge/source_faith",
+                "minecraft:consumable": {
+                  "consume_seconds": 1234567.0,
+                  "animation": "none",
+                  "sound": "minecraft:intentionally_empty",
+                  "has_consume_particles": false
+                },
+                "minecraft:max_stack_size": 16
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{rpg_fm:1b,rpg_mat:\"source\",rpg_src:\"faith\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

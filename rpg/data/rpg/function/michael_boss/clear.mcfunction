@@ -10,10 +10,12 @@ execute as @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview] run fun
 execute as @e[type=minecraft:vindicator,tag=rpg.mkb.w] run function rpg:michael_boss/clear_unit
 kill @e[type=minecraft:marker,tag=rpg.mkb.center]
 kill @e[type=minecraft:marker,tag=rpg.mkb.lag]
+kill @e[type=minecraft:marker,tag=rpg.mkb.last]
+scoreboard players set #ghost rpg_mk 0
 kill @e[tag=rpg.mkb.fx]
 bossbar set rpg:michael_boss visible false
 bossbar set rpg:michael_boss players
-stopsound @a record minecraft:boss1
-stopsound @a record minecraft:boss2
+stopsound @a record rpg:bgm.michael1
+stopsound @a record rpg:bgm.michael2
 scoreboard players set #fight rpg_mk 0
 scoreboard players set #stage rpg_mk 0

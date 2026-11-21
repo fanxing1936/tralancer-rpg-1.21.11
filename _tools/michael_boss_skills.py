@@ -93,7 +93,7 @@ def skills1():
         "execute if score @s rpg_mk_ws matches 4 if score @s rpg_mk_wt matches 32.. run function %s/watch/rest" % B,
     ])
     w("watch/blink", ["# 传送出去（as/at 它）", "scoreboard players set @s rpg_mk_ws 1", "scoreboard players set @s rpg_mk_wt 0",
-                      wanim("tp_out"), "particle minecraft:reverse_portal ~ ~1.4 ~ 0.4 0.9 0.4 0.05 20"])
+                      wanim("tp_out"), "particle minecraft:large_smoke ~ ~1.4 ~ 0.3 0.8 0.3 0.02 8"])
     w("watch/arrive", [
         "# 出现在最近那人身边（as 它）：四个方向里挑一个能站的",
         "scoreboard players set @s rpg_mk_ws 2", "scoreboard players set @s rpg_mk_wt 0",
@@ -400,7 +400,7 @@ def skills2():
         "execute at @s run particle minecraft:flame ~ ~1 ~ 0.4 0.6 0.4 0.03 6",
     ])
     w("dash/fire", [fx.marker("~ ~ ~", "rpg.mkb.trail")] + fx.born(60) + mdecal("embers", 2, pos="~ ~0.06 ~", life=60)
-      + flame_at("~ ~ ~", 1.6, 60))
+      + fire_block("~ ~ ~", 60))
     w("dash/hit", hurt_tagged(DASH_DMG, flame=True) + fx.slash("^ ^1.2 ^1", FIRE, size=3.0) + impact("^ ^1.2 ^1", True, 3))
     w("fx/trail", ["# 火路（as/at 标记）：每 10 刻烧一下站在上面的人"] + every(3, "@s rpg_mk_life") + [
         "execute if score #m %s matches 0 run particle minecraft:flame ~ ~0.2 ~ 0.3 0.05 0.3 0.01 2" % O,

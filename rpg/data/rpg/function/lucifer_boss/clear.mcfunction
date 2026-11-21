@@ -8,7 +8,7 @@ kill @e[type=minecraft:marker,tag=rpg.lub.thorn]
 kill @e[type=minecraft:marker,tag=rpg.lub.center]
 bossbar set rpg:lucifer_boss visible false
 bossbar set rpg:lucifer_boss players
-stopsound @a record minecraft:boss1
-stopsound @a record minecraft:boss2
+stopsound @a record rpg:bgm.lucifer1
+stopsound @a record rpg:bgm.lucifer2
 scoreboard players set #fight rpg_lub 0
 scoreboard players set #stage rpg_lub 0

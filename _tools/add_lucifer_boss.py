@@ -41,8 +41,8 @@ CAST_CD = 70
 
 STAGES = {
     # 段号: (名称, 本段血量, 本段底线, 大招血线（本段内）, 大招时钟, 音乐, 音乐长度, 血条颜色)
-    1: ("晨星之蛇", 1000, 1, (625, 375), 900, "boss2", 1876, "green"),
-    2: ("知善恶树", 1000, 1, (667, 333), 1200, "boss1", 2943, "green"),
+    1: ("晨星之蛇", 1000, 1, (625, 375), 900, "rpg:bgm.lucifer1", 2177, "green"),
+    2: ("知善恶树", 1000, 1, (667, 333), 1200, "rpg:bgm.lucifer2", 1132, "green"),
 }
 MAX = 1000
 GUARD = ('minecraft:paper[minecraft:death_protection={},minecraft:item_model="rpg:empty"]')
@@ -295,7 +295,7 @@ def build():
         "kill @e[type=minecraft:marker,tag=rpg.lub.center]",
         "bossbar set rpg:lucifer_boss visible false",
         "bossbar set rpg:lucifer_boss players",
-    ] + ["stopsound @a record minecraft:%s" % m for m in sorted({v[5] for v in STAGES.values()})] + [
+    ] + ["stopsound @a record %s" % m for m in sorted({v[5] for v in STAGES.values()})] + [
         "scoreboard players set #fight %s 0" % O,
         "scoreboard players set #stage %s 0" % O,
     ])
@@ -309,9 +309,9 @@ def build():
     music = ["scoreboard players remove #bgm %s 1" % O]
     for s, v in STAGES.items():
         music.append("execute if score #bgm %s matches ..0 if score #stage %s matches %d run function %s/music/%d" % (O, O, s, B, s))
-        w("music/%d" % s, ["stopsound @a[distance=..%d] record minecraft:%s" % (BAR_RANGE, m)
+        w("music/%d" % s, ["stopsound @a[distance=..%d] record %s" % (BAR_RANGE, m)
                            for m in sorted({x[5] for x in STAGES.values()})] + [
-            "execute as @a[distance=..%d] at @s run playsound minecraft:%s record @s ~ ~ ~ 1 1" % (BAR_RANGE, v[5]),
+            "execute as @a[distance=..%d] at @s run playsound %s record @s ~ ~ ~ 1 1" % (BAR_RANGE, v[5]),
             "scoreboard players set #bgm %s %d" % (O, v[6]),
         ])
     w("music/tick", music)

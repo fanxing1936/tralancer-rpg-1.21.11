@@ -1,0 +1,116 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[符文]",
+                    "color": "#EC8A4C",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "处决",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "镶嵌于 ",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[近战武器]",
+                      "color": "#EC8A4C",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "🪓被动 ",
+                      "color": "#FFFFFF",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "[处决]",
+                      "color": "#EC8A4C",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "对生命低于 25% 的目标伤害 +40%",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "副手拿装备，主手右键镶嵌",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:item_model": "rpg:forge/rune_execute",
+                "minecraft:consumable": {
+                  "consume_seconds": 1234567.0,
+                  "animation": "none",
+                  "sound": "minecraft:intentionally_empty",
+                  "has_consume_particles": false
+                },
+                "minecraft:max_stack_size": 64
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{rpg_fm:1b,rpg_mat:\"rune\",rpg_rune:\"execute\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

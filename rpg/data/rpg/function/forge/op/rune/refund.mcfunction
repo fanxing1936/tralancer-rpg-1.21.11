@@ -1,0 +1,13 @@
+execute if data storage rpg:forge g{o:"ember"} run loot give @s loot rpg:forge/item/rune_ember
+execute if data storage rpg:forge g{o:"echo"} run loot give @s loot rpg:forge/item/rune_echo
+execute if data storage rpg:forge g{o:"execute"} run loot give @s loot rpg:forge/item/rune_execute
+execute if data storage rpg:forge g{o:"backstab"} run loot give @s loot rpg:forge/item/rune_backstab
+execute if data storage rpg:forge g{o:"bloodpact"} run loot give @s loot rpg:forge/item/rune_bloodpact
+execute if data storage rpg:forge g{o:"poise"} run loot give @s loot rpg:forge/item/rune_poise
+execute if data storage rpg:forge g{o:"hunt"} run loot give @s loot rpg:forge/item/rune_hunt
+execute if data storage rpg:forge g{o:"split"} run loot give @s loot rpg:forge/item/rune_split
+execute if data storage rpg:forge g{o:"meteor"} run loot give @s loot rpg:forge/item/rune_meteor
+execute if data storage rpg:forge g{o:"recoil"} run loot give @s loot rpg:forge/item/rune_recoil
+execute if data storage rpg:forge g{o:"lastbreath"} run loot give @s loot rpg:forge/item/rune_lastbreath
+execute if data storage rpg:forge g{o:"stillwater"} run loot give @s loot rpg:forge/item/rune_stillwater
+execute if data storage rpg:forge g{o:"swift"} run loot give @s loot rpg:forge/item/rune_swift

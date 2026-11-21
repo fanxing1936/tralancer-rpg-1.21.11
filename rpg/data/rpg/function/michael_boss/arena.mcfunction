@@ -1,5 +1,6 @@
 # 战场（as/at 战场中心）。
 scoreboard players add #tick rpg_mk 1
+execute if score #ghost rpg_mk matches 1.. run return run function rpg:michael_boss/ghost/tick
 execute if entity @e[tag=rpg.unit.f,distance=..40] run scoreboard players set #empty rpg_mk 0
 execute unless entity @e[tag=rpg.unit.f,distance=..40] run scoreboard players add #empty rpg_mk 1
 execute if score #empty rpg_mk matches 1200.. run return run function rpg:michael_boss/lose

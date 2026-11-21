@@ -11,7 +11,7 @@ execute as @e[tag=rpg.usb.unit] run function rpg:usurper_boss/clear_unit
 execute as @e[tag=rpg.unit,tag=rpg.usb.rw] run function rpg:usurper_boss/rewrite/clear
 bossbar set rpg:usurper_boss visible false
 bossbar set rpg:usurper_boss players
-stopsound @a record minecraft:boss2
-stopsound @a record minecraft:boss3
+stopsound @a record rpg:bgm.usurper1
+stopsound @a record rpg:bgm.usurper2
 scoreboard players set #fight rpg_ub 0
 scoreboard players set #stage rpg_ub 0

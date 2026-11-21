@@ -357,6 +357,14 @@ def with_attachments(source, meta_doc, attachments):
             # bone takes m @ diag(1,-1,1) and the mesh is flipped in its own Y before it is placed (below)
             m[:3, :3] = m[:3, :3] @ np.diag([1., -1., 1.])
             att['_mirror_y'] = True
+        # a non-uniform scale (e.g. the Stalwart chest's RelativeScale3D Z 1.2): a bone only rotates and scales
+        # uniformly, and matrix_quat of a stretched matrix is a garbage turn (扫罗的胸甲歪了 28°, 2026-11-21).
+        # Split it: the bone takes the nearest rotation (SVD), the leftover stretch is baked into the mesh (below)
+        u_, _sv, vt = np.linalg.svd(m[:3, :3])
+        rot = u_ @ vt
+        if not np.allclose(m[:3, :3], rot * s, atol=1e-6):
+            att['_stretch'] = (rot.T @ m[:3, :3] / s).tolist()
+            m[:3, :3] = rot * s
         bones.append({'name': att['name'], 'parent': index[att['bone']], 'translation': m[:3, 3].tolist(),
                       'rotation': matrix_quat(m[:3, :3] / s), 'scale': [s, s, s]})
         index[att['name']] = len(bones) - 1
@@ -381,6 +389,8 @@ def with_attachments(source, meta_doc, attachments):
         if att.get('_mirror_y'):
             local = local * np.array([1., -1., 1.])
             tris = tris[:, ::-1]                    # a mirror turns the faces inside out; keep them facing out
+        if att.get('_stretch') is not None:
+            local = local @ np.asarray(att['_stretch']).T
         v = local @ w[:3, :3].T + w[:3, 3]
         vertices.append(v); uv.append(static['uv']); triangles.append(tris + nv)
         wt = np.zeros((len(v), k)); wt[:, 0] = 1

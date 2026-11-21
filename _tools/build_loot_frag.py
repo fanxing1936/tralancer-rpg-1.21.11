@@ -185,17 +185,11 @@ def reward_table(table, title):
 
 def main():
     frag = {
-        "loot_epic": cards_for("rpg:trial/epic_sword"),
-        "loot_drops": drop_table(
-            ["rpg:armor/sword", "rpg:armor/bow"], "怪物携带的武器 · rpg:armor/sword · bow")
-        + drop_table(["rpg:armor/helmet", "rpg:armor/chestplate",
-                      "rpg:armor/leggings", "rpg:armor/boots"],
-                     "怪物携带的护甲 · rpg:armor/*"),
-        "loot_trial": drop_table(
-            ["rpg:trial/sword", "rpg:trial/bow"], "试炼武器 · rpg:trial/sword · bow")
-        + drop_table(["rpg:trial/helmet", "rpg:trial/chestplate",
-                      "rpg:trial/leggings", "rpg:trial/boots"],
-                     "试炼护甲 · rpg:trial/*"),
+        # 旧的随机装备表（rpg:trial/sword 等、rpg:armor/*）已随装备养成重置退役，
+        # 装备改由魂火冶炼产出，见核心系统一节。
+        "loot_epic": "",
+        "loot_drops": "",
+        "loot_trial": "",
         "loot_reward": reward_table("rpg:trial/trial", "普通试炼奖励 · rpg:trial/trial")
         + reward_table("rpg:trial/trial_ominous", "不祥试炼奖励 · rpg:trial/trial_ominous")
         + reward_table("rpg:trial/valuable", "试炼珍品 · rpg:trial/valuable")

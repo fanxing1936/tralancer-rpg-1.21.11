@@ -1,0 +1,44 @@
+execute if score @s rpg_fg_t matches 58 run summon minecraft:arrow ~1.9 ~9 ~-1.4 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 58 run summon minecraft:arrow ~-0.7 ~9 ~0.5 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 55 run summon minecraft:arrow ~-0.7 ~9 ~-2.2 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 55 run summon minecraft:arrow ~-1.4 ~9 ~-0.6 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 52 run summon minecraft:arrow ~-1.4 ~9 ~0.4 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 52 run summon minecraft:arrow ~-0.5 ~9 ~-0.7 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 49 run summon minecraft:arrow ~1.8 ~9 ~-1.1 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 49 run summon minecraft:arrow ~1.8 ~9 ~-0.1 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 46 run summon minecraft:arrow ~-0.8 ~9 ~-1.8 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 46 run summon minecraft:arrow ~0.8 ~9 ~-0.6 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 43 run summon minecraft:arrow ~1.8 ~9 ~0.1 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 43 run summon minecraft:arrow ~1.6 ~9 ~0.6 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 40 run summon minecraft:arrow ~-2.1 ~9 ~-1.3 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 40 run summon minecraft:arrow ~0.5 ~9 ~-1.6 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 37 run summon minecraft:arrow ~0.5 ~9 ~1.5 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 37 run summon minecraft:arrow ~-0.6 ~9 ~-0.6 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 34 run summon minecraft:arrow ~-0.3 ~9 ~0.4 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 34 run summon minecraft:arrow ~1.7 ~9 ~-0.3 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 31 run summon minecraft:arrow ~0.1 ~9 ~-1.2 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 31 run summon minecraft:arrow ~0.8 ~9 ~-1.1 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 28 run summon minecraft:arrow ~-0.1 ~9 ~0.1 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 28 run summon minecraft:arrow ~-0.5 ~9 ~-0.2 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 25 run summon minecraft:arrow ~1.6 ~9 ~-0.0 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 25 run summon minecraft:arrow ~1.1 ~9 ~1.4 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 22 run summon minecraft:arrow ~0.9 ~9 ~-0.5 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 22 run summon minecraft:arrow ~-0.2 ~9 ~2.2 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 19 run summon minecraft:arrow ~2.1 ~9 ~-1.8 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 19 run summon minecraft:arrow ~2.0 ~9 ~1.9 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 16 run summon minecraft:arrow ~-1.0 ~9 ~0.3 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 16 run summon minecraft:arrow ~-0.6 ~9 ~1.4 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 13 run summon minecraft:arrow ~-0.8 ~9 ~-2.1 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 13 run summon minecraft:arrow ~1.9 ~9 ~1.8 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 10 run summon minecraft:arrow ~-1.6 ~9 ~1.2 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 10 run summon minecraft:arrow ~0.3 ~9 ~0.3 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 7 run summon minecraft:arrow ~0.1 ~9 ~0.8 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 7 run summon minecraft:arrow ~0.2 ~9 ~-0.1 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 4 run summon minecraft:arrow ~1.4 ~9 ~-1.8 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 4 run summon minecraft:arrow ~1.1 ~9 ~-1.9 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 1 run summon minecraft:arrow ~-0.9 ~9 ~1.1 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute if score @s rpg_fg_t matches 1 run summon minecraft:arrow ~-1.1 ~9 ~-2.1 {Tags:["rpg.fg.rain","rpg.fg.a"],pickup:0b,damage:4.0d,Motion:[0.0,-2.2,0.0]}
+execute as @e[type=minecraft:arrow,tag=rpg.fg.rain,tag=!rpg.fg.own,distance=..12] run data modify entity @s Owner set from entity @e[type=minecraft:marker,tag=rpg.fg.volley,limit=1,sort=nearest] data.owner
+tag @e[type=minecraft:arrow,tag=rpg.fg.rain,distance=..12] add rpg.fg.own
+kill @e[type=minecraft:arrow,tag=rpg.fg.rain,tag=rpg.fg.own,nbt={inGround:1b},distance=..12]
+particle minecraft:crit ~ ~0.2 ~ 2 0.1 2 0 6

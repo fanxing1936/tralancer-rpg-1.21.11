@@ -4462,1221 +4462,6 @@
    "potion_contents": null
   },
   {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "泣血",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🪓被动技能[泣血]",
-    "攻击时有1/5的概率吸取4点血量",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "damage_tag"
-   ],
-   "custom_data": {
-    "damage_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110018.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "重击",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🪓被动技能[重击]",
-    "攻击有1/3的概率持续造成10点伤害",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "blow_tag"
-   ],
-   "custom_data": {
-    "blow_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110019.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "幽深",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🪓被动技能[幽深]",
-    "攻击时有1/5的概率给予敌人黑暗效果",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "deep_tag"
-   ],
-   "custom_data": {
-    "deep_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110020.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "萤火",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🪓被动技能[萤火]",
-    "攻击时有1/5的概率标记敌人并重击",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "ink_tag"
-   ],
-   "custom_data": {
-    "ink_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110021.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "守护",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[胸甲]上",
-    "+------------------+",
-    "🛡被动技能[守护]",
-    "受击时有1/5的概率获得四点护盾",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "absorption_tag",
-    "add_weapon_tag"
-   ],
-   "custom_data": {
-    "absorption_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110022.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "不屈",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[胸甲]上",
-    "+------------------+",
-    "🛡被动技能[不屈]",
-    "血量低于3点时获得力量三",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "health_tag"
-   ],
-   "custom_data": {
-    "health_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110023.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "共死",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[胸甲]上",
-    "+------------------+",
-    "🛡被动技能[共死]",
-    "血量低于3点时自爆",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "boom_tag"
-   ],
-   "custom_data": {
-    "boom_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110024.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "黑炎",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[弓/弩]上",
-    "+------------------+",
-    "🏹被动技能[黑炎]",
-    "箭矢附带黑炎",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "dark_tag"
-   ],
-   "custom_data": {
-    "dark_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110025.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "连发",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[弓/弩]上",
-    "+------------------+",
-    "🏹被动技能[连发]",
-    "射击时连续发射箭矢",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "projectiles_tag"
-   ],
-   "custom_data": {
-    "projectiles_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110026.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "铸造之石",
-   "rarity": "传说",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "升级武器的晶石",
-    "增加100点武器经验值",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "level_item"
-   ],
-   "custom_data": {
-    "level_item": 1
-   },
-   "cmd": 1110003.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "sweeping_edge": 2
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "sweeping_edge": 3
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "sharpness": 3
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "sharpness": 4
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "sharpness": 5
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "bane_of_arthropods": 3
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "bane_of_arthropods": 4
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "bane_of_arthropods": 5
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "smite": 3
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "smite": 4
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "smite": 5
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "thorns": 2
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "thorns": 3
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "protection": 3
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "protection": 4
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "power": 3
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "power": 4
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "power": 5
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "piercing": 3
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "piercing": 4
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "unbreaking": 2
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "unbreaking": 3
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "unbreaking": 4
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "amethyst_shard",
-   "name": "试金石",
-   "rarity": "附魔",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "炼制武器的原料",
-    "添加附魔",
-    "+------------------+"
-   ],
-   "id": "amethyst_shard",
-   "enchantments": {
-    "unbreaking": 5
-   },
-   "modifiers": [],
-   "tags": [
-    "enchant_tag"
-   ],
-   "custom_data": {
-    "enchant_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "enchantments",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
    "item": "minecraft:raw_gold",
    "name": "货币",
    "rarity": "货币",
@@ -5702,594 +4487,6 @@
    "components": [
     "custom_data",
     "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "minecraft:gold_ingot",
-   "name": "黄金",
-   "rarity": "货币",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "上等的[物品]",
-    "好用的材料",
-    "+------------------+"
-   ],
-   "id": "minecraft:gold_ingot",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "gold_tag"
-   ],
-   "custom_data": {
-    "gold_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "diamond",
-   "name": "钻石",
-   "rarity": "货币",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "珍贵的[材料]",
-    "大家都喜欢",
-    "+------------------+"
-   ],
-   "id": "diamond",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "diamond_tag"
-   ],
-   "custom_data": {
-    "diamond_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符石",
-   "rarity": "剑气",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的符石",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🔱镶嵌技能[钢刃]",
-    "长按蓄力2.5秒，释放12格钢刃剑气",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "sweep_tag"
-   ],
-   "custom_data": {
-    "sweep_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110027.0,
-   "unbreakable": false,
-   "consumable": 1000000,
-   "components": [
-    "consumable",
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "food",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符石",
-   "rarity": "风暴",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的符石",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🔱镶嵌技能[风暴]",
-    "长按蓄力2.5秒，消耗1级经验释放风弹",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "wind_tag"
-   ],
-   "custom_data": {
-    "wind_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110028.0,
-   "unbreakable": false,
-   "consumable": 2000000,
-   "components": [
-    "consumable",
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "food",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符石",
-   "rarity": "烈焰",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的符石",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🔱镶嵌技能[烈焰]",
-    "长按蓄力2.5秒，消耗1级经验释放烈焰",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "flame_tag"
-   ],
-   "custom_data": {
-    "flame_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110029.0,
-   "unbreakable": false,
-   "consumable": 3000000,
-   "components": [
-    "consumable",
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "food",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "wooden_sword",
-   "name": "剑胚",
-   "rarity": "锻造",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "锻造装备的原材料",
-    "天然的武器",
-    "+------------------+"
-   ],
-   "id": "wooden_sword",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "embryo_tag"
-   ],
-   "custom_data": {
-    "embryo_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "damage_resistant",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "raw_iron",
-   "name": "生铁",
-   "rarity": "锻造",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "锻造装备的原材料",
-    "未经处理的矿石",
-    "+------------------+"
-   ],
-   "id": "raw_iron",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "fec_tag"
-   ],
-   "custom_data": {
-    "fec_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "damage_resistant",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "echo_shard",
-   "name": "传说冶炼石",
-   "rarity": "锻造",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "锻造装备的原材料",
-    "决定成品的矿石",
-    "+------------------+"
-   ],
-   "id": "echo_shard",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "echo_tag"
-   ],
-   "custom_data": {
-    "echo_tag": 2
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "damage_resistant",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "echo_shard",
-   "name": "冶炼石",
-   "rarity": "锻造",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "锻造装备的原材料",
-    "决定成品的矿石",
-    "+------------------+"
-   ],
-   "id": "echo_shard",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "echo_tag"
-   ],
-   "custom_data": {
-    "echo_tag": 1
-   },
-   "cmd": null,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_name",
-    "damage_resistant",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "枯萎",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🪓被动技能[枯萎]",
-    "攻击时有1/4的概率使目标凋零5秒",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "wilt_tag"
-   ],
-   "custom_data": {
-    "wilt_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110011.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "裂甲",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🪓被动技能[裂甲]",
-    "攻击时破开护甲，目标虚弱且暴露6秒",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "sunder_tag"
-   ],
-   "custom_data": {
-    "sunder_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110012.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "逆潮",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[胸甲]上",
-    "+------------------+",
-    "🛡被动技能[逆潮]",
-    "生命低于30%时回涌，再生与抗性各6秒",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "ebb_tag"
-   ],
-   "custom_data": {
-    "ebb_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110013.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符文",
-   "rarity": "钉影",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的卷轴",
-    "镶嵌于[弓]上",
-    "+------------------+",
-    "🏹被动技能[钉影]",
-    "箭矢命中后将目标钉在原地2.5秒",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "pin_tag"
-   ],
-   "custom_data": {
-    "pin_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110014.0,
-   "unbreakable": false,
-   "consumable": null,
-   "components": [
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符石",
-   "rarity": "寒潮",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的符石",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🔱镶嵌技能[寒潮]",
-    "长按/右键蓄力掀起环形寒潮",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "tide_tag"
-   ],
-   "custom_data": {
-    "tide_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110015.0,
-   "unbreakable": false,
-   "consumable": 4000000,
-   "components": [
-    "consumable",
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "food",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符石",
-   "rarity": "震地",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的符石",
-    "镶嵌于[重锤]上",
-    "+------------------+",
-    "🔱镶嵌技能[震地]",
-    "长按/右键蓄力砸地，震飞四周",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "quake_tag"
-   ],
-   "custom_data": {
-    "quake_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110016.0,
-   "unbreakable": false,
-   "consumable": 5000000,
-   "components": [
-    "consumable",
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "food",
-    "lore"
-   ],
-   "dyed_color": null,
-   "trim": null,
-   "potion_contents": null
-  },
-  {
-   "item": "quartz",
-   "name": "镶嵌符石",
-   "rarity": "噬影",
-   "name_colour": "#FFFFFF",
-   "lore": [
-    "+------------------+",
-    "蕴含[法力]的符石",
-    "镶嵌于[剑]上",
-    "+------------------+",
-    "🔱镶嵌技能[噬影]",
-    "长按/右键蓄力遁入影中，自敌后重创",
-    "+------------------+"
-   ],
-   "id": "quartz",
-   "enchantments": {},
-   "modifiers": [],
-   "tags": [
-    "add_weapon_tag",
-    "shade_tag"
-   ],
-   "custom_data": {
-    "shade_tag": 1,
-    "add_weapon_tag": 1
-   },
-   "cmd": 1110017.0,
-   "unbreakable": false,
-   "consumable": 7000000,
-   "components": [
-    "consumable",
-    "custom_data",
-    "custom_model_data",
-    "custom_name",
-    "food",
     "lore"
    ],
    "dyed_color": null,
@@ -6409,196 +4606,1261 @@
    "dyed_color": null,
    "trim": null,
    "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "器胚",
+   "rarity": "锻造",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "未成形的暗铁坯料",
+    "手持对准灵魂营火右键冶炼",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "blank"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "残魂",
+   "rarity": "锻造",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "冶炼时每多放一枚，品质多抽一次",
+    "随冶炼自动从背包扣取",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "soul"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "铸造之石",
+   "rarity": "锻造",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "副手拿装备，主手右键",
+    "装备经验 +100",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "forge_stone"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "洗炼钻",
+   "rarity": "锻造",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "副手拿装备，主手右键",
+    "重抽装备品质，新旧二选一",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "wash_gem"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "镀金箔",
+   "rarity": "锻造",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "副手拿装备，主手右键",
+    "随机一条附魔 +1 级，每件限一次",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "gild_leaf"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "余烬",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🪓被动 [余烬]",
+    "连击同一目标叠灼痕，5 层引爆 6 点火焰伤害",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "ember"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "回响",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🪓被动 [回响]",
+    "每第 4 击，0.5 秒后补一次 60% 回声斩",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "echo"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "处决",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🪓被动 [处决]",
+    "对生命低于 25% 的目标伤害 +40%",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "execute"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "背刺",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🪓被动 [背刺]",
+    "从目标背后命中伤害 +35%",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "backstab"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "血契",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🪓被动 [血契]",
+    "自身每少 10% 生命，伤害 +4%，至多 +36%",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "bloodpact"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "蓄势",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🪓被动 [蓄势]",
+    "2 秒未出手后，下一击 +50% 并击退",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "poise"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "追猎",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [弓弩]",
+    "🪓被动 [追猎]",
+    "箭矢命中标记目标 6 秒，你对它近战 +25%",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "hunt"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "裂矢",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [弓弩]",
+    "🪓被动 [裂矢]",
+    "满蓄力的箭命中后分出 2 支弹向附近敌人",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "split"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "坠星",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [弓弩]",
+    "🪓被动 [坠星]",
+    "仰角大于 45° 的箭在落点引发冲击",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "meteor"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "反震",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [护甲]",
+    "🪓被动 [反震]",
+    "受近战伤害后 1 秒内，下一击 +40%",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "recoil"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "余生",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [护甲]",
+    "🪓被动 [余生]",
+    "生命跌到 3 点以下时抗性 V 2 秒，冷却 120 秒",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "lastbreath"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "静水",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [护甲]",
+    "🪓被动 [静水]",
+    "3 秒未受伤后获得 4 点吸收护盾",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "stillwater"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "疾行",
+   "rarity": "符文",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [护甲]",
+    "🪓被动 [疾行]",
+    "击杀后获得速度 II 3 秒",
+    "副手拿装备，主手右键镶嵌",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_rune"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "rune",
+    "rpg_rune": "swift"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "裂地",
+   "rarity": "符石",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🔱主动 [裂地]",
+    "向前方扇形打出冲击波，8 点伤害并击飞",
+    "打怪攒满能量后按 F 释放",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_stone"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "stone",
+    "rpg_stone": "rift"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "寒潮",
+   "rarity": "符石",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🔱主动 [寒潮]",
+    "冻结周围 5 格内的敌人 2 秒",
+    "打怪攒满能量后按 F 释放",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_stone"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "stone",
+    "rpg_stone": "frost"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "影步",
+   "rarity": "符石",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🔱主动 [影步]",
+    "瞬移到 12 格内目标身后，下一击 +60%",
+    "打怪攒满能量后按 F 释放",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_stone"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "stone",
+    "rpg_stone": "shadow"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "血祭",
+   "rarity": "符石",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [近战武器]",
+    "🔱主动 [血祭]",
+    "献出当前生命的 20%，8 秒内攻击吸血 25%",
+    "打怪攒满能量后按 F 释放",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_stone"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "stone",
+    "rpg_stone": "blood"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "风墙",
+   "rarity": "符石",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [武器]",
+    "🔱主动 [风墙]",
+    "前方立起风墙 4 秒，推回敌人与投射物",
+    "打怪攒满能量后按 F 释放",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_stone"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "stone",
+    "rpg_stone": "gale"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "箭雨",
+   "rarity": "符石",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [弓弩]",
+    "🔱主动 [箭雨]",
+    "准星落点降下 3 秒箭雨",
+    "打怪攒满能量后按 F 释放",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_stone"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "stone",
+    "rpg_stone": "volley"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "minecraft:paper",
+   "name": "战旗",
+   "rarity": "符石",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "镶嵌于 [武器]",
+    "🔱主动 [战旗]",
+    "插下战旗 10 秒，6 格内友方力量 I 与抗性 I",
+    "打怪攒满能量后按 F 释放",
+    "+------------------+"
+   ],
+   "id": "minecraft:paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_stone"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "stone",
+    "rpg_stone": "banner"
+   },
+   "cmd": null,
+   "unbreakable": false,
+   "consumable": 1234567.0,
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
   }
  ],
  "command/give/weapon_up_item.mcfunction": [
   {
-   "item": "music_disc_precipice",
-   "name": "信仰之源",
+   "item": "minecraft:paper",
+   "name": "信念之源",
    "rarity": "神圣",
    "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
-    "天堂之门将再度洞开",
-    "武器分支更改为信念",
+    "副手拿武器，主手右键",
+    "🜏效果 [信念]",
+    "对亡灵与恶魔伤害 +25%",
+    "武器 Lv.5 起算圣器",
+    "一把武器只有一个源，新源会覆盖旧源",
     "+------------------+"
    ],
-   "id": "music_disc_precipice",
+   "id": "minecraft:paper",
    "enchantments": {},
    "modifiers": [],
    "tags": [
-    "weapon_tree"
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_src"
    ],
    "custom_data": {
-    "weapon_tree": 1
+    "rpg_fm": 1,
+    "rpg_mat": "source",
+    "rpg_src": "faith"
    },
    "cmd": null,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 1234567.0,
    "components": [
+    "consumable",
     "custom_data",
     "custom_name",
-    "lore"
+    "item_model",
+    "lore",
+    "max_stack_size"
    ],
    "dyed_color": null,
    "trim": null,
    "potion_contents": null
   },
   {
-   "item": "music_disc_relic",
-   "name": "存续之源",
+   "item": "minecraft:paper",
+   "name": "希望之源",
    "rarity": "神圣",
    "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
-    "天堂之门将再度洞开",
-    "武器分支更改为希望",
+    "副手拿武器，主手右键",
+    "🜏效果 [希望]",
+    "击杀回复 4 点生命并再生 3 秒",
+    "武器 Lv.5 起算圣器",
+    "一把武器只有一个源，新源会覆盖旧源",
     "+------------------+"
    ],
-   "id": "music_disc_relic",
+   "id": "minecraft:paper",
    "enchantments": {},
    "modifiers": [],
    "tags": [
-    "weapon_tree"
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_src"
    ],
    "custom_data": {
-    "weapon_tree": 2
+    "rpg_fm": 1,
+    "rpg_mat": "source",
+    "rpg_src": "hope"
    },
    "cmd": null,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 1234567.0,
    "components": [
+    "consumable",
     "custom_data",
     "custom_name",
-    "lore"
+    "item_model",
+    "lore",
+    "max_stack_size"
    ],
    "dyed_color": null,
    "trim": null,
    "potion_contents": null
   },
   {
-   "item": "music_disc_13",
+   "item": "minecraft:paper",
    "name": "不屈之源",
    "rarity": "神圣",
    "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
-    "天堂之门将再度洞开",
-    "武器分支更改为不屈",
+    "副手拿武器，主手右键",
+    "🜏效果 [不屈]",
+    "受击后 3 秒内下一击 +30%",
+    "武器 Lv.5 起算圣器",
+    "一把武器只有一个源，新源会覆盖旧源",
     "+------------------+"
    ],
-   "id": "music_disc_13",
+   "id": "minecraft:paper",
    "enchantments": {},
    "modifiers": [],
    "tags": [
-    "weapon_tree"
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_src"
    ],
    "custom_data": {
-    "weapon_tree": 3
+    "rpg_fm": 1,
+    "rpg_mat": "source",
+    "rpg_src": "resolve"
    },
    "cmd": null,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 1234567.0,
    "components": [
+    "consumable",
     "custom_data",
     "custom_name",
-    "lore"
+    "item_model",
+    "lore",
+    "max_stack_size"
    ],
    "dyed_color": null,
    "trim": null,
    "potion_contents": null
   },
   {
-   "item": "music_disc_11",
-   "name": "恶念之源",
+   "item": "minecraft:paper",
+   "name": "邪念之源",
    "rarity": "恶魔",
    "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
-    "地狱之门终将关闭",
-    "武器分支更改为邪念",
+    "副手拿武器，主手右键",
+    "🜏效果 [邪念]",
+    "伤害 +15%",
+    "代价 持有时缓慢累积魔化",
+    "一把武器只有一个源，新源会覆盖旧源",
     "+------------------+"
    ],
-   "id": "music_disc_11",
+   "id": "minecraft:paper",
    "enchantments": {},
    "modifiers": [],
    "tags": [
-    "weapon_tree"
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_src"
    ],
    "custom_data": {
-    "weapon_tree": 4
+    "rpg_fm": 1,
+    "rpg_mat": "source",
+    "rpg_src": "malice"
    },
    "cmd": null,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 1234567.0,
    "components": [
+    "consumable",
     "custom_data",
     "custom_name",
-    "lore"
+    "item_model",
+    "lore",
+    "max_stack_size"
    ],
    "dyed_color": null,
    "trim": null,
    "potion_contents": null
   },
   {
-   "item": "music_disc_stal",
-   "name": "睚眦之源",
+   "item": "minecraft:paper",
+   "name": "仇恨之源",
    "rarity": "恶魔",
    "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
-    "地狱之门终将关闭",
-    "武器分支更改为仇恨",
+    "副手拿武器，主手右键",
+    "🜏效果 [仇恨]",
+    "连击同一目标每击 +5%，至多 +30%",
+    "代价 换目标时自损 1 点生命",
+    "一把武器只有一个源，新源会覆盖旧源",
     "+------------------+"
    ],
-   "id": "music_disc_stal",
+   "id": "minecraft:paper",
    "enchantments": {},
    "modifiers": [],
    "tags": [
-    "weapon_tree"
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_src"
    ],
    "custom_data": {
-    "weapon_tree": 5
+    "rpg_fm": 1,
+    "rpg_mat": "source",
+    "rpg_src": "hatred"
    },
    "cmd": null,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 1234567.0,
    "components": [
+    "consumable",
     "custom_data",
     "custom_name",
-    "lore"
+    "item_model",
+    "lore",
+    "max_stack_size"
    ],
    "dyed_color": null,
    "trim": null,
    "potion_contents": null
   },
   {
-   "item": "music_disc_5",
+   "item": "minecraft:paper",
    "name": "傲慢之源",
    "rarity": "恶魔",
    "name_colour": "#FFFFFF",
    "lore": [
     "+------------------+",
-    "地狱之门终将关闭",
-    "武器分支更改为傲慢",
+    "副手拿武器，主手右键",
+    "🜏效果 [傲慢]",
+    "满血时伤害 +30%",
+    "代价 自身受到伤害 +15%",
+    "一把武器只有一个源，新源会覆盖旧源",
     "+------------------+"
    ],
-   "id": "music_disc_5",
+   "id": "minecraft:paper",
    "enchantments": {},
    "modifiers": [],
    "tags": [
-    "weapon_tree"
+    "rpg_fm",
+    "rpg_mat",
+    "rpg_src"
    ],
    "custom_data": {
-    "weapon_tree": 6
+    "rpg_fm": 1,
+    "rpg_mat": "source",
+    "rpg_src": "pride"
    },
    "cmd": null,
    "unbreakable": false,
-   "consumable": null,
+   "consumable": 1234567.0,
    "components": [
+    "consumable",
     "custom_data",
     "custom_name",
-    "lore"
+    "item_model",
+    "lore",
+    "max_stack_size"
    ],
    "dyed_color": null,
    "trim": null,

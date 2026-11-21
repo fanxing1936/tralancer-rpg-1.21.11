@@ -24,6 +24,7 @@ UNIT = "type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview"
 WATCH = "type=minecraft:vindicator,tag=rpg.mkb.w"
 CENTER = "type=minecraft:marker,tag=rpg.mkb.center,limit=1"
 LAG = "type=minecraft:marker,tag=rpg.mkb.lag,limit=1"
+LAST = "type=minecraft:marker,tag=rpg.mkb.last,limit=1"   # 他最后的位置（每次读血时挪过去），载体意外死掉时补放死亡特效
 SURV = "gamemode=!spectator,gamemode=!creative"
 BAR = "rpg:michael_boss"
 
@@ -58,8 +59,8 @@ BONE_I = 0xF2E6D8
 
 STAGES = {
     # 段号: (名称, 小注, 大招血线, 大招时钟（刻）, 音乐, 音乐长度（刻）, 招式轮换)
-    1: ("天使长", "Quis ut Deus", (900, 600, 300), 900, "boss1", 2943, ["watch", "quis", "feather", "gaze", "dive", "fold"]),
-    2: ("炽天使", "The Seraph", (900, 600, 300), 1100, "boss2", 1876, ["watch", "dash", "cross", "gaze", "rain", "dash"]),
+    1: ("天使长", "Quis ut Deus", (900, 600, 300), 900, "rpg:bgm.michael1", 1647, ["watch", "quis", "feather", "gaze", "dive", "fold"]),
+    2: ("炽天使", "The Seraph", (900, 600, 300), 1100, "rpg:bgm.michael2", 2917, ["watch", "dash", "cross", "gaze", "rain", "dash"]),
 }
 ULTS = {1: ["who", "sanctus", "trumpet"], 2: ["bones", "seraph", "stars"]}
 BURN_AT = 150
@@ -145,6 +146,10 @@ KINDS = {
     "linefade": dict(life=16, steps=[(10, 10, "scale:[0.02f,0.02f,30f]")]),
     "crossfade": dict(life=10, steps=[(7, 7, "scale:[0.02f,0.02f,9f]")]),
     "eye": dict(life=200),
+    # 二阶段冲刺的火路：原版火方块的展示实体（用户 2026-11-21「冲刺路径的火焰改成火焰方块的展示实体」），
+    # 窜起、烧着、最后矮下去；缩放时平移一起插值，火才不会偏离中心
+    "fireblk": dict(life=60, steps=[(59, 3, "translation:[-0.6f,0f,-0.6f],scale:[1.2f,1.5f,1.2f]"),
+                                    (8, 8, "translation:[-0.45f,0f,-0.45f],scale:[0.9f,0.01f,0.9f]")]),
     # 米迦勒的序列帧
     "arcfx": dict(life=12, frames=("glyph", "arc", 6, 2)),
     "arcffx": dict(life=12, frames=("glyph", "arcf", 6, 2)),
@@ -168,6 +173,9 @@ KINDS = {
     "meteorloop": dict(life=16, loop=("glyph", "meteor", 4, 2)),
     "doverise": dict(life=60, loop=("glyph", "dove", 8, 2), steps=[(58, 56, "translation:[0f,12f,0f]")]),
     "rayup": dict(life=30, steps=[(29, 4, "scale:[%gf,%gf,%gf]" % (3.2, 18, 3.2)), (10, 10, "scale:[0.01f,18f,0.01f]")]),
+    # 死亡时头顶的光环：小一些、高一些，别挡住跪着烧翼的他
+    "halodeath": dict(life=120, loop=("glyph", "halo", 6, 3), steps=[(118, 10, "scale:[3.2f,3.2f,3.2f]"),
+                                                                (10, 10, "scale:[0.01f,0.01f,0.01f]")]),
     "haloin": dict(life=120, loop=("glyph", "halo", 6, 3), steps=[(118, 8, "scale:[7.5f,7.5f,7.5f]"),
                                                              (8, 8, "scale:[0.01f,0.01f,0.01f]")]),
 }
@@ -217,6 +225,15 @@ def flame_at(pos="~ ~ ~", size=2.0, life=40, hot=True):
     """A standing flame (fire flipbook loop) on the ground."""
     return mglyph("fire" if hot else "fireh", size, pos=pos, kind="fireloop" if hot else "firehloop", life=life,
                   billboard="vertical", trans=(0, size * 0.5 - 0.1, 0))
+
+
+def fire_block(pos="~ ~ ~", life=60):
+    """A vanilla fire block as a block_display (grows in, burns, sinks), random yaw; never a real fire block."""
+    return ['summon minecraft:block_display %s {Tags:["%s","%s"],block_state:{Name:"minecraft:fire"},'
+            'brightness:{sky:15,block:15},view_range:2f,transformation:{translation:[-0.05f,0f,-0.05f],'
+            'left_rotation:[0f,0f,0f,1f],scale:[0.1f,0.1f,0.1f],right_rotation:[0f,0f,0f,1f]}}' % (pos, fx.tag, fx.new),
+            "execute as @e[tag=%s,limit=1] store result entity @s Rotation[0] float 1 run random value 0..359" % fx.new
+            ] + fx.born(life, "fireblk")
 
 
 def smoke_puff(pos="~ ~1 ~", size=2.2):

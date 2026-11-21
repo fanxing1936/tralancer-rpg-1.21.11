@@ -1,0 +1,6 @@
+execute unless data storage rpg:forge it[0] run return 0
+data modify storage rpg:forge cur set from storage rpg:forge it[0]
+execute if data storage rpg:forge cur{type:"minecraft:attack_damage",operation:"add_value"} unless data storage rpg:forge cur{id:"rpg:forge/bonus"} unless data storage rpg:forge cur{slot:"offhand"} unless data storage rpg:forge cur{slot:"head"} unless data storage rpg:forge cur{slot:"chest"} unless data storage rpg:forge cur{slot:"legs"} unless data storage rpg:forge cur{slot:"feet"} unless data storage rpg:forge cur{slot:"armor"} unless data storage rpg:forge cur{slot:"body"} unless data storage rpg:forge cur{slot:"saddle"} run function rpg:forge/base/add_b
+execute if data storage rpg:forge cur{type:"minecraft:attack_speed",operation:"add_value"} unless data storage rpg:forge cur{slot:"offhand"} unless data storage rpg:forge cur{slot:"head"} unless data storage rpg:forge cur{slot:"chest"} unless data storage rpg:forge cur{slot:"legs"} unless data storage rpg:forge cur{slot:"feet"} unless data storage rpg:forge cur{slot:"armor"} unless data storage rpg:forge cur{slot:"body"} unless data storage rpg:forge cur{slot:"saddle"} run function rpg:forge/base/add_s
+data remove storage rpg:forge it[0]
+function rpg:forge/base/melee_loop

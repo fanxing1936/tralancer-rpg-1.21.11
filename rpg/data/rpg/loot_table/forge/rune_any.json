@@ -1,0 +1,75 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_ember",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_echo",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_execute",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_backstab",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_bloodpact",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_poise",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_hunt",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_split",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_meteor",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_recoil",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_lastbreath",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_stillwater",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/rune_swift",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

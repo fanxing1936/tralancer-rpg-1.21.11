@@ -126,8 +126,9 @@ def main():
         print("  (none)")
 
     print("\n--- full console ---")
+    full = os.environ.get("MC_FULL_LINES")
     for l in lines:
-        print("  " + l[:220])
+        print("  " + (l if full else l[:220]))
 
 
 if __name__ == "__main__":

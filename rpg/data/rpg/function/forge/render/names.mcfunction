@@ -1,0 +1,5 @@
+$data modify storage rpg:forge ui.sc set from storage rpg:forge names.src.$(src)
+$data modify storage rpg:forge ui.sd set from storage rpg:forge names.srcd.$(src)
+$data modify storage rpg:forge ui.tc set from storage rpg:forge names.stone.$(stone)
+$data modify storage rpg:forge ui.r1 set from storage rpg:forge names.rune.$(r1)
+$data modify storage rpg:forge ui.r2 set from storage rpg:forge names.rune.$(r2)

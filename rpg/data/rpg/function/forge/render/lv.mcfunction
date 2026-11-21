@@ -1,0 +1,1 @@
+$data modify storage rpg:forge ui.lvp set value '{"text":"","extra":[{"text":"✦Lv.$(lv) ","color":"#FFFFFF","bold":true,"italic":false},{"text":"$(bar)","color":"#FFAA00","bold":false,"italic":false},{"text":" $(xp)/$(need)","color":"#797979","bold":false,"italic":false}]}'

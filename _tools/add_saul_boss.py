@@ -72,8 +72,8 @@ PHANTOM_C = "#E6ECF6"
 
 STAGES = {
     # 段号: (名称, 英文小注, 大招血线, 大招时钟（刻）, 音乐, 音乐长度（刻）, 招式轮换)
-    1: ("十字军大元帅", "The Marshal", (750, 500, 250), 900, "boss1", 2943, ["lunge", "guard", "flash", "shadow", "echo", "lunge"]),
-    2: ("疯人王", "The Mad King", (750, 500, 250), 1100, "boss2", 1876, ["lunge3", "thrusts", "web", "step", "guard", "feint"]),
+    1: ("十字军大元帅", "The Marshal", (750, 500, 250), 900, "rpg:bgm.saul1", 2171, ["lunge", "guard", "flash", "shadow", "echo", "lunge"]),
+    2: ("疯人王", "The Mad King", (750, 500, 250), 1100, "rpg:bgm.saul2", 2241, ["lunge3", "thrusts", "web", "step", "guard", "feint"]),
 }
 # 每段三个大招，按血线或时钟轮流（第 9 节之后用户要求加强：2026-11-16）
 ULTS = {1: ["line", "circle", "echoes"], 2: ["cuts", "rain", "last"]}
@@ -644,7 +644,7 @@ def build():
         "kill @e[tag=rpg.slb.fx]",
         "bossbar set %s visible false" % BAR,
         "bossbar set %s players" % BAR,
-    ] + ["stopsound @a record minecraft:%s" % m for m in sorted({v[4] for v in STAGES.values()})] + [
+    ] + ["stopsound @a record %s" % m for m in sorted({v[4] for v in STAGES.values()})] + [
         "scoreboard players set #fight %s 0" % O,
         "scoreboard players set #stage %s 0" % O,
     ])
@@ -653,10 +653,10 @@ def build():
     music = ["scoreboard players remove #bgm %s 1" % O]
     for s, v in STAGES.items():
         music.append("execute if score #bgm %s matches ..0 if score #stage %s matches %d run function %s/music/%d" % (O, O, s, B, s))
-        w("music/%d" % s, ["stopsound @a[distance=..%d] record minecraft:%s" % (BAR_RANGE, m)
+        w("music/%d" % s, ["stopsound @a[distance=..%d] record %s" % (BAR_RANGE, m)
                            for m in sorted({x[4] for x in STAGES.values()})] + [
             "stopsound @a[distance=..%d] music" % BAR_RANGE,
-            "execute as @a[distance=..%d] at @s run playsound minecraft:%s record @s ~ ~ ~ 1 1" % (BAR_RANGE, v[4]),
+            "execute as @a[distance=..%d] at @s run playsound %s record @s ~ ~ ~ 1 1" % (BAR_RANGE, v[4]),
             "scoreboard players set #bgm %s %d" % (O, v[5]),
         ])
     w("music/tick", music)

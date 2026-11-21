@@ -332,6 +332,9 @@ scoreboard players set #five rpg_pact 5
 scoreboard players set #ten rpg_pact 10
 scoreboard players set #twenty_t rpg_pact 20
 
+##装备养成
+function rpg:forge/load
+
 ##套装护甲
 scoreboard objectives add rpg_as_clock dummy
 scoreboard objectives add rpg_as_hp dummy

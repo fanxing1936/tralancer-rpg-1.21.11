@@ -180,3 +180,6 @@ execute if items entity @s armor.legs *[minecraft:custom_data~{holy_weapon_tag:3
 execute if items entity @s armor.feet *[minecraft:custom_data~{holy_weapon_tag:1b}] run tag @s add rpg.holy
 execute if items entity @s armor.feet *[minecraft:custom_data~{holy_weapon_tag:2b}] run tag @s add rpg.holy
 execute if items entity @s armor.feet *[minecraft:custom_data~{holy_weapon_tag:3b}] run tag @s add rpg.holy
+# 装备养成：注入神圣之源、且装备 Lv.5 以上的武器也算圣器
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{rpg_eq:{holy:1b}}] run tag @s add rpg.holy
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{rpg_eq:{holy:1b}}] run tag @s add rpg.holy

@@ -103,15 +103,31 @@ def brighten(dp, key):
               for l in lines])
 
 
+# 手里的武器用玩家版的贴图（用户 2026-11-21「手里两把武器使用玩家版本的贴图……适配iris」）：
+# 图集里这两块的轮廓和玩家手持贴图逐像素相同，直接贴回去；不透明度只有 0 / 255，光影包下不会半透明排序出错。
+# 必须在 tone() 之后贴，solid 版也要贴（fade 版跟着身体一起淡掉）。
+WEAPON_ART = {"michael_spine_in_hand": (128, 0), "michael_rib_in_hand": (160, 0)}
+
+
+def paste_weapons(rp, arr):
+    tex = os.path.join(rp, "assets", "rpg", "textures", "item")
+    for name, (x, y) in WEAPON_ART.items():
+        s = np.array(Image.open(os.path.join(tex, name + ".png")).convert("RGBA")).astype(float)
+        h, w_ = s.shape[:2]
+        assert ((arr[y:y + h, x:x + w_, 3] > 0) == (s[..., 3] > 0)).all(), "%s 的轮廓和图集对不上" % name
+        assert set(np.unique(s[..., 3])) <= {0.0, 255.0}, "%s 有半透明像素" % name
+        arr[y:y + h, x:x + w_] = s
+    return arr
+
+
 def tone(rp):
     """Michael's own atlas: more opaque and a little darker, closer to the project as seen in Blockbench."""
     path = os.path.join(rp, "assets", "rpg", "textures", "item", "michael", "atlas.png")
     a = np.array(Image.open(path).convert("RGBA")).astype(float)
     seen = a[..., 3] > 0
-    # 武器维持工程文件原有的贴图（用户 2026-11-18「让武器维持原有的贴图吧」，撤回同日改成霜冻甲配色的那一步），
-    # 和身体一样只经过下面整体的不透明度与明暗。
     a[..., :3] *= SHADE
     a[..., 3] = np.where(seen, np.minimum(235, a[..., 3] * OPACITY), 0)
+    a = paste_weapons(rp, a)
     Image.fromarray(a.clip(0, 255).astype(np.uint8)).save(path)
 
 
@@ -124,6 +140,7 @@ def variants(rp):
     top = max(a[..., 3][seen].max(), 1)
     solid[..., 3] = np.where(seen, 185 + 55 * a[..., 3] / top, 0)      # ~73%..94%
     fade[..., 3] = np.where(seen, np.maximum(4, a[..., 3] * 0.22), 0)     # ~2%..11%
+    solid = paste_weapons(rp, solid)
     for name, arr in (("atlas_solid", solid), ("atlas_fade", fade)):
         Image.fromarray(arr.clip(0, 255).astype(np.uint8)).save(os.path.join(tex, name + ".png"))
     models = os.path.join(rp, "assets", "rpg", "models", "michael")

@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "k": {
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "requirements": [
+    [
+      "k"
+    ]
+  ],
+  "rewards": {
+    "function": "rpg:forge/kill/any"
+  }
+}

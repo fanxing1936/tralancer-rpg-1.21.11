@@ -290,11 +290,12 @@ def main():
                or any((x.get("id") or "").endswith(k) for k in WEAPON_IDS)]
     armour = [x for x in w if "chestplate_tag" in x["tags"]]
     consum = [x for x in w if x not in weapons and x not in armour and x["name"]]
-    runes = [x for x in it if "add_weapon_tag" in x["tags"] or
-             any(t in x["tags"] for t in ("sweep_tag", "wind_tag", "flame_tag"))]
+    runes = [x for x in it + w if any(t in x["tags"] for t in ("rpg_rune", "rpg_stone"))]
     stones = [x for x in it if x["item"].endswith("_armor_trim_smithing_template")]
-    mats = [x for x in it if x not in runes and x not in stones
-            and "enchant_tag" not in x["tags"]]
+    mats = [x for x in it + w + up if x not in runes and x not in stones
+            and "enchant_tag" not in x["tags"] and "rpg_mat" in x["tags"]] + \
+        [x for x in it if x not in runes and x not in stones and "rpg_mat" not in x["tags"]
+         and "enchant_tag" not in x["tags"]]
     ench = [x for x in it if "enchant_tag" in x["tags"]]
 
     # 驱魔道具从药剂与材料里摘出来，单独一节

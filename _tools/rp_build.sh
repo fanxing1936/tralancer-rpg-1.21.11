@@ -23,6 +23,7 @@ python add_michael.py ../resourcepack ../rpg
 # Minecraft Dungeons 原作武器：坟墓克星、竖琴弩（[传说]，圣殿大团长雅克的武器）。
 # 同米迦勒：早于 opt_index、make_boxes、polish_ui 与 polish_vfx。
 python add_dungeons_weapons.py ../resourcepack ../rpg
+python add_forge.py ../resourcepack --rp-only
 python build_combat_prompt_font.py ../resourcepack
 # 圣卫（塔卫）与别西卜：从 *_ref/*.bbmodel 生成部件模型、图集与音效（sounds.json）
 python add_tower_guard.py ../resourcepack ../rpg
@@ -81,6 +82,7 @@ python add_saul_boss_art.py ../resourcepack
 # 米迦勒专属特效贴图：原作素材 + Codex 序列帧（michael_fx_ref/），字体 rpg:michael_vfx
 python add_michael_fx_art.py ../resourcepack
 python add_michael_boss_art.py ../resourcepack
+python add_boss_bgm.py ../resourcepack
 # last, so every hand transform in the pack has exactly one owner
 python fix_display.py ../resourcepack
 # 物品贴图按原生网格存储（整数倍放大的无损还原，新约按 D6 重建）

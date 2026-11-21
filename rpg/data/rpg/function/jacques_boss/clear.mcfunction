@@ -9,7 +9,7 @@ kill @e[type=minecraft:marker,tag=rpg.jqb.center]
 kill @e[tag=rpg.jqb.fx]
 bossbar set rpg:jacques_boss visible false
 bossbar set rpg:jacques_boss players
-stopsound @a record minecraft:boss1
-stopsound @a record minecraft:boss3
+stopsound @a record rpg:bgm.jacques1
+stopsound @a record rpg:bgm.jacques2
 scoreboard players set #fight rpg_jq 0
 scoreboard players set #stage rpg_jq 0

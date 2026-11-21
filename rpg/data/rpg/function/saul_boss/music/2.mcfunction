@@ -1,5 +1,5 @@
-stopsound @a[distance=..48] record minecraft:boss1
-stopsound @a[distance=..48] record minecraft:boss2
+stopsound @a[distance=..48] record rpg:bgm.saul1
+stopsound @a[distance=..48] record rpg:bgm.saul2
 stopsound @a[distance=..48] music
-execute as @e[tag=rpg.unit,distance=..48] at @s run playsound minecraft:boss2 record @s ~ ~ ~ 1 1
-scoreboard players set #bgm rpg_sl 1876
+execute as @e[tag=rpg.unit,distance=..48] at @s run playsound rpg:bgm.saul2 record @s ~ ~ ~ 1 1
+scoreboard players set #bgm rpg_sl 2241

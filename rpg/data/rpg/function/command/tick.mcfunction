@@ -7,14 +7,8 @@ function rpg:item/sword/off/off
 function rpg:item/bow/off
 
 
-function rpg:item/sword/main/sweep/sweep_trigger
-function rpg:item/sword/main/sweep/sweep_into
 
-function rpg:item/sword/main/flame/flame_into
-function rpg:item/sword/main/flame/flame_trigger
 
-function rpg:item/sword/main/wind/wind_into
-function rpg:item/sword/main/wind/wind_trigger
 
 function rpg:item/bow/legend/bubble/bubble
 function rpg:item/bow/legend/burn/burn

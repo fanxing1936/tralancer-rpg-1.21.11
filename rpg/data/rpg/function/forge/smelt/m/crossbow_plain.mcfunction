@@ -1,0 +1,1 @@
+$item replace entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] contents with minecraft:crossbow[custom_name=["",{"text":"$(p)劲弩","color":"#FFFFFF","bold":false,"italic":false}],lore=[["",{"text":"出自魂火的冶炼","color":"#797979","bold":false,"italic":false}]],custom_data={rpg_forged:1b},enchantments={"minecraft:quick_charge":1,"minecraft:unbreaking":1}]

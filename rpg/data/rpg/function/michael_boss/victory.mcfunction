@@ -5,4 +5,6 @@ execute at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1] run tellraw @a[d
 # 掉落（第 9 节第 5 条）：在场的人各得米迦勒脊骨、米迦勒肋骨一把
 execute at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1] as @e[tag=rpg.unit.ns,distance=..48] run function rpg:command/give/michael
 execute at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1] run tellraw @a[distance=..48,gamemode=!spectator] ["",{"text":"〖米迦勒〗","color":"#FFD0BD","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"灵走了，骨留下来。你拾起了米迦勒脊骨与米迦勒肋骨。","color":"#9C9A94","bold":false,"italic":false}]
+# 装备养成：希望之源与符石
+execute at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1] run loot spawn ~ ~1 ~ loot rpg:forge/boss/hope
 function rpg:michael_boss/clear

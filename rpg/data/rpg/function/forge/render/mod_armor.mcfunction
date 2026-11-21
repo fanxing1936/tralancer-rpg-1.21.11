@@ -1,0 +1,7 @@
+data remove entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:attribute_modifiers"[{id:"rpg:forge/bonus"}]
+data modify entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:attribute_modifiers" append value {type:"minecraft:armor",id:"rpg:forge/bonus",amount:0.0d,operation:"add_value",slot:"armor"}
+execute store result entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:attribute_modifiers"[-1].amount double 0.01 run scoreboard players get #bn rpg_fg
+# 原版的「在主手时」属性行和我们的属性块重复，藏起来
+execute unless data entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:tooltip_display" run data modify entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:tooltip_display" set value {hidden_components:[]}
+execute unless data entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:tooltip_display".hidden_components run data modify entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:tooltip_display".hidden_components set value []
+execute unless data entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:tooltip_display"{hidden_components:["minecraft:attribute_modifiers"]} run data modify entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:tooltip_display".hidden_components append value "minecraft:attribute_modifiers"

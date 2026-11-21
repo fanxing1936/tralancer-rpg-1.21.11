@@ -53,8 +53,8 @@ NAME_COLOR2 = WHITE_GOLD[1]
 
 STAGES = {
     # 段号: (名称, 大招血线, 大招时钟（刻）, 音乐, 音乐长度（刻）, 招式轮换)
-    1: ("所罗门之裔", (625, 375), 900, "boss2", 1876, ["seal", "infuse", "rewrite"]),
-    2: ("篡夺圣灵", (667, 333), 1200, "boss3", 2000, ["launch", "strike", "slam"]),
+    1: ("所罗门之裔", (625, 375), 900, "rpg:bgm.usurper1", 2287, ["seal", "infuse", "rewrite"]),
+    2: ("篡夺圣灵", (667, 333), 1200, "rpg:bgm.usurper2", 1056, ["launch", "strike", "slam"]),
 }
 SKILL_NAMES = {
     "seal": ("所罗门封印", "enchant"), "infuse": ("附魔灌注", "enchant"), "rewrite": ("契约改写", "enchant"),
@@ -385,7 +385,7 @@ def build():
         "execute as @a[tag=rpg.usb.rw] run function %s/rewrite/clear" % B,
         "bossbar set rpg:usurper_boss visible false",
         "bossbar set rpg:usurper_boss players",
-    ] + ["stopsound @a record minecraft:%s" % m for m in sorted({v[3] for v in STAGES.values()})] + [
+    ] + ["stopsound @a record %s" % m for m in sorted({v[3] for v in STAGES.values()})] + [
         "scoreboard players set #fight %s 0" % O,
         "scoreboard players set #stage %s 0" % O,
     ])
@@ -395,9 +395,9 @@ def build():
     music = ["scoreboard players remove #bgm %s 1" % O]
     for s, v in STAGES.items():
         music.append("execute if score #bgm %s matches ..0 if score #stage %s matches %d run function %s/music/%d" % (O, O, s, B, s))
-        w("music/%d" % s, ["stopsound @a[distance=..%d] record minecraft:%s" % (BAR_RANGE, m)
+        w("music/%d" % s, ["stopsound @a[distance=..%d] record %s" % (BAR_RANGE, m)
                            for m in sorted({x[3] for x in STAGES.values()})] + [
-            "execute as @a[distance=..%d] at @s run playsound minecraft:%s record @s ~ ~ ~ 1 1" % (BAR_RANGE, v[3]),
+            "execute as @a[distance=..%d] at @s run playsound %s record @s ~ ~ ~ 1 1" % (BAR_RANGE, v[3]),
             "scoreboard players set #bgm %s %d" % (O, v[4]),
         ])
     w("music/tick", music)

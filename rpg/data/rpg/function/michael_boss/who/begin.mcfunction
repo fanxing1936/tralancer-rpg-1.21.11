@@ -16,14 +16,14 @@ scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 22
 tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
 summon minecraft:text_display ~ ~ ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],text:{text:"",font:"rpg:michael_vfx",color:"white"},background:0,billboard:"vertical",brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:3f,transformation:{translation:[0f,7.0f,0f],left_rotation:[0f,0f,0f,1f],scale:[0.6f,18f,0.6f],right_rotation:[0f,0f,0f,1f]}}
 scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 30
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 48
+scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 49
 tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
 particle minecraft:end_rod ~ ~6 ~ 0.15 6 0.15 0.01 30 force
 summon minecraft:text_display ~ ~2.2 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],text:{text:"",font:"rpg:michael_vfx",color:"white"},background:0,billboard:"center",brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:3f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[5.5f,5.5f,5.5f],right_rotation:[0f,0f,0f,1f]}}
 scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 136
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 44
+scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 45
 tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
 summon minecraft:text_display ~ ~1.8 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],text:{text:"",font:"rpg:michael_vfx",color:"white"},background:0,billboard:"center",brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:3f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[10f,10f,10f],right_rotation:[0f,0f,0f,1f]}}
 scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 14
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 32
+scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 33
 tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew

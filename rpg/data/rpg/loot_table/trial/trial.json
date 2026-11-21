@@ -387,33 +387,664 @@
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
-          "value": "rpg:trial/bow"
+          "value": "rpg:forge/item/blank",
+          "weight": 2
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
-          "value": "rpg:trial/sword"
+          "value": "rpg:forge/item/soul",
+          "weight": 6
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
-          "value": "rpg:trial/chestplate"
+          "value": "rpg:forge/item/forge_stone",
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
-          "value": "rpg:trial/helmet"
+          "value": "rpg:forge/item/wash_gem",
+          "weight": 3
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 1,
-          "value": "rpg:trial/boots"
+          "value": "rpg:forge/item/gild_leaf",
+          "weight": 2
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 11,
-          "value": "rpg:trial/leggings"
+          "value": "rpg:forge/rune_any",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_helmet",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[史诗]",
+                    "color": "#B85CF0",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "圣卫残盔",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "圣塔之下的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[守望]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "从未终结",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "残甲仍记得那句",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[誓言]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［圣卫之誓］",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "护甲韧性 +4，击退抗性 +0.2",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:ward",
+                  "material": "minecraft:quartz"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 2,
+                  "minecraft:projectile_protection": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/sentinel/head/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 2,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/sentinel/head/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.05,
+                    "operation": "add_value",
+                    "slot": "head",
+                    "id": "rpg:armor/sentinel/head/2"
+                  }
+                ],
+                "minecraft:max_damage": 363
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"sentinel\"}"
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chainmail_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[史诗]",
+                    "color": "#B85CF0",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "圣卫胸铠",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "圣塔之下的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[守望]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "从未终结",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "残甲仍记得那句",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[誓言]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［圣卫之誓］",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "护甲韧性 +4，击退抗性 +0.2",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:sentry",
+                  "material": "minecraft:gold"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 2,
+                  "minecraft:projectile_protection": 2,
+                  "minecraft:blast_protection": 1
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 7.5,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/sentinel/chest/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 2.5,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/sentinel/chest/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.05,
+                    "operation": "add_value",
+                    "slot": "chest",
+                    "id": "rpg:armor/sentinel/chest/2"
+                  }
+                ],
+                "minecraft:max_damage": 528
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"sentinel\"}"
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_leggings",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[史诗]",
+                    "color": "#B85CF0",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "圣卫腿甲",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "圣塔之下的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[守望]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "从未终结",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "残甲仍记得那句",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[誓言]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［圣卫之誓］",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "护甲韧性 +4，击退抗性 +0.2",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:sentry",
+                  "material": "minecraft:gold"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 2,
+                  "minecraft:projectile_protection": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 6,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/sentinel/legs/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 2,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/sentinel/legs/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.05,
+                    "operation": "add_value",
+                    "slot": "legs",
+                    "id": "rpg:armor/sentinel/legs/2"
+                  }
+                ],
+                "minecraft:max_damage": 495
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"sentinel\"}"
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_boots",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[史诗]",
+                    "color": "#B85CF0",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "圣卫战靴",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "圣塔之下的",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[守望]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "从未终结",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "残甲仍记得那句",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[誓言]",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "套装 · 穿齐四件",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "［圣卫之誓］",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "护甲韧性 +4，击退抗性 +0.2",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:trim": {
+                  "pattern": "minecraft:ward",
+                  "material": "minecraft:gold"
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:enchantments": {
+                  "minecraft:protection": 2,
+                  "minecraft:projectile_protection": 2,
+                  "minecraft:feather_falling": 2
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:armor",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/sentinel/feet/0"
+                  },
+                  {
+                    "type": "minecraft:armor_toughness",
+                    "amount": 2,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/sentinel/feet/1"
+                  },
+                  {
+                    "type": "minecraft:knockback_resistance",
+                    "amount": 0.05,
+                    "operation": "add_value",
+                    "slot": "feet",
+                    "id": "rpg:armor/sentinel/feet/2"
+                  }
+                ],
+                "minecraft:dyed_color": 16773800,
+                "minecraft:max_damage": 429
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{chestplate_tag:1b,armor_set:\"sentinel\"}"
+            }
+          ],
+          "weight": 1
         }
       ]
     }
