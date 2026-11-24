@@ -483,21 +483,27 @@ scoreboard players set @e[type=minecraft:item_display,tag=rpg.rite.prop.new,dist
 tag @e[type=minecraft:item_display,tag=rpg.rite.prop.new,distance=..3] remove rpg.rite.prop.new
 """ % {"offset": offset, "nbt": nbt, "ttl": ttl})
 
-    place("nail", "iron_nugget", "nail", scale="0.64")
-    place("bell", "goat_horn", "bell", offset="~-1.35 ~0.06 ~0.65", scale="0.88")
-    place("incense", "blaze_powder", "incense", scale="0.78")
+    place("nail", "iron_nugget", "nail", scale="0.64", extra_components='"minecraft:custom_data":{rpg_nail:1b}')
+    place("bell", "goat_horn", "bell", offset="~-1.35 ~0.06 ~0.65", scale="0.88", extra_components='"minecraft:custom_data":{rpg_bell:1b}')
+    place("incense", "blaze_powder", "incense", scale="0.78", extra_components='"minecraft:custom_data":{rpg_incense:1b}')
     place("lantern", "soul_lantern", "lantern", offset="~0.95 ~0.06 ~1.05",
-          scale="0.92", ttl=120, linger=True)
-    place("chalk1", "white_dye", "chalk1", scale="0.86")
-    place("chalk2", "gray_dye", "chalk2", scale="0.86")
-    place("chalk3", "light_blue_dye", "chalk3", scale="0.86")
+          scale="0.92", ttl=120, linger=True, extra_components='"minecraft:custom_data":{rpg_lantern:1b}')
+    place("chalk1", "white_dye", "chalk1", scale="0.86", extra_components='"minecraft:custom_data":{rpg_chalk:1b}')
+    place("chalk2", "gray_dye", "chalk2", scale="0.86", extra_components='"minecraft:custom_data":{rpg_chalk:2b}')
+    place("chalk3", "light_blue_dye", "chalk3", scale="0.86", extra_components='"minecraft:custom_data":{rpg_chalk:3b}')
     place("page", "paper", "page", offset="~-0.95 ~0.06 ~1.10", scale="0.82")
+    page = "inquest/tool/place/page.mcfunction"      # 残页按领主换图标
+    tail = "tag @e[type=minecraft:item_display,tag=rpg.rite.prop.new,distance=..3] remove rpg.rite.prop.new"
+    write(page, read(page).replace(tail, "".join(
+        'execute if score @s rpg_dm_lord matches %d run data modify entity @e[type=minecraft:item_display,tag=rpg.rite.prop.new,distance=..3,sort=nearest,limit=1] '
+        'item.components."minecraft:custom_data" set value {rpg_rite_page:1b,rpg_lord:%d}\n' % (n, n) for n in range(1, 8)) + tail))
     place("water", "lingering_potion", "water", offset="~0.65 ~0.06 ~-0.85",
           scale="0.76", ttl=200,
-          extra_components='"minecraft:potion_contents":{custom_color:16773320}')
+          extra_components='"minecraft:custom_data":{rite_tag:1b},"minecraft:potion_contents":{custom_color:16773320}')
     for q in LORDS:
         place("medium%d" % q["n"], q["item"].split(":", 1)[-1],
-              "medium", offset="~1.15 ~0.06 ~0.75", scale="0.84")
+              "medium", offset="~1.15 ~0.06 ~0.75", scale="0.84",
+              extra_components='"minecraft:custom_data":{rpg_medium:%db}' % q["n"])
 
     write("inquest/tool/prop_tick.mcfunction", """\
 scoreboard players remove @s rpg_prop_t 1
@@ -879,7 +885,7 @@ tellraw @a[distance=..24,gamemode=!spectator] %(msg)s
     relics = {}
     cores = {}
     for q in LORDS:
-        relics[q["n"]] = item("echo_shard", "封印遗物 · " + q["who"], q["colour"],
+        relics[q["n"]] = item("echo_shard", "封印罪物 · " + q["who"], q["colour"],
                               ["封魔灯中的罪性残魂", "长期携带可能挣脱封印并重新降临"],
                               "holy_weapon_tag:1b,rpg_sealed:1b,rpg_lord:%d" % q["n"])
         cores[q["n"]] = item("nether_star", "武器核心 · " + q["who"], q["colour"],

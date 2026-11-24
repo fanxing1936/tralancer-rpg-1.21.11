@@ -196,108 +196,19 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:raw_gold",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "set_custom_data",
-              "tag": {
-                "trial_tag": 1
-              }
-            }
-          ]
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp_legend_any",
+          "weight": 1
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:raw_gold",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "set_custom_data",
-              "tag": {
-                "trial_tag": 2
-              }
-            }
-          ]
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp_epic_any",
+          "weight": 1
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:trial_key",
-          "weight": 3,
-          "functions": [
-            {
-              "function": "set_name",
-              "entity": "this",
-              "name": [
-                "",
-                {
-                  "text": "[传说]",
-                  "italic": false,
-                  "color": "#FFAA00",
-                  "bold": true
-                },
-                {
-                  "text": "试炼之匙",
-                  "italic": false,
-                  "color": "#FFFFFF",
-                  "bold": false
-                }
-              ],
-              "target": "custom_name"
-            },
-            {
-              "function": "set_lore",
-              "entity": "this",
-              "lore": [
-                [
-                  "",
-                  {
-                    "text": "+------------------+",
-                    "italic": false,
-                    "color": "white"
-                  }
-                ],
-                [
-                  "",
-                  {
-                    "text": "开辟神启的",
-                    "color": "white",
-                    "italic": false
-                  },
-                  {
-                    "text": "[钥匙]",
-                    "italic": false,
-                    "color": "gold",
-                    "bold": true
-                  }
-                ],
-                [
-                  "",
-                  {
-                    "text": "唤出传奇的",
-                    "color": "white",
-                    "italic": false
-                  },
-                  {
-                    "text": "[宝具]",
-                    "italic": false,
-                    "color": "gold",
-                    "bold": true
-                  }
-                ],
-                [
-                  "",
-                  {
-                    "text": "+------------------+",
-                    "italic": false,
-                    "color": "white"
-                  }
-                ]
-              ],
-              "mode": "append"
-            }
-          ]
+          "type": "minecraft:loot_table",
+          "value": "rpg:trial/key",
+          "weight": 3
         },
         {
           "type": "minecraft:item",

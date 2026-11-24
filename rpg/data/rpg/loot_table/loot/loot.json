@@ -5,8 +5,14 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:loot_table",
-          "value": "rpg:forge/bundle"
+          "type": "minecraft:item",
+          "name": "minecraft:nether_star",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{loot_trigger:2b}"
+            }
+          ]
         }
       ]
     }

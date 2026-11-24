@@ -56,7 +56,7 @@ CATEGORIES = [
     ("kabbalah", "magenta", "卡巴拉秘仪"),
     ("exorcism", "white", "驱魔器具"),
     ("page", "light_blue", "真名档案"),
-    ("verdict", "brown", "裁决遗物"),
+    ("verdict", "brown", "裁决罪物"),
 ]
 
 RULE = '{"text":"+------------------+","italic":false,"color":"white"}'

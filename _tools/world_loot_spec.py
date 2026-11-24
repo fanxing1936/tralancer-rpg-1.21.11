@@ -74,6 +74,22 @@ GROUPS = {
     }, [("diamond", 0.02, 1, 1)], 0.06, 0.01, 0.10),
 }
 
+# 怪物产物的前缀（用户 2026-11-24：「整个怪物产物的前缀都换成遗物」）。不加 custom_data：契约祭品、锻造、悬赏都认物品本身。
+# 每种写一行去处，印在 Lore 里。
+RELIC = "[遗物]"
+RELIC_USE = {
+    "rotten_flesh": "炼药：精血、衰败、镇痛、血祭", "bone": "炼药：净口、护盾；制粉笔", "arrow": "制银质圣钉",
+    "string": "炼药：镇痛、体能；制替死人偶", "spider_eye": "炼药：精血、疲惫、剧毒", "gunpowder": "炼药：衰败、烈焰",
+    "redstone": "炼药：剧毒、血祭、血战", "glowstone_dust": "炼药：净口、驱邪、祷告；制净罪香、封魔灯",
+    "iron_nugget": "制银质圣钉、告解铃", "breeze_rod": "炼药：体能、祷告、引潮；制告解铃",
+    "blaze_powder": "炼药：抗火、烈焰、血战；制净罪香", "ghast_tear": "炼药：复生、驱邪、不灭、圣水",
+    "magma_cream": "炼药：抗火；制封魔灯", "ender_pearl": "炼药：影行、不灭；制天启星",
+    "shulker_shell": "炼药：护盾、石肤；制驱魔图腾", "phantom_membrane": "炼药：疲惫、影行、引潮；制替死人偶",
+    "prismarine_shard": "炼药：动物朋友、石肤；制驱魔图腾", "prismarine_crystals": "炼药：动物朋友、复生、圣水",
+}
+# 罪仆掉的五职材料里，铁粒不在上面的怪物表里
+RELIC_MINION = {"iron_nugget": ("铁粒", "甲片", ("从先锋甲上剥下的", "碎片"))}
+
 # 单独加成：凋灵骷髅下界合金 1.5%；远古守卫者必掉 2 颗钻石
 EXTRA = {
     "wither_skeleton": [("netherite_ingot", 0.015, 1, 1)],

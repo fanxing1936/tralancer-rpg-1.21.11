@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/revive"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/shield"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/fatigue"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/vigor"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/stone"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/shadow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/blaze"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/exorcise"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/prayer"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/rite"
+        }
+      ]
+    }
+  ]
+}

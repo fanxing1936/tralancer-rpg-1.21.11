@@ -45,6 +45,8 @@ QUESTS = {
     6: ("空缺者的名字", "Name of the Vacant", [("完成一次驱魔裁决", "verdict", 1)],
         ["function rpg:world/kab/line_5", "scoreboard players add @s rpg_ex_xp 30",
          "function %s/q6_core" % P], "叫得出名字，才算理解。"),
+    7: ("失乐园", "Paradise Lost", [("过比逊河庭", "court", 1), ("向生命树献一次", "tree", 1), ("打倒基路伯", "cherub", 1)],
+        ["loot give @s loot rpg:world/bp_legend_any"], "门还在那里，只是没有人再守着它。"),
 }
 EPICS = None  # 由 add_world_items.WEAPONS 里的史诗图纸决定
 TITLES = {  # key: (名, 来历)
@@ -54,6 +56,7 @@ TITLES = {  # key: (名, 来历)
     "grandmaster": ("大团长的朋友", "让雅克的残影向一只叫「大团长」的狗行礼"),
     "meteor": ("白昼流星", "王冠阶的正午，对着太阳举起无垠星空"),
     "merchant": ("被商人记恨", "用金锄敲了商人三下"),
+    "summit": ("登顶者", "打完了失乐园四座河庭的二十层"),
 }
 
 

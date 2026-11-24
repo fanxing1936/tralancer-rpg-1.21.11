@@ -148,7 +148,7 @@ def patch_relic_items() -> None:
             6: "本轮尚未显现能力",
             7: "本轮尚未显现能力",
         }[number]
-        name_json = row(comp("[封印遗物] ", HOLY, True), comp(name, WHITE))
+        name_json = row(comp("[封印罪物] ", HOLY, True), comp(name, WHITE))
         lore_json = lore([
             [comp(ability, HOLY_LIGHT)],
             [comp("背包顺序前两件生效；其余休眠。", GRAY)],
@@ -494,7 +494,7 @@ def build_panel() -> None:
         # The panel polish pass may have adjusted copy; the home button is stable.
         anchor = next(line for line in source.splitlines() if "rpg_panel set 8" in line)
     rows = [
-        tell(comp("+-------- 封印遗物 --------+", RITUAL, True)),
+        tell(comp("+-------- 封印罪物 --------+", RITUAL, True)),
         "tellraw @s " + row(comp("躁动：", GRAY), score("rpg_agit", RITUAL),
                            comp(" / 100　", DARK_GRAY), comp("前两件生效", HOLY_LIGHT, True)),
     ]
@@ -510,7 +510,7 @@ def build_panel() -> None:
         tell(comp("净化：", CYAN, True), comp("站在驱魔圣水云中，每秒 -3（消耗圣水）。", GRAY)),
         tell(comp("压制：", HOLY, True), comp("潜行长按生效遗物 -20；代价为 30 秒能力冷却与 8 秒缓慢 I。", GRAY)),
     ]
-    if "+-------- 封印遗物 --------+" not in source:
+    if "+-------- 封印罪物 --------+" not in source:
         source = source.replace(anchor, "\n".join(rows) + "\n" + anchor, 1)
     write(rel, source)
 

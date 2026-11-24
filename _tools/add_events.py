@@ -46,7 +46,14 @@ BOUNTIES = {
     5: ("击败精英", "elite", 2, None),
     6: ("上交铁锭", "give", 16, "minecraft:iron_ingot[!minecraft:custom_data]"),
     7: ("上交金锭", "give", 6, "minecraft:gold_ingot[!minecraft:custom_data]"),
-    8: ("上交骸骨", "give", 24, "minecraft:bone[!minecraft:custom_data]"),
+    8: ("上交骸骨", "give", 24, "minecraft:bone"),
+    9: ("上交蛛丝", "give", 24, "minecraft:string"),
+    10: ("上交火药", "give", 12, "minecraft:gunpowder"),
+    11: ("上交烈焰粉", "give", 10, "minecraft:blaze_powder"),
+    12: ("上交末影珍珠", "give", 4, "minecraft:ender_pearl"),
+    13: ("通过试炼的层数", "trial", 5, None),
+    14: ("在失乐园打倒怪物", "paradise", 30, None),
+    15: ("在失乐园打倒首领", "paradise_champ", 2, None),
 }
 NB = len(BOUNTIES)
 
@@ -372,6 +379,9 @@ def bounty():
         fn("bt/kill_%s" % g, lines)
     el = [k for k, v in BOUNTIES.items() if v[1] == "elite"]
     fn("bt/elite", ["execute if score @s rpg_bt_t%d matches %d run scoreboard players add @s rpg_bt_p%d 1" % (s, k, s) for s in (1, 2, 3) for k in el])
+    for kind in ("trial", "paradise", "paradise_champ"):      # 失乐园（add_paradise.py）里调
+        ids = [k for k, v in BOUNTIES.items() if v[1] == kind]
+        fn("bt/" + kind, ["execute if score @s rpg_bt_t%d matches %d run scoreboard players add @s rpg_bt_p%d 1" % (s, k, s) for s in (1, 2, 3) for k in ids])
     for g in W.GROUPS:
         for suffix in ("", "_champion"):
             patch("elite/kill/%s%s.mcfunction" % (g, suffix), X("bt/elite"), "function %s\n" % X("bt/elite"))

@@ -127,6 +127,7 @@ python add_drop_policy.py ../rpg
 python add_armor_sets.py ../rpg
 # 全量领取箱必须在所有 give 生成器之后运行，才能收齐驱魔工具、真名残页
 # 与裁决奖励，并将旧目录中的物品按语义重新分类。
+python add_alchemy.py ../rpg --items
 python make_boxes.py ../rpg
 # 所有生成器（尤其领取箱）完成后再统一七罪姓名色与物品名字重：这样箱内
 # 副本、散装 give、Boss 名牌、调查/裁决/面板会共享同一套最终规范。
@@ -249,7 +250,14 @@ python add_world_items.py ../rpg
 python add_events.py ../rpg
 # 小支线、彩蛋与称号（add_quests.py）：接在事件之后（往旅程页和各系统里挂钩子）
 python add_quests.py ../rpg
+# 黑石堡垒（Antigravity，docs/FORTRESS-PROMPT.md；交付前跳过）
+if [ -f add_blackstone_fortress.py ]; then python add_blackstone_fortress.py ../rpg; fi
+# 失乐园：维度、自由猎杀、河庭试炼、宝库（add_paradise.py）
+python add_eden_gate.py ../rpg
+python add_paradise.py ../rpg ../resourcepack
 # 商人（add_merchants.py）：铁匠/神秘/奢侈品/迷途商人，接在支线之后（挂事件 6、玛门的账本、金锄彩蛋）
+# 药水、炼药与制器（add_alchemy.py）：商人要卖它的东西，所以在商人之前
+python add_alchemy.py ../rpg
 python add_merchants.py ../rpg
 # 商人外观（Codex：地下城 SK_Villager + 四套商人材质/帽子，idle/look/bow/examine）
 python add_merchant_models.py ../resourcepack ../rpg
@@ -258,6 +266,8 @@ python add_give_boxes.py ../rpg
 # 世界掉落与锻造的新图标（Codex 交付，world_ref/art）
 python add_world_art.py ../resourcepack
 python add_elite_bar_art.py ../resourcepack
+# 药水、驱魔器具、残页、罪物、传承书、钥匙的图标（Codex：relic_ref/art，没到先用原版图）
+python add_relic_art.py ../resourcepack
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg

@@ -15,7 +15,88 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:rotten_flesh"
+          "name": "minecraft:rotten_flesh",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[遗物]",
+                    "color": "#797979",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "腐肉",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "僵尸的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[遗物]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "作为他们存在过的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[证据]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "炼药：精血、衰败、镇痛、血祭",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
         }
       ]
     },
@@ -33,7 +114,88 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:redstone"
+          "name": "minecraft:redstone",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[遗物]",
+                    "color": "#797979",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "红石粉",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "女巫的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[药渣]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "熬药剩下的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[粉末]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "炼药：剧毒、血祭、血战",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
         }
       ]
     },

@@ -1,0 +1,207 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[史诗]",
+                    "color": "#B85CF0",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "体能药水",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "强化",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "体能",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "的神秘魔药",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "劝诫人们",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "强健身体",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "饮用　",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "速度 II、跳跃提升 II，30 秒",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:potion_contents": {
+                  "custom_color": 5107200,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:speed",
+                      "duration": 600,
+                      "amplifier": 1
+                    },
+                    {
+                      "id": "minecraft:jump_boost",
+                      "duration": 600,
+                      "amplifier": 1
+                    }
+                  ]
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:potion_contents"
+                  ]
+                },
+                "minecraft:max_stack_size": 8,
+                "minecraft:use_cooldown": {
+                  "seconds": 15.0,
+                  "cooldown_group": "rpg:potion_epic"
+                },
+                "minecraft:use_remainder": {
+                  "id": "minecraft:paper",
+                  "count": 1,
+                  "components": {
+                    "minecraft:custom_name": [
+                      "",
+                      {
+                        "text": "[药剂]",
+                        "color": "#AAAAAA",
+                        "bold": true,
+                        "italic": false
+                      },
+                      {
+                        "text": "空瓶",
+                        "color": "#FFFFFF",
+                        "bold": false,
+                        "italic": false
+                      }
+                    ],
+                    "minecraft:lore": [
+                      [
+                        "",
+                        {
+                          "text": "+------------------+",
+                          "color": "#FFFFFF",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ],
+                      [
+                        "",
+                        {
+                          "text": "手持对准灵魂营火右键炼药",
+                          "color": "gray",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ],
+                      [
+                        "",
+                        {
+                          "text": "喝完饮用的药水会还一个",
+                          "color": "gray",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ],
+                      [
+                        "",
+                        {
+                          "text": "+------------------+",
+                          "color": "#FFFFFF",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ]
+                    ],
+                    "minecraft:item_model": "rpg:relic/empty_vial",
+                    "minecraft:consumable": {
+                      "consume_seconds": 1234567.0,
+                      "animation": "none",
+                      "sound": "minecraft:intentionally_empty",
+                      "has_consume_particles": false
+                    },
+                    "minecraft:max_stack_size": 64,
+                    "minecraft:custom_data": {
+                      "rpg_fm": true,
+                      "rpg_mat": "vial"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{rpg_potion:\"vigor\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

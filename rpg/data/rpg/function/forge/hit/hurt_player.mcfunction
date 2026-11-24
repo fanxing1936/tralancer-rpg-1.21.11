@@ -12,3 +12,4 @@ execute if score @s rpg_pillar matches 2 if score @s rpg_sef matches 7.. run fun
 execute if score @s rpg_k20 matches 1.. run function rpg:force/sk/20/check
 execute if score @s rpg_messiah matches 1 run function rpg:force/x/id/third_day
 function rpg:elite/hit
+execute if score @s rpg_po_ud matches 1.. run function rpg:alc/undying

@@ -1077,7 +1077,7 @@ def main():
     build_advancement_and_trigger()
     build_old_power()
     build_new_power_and_borrow()
-    # 新约的潜行分支与随后的封印遗物压制共用这一个潜行判定。
+    # 新约的潜行分支与随后的封印罪物压制共用这一个潜行判定。
     write_json(DP, "data/rpg/predicate/sneaking.json", {
         "condition": "minecraft:entity_properties", "entity": "this",
         "predicate": {"flags": {"is_sneaking": True}}})

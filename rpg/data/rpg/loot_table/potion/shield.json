@@ -1,0 +1,119 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[史诗]",
+                    "color": "#B85CF0",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "护盾药水",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "守护他人的力量",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "获得",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "伤害吸收护盾",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "投掷　",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "伤害吸收 V，60 秒",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:potion_contents": {
+                  "custom_color": 16763904,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:absorption",
+                      "duration": 1200,
+                      "amplifier": 4
+                    }
+                  ]
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:potion_contents"
+                  ]
+                },
+                "minecraft:max_stack_size": 8,
+                "minecraft:use_cooldown": {
+                  "seconds": 15.0,
+                  "cooldown_group": "rpg:potion_epic"
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{rpg_potion:\"shield\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

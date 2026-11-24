@@ -1,0 +1,32 @@
+{
+  "fallback": "rpg:paradise/fortress/end",
+  "elements": [
+    {
+      "weight": 30,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/nebs",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/nebcr",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/nerc",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

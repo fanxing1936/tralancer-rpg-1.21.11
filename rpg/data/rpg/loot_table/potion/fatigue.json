@@ -1,0 +1,135 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[史诗]",
+                    "color": "#B85CF0",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "疲惫药水",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "放大敌人的弱点",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "恶魔",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    },
+                    {
+                      "text": "亲自炼制的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "邪恶药水",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "投掷　",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "黑暗、反胃、缓慢 III，30 秒",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:potion_contents": {
+                  "custom_color": 7733497,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:darkness",
+                      "duration": 600,
+                      "amplifier": 1
+                    },
+                    {
+                      "id": "minecraft:nausea",
+                      "duration": 600,
+                      "amplifier": 1
+                    },
+                    {
+                      "id": "minecraft:slowness",
+                      "duration": 600,
+                      "amplifier": 2
+                    }
+                  ]
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:potion_contents"
+                  ]
+                },
+                "minecraft:max_stack_size": 8,
+                "minecraft:use_cooldown": {
+                  "seconds": 15.0,
+                  "cooldown_group": "rpg:potion_epic"
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{rpg_potion:\"fatigue\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

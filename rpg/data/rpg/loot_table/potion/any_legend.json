@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/frenzy"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/undying"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/lure"
+        }
+      ]
+    }
+  ]
+}

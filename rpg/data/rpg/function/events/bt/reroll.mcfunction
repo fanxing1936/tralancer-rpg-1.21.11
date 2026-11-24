@@ -1,14 +1,14 @@
 scoreboard players operation @s rpg_bt_day = #day rpg_ev
-execute store result score @s rpg_bt_t1 run random value 1..8
-execute store result score #d rpg_ev run random value 1..7
-execute store result score #e rpg_ev run random value 1..7
+execute store result score @s rpg_bt_t1 run random value 1..15
+execute store result score #d rpg_ev run random value 1..14
+execute store result score #e rpg_ev run random value 1..14
 execute if score #e rpg_ev = #d rpg_ev run function rpg:events/bt/bump
 scoreboard players operation @s rpg_bt_t2 = @s rpg_bt_t1
 scoreboard players operation @s rpg_bt_t2 += #d rpg_ev
 scoreboard players operation @s rpg_bt_t3 = @s rpg_bt_t1
 scoreboard players operation @s rpg_bt_t3 += #e rpg_ev
-execute if score @s rpg_bt_t2 matches 9.. run scoreboard players remove @s rpg_bt_t2 8
-execute if score @s rpg_bt_t3 matches 9.. run scoreboard players remove @s rpg_bt_t3 8
+execute if score @s rpg_bt_t2 matches 16.. run scoreboard players remove @s rpg_bt_t2 15
+execute if score @s rpg_bt_t3 matches 16.. run scoreboard players remove @s rpg_bt_t3 15
 scoreboard players set @s rpg_bt_p1 0
 scoreboard players set @s rpg_bt_p2 0
 scoreboard players set @s rpg_bt_p3 0

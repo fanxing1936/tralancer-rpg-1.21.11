@@ -1,0 +1,1208 @@
+{
+  "data_version": 4671,
+  "seed": "1234567",
+  "glass_starts": 36,
+  "other_ids": [],
+  "pieces": {
+    "nebs": {
+      "size": [
+        5,
+        10,
+        19
+      ],
+      "bb": [
+        -4,
+        58,
+        18,
+        0,
+        67,
+        36
+      ],
+      "overlaps": 0,
+      "total_instances": 464,
+      "south_instances": 152,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 24,
+      "pillar_columns_below_bb": [
+        [
+          0,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          18,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          18,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          18,
+          "minecraft:nether_bricks"
+        ],
+        [
+          3,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          3,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          3,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          3,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          3,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          3,
+          18,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          18,
+          "minecraft:nether_bricks"
+        ]
+      ],
+      "block_counts": {
+        "minecraft:air": 171,
+        "minecraft:nether_brick_fence": 24,
+        "minecraft:nether_bricks": 344,
+        "minecraft:structure_void": 411
+      },
+      "block_entities": []
+    },
+    "nebcr": {
+      "size": [
+        19,
+        10,
+        19
+      ],
+      "bb": [
+        54,
+        58,
+        76,
+        72,
+        67,
+        94
+      ],
+      "overlaps": 0,
+      "total_instances": 125,
+      "south_instances": 29,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 0,
+      "pillar_columns_below_bb": [
+        [
+          0,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          9,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          9,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          9,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          18,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          18,
+          "minecraft:nether_bricks"
+        ],
+        [
+          9,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          9,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          9,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          9,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          9,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          9,
+          18,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          18,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          16,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          17,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          18,
+          "minecraft:nether_bricks"
+        ],
+        [
+          16,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          16,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          16,
+          9,
+          "minecraft:nether_bricks"
+        ],
+        [
+          16,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          16,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          17,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          17,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          17,
+          9,
+          "minecraft:nether_bricks"
+        ],
+        [
+          17,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          17,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          18,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          18,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          18,
+          9,
+          "minecraft:nether_bricks"
+        ],
+        [
+          18,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          18,
+          11,
+          "minecraft:nether_bricks"
+        ]
+      ],
+      "block_counts": {
+        "minecraft:air": 315,
+        "minecraft:nether_bricks": 670,
+        "minecraft:structure_void": 2625
+      },
+      "block_entities": []
+    },
+    "nerc": {
+      "size": [
+        7,
+        9,
+        7
+      ],
+      "bb": [
+        47,
+        61,
+        44,
+        53,
+        69,
+        50
+      ],
+      "overlaps": 0,
+      "total_instances": 100,
+      "south_instances": 30,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 9,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 210,
+        "minecraft:nether_brick_fence": 12,
+        "minecraft:nether_bricks": 170,
+        "minecraft:structure_void": 49
+      },
+      "block_entities": []
+    },
+    "nesr": {
+      "size": [
+        7,
+        11,
+        7
+      ],
+      "bb": [
+        40,
+        55,
+        37,
+        46,
+        65,
+        43
+      ],
+      "overlaps": 0,
+      "total_instances": 75,
+      "south_instances": 26,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 12,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 250,
+        "minecraft:nether_brick_fence": 18,
+        "minecraft:nether_bricks": 271
+      },
+      "block_entities": []
+    },
+    "nemt": {
+      "size": [
+        7,
+        8,
+        9
+      ],
+      "bb": [
+        -5,
+        61,
+        56,
+        1,
+        68,
+        64
+      ],
+      "overlaps": 0,
+      "total_instances": 50,
+      "south_instances": 9,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 22,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 207,
+        "minecraft:nether_brick_fence": 24,
+        "minecraft:nether_bricks": 203,
+        "minecraft:spawner": 1,
+        "minecraft:structure_void": 69
+      },
+      "block_entities": [
+        {
+          "pos": [
+            3,
+            5,
+            5
+          ],
+          "block": "minecraft:spawner",
+          "nbt": {
+            "components": {},
+            "MaxNearbyEntities": 6,
+            "RequiredPlayerRange": 16,
+            "SpawnCount": 4,
+            "SpawnData": {
+              "entity": {
+                "id": "minecraft:blaze"
+              }
+            },
+            "MaxSpawnDelay": 800,
+            "Delay": 20,
+            "id": "minecraft:mob_spawner",
+            "SpawnRange": 4,
+            "MinSpawnDelay": 200,
+            "SpawnPotentials": []
+          }
+        }
+      ]
+    },
+    "nece": {
+      "size": [
+        13,
+        14,
+        13
+      ],
+      "bb": [
+        383,
+        69,
+        680,
+        395,
+        82,
+        692
+      ],
+      "overlaps": 0,
+      "total_instances": 25,
+      "south_instances": 11,
+      "air_vs_glass_name_diffs": 1,
+      "air_vs_glass_prop_diffs": 75,
+      "pillar_columns_below_bb": [
+        [
+          0,
+          4,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          5,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          6,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          0,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          4,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          5,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          6,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          1,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          4,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          5,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          6,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          2,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          4,
+          12,
+          "minecraft:nether_bricks"
+        ],
+        [
+          5,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          5,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          5,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          5,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          5,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          5,
+          12,
+          "minecraft:nether_bricks"
+        ],
+        [
+          6,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          6,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          6,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          6,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          6,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          6,
+          12,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          7,
+          12,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          0,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          1,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          2,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          10,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          11,
+          "minecraft:nether_bricks"
+        ],
+        [
+          8,
+          12,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          4,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          5,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          6,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          10,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          4,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          5,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          6,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          11,
+          8,
+          "minecraft:nether_bricks"
+        ],
+        [
+          12,
+          4,
+          "minecraft:nether_bricks"
+        ],
+        [
+          12,
+          5,
+          "minecraft:nether_bricks"
+        ],
+        [
+          12,
+          6,
+          "minecraft:nether_bricks"
+        ],
+        [
+          12,
+          7,
+          "minecraft:nether_bricks"
+        ],
+        [
+          12,
+          8,
+          "minecraft:nether_bricks"
+        ]
+      ],
+      "block_counts": {
+        "minecraft:air": 645,
+        "minecraft:lava": 3,
+        "minecraft:nether_brick_fence": 91,
+        "minecraft:nether_bricks": 1387,
+        "minecraft:structure_void": 240
+      },
+      "block_entities": []
+    },
+    "nesc": {
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "bb": [
+        379,
+        51,
+        48,
+        383,
+        57,
+        52
+      ],
+      "overlaps": 0,
+      "total_instances": 1036,
+      "south_instances": 259,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 4,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 60,
+        "minecraft:nether_brick_fence": 8,
+        "minecraft:nether_bricks": 107
+      },
+      "block_entities": []
+    },
+    "nescsc": {
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "bb": [
+        379,
+        51,
+        43,
+        383,
+        57,
+        47
+      ],
+      "overlaps": 0,
+      "total_instances": 107,
+      "south_instances": 31,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 0,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 84,
+        "minecraft:nether_bricks": 91
+      },
+      "block_entities": []
+    },
+    "nescrt": {
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "bb": [
+        448,
+        51,
+        434,
+        452,
+        57,
+        438
+      ],
+      "overlaps": 0,
+      "total_instances": 170,
+      "south_instances": 48,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 8,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 59,
+        "minecraft:chest": 1,
+        "minecraft:nether_brick_fence": 8,
+        "minecraft:nether_bricks": 107
+      },
+      "block_entities": [
+        {
+          "pos": [
+            1,
+            2,
+            3
+          ],
+          "block": "minecraft:chest",
+          "nbt": {
+            "LootTable": "minecraft:chests/nether_bridge",
+            "components": {},
+            "id": "minecraft:chest",
+            "LootTableSeed": 3408757481518672107
+          }
+        }
+      ]
+    },
+    "nesclt": {
+      "size": [
+        5,
+        7,
+        5
+      ],
+      "bb": [
+        319,
+        51,
+        36,
+        323,
+        57,
+        40
+      ],
+      "overlaps": 0,
+      "total_instances": 178,
+      "south_instances": 46,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 8,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 59,
+        "minecraft:chest": 1,
+        "minecraft:nether_brick_fence": 8,
+        "minecraft:nether_bricks": 107
+      },
+      "block_entities": [
+        {
+          "pos": [
+            3,
+            2,
+            3
+          ],
+          "block": "minecraft:chest",
+          "nbt": {
+            "LootTable": "minecraft:chests/nether_bridge",
+            "components": {},
+            "id": "minecraft:chest",
+            "LootTableSeed": -3978714207556300318
+          }
+        }
+      ]
+    },
+    "neccs": {
+      "size": [
+        5,
+        14,
+        10
+      ],
+      "bb": [
+        379,
+        51,
+        33,
+        383,
+        64,
+        42
+      ],
+      "overlaps": 0,
+      "total_instances": 66,
+      "south_instances": 21,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 20,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 141,
+        "minecraft:nether_brick_fence": 20,
+        "minecraft:nether_brick_stairs": 21,
+        "minecraft:nether_bricks": 343,
+        "minecraft:structure_void": 175
+      },
+      "block_entities": []
+    },
+    "nectb": {
+      "size": [
+        9,
+        7,
+        9
+      ],
+      "bb": [
+        96,
+        55,
+        390,
+        104,
+        61,
+        398
+      ],
+      "overlaps": 0,
+      "total_instances": 45,
+      "south_instances": 13,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 15,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 226,
+        "minecraft:nether_brick_fence": 21,
+        "minecraft:nether_bricks": 293,
+        "minecraft:structure_void": 27
+      },
+      "block_entities": []
+    },
+    "necsr": {
+      "size": [
+        13,
+        14,
+        13
+      ],
+      "bb": [
+        325,
+        48,
+        41,
+        337,
+        61,
+        53
+      ],
+      "overlaps": 0,
+      "total_instances": 43,
+      "south_instances": 17,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 65,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:air": 565,
+        "minecraft:nether_brick_fence": 91,
+        "minecraft:nether_brick_stairs": 32,
+        "minecraft:nether_bricks": 1396,
+        "minecraft:nether_wart": 20,
+        "minecraft:soul_sand": 20,
+        "minecraft:structure_void": 242
+      },
+      "block_entities": []
+    },
+    "nebef": {
+      "size": [
+        5,
+        10,
+        8
+      ],
+      "bb": [
+        1020,
+        62,
+        38,
+        1024,
+        71,
+        45
+      ],
+      "overlaps": 0,
+      "total_instances": 324,
+      "south_instances": 79,
+      "air_vs_glass_name_diffs": 0,
+      "air_vs_glass_prop_diffs": 0,
+      "pillar_columns_below_bb": [],
+      "block_counts": {
+        "minecraft:nether_bricks": 105,
+        "minecraft:structure_void": 295
+      },
+      "block_entities": []
+    }
+  }
+}

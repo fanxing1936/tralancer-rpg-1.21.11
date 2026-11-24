@@ -1,0 +1,175 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[勇者]",
+                    "color": "#00AAAA",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "净口药水",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "漱一口，",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "什么都吐出来",
+                      "color": "#00AAAA",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "饮用　",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "清掉身上全部负面效果",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:potion_contents": {
+                  "custom_color": 15267056,
+                  "custom_effects": []
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:potion_contents"
+                  ]
+                },
+                "minecraft:max_stack_size": 16,
+                "minecraft:use_cooldown": {
+                  "seconds": 8.0,
+                  "cooldown_group": "rpg:potion_brave"
+                },
+                "minecraft:use_remainder": {
+                  "id": "minecraft:paper",
+                  "count": 1,
+                  "components": {
+                    "minecraft:custom_name": [
+                      "",
+                      {
+                        "text": "[药剂]",
+                        "color": "#AAAAAA",
+                        "bold": true,
+                        "italic": false
+                      },
+                      {
+                        "text": "空瓶",
+                        "color": "#FFFFFF",
+                        "bold": false,
+                        "italic": false
+                      }
+                    ],
+                    "minecraft:lore": [
+                      [
+                        "",
+                        {
+                          "text": "+------------------+",
+                          "color": "#FFFFFF",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ],
+                      [
+                        "",
+                        {
+                          "text": "手持对准灵魂营火右键炼药",
+                          "color": "gray",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ],
+                      [
+                        "",
+                        {
+                          "text": "喝完饮用的药水会还一个",
+                          "color": "gray",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ],
+                      [
+                        "",
+                        {
+                          "text": "+------------------+",
+                          "color": "#FFFFFF",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ]
+                    ],
+                    "minecraft:item_model": "rpg:relic/empty_vial",
+                    "minecraft:consumable": {
+                      "consume_seconds": 1234567.0,
+                      "animation": "none",
+                      "sound": "minecraft:intentionally_empty",
+                      "has_consume_particles": false
+                    },
+                    "minecraft:max_stack_size": 64,
+                    "minecraft:custom_data": {
+                      "rpg_fm": true,
+                      "rpg_mat": "vial"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{rpg_potion:\"cleanse\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

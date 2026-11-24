@@ -7,7 +7,7 @@
   迷途商人：第 6 种随机事件（白天），在玩家附近出现 5 分钟，货和神秘商人一样。
 * 载体是不会走的村民（原版交易界面，冒险模式可用），名牌是花体英文；外观是 Codex 按 docs/MERCHANT-MODELS-PROMPT.md
   做的地下城商人村民（add_merchant_models.py 生成的 rpg:merchant_<名>/dress），交付前先用原版村民的样子。
-* 交易里的物品与掉落表同一格式（[货币]、[锻造]、图纸……），从各自的掉落表里读组件，保证格式一致。
+* 交易里的物品与掉落表同一格式（[遗物]、[锻造]、图纸……），从各自的掉落表里读组件，保证格式一致。
 * 接线：神秘商人那里接「玛门的账本」；用金锄敲商人三下 → 彩蛋「被商人记恨」。
 """
 import io
@@ -149,19 +149,20 @@ def offer(buy, out, buy_b=None, uses=999):
 
 
 # ============================================================================ 货单
-BUY = [  # 铁匠收的 [货币] 类原版产物：(物品, 几个换 1 枚货币)，常见的要得多
+BUY = [  # 铁匠收的 [遗物]：(物品, 几个换 1 枚货币)，常见的要得多
     ("rotten_flesh", 32), ("bone", 32), ("arrow", 32), ("string", 24), ("spider_eye", 12), ("gunpowder", 16),
     ("redstone", 24), ("glowstone_dust", 24), ("breeze_rod", 8), ("blaze_powder", 16), ("ghast_tear", 4),
     ("magma_cream", 12), ("ender_pearl", 8), ("shulker_shell", 4), ("phantom_membrane", 8),
-    ("prismarine_shard", 24), ("prismarine_crystals", 16)]
+    ("prismarine_shard", 24), ("prismarine_crystals", 16), ("iron_nugget", 24)]
 BOOK_BADGE, BOOK_CURRENCY = 20, 30  # 未立约契约书的价钱
+PO_KEEP = 2                         # 神秘 / 迷途商人每次带几种药水
 SP_KEEP = 2                         # 神秘 / 迷途商人每次带几种特殊材料
 
 
 def check_buy():
-    """铁匠必须收齐 world_loot_spec 里每种 [货币] 产物。"""
+    """铁匠必须收齐 world_loot_spec 里每种 [遗物]。"""
     import world_loot_spec as W
-    drops = set(d[0] for _n, mobs, *_r in W.GROUPS.values() for ds in mobs.values() for d in ds)
+    drops = set(W.RELIC_MINION) | set(d[0] for _n, mobs, *_r in W.GROUPS.values() for ds in mobs.values() for d in ds)
     missing = drops - set(i for i, _n in BUY)
     if missing:
         raise SystemExit("merchants: 铁匠没收 %s" % sorted(missing))
@@ -175,7 +176,9 @@ def offers(kind, pillar=None):
                 offer(cost_currency(8), sell("rpg:forge/item/gild_leaf")),
                 offer(cost_currency(6), sell("rpg:forge/item/blank")),
                 offer(cost_plain("iron_ingot", 24), currency_item(2)),
-                offer(cost_plain("gold_ingot", 8), currency_item(3))] + [
+                offer(cost_plain("gold_ingot", 8), currency_item(3)),
+                offer(cost_currency(1), sell("rpg:potion/vial", 4)),
+                offer(cost_currency(8), sell("rpg:potion/blank_rite"))] + [
                 offer(cost_plain(item, n), currency_item(1)) for item, n in BUY]
     if kind in ("mystery", "travel"):
         out = [offer(cost_badge(6), sell("rpg:world/bp_fragment"), uses=8)]
@@ -183,6 +186,18 @@ def offers(kind, pillar=None):
             out.append(offer(cost_badge(15), sell("rpg:world/sp/" + k), uses=1))
         out.append(offer(cost_currency(10), sell("rpg:world/sin_shard_%d" % pillar), uses=4))
         out.append(offer(cost_badge(BOOK_BADGE), pact_book(pillar), buy_b=cost_currency(BOOK_CURRENCY), uses=1))
+        # 药水：生成时随机留 PO_KEEP 种（见 place）
+        import potion_spec as PS
+        for k, p in PS.POTIONS.items():
+            if p[1] == "epic":
+                out.append(offer(cost_currency(6), sell("rpg:potion/" + k), uses=3))
+            elif p[1] == "legend":
+                out.append(offer(cost_badge(10), sell("rpg:potion/" + k), uses=1))
+        # 收失乐园的三种遗物，换徽记
+        for k, n in (("fruit", 4), ("mud", 1), ("feather", 2)):
+            iid, comps = entry_of("rpg:paradise/" + k)
+            bid, bcomps = entry_of("rpg:elite/badge")
+            out.append(offer("{id:\"%s\",count:1,components:%s}" % (iid, comps), "{id:\"%s\",count:%d,components:%s}" % (bid, n, bcomps)))
         return out
     if kind == "luxury":
         out = []
@@ -263,6 +278,12 @@ def place():
             if v is not None:  # 特殊材料随机留两种：七种排在第 1..7 条（第 0 条是图纸碎片）
                 for left in range(len(WI.SPECIAL), SP_KEEP, -1):
                     lines += ["execute store result storage rpg:merchant cut.i int 1 run random value 1..%d" % left,
+                              "execute as @e[type=minecraft:villager,tag=rpg.mer.new,limit=1] run function %s/cut with storage rpg:merchant cut" % P]
+                import potion_spec as PS
+                n_po = sum(1 for p in PS.POTIONS.values() if p[1] in ("epic", "legend"))
+                first = 1 + SP_KEEP + 2          # 碎片 1 + 特殊材料 + 罪印 + 契约书 之后就是药水
+                for left in range(n_po, PO_KEEP, -1):
+                    lines += ["execute store result storage rpg:merchant cut.i int 1 run random value %d..%d" % (first, first + left - 1),
                               "execute as @e[type=minecraft:villager,tag=rpg.mer.new,limit=1] run function %s/cut with storage rpg:merchant cut" % P]
             fn(stem, lines + ["tag @e[type=minecraft:villager,tag=rpg.mer.new] remove rpg.mer.new"])
         if variants[0] is None:

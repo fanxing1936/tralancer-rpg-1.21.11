@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/blood"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/decay"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/beast"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/soothe"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/fireproof"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/cleanse"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/venom"
+        }
+      ]
+    }
+  ]
+}

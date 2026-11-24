@@ -17,5 +17,6 @@ execute if score #do rpg_q_st matches 42 run function rpg:quest/title/wear_waver
 execute if score #do rpg_q_st matches 43 run function rpg:quest/title/wear_grandmaster
 execute if score #do rpg_q_st matches 44 run function rpg:quest/title/wear_meteor
 execute if score #do rpg_q_st matches 45 run function rpg:quest/title/wear_merchant
+execute if score #do rpg_q_st matches 46 run function rpg:quest/title/wear_summit
 execute if score #do rpg_q_st matches 20..28 run tag @s remove rpg.q1.pick
 execute if score #do rpg_q_st matches 49 run function rpg:quest/title/off

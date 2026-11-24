@@ -11,6 +11,7 @@
 * 原版合成：limited_crafting 打开（只能合成已解锁的配方），每 2 秒把玩家配方书里的配方整个收回。冒险模式里没有挖矿、没有合成台，原料只能来自怪物。
 """
 import copy
+import glob
 import io
 import json
 import os
@@ -69,16 +70,74 @@ def raw_entry(item, lo, hi):
         count(lo, hi)]}
 
 
+def relic_lore(who, tag, lead, noun, item):
+    return [RULE, ["", seg(who + "的", ui.GRAY), seg("[%s]" % tag, ui.MUTED, True)],
+            ["", seg(lead, ui.GRAY), seg("[%s]" % noun, ui.MUTED, True)],
+            ["", seg(S.RELIC_USE[item], ui.MUTED)], RULE]
+
+
+def relic_first(item):
+    """这种遗物的通用写法：第一种掉它的怪物；铁粒只有罪仆掉。→ (名字, 组件)"""
+    for _g, (_n, mobs, *_r) in S.GROUPS.items():
+        for mob, ds in mobs.items():
+            for d in ds:
+                if d[0] == item:
+                    return d[1], base_entry(mob, *d)["functions"][0]["components"]
+    name, tag, line2 = S.RELIC_MINION[item]
+    return name, base_entry("", item, name, 1, 1, tag, line2)["functions"][0]["components"]
+
+
+def minion_names():
+    """35 张罪仆表：祭品与五职材料原来是没名字的原版物品，换成同一套写法（绿宝石、紫水晶、金粒用 [锻造]）。"""
+    root, n = os.path.join(DP, "data", "rpg", "loot_table", "minion"), 0
+    for path in sorted(glob.glob(os.path.join(root, "*", "*.json"))):
+        doc = json.load(io.open(path, encoding="utf-8"))
+        for pool in doc["pools"]:
+            for e in pool["entries"]:
+                item = e.get("name", "").replace("minecraft:", "")
+                if e.get("type") != "minecraft:item" or e.get("functions"):
+                    continue
+                if item in S.RAW:
+                    comps = raw_entry(item, 1, 1)["functions"][0]["components"]
+                elif item in S.RELIC_USE:
+                    comps = relic_first(item)[1]
+                else:
+                    continue
+                e["functions"] = [{"function": "minecraft:set_components", "components": comps}]
+                n += 1
+        wj(path, doc)
+    return n
+
+
+def migrate():
+    """背包里旧的 [货币] 产物每 2 秒换成 [遗物]（名字整个相等才算，货币本身不动）。"""
+    lines = []
+    seen = set()
+    for _g, (_n, mobs, *_r) in S.GROUPS.items():
+        for mob, ds in mobs.items():
+            for d in ds:
+                item, name = d[0], d[1]
+                if item in seen:
+                    continue
+                seen.add(item)
+                old = json.dumps(["", seg("[货币]", ui.MUTED, True), seg(name, ui.WHITE)], ensure_ascii=False, separators=(",", ":"))
+                pred = "minecraft:%s[minecraft:custom_name=%s]" % (item, old)
+                lines.append("execute as @a if items entity @s container.* %s run function rpg:world/relic/%s" % (pred, item))
+                comps = relic_first(item)[1]
+                body = ",".join("%s=%s" % (k, json.dumps(v, ensure_ascii=False, separators=(",", ":"))) for k, v in comps.items())
+                fn("relic/" + item, ["execute store result storage rpg:world relic.n int 1 run clear @s " + pred,
+                                     "function rpg:world/relic/%s_m with storage rpg:world relic" % item])
+                fn("relic/%s_m" % item, ["$give @s minecraft:%s[%s] $(n)" % (item, body)])
+    fn("relic/scan", lines)
+
+
 def base_entry(mob, item, name, lo, hi, tag, line2):
-    """原版产物：沿用原来七张自写表的格式（[货币] 灰前缀 + 「X 的[Y]」两行 Lore）。"""
+    """原版产物：[遗物] 灰前缀 + 「X 的[Y]」两行 Lore + 一行去处。"""
     lead, noun = line2
     return {"type": "minecraft:item", "name": "minecraft:" + item, "functions": [
         {"function": "minecraft:set_components", "components": {
-            "minecraft:custom_name": ["", seg("[货币]", ui.MUTED, True), seg(name, ui.WHITE)],
-            "minecraft:lore": [RULE,
-                               ["", seg(S.MOB_NAME[mob] + "的", ui.GRAY), seg("[%s]" % tag, ui.MUTED, True)],
-                               ["", seg(lead, ui.GRAY), seg("[%s]" % noun, ui.MUTED, True)],
-                               RULE]}},
+            "minecraft:custom_name": ["", seg(S.RELIC, ui.MUTED, True), seg(name, ui.WHITE)],
+            "minecraft:lore": relic_lore(S.MOB_NAME.get(mob, "罪仆"), tag, lead, noun, item)}},
         count(lo, hi),
         {"function": "minecraft:enchanted_count_increase", "enchantment": "minecraft:looting",
          "count": {"type": "minecraft:uniform", "min": 0, "max": 1}}]}
@@ -123,7 +182,8 @@ def recipes():
                 "scoreboard players add #t rpg_wl_rl 1",
                 "execute if score #t rpg_wl_rl matches 40.. run function rpg:world/recipe_scan"])
     fn("recipe_scan", ["scoreboard players set #t rpg_wl_rl 0",
-                       "execute as @a if data entity @s recipeBook.recipes[0] run recipe take @s *"])
+                       "execute as @a if data entity @s recipeBook.recipes[0] run recipe take @s *",
+                       "function rpg:world/relic/scan"])
 
 
 def recipe_advancements():
@@ -149,9 +209,11 @@ def main():
             wj(os.path.join(ENT, mob + ".json"), table(mob, base, raws, soul, blank, money))
             n += 1
     recipes()
+    migrate()
+    named = minion_names()
     k = recipe_advancements()
     assert n == len(S.WORLD_TABLES)
-    print("world loot: %d mob tables in %d groups, vanilla crafting locked (%d recipe advancements silenced)" % (n, len(S.GROUPS), k))
+    print("world loot: %d mob tables in %d groups, vanilla crafting locked (%d recipe advancements silenced), %d minion drops named" % (n, len(S.GROUPS), k, named))
 
 
 if __name__ == "__main__":

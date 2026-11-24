@@ -36,7 +36,7 @@ STORE = "storage rpg:panel"
 
 # ---- 面板的样式（只管外观；按钮命令一个不动）----------------------------------
 # 页内小节标题：暗金「◆」+ 白色加粗 + 哥特小注，和页头同一套（ART-STYLE §11、§12）。
-SECTION_GLOSS = {"封印遗物": "Relics"}
+SECTION_GLOSS = {"封印罪物": "Relics"}
 # 这些文字开头的正文行前面空一行，把一页分成几段。行本身带条件，空行跟着行走，
 # 行不显示时不会留下多余的空行。
 PARAGRAPH = {
@@ -52,7 +52,7 @@ KEY = re.compile(r"^([^：]{1,4})：(.+)$")
 # 开关和返回（灰色不加粗，不和主按钮抢）。悬停说明只是文字。
 ROLE = {
     "/trigger rpg_panel set 1": ("nav", "驱魔熟练、裁决次数与仪式槽"),
-    "/trigger rpg_panel set 2": ("nav", "七位领主的真名见证进度，以及封印遗物"),
+    "/trigger rpg_panel set 2": ("nav", "七位领主的真名见证进度，以及封印罪物"),
     "/trigger rpg_panel set 3": ("nav", "契约、侵蚀与上位契约"),
     "/trigger rpg_panel set 5": ("quiet", "显示或隐藏屏幕上的状态行"),
     "/trigger rpg_panel set 6": ("quiet", "按键与玩法速查"),

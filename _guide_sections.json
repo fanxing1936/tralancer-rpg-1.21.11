@@ -4798,21 +4798,30 @@
     "+------------------+",
     "精血炼制的药水",
     "快速回血",
+    "投掷　瞬间治疗 II",
     "+------------------+"
    ],
    "id": "splash_potion",
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "blood"
+   },
    "cmd": null,
    "item_model": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore",
-    "potion_contents"
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown"
    ],
    "dyed_color": null,
    "trim": null,
@@ -4820,7 +4829,7 @@
     "custom_color": 16728576,
     "custom_effects": [
      {
-      "id": "instant_health",
+      "id": "minecraft:instant_health",
       "duration": 1,
       "amplifier": 1
      }
@@ -4836,21 +4845,30 @@
     "+------------------+",
     "秘制的配方",
     "获得大幅回血",
+    "投掷　瞬间治疗 IV",
     "+------------------+"
    ],
    "id": "splash_potion",
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "revive"
+   },
    "cmd": null,
    "item_model": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore",
-    "potion_contents"
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown"
    ],
    "dyed_color": null,
    "trim": null,
@@ -4858,7 +4876,7 @@
     "custom_color": 16722944,
     "custom_effects": [
      {
-      "id": "instant_health",
+      "id": "minecraft:instant_health",
       "duration": 1,
       "amplifier": 3
      }
@@ -4874,21 +4892,30 @@
     "+------------------+",
     "守护他人的力量",
     "获得伤害吸收护盾",
+    "投掷　伤害吸收 V，60 秒",
     "+------------------+"
    ],
    "id": "splash_potion",
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "shield"
+   },
    "cmd": null,
    "item_model": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore",
-    "potion_contents"
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown"
    ],
    "dyed_color": null,
    "trim": null,
@@ -4896,7 +4923,7 @@
     "custom_color": 16763904,
     "custom_effects": [
      {
-      "id": "absorption",
+      "id": "minecraft:absorption",
       "duration": 1200,
       "amplifier": 4
      }
@@ -4912,21 +4939,30 @@
     "+------------------+",
     "恶毒的魔药",
     "投掷造成凋零效果",
+    "滞留　凋零 III，6 秒",
     "+------------------+"
    ],
    "id": "lingering_potion",
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "decay"
+   },
    "cmd": null,
    "item_model": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore",
-    "potion_contents"
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown"
    ],
    "dyed_color": null,
    "trim": null,
@@ -4934,7 +4970,7 @@
     "custom_color": 4673362,
     "custom_effects": [
      {
-      "id": "wither",
+      "id": "minecraft:wither",
       "duration": 120,
       "amplifier": 2
      }
@@ -4950,21 +4986,31 @@
     "+------------------+",
     "放手一搏吧！！！别顾虑太多",
     "扣除6滴血量并获得力量三",
+    "饮用　凋零 V 4 秒，力量 III 30 秒",
     "+------------------+"
    ],
    "id": "potion",
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "frenzy"
+   },
    "cmd": null,
    "item_model": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore",
-    "potion_contents"
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
    ],
    "dyed_color": null,
    "trim": null,
@@ -4972,12 +5018,12 @@
     "custom_color": 16755200,
     "custom_effects": [
      {
-      "id": "wither",
+      "id": "minecraft:wither",
       "duration": 80,
       "amplifier": 4
      },
      {
-      "id": "strength",
+      "id": "minecraft:strength",
       "duration": 600,
       "amplifier": 2
      }
@@ -4993,21 +5039,31 @@
     "+------------------+",
     "这个世界不光属于我们",
     "还属于我和我的动物朋友，芝士雪豹",
+    "饮用　潮涌能量 II、海豚的恩惠 II，30 秒",
     "+------------------+"
    ],
    "id": "potion",
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "beast"
+   },
    "cmd": null,
    "item_model": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore",
-    "potion_contents"
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
    ],
    "dyed_color": null,
    "trim": null,
@@ -5015,12 +5071,12 @@
     "custom_color": 63450,
     "custom_effects": [
      {
-      "id": "conduit_power",
+      "id": "minecraft:conduit_power",
       "duration": 600,
       "amplifier": 1
      },
      {
-      "id": "dolphins_grace",
+      "id": "minecraft:dolphins_grace",
       "duration": 600,
       "amplifier": 1
      }
@@ -5036,21 +5092,30 @@
     "+------------------+",
     "放大敌人的弱点",
     "恶魔亲自炼制的邪恶药水",
+    "投掷　黑暗、反胃、缓慢 III，30 秒",
     "+------------------+"
    ],
    "id": "splash_potion",
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "fatigue"
+   },
    "cmd": null,
    "item_model": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore",
-    "potion_contents"
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown"
    ],
    "dyed_color": null,
    "trim": null,
@@ -5058,17 +5123,17 @@
     "custom_color": 7733497,
     "custom_effects": [
      {
-      "id": "darkness",
+      "id": "minecraft:darkness",
       "duration": 600,
       "amplifier": 1
      },
      {
-      "id": "nausea",
+      "id": "minecraft:nausea",
       "duration": 600,
       "amplifier": 1
      },
      {
-      "id": "slowness",
+      "id": "minecraft:slowness",
       "duration": 600,
       "amplifier": 2
      }
@@ -5084,21 +5149,31 @@
     "+------------------+",
     "强化体能的神秘魔药",
     "劝诫人们强健身体",
+    "饮用　速度 II、跳跃提升 II，30 秒",
     "+------------------+"
    ],
    "id": "potion",
    "enchantments": {},
    "modifiers": [],
-   "tags": [],
-   "custom_data": {},
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "vigor"
+   },
    "cmd": null,
    "item_model": null,
    "unbreakable": false,
    "consumable": null,
    "components": [
+    "custom_data",
     "custom_name",
     "lore",
-    "potion_contents"
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
    ],
    "dyed_color": null,
    "trim": null,
@@ -5106,17 +5181,587 @@
     "custom_color": 5107200,
     "custom_effects": [
      {
-      "id": "speed",
+      "id": "minecraft:speed",
       "duration": 600,
       "amplifier": 1
      },
      {
-      "id": "jump_boost",
+      "id": "minecraft:jump_boost",
       "duration": 600,
       "amplifier": 1
      }
     ]
    }
+  },
+  {
+   "item": "potion",
+   "name": "镇痛药水",
+   "rarity": "勇者",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "裹在布里的草药",
+    "饮用　生命恢复 II，10 秒",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "soothe"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 15902392,
+    "custom_effects": [
+     {
+      "id": "minecraft:regeneration",
+      "duration": 200,
+      "amplifier": 1
+     }
+    ]
+   }
+  },
+  {
+   "item": "potion",
+   "name": "抗火药水",
+   "rarity": "勇者",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "从火里取来的壳",
+    "饮用　抗火，2 分钟",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "fireproof"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 14912300,
+    "custom_effects": [
+     {
+      "id": "minecraft:fire_resistance",
+      "duration": 2400,
+      "amplifier": 0
+     }
+    ]
+   }
+  },
+  {
+   "item": "potion",
+   "name": "净口药水",
+   "rarity": "勇者",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "漱一口，什么都吐出来",
+    "饮用　清掉身上全部负面效果",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "cleanse"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 15267056,
+    "custom_effects": []
+   }
+  },
+  {
+   "item": "splash_potion",
+   "name": "剧毒药水",
+   "rarity": "勇者",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "毒牙里挤出来的汁",
+    "投掷　中毒 II，10 秒",
+    "+------------------+"
+   ],
+   "id": "splash_potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "venom"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 6268978,
+    "custom_effects": [
+     {
+      "id": "minecraft:poison",
+      "duration": 200,
+      "amplifier": 1
+     }
+    ]
+   }
+  },
+  {
+   "item": "potion",
+   "name": "石肤药水",
+   "rarity": "史诗",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "皮肤一寸寸变成石头",
+    "饮用　抗性提升 II、缓慢 I，15 秒",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "stone"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 10132116,
+    "custom_effects": [
+     {
+      "id": "minecraft:resistance",
+      "duration": 300,
+      "amplifier": 1
+     },
+     {
+      "id": "minecraft:slowness",
+      "duration": 300,
+      "amplifier": 0
+     }
+    ]
+   }
+  },
+  {
+   "item": "potion",
+   "name": "影行药水",
+   "rarity": "史诗",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "影子先于你到达",
+    "饮用　隐身 15 秒；第一下近战伤害 +50%，打出后现形",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "shadow"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 2106940,
+    "custom_effects": [
+     {
+      "id": "minecraft:invisibility",
+      "duration": 300,
+      "amplifier": 0
+     }
+    ]
+   }
+  },
+  {
+   "item": "potion",
+   "name": "烈焰药水",
+   "rarity": "史诗",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "喝下去的是火",
+    "饮用　15 秒内近战点燃目标，自己不怕火",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "blaze"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 15759384,
+    "custom_effects": [
+     {
+      "id": "minecraft:fire_resistance",
+      "duration": 300,
+      "amplifier": 0
+     }
+    ]
+   }
+  },
+  {
+   "item": "potion",
+   "name": "驱邪药水",
+   "rarity": "史诗",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "把里面的东西请出去",
+    "饮用　魔化 −15；圣力者改为同化 −5",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "exorcise"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 16773800,
+    "custom_effects": []
+   }
+  },
+  {
+   "item": "potion",
+   "name": "祷告药水",
+   "rarity": "史诗",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "含着它念完一段经文",
+    "饮用　圣力 +40、生命力 +15",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "prayer"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 16767066,
+    "custom_effects": []
+   }
+  },
+  {
+   "item": "potion",
+   "name": "血祭药水",
+   "rarity": "史诗",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "别人的血，你的力",
+    "饮用　魔力 +50、魔化 +8",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "rite"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 7999536,
+    "custom_effects": []
+   }
+  },
+  {
+   "item": "potion",
+   "name": "不灭药水",
+   "rarity": "传说",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "坟里的人不肯走",
+    "饮用　60 秒内撑住一次致命伤，并有 3 秒抗性 III",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "undying"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 9412744,
+    "custom_effects": []
+   }
+  },
+  {
+   "item": "potion",
+   "name": "引潮药水",
+   "rarity": "传说",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "潮水闻到了血",
+    "饮用　60 秒内，48 格里刷出的怪物精英机率 ×3",
+    "+------------------+"
+   ],
+   "id": "potion",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_potion"
+   ],
+   "custom_data": {
+    "rpg_potion": "lure"
+   },
+   "cmd": null,
+   "item_model": null,
+   "unbreakable": false,
+   "consumable": null,
+   "components": [
+    "custom_data",
+    "custom_name",
+    "lore",
+    "max_stack_size",
+    "potion_contents",
+    "tooltip_display",
+    "use_cooldown",
+    "use_remainder"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": {
+    "custom_color": 1981560,
+    "custom_effects": []
+   }
+  },
+  {
+   "item": "paper",
+   "name": "空瓶",
+   "rarity": "药剂",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "手持对准灵魂营火右键炼药",
+    "喝完饮用的药水会还一个",
+    "+------------------+"
+   ],
+   "id": "paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "vial"
+   },
+   "cmd": null,
+   "item_model": "rpg:relic/empty_vial",
+   "unbreakable": false,
+   "consumable": "1.23457e+06f",
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
   },
   {
    "item": "enchanted_book",
@@ -9577,6 +10222,44 @@
    "potion_contents": null
   },
   {
+   "item": "paper",
+   "name": "空瓶",
+   "rarity": "药剂",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "手持对准灵魂营火右键炼药",
+    "喝完饮用的药水会还一个",
+    "+------------------+"
+   ],
+   "id": "paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "vial"
+   },
+   "cmd": null,
+   "item_model": "rpg:relic/empty_vial",
+   "unbreakable": false,
+   "consumable": "1.23457e+06f",
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
    "item": "minecraft:paper",
    "name": "信念之源",
    "rarity": "神圣",
@@ -9956,6 +10639,82 @@
     "custom_data",
     "custom_name",
     "food",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "paper",
+   "name": "空白圣具",
+   "rarity": "驱魔",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "还没刻字的圣具坯",
+    "手持对准灵魂营火右键制器",
+    "+------------------+"
+   ],
+   "id": "paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "blank_rite"
+   },
+   "cmd": null,
+   "item_model": "rpg:relic/blank_rite",
+   "unbreakable": false,
+   "consumable": "1.23457e+06f",
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
+    "lore",
+    "max_stack_size"
+   ],
+   "dyed_color": null,
+   "trim": null,
+   "potion_contents": null
+  },
+  {
+   "item": "paper",
+   "name": "空白圣具",
+   "rarity": "驱魔",
+   "name_colour": "#FFFFFF",
+   "lore": [
+    "+------------------+",
+    "还没刻字的圣具坯",
+    "手持对准灵魂营火右键制器",
+    "+------------------+"
+   ],
+   "id": "paper",
+   "enchantments": {},
+   "modifiers": [],
+   "tags": [
+    "rpg_fm",
+    "rpg_mat"
+   ],
+   "custom_data": {
+    "rpg_fm": 1,
+    "rpg_mat": "blank_rite"
+   },
+   "cmd": null,
+   "item_model": "rpg:relic/blank_rite",
+   "unbreakable": false,
+   "consumable": "1.23457e+06f",
+   "components": [
+    "consumable",
+    "custom_data",
+    "custom_name",
+    "item_model",
     "lore",
     "max_stack_size"
    ],

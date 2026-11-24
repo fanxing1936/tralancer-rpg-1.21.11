@@ -5,6 +5,8 @@ execute if entity @s[tag=rpg.fg.ui] run return 0
 tag @s add rpg.fg.ui
 scoreboard players enable @s rpg_fg_do
 scoreboard players set @s rpg_fg_op 0
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{rpg_mat:"vial"}] run return run function rpg:alc/open_potion
+execute if items entity @s weapon.mainhand *[minecraft:custom_data~{rpg_mat:"blank_rite"}] run return run function rpg:alc/open_rite
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{rpg_mat:"blank"}] run return run function rpg:forge/smelt/open
 execute unless items entity @s weapon.offhand #rpg:forge/any unless items entity @s weapon.offhand *[minecraft:custom_data~{sword_tag:1b}] unless items entity @s weapon.offhand *[minecraft:custom_data~{bow_tag:1b}] unless items entity @s weapon.offhand *[minecraft:custom_data~{chestplate_tag:1b}] run return run tellraw @s ["",{"text":"[锻造]","color":"#E39745","bold":true,"italic":false},{"text":"　副手拿着要养成的装备，主手拿材料再右键","color":"#C04A3C","bold":false,"italic":false}]
 function rpg:forge/wb/new

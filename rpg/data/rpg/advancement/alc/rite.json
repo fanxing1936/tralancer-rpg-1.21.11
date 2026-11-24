@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "drink": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{rpg_potion:\"rite\"}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:alc/fx/rite"
+  }
+}

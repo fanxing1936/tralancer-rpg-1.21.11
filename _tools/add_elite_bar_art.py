@@ -36,7 +36,8 @@ GAP = ""                 # 图标与名字之间的空隙
 RAMP = [(0xFF, 0xE7, 0xA0), (0xFF, 0xAA, 0x00), (0x8A, 0x5A, 0x00), (0x2A, 0x1A, 0x00)]
 ICONS = {0: "champion", 1: "swift", 2: "iron", 3: "rage", 4: "leech", 5: "frost", 6: "venom", 7: "burst",
          8: "summon", 9: "taint", 10: "holy"}
-MOBS = [m for m in W.WORLD_TABLES if m not in ("elder_guardian", "vex", "silverfish", "endermite")]
+MOBS = [m for m in W.WORLD_TABLES if m not in ("elder_guardian", "vex", "silverfish", "endermite")] + ["warden", "cherub", "castellan"]
+EXTRA_EN = {"warden": "Gate Warden", "cherub": "Cherub", "castellan": "Castellan"}   # 失乐园的三名首领（add_paradise.BOSSES）
 
 
 def char(step):
@@ -139,7 +140,7 @@ def main():
         icon_w = advance(16)
     table = unifont()
     for mob in MOBS:
-        img = name_image(table, W.MOB_EN[mob])
+        img = name_image(table, W.MOB_EN.get(mob) or EXTRA_EN[mob])
         save(img, os.path.join(out, "name_%s.png" % mob))
         providers.append({"type": "bitmap", "file": "rpg:font/elite_bar/name_%s.png" % mob,
                           "height": TITLE_HEIGHT, "ascent": TITLE_ASCENT, "chars": [name_char(mob)]})

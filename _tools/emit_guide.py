@@ -9,6 +9,7 @@ import guide_bestiary
 import guide_tutorial
 import guide_world
 import guide_sephira
+import guide_paradise
 import guide_theme
 import rpg_ui_style as ui
 
@@ -438,7 +439,8 @@ def build():
 <li><div><h3>摆放商人</h3><p>铁匠、神秘商人、奢侈品商人不会自己出现，由管理员站在要放的位置执行；他们面朝你看的方向，放下后一直在。铁匠放在灵魂营火旁的据点，奢侈品商人放在主城。</p><code class="cmd">/function rpg:merchant/place/smith
 /function rpg:merchant/place/mystery
 /function rpg:merchant/place/luxury</code></div></li>
-<li><div><h3>布置试炼与宝库<span class="opt">可选</span></h3><p>在脚下生成一组不祥试炼刷怪笼与宝库，掉落表指向本包的 <code>rpg:trial/*</code> 与 <code>rpg:loot/*</code>。站在要放置的位置执行。</p><code class="cmd">/function rpg:command/setblock</code></div></li>
+<li><div><h3>另放宝库<span class="opt">可选</span></h3><p>试炼与宝库在<a href="#s19">失乐园</a>里自己放好。想在主世界另放，站在位置上执行；站在旧宝库上执行就是换锁。</p><code class="cmd">/function rpg:pl/place/vault
+/function rpg:pl/place/vault_ominous</code></div></li>
 </ol>
 <div class="note"><b>完整调试手册：</b>本页末尾的<a href="#debug-catalog">调试指令总表</a>收录 <b>''' + str(len(ALL_COMMANDS)) + '''</b> 个公开入口，逐条标明执行者、前置条件、影响范围与风险。推荐先用 <code>/function rpg:command/give/box</code> 领取分类潜影盒。</div>
 <div class="note"><b>公共入口边界：</b><code>*_worker</code>、每刻 tick、伤害结算、UI 刷新与阶段内部函数不是调试接口。它们依赖调用上下文，手动执行容易留下半成品状态，因此未列入可复制命令。</div>
@@ -461,9 +463,11 @@ def build():
 <div><h3>玩家面板</h3><p class="how">切换到「玩家面板」头颅</p><p>面板 Lore 会实时刷新等级、生命、攻击、攻速、护甲、韧性、原质与综合能力、阅历、侵蚀（或权柄完整度）与契约序列。切换到面板并停留片刻，会打开面板界面，可直接查看驱魔师档案、七柱真名调查、契约与侵蚀，或切换个人 HUD；切走再切回即可重开。立下新约后，入口动态切为「契约·权柄」，页标题切为「契约与权柄」，「当前侵蚀」行则换成 <b>0–100 的权柄完整度</b>并标明「新约 · 权柄」。</p></div>
 <div><h3>原质与力</h3><p class="how">自动晋阶 · 圣徽 / 罪印</p><p>角色走<b>原质十阶</b>，只看综合能力。有了圣力或魔力，主手拿施法物按 <b>Shift+F</b> 开技能页，<b>右键 / 潜行右键 / F</b> 放三格技能。详见 <a href="#s18">XVI 原质与力</a>。</p></div>
 <div><h3>罪器与图纸锻造</h3><p class="how">灵魂营火 · 锻造页</p><p>武器核心加罪印碎片锻<b>罪器</b>；图纸加特殊材料锻<b>史诗与传说武器</b>；原料之间可以<b>转换</b>。详见 <a href="#w-sin">XV 世界循环</a>。</p></div>
+<div><h3>炼药与制器</h3><p class="how">空瓶 / 空白圣具 · 灵魂营火</p><p>怪物掉的<b>遗物</b>炼成 20 种药水，或做成驱魔器具。详见 <a href="#w-alc">XV 世界循环 · 炼药</a>。</p></div>
+<div><h3>失乐园</h3><p class="how">玩家面板 · 失乐园</p><p>单独的维度：四座河庭的试炼、分区自由猎杀、宝库。详见 <a href="#s19">XVII 失乐园</a>。</p></div>
 <div><h3>商人</h3><p class="how">对商人右键</p><p>铁匠、神秘商人、奢侈品商人固定摆放，迷途商人随机出现。用货币、精英徽记和多余的材料交易。详见 <a href="#w-mer">XV 世界循环 · 商人</a>。</p></div>
 <div><h3>旅程</h3><p class="how">玩家面板 · 旅程</p><p>当前<b>事件</b>、每天三条<b>悬赏</b>、<b>支线</b>、<b>称号</b>和<b>配方书</b>都在这一页。详见 <a href="#w-ev">XV 世界循环</a>。</p></div>
-<div><h3>试炼与宝库</h3><p class="how">不祥试炼刷怪笼 · 宝库</p><p>试炼之室吐出器胚、残魂、铸造之石、洗炼钻、镀金箔与符文（不祥试炼还有符石）。宝库开出一份养成材料包：铸造之石 ×2、洗炼钻、镀金箔，另有机会出符文与符石。</p></div>
+<div><h3>试炼与宝库</h3><p class="how">失乐园的四座河庭</p><p>每层吐出货币、遗物、养成材料与药水，守关层给钥匙；宝库从天上落下图纸、材料、药水，以及只在这里的<b>樱怒之日</b>。</p></div>
 </div>
 </section>''')
 
@@ -602,13 +606,13 @@ def build():
 <div class="note"><b>真名档案会跨战斗保留。</b>再次召唤已经调查完成的领主时，会直接提示已确证真名，这是存档进度而不是跳过见证。若只想重新测试调查流程，可由该玩家执行 <code>/function rpg:inquest/reset_self</code>；它只清空执行者自己的七柱调查记录。</div>
 <div class="tw"><table>
 <thead><tr><th>领主</th><th>弱点媒介</th><th>调查所得</th></tr></thead><tbody>
-<tr><td>路西法</td><td>羽毛 · 谦卑之羽</td><td>傲慢无法承受自愿的低伏</td></tr>
-<tr><td>利维坦</td><td>海晶砂 · 无主之潮</td><td>嫉妒惧怕不属于任何人的馈赠</td></tr>
-<tr><td>亚巴顿</td><td>时钟 · 不眠之钟</td><td>怠惰畏惧持续前行的时间</td></tr>
-<tr><td>别西卜</td><td>毒马铃薯 · 腐宴残食</td><td>暴食无法吞下已经腐败的宴席</td></tr>
-<tr><td>萨麦尔</td><td>雪球 · 熄怒之雪</td><td>暴怒会被不还手的寒意冷却</td></tr>
-<tr><td>贝利尔</td><td>紫水晶碎片 · 清醒之镜</td><td>色欲惧怕不被幻象改写的映照</td></tr>
-<tr><td>玛门</td><td>金锭 · 自愿之金</td><td>贪婪无法夺走主动舍弃之物</td></tr>
+<tr><td>路西法</td><td><span class="nm">谦卑之羽</span>（羽毛也行）</td><td>傲慢无法承受自愿的低伏</td></tr>
+<tr><td>利维坦</td><td><span class="nm">无主之潮</span>（海晶砂也行）</td><td>嫉妒惧怕不属于任何人的馈赠</td></tr>
+<tr><td>亚巴顿</td><td><span class="nm">不眠之钟</span>（时钟也行）</td><td>怠惰畏惧持续前行的时间</td></tr>
+<tr><td>别西卜</td><td><span class="nm">腐宴残食</span>（毒马铃薯也行）</td><td>暴食无法吞下已经腐败的宴席</td></tr>
+<tr><td>萨麦尔</td><td><span class="nm">熄怒之雪</span>（雪球也行）</td><td>暴怒会被不还手的寒意冷却</td></tr>
+<tr><td>贝利尔</td><td><span class="nm">清醒之镜</span>（紫水晶碎片也行）</td><td>色欲惧怕不被幻象改写的映照</td></tr>
+<tr><td>玛门</td><td><span class="nm">自愿之金</span>（金锭也行）</td><td>贪婪无法夺走主动舍弃之物</td></tr>
 </tbody></table></div>
 <div class="sys">
 <div><h3>Ⅰ · 镇压</h3><p class="how">生命降到 420 / 700</p><p>领主锁血并获得完全抗性；它仍会出招，尚未收齐的罪证可以继续观察。</p></div>
@@ -643,7 +647,7 @@ def build():
 <div class="sys">
 <div><h3>消灭</h3><p class="how">最高战斗难度</p><p>解除仪式锁血，恶魔以 <b>700</b> 生命狂暴复苏；最终掉落对应<b>武器核心</b>，奖励 25 阅历。稳定度归零也会被迫走入此路线。</p></div>
 <div><h3>放逐</h3><p class="how">完整仪式</p><p>直接逐离，参与者获得经验、净去 10 魔化；裁决者奖励 20 阅历。</p></div>
-<div><h3>封印</h3><p class="how">消耗封魔灯</p><p>得到对应封印遗物并增加 5 魔化。携带时每十分钟检定一次，平均约一小时发生一次逃逸。</p></div>
+<div><h3>封印</h3><p class="how">消耗封魔灯</p><p>得到对应封印罪物并增加 5 魔化。携带时每十分钟检定一次，平均约一小时发生一次逃逸。</p></div>
 <div><h3>契约</h3><p class="how">保留柱中之力</p><p>得到对应未立约的柱之书与罪遗武器，并增加 25 魔化；签约规则仍按契约章节执行。</p></div>
 </div>
 <h3 class="sub-h">驱魔熟练<span class="rolls">按裁决次数</span></h3>
@@ -740,7 +744,7 @@ def build():
 <div><h3>银质圣钉</h3><p class="how">法阵五格内主手右键 · 落点立钉</p><p>恢复 20 稳定度并固定边界；完整抵消萨麦尔下一次破阵，同时降低贝利尔的魅惑位移。</p></div>
 <div><h3>告解铃</h3><p class="how">主手右键 · 15 秒冷却 · 阵旁立铃</p><p>立刻打断伪名、妒影或赎金，恢复 12 稳定度。代价是敲铃者发光、虚弱，恶魔获得力量与速度。</p></div>
 <div><h3>净罪香</h3><p class="how">法阵五格内主手右键 · 落点燃香</p><p>清除六格内缓慢、虚弱、失明、黑暗与反胃，恢复 15 稳定度。</p></div>
-<div><h3>封魔灯</h3><p class="how">裁决阶段 · 法阵五格内主手右键</p><p>右键即消耗灯盏并选择封印，生成对应领主的封印遗物；灯影在仪式结束后停留六秒。</p></div>
+<div><h3>封魔灯</h3><p class="how">裁决阶段 · 法阵五格内主手右键</p><p>右键即消耗灯盏并选择封印，生成对应领主的封印罪物；灯影在仪式结束后停留六秒。</p></div>
 <div><h3>守御粉笔</h3><p class="how">法阵五格内主手右键</p><p>首次刻写恢复 10 稳定度，并降低后续稳定度损失。</p></div>
 <div><h3>压制粉笔</h3><p class="how">法阵五格内主手右键</p><p>首次刻写恢复 10 稳定度，每轮反仪式间隔延长四秒。</p></div>
 <div><h3>疾行粉笔</h3><p class="how">法阵五格内主手右键</p><p>首次刻写恢复 10 稳定度，被压制领主每次受击额外多恢复 1 点。</p></div>
@@ -828,6 +832,7 @@ def build():
 
     a(guide_world.section())
     a(guide_sephira.section())
+    a(guide_paradise.section())
     a('<footer><span class="seal">Eretz Ha-Shevarim</span>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
     a('</main></div></div>')
 

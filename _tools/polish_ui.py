@@ -477,7 +477,7 @@ def polish_broadcast(parts, stats):
             stats["broadcast_join"] += 1
         return
     if tag.startswith(ui.BRACKETS[0]):
-        return  # 已是播报样式（封印遗物层之后的第二遍）
+        return  # 已是播报样式（封印罪物层之后的第二遍）
     key = ui.broadcast_tag(tag)
     if key in ui.VERDICTS and len(verdict_buttons(parts)) > 1:
         style_choices(parts)
@@ -662,7 +662,7 @@ def validate(stats):
 
 
 def broadcasts_only(stats):
-    """封印遗物层排在本脚本之后，它写的播报行由构建末尾这一遍补上样式。"""
+    """封印罪物层排在本脚本之后，它写的播报行由构建末尾这一遍补上样式。"""
     problems = []
     for root, dirs, files in os.walk(DP):
         dirs.sort()

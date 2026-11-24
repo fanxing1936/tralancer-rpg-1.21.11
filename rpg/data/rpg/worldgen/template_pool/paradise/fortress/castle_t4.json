@@ -1,0 +1,68 @@
+{
+  "fallback": "rpg:paradise/fortress/end",
+  "elements": [
+    {
+      "weight": 25,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/nesc",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 15,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/nescsc",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/nescrt",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/nesclt",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/neccs",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 7,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/nectb",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpg:paradise/fortress/necsr",
+        "processors": "rpg:paradise/fortress",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

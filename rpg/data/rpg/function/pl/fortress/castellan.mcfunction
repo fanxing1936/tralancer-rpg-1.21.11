@@ -1,0 +1,2 @@
+# 在执行位置落一名堡主
+summon minecraft:wither_skeleton ~ ~ ~ {Tags:["rpg.pl.g","rpg.pl.s","rpg.pl.b.castellan"],PersistenceRequired:1b,CustomNameVisible:1b,CustomName:["",{"text":"ℭ𝔞𝔰𝔱𝔢𝔩𝔩𝔞𝔫","color":"#FFFFFF","bold":false,"italic":false}],Health:220f,equipment:{mainhand:{id:"minecraft:netherite_sword",count:1},chest:{id:"minecraft:netherite_chestplate",count:1},head:{id:"minecraft:netherite_helmet",count:1}},drop_chances:{mainhand:0f,chest:0f,head:0f},attributes:[{id:"minecraft:max_health",base:220d},{id:"minecraft:attack_damage",base:11d},{id:"minecraft:scale",base:1.25d}]}

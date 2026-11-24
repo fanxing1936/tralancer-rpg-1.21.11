@@ -14,4 +14,7 @@ execute if score @s rpg_panel matches 6 run function rpg:panel/help
 execute if score @s rpg_panel matches 8 run function rpg:panel/open
 execute if score @s rpg_panel matches 9 run function rpg:divine/judgment/arm
 execute if score @s rpg_panel matches 10 run function rpg:divine/gift
+execute if score @s rpg_panel matches 12 run function rpg:pl/page
+execute if score @s rpg_panel matches 13 run function rpg:pl/enter
+execute if score @s rpg_panel matches 14 run function rpg:pl/leave
 execute if score @s rpg_panel matches 1.. run scoreboard players set @s rpg_panel 0

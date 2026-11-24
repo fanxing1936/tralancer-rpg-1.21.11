@@ -113,7 +113,7 @@
                 "minecraft:custom_name": [
                   "",
                   {
-                    "text": "[货币]",
+                    "text": "[遗物]",
                     "color": "#797979",
                     "bold": true,
                     "italic": false
@@ -168,6 +168,15 @@
                   [
                     "",
                     {
+                      "text": "炼药：剧毒、血祭、血战",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
                       "text": "+------------------+",
                       "color": "#FFFFFF",
                       "bold": false,
@@ -211,7 +220,7 @@
                 "minecraft:custom_name": [
                   "",
                   {
-                    "text": "[货币]",
+                    "text": "[遗物]",
                     "color": "#797979",
                     "bold": true,
                     "italic": false
@@ -260,6 +269,15 @@
                       "text": "[粉末]",
                       "color": "#797979",
                       "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "炼药：净口、驱邪、祷告；制净罪香、封魔灯",
+                      "color": "#797979",
+                      "bold": false,
                       "italic": false
                     }
                   ],
@@ -609,6 +627,42 @@
         {
           "type": "minecraft:loot_table",
           "value": "rpg:forge/item/blank"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.05
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/any_brave"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/vial"
         }
       ]
     }

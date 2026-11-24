@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 3,
+        "max": 5
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:paradise/sp_any",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/any_epic",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/rune_any",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:trial/key",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:paradise/relic_any",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/currency",
+          "weight": 6
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp_epic_any",
+          "weight": 1
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.05
+        }
+      ]
+    }
+  ]
+}

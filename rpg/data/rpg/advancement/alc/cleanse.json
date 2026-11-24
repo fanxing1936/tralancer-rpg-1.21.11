@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "drink": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{rpg_potion:\"cleanse\"}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:alc/fx/cleanse"
+  }
+}

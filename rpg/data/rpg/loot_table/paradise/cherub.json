@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:paradise/feather",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 8,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp_fragment",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

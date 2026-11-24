@@ -5,7 +5,7 @@
 
 make_boxes.py 在构建中段运行，只收当时已有的 give 行；世界掉落、图纸、罪印碎片、圣徽、传承书等在它之后才写出来，
 而且多数只在掉落表里、没有 give 行。这里按类追加：
-  [锻造原料] [怪物产物] [世界材料] [罪印碎片] [锻造图纸] [圣力魔力] [试炼物资]
+  [锻造原料] [遗物] [世界材料] [罪印碎片] [锻造图纸] [圣力魔力] [试炼物资]
 物品组件直接读掉落表 / give 行，和掉落的一模一样。结尾扫一遍全部掉落表：凡是带自定义名字、箱里没有的物品，构建就失败。
 """
 import glob
@@ -116,13 +116,14 @@ def main():
     for _n, mobs, *_r in W.GROUPS.values():
         for ds in mobs.values():
             for d in ds:
-                if "[货币]" + d[1] not in prod:
-                    prod.append("[货币]" + d[1])
+                if W.RELIC + d[1] not in prod:
+                    prod.append(W.RELIC + d[1])
+    prod += [W.RELIC + n for n in ("铁粒", "禁果", "血泥", "断羽")]
     world = ["[货币]精英徽记", "[锻造]图纸碎片"] + ["[锻造]" + v[0] for v in WI.SPECIAL.values()]
     shards = ["[恶魔]罪印碎片 · " + p["who"] for p in ui.PILLARS]
     bps = ["%s图纸 · %s" % (WI.TIER_TAG[w[2]], w[1]) for w in WI.WEAPONS]
     trial = ["[传说]试炼之匙", "[传说]灾厄试炼之匙", "[传说]不死图腾", "[食物]压缩肉干"]
-    cats = [("lime", "锻造原料", raw, 64), ("green", "怪物产物", prod, 64), ("gray", "世界材料", world, 64),
+    cats = [("lime", "锻造原料", raw, 64), ("green", "遗物", prod, 64), ("gray", "世界材料", world, 64),
             ("red", "罪印碎片", shards, 64), ("brown", "锻造图纸", bps, 1), ("cyan", "试炼物资", trial, 16)]
     lines = [MARK, ""]
     kinds = boxes = 0

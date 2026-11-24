@@ -1,0 +1,186 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[史诗]",
+                    "color": "#B85CF0",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "石肤药水",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "皮肤一寸寸变成",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "石头",
+                      "color": "#B85CF0",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "饮用　",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "抗性提升 II、缓慢 I，15 秒",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:potion_contents": {
+                  "custom_color": 10132116,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:resistance",
+                      "duration": 300,
+                      "amplifier": 1
+                    },
+                    {
+                      "id": "minecraft:slowness",
+                      "duration": 300,
+                      "amplifier": 0
+                    }
+                  ]
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:potion_contents"
+                  ]
+                },
+                "minecraft:max_stack_size": 8,
+                "minecraft:use_cooldown": {
+                  "seconds": 15.0,
+                  "cooldown_group": "rpg:potion_epic"
+                },
+                "minecraft:use_remainder": {
+                  "id": "minecraft:paper",
+                  "count": 1,
+                  "components": {
+                    "minecraft:custom_name": [
+                      "",
+                      {
+                        "text": "[药剂]",
+                        "color": "#AAAAAA",
+                        "bold": true,
+                        "italic": false
+                      },
+                      {
+                        "text": "空瓶",
+                        "color": "#FFFFFF",
+                        "bold": false,
+                        "italic": false
+                      }
+                    ],
+                    "minecraft:lore": [
+                      [
+                        "",
+                        {
+                          "text": "+------------------+",
+                          "color": "#FFFFFF",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ],
+                      [
+                        "",
+                        {
+                          "text": "手持对准灵魂营火右键炼药",
+                          "color": "gray",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ],
+                      [
+                        "",
+                        {
+                          "text": "喝完饮用的药水会还一个",
+                          "color": "gray",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ],
+                      [
+                        "",
+                        {
+                          "text": "+------------------+",
+                          "color": "#FFFFFF",
+                          "bold": false,
+                          "italic": false
+                        }
+                      ]
+                    ],
+                    "minecraft:item_model": "rpg:relic/empty_vial",
+                    "minecraft:consumable": {
+                      "consume_seconds": 1234567.0,
+                      "animation": "none",
+                      "sound": "minecraft:intentionally_empty",
+                      "has_consume_particles": false
+                    },
+                    "minecraft:max_stack_size": 64,
+                    "minecraft:custom_data": {
+                      "rpg_fm": true,
+                      "rpg_mat": "vial"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{rpg_potion:\"stone\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

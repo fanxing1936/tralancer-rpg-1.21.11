@@ -1,0 +1,75 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/currency",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:paradise/relic_any",
+          "weight": 24
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/soul",
+          "weight": 12
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/blank",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/forge_stone",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/wash_gem",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/gild_leaf",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/rune_any",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/stone_any",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/any_brave",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/any_epic",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp_fragment",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:trial/key",
+          "weight": 8
+        }
+      ]
+    }
+  ]
+}

@@ -15,7 +15,88 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:blaze_powder"
+          "name": "minecraft:blaze_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[遗物]",
+                    "color": "#797979",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "烈焰粉",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "烈焰人的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[余烬]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "烧不尽的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[火]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "炼药：抗火、烈焰、血战；制净罪香",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
         }
       ]
     },
@@ -33,7 +114,88 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:glowstone_dust"
+          "name": "minecraft:glowstone_dust",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[遗物]",
+                    "color": "#797979",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "荧石粉",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "女巫的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[药渣]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "熬药剩下的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[粉末]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "炼药：净口、驱邪、祷告；制净罪香、封魔灯",
+                      "color": "#797979",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
         }
       ]
     },

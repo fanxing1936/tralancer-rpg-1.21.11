@@ -1,0 +1,181 @@
+{
+ "has_precipitation": false,
+ "temperature": 2.0,
+ "downfall": 0.0,
+ "attributes": {
+  "minecraft:visual/sky_color": "#5a0606",
+  "minecraft:visual/fog_color": "#6e0c0c",
+  "minecraft:visual/water_fog_color": "#2a0202",
+  "minecraft:visual/cloud_color": "#b37a1010",
+  "minecraft:visual/sky_light_color": "#ff5a4a",
+  "minecraft:visual/ambient_particles": [
+   {
+    "particle": {
+     "type": "minecraft:crimson_spore"
+    },
+    "probability": 0.012
+   },
+   {
+    "particle": {
+     "type": "minecraft:ash"
+    },
+    "probability": 0.004
+   }
+  ],
+  "minecraft:audio/ambient_sounds": {
+   "loop": "minecraft:ambient.crimson_forest.loop",
+   "additions": {
+    "sound": "minecraft:ambient.crimson_forest.additions",
+    "tick_chance": 0.0111
+   },
+   "mood": {
+    "block_search_extent": 8,
+    "offset": 2.0,
+    "sound": "minecraft:ambient.crimson_forest.mood",
+    "tick_delay": 6000
+   }
+  }
+ },
+ "effects": {
+  "water_color": "#6a0606",
+  "grass_color": "#6e5a3a",
+  "foliage_color": "#6a4a34",
+  "dry_foliage_color": "#6a4434"
+ },
+ "spawners": {
+  "monster": [
+   {
+    "type": "minecraft:zombie",
+    "weight": 40,
+    "minCount": 2,
+    "maxCount": 4
+   },
+   {
+    "type": "minecraft:husk",
+    "weight": 30,
+    "minCount": 1,
+    "maxCount": 3
+   },
+   {
+    "type": "minecraft:zombie_villager",
+    "weight": 8,
+    "minCount": 1,
+    "maxCount": 1
+   },
+   {
+    "type": "minecraft:skeleton",
+    "weight": 30,
+    "minCount": 1,
+    "maxCount": 3
+   },
+   {
+    "type": "minecraft:stray",
+    "weight": 12,
+    "minCount": 1,
+    "maxCount": 2
+   },
+   {
+    "type": "minecraft:bogged",
+    "weight": 18,
+    "minCount": 1,
+    "maxCount": 2
+   },
+   {
+    "type": "minecraft:spider",
+    "weight": 25,
+    "minCount": 1,
+    "maxCount": 3
+   },
+   {
+    "type": "minecraft:cave_spider",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 3
+   },
+   {
+    "type": "minecraft:creeper",
+    "weight": 16,
+    "minCount": 1,
+    "maxCount": 2
+   },
+   {
+    "type": "minecraft:witch",
+    "weight": 8,
+    "minCount": 1,
+    "maxCount": 1
+   },
+   {
+    "type": "minecraft:pillager",
+    "weight": 6,
+    "minCount": 1,
+    "maxCount": 2
+   },
+   {
+    "type": "minecraft:vindicator",
+    "weight": 6,
+    "minCount": 1,
+    "maxCount": 1
+   },
+   {
+    "type": "minecraft:zombified_piglin",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 3
+   },
+   {
+    "type": "minecraft:wither_skeleton",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 2
+   },
+   {
+    "type": "minecraft:blaze",
+    "weight": 5,
+    "minCount": 1,
+    "maxCount": 1
+   },
+   {
+    "type": "minecraft:enderman",
+    "weight": 5,
+    "minCount": 1,
+    "maxCount": 1
+   }
+  ],
+  "creature": [],
+  "ambient": [],
+  "axolotls": [],
+  "underground_water_creature": [],
+  "water_creature": [],
+  "water_ambient": [],
+  "misc": []
+ },
+ "spawn_costs": {},
+ "carvers": [],
+ "features": [
+  [],
+  [
+   "rpg:paradise_lost/blood_puddle"
+  ],
+  [],
+  [
+   "rpg:paradise_lost/fossil"
+  ],
+  [],
+  [],
+  [
+   "rpg:paradise_lost/wart_disk",
+   "rpg:paradise_lost/soul_scorch"
+  ],
+  [],
+  [],
+  [
+   "rpg:paradise_lost/fallen_tree",
+   "rpg:paradise_lost/stump",
+   "rpg:paradise_lost/dry_grass",
+   "rpg:paradise_lost/dead_bush",
+   "rpg:paradise_lost/skulls",
+   "rpg:paradise_lost/blood_splatter"
+  ],
+  []
+ ]
+}

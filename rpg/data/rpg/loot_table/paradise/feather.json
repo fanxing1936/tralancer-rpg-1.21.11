@@ -1,0 +1,80 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[遗物]",
+                    "color": "#797979",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "断羽",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "从天上掉下来、烧断了的羽毛",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "献给生命树，或卖给神秘商人",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ],
+                "minecraft:item_model": "rpg:relic/broken_feather",
+                "minecraft:max_stack_size": 64
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{rpg_mat:\"pl_feather\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

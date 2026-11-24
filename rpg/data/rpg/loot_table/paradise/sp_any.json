@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sp/star",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sp/wind",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sp/tear",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sp/core",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sp/stone",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sp/bronze",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sp/soil",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

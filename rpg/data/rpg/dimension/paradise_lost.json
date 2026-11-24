@@ -1,0 +1,11 @@
+{
+ "type": "rpg:paradise_lost",
+ "generator": {
+  "type": "minecraft:noise",
+  "settings": "rpg:paradise_lost",
+  "biome_source": {
+   "type": "minecraft:fixed",
+   "biome": "rpg:paradise_lost"
+  }
+ }
+}

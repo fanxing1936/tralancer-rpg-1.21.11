@@ -550,6 +550,33 @@
    ]
   },
   {
+   "type": "bitmap",
+   "file": "rpg:font/elite_bar/name_warden.png",
+   "height": 8,
+   "ascent": -28,
+   "chars": [
+    ""
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "rpg:font/elite_bar/name_cherub.png",
+   "height": 8,
+   "ascent": -28,
+   "chars": [
+    ""
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "rpg:font/elite_bar/name_castellan.png",
+   "height": 8,
+   "ascent": -28,
+   "chars": [
+    ""
+   ]
+  },
+  {
    "type": "space",
    "advances": {
     "": 2,
@@ -610,7 +637,13 @@
     "": -165,
     "": 76,
     "": -167,
-    "": 74
+    "": 74,
+    "": -159,
+    "": 82,
+    "": -148,
+    "": 93,
+    "": -154,
+    "": 87
    }
   }
  ]
