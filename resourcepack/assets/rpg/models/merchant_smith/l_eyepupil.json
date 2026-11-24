@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/merchant_smith/atlas",
+    "particle": "rpg:item/merchant_smith/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.94,
+        8.0,
+        7.94
+      ],
+      "to": [
+        8.06,
+        8.0,
+        8.06
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            2.0,
+            1.5,
+            1.75,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            2.0,
+            1.75,
+            1.75,
+            1.5
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.18,
+          7.5034,
+          4.7
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      }
+    }
+  ]
+}

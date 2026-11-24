@@ -1,0 +1,15 @@
+execute if score @s rpg_fo_kd matches 1 run return run function rpg:force/m/fx/k/spin
+execute if score @s rpg_fo_kd matches 2 run return run function rpg:force/m/fx/k/spinr
+execute if score @s rpg_fo_kd matches 3 run return run function rpg:force/m/fx/k/pop
+execute if score @s rpg_fo_kd matches 4 run return run function rpg:force/m/fx/k/burst
+execute if score @s rpg_fo_kd matches 5 run return run function rpg:force/m/fx/k/shock
+execute if score @s rpg_fo_kd matches 6 run return run function rpg:force/m/fx/k/sq
+execute if score @s rpg_fo_kd matches 7 run return run function rpg:force/m/fx/k/twinkle
+execute if score @s rpg_fo_kd matches 8 run return run function rpg:force/m/fx/k/ray
+execute if score @s rpg_fo_kd matches 9 run return run function rpg:force/m/fx/k/raylong
+execute if score @s rpg_fo_kd matches 10 run return run function rpg:force/m/fx/k/spark
+execute if score @s rpg_fo_kd matches 11 run return run function rpg:force/m/fx/k/sparkl
+execute if score @s rpg_fo_kd matches 12 run return run function rpg:force/m/fx/k/bolt
+execute if score @s rpg_fo_kd matches 13 run return run function rpg:force/m/fx/k/slashfx
+execute if score @s rpg_fo_kd matches 14 run return run function rpg:force/m/fx/k/rise
+execute if score @s rpg_fo_kd matches 15 run return run function rpg:force/m/fx/k/fade

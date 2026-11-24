@@ -54,14 +54,14 @@
       [
         "",
         {
-          "text": "等级 ",
+          "text": "原质阶 ",
           "color": "gray",
           "italic": false
         },
         {
           "score": {
             "name": "@s",
-            "objective": "player_level"
+            "objective": "rpg_sef"
           },
           "color": "gold",
           "italic": false
@@ -193,7 +193,7 @@
       [
         "",
         {
-          "text": "+------- 驱魔师档案 -------+",
+          "text": "+------- 驱魔 -------+",
           "color": "#FFF2A8",
           "italic": false,
           "bold": true
@@ -202,7 +202,7 @@
       [
         "",
         {
-          "text": "驱魔等级 ",
+          "text": "驱魔熟练 ",
           "color": "gray",
           "italic": false
         },

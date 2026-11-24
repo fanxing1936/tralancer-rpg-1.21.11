@@ -1,0 +1,43 @@
+scoreboard players operation #zt rpg_fo = @s rpg_fo_end
+scoreboard players operation #zt rpg_fo -= #now rpg_fo
+execute if score #zt rpg_fo matches 1 run particle minecraft:flame ~ ~1.2 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 1 run particle minecraft:end_rod ~ ~1.8 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 2 run particle minecraft:flame ~ ~2.4 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 2 run particle minecraft:end_rod ~ ~3.0 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 3 run particle minecraft:flame ~ ~3.6 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 3 run particle minecraft:end_rod ~ ~4.2 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 4 run particle minecraft:flame ~ ~4.8 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 4 run particle minecraft:end_rod ~ ~5.4 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 5 run particle minecraft:flame ~ ~6.0 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 5 run particle minecraft:end_rod ~ ~6.6 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 6 run particle minecraft:flame ~ ~7.2 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 6 run particle minecraft:end_rod ~ ~7.8 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 7 run particle minecraft:flame ~ ~8.4 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 7 run particle minecraft:end_rod ~ ~9.0 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 8 run particle minecraft:flame ~ ~9.6 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 8 run particle minecraft:end_rod ~ ~10.2 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 9 run particle minecraft:flame ~ ~10.8 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 9 run particle minecraft:end_rod ~ ~11.4 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 10 run particle minecraft:flame ~ ~12.0 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 10 run particle minecraft:end_rod ~ ~12.6 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 11 run particle minecraft:flame ~ ~13.2 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 11 run particle minecraft:end_rod ~ ~13.8 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 12 run particle minecraft:flame ~ ~14.4 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 12 run particle minecraft:end_rod ~ ~15.0 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 13 run particle minecraft:flame ~ ~15.6 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 13 run particle minecraft:end_rod ~ ~16.2 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 14 run particle minecraft:flame ~ ~16.8 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 14 run particle minecraft:end_rod ~ ~17.4 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 15 run particle minecraft:flame ~ ~18.0 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 15 run particle minecraft:end_rod ~ ~18.6 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 16 run particle minecraft:flame ~ ~19.2 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 16 run particle minecraft:end_rod ~ ~19.8 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 17 run particle minecraft:flame ~ ~20.4 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 17 run particle minecraft:end_rod ~ ~21.0 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 18 run particle minecraft:flame ~ ~21.6 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 18 run particle minecraft:end_rod ~ ~22.2 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 19 run particle minecraft:flame ~ ~22.8 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 19 run particle minecraft:end_rod ~ ~23.4 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 20 run particle minecraft:flame ~ ~24.0 ~ 0.3 0.3 0.3 0.02 14 force
+execute if score #zt rpg_fo matches 20 run particle minecraft:end_rod ~ ~24.6 ~ 0.15 0.15 0.15 0 4 force
+execute if score #zt rpg_fo matches 10 run playsound minecraft:entity.blaze.shoot player @a[distance=..32] ~ ~ ~ 1 0.5

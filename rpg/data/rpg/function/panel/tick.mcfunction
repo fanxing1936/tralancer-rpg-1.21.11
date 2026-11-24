@@ -1,3 +1,4 @@
+scoreboard players enable @s rpg_sef_do
 scoreboard players enable @s rpg_panel
 scoreboard players add @s rpg_panel 0
 execute if entity @s[tag=rpg.h.player_tag1,tag=!rpg.panel.open] run scoreboard players add @s rpg_panel_h 1

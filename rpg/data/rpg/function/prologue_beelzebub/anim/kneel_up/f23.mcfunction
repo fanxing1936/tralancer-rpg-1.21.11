@@ -1,0 +1,3 @@
+# kneel_up 第 23 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_prologue_models.py 烘焙。
+execute on passengers if entity @s[tag=rpg.prbz.p.r_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.30332f,0.86064f,-0.30755f],left_rotation:[-0.53551f,-0.05812f,-0.2594f,0.8016f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.prbz.p.beelzebub_angel_beel_native_sm_turtle_arm_r_028] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.27544f,0.98636f,-0.25486f],left_rotation:[0.8016f,-0.2594f,0.05813f,0.53551f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}

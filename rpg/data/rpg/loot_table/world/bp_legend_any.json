@@ -1,0 +1,58 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/starry"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/leviathan_song"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/flame_pride"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/wind_echo"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/mountain_roar"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/grave_bane"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/harp_crossbow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/azure_seeker"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/gale_bow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/jachin"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/boaz"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/molten_hammer"
+        }
+      ]
+    }
+  ]
+}

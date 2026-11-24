@@ -1,0 +1,33 @@
+{
+ "model_scale": 1.0,
+ "height_blocks": 2.0,
+ "turn": 0,
+ "merge": {},
+ "held_bone": null,
+ "clips": [
+  {
+   "clip": "idle",
+   "seconds": 8.0
+  },
+  {
+   "clip": "walk",
+   "seconds": 4.8
+  },
+  {
+   "clip": "run",
+   "seconds": 4.8
+  },
+  {
+   "clip": "blink",
+   "seconds": 1.2
+  },
+  {
+   "clip": "walk_forward",
+   "seconds": 4.8
+  },
+  {
+   "clip": "run_forward",
+   "seconds": 4.8
+  }
+ ]
+}

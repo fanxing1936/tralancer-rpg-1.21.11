@@ -1,0 +1,2 @@
+execute if score @s rpg_msm_t matches ..11 run return run function rpg:merchant_smith/anim/idle/at_a_a_a
+function rpg:merchant_smith/anim/idle/at_a_a_b

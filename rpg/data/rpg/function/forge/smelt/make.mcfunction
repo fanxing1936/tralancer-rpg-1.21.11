@@ -40,3 +40,4 @@ playsound minecraft:block.trial_spawner.eject_item block @a[distance=..16] ~ ~ ~
 scoreboard players operation #me rpg_fg = @s rpg_fg_eo
 execute as @a if score @s rpg_fg_id = #me rpg_fg run tellraw @s ["",{"text":"[锻造]","color":"#E39745","bold":true,"italic":false},{"text":"　成品出炉了","color":"#9C9A94","bold":false,"italic":false}]
 kill @s
+execute as @a if score @s rpg_fg_id = #me rpg_fg run function rpg:quest/hook/smelt

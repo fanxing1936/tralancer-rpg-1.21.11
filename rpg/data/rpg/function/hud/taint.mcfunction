@@ -1,3 +1,5 @@
+# 圣力者的魔化那一行显示为生命力（在力条槽里，add_sephira.py）
+execute if score @s rpg_force matches 1 run return 0
 execute if entity @s[tag=rpg.taint.full] run return run function rpg:hud/tfall
 
 # 先把魔化换算成格数，再按档分流 —— 每档的颜色与措辞不同。

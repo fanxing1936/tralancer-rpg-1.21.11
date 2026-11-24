@@ -8,9 +8,11 @@ data modify storage rpg:hud a set value '{"text":""}'
 data modify storage rpg:hud b set value '{"text":""}'
 data modify storage rpg:hud c set value '{"text":""}'
 data modify storage rpg:hud d set value '{"text":""}'
+data modify storage rpg:hud e set value '{"text":""}'
 execute unless score @s rpg_lt_divine matches 2 if entity @s[scores={rpg_holy=1..}] run function rpg:hud/holy
 execute unless score @s rpg_lt_divine matches 2 if entity @s[scores={rpg_taint=1..}] run function rpg:hud/taint
 execute if score @s rpg_lt_divine matches 2 run function rpg:hud/authority
+execute if score @s rpg_force matches 1.. run function rpg:sephira/hud/e
 execute if entity @s[scores={rpg_pact=1..7}] run function rpg:hud/pact
 execute if entity @s[scores={rpg_pact_cd=1..}] run function rpg:hud/pbar
 execute if score @s rpg_lt_div_cd matches 1.. run function rpg:hud/divine_bar

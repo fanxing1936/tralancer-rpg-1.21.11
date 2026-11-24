@@ -27,6 +27,9 @@ JOBS = {
     "michael": ("michael_dungeons_ref/michael.bbmodel", "michael/atlas.png", ("rib",), ("idle", 0.0), 200),
     "michael_s2": ("michael_dungeons_ref/michael.bbmodel", "michael/atlas.png", ("spine",), ("rib_idle", 0.0), 200),
     "watchling": ("watchling_dungeons_ref/watchling.bbmodel", "watchling/atlas.png", (), ("idle", 0.0), 200),
+    # 2026-11-21 扫罗胸甲扶正后重画（Blockbench 没连上）；二段藏掉碎掉的头盔与左肩甲
+    "saul": ("saul_dungeons_ref/saul.bbmodel", "saul/atlas.png", (), ("idle", 0.0), 200),
+    "saul_s2": ("saul_dungeons_ref/saul.bbmodel", "saul/atlas.png", ("helmet", "l_pauldron"), ("idle", 0.0), 200),
 }
 
 FACES = {
@@ -115,7 +118,10 @@ def render(path, out, tex=None, hide=(), pose=None, yaw=200, size=900, pitch=12)
 
 
 def main():
+    only = sys.argv[1:]
     for name, (bb, tex, hide, pose, yaw) in JOBS.items():
+        if only and name not in only:
+            continue
         render(os.path.join(TOOLS, bb), os.path.join(HERE, name + ".png"), os.path.join(RP, tex), hide, pose, yaw)
         print("rendered", name)
 

@@ -1,8 +1,10 @@
-# 化身：潜行抬头长按。大招加 20 秒附身。
+# 化身：书在手上按 F。大招加 20 秒附身。
 execute unless score @s rpg_pact_lv matches 3.. run return run function rpg:hud/m81
 execute if score @s rpg_pact_cd3 matches 1.. run return run function rpg:hud/m80
 scoreboard players set @s rpg_pact_cd3 3600
 scoreboard players add @s rpg_taint 15
+# 七大罪之仆与本柱立约：魔化减半（force_ext.py）
+execute if score @s rpg_ident matches 4 if score @s rpg_ident_sin = @s rpg_pact run scoreboard players remove @s rpg_taint 7
 scoreboard players set @s rpg_pact_av 400
 tag @s add rpg.pact.cast
 execute if score @s rpg_pact matches 1 run function rpg:pact/s/a1

@@ -1,0 +1,4 @@
+execute if score @s rpg_pran_t matches 9 run return run function rpg:prologue_angel/anim/slash1/f8
+execute if score @s rpg_pran_t matches 10 run return run function rpg:prologue_angel/anim/slash1/f9
+execute if score @s rpg_pran_t matches 11 run return run function rpg:prologue_angel/anim/slash1/f10
+execute if score @s rpg_pran_t matches 12 run return run function rpg:prologue_angel/anim/slash1/f11

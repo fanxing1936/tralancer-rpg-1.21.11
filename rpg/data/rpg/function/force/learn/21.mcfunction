@@ -1,0 +1,15 @@
+# 学习 / 升级 影步
+execute unless score @s rpg_force matches 2 unless score @s rpg_force matches 3 run return run function rpg:force/fail/say {m:"你没有魔力，学不了魔力树"}
+execute if score @s rpg_k21 matches 3.. run return run function rpg:force/fail/say {m:"「影步」已经满级"}
+execute if score @s rpg_k21 matches 1 unless score @s rpg_sef matches 5.. run return run function rpg:force/fail/say {m:"2 级要到美丽阶（第 5 阶）"}
+execute if score @s rpg_k21 matches 2 unless score @s rpg_sef matches 8.. run return run function rpg:force/fail/say {m:"3 级要到理解阶（第 8 阶）"}
+scoreboard players set #c rpg_fo 1
+execute if score @s rpg_k21 matches 2 run scoreboard players set #c rpg_fo 2
+execute if score @s rpg_k21 matches 2 if score @s rpg_pillar matches 3 run scoreboard players set #c rpg_fo 1
+execute unless score @s rpg_sp >= #c rpg_fo run return run function rpg:force/fail/say {m:"技能点不够"}
+scoreboard players operation @s rpg_sp -= #c rpg_fo
+scoreboard players operation @s rpg_fo_sm += #c rpg_fo
+scoreboard players add @s rpg_k21 1
+execute if score @s rpg_k21 matches 1 run function rpg:force/slot/auto_21
+playsound minecraft:block.enchantment_table.use player @s ~ ~ ~ 1 1.2
+tellraw @s ["",{"text":"[力] ","color":"#C9A646","bold":true,"italic":false},{"text":"影步","color":"#A276BE","bold":true,"italic":false},{"text":" 升到 ","color":"#9C9A94","bold":false,"italic":false},{"score":{"name":"@s","objective":"rpg_k21"},"color":"#E6DFCF"},{"text":" 级","color":"#9C9A94","bold":false,"italic":false}]

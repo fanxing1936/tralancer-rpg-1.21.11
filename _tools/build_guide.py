@@ -192,7 +192,8 @@ def card(it, show_tags=True):
     misc = []
     if it["unbreakable"]:
         misc.append("不可破坏")
-    if it["consumable"]:
+    # 装备养成材料（rpg_fm）带 consumable 只是为了接住右键，玩法是「副手装备、主手右键」，不是长按
+    if it["consumable"] and "rpg_fm" not in it["tags"]:
         misc.append("右键长按发动")
     if it["cmd"]:
         misc.append("模型 %d" % int(it["cmd"]))

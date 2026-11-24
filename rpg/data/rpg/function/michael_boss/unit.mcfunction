@@ -8,7 +8,8 @@ scoreboard players operation #m rpg_mk = #tick rpg_mk
 scoreboard players set #k rpg_mk 4
 scoreboard players operation #m rpg_mk %= #k rpg_mk
 execute if score #m rpg_mk matches 0 run function rpg:michael_boss/read_hp
-execute if score @s rpg_mk matches 1 if score @s rpg_mk_h matches ..1 run return run function rpg:michael_boss/stage/end1
+execute if score #m rpg_mk matches 0 if score #pro rpg_mk matches 1 run function #rpg:michael_boss/prologue_hp
+execute if score @s rpg_mk matches 1 if score @s rpg_mk_h matches ..1 unless score #pro rpg_mk matches 1 run return run function rpg:michael_boss/stage/end1
 execute if score @s rpg_mk matches 2 if score @s rpg_mk_h matches ..1 run return run function rpg:michael_boss/stage/end2
 execute if entity @s[tag=rpg.mkb.morph] run return run function rpg:michael_boss/morph/tick
 execute if score @s rpg_mk_so matches 1.. run function rpg:michael_boss/solid/tick

@@ -1,0 +1,136 @@
+{
+  "textures": {
+    "0": "rpg:item/prologue_lucifer/atlas_possessed",
+    "particle": "rpg:item/prologue_lucifer/atlas_possessed"
+  },
+  "elements": [
+    {
+      "from": [
+        7.5518,
+        8.1919,
+        8.3396
+      ],
+      "to": [
+        8.4482,
+        8.2559,
+        8.4036
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            1.0,
+            9.125,
+            2.0,
+            9.125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            2.0,
+            9.3125,
+            1.0,
+            9.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            1.0,
+            9.125,
+            1.0,
+            9.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            2.0,
+            9.3125,
+            2.0,
+            9.125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "up": {
+          "uv": [
+            2.0,
+            9.125,
+            1.0,
+            9.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            2.0,
+            9.3125,
+            1.0,
+            9.125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.4482,
+          8.2239,
+          8.3716
+        ],
+        "axis": "x",
+        "angle": -32
+      }
+    },
+    {
+      "from": [
+        7.5518,
+        8.2239,
+        7.4432
+      ],
+      "to": [
+        8.4482,
+        8.2239,
+        8.3396
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            2.0,
+            9.0,
+            1.0,
+            8.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            2.0,
+            8.0,
+            1.0,
+            9.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          8.4482,
+          8.2239,
+          8.3716
+        ],
+        "axis": "x",
+        "angle": -32
+      }
+    }
+  ]
+}

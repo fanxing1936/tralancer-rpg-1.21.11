@@ -1,0 +1,7 @@
+execute if score @s rpg_fo_life matches 14 run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_vfx/shockh_1"
+execute if score @s rpg_fo_life matches 12 run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_vfx/shockh_2"
+execute if score @s rpg_fo_life matches 10 run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_vfx/shockh_3"
+execute if score @s rpg_fo_life matches 8 run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_vfx/shockh_4"
+execute if score @s rpg_fo_life matches 6 run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_vfx/shockh_5"
+execute if score @s rpg_fo_life matches 4 run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_vfx/shockh_6"
+execute if score @s rpg_fo_life matches 2 run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_vfx/shockh_7"

@@ -183,3 +183,9 @@ execute if items entity @s armor.feet *[minecraft:custom_data~{holy_weapon_tag:3
 # 装备养成：注入神圣之源、且装备 Lv.5 以上的武器也算圣器
 execute if items entity @s weapon.mainhand *[minecraft:custom_data~{rpg_eq:{holy:1b}}] run tag @s add rpg.holy
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{rpg_eq:{holy:1b}}] run tag @s add rpg.holy
+
+# 原质（force_ext.py）：燃尽时圣器保护失效；同化 50 起减半（奇数刻失效）
+execute if entity @s[tag=rpg.holy,tag=rpg.burnt] run tag @s remove rpg.holy
+execute store result score #odd rpg_fo run time query gametime
+scoreboard players operation #odd rpg_fo %= #2 rpg_fo
+execute if entity @s[tag=rpg.holy] if score @s rpg_assim matches 50.. if score #odd rpg_fo matches 1 run tag @s remove rpg.holy

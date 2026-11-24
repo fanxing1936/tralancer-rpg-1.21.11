@@ -99,7 +99,7 @@ def main() -> None:
                 errors.append("%s lacks %s" % (rel, needle))
 
     for rel, needle in (("hud/status.mcfunction", "rpg:hud/seal/render"),
-                        ("hud/demon/r1.mcfunction", "$(r),$(a),$(b),$(c),$(d)")):
+                        ("hud/demon/r1.mcfunction", "$(r),$(a),$(e),$(b),$(c),$(d)")):
         if needle not in read(rel):
             errors.append("two-layer relic HUD missing from " + rel)
     rp = dp.parent / "resourcepack"

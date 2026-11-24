@@ -437,6 +437,64 @@
    }
   ]
  },
+ "bgm.onboard_flow": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/onboard_flow",
+    "stream": true,
+    "volume": 0.6
+   }
+  ]
+ },
+ "bgm.onboard_intro": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/onboard_intro",
+    "stream": true,
+    "volume": 0.45
+   }
+  ]
+ },
+ "bgm.prologue_end": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/prologue_end",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.55
+   }
+  ]
+ },
+ "bgm.prologue_intro": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/prologue_intro",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.85
+   }
+  ]
+ },
+ "bgm.prologue_michael": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/prologue_michael",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.55
+   }
+  ]
+ },
+ "bgm.prologue_waves": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/prologue_waves",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.55
+   }
+  ]
+ },
  "bgm.saul1": {
   "sounds": [
    {
@@ -1596,6 +1654,69 @@
    "rpg:pope/sfx_boss_archillagerwhirlwind"
   ]
  },
+ "prologue_angel.step": {
+  "subtitle": "subtitles.rpg.prologue_angel.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_beelzebub.step": {
+  "subtitle": "subtitles.rpg.prologue_beelzebub.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_belial.step": {
+  "subtitle": "subtitles.rpg.prologue_belial.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_lucifer.step": {
+  "subtitle": "subtitles.rpg.prologue_lucifer.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_mammon.step": {
+  "subtitle": "subtitles.rpg.prologue_mammon.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_michael.step": {
+  "subtitle": "subtitles.rpg.prologue_michael.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_throne.step": {
+  "subtitle": "subtitles.rpg.prologue_throne.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
  "royal_guard.block": {
   "subtitle": "subtitles.rpg.royal_guard.block",
   "sounds": [
@@ -2301,5 +2422,284 @@
     "name": "minecraft:entity.enderman.teleport"
    }
   ]
+ },
+ "vo.prologue.n01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N01.en_full"
+ },
+ "vo.prologue.n02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N02.en_full"
+ },
+ "vo.prologue.n03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N03.en_full"
+ },
+ "vo.prologue.n04": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n04",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N04.en_full"
+ },
+ "vo.prologue.n05": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n05",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N05.en_full"
+ },
+ "vo.prologue.d01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D01.en_full"
+ },
+ "vo.prologue.d02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D02.en_full"
+ },
+ "vo.prologue.d03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D03.en_full"
+ },
+ "vo.prologue.d04": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d04",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D04.en_full"
+ },
+ "vo.prologue.d05": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d05",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D05.en_full"
+ },
+ "vo.prologue.d06": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d06",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D06.en_full"
+ },
+ "vo.prologue.m01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/m01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.M01.en_full"
+ },
+ "vo.prologue.m02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/m02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.M02.en_full"
+ },
+ "vo.prologue.m03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/m03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.M03.en_full"
+ },
+ "vo.prologue.m04": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/m04",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.M04.en_full"
+ },
+ "vo.prologue.l01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/l01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.L01.en_full"
+ },
+ "vo.prologue.e01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/e01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.E01.en_full"
+ },
+ "vo.prologue.e02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/e02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.E02.en_full"
+ },
+ "vo.prologue.e03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/e03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.E03.en_full"
+ },
+ "vo.prologue.x01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/x01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.X01.en_full"
+ },
+ "vo.prologue.x02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/x02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.X02.en_full"
+ },
+ "vo.onboard.w01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w01.en_full"
+ },
+ "vo.onboard.w02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w02.en_full"
+ },
+ "vo.onboard.w03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w03.en_full"
+ },
+ "vo.onboard.w04": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w04",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w04.en_full"
+ },
+ "vo.onboard.w05": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w05",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w05.en_full"
+ },
+ "vo.onboard.w06": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w06",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w06.en_full"
+ },
+ "vo.onboard.w07": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w07",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w07.en_full"
+ },
+ "vo.onboard.w08": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w08",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w08.en_full"
+ },
+ "vo.onboard.w09": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w09",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w09.en_full"
+ },
+ "vo.onboard.w10": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w10",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w10.en_full"
  }
 }

@@ -1,3 +1,5 @@
+# 原质：记打过、给阅历（add_sephira.py）
+function rpg:sephira/boss/pope
 # 击败结算：清魔化，收束。
 scoreboard players set @e[tag=rpg.unit,distance=..48] rpg_taint 0
 tellraw @a[distance=..48] ["",{"text":"〖教皇〗","color":"#C9A646","bold":true,"italic":false},{"text":" 𝔗𝔥𝔢 𝔓𝔬𝔭𝔢","color":"#8F7430","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"「你们必晓得真理，真理必叫你们得以自由。」——《约翰福音》8:32","color":"#9C9A94","bold":false,"italic":false}]

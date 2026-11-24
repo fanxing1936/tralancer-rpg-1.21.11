@@ -1,0 +1,1 @@
+$data modify storage rpg:panel ui.body append value {"text":"","extra":[{"text":"权柄完整度 ","color":"#4E9FAD","bold":false,"italic":false},{"text":"$(au)","color":"#E8F4FF","bold":true,"italic":false},{"text":"/100","color":"#797979","bold":false,"italic":false},{"text":"\n","color":"#E6DFCF","bold":false,"italic":false}]}

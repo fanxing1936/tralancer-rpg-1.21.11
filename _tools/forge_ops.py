@@ -413,8 +413,10 @@ def build_smelt(out, make_lines):
         "scoreboard players set @s rpg_fg_op 10",
         "scoreboard players set @s rpg_fg_arg -1",
         dialog("魂火冶炼 · 造什么", [tt("选择要冶炼的装备。", T_BODY), NL,
-                                     tt("下一步选主材，主材决定档次。", T_MUTED)],
-               [(name, T_NAME, 20 + k) for k, (_key, name, _kind, _b) in enumerate(S.SMELT_TYPES)]),
+                                     tt("下一步选主材，主材决定档次。", T_MUTED), NL,
+                                     tt("也可以在这里锻造罪器、转换材料。", T_MUTED)],
+               [(name, T_NAME, 20 + k) for k, (_key, name, _kind, _b) in enumerate(S.SMELT_TYPES)] +
+               [("罪器锻造", T_HOLY, 50), ("材料转换", T_HOLY, 60)]),
     ]))
     out.fn("smelt/ray", "\n".join([
         "execute if block ~ ~ ~ #rpg:forge/soul_fire run return run function rpg:forge/smelt/found",
@@ -467,7 +469,9 @@ def build_smelt(out, make_lines):
     out.fn("smelt/confirm", "$" + dialog("魂火冶炼 · 确认", conf, [("开炉", T_HOLY, 40)]))
 
     d = [
-        "# 冶炼对话框的三步：20..28 选类型，30..32 选档次，40 开炉。",
+        "# 冶炼对话框的三步：20..28 选类型，30..32 选档次，40 开炉。50..59 罪器锻造、60..69 材料转换（add_forge_world.py）。",
+        "execute if score #do rpg_fg matches 50..59 run return run function rpg:forge/sin/do",
+        "execute if score #do rpg_fg matches 60..69 run return run function rpg:forge/conv/do",
         "execute if score #do rpg_fg matches 20..28 run scoreboard players operation @s rpg_fg_arg = #do rpg_fg",
         "execute if score #do rpg_fg matches 20..28 run scoreboard players remove @s rpg_fg_arg 20",
         "execute if score #do rpg_fg matches 20..28 run function rpg:forge/smelt/count",

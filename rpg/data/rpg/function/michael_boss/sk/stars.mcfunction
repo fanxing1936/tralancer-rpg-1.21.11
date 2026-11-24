@@ -30,7 +30,7 @@ execute if score @s rpg_mk_t matches 132..148 run execute if score @s rpg_mk_r m
 execute if score @s rpg_mk_t matches 150 run execute if score @s rpg_mk_r matches 0 at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1] run function rpg:michael_boss/stars/hit2
 execute if score @s rpg_mk_t matches 120 run function rpg:michael/anim/enter/horn
 execute if score @s rpg_mk_t matches 170 run execute at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1] run function rpg:michael_boss/stars/bigwarn
-execute if score @s rpg_mk_t matches 170 run tellraw @a[distance=..48] ["",{"text":"〖","color":"#FF805F","bold":true,"italic":false},{"text":"炽天使 ","color":"#FF805F","bold":true,"italic":false},{"text":"米迦勒","color":"#FF3300","bold":true,"italic":false},{"text":"〗","color":"#FF805F","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"……最后一颗。","color":"#9C9A94","bold":false,"italic":false}]
+execute if score @s rpg_mk_t matches 170 run execute unless score #pro rpg_mk matches 1 run tellraw @a[distance=..48] ["",{"text":"〖","color":"#FF805F","bold":true,"italic":false},{"text":"炽天使 ","color":"#FF805F","bold":true,"italic":false},{"text":"米迦勒","color":"#FF3300","bold":true,"italic":false},{"text":"〗","color":"#FF805F","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"……最后一颗。","color":"#9C9A94","bold":false,"italic":false}]
 execute if score @s rpg_mk_t matches 190 run execute at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1] run function rpg:michael_boss/stars/bighit
 execute if score @s rpg_mk_t matches 196 run tp @s @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1]
 execute if score @s rpg_mk_t matches 196 run data merge entity @s {NoGravity:0b}

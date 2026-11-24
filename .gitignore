@@ -58,3 +58,13 @@ Dungeons GUI *.zip
 # 构建日志
 /_tools/*.log.tmp
 /logs/
+
+# Codex 交付过程里的中间导出与打包件（构建只读成品目录）：2026-11-24 核对过生成器的读取路径
+/_tools/*_ref/**/_work/
+/_tools/world_ref/art/_*/
+/_tools/world_ref/art/*.zip
+/_tools/onboard_ref/shots/
+# 含本机用户目录路径的生成清单，不进仓库
+/_tools/world_ref/art/*retry_results.json
+/_tools/world_ref/art/*generation_manifest.json
+/_tools/t9.txt

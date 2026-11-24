@@ -1,0 +1,3 @@
+# 神秘商人外观的每实体动画状态。
+scoreboard objectives add rpg_mmy_anim dummy
+scoreboard objectives add rpg_mmy_t dummy

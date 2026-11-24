@@ -275,7 +275,8 @@ def say(text, gloss=None, name=None, stage=1):
     if name:
         parts.append(ui.comp(name, ui.BROADCAST_NAME))
     parts.append(ui.comp(text, ui.BROADCAST_BODY))
-    return "tellraw @a[distance=..%d] %s" % (BAR_RANGE, ui.row(*parts))
+    # 序章模式里不播中文播报：台词由序章的双语字幕负责
+    return "execute unless score #pro %s matches 1 run tellraw @a[distance=..%d] %s" % (O, BAR_RANGE, ui.row(*parts))
 
 
 def say_s(text, gloss=None, name=None):

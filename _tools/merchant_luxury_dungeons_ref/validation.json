@@ -1,0 +1,94 @@
+{
+ "key": "merchant_luxury",
+ "source_bones": 36,
+ "accessory_bones": 1,
+ "orientation_groups": 1,
+ "display_entities": 17,
+ "atlas": [
+  64,
+  64
+ ],
+ "native_64x64_tile_equals_source": true,
+ "original_png_byte_identical": true,
+ "hat_head_relative_max_error": 1.1102230246251565e-16,
+ "idle_nose_minus_head_after_base_turn": [
+  -2.217765837711811e-16,
+  -0.47999991514718765,
+  0.6000000869557243
+ ],
+ "yaw_0_faces_world_positive_z": true,
+ "original_action_max_visual_vertex_error_px": 0.001616657624825725,
+ "numeric_static_angle_cleanup": [
+  {
+   "group": "merchant_luxury_merchant_hat_017",
+   "axis": 0,
+   "degrees": 5.203952852664312e-06
+  },
+  {
+   "group": "merchant_luxury_merchant_hat_017",
+   "axis": 2,
+   "degrees": -7.359499841132354e-06
+  },
+  {
+   "group": "merchant_luxury_merchant_hat_018",
+   "axis": 0,
+   "degrees": 3.348765945334586e-14
+  },
+  {
+   "group": "merchant_luxury_merchant_hat_018",
+   "axis": 2,
+   "degrees": -1.0729246227614624e-06
+  }
+ ],
+ "triangles": 146,
+ "direct_uv_elements": 73,
+ "baked_elements": 0,
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Villager_Idle",
+   "seconds": 4.9583335,
+   "loop": true,
+   "ticks": 100,
+   "max_bone_error_px": 0.0007893659952023779,
+   "max_vertex_error_px": 0.0004081336923647043,
+   "notifies": []
+  },
+  {
+   "clip": "look",
+   "source": "Villager_Idle_LookAround",
+   "seconds": 2.3,
+   "loop": false,
+   "ticks": 46,
+   "max_bone_error_px": 0.002946076760191488,
+   "max_vertex_error_px": 0.001616657624825725,
+   "notifies": []
+  },
+  {
+   "clip": "bow",
+   "source": "Villager_Bowing",
+   "seconds": 1.6333333,
+   "loop": false,
+   "ticks": 33,
+   "max_bone_error_px": 1.7199887375052827e-08,
+   "max_vertex_error_px": 2.2191977444621795e-08,
+   "notifies": [
+    [
+     0.0001,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "examine",
+   "source": "Villager_Examining",
+   "seconds": 8.9,
+   "loop": false,
+   "ticks": 178,
+   "max_bone_error_px": 0.0017756952630805893,
+   "max_vertex_error_px": 0.0006465124022446925,
+   "notifies": []
+  }
+ ]
+}

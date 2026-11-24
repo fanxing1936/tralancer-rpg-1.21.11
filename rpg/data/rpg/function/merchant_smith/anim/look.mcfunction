@@ -1,0 +1,3 @@
+# 以这位铁匠为执行者播放 look。
+execute unless entity @s[type=minecraft:villager,tag=rpg.mer.model.smith] run return 0
+execute at @s run function rpg:merchant_smith/anim/enter/look

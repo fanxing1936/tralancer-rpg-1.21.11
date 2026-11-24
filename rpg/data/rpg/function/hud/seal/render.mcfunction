@@ -1,1 +1,1 @@
-$title @s actionbar ["",$(top),$(back),$(r),$(a),$(b),$(c),$(d)]
+$title @s actionbar ["",$(top),$(back),$(r),$(a),$(e),$(b),$(c),$(d)]

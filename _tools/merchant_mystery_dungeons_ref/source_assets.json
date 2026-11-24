@@ -1,0 +1,59 @@
+{
+ "mesh": "Dungeons/Content/Actors/Characters/Friendlies/Villager/SK_Villager",
+ "mesh_sha256": "c86045819a1d9019af926d1ce8b668844f90a98b76df612c32363fcb791bb4bb",
+ "material": "Dungeons/Content/Actors/Characters/Friendlies/Villager/MI_Villager_MysteryMerchant",
+ "texture": "Dungeons/Content/Actors/Characters/Friendlies/Villager/T_Villager_MysteryMerchant",
+ "texture_sha256": "c98c7ea9db838a339e7cc8e087f54ef5e050e15f13538572b3c983f0440a34c8",
+ "texture_copied_byte_identically": true,
+ "attachments": [
+  {
+   "name": "merchant_hat",
+   "mesh": "Dungeons/Content/Actors/Characters/Friendlies/Villager/Merchants/SM_MysteriousMerchantCap",
+   "bone": "J_Head",
+   "material": "MI_Villager_MysteryMerchant",
+   "component": "SM_MysteriousMerchantCap",
+   "relative_location_ue_cm": {
+    "X": 0.0,
+    "Y": 180.0,
+    "Z": 0.0
+   },
+   "relative_rotation_ue_degrees": {},
+   "relative_scale": {},
+   "matrix_ue": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     180.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "evidence": "D:\\agent\\dungeons_extract\\merchant_metadata_20261124\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Merchants\\BP_LobbyVillagerMysteryMerchant\\SM_MysteriousMerchantCap_GEN_VARIABLE.uobject.json",
+   "alignment": "original blueprint component transform"
+  }
+ ],
+ "animations": [
+  "Dungeons/Content/Actors/Characters/Friendlies/Villager/Animations/Villager_Idle",
+  "Dungeons/Content/Actors/Characters/Friendlies/Villager/Animations/Villager_Idle_LookAround",
+  "Dungeons/Content/Actors/Characters/Friendlies/Villager/Animations/Villager_Bowing",
+  "Dungeons/Content/Actors/Characters/Friendlies/Villager/Animations/Villager_Examining"
+ ],
+ "rebuild_script": "D:\\agent\\dungeons_extract\\merchant_models_20261124\\build_refs.py"
+}

@@ -1,0 +1,32 @@
+{
+  "textures": {
+    "0": "rpg:item/prologue_throne/atlas",
+    "particle": "rpg:item/prologue_throne/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.9825,
+        7.3822,
+        5.7188
+      ],
+      "to": [
+        8.0175,
+        8.6178,
+        10.2812
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            16.0,
+            14.0,
+            14.0,
+            14.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

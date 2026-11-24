@@ -35,6 +35,11 @@ def main():
     ults.ults2()
     ults.vfx()
     fx.build(extra_tick=["execute if entity @s[tag=rpg.mkb.%s] run return run function %s/fx/%s" % (k, B, k) for k in FX_TICK])
+    # 序章模式的血线钩子：默认空标签，add_prologue.py 往里登记自己的函数（没有序章时这一行什么也不做）
+    tag = os.path.join(DP, "data", "rpg", "tags", "function", "michael_boss", "prologue_hp.json")
+    os.makedirs(os.path.dirname(tag), exist_ok=True)
+    with open(tag, "w", encoding="utf-8") as fh:
+        fh.write('{"values": []}' + chr(10))
     hook_tag(DP, "load", "%s/load" % B, False)
     hook_tag(DP, "tick", "%s/tick" % B, True)
     count = sum(len(fs) for _, _, fs in os.walk(OUT))

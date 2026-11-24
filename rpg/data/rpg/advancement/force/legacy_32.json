@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "read": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{rpg_legacy:32}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:force/x/l/read_32"
+  }
+}

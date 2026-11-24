@@ -1,0 +1,3 @@
+execute if score @s rpg_prbz_t matches 4 run return run function rpg:prologue_beelzebub/anim/kneel_down/f3
+execute if score @s rpg_prbz_t matches 5 run return run function rpg:prologue_beelzebub/anim/kneel_down/f4
+execute if score @s rpg_prbz_t matches 6 run return run function rpg:prologue_beelzebub/anim/kneel_down/f5

@@ -23,3 +23,31 @@
 - "Red Curtain" by HorrorPen — https://opengameart.org/content/red-curtain — CC-BY 3.0
 
 许可原文：https://creativecommons.org/licenses/by/3.0/ ；CC0：https://creativecommons.org/publicdomain/zero/1.0/
+
+## 序章（2026-11-22 下载，用户同意）
+
+原件在 `_tools/prologue_ref/bgm_src/`（来源说明见那里的 SOURCES.md），由 `_tools/convert_prologue_bgm.py` 转成 Ogg Vorbis（只换格式，不剪辑、不改音量）；Elegy Dm 原本就是 Ogg，原样拷贝。
+
+| 文件 | 用在 | 曲名 | 作者 | 许可 | 长度 | 页面 |
+|---|---|---|---|---|---|---|
+| prologue_intro.ogg | 序章 · 大厅与开场旁白 | When Angels Cry | Tsorthan Grove | CC0 | 1:17 | https://opengameart.org/content/when-angels-cry |
+| prologue_waves.ogg | 序章 · 三波天使 | Dark Descent | Matthew Pablo | CC-BY 3.0 | 1:23 | https://opengameart.org/content/dark-descent |
+| prologue_michael.ogg | 序章 · 米迦勒降临与战斗 | Colossal Boss Battle Theme（Blackmoor Colossus Loop） | Matthew Pablo | CC-BY 3.0 | 1:58 | https://opengameart.org/content/colossal-boss-battle-theme |
+| prologue_end.ogg | 序章 · 结尾过场 | Elegy Dm | Yubatake | CC-BY 4.0 | 6:22 | https://opengameart.org/content/elegy-dm |
+
+- "Dark Descent" and "Colossal Boss Battle Theme" by Matthew Pablo — http://www.matthewpablo.com — CC-BY 3.0
+- "Elegy Dm" by Yubatake — https://opengameart.org/content/elegy-dm — CC-BY 4.0 (the author asks: "Please just mention my username and this site.")
+- "When Angels Cry" by Tsorthan Grove — CC0
+- License: https://creativecommons.org/licenses/by/4.0/
+
+## 新手开局（2026-11-23 下载，用户同意）
+
+原件在 `_tools/onboard_ref/bgm_src/`，由 `_tools/convert_onboard_bgm.py` 转成 Ogg Vorbis（只换格式，不剪辑、不改音量）；Wendale Abbey 原本就是 Ogg，原样拷贝。
+
+| 文件 | 用在 | 曲名 | 作者 | 许可 | 长度 | 页面 |
+|---|---|---|---|---|---|---|
+| onboard_intro.ogg | 新手开局 · 世界观旁白 | Wendale Abbey | Yubatake | CC-BY 4.0 | 1:28 | https://opengameart.org/content/wendale-abbey |
+| onboard_flow.ogg | 新手开局 · 起名、身份、锻造教学 | Medieval: Exploration | RandomMind | CC0 | 3:56 | https://opengameart.org/content/medieval-exploration |
+
+- "Wendale Abbey" by Yubatake — https://opengameart.org/content/wendale-abbey — CC-BY 4.0
+- "Medieval: Exploration" by RandomMind — CC0

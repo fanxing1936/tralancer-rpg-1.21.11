@@ -1,3 +1,7 @@
+# 新手开局的黑屏里不画状态栏（add_onboard.py）
+execute if entity @s[tag=rpg.ob.hold] run return 0
+# 序章里由 rpg:prologue/player/hud 绘制状态栏（add_prologue.py）
+execute if entity @s[tag=rpg.pr] run return 0
 # 玩家面板的个人 HUD 开关：状态仍正常结算，只跳过屏幕绘制。
 execute if entity @s[tag=rpg.panel.hud_off] run scoreboard players add @s rpg_hud_t 0
 execute if entity @s[tag=rpg.panel.hud_off] run scoreboard players add @s rpg_hud_mt 0

@@ -1,4 +1,4 @@
-# 潜行低头长按书。文字里的数字靠宏写进去，所以每次打开都现算。
+# 书在手上按 Shift+F。文字里的数字靠宏写进去，所以每次打开都现算。
 tag @s add rpg.pact.ui
 scoreboard players enable @s rpg_pact_do
 execute store result storage rpg:pact ui.bond int 1 run scoreboard players get @s rpg_pact_bond

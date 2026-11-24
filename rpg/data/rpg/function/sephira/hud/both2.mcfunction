@@ -1,0 +1,1 @@
+$data modify storage rpg:hud e set value '["",{"text":"$(lead)","italic":false},{"text":"圣力 ","color":"gray","italic":false},{"text":"$(mf)","color":"#FFD85A","italic":false},{"text":"$(me)","color":"dark_gray","italic":false},{"text":" 魔力 ","color":"gray","italic":false},{"text":"$(nf)","color":"#A276BE","italic":false},{"text":"$(ne)","color":"dark_gray","italic":false}]'

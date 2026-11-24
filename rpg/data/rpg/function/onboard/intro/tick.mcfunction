@@ -1,0 +1,29 @@
+execute store result storage rpg:onboard tmp.id int 1 run scoreboard players get @s rpg_fg_id
+scoreboard players add @s rpg_ob_it 1
+execute if score @s rpg_ob_it matches 30 run function rpg:onboard/intro/l_w01 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 79 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 91 run function rpg:onboard/intro/l_w02 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 170 run function rpg:onboard/intro/l_w02_1 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 250 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 262 run function rpg:onboard/intro/l_w03 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 337 run function rpg:onboard/intro/l_w03_1 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 412 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 424 run function rpg:onboard/intro/l_w04 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 521 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 533 run function rpg:onboard/intro/l_w05 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 598 run function rpg:onboard/intro/l_w05_1 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 664 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 676 run function rpg:onboard/intro/l_w06 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 740 run function rpg:onboard/intro/l_w06_1 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 804 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 816 run function rpg:onboard/intro/l_w07 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 877 run function rpg:onboard/intro/l_w07_1 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 939 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 951 run function rpg:onboard/intro/l_w08 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 1031 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 1043 run function rpg:onboard/intro/l_w09 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 1102 run function rpg:onboard/intro/l_w09_1 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 1161 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 1173 run function rpg:onboard/intro/l_w10 with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 1274 run function rpg:onboard/intro/blank with storage rpg:onboard tmp
+execute if score @s rpg_ob_it matches 1306.. run function rpg:onboard/intro/end

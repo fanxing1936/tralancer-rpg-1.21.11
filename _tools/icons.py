@@ -300,7 +300,7 @@ def _over(dst, src):
         dst[i + 3] = int(round(out_a * 255))
 
 
-def composite(item_id, cmd=None, dyed=None, trim=None, potion=None):
+def composite(item_id, cmd=None, dyed=None, trim=None, potion=None, item_model=None):
     """-> (w, h, rgba) for the icon as the client draws it."""
     item_id = item_id.split(":")[-1]
     if item_id in OVERRIDE:
@@ -312,7 +312,12 @@ def composite(item_id, cmd=None, dyed=None, trim=None, potion=None):
             return got
 
     material = (trim or {}).get("material")
-    defn = _json("assets/minecraft/items/%s.json" % item_id)
+    defn = None
+    if item_model:                     # the item_model component replaces the base item's definition
+        ns, path = _split(item_model)
+        defn = _json("assets/%s/items/%s.json" % (ns, path))
+    if defn is None:
+        defn = _json("assets/minecraft/items/%s.json" % item_id)
     layers, tints = [], []
     if defn:
         mdl, tints = _pick(defn.get("model"), float(cmd) if cmd else None, material)
@@ -346,13 +351,13 @@ def composite(item_id, cmd=None, dyed=None, trim=None, potion=None):
     return None if base is None else (base[0], base[1], bytes(base[2]))
 
 
-def texture_for(item_id, cmd=None, dyed=None, trim=None, potion=None):
-    key = (item_id.split(":")[-1], cmd, dyed,
+def texture_for(item_id, cmd=None, dyed=None, trim=None, potion=None, item_model=None):
+    key = (item_id.split(":")[-1], cmd, item_model, dyed,
            json.dumps(trim, sort_keys=True) if trim else None,
            (potion or {}).get("custom_color"))
     if key in _cache:
         return _cache[key]
-    got = composite(item_id, cmd, dyed, trim, potion)
+    got = composite(item_id, cmd, dyed, trim, potion, item_model)
     uri = None
     if got:
         uri = ("data:image/png;base64,"
@@ -361,8 +366,8 @@ def texture_for(item_id, cmd=None, dyed=None, trim=None, potion=None):
     return uri
 
 
-def img(item_id, cmd=None, alt="", dyed=None, trim=None, potion=None, glint=False):
-    uri = texture_for(item_id, cmd, dyed, trim, potion)
+def img(item_id, cmd=None, alt="", dyed=None, trim=None, potion=None, glint=False, item_model=None):
+    uri = texture_for(item_id, cmd, dyed, trim, potion, item_model)
     if not uri:
         return '<span class="icon icon-none" aria-hidden="true"></span>'
     tag = ('<img class="icon" src="%s" alt="%s" loading="lazy" decoding="async">'
@@ -381,7 +386,7 @@ def item_img(entry, alt=None):
                alt if alt is not None else (entry.get("name") or ""),
                dyed=entry.get("dyed_color"), trim=entry.get("trim"),
                potion=entry.get("potion_contents"),
-               glint=bool(entry.get("enchantments")))
+               glint=bool(entry.get("enchantments")), item_model=entry.get("item_model"))
 
 
 def loot_img(entry, alt=None):
@@ -407,4 +412,4 @@ def loot_img(entry, alt=None):
     return img(entry.get("item") or "", cmd,
                alt if alt is not None else (entry.get("name") or ""),
                dyed=dyed, trim=comp("trim"), potion=comp("potion_contents"),
-               glint=bool(ench) or bool(entry.get("ench")))
+               glint=bool(ench) or bool(entry.get("ench")), item_model=comp("item_model"))

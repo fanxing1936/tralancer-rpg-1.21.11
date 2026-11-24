@@ -1,3 +1,7 @@
+# 新手开局的黑屏里不结算魔化（add_onboard.py）
+execute if entity @s[tag=rpg.ob.hold] run return 0
+# 序章里不结算魔化（add_prologue.py）
+execute if entity @s[tag=rpg.pr] run return 0
 # 一次结算。魔器加、圣器减，两者都握着时互相抵消。
 scoreboard players set @s rpg_taint_t 0
 
@@ -21,6 +25,10 @@ execute if entity @s[scores={rpg_taint=..-1}] run scoreboard players set @s rpg_
 scoreboard players operation #t1 rpg_hud = @s rpg_taint
 scoreboard players operation #t1 rpg_hud -= #t0 rpg_hud
 execute if score #t1 rpg_hud matches 1.. if entity @e[type=minecraft:allay,tag=rpg.doll,distance=..16,limit=1] run function rpg:taint/doll
+
+# 原质 · 力（add_sephira.py）：圣力者沾上的魔化变成生命力损失与同化；魔力者魔化涨，魔力跟着涨
+execute if score @s rpg_force matches 1 run function rpg:sephira/force/holy_taint
+execute if score @s rpg_force matches 2..3 run function rpg:sephira/force/mana_taint
 
 # 分档外显。低档只是身上泛起暗纹，越深越明显。
 execute if entity @s[scores={rpg_taint=31..60}] at @s run particle dust{color:[0.63,0.39,0.41],scale:1} ~ ~1 ~ 0.35 0.6 0.35 0.01 4

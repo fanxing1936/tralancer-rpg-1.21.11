@@ -4,6 +4,8 @@ execute if score @s rpg_pact_cd2 matches 1.. run return run function rpg:hud/m80
 execute if score @s rpg_pact matches 5 unless entity @e[type=#rpg:seal_hostile,distance=..14,limit=1] run return run function rpg:pact/say/no_target
 scoreboard players set @s rpg_pact_cd2 400
 scoreboard players add @s rpg_taint 6
+# 七大罪之仆与本柱立约：魔化减半（force_ext.py）
+execute if score @s rpg_ident matches 4 if score @s rpg_ident_sin = @s rpg_pact run scoreboard players remove @s rpg_taint 3
 tag @s add rpg.pact.cast
 execute if score @s rpg_pact matches 1 run function rpg:pact/s/p1
 execute if score @s rpg_pact matches 2 run function rpg:pact/s/p2

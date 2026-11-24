@@ -1,0 +1,19 @@
+# 还原一名玩家（as 玩家）
+execute store result storage rpg:pr tmp.id int 1 run scoreboard players get @s rpg_pr_id
+execute unless data storage rpg:pr r.p1 unless data storage rpg:pr r.p2 unless data storage rpg:pr r.p3 unless data storage rpg:pr r.p4 run return run tellraw @s {"text":"[序章] 找不到你的回程记录","color":"red"}
+clear @s
+execute if score @s rpg_pr_id matches 1 run function rpg:prologue/iso/unstash_1
+execute if score @s rpg_pr_id matches 2 run function rpg:prologue/iso/unstash_2
+execute if score @s rpg_pr_id matches 3 run function rpg:prologue/iso/unstash_3
+execute if score @s rpg_pr_id matches 4 run function rpg:prologue/iso/unstash_4
+function rpg:prologue/iso/restore_m with storage rpg:pr tmp
+attribute @s minecraft:max_health modifier remove rpg:prologue/hp
+function rpg:prologue/role/avatar_off
+stopsound @s record
+tag @s remove rpg.pr
+tag @s remove rpg.pr.mh
+scoreboard players reset @s rpg_pr_role
+scoreboard players reset @s rpg_pr_id
+title @s reset
+# 新手开局：序章之后进黑屏欢迎页（add_onboard.py）
+execute if entity @s[tag=rpg.ob] run function rpg:onboard/pro/after

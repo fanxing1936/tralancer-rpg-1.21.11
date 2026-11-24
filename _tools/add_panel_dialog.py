@@ -20,7 +20,11 @@ import sys
 import rpg_ui_style as ui
 
 DP = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else "../rpg")
+RP = os.path.abspath(sys.argv[2]) if len(sys.argv) > 2 else None
 FUNC = os.path.join(DP, "data/rpg/function")
+# 游戏内菜单（对话框、暂停、设置）的底：原版是 25% 的黑，白天亮天空上暗色板文字读不清。
+# 换成提示框同色的深底，约 73% 不透明（用户 2026-11-23 选定「加深背景」）。
+MENU_GROUND_ALPHA = 185
 PAGES = ["panel/open", "panel/inquest", "panel/pact", "panel/help", "inquest/career"]
 # 页头的哥特小注（ART-STYLE.md §12）。
 GLOSS = {"panel/open": "Dossier", "panel/inquest": "True Names", "panel/pact": "Covenant",
@@ -29,6 +33,77 @@ OPEN_DELAY = 12
 TELLRAW = re.compile(r"^(execute .* run )?tellraw @s (\[.*\])\s*$")
 HEADER = re.compile(r"^\+[-\s]*(.*?)[-\s]*\+$")
 STORE = "storage rpg:panel"
+
+# ---- 面板的样式（只管外观；按钮命令一个不动）----------------------------------
+# 页内小节标题：暗金「◆」+ 白色加粗 + 哥特小注，和页头同一套（ART-STYLE §11、§12）。
+SECTION_GLOSS = {"封印遗物": "Relics"}
+# 这些文字开头的正文行前面空一行，把一页分成几段。行本身带条件，空行跟着行走，
+# 行不显示时不会留下多余的空行。
+PARAGRAPH = {
+    "panel/open": ("HUD",),
+    "panel/inquest": ("放任：",),
+    "panel/pact": ("当前契约", "供奉："),
+    "panel/help": ("所有面板按钮",),
+}
+# 速查页「面板：……」这类行，把冒号前的词提成加粗标签。
+KEYED = ("panel/help",)
+KEY = re.compile(r"^([^：]{1,4})：(.+)$")
+# 按钮按用途分三种样子：去别的页（暗金加粗）、页内的动作（保留语义色，加粗）、
+# 开关和返回（灰色不加粗，不和主按钮抢）。悬停说明只是文字。
+ROLE = {
+    "/trigger rpg_panel set 1": ("nav", "驱魔熟练、裁决次数与仪式槽"),
+    "/trigger rpg_panel set 2": ("nav", "七位领主的真名见证进度，以及封印遗物"),
+    "/trigger rpg_panel set 3": ("nav", "契约、侵蚀与上位契约"),
+    "/trigger rpg_panel set 5": ("quiet", "显示或隐藏屏幕上的状态行"),
+    "/trigger rpg_panel set 6": ("quiet", "按键与玩法速查"),
+    "/trigger rpg_panel set 8": ("back", None),
+}
+
+
+def styled_label(label, command):
+    """按钮文字：text 必须是第一个键 —— add_sephira 按 `"text":"驱魔师档案"` 改名。"""
+    role, _tip = ROLE.get(command, ("act", None))
+    if role == "nav":
+        return {"text": label["text"], "color": ui.BROADCAST_HOLY, "bold": True, "italic": False}
+    if role == "quiet":
+        return {"text": label["text"], "color": ui.BROADCAST_BODY, "bold": False, "italic": False}
+    if role == "back":
+        return {"text": "‹ " + label["text"], "color": ui.BROADCAST_BODY, "bold": False, "italic": False}
+    out = dict(label)
+    out["bold"] = True
+    return out
+
+
+def make_action(label, command):
+    action = {"label": styled_label(label, command)}
+    tip = ROLE.get(command, (None, None))[1]
+    if tip:
+        action["tooltip"] = {"text": tip, "color": ui.BROADCAST_BODY, "italic": False}
+    action["action"] = {"type": "minecraft:run_command", "command": command}
+    return action
+
+
+def section(head, colour=None):
+    gloss = SECTION_GLOSS.get(head)
+    parts = [{"text": "\n"}, {"text": "◆ ", "color": ui.BROADCAST_GLOSS, "bold": False, "italic": False},
+             {"text": head, "color": ui.BROADCAST_NAME, "bold": True, "italic": False}]
+    if gloss:
+        parts.append({"text": " " + ui.fraktur(gloss), "color": ui.BROADCAST_GLOSS, "bold": False, "italic": False})
+    return parts
+
+
+def restyle(rel, parts):
+    """正文行的版式：段落空行、速查页的「词：说明」。"""
+    first = plain(parts[0]) if parts else ""
+    if rel in KEYED and len(parts) == 1:
+        match = KEY.match(first)
+        if match:
+            base = {k: v for k, v in parts[0].items() if k != "text"}
+            parts = [dict(base, text=match.group(1) + "　", color=ui.BROADCAST_NAME, bold=True),
+                     dict(base, text=match.group(2), bold=False)]
+    if any(first.startswith(p) for p in PARAGRAPH.get(rel, ())):
+        parts = [{"text": "\n"}] + parts
+    return parts
 
 
 def path_of(rel):
@@ -66,6 +141,7 @@ def convert_line(comps, names):
     """返回 (页头文字, 正文, 按钮表)。"""
     parts = []
     actions = []
+    labels = []
     for comp in comps:
         if comp == "":
             continue
@@ -78,16 +154,16 @@ def convert_line(comps, names):
             comp["text"] = "$(%s)" % name
             comp["bold"] = True         # 数值是这一行的主角
         if "click_event" in comp:
-            actions.append({"label": label_of(comp),
-                            "action": {"type": "minecraft:run_command",
-                                       "command": comp["click_event"]["command"]}})
+            label = label_of(comp)
+            labels.append(label["text"])
+            actions.append(make_action(label, comp["click_event"]["command"]))
         parts.append({k: v for k, v in comp.items() if k != "click_event"})
     joined = "".join(plain(p) for p in parts).strip()
     match = HEADER.match(joined)
     if match:
         return match.group(1), None, actions
     if actions and not "".join(plain(p) for p in parts if not any(
-            plain(p).strip().strip("[]〖〗").strip() == a["label"]["text"] for a in actions)).strip():
+            plain(p).strip().strip("[]〖〗").strip() == text for text in labels)).strip():
         return None, None, actions
     return None, parts, actions
 
@@ -110,15 +186,16 @@ def convert_page(rel):
         if head == "":
             continue
         if head is not None and not seen_body:
-            colour = next((c for c in json.loads(match.group(2)) if isinstance(c, dict)), {})
-            title = {"text": head, "color": colour.get("color", "white"), "bold": True, "italic": False,
+            # 每一页的页头同一个样子：暗金加粗 + 哥特小注（原来各页各用一种颜色）
+            title = {"text": head, "color": ui.BROADCAST_HOLY, "bold": True, "italic": False,
                      "extra": [{"text": " " + ui.fraktur(GLOSS[rel]), "color": ui.BROADCAST_GLOSS, "bold": False}]}
             out.append("%sdata modify %s ui.title set value %s" % (guard, STORE, dump(title)))
             has_title = True
             continue
         if head is not None:
-            source = next((c for c in json.loads(match.group(2)) if isinstance(c, dict)), {})
-            parts = [{"text": "\n"}, {"text": head, "color": source.get("color", "white"), "bold": True, "italic": False}]
+            parts = section(head)
+        elif parts:
+            parts = restyle(rel, parts)
         for action in actions:
             out.append("%sdata modify %s ui.actions append value %s" % (guard, STORE, dump(action)))
         if parts:
@@ -167,15 +244,18 @@ def patch_sources():
     lines = read("panel/open").rstrip("\n").splitlines()
     tip = next(i for i, l in enumerate(lines) if "切走再切回面板" in l)
     lines[tip:tip + 1] = [
-        "execute if entity @s[tag=rpg.panel.hud_off] run " + tell(text("HUD：已隐藏", "#8FC7FF")),
-        "execute unless entity @s[tag=rpg.panel.hud_off] run " + tell(text("HUD：显示中", ui.READY)),
-        tell(text("切走再切回面板，可再次打开此页。", ui.MUTED)),
+        # 状态和提示并成一行：HUD 状态加粗，提示用 MUTED 跟在后面
+        "execute if entity @s[tag=rpg.panel.hud_off] run " + tell(
+            text("HUD ", ui.GRAY), text("已隐藏", "#8FC7FF", True), text("　·　切走再切回面板可重开此页", ui.MUTED)),
+        "execute unless entity @s[tag=rpg.panel.hud_off] run " + tell(
+            text("HUD ", ui.GRAY), text("显示中", ui.READY, True), text("　·　切走再切回面板可重开此页", ui.MUTED)),
     ]
     write("panel/open", lines)
 
     lines = read("panel/help").rstrip("\n").splitlines()
-    home = next(i for i, l in enumerate(lines) if "[返回面板]" in l)
-    lines[home:home] = [tell(text("契约：长按放力量，潜行长按放魂誓技能，潜行抬头长按化身，潜行低头长按打开契约。"))]
+    # 契约这一条放在页脚「所有面板按钮……」之前，页脚留在最后
+    home = next(i for i, l in enumerate(lines) if "所有面板按钮" in l or "[返回面板]" in l)
+    lines[home:home] = [tell(text("契约：长按放力量，潜行长按放魂誓技能，F 化身，Shift+F 打开契约。"))]
     lines = [l.replace("面板：切换到玩家面板自动打开；切走再切回可重开。",
                        "面板：切到玩家面板并停留片刻就会打开；切走再切回可重开。") for l in lines]
     write("panel/help", lines)
@@ -203,7 +283,19 @@ def relight_pact_dialogs():
             write(rel, read(rel).replace(p["lit"], ui.pillar_mid(n)).rstrip("\n").splitlines())
 
 
+def darken_menu_ground():
+    """纯色平铺底（16×16），不是美术贴图；原版同名贴图也是纯色。"""
+    if not RP:
+        return
+    from PIL import Image
+    r, g, b = (round(c * 255) for c in ui.rgb(ui.TOOLTIP_GROUND))
+    target = os.path.join(RP, "assets/minecraft/textures/gui/inworld_menu_background.png")
+    os.makedirs(os.path.dirname(target), exist_ok=True)
+    Image.new("RGBA", (16, 16), (r, g, b, MENU_GROUND_ALPHA)).save(target)
+
+
 def main():
+    darken_menu_ground()
     relight_pact_dialogs()
     patch_sources()
     build_show()

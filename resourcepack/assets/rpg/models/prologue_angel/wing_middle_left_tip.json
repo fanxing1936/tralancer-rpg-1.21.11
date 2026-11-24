@@ -1,0 +1,118 @@
+{
+  "textures": {
+    "0": "rpg:item/prologue_angel/atlas",
+    "particle": "rpg:item/prologue_angel/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.365,
+        7.9546,
+        8.5896
+      ],
+      "to": [
+        8.635,
+        8.0454,
+        8.6803
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            1.0,
+            9.125,
+            2.0,
+            9.125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            2.0,
+            9.3125,
+            1.0,
+            9.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            1.0,
+            9.125,
+            1.0,
+            9.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            2.0,
+            9.3125,
+            2.0,
+            9.125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "up": {
+          "uv": [
+            2.0,
+            9.125,
+            1.0,
+            9.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            2.0,
+            9.3125,
+            1.0,
+            9.125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        7.365,
+        8.0,
+        7.3197
+      ],
+      "to": [
+        8.635,
+        8.0,
+        8.5896
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            2.0,
+            9.0,
+            1.0,
+            8.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            2.0,
+            8.0,
+            1.0,
+            9.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

@@ -41,6 +41,10 @@ CUSTOM_ENTITY_TABLES = {
     "zombie_villager",
 }
 
+# 世界怪物掉落表（add_world_loot.py，用户 2026-11-23）：这些生物改为自写表，由 add_world_loot 在本脚本之前写好。
+from world_loot_spec import WORLD_TABLES  # noqa: E402
+CUSTOM_ENTITY_TABLES = CUSTOM_ENTITY_TABLES | set(WORLD_TABLES)
+
 # Player/prop inventory is explicitly outside the user's mob-death policy.
 EXCLUDED_ENTITY_TABLES = {"player", "armor_stand", "mannequin"}
 

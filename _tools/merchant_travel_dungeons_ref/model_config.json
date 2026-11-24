@@ -1,0 +1,96 @@
+{
+ "model_scale": 7.785888149342003,
+ "height_blocks": 2.0,
+ "source_height_cm": 214.06249803466793,
+ "turn": 180,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [],
+ "numeric_angle_cleanup": [],
+ "material_slot_aliases": {},
+ "source_orientation": {
+  "native_java_forward": "-Z",
+  "normalized_forward": "+Z",
+  "static_group": "merchant_orientation",
+  "normalization_rotation_degrees": [
+   0,
+   180,
+   0
+  ],
+  "runtime_turn_degrees": 180
+ },
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Friendlies/Villager/SK_Villager",
+  "export_root": "D:\\agent\\dungeons_extract\\merchant_models_20261124",
+  "material": "MI_Villager_TravellingMerchant",
+  "texture": "Dungeons/Content/Actors/Characters/Friendlies/Villager/T_Villager_TravellingMerchant"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Villager_Idle",
+   "seconds": 4.9583335,
+   "loop": true,
+   "ticks": 100,
+   "max_bone_error_px": 0.0007893659952023779,
+   "max_vertex_error_px": 0.0004081336923647043,
+   "notifies": []
+  },
+  {
+   "clip": "look",
+   "source": "Villager_Idle_LookAround",
+   "seconds": 2.3,
+   "loop": false,
+   "ticks": 46,
+   "max_bone_error_px": 0.002946076760191488,
+   "max_vertex_error_px": 0.001616657624825725,
+   "notifies": []
+  },
+  {
+   "clip": "bow",
+   "source": "Villager_Bowing",
+   "seconds": 1.6333333,
+   "loop": false,
+   "ticks": 33,
+   "max_bone_error_px": 1.7199887375052827e-08,
+   "max_vertex_error_px": 2.2191977444621795e-08,
+   "notifies": [
+    [
+     0.0001,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "examine",
+   "source": "Villager_Examining",
+   "seconds": 8.9,
+   "loop": false,
+   "ticks": 178,
+   "max_bone_error_px": 0.0017756952630805893,
+   "max_vertex_error_px": 0.0006465124022446925,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "merchant_travel",
+  "source_mesh_sha256": "c86045819a1d9019af926d1ce8b668844f90a98b76df612c32363fcb791bb4bb",
+  "triangles": 134,
+  "all_triangles_covered_once": true,
+  "bones": 36,
+  "plane_groups": 17,
+  "display_parts": 17,
+  "elements": 67,
+  "direct_uv_elements": 67,
+  "baked_elements": 0,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Villager_Butcher": 0
+  },
+  "atlas": [
+   64,
+   64
+  ]
+ }
+}

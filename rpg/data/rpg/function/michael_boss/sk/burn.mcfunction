@@ -60,5 +60,5 @@ execute if score @s rpg_mk_t matches 170 run function rpg:michael/anim/enter/kne
 execute if score @s rpg_mk_t matches 170 run attribute @s minecraft:armor base set 0
 execute if score @s rpg_mk_t matches 170 run function rpg:michael_boss/solid/on
 execute if score @s rpg_mk_t matches 170 run scoreboard players set @s rpg_mk_so 60
-execute if score @s rpg_mk_t matches 174 run tellraw @a[distance=..48] ["",{"text":"〖","color":"#FF805F","bold":true,"italic":false},{"text":"炽天使 ","color":"#FF805F","bold":true,"italic":false},{"text":"米迦勒","color":"#FF3300","bold":true,"italic":false},{"text":"〗","color":"#FF805F","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"……","color":"#9C9A94","bold":false,"italic":false}]
+execute if score @s rpg_mk_t matches 174 run execute unless score #pro rpg_mk matches 1 run tellraw @a[distance=..48] ["",{"text":"〖","color":"#FF805F","bold":true,"italic":false},{"text":"炽天使 ","color":"#FF805F","bold":true,"italic":false},{"text":"米迦勒","color":"#FF3300","bold":true,"italic":false},{"text":"〗","color":"#FF805F","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"……","color":"#9C9A94","bold":false,"italic":false}]
 execute if score @s rpg_mk_t matches 230.. run function rpg:michael_boss/sk/end

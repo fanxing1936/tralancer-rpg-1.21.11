@@ -321,6 +321,24 @@
           "value": "rpg:armor_set/demon"
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sin_shard_1"
+        }
+      ]
     }
   ]
 }

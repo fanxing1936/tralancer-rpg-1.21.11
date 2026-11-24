@@ -1,0 +1,44 @@
+{
+  "textures": {
+    "0": "rpg:item/prologue_michael/atlas",
+    "particle": "rpg:item/prologue_michael/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        8.0,
+        7.52,
+        7.52
+      ],
+      "to": [
+        8.0,
+        8.48,
+        8.48
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            5.875,
+            4.0,
+            4.8125,
+            5.0625
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            5.875,
+            5.0625,
+            4.8125,
+            4.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    }
+  ]
+}

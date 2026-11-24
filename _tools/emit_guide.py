@@ -6,6 +6,9 @@ import io
 import json
 
 import guide_bestiary
+import guide_tutorial
+import guide_world
+import guide_sephira
 import guide_theme
 import rpg_ui_style as ui
 
@@ -72,7 +75,7 @@ def divine_section():
 <div><h3>Ⅰ · 展开生命之树</h3><p class="how">卡巴拉血契 · 普通长按</p><p>法阵会依照使用者朝向铺开；血契本身不会被消耗。请留出完整空地，十个有名称的圆心和中央 Daath 都是后续交互点。</p></div>
 <div><h3>Ⅱ · 十源质归位</h3><p class="how">站入同名圆心 · 手持对应源质长按</p><p>错误位置或重复嵌入不会消耗物品。十枚全部归位后，生命之树完成，玩家自动获得唯一奖励<strong>旧约</strong>；同一玩家只领取一次。</p></div>
 <div><h3>Ⅲ · Daath 的见证</h3><p class="how">十源质已齐 · Daath 节点 · 真·十字架长按</p><p>十个圆心上的见证向十字架汇聚，随后法阵、源质与十字架一并收束。玩家持有的旧约被回收，并得到<strong>新约</strong>。</p></div>
-<div><h3>测试／管理发放</h3><p class="how">整套仪式物品</p><p><code>{D["test_give_command"]}</code> 会给执行者血契、十源质与真·十字架。当前项目没有为这套物品另写生存掉落或配方，因此这条只作为测试入口，不代表自然获得方式。</p></div>
+<div><h3>来路</h3><p class="how">Boss 首杀 · 事件 · 支线 · 悬赏 · 精英</p><p>血契、十源质与真·十字架各有一条来路，逐件列在 <a href="#w-kab">XV 世界循环 · 卡巴拉物品的来路</a>。Boss 给的几件，之后每次击败还有 20%。管理员测试用 <code>{D["test_give_command"]}</code> 一次拿齐。</p></div>
 </div>
 
 <h3 class="sub-h">十源质<span class="rolls">十环全部完成才显化旧约</span></h3>
@@ -418,6 +421,9 @@ def build():
 
     a('<main>')
 
+    # 序 新手教程（2026-11-21）：按玩家遇到的顺序讲操作，数值链接到后面的参考章节
+    a(guide_tutorial.section())
+
     # I setup -------------------------------------------------------------
     a('''<section class="plate" id="s1">
 <div class="plate-h"><span class="num">I</span><h2>安装与调试</h2><span class="sub">自动初始化 · 管理入口集中归档</span></div>
@@ -429,12 +435,16 @@ def build():
 <li><div><h3>发放起始装备<span class="opt">可选</span></h3><p>三个发放函数会把对应类别的全部物品发给<strong>所有在线玩家</strong>，建议在创造模式测试区使用。</p><code class="cmd">/function rpg:command/give/weapon      # 武器、护甲、药剂
 /function rpg:command/give/item        # 属性晶石、养成材料、符文、符石
 /function rpg:command/give/weapon_up_item  # 六源</code></div></li>
+<li><div><h3>摆放商人</h3><p>铁匠、神秘商人、奢侈品商人不会自己出现，由管理员站在要放的位置执行；他们面朝你看的方向，放下后一直在。铁匠放在灵魂营火旁的据点，奢侈品商人放在主城。</p><code class="cmd">/function rpg:merchant/place/smith
+/function rpg:merchant/place/mystery
+/function rpg:merchant/place/luxury</code></div></li>
 <li><div><h3>布置试炼与宝库<span class="opt">可选</span></h3><p>在脚下生成一组不祥试炼刷怪笼与宝库，掉落表指向本包的 <code>rpg:trial/*</code> 与 <code>rpg:loot/*</code>。站在要放置的位置执行。</p><code class="cmd">/function rpg:command/setblock</code></div></li>
 </ol>
 <div class="note"><b>完整调试手册：</b>本页末尾的<a href="#debug-catalog">调试指令总表</a>收录 <b>''' + str(len(ALL_COMMANDS)) + '''</b> 个公开入口，逐条标明执行者、前置条件、影响范围与风险。推荐先用 <code>/function rpg:command/give/box</code> 领取分类潜影盒。</div>
 <div class="note"><b>公共入口边界：</b><code>*_worker</code>、每刻 tick、伤害结算、UI 刷新与阶段内部函数不是调试接口。它们依赖调用上下文，手动执行容易留下半成品状态，因此未列入可复制命令。</div>
 <div class="note"><b>独立文档：</b><code>DEBUG-COMMANDS.md</code> 与本介绍页由同一清单生成，适合在编辑器中检索、复制或随工程一起归档。</div>
-<div class="note"><b>玩家等级：</b>玩家的经验等级即角色等级。等级每提升一档，最大生命值会按 64/32/16/8/4/2/1 的分段自动加成，并播放升级特效——无需任何额外操作。</div>
+<div class="note"><b>角色等级：</b>成长看<a href="#s18">原质十阶</a>（王国 → 王冠），每阶生命 +4。经验等级不再加生命。</div>
+<div class="note"><b>冒险模式：</b>所有玩家都按冒险模式玩。原版合成表已停用，动物不掉东西；原料来自怪物，灵魂营火由地图放在固定的地方。</div>
 </section>''')
 
     # II systems ----------------------------------------------------------
@@ -448,7 +458,11 @@ def build():
 <div><h3>镀金</h3><p class="how">装备 + 镀金箔 · 每件一次</p><p>随机挑一条已有附魔等级 +1，可以超过原版上限（比如锋利 V 变成 VI）；装备上没有附魔时随机附上一条。镀过的装备在属性块里写明镀了哪一条。</p></div>
 <div><h3>六源</h3><p class="how">武器 + 源</p><p>一把武器只有一个源，新源覆盖旧源。<b>信念</b>对亡灵与恶魔 +25%，<b>希望</b>击杀回复生命，<b>不屈</b>受击后下一击 +30%；恶魔三源更强但带代价：<b>邪念</b> +15% 但持有时累积魔化，<b>仇恨</b>连击同一目标叠到 +30%、换目标自损，<b>傲慢</b>满血 +30% 但自己受伤 +15%。原生 [神圣] 武器只接神圣之源，原生 [恶魔] 武器只接恶魔之源。六源分别出自教皇、米迦勒、雅克、路西法、篡夺者与扫罗（每次击败 30%）。神圣之源的武器到 <b>Lv.5</b> 起也算圣器。</p></div>
 <div><h3>符文与符石</h3><p class="how">装备 + 符文 / 符石</p><p>符文是规则型被动：武器两个槽（第二个 Lv.5 解锁），每件护甲一个；同一件不能放两枚相同的，部位不对放不进去，槽满时选一枚替换，换下来的退回背包。符石每把武器一个槽，<b>打怪攒能量，满 100 时按 F 释放</b>，不占右键，所以武器自己的右键技能照常可用；<b>潜行按 F</b> 照常换手。详见第五节。</p></div>
-<div><h3>玩家面板</h3><p class="how">切换到「玩家面板」头颅</p><p>面板 Lore 会实时刷新等级、生命、攻击、攻速、护甲、韧性、驱魔等级、阅历、侵蚀（或权柄完整度）与契约序列。切换到面板并停留片刻，会打开面板界面，可直接查看驱魔师档案、七柱真名调查、契约与侵蚀，或切换个人 HUD；切走再切回即可重开。立下新约后，入口动态切为「契约·权柄」，页标题切为「契约与权柄」，「当前侵蚀」行则换成 <b>0–100 的权柄完整度</b>并标明「新约 · 权柄」。</p></div>
+<div><h3>玩家面板</h3><p class="how">切换到「玩家面板」头颅</p><p>面板 Lore 会实时刷新等级、生命、攻击、攻速、护甲、韧性、原质与综合能力、阅历、侵蚀（或权柄完整度）与契约序列。切换到面板并停留片刻，会打开面板界面，可直接查看驱魔师档案、七柱真名调查、契约与侵蚀，或切换个人 HUD；切走再切回即可重开。立下新约后，入口动态切为「契约·权柄」，页标题切为「契约与权柄」，「当前侵蚀」行则换成 <b>0–100 的权柄完整度</b>并标明「新约 · 权柄」。</p></div>
+<div><h3>原质与力</h3><p class="how">自动晋阶 · 圣徽 / 罪印</p><p>角色走<b>原质十阶</b>，只看综合能力。有了圣力或魔力，主手拿施法物按 <b>Shift+F</b> 开技能页，<b>右键 / 潜行右键 / F</b> 放三格技能。详见 <a href="#s18">XVI 原质与力</a>。</p></div>
+<div><h3>罪器与图纸锻造</h3><p class="how">灵魂营火 · 锻造页</p><p>武器核心加罪印碎片锻<b>罪器</b>；图纸加特殊材料锻<b>史诗与传说武器</b>；原料之间可以<b>转换</b>。详见 <a href="#w-sin">XV 世界循环</a>。</p></div>
+<div><h3>商人</h3><p class="how">对商人右键</p><p>铁匠、神秘商人、奢侈品商人固定摆放，迷途商人随机出现。用货币、精英徽记和多余的材料交易。详见 <a href="#w-mer">XV 世界循环 · 商人</a>。</p></div>
+<div><h3>旅程</h3><p class="how">玩家面板 · 旅程</p><p>当前<b>事件</b>、每天三条<b>悬赏</b>、<b>支线</b>、<b>称号</b>和<b>配方书</b>都在这一页。详见 <a href="#w-ev">XV 世界循环</a>。</p></div>
 <div><h3>试炼与宝库</h3><p class="how">不祥试炼刷怪笼 · 宝库</p><p>试炼之室吐出器胚、残魂、铸造之石、洗炼钻、镀金箔与符文（不祥试炼还有符石）。宝库开出一份养成材料包：铸造之石 ×2、洗炼钻、镀金箔，另有机会出符文与符石。</p></div>
 </div>
 </section>''')
@@ -489,10 +503,12 @@ def build():
 
     # VI consumables ------------------------------------------------------
     a('''<section class="plate" id="s6">
-<div class="plate-h"><span class="num">VI</span><h2>药剂与材料</h2><span class="sub">12 药剂 · 8 材料</span></div>
+<div class="plate-h"><span class="num">VI</span><h2>药剂与材料</h2><span class="sub">12 药剂 · 13 养成材料 · 11 世界材料</span></div>
 <div class="grid">''' + F["consum"] + '</div>')
     a('<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:40px 0 16px">锻造材料</h3>')
     a('<div class="grid">' + F["mats"] + '</div>')
+    a('<h3 style="font-family:Cinzel,serif;font-size:12px;letter-spacing:.18em;color:var(--muted);margin:40px 0 16px">世界材料</h3>')
+    a('<div class="grid">' + guide_world.cards() + '</div>')
     a('<div class="note"><b>旧材料会自动换新：</b>背包里的冶炼石、生铁、剑胚、旧铸造之石、[货币]钻石与黄金、试金石、旧符文符石和旧分支唱片，会就地换成对应的新养成材料。</div>')
     a('</section>')
 
@@ -500,7 +516,7 @@ def build():
     a('''<section class="plate" id="s7">
 <div class="plate-h"><span class="num">VII</span><h2>掉落总表</h2><span class="sub">权重 · 区间 · 来源</span></div>
 <p>前面几节是 <code>give</code> 指令里写死的固定装备；这一节是<strong>战利品表</strong>里的东西——怪物身上穿的、试炼刷怪笼吐出来的、宝库开出来的。它们的属性不是定值，而是每次生成时在一个<strong>区间内随机</strong>，附魔也是随机抽取的，所以同名的两把武器数值可能完全不同。</p>
-<div class="note"><b>养成材料从哪来：</b>僵尸、尸壳、骷髅、僵尸村民与苦力怕被玩家击杀时有 5% 掉残魂、1% 掉器胚；恶魔仆从 25% 掉残魂、4% 掉符文；试炼之室与宝库见下表；六个首领每次击败 30% 掉对应的源、25% 掉符石。以前这些怪物会掉改名的原版装备，现在装备改由魂火冶炼产出。</div>
+<div class="note"><b>养成材料从哪来：</b>33 种野外怪物被玩家击杀时掉货币产物、锻造原料，并有机会掉残魂与器胚（逐组概率见 <a href="#w-drops">XV 世界循环 · 怪物掉落</a>）；精英与首领掉徽记、图纸、特殊材料（<a href="#w-elite">精英与首领</a>）；恶魔仆从 25% 掉残魂、4% 掉符文；试炼之室与宝库见下表；罪仆 30% 掉本柱罪印碎片；六个首领每次击败 30% 掉对应的源、25% 掉符石，首次击败另给图纸、传承书和一件卡巴拉物品。</div>
 ''' + F["loot_trial"] + F["loot_drops"] + F["loot_reward"] + '''
 <div class="note"><b>怎么读这些数字：</b>「权重」是同一个池子里被抽中的相对概率；「随机属性范围」是该词条实际会落在的区间，
 生成时在区间内均匀取值；「随机附魔 ×N」表示从全部可用附魔里随机抽 N 次，等级也随机。
@@ -630,14 +646,10 @@ def build():
 <div><h3>封印</h3><p class="how">消耗封魔灯</p><p>得到对应封印遗物并增加 5 魔化。携带时每十分钟检定一次，平均约一小时发生一次逃逸。</p></div>
 <div><h3>契约</h3><p class="how">保留柱中之力</p><p>得到对应未立约的柱之书与罪遗武器，并增加 25 魔化；签约规则仍按契约章节执行。</p></div>
 </div>
-<h3 class="sub-h">驱魔师成长<span class="rolls">独立阅历 · 五级 · 三路线</span></h3>
-<p>新罪证 +4、真名确证 +8、正确弱点 +6、解决反仪式 +2～3、裁决 +15～25。等级阈值为 <b>0 / 40 / 100 / 180 / 280</b>。
-切换到<b>玩家面板</b>，点击「驱魔师档案」即可查看阶位、阅历与仪式槽，并选择职业路线。</p>
-<div class="sys">
-<div><h3>审判</h3><p class="how">识破 · 打断 · 处决</p><p>优先获得告解铃与压制粉笔；高阶审判者主动选择消灭时，狂暴恶魔从 640 而非 700 生命复苏。</p></div>
-<div><h3>守护</h3><p class="how">固阵 · 减损 · 封印</p><p>优先获得银质圣钉与守御粉笔；二级起只要守在十格内，每次稳定度损失都会额外减免 4 点。</p></div>
-<div><h3>秘仪</h3><p class="how">净化 · 加速 · 通晓</p><p>优先获得净罪香与疾行粉笔；四级起本人守阵时，宣判每刻额外推进一次。</p></div>
-</div>
+<h3 class="sub-h">驱魔熟练<span class="rolls">按裁决次数</span></h3>
+<p>驱魔里的等级只看<b>完成过几次裁决</b>：1 次、3 次、6 次各升一档。裁决另给 <b>10 阅历</b>、驱逐 <b>3 阅历</b>，计入<a href="#p-tier">原质的综合能力</a>。
+审判、守护、秘仪三条路线已经取消，它们的位置由<a href="#p-pillar">三根主柱</a>接替。</p>
+<div class="note"><b>工具按裁决次数领：</b>面板「驱魔师档案」里，第 1 次裁决后领告解铃、银质圣钉与净罪香，第 3 次后领守御、压制、疾行三支粉笔。</div>
 <div class="note"><b>签谁的约，就要挨谁的打。</b>这是契约那一节最后一句话的兑现——
 你借他的力时省下的那些代价，他会亲自来收。
 <br>但<b>手里或身上有圣器</b>时，他蒙不住你的眼：黑暗与失明落不下来，其余 debuff 减半（见卷 IX）。</div>
@@ -721,7 +733,7 @@ def build():
 空壳额外挨 6 点伤害并大幅加速裂壳。「能指引恶魔的繁星，审判罪恶」。</p></div>
 </div>
 
-<h3 class="sub-h">仪式工具<span class="rolls">职业晋阶自动发放</span></h3>
+<h3 class="sub-h">仪式工具<span class="rolls">按裁决次数领取</span></h3>
 <div class="sys">
 <div><h3>真名残页</h3><p class="how">法阵五格内主手右键 · 不消耗</p><p>每位领主各一页。首次展开对应残页恢复 10 稳定度，纸页在使用者脚边贴地显现。</p></div>
 <div><h3>弱点媒介</h3><p class="how">对应领主 · 法阵五格内主手右键</p><p>七种媒介均有仪式版本，布下后恢复 25 稳定度。旧式丢入法阵仍兼容；右键在阵外不会消耗。</p></div>
@@ -733,8 +745,8 @@ def build():
 <div><h3>压制粉笔</h3><p class="how">法阵五格内主手右键</p><p>首次刻写恢复 10 稳定度，每轮反仪式间隔延长四秒。</p></div>
 <div><h3>疾行粉笔</h3><p class="how">法阵五格内主手右键</p><p>首次刻写恢复 10 稳定度，被压制领主每次受击额外多恢复 1 点。</p></div>
 </div>
-<div class="note"><b>槽位与浓缩圣水。</b>普通法阵有一个粉笔槽位；附近存在五级驱魔师时有两个。
-四级自动解锁<b>浓缩驱魔圣水</b>，它能点燃图腾，并让圣水池每拍净化 2 点魔化。仪式物品均支持靠近后右键布置，并在使用者脚边留下贴地器物；旧式丢入仍兼容，摆件随所属法阵结束自动清理。</div>
+<div class="note"><b>槽位与浓缩圣水。</b>普通法阵有一个粉笔槽位；附近有完成过 6 次裁决的人时有两个。
+完成 3 次裁决后解锁<b>浓缩驱魔圣水</b>，它能点燃图腾，并让圣水池每拍净化 2 点魔化。仪式物品均支持靠近后右键布置，并在使用者脚边留下贴地器物；旧式丢入仍兼容，摆件随所属法阵结束自动清理。</div>
 
 <div class="grid">''' + F["rite"] + '''</div>
 </section>''')
@@ -760,11 +772,11 @@ def build():
 <blockquote class="verse">每一个正式边缘者都被分配一根柱位和一位魔神：边缘者借用魔神的力，魔神借契约进入边缘者的心。<cite>——卷五《魔神书》</cite></blockquote>
 <p>一份契约分四环：<strong>立约、侍奉、深契、清算</strong>。书是这份契约的凭证，上面写着条款和阶位。主手拿武器时，书放副手也能用。</p>
 <div class="sys">
-<div><h3>立约</h3><p class="how">长按未立约的书</p><p>书来自裁决的「契约」选项，或集齐同一柱五职各一页<strong>柱页</strong>后长按合成。翻开后是条款界面，点「签下」并交出 ''' + str(P["tribute"]) + ''' 个祭品才生效。一个人只能挂在一根柱子上。</p></div>
+<div><h3>立约</h3><p class="how">长按未立约的书</p><p>书的来路：裁决的「契约」选项；集齐同一柱五职各一页<strong>柱页</strong>后长按合成；在<a href="#w-mer">神秘商人、迷途商人</a>那里买（七罪之仆买本柱退一半）；七罪之仆在原质第 3 阶直接得到自己领主的那本。圣力者也能签，代价是<a href="#p-force">同化</a>。翻开后是条款界面，点「签下」并交出 ''' + str(P["tribute"]) + ''' 个祭品才生效。一个人只能挂在一根柱子上。</p></div>
 <div><h3>侍奉</h3><p class="how">每柱一条供奉、一条禁忌</p><p>做供奉涨<strong>契合度</strong>；犯禁忌扣 10 点契合、加 5 点魔化。契合归零掉一阶，一阶归零再加 20 点魔化。</p></div>
-<div><h3>深契</h3><p class="how">潜行低头长按书，打开契约</p><p>第二阶<b>魂誓</b>：契合 100，献上五职材料各 4 个。第三阶<b>真名</b>：再次契合 100，并击败过这位领主。恩赐和枷锁都随阶位加深。</p></div>
+<div><h3>深契</h3><p class="how">书在手上按 Shift+F，打开契约</p><p>第二阶<b>魂誓</b>：契合 100，献上五职材料各 4 个。第三阶<b>真名</b>：再次契合 100，并击败过这位领主。恩赐和枷锁都随阶位加深。</p></div>
 <div><h3>清算</h3><p class="how">四种结局</p><p><b>夺舍</b>：魔化走完堕落，领主降临，阶位越高越强。<b>支配</b>：打败从自己身上挣出的领主，魔化清零，枷锁减半。<b>逆圣化</b>：烧断契约。<b>赦免</b>：立下新约。中途也可以在燃着的图腾旁毁约，代价是 +20 魔化和凋零。</p></div>
-<div><h3>四种长按</h3><p class="how">书在手上时</p><p>长按放<b>力量</b>，冷却 ''' + str(P["cd_seconds"]) + ''' 秒，魔化 +''' + str(P["use_taint"]) + '''。潜行长按放<b>魂誓技能</b>，冷却 20 秒，魔化 +''' + str(P["second_taint"]) + '''。潜行抬头长按放<b>化身</b>，20 秒附身，冷却 3 分钟，魔化 +''' + str(P["avatar_taint"]) + '''。潜行低头长按打开契约。</p></div>
+<div><h3>四种长按</h3><p class="how">书在手上时</p><p>长按放<b>力量</b>，冷却 ''' + str(P["cd_seconds"]) + ''' 秒，魔化 +''' + str(P["use_taint"]) + '''。潜行长按放<b>魂誓技能</b>，冷却 20 秒，魔化 +''' + str(P["second_taint"]) + '''。按 F 放<b>化身</b>，20 秒附身，冷却 3 分钟，魔化 +''' + str(P["avatar_taint"]) + '''。Shift+F 打开契约。</p></div>
 <div><h3>常驻代价</h3><p class="how">每 60 秒结算一次</p><p>立约本身缓慢渗入魔化：每分钟 +1，每升一阶多 +1，<b>贪婪</b>那一柱翻倍。魔化主要来自动用力量和犯禁忌。</p></div>
 <div><h3>从契</h3><p class="how">长按柱印镶入</p><p>35 名罪仆各对应一位魔神，死亡时小概率掉<strong>柱印</strong>。魂誓开一槽，真名开两槽，七柱的柱印可以混用，与主契约同柱时效果增强。先锋加护甲，猎手加移速和触及距离，司祭加生命并定时回复，咒使命中使敌人虚弱，处刑者加攻击并追斩残血。</p></div>
 <div><h3>力量借的是原件</h3><p class="how">与领主同一套招式</p><p>一阶力量调用罪器本身的函数，魂誓技能和化身取自领主自己的招式。</p></div>
@@ -814,6 +826,8 @@ def build():
 <div class="note"><b>每刻运行的函数</b>由 <code>#minecraft:tick</code> 驱动，依次为 <code>rpg:command/index</code>（标志索引与伤害检测）→ <code>rpg:command/tick</code>（合成、试炼、等级）→ <code>rpg:item/sword/legend/legend1</code>（武器技能）→ <code>rpg:entities/warden/warden</code>（BOSS 战）→ <code>rpg:command/tick_end</code>。正常游玩无需手动调用。</div>
 </section>''')
 
+    a(guide_world.section())
+    a(guide_sephira.section())
     a('<footer><span class="seal">Eretz Ha-Shevarim</span>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
     a('</main></div></div>')
 

@@ -183,9 +183,10 @@ for lord_index, (lord, spirits) in enumerate(LORDS, 1):
             with io.open(loot, encoding="utf-8") as handle:
                 data = json.load(handle)
             # 领主材料、职业材料，加 add_pact_depth 的柱页和柱印。
-            # add_armor_sets 另挂的护甲掉落池（rpg:armor_set/…）和装备养成的残魂、符文池（rpg:forge/…）不计在内。
+            # add_armor_sets 另挂的护甲掉落池（rpg:armor_set/…）、装备养成的残魂与符文池（rpg:forge/…）
+            # 和罪器锻造的罪印碎片池（rpg:world/…，add_forge_world.py）不计在内。
             pools = [p for p in data.get("pools", [])
-                     if not any(str(e.get("value", "")).startswith(("rpg:armor_set/", "rpg:forge/"))
+                     if not any(str(e.get("value", "")).startswith(("rpg:armor_set/", "rpg:forge/", "rpg:world/"))
                                 for e in p.get("entries", []))]
             if len(pools) != 4:
                 problems.append("%s/%s loot lacks lord, role, page and seal pools" % (lord, spirit))
@@ -248,7 +249,9 @@ if resolve_dispatch.count("function rpg:minion/ability/resolve/") != 35:
     problems.append("resolve dispatch does not expose all 35 delayed abilities")
 if "rpg_mn_life" in entity_tick or "owner" in entity_tick or "fade" in entity_tick:
     problems.append("runtime still couples minions to lifetime or owner")
-if "rpg_ex_xp 1" not in read("minion/reward.mcfunction"):
+# 原质（add_sephira.py）之后，驱魔里的零碎阅历记到 rpg_ex_dxp；击杀进原质走锻造的击杀进度
+_reward = read("minion/reward.mcfunction")
+if "rpg_ex_xp 1" not in _reward and "rpg_ex_dxp 1" not in _reward:
     problems.append("kills do not feed exorcist progression")
 
 adv = os.path.join(ROOT, "data/rpg/advancement/minion/kill.json")

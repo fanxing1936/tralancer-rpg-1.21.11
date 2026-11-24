@@ -10,15 +10,15 @@ function rpg:pact/book/stale
 # 这是逆圣化之外的第二条解约途径 —— 详见 rpg:pact/renounce。
 execute if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,distance=..6] run return run function rpg:pact/renounce
 
-# 四种长按：普通放力量，潜行放二阶技能，潜行抬头化身，潜行低头打开契约。
-execute if predicate rpg:sneaking if entity @s[x_rotation=45..90] run return run function rpg:pact/ui/open
-execute if predicate rpg:sneaking if entity @s[x_rotation=-90..-45] run return run function rpg:pact/depth/avatar
+# 长按放力量，潜行长按放二阶技能；化身与打开契约改到 F / Shift+F（rpg:pact/fkey，用户 2026-11-23）。
 execute if predicate rpg:sneaking run return run function rpg:pact/depth/second
 
 execute if entity @s[scores={rpg_pact_cd=1..}] run return run function rpg:pact/cooling
 
 scoreboard players set @s rpg_pact_cd 300
 scoreboard players add @s rpg_taint 3
+# 七大罪之仆与本柱立约：魔化减半（force_ext.py）
+execute if score @s rpg_ident matches 4 if score @s rpg_ident_sin = @s rpg_pact run scoreboard players remove @s rpg_taint 1
 tag @s add rpg.pact.cast
 execute if entity @s[scores={rpg_pact=1}] run function rpg:pact/p1
 execute if entity @s[scores={rpg_pact=2}] run function rpg:pact/p2

@@ -31,7 +31,7 @@ function rpg:task/trial/trial
 
 function rpg:loot/loot
 
-function rpg:level/player
+# 旧角色等级已并入原质（add_sephira.py）
 
 
 #生物检测

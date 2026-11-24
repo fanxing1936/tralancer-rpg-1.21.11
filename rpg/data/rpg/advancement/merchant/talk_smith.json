@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "talk": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"rpg.mer.smith\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:merchant/talk_smith"
+  }
+}

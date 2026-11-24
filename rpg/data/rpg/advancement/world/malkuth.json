@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#rpg:world_mobs"
+            }
+          },
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.001
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:world/kab/malkuth"
+  }
+}

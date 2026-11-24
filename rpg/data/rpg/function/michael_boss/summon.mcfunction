@@ -29,8 +29,8 @@ scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.prev
 bossbar set rpg:michael_boss max 1200
 bossbar set rpg:michael_boss value 1200
 bossbar set rpg:michael_boss visible true
-function rpg:michael_boss/music/1
-function rpg:michael_boss/vfx/intro
+execute unless score #pro rpg_mk matches 1 run function rpg:michael_boss/music/1
+execute unless score #pro rpg_mk matches 1 run function rpg:michael_boss/vfx/intro
 playsound minecraft:block.beacon.activate hostile @a[distance=..48] ~ ~ ~ 2 0.6
 playsound minecraft:entity.phantom.flap hostile @a[distance=..48] ~ ~ ~ 2 0.5
-tellraw @a[distance=..48] ["",{"text":"〖","color":"#FF805F","bold":true,"italic":false},{"text":"天使长 ","color":"#FFD0BD","bold":true,"italic":false},{"text":"米迦勒","color":"#FFF5EE","bold":true,"italic":false},{"text":"〗","color":"#FF805F","bold":true,"italic":false},{"text":" 𝔔𝔲𝔦𝔰 𝔲𝔱 𝔇𝔢𝔲𝔰","color":"#8F7430","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"在天上就有了争战。你身上有拂晓之星的气味。","color":"#9C9A94","bold":false,"italic":false}]
+execute unless score #pro rpg_mk matches 1 run tellraw @a[distance=..48] ["",{"text":"〖","color":"#FF805F","bold":true,"italic":false},{"text":"天使长 ","color":"#FFD0BD","bold":true,"italic":false},{"text":"米迦勒","color":"#FFF5EE","bold":true,"italic":false},{"text":"〗","color":"#FF805F","bold":true,"italic":false},{"text":" 𝔔𝔲𝔦𝔰 𝔲𝔱 𝔇𝔢𝔲𝔰","color":"#8F7430","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"在天上就有了争战。你身上有拂晓之星的气味。","color":"#9C9A94","bold":false,"italic":false}]

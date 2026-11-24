@@ -400,9 +400,7 @@ function rpg:pact/book/stale
 # 这是逆圣化之外的第二条解约途径 —— 详见 rpg:pact/renounce。
 execute if entity @e[type=minecraft:item_display,tag=rpg.totem.lit,distance=..%(R)d] run return run function rpg:pact/renounce
 
-# 四种长按：普通放力量，潜行放二阶技能，潜行抬头化身，潜行低头打开契约。
-execute if predicate rpg:sneaking if entity @s[x_rotation=45..90] run return run function rpg:pact/ui/open
-execute if predicate rpg:sneaking if entity @s[x_rotation=-90..-45] run return run function rpg:pact/depth/avatar
+# 长按放力量，潜行长按放二阶技能；化身与打开契约改到 F / Shift+F（rpg:pact/fkey，用户 2026-11-23）。
 execute if predicate rpg:sneaking run return run function rpg:pact/depth/second
 
 execute if entity @s[scores={rpg_pact_cd=1..}] run return run function rpg:pact/cooling
@@ -412,6 +410,18 @@ scoreboard players add @s rpg_taint %(TAINT)d
 tag @s add rpg.pact.cast
 %(BRANCH)s
 tag @s remove rpg.pact.cast
+"""
+
+FKEY = """# 契约之书上按 F：化身；Shift+F：打开契约（as/at 玩家，书已换回原手）。
+execute unless entity @s[tag=rpg.pact] run return run tellraw @s {"text":"这本书还没立约：长按右键翻开条款","color":"gray","italic":false}
+tag @s remove rpg.pact.off
+execute unless items entity @s weapon.mainhand *[minecraft:custom_data~{pact_tag:1b}] run tag @s add rpg.pact.off
+execute unless entity @s[tag=rpg.pact.off] unless items entity @s weapon.mainhand *[minecraft:custom_data~{pact_signed:1b}] run return run function rpg:pact/reissue
+execute if entity @s[tag=rpg.pact.off] unless items entity @s weapon.offhand *[minecraft:custom_data~{pact_signed:1b}] run return run function rpg:pact/reissue
+execute unless score @s rpg_pact_lv matches 1.. run function rpg:pact/oath/migrate
+function rpg:pact/book/stale
+execute if predicate rpg:sneaking run return run function rpg:pact/ui/open
+function rpg:pact/depth/avatar
 """
 
 REISSUE = """# 手里这本没盖过印。死一次把书掉了是常事 —— 柱位还在身上，
@@ -527,7 +537,7 @@ def item_snbt(p, signed, lv=1, dom=0):
                  seg("　潜行长按", "gray")),
              row(seg("　" + d["second_text"], "gray")),
              row(seg("🜏真名", "white", True), seg("[" + d["avatar"] + "]", p["colour"], True),
-                 seg("　潜行抬头长按", "gray")),
+                 seg("　F", "gray")),
              row(seg("　" + d["avatar_text"], "gray")),
              row(seg("🜏枷锁", "white", True), seg("　" + bane, ui.WARN)),
              RULE,
@@ -535,7 +545,7 @@ def item_snbt(p, signed, lv=1, dom=0):
              row(seg("🜏禁忌", "white", True), seg("　" + d["taboo"], ui.WARN)),
              RULE]
     if signed:
-        lore.append(row(seg("潜行低头长按打开契约", "gray")))
+        lore.append(row(seg("Shift+F 打开契约", "gray")))
         lore.append(row(seg("在燃着的驱魔图腾旁长按则", "gray"),
                         seg("毁约", ui.WARN, True)))
         lore.append(RULE)
@@ -624,6 +634,8 @@ def build_functions():
     # ---- 动用 ----
     inv = ["execute if entity @s[scores={rpg_pact=%d}] run function rpg:pact/p%d"
            % (p["n"], p["n"]) for p in PILLARS]
+    # F 键由 rpg:force/fkey 统一侦测（同一刻只换回一次手），认出契约书后调这里；书已经换回原来那只手。
+    wf("pact/fkey.mcfunction", FKEY)
     wf("pact/invoke.mcfunction",
        INVOKE % {"CD": CD, "TAINT": USE_TAINT, "R": ex.RITE_R,
                  "BRANCH": "\n".join(inv)})

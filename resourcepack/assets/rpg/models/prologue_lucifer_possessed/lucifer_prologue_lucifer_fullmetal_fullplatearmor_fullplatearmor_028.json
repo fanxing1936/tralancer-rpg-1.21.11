@@ -1,0 +1,152 @@
+{
+  "textures": {
+    "0": "rpg:item/prologue_lucifer/atlas_possessed",
+    "particle": "rpg:item/prologue_lucifer/atlas_possessed"
+  },
+  "elements": [
+    {
+      "from": [
+        8.24,
+        7.88,
+        8.24
+      ],
+      "to": [
+        8.36,
+        8.12,
+        8.24
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            7.6875,
+            0.375,
+            7.791,
+            0.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            7.6875,
+            0.3125,
+            7.791,
+            0.375
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "from": [
+        8.24,
+        7.88,
+        7.76
+      ],
+      "to": [
+        8.36,
+        8.12,
+        7.76
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            7.791,
+            0.6875,
+            7.6875,
+            0.625
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            7.791,
+            0.625,
+            7.6875,
+            0.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "from": [
+        7.64,
+        7.88,
+        8.24
+      ],
+      "to": [
+        7.76,
+        8.12,
+        8.24
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            7.6855,
+            0.375,
+            7.791,
+            0.3125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            7.6855,
+            0.3125,
+            7.791,
+            0.375
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    },
+    {
+      "from": [
+        7.64,
+        7.88,
+        7.76
+      ],
+      "to": [
+        7.76,
+        8.12,
+        7.76
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            7.791,
+            0.6875,
+            7.6855,
+            0.625
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            7.791,
+            0.625,
+            7.6855,
+            0.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    }
+  ]
+}

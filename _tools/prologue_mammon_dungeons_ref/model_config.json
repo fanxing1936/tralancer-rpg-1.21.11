@@ -1,0 +1,596 @@
+{
+ "model_scale": 7.496633670709872,
+ "height_blocks": 1.87,
+ "source_height_cm": 207.87107944488525,
+ "turn": 0,
+ "merge": {
+  "head": [
+   "mouth",
+   "l_eye_pupil",
+   "l_eye_iris",
+   "r_eye_pupil",
+   "r_eye_iris",
+   "michael_spirit_head_000",
+   "michael_spirit_head_002",
+   "michael_spirit_head_011",
+   "michael_spirit_head_012"
+  ],
+  "body": [
+   "body_armor"
+  ],
+  "l_arm": [
+   "l_arm_armor"
+  ],
+  "r_arm": [
+   "r_arm_armor"
+  ],
+  "l_leg": [
+   "l_leg_armor"
+  ],
+  "r_leg": [
+   "r_leg_armor"
+  ]
+ },
+ "held_bone": null,
+ "attachments": [
+  {
+   "name": "frost_body",
+   "mesh": "D:\\agent\\codex\\TRA\\work\\michael_spirit\\prepared\\FrostArmor_Body.glb",
+   "bone": "J_Shoulders",
+   "matrix": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "material": "FROST",
+   "attach": "J_ShouldersSocket",
+   "component": "FurArmor_FurArmor_GEN_VARIABLE",
+   "package": "Actors/Equipment/Armor/SnowArmor_Unique1/FrostArmor_Body"
+  },
+  {
+   "name": "frost_helmet",
+   "mesh": "D:\\agent\\codex\\TRA\\work\\michael_spirit\\prepared\\FrostArmor_Head.glb",
+   "bone": "J_Head",
+   "matrix": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     -3.830684818240115e-06
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     -23.686153411865234
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     3.3088324069976807
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "material": "FROST",
+   "attach": "J_Head_Socket",
+   "component": "Helmet_FurArmor_GEN_VARIABLE",
+   "package": "Actors/Equipment/Armor/SnowArmor_Unique1/FrostArmor_Head"
+  },
+  {
+   "name": "frost_r_leg",
+   "mesh": "D:\\agent\\codex\\TRA\\work\\michael_spirit\\prepared\\FrostArmor_Leg_L.glb",
+   "bone": "J_R_Foot",
+   "matrix": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     -1.2246467991473532e-16,
+     6.67572021484375e-06
+    ],
+    [
+     0.0,
+     1.2246467991473532e-16,
+     -1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "material": "FROST",
+   "attach": "J_R_Leg_Socket",
+   "component": "L_LegGuard_FurArmor_GEN_VARIABLE",
+   "package": "Actors/Equipment/Armor/SnowArmor_Unique1/FrostArmor_Leg_L"
+  },
+  {
+   "name": "frost_l_arm",
+   "mesh": "D:\\agent\\codex\\TRA\\work\\michael_spirit\\prepared\\FrostArmor_Arm_L.glb",
+   "bone": "J_L_Hand",
+   "matrix": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     -10.63166618347168
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     -55.0000057220459
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     -3.9493441581726074
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "material": "FROST",
+   "attach": "J_L_Shoulder_Socket",
+   "component": "L_ShoulderPad_FurArmor_GEN_VARIABLE",
+   "package": "Actors/Equipment/Armor/SnowArmor_Unique1/FrostArmor_Arm_L"
+  },
+  {
+   "name": "frost_r_arm",
+   "mesh": "D:\\agent\\codex\\TRA\\work\\michael_spirit\\prepared\\FrostArmor_Arm_R.glb",
+   "bone": "J_R_Hand",
+   "matrix": [
+    [
+     0.9999999999996813,
+     3.5473391894286967e-07,
+     7.15257776414722e-07,
+     6.360581398010254
+    ],
+    [
+     3.547381095993854e-07,
+     -0.9999999999827738,
+     -5.858954144445937e-06,
+     55.0000114440918
+    ],
+    [
+     7.152556980326359e-07,
+     5.858954398173261e-06,
+     -0.9999999999825808,
+     3.448002338409424
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "material": "FROST",
+   "attach": "J_R_Shoulder_Socket",
+   "component": "R_ShoulderPad_FurArmor_GEN_VARIABLE",
+   "package": "Actors/Equipment/Armor/SnowArmor_Unique1/FrostArmor_Arm_R"
+  },
+  {
+   "name": "frost_l_leg",
+   "mesh": "D:\\agent\\codex\\TRA\\work\\michael_spirit\\prepared\\FrostArmor_Leg_R.glb",
+   "bone": "J_L_Foot",
+   "matrix": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     7.000000096013537e-06
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "material": "FROST",
+   "attach": "J_L_Leg_Socket",
+   "component": "R_Leg_FurArmor_GEN_VARIABLE",
+   "package": "Actors/Equipment/Armor/SnowArmor_Unique1/FrostArmor_Leg_R"
+  },
+  {
+   "name": "spine",
+   "mesh": "D:\\agent\\codex\\TRA\\work\\michael_spirit\\custom_weapons\\spine.glb",
+   "bone": "J_R_Weapon",
+   "matrix": [
+    [
+     -1.3315805451608045e-06,
+     1.5978976064534578e-06,
+     -0.9999999999978367,
+     0.0
+    ],
+    [
+     0.9999999999988577,
+     -7.152535701493434e-07,
+     -1.3315816879688747e-06,
+     0.0
+    ],
+    [
+     -7.152556978917702e-07,
+     -0.9999999999984674,
+     -1.5978966541041473e-06,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "material": "SPINE",
+   "attach": "J_R_Weapon_Socket",
+   "component": "spine",
+   "package": "TRA/spine"
+  },
+  {
+   "name": "rib",
+   "mesh": "D:\\agent\\codex\\TRA\\work\\michael_spirit\\custom_weapons\\rib.glb",
+   "bone": "J_L_Weapon",
+   "matrix": [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     -1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "material": "RIB",
+   "attach": "J_L_Weapon_Socket",
+   "component": "rib",
+   "package": "TRA/rib"
+  },
+  {
+   "name": "rib_attack",
+   "mesh": "D:\\agent\\codex\\TRA\\work\\michael_spirit\\custom_weapons\\rib.glb",
+   "bone": "J_R_Weapon",
+   "matrix": [
+    [
+     -1.2246467991473532e-16,
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     1.0,
+     0.0,
+     -1.2246467991473532e-16,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "material": "RIB",
+   "attach": "J_R_Weapon_Socket",
+   "component": "rib",
+   "package": "TRA/rib"
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master",
+  "skin": "Nephrologist (Cloudwatcher)",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\jacques"
+ },
+ "material_colors": {
+  "MI_Valorie": {
+   "palette": [
+    [
+     255,
+     245,
+     238
+    ]
+   ],
+   "opacity": [
+    0.18,
+    0.34
+   ]
+  },
+  "FROST": {
+   "palette": [
+    [
+     255,
+     51,
+     0
+    ],
+    [
+     255,
+     128,
+     95
+    ],
+    [
+     255,
+     208,
+     189
+    ]
+   ],
+   "opacity": [
+    0.19,
+    0.43
+   ]
+  },
+  "SPINE": {
+   "palette": [
+    [
+     255,
+     51,
+     0
+    ]
+   ],
+   "opacity": [
+    0.32,
+    0.48
+   ]
+  },
+  "RIB": {
+   "palette": [
+    [
+     255,
+     51,
+     0
+    ]
+   ],
+   "opacity": [
+    0.32,
+    0.48
+   ]
+  }
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "seconds": 3.3333333
+  },
+  {
+   "clip": "walk",
+   "seconds": 4.3333335
+  },
+  {
+   "clip": "run",
+   "seconds": 2.1666667
+  },
+  {
+   "clip": "roll_f",
+   "seconds": 0.625
+  },
+  {
+   "clip": "roll_b",
+   "seconds": 0.5833333
+  },
+  {
+   "clip": "roll_l",
+   "seconds": 0.7083333
+  },
+  {
+   "clip": "roll_r",
+   "seconds": 0.7083333
+  },
+  {
+   "clip": "hurt",
+   "seconds": 1.875
+  },
+  {
+   "clip": "fall",
+   "seconds": 1.2
+  },
+  {
+   "clip": "down",
+   "seconds": 0.416
+  },
+  {
+   "clip": "mighty",
+   "seconds": 4.266667
+  },
+  {
+   "clip": "hero",
+   "seconds": 2
+  },
+  {
+   "clip": "kneel",
+   "seconds": 1.9333333
+  },
+  {
+   "clip": "twirl",
+   "seconds": 4.0416665
+  },
+  {
+   "clip": "showoff",
+   "seconds": 0.875
+  },
+  {
+   "clip": "rise",
+   "seconds": 1.92
+  },
+  {
+   "clip": "land",
+   "seconds": 1.4166666
+  },
+  {
+   "clip": "stun",
+   "seconds": 1.6666666
+  },
+  {
+   "clip": "horn",
+   "seconds": 0.625
+  },
+  {
+   "clip": "gong",
+   "seconds": 0.625
+  },
+  {
+   "clip": "fold",
+   "seconds": 2
+  },
+  {
+   "clip": "talk",
+   "seconds": 2.4
+  },
+  {
+   "clip": "flee",
+   "seconds": 1.5
+  },
+  {
+   "clip": "kneel_down",
+   "seconds": 1.2
+  },
+  {
+   "clip": "kneel_idle",
+   "seconds": 3.0
+  },
+  {
+   "clip": "kneel_up",
+   "seconds": 1.2
+  },
+  {
+   "clip": "bow",
+   "seconds": 1.8
+  },
+  {
+   "clip": "look_up",
+   "seconds": 1.2
+  },
+  {
+   "clip": "shield",
+   "seconds": 0.6
+  }
+ ],
+ "conversion": {
+  "name": "michael_spirit",
+  "source_mesh_sha256": "e62930c25676a5766491a8efab1ca01ab353130769d11723b4d4483160022fb3",
+  "triangles": 796,
+  "all_triangles_covered_once": true,
+  "bones": 38,
+  "plane_groups": 44,
+  "display_parts": 40,
+  "elements": 400,
+  "direct_uv_elements": 361,
+  "baked_elements": 39,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Valorie": 0,
+   "FROST": 1,
+   "SPINE": 2,
+   "RIB": 3
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ },
+ "wings": [
+  "wing_lower_left",
+  "wing_lower_right",
+  "wing_middle_left",
+  "wing_middle_right",
+  "wing_upper_left",
+  "wing_upper_right"
+ ],
+ "wing_parts": {
+  "wing_lower_left": [
+   "wing_lower_left",
+   "wing_lower_left_tip"
+  ],
+  "wing_lower_right": [
+   "wing_lower_right",
+   "wing_lower_right_tip"
+  ],
+  "wing_middle_left": [
+   "wing_middle_left",
+   "wing_middle_left_tip"
+  ],
+  "wing_middle_right": [
+   "wing_middle_right",
+   "wing_middle_right_tip"
+  ],
+  "wing_upper_left": [
+   "wing_upper_left",
+   "wing_upper_left_tip"
+  ],
+  "wing_upper_right": [
+   "wing_upper_right",
+   "wing_upper_right_tip"
+  ]
+ }
+}

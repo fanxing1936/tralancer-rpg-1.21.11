@@ -31,6 +31,8 @@ JAR = sys.argv[2] if len(sys.argv) > 2 else MC_JAR
 KNOWN = {
     # player_hurt_entity：damage / entity / player；原版只用过 damage。友军雅克的防误伤要按被打的实体判定
     "minecraft:player_hurt_entity": {"entity"},
+    # villager_trade：player / villager / item；商人按被交易的村民和卖出的物品判定
+    "minecraft:villager_trade": {"villager", "item"},
 }
 
 

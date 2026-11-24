@@ -47,6 +47,9 @@ def flatten(tc):
                 parts.append((node, inherited))
             return
         if isinstance(node, dict):
+            # 自定义字体的字形是图标（如 2026-11-21 起六源名字前的 rpg:forge_src 源图标），不是名字的一部分
+            if node.get("font") not in (None, "minecraft:default", "default"):
+                return
             colour = node.get("color", inherited)
             if node.get("text"):
                 parts.append((node["text"], colour))
@@ -92,6 +95,7 @@ def parse_give(line):
 def describe(item_id, c):
     name_tc = c.get("custom_name")
     plain, parts = flatten(name_tc) if name_tc is not None else ("", [])
+    plain = plain.lstrip()
     rarity = None
     display = plain
     for tag, (label, colour) in RARITY.items():
@@ -131,6 +135,8 @@ def describe(item_id, c):
         "tags": sorted((c.get("custom_data") or {}).keys()),
         "custom_data": c.get("custom_data") or {},
         "cmd": (c.get("custom_model_data") or {}).get("floats", [None])[0],
+        # 1.21.4+ item_model 组件（装备养成的材料、源、符文、符石都用它指向 rpg:forge/...），图标要按它取
+        "item_model": c.get("item_model"),
         "unbreakable": "unbreakable" in c,
         "consumable": (c.get("consumable") or {}).get("consume_seconds"),
         "components": sorted(c.keys()),

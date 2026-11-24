@@ -119,6 +119,8 @@ python add_pact_depth.py ../rpg ../resourcepack
 # 的无损还原，新约按 ART-STYLE D6 重建；单独重建数据包也要收回来
 python fix_texture_grid.py ../resourcepack
 python add_forge.py ../resourcepack ../rpg
+# 世界怪物掉落表 + 禁用原版合成（add_world_loot.py）：必须在 add_drop_policy 之前
+python add_world_loot.py ../rpg
 python add_drop_policy.py ../rpg
 # 批量护甲与套装加成：要在 add_demon_minions 之后（往罪仆掉落表里追加），
 # 早于 make_boxes 与 polish_ui；也晚于全部 opt_*，套装检测不会被改写。
@@ -211,6 +213,10 @@ python add_jacques_ally.py ../rpg ../resourcepack
 python add_saul_boss.py ../rpg
 # 天使长米迦勒 Boss（docs/MICHAEL-DESIGN.md）
 python add_michael_boss.py ../rpg
+# 《破碎大陆》序章（Claude Docs 方案书 / 脚本书）：维度与群系、大厅选角、三波、五段过场、双语字幕。
+# 要在米迦勒 Boss 之后：序章模式挂在它的血线钩子 #rpg:michael_boss/prologue_hp 上；台词来自 prologue_ref/lines.json
+python add_prologue_models.py ../resourcepack ../rpg
+python add_prologue.py ../resourcepack ../rpg
 # Final ownership layer: deterministic sealed-relic agitation, ordered active
 # slots, abilities and the persistent two-layer HUD.  Nothing gameplay/UI may
 # overwrite these products after this point.
@@ -218,7 +224,8 @@ python add_seal_relic.py ../rpg
 # 封印遗物层写的播报行（[遗物休眠]、[利维坦・反制] 等）补上〖〗暗色样式（ART-STYLE §12）。
 python polish_ui.py ../rpg --broadcasts
 # 玩家面板换成对话框：要在所有写面板的生成器和文字规范化之后。
-python add_panel_dialog.py ../rpg
+# 第二个参数：顺带把游戏内菜单底换成深色（inworld_menu_background.png）。
+python add_panel_dialog.py ../rpg ../resourcepack
 # 特效收口（docs/VFX-SPEC.md）：force 只留给预警和大招，数量／速度／尺寸收进各档上限，
 # 旧柱色闪光折回亮色。放在最后，前面所有生成器（含封印遗物层）写的粒子都经过这一道。
 python polish_vfx.py ../rpg
@@ -226,6 +233,31 @@ python polish_vfx.py ../rpg
 # 要在所有生成器与收口之后（它改写的是最终产物）。
 python add_ally_units.py ../rpg
 python add_forge.py ../resourcepack ../rpg --late
+# 新手开局：序章 → 黑屏欢迎与起名 → 抽身份 → 锻造教学。要在序章、锻造、面板、HUD 都生成完之后（它往这些产物里接钩子）。
+python add_onboard.py ../rpg ../resourcepack
+# 原质等级、力条与生命力：在新手开局之后接钩子（add_sephira.py，方案书第三版）
+python add_sephira.py ../rpg
+# 力与技能：圣徽 / 罪印、技能页、两棵技能树（add_force.py，接在原质之后）
+python add_force.py ../rpg ../resourcepack
+# 精英怪（add_elites.py）：要在 add_force 之后（往 rpg:force/hit 里接圣印词缀）
+python add_elites.py ../rpg
+# 罪器锻造与材料转换（add_forge_world.py）：锻造对话框按钮 50..69；往罪仆掉落表里加罪印碎片
+python add_forge_world.py ../rpg
+# 图纸、特殊材料、卡巴拉物品与契约书的来源（add_world_items.py）
+python add_world_items.py ../rpg
+# 随机事件、每日悬赏与面板「旅程」页（add_events.py）
+python add_events.py ../rpg
+# 小支线、彩蛋与称号（add_quests.py）：接在事件之后（往旅程页和各系统里挂钩子）
+python add_quests.py ../rpg
+# 商人（add_merchants.py）：铁匠/神秘/奢侈品/迷途商人，接在支线之后（挂事件 6、玛门的账本、金锄彩蛋）
+python add_merchants.py ../rpg
+# 商人外观（Codex：地下城 SK_Villager + 四套商人材质/帽子，idle/look/bow/examine）
+python add_merchant_models.py ../resourcepack ../rpg
+# 领取箱补齐（add_give_boxes.py）：make_boxes 之后才有的材料、图纸、圣徽与传承书；接在所有生成物品的步骤之后
+python add_give_boxes.py ../rpg
+# 世界掉落与锻造的新图标（Codex 交付，world_ref/art）
+python add_world_art.py ../resourcepack
+python add_elite_bar_art.py ../resourcepack
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg

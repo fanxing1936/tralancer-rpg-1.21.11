@@ -25,7 +25,6 @@ execute if score @s rpg_dm_lord matches 7 as @a[distance=..6,gamemode=!spectator
 execute if score #channel rpg_ex_tmp matches 0 run scoreboard players set @s rpg_ex_time 100
 execute if score #channel rpg_ex_tmp matches 1 run scoreboard players remove @s rpg_ex_time 1
 execute if score #channel rpg_ex_tmp matches 1 if entity @s[tag=rpg.layout.haste] run scoreboard players remove @s rpg_ex_time 1
-execute if score #channel rpg_ex_tmp matches 1 if entity @a[distance=..6,gamemode=!spectator,scores={rpg_ex_path=3,rpg_ex_lvl=4..}] run scoreboard players remove @s rpg_ex_time 1
 execute if score @s rpg_ex_time matches 80 run playsound minecraft:block.amethyst_block.chime player @a[distance=..14] ~ ~ ~ 0.8 0.9
 execute if score @s rpg_ex_time matches 60 run playsound minecraft:block.amethyst_block.chime player @a[distance=..14] ~ ~ ~ 0.8 1.05
 execute if score @s rpg_ex_time matches 40 run playsound minecraft:block.amethyst_block.chime player @a[distance=..14] ~ ~ ~ 0.8 1.2

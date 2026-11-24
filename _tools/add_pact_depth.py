@@ -737,7 +737,7 @@ def build_skills():
             write("pact/s/%s.mcfunction" % name, expand(part))
 
     avatar = [
-        "# 化身：潜行抬头长按。大招加 20 秒附身。",
+        "# 化身：书在手上按 F。大招加 20 秒附身。",
         "execute unless score @s rpg_pact_lv matches 3.. run return run function rpg:hud/m%d" % HUD_LOCKED,
         "execute if score @s rpg_pact_cd3 matches 1.. run return run function rpg:hud/m%d" % HUD_DENY,
         "scoreboard players set @s rpg_pact_cd3 %d" % CD3,
@@ -884,7 +884,7 @@ def build_ui():
     write("pact/ui/names.mcfunction", names)
 
     opened = [
-        "# 潜行低头长按书。文字里的数字靠宏写进去，所以每次打开都现算。",
+        "# 书在手上按 Shift+F。文字里的数字靠宏写进去，所以每次打开都现算。",
         "tag @s add rpg.pact.ui",
         "scoreboard players enable @s rpg_pact_do",
         "execute store result storage rpg:pact ui.bond int 1 run scoreboard players get @s rpg_pact_bond",
@@ -1241,7 +1241,7 @@ def patch_panel():
         d = DEPTH[p["n"]]
         extra.append("execute if score @s rpg_pact matches %d run tellraw @s %s"
                      % (p["n"], raw(text("供奉："), text(d["oath"], "white"), text("　禁忌："), text(d["taboo"], ui.WARN))))
-    extra.append("execute if score @s rpg_pact matches 1..7 run tellraw @s %s" % raw(text("潜行低头长按书，打开契约", ui.MUTED)))
+    extra.append("execute if score @s rpg_pact matches 1..7 run tellraw @s %s" % raw(text("书在手上按 Shift+F，打开契约", ui.MUTED)))
     write("panel/pact.mcfunction", src[:home] + extra + src[home:])
 
 

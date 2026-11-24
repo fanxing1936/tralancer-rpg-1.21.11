@@ -1,0 +1,82 @@
+{
+  "textures": {
+    "0": "rpg:item/prologue_mammon/atlas",
+    "particle": "rpg:item/prologue_mammon/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.95,
+        7.93,
+        7.9125
+      ],
+      "to": [
+        8.05,
+        8.07,
+        8.0875
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2.0,
+            10.0,
+            2.0625,
+            10.0625
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            2.0,
+            10.0,
+            2.0625,
+            10.0625
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            2.0,
+            10.0,
+            2.0625,
+            10.0625
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            2.0,
+            10.0,
+            2.0625,
+            10.0625
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            2.0,
+            10.0,
+            2.0625,
+            10.0625
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            2.0,
+            10.0,
+            2.0625,
+            10.0625
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

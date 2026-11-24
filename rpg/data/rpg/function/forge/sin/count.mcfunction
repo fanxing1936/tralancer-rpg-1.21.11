@@ -1,0 +1,14 @@
+execute store result storage rpg:forge d.c1 int 1 run clear @s minecraft:nether_star[minecraft:custom_data~{rpg_weapon_core:1b,rpg_lord:1}] 0
+execute store result storage rpg:forge d.s1 int 1 run clear @s minecraft:paper[minecraft:custom_data~{rpg_mat:"sin_shard",rpg_lord:1}] 0
+execute store result storage rpg:forge d.c2 int 1 run clear @s minecraft:nether_star[minecraft:custom_data~{rpg_weapon_core:1b,rpg_lord:2}] 0
+execute store result storage rpg:forge d.s2 int 1 run clear @s minecraft:paper[minecraft:custom_data~{rpg_mat:"sin_shard",rpg_lord:2}] 0
+execute store result storage rpg:forge d.c3 int 1 run clear @s minecraft:nether_star[minecraft:custom_data~{rpg_weapon_core:1b,rpg_lord:3}] 0
+execute store result storage rpg:forge d.s3 int 1 run clear @s minecraft:paper[minecraft:custom_data~{rpg_mat:"sin_shard",rpg_lord:3}] 0
+execute store result storage rpg:forge d.c4 int 1 run clear @s minecraft:nether_star[minecraft:custom_data~{rpg_weapon_core:1b,rpg_lord:4}] 0
+execute store result storage rpg:forge d.s4 int 1 run clear @s minecraft:paper[minecraft:custom_data~{rpg_mat:"sin_shard",rpg_lord:4}] 0
+execute store result storage rpg:forge d.c5 int 1 run clear @s minecraft:nether_star[minecraft:custom_data~{rpg_weapon_core:1b,rpg_lord:5}] 0
+execute store result storage rpg:forge d.s5 int 1 run clear @s minecraft:paper[minecraft:custom_data~{rpg_mat:"sin_shard",rpg_lord:5}] 0
+execute store result storage rpg:forge d.c6 int 1 run clear @s minecraft:nether_star[minecraft:custom_data~{rpg_weapon_core:1b,rpg_lord:6}] 0
+execute store result storage rpg:forge d.s6 int 1 run clear @s minecraft:paper[minecraft:custom_data~{rpg_mat:"sin_shard",rpg_lord:6}] 0
+execute store result storage rpg:forge d.c7 int 1 run clear @s minecraft:nether_star[minecraft:custom_data~{rpg_weapon_core:1b,rpg_lord:7}] 0
+execute store result storage rpg:forge d.s7 int 1 run clear @s minecraft:paper[minecraft:custom_data~{rpg_mat:"sin_shard",rpg_lord:7}] 0

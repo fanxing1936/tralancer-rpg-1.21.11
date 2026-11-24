@@ -1,0 +1,3 @@
+# look_up 第 2 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_prologue_models.py 烘焙。
+execute on passengers if entity @s[tag=rpg.prlu.p.dragonwing_middle_right_tip] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.73678f,0.79094f,-0.76014f],left_rotation:[0.61299f,-0.20791f,0.28442f,0.70719f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.prlu.p.dragonwing_middle_left_tip] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.99641f,0.79094f,-0.3406f],left_rotation:[0.6627f,0.03569f,-0.13222f,0.73625f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}

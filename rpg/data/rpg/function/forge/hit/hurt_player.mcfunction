@@ -8,3 +8,7 @@ execute if entity @s[tag=rpg.fg.st] run scoreboard players add @s rpg_fg_en 5
 scoreboard players set @s[scores={rpg_fg_en=101..}] rpg_fg_en 100
 execute if entity @s[tag=rpg.fg.src.pride] run function rpg:forge/src/pride_cost
 execute if entity @s[tag=rpg.fg.a.lastbreath] unless score @s rpg_fg_lb matches 1.. run function rpg:forge/rune/lastbreath
+execute if score @s rpg_pillar matches 2 if score @s rpg_sef matches 7.. run function rpg:sephira/bonus/last_stand
+execute if score @s rpg_k20 matches 1.. run function rpg:force/sk/20/check
+execute if score @s rpg_messiah matches 1 run function rpg:force/x/id/third_day
+function rpg:elite/hit

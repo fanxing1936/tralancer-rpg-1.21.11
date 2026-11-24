@@ -78,7 +78,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:ravager"
+              "nbt": "{Tags:[\"rpg.el\"]}"
             }
           }
         ]
@@ -92,7 +92,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:evoker"
+              "type": "minecraft:ravager"
             }
           }
         ]
@@ -106,13 +106,27 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:piglin_brute"
+              "type": "minecraft:evoker"
             }
           }
         ]
       }
     },
     "k8": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:piglin_brute"
+            }
+          }
+        ]
+      }
+    },
+    "k9": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": [
@@ -137,7 +151,8 @@
       "k5",
       "k6",
       "k7",
-      "k8"
+      "k8",
+      "k9"
     ]
   ],
   "rewards": {

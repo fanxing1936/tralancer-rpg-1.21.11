@@ -1,4 +1,4 @@
-execute on attacker run scoreboard players add @s rpg_ex_xp 3
+execute on attacker run scoreboard players add @s rpg_ex_dxp 3
 execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,distance=..10,sort=nearest,limit=1] run scoreboard players set @s rpg_ex_kind 0
 execute as @e[type=minecraft:item_display,tag=rpg.rite.anchor,distance=..10,sort=nearest,limit=1] run function rpg:inquest/stability/restore
 tellraw @a[distance=..16,gamemode=!spectator] ["",{"text":"〖真名击破〗","color":"#C9A646","bold":true,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"傲慢的伪名失去效力。","color":"#9C9A94","italic":false}]

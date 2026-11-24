@@ -1,0 +1,2 @@
+$data modify entity @s CustomName set value ["",{"text":"","font":"rpg:world_affix","color":"#FFFFFF","italic":false},{"text":"$(n1)","font":"rpg:world_affix","color":"#FFFFFF","italic":false},{"text":"$(n2)","font":"rpg:world_affix","color":"#FFFFFF","italic":false},{"text":"","font":"rpg:world_affix","color":"#FFFFFF","italic":false},{"text":"$(nm)","color":"#FFFFFF","bold":false,"italic":false}]
+data modify entity @s CustomNameVisible set value 1b

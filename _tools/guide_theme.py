@@ -26,10 +26,10 @@ ART = os.path.join(HERE, "guide_art_ref")
 # 章节 → 横幅插图（Codex，guide_art_ref/raw/）
 BANNERS = {"s9": "bestiary", "s8": "exorcism", "s12": "pacts", "s15": "kabbalah", "s10": "lore"}
 
-RAIL = [("s1", "I", "安装与调试"), ("s2", "II", "核心系统"), ("s3", "III", "武器图鉴"), ("s4", "IV", "护甲图鉴"),
+RAIL = [("s16", "序", "新手教程"), ("s1", "I", "安装与调试"), ("s2", "II", "核心系统"), ("s3", "III", "武器图鉴"), ("s4", "IV", "护甲图鉴"),
         ("s5", "V", "符文与符石"), ("s6", "VI", "药剂与材料"), ("s7", "VII", "掉落总表"), ("s9", "VIII", "生物图鉴"),
         ("s8", "IX", "驱魔体系"), ("s14", "X", "驱魔道具"), ("s12", "XI", "七十二柱契约"), ("s15", "XII", "卡巴拉上位契约"),
-        ("s10", "XIII", "破碎大陆"), ("s11", "XIV", "调试指令")]
+        ("s10", "XIII", "破碎大陆"), ("s11", "XIV", "调试指令"), ("s17", "XV", "世界循环"), ("s18", "XVI", "原质与力")]
 
 LORDS = {"lucifer": ("路西法", "傲慢", "Superbia"), "leviathan": ("利维坦", "嫉妒", "Invidia"),
          "abaddon": ("亚巴顿", "怠惰", "Acedia"), "beelzebub": ("别西卜", "暴食", "Gula"),
@@ -83,7 +83,7 @@ body{
 }
 /* film grain + a faint warm vignette over the whole page */
 body::before{
-  content:""; position:fixed; inset:0; pointer-events:none; z-index:100; opacity:.05; mix-blend-mode:screen;
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:100; opacity:.035; transform:translateZ(0);
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 .9  0 0 0 0 .7  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 body::after{
@@ -116,6 +116,7 @@ strong,b{font-weight:600; color:var(--ink)}
 .hero-rays{position:absolute; inset:0; z-index:-2; pointer-events:none; mix-blend-mode:screen; opacity:.55;
   background:conic-gradient(from 196deg at 66% -12%, transparent 0deg, rgba(255,216,90,.10) 6deg, transparent 12deg, rgba(255,242,168,.07) 19deg, transparent 26deg, rgba(255,216,90,.06) 34deg, transparent 44deg);
   animation:rays 14s ease-in-out infinite alternate}
+.hero.off .hero-rays,.hero.off .title .word,.hero.off .cue i{animation-play-state:paused}
 @keyframes rays{from{opacity:.35; transform:rotate(-1.2deg)} to{opacity:.65; transform:rotate(1.2deg)}}
 #motes{position:absolute; inset:0; z-index:-1; width:100%; height:100%; pointer-events:none}
 .hero-in{width:100%; max-width:1240px; margin:0 auto; padding:0 32px 64px}
@@ -137,7 +138,7 @@ strong,b{font-weight:600; color:var(--ink)}
 .lede strong{color:var(--gold-lt); font-weight:500}
 .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:30px}
 .chip{font-family:var(--mono); font-size:11.5px; letter-spacing:.05em; color:var(--muted); padding:6px 12px;
-  border:1px solid var(--rule-2); background:rgba(10,9,8,.55); backdrop-filter:blur(6px); border-radius:2px}
+  border:1px solid var(--rule-2); background:rgba(10,9,8,.74); border-radius:2px}
 .chip b{color:var(--ink); font-weight:600}
 .cue{position:absolute; right:32px; bottom:26px; display:flex; flex-direction:column; align-items:center; gap:8px;
   font-family:var(--display); font-size:10px; letter-spacing:.4em; color:var(--muted); text-decoration:none}
@@ -208,6 +209,9 @@ html:not(.js) .plate-h .crack path{stroke-dashoffset:0}
 .plate > p{max-width:68ch; color:var(--ink-2)}
 .plate > p strong{color:var(--gold-lt); font-weight:500}
 
+/* off-screen plates are not laid out or painted until they come near the viewport */
+section.plate{content-visibility:auto; contain-intrinsic-size:auto 2400px}
+
 /* banner art at the head of some plates */
 .banner{position:relative; margin:-6px 0 34px; height:clamp(170px,22vw,280px); overflow:hidden; border:1px solid var(--rule)}
 .banner img{position:absolute; inset:-12% 0; width:100%; height:124%; object-fit:cover; transform:translateY(var(--py,0)); will-change:transform;
@@ -266,8 +270,8 @@ code{font-size:12.8px; background:var(--sunk); padding:2px 6px; border-radius:2p
 .sins .what{color:var(--muted); font-size:12.5px}
 
 /* ---- filter bar ---- */
-.tools{position:sticky; top:0; z-index:20; display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0 -12px 26px; padding:12px;
-  background:linear-gradient(180deg, rgba(14,12,11,.96), rgba(14,12,11,.85)); backdrop-filter:blur(10px); border-bottom:1px solid var(--rule)}
+.tools{position:sticky; top:0; z-index:20; display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0 0 26px; padding:12px 0;
+  background:linear-gradient(180deg, rgba(14,12,11,.98), rgba(14,12,11,.94)); border-bottom:1px solid var(--rule)}
 .tools button{font-family:var(--serif); font-size:13.5px; color:var(--muted); background:none; border:1px solid var(--rule-2); padding:6px 15px;
   border-radius:999px; cursor:pointer; transition:color .25s, border-color .25s, background .25s, box-shadow .25s}
 .tools button:hover{color:var(--ink); border-color:var(--muted)}
@@ -311,7 +315,9 @@ code{font-size:12.8px; background:var(--sunk); padding:2px 6px; border-radius:2p
   -webkit-mask-image:var(--sprite); mask-image:var(--sprite); -webkit-mask-size:contain; mask-size:contain;
   -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:center; mask-position:center;
   background:linear-gradient(115deg, transparent 41%, rgba(168,104,236,.34) 47%, rgba(214,184,255,.60) 50%, rgba(138,84,214,.32) 53%, transparent 59%);
-  background-size:300% 300%; mix-blend-mode:screen; animation:glint 4.4s linear infinite}
+  background-size:300% 300%; background-position:150% 0; mix-blend-mode:screen}
+.card.in .icon-wrap.glint::after{animation:glint 2.2s linear .5s 1 both}
+.card:hover .icon-wrap.glint::after{animation:glint 2.2s linear infinite}
 td.has-icon .icon-wrap.glint::after{inset:3px; animation:none; background-position:44% 0}
 @keyframes glint{from{background-position:150% 0} to{background-position:-70% 0}}
 h3 .new{display:inline-block; vertical-align:middle; margin-left:9px; font-family:var(--display); font-size:9.5px; letter-spacing:.18em;
@@ -489,7 +495,8 @@ def hero(lede_meta):
             '<p class="lede sub in" style="animation-delay:1.4s">%s</p>\n'
             '<div class="chips in" style="animation-delay:1.55s"><span class="chip">Minecraft <b>1.21.11</b></span>'
             '<span class="chip">数据包格式 <b>94.1</b></span><span class="chip">资源包格式 <b>75.0</b></span>'
-            '<span class="chip">命名空间 <b>rpg</b></span></div>\n'
+            '<span class="chip">命名空间 <b>rpg</b></span>'
+            '<a class="chip" href="#s16" style="text-decoration:none; color:inherit; border-color:var(--gold)">第一次玩？<b>新手教程 →</b></a></div>\n'
             '</div>\n<a class="cue" href="#codex">SCROLL<i></i></a>\n</header>\n'
             '<section class="pillars" aria-label="七宗罪">%s</section>\n'
             % (style, _letters("Shevarim"), lede_meta, "".join(pillars)))
@@ -541,28 +548,29 @@ SCRIPT = r"""<script>
     if (ticking) return; ticking = true;
     requestAnimationFrame(function(){
       ticking = false;
-      var h = doc.scrollHeight - innerHeight, p = h > 0 ? scrollY / h : 0;
+      /* reads first ... */
+      var y = scrollY, vh = innerHeight, h = doc.scrollHeight - vh, p = h > 0 ? y / h : 0;
+      var cur = null;
+      for (var i = 0; i < plates.length; i++){ if (plates[i].getBoundingClientRect().top < vh * .35) cur = plates[i].id; }
+      var moves = [];
+      if (!reduce) banners.forEach(function(img){
+        var r = img.parentNode.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        moves.push([img, ((r.top + r.height / 2 - vh / 2) / vh * -36).toFixed(1) + 'px']);
+      });
+      /* ... then writes, so no frame forces a second layout */
       if (bar) bar.style.setProperty('--p', p.toFixed(4));
       if (railOl) railOl.style.setProperty('--rp', p.toFixed(4));
-      /* scrollspy: the last plate whose top has passed 35% of the viewport */
-      var cur = null;
-      for (var i = 0; i < plates.length; i++){ if (plates[i].getBoundingClientRect().top < innerHeight * .35) cur = plates[i].id; }
-      for (var k in links){ links[k].classList.toggle('on', k === cur); }
-      if (!reduce) parallax();
+      if (cur !== lastCur){ for (var k in links){ links[k].classList.toggle('on', k === cur); } lastCur = cur; }
+      if (!reduce){
+        if (heroArt && y < vh * 1.2) heroArt.style.transform = 'translateY(' + (y * .28).toFixed(1) + 'px) scale(1.04)';
+        moves.forEach(function(m){ m[0].style.setProperty('--py', m[1]); });
+      }
     });
   }
   /* hero + banner parallax */
-  var heroArt = document.querySelector('.hero-art');
+  var heroArt = document.querySelector('.hero-art'), lastCur;
   var banners = [].slice.call(document.querySelectorAll('.banner img'));
-  function parallax(){
-    if (heroArt && scrollY < innerHeight * 1.2) heroArt.style.transform = 'translateY(' + (scrollY * .28).toFixed(1) + 'px) scale(1.04)';
-    banners.forEach(function(img){
-      var r = img.parentNode.getBoundingClientRect();
-      if (r.bottom < 0 || r.top > innerHeight) return;
-      var t = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
-      img.style.setProperty('--py', (t * -36).toFixed(1) + 'px');
-    });
-  }
   addEventListener('scroll', onScroll, {passive:true});
   addEventListener('resize', onScroll);
   onScroll();
@@ -584,9 +592,17 @@ SCRIPT = r"""<script>
   /* hero motes: gold dust rising through the light, a few falling shards */
   var cv = document.getElementById('motes');
   if (cv && !reduce){
-    var ctx = cv.getContext('2d'), W = 0, H = 0, dpr = Math.min(devicePixelRatio || 1, 2), motes = [], running = true, last = 0;
-    var N = innerWidth < 700 ? 34 : 80;
+    var ctx = cv.getContext('2d'), W = 0, H = 0, dpr = Math.min(devicePixelRatio || 1, 1.5), motes = [], running = true, last = 0, hero = document.querySelector('.hero');
+    var N = innerWidth < 700 ? 28 : 60;
     var cols = ['255,216,90', '255,242,168', '212,175,55'];
+    /* one soft glow sprite per colour, drawn once (shadowBlur on every particle every frame was the costly part) */
+    var glow = {};
+    cols.forEach(function(c){
+      var g = document.createElement('canvas'); g.width = g.height = 32; var x = g.getContext('2d');
+      var rg = x.createRadialGradient(16, 16, 0, 16, 16, 16);
+      rg.addColorStop(0, 'rgba(' + c + ',1)'); rg.addColorStop(.22, 'rgba(' + c + ',.75)'); rg.addColorStop(1, 'rgba(' + c + ',0)');
+      x.fillStyle = rg; x.fillRect(0, 0, 32, 32); glow[c] = g;
+    });
     function size(){ W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
     function spawn(m, fresh){
       m.x = Math.random() * W; m.y = fresh ? Math.random() * H : H + 10;
@@ -597,7 +613,7 @@ SCRIPT = r"""<script>
     }
     size(); for (var i = 0; i < N; i++) motes.push(spawn({}, true));
     addEventListener('resize', size);
-    new IntersectionObserver(function(es){ running = es[0].isIntersecting; if (running) requestAnimationFrame(frame); }).observe(cv);
+    new IntersectionObserver(function(es){ running = es[0].isIntersecting; if (hero) hero.classList.toggle('off', !running); if (running){ last = 0; requestAnimationFrame(frame); } }).observe(cv);
     function frame(t){
       if (!running) return;
       var dt = Math.min(48, t - (last || t)); last = t;
@@ -610,13 +626,11 @@ SCRIPT = r"""<script>
           ctx.fillStyle = 'rgba(' + m.c + ',' + (m.a * .55) + ')'; ctx.fillRect(-m.r, -m.r, m.r * 2, m.r * 2); ctx.restore();
           if (m.y > H + 12) spawn(m, false);
         } else {
-          var tw = .55 + .45 * Math.sin(m.d * 3);
-          ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, 6.283);
-          ctx.fillStyle = 'rgba(' + m.c + ',' + (m.a * tw) + ')'; ctx.shadowColor = 'rgba(' + m.c + ',.9)'; ctx.shadowBlur = 8; ctx.fill();
+          var tw = .55 + .45 * Math.sin(m.d * 3), s = m.r * 7;
+          ctx.globalAlpha = m.a * tw; ctx.drawImage(glow[m.c], m.x - s / 2, m.y - s / 2, s, s); ctx.globalAlpha = 1;
           if (m.y < -10) spawn(m, false);
         }
       }
-      ctx.shadowBlur = 0;
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);

@@ -1,0 +1,110 @@
+scoreboard players operation #do rpg_fo = @s rpg_fo_do
+scoreboard players set @s rpg_fo_do 0
+scoreboard players enable @s rpg_fo_do
+execute if score #do rpg_fo matches 1..6 run scoreboard players operation @s rpg_fo_pg = #do rpg_fo
+execute if score #do rpg_fo matches 1..6 run return run function rpg:force/page/show
+execute if score #do rpg_fo matches 9 run return run function rpg:force/page/default
+execute if score #do rpg_fo matches 11 run scoreboard players set @s rpg_fo_pg 7
+execute if score #do rpg_fo matches 12 run scoreboard players set @s rpg_fo_pg 8
+execute if score #do rpg_fo matches 11..12 run return run function rpg:force/page/show
+execute if score #do rpg_fo matches 2000.. run function rpg:force/x/press
+execute if score #do rpg_fo matches 7 run function rpg:force/wash
+execute if score #do rpg_fo matches 81 run function rpg:force/give/reissue_1
+execute if score #do rpg_fo matches 82 run function rpg:force/give/reissue_2
+execute if score #do rpg_fo matches 101 run function rpg:force/learn/1
+execute if score #do rpg_fo matches 1011 run function rpg:force/slot/1_1
+execute if score #do rpg_fo matches 1012 run function rpg:force/slot/1_2
+execute if score #do rpg_fo matches 1013 run function rpg:force/slot/1_3
+execute if score #do rpg_fo matches 102 run function rpg:force/learn/2
+execute if score #do rpg_fo matches 1021 run function rpg:force/slot/2_1
+execute if score #do rpg_fo matches 1022 run function rpg:force/slot/2_2
+execute if score #do rpg_fo matches 1023 run function rpg:force/slot/2_3
+execute if score #do rpg_fo matches 103 run function rpg:force/learn/3
+execute if score #do rpg_fo matches 1031 run function rpg:force/slot/3_1
+execute if score #do rpg_fo matches 1032 run function rpg:force/slot/3_2
+execute if score #do rpg_fo matches 1033 run function rpg:force/slot/3_3
+execute if score #do rpg_fo matches 104 run function rpg:force/learn/4
+execute if score #do rpg_fo matches 1041 run function rpg:force/slot/4_1
+execute if score #do rpg_fo matches 1042 run function rpg:force/slot/4_2
+execute if score #do rpg_fo matches 1043 run function rpg:force/slot/4_3
+execute if score #do rpg_fo matches 105 run function rpg:force/learn/5
+execute if score #do rpg_fo matches 1051 run function rpg:force/slot/5_1
+execute if score #do rpg_fo matches 1052 run function rpg:force/slot/5_2
+execute if score #do rpg_fo matches 1053 run function rpg:force/slot/5_3
+execute if score #do rpg_fo matches 106 run function rpg:force/learn/6
+execute if score #do rpg_fo matches 1061 run function rpg:force/slot/6_1
+execute if score #do rpg_fo matches 1062 run function rpg:force/slot/6_2
+execute if score #do rpg_fo matches 1063 run function rpg:force/slot/6_3
+execute if score #do rpg_fo matches 107 run function rpg:force/learn/7
+execute if score #do rpg_fo matches 1071 run function rpg:force/slot/7_1
+execute if score #do rpg_fo matches 1072 run function rpg:force/slot/7_2
+execute if score #do rpg_fo matches 1073 run function rpg:force/slot/7_3
+execute if score #do rpg_fo matches 108 run function rpg:force/learn/8
+execute if score #do rpg_fo matches 1081 run function rpg:force/slot/8_1
+execute if score #do rpg_fo matches 1082 run function rpg:force/slot/8_2
+execute if score #do rpg_fo matches 1083 run function rpg:force/slot/8_3
+execute if score #do rpg_fo matches 109 run function rpg:force/learn/9
+execute if score #do rpg_fo matches 1091 run function rpg:force/slot/9_1
+execute if score #do rpg_fo matches 1092 run function rpg:force/slot/9_2
+execute if score #do rpg_fo matches 1093 run function rpg:force/slot/9_3
+execute if score #do rpg_fo matches 110 run function rpg:force/learn/10
+execute if score #do rpg_fo matches 1101 run function rpg:force/slot/10_1
+execute if score #do rpg_fo matches 1102 run function rpg:force/slot/10_2
+execute if score #do rpg_fo matches 1103 run function rpg:force/slot/10_3
+execute if score #do rpg_fo matches 111 run function rpg:force/learn/11
+execute if score #do rpg_fo matches 1111 run function rpg:force/slot/11_1
+execute if score #do rpg_fo matches 1112 run function rpg:force/slot/11_2
+execute if score #do rpg_fo matches 1113 run function rpg:force/slot/11_3
+execute if score #do rpg_fo matches 112 run function rpg:force/learn/12
+execute if score #do rpg_fo matches 1121 run function rpg:force/slot/12_1
+execute if score #do rpg_fo matches 1122 run function rpg:force/slot/12_2
+execute if score #do rpg_fo matches 1123 run function rpg:force/slot/12_3
+execute if score #do rpg_fo matches 113 run function rpg:force/learn/13
+execute if score #do rpg_fo matches 1131 run function rpg:force/slot/13_1
+execute if score #do rpg_fo matches 1132 run function rpg:force/slot/13_2
+execute if score #do rpg_fo matches 1133 run function rpg:force/slot/13_3
+execute if score #do rpg_fo matches 114 run function rpg:force/learn/14
+execute if score #do rpg_fo matches 1141 run function rpg:force/slot/14_1
+execute if score #do rpg_fo matches 1142 run function rpg:force/slot/14_2
+execute if score #do rpg_fo matches 1143 run function rpg:force/slot/14_3
+execute if score #do rpg_fo matches 115 run function rpg:force/learn/15
+execute if score #do rpg_fo matches 1151 run function rpg:force/slot/15_1
+execute if score #do rpg_fo matches 1152 run function rpg:force/slot/15_2
+execute if score #do rpg_fo matches 1153 run function rpg:force/slot/15_3
+execute if score #do rpg_fo matches 116 run function rpg:force/learn/16
+execute if score #do rpg_fo matches 1161 run function rpg:force/slot/16_1
+execute if score #do rpg_fo matches 1162 run function rpg:force/slot/16_2
+execute if score #do rpg_fo matches 1163 run function rpg:force/slot/16_3
+execute if score #do rpg_fo matches 117 run function rpg:force/learn/17
+execute if score #do rpg_fo matches 1171 run function rpg:force/slot/17_1
+execute if score #do rpg_fo matches 1172 run function rpg:force/slot/17_2
+execute if score #do rpg_fo matches 1173 run function rpg:force/slot/17_3
+execute if score #do rpg_fo matches 118 run function rpg:force/learn/18
+execute if score #do rpg_fo matches 1181 run function rpg:force/slot/18_1
+execute if score #do rpg_fo matches 1182 run function rpg:force/slot/18_2
+execute if score #do rpg_fo matches 1183 run function rpg:force/slot/18_3
+execute if score #do rpg_fo matches 119 run function rpg:force/learn/19
+execute if score #do rpg_fo matches 1191 run function rpg:force/slot/19_1
+execute if score #do rpg_fo matches 1192 run function rpg:force/slot/19_2
+execute if score #do rpg_fo matches 1193 run function rpg:force/slot/19_3
+execute if score #do rpg_fo matches 120 run function rpg:force/learn/20
+execute if score #do rpg_fo matches 1201 run function rpg:force/slot/20_1
+execute if score #do rpg_fo matches 1202 run function rpg:force/slot/20_2
+execute if score #do rpg_fo matches 1203 run function rpg:force/slot/20_3
+execute if score #do rpg_fo matches 121 run function rpg:force/learn/21
+execute if score #do rpg_fo matches 1211 run function rpg:force/slot/21_1
+execute if score #do rpg_fo matches 1212 run function rpg:force/slot/21_2
+execute if score #do rpg_fo matches 1213 run function rpg:force/slot/21_3
+execute if score #do rpg_fo matches 122 run function rpg:force/learn/22
+execute if score #do rpg_fo matches 1221 run function rpg:force/slot/22_1
+execute if score #do rpg_fo matches 1222 run function rpg:force/slot/22_2
+execute if score #do rpg_fo matches 1223 run function rpg:force/slot/22_3
+execute if score #do rpg_fo matches 123 run function rpg:force/learn/23
+execute if score #do rpg_fo matches 1231 run function rpg:force/slot/23_1
+execute if score #do rpg_fo matches 1232 run function rpg:force/slot/23_2
+execute if score #do rpg_fo matches 1233 run function rpg:force/slot/23_3
+execute if score #do rpg_fo matches 124 run function rpg:force/learn/24
+execute if score #do rpg_fo matches 1241 run function rpg:force/slot/24_1
+execute if score #do rpg_fo matches 1242 run function rpg:force/slot/24_2
+execute if score #do rpg_fo matches 1243 run function rpg:force/slot/24_3
+function rpg:force/page/show

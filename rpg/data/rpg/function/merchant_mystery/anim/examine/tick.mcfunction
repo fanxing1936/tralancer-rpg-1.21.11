@@ -1,0 +1,4 @@
+# examine：178 刻，播完回到 idle。由 add_merchant_models.py 生成。
+execute if score @s rpg_mmy_t matches 179.. run return run function rpg:merchant_mystery/anim/enter/idle
+scoreboard players add @s rpg_mmy_t 1
+function rpg:merchant_mystery/anim/examine/at

@@ -1,0 +1,59 @@
+{
+ "mesh": "Dungeons/Content/Actors/Characters/Friendlies/Villager/SK_Villager",
+ "mesh_sha256": "c86045819a1d9019af926d1ce8b668844f90a98b76df612c32363fcb791bb4bb",
+ "material": "Dungeons/Content/Actors/Characters/Friendlies/Villager/MI_Villager_LuxuryMerchant",
+ "texture": "Dungeons/Content/Actors/Characters/Friendlies/Villager/T_Villager_LuxuryMerchant",
+ "texture_sha256": "55fb114573f5d123ca6edd0666de6506a8436cebd04400a6c752cc13b29982f9",
+ "texture_copied_byte_identically": true,
+ "attachments": [
+  {
+   "name": "merchant_hat",
+   "mesh": "Dungeons/Content/Actors/Characters/Friendlies/Villager/Merchants/LuxuaryMerchantHat",
+   "bone": "J_Head",
+   "material": "MI_Villager_LuxuryMerchant",
+   "component": "LuxuaryMerchantHat",
+   "relative_location_ue_cm": {
+    "X": 0.0,
+    "Y": 180.0,
+    "Z": 0.0
+   },
+   "relative_rotation_ue_degrees": {},
+   "relative_scale": {},
+   "matrix_ue": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     180.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "evidence": "D:\\agent\\dungeons_extract\\merchant_metadata_20261124\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Merchants\\BP_LobbyVillagerLuxuryMerchant\\LuxuaryMerchantHat_GEN_VARIABLE.uobject.json",
+   "alignment": "original blueprint component transform"
+  }
+ ],
+ "animations": [
+  "Dungeons/Content/Actors/Characters/Friendlies/Villager/Animations/Villager_Idle",
+  "Dungeons/Content/Actors/Characters/Friendlies/Villager/Animations/Villager_Idle_LookAround",
+  "Dungeons/Content/Actors/Characters/Friendlies/Villager/Animations/Villager_Bowing",
+  "Dungeons/Content/Actors/Characters/Friendlies/Villager/Animations/Villager_Examining"
+ ],
+ "rebuild_script": "D:\\agent\\dungeons_extract\\merchant_models_20261124\\build_refs.py"
+}

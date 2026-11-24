@@ -1,6 +1,6 @@
 # TRALANCER RPG 调试指令手册
 
-> 共 98 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
+> 共 110 个公开、可手动执行的调试／管理入口。适配 Minecraft Java 1.21.11。
 
 所有命令默认需要开启作弊或拥有管理员权限。带 `@s` 的入口必须由目标玩家自己执行；命令方块或服务器控制台不会自动获得玩家上下文。
 
@@ -21,7 +21,7 @@
 
 | 指令 | 用途 | 前置、影响与风险 |
 |---|---|---|
-| `/function rpg:command/give/box` | 发放按类型整理的全套测试潜影盒。 | 会发给所有在线玩家（@a）；盒内覆盖当前全部自定义物品。 影响：全体背包；标记：群体发放。 |
+| `/function rpg:command/give/box` | 发放按类型整理的全套测试潜影盒。 | 会发给所有在线玩家（@a）；盒内覆盖当前全部自定义物品，包括世界材料、图纸、罪印碎片、圣徽罪印与传承书。 影响：全体背包；标记：群体发放。 |
 | `/function rpg:command/give/weapon` | 发放全部武器、护甲与药剂。 | 会发给所有在线玩家（@a），多人服慎用。 影响：全体背包；标记：群体发放。 |
 | `/function rpg:command/give/item` | 发放属性晶石，以及装备养成的材料、符文与符石。 | 会发给所有在线玩家（@a），多人服慎用。 影响：全体背包；标记：群体发放。 |
 | `/function rpg:command/give/weapon_up_item` | 发放六源（信念、希望、不屈、邪念、仇恨、傲慢）。 | 会发给所有在线玩家（@a），多人服慎用。 影响：全体背包；标记：群体发放。 |
@@ -82,6 +82,18 @@
 | `/function rpg:jacques_ally/debug/summon` | 在身前召一个友军雅克，不走冷却。 | 必须由玩家执行。 影响：雅克；标记：生成单位。 |
 | `/function rpg:jacques_ally/debug/reset_cd` | 清掉自己的圣殿誓约冷却。 | 必须由玩家执行。 影响：雅克；标记：常规。 |
 | `/function rpg:jacques_ally/clear` | 清掉所有友军雅克。 | 测试收尾时使用。 影响：雅克；标记：清理。 |
+| `/function rpg:merchant/place/smith` | 在脚下放一位铁匠，面朝执行者看的方向。 | 持久存在，直到用 remove 移走。 影响：商人；标记：生成单位。 |
+| `/function rpg:merchant/place/mystery` | 在脚下放一位神秘商人（每天换一次货），面朝执行者看的方向。 | 持久存在，直到用 remove 移走。 影响：商人；标记：生成单位。 |
+| `/function rpg:merchant/place/luxury` | 在脚下放一位奢侈品商人，面朝执行者看的方向。 | 持久存在，直到用 remove 移走。 影响：商人；标记：生成单位。 |
+| `/function rpg:merchant/place/travel` | 在脚下放一位迷途商人（不会自己离开），面朝执行者看的方向。 | 持久存在，直到用 remove 移走。 影响：商人；标记：生成单位。 |
+| `/function rpg:merchant/remove` | 移走身边 4 格内最近的一位商人。 | 连同模型与名牌。 影响：商人；标记：清理。 |
+| `/function rpg:merchant/admin/travel` | 立刻开始「迷途商人」事件。 | 会先结束正在进行的事件。 影响：世界事件；标记：常规。 |
+| `/function rpg:events/admin/start_1` | 立刻开始「罪潮之夜」事件。 | 必须由玩家执行；会先结束正在进行的事件。 影响：世界事件；标记：常规。 |
+| `/function rpg:events/admin/start_2` | 立刻开始「坠星」事件。 | 必须由玩家执行；会先结束正在进行的事件。 影响：世界事件；标记：常规。 |
+| `/function rpg:events/admin/start_3` | 立刻开始「罪仆巡逻」事件。 | 必须由玩家执行；会先结束正在进行的事件。 影响：世界事件；标记：常规。 |
+| `/function rpg:events/admin/start_4` | 立刻开始「寻宝者」事件。 | 必须由玩家执行；会先结束正在进行的事件。 影响：世界事件；标记：常规。 |
+| `/function rpg:events/admin/start_5` | 立刻开始「空缺者显现」事件。 | 必须由玩家执行；会先结束正在进行的事件。 影响：世界事件；标记：常规。 |
+| `/function rpg:events/admin/end` | 结束正在进行的事件。 | 没有事件时无效。 影响：世界事件；标记：清理。 |
 | `/function rpg:saul_boss/summon` | 在执行位置开始疯人王扫罗战：十字军大元帅 → 甲碎 → 疯人王。 | 同一时间只允许一场；战场半径 40 格。 影响：扫罗；标记：生成战斗。 |
 | `/function rpg:saul_boss/debug/stage2` | 召唤后直接打到一阶段底线，走甲碎演出进入二阶段。 | 同一时间只允许一场。 影响：扫罗；标记：生成战斗。 |
 | `/function rpg:saul_boss/clear` | 清除扫罗战的全部实体（含碎甲、蛛网与老战友的幻影）。 | 战斗卡住或测试收尾时使用。 影响：扫罗；标记：清理。 |

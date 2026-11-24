@@ -1,3 +1,5 @@
+# 原质：记打过、给阅历（add_sephira.py）
+execute at @e[type=minecraft:marker,tag=rpg.jqb.center,limit=1] run function rpg:sephira/boss/jacques
 execute at @e[type=minecraft:marker,tag=rpg.jqb.center,limit=1] run particle minecraft:flash{color:16774876} ~ ~2 ~ 0 0 0 0 1 force
 execute at @e[type=minecraft:marker,tag=rpg.jqb.center,limit=1] run particle minecraft:totem_of_undying ~ ~2 ~ 2 2 2 0.4 120 force
 execute at @e[type=minecraft:marker,tag=rpg.jqb.center,limit=1] run particle minecraft:end_rod ~ ~6 ~ 3 4 3 0.02 80 force

@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "trade": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"rpg.mer\"]}"
+            }
+          }
+        ],
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{pact_tag:1b,pact:6}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:merchant/pact_6"
+  }
+}

@@ -10,4 +10,5 @@ execute store result storage rpg:panel v.rpg_lt_auth int 1 run scoreboard player
 scoreboard players add @s rpg_taint 0
 execute store result storage rpg:panel v.rpg_taint int 1 run scoreboard players get @s rpg_taint
 function rpg:panel/pages/panel_open with storage rpg:panel v
+function rpg:onboard/panel
 function rpg:panel/ui/show with storage rpg:panel ui

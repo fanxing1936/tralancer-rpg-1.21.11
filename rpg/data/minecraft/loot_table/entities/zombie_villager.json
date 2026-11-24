@@ -1,4 +1,5 @@
 {
+  "type": "minecraft:entity",
   "pools": [
     {
       "rolls": 1,
@@ -107,83 +108,267 @@
           "name": "minecraft:rotten_flesh",
           "functions": [
             {
-              "function": "set_lore",
-              "entity": "this",
-              "lore": [
-                [
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
                   "",
                   {
-                    "text": "+------------------+",
-                    "italic": false,
-                    "color": "white"
-                  }
-                ],
-                [
-                  "",
-                  {
-                    "text": "僵尸的",
-                    "color": "white",
+                    "text": "[货币]",
+                    "color": "#797979",
+                    "bold": true,
                     "italic": false
                   },
                   {
-                    "text": "[遗物]",
-                    "italic": false,
-                    "color": "#797979",
-                    "bold": true
-                  }
-                ],
-                [
-                  "",
-                  {
-                    "text": "作为他们存在过的",
-                    "color": "white",
+                    "text": "腐肉",
+                    "color": "#FFFFFF",
+                    "bold": false,
                     "italic": false
-                  },
-                  {
-                    "text": "[证据]",
-                    "italic": false,
-                    "color": "#797979",
-                    "bold": true
                   }
                 ],
-                [
-                  "",
-                  {
-                    "text": "+------------------+",
-                    "italic": false,
-                    "color": "white"
-                  }
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "僵尸村民的",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[遗物]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "曾经也是",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    },
+                    {
+                      "text": "[村民]",
+                      "color": "#797979",
+                      "bold": true,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
                 ]
-              ],
-              "mode": "append"
+              }
             },
             {
-              "function": "set_name",
-              "entity": "this",
-              "name": [
-                "",
-                {
-                  "text": "[货币]",
-                  "italic": false,
-                  "color": "#797979",
-                  "bold": true
-                },
-                {
-                  "text": "腐肉",
-                  "italic": false,
-                  "color": "#FFFFFF",
-                  "bold": false
-                }
-              ],
-              "target": "custom_name"
-            },
-            {
-              "function": "set_count",
+              "function": "minecraft:set_count",
               "count": {
-                "type": "uniform",
+                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               }
+            },
+            {
+              "function": "minecraft:enchanted_count_increase",
+              "enchantment": "minecraft:looting",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.25,
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.3,
+            "per_level_above_first": 0.05
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[锻造]",
+                    "color": "#E39745",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "铁锭",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "从怪物身上剥下的铁",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "普通档冶炼的主材，每件 6 块",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.03,
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.036,
+            "per_level_above_first": 0.006
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": [
+                  "",
+                  {
+                    "text": "[锻造]",
+                    "color": "#E39745",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "金锭",
+                    "color": "#FFFFFF",
+                    "bold": false,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "成色不纯的金",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "可在锻造台换镀金箔，也能卖给商人",
+                      "color": "gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    "",
+                    {
+                      "text": "+------------------+",
+                      "color": "#FFFFFF",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
             }
           ]
         }
@@ -201,7 +386,7 @@
           "unenchanted_chance": 0.05,
           "enchanted_chance": {
             "type": "minecraft:linear",
-            "base": 0.060000000000000005,
+            "base": 0.06,
             "per_level_above_first": 0.01
           }
         }
@@ -209,8 +394,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "rpg:forge/item/soul",
-          "weight": 1
+          "value": "rpg:forge/item/soul"
         }
       ]
     },
@@ -226,16 +410,15 @@
           "unenchanted_chance": 0.01,
           "enchanted_chance": {
             "type": "minecraft:linear",
-            "base": 0.02,
-            "per_level_above_first": 0.01
+            "base": 0.012,
+            "per_level_above_first": 0.002
           }
         }
       ],
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "rpg:forge/item/blank",
-          "weight": 1
+          "value": "rpg:forge/item/blank"
         }
       ]
     }

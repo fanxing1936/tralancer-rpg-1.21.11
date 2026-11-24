@@ -1,0 +1,2 @@
+execute if score @s rpg_prlu_t matches 11 run return run function rpg:prologue_lucifer/anim/pit_rise/f10
+execute if score @s rpg_prlu_t matches 12 run return run function rpg:prologue_lucifer/anim/pit_rise/f11

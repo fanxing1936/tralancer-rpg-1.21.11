@@ -1,0 +1,4 @@
+# 切到 flee 并立即播放第一帧。
+scoreboard players set @s rpg_prbz_anim 4
+scoreboard players set @s rpg_prbz_t 0
+return run function rpg:prologue_beelzebub/anim/flee/tick

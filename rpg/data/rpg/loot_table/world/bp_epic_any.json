@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/dark_sun"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/chainsaw"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/earth_spine"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/venom_fang"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/wind_bone"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/mischief_bow"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/vine_whip"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/truth_blade"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp/crystal_roar"
+        }
+      ]
+    }
+  ]
+}

@@ -57,8 +57,9 @@ def build():
         "bossbar set %s max %d" % (BAR, MAX),
         "bossbar set %s value %d" % (BAR, MAX),
         "bossbar set %s visible true" % BAR,
-        "function %s/music/1" % B,
-        "function %s/vfx/intro" % B,
+        # 序章模式（#pro rpg_mk = 1，由 rpg:prologue 打开）：开场、配乐与播报交给序章的过场与字幕
+        "execute unless score #pro %s matches 1 run function %s/music/1" % (O, B),
+        "execute unless score #pro %s matches 1 run function %s/vfx/intro" % (O, B),
         "playsound minecraft:block.beacon.activate hostile @a[distance=..%d] ~ ~ ~ 2 0.6" % BAR_RANGE,
         "playsound minecraft:entity.phantom.flap hostile @a[distance=..%d] ~ ~ ~ 2 0.5" % BAR_RANGE,
         say("在天上就有了争战。你身上有拂晓之星的气味。", gloss="Quis ut Deus"),
@@ -109,7 +110,8 @@ def build():
         "scoreboard players set #k %s %d" % (O, STRIDE),
         "scoreboard players operation #m %s %%= #k %s" % (O, O),
         "execute if score #m %s matches 0 run function %s/read_hp" % (O, B),
-        "execute if score @s %s matches 1 if score @s rpg_mk_h matches ..1 run return run function %s/stage/end1" % (O, B),
+        "execute if score #m %s matches 0 if score #pro %s matches 1 run function #rpg:michael_boss/prologue_hp" % (O, O),
+        "execute if score @s %s matches 1 if score @s rpg_mk_h matches ..1 unless score #pro %s matches 1 run return run function %s/stage/end1" % (O, O, B),
         "execute if score @s %s matches 2 if score @s rpg_mk_h matches ..1 run return run function %s/stage/end2" % (O, B),
         "execute if entity @s[tag=rpg.mkb.morph] run return run function %s/morph/tick" % B,
         "execute if score @s rpg_mk_so matches 1.. run function %s/solid/tick" % B,
@@ -127,6 +129,7 @@ def build():
     ])
     w("hp_init", ["tag @s add rpg.mkb.hp", "function %s/refill" % B,
                   "execute if entity @s[tag=rpg.mkb.intro] run %s" % anim("hero"),
+                  "execute if score #pro %s matches 1 run function %s/look/solid" % (O, LOOK),
                   "tag @s remove rpg.mkb.intro"])
     w("safety/back", ["# 拉回场地中心（as 他）", "tp @s @e[%s]" % CENTER,
                       "execute at @s run particle %s ~ ~1 ~ 0.4 0.7 0.4 0 20" % WHITE_DUST,
@@ -167,7 +170,7 @@ def build():
     w("solid/tick", ["scoreboard players remove @s rpg_mk_so 1",
                      "execute if score @s rpg_mk_so matches ..0 run function %s/solid/off" % B])
     w("solid/off", ["# 恢复灵体（as 他）", "tag @s remove rpg.mkb.solid", "scoreboard players set @s rpg_mk_so 0",
-                    "execute unless entity @s[tag=rpg.mkb.end] run function %s/look/spirit" % LOOK,
+                    "execute unless entity @s[tag=rpg.mkb.end] unless score #pro %s matches 1 run function %s/look/spirit" % (O, LOOK),
                     "attribute @s minecraft:knockback_resistance base set 1",
                     "execute at @s run particle minecraft:end_rod ~ ~1.2 ~ 0.4 0.7 0.4 0.03 10"])
 
@@ -488,7 +491,7 @@ def build():
     ])
     w("clear_unit", ["execute on passengers run kill @s", "tp @s ~ -256 ~", "kill @s"])
 
-    music = ["scoreboard players remove #bgm %s 1" % O]
+    music = ["execute if score #pro %s matches 1 run return 0" % O, "scoreboard players remove #bgm %s 1" % O]
     for s, v in STAGES.items():
         music.append("execute if score #bgm %s matches ..0 if score #stage %s matches %d run function %s/music/%d" % (O, O, s, B, s))
         w("music/%d" % s, ["stopsound @a[distance=..%d] record %s" % (BAR_RANGE, m)

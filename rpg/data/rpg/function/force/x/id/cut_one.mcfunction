@@ -1,0 +1,10 @@
+execute if data storage rpg:force r.c{n:"poison"} run return run function rpg:force/x/id/n/poison with storage rpg:force r.c
+execute if data storage rpg:force r.c{n:"wither"} run return run function rpg:force/x/id/n/wither with storage rpg:force r.c
+execute if data storage rpg:force r.c{n:"slowness"} run return run function rpg:force/x/id/n/slowness with storage rpg:force r.c
+execute if data storage rpg:force r.c{n:"weakness"} run return run function rpg:force/x/id/n/weakness with storage rpg:force r.c
+execute if data storage rpg:force r.c{n:"blindness"} run return run function rpg:force/x/id/n/blindness with storage rpg:force r.c
+execute if data storage rpg:force r.c{n:"nausea"} run return run function rpg:force/x/id/n/nausea with storage rpg:force r.c
+execute if data storage rpg:force r.c{n:"hunger"} run return run function rpg:force/x/id/n/hunger with storage rpg:force r.c
+execute if data storage rpg:force r.c{n:"mining_fatigue"} run return run function rpg:force/x/id/n/mining_fatigue with storage rpg:force r.c
+execute if data storage rpg:force r.c{n:"darkness"} run return run function rpg:force/x/id/n/darkness with storage rpg:force r.c
+execute if data storage rpg:force r.c{n:"levitation"} run return run function rpg:force/x/id/n/levitation with storage rpg:force r.c

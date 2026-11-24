@@ -60,6 +60,7 @@ def skills1():
         "execute if score @s rpg_mk_t matches 33.. run function %s/sk/end" % B,
     ])
     w("watch/spawn", [
+        "execute if score #pro %s matches 1 run return 0" % O,   # 序章里的米迦勒不召守望者
         "# 一只守望者从场地边缘传送进来（at 中心）：随机方向 14 格外的地面",
         "summon minecraft:marker ~ ~ ~ {Tags:[\"rpg.mkb.wspot\"]}",
         "execute as @e[type=minecraft:marker,tag=rpg.mkb.wspot] store result entity @s Rotation[0] float 1 run random value 0..359",
