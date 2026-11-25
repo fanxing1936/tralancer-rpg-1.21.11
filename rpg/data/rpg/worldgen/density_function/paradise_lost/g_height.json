@@ -1,0 +1,49 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:clamp",
+  "input": {
+   "type": "minecraft:add",
+   "argument1": {
+    "type": "minecraft:mul",
+    "argument1": "rpg:paradise_lost/free",
+    "argument2": {
+     "type": "minecraft:add",
+     "argument1": {
+      "type": "minecraft:add",
+      "argument1": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:paradise_lost/w1",
+       "argument2": "rpg:paradise_lost/g_h1"
+      },
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:paradise_lost/w2",
+       "argument2": "rpg:paradise_lost/g_h2"
+      }
+     },
+     "argument2": {
+      "type": "minecraft:mul",
+      "argument1": "rpg:paradise_lost/w3",
+      "argument2": "rpg:paradise_lost/g_h3"
+     }
+    }
+   },
+   "argument2": {
+    "type": "minecraft:mul",
+    "argument1": {
+     "type": "minecraft:add",
+     "argument1": 1.0,
+     "argument2": {
+      "type": "minecraft:mul",
+      "argument1": -1.0,
+      "argument2": "rpg:paradise_lost/free"
+     }
+    },
+    "argument2": 0.075
+   }
+  },
+  "min": -0.40625,
+  "max": 7.25
+ }
+}

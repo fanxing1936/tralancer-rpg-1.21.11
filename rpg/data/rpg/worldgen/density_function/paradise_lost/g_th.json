@@ -1,0 +1,183 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:add",
+  "argument1": {
+   "type": "minecraft:mul",
+   "argument1": 0.3,
+   "argument2": {
+    "type": "minecraft:spline",
+    "spline": {
+     "coordinate": "rpg:paradise_lost/g_hm",
+     "points": [
+      {
+       "location": 0.0,
+       "value": 0.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 10.799999999999999,
+       "value": 2.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 15.0,
+       "value": 15.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 25.799999999999997,
+       "value": 17.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 30.0,
+       "value": 30.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 40.8,
+       "value": 32.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 45.0,
+       "value": 45.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 55.8,
+       "value": 47.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 60.0,
+       "value": 60.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 70.8,
+       "value": 62.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 75.0,
+       "value": 75.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 85.8,
+       "value": 77.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 90.0,
+       "value": 90.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 100.8,
+       "value": 92.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 105.0,
+       "value": 105.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 115.8,
+       "value": 107.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 120.0,
+       "value": 120.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 130.8,
+       "value": 122.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 135.0,
+       "value": 135.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 145.8,
+       "value": 137.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 150.0,
+       "value": 150.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 160.8,
+       "value": 152.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 165.0,
+       "value": 165.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 175.8,
+       "value": 167.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 180.0,
+       "value": 180.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 190.8,
+       "value": 182.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 195.0,
+       "value": 195.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 205.8,
+       "value": 197.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 210.0,
+       "value": 210.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 220.8,
+       "value": 212.25,
+       "derivative": 0.15
+      },
+      {
+       "location": 225.0,
+       "value": 225.0,
+       "derivative": 0.15
+      },
+      {
+       "location": 235.8,
+       "value": 227.25,
+       "derivative": 0.15
+      }
+     ]
+    }
+   }
+  },
+  "argument2": {
+   "type": "minecraft:mul",
+   "argument1": 0.7,
+   "argument2": "rpg:paradise_lost/g_hm"
+  }
+ }
+}

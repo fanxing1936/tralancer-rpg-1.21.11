@@ -1,0 +1,9 @@
+scoreboard objectives add rpg_vt dummy
+scoreboard objectives add rpg_vt_id dummy
+scoreboard objectives add rpg_vt_t dummy
+scoreboard objectives add rpg_vt_q dummy
+scoreboard objectives add rpg_vt_k dummy
+scoreboard objectives add rpg_vt_m dummy
+scoreboard objectives add rpg_vt_e dummy
+scoreboard objectives add rpg_vt_l dummy
+scoreboard objectives add rpg_vt_n dummy

@@ -1,0 +1,133 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:add",
+  "argument1": {
+   "type": "minecraft:add",
+   "argument1": {
+    "type": "minecraft:add",
+    "argument1": {
+     "type": "minecraft:spline",
+     "spline": {
+      "coordinate": {
+       "type": "minecraft:abs",
+       "argument": {
+        "type": "minecraft:noise",
+        "noise": "rpg:paradise_lost/channel",
+        "xz_scale": 1.0,
+        "y_scale": 0.0
+       }
+      },
+      "points": [
+       {
+        "location": 0.0,
+        "value": -0.28125,
+        "derivative": 0.0
+       },
+       {
+        "location": 0.04,
+        "value": -0.25,
+        "derivative": 1.9444444444444444
+       },
+       {
+        "location": 0.09,
+        "value": -0.10625,
+        "derivative": 2.4431818181818183
+       },
+       {
+        "location": 0.15,
+        "value": 0.01875,
+        "derivative": 0.45731707317073167
+       },
+       {
+        "location": 0.5,
+        "value": 0.08125,
+        "derivative": 0.0
+       }
+      ]
+     }
+    },
+    "argument2": {
+     "type": "minecraft:spline",
+     "spline": {
+      "coordinate": {
+       "type": "minecraft:noise",
+       "noise": "rpg:paradise_lost/lake",
+       "xz_scale": 1.0,
+       "y_scale": 0.0
+      },
+      "points": [
+       {
+        "location": -0.75,
+        "value": -0.28125,
+        "derivative": 0.0
+       },
+       {
+        "location": -0.45,
+        "value": -0.15625,
+        "derivative": 0.5625
+       },
+       {
+        "location": -0.25,
+        "value": 0.0,
+        "derivative": 0.24166666666666667
+       },
+       {
+        "location": 0.3,
+        "value": 0.025,
+        "derivative": 0.0
+       }
+      ]
+     }
+    }
+   },
+   "argument2": {
+    "type": "minecraft:spline",
+    "spline": {
+     "coordinate": {
+      "type": "minecraft:noise",
+      "noise": "rpg:paradise_lost/mound",
+      "xz_scale": 1.0,
+      "y_scale": 0.0
+     },
+     "points": [
+      {
+       "location": 0.18,
+       "value": 0.0,
+       "derivative": 0.0
+      },
+      {
+       "location": 0.42,
+       "value": 0.09375,
+       "derivative": 0.7102272727272727
+      },
+      {
+       "location": 0.62,
+       "value": 0.3125,
+       "derivative": 0.7401315789473683
+      },
+      {
+       "location": 0.8,
+       "value": 0.375,
+       "derivative": 0.0
+      }
+     ]
+    }
+   }
+  },
+  "argument2": {
+   "type": "minecraft:mul",
+   "argument1": 0.04375,
+   "argument2": {
+    "type": "minecraft:mul",
+    "argument1": {
+     "type": "minecraft:noise",
+     "noise": "rpg:paradise_lost/roll",
+     "xz_scale": 1.0,
+     "y_scale": 0.0
+    },
+    "argument2": 1.0
+   }
+  }
+ }
+}

@@ -255,6 +255,8 @@ if [ -f add_blackstone_fortress.py ]; then python add_blackstone_fortress.py ../
 # 失乐园：维度、自由猎杀、河庭试炼、宝库（add_paradise.py）
 python add_eden_gate.py ../rpg
 python add_paradise.py ../rpg ../resourcepack
+# 宝库抽奖：奖池与开箱演出
+python add_vault.py ../rpg
 # 失乐园与主世界的背景音乐（读 add_paradise 的分区与河庭）
 python add_world_bgm.py ../rpg
 # 商人（add_merchants.py）：铁匠/神秘/奢侈品/迷途商人，接在支线之后（挂事件 6、玛门的账本、金锄彩蛋）

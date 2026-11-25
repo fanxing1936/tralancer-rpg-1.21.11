@@ -1,0 +1,75 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:add",
+  "argument1": {
+   "type": "minecraft:add",
+   "argument1": -1.0,
+   "argument2": {
+    "type": "minecraft:mul",
+    "argument1": "rpg:paradise_lost/g_inner",
+    "argument2": {
+     "type": "minecraft:spline",
+     "spline": {
+      "coordinate": "rpg:paradise_lost/g_basin",
+      "points": [
+       {
+        "location": 0.1322222222222222,
+        "value": 0.0,
+        "derivative": 0.0
+       },
+       {
+        "location": 0.16111111111111112,
+        "value": 1.0,
+        "derivative": 0.0
+       }
+      ]
+     }
+    }
+   }
+  },
+  "argument2": {
+   "type": "minecraft:mul",
+   "argument1": {
+    "type": "minecraft:mul",
+    "argument1": "rpg:paradise_lost/g_inner",
+    "argument2": {
+     "type": "minecraft:spline",
+     "spline": {
+      "coordinate": "rpg:paradise_lost/g_basin",
+      "points": [
+       {
+        "location": 0.2722222222222222,
+        "value": 0.0,
+        "derivative": 0.0
+       },
+       {
+        "location": 0.31666666666666665,
+        "value": 1.0,
+        "derivative": 0.0
+       }
+      ]
+     }
+    }
+   },
+   "argument2": {
+    "type": "minecraft:spline",
+    "spline": {
+     "coordinate": "rpg:paradise_lost/r2w",
+     "points": [
+      {
+       "location": 0.5112249999999999,
+       "value": 0.0,
+       "derivative": 0.0
+      },
+      {
+       "location": 0.5776,
+       "value": 1.0,
+       "derivative": 0.0
+      }
+     ]
+    }
+   }
+  }
+ }
+}

@@ -1,13 +1,13 @@
 {
  "type": "minecraft:nether_fossil",
- "biomes": "rpg:paradise_lost",
+ "biomes": "#rpg:in_paradise",
  "height": {
   "type": "minecraft:uniform",
   "min_inclusive": {
-   "absolute": 96
+   "absolute": 262
   },
   "max_inclusive": {
-   "absolute": 110
+   "absolute": 270
   }
  },
  "spawn_overrides": {},

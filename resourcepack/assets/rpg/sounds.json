@@ -455,6 +455,106 @@
    }
   ]
  },
+ "bgm.ow_day1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_day1",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.29
+   }
+  ]
+ },
+ "bgm.ow_day2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_day2",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.65
+   }
+  ]
+ },
+ "bgm.ow_day3": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_day3",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.35
+   }
+  ]
+ },
+ "bgm.ow_night1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_night1",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.65
+   }
+  ]
+ },
+ "bgm.ow_night2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_night2",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.53
+   }
+  ]
+ },
+ "bgm.pl_ash": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_ash",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.75
+   }
+  ]
+ },
+ "bgm.pl_court": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_court",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.65
+   }
+  ]
+ },
+ "bgm.pl_gate": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_gate",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.76
+   }
+  ]
+ },
+ "bgm.pl_hunt": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_hunt",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.51
+   }
+  ]
+ },
+ "bgm.pl_moon": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_moon",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.61
+   }
+  ]
+ },
  "bgm.prologue_end": {
   "sounds": [
    {
@@ -2701,105 +2801,5 @@
    }
   ],
   "subtitle": "rpg.onboard.w10.en_full"
- },
- "bgm.pl_gate": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/pl_gate",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.76
-   }
-  ]
- },
- "bgm.pl_hunt": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/pl_hunt",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.51
-   }
-  ]
- },
- "bgm.pl_ash": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/pl_ash",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.75
-   }
-  ]
- },
- "bgm.pl_court": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/pl_court",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.65
-   }
-  ]
- },
- "bgm.pl_moon": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/pl_moon",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.61
-   }
-  ]
- },
- "bgm.ow_day1": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/ow_day1",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.29
-   }
-  ]
- },
- "bgm.ow_day2": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/ow_day2",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.65
-   }
-  ]
- },
- "bgm.ow_day3": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/ow_day3",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.35
-   }
-  ]
- },
- "bgm.ow_night1": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/ow_night1",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.65
-   }
-  ]
- },
- "bgm.ow_night2": {
-  "sounds": [
-   {
-    "name": "rpg:bgm/ow_night2",
-    "stream": true,
-    "attenuation_distance": 1024,
-    "volume": 0.53
-   }
-  ]
  }
 }

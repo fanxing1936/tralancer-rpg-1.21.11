@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:vault/t1",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:vault/t2",
+          "weight": 35
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:vault/t3",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:vault/t4",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

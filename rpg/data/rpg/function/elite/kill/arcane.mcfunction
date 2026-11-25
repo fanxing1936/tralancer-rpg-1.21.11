@@ -7,3 +7,4 @@ loot give @s loot rpg:world/elite_extra/arcane
 execute if score @s rpg_el_kill matches 100 run function rpg:world/kab/give_victory
 function rpg:events/bt/elite
 function rpg:quest/hook/elite
+execute if entity @s[tag=rpg.pl.in] if score #rain rpg_pl matches 1.. run loot give @s loot rpg:paradise/rain_elite

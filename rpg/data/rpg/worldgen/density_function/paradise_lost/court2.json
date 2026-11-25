@@ -1,0 +1,42 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:min",
+  "argument1": {
+   "type": "minecraft:add",
+   "argument1": {
+    "type": "minecraft:square",
+    "argument": {
+     "type": "minecraft:add",
+     "argument1": -0.12,
+     "argument2": {
+      "type": "minecraft:abs",
+      "argument": "rpg:paradise_lost/x"
+     }
+    }
+   },
+   "argument2": {
+    "type": "minecraft:square",
+    "argument": "rpg:paradise_lost/z"
+   }
+  },
+  "argument2": {
+   "type": "minecraft:add",
+   "argument1": {
+    "type": "minecraft:square",
+    "argument": "rpg:paradise_lost/x"
+   },
+   "argument2": {
+    "type": "minecraft:square",
+    "argument": {
+     "type": "minecraft:add",
+     "argument1": -0.12,
+     "argument2": {
+      "type": "minecraft:abs",
+      "argument": "rpg:paradise_lost/z"
+     }
+    }
+   }
+  }
+ }
+}

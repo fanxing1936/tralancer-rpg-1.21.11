@@ -1,0 +1,94 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:clamp",
+  "input": {
+   "type": "minecraft:range_choice",
+   "input": "rpg:paradise_lost/det_ab",
+   "min_inclusive": 0.1,
+   "max_exclusive": 1000.0,
+   "when_in_range": {
+    "type": "minecraft:mul",
+    "argument1": {
+     "type": "minecraft:add",
+     "argument1": {
+      "type": "minecraft:mul",
+      "argument1": "rpg:paradise_lost/coord_b_z",
+      "argument2": "rpg:paradise_lost/coord_a_v"
+     },
+     "argument2": {
+      "type": "minecraft:mul",
+      "argument1": -1.0,
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:paradise_lost/coord_a_z",
+       "argument2": "rpg:paradise_lost/coord_b_v"
+      }
+     }
+    },
+    "argument2": {
+     "type": "minecraft:invert",
+     "argument": {
+      "type": "minecraft:add",
+      "argument1": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:paradise_lost/coord_a_x",
+       "argument2": "rpg:paradise_lost/coord_b_z"
+      },
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": -1.0,
+       "argument2": {
+        "type": "minecraft:mul",
+        "argument1": "rpg:paradise_lost/coord_a_z",
+        "argument2": "rpg:paradise_lost/coord_b_x"
+       }
+      }
+     }
+    }
+   },
+   "when_out_of_range": {
+    "type": "minecraft:mul",
+    "argument1": {
+     "type": "minecraft:add",
+     "argument1": {
+      "type": "minecraft:mul",
+      "argument1": "rpg:paradise_lost/coord_c_z",
+      "argument2": "rpg:paradise_lost/coord_a_v"
+     },
+     "argument2": {
+      "type": "minecraft:mul",
+      "argument1": -1.0,
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:paradise_lost/coord_a_z",
+       "argument2": "rpg:paradise_lost/coord_c_v"
+      }
+     }
+    },
+    "argument2": {
+     "type": "minecraft:invert",
+     "argument": {
+      "type": "minecraft:add",
+      "argument1": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:paradise_lost/coord_a_x",
+       "argument2": "rpg:paradise_lost/coord_c_z"
+      },
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": -1.0,
+       "argument2": {
+        "type": "minecraft:mul",
+        "argument1": "rpg:paradise_lost/coord_a_z",
+        "argument2": "rpg:paradise_lost/coord_c_x"
+       }
+      }
+     }
+    }
+   }
+  },
+  "min": -40000.0,
+  "max": 40000.0
+ }
+}

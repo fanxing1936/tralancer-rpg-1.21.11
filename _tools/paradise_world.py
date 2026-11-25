@@ -18,7 +18,7 @@ SEA = 78
 
 SPAWN = [("zombie", 40, 2, 4), ("husk", 30, 1, 3), ("zombie_villager", 8, 1, 1), ("skeleton", 30, 1, 3), ("stray", 12, 1, 2),
          ("bogged", 18, 1, 2), ("spider", 25, 1, 3), ("cave_spider", 10, 1, 3), ("creeper", 16, 1, 2), ("witch", 8, 1, 1),
-         ("pillager", 6, 1, 2), ("vindicator", 6, 1, 1), ("zombified_piglin", 10, 1, 3), ("wither_skeleton", 10, 1, 2),
+         ("pillager", 1, 1, 1), ("vindicator", 6, 1, 1), ("zombified_piglin", 10, 1, 3), ("wither_skeleton", 10, 1, 2),
          ("blaze", 5, 1, 1), ("enderman", 5, 1, 1)]
 
 
@@ -33,7 +33,9 @@ def write(rpg):
     # 维度
     at = dim["attributes"]
     at.update({"minecraft:visual/sky_color": SKY, "minecraft:visual/fog_color": FOG, "minecraft:visual/sky_light_color": LIGHT,
-               "minecraft:gameplay/monsters_burn": False})
+               "minecraft:gameplay/monsters_burn": False,
+               # 玩法天光：满 15 时原版拒绝所有看光的怪自然生成，只剩不看光的掠夺者；画面亮度由别的属性管
+               "minecraft:gameplay/sky_light_level": 7.0})
     dim["ambient_light"] = 0.16
     dim["monster_spawn_light_level"] = 15
     dim["monster_spawn_block_light_limit"] = 15

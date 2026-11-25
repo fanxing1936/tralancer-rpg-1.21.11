@@ -32,7 +32,7 @@ import nbt
 DATA_VERSION = 4671
 NS = "rpg"
 SUB = "paradise/fortress"
-PILLAR_EXTEND = 106   # 用户 2026-11-24：落差约 100 格（桥面 = 地表 + START_HEIGHT_OFFSET + PILLAR_EXTEND + 4）
+PILLAR_EXTEND = 136   # 用户 2026-11-24：落差约 100 格（桥面 = 地表 + START_HEIGHT_OFFSET + PILLAR_EXTEND + 4）
 PILLAR_PIECES = ("nebs", "nebcr", "nece", "nebef")
 
 # Jigsaw tuning parameters (validated against 20 generated fortresses on 1.21.11)
@@ -41,7 +41,7 @@ JIGSAW_MAX_DIST = 128
 # nebcr_start has 16-block pillars underneath; deck surface is at template y = 20
 # (orig y=4 + 16). With WORLD_SURFACE_WG + start_height=-12, deck sits at ground + 8
 # and pillar bottoms reach ground - 12 (sinking cleanly into mud and water basins).
-START_HEIGHT_OFFSET = -10
+START_HEIGHT_OFFSET = -40
 BRIDGE_TIERS = 6
 
 # Doorway definitions for all 14 South-facing (O=0) pieces in ORIGINAL (pre-pillar)

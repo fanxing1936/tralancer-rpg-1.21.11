@@ -1,0 +1,67 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:add",
+  "argument1": {
+   "type": "minecraft:spline",
+   "spline": {
+    "coordinate": "rpg:paradise_lost/g_bog",
+    "points": [
+     {
+      "location": -0.9055555555555556,
+      "value": -0.1875,
+      "derivative": 0.0
+     },
+     {
+      "location": -0.39444444444444443,
+      "value": -0.15625,
+      "derivative": 0.1163793103448276
+     },
+     {
+      "location": -0.2611111111111111,
+      "value": -0.1125,
+      "derivative": 0.390625
+     },
+     {
+      "location": -0.19444444444444442,
+      "value": -0.078125,
+      "derivative": 0.8760245901639344
+     },
+     {
+      "location": -0.12555555555555556,
+      "value": 0.00625,
+      "derivative": 0.501358695652174
+     },
+     {
+      "location": 0.06111111111111111,
+      "value": 0.05,
+      "derivative": 0.18342391304347827
+     },
+     {
+      "location": 0.2833333333333333,
+      "value": 0.08125,
+      "derivative": 0.1278409090909091
+     },
+     {
+      "location": 0.55,
+      "value": 0.1125,
+      "derivative": 0.0
+     }
+    ]
+   }
+  },
+  "argument2": {
+   "type": "minecraft:add",
+   "argument1": {
+    "type": "minecraft:mul",
+    "argument1": 0.06090534335223335,
+    "argument2": "rpg:paradise_lost/g_roll"
+   },
+   "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 0.045679007514175016,
+    "argument2": "rpg:paradise_lost/g_fine"
+   }
+  }
+ }
+}

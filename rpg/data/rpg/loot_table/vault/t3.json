@@ -1,0 +1,129 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp_epic_any",
+          "weight": 12
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/stone_any",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:potion/any_legend",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp_fragment",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:paradise/sp_any",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:trial/ominous_key",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sin_shard_1",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sin_shard_2",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sin_shard_3",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sin_shard_4",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sin_shard_5",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sin_shard_6",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/sin_shard_7",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

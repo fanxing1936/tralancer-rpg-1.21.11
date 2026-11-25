@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:world/bp_legend_any",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/source_faith",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/source_hope",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/source_resolve",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/source_malice",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/source_hatred",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "rpg:forge/item/source_pride",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

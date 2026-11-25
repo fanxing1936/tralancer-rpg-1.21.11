@@ -31268,6 +31268,412 @@
    "conditions": 0
   }
  ],
+ "rpg:paradise/rain_champ": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:paradise/sp_any",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 0
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:potion/any_epic",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:world/bp_epic_any",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:forge/stone_any",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  }
+ ],
+ "rpg:paradise/rain_elite": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:world/bp_fragment",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:forge/rune_any",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:paradise/sp_any",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  }
+ ],
+ "rpg:paradise/rain_z1": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:paradise/relic_any",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 0
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:forge/item/soul",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:potion/any_brave",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  }
+ ],
+ "rpg:paradise/rain_z2": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:paradise/z3",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:potion/any_epic",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:forge/rune_any",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  }
+ ],
+ "rpg:paradise/rain_z3": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:paradise/sp_any",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:potion/any_epic",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:forge/rune_any",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:elite/badge",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  },
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:world/bp_fragment",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 1
+  }
+ ],
  "rpg:paradise/relic_any": [
   {
    "rolls": [
@@ -32986,93 +33392,6 @@
     },
     {
      "item": "→ rpg:world/sp/soil",
-     "weight": 1,
-     "name": null,
-     "lore": [],
-     "attrs": [],
-     "ench": [],
-     "tags": {},
-     "damage": null,
-     "count": null,
-     "components": {},
-     "ref": true
-    }
-   ],
-   "conditions": 0
-  }
- ],
- "rpg:paradise/v_material": [
-  {
-   "rolls": [
-    1,
-    1
-   ],
-   "entries": [
-    {
-     "item": "→ rpg:paradise/sp_any",
-     "weight": 3,
-     "name": null,
-     "lore": [],
-     "attrs": [],
-     "ench": [],
-     "tags": {},
-     "damage": null,
-     "count": null,
-     "components": {},
-     "ref": true
-    },
-    {
-     "item": "→ rpg:forge/rune_any",
-     "weight": 2,
-     "name": null,
-     "lore": [],
-     "attrs": [],
-     "ench": [],
-     "tags": {},
-     "damage": null,
-     "count": null,
-     "components": {},
-     "ref": true
-    },
-    {
-     "item": "→ rpg:forge/stone_any",
-     "weight": 2,
-     "name": null,
-     "lore": [],
-     "attrs": [],
-     "ench": [],
-     "tags": {},
-     "damage": null,
-     "count": null,
-     "components": {},
-     "ref": true
-    }
-   ],
-   "conditions": 0
-  }
- ],
- "rpg:paradise/v_misc": [
-  {
-   "rolls": [
-    1,
-    1
-   ],
-   "entries": [
-    {
-     "item": "→ rpg:potion/any_epic",
-     "weight": 1,
-     "name": null,
-     "lore": [],
-     "attrs": [],
-     "ench": [],
-     "tags": {},
-     "damage": null,
-     "count": null,
-     "components": {},
-     "ref": true
-    },
-    {
-     "item": "→ rpg:forge/bundle",
      "weight": 1,
      "name": null,
      "lore": [],
@@ -38911,6 +39230,620 @@
     {
      "item": "→ rpg:forge/item/wash_gem",
      "weight": 5,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:vault/decoy": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:vault/t1",
+     "weight": 40,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:vault/t2",
+     "weight": 35,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:vault/t3",
+     "weight": 20,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:vault/t4",
+     "weight": 5,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:vault/t1": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:world/currency",
+     "weight": 14,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/forge_stone",
+     "weight": 10,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/wash_gem",
+     "weight": 8,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/gild_leaf",
+     "weight": 6,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/soul",
+     "weight": 12,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:paradise/relic_any",
+     "weight": 14,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:potion/any_brave",
+     "weight": 12,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:paradise/mud",
+     "weight": 6,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:elite/badge",
+     "weight": 8,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:vault/t2": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:paradise/sp_any",
+     "weight": 14,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/rune_any",
+     "weight": 12,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:potion/any_epic",
+     "weight": 10,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:world/bp_fragment",
+     "weight": 12,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:elite/badge",
+     "weight": 8,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:paradise/feather",
+     "weight": 8,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:paradise/fruit",
+     "weight": 8,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/blank",
+     "weight": 6,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:potion/blank_rite",
+     "weight": 6,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/key",
+     "weight": 5,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:vault/t3": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:world/bp_epic_any",
+     "weight": 12,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/stone_any",
+     "weight": 10,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:potion/any_legend",
+     "weight": 8,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:world/bp_fragment",
+     "weight": 8,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:paradise/sp_any",
+     "weight": 8,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:trial/ominous_key",
+     "weight": 4,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:world/sin_shard_1",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:world/sin_shard_2",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:world/sin_shard_3",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:world/sin_shard_4",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:world/sin_shard_5",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:world/sin_shard_6",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:world/sin_shard_7",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    }
+   ],
+   "conditions": 0
+  }
+ ],
+ "rpg:vault/t4": [
+  {
+   "rolls": [
+    1,
+    1
+   ],
+   "entries": [
+    {
+     "item": "→ rpg:world/bp_legend_any",
+     "weight": 7,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/source_faith",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/source_hope",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/source_resolve",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/source_malice",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/source_hatred",
+     "weight": 1,
+     "name": null,
+     "lore": [],
+     "attrs": [],
+     "ench": [],
+     "tags": {},
+     "damage": null,
+     "count": null,
+     "components": {},
+     "ref": true
+    },
+    {
+     "item": "→ rpg:forge/item/source_pride",
+     "weight": 1,
      "name": null,
      "lore": [],
      "attrs": [],

@@ -1,0 +1,118 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:mul",
+  "argument1": {
+   "type": "minecraft:add",
+   "argument1": {
+    "type": "minecraft:add",
+    "argument1": 0.3,
+    "argument2": {
+     "type": "minecraft:square",
+     "argument": "rpg:paradise_lost/g_er1_v"
+    }
+   },
+   "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 3.0,
+    "argument2": {
+     "type": "minecraft:flat_cache",
+     "argument": {
+      "type": "minecraft:mul",
+      "argument1": 0.5,
+      "argument2": {
+       "type": "minecraft:add",
+       "argument1": {
+        "type": "minecraft:min",
+        "argument1": {
+         "type": "minecraft:abs",
+         "argument": {
+          "type": "minecraft:add",
+          "argument1": {
+           "type": "minecraft:shifted_noise",
+           "noise": "rpg:paradise_lost/g_er1",
+           "xz_scale": 0.8,
+           "y_scale": 0.0,
+           "shift_x": 4.0,
+           "shift_y": 0.0,
+           "shift_z": 0.0
+          },
+          "argument2": {
+           "type": "minecraft:mul",
+           "argument1": -1.0,
+           "argument2": "rpg:paradise_lost/g_er1_v"
+          }
+         }
+        },
+        "argument2": {
+         "type": "minecraft:abs",
+         "argument": {
+          "type": "minecraft:add",
+          "argument1": {
+           "type": "minecraft:shifted_noise",
+           "noise": "rpg:paradise_lost/g_er1",
+           "xz_scale": 0.8,
+           "y_scale": 0.0,
+           "shift_x": 0.0,
+           "shift_y": 0.0,
+           "shift_z": 4.0
+          },
+          "argument2": {
+           "type": "minecraft:mul",
+           "argument1": -1.0,
+           "argument2": "rpg:paradise_lost/g_er1_v"
+          }
+         }
+        }
+       },
+       "argument2": {
+        "type": "minecraft:min",
+        "argument1": {
+         "type": "minecraft:abs",
+         "argument": {
+          "type": "minecraft:add",
+          "argument1": {
+           "type": "minecraft:shifted_noise",
+           "noise": "rpg:paradise_lost/g_er1",
+           "xz_scale": 0.8,
+           "y_scale": 0.0,
+           "shift_x": 2.8284000000000002,
+           "shift_y": 0.0,
+           "shift_z": 2.8284000000000002
+          },
+          "argument2": {
+           "type": "minecraft:mul",
+           "argument1": -1.0,
+           "argument2": "rpg:paradise_lost/g_er1_v"
+          }
+         }
+        },
+        "argument2": {
+         "type": "minecraft:abs",
+         "argument": {
+          "type": "minecraft:add",
+          "argument1": {
+           "type": "minecraft:shifted_noise",
+           "noise": "rpg:paradise_lost/g_er1",
+           "xz_scale": 0.8,
+           "y_scale": 0.0,
+           "shift_x": 2.8284000000000002,
+           "shift_y": 0.0,
+           "shift_z": -2.8284000000000002
+          },
+          "argument2": {
+           "type": "minecraft:mul",
+           "argument1": -1.0,
+           "argument2": "rpg:paradise_lost/g_er1_v"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "argument2": "rpg:paradise_lost/g_er0_e"
+ }
+}

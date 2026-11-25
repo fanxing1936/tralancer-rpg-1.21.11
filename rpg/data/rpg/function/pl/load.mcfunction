@@ -16,6 +16,6 @@ scoreboard players add #c3 rpg_pl 0
 scoreboard players add #c4 rpg_pl 0
 scoreboard players set #2 rpg_el 2
 scoreboard players set #4 rpg_el 4
-execute if score #built rpg_pl matches 2..8 run function rpg:pl/prepare
+execute if score #built rpg_pl matches 2..9 run function rpg:pl/prepare
 scoreboard objectives add rpg_pl_tb dummy
 scoreboard objectives add rpg_pl_fort dummy

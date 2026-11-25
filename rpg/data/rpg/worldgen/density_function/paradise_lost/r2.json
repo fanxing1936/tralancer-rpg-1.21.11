@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:add",
+  "argument1": {
+   "type": "minecraft:square",
+   "argument": "rpg:paradise_lost/x"
+  },
+  "argument2": {
+   "type": "minecraft:square",
+   "argument": "rpg:paradise_lost/z"
+  }
+ }
+}

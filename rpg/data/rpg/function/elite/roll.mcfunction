@@ -29,6 +29,7 @@ execute if entity @s[tag=rpg.pl.z1] run scoreboard players operation #p rpg_el *
 execute if entity @s[tag=rpg.pl.z2] run scoreboard players operation #p rpg_el *= #3 rpg_el
 execute if entity @s[tag=rpg.pl.z3] run scoreboard players operation #p rpg_el *= #4 rpg_el
 execute if entity @s[tag=rpg.pl.s] if score #moon rpg_pl matches 1.. run scoreboard players operation #p rpg_el *= #2 rpg_el
+execute if entity @s[tag=rpg.pl.s] if score #rain rpg_pl matches 1.. run scoreboard players operation #p rpg_el *= #2 rpg_el
 execute if entity @s[tag=rpg.pl.s] if score #p rpg_el matches 251.. run scoreboard players set #p rpg_el 250
 execute if entity @s[tag=rpg.pl.z2] if score #sef rpg_el matches ..5 run scoreboard players set #sef rpg_el 6
 execute if entity @s[tag=rpg.pl.z3] if score #sef rpg_el matches ..5 run scoreboard players set #sef rpg_el 6

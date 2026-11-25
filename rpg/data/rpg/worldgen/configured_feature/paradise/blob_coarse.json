@@ -1,0 +1,45 @@
+{
+ "type": "minecraft:ore",
+ "config": {
+  "size": 10,
+  "discard_chance_on_air_exposure": 0.0,
+  "targets": [
+   {
+    "target": {
+     "predicate_type": "minecraft:block_match",
+     "block": "minecraft:mud"
+    },
+    "state": {
+     "Name": "minecraft:coarse_dirt"
+    }
+   },
+   {
+    "target": {
+     "predicate_type": "minecraft:block_match",
+     "block": "minecraft:tuff"
+    },
+    "state": {
+     "Name": "minecraft:coarse_dirt"
+    }
+   },
+   {
+    "target": {
+     "predicate_type": "minecraft:block_match",
+     "block": "minecraft:blackstone"
+    },
+    "state": {
+     "Name": "minecraft:coarse_dirt"
+    }
+   },
+   {
+    "target": {
+     "predicate_type": "minecraft:block_match",
+     "block": "minecraft:muddy_mangrove_roots"
+    },
+    "state": {
+     "Name": "minecraft:coarse_dirt"
+    }
+   }
+  ]
+ }
+}

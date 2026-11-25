@@ -19,6 +19,7 @@ import sys
 import add_alchemy as AL
 import add_eden_gate as EG
 import add_elite_bar_art as BA
+import paradise_terrain
 import paradise_world
 import potion_spec as PS
 import rpg_ui_style as ui
@@ -36,7 +37,7 @@ IN = "execute in %s positioned 0 83 0 " % DIM
 FLOOR = 82
 DECK = FLOOR + 1 + EG.DECK + 1        # 门内亭台上站人的高度
 GATE_R = 36
-BUILT = 9                             # 伊甸之门的版本：旧档读进来会自动换成新门
+BUILT = 10                            # 伊甸之门的版本：旧档读进来会自动换成新门
 LAND = "execute in %s run tp @s 0.5 %d 17.5 180 0" % (DIM, DECK)
 COUNT = 0
 COL = "#E0483C"
@@ -167,6 +168,14 @@ def loots():
     table("paradise/z3", pool([ref("rpg:paradise/relic_any")], (1, 2)), pool([ref("rpg:forge/item/soul")], 1, 0.25),
           pool([ref("rpg:paradise/sp_any")], 1, 0.04), pool([ref("rpg:elite/badge")], 1, 0.06), pool([ref("rpg:paradise/feather")], 1, 0.05))
     table("paradise/champ", pool([ref("rpg:paradise/fruit")], 1, 0.15))
+    # 血雨里另给的一份：比平时高一档
+    table("paradise/rain_z1", pool([ref("rpg:paradise/relic_any")]), pool([ref("rpg:forge/item/soul")], 1, 0.15), pool([ref("rpg:potion/any_brave")], 1, 0.06))
+    table("paradise/rain_z2", pool([ref("rpg:paradise/z3")], 1, 0.6), pool([ref("rpg:potion/any_epic")], 1, 0.03), pool([ref("rpg:forge/rune_any")], 1, 0.05))
+    table("paradise/rain_z3", pool([ref("rpg:paradise/sp_any")], 1, 0.10), pool([ref("rpg:potion/any_epic")], 1, 0.06), pool([ref("rpg:forge/rune_any")], 1, 0.08),
+          pool([ref("rpg:elite/badge")], 1, 0.12), pool([ref("rpg:world/bp_fragment")], 1, 0.08))
+    table("paradise/rain_elite", pool([ref("rpg:world/bp_fragment")], 1, 0.5), pool([ref("rpg:forge/rune_any")], 1, 0.3), pool([ref("rpg:paradise/sp_any")], 1, 0.2))
+    table("paradise/rain_champ", pool([ref("rpg:paradise/sp_any")]), pool([ref("rpg:potion/any_epic")], 1, 0.35), pool([ref("rpg:world/bp_epic_any")], 1, 0.12),
+          pool([ref("rpg:forge/stone_any")], 1, 0.25))
     # 河庭：刷怪笼吐的
     for k, c in COURTS.items():
         omen = c[4]
@@ -180,15 +189,12 @@ def loots():
           pool([ref("rpg:world/bp_epic_any")], 1, 0.05))
     # 基路伯
     table("paradise/cherub", pool([ref("rpg:paradise/feather")]), pool([ref("rpg:world/bp_fragment")], 8))
-    # 宝库八档（1 樱怒之日 由原来的 summon 给，不在表里）
-    table("paradise/v_material", pool([ref("rpg:paradise/sp_any", 3), ref("rpg:forge/rune_any", 2), ref("rpg:forge/stone_any", 2)]))
-    table("paradise/v_misc", pool([ref("rpg:potion/any_epic"), ref("rpg:forge/bundle")]))
 
 
 # ============================================================================ 宝库与钥匙
 def vault_nbt(omen):
     comps = ",".join("%s:%s" % (json.dumps(k), snbt(v)) for k, v in key_components(omen).items())
-    return ('minecraft:vault[ominous=%s]{config:{loot_table:"rpg:loot/%s",key_item:{id:"%s",count:1,components:{%s}}}}'
+    return ('minecraft:vault[ominous=%s]{config:{loot_table:"rpg:loot/%s",override_loot_table_to_display:"rpg:vault/decoy",key_item:{id:"%s",count:1,components:{%s}}}}'
             % ("true" if omen else "false", "loot_ominous" if omen else "loot", key_id(omen), comps))
 
 
@@ -196,35 +202,7 @@ def vaults():
     for name, v in (("loot", 2), ("loot_ominous", 1)):
         table("loot/" + name, pool([{"type": "minecraft:item", "name": "minecraft:nether_star",
                                      "functions": [{"function": "minecraft:set_custom_data", "tag": "{loot_trigger:%db}" % v}]}]))
-    for f, omen in (("g0", True), ("g1", False)):
-        rel = "loot/loot/%s.mcfunction" % f
-        out = []
-        for l in read(rel).rstrip("\n").split("\n"):
-            m = re.match(r"(execute as \S+ at @s run setblock ~ ~-1 ~ )minecraft:vault", l)
-            out.append(m.group(1) + vault_nbt(omen) if m else l)
-        assert any(vault_nbt(omen) in l for l in out), rel
-        write(rel, "\n".join(out) + "\n")
-    # 概率（百分）：1 樱怒之日、2 传说图纸、3 史诗图纸、4 特殊材料/符文/符石、5 药水/养成包、6 传说药水
-    star = 'summon minecraft:ominous_item_spawner ~ ~5 ~ {"item":{components:{"minecraft:custom_data":{loot:%db}},count:1,id:"minecraft:nether_star"},"spawn_item_after_ticks":80}'
-    for f, odds in (("trigger", [(1, 1), (4, 2), (15, 3), (30, 4), (50, 5)]), ("trigger_ominous", [(1, 1), (6, 2), (20, 3), (40, 4), (30, 5), (3, 6)])):
-        lines, at = ["# 开箱：落哪一档", "execute store result score #loot loot run random value 1..100"], 1
-        for pct, k in odds:
-            lines.append("execute if score #loot loot matches %d..%d run %s" % (at, at + pct - 1, star % k))
-            at += pct
-        assert at == 101
-        write("loot/%s.mcfunction" % f, "\n".join(lines + ["scoreboard players reset * loot"]) + "\n")
-    # 落地：1 原样；2..6 换成掉落表；7、8 不再出现
-    tab = {2: "rpg:world/bp_legend_any", 3: "rpg:world/bp_epic_any", 4: "rpg:paradise/v_material", 5: "rpg:paradise/v_misc", 6: "rpg:potion/any_legend"}
-    out = []
-    for l in read("loot/loot.mcfunction").rstrip("\n").split("\n"):
-        m = re.match(r"execute as @e\[type=minecraft:item,tag=rpg\.i\.loot(\d)\] at @s unless block ~ ~-1 ~ air run (summon|loot)", l)
-        if m and int(m.group(1)) in tab:
-            l = "execute as @e[type=minecraft:item,tag=rpg.i.loot%s] at @s unless block ~ ~-1 ~ air run loot spawn ~ ~ ~ loot %s" % (m.group(1), tab[int(m.group(1))])
-        out.append(l)
-    guard = "execute as @e[type=minecraft:item,tag=rpg.i.loot%d] run data merge entity @s {PickupDelay:20s}"
-    if not any("PickupDelay" in l for l in out):      # 半空里的宝物别被人捡走
-        out = [guard % k for k in range(1, 9)] + out
-    write("loot/loot.mcfunction", "\n".join(out) + "\n")
+    # 开箱演出、奖池在 add_vault.py
     fn("place/vault", ["# 管理员：在脚下放一座试炼宝库；站在旧宝库上执行就是换锁", "setblock ~ ~ ~ " + vault_nbt(False)])
     fn("place/vault_ominous", ["# 管理员：在脚下放一座灾厄宝库", "setblock ~ ~ ~ " + vault_nbt(True)])
     # 最早的布置指令：原来两座宝库叠在一格
@@ -388,7 +366,7 @@ def building():
     """positioned 在地面中心（y=FLOOR）。"""
     BB, CB, GB = "minecraft:polished_blackstone_bricks", "minecraft:cracked_polished_blackstone_bricks", "minecraft:gilded_blackstone"
     gate = ["# 伊甸之门（positioned 0 %d 0）" % FLOOR]
-    for dy in range(1, 46):
+    for dy in range(45, 0, -1):       # 自上而下：地上的血迹是红石线，先拆支撑会弹成红石
         gate += disc(30, dy, "minecraft:air")
     for dy in range(-10, 0):
         gate += disc(29, dy, "minecraft:packed_mud")
@@ -409,7 +387,7 @@ def building():
              "execute as @a[distance=..34,gamemode=!spectator] run " + LAND]
     fn("build/gate", gate)
     court = ["# 一座河庭的场地（positioned 中心 y=%d）" % FLOOR, "execute as @e[%s,distance=..60] run tp @s ~ -400 ~" % HUNT, "kill @e[type=minecraft:item,distance=..28]"]
-    for dy in range(1, 33):
+    for dy in range(32, 0, -1):
         court += disc(26, dy, "minecraft:air")
     for dy in range(-8, 0):
         court += disc(26, dy, "minecraft:" + ("andesite", "tuff", "cobblestone")[dy % 3])
@@ -461,7 +439,8 @@ def building():
             [q.replace(" ~ ~", " ~-1 ~") for q in ground([(x, z) for z in range(a[1], b[1] + 1) for x in range(a[0], b[0] + 1)])] +
             ["place template rpg:paradise/%s ~%d ~-1 ~%d %s" % (key, at[0], at[1], rot),
              "execute if block ~ ~2 ~ minecraft:air run setblock ~ ~2 ~ minecraft:light[level=13]"])
-    lines = ["# 失乐园打开：放好伊甸之门与四座河庭。旧档（#built 2 到 8）读进来时重放一遍", "scoreboard players set #built %s %d" % (O, BUILT),
+    lines = ["# 失乐园打开：放好伊甸之门与四座河庭。旧档（#built 2 到 9）读进来时重放一遍"] + [
+        "execute in %s unless loaded %d 80 %d run return run schedule function %s/build/all 40t" % (DIM, x, z, P) for x, z in [(-30, -30), (39, 39)] + [(c[2] + a, c[3] + b) for c in COURTS.values() for a in (-55, 55) for b in (-55, 55)]] + ["scoreboard players set #built %s %d" % (O, BUILT),
              IN + "positioned 0 %d 0 run function %s/build/gate" % (FLOOR, P)]
     for k, c in COURTS.items():
         lines += ["scoreboard players set #c%d %s 0" % (k, O), IN + "positioned %d %d %d run function %s/build/court" % (c[2], FLOOR, c[3], P),
@@ -469,8 +448,11 @@ def building():
                   IN + "run kill @e[type=minecraft:marker,tag=rpg.pl.court%d]" % k,
                   IN + "run setblock %d %d %d %s" % (c[2] + VAULT[0], FLOOR + 1, c[3] + VAULT[1], vault_nbt(c[4])),
                   IN + 'run summon minecraft:marker %d %d %d {Tags:["rpg.pl.court","rpg.pl.court%d"]}' % (c[2], FLOOR + 1, c[3], k)]
-    lines += ["scoreboard players set #sites %s 1" % O, IN + "run forceload remove all", "execute as @a[tag=rpg.pl.wait] run function %s/go" % P]
+    lines += ["scoreboard players set #sites %s 1" % O, "schedule function %s/build/sweep 10t" % P]
     fn("build/all", lines)
+    fn("build/sweep", ["# 建完扫掉被挤出来的掉落物（刚建好，里面不会有玩家的东西）"] +
+       [IN + "positioned %d 82 %d run kill @e[type=minecraft:item,distance=..60]" % q for q in [(0, 0)] + [(c[2], c[3]) for c in COURTS.values()]] +
+       [IN + "run forceload remove all", "execute as @a[tag=rpg.pl.wait] run function %s/go" % P])
 
 
 # ============================================================================ 进出
@@ -490,7 +472,7 @@ def travel():
                 "$execute store result storage rpg:paradise r.p$(id).y double 0.01 run data get entity @s Pos[1] 100",
                 "$execute store result storage rpg:paradise r.p$(id).z double 0.01 run data get entity @s Pos[2] 100",
                 "$execute store result storage rpg:paradise r.p$(id).yaw float 0.01 run data get entity @s Rotation[0] 100"])
-    fn("prepare", ["scoreboard players set #built %s 1" % O,
+    fn("prepare", ["# 新地形（BUILT 10）要连同重置维度一起用：散落的小建筑重放一遍", "execute unless score #built %s matches %d run scoreboard players set #sites %s 0" % (O, BUILT, O), "scoreboard players set #built %s 1" % O,
                    IN + "run forceload add -32 -32 40 40"] +
        [IN + "run forceload add %d %d %d %d" % (c[2] - 56, c[3] - 56, c[2] + 56, c[3] + 56) for c in COURTS.values()] +
        ["schedule function %s/build/all 100t" % P])
@@ -531,10 +513,15 @@ def travel():
 # ============================================================================ 面板页
 def panel():
     T = lambda text, col=ui.BROADCAST_BODY, bold=False: {"text": text, "color": col, "bold": bold, "italic": False}
-    fn("page", ["# 失乐园页（as 玩家）", "scoreboard players add @s rpg_pl_best 0", "scoreboard players add @s rpg_pl_kill 0", "scoreboard players add #moon %s 0" % O,
+    fn("page", ["# 失乐园页（as 玩家）", "scoreboard players add @s rpg_pl_best 0", "scoreboard players add @s rpg_pl_kill 0", "scoreboard players add #moon %s 0" % O, "scoreboard players add #rain %s 0" % O,
                 "execute store result storage rpg:paradise v.best int 1 run scoreboard players get @s rpg_pl_best",
                 "execute store result storage rpg:paradise v.kill int 1 run scoreboard players get @s rpg_pl_kill",
                 "execute store result storage rpg:paradise v.moon int 1 run scoreboard players get #moon %s" % O,
+                "scoreboard players add #rain %s 0" % O, "execute store result storage rpg:paradise v.rain int 1 run scoreboard players get #rain %s" % O,
+                "scoreboard players add @s rpg_vt_n 0", "scoreboard players add @s rpg_vt_e 0", "scoreboard players add @s rpg_vt_l 0",
+                "execute store result storage rpg:paradise v.vn int 1 run scoreboard players get @s rpg_vt_n",
+                "scoreboard players set #a %s 10" % O, "scoreboard players operation #a %s -= @s rpg_vt_e" % O, "execute store result storage rpg:paradise v.ve int 1 run scoreboard players get #a %s" % O,
+                "scoreboard players set #a %s 40" % O, "scoreboard players operation #a %s -= @s rpg_vt_l" % O, "execute store result storage rpg:paradise v.vl int 1 run scoreboard players get #a %s" % O,
                 "function %s/page_m with storage rpg:paradise v" % P])
     def ap(comp, macro=False, cond=""):
         l = "%sdata modify storage rpg:panel ui.body append value %s" % (("execute %s run " % cond) if cond else "", J({"text": "", "extra": comp}))
@@ -547,8 +534,11 @@ def panel():
              ap([T("泥与血的地方。伊甸之门里安全，门外越远，怪越强、掉得越多。\n\n")]),
              ap([T("最高层数　", ui.BROADCAST_BODY, True), T("$(best)", ui.BROADCAST_NAME), T(" / 20\n")], True),
              ap([T("猎杀　", ui.BROADCAST_BODY, True), T("$(kill)", ui.BROADCAST_NAME), T(" 只\n")], True),
-             ap([T("血月　", ui.BROADCAST_BODY, True), T("正在天上，还剩 "), T("$(moon)", ui.BROADCAST_NAME), T(" 秒\n\n")], True, "if score #moon %s matches 1.." % O),
-             ap([T("血月　", ui.BROADCAST_BODY, True), T("没有\n\n", ui.MUTED)], False, "if score #moon %s matches ..0" % O)]
+             ap([T("血月　", ui.BROADCAST_BODY, True), T("正在天上，还剩 "), T("$(moon)", ui.BROADCAST_NAME), T(" 秒\n")], True, "if score #moon %s matches 1.." % O),
+             ap([T("血月　", ui.BROADCAST_BODY, True), T("没有\n", ui.MUTED)], False, "if score #moon %s matches ..0" % O),
+             ap([T("血雨　", ui.BROADCAST_BODY, True), T("正在下，还剩 "), T("$(rain)", ui.BROADCAST_NAME), T(" 秒\n\n")], True, "if score #rain %s matches 1.." % O),
+             ap([T("血雨　", ui.BROADCAST_BODY, True), T("没有\n\n", ui.MUTED)], False, "if score #rain %s matches ..0" % O),
+             ap([T("宝库　", ui.BROADCAST_BODY, True), T("开过 "), T("$(vn)", ui.BROADCAST_NAME), T(" 件　最多再 "), T("$(ve)", ui.BROADCAST_NAME), T(" 件必出史诗、"), T("$(vl)", ui.BROADCAST_NAME), T(" 件必出传说\n\n")], True)]
     for k, c in COURTS.items():
         lo, hi = (k - 1) * 5 + 1, k * 5
         need = (k - 1) * 5
@@ -584,7 +574,7 @@ def hunt():
                 "scoreboard players add #built %s 0" % O, "scoreboard players set #2 %s 2" % O, "scoreboard players set #100 %s 100" % O] +
        ["scoreboard players add #c%d %s 0" % (k, O) for k in COURTS] +
        ["scoreboard players set #%d rpg_el %d" % (n, n) for n in (2, 4)] +
-       ["execute if score #built %s matches 2..8 run function %s/prepare" % (O, P)])
+       ["execute if score #built %s matches 2..9 run function %s/prepare" % (O, P)])
     fn("tick", ["scoreboard players add #t %s 1" % O,
                 "execute if score #t %s matches 20.. run function %s/sec" % (O, P),
                 "execute as @e[type=minecraft:interaction,tag=rpg.pl.tree] if data entity @s interaction on target run function %s/tree/use" % P,
@@ -598,11 +588,16 @@ def hunt():
                "execute as @a[tag=rpg.pl.in,scores={rpg_pl_lv=1..}] at @s run function %s/leave_sec" % P,
                "# 门里不留怪",
                IN + "as @e[%s,distance=..%d] unless entity @s[tag=rpg.pl.g] run tp @s ~ -200 ~" % (HUNT, GATE_R + 2),
+               "# 掠夺者在这里几乎不会自己消失，会把刷怪名额占满：全维度最多留 5 只（河庭的守卫不算）",
+               IN + "store result score #pc %s if entity @e[type=minecraft:pillager,distance=0..,tag=!rpg.pl.g,tag=!rpg.el]" % O,
+               "execute if score #pc %s matches 6.. in %s positioned 0 83 0 as @e[type=minecraft:pillager,distance=0..,tag=!rpg.pl.g,tag=!rpg.el,sort=random,limit=6] at @s unless entity @a[distance=..14] run tp @s ~ -200 ~" % (O, DIM),
+               "# 搬着方块的末影人不会消失，也会把地面搬乱",
+               IN + "as @e[type=minecraft:enderman,distance=0..,nbt={carriedBlockState:{}}] run data remove entity @s carriedBlockState",
                "# 新刷出来的怪按离门多远强化",
                IN + "as @e[%s,tag=!rpg.pl.s,distance=%d..] at @s run function %s/mob/see" % (HUNT, GATE_R, P),
                "# 侵蚀：门外每分钟",
                IN + "as @a[distance=%d..,gamemode=!spectator,gamemode=!creative] run function %s/erode" % (GATE_R, P),
-               "function %s/moon" % P, "function %s/cherub/sec" % P] +
+               "function %s/moon" % P, "function %s/rain/sec" % P, "function %s/cherub/sec" % P] +
        ["execute if score #c%d %s matches 1.. run function %s/court/%d/sec" % (k, O, P, k) for k in COURTS] +
        ["execute if score #built %s matches %d in %s positioned %d %d %d if score #c%d %s matches 0 if entity @a[distance=..%d,gamemode=!spectator] run function %s/court/%d/try"
         % (O, BUILT, DIM, c[2], FLOOR + 1, c[3], k, O, CENTRE[k][2], P, k) for k, c in COURTS.items()])
@@ -628,6 +623,7 @@ def hunt():
         fn("mob/kill_z%d" % z, ["advancement revoke @s only rpg:paradise/kill_z%d" % z, "scoreboard players add @s rpg_pl_kill 1",
                                 "loot give @s loot rpg:paradise/z%d" % z,
                                 "execute if score #moon %s matches 1.. run loot give @s loot rpg:paradise/z%d" % (O, z),
+                                "execute if score #rain %s matches 1.. run loot give @s loot rpg:paradise/rain_z%d" % (O, z),
                                 "function rpg:events/bt/paradise"])
     # 精英：标签不算「本包召唤」，机率按区
     s = read("elite/roll.mcfunction")
@@ -638,6 +634,7 @@ def hunt():
                       + "execute if score #nt rpg_el matches 1.. run return 0", 1)
         add = "".join("execute if entity @s[tag=rpg.pl.z%d] run scoreboard players operation #p rpg_el *= #%d rpg_el\n" % (z, v[3]) for z, v in ZONES.items())
         add += "execute if entity @s[tag=rpg.pl.s] if score #moon %s matches 1.. run scoreboard players operation #p rpg_el *= #2 rpg_el\n" % O
+        add += "execute if entity @s[tag=rpg.pl.s] if score #rain %s matches 1.. run scoreboard players operation #p rpg_el *= #2 rpg_el\n" % O
         add += "execute if entity @s[tag=rpg.pl.s] if score #p rpg_el matches 251.. run scoreboard players set #p rpg_el 250\n"
         add += "execute if entity @s[tag=rpg.pl.z2] if score #sef rpg_el matches ..5 run scoreboard players set #sef rpg_el 6\n"
         add += "execute if entity @s[tag=rpg.pl.z3] if score #sef rpg_el matches ..5 run scoreboard players set #sef rpg_el 6\n"
@@ -646,13 +643,17 @@ def hunt():
     for g in W.GROUPS:
         patch("elite/kill/%s_champion.mcfunction" % g, "rpg:paradise/champ",
               "execute if entity @s[tag=rpg.pl.in] run loot give @s loot rpg:paradise/champ\n"
-              "execute if entity @s[tag=rpg.pl.in] run function rpg:events/bt/paradise_champ\n")
+              "execute if entity @s[tag=rpg.pl.in] run function rpg:events/bt/paradise_champ\n"
+              "execute if entity @s[tag=rpg.pl.in] if score #rain rpg_pl matches 1.. run loot give @s loot rpg:paradise/rain_champ\n")
+        patch("elite/kill/%s.mcfunction" % g, "rpg:paradise/rain_elite",
+              "execute if entity @s[tag=rpg.pl.in] if score #rain rpg_pl matches 1.. run loot give @s loot rpg:paradise/rain_elite\n")
     fn("erode", ["scoreboard players add @s rpg_pl_er 1", "execute unless score @s rpg_pl_er matches 60.. run return 0",
                  "scoreboard players set @s rpg_pl_er 0",
                  "execute if score @s rpg_force matches 1 if score @s rpg_vital matches 1.. run scoreboard players remove @s rpg_vital 1",
                  "execute unless score @s rpg_force matches 1 if score @s rpg_taint matches ..89 run scoreboard players add @s rpg_taint 1"])
     # 血月：20 分钟一次，3 分钟
     fn("moon", ["execute if score #moon %s matches 1.. run return run function %s/moon_on" % (O, P),
+                "# 血雨里不来血月，等雨停", "execute if score #rain %s matches 1.. run return 0" % O,
                 "scoreboard players add #mw %s 1" % O,
                 "execute if score #mw %s matches 1200.. run function %s/moon_start" % (O, P)])
     fn("moon_start", ["scoreboard players set #mw %s 0" % O, "scoreboard players set #moon %s 180" % O,
@@ -664,9 +665,41 @@ def hunt():
                    "scoreboard players operation #q %s %%= #15 %s" % (O, O),
                    "execute if score #q %s matches 0 " % O + "in %s positioned 0 83 0 as @a[distance=%d..,gamemode=!spectator,gamemode=!creative] at @s run function %s/moon_wave" % (DIM, GATE_R + 8, P),
                    "execute if score #moon %s matches 0 in %s positioned 0 83 0 run " % (O, DIM) + ev("血月", "Blood Moon", "血停了。", "@a[distance=0..]")])
+    # 血雨（用户 2026-11-25）：怪物全部强化、精英翻倍、掉落高一档。15 到 25 分钟一次，持续 4 分钟
+    fn("rain/sec", ["execute if score #rain %s matches 1.. run return run function %s/rain/on" % (O, P),
+                    "execute as @e[tag=rpg.pl.r] run function %s/rain/unbuff" % P,
+                    "execute if score #moon %s matches 1.. run return 0" % O,
+                    "execute unless score #rt %s matches 1.. store result score #rt %s run random value 900..1500" % (O, O),
+                    "scoreboard players remove #rt %s 1" % O,
+                    "execute if score #rt %s matches 0 run function %s/rain/start" % (O, P)])
+    fn("rain/start", ["# 下血雨（管理员也可以直接执行）", "scoreboard players set #rt %s 0" % O, "scoreboard players set #rain %s 240" % O,
+                      IN + "run " + ev("血雨", "Blood Rain", "血从天上落下来。四分钟里怪物更强，精英更多，掉落更好。", "@a[distance=0..]"),
+                      IN + "as @a[distance=0..] at @s run playsound minecraft:entity.lightning_bolt.thunder weather @s ~ ~ ~ 0.7 0.6"])
+    fn("rain/on", ["scoreboard players remove #rain %s 1" % O,
+                   "scoreboard players operation #q %s = #rain %s" % (O, O), "scoreboard players set #2r %s 2" % O, "scoreboard players operation #q %s %%= #2r %s" % (O, O),
+                   "execute if score #q %s matches 0 " % O + "in %s positioned 0 83 0 as @a[distance=0..] at @s run playsound minecraft:weather.rain weather @s ~ ~4 ~ 0.35 0.7" % DIM,
+                   "# 门外的怪：强化并补满一次",
+                   IN + "as @e[%s,distance=%d..,tag=!rpg.pl.r,tag=!rpg.pl.g] run function %s/rain/buff" % (HUNT, GATE_R + 2, P),
+                   IN + "as @e[tag=rpg.pl.g,distance=%d..,tag=!rpg.pl.r] run function %s/rain/buff_only" % (GATE_R + 2, P),
+                   "execute if score #rain %s matches 0 in %s positioned 0 83 0 run " % (O, DIM) + ev("血雨", "Blood Rain", "雨停了。", "@a[distance=0..]")])
+    fn("rain/buff_only", ["tag @s add rpg.pl.r", "attribute @s minecraft:max_health modifier add rpg:pl_rain 0.4 add_multiplied_base",
+                          "attribute @s minecraft:attack_damage modifier add rpg:pl_rain 0.35 add_multiplied_base",
+                          "attribute @s minecraft:movement_speed modifier add rpg:pl_rain 0.12 add_multiplied_base",
+                          "attribute @s minecraft:knockback_resistance modifier add rpg:pl_rain 0.2 add_value"])
+    fn("rain/buff", ["function %s/rain/buff_only" % P, "data modify entity @s Health set value 1024f"])
+    fn("rain/unbuff", ["tag @s remove rpg.pl.r"] + ["attribute @s minecraft:%s modifier remove rpg:pl_rain" % a for a in ("max_health", "attack_damage", "movement_speed", "knockback_resistance")])
+    fn("rain/fx", ["# 血滴、血点与地上溅开的（as/at 露天的玩家，每 2 刻）",
+                   "particle minecraft:falling_lava ~ ~8 ~ 8 3 8 0 44",
+                   "particle minecraft:falling_dust{block_state:{Name:\"minecraft:redstone_block\"}} ~ ~6 ~ 8 3 8 0 14",
+                   "particle minecraft:block{block_state:{Name:\"minecraft:redstone_block\"}} ~ ~0.2 ~ 8 0.2 8 0 10"])
+    wj(os.path.join(DP, "data", "rpg", "predicate", "paradise", "open_sky.json"), {"condition": "minecraft:location_check", "predicate": {"can_see_sky": True}})
+    s = read("pl/tick.mcfunction")
+    write("pl/tick.mcfunction", s + "execute if score #rain %s matches 1.. run function %s/rain/tick\n" % (O, P))
+    fn("rain/tick", ["scoreboard players add #rf %s 1" % O, "execute unless score #rf %s matches 2.. run return 0" % O, "scoreboard players set #rf %s 0" % O,
+                     IN + "as @a[distance=0..] at @s if predicate rpg:paradise/open_sky run function %s/rain/fx" % P])
     wave = ["# 血月：身边多刷三只"]
     for i, m in enumerate(("zombie", "skeleton", "spider")):
-        wave += ["summon minecraft:%s ~ ~ ~ {Tags:[\"rpg.pl.new\"]}" % m, "spreadplayers ~ ~ 2 18 under 200 false @e[type=minecraft:%s,tag=rpg.pl.new,limit=1]" % m,
+        wave += ["summon minecraft:%s ~ ~ ~ {Tags:[\"rpg.pl.new\"]}" % m, "spreadplayers ~ ~ 2 18 under 330 false @e[type=minecraft:%s,tag=rpg.pl.new,limit=1]" % m,
                  "tag @e[tag=rpg.pl.new] remove rpg.pl.new"]
     fn("moon_wave", wave)
     # 生命树
@@ -834,7 +867,7 @@ def wanderers():
                       "scoreboard players set #ch %s 0" % O,
                       IN + "as @r[distance=%d..,gamemode=!spectator] at @s run function %s/cherub/spawn" % (ZONE_R[1], P)])
     fn("cherub/spawn", ["# 在这名玩家附近落下（as/at 玩家）",
-                        "summon minecraft:marker ~ ~ ~ {Tags:[\"rpg.pl.cm\"]}", "spreadplayers ~ ~ 4 24 under 200 false @e[type=minecraft:marker,tag=rpg.pl.cm,limit=1]",
+                        "summon minecraft:marker ~ ~ ~ {Tags:[\"rpg.pl.cm\"]}", "spreadplayers ~ ~ 4 24 under 330 false @e[type=minecraft:marker,tag=rpg.pl.cm,limit=1]",
                         "execute at @e[type=minecraft:marker,tag=rpg.pl.cm,limit=1] run function rpg:royal_guard/summon",
                         "execute at @e[type=minecraft:marker,tag=rpg.pl.cm,limit=1] as @e[tag=rpg.rg,distance=..6,limit=1,sort=nearest] run function %s/cherub/make" % P,
                         "kill @e[type=minecraft:marker,tag=rpg.pl.cm]",
@@ -850,16 +883,16 @@ def wanderers():
                 {"condition": "minecraft:entity_properties", "entity": "this", "predicate": {"nbt": "{Tags:[\"rpg.pl.b.%s\"]}" % k}}]}}},
             "rewards": {"function": "%s/%s_dead" % (P, k)}})
         fn("%s_dead" % k, ["advancement revoke @s only rpg:paradise/" + k, "loot give @s loot " + lootn] + extra)
-    # 堡垒的分布：换成同心环，离门 400 格左右才有第一圈，不会压到伊甸之门和河庭（Antigravity 交的是随机散布）
+    # 堡垒的分布：同心环，只落在灰烬边境的盆地中心（paradise_terrain），不会压到伊甸之门和河庭（Antigravity 交的是随机散布）
     sset = os.path.join(DP, "data", "rpg", "worldgen", "structure_set", "paradise", "fortress.json")
     if os.path.exists(sset):
         wj(sset, {"structures": [{"structure": "rpg:paradise/fortress", "weight": 1}],
-                  "placement": {"type": "minecraft:concentric_rings", "distance": 7, "spread": 4, "count": 90,
-                                "preferred_biomes": "rpg:paradise_lost", "salt": 1795411}})
+                  "placement": {"type": "minecraft:concentric_rings", "distance": 5, "spread": 4, "count": 90,
+                                "preferred_biomes": "#rpg:paradise_fortress", "salt": 1795411}})
     # 堡主：玩家走进黑石堡垒（结构由 add_blackstone_fortress.py 生成），每人每天召一次
     if os.path.exists(os.path.join(DP, "data", "rpg", "worldgen", "structure", "paradise", "fortress.json")):
         wj(os.path.join(DP, "data", "rpg", "predicate", "paradise", "in_fortress.json"), {
-            "condition": "minecraft:location_check", "predicate": {"structures": "rpg:paradise/fortress", "position": {"y": {"min": 120}}}})      # 柱子底下的地面不算进堡垒
+            "condition": "minecraft:location_check", "predicate": {"structures": "rpg:paradise/fortress", "position": {"y": {"min": 160}}}})      # 柱子底下的地面不算进堡垒
         s = read("pl/sec.mcfunction")
         write("pl/sec.mcfunction", s + "execute store result score #d %s run time query day\n" % O +
               "execute in %s as @a[x=0,y=83,z=0,distance=%d..,gamemode=!spectator] unless score @s rpg_pl_fort = #d %s at @s if predicate rpg:paradise/in_fortress run function %s/fortress/enter\n" % (DIM, GATE_R, O, P))
@@ -887,7 +920,18 @@ def hooks():
 def main():
     import shutil
     shutil.rmtree(os.path.join(FUNC, "pl"), ignore_errors=True)
-    n = paradise_world.write(DP)
+    n = paradise_world.write(DP) + paradise_terrain.write(DP)
+    # 地上的血迹是红石线，枯灌木掉木棍，草和蕨掉种子：这两个维度里碎了都不掉东西
+    import zipfile
+    import mc_env
+    with zipfile.ZipFile(mc_env.JAR) as z:
+        for b in ("redstone_wire", "dead_bush", "short_grass", "fern", "tall_grass", "large_fern"):
+            t = json.loads(z.read("data/minecraft/loot_table/blocks/%s.json" % b))
+            for pool in t["pools"]:
+                pool["conditions"] = pool.get("conditions", []) + [
+                    {"condition": "minecraft:inverted", "term": {"condition": "minecraft:location_check", "predicate": {"dimension": d}}}
+                    for d in ("rpg:paradise_lost", "rpg:armageddon")]
+            wj(os.path.join(DP, "data", "minecraft", "loot_table", "blocks", b + ".json"), t)
     loots()
     vaults()
     building()

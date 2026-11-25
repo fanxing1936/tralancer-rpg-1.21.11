@@ -1,0 +1,30 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:shifted_noise",
+  "noise": "rpg:paradise_lost/g_crest2",
+  "xz_scale": 1.2,
+  "y_scale": 0.0,
+  "shift_x": {
+   "type": "minecraft:mul",
+   "argument1": 31.2,
+   "argument2": {
+    "type": "minecraft:noise",
+    "noise": "rpg:paradise_lost/g_wz",
+    "xz_scale": 1.0,
+    "y_scale": 0.0
+   }
+  },
+  "shift_y": 0.0,
+  "shift_z": {
+   "type": "minecraft:mul",
+   "argument1": 31.2,
+   "argument2": {
+    "type": "minecraft:noise",
+    "noise": "rpg:paradise_lost/g_wx",
+    "xz_scale": 1.0,
+    "y_scale": 0.0
+   }
+  }
+ }
+}

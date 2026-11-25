@@ -1,0 +1,21 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:mul",
+  "argument1": "rpg:paradise_lost/r2",
+  "argument2": {
+   "type": "minecraft:add",
+   "argument1": 1.0,
+   "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 0.14,
+    "argument2": {
+     "type": "minecraft:noise",
+     "noise": "rpg:paradise_lost/warp",
+     "xz_scale": 1.0,
+     "y_scale": 0.0
+    }
+   }
+  }
+ }
+}
