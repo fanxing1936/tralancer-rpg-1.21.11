@@ -178,6 +178,12 @@ python _tools/package.py --install
 
 感谢这段三方的合作。
 
+### 建筑、地形与音乐
+
+- **失乐园的建筑**：伊甸之门用 **Boulevardier** 的 *Boulevardier's Archway Pack*（Large Archway），四座河庭用同一作者的 *Boulevardier's Primitive Structures Pack*，均发布在 [Planet Minecraft](https://www.planetminecraft.com/)。建筑设计归作者所有；本包放进游戏时只转成结构文件，大门换了两处材质，河庭原样照搬。清单见 [`_tools/gate_ref/SOURCES.md`](_tools/gate_ref/SOURCES.md)。
+- **失乐园的地形**：坡度与逐层侵蚀的思路来自 [Epic Terrain](https://github.com/wonderfulaichen/Epic-Terrain)（MIT，Copyright (c) 2025 wonderfulaichen），代码与数值自写，见 [`docs/TERRAIN-STUDY.md`](docs/TERRAIN-STUDY.md)。
+- **背景音乐**：CC0 与 CC-BY 曲子，作者与许可逐首列在 [`_tools/bgm_ref/SOURCES.md`](_tools/bgm_ref/SOURCES.md)。
+
 ### 素材来源
 
 圣卫（塔卫）、别西卜（无名者）、利维坦（死灵法师）、亚巴顿（悲惨幽魂）与三位领主麾下罪仆（先锋、沉没骷髅、塔中幽魂）的原始贴图与音效取自
