@@ -20,7 +20,12 @@ TRACKS = ["michael1", "michael2", "saul1", "saul2", "jacques1", "jacques2",
           # 序章（2026-11-22，原件与来源在 prologue_ref/bgm_src/，convert_prologue_bgm.py 转码）
           "prologue_intro", "prologue_waves", "prologue_michael", "prologue_end",
           # 新手开局（2026-11-23，原件在 onboard_ref/bgm_src/，convert_onboard_bgm.py 转码）
-          "onboard_intro", "onboard_flow"]
+          "onboard_intro", "onboard_flow",
+          # 失乐园与主世界（2026-11-25，原件在 world_bgm_ref/bgm_src/，convert_world_bgm.py 转码，add_world_bgm.py 播放）
+          "pl_gate", "pl_hunt", "pl_ash", "pl_court", "pl_moon", "ow_day1", "ow_day2", "ow_day3", "ow_night1", "ow_night2"]
+# 各曲原本的响度差很多（RMS −17 到 −24 dB），按量出来的 RMS 拉齐：主世界 −28，失乐园 −26，河庭与血月 −24
+WORLD_VOLUME = {"pl_gate": 0.76, "pl_hunt": 0.51, "pl_ash": 0.75, "pl_court": 0.65, "pl_moon": 0.61,
+                "ow_day1": 0.29, "ow_day2": 0.65, "ow_day3": 0.35, "ow_night1": 0.65, "ow_night2": 0.53}
 # 新手开局：黑屏里玩家悬在出生点上空，声音在玩家身上放；旁白配乐要压在配音下面（作者也说这首要放得很轻）
 ONBOARD_VOLUME = {"onboard_intro": 0.45, "onboard_flow": 0.6}
 
@@ -43,6 +48,8 @@ def main(pack):
             sounds["bgm." + t]["sounds"][0]["attenuation_distance"] = 1024
             # 给台词让位（用户 2026-11-22「台词声音太小了」）：开场配乐本来就轻，其余三首压低
             sounds["bgm." + t]["sounds"][0]["volume"] = 0.85 if t == "prologue_intro" else 0.55
+        if t in WORLD_VOLUME:            # 边走边放：不随离起播点的距离变小
+            sounds["bgm." + t]["sounds"][0].update({"attenuation_distance": 1024, "volume": WORLD_VOLUME[t]})
         if t in ONBOARD_VOLUME:
             sounds["bgm." + t]["sounds"][0]["volume"] = ONBOARD_VOLUME[t]
     with io.open(path, "w", encoding="utf-8") as fh:

@@ -17,4 +17,3 @@ summon minecraft:ominous_item_spawner ~1 ~5 ~-5 {item:{id:"minecraft:lingering_p
 summon minecraft:ominous_item_spawner ~-4 ~6 ~-3 {item:{id:"minecraft:lingering_potion",count:1,components:{"minecraft:potion_contents":{custom_color:4673362,custom_effects:[{id:"minecraft:wither",duration:120,amplifier:2}]}}},spawn_item_after_ticks:80L}
 summon minecraft:ominous_item_spawner ~6 ~6 ~-5 {item:{id:"minecraft:lingering_potion",count:1,components:{"minecraft:potion_contents":{custom_color:7733497,custom_effects:[{id:"minecraft:darkness",duration:600,amplifier:1},{id:"minecraft:nausea",duration:600,amplifier:1},{id:"minecraft:slowness",duration:600,amplifier:2}]}}},spawn_item_after_ticks:150L}
 execute if score #l3 rpg_pl matches 5 positioned ~ ~ ~7 run function rpg:pl/court/guard_3
-execute if score #l3 rpg_pl matches 1 as @a[distance=..24] at @s run playsound rpg:bgm.prologue_waves record @s ~ ~ ~ 0.6 1

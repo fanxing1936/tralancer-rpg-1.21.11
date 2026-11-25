@@ -342,7 +342,7 @@ def section():
     a(_part("t-faq", "排错与管理", "",
             _table(["现象", "原因与做法"], [
                 ("武器、Boss 显示成原版外观或紫黑方块", "材质包没启用，或顺序被别的材质包盖住。到「选项 → 资源包」把它挪到上面。"),
-                ("听不到 Boss 音乐", "把「唱片机 / 音符盒」音量调上来。"),
+                ("听不到背景音乐或 Boss 音乐", "把「唱片机 / 音符盒」音量调上来。失乐园与主世界有自己的背景音乐，和 Boss 曲同走这一条，不看「音乐」滑条；原版背景音乐会被停掉。主世界一首放完静一两分钟。"),
                 ("更新了包但游戏里没变", "材质包按 <kbd>F3</kbd>+<kbd>T</kbd> 重载；数据包执行 <code>/reload</code>。"),
                 ("Boss 战卡住、实体残留", "管理员执行对应 Boss 的 <code>/function rpg:&lt;boss&gt;/clear</code>，例如 <code>rpg:michael_boss/clear</code>。"),
                 ("想重测真名调查", "由要重置的玩家自己执行 <code>/function rpg:inquest/reset_self</code>，只清自己的七柱调查记录。"),

@@ -51,3 +51,24 @@
 
 - "Wendale Abbey" by Yubatake — https://opengameart.org/content/wendale-abbey — CC-BY 4.0
 - "Medieval: Exploration" by RandomMind — CC0
+
+## 失乐园与主世界（2026-11-25 下载，用户同意）
+
+原件在 `_tools/world_bgm_ref/bgm_src/`，由 `_tools/convert_world_bgm.py` 转成 Ogg Vorbis（只换格式，不剪辑；音量在 sounds.json 里拉齐）；原本就是 Ogg 的原样拷贝。
+
+| 文件 | 用在 | 曲名 | 作者 | 许可 | 长度 | 页面 |
+|---|---|---|---|---|---|---|
+| pl_gate.ogg | 失乐园 · 伊甸之门 | Cathedral | Umplix | CC0 | 1:12 | https://opengameart.org/content/cathedral-0 |
+| pl_hunt.ogg | 失乐园 · 泥沼与血泽 | Fantasy Music - The Mourning Forest | Hitctrl | CC-BY 3.0 | 3:06 | https://opengameart.org/content/fantasy-music-the-mourning-forest |
+| pl_ash.ogg | 失乐园 · 灰烬边境与黑石堡垒 | RPG Exploration - (The Black Temple) | Hitctrl | CC-BY 3.0 | 3:44 | https://opengameart.org/content/rpg-exploration-the-black-temple |
+| pl_court.ogg | 失乐园 · 河庭试炼 | (Blood) Stained Glass | FoxSynergy | CC-BY 3.0 | 4:00 | https://opengameart.org/content/blood-stained-glass |
+| pl_moon.ogg | 失乐园 · 血月 | Chapel of Hate | FoxSynergy | CC-BY 3.0 | 4:21 | https://opengameart.org/content/chapel-of-hate |
+| ow_day1.ogg | 主世界 · 白天 | Fantasy Music - The Elven Groves | Hitctrl | CC-BY 3.0 | 2:41 | https://opengameart.org/content/fantasy-music-the-elven-groves |
+| ow_day2.ogg | 主世界 · 白天 | RPG Ambient 3 | Hitctrl | CC-BY 3.0 | 3:12 | https://opengameart.org/content/rpg-ambient-3 |
+| ow_day3.ogg | 主世界 · 白天 | RPG Exploration (The Lost City) | Hitctrl | CC-BY 3.0 | 1:45 | https://opengameart.org/content/rpg-exploration-the-lost-city |
+| ow_night1.ogg | 主世界 · 夜晚 | Moongate（loop） | Tsorthan Grove | CC0 | 2:34 | https://opengameart.org/content/moongate |
+| ow_night2.ogg | 主世界 · 夜晚 | RPG_Ambient_2 | Hitctrl | CC-BY 3.0 | 2:00 | https://opengameart.org/content/rpgambient2 |
+
+- "The Mourning Forest", "The Black Temple", "The Elven Groves", "RPG Ambient 3", "The Lost City", "RPG Ambient 2" by Hitctrl — https://opengameart.org/users/hitctrl — CC-BY 3.0
+- "(Blood) Stained Glass" and "Chapel of Hate" by FoxSynergy — https://opengameart.org/users/foxsynergy — CC-BY 3.0
+- "Cathedral" by Umplix and "Moongate" by Tsorthan Grove — CC0

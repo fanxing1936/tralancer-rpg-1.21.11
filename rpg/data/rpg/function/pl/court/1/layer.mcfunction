@@ -15,4 +15,3 @@ summon minecraft:ominous_item_spawner ~2 ~6 ~2 {item:{id:"minecraft:wind_charge"
 summon minecraft:ominous_item_spawner ~-2 ~6 ~3 {item:{id:"minecraft:wind_charge",count:1},spawn_item_after_ticks:120L}
 summon minecraft:ominous_item_spawner ~1 ~5 ~-4 {item:{id:"minecraft:lingering_potion",count:1,components:{"minecraft:potion_contents":{custom_color:6268978,custom_effects:[{id:"minecraft:poison",duration:200,amplifier:1}]}}},spawn_item_after_ticks:50L}
 execute if score #l1 rpg_pl matches 5 positioned ~ ~ ~5 run function rpg:pl/court/guard_1
-execute if score #l1 rpg_pl matches 1 as @a[distance=..24] at @s run playsound rpg:bgm.prologue_waves record @s ~ ~ ~ 0.6 1

@@ -519,7 +519,6 @@ def travel():
     fn("back", ["tag @s remove rpg.pl.in", "scoreboard players set @s rpg_pl_lv 0",
                 "execute store result storage rpg:paradise t.id int 1 run scoreboard players get @s rpg_fg_id",
                 "function %s/back_m with storage rpg:paradise t" % P,
-                "stopsound @s record rpg:bgm.prologue_waves",
                 "playsound minecraft:block.portal.travel player @s ~ ~ ~ 0.2 1.4"])
     fn("back_m", ["$execute unless data storage rpg:paradise r.p$(id) in minecraft:overworld run return run tp @s 0 120 0",
                   "$function %s/back_at with storage rpg:paradise r.p$(id)" % P, "$data remove storage rpg:paradise r.p$(id)"])
@@ -780,9 +779,8 @@ def courts():
                  "execute as @a[distance=..24,scores={rpg_force=1}] run scoreboard players add @s rpg_mana 20",
                  "execute as @a[distance=..24,scores={rpg_force=2..3}] run scoreboard players add @s rpg_mana 20",
                  "particle minecraft:trial_spawner_detection%s ~ ~2 ~ 1 1 1 0.2 200" % ("_ominous" if omen else ""),
-                 "function %s/court/%d/title with storage rpg:paradise c" % (P, k)] + spawn_lines + [
-                 "execute if score #l%d %s matches 5 positioned ~ ~ ~%d run function %s/court/guard_%d" % (k, O, CENTRE[k][5], P, k),
-                 "execute if score #l%d %s matches 1 as @a[distance=..24] at @s run playsound rpg:bgm.prologue_waves record @s ~ ~ ~ 0.6 1" % (k, O)]
+                 "function %s/court/%d/title with storage rpg:paradise c" % (P, k)] + spawn_lines + [      # 河庭的曲子由 add_world_bgm.py 管
+                 "execute if score #l%d %s matches 5 positioned ~ ~ ~%d run function %s/court/guard_%d" % (k, O, CENTRE[k][5], P, k)]
         fn(d + "layer", layer)
         fn(d + "title", ["title @a[distance=..24] times 5 40 10", "title @a[distance=..24] title " + J(["", seg("试炼之室", COL, True), seg(" " + ui.fraktur("Trial"), ui.BROADCAST_GLOSS)]),
                          "$title @a[distance=..24] subtitle " + J(["", seg("%s河庭　" % name, ui.BROADCAST_BODY), seg("第 $(n) 层", ui.BROADCAST_NAME, True)])])
@@ -806,11 +804,10 @@ def courts():
                         "execute as @a[distance=..32,gamemode=!spectator] run loot give @s loot rpg:trial/%s" % ("ominous_key" if omen else "key"),
                         "execute as @a[distance=..32,gamemode=!spectator] run scoreboard players add @s rpg_ex_xp 12",
                         "execute as @a[distance=..32,gamemode=!spectator] if score @s rpg_pl_best matches ..%d run scoreboard players set @s rpg_pl_best %d" % (k * 5 - 1, k * 5)] + summit + [
-                        "stopsound @a[distance=..48] record rpg:bgm.prologue_waves",
                         ev(name + "河庭", en, "五层都过了。宝库在南边，钥匙已经给你。", "@a[distance=..48]")] +
            (["execute as @a[distance=..32,gamemode=!spectator] run function rpg:quest/hook/court"] if k == 1 else []))
         fn(d + "fail", ["scoreboard players set #c%d %s 0" % (k, O), "scoreboard players set #f%d %s 0" % (k, O), "setblock ~ ~%d ~ minecraft:air" % UP,
-                        "kill @e[%s,distance=..26]" % HUNT, "execute as @e[tag=rpg.pl.g,distance=..30] run tp @s ~ -200 ~", "stopsound @a[distance=..64] record rpg:bgm.prologue_waves"])
+                        "kill @e[%s,distance=..26]" % HUNT, "execute as @e[tag=rpg.pl.g,distance=..30] run tp @s ~ -200 ~"])
     fn("summit", ["scoreboard players add @s rpg_ex_xp 50", "function rpg:quest/title/get_summit", "loot give @s loot rpg:world/bp_epic_any",
                   ev("登顶", "Summit", "二十层都在你脚下。", "@a[distance=0..]")])
 
