@@ -1,0 +1,343 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:clamp",
+  "input": {
+   "type": "minecraft:add",
+   "argument1": {
+    "type": "minecraft:add",
+    "argument1": -6.0,
+    "argument2": {
+     "type": "minecraft:mul",
+     "argument1": {
+      "type": "minecraft:add",
+      "argument1": {
+       "type": "minecraft:add",
+       "argument1": {
+        "type": "minecraft:add",
+        "argument1": {
+         "type": "minecraft:add",
+         "argument1": {
+          "type": "minecraft:add",
+          "argument1": {
+           "type": "minecraft:spline",
+           "spline": {
+            "coordinate": "rpg:overworld/land",
+            "points": [
+             {
+              "location": -1.0,
+              "value": -40.0,
+              "derivative": 0.0
+             },
+             {
+              "location": -0.5,
+              "value": -28.0,
+              "derivative": 36.470588235294116
+             },
+             {
+              "location": -0.15,
+              "value": -9.0,
+              "derivative": 53.0
+             },
+             {
+              "location": 0.0,
+              "value": -1.5,
+              "derivative": 38.888888888888886
+             },
+             {
+              "location": 0.12,
+              "value": 1.5,
+              "derivative": 13.75
+             },
+             {
+              "location": 0.4,
+              "value": 4.0,
+              "derivative": 5.113636363636363
+             },
+             {
+              "location": 1.0,
+              "value": 6.0,
+              "derivative": 0.0
+             }
+            ]
+           }
+          },
+          "argument2": {
+           "type": "minecraft:mul",
+           "argument1": {
+            "type": "minecraft:spline",
+            "spline": {
+             "coordinate": "rpg:overworld/land",
+             "points": [
+              {
+               "location": 0.0,
+               "value": 0.0,
+               "derivative": 0.0
+              },
+              {
+               "location": 0.35,
+               "value": 1.0,
+               "derivative": 0.0
+              }
+             ]
+            }
+           },
+           "argument2": {
+            "type": "minecraft:add",
+            "argument1": {
+             "type": "minecraft:mul",
+             "argument1": {
+              "type": "minecraft:add",
+              "argument1": 1.0,
+              "argument2": {
+               "type": "minecraft:mul",
+               "argument1": -1.0,
+               "argument2": {
+                "type": "minecraft:spline",
+                "spline": {
+                 "coordinate": "rpg:overworld/war_field",
+                 "points": [
+                  {
+                   "location": 1.0,
+                   "value": 0.0,
+                   "derivative": 0.0
+                  },
+                  {
+                   "location": 2.0,
+                   "value": 1.0,
+                   "derivative": 0.0
+                  }
+                 ]
+                }
+               }
+              }
+             },
+             "argument2": "rpg:overworld/climate_h"
+            },
+            "argument2": {
+             "type": "minecraft:mul",
+             "argument1": {
+              "type": "minecraft:spline",
+              "spline": {
+               "coordinate": "rpg:overworld/war_field",
+               "points": [
+                {
+                 "location": 1.0,
+                 "value": 0.0,
+                 "derivative": 0.0
+                },
+                {
+                 "location": 2.0,
+                 "value": 1.0,
+                 "derivative": 0.0
+                }
+               ]
+              }
+             },
+             "argument2": {
+              "type": "minecraft:add",
+              "argument1": {
+               "type": "minecraft:mul",
+               "argument1": 0.25,
+               "argument2": "rpg:overworld/hill"
+              },
+              "argument2": {
+               "type": "minecraft:spline",
+               "spline": {
+                "coordinate": {
+                 "type": "minecraft:add",
+                 "argument1": {
+                  "type": "minecraft:square",
+                  "argument": {
+                   "type": "minecraft:noise",
+                   "noise": "rpg:ow/crater_a",
+                   "xz_scale": 1.16,
+                   "y_scale": 0.0
+                  }
+                 },
+                 "argument2": {
+                  "type": "minecraft:square",
+                  "argument": {
+                   "type": "minecraft:noise",
+                   "noise": "rpg:ow/crater_b",
+                   "xz_scale": 1.16,
+                   "y_scale": 0.0
+                  }
+                 }
+                },
+                "points": [
+                 {
+                  "location": 0.0,
+                  "value": -7.0,
+                  "derivative": 0.0
+                 },
+                 {
+                  "location": 0.006,
+                  "value": -6.0,
+                  "derivative": 542.8571428571428
+                 },
+                 {
+                  "location": 0.014,
+                  "value": 0.6,
+                  "derivative": 428.57142857142856
+                 },
+                 {
+                  "location": 0.02,
+                  "value": 0.0,
+                  "derivative": 0.0
+                 }
+                ]
+               }
+              }
+             }
+            }
+           }
+          }
+         },
+         "argument2": "rpg:overworld/alp_h"
+        },
+        "argument2": {
+         "type": "minecraft:mul",
+         "argument1": "rpg:overworld/cliff_n",
+         "argument2": {
+          "type": "minecraft:spline",
+          "spline": {
+           "coordinate": "rpg:overworld/land",
+           "points": [
+            {
+             "location": 0.08,
+             "value": 0.0,
+             "derivative": 0.0
+            },
+            {
+             "location": 0.13,
+             "value": 24.0,
+             "derivative": 154.54545454545456
+            },
+            {
+             "location": 0.3,
+             "value": 34.0,
+             "derivative": 12.5
+            },
+            {
+             "location": 0.45,
+             "value": 28.0,
+             "derivative": -113.33333333333334
+            },
+            {
+             "location": 0.6,
+             "value": 0.0,
+             "derivative": 0.0
+            }
+           ]
+          }
+         }
+        }
+       },
+       "argument2": {
+        "type": "minecraft:spline",
+        "spline": {
+         "coordinate": {
+          "type": "minecraft:noise",
+          "noise": "rpg:ow/detail",
+          "xz_scale": 0.8,
+          "y_scale": 0.0
+         },
+         "points": [
+          {
+           "location": -0.4605590155464124,
+           "value": -1.3,
+           "derivative": 0.0
+          },
+          {
+           "location": 0.4605590155464121,
+           "value": 1.3,
+           "derivative": 0.0
+          }
+         ]
+        }
+       }
+      },
+      "argument2": 6.0
+     },
+     "argument2": {
+      "type": "minecraft:add",
+      "argument1": 1.0,
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": {
+        "type": "minecraft:mul",
+        "argument1": {
+         "type": "minecraft:add",
+         "argument1": 1.0,
+         "argument2": {
+          "type": "minecraft:mul",
+          "argument1": -1.0,
+          "argument2": {
+           "type": "minecraft:spline",
+           "spline": {
+            "coordinate": "rpg:overworld/river_v",
+            "points": [
+             {
+              "location": 0.012,
+              "value": 0.0,
+              "derivative": 0.0
+             },
+             {
+              "location": 0.022,
+              "value": 0.12,
+              "derivative": 25.000000000000004
+             },
+             {
+              "location": 0.036,
+              "value": 0.6,
+              "derivative": 23.157894736842106
+             },
+             {
+              "location": 0.06,
+              "value": 1.0,
+              "derivative": 0.0
+             }
+            ]
+           }
+          }
+         }
+        },
+        "argument2": {
+         "type": "minecraft:spline",
+         "spline": {
+          "coordinate": "rpg:overworld/land",
+          "points": [
+           {
+            "location": -0.05,
+            "value": 0.0,
+            "derivative": 0.0
+           },
+           {
+            "location": 0.06,
+            "value": 1.0,
+            "derivative": 0.0
+           }
+          ]
+         }
+        }
+       },
+       "argument2": -1.0
+      }
+     }
+    }
+   },
+   "argument2": {
+    "type": "minecraft:max",
+    "argument1": {
+     "type": "minecraft:add",
+     "argument1": "rpg:overworld/volc_field",
+     "argument2": -2.0
+    },
+    "argument2": 0.0
+   }
+  },
+  "min": -60.0,
+  "max": 900.0
+ }
+}

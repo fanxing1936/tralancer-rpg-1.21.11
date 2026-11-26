@@ -1,0 +1,142 @@
+{
+ "attributes": {
+  "minecraft:audio/background_music": {
+   "default": {
+    "max_delay": 24000,
+    "min_delay": 12000,
+    "sound": "minecraft:music.overworld.meadow"
+   }
+  },
+  "minecraft:visual/sky_color": "#7fb8c8",
+  "minecraft:visual/fog_color": "#5aa6a8",
+  "minecraft:visual/ambient_particles": [
+   {
+    "particle": {
+     "type": "minecraft:warped_spore"
+    },
+    "probability": 0.012
+   }
+  ]
+ },
+ "carvers": [],
+ "downfall": 0.8,
+ "effects": {
+  "water_color": "#0e4ecf",
+  "grass_color": "#167e86",
+  "foliage_color": "#14b485",
+  "dry_foliage_color": "#167e86"
+ },
+ "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   "rpg:ow/warped_veg",
+   "rpg:ow/twisting"
+  ],
+  [
+   "minecraft:freeze_top_layer"
+  ]
+ ],
+ "has_precipitation": true,
+ "spawn_costs": {},
+ "spawners": {
+  "ambient": [
+   {
+    "type": "minecraft:bat",
+    "maxCount": 8,
+    "minCount": 8,
+    "weight": 10
+   }
+  ],
+  "axolotls": [],
+  "creature": [
+   {
+    "type": "minecraft:donkey",
+    "maxCount": 2,
+    "minCount": 1,
+    "weight": 1
+   },
+   {
+    "type": "minecraft:rabbit",
+    "maxCount": 6,
+    "minCount": 2,
+    "weight": 2
+   },
+   {
+    "type": "minecraft:sheep",
+    "maxCount": 4,
+    "minCount": 2,
+    "weight": 2
+   }
+  ],
+  "misc": [],
+  "monster": [
+   {
+    "type": "minecraft:spider",
+    "maxCount": 4,
+    "minCount": 4,
+    "weight": 100
+   },
+   {
+    "type": "minecraft:zombie",
+    "maxCount": 4,
+    "minCount": 4,
+    "weight": 95
+   },
+   {
+    "type": "minecraft:zombie_villager",
+    "maxCount": 1,
+    "minCount": 1,
+    "weight": 5
+   },
+   {
+    "type": "minecraft:skeleton",
+    "maxCount": 4,
+    "minCount": 4,
+    "weight": 100
+   },
+   {
+    "type": "minecraft:creeper",
+    "maxCount": 4,
+    "minCount": 4,
+    "weight": 100
+   },
+   {
+    "type": "minecraft:slime",
+    "maxCount": 4,
+    "minCount": 4,
+    "weight": 100
+   },
+   {
+    "type": "minecraft:enderman",
+    "maxCount": 4,
+    "minCount": 1,
+    "weight": 10
+   },
+   {
+    "type": "minecraft:witch",
+    "maxCount": 1,
+    "minCount": 1,
+    "weight": 5
+   }
+  ],
+  "underground_water_creature": [
+   {
+    "type": "minecraft:glow_squid",
+    "maxCount": 6,
+    "minCount": 4,
+    "weight": 10
+   }
+  ],
+  "water_ambient": [],
+  "water_creature": []
+ },
+ "temperature": 0.3
+}

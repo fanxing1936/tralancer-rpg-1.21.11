@@ -1,0 +1,23 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:abs",
+  "argument": {
+   "type": "minecraft:add",
+   "argument1": {
+    "type": "minecraft:mul",
+    "argument1": "rpg:overworld/coord_a_x",
+    "argument2": "rpg:overworld/coord_b_z"
+   },
+   "argument2": {
+    "type": "minecraft:mul",
+    "argument1": -1.0,
+    "argument2": {
+     "type": "minecraft:mul",
+     "argument1": "rpg:overworld/coord_a_z",
+     "argument2": "rpg:overworld/coord_b_x"
+    }
+   }
+  }
+ }
+}

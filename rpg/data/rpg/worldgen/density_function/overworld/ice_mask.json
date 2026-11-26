@@ -1,0 +1,64 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:mul",
+  "argument1": {
+   "type": "minecraft:mul",
+   "argument1": {
+    "type": "minecraft:mul",
+    "argument1": {
+     "type": "minecraft:mul",
+     "argument1": "rpg:overworld/w_cold",
+     "argument2": "rpg:overworld/w_dry"
+    },
+    "argument2": "rpg:overworld/w_weird"
+   },
+   "argument2": {
+    "type": "minecraft:spline",
+    "spline": {
+     "coordinate": {
+      "type": "minecraft:noise",
+      "noise": "rpg:ow/ice_reg",
+      "xz_scale": 1.07,
+      "y_scale": 0.0
+     },
+     "points": [
+      {
+       "location": -0.03518517711942072,
+       "value": 0.0,
+       "derivative": 0.0
+      },
+      {
+       "location": 0.10788973059411894,
+       "value": 1.0,
+       "derivative": 0.0
+      }
+     ]
+    }
+   }
+  },
+  "argument2": {
+   "type": "minecraft:spline",
+   "spline": {
+    "coordinate": {
+     "type": "minecraft:noise",
+     "noise": "rpg:ow/ice_col",
+     "xz_scale": 1.33,
+     "y_scale": 0.0
+    },
+    "points": [
+     {
+      "location": 0.30248941542818775,
+      "value": 0.0,
+      "derivative": 0.0
+     },
+     {
+      "location": 0.5266222102823501,
+      "value": 1.0,
+      "derivative": 0.0
+     }
+    ]
+   }
+  }
+ }
+}

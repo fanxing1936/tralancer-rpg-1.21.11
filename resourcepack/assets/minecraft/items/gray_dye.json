@@ -9,8 +9,38 @@
    "model": "rpg:relic/chalk_2"
   },
   "on_false": {
-   "type": "minecraft:model",
-   "model": "minecraft:item/gray_dye"
+   "type": "minecraft:condition",
+   "property": "minecraft:component",
+   "predicate": "minecraft:custom_data",
+   "value": "{rpg_chalk:2b}",
+   "on_true": {
+    "type": "minecraft:model",
+    "model": "rpg:relic/chalk_2"
+   },
+   "on_false": {
+    "type": "minecraft:condition",
+    "property": "minecraft:component",
+    "predicate": "minecraft:custom_data",
+    "value": "{rpg_chalk:2b}",
+    "on_true": {
+     "type": "minecraft:model",
+     "model": "rpg:relic/chalk_2"
+    },
+    "on_false": {
+     "type": "minecraft:condition",
+     "property": "minecraft:component",
+     "predicate": "minecraft:custom_data",
+     "value": "{rpg_chalk:2b}",
+     "on_true": {
+      "type": "minecraft:model",
+      "model": "rpg:relic/chalk_2"
+     },
+     "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/gray_dye"
+     }
+    }
+   }
   }
  }
 }

@@ -9,8 +9,38 @@
    "model": "rpg:relic/medium_2"
   },
   "on_false": {
-   "type": "minecraft:model",
-   "model": "minecraft:item/prismarine_crystals"
+   "type": "minecraft:condition",
+   "property": "minecraft:component",
+   "predicate": "minecraft:custom_data",
+   "value": "{rpg_medium:2b}",
+   "on_true": {
+    "type": "minecraft:model",
+    "model": "rpg:relic/medium_2"
+   },
+   "on_false": {
+    "type": "minecraft:condition",
+    "property": "minecraft:component",
+    "predicate": "minecraft:custom_data",
+    "value": "{rpg_medium:2b}",
+    "on_true": {
+     "type": "minecraft:model",
+     "model": "rpg:relic/medium_2"
+    },
+    "on_false": {
+     "type": "minecraft:condition",
+     "property": "minecraft:component",
+     "predicate": "minecraft:custom_data",
+     "value": "{rpg_medium:2b}",
+     "on_true": {
+      "type": "minecraft:model",
+      "model": "rpg:relic/medium_2"
+     },
+     "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/prismarine_crystals"
+     }
+    }
+   }
   }
  }
 }

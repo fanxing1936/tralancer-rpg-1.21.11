@@ -1,0 +1,62 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:spline",
+  "spline": {
+   "coordinate": {
+    "type": "minecraft:add",
+    "argument1": {
+     "type": "minecraft:add",
+     "argument1": {
+      "type": "minecraft:square",
+      "argument": {
+       "type": "minecraft:add",
+       "argument1": "rpg:overworld/x",
+       "argument2": -2.7
+      }
+     },
+     "argument2": {
+      "type": "minecraft:square",
+      "argument": {
+       "type": "minecraft:add",
+       "argument1": "rpg:overworld/z",
+       "argument2": -3.55
+      }
+     }
+    },
+    "argument2": {
+     "type": "minecraft:mul",
+     "argument1": 0.28800000000000003,
+     "argument2": "rpg:overworld/edge_wobble"
+    }
+   },
+   "points": [
+    {
+     "location": 0.0,
+     "value": 2.0,
+     "derivative": 0.0
+    },
+    {
+     "location": 0.43033600000000005,
+     "value": 2.0,
+     "derivative": -1.5624999999999998
+    },
+    {
+     "location": 0.6400000000000001,
+     "value": 1.0,
+     "derivative": -2.4034763882479617
+    },
+    {
+     "location": 0.8464,
+     "value": 1.0,
+     "derivative": -2.7777777777777786
+    },
+    {
+     "location": 1.0,
+     "value": 0.0,
+     "derivative": 0.0
+    }
+   ]
+  }
+ }
+}

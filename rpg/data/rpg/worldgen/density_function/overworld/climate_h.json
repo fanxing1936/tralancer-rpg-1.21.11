@@ -1,0 +1,551 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:add",
+  "argument1": {
+   "type": "minecraft:add",
+   "argument1": {
+    "type": "minecraft:add",
+    "argument1": {
+     "type": "minecraft:mul",
+     "argument1": "rpg:overworld/w_cold",
+     "argument2": {
+      "type": "minecraft:add",
+      "argument1": {
+       "type": "minecraft:add",
+       "argument1": {
+        "type": "minecraft:mul",
+        "argument1": "rpg:overworld/w_dry",
+        "argument2": {
+         "type": "minecraft:add",
+         "argument1": {
+          "type": "minecraft:mul",
+          "argument1": {
+           "type": "minecraft:add",
+           "argument1": 1.0,
+           "argument2": {
+            "type": "minecraft:mul",
+            "argument1": -1.0,
+            "argument2": "rpg:overworld/w_weird"
+           }
+          },
+          "argument2": {
+           "type": "minecraft:mul",
+           "argument1": 0.45,
+           "argument2": "rpg:overworld/hill"
+          }
+         },
+         "argument2": {
+          "type": "minecraft:mul",
+          "argument1": "rpg:overworld/w_weird",
+          "argument2": {
+           "type": "minecraft:mul",
+           "argument1": 0.3,
+           "argument2": "rpg:overworld/hill"
+          }
+         }
+        }
+       },
+       "argument2": {
+        "type": "minecraft:mul",
+        "argument1": "rpg:overworld/w_midh",
+        "argument2": {
+         "type": "minecraft:mul",
+         "argument1": 0.45,
+         "argument2": "rpg:overworld/hill"
+        }
+       }
+      },
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:overworld/w_wet",
+       "argument2": {
+        "type": "minecraft:add",
+        "argument1": {
+         "type": "minecraft:add",
+         "argument1": {
+          "type": "minecraft:add",
+          "argument1": 20.0,
+          "argument2": {
+           "type": "minecraft:mul",
+           "argument1": 0.8,
+           "argument2": "rpg:overworld/hill"
+          }
+         },
+         "argument2": {
+          "type": "minecraft:spline",
+          "spline": {
+           "coordinate": {
+            "type": "minecraft:abs",
+            "argument": {
+             "type": "minecraft:shifted_noise",
+             "noise": "rpg:ow/canyon",
+             "xz_scale": 0.78,
+             "y_scale": 0.0,
+             "shift_x": {
+              "type": "minecraft:mul",
+              "argument1": 93.60000000000001,
+              "argument2": "rpg:overworld/warp_x"
+             },
+             "shift_y": 0.0,
+             "shift_z": {
+              "type": "minecraft:mul",
+              "argument1": 93.60000000000001,
+              "argument2": "rpg:overworld/warp_z"
+             }
+            }
+           },
+           "points": [
+            {
+             "location": 0.0,
+             "value": -48.0,
+             "derivative": 0.0
+            },
+            {
+             "location": 0.022,
+             "value": -44.0,
+             "derivative": 900.0
+            },
+            {
+             "location": 0.04,
+             "value": -12.0,
+             "derivative": 1023.2558139534883
+            },
+            {
+             "location": 0.065,
+             "value": 0.0,
+             "derivative": 0.0
+            }
+           ]
+          }
+         }
+        },
+        "argument2": {
+         "type": "minecraft:spline",
+         "spline": {
+          "coordinate": {
+           "type": "minecraft:noise",
+           "noise": "rpg:ow/spring",
+           "xz_scale": 1.0,
+           "y_scale": 0.0
+          },
+          "points": [
+           {
+            "location": 0.43533660648711886,
+            "value": 0.0,
+            "derivative": 0.0
+           },
+           {
+            "location": 0.5073349884267272,
+            "value": -2.0,
+            "derivative": -13.88626604039555
+           },
+           {
+            "location": 0.6513774047314355,
+            "value": -3.0,
+            "derivative": 0.0
+           }
+          ]
+         }
+        }
+       }
+      }
+     }
+    },
+    "argument2": {
+     "type": "minecraft:mul",
+     "argument1": "rpg:overworld/w_cool",
+     "argument2": {
+      "type": "minecraft:add",
+      "argument1": {
+       "type": "minecraft:add",
+       "argument1": {
+        "type": "minecraft:mul",
+        "argument1": "rpg:overworld/w_dry",
+        "argument2": {
+         "type": "minecraft:add",
+         "argument1": {
+          "type": "minecraft:add",
+          "argument1": 6.0,
+          "argument2": {
+           "type": "minecraft:mul",
+           "argument1": 0.5,
+           "argument2": "rpg:overworld/hill"
+          }
+         },
+         "argument2": {
+          "type": "minecraft:spline",
+          "spline": {
+           "coordinate": {
+            "type": "minecraft:noise",
+            "noise": "rpg:ow/plateau",
+            "xz_scale": 0.98,
+            "y_scale": 0.0
+           },
+           "points": [
+            {
+             "location": -0.07093718887802394,
+             "value": 0.0,
+             "derivative": 0.0
+            },
+            {
+             "location": -0.03872517822919326,
+             "value": 52.0,
+             "derivative": 1019.4363357561023
+            },
+            {
+             "location": -0.014043003370125425,
+             "value": 58.0,
+             "derivative": 51.02429009467543
+            },
+            {
+             "location": 0.23565394540041606,
+             "value": 66.0,
+             "derivative": 44.389761711998226
+            },
+            {
+             "location": 0.5266222102823501,
+             "value": 82.0,
+             "derivative": 0.0
+            }
+           ]
+          }
+         }
+        }
+       },
+       "argument2": {
+        "type": "minecraft:mul",
+        "argument1": "rpg:overworld/w_midh",
+        "argument2": {
+         "type": "minecraft:mul",
+         "argument1": 0.6,
+         "argument2": "rpg:overworld/hill"
+        }
+       }
+      },
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:overworld/w_wet",
+       "argument2": {
+        "type": "minecraft:add",
+        "argument1": {
+         "type": "minecraft:mul",
+         "argument1": 1.1,
+         "argument2": "rpg:overworld/hill"
+        },
+        "argument2": {
+         "type": "minecraft:spline",
+         "spline": {
+          "coordinate": {
+           "type": "minecraft:abs",
+           "argument": {
+            "type": "minecraft:shifted_noise",
+            "noise": "rpg:ow/creek",
+            "xz_scale": 0.8,
+            "y_scale": 0.0,
+            "shift_x": {
+             "type": "minecraft:mul",
+             "argument1": 32.0,
+             "argument2": "rpg:overworld/warp_x"
+            },
+            "shift_y": 0.0,
+            "shift_z": {
+             "type": "minecraft:mul",
+             "argument1": 32.0,
+             "argument2": "rpg:overworld/warp_z"
+            }
+           }
+          },
+          "points": [
+           {
+            "location": 0.0,
+            "value": -5.0,
+            "derivative": 0.0
+           },
+           {
+            "location": 0.02,
+            "value": -4.0,
+            "derivative": 100.0
+           },
+           {
+            "location": 0.05,
+            "value": 0.0,
+            "derivative": 0.0
+           }
+          ]
+         }
+        }
+       }
+      }
+     }
+    }
+   },
+   "argument2": {
+    "type": "minecraft:mul",
+    "argument1": "rpg:overworld/w_mild",
+    "argument2": {
+     "type": "minecraft:add",
+     "argument1": {
+      "type": "minecraft:add",
+      "argument1": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:overworld/w_dry",
+       "argument2": "rpg:overworld/hill"
+      },
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": "rpg:overworld/w_midh",
+       "argument2": {
+        "type": "minecraft:mul",
+        "argument1": 1.3,
+        "argument2": "rpg:overworld/hill"
+       }
+      }
+     },
+     "argument2": {
+      "type": "minecraft:mul",
+      "argument1": "rpg:overworld/w_wet",
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": 0.9,
+       "argument2": "rpg:overworld/hill"
+      }
+     }
+    }
+   }
+  },
+  "argument2": {
+   "type": "minecraft:mul",
+   "argument1": "rpg:overworld/w_hot",
+   "argument2": {
+    "type": "minecraft:add",
+    "argument1": {
+     "type": "minecraft:add",
+     "argument1": {
+      "type": "minecraft:mul",
+      "argument1": "rpg:overworld/w_dry",
+      "argument2": {
+       "type": "minecraft:add",
+       "argument1": {
+        "type": "minecraft:mul",
+        "argument1": {
+         "type": "minecraft:add",
+         "argument1": 1.0,
+         "argument2": {
+          "type": "minecraft:mul",
+          "argument1": -1.0,
+          "argument2": "rpg:overworld/w_weird"
+         }
+        },
+        "argument2": {
+         "type": "minecraft:spline",
+         "spline": {
+          "coordinate": {
+           "type": "minecraft:shifted_noise",
+           "noise": "rpg:ow/dune",
+           "xz_scale": 0.71,
+           "y_scale": 0.0,
+           "shift_x": {
+            "type": "minecraft:mul",
+            "argument1": 12.78,
+            "argument2": "rpg:overworld/warp_x"
+           },
+           "shift_y": 0.0,
+           "shift_z": {
+            "type": "minecraft:mul",
+            "argument1": 12.78,
+            "argument2": "rpg:overworld/warp_z"
+           }
+          },
+          "points": [
+           {
+            "location": -0.5,
+            "value": 0.0,
+            "derivative": 0.0
+           },
+           {
+            "location": -0.12,
+            "value": 4.5,
+            "derivative": 20.0
+           },
+           {
+            "location": 0.0,
+            "value": 10.0,
+            "derivative": -8.333333333333334
+           },
+           {
+            "location": 0.06,
+            "value": 3.0,
+            "derivative": -33.333333333333336
+           },
+           {
+            "location": 0.3,
+            "value": 0.0,
+            "derivative": 0.0
+           }
+          ]
+         }
+        }
+       },
+       "argument2": {
+        "type": "minecraft:mul",
+        "argument1": "rpg:overworld/w_weird",
+        "argument2": {
+         "type": "minecraft:add",
+         "argument1": {
+          "type": "minecraft:spline",
+          "spline": {
+           "coordinate": "rpg:overworld/ero_m",
+           "points": [
+            {
+             "location": 0.41,
+             "value": -4.0,
+             "derivative": 0.0
+            },
+            {
+             "location": 0.63,
+             "value": 12.0,
+             "derivative": 55.0
+            },
+            {
+             "location": 1.21,
+             "value": 40.0,
+             "derivative": 0.0
+            }
+           ]
+          }
+         },
+         "argument2": {
+          "type": "minecraft:spline",
+          "spline": {
+           "coordinate": {
+            "type": "minecraft:abs",
+            "argument": {
+             "type": "minecraft:noise",
+             "noise": "rpg:ow/runoff",
+             "xz_scale": 1.0,
+             "y_scale": 0.0
+            }
+           },
+           "points": [
+            {
+             "location": 0.0,
+             "value": -6.0,
+             "derivative": 0.0
+            },
+            {
+             "location": 0.02,
+             "value": -5.0,
+             "derivative": 133.33333333333334
+            },
+            {
+             "location": 0.045,
+             "value": 0.0,
+             "derivative": 0.0
+            }
+           ]
+          }
+         }
+        }
+       }
+      }
+     },
+     "argument2": {
+      "type": "minecraft:mul",
+      "argument1": "rpg:overworld/w_midh",
+      "argument2": {
+       "type": "minecraft:add",
+       "argument1": {
+        "type": "minecraft:mul",
+        "argument1": 0.3,
+        "argument2": "rpg:overworld/hill"
+       },
+       "argument2": {
+        "type": "minecraft:max",
+        "argument1": {
+         "type": "minecraft:spline",
+         "spline": {
+          "coordinate": "rpg:overworld/mesa_c2a",
+          "points": [
+           {
+            "location": 0.0,
+            "value": 100.0,
+            "derivative": 0.0
+           },
+           {
+            "location": 0.012,
+            "value": 95.0,
+            "derivative": -3750.0
+           },
+           {
+            "location": 0.016,
+            "value": 40.0,
+            "derivative": -6230.7692307692305
+           },
+           {
+            "location": 0.025,
+            "value": 14.0,
+            "derivative": -1379.3103448275863
+           },
+           {
+            "location": 0.045,
+            "value": 0.0,
+            "derivative": 0.0
+           }
+          ]
+         }
+        },
+        "argument2": {
+         "type": "minecraft:spline",
+         "spline": {
+          "coordinate": "rpg:overworld/mesa_c2b",
+          "points": [
+           {
+            "location": 0.0,
+            "value": 48.0,
+            "derivative": 0.0
+           },
+           {
+            "location": 0.008,
+            "value": 45.0,
+            "derivative": -2727.2727272727275
+           },
+           {
+            "location": 0.011,
+            "value": 18.0,
+            "derivative": -3900.0000000000005
+           },
+           {
+            "location": 0.018,
+            "value": 6.0,
+            "derivative": -947.3684210526316
+           },
+           {
+            "location": 0.03,
+            "value": 0.0,
+            "derivative": 0.0
+           }
+          ]
+         }
+        }
+       }
+      }
+     }
+    },
+    "argument2": {
+     "type": "minecraft:mul",
+     "argument1": "rpg:overworld/w_wet",
+     "argument2": {
+      "type": "minecraft:add",
+      "argument1": -2.0,
+      "argument2": {
+       "type": "minecraft:mul",
+       "argument1": 0.15,
+       "argument2": "rpg:overworld/hill"
+      }
+     }
+    }
+   }
+  }
+ }
+}

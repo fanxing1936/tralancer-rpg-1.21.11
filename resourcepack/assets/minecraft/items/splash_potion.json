@@ -45,14 +45,164 @@
        "model": "rpg:relic/potion_fatigue"
       },
       "on_false": {
-       "type": "minecraft:model",
-       "model": "minecraft:item/splash_potion",
-       "tints": [
-        {
-         "type": "minecraft:potion",
-         "default": -13083194
+       "type": "minecraft:condition",
+       "property": "minecraft:component",
+       "predicate": "minecraft:custom_data",
+       "value": "{rpg_potion:\"blood\"}",
+       "on_true": {
+        "type": "minecraft:model",
+        "model": "rpg:relic/potion_blood"
+       },
+       "on_false": {
+        "type": "minecraft:condition",
+        "property": "minecraft:component",
+        "predicate": "minecraft:custom_data",
+        "value": "{rpg_potion:\"venom\"}",
+        "on_true": {
+         "type": "minecraft:model",
+         "model": "rpg:relic/potion_venom"
+        },
+        "on_false": {
+         "type": "minecraft:condition",
+         "property": "minecraft:component",
+         "predicate": "minecraft:custom_data",
+         "value": "{rpg_potion:\"revive\"}",
+         "on_true": {
+          "type": "minecraft:model",
+          "model": "rpg:relic/potion_revive"
+         },
+         "on_false": {
+          "type": "minecraft:condition",
+          "property": "minecraft:component",
+          "predicate": "minecraft:custom_data",
+          "value": "{rpg_potion:\"shield\"}",
+          "on_true": {
+           "type": "minecraft:model",
+           "model": "rpg:relic/potion_shield"
+          },
+          "on_false": {
+           "type": "minecraft:condition",
+           "property": "minecraft:component",
+           "predicate": "minecraft:custom_data",
+           "value": "{rpg_potion:\"fatigue\"}",
+           "on_true": {
+            "type": "minecraft:model",
+            "model": "rpg:relic/potion_fatigue"
+           },
+           "on_false": {
+            "type": "minecraft:condition",
+            "property": "minecraft:component",
+            "predicate": "minecraft:custom_data",
+            "value": "{rpg_potion:\"blood\"}",
+            "on_true": {
+             "type": "minecraft:model",
+             "model": "rpg:relic/potion_blood"
+            },
+            "on_false": {
+             "type": "minecraft:condition",
+             "property": "minecraft:component",
+             "predicate": "minecraft:custom_data",
+             "value": "{rpg_potion:\"venom\"}",
+             "on_true": {
+              "type": "minecraft:model",
+              "model": "rpg:relic/potion_venom"
+             },
+             "on_false": {
+              "type": "minecraft:condition",
+              "property": "minecraft:component",
+              "predicate": "minecraft:custom_data",
+              "value": "{rpg_potion:\"revive\"}",
+              "on_true": {
+               "type": "minecraft:model",
+               "model": "rpg:relic/potion_revive"
+              },
+              "on_false": {
+               "type": "minecraft:condition",
+               "property": "minecraft:component",
+               "predicate": "minecraft:custom_data",
+               "value": "{rpg_potion:\"shield\"}",
+               "on_true": {
+                "type": "minecraft:model",
+                "model": "rpg:relic/potion_shield"
+               },
+               "on_false": {
+                "type": "minecraft:condition",
+                "property": "minecraft:component",
+                "predicate": "minecraft:custom_data",
+                "value": "{rpg_potion:\"fatigue\"}",
+                "on_true": {
+                 "type": "minecraft:model",
+                 "model": "rpg:relic/potion_fatigue"
+                },
+                "on_false": {
+                 "type": "minecraft:condition",
+                 "property": "minecraft:component",
+                 "predicate": "minecraft:custom_data",
+                 "value": "{rpg_potion:\"blood\"}",
+                 "on_true": {
+                  "type": "minecraft:model",
+                  "model": "rpg:relic/potion_blood"
+                 },
+                 "on_false": {
+                  "type": "minecraft:condition",
+                  "property": "minecraft:component",
+                  "predicate": "minecraft:custom_data",
+                  "value": "{rpg_potion:\"venom\"}",
+                  "on_true": {
+                   "type": "minecraft:model",
+                   "model": "rpg:relic/potion_venom"
+                  },
+                  "on_false": {
+                   "type": "minecraft:condition",
+                   "property": "minecraft:component",
+                   "predicate": "minecraft:custom_data",
+                   "value": "{rpg_potion:\"revive\"}",
+                   "on_true": {
+                    "type": "minecraft:model",
+                    "model": "rpg:relic/potion_revive"
+                   },
+                   "on_false": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:component",
+                    "predicate": "minecraft:custom_data",
+                    "value": "{rpg_potion:\"shield\"}",
+                    "on_true": {
+                     "type": "minecraft:model",
+                     "model": "rpg:relic/potion_shield"
+                    },
+                    "on_false": {
+                     "type": "minecraft:condition",
+                     "property": "minecraft:component",
+                     "predicate": "minecraft:custom_data",
+                     "value": "{rpg_potion:\"fatigue\"}",
+                     "on_true": {
+                      "type": "minecraft:model",
+                      "model": "rpg:relic/potion_fatigue"
+                     },
+                     "on_false": {
+                      "type": "minecraft:model",
+                      "model": "minecraft:item/splash_potion",
+                      "tints": [
+                       {
+                        "type": "minecraft:potion",
+                        "default": -13083194
+                       }
+                      ]
+                     }
+                    }
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
         }
-       ]
+       }
       }
      }
     }

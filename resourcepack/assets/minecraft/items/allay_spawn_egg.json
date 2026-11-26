@@ -9,8 +9,38 @@
    "model": "rpg:relic/rite_doll"
   },
   "on_false": {
-   "type": "minecraft:model",
-   "model": "minecraft:item/allay_spawn_egg"
+   "type": "minecraft:condition",
+   "property": "minecraft:component",
+   "predicate": "minecraft:custom_data",
+   "value": "{holy_weapon_tag:1b}",
+   "on_true": {
+    "type": "minecraft:model",
+    "model": "rpg:relic/rite_doll"
+   },
+   "on_false": {
+    "type": "minecraft:condition",
+    "property": "minecraft:component",
+    "predicate": "minecraft:custom_data",
+    "value": "{holy_weapon_tag:1b}",
+    "on_true": {
+     "type": "minecraft:model",
+     "model": "rpg:relic/rite_doll"
+    },
+    "on_false": {
+     "type": "minecraft:condition",
+     "property": "minecraft:component",
+     "predicate": "minecraft:custom_data",
+     "value": "{holy_weapon_tag:1b}",
+     "on_true": {
+      "type": "minecraft:model",
+      "model": "rpg:relic/rite_doll"
+     },
+     "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/allay_spawn_egg"
+     }
+    }
+   }
   }
  }
 }

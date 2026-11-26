@@ -1,0 +1,60 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:mul",
+  "argument1": {
+   "type": "minecraft:mul",
+   "argument1": {
+    "type": "minecraft:mul",
+    "argument1": "rpg:overworld/w_hot",
+    "argument2": "rpg:overworld/w_wet"
+   },
+   "argument2": {
+    "type": "minecraft:spline",
+    "spline": {
+     "coordinate": {
+      "type": "minecraft:noise",
+      "noise": "rpg:ow/stone_reg",
+      "xz_scale": 0.85,
+      "y_scale": 0.0
+     },
+     "points": [
+      {
+       "location": -0.07093718887802394,
+       "value": 0.0,
+       "derivative": 0.0
+      },
+      {
+       "location": 0.07093718887802394,
+       "value": 1.0,
+       "derivative": 0.0
+      }
+     ]
+    }
+   }
+  },
+  "argument2": {
+   "type": "minecraft:spline",
+   "spline": {
+    "coordinate": {
+     "type": "minecraft:noise",
+     "noise": "rpg:ow/stone_col",
+     "xz_scale": 1.33,
+     "y_scale": 0.0
+    },
+    "points": [
+     {
+      "location": 0.2784482072987308,
+      "value": 0.0,
+      "derivative": 0.0
+     },
+     {
+      "location": 0.4901920999506075,
+      "value": 1.0,
+      "derivative": 0.0
+     }
+    ]
+   }
+  }
+ }
+}

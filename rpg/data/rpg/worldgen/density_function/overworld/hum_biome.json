@@ -1,0 +1,48 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:clamp",
+  "input": {
+   "type": "minecraft:add",
+   "argument1": "rpg:overworld/hum",
+   "argument2": {
+    "type": "minecraft:add",
+    "argument1": {
+     "type": "minecraft:add",
+     "argument1": {
+      "type": "minecraft:mul",
+      "argument1": 0.32,
+      "argument2": {
+       "type": "minecraft:noise",
+       "noise": "rpg:ow/jit_d",
+       "xz_scale": 1.28,
+       "y_scale": 0.0
+      }
+     },
+     "argument2": {
+      "type": "minecraft:mul",
+      "argument1": 0.1,
+      "argument2": {
+       "type": "minecraft:noise",
+       "noise": "rpg:ow/jit_e",
+       "xz_scale": 1.07,
+       "y_scale": 0.0
+      }
+     }
+    },
+    "argument2": {
+     "type": "minecraft:mul",
+     "argument1": 0.02,
+     "argument2": {
+      "type": "minecraft:noise",
+      "noise": "rpg:ow/jit_f",
+      "xz_scale": 0.8,
+      "y_scale": 0.0
+     }
+    }
+   }
+  },
+  "min": -1.0,
+  "max": 1.0
+ }
+}

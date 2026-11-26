@@ -1,0 +1,33 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:mul",
+  "argument1": 100.0,
+  "argument2": {
+   "type": "minecraft:mul",
+   "argument1": 100000.0,
+   "argument2": {
+    "type": "minecraft:add",
+    "argument1": {
+     "type": "minecraft:noise",
+     "noise": "rpg:ow/coord_a",
+     "xz_scale": 1e-10,
+     "y_scale": 0.0
+    },
+    "argument2": {
+     "type": "minecraft:mul",
+     "argument1": -1.0,
+     "argument2": {
+      "type": "minecraft:shifted_noise",
+      "noise": "rpg:ow/coord_a",
+      "xz_scale": 0.0,
+      "y_scale": 0.0,
+      "shift_x": 0.0,
+      "shift_y": 0.0,
+      "shift_z": 0.0
+     }
+    }
+   }
+  }
+ }
+}

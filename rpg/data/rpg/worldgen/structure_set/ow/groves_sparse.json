@@ -1,0 +1,22 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 718203,
+  "spacing": 12,
+  "separation": 5
+ },
+ "structures": [
+  {
+   "structure": "rpg:ow/grove_plains",
+   "weight": 1
+  },
+  {
+   "structure": "rpg:ow/grove_snowfield",
+   "weight": 1
+  },
+  {
+   "structure": "rpg:ow/grove_sea_cliffs",
+   "weight": 1
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "placement": {
+  "type": "minecraft:random_spread",
+  "salt": 718202,
+  "spacing": 7,
+  "separation": 3
+ },
+ "structures": [
+  {
+   "structure": "rpg:ow/grove_wildfield",
+   "weight": 1
+  },
+  {
+   "structure": "rpg:ow/grove_stone_forest",
+   "weight": 1
+  },
+  {
+   "structure": "rpg:ow/grove_warped_plateau",
+   "weight": 1
+  },
+  {
+   "structure": "rpg:ow/grove_alpine",
+   "weight": 1
+  }
+ ]
+}

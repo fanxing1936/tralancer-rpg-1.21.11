@@ -9,8 +9,38 @@
    "model": "rpg:relic/medium_5"
   },
   "on_false": {
-   "type": "minecraft:model",
-   "model": "minecraft:item/snowball"
+   "type": "minecraft:condition",
+   "property": "minecraft:component",
+   "predicate": "minecraft:custom_data",
+   "value": "{rpg_medium:5b}",
+   "on_true": {
+    "type": "minecraft:model",
+    "model": "rpg:relic/medium_5"
+   },
+   "on_false": {
+    "type": "minecraft:condition",
+    "property": "minecraft:component",
+    "predicate": "minecraft:custom_data",
+    "value": "{rpg_medium:5b}",
+    "on_true": {
+     "type": "minecraft:model",
+     "model": "rpg:relic/medium_5"
+    },
+    "on_false": {
+     "type": "minecraft:condition",
+     "property": "minecraft:component",
+     "predicate": "minecraft:custom_data",
+     "value": "{rpg_medium:5b}",
+     "on_true": {
+      "type": "minecraft:model",
+      "model": "rpg:relic/medium_5"
+     },
+     "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/snowball"
+     }
+    }
+   }
   }
  }
 }

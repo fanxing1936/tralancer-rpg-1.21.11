@@ -283,6 +283,9 @@ python add_world_art.py ../resourcepack
 python add_elite_bar_art.py ../resourcepack
 # 药水、驱魔器具、残页、罪物、传承书、钥匙的图标（Codex：relic_ref/art，没到先用原版图）
 python add_relic_art.py ../resourcepack
+# 主世界重做（add_overworld.py → overworld_world.py / overworld_trees.py）：19 个群系的破碎大陆、
+# 无原版结构、无矿洞矿物、高度上限 1024、世界边界 12000；覆盖老存档的主世界（用户 2026-11-26 决定）
+python add_overworld.py ../rpg ../resourcepack
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg

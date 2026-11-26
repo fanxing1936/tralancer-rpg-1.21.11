@@ -1,0 +1,51 @@
+{
+ "type": "minecraft:flat_cache",
+ "argument": {
+  "type": "minecraft:mul",
+  "argument1": {
+   "type": "minecraft:square",
+   "argument": "rpg:overworld/alp_w"
+  },
+  "argument2": {
+   "type": "minecraft:add",
+   "argument1": "rpg:overworld/alp_shape",
+   "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 1.4,
+    "argument2": {
+     "type": "minecraft:spline",
+     "spline": {
+      "coordinate": "rpg:overworld/ero_m",
+      "points": [
+       {
+        "location": 0.41,
+        "value": -10.0,
+        "derivative": 0.0
+       },
+       {
+        "location": 0.5,
+        "value": -5.0,
+        "derivative": 45.454545454545446
+       },
+       {
+        "location": 0.63,
+        "value": 0.0,
+        "derivative": 33.33333333333333
+       },
+       {
+        "location": 0.8,
+        "value": 5.0,
+        "derivative": 15.517241379310345
+       },
+       {
+        "location": 1.21,
+        "value": 9.0,
+        "derivative": 0.0
+       }
+      ]
+     }
+    }
+   }
+  }
+ }
+}

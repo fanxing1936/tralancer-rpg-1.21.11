@@ -1,0 +1,1086 @@
+{
+ "type": "minecraft:overworld",
+ "generator": {
+  "type": "minecraft:noise",
+  "settings": "rpg:overworld",
+  "biome_source": {
+   "type": "minecraft:multi_noise",
+   "biomes": [
+    {
+     "biome": "rpg:snowfield",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       -0.5
+      ],
+      "humidity": [
+       -1.0,
+       -0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       0.05
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:glacier_spires",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       -0.5
+      ],
+      "humidity": [
+       -1.0,
+       -0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       0.05,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:snowfield",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       -0.5
+      ],
+      "humidity": [
+       -0.12,
+       0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:geyser_taiga",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       -0.5
+      ],
+      "humidity": [
+       0.12,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:warped_plateau",
+     "parameters": {
+      "temperature": [
+       -0.5,
+       -0.2
+      ],
+      "humidity": [
+       -1.0,
+       -0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:wildfield",
+     "parameters": {
+      "temperature": [
+       -0.5,
+       -0.2
+      ],
+      "humidity": [
+       -0.12,
+       0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:lavender_forest",
+     "parameters": {
+      "temperature": [
+       -0.5,
+       -0.2
+      ],
+      "humidity": [
+       0.12,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:plains",
+     "parameters": {
+      "temperature": [
+       -0.2,
+       0.2
+      ],
+      "humidity": [
+       -1.0,
+       -0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:forest",
+     "parameters": {
+      "temperature": [
+       -0.2,
+       0.2
+      ],
+      "humidity": [
+       -0.12,
+       0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:golden_forest",
+     "parameters": {
+      "temperature": [
+       -0.2,
+       0.2
+      ],
+      "humidity": [
+       0.12,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:desert",
+     "parameters": {
+      "temperature": [
+       0.2,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       -0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       0.05
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:eroded_desert",
+     "parameters": {
+      "temperature": [
+       0.2,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       -0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       0.05,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:mesa_valley",
+     "parameters": {
+      "temperature": [
+       0.2,
+       1.0
+      ],
+      "humidity": [
+       -0.12,
+       0.12
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:stone_forest",
+     "parameters": {
+      "temperature": [
+       0.2,
+       1.0
+      ],
+      "humidity": [
+       0.12,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       0.5
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.0,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:sea_cliffs",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.15,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:alpine",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.3,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:alpine_slope",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.34,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:alpine_rock",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.38,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:alpine_cliff",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.42,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:ashwood",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.08,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.5,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:volcano",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -1.0,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.7,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:war_front",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -1.0,
+       1.0
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": 0.9,
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:frozen_river",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       -0.5
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.03,
+       1.0
+      ],
+      "erosion": [
+       0.5,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.1
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:snowy_beach",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       -0.5
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -0.16,
+       0.08
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:frozen_ocean",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       -0.5
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -0.55,
+       -0.16
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:deep_ocean",
+     "parameters": {
+      "temperature": [
+       -1.0,
+       -0.5
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -1.0,
+       -0.55
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:river",
+     "parameters": {
+      "temperature": [
+       -0.5,
+       -0.2
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.03,
+       1.0
+      ],
+      "erosion": [
+       0.5,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.1
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:beach",
+     "parameters": {
+      "temperature": [
+       -0.5,
+       -0.2
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -0.16,
+       0.08
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:ocean",
+     "parameters": {
+      "temperature": [
+       -0.5,
+       -0.2
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -0.55,
+       -0.16
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:deep_ocean",
+     "parameters": {
+      "temperature": [
+       -0.5,
+       -0.2
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -1.0,
+       -0.55
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:river",
+     "parameters": {
+      "temperature": [
+       -0.2,
+       0.2
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.03,
+       1.0
+      ],
+      "erosion": [
+       0.5,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.1
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:beach",
+     "parameters": {
+      "temperature": [
+       -0.2,
+       0.2
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -0.16,
+       0.08
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:ocean",
+     "parameters": {
+      "temperature": [
+       -0.2,
+       0.2
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -0.55,
+       -0.16
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:deep_ocean",
+     "parameters": {
+      "temperature": [
+       -0.2,
+       0.2
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -1.0,
+       -0.55
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:river",
+     "parameters": {
+      "temperature": [
+       0.2,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       0.03,
+       1.0
+      ],
+      "erosion": [
+       0.5,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.1
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:beach",
+     "parameters": {
+      "temperature": [
+       0.2,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -0.16,
+       0.08
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:ocean",
+     "parameters": {
+      "temperature": [
+       0.2,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -0.55,
+       -0.16
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    },
+    {
+     "biome": "rpg:deep_ocean",
+     "parameters": {
+      "temperature": [
+       0.2,
+       1.0
+      ],
+      "humidity": [
+       -1.0,
+       1.0
+      ],
+      "continentalness": [
+       -1.0,
+       -0.55
+      ],
+      "erosion": [
+       -1.0,
+       1.0
+      ],
+      "weirdness": [
+       -1.0,
+       1.0
+      ],
+      "depth": [
+       0.0,
+       0.6
+      ],
+      "offset": 0.0
+     }
+    }
+   ]
+  }
+ }
+}
