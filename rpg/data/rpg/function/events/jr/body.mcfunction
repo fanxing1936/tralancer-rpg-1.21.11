@@ -83,4 +83,6 @@ data modify storage rpg:panel ui.actions append value {"label":{"text":"领取 3
 data modify storage rpg:panel ui.actions append value {"label":{"text":"配方书","color":"#C9A646","bold":true,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_jr_do set 2"},"tooltip":{"text":"锻造配方与材料来源","color":"#9C9A94","bold":false,"italic":false}}
 data modify storage rpg:panel ui.actions append value {"label":{"text":"称号","color":"#C9A646","bold":true,"italic":false},"tooltip":{"text":"名字前的小图标","color":"#9C9A94","bold":false,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_q_do set 1"}}
 data modify storage rpg:panel ui.actions append value {"label":{"text":"返回面板","color":"#C9A646","bold":true,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_panel set 8"}}
+data modify storage rpg:panel ui.actions append value {"label":{"text":"失乐园","color":"#E0483C","bold":true,"italic":false},"tooltip":{"text":"进入失乐园：四座河庭的试炼与自由猎杀","color":"#9C9A94","bold":false,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_panel set 12"}}
+data modify storage rpg:panel ui.tab set value 5
 function rpg:panel/ui/show with storage rpg:panel ui

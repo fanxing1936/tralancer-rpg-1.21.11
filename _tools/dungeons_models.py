@@ -28,6 +28,7 @@ from dungeons_conversion import generic as G  # noqa: E402
 from dungeons_conversion import blueprint as BP  # noqa: E402
 import numpy as np  # noqa: E402
 from scipy.spatial.transform import Rotation  # noqa: E402
+import daath_spec as DAATH  # noqa: E402
 
 UP = Path(r"D:\agent\dungeons_extract\upgrade")
 E = "Dungeons/Content/Actors/Characters/Enemies/"
@@ -252,6 +253,12 @@ MODELS = {
                   merge={"head": ["mouth", "l_eye_pupil", "l_eye_iris", "r_eye_pupil", "r_eye_iris"]},
                   clips=[("Player_Master_Idle", "idle", True), ("Player_Master_Walk", "walk", True),
                          ("Player_Master_ShowOff", "throw", False), ("Player_Master_Emote_HeroPose", "hero", False)]),
+    # 达阿特的影子（docs/DAATH-DESIGN.md）：原作玩家英雄网格，皮肤压成近黑（daath_ref/shadow_skin.png）。
+    # 盔甲、武器、头颅都是玩家自己的物品，由 add_daath_model.py 挂上；动作表在 daath_spec.py（约九十段，全是原作玩家动作）
+    "daath": dict(root="daath", mesh=E.replace("Enemies/", "") + "Player/Master/SK_Player_Master", anims=["daath"],
+                  material_override={"MI_Valorie": ("daath_ref/shadow_skin.png", None)}, height=1.87, held_bone="J_R_Weapon",
+                  merge={"head": ["mouth", "l_eye_pupil", "l_eye_iris", "r_eye_pupil", "r_eye_iris"]},
+                  clips=DAATH.CLIPS),
     # 疯人王扫罗（docs/SAUL-DESIGN.md）：原作玩家英雄网格 + 织网者皮肤（wiki 叫 Web Crawler，本体是 Skins/Spider）
     # + 坚毅铠甲（强化锁甲的独特变体 BP_ReinforcedMail_Unique1：头盔、胸甲、护腿沿用强化锁甲网格，左右臂甲是它自己的，
     # 贴图全部换成 T_StalwartArmor）；千刀挂右手武器插槽（一代细剑 SM_Rapier，贴图按千刀配色重画）。

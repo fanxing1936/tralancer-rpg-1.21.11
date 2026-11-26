@@ -1,0 +1,2 @@
+scoreboard players operation @s rpg_pa_wt = @s rpg_sef
+tellraw @s ["",{"text":"[路径] ","color":"#C9A646","bold":true,"italic":false},{"text":"综合能力已经够晋入下一阶，","color":"#9C9A94","bold":false,"italic":false},{"text":"先走完一条连着这一阶的路径","color":"#C9A646","bold":true,"italic":false},{"text":"。","color":"#9C9A94","bold":false,"italic":false},{"text":"[看路径]","color":"#C9A646","bold":true,"italic":false,"click_event":{"action":"run_command","command":"/trigger rpg_pa_do set 1"}}]

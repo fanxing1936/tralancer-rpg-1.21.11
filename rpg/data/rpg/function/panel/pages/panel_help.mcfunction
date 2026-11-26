@@ -1,5 +1,5 @@
-data modify storage rpg:panel ui.title set value {"text":"操作速查","color":"#C9A646","bold":true,"italic":false,"extra":[{"text":" ℌ𝔞𝔫𝔡𝔟𝔬𝔬𝔨","color":"#8F7430","bold":false}]}
-data modify storage rpg:panel ui.body append value {"text":"","extra":[{"color":"#E6DFCF","italic":false,"text":"面板　","bold":true},{"color":"#9C9A94","italic":false,"text":"切到玩家面板并停留片刻就会打开；切走再切回可重开。","bold":false},{"text":"\n"}]}
+data modify storage rpg:panel ui.title set value {"text":"设置","color":"#C9A646","bold":true,"italic":false,"extra":[{"text":" 𝔖𝔢𝔱𝔱𝔦𝔫𝔤𝔰","color":"#8F7430","bold":false}]}
+data modify storage rpg:panel ui.body append value {"text":"","extra":[{"color":"#E6DFCF","italic":false,"text":"面板　","bold":true},{"color":"#9C9A94","italic":false,"text":"按 G、暂停菜单里的「玩家面板」，或右键档案头颅。","bold":false},{"text":"\n"}]}
 data modify storage rpg:panel ui.body append value {"text":"","extra":[{"color":"#E6DFCF","italic":false,"text":"真名　","bold":true},{"color":"#9C9A94","italic":false,"text":"携带圣器，见证同一恶魔三种不同招式。","bold":false},{"text":"\n"}]}
 data modify storage rpg:panel ui.body append value {"text":"","extra":[{"color":"#E6DFCF","italic":false,"text":"仪式　","bold":true},{"color":"#9C9A94","italic":false,"text":"点燃图腾 → 投入媒介 → 宣读真名 → 选择裁决。","bold":false},{"text":"\n"}]}
 data modify storage rpg:panel ui.body append value {"text":"","extra":[{"text":"告解铃可打断反仪式；圣钉、粉笔与净罪香投入法阵生效。","color":"#9C9A94","italic":false},{"text":"\n"}]}

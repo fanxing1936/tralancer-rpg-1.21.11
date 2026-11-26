@@ -92,7 +92,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:wither"
+              "nbt": "{Tags:[\"rpg.dtb\"]}"
             }
           }
         ]
@@ -106,7 +106,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:ender_dragon"
+              "type": "minecraft:wither"
             }
           }
         ]
@@ -120,13 +120,27 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:elder_guardian"
+              "type": "minecraft:ender_dragon"
             }
           }
         ]
       }
     },
     "k9": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:elder_guardian"
+            }
+          }
+        ]
+      }
+    },
+    "k10": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": [
@@ -152,7 +166,8 @@
       "k6",
       "k7",
       "k8",
-      "k9"
+      "k9",
+      "k10"
     ]
   ],
   "rewards": {

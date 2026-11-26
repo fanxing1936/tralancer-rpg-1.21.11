@@ -6,6 +6,7 @@ execute as @e[type=minecraft:item,name=1] at @s run data modify entity @s Custom
 
 ##玩家面板
 execute as @a[tag=rpg.h.skull_tag1] at @s if entity @s[tag=!rpg.h.player_tag1] run item modify entity @s weapon.mainhand rpg:command/player
+execute as @a[tag=rpg.h.skull_tag1] if items entity @s weapon.mainhand minecraft:player_head[minecraft:custom_data~{player_tag:1b}] run function rpg:panel/v2/head_swap
 # 玩家面板数值并入 5 刻一次的 player_values。
 
 execute as @a[scores={rpg_com_clock=5..}] at @s run function rpg:command/com/player_values

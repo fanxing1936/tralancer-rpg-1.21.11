@@ -1,0 +1,5 @@
+execute if score @s rpg_dt_life matches 15 run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath_fx/smash_1"
+execute if score @s rpg_dt_life matches 12 run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath_fx/smash_2"
+execute if score @s rpg_dt_life matches 9 run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath_fx/smash_3"
+execute if score @s rpg_dt_life matches 6 run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath_fx/smash_4"
+execute if score @s rpg_dt_life matches 3 run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath_fx/smash_5"

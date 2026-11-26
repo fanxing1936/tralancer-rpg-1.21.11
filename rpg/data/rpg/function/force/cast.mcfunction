@@ -10,6 +10,8 @@ execute if score #tree rpg_fo matches 1 unless score @s rpg_force matches 1 unle
 execute if score #tree rpg_fo matches 2 unless score @s rpg_force matches 2 unless score @s rpg_force matches 3 run return run function rpg:force/fail/say {m:"你没有魔力，罪印不回应你"}
 execute if score #tree rpg_fo matches 1 if entity @s[tag=rpg.burnt] run return run function rpg:force/fail/say {m:"燃尽：生命力回到 30 之前，圣力不会回应你"}
 execute unless score #k rpg_fo matches 1.. run return run function rpg:force/fail/say {m:"这个槽是空的：拿着它按 Shift+F 打开技能页，把技能放进槽里"}
+# 达阿特：影子记住这一招（add_daath.py）
+execute if score @s rpg_dt matches 1.. run scoreboard players operation @s rpg_dt_cast = #k rpg_fo
 execute if score #k rpg_fo matches 1 run return run function rpg:force/sk/1/try
 execute if score #k rpg_fo matches 2 run return run function rpg:force/sk/2/try
 execute if score #k rpg_fo matches 3 run return run function rpg:force/sk/3/try

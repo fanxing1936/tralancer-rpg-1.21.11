@@ -15,3 +15,5 @@ execute if entity @s[tag=rpg.pl.in] run loot give @s loot rpg:paradise/champ
 execute if entity @s[tag=rpg.pl.in] run function rpg:events/bt/paradise_champ
 execute if entity @s[tag=rpg.pl.in] if score #rain rpg_pl matches 1.. run loot give @s loot rpg:paradise/rain_champ
 execute if predicate {condition:"minecraft:random_chance",chance:0.1} run loot give @s loot rpg:potion/any_epic
+function rpg:paths/champ
+execute if score @s rpg_ps_21 matches 3 if predicate {condition:"minecraft:random_chance",chance:0.1} run loot give @s loot rpg:elite/end_champion

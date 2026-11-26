@@ -8,4 +8,5 @@ execute store result storage rpg:panel v.rpg_pact_cd int 1 run scoreboard player
 scoreboard players add @s rpg_taint 0
 execute store result storage rpg:panel v.rpg_taint int 1 run scoreboard players get @s rpg_taint
 function rpg:panel/pages/panel_pact with storage rpg:panel v
+data modify storage rpg:panel ui.tab set value 4
 function rpg:panel/ui/show with storage rpg:panel ui

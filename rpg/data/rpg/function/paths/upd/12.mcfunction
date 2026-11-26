@@ -1,0 +1,25 @@
+scoreboard players set @s rpg_pa_12 0
+execute if score @s rpg_k01 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k02 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k03 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k04 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k05 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k06 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k07 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k08 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k09 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k10 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k11 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k12 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k13 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k14 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k15 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k16 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k17 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k18 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k19 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k20 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k21 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k22 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k23 matches 3.. run scoreboard players add @s rpg_pa_12 1
+execute if score @s rpg_k24 matches 3.. run scoreboard players add @s rpg_pa_12 1

@@ -1,0 +1,86 @@
+scoreboard objectives add rpg_pa_do trigger
+scoreboard objectives add rpg_pa_wk minecraft.custom:minecraft.walk_one_cm
+scoreboard objectives add rpg_pa_sp minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add rpg_pa_tsd minecraft.custom:minecraft.time_since_death
+scoreboard objectives add rpg_pa dummy
+scoreboard objectives add rpg_pa_fg dummy
+scoreboard objectives add rpg_pa_ok dummy
+scoreboard objectives add rpg_pa_wt dummy
+scoreboard objectives add rpg_pa_wn dummy
+scoreboard objectives add rpg_pa_ct dummy
+scoreboard objectives add rpg_pa_ff dummy
+scoreboard objectives add rpg_pa_xl dummy
+scoreboard objectives add rpg_pa_t dummy
+scoreboard objectives add rpg_ps_32 dummy
+scoreboard objectives add rpg_pa_32 dummy
+scoreboard objectives add rpg_pb_32 dummy
+scoreboard objectives add rpg_ps_31 dummy
+scoreboard objectives add rpg_pa_31 dummy
+scoreboard objectives add rpg_pb_31 dummy
+scoreboard objectives add rpg_ps_30 dummy
+scoreboard objectives add rpg_pa_30 dummy
+scoreboard objectives add rpg_pb_30 dummy
+scoreboard objectives add rpg_ps_29 dummy
+scoreboard objectives add rpg_pa_29 dummy
+scoreboard objectives add rpg_pb_29 dummy
+scoreboard objectives add rpg_ps_28 dummy
+scoreboard objectives add rpg_pa_28 dummy
+scoreboard objectives add rpg_pb_28 dummy
+scoreboard objectives add rpg_ps_27 dummy
+scoreboard objectives add rpg_pa_27 dummy
+scoreboard objectives add rpg_pb_27 dummy
+scoreboard objectives add rpg_ps_26 dummy
+scoreboard objectives add rpg_pa_26 dummy
+scoreboard objectives add rpg_pb_26 dummy
+scoreboard objectives add rpg_ps_25 dummy
+scoreboard objectives add rpg_pa_25 dummy
+scoreboard objectives add rpg_pb_25 dummy
+scoreboard objectives add rpg_ps_24 dummy
+scoreboard objectives add rpg_pa_24 dummy
+scoreboard objectives add rpg_pb_24 dummy
+scoreboard objectives add rpg_ps_23 dummy
+scoreboard objectives add rpg_pa_23 dummy
+scoreboard objectives add rpg_pb_23 dummy
+scoreboard objectives add rpg_ps_22 dummy
+scoreboard objectives add rpg_pa_22 dummy
+scoreboard objectives add rpg_pb_22 dummy
+scoreboard objectives add rpg_ps_21 dummy
+scoreboard objectives add rpg_pa_21 dummy
+scoreboard objectives add rpg_pb_21 dummy
+scoreboard objectives add rpg_ps_20 dummy
+scoreboard objectives add rpg_pa_20 dummy
+scoreboard objectives add rpg_pb_20 dummy
+scoreboard objectives add rpg_ps_19 dummy
+scoreboard objectives add rpg_pa_19 dummy
+scoreboard objectives add rpg_pb_19 dummy
+scoreboard objectives add rpg_ps_18 dummy
+scoreboard objectives add rpg_pa_18 dummy
+scoreboard objectives add rpg_pb_18 dummy
+scoreboard objectives add rpg_ps_17 dummy
+scoreboard objectives add rpg_pa_17 dummy
+scoreboard objectives add rpg_pb_17 dummy
+scoreboard objectives add rpg_ps_16 dummy
+scoreboard objectives add rpg_pa_16 dummy
+scoreboard objectives add rpg_pb_16 dummy
+scoreboard objectives add rpg_ps_15 dummy
+scoreboard objectives add rpg_pa_15 dummy
+scoreboard objectives add rpg_pb_15 dummy
+scoreboard objectives add rpg_ps_14 dummy
+scoreboard objectives add rpg_pa_14 dummy
+scoreboard objectives add rpg_pb_14 dummy
+scoreboard objectives add rpg_ps_13 dummy
+scoreboard objectives add rpg_pa_13 dummy
+scoreboard objectives add rpg_pb_13 dummy
+scoreboard objectives add rpg_ps_12 dummy
+scoreboard objectives add rpg_pa_12 dummy
+scoreboard objectives add rpg_pb_12 dummy
+scoreboard objectives add rpg_ps_11 dummy
+scoreboard objectives add rpg_pa_11 dummy
+scoreboard objectives add rpg_pb_11 dummy
+scoreboard players set #2 rpg_pa 2
+scoreboard players set #8 rpg_pa 8
+scoreboard players set #9 rpg_pa 9
+scoreboard players set #10 rpg_pa 10
+scoreboard players set #92 rpg_pa 92
+scoreboard players set #100 rpg_pa 100
+scoreboard players set #30 rpg_pa 30

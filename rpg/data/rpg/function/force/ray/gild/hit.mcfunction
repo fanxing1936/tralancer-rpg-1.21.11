@@ -11,6 +11,7 @@ execute if entity @s[tag=rpg.jqb] run scoreboard players set #b rpg_fo 1
 execute if entity @s[tag=rpg.lub] run scoreboard players set #b rpg_fo 1
 execute if entity @s[tag=rpg.slb] run scoreboard players set #b rpg_fo 1
 execute if entity @s[tag=rpg.usb] run scoreboard players set #b rpg_fo 1
+execute if entity @s[tag=rpg.dtb] run scoreboard players set #b rpg_fo 1
 execute if score #b rpg_fo matches 0 run data merge entity @s {NoAI:1b}
 execute if score #b rpg_fo matches 1 run effect give @s minecraft:slowness 3 4 true
 effect give @s minecraft:glowing 3 0 true

@@ -35,3 +35,7 @@ team add rpg_t_merchant
 team modify rpg_t_merchant prefix ["",{"text":"","font":"rpg:world_titles","color":"white"},{"text":" ","color":"white"}]
 team add rpg_t_summit
 team modify rpg_t_summit prefix ["",{"text":"","font":"rpg:world_titles","color":"white"},{"text":" ","color":"white"}]
+team add rpg_t_sever
+team modify rpg_t_sever prefix ["",{"text":"","font":"rpg:world_titles","color":"white"},{"text":" ","color":"white"}]
+team add rpg_t_mirror
+team modify rpg_t_mirror prefix ["",{"text":"","font":"rpg:world_titles","color":"white"},{"text":" ","color":"white"}]

@@ -1,0 +1,29 @@
+scoreboard players add @s rpg_dt_t 1
+function rpg:daath_fight/eye/follow
+execute if score @s rpg_dt_sk matches 1 run return run function rpg:daath_fight/sk/chain
+execute if score @s rpg_dt_sk matches 2 run return run function rpg:daath_fight/sk/shoot
+execute if score @s rpg_dt_sk matches 3 run return run function rpg:daath_fight/sk/guard
+execute if score @s rpg_dt_sk matches 4 run return run function rpg:daath_fight/sk/step
+execute if score @s rpg_dt_sk matches 5 run return run function rpg:daath_fight/sk/grab
+execute if score @s rpg_dt_sk matches 6 run return run function rpg:daath_fight/sk/steal
+execute if score @s rpg_dt_sk matches 7 run return run function rpg:daath_fight/sk/drink
+execute if score @s rpg_dt_sk matches 8 run return run function rpg:daath_fight/sk/dodge
+execute if score @s rpg_dt_sk matches 9 run return run function rpg:daath_fight/sk/lance
+execute if score @s rpg_dt_sk matches 10 run return run function rpg:daath_fight/sk/blast
+execute if score @s rpg_dt_sk matches 11 run return run function rpg:daath_fight/sk/blade
+execute if score @s rpg_dt_sk matches 12 run return run function rpg:daath_fight/sk/bind
+execute if score @s rpg_dt_sk matches 13 run return run function rpg:daath_fight/sk/shell
+execute if score @s rpg_dt_sk matches 14 run return run function rpg:daath_fight/sk/puppet
+execute if score @s rpg_dt_sk matches 15 run return run function rpg:daath_fight/sk/seal
+execute if score @s rpg_dt_sk matches 16 run return run function rpg:daath_fight/sk/follow
+execute if score @s rpg_dt_sk matches 17 run return run function rpg:daath_fight/sk/douse
+execute if score @s rpg_dt_sk matches 18 run return run function rpg:daath_fight/sk/swap
+execute if score @s rpg_dt_sk matches 19 run return run function rpg:daath_fight/sk/pact
+execute if score @s rpg_dt_sk matches 20 run return run function rpg:daath_fight/sk/stun
+execute if score @s rpg_dt_sk matches 21 run return run function rpg:daath_fight/sk/reflect
+execute if score @s rpg_dt_sk matches 22 run return run function rpg:daath_fight/sk/ten
+execute if score @s rpg_dt_sk matches 23 run return run function rpg:daath_fight/sk/ask
+execute if score @s rpg_dt_sk matches 24 run return run function rpg:daath_fight/sk/clash
+execute if score @s rpg_dt_sk matches 25 run return run function rpg:daath_fight/sk/shatter
+execute if score @s rpg_dt_sk matches 26 run return run function rpg:daath_fight/sk/riposte
+execute if score @s rpg_dt_sk matches 27 run return run function rpg:daath_fight/sk/arrive

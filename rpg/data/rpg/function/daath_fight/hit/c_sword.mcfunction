@@ -1,0 +1,19 @@
+execute store result score #r rpg_dt run random value 0..17
+execute if score #r rpg_dt matches 0 run return run function rpg:daath_fight/hit/sw1
+execute if score #r rpg_dt matches 1 run return run function rpg:daath_fight/hit/sw2
+execute if score #r rpg_dt matches 2 run return run function rpg:daath_fight/hit/sw3
+execute if score #r rpg_dt matches 3 run return run function rpg:daath_fight/hit/ka1
+execute if score #r rpg_dt matches 4 run return run function rpg:daath_fight/hit/ka2
+execute if score #r rpg_dt matches 5 run return run function rpg:daath_fight/hit/ka3
+execute if score #r rpg_dt matches 6 run return run function rpg:daath_fight/hit/cl1
+execute if score #r rpg_dt matches 7 run return run function rpg:daath_fight/hit/cl2
+execute if score #r rpg_dt matches 8 run return run function rpg:daath_fight/hit/cl3
+execute if score #r rpg_dt matches 9 run return run function rpg:daath_fight/hit/cu1
+execute if score #r rpg_dt matches 10 run return run function rpg:daath_fight/hit/cu2
+execute if score #r rpg_dt matches 11 run return run function rpg:daath_fight/hit/ra1
+execute if score #r rpg_dt matches 12 run return run function rpg:daath_fight/hit/ra2
+execute if score #r rpg_dt matches 13 run return run function rpg:daath_fight/hit/ra3
+execute if score #r rpg_dt matches 14 run return run function rpg:daath_fight/hit/ra4
+execute if score #r rpg_dt matches 15 run return run function rpg:daath_fight/hit/co1
+execute if score #r rpg_dt matches 16 run return run function rpg:daath_fight/hit/co2
+execute if score #r rpg_dt matches 17 run return run function rpg:daath_fight/hit/co3

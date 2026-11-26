@@ -290,3 +290,33 @@
 - `Sfx_item_scatterCrossbowUnique1Shoot-002.ogg` sha256:05c4e16a500c2b91
 - `Sfx_item_scatterCrossbowUnique1Shoot-003.ogg` sha256:6e5d480faee52a34
 - `Sfx_item_scatterCrossbowUnique1Shoot-004.ogg` sha256:e721da94a3c8a3e7
+
+## 达阿特的影子（2026-11-25，用户同意下载）
+
+《Minecraft Dungeons》原作音效，取自 https://minecraft.wiki/images/<文件名> ，版权归 Mojang。
+
+- `D6_sfx_item_shadowFlash_activate1_001.ogg` sha256:b5ec0928f94eb697
+- `D6_sfx_item_shadowFlash_activate1_002.ogg` sha256:152cd3d94a772c15
+- `D6_sfx_item_shadowFlash_activate1_003.ogg` sha256:13c9167034ced894
+- `D6_sfx_item_shadowFlash_activate2_001.ogg` sha256:008ed5ae8f8c165b
+- `D6_sfx_item_shadowFlash_activate2_002.ogg` sha256:a4615d286963afef
+- `D6_sfx_item_shadowFlash_activate2_003.ogg` sha256:919265ed00637f86
+- `D6_sfx_item_shadowFlash_activate3_001.ogg` sha256:27617ed218d69b08
+- `D6_sfx_item_shadowFlash_activate3_002.ogg` sha256:5b1eb8c2375ea248
+- `D6_sfx_item_shadowFlash_activate3_003.ogg` sha256:c0e7916496ffb85f
+- `D6_sfx_shadowFeastExecute-001.ogg` sha256:74e8edf5f180cce4
+- `D6_sfx_shadowFeastExecute-002.ogg` sha256:e31db8b0a5b6d622
+- `D6_sfx_shadowFeastExecute-003.ogg` sha256:2d75fe617af9d2b6
+- `D6_sfx_shadowFeastExecute-004.ogg` sha256:d99942ead80567f8
+- `D6_sfx_shadowFeastExecute-005.ogg` sha256:b0b19e1d0a01f29d
+- `D6_sfx_shadowSplinterActivate-001.ogg` sha256:eea61530ff887220
+- `D6_sfx_shadowSplinterActivate-002.ogg` sha256:0ad760c00c2c3584
+- `D6_sfx_shadowSplinterActivate-003.ogg` sha256:d12885607d01d5ab
+- `D6_sfx_wpn_shadowCbow_impact_001.ogg` sha256:c157adb23ea47f65
+- `D6_sfx_wpn_shadowCbow_impact_002.ogg` sha256:62b276c70c70ba1b
+- `D6_sfx_wpn_shadowCbow_impact_003.ogg` sha256:5d9c4cb85231b58c
+- `D6_sfx_wpn_shadowCbow_shot_001.ogg` sha256:91123e4e1d9896af
+- `D6_sfx_wpn_shadowCbow_shot_002.ogg` sha256:473bf5d7639e3888
+- `D6_sfx_wpn_shadowCbow_shot_003.ogg` sha256:4478d53eb2d83dc7
+- `DLC_sfx_mob_illusionerMirror-001.ogg` sha256:51de8f7ac16128ad
+- `DLC_sfx_mob_illusionerMirror-002.ogg` sha256:41003c41a60e6b37

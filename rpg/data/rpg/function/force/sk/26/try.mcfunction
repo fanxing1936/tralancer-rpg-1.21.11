@@ -12,6 +12,8 @@ function rpg:force/pay/m
 execute unless score #ok rpg_fo matches 1 run return 0
 scoreboard players set #c rpg_fo 3600
 function rpg:force/pay/cd
+execute if score @s rpg_ps_12 matches 3 run scoreboard players operation #c rpg_fo *= #8 rpg_pa
+execute if score @s rpg_ps_12 matches 3 run scoreboard players operation #c rpg_fo /= #10 rpg_pa
 scoreboard players operation @s rpg_kc26 = #now rpg_fo
 scoreboard players operation @s rpg_kc26 += #c rpg_fo
 tag @s add rpg.fo.me

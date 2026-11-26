@@ -1,0 +1,148 @@
+{
+  "type": "minecraft:multi_action",
+  "title": [
+    "",
+    {
+      "text": "玩家面板",
+      "color": "#C9A646",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "text": " 𝔇𝔬𝔰𝔰𝔦𝔢𝔯",
+      "color": "#8F7430",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "external_title": {
+    "text": "玩家面板",
+    "color": "#C9A646",
+    "bold": true,
+    "italic": false
+  },
+  "body": {
+    "type": "minecraft:plain_message",
+    "width": 300,
+    "contents": {
+      "text": "选一页。头颅右键、Shift+F（拿着圣徽或罪印）也能直达。",
+      "color": "#9C9A94",
+      "bold": false,
+      "italic": false
+    }
+  },
+  "actions": [
+    {
+      "label": {
+        "text": "生命之树",
+        "color": "#C9A646",
+        "bold": true,
+        "italic": false
+      },
+      "tooltip": {
+        "text": "𝔄𝔯𝔟𝔬𝔯",
+        "color": "#8F7430",
+        "bold": false,
+        "italic": false
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger rpg_panel set 8"
+      }
+    },
+    {
+      "label": {
+        "text": "路径",
+        "color": "#E6DFCF",
+        "bold": false,
+        "italic": false
+      },
+      "tooltip": {
+        "text": "𝔓𝔞𝔱𝔥𝔰",
+        "color": "#8F7430",
+        "bold": false,
+        "italic": false
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger rpg_panel set 20"
+      }
+    },
+    {
+      "label": {
+        "text": "力",
+        "color": "#E6DFCF",
+        "bold": false,
+        "italic": false
+      },
+      "tooltip": {
+        "text": "𝔙𝔦𝔯𝔱𝔲𝔰",
+        "color": "#8F7430",
+        "bold": false,
+        "italic": false
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger rpg_panel set 21"
+      }
+    },
+    {
+      "label": {
+        "text": "契约与驱魔",
+        "color": "#E6DFCF",
+        "bold": false,
+        "italic": false
+      },
+      "tooltip": {
+        "text": "ℭ𝔬𝔳𝔢𝔫𝔞𝔫𝔱",
+        "color": "#8F7430",
+        "bold": false,
+        "italic": false
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger rpg_panel set 3"
+      }
+    },
+    {
+      "label": {
+        "text": "旅程",
+        "color": "#E6DFCF",
+        "bold": false,
+        "italic": false
+      },
+      "tooltip": {
+        "text": "𝔍𝔬𝔲𝔯𝔫𝔢𝔶",
+        "color": "#8F7430",
+        "bold": false,
+        "italic": false
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger rpg_panel set 22"
+      }
+    },
+    {
+      "label": {
+        "text": "设置",
+        "color": "#E6DFCF",
+        "bold": false,
+        "italic": false
+      },
+      "tooltip": {
+        "text": "𝔖𝔢𝔱𝔱𝔦𝔫𝔤𝔰",
+        "color": "#8F7430",
+        "bold": false,
+        "italic": false
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "/trigger rpg_panel set 6"
+      }
+    }
+  ],
+  "columns": 3,
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "close"
+}

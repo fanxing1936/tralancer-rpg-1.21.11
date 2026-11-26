@@ -1,0 +1,5 @@
+execute if score @s rpg_dt_life matches 15 run data modify entity @s text.text set value ""
+execute if score @s rpg_dt_life matches 12 run data modify entity @s text.text set value ""
+execute if score @s rpg_dt_life matches 9 run data modify entity @s text.text set value ""
+execute if score @s rpg_dt_life matches 6 run data modify entity @s text.text set value ""
+execute if score @s rpg_dt_life matches 3 run data modify entity @s text.text set value ""

@@ -1,0 +1,4 @@
+# updraft 第 38 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_daath_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.dtm.p.head] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.0394f,-0.42985f,0.07913f],left_rotation:[0.73656f,-0.02783f,-0.00445f,0.67579f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.dtm.p.l_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.34782f,-0.99498f,0.0102f],left_rotation:[0.77147f,0.00069f,0.02645f,0.63572f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.dtm.p.weapon_l] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.3537f,-1.27109f,-0.04267f],left_rotation:[0.81143f,-0.06753f,-0.02822f,0.57985f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}

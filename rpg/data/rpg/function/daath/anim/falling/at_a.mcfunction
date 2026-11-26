@@ -1,0 +1,2 @@
+execute if score @s rpg_dtm_t matches ..5 run return run function rpg:daath/anim/falling/at_a_a
+function rpg:daath/anim/falling/at_a_b

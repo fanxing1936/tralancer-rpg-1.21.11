@@ -1,0 +1,3 @@
+# drink 第 19 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_daath_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.dtm.p.head] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.00053f,-0.45799f,0.02634f],left_rotation:[0.71761f,0.07524f,-0.07849f,0.6879f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.dtm.p.l_leg] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.13087f,-1.6456f,0.11605f],left_rotation:[0.64333f,0.06047f,-0.05109f,0.76148f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}

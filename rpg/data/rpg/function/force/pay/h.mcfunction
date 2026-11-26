@@ -1,3 +1,6 @@
+# 路径赐福（add_paths.py）
+execute if score @s rpg_ps_12 matches 2 run scoreboard players operation #fc rpg_fo *= #9 rpg_pa
+execute if score @s rpg_ps_12 matches 2 run scoreboard players operation #fc rpg_fo /= #10 rpg_pa
 scoreboard players set #ok rpg_fo 0
 execute unless score @s rpg_mana >= #fc rpg_fo run return run function rpg:force/fail/say {m:"圣力不够"}
 scoreboard players operation @s rpg_mana -= #fc rpg_fo

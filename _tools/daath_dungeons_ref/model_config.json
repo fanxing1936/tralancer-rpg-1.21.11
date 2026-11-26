@@ -1,0 +1,1972 @@
+{
+ "model_scale": 7.496633670709872,
+ "height_blocks": 1.87,
+ "source_height_cm": 207.87107944488525,
+ "turn": 0,
+ "merge": {
+  "head": [
+   "mouth",
+   "l_eye_pupil",
+   "l_eye_iris",
+   "r_eye_pupil",
+   "r_eye_iris"
+  ]
+ },
+ "held_bone": "J_R_Weapon",
+ "attachments": [],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\daath"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Player_Master_Idle",
+   "seconds": 3.3333333,
+   "loop": true,
+   "ticks": 67,
+   "max_bone_error_px": 7.69322022356814e-08,
+   "max_vertex_error_px": 2.1592365777853855e-07,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Player_Master_Run",
+   "seconds": 2.1666667,
+   "loop": true,
+   "ticks": 44,
+   "max_bone_error_px": 0.0016771373237610024,
+   "max_vertex_error_px": 0.0017218872013281567,
+   "notifies": [
+    [
+     0.1704,
+     "step",
+     null
+    ],
+    [
+     0.4609,
+     "step",
+     null
+    ],
+    [
+     0.7175,
+     "step",
+     null
+    ],
+    [
+     1.0089,
+     "step",
+     null
+    ],
+    [
+     1.2591,
+     "step",
+     null
+    ],
+    [
+     1.5388,
+     "step",
+     null
+    ],
+    [
+     1.8018,
+     "step",
+     null
+    ],
+    [
+     2.0907,
+     "step",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "bow",
+   "source": "Player_Master_Bow_Shoot",
+   "seconds": 0.67,
+   "loop": false,
+   "ticks": 14,
+   "max_bone_error_px": 0.0011361804552951955,
+   "max_vertex_error_px": 0.003025295286875438,
+   "notifies": []
+  },
+  {
+   "clip": "bow_draw",
+   "source": "Player_Master_Bow_Charge",
+   "seconds": 0.34849995,
+   "loop": false,
+   "ticks": 7,
+   "max_bone_error_px": 2.066892006317712e-06,
+   "max_vertex_error_px": 3.407594964173752e-06,
+   "notifies": [
+    [
+     0.0032,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "xbow",
+   "source": "Player_Master_Crossbow_Shoot",
+   "seconds": 0.24000007,
+   "loop": false,
+   "ticks": 5,
+   "max_bone_error_px": 0.0025303478152615723,
+   "max_vertex_error_px": 0.006055333391246237,
+   "notifies": [
+    [
+     0.0383,
+     "AnimNS_BowFire_C",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "xbow_load",
+   "source": "Player_Master_Crossbow_Load",
+   "seconds": 0.7,
+   "loop": false,
+   "ticks": 14,
+   "max_bone_error_px": 0.050636514032066426,
+   "max_vertex_error_px": 0.05217908394812406,
+   "notifies": [
+    [
+     0.0703,
+     "AnimNS_BowLoad_C",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "roll_f",
+   "source": "Player_Master_DodgeRollForward",
+   "seconds": 0.625,
+   "loop": false,
+   "ticks": 13,
+   "max_bone_error_px": 0.09373483565936451,
+   "max_vertex_error_px": 0.09828031849652777,
+   "notifies": []
+  },
+  {
+   "clip": "roll_b",
+   "source": "Player_Master_DodgeRollBackward",
+   "seconds": 0.5833333,
+   "loop": false,
+   "ticks": 12,
+   "max_bone_error_px": 0.008855053393601011,
+   "max_vertex_error_px": 0.029532907574163502,
+   "notifies": []
+  },
+  {
+   "clip": "roll_l",
+   "source": "Player_Master_DodgeRollSidewayLeft",
+   "seconds": 0.7083333,
+   "loop": false,
+   "ticks": 15,
+   "max_bone_error_px": 0.12469814948008151,
+   "max_vertex_error_px": 0.129541785208331,
+   "notifies": []
+  },
+  {
+   "clip": "roll_r",
+   "source": "Player_Master_DodgeRollSidewayRight",
+   "seconds": 0.7083333,
+   "loop": false,
+   "ticks": 15,
+   "max_bone_error_px": 0.12469814954065803,
+   "max_vertex_error_px": 0.12954178526674945,
+   "notifies": []
+  },
+  {
+   "clip": "cast",
+   "source": "Player_Master_EnchantersTome_Start",
+   "seconds": 0.9,
+   "loop": false,
+   "ticks": 18,
+   "max_bone_error_px": 0.010433491106256017,
+   "max_vertex_error_px": 0.013695455553763645,
+   "notifies": [
+    [
+     0.0001,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "updraft",
+   "source": "Player_Master_UpdraftTome",
+   "seconds": 2.2,
+   "loop": false,
+   "ticks": 44,
+   "max_bone_error_px": 0.0554214056424914,
+   "max_vertex_error_px": 0.07016693940866892,
+   "notifies": []
+  },
+  {
+   "clip": "shake",
+   "source": "Player_Master_Powershake",
+   "seconds": 0.8333333,
+   "loop": false,
+   "ticks": 17,
+   "max_bone_error_px": 0.0035338541704969697,
+   "max_vertex_error_px": 0.0066796276242144965,
+   "notifies": [
+    [
+     0.0114,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "drink",
+   "source": "Player_Master_Drink",
+   "seconds": 0.9583333,
+   "loop": false,
+   "ticks": 20,
+   "max_bone_error_px": 0.0003453324257268007,
+   "max_vertex_error_px": 0.011237706453095719,
+   "notifies": []
+  },
+  {
+   "clip": "mighty",
+   "source": "Player_Master_Emote_MightySword",
+   "seconds": 4.266667,
+   "loop": false,
+   "ticks": 86,
+   "max_bone_error_px": 0.007707059379028082,
+   "max_vertex_error_px": 0.012652009166953197,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_Player_HideWeapon_C",
+     null
+    ],
+    [
+     0.0001,
+     "TimedSoundEffect",
+     null
+    ],
+    [
+     0.6667,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "twirl",
+   "source": "Player_Master_Emote_TheTwirl",
+   "seconds": 4.0416665,
+   "loop": false,
+   "ticks": 81,
+   "max_bone_error_px": 0.03010935406814934,
+   "max_vertex_error_px": 0.031809610798627846,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_Player_HideWeapon_C",
+     null
+    ],
+    [
+     0.0001,
+     "TimedSoundEffect",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "gong",
+   "source": "Player_Master_Gong",
+   "seconds": 0.625,
+   "loop": false,
+   "ticks": 13,
+   "max_bone_error_px": 0.0002976472853123561,
+   "max_vertex_error_px": 0.002479028589338172,
+   "notifies": []
+  },
+  {
+   "clip": "vanish",
+   "source": "Player_Master_TeleportInitiate_Start",
+   "seconds": 1.92,
+   "loop": false,
+   "ticks": 39,
+   "max_bone_error_px": 0.0008096895419490051,
+   "max_vertex_error_px": 0.008570196465226922,
+   "notifies": [
+    [
+     0.0001,
+     "PS_Player_TeleportInitiate",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.1337,
+     "PS_Player_TeleportSocket",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.3024,
+     "Player_Teleport_Start_Magic-Spark",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.7611,
+     "Player_Teleport_Start_Swoosh-slow_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.2384,
+     "Teleport_Start_Swoosh-Slow_02",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "land",
+   "source": "Player_Master_TeleportLanding",
+   "seconds": 1.4166666,
+   "loop": false,
+   "ticks": 29,
+   "max_bone_error_px": 0.030025930319203937,
+   "max_vertex_error_px": 0.06759396531087358,
+   "notifies": [
+    [
+     0.0366,
+     "Player_Teleport_Landing",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0561,
+     "PS_Player_TeleportLanding",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "falling",
+   "source": "Player_Master_Falling",
+   "seconds": 1.25,
+   "loop": true,
+   "ticks": 25,
+   "max_bone_error_px": 0.0004931972913494979,
+   "max_vertex_error_px": 0.010021137695984592,
+   "notifies": []
+  },
+  {
+   "clip": "kneel",
+   "source": "Player_Master_Emote_KneelPose",
+   "seconds": 1.9333333,
+   "loop": false,
+   "ticks": 39,
+   "max_bone_error_px": 0.061056059039704194,
+   "max_vertex_error_px": 0.07267376651542043,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_Player_HideWeapon_C",
+     null
+    ],
+    [
+     0.0001,
+     "TimedSoundEffect",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "hero",
+   "source": "Player_Master_Emote_HeroPose",
+   "seconds": 2.0,
+   "loop": false,
+   "ticks": 40,
+   "max_bone_error_px": 0.005859451546496385,
+   "max_vertex_error_px": 0.0071462918591909475,
+   "notifies": [
+    [
+     0.0,
+     "AnimNS_Player_ShowWeaponSlot_C",
+     null
+    ],
+    [
+     0.0001,
+     "TimedSoundEffect",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "hurt",
+   "source": "Player_Master_GetHitFront",
+   "seconds": 1.875,
+   "loop": false,
+   "ticks": 38,
+   "max_bone_error_px": 0.002832619394622411,
+   "max_vertex_error_px": 0.008149240501074406,
+   "notifies": []
+  },
+  {
+   "clip": "stun",
+   "source": "Player_Master_Stun",
+   "seconds": 1.6666666,
+   "loop": true,
+   "ticks": 34,
+   "max_bone_error_px": 0.0010855692951094544,
+   "max_vertex_error_px": 0.003354343073883152,
+   "notifies": []
+  },
+  {
+   "clip": "fall",
+   "source": "Player_Master_DownedFloor_Initiate",
+   "seconds": 1.2,
+   "loop": false,
+   "ticks": 24,
+   "max_bone_error_px": 0.10753379186891107,
+   "max_vertex_error_px": 0.1641401526701175,
+   "notifies": [
+    [
+     0.0365,
+     "gong_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0512,
+     "Play Sound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0556,
+     "PS_DownedInitiate",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.1881,
+     "Play Sound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "down",
+   "source": "Player_Master_DownedFloored_Loop",
+   "seconds": 0.416,
+   "loop": true,
+   "ticks": 9,
+   "max_bone_error_px": 6.638933213093438e-08,
+   "max_vertex_error_px": 6.640126185564212e-08,
+   "notifies": []
+  },
+  {
+   "clip": "guard",
+   "source": "Player_Master_ShowOff",
+   "seconds": 0.875,
+   "loop": false,
+   "ticks": 18,
+   "max_bone_error_px": 0.0016486055896489519,
+   "max_vertex_error_px": 0.0014812446843304448,
+   "notifies": []
+  },
+  {
+   "clip": "throw",
+   "source": "Player_Master_SpinWheel_Throw",
+   "seconds": 0.804762,
+   "loop": false,
+   "ticks": 17,
+   "max_bone_error_px": 0.004443290686845743,
+   "max_vertex_error_px": 0.025415220885187256,
+   "notifies": [
+    [
+     0.0122,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "revive",
+   "source": "Player_Master_SupportRevive",
+   "seconds": 2.625,
+   "loop": false,
+   "ticks": 53,
+   "max_bone_error_px": 0.0023848244533433483,
+   "max_vertex_error_px": 0.049842286948949106,
+   "notifies": [
+    [
+     0.0,
+     "Anim Notify State Timed Sound Effect",
+     null
+    ],
+    [
+     0.1994,
+     "Play Particle Effect",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "sw1",
+   "source": "Player_Master_SwordSwing_1",
+   "seconds": 0.562437,
+   "loop": false,
+   "ticks": 12,
+   "max_bone_error_px": 0.06895430613696457,
+   "max_vertex_error_px": 0.07166177231017105,
+   "notifies": [
+    [
+     0.0001,
+     "Slash0",
+     null
+    ],
+    [
+     0.0114,
+     "sword_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0958,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "sw2",
+   "source": "Player_Master_SwordSwing_2",
+   "seconds": 0.39602298,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.07424797227771812,
+   "max_vertex_error_px": 0.12722425329276787,
+   "notifies": [
+    [
+     0.0001,
+     "Slash1",
+     null
+    ],
+    [
+     0.0538,
+     "sword_backhand_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0837,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "sw3",
+   "source": "Player_Master_SwordSwing_3",
+   "seconds": 0.24241602,
+   "loop": false,
+   "ticks": 5,
+   "max_bone_error_px": 0.010635257224151495,
+   "max_vertex_error_px": 0.05574205651894884,
+   "notifies": [
+    [
+     0.0103,
+     "P_Combat_Stab",
+     null
+    ],
+    [
+     0.0201,
+     "strike_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "ka1",
+   "source": "Player_Master_KatanaCombo_1",
+   "seconds": 0.8,
+   "loop": false,
+   "ticks": 16,
+   "max_bone_error_px": 0.006022993630992823,
+   "max_vertex_error_px": 0.07365286575595932,
+   "notifies": [
+    [
+     0.1145,
+     "Katana_Swing_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2214,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ka2",
+   "source": "Player_Master_KatanaCombo_2",
+   "seconds": 1.3,
+   "loop": false,
+   "ticks": 26,
+   "max_bone_error_px": 0.004833033160683157,
+   "max_vertex_error_px": 0.10516141913482913,
+   "notifies": [
+    [
+     0.2384,
+     "Katana_Swing_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2484,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ka3",
+   "source": "Player_Master_KatanaCombo_3",
+   "seconds": 1.8,
+   "loop": false,
+   "ticks": 36,
+   "max_bone_error_px": 0.02592080255127846,
+   "max_vertex_error_px": 0.05212654621056338,
+   "notifies": [
+    [
+     0.1058,
+     "Katana_Swing_Strong_AIR_-_Swoosh_Arm_Air",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.3983,
+     "P_Slash",
+     null
+    ],
+    [
+     0.4108,
+     "Katana_Swing_Strong_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.4616,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ],
+    [
+     0.4657,
+     "P_PostSlashWave",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "cl1",
+   "source": "Player_Master_ClaymoreCombo1",
+   "seconds": 1.0,
+   "loop": false,
+   "ticks": 20,
+   "max_bone_error_px": 0.007068611682653442,
+   "max_vertex_error_px": 0.060764473555368424,
+   "notifies": [
+    [
+     0.1391,
+     "Claymore_Swing",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2491,
+     "P_Slash",
+     null
+    ],
+    [
+     0.2667,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ]
+   ]
+  },
+  {
+   "clip": "cl2",
+   "source": "Player_Master_ClaymoreCombo2",
+   "seconds": 0.8000001,
+   "loop": false,
+   "ticks": 17,
+   "max_bone_error_px": 0.08314178856360402,
+   "max_vertex_error_px": 0.05464635913731018,
+   "notifies": [
+    [
+     0.2986,
+     "Claymore_Swing_Stab",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.4062,
+     "P_Combat_Stab",
+     null
+    ],
+    [
+     0.4484,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ]
+   ]
+  },
+  {
+   "clip": "cl3",
+   "source": "Player_Master_ClaymoreCombo3",
+   "seconds": 1.2,
+   "loop": false,
+   "ticks": 24,
+   "max_bone_error_px": 0.003536866237152253,
+   "max_vertex_error_px": 0.0038658615291694504,
+   "notifies": [
+    [
+     0.5502,
+     "Claymore_Swing_Pound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.7426,
+     "P_Slash",
+     null
+    ],
+    [
+     0.7932,
+     "PS_GroundSlam",
+     null
+    ],
+    [
+     0.8102,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ]
+   ]
+  },
+  {
+   "clip": "cu1",
+   "source": "Player_Master_CutlassCombo_1LeftToRight",
+   "seconds": 0.39999998,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.013680756664622366,
+   "max_vertex_error_px": 0.028248359259416257,
+   "notifies": [
+    [
+     0.0001,
+     "Cutlass_Swing",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0078,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "cu2",
+   "source": "Player_Master_CutlassCombo_2LeftToRight_Alternative",
+   "seconds": 0.38,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.03783929467598101,
+   "max_vertex_error_px": 0.0743519918277404,
+   "notifies": [
+    [
+     0.0001,
+     "Cutlass_Swing",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0539,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ra1",
+   "source": "Player_Master_RapierCombo1Start",
+   "seconds": 0.339,
+   "loop": false,
+   "ticks": 7,
+   "max_bone_error_px": 0.00011525119662623141,
+   "max_vertex_error_px": 0.0010480317919107612,
+   "notifies": [
+    [
+     0.0371,
+     "Spear_Swing_Light_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0558,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ra2",
+   "source": "Player_Master_RapierCombo2_Left",
+   "seconds": 0.23399997,
+   "loop": false,
+   "ticks": 5,
+   "max_bone_error_px": 4.976739768278768e-05,
+   "max_vertex_error_px": 0.0012439012189216518,
+   "notifies": [
+    [
+     0.0011,
+     "Spear_Swing_Light_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.01,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ra3",
+   "source": "Player_Master_RapierCombo2_Right",
+   "seconds": 0.30000007,
+   "loop": false,
+   "ticks": 7,
+   "max_bone_error_px": 6.857136043941326e-06,
+   "max_vertex_error_px": 9.739592966329714e-05,
+   "notifies": [
+    [
+     0.0001,
+     "P_Combat_Stab",
+     null
+    ],
+    [
+     0.0032,
+     "Spear_Swing_Light_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0157,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ra4",
+   "source": "Player_Master_RapierCombo5Final",
+   "seconds": 1.1890001,
+   "loop": false,
+   "ticks": 24,
+   "max_bone_error_px": 0.026341874186958714,
+   "max_vertex_error_px": 0.08637748359011824,
+   "notifies": [
+    [
+     0.2332,
+     "Spear_Swing_Light_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2828,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "co1",
+   "source": "Player_Master_CoralBladeCombo_1",
+   "seconds": 0.53,
+   "loop": false,
+   "ticks": 11,
+   "max_bone_error_px": 0.020044523113192374,
+   "max_vertex_error_px": 0.024284325476375872,
+   "notifies": [
+    [
+     0.1471,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.201,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "co2",
+   "source": "Player_Master_CoralBladeCombo_2",
+   "seconds": 0.41000003,
+   "loop": false,
+   "ticks": 9,
+   "max_bone_error_px": 0.01629570784333648,
+   "max_vertex_error_px": 0.02038353781604653,
+   "notifies": [
+    [
+     0.0049,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.0236,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "co3",
+   "source": "Player_Master_CoralBladeCombo_3",
+   "seconds": 0.85999995,
+   "loop": false,
+   "ticks": 18,
+   "max_bone_error_px": 0.01904964580879877,
+   "max_vertex_error_px": 0.022413502683225308,
+   "notifies": [
+    [
+     0.2171,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2548,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.2686,
+     "PlayParticleEffect",
+     "AnimNotify_PlayParticleEffect"
+    ]
+   ]
+  },
+  {
+   "clip": "ax1",
+   "source": "Player_Master_AxeCombo_1LeftToRight",
+   "seconds": 0.39999998,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.013680756664622366,
+   "max_vertex_error_px": 0.028248359259416257,
+   "notifies": [
+    [
+     0.0079,
+     "axe_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0744,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ax2",
+   "source": "Player_Master_AxeCombo_2LeftToRight_Alternative",
+   "seconds": 0.38,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.03783929467598101,
+   "max_vertex_error_px": 0.0743519918277404,
+   "notifies": [
+    [
+     0.0086,
+     "axe_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0785,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ax3",
+   "source": "Player_Master_AxeCombo_3SpinAttack",
+   "seconds": 1.2,
+   "loop": false,
+   "ticks": 24,
+   "max_bone_error_px": 0.04915254042878231,
+   "max_vertex_error_px": 0.0549013332358284,
+   "notifies": [
+    [
+     0.0806,
+     "axe_swingswong_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2691,
+     "P_SpinSlash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "da1",
+   "source": "Player_Master_DoubleAxeCombo_SpinAttack1",
+   "seconds": 1.0,
+   "loop": false,
+   "ticks": 20,
+   "max_bone_error_px": 0.07435863485358632,
+   "max_vertex_error_px": 0.07423528515202243,
+   "notifies": [
+    [
+     0.0001,
+     "DoubleAxe_Swing_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1977,
+     "P_SpinSlash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "da2",
+   "source": "Player_Master_DoubleAxeCombo_SpinAttack2",
+   "seconds": 1.15,
+   "loop": false,
+   "ticks": 23,
+   "max_bone_error_px": 0.008017720204372318,
+   "max_vertex_error_px": 0.02389345622192669,
+   "notifies": [
+    [
+     0.0001,
+     "DoubleAxe_Swing_02",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1681,
+     "P_SpinSlash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "bc1",
+   "source": "Player_Master_BoneclubCombo1",
+   "seconds": 1.2,
+   "loop": false,
+   "ticks": 24,
+   "max_bone_error_px": 0.029304562986144506,
+   "max_vertex_error_px": 0.053858629927081285,
+   "notifies": [
+    [
+     0.2447,
+     "Claymore_Swing",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2677,
+     "P_Slash",
+     null
+    ],
+    [
+     0.2794,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ]
+   ]
+  },
+  {
+   "clip": "bc2",
+   "source": "Player_Master_BoneclubCombo2",
+   "seconds": 0.78999996,
+   "loop": false,
+   "ticks": 16,
+   "max_bone_error_px": 0.04185914628739444,
+   "max_vertex_error_px": 0.1022375819426186,
+   "notifies": [
+    [
+     0.2242,
+     "P_Slash",
+     null
+    ],
+    [
+     0.2638,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ],
+    [
+     0.2638,
+     "Claymore_Swing",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "ma1",
+   "source": "Player_Master_MaceSwing_1",
+   "seconds": 0.562437,
+   "loop": false,
+   "ticks": 12,
+   "max_bone_error_px": 0.06895430613696457,
+   "max_vertex_error_px": 0.07166177231017105,
+   "notifies": [
+    [
+     0.0001,
+     "Mace_Swing_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0001,
+     "Slash0",
+     null
+    ],
+    [
+     0.0958,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ma2",
+   "source": "Player_Master_MaceSwing_2",
+   "seconds": 0.39602298,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.07424797227771812,
+   "max_vertex_error_px": 0.12722425329276787,
+   "notifies": [
+    [
+     0.0001,
+     "Mace_Swing_02",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0001,
+     "Slash1",
+     null
+    ],
+    [
+     0.1091,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "ma3",
+   "source": "Player_Master_MaceSwing_3",
+   "seconds": 0.7,
+   "loop": false,
+   "ticks": 14,
+   "max_bone_error_px": 0.02562860889753166,
+   "max_vertex_error_px": 0.04124320013601856,
+   "notifies": [
+    [
+     0.0001,
+     "Mace_Groundsmash",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1365,
+     "P_Slash",
+     null
+    ],
+    [
+     0.1871,
+     "PS_GroundSlam",
+     null
+    ],
+    [
+     0.191,
+     "dirt_debris_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2025,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ]
+   ]
+  },
+  {
+   "clip": "ha1",
+   "source": "Player_Master_HammerCombo_1Strike_Separated_Composite",
+   "seconds": 0.75000006,
+   "loop": false,
+   "ticks": 16,
+   "max_bone_error_px": 0.025628590092189547,
+   "max_vertex_error_px": 0.04124320047646348,
+   "notifies": [
+    [
+     0.0279,
+     "jump_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1378,
+     "P_Slash",
+     null
+    ],
+    [
+     0.1884,
+     "PS_GroundSlam",
+     null
+    ],
+    [
+     0.1922,
+     "dirt_debris_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1955,
+     "hammer_impact_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1971,
+     "CameraShakeNotify",
+     "CameraShakeNotify_C"
+    ]
+   ]
+  },
+  {
+   "clip": "sp1",
+   "source": "Player_Master_SpearCombo1",
+   "seconds": 0.75,
+   "loop": false,
+   "ticks": 15,
+   "max_bone_error_px": 0.039057203353370755,
+   "max_vertex_error_px": 0.12947681079717752,
+   "notifies": [
+    [
+     0.1965,
+     "Spear_Swing_Light_01",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.309,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "sp2",
+   "source": "Player_Master_SpearCombo2",
+   "seconds": 0.75,
+   "loop": false,
+   "ticks": 15,
+   "max_bone_error_px": 0.004320360486346994,
+   "max_vertex_error_px": 0.012970063881757364,
+   "notifies": [
+    [
+     0.2546,
+     "Spear_Swing_Light_02",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2812,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "sp3",
+   "source": "Player_Master_SpearCombo3",
+   "seconds": 1.7,
+   "loop": false,
+   "ticks": 34,
+   "max_bone_error_px": 0.003760696873081473,
+   "max_vertex_error_px": 0.04522352340500696,
+   "notifies": [
+    [
+     0.5566,
+     "Spear_Swing_Medium",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.6196,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "bo1",
+   "source": "Player_Master_BoStaffCombo1_Left",
+   "seconds": 0.5,
+   "loop": false,
+   "ticks": 10,
+   "max_bone_error_px": 0.005327322804317343,
+   "max_vertex_error_px": 0.05318125931419301,
+   "notifies": [
+    [
+     0.0001,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0389,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "bo2",
+   "source": "Player_Master_BoStaffCombo2_Right",
+   "seconds": 0.19999999,
+   "loop": false,
+   "ticks": 4,
+   "max_bone_error_px": 0.021915644967986155,
+   "max_vertex_error_px": 0.036716579865980564,
+   "notifies": [
+    [
+     0.0001,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0236,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "bo3",
+   "source": "Player_Master_BoStaffCombo3_Swipe",
+   "seconds": 0.5,
+   "loop": false,
+   "ticks": 10,
+   "max_bone_error_px": 0.03697432806376017,
+   "max_vertex_error_px": 0.05509252732272185,
+   "notifies": [
+    [
+     0.0001,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1835,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "bo4",
+   "source": "Player_Master_BoStaffCombo4_Smash",
+   "seconds": 0.5,
+   "loop": false,
+   "ticks": 10,
+   "max_bone_error_px": 0.06189745840426254,
+   "max_vertex_error_px": 0.06928067104306458,
+   "notifies": [
+    [
+     0.0001,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1107,
+     "P_Slash",
+     null
+    ],
+    [
+     0.1389,
+     "PS_GroundSlam",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "gl1",
+   "source": "Player_Master_GlaiveCombo_Attack1",
+   "seconds": 0.79999995,
+   "loop": false,
+   "ticks": 16,
+   "max_bone_error_px": 0.013103811318924425,
+   "max_vertex_error_px": 0.02980596274314393,
+   "notifies": [
+    [
+     0.305,
+     "P_Slash",
+     null
+    ],
+    [
+     0.3412,
+     "glaive_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "gl2",
+   "source": "Player_Master_GlaiveCombo_Attack2",
+   "seconds": 1.0999999,
+   "loop": false,
+   "ticks": 22,
+   "max_bone_error_px": 0.006141208000633536,
+   "max_vertex_error_px": 0.011955048213949312,
+   "notifies": [
+    [
+     0.4081,
+     "P_Slash",
+     null
+    ],
+    [
+     0.4515,
+     "glaive_second_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "gl3",
+   "source": "Player_Master_GlaiveCombo_Attack3",
+   "seconds": 0.95000005,
+   "loop": false,
+   "ticks": 20,
+   "max_bone_error_px": 0.05962890731061955,
+   "max_vertex_error_px": 0.1536346634568927,
+   "notifies": [
+    [
+     0.1478,
+     "glaive_third_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2045,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "gu1",
+   "source": "Player_Master_BoStaffCombo5_Thrust1",
+   "seconds": 0.5,
+   "loop": false,
+   "ticks": 10,
+   "max_bone_error_px": 0.001905590238550681,
+   "max_vertex_error_px": 0.0390412307854862,
+   "notifies": [
+    [
+     0.0001,
+     "strike_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0464,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "gu2",
+   "source": "Player_Master_BoStaffCombo7_SpinAttack1",
+   "seconds": 0.4499998,
+   "loop": false,
+   "ticks": 9,
+   "max_bone_error_px": 0.001174999361945293,
+   "max_vertex_error_px": 0.0018926271745759355,
+   "notifies": [
+    [
+     0.0001,
+     "PlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "dg1",
+   "source": "Player_Master_DaggersComboDeluxe_1",
+   "seconds": 0.446,
+   "loop": false,
+   "ticks": 9,
+   "max_bone_error_px": 0.07201662054466056,
+   "max_vertex_error_px": 0.07642050271053381,
+   "notifies": [
+    [
+     0.0001,
+     "P_Slash",
+     null
+    ],
+    [
+     0.0041,
+     "knife_whoosh_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "dg2",
+   "source": "Player_Master_DaggersComboDeluxe_2",
+   "seconds": 0.39999998,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.030110169074063664,
+   "max_vertex_error_px": 0.05566679160483202,
+   "notifies": [
+    [
+     0.0369,
+     "P_Slash",
+     null
+    ],
+    [
+     0.0482,
+     "knife_whoosh_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "dg3",
+   "source": "Player_Master_DaggersComboDeluxe_3",
+   "seconds": 0.35399997,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.0004491663799324517,
+   "max_vertex_error_px": 0.0007165728467589908,
+   "notifies": [
+    [
+     0.0298,
+     "P_Slash",
+     null
+    ],
+    [
+     0.034,
+     "knife_whoosh_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "dg4",
+   "source": "Player_Master_DaggersComboDeluxe_4",
+   "seconds": 0.23599994,
+   "loop": false,
+   "ticks": 5,
+   "max_bone_error_px": 0.044882780474187124,
+   "max_vertex_error_px": 0.05598572539437127,
+   "notifies": [
+    [
+     0.0249,
+     "P_Slash",
+     null
+    ],
+    [
+     0.0362,
+     "knife_whoosh_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "dg5",
+   "source": "Player_Master_DaggersComboDeluxe_5",
+   "seconds": 0.44000006,
+   "loop": false,
+   "ticks": 9,
+   "max_bone_error_px": 0.08382737673049405,
+   "max_vertex_error_px": 0.088667256608152,
+   "notifies": [
+    [
+     0.0175,
+     "knife_whoosh_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.018,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "dg6",
+   "source": "Player_Master_DaggersComboDeluxe_6",
+   "seconds": 0.6199999,
+   "loop": false,
+   "ticks": 13,
+   "max_bone_error_px": 0.02414144490407545,
+   "max_vertex_error_px": 0.10977680764495018,
+   "notifies": [
+    [
+     0.041,
+     "knife_whoosh_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0544,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "bs1",
+   "source": "Player_Master_BackstabberCombo_1",
+   "seconds": 0.41933334,
+   "loop": false,
+   "ticks": 9,
+   "max_bone_error_px": 0.09558507424295684,
+   "max_vertex_error_px": 0.11148795920091022,
+   "notifies": [
+    [
+     0.1018,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2782,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "bs2",
+   "source": "Player_Master_BackstabberCombo_2",
+   "seconds": 0.5,
+   "loop": false,
+   "ticks": 10,
+   "max_bone_error_px": 0.02722972966913277,
+   "max_vertex_error_px": 0.0397426070060644,
+   "notifies": [
+    [
+     0.3526,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "bs3",
+   "source": "Player_Master_BackstabberCombo_3",
+   "seconds": 1.125,
+   "loop": false,
+   "ticks": 23,
+   "max_bone_error_px": 0.08028681942959835,
+   "max_vertex_error_px": 0.09011966967528832,
+   "notifies": [
+    [
+     0.309,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "vb1",
+   "source": "Player_Master_VoidBladesCombo_1",
+   "seconds": 0.4,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.013125463613410158,
+   "max_vertex_error_px": 0.016190791172124068,
+   "notifies": [
+    [
+     0.1707,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "vb2",
+   "source": "Player_Master_VoidBladesCombo_2",
+   "seconds": 0.39999998,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.013169418682603504,
+   "max_vertex_error_px": 0.01516298578385454,
+   "notifies": [
+    [
+     0.1357,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "vb3",
+   "source": "Player_Master_VoidBladesCombo_3",
+   "seconds": 0.25000006,
+   "loop": false,
+   "ticks": 6,
+   "max_bone_error_px": 0.006121182522425897,
+   "max_vertex_error_px": 0.007428932894870695,
+   "notifies": [
+    [
+     0.1005,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "si1",
+   "source": "Player_Master_SicklesCombo1",
+   "seconds": 0.6,
+   "loop": false,
+   "ticks": 12,
+   "max_bone_error_px": 0.10400570898098042,
+   "max_vertex_error_px": 0.18212365461959593,
+   "notifies": [
+    [
+     0.0001,
+     "Sickles_Swing_Light",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0585,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "si4",
+   "source": "Player_Master_SicklesCombo4",
+   "seconds": 0.5,
+   "loop": false,
+   "ticks": 10,
+   "max_bone_error_px": 0.001925737054823003,
+   "max_vertex_error_px": 0.0549284091094219,
+   "notifies": [
+    [
+     0.0001,
+     "Sickles_Swing_Light",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.1222,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "si6",
+   "source": "Player_Master_SicklesCombo6",
+   "seconds": 1.0,
+   "loop": false,
+   "ticks": 20,
+   "max_bone_error_px": 0.013269724346568992,
+   "max_vertex_error_px": 0.13784750188697875,
+   "notifies": [
+    [
+     0.1262,
+     "Sickles_Swing_Pair_02",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.2958,
+     "P_Slash",
+     null
+    ],
+    [
+     0.2958,
+     "P_Slash",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "sc1",
+   "source": "Player_Master_ScytheCombo_1Scythe",
+   "seconds": 0.46,
+   "loop": false,
+   "ticks": 10,
+   "max_bone_error_px": 0.04297316664660223,
+   "max_vertex_error_px": 0.04869588469330095,
+   "notifies": [
+    [
+     0.0169,
+     "P_SlashSoul",
+     null
+    ],
+    [
+     0.0177,
+     "scythe_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "sc2",
+   "source": "Player_Master_ScytheCombo_2Scythe",
+   "seconds": 0.65000004,
+   "loop": false,
+   "ticks": 14,
+   "max_bone_error_px": 0.009328682490811768,
+   "max_vertex_error_px": 0.011932739751979594,
+   "notifies": [
+    [
+     0.0212,
+     "P_SlashSoul",
+     null
+    ],
+    [
+     0.0251,
+     "scythe_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "fi1",
+   "source": "Player_Master_GauntletsCombo1",
+   "seconds": 0.33,
+   "loop": false,
+   "ticks": 7,
+   "max_bone_error_px": 0.0009780111507301514,
+   "max_vertex_error_px": 0.008235477052005932,
+   "notifies": [
+    [
+     0.0001,
+     "Gauntlets_Swing_Short",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0582,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "fi2",
+   "source": "Player_Master_GauntletsCombo2",
+   "seconds": 0.35000002,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.004533343271914659,
+   "max_vertex_error_px": 0.07055153677525994,
+   "notifies": [
+    [
+     0.0001,
+     "Gauntlets_Swing_Short",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0815,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "fi3",
+   "source": "Player_Master_GauntletsCombo3",
+   "seconds": 0.30000007,
+   "loop": false,
+   "ticks": 7,
+   "max_bone_error_px": 0.0029279731780284244,
+   "max_vertex_error_px": 0.049047602462293415,
+   "notifies": [
+    [
+     0.0001,
+     "Gauntlets_Swing_Short",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0582,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "fi4",
+   "source": "Player_Master_GauntletsCombo4",
+   "seconds": 0.35000002,
+   "loop": false,
+   "ticks": 8,
+   "max_bone_error_px": 0.004688863355663492,
+   "max_vertex_error_px": 0.07059164008317097,
+   "notifies": [
+    [
+     0.0001,
+     "Gauntlets_Swing_Short",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0582,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "fi5",
+   "source": "Player_Master_GauntletsCombo5",
+   "seconds": 0.29999995,
+   "loop": false,
+   "ticks": 6,
+   "max_bone_error_px": 0.0003986334115240484,
+   "max_vertex_error_px": 0.0011002940662279534,
+   "notifies": [
+    [
+     0.0001,
+     "Gauntlets_Swing_Medium",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.034,
+     "P_Slash",
+     null
+    ],
+    [
+     0.0585,
+     "P_Combat_Stab",
+     null
+    ]
+   ]
+  },
+  {
+   "clip": "fi6",
+   "source": "Player_Master_GauntletsCombo6",
+   "seconds": 0.5,
+   "loop": false,
+   "ticks": 10,
+   "max_bone_error_px": 0.019243572017958045,
+   "max_vertex_error_px": 0.19034890519668393,
+   "notifies": [
+    [
+     0.0001,
+     "Gauntlets_Swing_Medium",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     0.0315,
+     "P_Combat_Stab",
+     null
+    ],
+    [
+     0.034,
+     "P_Slash",
+     null
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "daath",
+  "source_mesh_sha256": "c69a08825b0f3a9acbef6e7b8588b0cdb78eee6d7a31deee2cc02bcb58ceb24d",
+  "triangles": 154,
+  "all_triangles_covered_once": true,
+  "bones": 38,
+  "plane_groups": 25,
+  "display_parts": 21,
+  "elements": 79,
+  "direct_uv_elements": 60,
+  "baked_elements": 19,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Valorie": 0
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

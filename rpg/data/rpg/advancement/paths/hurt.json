@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "h": {
+      "trigger": "minecraft:entity_hurt_player"
+    }
+  },
+  "rewards": {
+    "function": "rpg:paths/hurt"
+  }
+}

@@ -72,3 +72,15 @@
 - "The Mourning Forest", "The Black Temple", "The Elven Groves", "RPG Ambient 3", "The Lost City", "RPG Ambient 2" by Hitctrl — https://opengameart.org/users/hitctrl — CC-BY 3.0
 - "(Blood) Stained Glass" and "Chapel of Hate" by FoxSynergy — https://opengameart.org/users/foxsynergy — CC-BY 3.0
 - "Cathedral" by Umplix and "Moongate" by Tsorthan Grove — CC0
+
+## 达阿特试炼（2026-11-25 下载，用户同意）
+
+原件在 `_tools/daath_ref/bgm_src/`；daath2 由 WAV 转成 Ogg Vorbis（只换格式，不剪辑），daath1 原样。
+
+| 文件 | 用在 | 曲名 | 作者 | 许可 | 长度 | 页面 |
+|---|---|---|---|---|---|---|
+| daath1.ogg | 达阿特 · 镜 | Reflections Upon the Black Mirror | Hitctrl | CC-BY 3.0 | 2:05 | https://opengameart.org/content/reflections-upon-the-black-mirror |
+| daath2.ogg | 达阿特 · 面对面 | Fated Duel | FrancisLeeMusic | CC-BY 3.0 | 1:16 | https://opengameart.org/content/fated-duel |
+
+- "Reflections Upon the Black Mirror" by Hitctrl — https://opengameart.org/users/hitctrl — CC-BY 3.0
+- "Fated Duel" by FrancisLeeMusic — CC-BY 3.0

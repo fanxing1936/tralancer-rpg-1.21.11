@@ -2,12 +2,13 @@
 """原质等级、力条与生命力（方案书「原质等级与身份能力方案书」第三版，用户 2026-11-23 批准）。
 
 这一步（里程碑 A）做的：
-  * 原质十阶：王国 → 王冠。晋阶只看「综合能力」= 阅历（rpg_ex_xp）+ 装备分（四件护甲和主手的装备等级之和 × 10），
+  * 原质十阶：王国 → 王冠。晋阶只看「综合能力」= 阅历（rpg_ex_xp）+ 装备分（四件护甲和主手，每件 2 的装备等级次方；Lv.10 一件 1024），
     不绑任何 Boss（开放世界）。唯一的门是达阿特：这一版到了慈悲阶直接放行，留接口 rpg:sephira/daath/start。
   * 每阶：生命 +4、技能点、力条上限、锻造材料；第 2 阶选主柱，主柱加成按柱给。
   * 旧角色等级（经验等级加血）拆掉；驱魔等级退出成长：rpg_ex_lvl 只剩驱魔内部的「驱魔熟练」，
     按裁决次数 rpg_ex_rites 算（1/3/6 次），驱魔里零碎的阅历改记到 rpg_ex_dxp，不再进原质。
-  * 阅历来源：击杀（普通每天前 300 只 +1、精英 +5）、六个 Boss（首杀 +80、之后每天每个前 3 次 +15）、
+  * 门槛是指数的（用户 2026-11-25「升级难度应该是指数级别」）：第 2 阶 60，往后每一阶要的都是上一阶的两倍（THR）。
+  * 阅历来源：击杀（每 20 分钟前 100 只普通怪 +1、前 60 只精英 +5、之后的精英 +1）、六个 Boss（首杀 +80、之后每天每个前 3 次 +15）、
     裁决 +10、驱逐 +3。
   * 力：圣力 / 魔力各一根条（rpg_mana，弥赛亚的魔力在 rpg_mana2）。圣力者魔化那一行换成生命力（rpg_vital）：
     沾上的每一点魔化变成 1 点生命力损失和 1 点同化（rpg_assim），握圣器每 30 秒 -1；同化满 100 堕入魔力，
@@ -40,20 +41,11 @@ C_MANA = "#A276BE"
 C_VITAL = "#E86A6A"
 C_ASSIM = "#9B6BD6"
 
-# (阶, 键, 中文, 拉丁, 希伯来, 颜色, 柱 0 中 1 严厉 2 慈悲)
-TIERS = [
-    (1, "malkuth", "王国", "Malkuth", "מלכות", "#C58A62", 0),
-    (2, "yesod", "基础", "Yesod", "יסוד", "#D596F2", 0),
-    (3, "hod", "光辉", "Hod", "הוד", "#FF8A4A", 1),
-    (4, "netzach", "胜利", "Netzach", "נצח", "#70DB70", 2),
-    (5, "tiphareth", "美丽", "Tiphareth", "תפארת", "#FFD85A", 0),
-    (6, "geburah", "严厉", "Geburah", "גבורה", "#FF5A62", 1),
-    (7, "chesed", "慈悲", "Chesed", "חסד", "#62B8F0", 2),
-    (8, "binah", "理解", "Binah", "בינה", "#AAB4C3", 1),
-    (9, "chokmah", "智慧", "Chokmah", "חכמה", "#C9CDD6", 2),
-    (10, "kether", "王冠", "Kether", "כתר", "#FFF2A8", 0),
-]
-THR = {1: 0, 2: 60, 3: 160, 4: 300, 5: 480, 6: 700, 7: 950, 8: 1250, 9: 1600, 10: 2000}
+from add_sephira_tiers import TIERS  # noqa: E402  (阶, 键, 中文, 拉丁, 希伯来, 颜色, 柱)
+THR_BASE, THR_RATIO = 60, 2          # 指数门槛：第 n 阶自己要 60 × 2^(n-2)，THR 是累计值
+THR = {1: 0}
+for _n in range(2, 11):
+    THR[_n] = THR[_n - 1] + THR_BASE * THR_RATIO ** (_n - 2)
 SP = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 1, 7: 2, 8: 1, 9: 2, 10: 2}
 MATS = {
     2: [("blank", 2), ("soul", 4)],
@@ -73,7 +65,9 @@ PILLAR = {1: ("严厉柱", "进攻", "#FF5A62"), 2: ("慈悲柱", "守护与续�
 # 第 n 阶落在哪根柱上 —— 主柱加成只在「这一阶在你的主柱上」时给（rpg_pillar：1 严厉 2 慈悲 3 中）
 TIER_PILLAR = {2: 3, 3: 1, 4: 2, 5: 3, 6: 1, 7: 2, 8: 1, 9: 2, 10: 3}
 MANA_BASE = 100
-DAILY_KILLS = 300
+DAILY_KILLS = 100      # 一「天」= 20 分钟游戏时间（gametime，睡觉跳不过去）里给阅历的普通怪
+DAILY_ELITES = 60      # 同上，精英：超过以后每只只给 1
+GEAR = {lv: 2 ** lv for lv in range(1, 11)}
 # 六个 Boss：(键, 中文, 胜利函数目录, 场地中心标记；None = 原地结算)
 BOSSES = [("pope", "教皇", "pope_fight", None), ("usurper", "篡夺者", "usurper_boss", "rpg.usb.center"),
           ("jacques", "雅克", "jacques_boss", "rpg.jqb.center"), ("saul", "扫罗", "saul_boss", "rpg.slb.center"),
@@ -150,7 +144,7 @@ def tier_of(n):
 
 # ============================================================================ 核心
 def core():
-    objs = [O, "rpg_power", "rpg_gear", "rpg_pillar", "rpg_sp", "rpg_sef_mig", "rpg_sef_day", "rpg_sef_dk", "rpg_daath",
+    objs = [O, "rpg_power", "rpg_gear", "rpg_pillar", "rpg_sp", "rpg_sef_mig", "rpg_sef_day", "rpg_sef_dk", "rpg_sef_de", "rpg_daath",
             "rpg_ex_rites", "rpg_ex_dxp", "rpg_sef_lcd",
             "rpg_force", "rpg_mana", "rpg_mana2", "rpg_mana_max", "rpg_mana_f", "rpg_vital", "rpg_assim",
             "rpg_fz_t", "rpg_fz_h", "rpg_fz_r", "rpg_fz_tp", "rpg_fz_b", "rpg_fz_mv0"]
@@ -161,7 +155,7 @@ def core():
              "scoreboard objectives add rpg_fz_mv minecraft.custom:minecraft.walk_one_cm"]
     load += ["scoreboard objectives add rpg_bk_%s dummy" % b for b, _n, _d, _c in BOSSES]
     load += ["scoreboard objectives add rpg_bkd_%s dummy" % b for b, _n, _d, _c in BOSSES]
-    load += ["scoreboard players set #20 %s 20" % O, "scoreboard players set #40 %s 40" % O,
+    load += ["scoreboard players set #24k %s 24000" % O, "scoreboard players set #20 %s 20" % O, "scoreboard players set #40 %s 40" % O,
              "scoreboard players set #10 %s 10" % O, "scoreboard players set #2 %s 2" % O,
              "scoreboard players set #3 %s 3" % O, "scoreboard players set #8 %s %d" % (O, BAR),
              "scoreboard players set #115 %s 115" % O, "scoreboard players set #100 %s 100" % O,
@@ -175,7 +169,9 @@ def core():
         "execute unless score #m %s matches 0 run return 0" % O,
         "scoreboard players operation #m2 %s = #t %s" % (O, O),
         "scoreboard players operation #m2 %s %%= #40 %s" % (O, O),
-        "execute store result score #day %s run time query day" % O,
+        "# 一天按游戏运行时间算（24000 刻），睡觉不会提前换日",
+        "execute store result score #day %s run time query gametime" % O,
+        "scoreboard players operation #day %s /= #24k %s" % (O, O),
         "execute as @a[tag=!rpg.ob.hold,tag=!rpg.pr] at @s run function %s/sec" % P,
     ])
     fn("sec", [
@@ -190,7 +186,8 @@ def core():
         "# 慈悲柱第 9 阶：6 格内友方抗性 I",
         "execute if score #m2 %s matches 0 if score @s rpg_pillar matches 2 if score @s %s matches 9.. run effect give @a[distance=..6,gamemode=!spectator] minecraft:resistance 3 0 true" % (O, O),
     ])
-    fn("day", ["scoreboard players operation @s rpg_sef_day = #day %s" % O, "scoreboard players set @s rpg_sef_dk 0"] +
+    fn("day", ["scoreboard players operation @s rpg_sef_day = #day %s" % O, "scoreboard players set @s rpg_sef_dk 0",
+               "scoreboard players set @s rpg_sef_de 0"] +
        ["scoreboard players set @s rpg_bkd_%s 0" % b for b, _n, _d, _c in BOSSES])
 
 
@@ -200,9 +197,8 @@ def gear_lines():
     for slot in ("armor.head", "armor.chest", "armor.legs", "armor.feet", "weapon.mainhand"):
         for lv in range(1, 11):
             out.append("execute if items entity @s %s *[minecraft:custom_data~{rpg_eq:{lv:%d}}] run scoreboard players add #g %s %d"
-                       % (slot, lv, O, lv))
-    out += ["scoreboard players operation @s rpg_gear = #g %s" % O,
-            "scoreboard players operation @s rpg_gear *= #10 %s" % O]
+                       % (slot, lv, O, GEAR[lv]))
+    out += ["scoreboard players operation @s rpg_gear = #g %s" % O]
     return out
 
 
@@ -372,7 +368,9 @@ def sources():
         "# 锻造的三档击杀进度（rpg_fg_kx：1 普通 5 精英 50 Boss）顺路记阅历；Boss 的大头由胜利结算给",
         "execute if score @s rpg_fg_kx matches 1 if score @s rpg_sef_dk matches ..%d run scoreboard players add @s rpg_ex_xp 1" % (DAILY_KILLS - 1),
         "execute if score @s rpg_fg_kx matches 1 run scoreboard players add @s rpg_sef_dk 1",
-        "execute if score @s rpg_fg_kx matches 5.. run scoreboard players add @s rpg_ex_xp 5",
+        "execute if score @s rpg_fg_kx matches 5.. run scoreboard players add @s rpg_sef_de 1",
+        "execute if score @s rpg_fg_kx matches 5.. if score @s rpg_sef_de matches ..%d run scoreboard players add @s rpg_ex_xp 5" % DAILY_ELITES,
+        "execute if score @s rpg_fg_kx matches 5.. if score @s rpg_sef_de matches %d.. run scoreboard players add @s rpg_ex_xp 1" % (DAILY_ELITES + 1),
         "# 魔力：击杀 +4；圣力：杀死精英（恶魔、亡灵首领）+5",
         "execute if score @s rpg_force matches 2 run scoreboard players add @s rpg_mana 4",
         "execute if score @s rpg_force matches 3 run scoreboard players add @s rpg_mana2 4",
@@ -710,7 +708,7 @@ def panel():
             page += ["execute if score @s rpg_daath matches 1 run data modify storage rpg:panel ui.body append value %s" % J(dz_ok),
                      "execute unless score @s rpg_daath matches 1 run data modify storage rpg:panel ui.body append value %s" % J(dz_no)]
     page += ["data modify storage rpg:panel ui.body append value %s" % J({"text": "", "extra": [
-        t("\n综合能力 = 阅历 + 装备分（四件护甲和主手的装备等级之和 × 10）。不指定打哪个 Boss，够了就晋阶。", "#797979"), t("\n")]}),
+        t("\n每一阶要的都是上一阶的两倍。综合能力 = 阅历 + 装备分（四件护甲和主手，每件 2、4、8……Lv.10 是 1024）。不指定打哪个 Boss，够了就晋阶。", "#797979"), t("\n")]}),
              "function %s/panel/row" % P,
              "data modify storage rpg:panel ui.actions set value []",
              "execute if score @s %s matches 2.. unless score @s rpg_pillar matches 1..3 run data modify storage rpg:panel ui.actions append value %s"

@@ -1,3 +1,4 @@
+execute if score @s rpg_dt matches 1.. run return 0
 # 新手开局的黑屏里不结算魔化（add_onboard.py）
 execute if entity @s[tag=rpg.ob.hold] run return 0
 # 序章里不结算魔化（add_prologue.py）

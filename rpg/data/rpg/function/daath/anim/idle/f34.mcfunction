@@ -1,0 +1,3 @@
+# idle 第 34 刻的姿势（每 2 刻一帧，补间 2 刻）。由 add_daath_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.dtm.p.r_leg] run data merge entity @s {start_interpolation:0,interpolation_duration:2,transformation:{translation:[-0.16046f,-1.65638f,-0.06131f],left_rotation:[-0.58293f,-0.13539f,-0.24435f,0.76299f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.dtm.p.weapon_r] run data merge entity @s {start_interpolation:0,interpolation_duration:2,transformation:{translation:[-0.45276f,-1.2568f,-0.22612f],left_rotation:[0.70196f,0.00602f,0.00898f,0.71213f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}

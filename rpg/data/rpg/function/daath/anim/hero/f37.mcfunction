@@ -1,0 +1,3 @@
+# hero 第 37 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_daath_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.dtm.p.l_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.32882f,-0.9407f,0.22146f],left_rotation:[0.52287f,-0.02286f,0.16003f,0.83695f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.dtm.p.weapon_l] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.35933f,-1.18987f,0.34815f],left_rotation:[0.5889f,-0.09462f,0.13152f,0.7918f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}

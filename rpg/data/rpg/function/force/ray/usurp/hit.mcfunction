@@ -19,6 +19,7 @@ execute if entity @s[tag=rpg.jqb] run scoreboard players set #b rpg_fo 1
 execute if entity @s[tag=rpg.lub] run scoreboard players set #b rpg_fo 1
 execute if entity @s[tag=rpg.slb] run scoreboard players set #b rpg_fo 1
 execute if entity @s[tag=rpg.usb] run scoreboard players set #b rpg_fo 1
+execute if entity @s[tag=rpg.dtb] run scoreboard players set #b rpg_fo 1
 execute if score #b rpg_fo matches 0 run effect give @s minecraft:slowness 5 9 true
 execute if score #b rpg_fo matches 0 run effect give @s minecraft:jump_boost 5 250 true
 execute if score #b rpg_fo matches 0 run effect give @s minecraft:weakness 5 4 true

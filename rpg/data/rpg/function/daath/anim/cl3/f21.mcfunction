@@ -1,0 +1,3 @@
+# cl3 第 21 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_daath_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.dtm.p.head] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.00034f,-0.70437f,0.49158f],left_rotation:[0.80788f,-0.00009f,0.00009f,0.58935f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.dtm.p.weapon_r] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.00259f,-1.7095f,0.84131f],left_rotation:[0.67975f,-0.04718f,-0.50132f,0.53328f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}

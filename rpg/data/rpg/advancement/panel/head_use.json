@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "u": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": {
+              "player_tag": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "rpg:panel/v2/head_use"
+  }
+}

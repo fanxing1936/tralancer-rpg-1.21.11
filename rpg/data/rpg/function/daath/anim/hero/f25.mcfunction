@@ -1,0 +1,3 @@
+# hero 第 25 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_daath_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.dtm.p.r_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.28643f,-0.33871f,-0.14311f],left_rotation:[-0.68263f,-0.03238f,-0.0415f,-0.72887f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.dtm.p.weapon_r] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.31f,-0.05919f,-0.16248f],left_rotation:[-0.58156f,-0.51417f,0.10523f,0.62157f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}

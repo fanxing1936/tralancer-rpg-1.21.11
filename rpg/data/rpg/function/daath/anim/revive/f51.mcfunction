@@ -1,0 +1,4 @@
+# revive 第 51 刻的姿势（每 1 刻一帧，补间 1 刻）。由 add_daath_model.py 烘焙。
+execute on passengers if entity @s[tag=rpg.dtm.p.l_arm] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.23873f,-1.26846f,0.61625f],left_rotation:[0.05214f,-0.13748f,-0.32165f,0.93537f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.dtm.p.weapon_r] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[-0.57559f,-1.49827f,0.03307f],left_rotation:[0.71063f,-0.10314f,-0.08842f,0.69033f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}
+execute on passengers if entity @s[tag=rpg.dtm.p.weapon_l] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0.15312f,-1.26673f,0.88408f],left_rotation:[0.08373f,-0.24008f,-0.29688f,0.92044f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}

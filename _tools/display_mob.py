@@ -193,6 +193,7 @@ class Mob(object):
         self.hurt_volume, self.death_volume = hurt_volume, death_volume
         self.on_hurt = list(on_hurt)
         self.held = held
+        self.held_left = None       # a second held part, in the left hand (add_daath_model.py)
         self.anim_from = anim_from
         self.face_rotation = face_rotation
         self.idle_clip, self.walk_clip = idle_clip, walk_clip
@@ -350,6 +351,8 @@ def display_matrix(mob, bones, part_bone, K, W=None):
 
 
 HOLD = mat_mul(rot_x(-90), mat_mul(rot_y(180), translate(1 / 16.0, 2 / 16.0, -10 / 16.0)))
+# the left hand (Mob.held_left): the same grip mirrored
+HOLD_LEFT = mat_mul(rot_x(-90), mat_mul(rot_y(180), translate(-1 / 16.0, 2 / 16.0, -10 / 16.0)))
 VANILLA = [[-16, 0, 0, 0], [0, -16, 0, 0], [0, 0, 16, 0], [0, 0, 0, 1]]
 
 
@@ -367,7 +370,7 @@ def held_matrix(mob, bones, arm, W):
             Wr = posed_matrix(bones, arm, clip, ref[1])
             p = [sum(Wr[i][k] * (bones[arm]["pivot"] + [1])[k] for k in range(4)) for i in range(3)]
             k = getattr(mob, "held_size", 1.0)
-            L = mat_mul(VANILLA, HOLD)
+            L = mat_mul(VANILLA, HOLD_LEFT if mob.held_left and arm == dict(mob.parts)[mob.held_left][0] else HOLD)
             L = [[v * k for v in row[:3]] + [0] for row in L[:3]] + [[0, 0, 0, 1]]
             cache[arm] = mat_mul(inverse_affine(Wr), mat_mul(translate(*p), L))
         return mat_mul(mat_mul(G, mat_mul(W, cache[arm])), R180)
@@ -613,8 +616,10 @@ def bake(mob, bones, offsets, clips):
             cache = {} if mob.pose_cache else None
             for part, members in mob.parts:
                 W = posed_matrix(bones, members[0], clip, t * TICK, cache)
-                T = held_matrix(mob, bones, members[0], W) if part == mob.held else                     display_matrix(mob, bones, members[0], offsets[part], W)
-                held_size = getattr(mob, "held_size", 1.0) if part == mob.held else 1.0
+                held = part == mob.held or part == mob.held_left
+                T = held_matrix(mob, bones, members[0], W) if held else \
+                    display_matrix(mob, bones, members[0], offsets[part], W)
+                held_size = getattr(mob, "held_size", 1.0) if held else 1.0
                 frame[part] = prev[part] = (affine_components(T, prev.get(part)) if part in mob.affine_parts
                                            else components(T, mob.model_scale * held_size, prev.get(part)))
                 if held_size != 1.0:
@@ -930,7 +935,7 @@ def build(mob, rp, dp):
 
     offsets = {}
     for part, members in mob.parts:
-        if part == mob.held:
+        if part == mob.held or part == mob.held_left:
             offsets[part] = None
             continue
         model, K = part_model(mob, bones, part, members, res)

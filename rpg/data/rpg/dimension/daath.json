@@ -1,0 +1,18 @@
+{
+  "type": "rpg:daath",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "rpg:daath",
+      "features": false,
+      "lakes": false,
+      "layers": [
+        {
+          "block": "minecraft:air",
+          "height": 1
+        }
+      ],
+      "structure_overrides": []
+    }
+  }
+}

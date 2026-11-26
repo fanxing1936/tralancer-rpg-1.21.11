@@ -1,5 +1,6 @@
 function rpg:sephira/kill
 scoreboard players operation #xa rpg_fg = @s rpg_fg_kx
+execute if score @s rpg_ps_15 matches 2 if predicate {condition:"minecraft:random_chance",chance:0.2} run scoreboard players operation #xa rpg_fg += #xa rpg_fg
 scoreboard players reset @s rpg_fg_kx
 execute if entity @s[tag=rpg.fg.src.hope] run function rpg:forge/src/hope
 execute if entity @s[tag=rpg.fg.a.swift] run effect give @s minecraft:speed 3 1 true

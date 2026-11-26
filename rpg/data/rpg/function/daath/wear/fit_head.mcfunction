@@ -1,0 +1,10 @@
+# 按底材换成盔甲块模型（as 盔甲块）；认不出的（鞘翅、南瓜、自定义装备层）就不画
+execute if entity @s[tag=rpg.dtm.a.helmet] if items entity @s contents minecraft:leather_helmet run return run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath/a/leather/helmet"
+execute if entity @s[tag=rpg.dtm.a.helmet] if items entity @s contents minecraft:chainmail_helmet run return run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath/a/chainmail/helmet"
+execute if entity @s[tag=rpg.dtm.a.helmet] if items entity @s contents minecraft:iron_helmet run return run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath/a/iron/helmet"
+execute if entity @s[tag=rpg.dtm.a.helmet] if items entity @s contents minecraft:golden_helmet run return run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath/a/golden/helmet"
+execute if entity @s[tag=rpg.dtm.a.helmet] if items entity @s contents minecraft:diamond_helmet run return run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath/a/diamond/helmet"
+execute if entity @s[tag=rpg.dtm.a.helmet] if items entity @s contents minecraft:netherite_helmet run return run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath/a/netherite/helmet"
+execute if entity @s[tag=rpg.dtm.a.helmet] if items entity @s contents minecraft:copper_helmet run return run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath/a/copper/helmet"
+execute if entity @s[tag=rpg.dtm.a.helmet] if items entity @s contents minecraft:turtle_helmet run return run data modify entity @s item.components."minecraft:item_model" set value "rpg:daath/a/turtle/helmet"
+execute if items entity @s contents * run data modify entity @s item.components."minecraft:item_model" set value "rpg:empty"

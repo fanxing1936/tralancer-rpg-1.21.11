@@ -22,4 +22,5 @@ execute if score @s rpg_pl_best matches ..14 run data modify storage rpg:panel u
 execute unless data entity @s {Dimension:"rpg:paradise_lost"} run data modify storage rpg:panel ui.actions append value {"label":{"text":"进入","color":"#C9A646","bold":true,"italic":false},"tooltip":{"text":"落在伊甸之门，回来时回到现在的位置","color":"#9C9A94","bold":false,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_panel set 13"}}
 execute if data entity @s {Dimension:"rpg:paradise_lost"} run data modify storage rpg:panel ui.actions append value {"label":{"text":"离开","color":"#C9A646","bold":true,"italic":false},"tooltip":{"text":"门内立刻离开，门外要站着不动 5 秒","color":"#9C9A94","bold":false,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_panel set 14"}}
 data modify storage rpg:panel ui.actions append value {"label":{"text":"返回面板","color":"#C9A646","bold":true,"italic":false},"tooltip":{"text":"回到玩家面板","color":"#9C9A94","bold":false,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_panel set 8"}}
+data modify storage rpg:panel ui.tab set value 5
 function rpg:panel/ui/show with storage rpg:panel ui

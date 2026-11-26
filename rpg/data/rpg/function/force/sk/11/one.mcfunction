@@ -7,6 +7,7 @@ execute if entity @s[tag=rpg.jqb] run scoreboard players set #b rpg_fo 1
 execute if entity @s[tag=rpg.lub] run scoreboard players set #b rpg_fo 1
 execute if entity @s[tag=rpg.slb] run scoreboard players set #b rpg_fo 1
 execute if entity @s[tag=rpg.usb] run scoreboard players set #b rpg_fo 1
+execute if entity @s[tag=rpg.dtb] run scoreboard players set #b rpg_fo 1
 execute if score #b rpg_fo matches 1 run return run effect give @s minecraft:slowness 2 1 true
 execute if score #lv rpg_fo matches 1 run effect give @s minecraft:slowness 2 9 true
 execute if score #lv rpg_fo matches 2 run effect give @s minecraft:slowness 3 9 true

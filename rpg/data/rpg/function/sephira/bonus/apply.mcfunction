@@ -25,3 +25,4 @@ execute if score @s rpg_sef matches 4.. run scoreboard players add @s rpg_mana_m
 execute if score @s rpg_sef matches 7.. run scoreboard players add @s rpg_mana_max 20
 execute if score @s rpg_sef matches 9.. run scoreboard players add @s rpg_mana_max 20
 execute if score @s rpg_pillar matches 3 if score @s rpg_sef matches 10 run scoreboard players add @s rpg_mana_max 40
+function rpg:paths/bless/apply

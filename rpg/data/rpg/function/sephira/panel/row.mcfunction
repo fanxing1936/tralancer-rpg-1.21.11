@@ -5,16 +5,16 @@ scoreboard players add @s rpg_gear 0
 scoreboard players add @s rpg_sp 0
 data modify storage rpg:sephira v set value {tn:"未入阶",tc:"#9C9A94",nx:"—",fl:""}
 execute if score @s rpg_sef matches 1 run data modify storage rpg:sephira v merge value {tn:"王国",tc:"#C58A62",nx:"60"}
-execute if score @s rpg_sef matches 2 run data modify storage rpg:sephira v merge value {tn:"基础",tc:"#D596F2",nx:"160"}
-execute if score @s rpg_sef matches 3 run data modify storage rpg:sephira v merge value {tn:"光辉",tc:"#FF8A4A",nx:"300"}
-execute if score @s rpg_sef matches 4 run data modify storage rpg:sephira v merge value {tn:"胜利",tc:"#70DB70",nx:"480"}
-execute if score @s rpg_sef matches 5 run data modify storage rpg:sephira v merge value {tn:"美丽",tc:"#FFD85A",nx:"700"}
-execute if score @s rpg_sef matches 6 run data modify storage rpg:sephira v merge value {tn:"严厉",tc:"#FF5A62",nx:"950"}
-execute if score @s rpg_sef matches 7 run data modify storage rpg:sephira v merge value {tn:"慈悲",tc:"#62B8F0",nx:"1250"}
-execute if score @s rpg_sef matches 8 run data modify storage rpg:sephira v merge value {tn:"理解",tc:"#AAB4C3",nx:"1600"}
-execute if score @s rpg_sef matches 9 run data modify storage rpg:sephira v merge value {tn:"智慧",tc:"#C9CDD6",nx:"2000"}
+execute if score @s rpg_sef matches 2 run data modify storage rpg:sephira v merge value {tn:"基础",tc:"#D596F2",nx:"180"}
+execute if score @s rpg_sef matches 3 run data modify storage rpg:sephira v merge value {tn:"光辉",tc:"#FF8A4A",nx:"420"}
+execute if score @s rpg_sef matches 4 run data modify storage rpg:sephira v merge value {tn:"胜利",tc:"#70DB70",nx:"900"}
+execute if score @s rpg_sef matches 5 run data modify storage rpg:sephira v merge value {tn:"美丽",tc:"#FFD85A",nx:"1860"}
+execute if score @s rpg_sef matches 6 run data modify storage rpg:sephira v merge value {tn:"严厉",tc:"#FF5A62",nx:"3780"}
+execute if score @s rpg_sef matches 7 run data modify storage rpg:sephira v merge value {tn:"慈悲",tc:"#62B8F0",nx:"7620"}
+execute if score @s rpg_sef matches 8 run data modify storage rpg:sephira v merge value {tn:"理解",tc:"#AAB4C3",nx:"15300"}
+execute if score @s rpg_sef matches 9 run data modify storage rpg:sephira v merge value {tn:"智慧",tc:"#C9CDD6",nx:"30660"}
 execute if score @s rpg_sef matches 10 run data modify storage rpg:sephira v merge value {tn:"王冠",tc:"#FFF2A8",nx:"已至王冠"}
-execute if score @s rpg_sef matches 7 unless score @s rpg_daath matches 1 run data modify storage rpg:sephira v.nx set value "1250（先越过达阿特）"
+execute if score @s rpg_sef matches 7 unless score @s rpg_daath matches 1 run data modify storage rpg:sephira v.nx set value "7620（先越过达阿特）"
 execute store result storage rpg:sephira v.tier int 1 run scoreboard players get @s rpg_sef
 execute store result storage rpg:sephira v.pw int 1 run scoreboard players get @s rpg_power
 execute store result storage rpg:sephira v.xp int 1 run scoreboard players get @s rpg_ex_xp

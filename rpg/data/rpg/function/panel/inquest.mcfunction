@@ -17,4 +17,5 @@ execute store result storage rpg:panel v.rpg_case6 int 1 run scoreboard players 
 scoreboard players add @s rpg_case7 0
 execute store result storage rpg:panel v.rpg_case7 int 1 run scoreboard players get @s rpg_case7
 function rpg:panel/pages/panel_inquest with storage rpg:panel v
+data modify storage rpg:panel ui.tab set value 4
 function rpg:panel/ui/show with storage rpg:panel ui

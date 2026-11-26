@@ -9,3 +9,5 @@ execute if score #do rpg_sef matches 12 run function rpg:sephira/force/awaken_2
 execute if score #do rpg_sef matches 19 run function rpg:sephira/force/awaken_ask
 execute if score #do rpg_sef matches 20 run function rpg:sephira/page/open
 execute if score #do rpg_sef matches 21 if entity @s[tag=rpg.fallen] if score @s rpg_lt_divine matches 2 run function rpg:sephira/force/rise
+execute if score #do rpg_sef matches 30 at @s run function rpg:daath_fight/ask
+execute if score #do rpg_sef matches 31 at @s run function rpg:daath_fight/go

@@ -1,0 +1,2 @@
+execute if score @s rpg_dtm_t matches ..4 run return run function rpg:daath/anim/ma2/at_a
+function rpg:daath/anim/ma2/at_b

@@ -1,0 +1,40 @@
+# 把背包里的武器抄一份（as/at 玩家）
+summon minecraft:item_display ~ ~ ~ {Tags:["rpg.dt.tmp"]}
+execute if items entity @s hotbar.0 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"hotbar.0"}
+execute if items entity @s hotbar.1 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"hotbar.1"}
+execute if items entity @s hotbar.2 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"hotbar.2"}
+execute if items entity @s hotbar.3 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"hotbar.3"}
+execute if items entity @s hotbar.4 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"hotbar.4"}
+execute if items entity @s hotbar.5 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"hotbar.5"}
+execute if items entity @s hotbar.6 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"hotbar.6"}
+execute if items entity @s hotbar.7 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"hotbar.7"}
+execute if items entity @s hotbar.8 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"hotbar.8"}
+execute if items entity @s inventory.0 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.0"}
+execute if items entity @s inventory.1 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.1"}
+execute if items entity @s inventory.2 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.2"}
+execute if items entity @s inventory.3 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.3"}
+execute if items entity @s inventory.4 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.4"}
+execute if items entity @s inventory.5 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.5"}
+execute if items entity @s inventory.6 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.6"}
+execute if items entity @s inventory.7 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.7"}
+execute if items entity @s inventory.8 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.8"}
+execute if items entity @s inventory.9 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.9"}
+execute if items entity @s inventory.10 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.10"}
+execute if items entity @s inventory.11 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.11"}
+execute if items entity @s inventory.12 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.12"}
+execute if items entity @s inventory.13 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.13"}
+execute if items entity @s inventory.14 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.14"}
+execute if items entity @s inventory.15 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.15"}
+execute if items entity @s inventory.16 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.16"}
+execute if items entity @s inventory.17 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.17"}
+execute if items entity @s inventory.18 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.18"}
+execute if items entity @s inventory.19 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.19"}
+execute if items entity @s inventory.20 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.20"}
+execute if items entity @s inventory.21 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.21"}
+execute if items entity @s inventory.22 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.22"}
+execute if items entity @s inventory.23 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.23"}
+execute if items entity @s inventory.24 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.24"}
+execute if items entity @s inventory.25 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.25"}
+execute if items entity @s inventory.26 #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"inventory.26"}
+execute if items entity @s weapon.offhand #rpg:daath/weapon run function rpg:daath_fight/snap/one {s:"weapon.offhand"}
+kill @e[type=minecraft:item_display,tag=rpg.dt.tmp,distance=..4]

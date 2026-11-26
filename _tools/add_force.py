@@ -43,7 +43,7 @@ C_MANA = "#A276BE"
 C_LOCK = "#5A5852"
 
 ENEMY = "type=#rpg:seal_hostile,tag=!rpg.ally"
-BOSS_TAGS = ["rpg.pope", "rpg.mkb", "rpg.jqb", "rpg.lub", "rpg.slb", "rpg.usb"]
+BOSS_TAGS = ["rpg.pope", "rpg.mkb", "rpg.jqb", "rpg.lub", "rpg.slb", "rpg.usb", "rpg.dtb"]
 NOBOSS = ",".join("tag=!" + b for b in BOSS_TAGS)
 # 圣光对它们加成
 UNHOLY = ["type=#minecraft:undead", "tag=rpg.demon", "tag=rpg.demon.minion"]

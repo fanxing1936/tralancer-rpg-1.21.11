@@ -21,6 +21,8 @@ scoreboard players set #mn rpg_vt 0
 scoreboard players add @a[tag=rpg.vt.op] rpg_vt_n 1
 scoreboard players add @a[tag=rpg.vt.op] rpg_vt_e 1
 scoreboard players add @a[tag=rpg.vt.op] rpg_vt_l 1
+scoreboard players add @a[tag=rpg.vt.op,scores={rpg_ps_21=2}] rpg_vt_e 1
+scoreboard players add @a[tag=rpg.vt.op,scores={rpg_ps_21=2}] rpg_vt_l 1
 execute if score #q rpg_vt matches 2.. run scoreboard players set @a[tag=rpg.vt.op] rpg_vt_e 0
 execute if score #q rpg_vt matches 3.. run scoreboard players set @a[tag=rpg.vt.op] rpg_vt_l 0
 scoreboard players operation @s rpg_vt_q = #q rpg_vt

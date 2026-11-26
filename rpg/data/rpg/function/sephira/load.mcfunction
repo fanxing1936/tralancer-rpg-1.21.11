@@ -6,6 +6,7 @@ scoreboard objectives add rpg_sp dummy
 scoreboard objectives add rpg_sef_mig dummy
 scoreboard objectives add rpg_sef_day dummy
 scoreboard objectives add rpg_sef_dk dummy
+scoreboard objectives add rpg_sef_de dummy
 scoreboard objectives add rpg_daath dummy
 scoreboard objectives add rpg_ex_rites dummy
 scoreboard objectives add rpg_ex_dxp dummy
@@ -39,6 +40,7 @@ scoreboard objectives add rpg_bkd_jacques dummy
 scoreboard objectives add rpg_bkd_saul dummy
 scoreboard objectives add rpg_bkd_michael dummy
 scoreboard objectives add rpg_bkd_lucifer dummy
+scoreboard players set #24k rpg_sef 24000
 scoreboard players set #20 rpg_sef 20
 scoreboard players set #40 rpg_sef 40
 scoreboard players set #10 rpg_sef 10

@@ -1,0 +1,281 @@
+{
+ "source": "docs/DAATH-DESIGN.md（达阿特试炼）",
+ "base": "The player's own shadow: calm, close, unhurried, stating facts; never threatening, never mocking.",
+ "lines": [
+  {
+   "id": "S01",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "开场",
+   "zh": "你下来得比我想的晚。",
+   "en": "You came down later than I thought you would.",
+   "direction": "Quiet, almost fond. As if it had been counting.",
+   "when": "影子从倒影里站起来",
+   "voiced": true
+  },
+  {
+   "id": "S02",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "开场",
+   "zh": "别找门了。你每走一步，我都在。",
+   "en": "Stop looking for the door. I was there for every step.",
+   "direction": "Matter of fact. Slight pause before the second sentence.",
+   "when": "第一次试图走出场地",
+   "voiced": true
+  },
+  {
+   "id": "S03",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "一段",
+   "zh": "我看着。",
+   "en": "I am watching.",
+   "direction": "Very soft, half a whisper.",
+   "when": "「记住你」第一次触发",
+   "voiced": true
+  },
+  {
+   "id": "S04",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "一段",
+   "zh": "又是这一招。",
+   "en": "Again.",
+   "direction": "Flat, a little tired.",
+   "when": "同一招连用三次",
+   "voiced": true
+  },
+  {
+   "id": "S05",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "一段",
+   "zh": "这一招，是你教我的。",
+   "en": "You taught me that one.",
+   "direction": "Gentle, no irony.",
+   "when": "第一次放出影版技能",
+   "voiced": true
+  },
+  {
+   "id": "S06",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "一段大招",
+   "zh": "往下看。",
+   "en": "Look down.",
+   "direction": "Low and slow, each word placed.",
+   "when": "倒影起手",
+   "voiced": true
+  },
+  {
+   "id": "S07",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "一段大招",
+   "zh": "哪一个是你？",
+   "en": "Which one is you?",
+   "direction": "A real question, curious.",
+   "when": "十影起手",
+   "voiced": true
+  },
+  {
+   "id": "S08",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "变身",
+   "zh": "我们如今对着镜子观看，模糊不清。",
+   "en": "Now we see through a glass, darkly.",
+   "direction": "Scripture, spoken quietly on one long breath.",
+   "when": "一段打空，跪下",
+   "voiced": true
+  },
+  {
+   "id": "S09",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "变身",
+   "zh": "面对面了。",
+   "en": "Face to face.",
+   "direction": "Barely louder than before. Final consonant clear.",
+   "when": "脸露出来",
+   "voiced": true
+  },
+  {
+   "id": "S10",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "二段",
+   "zh": "我数过。",
+   "en": "I counted.",
+   "direction": "Dry, certain. Used before any line that shows a number.",
+   "when": "任何带数字的字幕之前",
+   "voiced": true
+  },
+  {
+   "id": "S11",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "二段大招",
+   "zh": "认识你自己。",
+   "en": "Know yourself.",
+   "direction": "A command, not a shout.",
+   "when": "「问」起手",
+   "voiced": true
+  },
+  {
+   "id": "S12",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "二段大招",
+   "zh": "是。",
+   "en": "Yes.",
+   "direction": "One word, warm, relieved.",
+   "when": "答对",
+   "voiced": true
+  },
+  {
+   "id": "S13",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "二段大招",
+   "zh": "你连自己都不认识。",
+   "en": "You do not even know yourself.",
+   "direction": "Sad rather than angry.",
+   "when": "答错",
+   "voiced": true
+  },
+  {
+   "id": "S14",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "二段大招",
+   "zh": "同一把剑。看谁先落下。",
+   "en": "The same blade. Let us see whose falls first.",
+   "direction": "Level, deliberate.",
+   "when": "同一把剑起手",
+   "voiced": true
+  },
+  {
+   "id": "S15",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "二段大招",
+   "zh": "镜子碎了，你还在吗？",
+   "en": "When the glass breaks, are you still there?",
+   "direction": "Slow, the last four words almost a whisper.",
+   "when": "碎镜起手",
+   "voiced": true
+  },
+  {
+   "id": "S16",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "绝境",
+   "zh": "别打了。看着我。",
+   "en": "Stop. Look at me.",
+   "direction": "Tired, human for the first time.",
+   "when": "绝境开始",
+   "voiced": true
+  },
+  {
+   "id": "S17",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "绝境",
+   "zh": "那些事，是谁做的？",
+   "en": "All of that. Who did it?",
+   "direction": "Soft. A pause after 'that'.",
+   "when": "绝境中段",
+   "voiced": true
+  },
+  {
+   "id": "S18",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "绝境",
+   "zh": "不是我。是你。",
+   "en": "Not I. You.",
+   "direction": "Two beats, no accusation.",
+   "when": "绝境后段",
+   "voiced": true
+  },
+  {
+   "id": "S19",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "结局·斩断",
+   "zh": "……好。那就一个人走吧。",
+   "en": "...Very well. Walk on alone.",
+   "direction": "Acceptance, breath going out.",
+   "when": "攻击跪着的影子",
+   "voiced": true
+  },
+  {
+   "id": "S20",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "结局·接纳",
+   "zh": "我一直都在。",
+   "en": "I was always here.",
+   "direction": "The only line that smiles.",
+   "when": "接纳影子",
+   "voiced": true
+  },
+  {
+   "id": "S21",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "失败",
+   "zh": "再看一遍。",
+   "en": "Look again.",
+   "direction": "Patient, like a teacher.",
+   "when": "判负",
+   "voiced": true
+  },
+  {
+   "id": "S22",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "夺械",
+   "zh": "这是我的了。",
+   "en": "This is mine now.",
+   "direction": "Not greedy. As if stating whose it always was.",
+   "when": "夺走武器或护甲",
+   "voiced": true
+  },
+  {
+   "id": "S23",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "夺械",
+   "zh": "拿回去吧。",
+   "en": "Take it back.",
+   "direction": "Quiet, slightly out of breath.",
+   "when": "武器或护甲被夺回",
+   "voiced": true
+  },
+  {
+   "id": "N01",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "字幕",
+   "zh": "你死过 %d 次。",
+   "en": "You have died %d times.",
+   "direction": null,
+   "when": "二段，前面垫 S10",
+   "voiced": false
+  },
+  {
+   "id": "N02",
+   "speaker": "shadow",
+   "speaker_zh": "影",
+   "section": "字幕",
+   "zh": "这是第 %d 次。",
+   "en": "Attempt %d.",
+   "direction": null,
+   "when": "二段开场，失败过才出现",
+   "voiced": false
+  }
+ ]
+}

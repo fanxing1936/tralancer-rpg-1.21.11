@@ -46,6 +46,8 @@ python add_usurper_model.py ../resourcepack ../rpg
 python add_jacques_model.py ../resourcepack ../rpg
 # 疯人王扫罗：原作玩家英雄网格 + 织网者皮肤 + 坚毅铠甲，千刀（saul_dungeons_ref/、saul_ghost_dungeons_ref/）
 python add_saul_model.py ../resourcepack ../rpg
+# 达阿特的影子（docs/DAATH-DESIGN.md）：原作玩家英雄骨架与约九十段动作，盔甲、武器、头颅抄玩家的
+python add_daath_model.py ../resourcepack ../rpg
 # 米迦勒灵体：原版 Cloudwatcher、霜冻护甲和双持武器及动作。
 python add_michael_spirit_model.py ../resourcepack ../rpg
 # 天使长米迦勒：半透明灵体 + 六翼（michael_dungeons_ref/，build_michael_model.py）；守望者（watchling_dungeons_ref/）
@@ -78,6 +80,9 @@ python add_usurper_boss_art.py ../resourcepack
 python add_jacques_boss_art.py ../resourcepack
 # 扫罗的位图血条：饰物与标题在 saul_boss_ref/bar/（占位：原作图标与哥特字体）
 python add_saul_boss_art.py ../resourcepack
+# 达阿特的影子：血条与图标（饰物、标题占位在 daath_ref/bar/）
+python add_daath_art.py ../resourcepack
+python add_daath_fx_art.py ../resourcepack
 # 米迦勒的位图血条、羽毛与骨头的物品模型（占位在 michael_boss_ref/bar/）
 # 米迦勒专属特效贴图：原作素材 + Codex 序列帧（michael_fx_ref/），字体 rpg:michael_vfx
 python add_michael_fx_art.py ../resourcepack

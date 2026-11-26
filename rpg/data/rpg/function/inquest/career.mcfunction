@@ -12,4 +12,5 @@ execute store result storage rpg:panel v.rpg_ex_xp int 1 run scoreboard players 
 scoreboard players add @s rpg_ex_rites 0
 execute store result storage rpg:panel v.rpg_ex_rites int 1 run scoreboard players get @s rpg_ex_rites
 function rpg:panel/pages/inquest_career with storage rpg:panel v
+data modify storage rpg:panel ui.tab set value 4
 function rpg:panel/ui/show with storage rpg:panel ui

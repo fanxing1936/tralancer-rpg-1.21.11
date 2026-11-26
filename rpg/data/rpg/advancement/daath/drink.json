@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "d": {
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "rewards": {
+    "function": "rpg:daath_fight/hook/drank"
+  }
+}

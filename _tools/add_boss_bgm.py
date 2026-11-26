@@ -22,7 +22,9 @@ TRACKS = ["michael1", "michael2", "saul1", "saul2", "jacques1", "jacques2",
           # 新手开局（2026-11-23，原件在 onboard_ref/bgm_src/，convert_onboard_bgm.py 转码）
           "onboard_intro", "onboard_flow",
           # 失乐园与主世界（2026-11-25，原件在 world_bgm_ref/bgm_src/，convert_world_bgm.py 转码，add_world_bgm.py 播放）
-          "pl_gate", "pl_hunt", "pl_ash", "pl_court", "pl_moon", "ow_day1", "ow_day2", "ow_day3", "ow_night1", "ow_night2"]
+          "pl_gate", "pl_hunt", "pl_ash", "pl_court", "pl_moon", "ow_day1", "ow_day2", "ow_day3", "ow_night1", "ow_night2",
+          # 达阿特试炼（2026-11-25，原件在 daath_ref/bgm_src/）
+          "daath1", "daath2"]
 # 各曲原本的响度差很多（RMS −17 到 −24 dB），按量出来的 RMS 拉齐：主世界 −28，失乐园 −26，河庭与血月 −24
 WORLD_VOLUME = {"pl_gate": 0.76, "pl_hunt": 0.51, "pl_ash": 0.75, "pl_court": 0.65, "pl_moon": 0.61,
                 "ow_day1": 0.29, "ow_day2": 0.65, "ow_day3": 0.35, "ow_night1": 0.65, "ow_night2": 0.53}

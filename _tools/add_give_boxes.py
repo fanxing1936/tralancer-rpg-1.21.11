@@ -118,7 +118,7 @@ def main():
             for d in ds:
                 if W.RELIC + d[1] not in prod:
                     prod.append(W.RELIC + d[1])
-    prod += [W.RELIC + n for n in ("铁粒", "禁果", "血泥", "断羽")]
+    prod += [W.RELIC + n for n in ("铁粒", "禁果", "血泥", "断羽", "达阿特的碎镜")]
     world = ["[货币]精英徽记", "[锻造]图纸碎片"] + ["[锻造]" + v[0] for v in WI.SPECIAL.values()]
     shards = ["[恶魔]罪印碎片 · " + p["who"] for p in ui.PILLARS]
     bps = ["%s图纸 · %s" % (WI.TIER_TAG[w[2]], w[1]) for w in WI.WEAPONS]

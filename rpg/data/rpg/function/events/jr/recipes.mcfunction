@@ -22,4 +22,5 @@ data modify storage rpg:panel ui.body append value {"text":"","extra":[{"text":"
 data modify storage rpg:panel ui.body append value {"text":"","extra":[{"text":"圣殿铜","color":"#E6DFCF","bold":true,"italic":false},{"text":"　圣卫\n","color":"#9C9A94","bold":false,"italic":false}]}
 data modify storage rpg:panel ui.body append value {"text":"","extra":[{"text":"墓土","color":"#E6DFCF","bold":true,"italic":false},{"text":"　亡灵首领\n","color":"#9C9A94","bold":false,"italic":false}]}
 data modify storage rpg:panel ui.actions append value {"label":{"text":"返回旅程","color":"#C9A646","bold":true,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_jr_do set 1"}}
+data modify storage rpg:panel ui.tab set value 5
 function rpg:panel/ui/show with storage rpg:panel ui

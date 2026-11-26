@@ -1,0 +1,16 @@
+execute if score @s rpg_dt matches 1 run return run function rpg:daath_fight/slot/loot_1
+execute if score @s rpg_dt matches 2 run return run function rpg:daath_fight/slot/loot_2
+execute if score @s rpg_dt matches 3 run return run function rpg:daath_fight/slot/loot_3
+execute if score @s rpg_dt matches 4 run return run function rpg:daath_fight/slot/loot_4
+execute if score @s rpg_dt matches 5 run return run function rpg:daath_fight/slot/loot_5
+execute if score @s rpg_dt matches 6 run return run function rpg:daath_fight/slot/loot_6
+execute if score @s rpg_dt matches 7 run return run function rpg:daath_fight/slot/loot_7
+execute if score @s rpg_dt matches 8 run return run function rpg:daath_fight/slot/loot_8
+execute if score @s rpg_dt matches 9 run return run function rpg:daath_fight/slot/loot_9
+execute if score @s rpg_dt matches 10 run return run function rpg:daath_fight/slot/loot_10
+execute if score @s rpg_dt matches 11 run return run function rpg:daath_fight/slot/loot_11
+execute if score @s rpg_dt matches 12 run return run function rpg:daath_fight/slot/loot_12
+execute if score @s rpg_dt matches 13 run return run function rpg:daath_fight/slot/loot_13
+execute if score @s rpg_dt matches 14 run return run function rpg:daath_fight/slot/loot_14
+execute if score @s rpg_dt matches 15 run return run function rpg:daath_fight/slot/loot_15
+execute if score @s rpg_dt matches 16 run return run function rpg:daath_fight/slot/loot_16

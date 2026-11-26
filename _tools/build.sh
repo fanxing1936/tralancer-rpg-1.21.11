@@ -157,6 +157,8 @@ python add_usurper_model.py ../resourcepack ../rpg
 python add_jacques_model.py ../resourcepack ../rpg
 # 疯人王扫罗：原作玩家英雄网格 + 织网者皮肤 + 坚毅铠甲，千刀（saul_dungeons_ref/、saul_ghost_dungeons_ref/）
 python add_saul_model.py ../resourcepack ../rpg
+# 达阿特的影子（docs/DAATH-DESIGN.md）：原作玩家英雄骨架与约九十段动作，盔甲、武器、头颅抄玩家的
+python add_daath_model.py ../resourcepack ../rpg
 # 米迦勒灵体：原版 Cloudwatcher、霜冻护甲和双持武器及动作。
 python add_michael_spirit_model.py ../resourcepack ../rpg
 # 天使长米迦勒：半透明灵体 + 六翼（michael_dungeons_ref/，build_michael_model.py）；守望者（watchling_dungeons_ref/）
@@ -192,6 +194,9 @@ python add_usurper_boss_art.py ../resourcepack
 python add_jacques_boss_art.py ../resourcepack
 # 扫罗的位图血条：饰物与标题在 saul_boss_ref/bar/（占位：原作图标与哥特字体）
 python add_saul_boss_art.py ../resourcepack
+# 达阿特的影子：血条与图标（饰物、标题占位在 daath_ref/bar/）
+python add_daath_art.py ../resourcepack
+python add_daath_fx_art.py ../resourcepack
 # 米迦勒的位图血条、羽毛与骨头的物品模型（占位在 michael_boss_ref/bar/）
 # 米迦勒专属特效贴图：原作素材 + Codex 序列帧（michael_fx_ref/），字体 rpg:michael_vfx
 python add_michael_fx_art.py ../resourcepack
@@ -250,6 +255,8 @@ python add_world_items.py ../rpg
 python add_events.py ../rpg
 # 小支线、彩蛋与称号（add_quests.py）：接在事件之后（往旅程页和各系统里挂钩子）
 python add_quests.py ../rpg
+# 达阿特试炼 · 影子对决：接在原质、力、称号之后（换掉 rpg:sephira/daath/start 的自动放行）
+python add_daath.py ../rpg ../resourcepack
 # 黑石堡垒（Antigravity，docs/FORTRESS-PROMPT.md；交付前跳过）
 if [ -f add_blackstone_fortress.py ]; then python add_blackstone_fortress.py ../rpg; fi
 # 失乐园：维度、自由猎杀、河庭试炼、宝库（add_paradise.py）
@@ -265,6 +272,10 @@ python add_alchemy.py ../rpg
 python add_merchants.py ../rpg
 # 商人外观（Codex：地下城 SK_Villager + 四套商人材质/帽子，idle/look/bow/examine）
 python add_merchant_models.py ../resourcepack ../rpg
+# 原质二十二路径（add_paths.py）与新面板（add_panel_v2.py）：要在所有写面板、精英、宝库、悬赏、炼药、达阿特的生成器之后
+python add_paths.py ../rpg ../resourcepack
+python add_panel_v2.py ../rpg ../resourcepack
+python add_bench.py ../rpg
 # 领取箱补齐（add_give_boxes.py）：make_boxes 之后才有的材料、图纸、圣徽与传承书；接在所有生成物品的步骤之后
 python add_give_boxes.py ../rpg
 # 世界掉落与锻造的新图标（Codex 交付，world_ref/art）
