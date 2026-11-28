@@ -1,3 +1,3 @@
-$execute positioned ~-77 $(y) ~25 run function rpg:town/b/barn/ccw with storage rpg:town m
-$execute positioned ~-47 $(y) ~4 run summon minecraft:marker ~ ~1 ~ {Tags:["rpg.tw.a","rpg.tw.in.granary","rpg.tw.new"]}
-execute positioned ~-15 0 ~4 positioned over motion_blocking_no_leaves run summon minecraft:marker ~ ~ ~ {Tags:["rpg.tw.a","rpg.tw.at.granary","rpg.tw.new"]}
+$execute positioned ~85 $(y) ~-20 run function rpg:town/b/barn/cw with storage rpg:town m
+$execute positioned ~55 $(y) ~1 run summon minecraft:marker ~ ~1 ~ {Tags:["rpg.tw.a","rpg.tw.in.granary","rpg.tw.new"]}
+execute positioned ~23 0 ~1 positioned over motion_blocking_no_leaves run summon minecraft:marker ~ ~ ~ {Tags:["rpg.tw.a","rpg.tw.at.granary","rpg.tw.new"]}

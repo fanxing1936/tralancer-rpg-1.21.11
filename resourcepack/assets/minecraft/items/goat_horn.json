@@ -136,15 +136,55 @@
                 },
                 "on_false": {
                  "type": "minecraft:condition",
-                 "on_false": {
-                  "type": "minecraft:model",
-                  "model": "minecraft:item/goat_horn"
-                 },
+                 "property": "minecraft:component",
+                 "predicate": "minecraft:custom_data",
+                 "value": "{rpg_bell:1b}",
                  "on_true": {
                   "type": "minecraft:model",
-                  "model": "minecraft:item/tooting_goat_horn"
+                  "model": "rpg:relic/rite_bell"
                  },
-                 "property": "minecraft:using_item"
+                 "on_false": {
+                  "type": "minecraft:condition",
+                  "property": "minecraft:component",
+                  "predicate": "minecraft:custom_data",
+                  "value": "{rpg_bell:1b}",
+                  "on_true": {
+                   "type": "minecraft:model",
+                   "model": "rpg:relic/rite_bell"
+                  },
+                  "on_false": {
+                   "type": "minecraft:condition",
+                   "property": "minecraft:component",
+                   "predicate": "minecraft:custom_data",
+                   "value": "{rpg_bell:1b}",
+                   "on_true": {
+                    "type": "minecraft:model",
+                    "model": "rpg:relic/rite_bell"
+                   },
+                   "on_false": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:component",
+                    "predicate": "minecraft:custom_data",
+                    "value": "{rpg_bell:1b}",
+                    "on_true": {
+                     "type": "minecraft:model",
+                     "model": "rpg:relic/rite_bell"
+                    },
+                    "on_false": {
+                     "type": "minecraft:condition",
+                     "on_false": {
+                      "type": "minecraft:model",
+                      "model": "minecraft:item/goat_horn"
+                     },
+                     "on_true": {
+                      "type": "minecraft:model",
+                      "model": "minecraft:item/tooting_goat_horn"
+                     },
+                     "property": "minecraft:using_item"
+                    }
+                   }
+                  }
+                 }
                 }
                }
               }

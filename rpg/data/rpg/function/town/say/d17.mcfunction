@@ -1,0 +1,3 @@
+# CH02
+execute as @a if score @s rpg_say = #cur rpg_say run tellraw @s ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"孩子","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" ℭ𝔥𝔦𝔩𝔡","color":"#8F7430","italic":false},{"text":"  我迷路了，是那个戴兜帽的叔叔给我饭吃。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"I got lost, and the man in the hood gave me food.","color":"#8F7430","italic":false}}}]
+execute as @a if score @s rpg_say = #cur rpg_say at @s run playsound rpg:vo.town.ch02 voice @s ~ ~ ~ 1 1

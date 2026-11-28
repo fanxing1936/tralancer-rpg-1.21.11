@@ -171,18 +171,23 @@ def table(mob, base, raws, soul, blank, money):
     return {"type": "minecraft:entity", "pools": pools}
 
 
+# 每个维度都写一遍游戏规则（服务端里每个维度单独一份）：原版三个 + 包里的维度 + 序章的四个战场（prologue_multi.py）
+RULE_DIMS = ["minecraft:overworld", "minecraft:the_nether", "minecraft:the_end", "rpg:paradise_lost", "rpg:daath",
+             "rpg:armageddon", "rpg:armageddon_2", "rpg:armageddon_3", "rpg:armageddon_4"]
+
+
 def recipes():
     hook_tag(DP, "load", "rpg:world/load", False)
     fn("load", ["# 冒险模式：原版合成表全部禁用（world_loot / 用户 2026-11-23）",
-                "gamerule limited_crafting true",
+                ] + ["execute in %s run gamerule limited_crafting true" % d for d in RULE_DIMS] + [
                 "scoreboard objectives add rpg_wl_rl dummy",
-                "# 默认保留物品栏、生物不破坏地形（用户 2026-11-28）。游戏规则是整个存档共用的，所有维度"
-                "（主世界、失乐园、达阿特、序章战场……）一起生效。",
-                "# 只在装上这一版时设一次（#rules）：之后服主用 /gamerule 改了，重载不会改回来。",
-                "scoreboard objectives add rpg_rules dummy",
-                "execute unless score #rules rpg_rules matches 1.. run gamerule keep_inventory true",
-                "execute unless score #rules rpg_rules matches 1.. run gamerule mob_griefing false",
-                "scoreboard players set #rules rpg_rules 1"])
+                "# 默认保留物品栏、生物不破坏地形（用户 2026-11-28）。原版里游戏规则整个存档共用；",
+                "# 但服务端（Paper 等）每个维度是单独的世界、各有一份规则，所以每个维度都写一遍（用户 2026-11-28）。",
+                "# 只在装上这一版时设一次（#rules 到 2）：之后服主用 /gamerule 改了，重载不会改回来。",
+                "scoreboard objectives add rpg_rules dummy"] +
+       ["execute unless score #rules rpg_rules matches 2.. in %s run gamerule %s" % (d, r)
+        for d in RULE_DIMS for r in ("keep_inventory true", "mob_griefing false")] +
+       ["scoreboard players set #rules rpg_rules 2"])
     hook_tag(DP, "tick", "rpg:world/tick", True)
     fn("tick", ["# 每 2 秒：配方书里出现原版配方（捡东西时原版会自动解锁）就整个收回。",
                 "# recipe_unlocked 进度在 1.21.11 必须指定配方，没法当「任意解锁」用，所以改成轮询。",

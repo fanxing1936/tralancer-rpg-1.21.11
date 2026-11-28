@@ -1,3 +1,3 @@
-$execute positioned ~-35 $(y) ~-88 run function rpg:town/b/church_glimmerhall/none with storage rpg:town m
-$execute positioned ~-12 $(y) ~-52 run summon minecraft:marker ~ ~1 ~ {Tags:["rpg.tw.a","rpg.tw.in.church","rpg.tw.new"]}
-execute positioned ~-3 0 ~-14 positioned over motion_blocking_no_leaves run summon minecraft:marker ~ ~ ~ {Tags:["rpg.tw.a","rpg.tw.at.church","rpg.tw.new"]}
+$execute positioned ~97 $(y) ~-17 run function rpg:town/b/church_glimmerhall/cw with storage rpg:town m
+$execute positioned ~61 $(y) ~6 run summon minecraft:marker ~ ~1 ~ {Tags:["rpg.tw.a","rpg.tw.in.church","rpg.tw.new"]}
+execute positioned ~23 0 ~6 positioned over motion_blocking_no_leaves run summon minecraft:marker ~ ~ ~ {Tags:["rpg.tw.a","rpg.tw.at.church","rpg.tw.new"]}

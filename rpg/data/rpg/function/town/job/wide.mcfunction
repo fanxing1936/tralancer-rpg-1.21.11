@@ -2,15 +2,15 @@
 scoreboard players set #ok rpg_tw 1
 scoreboard players set #mn rpg_tw 9999
 scoreboard players set #mx rpg_tw -9999
-$execute in minecraft:overworld positioned $(xm96) 80 $(zm96) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xm96) 80 $(z) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xm96) 80 $(zp96) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(x) 80 $(zm96) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(x) 80 $(z) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(x) 80 $(zp96) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xp96) 80 $(zm96) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xp96) 80 $(z) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xp96) 80 $(zp96) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
+$execute in minecraft:overworld positioned $(xm96) 80 $(zm96) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xm96) 80 $(z) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xm96) 80 $(zp96) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(x) 80 $(zm96) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(x) 80 $(z) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(x) 80 $(zp96) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xp96) 80 $(zm96) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xp96) 80 $(z) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xp96) 80 $(zp96) run function rpg:town/s/bio
 $execute in minecraft:overworld positioned $(xm96) 0 $(zm96) positioned over motion_blocking_no_leaves run function rpg:town/s/mm
 $execute in minecraft:overworld positioned $(xm96) 0 $(zm48) positioned over motion_blocking_no_leaves run function rpg:town/s/mm
 $execute in minecraft:overworld positioned $(xm96) 0 $(z) positioned over motion_blocking_no_leaves run function rpg:town/s/mm
@@ -36,6 +36,16 @@ $execute in minecraft:overworld positioned $(xp96) 0 $(zm48) positioned over mot
 $execute in minecraft:overworld positioned $(xp96) 0 $(z) positioned over motion_blocking_no_leaves run function rpg:town/s/mm
 $execute in minecraft:overworld positioned $(xp96) 0 $(zp48) positioned over motion_blocking_no_leaves run function rpg:town/s/mm
 $execute in minecraft:overworld positioned $(xp96) 0 $(zp96) positioned over motion_blocking_no_leaves run function rpg:town/s/mm
+scoreboard players set #wet rpg_tw 0
+$execute if score #lmk rpg_tw matches 3 in minecraft:overworld positioned $(xp128) 80 $(z) if biome ~ ~ ~ #rpg:lm_water run scoreboard players set #wet rpg_tw 1
+$execute if score #lmk rpg_tw matches 3 in minecraft:overworld positioned $(xm128) 80 $(z) if biome ~ ~ ~ #rpg:lm_water run scoreboard players set #wet rpg_tw 1
+$execute if score #lmk rpg_tw matches 3 in minecraft:overworld positioned $(x) 80 $(zp128) if biome ~ ~ ~ #rpg:lm_water run scoreboard players set #wet rpg_tw 1
+$execute if score #lmk rpg_tw matches 3 in minecraft:overworld positioned $(x) 80 $(zm128) if biome ~ ~ ~ #rpg:lm_water run scoreboard players set #wet rpg_tw 1
+$execute if score #lmk rpg_tw matches 3 in minecraft:overworld positioned $(xp90) 80 $(zp90) if biome ~ ~ ~ #rpg:lm_water run scoreboard players set #wet rpg_tw 1
+$execute if score #lmk rpg_tw matches 3 in minecraft:overworld positioned $(xm90) 80 $(zp90) if biome ~ ~ ~ #rpg:lm_water run scoreboard players set #wet rpg_tw 1
+$execute if score #lmk rpg_tw matches 3 in minecraft:overworld positioned $(xp90) 80 $(zm90) if biome ~ ~ ~ #rpg:lm_water run scoreboard players set #wet rpg_tw 1
+$execute if score #lmk rpg_tw matches 3 in minecraft:overworld positioned $(xm90) 80 $(zm90) if biome ~ ~ ~ #rpg:lm_water run scoreboard players set #wet rpg_tw 1
+execute if score #lmk rpg_tw matches 3 if score #relax rpg_tw matches 0 if score #wet rpg_tw matches 0 run scoreboard players set #ok rpg_tw 0
 scoreboard players operation #sp rpg_tw = #mx rpg_tw
 scoreboard players operation #sp rpg_tw -= #mn rpg_tw
 execute if score #sp rpg_tw matches 17.. run scoreboard players set #ok rpg_tw 0

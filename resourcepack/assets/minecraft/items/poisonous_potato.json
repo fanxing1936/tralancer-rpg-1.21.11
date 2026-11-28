@@ -135,8 +135,48 @@
                  "model": "rpg:relic/medium_4"
                 },
                 "on_false": {
-                 "type": "minecraft:model",
-                 "model": "minecraft:item/poisonous_potato"
+                 "type": "minecraft:condition",
+                 "property": "minecraft:component",
+                 "predicate": "minecraft:custom_data",
+                 "value": "{rpg_medium:4b}",
+                 "on_true": {
+                  "type": "minecraft:model",
+                  "model": "rpg:relic/medium_4"
+                 },
+                 "on_false": {
+                  "type": "minecraft:condition",
+                  "property": "minecraft:component",
+                  "predicate": "minecraft:custom_data",
+                  "value": "{rpg_medium:4b}",
+                  "on_true": {
+                   "type": "minecraft:model",
+                   "model": "rpg:relic/medium_4"
+                  },
+                  "on_false": {
+                   "type": "minecraft:condition",
+                   "property": "minecraft:component",
+                   "predicate": "minecraft:custom_data",
+                   "value": "{rpg_medium:4b}",
+                   "on_true": {
+                    "type": "minecraft:model",
+                    "model": "rpg:relic/medium_4"
+                   },
+                   "on_false": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:component",
+                    "predicate": "minecraft:custom_data",
+                    "value": "{rpg_medium:4b}",
+                    "on_true": {
+                     "type": "minecraft:model",
+                     "model": "rpg:relic/medium_4"
+                    },
+                    "on_false": {
+                     "type": "minecraft:model",
+                     "model": "minecraft:item/poisonous_potato"
+                    }
+                   }
+                  }
+                 }
                 }
                }
               }

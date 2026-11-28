@@ -2,15 +2,15 @@
 scoreboard players set #ok rpg_tw 1
 scoreboard players set #mn rpg_tw 9999
 scoreboard players set #mx rpg_tw -9999
-$execute in minecraft:overworld positioned $(xm40) 80 $(zm40) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xm40) 80 $(z) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xm40) 80 $(zp40) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(x) 80 $(zm40) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(x) 80 $(z) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(x) 80 $(zp40) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xp40) 80 $(zm40) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xp40) 80 $(z) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
-$execute in minecraft:overworld positioned $(xp40) 80 $(zp40) unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok rpg_tw 0
+$execute in minecraft:overworld positioned $(xm40) 80 $(zm40) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xm40) 80 $(z) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xm40) 80 $(zp40) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(x) 80 $(zm40) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(x) 80 $(z) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(x) 80 $(zp40) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xp40) 80 $(zm40) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xp40) 80 $(z) run function rpg:town/s/bio
+$execute in minecraft:overworld positioned $(xp40) 80 $(zp40) run function rpg:town/s/bio
 execute if score #ok rpg_tw matches 0 run return 0
 $execute in minecraft:overworld positioned $(xm40) 0 $(zm40) positioned over motion_blocking_no_leaves run function rpg:town/s/mm
 $execute in minecraft:overworld positioned $(xm40) 0 $(zm20) positioned over motion_blocking_no_leaves run function rpg:town/s/mm

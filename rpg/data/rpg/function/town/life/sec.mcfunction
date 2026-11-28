@@ -11,4 +11,8 @@ execute as @a[tag=rpg.tl.ch] at @s run function rpg:town/life/scroll_tick
 execute as @a[scores={rpg_tl_q3=1..}] at @s run function rpg:town/life/q/watch_tick
 execute as @a[scores={rpg_tl_q4=1}] at @s run function rpg:town/life/q/wheat_tick
 execute as @a[scores={rpg_tl_q6=1..}] at @s run function rpg:town/life/q/bard_tick
+scoreboard players add #folkt rpg_tl 1
+execute if score #folkt rpg_tl matches 30.. run function rpg:town/life/folk_scan
 execute as @e[type=minecraft:interaction,tag=rpg.tl.target] run function rpg:town/life/q/target_age
+# 镇上的人不交易（用户 2026-11-28「右键都会打开交易面板」）：老存档里已有的村民改成无职业、清掉交易
+execute as @e[type=minecraft:villager,tag=rpg.tnpc,tag=!rpg.tl.notrade] run function rpg:town/life/notrade

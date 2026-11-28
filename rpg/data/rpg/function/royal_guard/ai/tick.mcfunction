@@ -1,3 +1,7 @@
+execute if entity @s[tag=rpg.tw.guard] run function rpg:town/life/guard_ai
+execute if entity @s[tag=rpg.lm.guard] run function rpg:town/life/guard_ai
+execute if entity @s[tag=rpg.tw.guard,tag=!rpg.tw.fight] run return 0
+execute if entity @s[tag=rpg.lm.guard,tag=!rpg.tw.fight] run return 0
 # 重盾一刻（as/at 载体）。0 举盾自由，1 砸锤，2 放盾喘息。
 execute unless score @s rpg_rg_st matches 0.. run function rpg:royal_guard/ai/init
 execute if entity @s[tag=rpg.hurt] unless score @s rpg_rg_st matches 2 run function rpg:royal_guard/ai/guard

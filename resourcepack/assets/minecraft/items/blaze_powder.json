@@ -135,8 +135,48 @@
                  "model": "rpg:relic/rite_incense"
                 },
                 "on_false": {
-                 "type": "minecraft:model",
-                 "model": "minecraft:item/blaze_powder"
+                 "type": "minecraft:condition",
+                 "property": "minecraft:component",
+                 "predicate": "minecraft:custom_data",
+                 "value": "{rpg_incense:1b}",
+                 "on_true": {
+                  "type": "minecraft:model",
+                  "model": "rpg:relic/rite_incense"
+                 },
+                 "on_false": {
+                  "type": "minecraft:condition",
+                  "property": "minecraft:component",
+                  "predicate": "minecraft:custom_data",
+                  "value": "{rpg_incense:1b}",
+                  "on_true": {
+                   "type": "minecraft:model",
+                   "model": "rpg:relic/rite_incense"
+                  },
+                  "on_false": {
+                   "type": "minecraft:condition",
+                   "property": "minecraft:component",
+                   "predicate": "minecraft:custom_data",
+                   "value": "{rpg_incense:1b}",
+                   "on_true": {
+                    "type": "minecraft:model",
+                    "model": "rpg:relic/rite_incense"
+                   },
+                   "on_false": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:component",
+                    "predicate": "minecraft:custom_data",
+                    "value": "{rpg_incense:1b}",
+                    "on_true": {
+                     "type": "minecraft:model",
+                     "model": "rpg:relic/rite_incense"
+                    },
+                    "on_false": {
+                     "type": "minecraft:model",
+                     "model": "minecraft:item/blaze_powder"
+                    }
+                   }
+                  }
+                 }
                 }
                }
               }

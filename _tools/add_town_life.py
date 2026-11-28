@@ -181,7 +181,16 @@ def core():
                "execute as @a[scores={rpg_tl_q3=1..}] at @s run function %s/q/watch_tick" % L,
                "execute as @a[scores={rpg_tl_q4=1}] at @s run function %s/q/wheat_tick" % L,
                "execute as @a[scores={rpg_tl_q6=1..}] at @s run function %s/q/bard_tick" % L,
-               "execute as @e[type=minecraft:interaction,tag=rpg.tl.target] run function %s/q/target_age" % L])
+               "scoreboard players add #folkt %s 1" % O,
+               "execute if score #folkt %s matches 30.. run function %s/folk_scan" % (O, L),
+               "execute as @e[type=minecraft:interaction,tag=rpg.tl.target] run function %s/q/target_age" % L,
+               "# 镇上的人不交易（用户 2026-11-28「右键都会打开交易面板」）：老存档里已有的村民改成无职业、清掉交易",
+               "execute as @e[type=minecraft:villager,tag=rpg.tnpc,tag=!rpg.tl.notrade] run function %s/notrade" % L])
+    fn("folk_scan", ["scoreboard players set #folkt %s 0" % O,
+                      "execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.tw.c,tag=!rpg.tw.lm] at @s if entity @a[distance=..160] run function %s/folk_check" % L])
+    fn("notrade", ["# 村民的身体是隐形的（外观是城镇模型），职业只决定交易：改成无职业，就不会再生成交易、不会弹交易面板",
+                   "data merge entity @s {VillagerData:{profession:\"minecraft:none\"},Offers:{Recipes:[]}}",
+                   "tag @s add rpg.tl.notrade"])
     fn("newday", ["# 新的现实日：#lastday 跟上；每个人的「今天」在用到时再比（rpg_tl_d、rpg_tl_qd*）",
                   "scoreboard players operation #lastday %s = #day %s" % (O, O),
                   "scoreboard players operation #day1 %s = #day %s" % (O, O), "scoreboard players add #day1 %s 1" % O,
@@ -235,10 +244,11 @@ def holy():
 
 # ============================================================================ 镇上的人
 def villager(role, name, gloss, prof, extra_tags=()):
-    tags = ["rpg.tnpc", "rpg.tnpc." + role, "rpg.tl.new"] + list(extra_tags)
+    # 职业一律「无」：身体隐形、外观是城镇模型，职业只会让原版在重新载入后给他生成交易、右键弹交易面板（prof 参数保留不用）
+    tags = ["rpg.tnpc", "rpg.tnpc." + role, "rpg.tl.new", "rpg.tl.notrade"] + list(extra_tags)
     return ("summon minecraft:villager ~ ~ ~ {Tags:%s,NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,CanPickUpLoot:0b,"
-            "CustomNameVisible:0b,CustomName:%s,VillagerData:{type:\"minecraft:plains\",profession:\"minecraft:%s\",level:1},Offers:{Recipes:[]}}"
-            % (J(tags), J(T(ui.fraktur(gloss), "#404040")), prof)) + "\n" + (
+            "CustomNameVisible:0b,CustomName:%s,VillagerData:{type:\"minecraft:plains\",profession:\"minecraft:none\",level:1},Offers:{Recipes:[]}}"
+            % (J(tags), J(T(ui.fraktur(gloss), "#404040")))) + "\n" + (
         "summon minecraft:text_display ~ ~ ~ {Tags:[\"rpg.tnpc.plate\",\"rpg.tl.pnew\"],billboard:\"center\",text:%s,"
         "transformation:{translation:[0f,0.62f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f]}}"
         % J(["", T(name, NAME, True), T("\n" + ui.fraktur(gloss), GLOSS)]))
@@ -297,7 +307,37 @@ def people():
                      "execute as @e[type=minecraft:vindicator,tag=rpg.tg,tag=!rpg.tw.guard,distance=..1,limit=1] run function %s/ppl/guard_post" % L])
     fn("ppl/guard_post", ["data merge entity @s {NoAI:1b,Invulnerable:1b,PersistenceRequired:1b}", "execute " + ROT, "tag @s add rpg.tw.guard", "tag @s add rpg.ally",
                           "scoreboard players operation @s %s_id = #built %s" % (TW, TW)])
+    # 站岗的圣卫（镇上的、孤堡的）：圣卫的出招逻辑不看 NoAI，谁走近就打，打完还会把 NoAI 关掉。
+    # 镇上的只对通缉中的恶魔信徒（rpg.dm.wanted）出手，孤堡的醒了（rpg.lm.awake）才出手；其余时候一动不动。
+    fn("guard_ai", ["# 站岗的圣卫每刻（as/at 它）",
+                    "execute if entity @s[tag=rpg.tw.guard] if entity @a[tag=rpg.dm.wanted,distance=..16,gamemode=!spectator] run tag @s add rpg.tw.fight",
+                    "execute if entity @s[tag=rpg.lm.awake] run tag @s add rpg.tw.fight",
+                    "execute if entity @s[tag=rpg.tw.guard,tag=rpg.tw.fight] unless score @s rpg_tg_st matches 1.. unless entity @a[tag=rpg.dm.wanted,distance=..24] run function %s/guard_calm" % L,
+                    "execute if entity @s[tag=!rpg.tw.fight,nbt={NoAI:0b}] run data merge entity @s {NoAI:1b}"])
+    fn("guard_calm", ["tag @s remove rpg.tw.fight", "data merge entity @s {NoAI:1b}"])
+    for ai in ("tower_guard", "royal_guard"):
+        q = os.path.join(FUNC, ai, "ai", "tick.mcfunction")
+        if os.path.exists(q):
+            s = io.open(q, encoding="utf-8").read()
+            if L + "/guard_ai" not in s:
+                head = ["execute if entity @s[tag=rpg.tw.guard] run function %s/guard_ai" % L,
+                        "execute if entity @s[tag=rpg.lm.guard] run function %s/guard_ai" % L,
+                        "execute if entity @s[tag=rpg.tw.guard,tag=!rpg.tw.fight] run return 0",
+                        "execute if entity @s[tag=rpg.lm.guard,tag=!rpg.tw.fight] run return 0"]
+                io.open(q, "w", encoding="utf-8", newline="\n").write("\n".join(head) + "\n" + s)
     fn("spawn_people", out)
+    folk = [("farmwife", "granary"), ("farmer", "house"), ("lad", "plaza")]
+    fn("folk_check", ["# 每 30 秒：附近有玩家的镇，农妇、农夫、少年缺谁补谁（as/at 镇中心标记）",
+                      "scoreboard players operation #built %s = @s %s_id" % (TW, TW)] + [
+        "execute unless entity @e[type=minecraft:villager,tag=rpg.tnpc.%s,distance=..200] run function %s/folk_add_%s" % (who, L, who) for who, _a in folk])
+    for who, anchor in folk:
+        if anchor == "house":
+            body = ["execute as @e[type=minecraft:marker,tag=rpg.tw.at.house,distance=..200] if score @s %s_id = #built %s run tag @s add rpg.tl.pick" % (TW, TW),
+                    "execute as @e[type=minecraft:marker,tag=rpg.tl.pick,limit=1,sort=random] at @s run function %s/ppl/house" % L,
+                    "tag @e[type=minecraft:marker,tag=rpg.tl.pick] remove rpg.tl.pick"]
+        else:
+            body = ["execute as @e[type=minecraft:marker,tag=rpg.tw.at.%s,distance=..200] if score @s %s_id = #built %s at @s run function %s/ppl/%s" % (anchor, TW, TW, L, anchor)]
+        fn("folk_add_%s" % who, body)
     tag_values("town_built", [L + "/spawn_people"])
     tag_values("town_dress", [])
     tag_values("town_arrive", [L + "/arrive"])

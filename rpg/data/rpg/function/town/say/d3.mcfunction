@@ -1,0 +1,3 @@
+# SV02
+execute as @a if score @s rpg_say = #cur rpg_say run tellraw @s ["",{"text":"〖","color":"#A276BE","bold":true,"italic":false},{"text":"罪仆","color":"#A276BE","bold":true,"italic":false},{"text":"〗","color":"#A276BE","bold":true,"italic":false},{"text":" 𝔖𝔦𝔫-𝔰𝔢𝔯𝔳𝔞𝔫𝔱","color":"#8F7430","italic":false},{"text":"  教廷给你的是锁链和名单。我们给你的是名字。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The Church gave you chains and lists. We give you a name.","color":"#8F7430","italic":false}}}]
+execute as @a if score @s rpg_say = #cur rpg_say at @s run playsound rpg:vo.town.sv02 voice @s ~ ~ ~ 1 1

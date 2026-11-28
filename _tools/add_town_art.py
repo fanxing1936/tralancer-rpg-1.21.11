@@ -63,6 +63,7 @@ def main():
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         Image.open(src).convert("RGBA").save(dst)
         prov.append({"type": "bitmap", "file": "rpg:font/town_icons/%s.png" % name, "height": 8, "ascent": 7, "chars": [ch]})
+    prov.append({"type": "space", "advances": {" ": 4}})          # 图标字体里的空格（没有它会显示成缺字方框）
     wj(os.path.join(RP, "assets", "rpg", "font", "town_icons.json"), {"providers": prov})
     for name, tex in VANILLA_FALLBACK.items():
         if not os.path.exists(os.path.join(ART, name + ".png")):

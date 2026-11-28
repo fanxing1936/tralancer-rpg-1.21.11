@@ -1,0 +1,3 @@
+# WT02
+execute as @a if score @s rpg_say = #cur rpg_say run tellraw @s ["",{"text":"〖","color":"#A8B4C0","bold":true,"italic":false},{"text":"守夜人","color":"#A8B4C0","bold":true,"italic":false},{"text":"〗","color":"#A8B4C0","bold":true,"italic":false},{"text":" 𝔚𝔞𝔱𝔠𝔥𝔪𝔞𝔫","color":"#8F7430","italic":false},{"text":"  墓地那边的灯总是先灭。你去看看。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The lamps by the graveyard always go out first. Go and look.","color":"#8F7430","italic":false}}}]
+execute as @a if score @s rpg_say = #cur rpg_say at @s run playsound rpg:vo.town.wt02 voice @s ~ ~ ~ 1 1

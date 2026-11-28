@@ -35,6 +35,7 @@ O = "rpg_tw"
 OW = "execute in minecraft:overworld "
 COUNT = [0]
 GAP = 8
+CENTER_CLEAR = 16   # 房子离天使像至少这么远：中间是土径广场
 NATIONS = ["犹大王国", "以色列北国", "以东公国", "摩押王国", "亚扪联邦", "非利士五城同盟", "亚兰帝国", "推罗海商共和国", "基列边境领", "圣城教廷领"]
 # (国家序号, 内圈镇, 外圈镇)：圣经地名
 NAMES = [("伯利恒", "Bethlehem", "希伯仑", "Hebron"), ("撒玛利亚", "Samaria", "示剑", "Shechem"), ("波斯拉", "Bozrah", "提幔", "Teman"),
@@ -72,7 +73,7 @@ PAD = 112          # 町地半宽（整块 224×224；结构连同地形自适�
 CAMP_R = (185, 200, 215)   # 林中营地离镇中心（用户 2026-11-28：「林中祭坛要远离，离村庄 200 格左右」）
 PAD_H = 40         # 町地上方清空的高度
 LIM = PAD + 6      # 不规则町地的外沿不超出镇中心 ±LIM（再加外圈缓坡 EDGE）
-PLOT_G = 4         # 町地轮廓的网格（格）：轮廓按 4×4 的小块走，缓坡再把台阶抹圆
+PLOT_G = 2         # 町地轮廓的网格（格）：轮廓按 2×2 的小块走（更细的弯），缓坡再把台阶抹圆
 
 
 def J(c):
@@ -99,6 +100,11 @@ def wj(rel, doc):
 
 
 # ============================================================================ 城镇表
+# 地标按群系挑地方（用户 2026-11-28）：#lmk = 1 孤堡（边地高处）、2 尼古拉城堡（阴暗的林子）、3 湖畔庄园（平地，町地外有水）
+LM_BIOMES = {1: ["rpg:stone_forest", "rpg:wildfield", "rpg:snowfield", "rpg:geyser_taiga"],
+             2: ["rpg:ashwood", "rpg:lavender_forest", "rpg:geyser_taiga"],
+             3: ["rpg:plains", "rpg:forest", "rpg:golden_forest", "rpg:wildfield"]}
+LM_KIND = {"lone_fort": 1, "castle_nicolae": 2, "lake_mansion": 3}
 LANDMARKS = [  # (编号, 名, 英文, 结构, 半径, 角度, 副标题)
     (21, "孤堡", "Lone Fort", "lone_fort", 2600, 54, "教廷前哨 · 审判官驻地"),
     (22, "孤堡", "Lone Fort", "lone_fort", 2600, 234, "教廷前哨 · 审判官驻地"),
@@ -191,7 +197,8 @@ def _layout(town, META, salt, v1=False):
                 rot = (DIRS.index(want) - DIRS.index(meta["front"])) % 4
                 bw, bd = footprint(meta, rot)
                 rect = (round(cx - bw / 2), round(cz - bd / 2), bw, bd)
-                if all(not overlap(rect, q, GAP) for q in rects):
+                # 天使像四周留出一片空地当广场（用户 2026-11-28「天使雕塑附近土径的范围大一点，就像一个广场」）；旧布局（v1）不变
+                if all(not overlap(rect, q, GAP) for q in rects) and (v1 or not overlap(rect, c["rect"], CENTER_CLEAR)):
                     ok = dict(key=key, role=role, rot=rot, rect=rect)
                     break
             r += 3
@@ -334,6 +341,20 @@ def paths(town, placed, plaza, grave, rects, META):
                     continue
                 r = rng.random()
                 cells[q] = "P" if r < 0.78 - fade * 0.4 else ("C" if r < 0.9 else "G")
+    # 天使像四周铺开一片土径，像个广场（用户 2026-11-28「天使雕塑附近土径的范围大一点，就像一个广场」）：
+    # 离雕像底座 9–15 格以内（随方向起伏），边上再由下面的毛边打散
+    cx0, cz0, cw, cd = c
+    for x in range(cx0 - 21, cx0 + cw + 21):
+        for z in range(cz0 - 21, cz0 + cd + 21):
+            if (x, z) in blocked:
+                continue
+            gx = max(cx0 - x, 0, x - (cx0 + cw - 1))
+            gz = max(cz0 - z, 0, z - (cz0 + cd - 1))
+            th = math.atan2(z - (cz0 + cd / 2.0), x - (cx0 + cw / 2.0))
+            lim = 12 + 8 * noise(4 * math.cos(th) + 7, 4 * math.sin(th) + 7, seed + 23, 1)
+            if math.hypot(gx, gz) <= lim:
+                r = rng.random()
+                cells[(x, z)] = "P" if r < 0.8 else ("C" if r < 0.93 else "G")
     for (x, z) in list(cells):
         for dx, dz in ((1, 0), (-1, 0), (0, 1), (0, -1)):
             q = (x + dx, z + dz)
@@ -611,7 +632,9 @@ def job(info):
            plot_fills(rs, 0, 100, "minecraft:air") + plot_fills(rs, -1, -1, "minecraft:grass_block") +
            plot_fills(rs, -1, -1, "minecraft:snow_block", "minecraft:grass_block", "execute if score #v %s matches 1 run " % O) +
            plot_fills(rs, -1, -1, "minecraft:sand", "minecraft:grass_block", "execute if score #v %s matches 2 run " % O))
-    probe = ["# 下一个候选点：名义位置 + 偏移；forceload 四周 %d 格" % PROBE]
+    probe = ["# 下一个候选点：名义位置 + 偏移；forceload 四周 %d 格" % PROBE, "scoreboard players set #lmk %s 0" % O] + [
+        "execute if score #cur %s matches %d run scoreboard players set #lmk %s %d" % (O, i, O, LM_KIND[info[i]["key"]])
+        for i in info if info[i].get("lm")]
     for c, (dx, dz) in enumerate(OFFS):
         probe.append("execute if score #c %s matches %d run function %s/job/off {dx:%d,dz:%d}" % (O, c, P, dx, dz))
     probe += ["scoreboard players operation #px %s = #nx %s" % (O, O), "scoreboard players operation #px %s += #dx %s" % (O, O),
@@ -623,7 +646,7 @@ def job(info):
     co = []
     for a in ("x", "z"):
         co.append("execute store result storage rpg:town m.%s int 1 run scoreboard players get #p%s %s" % (a, a, O))
-        for d in (20, 40, 48, 96):
+        for d in (20, 40, 48, 90, 96, 128):
             for sgn, tag in ((1, "p"), (-1, "m")):
                 co += ["scoreboard players operation #t %s = #p%s %s" % (O, a, O), "scoreboard players %s #t %s %d" % ("add" if sgn > 0 else "remove", O, d),
                        "execute store result storage rpg:town m.%s%s%d int 1 run scoreboard players get #t %s" % (a, tag, d, O)]
@@ -660,7 +683,7 @@ def job(info):
              "scoreboard players set #ok %s 1" % O, "scoreboard players set #mn %s 9999" % O, "scoreboard players set #mx %s -9999" % O]
     for dx in (-40, 0, 40):
         for dz in (-40, 0, 40):
-            judge.append("$execute in minecraft:overworld positioned %s 80 %s unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok %s 0" % (rel("$(x)", dx), rel("$(z)", dz), O))
+            judge.append("$execute in minecraft:overworld positioned %s 80 %s run function %s/s/bio" % (rel("$(x)", dx), rel("$(z)", dz), P))
     judge.append("execute if score #ok %s matches 0 run return 0" % O)
     for dx in (-40, -20, 0, 20, 40):
         for dz in (-40, -20, 0, 20, 40):
@@ -672,6 +695,10 @@ def job(info):
               "$execute in minecraft:overworld positioned $(x) 80 $(z) if biome ~ ~ ~ #rpg:town_snow run scoreboard players set #v %s 1" % O,
               "$execute in minecraft:overworld positioned $(x) 80 $(z) if biome ~ ~ ~ #rpg:town_desert run scoreboard players set #v %s 2" % O]
     fn("job/judge", judge)
+    fn("s/bio", ["# 这一点的群系合不合适（positioned 那一点；#lmk 0 是城镇，1–3 是地标）",
+                 "execute if score #lmk %s matches 0 unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok %s 0" % (O, O)] +
+       ["execute if score #lmk %s matches %d if score #relax %s matches 0 unless biome ~ ~ ~ #rpg:lm_%d run scoreboard players set #ok %s 0" % (O, k, O, k, O) for k in LM_BIOMES] +
+       ["execute if score #lmk %s matches %d if score #relax %s matches 1.. unless biome ~ ~ ~ #rpg:lm_%d unless biome ~ ~ ~ #rpg:town_relaxed run scoreboard players set #ok %s 0" % (O, k, O, k, O) for k in LM_BIOMES])
     fn("s/mm", ["# 取样（positioned 在地表上一格）：水和岩浆不行；树干、树叶不算",
                 "execute if block ~ ~-1 ~ #rpg:town_wet run return run scoreboard players set #ok %s 0" % O,
                 "execute if block ~ ~-1 ~ #rpg:town_clear run return 0",
@@ -683,8 +710,10 @@ def job(info):
     fn("job/reject", ["function %s/job/fl_rem with storage rpg:town m" % P, "scoreboard players set #cool %s 3" % O,
                       "scoreboard players add #c %s 1" % O, "scoreboard players set #ph %s 0" % O,
                       "execute if score #c %s matches %d.. run function %s/job/give_up" % (O, len(OFFS), P)])
-    fn("job/relax", ["scoreboard players set #relax %s 1" % O, "scoreboard players set #c %s 0" % O])
-    fn("job/give_up", ["# 实在找不到：这座镇不建（以它为故乡的人改去同国的另一座）"] +
+    fn("job/relax", ["scoreboard players set #relax %s 1" % O, "scoreboard players set #c %s 0" % O, "scoreboard players set #ph %s 0" % O])
+    fn("job/give_up", ["# 实在找不到：这座镇不建（以它为故乡的人改去同国的另一座）",
+                       "# 地标第一轮按群系找不到：放宽群系、不再要求湖边有水，再找一轮",
+                       "execute if score #lmk %s matches 1.. if score #relax %s matches 0 run return run function %s/job/relax" % (O, O, P)] +
        ["execute if score #cur %s matches %d run scoreboard players set #s%d %s 4" % (O, i, i, O) for i in info] +
        ["scoreboard players set #cur %s 0" % O, "function %s/home/poll_all" % P])
     acc = ["# 选中：记下坐标，把整座镇的范围 forceload 上，等区块到齐再建",
@@ -703,10 +732,15 @@ def job(info):
             "scoreboard players set #ok %s 1" % O, "scoreboard players set #mn %s 9999" % O, "scoreboard players set #mx %s -9999" % O]
     for dx in (-96, 0, 96):
         for dz in (-96, 0, 96):
-            wide.append("$execute in minecraft:overworld positioned %s 80 %s unless biome ~ ~ ~ #rpg:town_ok run scoreboard players set #ok %s 0" % (rel("$(x)", dx), rel("$(z)", dz), O))
+            wide.append("$execute in minecraft:overworld positioned %s 80 %s run function %s/s/bio" % (rel("$(x)", dx), rel("$(z)", dz), P))
     for dx in (-96, -48, 0, 48, 96):
         for dz in (-96, -48, 0, 48, 96):
             wide.append("$execute in minecraft:overworld positioned %s 0 %s positioned over motion_blocking_no_leaves run function %s/s/mm" % (rel("$(x)", dx), rel("$(z)", dz), P))
+    wide.append("scoreboard players set #wet %s 0" % O)
+    for dx, dz in ((128, 0), (-128, 0), (0, 128), (0, -128), (90, 90), (-90, 90), (90, -90), (-90, -90)):
+        wide.append("$execute if score #lmk %s matches 3 in minecraft:overworld positioned %s 80 %s if biome ~ ~ ~ #rpg:lm_water run scoreboard players set #wet %s 1"
+                    % (O, rel("$(x)", dx), rel("$(z)", dz), O))
+    wide.append("execute if score #lmk %s matches 3 if score #relax %s matches 0 if score #wet %s matches 0 run scoreboard players set #ok %s 0" % (O, O, O, O))
     wide += ["scoreboard players operation #sp %s = #mx %s" % (O, O), "scoreboard players operation #sp %s -= #mn %s" % (O, O),
              "execute if score #sp %s matches %d.. run scoreboard players set #ok %s 0" % (O, WIDE + 1, O),
              "execute if score #mn %s matches ..62 run scoreboard players set #ok %s 0" % (O, O),
@@ -792,47 +826,73 @@ def pad_fns():
 
 
 def plot_shape(i, rects):
-    """町地轮廓（用户 2026-11-28：「这块地应该是不规则的」）：起伏的圆盘 ∪ 每栋建筑/广场/墓地外扩 6–10 格，再做一次闭运算抹平、填洞。
-    网格 PLOT_G 格一块；返回块坐标的长方形列表 (x0, z0, x1, z1)。"""
+    """町地轮廓（用户 2026-11-28：「这块地应该是不规则的」「边框要更扭曲一点，这样和地形衔接更自然」）：
+    起伏的圆盘 ∪ 每栋建筑/广场/墓地外扩 4–20 格；再用一层「扭曲场」把边界整体弯一弯（直边变成自然的弯），
+    最后闭运算抹平、填洞，并保证每栋建筑外 2 格都在町地里。网格 PLOT_G 格一块；返回块坐标的长方形列表 (x0, z0, x1, z1)。"""
     import numpy as np
     G = PLOT_G
     n = LIM // G
     seed = i * 101 + 17
     span = lambda q: max(abs(q[0]), abs(q[0] + q[2]), abs(q[1]), abs(q[1] + q[3]))
     ext = max(span(q) for q in rects)
-    m = np.zeros((2 * n, 2 * n), bool)
-    for a in range(2 * n):
-        for b in range(2 * n):
+    N2 = 2 * n
+    m = np.zeros((N2, N2), bool)
+    core = np.zeros((N2, N2), bool)
+    for a in range(N2):
+        for b in range(N2):
             cx, cz = a - n, b - n
             x, z = cx * G + G / 2.0, cz * G + G / 2.0
             th = math.atan2(z, x)
-            f = 0.65 * noise(3 * math.cos(th) + 5, 3 * math.sin(th) + 5, seed, 1) + 0.35 * noise(7 * math.cos(th) + 9, 7 * math.sin(th) + 9, seed + 1, 1)
-            if math.hypot(x, z) <= (ext * (0.62 + 0.36 * f) if len(rects) > 1 else ext * 1.2 * (0.9 + 0.4 * f)):
+            f = (0.45 * noise(3 * math.cos(th) + 5, 3 * math.sin(th) + 5, seed, 1) + 0.3 * noise(7 * math.cos(th) + 9, 7 * math.sin(th) + 9, seed + 1, 1)
+                 + 0.25 * noise(13 * math.cos(th) + 21, 13 * math.sin(th) + 21, seed + 2, 1))
+            if math.hypot(x, z) <= (ext * (0.5 + 0.6 * f) if len(rects) > 1 else ext * 1.2 * (0.8 + 0.6 * f)):
                 m[a, b] = True
-                continue
-            mg = 5 + 9 * noise(cx, cz, seed + 5, 2.5)
+            mg = 4 + 16 * noise(x, z, seed + 5, 12.0)
             x0, z0, x1, z1 = cx * G, cz * G, cx * G + G - 1, cz * G + G - 1
             for q in rects:
                 gx = max(q[0] - x1, 0, x0 - (q[0] + q[2] - 1))
                 gz = max(q[1] - z1, 0, z0 - (q[1] + q[3] - 1))
-                if math.hypot(gx, gz) <= mg:
+                dd = math.hypot(gx, gz)
+                if dd <= 2:
+                    core[a, b] = True
+                if dd <= mg:
                     m[a, b] = True
-                    break
-    disk = [(dx, dz) for dx in range(-2, 3) for dz in range(-2, 3) if dx * dx + dz * dz <= 5]
+    # 扭曲场：每一格去看偏移后那一格（两档噪声：约 22 格的大弯 + 7 格的小弯）
+    warped = np.zeros_like(m)
+    for a in range(N2):
+        for b in range(N2):
+            x, z = (a - n) * G, (b - n) * G
+            ox = 28 * (noise(x, z, seed + 31, 22.0) - 0.5) + 10 * (noise(x, z, seed + 33, 7.0) - 0.5)
+            oz = 28 * (noise(x, z, seed + 32, 22.0) - 0.5) + 10 * (noise(x, z, seed + 34, 7.0) - 0.5)
+            sa, sb = a + int(round(ox / G)), b + int(round(oz / G))
+            if 0 <= sa < N2 and 0 <= sb < N2:
+                warped[a, b] = m[sa, sb]
+    m = warped | core
+    disk = [(dx, dz) for dx in range(-3, 4) for dz in range(-3, 4) if dx * dx + dz * dz <= 9]
 
     def dil(v):
-        pad = np.pad(v, 3)
+        pad = np.pad(v, 4)
         out = np.zeros_like(pad)
         for dx, dz in disk:
             out |= np.roll(np.roll(pad, dx, 0), dz, 1)
-        return out[3:-3, 3:-3]
+        return out[4:-4, 4:-4]
     m = ~dil(~dil(m))                       # 闭运算：填掉建筑之间的豁口
-    # 填洞：从外面淹不到的空格都算町地
-    seen = np.zeros_like(m)
-    stack = [(a, b) for a in range(2 * n) for b in (0, 2 * n - 1)] + [(a, b) for b in range(2 * n) for a in (0, 2 * n - 1)]
+    # 只留和建筑连着的那一块（扭曲可能甩出小岛）
+    keep = np.zeros_like(m)
+    stack = [tuple(q) for q in np.argwhere(core)]
     while stack:
         a, b = stack.pop()
-        if not (0 <= a < 2 * n and 0 <= b < 2 * n) or seen[a, b] or m[a, b]:
+        if not (0 <= a < N2 and 0 <= b < N2) or keep[a, b] or not m[a, b]:
+            continue
+        keep[a, b] = True
+        stack += [(a + 1, b), (a - 1, b), (a, b + 1), (a, b - 1)]
+    m = keep
+    # 填洞：从外面淹不到的空格都算町地
+    seen = np.zeros_like(m)
+    stack = [(a, b) for a in range(N2) for b in (0, N2 - 1)] + [(a, b) for b in range(N2) for a in (0, N2 - 1)]
+    while stack:
+        a, b = stack.pop()
+        if not (0 <= a < N2 and 0 <= b < N2) or seen[a, b] or m[a, b]:
             continue
         seen[a, b] = True
         stack += [(a + 1, b), (a - 1, b), (a, b + 1), (a, b - 1)]
@@ -1067,6 +1127,9 @@ def tags():
     wj("rpg/tags/worldgen/biome/town_relaxed.json", {"values": ok + ["rpg:eroded_desert", "rpg:mesa_valley", "rpg:stone_forest", "rpg:ashwood",
                                                                      "rpg:alpine", "rpg:warped_plateau"]})
     wj("rpg/tags/worldgen/biome/town_snow.json", {"values": ["rpg:snowfield", "rpg:geyser_taiga"]})
+    for k, v in LM_BIOMES.items():
+        wj("rpg/tags/worldgen/biome/lm_%d.json" % k, {"values": v})
+    wj("rpg/tags/worldgen/biome/lm_water.json", {"values": ["rpg:river", "rpg:frozen_river", "rpg:ocean", "rpg:beach", "rpg:snowy_beach"]})
     wj("rpg/tags/worldgen/biome/town_desert.json", {"values": ["rpg:desert", "rpg:eroded_desert", "rpg:mesa_valley"]})
 
 

@@ -1,4 +1,9 @@
 # 下一个候选点：名义位置 + 偏移；forceload 四周 48 格
+scoreboard players set #lmk rpg_tw 0
+execute if score #cur rpg_tw matches 21 run scoreboard players set #lmk rpg_tw 1
+execute if score #cur rpg_tw matches 22 run scoreboard players set #lmk rpg_tw 1
+execute if score #cur rpg_tw matches 23 run scoreboard players set #lmk rpg_tw 2
+execute if score #cur rpg_tw matches 24 run scoreboard players set #lmk rpg_tw 3
 execute if score #c rpg_tw matches 0 run function rpg:town/job/off {dx:0,dz:0}
 execute if score #c rpg_tw matches 1 run function rpg:town/job/off {dx:-156,dz:35}
 execute if score #c rpg_tw matches 2 run function rpg:town/job/off {dx:-108,dz:-118}

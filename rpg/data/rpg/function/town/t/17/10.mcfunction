@@ -1,2 +1,2 @@
-$execute positioned ~46 $(y) ~52 run function rpg:town/b/green_house_medium/cw with storage rpg:town m
-execute positioned ~40 0 ~50 positioned over motion_blocking_no_leaves run summon minecraft:marker ~ ~ ~ {Tags:["rpg.tw.a","rpg.tw.at.house","rpg.tw.new"]}
+$execute positioned ~-65 $(y) ~22 run function rpg:town/b/green_house_medium/180 with storage rpg:town m
+execute positioned ~-63 0 ~16 positioned over motion_blocking_no_leaves run summon minecraft:marker ~ ~ ~ {Tags:["rpg.tw.a","rpg.tw.at.house","rpg.tw.new"]}

@@ -19,11 +19,23 @@ scoreboard players operation #t rpg_tw = #px rpg_tw
 scoreboard players remove #t rpg_tw 48
 execute store result storage rpg:town m.xm48 int 1 run scoreboard players get #t rpg_tw
 scoreboard players operation #t rpg_tw = #px rpg_tw
+scoreboard players add #t rpg_tw 90
+execute store result storage rpg:town m.xp90 int 1 run scoreboard players get #t rpg_tw
+scoreboard players operation #t rpg_tw = #px rpg_tw
+scoreboard players remove #t rpg_tw 90
+execute store result storage rpg:town m.xm90 int 1 run scoreboard players get #t rpg_tw
+scoreboard players operation #t rpg_tw = #px rpg_tw
 scoreboard players add #t rpg_tw 96
 execute store result storage rpg:town m.xp96 int 1 run scoreboard players get #t rpg_tw
 scoreboard players operation #t rpg_tw = #px rpg_tw
 scoreboard players remove #t rpg_tw 96
 execute store result storage rpg:town m.xm96 int 1 run scoreboard players get #t rpg_tw
+scoreboard players operation #t rpg_tw = #px rpg_tw
+scoreboard players add #t rpg_tw 128
+execute store result storage rpg:town m.xp128 int 1 run scoreboard players get #t rpg_tw
+scoreboard players operation #t rpg_tw = #px rpg_tw
+scoreboard players remove #t rpg_tw 128
+execute store result storage rpg:town m.xm128 int 1 run scoreboard players get #t rpg_tw
 execute store result storage rpg:town m.z int 1 run scoreboard players get #pz rpg_tw
 scoreboard players operation #t rpg_tw = #pz rpg_tw
 scoreboard players add #t rpg_tw 20
@@ -44,8 +56,20 @@ scoreboard players operation #t rpg_tw = #pz rpg_tw
 scoreboard players remove #t rpg_tw 48
 execute store result storage rpg:town m.zm48 int 1 run scoreboard players get #t rpg_tw
 scoreboard players operation #t rpg_tw = #pz rpg_tw
+scoreboard players add #t rpg_tw 90
+execute store result storage rpg:town m.zp90 int 1 run scoreboard players get #t rpg_tw
+scoreboard players operation #t rpg_tw = #pz rpg_tw
+scoreboard players remove #t rpg_tw 90
+execute store result storage rpg:town m.zm90 int 1 run scoreboard players get #t rpg_tw
+scoreboard players operation #t rpg_tw = #pz rpg_tw
 scoreboard players add #t rpg_tw 96
 execute store result storage rpg:town m.zp96 int 1 run scoreboard players get #t rpg_tw
 scoreboard players operation #t rpg_tw = #pz rpg_tw
 scoreboard players remove #t rpg_tw 96
 execute store result storage rpg:town m.zm96 int 1 run scoreboard players get #t rpg_tw
+scoreboard players operation #t rpg_tw = #pz rpg_tw
+scoreboard players add #t rpg_tw 128
+execute store result storage rpg:town m.zp128 int 1 run scoreboard players get #t rpg_tw
+scoreboard players operation #t rpg_tw = #pz rpg_tw
+scoreboard players remove #t rpg_tw 128
+execute store result storage rpg:town m.zm128 int 1 run scoreboard players get #t rpg_tw

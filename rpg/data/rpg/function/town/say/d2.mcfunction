@@ -1,0 +1,3 @@
+# SV03
+execute as @a if score @s rpg_say = #cur rpg_say run tellraw @s ["",{"text":"〖","color":"#A276BE","bold":true,"italic":false},{"text":"罪仆","color":"#A276BE","bold":true,"italic":false},{"text":"〗","color":"#A276BE","bold":true,"italic":false},{"text":" 𝔖𝔦𝔫-𝔰𝔢𝔯𝔳𝔞𝔫𝔱","color":"#8F7430","italic":false},{"text":"  代价？一半的血，一枚印。很公道。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The price? Half your blood, and one mark. Very fair.","color":"#8F7430","italic":false}}}]
+execute as @a if score @s rpg_say = #cur rpg_say at @s run playsound rpg:vo.town.sv03 voice @s ~ ~ ~ 1 1

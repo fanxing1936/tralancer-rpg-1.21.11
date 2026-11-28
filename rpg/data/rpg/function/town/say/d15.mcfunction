@@ -1,0 +1,3 @@
+# PR22
+execute as @a if score @s rpg_say = #cur rpg_say run tellraw @s ["",{"text":"〖","color":"#C9A646","bold":true,"italic":false},{"text":"神父","color":"#C9A646","bold":true,"italic":false},{"text":"〗","color":"#C9A646","bold":true,"italic":false},{"text":" 𝔉𝔞𝔱𝔥𝔢𝔯","color":"#8F7430","italic":false},{"text":"  还有这道通行符。去伊甸之门吧，但别一个人走得太深。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"And this pass. Go to the Gate of Eden, but don't walk too deep alone.","color":"#8F7430","italic":false}}}]
+execute as @a if score @s rpg_say = #cur rpg_say at @s run playsound rpg:vo.town.pr22 voice @s ~ ~ ~ 1 1

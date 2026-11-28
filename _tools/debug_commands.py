@@ -43,6 +43,8 @@ RESET = [
     command("/function rpg:inquest/debug/reset_career", "重置执行者驱魔阅历、等级、路线和阶段奖励领取记录。", "必须由目标玩家自己执行。", "个人档案", "会丢进度"),
     command("/function rpg:ritual/life_tree/clear", "清除执行位置 12 格内的生命之树与展示物。", "站在需要清理的法阵附近执行。", "附近实体", "清理"),
     command("/function rpg:ritual/life_tree/clear_all", "清除当前维度所有生命之树与展示物。", "不区分玩家和法阵；仅用于测试服收尾。", "整维度", "全局清理"),
+    command("/function rpg:prologue/skip", "跳过执行者的序章：排队的出队，正在打的还原背包送回原处；新手开局里的人直接进正式游戏。",
+            "记为打过序章（面板不再显示「序章」，不发米迦勒之羽）；跳过别人用 /execute as <玩家> run function rpg:prologue/skip。", "个人档案", "会丢进度"),
 ]
 
 BOSSES = [

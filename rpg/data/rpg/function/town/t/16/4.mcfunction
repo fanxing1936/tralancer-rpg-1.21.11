@@ -1,2 +1,2 @@
-$execute positioned ~32 $(y) ~47 run function rpg:town/b/half_timbered/cw with storage rpg:town m
-execute positioned ~2 0 ~45 positioned over motion_blocking_no_leaves run summon minecraft:marker ~ ~ ~ {Tags:["rpg.tw.a","rpg.tw.at.house","rpg.tw.new"]}
+$execute positioned ~-31 $(y) ~-33 run function rpg:town/b/half_timbered/ccw with storage rpg:town m
+execute positioned ~-1 0 ~-31 positioned over motion_blocking_no_leaves run summon minecraft:marker ~ ~ ~ {Tags:["rpg.tw.a","rpg.tw.at.house","rpg.tw.new"]}

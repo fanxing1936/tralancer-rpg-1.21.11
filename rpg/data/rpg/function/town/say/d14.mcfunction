@@ -1,0 +1,3 @@
+# PR02
+execute as @a if score @s rpg_say = #cur rpg_say run tellraw @s ["",{"text":"〖","color":"#C9A646","bold":true,"italic":false},{"text":"神父","color":"#C9A646","bold":true,"italic":false},{"text":"〗","color":"#C9A646","bold":true,"italic":false},{"text":" 𝔉𝔞𝔱𝔥𝔢𝔯","color":"#8F7430","italic":false},{"text":"  镇子外面不太平。先拿着这些，够你撑过头几天。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"It isn't safe beyond the town. Take these; they'll see you through the first days.","color":"#8F7430","italic":false}}}]
+execute as @a if score @s rpg_say = #cur rpg_say at @s run playsound rpg:vo.town.pr02 voice @s ~ ~ ~ 1 1

@@ -371,6 +371,7 @@ def prologue():
         "scoreboard players set @s rpg_pro_go 0",
         "execute if entity @s[tag=rpg.ob] run return 0",
         "execute if entity @s[tag=rpg.pr] run return 0",
+        "execute if score @s rpg_pr_done matches 1.. run return 0",
         "execute if entity @s[tag=rpg.pr.q] run return run %s" % say("你已经在序章的队伍里了，凑齐同伴就会开始。"),
         "function rpg:prologue/enqueue",
         say("已排进序章的队伍：凑满四人，或稍等片刻没有别人，就会开始。"),
@@ -898,8 +899,8 @@ def stash():
 # ---------------------------------------------------------------------------- 面板一行 + 管理员
 def panel_and_admin():
     names = {n: (name, colour) for n, _k, name, colour, _d in S.IDENTITIES}
-    lines = ["# 「序章」按钮：任何人随时可以进（用户 2026-11-23）",
-             "execute unless entity @s[tag=rpg.pr] run data modify storage rpg:panel ui.actions append value %s" % J(
+    lines = ["# 「序章」按钮：只给还没打完序章的人（用户 2026-11-28「序章结束就从菜单移除掉」）",
+             "execute unless entity @s[tag=rpg.pr] unless score @s rpg_pr_done matches 1.. run data modify storage rpg:panel ui.actions append value %s" % J(
                  {"label": {"text": "序章", "color": ui.BROADCAST_HOLY, "bold": True, "italic": False},
                   "action": {"type": "minecraft:run_command", "command": "/trigger rpg_pro_go set 1"}}),
              "execute unless score @s rpg_ident matches 1.. run return 0",

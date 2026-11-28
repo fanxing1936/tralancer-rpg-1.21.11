@@ -20,17 +20,17 @@ execute if score #t rpg_tl matches 17 run scoreboard players operation #k rpg_te
 execute if score #t rpg_tl matches 18 run scoreboard players operation #k rpg_te = #ev18 rpg_te
 execute if score #t rpg_tl matches 19 run scoreboard players operation #k rpg_te = #ev19 rpg_te
 execute if score #t rpg_tl matches 20 run scoreboard players operation #k rpg_te = #ev20 rpg_te
-execute store result score #r rpg_te run random value 0..3
-execute if score #k rpg_te matches 1 if score #r rpg_te matches 0 run return run function rpg:town/ev/r/rb01
-execute if score #k rpg_te matches 1 if score #r rpg_te matches 1 run return run function rpg:town/ev/r/rb02
-execute if score #k rpg_te matches 1 if score #r rpg_te matches 2 run return run function rpg:town/ev/r/rb03
-execute if score #k rpg_te matches 1 if score #r rpg_te matches 3 run return run function rpg:town/ev/r/rb04
-execute if score #k rpg_te matches 2 if score #r rpg_te matches 0 run return run function rpg:town/ev/r/rh01
-execute if score #k rpg_te matches 2 if score #r rpg_te matches 1 run return run function rpg:town/ev/r/rh02
-execute if score #k rpg_te matches 2 if score #r rpg_te matches 2 run return run function rpg:town/ev/r/rh03
-execute if score #k rpg_te matches 2 if score #r rpg_te matches 3 run return run function rpg:town/ev/r/rh04
-execute if score #k rpg_te matches 3 if score #r rpg_te matches 0 run return run function rpg:town/ev/r/rw01
-execute if score #k rpg_te matches 3 if score #r rpg_te matches 1 run return run function rpg:town/ev/r/rw02
-execute if score #k rpg_te matches 3 if score #r rpg_te matches 2 run return run function rpg:town/ev/r/rw03
-execute if score #k rpg_te matches 3 if score #r rpg_te matches 3 run return run function rpg:town/ev/r/rw04
-execute if score #k rpg_te matches 0 run return run function rpg:town/ev/r/th05
+execute if entity @s[type=minecraft:villager] run scoreboard players set #folk rpg_tl 0
+execute if entity @s[type=minecraft:villager,tag=rpg.tnpc.farmwife] run scoreboard players set #folk rpg_tl 1
+execute if entity @s[type=minecraft:villager,tag=rpg.tnpc.farmer] run scoreboard players set #folk rpg_tl 2
+execute if entity @s[type=minecraft:villager,tag=rpg.tnpc.lad] run scoreboard players set #folk rpg_tl 3
+execute if score #k rpg_te matches 1 if score #folk rpg_tl matches 1 run return run function rpg:town/ev/r/k1_f1
+execute if score #k rpg_te matches 1 if score #folk rpg_tl matches 2 run return run function rpg:town/ev/r/k1_f2
+execute if score #k rpg_te matches 1 if score #folk rpg_tl matches 3 run return run function rpg:town/ev/r/k1_f3
+execute if score #k rpg_te matches 2 if score #folk rpg_tl matches 1 run return run function rpg:town/ev/r/k2_f1
+execute if score #k rpg_te matches 2 if score #folk rpg_tl matches 2 run return run function rpg:town/ev/r/k2_f2
+execute if score #k rpg_te matches 2 if score #folk rpg_tl matches 3 run return run function rpg:town/ev/r/k2_f3
+execute if score #k rpg_te matches 3 if score #folk rpg_tl matches 1 run return run function rpg:town/ev/r/k3_f1
+execute if score #k rpg_te matches 3 if score #folk rpg_tl matches 2 run return run function rpg:town/ev/r/k3_f2
+execute if score #k rpg_te matches 3 if score #folk rpg_tl matches 3 run return run function rpg:town/ev/r/k3_f3
+execute if score #k rpg_te matches 0 if score #folk rpg_tl matches 2 run return run function rpg:town/ev/r/k0_f2

@@ -1,0 +1,3 @@
+# PR03
+execute as @a if score @s rpg_say = #cur rpg_say run tellraw @s ["",{"text":"〖","color":"#C9A646","bold":true,"italic":false},{"text":"神父","color":"#C9A646","bold":true,"italic":false},{"text":"〗","color":"#C9A646","bold":true,"italic":false},{"text":" 𝔉𝔞𝔱𝔥𝔢𝔯","color":"#8F7430","italic":false},{"text":"  教堂前的圣火会护着你，直到你站稳脚跟。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The holy fire before the church will shelter you until you find your feet.","color":"#8F7430","italic":false}}}]
+execute as @a if score @s rpg_say = #cur rpg_say at @s run playsound rpg:vo.town.pr03 voice @s ~ ~ ~ 1 1

@@ -424,6 +424,23 @@ def hub():
     clear += ["tag @a remove rpg.pr.q", "tag @a remove rpg.pr.pick", "scoreboard players reset @a rpg_pr_g",
               'tellraw @s {"text":"[序章] 所有战场已中止。","color":"#E8D9B0"}']
     fn("clear", clear)
+    # 管理员跳过序章（用户 2026-11-28）：/function rpg:prologue/skip 跳过自己；/execute as <玩家> run function rpg:prologue/skip 跳过别人
+    skip = ["# 跳过序章（as 玩家）：排队的出队、分了组还没进去的撤回、正在打的还原背包送回去；记为打过（面板不再显示「序章」，不发羽毛）。",
+            "# 新手开局里的人接着进正式游戏（onboard/pro/after → finish）",
+            "scoreboard players set @s rpg_pr_done 1",
+            "tag @s remove rpg.pr.q", "tag @s remove rpg.pr.pick", "scoreboard players reset @s rpg_pr_qt"]
+    for k in range(1, N + 1):
+        skip += ["execute if entity @s[tag=%s] in %s run return run function %s/skip_in" % (ptag(k), DIMS[k], P(k)),
+                 "tag @s remove rpg.pr.join%d" % k]
+    skip += ["scoreboard players reset @s rpg_pr_g",
+             "execute if entity @s[tag=rpg.ob] run function rpg:onboard/pro/after",
+             'tellraw @s {"text":"[序章] 已跳过。","color":"#E8D9B0"}']
+    fn("skip", skip)
+    for k in range(1, N + 1):
+        # 复制品里的 iso/restore 末尾已经接着 onboard/pro/after；这个战场没人了，它自己的 tick 会清场
+        wr(os.path.join(FUNC, "prologue_i%d" % k, "skip_in.mcfunction"),
+           "# 跳过序章：把这名玩家还原（as 玩家）\nfunction %s/iso/restore\n"
+           'tellraw @s {"text":"[序章] 已跳过。","color":"#E8D9B0"}\n' % P(k))
     fn("status", ["# 管理员：各战场的状态"] + [
         'tellraw @s ["",{"text":"[序章] 战场 %d · 状态 ","color":"#E8D9B0"},{"score":{"name":"#state","objective":"%s"}},'
         '{"text":" · 欠背包 "},{"score":{"name":"#owe","objective":"%s"}}]' % (k, o(k), o(k)) for k in range(1, N + 1)])

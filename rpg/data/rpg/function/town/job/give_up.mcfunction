@@ -1,4 +1,6 @@
 # 实在找不到：这座镇不建（以它为故乡的人改去同国的另一座）
+# 地标第一轮按群系找不到：放宽群系、不再要求湖边有水，再找一轮
+execute if score #lmk rpg_tw matches 1.. if score #relax rpg_tw matches 0 run return run function rpg:town/job/relax
 execute if score #cur rpg_tw matches 1 run scoreboard players set #s1 rpg_tw 4
 execute if score #cur rpg_tw matches 2 run scoreboard players set #s2 rpg_tw 4
 execute if score #cur rpg_tw matches 3 run scoreboard players set #s3 rpg_tw 4

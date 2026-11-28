@@ -1,5 +1,5 @@
-# 「序章」按钮：任何人随时可以进（用户 2026-11-23）
-execute unless entity @s[tag=rpg.pr] run data modify storage rpg:panel ui.actions append value {"label":{"text":"序章","color":"#C9A646","bold":true,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_pro_go set 1"}}
+# 「序章」按钮：只给还没打完序章的人（用户 2026-11-28「序章结束就从菜单移除掉」）
+execute unless entity @s[tag=rpg.pr] unless score @s rpg_pr_done matches 1.. run data modify storage rpg:panel ui.actions append value {"label":{"text":"序章","color":"#C9A646","bold":true,"italic":false},"action":{"type":"minecraft:run_command","command":"/trigger rpg_pro_go set 1"}}
 execute unless score @s rpg_ident matches 1.. run return 0
 execute store result storage rpg:onboard tmp.id int 1 run scoreboard players get @s rpg_fg_id
 data modify storage rpg:onboard tmp.i set value {n:"",c:"#FFFFFF"}

@@ -218,6 +218,11 @@ def build():
 def main():
     build()
     print("demon: %d 个函数" % COUNT[0])
+    # 城镇台词节奏：城镇各模块（life、ev、demon）的函数都写完了，最后统一把连说的台词排成一句一句
+    files, n = TT.pace(DP)
+    hook_tag(DP, "load", "rpg:town/say/load", False)
+    hook_tag(DP, "tick", "rpg:town/say/tick", False)
+    print("town dialogue pacing: %d 个函数、%d 句排队" % (files, n))
 
 
 if __name__ == "__main__":

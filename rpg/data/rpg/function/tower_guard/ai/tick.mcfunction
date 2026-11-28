@@ -1,3 +1,7 @@
+execute if entity @s[tag=rpg.tw.guard] run function rpg:town/life/guard_ai
+execute if entity @s[tag=rpg.lm.guard] run function rpg:town/life/guard_ai
+execute if entity @s[tag=rpg.tw.guard,tag=!rpg.tw.fight] run return 0
+execute if entity @s[tag=rpg.lm.guard,tag=!rpg.tw.fight] run return 0
 # 圣卫一刻的战斗（as、at 载体）。
 execute unless score @s rpg_tg_st matches 0.. run function rpg:tower_guard/ai/init
 execute if entity @s[tag=rpg.hurt,tag=!rpg.tg.broken] run function rpg:tower_guard/ai/shield_hit

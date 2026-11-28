@@ -1,0 +1,3 @@
+# CH03
+execute as @a if score @s rpg_say = #cur rpg_say run tellraw @s ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"孩子","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" ℭ𝔥𝔦𝔩𝔡","color":"#8F7430","italic":false},{"text":"  他说别告诉神父，可我觉得他是好人。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"He said not to tell the priest, but I think he's a good man.","color":"#8F7430","italic":false}}}]
+execute as @a if score @s rpg_say = #cur rpg_say at @s run playsound rpg:vo.town.ch03 voice @s ~ ~ ~ 1 1

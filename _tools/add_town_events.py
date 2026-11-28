@@ -136,7 +136,7 @@ def core():
         fn("title%d" % k, ["title @a[tag=rpg.tw.in] times 10 60 20",
                            "title @a[tag=rpg.tw.in] title " + J(["", T(name, col, True)]),
                            "title @a[tag=rpg.tw.in] subtitle " + J(["", T(where + "　", BODY), T(ui.fraktur(en), ui.BROADCAST_GLOSS)]),
-                           "bossbar set rpg:town_ev name " + J(["", {"text": GLYPH[k] + " ", "font": "rpg:town_icons", "color": "white"}, T(name, col, True)])])
+                           "bossbar set rpg:town_ev name " + J(["", {"text": GLYPH[k], "font": "rpg:town_icons", "color": "white"}, T(" " + name, col, True)])])
     step = ["# 进行中（每秒）：参与者跟着走；超时就失败",
             "scoreboard players add #et %s 1" % O,
             "execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.tw.c] if score @s %s_id = #run %s at @s run tag @a[distance=..110,gamemode=!spectator] add rpg.tw.in" % (TW, O),
@@ -201,13 +201,25 @@ def core():
     ro = ["# 镇民（as 被点的镇民 or 玩家，#t 镇号）说一句今天的风声", "scoreboard players set #k %s 0" % O]
     for i in N:
         ro.append("execute if score #t rpg_tl matches %d run scoreboard players operation #k %s = #ev%d %s" % (i, O, i, O))
-    ro += ["execute store result score #r %s run random value 0..3" % O]
-    for k, ids in RUMOR.items():
-        for n, pid in enumerate(ids):
-            ro.append("execute if score #k %s matches %d if score #r %s matches %d run return run function %s/r/%s" % (O, k, O, n, E, pid.lower()))
-            fn("r/%s" % pid.lower(), TT.say(pid, "@a[distance=..16]"))
-    ro.append("execute if score #k %s matches 0 run return run function %s/r/th05" % (O, E))
-    fn("r/th05", TT.say("TH05", "@a[distance=..16]"))
+    # 谁说话就说谁的台词（用户 2026-11-28：「少年说农夫的台词」）：台词表里每句都有说话人（农妇 / 农夫 / 少年）
+    who = {"farmwife": 1, "farmer": 2, "youth": 3}
+    ro += ["execute if entity @s[type=minecraft:villager] run scoreboard players set #folk rpg_tl 0",
+           "execute if entity @s[type=minecraft:villager,tag=rpg.tnpc.farmwife] run scoreboard players set #folk rpg_tl 1",
+           "execute if entity @s[type=minecraft:villager,tag=rpg.tnpc.farmer] run scoreboard players set #folk rpg_tl 2",
+           "execute if entity @s[type=minecraft:villager,tag=rpg.tnpc.lad] run scoreboard players set #folk rpg_tl 3"]
+    calm = {2: ["TH05"]}                                   # 没有副本时的闲话：只有农夫有
+    for k, ids in list(RUMOR.items()) + [(0, None)]:
+        for f in (1, 2, 3):
+            mine = [p for p in ids if TT.LINES[p]["speaker"] == [s for s, v in who.items() if v == f][0]] if ids else calm.get(f, [])
+            if not mine:
+                continue
+            sub = "r/k%d_f%d" % (k, f)
+            body = ["execute store result score #r %s run random value 0..%d" % (O, len(mine) - 1)]
+            for n, pid in enumerate(mine):
+                body.append("execute if score #r %s matches %d run return run function %s/r/%s" % (O, n, E, pid.lower()))
+                fn("r/%s" % pid.lower(), TT.say(pid, "@a[distance=..16]"))
+            fn(sub, body)
+            ro.append("execute if score #k %s matches %d if score #folk rpg_tl matches %d run return run function %s/%s" % (O, k, f, E, sub))
     fn("rumor_one", ro)
     rum = ["# 白天的风声：每 70 秒，有人在的镇上，镇民说一句", "scoreboard players set #rumor %s 0" % O]
     rum.append("execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.tw.c] at @s if entity @a[distance=..120,gamemode=!spectator] run function %s/rumor_at" % E)
@@ -452,9 +464,17 @@ def witch():
                     "execute if score #tt %s matches 20 run function %s/l_iq04" % (O, W),
                     "execute if score #tt %s matches 40 run function %s/l_ew09" % (O, W),
                     "execute if score #tt %s matches 70 run function %s/l_iq05" % (O, W),
-                    "execute as @e[tag=rpg.te.witch] at @s if entity @a[tag=rpg.tw.in,distance=..10] facing entity @p[tag=rpg.tw.in] feet positioned ^ ^ ^1.3 positioned over motion_blocking_no_leaves run tp @s ~ ~ ~",
+
                     "execute as @e[tag=rpg.te.witch] at @s run particle minecraft:dust{color:[0.6,0.4,0.8],scale:1} ~ ~1 ~ 0.2 0.5 0.2 0 4",
                     "execute in minecraft:overworld as @e[type=minecraft:marker,tag=rpg.tw.at.camp] if score @s %s_id = #run %s at @s if entity @e[tag=rpg.te.witch,distance=..10] run function %s/arrive" % (TW, O, W)])
+    # 护送：她自己跟着最近的参与者走（用户 2026-11-28：「女巫不会自主移动」）。每刻一小步，离人三格内就站住，太远（24 格外）就等。
+    fn("w/follow_tick", ["execute unless score #run %s matches 1.. run return 0" % O, "execute unless score #kind %s matches 3 run return 0" % O,
+                         "execute unless score #ph %s matches 3 run return 0" % O,
+                         "execute as @e[type=minecraft:villager,tag=rpg.te.witch] at @s run function %s/follow" % W])
+    fn("w/follow", ["execute if entity @a[tag=rpg.tw.in,distance=..3,gamemode=!spectator] run return run tp @s ~ ~ ~ facing entity @p[tag=rpg.tw.in] feet",
+                    "execute unless entity @a[tag=rpg.tw.in,distance=..24,gamemode=!spectator] run return 0",
+                    "execute facing entity @p[tag=rpg.tw.in] feet rotated ~ 0 positioned ^ ^ ^0.17 positioned over motion_blocking_no_leaves run tp @s ~ ~ ~ ~ 0"])
+    hook_tag(DP, "tick", W + "/follow_tick", False)
     fn("w/l_iq04", TT.say("IQ04", IN))
     fn("w/l_ew09", TT.say("EW09", IN) + TT.say("EW10", IN))
     fn("w/l_iq05", TT.say("IQ05", IN))

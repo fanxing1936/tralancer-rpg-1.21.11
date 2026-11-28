@@ -135,8 +135,48 @@
                  "model": "rpg:relic/medium_7"
                 },
                 "on_false": {
-                 "type": "minecraft:model",
-                 "model": "minecraft:item/gold_ingot"
+                 "type": "minecraft:condition",
+                 "property": "minecraft:component",
+                 "predicate": "minecraft:custom_data",
+                 "value": "{rpg_medium:7b}",
+                 "on_true": {
+                  "type": "minecraft:model",
+                  "model": "rpg:relic/medium_7"
+                 },
+                 "on_false": {
+                  "type": "minecraft:condition",
+                  "property": "minecraft:component",
+                  "predicate": "minecraft:custom_data",
+                  "value": "{rpg_medium:7b}",
+                  "on_true": {
+                   "type": "minecraft:model",
+                   "model": "rpg:relic/medium_7"
+                  },
+                  "on_false": {
+                   "type": "minecraft:condition",
+                   "property": "minecraft:component",
+                   "predicate": "minecraft:custom_data",
+                   "value": "{rpg_medium:7b}",
+                   "on_true": {
+                    "type": "minecraft:model",
+                    "model": "rpg:relic/medium_7"
+                   },
+                   "on_false": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:component",
+                    "predicate": "minecraft:custom_data",
+                    "value": "{rpg_medium:7b}",
+                    "on_true": {
+                     "type": "minecraft:model",
+                     "model": "rpg:relic/medium_7"
+                    },
+                    "on_false": {
+                     "type": "minecraft:model",
+                     "model": "minecraft:item/gold_ingot"
+                    }
+                   }
+                  }
+                 }
                 }
                }
               }

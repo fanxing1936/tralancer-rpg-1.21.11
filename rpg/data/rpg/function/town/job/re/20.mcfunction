@@ -5,7 +5,7 @@ scoreboard players operation #px rpg_tw = #x20 rpg_tw
 scoreboard players operation #pz rpg_tw = #z20 rpg_tw
 scoreboard players operation #v rpg_tw = #v20 rpg_tw
 scoreboard players operation #h0 rpg_tw = #sy20 rpg_tw
-scoreboard players set #r rpg_tw 151
+scoreboard players set #r rpg_tw 157
 function rpg:town/job/coords
 function rpg:town/job/bigcoords
 function rpg:town/job/big_add with storage rpg:town m
