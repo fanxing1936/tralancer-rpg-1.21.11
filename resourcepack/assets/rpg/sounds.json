@@ -1,3088 +1,4240 @@
 {
-  "abaddon.bolt": {
-    "subtitle": "subtitles.rpg.abaddon.bolt",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithprojectileattackfoley_001_soundwave",
-      "rpg:abaddon/wretchedwraithprojectileattackfoley_002_soundwave",
-      "rpg:abaddon/wretchedwraithprojectileattackfoley_003_soundwave"
-    ]
-  },
-  "abaddon.bolt_vocal": {
-    "subtitle": "subtitles.rpg.abaddon.bolt_vocal",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithprojectileattackvocal_001_soundwave",
-      "rpg:abaddon/wretchedwraithprojectileattackvocal_002_soundwave",
-      "rpg:abaddon/wretchedwraithprojectileattackvocal_003_soundwave"
-    ]
-  },
-  "abaddon.circle": {
-    "subtitle": "subtitles.rpg.abaddon.circle",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithprojectilecirclefoley_001_soundwave",
-      "rpg:abaddon/wretchedwraithprojectilecirclefoley_002_soundwave",
-      "rpg:abaddon/wretchedwraithprojectilecirclefoley_003_soundwave"
-    ]
-  },
-  "abaddon.circle_vocal": {
-    "subtitle": "subtitles.rpg.abaddon.circle_vocal",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithprojectilecirclevocal_001_soundwave",
-      "rpg:abaddon/wretchedwraithprojectilecirclevocal_002_soundwave",
-      "rpg:abaddon/wretchedwraithprojectilecirclevocal_003_soundwave"
-    ]
-  },
-  "abaddon.crown": {
-    "subtitle": "subtitles.rpg.abaddon.crown",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithstuncrown_001_soundwave",
-      "rpg:abaddon/wretchedwraithstuncrown_002_soundwave"
-    ]
-  },
-  "abaddon.death": {
-    "subtitle": "subtitles.rpg.abaddon.death",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithdeath_001_soundwave",
-      "rpg:abaddon/wretchedwraithdeath_002_soundwave"
-    ]
-  },
-  "abaddon.hurt": {
-    "subtitle": "subtitles.rpg.abaddon.hurt",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithhurt_001_soundwave",
-      "rpg:abaddon/wretchedwraithhurt_002_soundwave",
-      "rpg:abaddon/wretchedwraithhurt_003_soundwave"
-    ]
-  },
-  "abaddon.idle": {
-    "subtitle": "subtitles.rpg.abaddon.idle",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithidle_001_soundwave",
-      "rpg:abaddon/wretchedwraithidle_002_soundwave",
-      "rpg:abaddon/wretchedwraithidle_003_soundwave",
-      "rpg:abaddon/wretchedwraithidle_004_soundwave",
-      "rpg:abaddon/wretchedwraithidle_005_soundwave",
-      "rpg:abaddon/wretchedwraithidle_006_soundwave"
-    ]
-  },
-  "abaddon.intro": {
-    "subtitle": "subtitles.rpg.abaddon.intro",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithintrovocal_soundwave"
-    ]
-  },
-  "abaddon.intro_foley": {
-    "subtitle": "subtitles.rpg.abaddon.intro_foley",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithintrofoley_soundwave"
-    ]
-  },
-  "abaddon.step": {
-    "subtitle": "subtitles.rpg.abaddon.step",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithwalkice_001_soundwave",
-      "rpg:abaddon/wretchedwraithwalkice_002_soundwave",
-      "rpg:abaddon/wretchedwraithwalkice_003_soundwave"
-    ]
-  },
-  "abaddon.strike": {
-    "subtitle": "subtitles.rpg.abaddon.strike",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithbasicattackfoley_001_soundwave",
-      "rpg:abaddon/wretchedwraithbasicattackfoley_002_soundwave",
-      "rpg:abaddon/wretchedwraithbasicattackfoley_003_soundwave"
-    ]
-  },
-  "abaddon.strike_vocal": {
-    "subtitle": "subtitles.rpg.abaddon.strike_vocal",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithbasicattackvocal_001_soundwave",
-      "rpg:abaddon/wretchedwraithbasicattackvocal_002_soundwave",
-      "rpg:abaddon/wretchedwraithbasicattackvocal_003_soundwave"
-    ]
-  },
-  "abaddon.summon": {
-    "subtitle": "subtitles.rpg.abaddon.summon",
-    "sounds": [
-      "rpg:abaddon/wretchedwraithsummon_001_soundwave"
-    ]
-  },
-  "arch_visage.beam_attack": {
-    "subtitle": "subtitles.rpg.arch_visage.beam_attack",
-    "sounds": [
-      "rpg:arch_visage/sfx_boss_archvisagebeamattack_001",
-      "rpg:arch_visage/sfx_boss_archvisagebeamattack_002",
-      "rpg:arch_visage/sfx_boss_archvisagebeamattack_003"
-    ]
-  },
-  "arch_visage.beam_loop": {
-    "subtitle": "subtitles.rpg.arch_visage.beam_loop",
-    "sounds": [
-      "rpg:arch_visage/sfx_boss_archvisagebeamloop_001"
-    ]
-  },
-  "arch_visage.mortar": {
-    "subtitle": "subtitles.rpg.arch_visage.mortar",
-    "sounds": [
-      "rpg:arch_visage/sfx_boss_archvisagemortarshoot_001",
-      "rpg:arch_visage/sfx_boss_archvisagemortarshoot_002",
-      "rpg:arch_visage/sfx_boss_archvisagemortarshoot_003"
-    ]
-  },
-  "arch_visage.tele_in": {
-    "subtitle": "subtitles.rpg.arch_visage.tele_in",
-    "sounds": [
-      "rpg:arch_visage/sfx_boss_archvisagetelein"
-    ]
-  },
-  "arch_visage.tele_out": {
-    "subtitle": "subtitles.rpg.arch_visage.tele_out",
-    "sounds": [
-      "rpg:arch_visage/sfx_boss_archvisageteleout"
-    ]
-  },
-  "beelzebub.approach": {
-    "subtitle": "subtitles.rpg.beelzebub.approach",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelessapproach_001_soundwave"
-    ]
-  },
-  "beelzebub.cast": {
-    "subtitle": "subtitles.rpg.beelzebub.cast",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelesscast_001_soundwave",
-      "rpg:beelzebub/sfx_mob_namelesscast_002_soundwave",
-      "rpg:beelzebub/sfx_mob_namelesscast_003_soundwave"
-    ]
-  },
-  "beelzebub.death": {
-    "subtitle": "subtitles.rpg.beelzebub.death",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelessdeath_001_soundwave"
-    ]
-  },
-  "beelzebub.distant": {
-    "subtitle": "subtitles.rpg.beelzebub.distant",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelessdistant_001_soundwave",
-      "rpg:beelzebub/sfx_mob_namelessdistant_002_soundwave",
-      "rpg:beelzebub/sfx_mob_namelessdistant_003_soundwave",
-      "rpg:beelzebub/sfx_mob_namelessdistant_004_soundwave"
-    ]
-  },
-  "beelzebub.fly": {
-    "subtitle": "subtitles.rpg.beelzebub.fly",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelessfly_001_soundwave",
-      "rpg:beelzebub/sfx_mob_namelessfly_002_soundwave",
-      "rpg:beelzebub/sfx_mob_namelessfly_003_soundwave",
-      "rpg:beelzebub/sfx_mob_namelessfly_004_soundwave"
-    ]
-  },
-  "beelzebub.hurt": {
-    "subtitle": "subtitles.rpg.beelzebub.hurt",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelesshurt_001_soundwave",
-      "rpg:beelzebub/sfx_mob_namelesshurt_002_soundwave",
-      "rpg:beelzebub/sfx_mob_namelesshurt_003_soundwave",
-      "rpg:beelzebub/sfx_mob_namelesshurt_004_soundwave"
-    ]
-  },
-  "beelzebub.idle": {
-    "subtitle": "subtitles.rpg.beelzebub.idle",
-    "sounds": [
-      "rpg:beelzebub/sfx_multi_namelessidle_001_soundwave",
-      "rpg:beelzebub/sfx_multi_namelessidle_002_soundwave",
-      "rpg:beelzebub/sfx_multi_namelessidle_003_soundwave"
-    ]
-  },
-  "beelzebub.laugh": {
-    "subtitle": "subtitles.rpg.beelzebub.laugh",
-    "sounds": [
-      "rpg:beelzebub/sfx_multi_namelesslaughshort_001_soundwave",
-      "rpg:beelzebub/sfx_multi_namelesslaughshort_002_soundwave",
-      "rpg:beelzebub/sfx_multi_namelesslaughshort_003_soundwave"
-    ]
-  },
-  "beelzebub.laugh_long": {
-    "subtitle": "subtitles.rpg.beelzebub.laugh_long",
-    "sounds": [
-      "rpg:beelzebub/sfx_multi_namelesslaughlong_001_soundwave",
-      "rpg:beelzebub/sfx_multi_namelesslaughlong_002_soundwave",
-      "rpg:beelzebub/sfx_multi_namelesslaughlong_003_soundwave"
-    ]
-  },
-  "beelzebub.load": {
-    "subtitle": "subtitles.rpg.beelzebub.load",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelessload_001_soundwave",
-      "rpg:beelzebub/sfx_mob_namelessload_002_soundwave"
-    ]
-  },
-  "beelzebub.load_long": {
-    "subtitle": "subtitles.rpg.beelzebub.load_long",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelessloadlongspell_001_soundwave"
-    ]
-  },
-  "beelzebub.poff": {
-    "subtitle": "subtitles.rpg.beelzebub.poff",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelesspoff_001_soundwave"
-    ]
-  },
-  "beelzebub.spell": {
-    "subtitle": "subtitles.rpg.beelzebub.spell",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelessspellfat_001_soundwave"
-    ]
-  },
-  "beelzebub.teleport_in": {
-    "subtitle": "subtitles.rpg.beelzebub.teleport_in",
-    "sounds": [
-      "rpg:beelzebub/sfx_multi_namelessteleportin_001_soundwave",
-      "rpg:beelzebub/sfx_multi_namelessteleportin_002_soundwave",
-      "rpg:beelzebub/sfx_multi_namelessteleportin_003_soundwave",
-      "rpg:beelzebub/sfx_multi_namelessteleportin_004_soundwave"
-    ]
-  },
-  "beelzebub.teleport_out": {
-    "subtitle": "subtitles.rpg.beelzebub.teleport_out",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelessteleportout_001_soundwave",
-      "rpg:beelzebub/sfx_mob_namelessteleportout_002_soundwave"
-    ]
-  },
-  "beelzebub.wake": {
-    "subtitle": "subtitles.rpg.beelzebub.wake",
-    "sounds": [
-      "rpg:beelzebub/sfx_mob_namelesswakeup_001_soundwave",
-      "rpg:beelzebub/sfx_mob_namelesswakeup_002_soundwave",
-      "rpg:beelzebub/sfx_mob_namelesswakeup_003_soundwave"
-    ]
-  },
-  "belial_lord.brew": {
-    "subtitle": "subtitles.rpg.belial_lord.brew",
-    "sounds": [
-      "rpg:belial_lord/sfx_mob_bosscauldronswallowlightlayer_001_soundwave"
-    ]
-  },
-  "belial_lord.bubble": {
-    "subtitle": "subtitles.rpg.belial_lord.bubble",
-    "sounds": [
-      "rpg:belial_lord/sfx_mob_bosscauldronattackbubble_001_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronattackbubble_002_soundwave"
-    ]
-  },
-  "belial_lord.death": {
-    "subtitle": "subtitles.rpg.belial_lord.death",
-    "sounds": [
-      "rpg:belial_lord/sfx_mob_bosscauldrondeath_001_soundwave"
-    ]
-  },
-  "belial_lord.hop": {
-    "subtitle": "subtitles.rpg.belial_lord.hop",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.place"
-      }
-    ]
-  },
-  "belial_lord.hurt": {
-    "subtitle": "subtitles.rpg.belial_lord.hurt",
-    "sounds": [
-      "rpg:belial_lord/sfx_mob_bosscauldronhurt_001_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronhurt_002_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronhurt_003_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronhurt_004_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronhurt_005_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronhurt_006_soundwave"
-    ]
-  },
-  "belial_lord.idle": {
-    "subtitle": "subtitles.rpg.belial_lord.idle",
-    "sounds": [
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_001_soundwave",
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_002_soundwave",
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_003_soundwave",
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_004_soundwave",
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_005_soundwave",
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_006_soundwave",
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_007_soundwave",
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_008_soundwave",
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_009_soundwave",
-      "rpg:belial_lord/sfx_multi_bosscauldronidle_010_soundwave"
-    ]
-  },
-  "belial_lord.laugh": {
-    "subtitle": "subtitles.rpg.belial_lord.laugh",
-    "sounds": [
-      "rpg:belial_lord/sfx_mob_bosscauldronattackvoice_001_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronattackvoice_002_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronattackvoice_003_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronattackvoice_004_soundwave"
-    ]
-  },
-  "belial_lord.spin": {
-    "subtitle": "subtitles.rpg.belial_lord.spin",
-    "sounds": [
-      "rpg:belial_lord/sfx_mob_bosscauldronattackspin_001_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronattackspin_002_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronattackspin_003_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronvoicespin_001_soundwave"
-    ]
-  },
-  "belial_lord.splash": {
-    "subtitle": "subtitles.rpg.belial_lord.splash",
-    "sounds": [
-      "rpg:belial_lord/sfx_mob_bosscauldronswallowbass_001_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronswallowbass_002_soundwave",
-      "rpg:belial_lord/sfx_mob_bosscauldronswallowbass_003_soundwave"
-    ]
-  },
-  "belial_lord.wand": {
-    "subtitle": "subtitles.rpg.belial_lord.wand",
-    "sounds": [
-      "rpg:belial_lord/sfx_multi_bosscauldronwandspin_001_soundwave"
-    ]
-  },
-  "belial_servant.death": {
-    "subtitle": "subtitles.rpg.belial_servant.death",
-    "sounds": [
-      "rpg:belial_servant/sfx_mob_witchdeath_001_soundwave",
-      "rpg:belial_servant/sfx_mob_witchdeath_002_soundwave",
-      "rpg:belial_servant/sfx_mob_witchdeath_003_soundwave"
-    ]
-  },
-  "belial_servant.drink": {
-    "subtitle": "subtitles.rpg.belial_servant.drink",
-    "sounds": [
-      "rpg:belial_servant/sfx_mob_witchdrink_001_soundwave",
-      "rpg:belial_servant/sfx_mob_witchdrink_002_soundwave",
-      "rpg:belial_servant/sfx_mob_witchdrink_003_soundwave",
-      "rpg:belial_servant/sfx_mob_witchdrink_004_soundwave"
-    ]
-  },
-  "belial_servant.hurt": {
-    "subtitle": "subtitles.rpg.belial_servant.hurt",
-    "sounds": [
-      "rpg:belial_servant/sfx_mob_witchhurt_001_soundwave",
-      "rpg:belial_servant/sfx_mob_witchhurt_002_soundwave",
-      "rpg:belial_servant/sfx_mob_witchhurt_003_soundwave"
-    ]
-  },
-  "belial_servant.idle": {
-    "subtitle": "subtitles.rpg.belial_servant.idle",
-    "sounds": [
-      "rpg:belial_servant/sfx_mob_witchidle_001_soundwave",
-      "rpg:belial_servant/sfx_mob_witchidle_002_soundwave",
-      "rpg:belial_servant/sfx_mob_witchidle_003_soundwave",
-      "rpg:belial_servant/sfx_mob_witchidle_004_soundwave",
-      "rpg:belial_servant/sfx_mob_witchidle_005_soundwave"
-    ]
-  },
-  "belial_servant.throw": {
-    "subtitle": "subtitles.rpg.belial_servant.throw",
-    "sounds": [
-      "rpg:belial_servant/sfx_mob_witchthrow_001_soundwave",
-      "rpg:belial_servant/sfx_mob_witchthrow_002_soundwave",
-      "rpg:belial_servant/sfx_mob_witchthrow_003_soundwave"
-    ]
-  },
-  "bgm.daath1": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/daath1",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.daath2": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/daath2",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.jacques1": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/jacques1",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.jacques2": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/jacques2",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.lucifer1": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/lucifer1",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.lucifer2": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/lucifer2",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.michael1": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/michael1",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.michael2": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/michael2",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.onboard_flow": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/onboard_flow",
-        "stream": true,
-        "volume": 0.6
-      }
-    ]
-  },
-  "bgm.onboard_intro": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/onboard_intro",
-        "stream": true,
-        "volume": 0.45
-      }
-    ]
-  },
-  "bgm.ow_day1": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/ow_day1",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.29
-      }
-    ]
-  },
-  "bgm.ow_day2": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/ow_day2",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.65
-      }
-    ]
-  },
-  "bgm.ow_day3": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/ow_day3",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.35
-      }
-    ]
-  },
-  "bgm.ow_night1": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/ow_night1",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.65
-      }
-    ]
-  },
-  "bgm.ow_night2": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/ow_night2",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.53
-      }
-    ]
-  },
-  "bgm.pl_ash": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/pl_ash",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.75
-      }
-    ]
-  },
-  "bgm.pl_court": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/pl_court",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.65
-      }
-    ]
-  },
-  "bgm.pl_gate": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/pl_gate",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.76
-      }
-    ]
-  },
-  "bgm.pl_hunt": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/pl_hunt",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.51
-      }
-    ]
-  },
-  "bgm.pl_moon": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/pl_moon",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.61
-      }
-    ]
-  },
-  "bgm.prologue_end": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/prologue_end",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.55
-      }
-    ]
-  },
-  "bgm.prologue_intro": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/prologue_intro",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.85
-      }
-    ]
-  },
-  "bgm.prologue_michael": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/prologue_michael",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.55
-      }
-    ]
-  },
-  "bgm.prologue_waves": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/prologue_waves",
-        "stream": true,
-        "attenuation_distance": 1024,
-        "volume": 0.55
-      }
-    ]
-  },
-  "bgm.saul1": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/saul1",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.saul2": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/saul2",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.usurper1": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/usurper1",
-        "stream": true
-      }
-    ]
-  },
-  "bgm.usurper2": {
-    "sounds": [
-      {
-        "name": "rpg:bgm/usurper2",
-        "stream": true
-      }
-    ]
-  },
-  "daath.execute": {
-    "subtitle": "subtitles.rpg.daath.execute",
-    "sounds": [
-      "rpg:daath/d6_sfx_shadowfeastexecute_001",
-      "rpg:daath/d6_sfx_shadowfeastexecute_002",
-      "rpg:daath/d6_sfx_shadowfeastexecute_003",
-      "rpg:daath/d6_sfx_shadowfeastexecute_004",
-      "rpg:daath/d6_sfx_shadowfeastexecute_005"
-    ]
-  },
-  "daath.flash1": {
-    "subtitle": "subtitles.rpg.daath.flash1",
-    "sounds": [
-      "rpg:daath/d6_sfx_item_shadowflash_activate1_001",
-      "rpg:daath/d6_sfx_item_shadowflash_activate1_002",
-      "rpg:daath/d6_sfx_item_shadowflash_activate1_003"
-    ]
-  },
-  "daath.flash2": {
-    "subtitle": "subtitles.rpg.daath.flash2",
-    "sounds": [
-      "rpg:daath/d6_sfx_item_shadowflash_activate2_001",
-      "rpg:daath/d6_sfx_item_shadowflash_activate2_002",
-      "rpg:daath/d6_sfx_item_shadowflash_activate2_003"
-    ]
-  },
-  "daath.flash3": {
-    "subtitle": "subtitles.rpg.daath.flash3",
-    "sounds": [
-      "rpg:daath/d6_sfx_item_shadowflash_activate3_001",
-      "rpg:daath/d6_sfx_item_shadowflash_activate3_002",
-      "rpg:daath/d6_sfx_item_shadowflash_activate3_003"
-    ]
-  },
-  "daath.hurt": {
-    "subtitle": "subtitles.rpg.daath.hurt",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.glass.hit"
-      }
-    ]
-  },
-  "daath.impact": {
-    "subtitle": "subtitles.rpg.daath.impact",
-    "sounds": [
-      "rpg:daath/d6_sfx_wpn_shadowcbow_impact_001",
-      "rpg:daath/d6_sfx_wpn_shadowcbow_impact_002",
-      "rpg:daath/d6_sfx_wpn_shadowcbow_impact_003"
-    ]
-  },
-  "daath.mirror": {
-    "subtitle": "subtitles.rpg.daath.mirror",
-    "sounds": [
-      "rpg:daath/dlc_sfx_mob_illusionermirror_001",
-      "rpg:daath/dlc_sfx_mob_illusionermirror_002"
-    ]
-  },
-  "daath.shot": {
-    "subtitle": "subtitles.rpg.daath.shot",
-    "sounds": [
-      "rpg:daath/d6_sfx_wpn_shadowcbow_shot_001",
-      "rpg:daath/d6_sfx_wpn_shadowcbow_shot_002",
-      "rpg:daath/d6_sfx_wpn_shadowcbow_shot_003"
-    ]
-  },
-  "daath.splinter": {
-    "subtitle": "subtitles.rpg.daath.splinter",
-    "sounds": [
-      "rpg:daath/d6_sfx_shadowsplinteractivate_001",
-      "rpg:daath/d6_sfx_shadowsplinteractivate_002",
-      "rpg:daath/d6_sfx_shadowsplinteractivate_003"
-    ]
-  },
-  "daath.step": {
-    "subtitle": "subtitles.rpg.daath.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.generic.splash"
-      }
-    ]
-  },
-  "david.sling": {
-    "subtitle": "subtitles.rpg.david.sling",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:item.trident.throw"
-      }
-    ]
-  },
-  "end_illager.blink": {
-    "subtitle": "subtitles.rpg.end_illager.blink",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.enderman.teleport"
-      }
-    ]
-  },
-  "end_illager.cast": {
-    "subtitle": "subtitles.rpg.end_illager.cast",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.evoker.cast_spell"
-      }
-    ]
-  },
-  "end_illager.death": {
-    "subtitle": "subtitles.rpg.end_illager.death",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.evoker.death"
-      }
-    ]
-  },
-  "end_illager.heal": {
-    "subtitle": "subtitles.rpg.end_illager.heal",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.beacon.power_select"
-      }
-    ]
-  },
-  "end_illager.hurt": {
-    "subtitle": "subtitles.rpg.end_illager.hurt",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.evoker.hurt"
-      }
-    ]
-  },
-  "end_illager.idle": {
-    "subtitle": "subtitles.rpg.end_illager.idle",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.evoker.ambient"
-      }
-    ]
-  },
-  "end_illager.prepare": {
-    "subtitle": "subtitles.rpg.end_illager.prepare",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.evoker.prepare_attack"
-      }
-    ]
-  },
-  "heart_of_ender.death": {
-    "subtitle": "subtitles.rpg.heart_of_ender.death",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesseldeath"
-    ]
-  },
-  "heart_of_ender.fourside": {
-    "subtitle": "subtitles.rpg.heart_of_ender.fourside",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesselfourside_001",
-      "rpg:heart_of_ender/sfx_boss_archvesselfourside_002",
-      "rpg:heart_of_ender/sfx_boss_archvesselfourside_003",
-      "rpg:heart_of_ender/sfx_boss_archvesselfourside_004"
-    ]
-  },
-  "heart_of_ender.hurt": {
-    "subtitle": "subtitles.rpg.heart_of_ender.hurt",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesselhurt_001",
-      "rpg:heart_of_ender/sfx_boss_archvesselhurt_002",
-      "rpg:heart_of_ender/sfx_boss_archvesselhurt_003",
-      "rpg:heart_of_ender/sfx_boss_archvesselhurt_004",
-      "rpg:heart_of_ender/sfx_boss_archvesselhurt_005",
-      "rpg:heart_of_ender/sfx_boss_archvesselhurt_006",
-      "rpg:heart_of_ender/sfx_boss_archvesselhurt_007",
-      "rpg:heart_of_ender/sfx_boss_archvesselhurt_008"
-    ]
-  },
-  "heart_of_ender.inner_voice": {
-    "subtitle": "subtitles.rpg.heart_of_ender.inner_voice",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_001",
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_002",
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_003",
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_004",
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_005",
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_006",
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_007",
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_008",
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_009",
-      "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_010"
-    ]
-  },
-  "heart_of_ender.mortar": {
-    "subtitle": "subtitles.rpg.heart_of_ender.mortar",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_001",
-      "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_002",
-      "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_003",
-      "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_004"
-    ]
-  },
-  "heart_of_ender.mortar_explode": {
-    "subtitle": "subtitles.rpg.heart_of_ender.mortar_explode",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_mob_witchbottlebreak_001_soundwave",
-      "rpg:heart_of_ender/sfx_mob_witchbottlebreak_002_soundwave",
-      "rpg:heart_of_ender/sfx_mob_witchbottlebreak_003_soundwave"
-    ]
-  },
-  "heart_of_ender.mortar_land": {
-    "subtitle": "subtitles.rpg.heart_of_ender.mortar_land",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesselmortarland_001",
-      "rpg:heart_of_ender/sfx_boss_archvesselmortarland_002",
-      "rpg:heart_of_ender/sfx_boss_archvesselmortarland_003"
-    ]
-  },
-  "heart_of_ender.step": {
-    "subtitle": "subtitles.rpg.heart_of_ender.step",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesselstep_001",
-      "rpg:heart_of_ender/sfx_boss_archvesselstep_002",
-      "rpg:heart_of_ender/sfx_boss_archvesselstep_003",
-      "rpg:heart_of_ender/sfx_boss_archvesselstep_004"
-    ]
-  },
-  "heart_of_ender.tele_in": {
-    "subtitle": "subtitles.rpg.heart_of_ender.tele_in",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesseltelein"
-    ]
-  },
-  "heart_of_ender.tele_out": {
-    "subtitle": "subtitles.rpg.heart_of_ender.tele_out",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesselteleout"
-    ]
-  },
-  "heart_of_ender.vessel_voice": {
-    "subtitle": "subtitles.rpg.heart_of_ender.vessel_voice",
-    "sounds": [
-      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_001",
-      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_002",
-      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_003",
-      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_004",
-      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_005",
-      "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_006"
-    ]
-  },
-  "jacques.arrow": {
-    "subtitle": "subtitles.rpg.jacques.arrow",
-    "sounds": [
-      "rpg:jacques/sfx_item_scattercrossbowunique1arrow_001"
-    ]
-  },
-  "jacques.death": {
-    "subtitle": "subtitles.rpg.jacques.death",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.death"
-      }
-    ]
-  },
-  "jacques.fire": {
-    "subtitle": "subtitles.rpg.jacques.fire",
-    "sounds": [
-      "rpg:jacques/sfx_item_scattercrossbowunique1shoot_001",
-      "rpg:jacques/sfx_item_scattercrossbowunique1shoot_002",
-      "rpg:jacques/sfx_item_scattercrossbowunique1shoot_003",
-      "rpg:jacques/sfx_item_scattercrossbowunique1shoot_004"
-    ]
-  },
-  "jacques.horn": {
-    "subtitle": "subtitles.rpg.jacques.horn",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:event.raid.horn"
-      }
-    ]
-  },
-  "jacques.hurt": {
-    "subtitle": "subtitles.rpg.jacques.hurt",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.hurt"
-      }
-    ]
-  },
-  "jacques.load": {
-    "subtitle": "subtitles.rpg.jacques.load",
-    "sounds": [
-      "rpg:jacques/sfx_item_scattercrossbowunique1place_001",
-      "rpg:jacques/sfx_item_scattercrossbowunique1place_002",
-      "rpg:jacques/sfx_item_scattercrossbowunique1place_003"
-    ]
-  },
-  "jacques.roll": {
-    "subtitle": "subtitles.rpg.jacques.roll",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.attack.nodamage"
-      }
-    ]
-  },
-  "jacques.step": {
-    "subtitle": "subtitles.rpg.jacques.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.step"
-      }
-    ]
-  },
-  "jacques.swing1": {
-    "subtitle": "subtitles.rpg.jacques.swing1",
-    "sounds": [
-      "rpg:jacques/sfx_item_glaiveswing_001_soundwave",
-      "rpg:jacques/sfx_item_glaiveswing_002_soundwave",
-      "rpg:jacques/sfx_item_glaiveswing_003_soundwave",
-      "rpg:jacques/sfx_item_glaiveswing_004_soundwave",
-      "rpg:jacques/sfx_item_glaiveswing_005_soundwave"
-    ]
-  },
-  "jacques.swing2": {
-    "subtitle": "subtitles.rpg.jacques.swing2",
-    "sounds": [
-      "rpg:jacques/sfx_item_glaiveswing_001_soundwave",
-      "rpg:jacques/sfx_item_glaiveswing_002_soundwave",
-      "rpg:jacques/sfx_item_glaiveswing_003_soundwave",
-      "rpg:jacques/sfx_item_glaiveswing_004_soundwave",
-      "rpg:jacques/sfx_item_glaiveswing_005_soundwave"
-    ]
-  },
-  "jacques.swing3": {
-    "subtitle": "subtitles.rpg.jacques.swing3",
-    "sounds": [
-      "rpg:jacques/sfx_item_glaiveshing_001_soundwave",
-      "rpg:jacques/sfx_item_glaiveshing_002_soundwave",
-      "rpg:jacques/sfx_item_glaiveshing_003_soundwave",
-      "rpg:jacques/sfx_item_glaiveshing_004_soundwave"
-    ]
-  },
-  "leviathan.cast": {
-    "subtitle": "subtitles.rpg.leviathan.cast",
-    "sounds": [
-      "rpg:leviathan/sfx_multi_evokercastspell_001_soundwave",
-      "rpg:leviathan/sfx_multi_evokercastspell_002_soundwave"
-    ]
-  },
-  "leviathan.death": {
-    "subtitle": "subtitles.rpg.leviathan.death",
-    "sounds": [
-      "rpg:leviathan/sfx_mob_necromancerdeath_001_soundwave",
-      "rpg:leviathan/sfx_mob_necromancerdeath_002_soundwave"
-    ]
-  },
-  "leviathan.hurt": {
-    "subtitle": "subtitles.rpg.leviathan.hurt",
-    "sounds": [
-      "rpg:leviathan/sfx_mob_necromancerhurt_001_soundwave",
-      "rpg:leviathan/sfx_mob_necromancerhurt_002_soundwave",
-      "rpg:leviathan/sfx_mob_necromancerhurt_003_soundwave",
-      "rpg:leviathan/sfx_mob_necromancerhurt_004_soundwave"
-    ]
-  },
-  "leviathan.idle": {
-    "subtitle": "subtitles.rpg.leviathan.idle",
-    "sounds": [
-      "rpg:leviathan/sfx_mob_necromanceridle_001_soundwave",
-      "rpg:leviathan/sfx_mob_necromanceridle_002_soundwave",
-      "rpg:leviathan/sfx_mob_necromanceridle_003_soundwave"
-    ]
-  },
-  "leviathan.impact": {
-    "subtitle": "subtitles.rpg.leviathan.impact",
-    "sounds": [
-      "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_001",
-      "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_002",
-      "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_003",
-      "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_004"
-    ]
-  },
-  "leviathan.laugh": {
-    "subtitle": "subtitles.rpg.leviathan.laugh",
-    "sounds": [
-      "rpg:leviathan/sfx_mob_necromancerboneylaugh_001_soundwave",
-      "rpg:leviathan/sfx_mob_necromancerboneylaugh_002_soundwave"
-    ]
-  },
-  "leviathan.prepare": {
-    "subtitle": "subtitles.rpg.leviathan.prepare",
-    "sounds": [
-      "rpg:leviathan/sfx_mob_necromancerpreparesummon_002_soundwave",
-      "rpg:leviathan/sfx_mob_evokerpreparesummon_001_soundwave"
-    ]
-  },
-  "leviathan.spell": {
-    "subtitle": "subtitles.rpg.leviathan.spell",
-    "sounds": [
-      "rpg:leviathan/sfx_mob_necromancerspell_001_soundwave",
-      "rpg:leviathan/sfx_mob_necromancerspell_002_soundwave"
-    ]
-  },
-  "leviathan.step": {
-    "subtitle": "subtitles.rpg.leviathan.step",
-    "sounds": [
-      "rpg:leviathan/sfx_mob_necromancerstep_001_soundwave",
-      "rpg:leviathan/sfx_mob_necromancerstep_002_soundwave",
-      "rpg:leviathan/sfx_mob_necromancerstep_003_soundwave",
-      "rpg:leviathan/sfx_mob_necromancerstep_004_soundwave"
-    ]
-  },
-  "leviathan.summoned": {
-    "subtitle": "subtitles.rpg.leviathan.summoned",
-    "sounds": [
-      "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_001_soundwave",
-      "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_002_soundwave",
-      "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_003_soundwave"
-    ]
-  },
-  "lucifer_lord.arrowwhoosh": {
-    "sounds": [
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-001_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-002_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-003_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-004_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-005_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-006_soundwave",
-        "stream": false
-      }
-    ]
-  },
-  "lucifer_lord.attack": {
-    "sounds": [
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonattack-001",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonattack-002",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonattack-003",
-        "stream": false
-      }
-    ]
-  },
-  "lucifer_lord.death": {
-    "sounds": [
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-001_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-002_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-003_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-004_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-005_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-006_soundwave",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-007_soundwave",
-        "stream": false
-      }
-    ]
-  },
-  "lucifer_lord.hurt": {
-    "sounds": [
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-001",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-002",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-003",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-004",
-        "stream": false
-      }
-    ]
-  },
-  "lucifer_lord.idle": {
-    "sounds": [
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonidle-001",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonidle-002",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonidle-003",
-        "stream": false
-      }
-    ]
-  },
-  "lucifer_lord.step": {
-    "sounds": [
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-001",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-002",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-003",
-        "stream": false
-      },
-      {
-        "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-004",
-        "stream": false
-      }
-    ]
-  },
-  "lucifer_p2.attack_boom": {
-    "subtitle": "subtitles.rpg.lucifer_p2.attack_boom",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_attack_boom_foley"
-    ]
-  },
-  "lucifer_p2.basic_attack_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.basic_attack_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_basicattack_foley"
-    ]
-  },
-  "lucifer_p2.basic_attack_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.basic_attack_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_basicattack_vocal",
-      "rpg:lucifer_p2/dlc_mob_abom_basicattack2_vocal",
-      "rpg:lucifer_p2/dlc_mob_abom_vineattack_vocal"
-    ]
-  },
-  "lucifer_p2.death_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.death_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_death_foley"
-    ]
-  },
-  "lucifer_p2.death_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.death_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_death_vocal"
-    ]
-  },
-  "lucifer_p2.fall_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.fall_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_fall_foley"
-    ]
-  },
-  "lucifer_p2.fall_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.fall_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_fall_vocal"
-    ]
-  },
-  "lucifer_p2.flower_close": {
-    "subtitle": "subtitles.rpg.lucifer_p2.flower_close",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_flowerclose"
-    ]
-  },
-  "lucifer_p2.flower_loop": {
-    "subtitle": "subtitles.rpg.lucifer_p2.flower_loop",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_flower_loop"
-    ]
-  },
-  "lucifer_p2.flower_open": {
-    "subtitle": "subtitles.rpg.lucifer_p2.flower_open",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_floweropen"
-    ]
-  },
-  "lucifer_p2.getup_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.getup_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_getup_foley"
-    ]
-  },
-  "lucifer_p2.getup_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.getup_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_getup_vocal"
-    ]
-  },
-  "lucifer_p2.hurt_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.hurt_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_gethit1_foley",
-      "rpg:lucifer_p2/dlc_mob_abom_gethit2_foley",
-      "rpg:lucifer_p2/dlc_mob_abom_gethit3_foley"
-    ]
-  },
-  "lucifer_p2.hurt_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.hurt_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_gethit1_vocal",
-      "rpg:lucifer_p2/dlc_mob_abom_gethit2_vocal",
-      "rpg:lucifer_p2/dlc_mob_abom_gethit3_vocal",
-      "rpg:lucifer_p2/dlc_mob_abom_gethit4_vocal"
-    ]
-  },
-  "lucifer_p2.idle_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.idle_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_idle_foley"
-    ]
-  },
-  "lucifer_p2.idle_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.idle_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_idle_vocal"
-    ]
-  },
-  "lucifer_p2.intro_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.intro_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_intro_foley_stereo"
-    ]
-  },
-  "lucifer_p2.intro_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.intro_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_intro_vocal_stereo"
-    ]
-  },
-  "lucifer_p2.land_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.land_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_land_foley"
-    ]
-  },
-  "lucifer_p2.land_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.land_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_land_vocal"
-    ]
-  },
-  "lucifer_p2.laugh_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.laugh_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_laugh_vocal_stereo"
-    ]
-  },
-  "lucifer_p2.music_end_preview": {
-    "subtitle": "subtitles.rpg.lucifer_p2.music_end_preview",
-    "sounds": [
-      {
-        "stream": true,
-        "name": "rpg:lucifer_p2/bgm_env_sosw2dbosscauldronend_001_soundwave"
-      }
-    ]
-  },
-  "lucifer_p2.music_loop_preview": {
-    "subtitle": "subtitles.rpg.lucifer_p2.music_loop_preview",
-    "sounds": [
-      {
-        "stream": true,
-        "name": "rpg:lucifer_p2/bgm_env_sosw2dbosscauldronloop_001_soundwave"
-      }
-    ]
-  },
-  "lucifer_p2.music_start_preview": {
-    "subtitle": "subtitles.rpg.lucifer_p2.music_start_preview",
-    "sounds": [
-      {
-        "stream": true,
-        "name": "rpg:lucifer_p2/bgm_env_sosw2dbosscauldronstart_001_soundwave"
-      }
-    ]
-  },
-  "lucifer_p2.summon_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.summon_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_summon_foley"
-    ]
-  },
-  "lucifer_p2.summon_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.summon_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_summon_vocal"
-    ]
-  },
-  "lucifer_p2.vine_attack_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.vine_attack_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_vineattack_foley"
-    ]
-  },
-  "lucifer_p2.vine_attack_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.vine_attack_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_vineattack_vocal",
-      "rpg:lucifer_p2/dlc_mob_abom_basicattack_vocal",
-      "rpg:lucifer_p2/dlc_mob_abom_basicattack2_vocal"
-    ]
-  },
-  "lucifer_p2.vine_burst_new": {
-    "subtitle": "subtitles.rpg.lucifer_p2.vine_burst_new",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abomvine_burst_f_new"
-    ]
-  },
-  "lucifer_p2.vine_burst_old": {
-    "subtitle": "subtitles.rpg.lucifer_p2.vine_burst_old",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abomvine_burst_f"
-    ]
-  },
-  "lucifer_p2.vine_fail_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.vine_fail_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_vineattackfail_foley"
-    ]
-  },
-  "lucifer_p2.vine_fail_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.vine_fail_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_vineattackfail_vocal"
-    ]
-  },
-  "lucifer_p2.vine_success_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.vine_success_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_vineattacksuccess_foley"
-    ]
-  },
-  "lucifer_p2.vine_success_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.vine_success_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_vineattacksuccess_vocal"
-    ]
-  },
-  "lucifer_p2.walk_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.walk_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_walk1_foley",
-      "rpg:lucifer_p2/dlc_mob_abom_walk2_foley"
-    ]
-  },
-  "lucifer_p2.walk_legacy_foley": {
-    "subtitle": "subtitles.rpg.lucifer_p2.walk_legacy_foley",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_walk_foley"
-    ]
-  },
-  "lucifer_p2.walk_legacy_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.walk_legacy_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_walk_vocal"
-    ]
-  },
-  "lucifer_p2.walk_voice": {
-    "subtitle": "subtitles.rpg.lucifer_p2.walk_voice",
-    "sounds": [
-      "rpg:lucifer_p2/dlc_mob_abom_walk1_vocal",
-      "rpg:lucifer_p2/dlc_mob_abom_walk2_vocal"
-    ]
-  },
-  "lucifer_servant.death": {
-    "subtitle": "subtitles.rpg.lucifer_servant.death",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.skeleton.death"
-      }
-    ]
-  },
-  "lucifer_servant.hurt": {
-    "subtitle": "subtitles.rpg.lucifer_servant.hurt",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.skeleton.hurt"
-      }
-    ]
-  },
-  "lucifer_servant.idle": {
-    "subtitle": "subtitles.rpg.lucifer_servant.idle",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.skeleton.ambient"
-      }
-    ]
-  },
-  "lucifer_servant.shoot": {
-    "subtitle": "subtitles.rpg.lucifer_servant.shoot",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.skeleton.shoot"
-      }
-    ]
-  },
-  "lucifer_servant.step": {
-    "subtitle": "subtitles.rpg.lucifer_servant.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.skeleton.step"
-      }
-    ]
-  },
-  "lucifer_servant.swing": {
-    "subtitle": "subtitles.rpg.lucifer_servant.swing",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.attack.sweep"
-      }
-    ]
-  },
-  "mammon_lord.admire": {
-    "subtitle": "subtitles.rpg.mammon_lord.admire",
-    "sounds": [
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantbuy_001",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantbuy_002",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantbuy_003"
-    ]
-  },
-  "mammon_lord.angry": {
-    "subtitle": "subtitles.rpg.mammon_lord.angry",
-    "sounds": [
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_001",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_002",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_003",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_004",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_005",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_006",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_007",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_008",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_009",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_010"
-    ]
-  },
-  "mammon_lord.brute": {
-    "subtitle": "subtitles.rpg.mammon_lord.brute",
-    "sounds": [
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_001",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_002",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_003",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_004",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_005",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_006",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_007",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_008",
-      "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_009"
-    ]
-  },
-  "mammon_lord.celebrate": {
-    "subtitle": "subtitles.rpg.mammon_lord.celebrate",
-    "sounds": [
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantrestock_001",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantrestock_002",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantrestock_003"
-    ]
-  },
-  "mammon_lord.death": {
-    "subtitle": "subtitles.rpg.mammon_lord.death",
-    "sounds": [
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantdeath_001",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantdeath_002",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantdeath_003",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantdeath_004"
-    ]
-  },
-  "mammon_lord.hurt": {
-    "subtitle": "subtitles.rpg.mammon_lord.hurt",
-    "sounds": [
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchanthurt_001",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchanthurt_002",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchanthurt_003"
-    ]
-  },
-  "mammon_lord.idle": {
-    "subtitle": "subtitles.rpg.mammon_lord.idle",
-    "sounds": [
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_001",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_002",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_003",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_004",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_005"
-    ]
-  },
-  "mammon_lord.jealous": {
-    "subtitle": "subtitles.rpg.mammon_lord.jealous",
-    "sounds": [
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantfree_001",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantfree_002",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantfree_003",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantfree_004"
-    ]
-  },
-  "mammon_lord.open": {
-    "subtitle": "subtitles.rpg.mammon_lord.open",
-    "sounds": [
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantopen_001",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantopen_002",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantopen_003"
-    ]
-  },
-  "mammon_lord.retreat": {
-    "subtitle": "subtitles.rpg.mammon_lord.retreat",
-    "sounds": [
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantclose_001",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantclose_002",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantclose_003",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantclose_004"
-    ]
-  },
-  "mammon_lord.step": {
-    "subtitle": "subtitles.rpg.mammon_lord.step",
-    "sounds": [
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_001",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_002",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_003",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_004",
-      "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_005"
-    ]
-  },
-  "mammon_servant.angry": {
-    "subtitle": "subtitles.rpg.mammon_servant.angry",
-    "sounds": [
-      "rpg:mammon_servant/d4_sfx_mob_piglinattack_001",
-      "rpg:mammon_servant/d4_sfx_mob_piglinattack_002",
-      "rpg:mammon_servant/d4_sfx_mob_piglinattack_003"
-    ]
-  },
-  "mammon_servant.death": {
-    "subtitle": "subtitles.rpg.mammon_servant.death",
-    "sounds": [
-      "rpg:mammon_servant/d4_sfx_mob_piglindeath_001",
-      "rpg:mammon_servant/d4_sfx_mob_piglindeath_002",
-      "rpg:mammon_servant/d4_sfx_mob_piglindeath_003"
-    ]
-  },
-  "mammon_servant.hurt": {
-    "subtitle": "subtitles.rpg.mammon_servant.hurt",
-    "sounds": [
-      "rpg:mammon_servant/d4_sfx_mob_piglinhurt_001",
-      "rpg:mammon_servant/d4_sfx_mob_piglinhurt_002",
-      "rpg:mammon_servant/d4_sfx_mob_piglinhurt_003"
-    ]
-  },
-  "mammon_servant.idle": {
-    "subtitle": "subtitles.rpg.mammon_servant.idle",
-    "sounds": [
-      "rpg:mammon_servant/d4_sfx_mob_piglinidle_001",
-      "rpg:mammon_servant/d4_sfx_mob_piglinidle_002",
-      "rpg:mammon_servant/d4_sfx_mob_piglinidle_003",
-      "rpg:mammon_servant/d4_sfx_mob_piglinidle_004"
-    ]
-  },
-  "mammon_servant.step": {
-    "subtitle": "subtitles.rpg.mammon_servant.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.piglin.step"
-      }
-    ]
-  },
-  "michael.chime": {
-    "subtitle": "subtitles.rpg.michael.chime",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.amethyst_block.resonate"
-      }
-    ]
-  },
-  "michael.death": {
-    "subtitle": "subtitles.rpg.michael.death",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.beacon.deactivate"
-      }
-    ]
-  },
-  "michael.flap": {
-    "subtitle": "subtitles.rpg.michael.flap",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.phantom.flap"
-      }
-    ]
-  },
-  "michael.gong": {
-    "subtitle": "subtitles.rpg.michael.gong",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.bell.use"
-      }
-    ]
-  },
-  "michael.horn": {
-    "subtitle": "subtitles.rpg.michael.horn",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:item.goat_horn.sound.0"
-      }
-    ]
-  },
-  "michael.hurt": {
-    "subtitle": "subtitles.rpg.michael.hurt",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.amethyst_block.hit"
-      }
-    ]
-  },
-  "michael.slash": {
-    "subtitle": "subtitles.rpg.michael.slash",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.attack.sweep"
-      }
-    ]
-  },
-  "michael.swing": {
-    "subtitle": "subtitles.rpg.michael.swing",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:item.trident.throw"
-      }
-    ]
-  },
-  "pope.appear": {
-    "subtitle": "subtitles.rpg.pope.appear",
-    "sounds": [
-      "rpg:pope/sfx_mob_archillagerappear_001_soundwave"
-    ]
-  },
-  "pope.haha": {
-    "subtitle": "subtitles.rpg.pope.haha",
-    "sounds": [
-      "rpg:pope/sfx_mob_archillagerhaha_001_soundwave",
-      "rpg:pope/sfx_mob_archillagerhaha_002_soundwave"
-    ]
-  },
-  "pope.hargh": {
-    "subtitle": "subtitles.rpg.pope.hargh",
-    "sounds": [
-      "rpg:pope/sfx_mob_archillagerhargh_001_soundwave",
-      "rpg:pope/sfx_mob_archillagerhargh_002_soundwave",
-      "rpg:pope/sfx_mob_archillagerhargh_003_soundwave",
-      "rpg:pope/sfx_mob_archillagerhargh_004_soundwave"
-    ]
-  },
-  "pope.hurt": {
-    "subtitle": "subtitles.rpg.pope.hurt",
-    "sounds": [
-      "rpg:pope/sfx_boss_archillagerhurt_001",
-      "rpg:pope/sfx_boss_archillagerhurt_002",
-      "rpg:pope/sfx_boss_archillagerhurt_003",
-      "rpg:pope/sfx_boss_archillagerhurt_004",
-      "rpg:pope/sfx_boss_archillagerhurt_005",
-      "rpg:pope/sfx_boss_archillagerhurt_006"
-    ]
-  },
-  "pope.idle": {
-    "subtitle": "subtitles.rpg.pope.idle",
-    "sounds": [
-      "rpg:pope/sfx_boss_archillageridle_001",
-      "rpg:pope/sfx_boss_archillageridle_002",
-      "rpg:pope/sfx_boss_archillageridle_003",
-      "rpg:pope/sfx_boss_archillageridle_004",
-      "rpg:pope/sfx_boss_archillageridle_005",
-      "rpg:pope/sfx_boss_archillageridle_006",
-      "rpg:pope/sfx_boss_archillageridle_007",
-      "rpg:pope/sfx_boss_archillageridle_008",
-      "rpg:pope/sfx_boss_archillageridle_009",
-      "rpg:pope/sfx_boss_archillageridle_010",
-      "rpg:pope/sfx_boss_archillageridle_011",
-      "rpg:pope/sfx_boss_archillageridle_012",
-      "rpg:pope/sfx_boss_archillageridle_013"
-    ]
-  },
-  "pope.intro_final_blow": {
-    "subtitle": "subtitles.rpg.pope.intro_final_blow",
-    "sounds": [
-      "rpg:pope/sfx_boss_archillagerintrofinalblow"
-    ]
-  },
-  "pope.intro_greetings": {
-    "subtitle": "subtitles.rpg.pope.intro_greetings",
-    "sounds": [
-      "rpg:pope/sfx_boss_archillagerintrogreetings_001"
-    ]
-  },
-  "pope.intro_laugh": {
-    "subtitle": "subtitles.rpg.pope.intro_laugh",
-    "sounds": [
-      "rpg:pope/sfx_boss_archillagerintrolaugh_002"
-    ]
-  },
-  "pope.laugh": {
-    "subtitle": "subtitles.rpg.pope.laugh",
-    "sounds": [
-      "rpg:pope/sfx_mob_archillagerlaugh_001_soundwave"
-    ]
-  },
-  "pope.load_spell": {
-    "subtitle": "subtitles.rpg.pope.load_spell",
-    "sounds": [
-      "rpg:pope/sfx_mob_archillager_loadspell_001_soundwave"
-    ]
-  },
-  "pope.magic_impact": {
-    "subtitle": "subtitles.rpg.pope.magic_impact",
-    "sounds": [
-      "rpg:pope/sfx_boss_archillagermagicimpact_001"
-    ]
-  },
-  "pope.mirror_in": {
-    "subtitle": "subtitles.rpg.pope.mirror_in",
-    "sounds": [
-      "rpg:pope/sfx_mob_archillager_mirrorin_001_soundwave"
-    ]
-  },
-  "pope.mirror_out": {
-    "subtitle": "subtitles.rpg.pope.mirror_out",
-    "sounds": [
-      "rpg:pope/sfx_mob_archillager_mirrorout_001_soundwave"
-    ]
-  },
-  "pope.spell": {
-    "subtitle": "subtitles.rpg.pope.spell",
-    "sounds": [
-      "rpg:pope/sfx_mob_archillager_spell_001_soundwave"
-    ]
-  },
-  "pope.spell_disappear": {
-    "subtitle": "subtitles.rpg.pope.spell_disappear",
-    "sounds": [
-      "rpg:pope/sfx_mob_archillager_spelldissapear_001_soundwave"
-    ]
-  },
-  "pope.summon_mobs": {
-    "subtitle": "subtitles.rpg.pope.summon_mobs",
-    "sounds": [
-      "rpg:pope/sfx_boss_archillagersummonmobs_001",
-      "rpg:pope/sfx_boss_archillagersummonmobs_002"
-    ]
-  },
-  "pope.whirlwind": {
-    "subtitle": "subtitles.rpg.pope.whirlwind",
-    "sounds": [
-      "rpg:pope/sfx_boss_archillagerwhirlwind"
-    ]
-  },
-  "prologue_angel.step": {
-    "subtitle": "subtitles.rpg.prologue_angel.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.step"
-      }
-    ]
-  },
-  "prologue_beelzebub.step": {
-    "subtitle": "subtitles.rpg.prologue_beelzebub.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.step"
-      }
-    ]
-  },
-  "prologue_belial.step": {
-    "subtitle": "subtitles.rpg.prologue_belial.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.step"
-      }
-    ]
-  },
-  "prologue_lucifer.step": {
-    "subtitle": "subtitles.rpg.prologue_lucifer.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.step"
-      }
-    ]
-  },
-  "prologue_mammon.step": {
-    "subtitle": "subtitles.rpg.prologue_mammon.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.step"
-      }
-    ]
-  },
-  "prologue_michael.step": {
-    "subtitle": "subtitles.rpg.prologue_michael.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.step"
-      }
-    ]
-  },
-  "prologue_throne.step": {
-    "subtitle": "subtitles.rpg.prologue_throne.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.step"
-      }
-    ]
-  },
-  "royal_guard.block": {
-    "subtitle": "subtitles.rpg.royal_guard.block",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:item.shield.block"
-      }
-    ]
-  },
-  "royal_guard.death": {
-    "subtitle": "subtitles.rpg.royal_guard.death",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.vindicator.death"
-      }
-    ]
-  },
-  "royal_guard.hurt": {
-    "subtitle": "subtitles.rpg.royal_guard.hurt",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.vindicator.hurt"
-      }
-    ]
-  },
-  "royal_guard.idle": {
-    "subtitle": "subtitles.rpg.royal_guard.idle",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.vindicator.ambient"
-      }
-    ]
-  },
-  "royal_guard.slam": {
-    "subtitle": "subtitles.rpg.royal_guard.slam",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:item.mace.smash_ground"
-      }
-    ]
-  },
-  "royal_guard.step": {
-    "subtitle": "subtitles.rpg.royal_guard.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.iron_golem.step"
-      }
-    ]
-  },
-  "samael_lord.arm": {
-    "subtitle": "subtitles.rpg.samael_lord.arm",
-    "sounds": [
-      "rpg:samael_lord/sfx_mob_rsmonstrosityarm_001_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityarm_002_soundwave"
-    ]
-  },
-  "samael_lord.attack": {
-    "subtitle": "subtitles.rpg.samael_lord.attack",
-    "sounds": [
-      "rpg:samael_lord/sfx_mob_rsmonstrosityshoot_001_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityshoot_002_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityshoot_003_soundwave"
-    ]
-  },
-  "samael_lord.awaken": {
-    "subtitle": "subtitles.rpg.samael_lord.awaken",
-    "sounds": [
-      "rpg:samael_lord/sfx_mob_rsmonstrosityawaken_001_soundwave"
-    ]
-  },
-  "samael_lord.charge": {
-    "subtitle": "subtitles.rpg.samael_lord.charge",
-    "sounds": [
-      "rpg:samael_lord/sfx_mob_rsmonstrosityvoicecharge_001_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityvoicecharge_002_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityvoicecharge_003_soundwave"
-    ]
-  },
-  "samael_lord.death": {
-    "subtitle": "subtitles.rpg.samael_lord.death",
-    "sounds": [
-      "rpg:samael_lord/sfx_mob_rsmonstrositydeath_001_soundwave"
-    ]
-  },
-  "samael_lord.hurt": {
-    "subtitle": "subtitles.rpg.samael_lord.hurt",
-    "sounds": [
-      "rpg:samael_lord/sfx_mob_rsmonstrosityhurt_001_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityhurt_002_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityhurt_003_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityhurt_004_soundwave"
-    ]
-  },
-  "samael_lord.idle": {
-    "subtitle": "subtitles.rpg.samael_lord.idle",
-    "sounds": [
-      "rpg:samael_lord/sfx_mob_rsmonstrosityidle_001_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityidle_002_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityidle_003_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityidle_004_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityidle_005_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityidle_006_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityidle_007_soundwave"
-    ]
-  },
-  "samael_lord.roar": {
-    "subtitle": "subtitles.rpg.samael_lord.roar",
-    "sounds": [
-      "rpg:samael_lord/sfx_mob_rsmonstrositygrowl_001_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrosityshortgrowl_001_soundwave"
-    ]
-  },
-  "samael_lord.slam": {
-    "subtitle": "subtitles.rpg.samael_lord.slam",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:item.mace.smash_ground_heavy"
-      }
-    ]
-  },
-  "samael_lord.step": {
-    "subtitle": "subtitles.rpg.samael_lord.step",
-    "sounds": [
-      "rpg:samael_lord/sfx_mob_rsmonstrositystep_001_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrositystep_002_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrositystep_003_soundwave",
-      "rpg:samael_lord/sfx_mob_rsmonstrositystep_004_soundwave"
-    ]
-  },
-  "samael_servant.brace": {
-    "subtitle": "subtitles.rpg.samael_servant.brace",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.vindicator.celebrate"
-      }
-    ]
-  },
-  "samael_servant.death": {
-    "subtitle": "subtitles.rpg.samael_servant.death",
-    "sounds": [
-      "rpg:samael_servant/d3_sfx_mob_mountaineerdeath_new_001",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerdeath_new_002",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerdeath_new_003",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerdeath_new_004"
-    ]
-  },
-  "samael_servant.hurt": {
-    "subtitle": "subtitles.rpg.samael_servant.hurt",
-    "sounds": [
-      "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_001",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_002",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_003",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_004",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_005"
-    ]
-  },
-  "samael_servant.idle": {
-    "subtitle": "subtitles.rpg.samael_servant.idle",
-    "sounds": [
-      "rpg:samael_servant/d3_sfx_mob_mountaineeridle_new_001",
-      "rpg:samael_servant/d3_sfx_mob_mountaineeridle_new_002",
-      "rpg:samael_servant/d3_sfx_mob_mountaineeridle_new_003",
-      "rpg:samael_servant/d3_sfx_mob_mountaineeridle_new_004"
-    ]
-  },
-  "samael_servant.swing": {
-    "subtitle": "subtitles.rpg.samael_servant.swing",
-    "sounds": [
-      "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_001",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_002",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_003",
-      "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_004"
-    ]
-  },
-  "saul.death": {
-    "subtitle": "subtitles.rpg.saul.death",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.death"
-      }
-    ]
-  },
-  "saul.final": {
-    "subtitle": "subtitles.rpg.saul.final",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.attack.knockback"
-      }
-    ]
-  },
-  "saul.hurt": {
-    "subtitle": "subtitles.rpg.saul.hurt",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.hurt"
-      }
-    ]
-  },
-  "saul.laugh": {
-    "subtitle": "subtitles.rpg.saul.laugh",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.witch.celebrate"
-      }
-    ]
-  },
-  "saul.roll": {
-    "subtitle": "subtitles.rpg.saul.roll",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.attack.nodamage"
-      }
-    ]
-  },
-  "saul.stab": {
-    "subtitle": "subtitles.rpg.saul.stab",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.attack.sweep"
-      }
-    ]
-  },
-  "saul.stab2": {
-    "subtitle": "subtitles.rpg.saul.stab2",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.attack.strong"
-      }
-    ]
-  },
-  "saul.step": {
-    "subtitle": "subtitles.rpg.saul.step",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:block.chain.step"
-      }
-    ]
-  },
-  "saul_ghost.swish": {
-    "subtitle": "subtitles.rpg.saul_ghost.swish",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.player.attack.sweep"
-      }
-    ]
-  },
-  "sunken_skeleton.death": {
-    "subtitle": "subtitles.rpg.sunken_skeleton.death",
-    "sounds": [
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletondeath_001",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletondeath_002",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletondeath_003"
-    ]
-  },
-  "sunken_skeleton.hurt": {
-    "subtitle": "subtitles.rpg.sunken_skeleton.hurt",
-    "sounds": [
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_001",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_002",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_003",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_004"
-    ]
-  },
-  "sunken_skeleton.idle": {
-    "subtitle": "subtitles.rpg.sunken_skeleton.idle",
-    "sounds": [
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonidle_001",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonidle_002",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonidle_003"
-    ]
-  },
-  "sunken_skeleton.impact": {
-    "subtitle": "subtitles.rpg.sunken_skeleton.impact",
-    "sounds": [
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_001",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_002",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_003",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_004"
-    ]
-  },
-  "sunken_skeleton.load": {
-    "subtitle": "subtitles.rpg.sunken_skeleton.load",
-    "sounds": [
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_001",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_002",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_003",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_004"
-    ]
-  },
-  "sunken_skeleton.novelty": {
-    "subtitle": "subtitles.rpg.sunken_skeleton.novelty",
-    "sounds": [
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonnovelty_001",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonnovelty_002"
-    ]
-  },
-  "sunken_skeleton.shoot": {
-    "subtitle": "subtitles.rpg.sunken_skeleton.shoot",
-    "sounds": [
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowshoot_001",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowshoot_002",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowshoot_003"
-    ]
-  },
-  "sunken_skeleton.step": {
-    "subtitle": "subtitles.rpg.sunken_skeleton.step",
-    "sounds": [
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_001",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_002",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_003",
-      "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_004"
-    ]
-  },
-  "tower_guard.armour": {
-    "subtitle": "subtitles.rpg.tower_guard.armour",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_basicattack_armour_01",
-      "rpg:tower_guard/s1_sfx_towerguard_basicattack_armour_02",
-      "rpg:tower_guard/s1_sfx_towerguard_basicattack_armour_03"
-    ]
-  },
-  "tower_guard.block": {
-    "subtitle": "subtitles.rpg.tower_guard.block",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_block_01",
-      "rpg:tower_guard/s1_sfx_towerguard_block_02",
-      "rpg:tower_guard/s1_sfx_towerguard_block_03",
-      "rpg:tower_guard/s1_sfx_towerguard_block_04",
-      "rpg:tower_guard/s1_sfx_towerguard_block_05"
-    ]
-  },
-  "tower_guard.charge": {
-    "subtitle": "subtitles.rpg.tower_guard.charge",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_start_01",
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_start_02",
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_start_03",
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_start_04"
-    ]
-  },
-  "tower_guard.collide": {
-    "subtitle": "subtitles.rpg.tower_guard.collide",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_collide_01",
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_collide_02",
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_collide_03",
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_collide_04"
-    ]
-  },
-  "tower_guard.death": {
-    "subtitle": "subtitles.rpg.tower_guard.death",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_death_01",
-      "rpg:tower_guard/s1_sfx_towerguard_death_02",
-      "rpg:tower_guard/s1_sfx_towerguard_death_03",
-      "rpg:tower_guard/s1_sfx_towerguard_death_04"
-    ]
-  },
-  "tower_guard.hurt": {
-    "subtitle": "subtitles.rpg.tower_guard.hurt",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_hurt_01",
-      "rpg:tower_guard/s1_sfx_towerguard_hurt_02",
-      "rpg:tower_guard/s1_sfx_towerguard_hurt_03",
-      "rpg:tower_guard/s1_sfx_towerguard_hurt_04"
-    ]
-  },
-  "tower_guard.idle": {
-    "subtitle": "subtitles.rpg.tower_guard.idle",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_idle_01",
-      "rpg:tower_guard/s1_sfx_towerguard_idle_02",
-      "rpg:tower_guard/s1_sfx_towerguard_idle_03",
-      "rpg:tower_guard/s1_sfx_towerguard_idle_04",
-      "rpg:tower_guard/s1_sfx_towerguard_idle_05",
-      "rpg:tower_guard/s1_sfx_towerguard_idle_06",
-      "rpg:tower_guard/s1_sfx_towerguard_idle_07"
-    ]
-  },
-  "tower_guard.shield_break": {
-    "subtitle": "subtitles.rpg.tower_guard.shield_break",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_001",
-      "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_002",
-      "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_003"
-    ]
-  },
-  "tower_guard.shield_break_vocal": {
-    "subtitle": "subtitles.rpg.tower_guard.shield_break_vocal",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_01",
-      "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_02",
-      "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_03",
-      "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_04",
-      "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_05"
-    ]
-  },
-  "tower_guard.step": {
-    "subtitle": "subtitles.rpg.tower_guard.step",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_step_01",
-      "rpg:tower_guard/s1_sfx_towerguard_step_02",
-      "rpg:tower_guard/s1_sfx_towerguard_step_03",
-      "rpg:tower_guard/s1_sfx_towerguard_step_04",
-      "rpg:tower_guard/s1_sfx_towerguard_step_05",
-      "rpg:tower_guard/s1_sfx_towerguard_step_06",
-      "rpg:tower_guard/s1_sfx_towerguard_step_07",
-      "rpg:tower_guard/s1_sfx_towerguard_step_08"
-    ]
-  },
-  "tower_guard.stop": {
-    "subtitle": "subtitles.rpg.tower_guard.stop",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_normal_01",
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_normal_02",
-      "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_normal_03"
-    ]
-  },
-  "tower_guard.stun": {
-    "subtitle": "subtitles.rpg.tower_guard.stun",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_stun_01",
-      "rpg:tower_guard/s1_sfx_towerguard_stun_02",
-      "rpg:tower_guard/s1_sfx_towerguard_stun_03"
-    ]
-  },
-  "tower_guard.swing": {
-    "subtitle": "subtitles.rpg.tower_guard.swing",
-    "sounds": [
-      "rpg:tower_guard/s1_sfx_towerguard_basicattack_swing_01",
-      "rpg:tower_guard/s1_sfx_towerguard_basicattack_swing_02",
-      "rpg:tower_guard/s1_sfx_towerguard_basicattack_swing_03"
-    ]
-  },
-  "tower_wraith.appear": {
-    "subtitle": "subtitles.rpg.tower_wraith.appear",
-    "sounds": [
-      "rpg:tower_wraith/sfx_mob_towerwraithteleportin_001_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithteleportin_002_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithteleportin_003_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithteleportin_004_soundwave"
-    ]
-  },
-  "tower_wraith.attack": {
-    "subtitle": "subtitles.rpg.tower_wraith.attack",
-    "sounds": [
-      "rpg:tower_wraith/sfx_mob_towerwraithattack_001_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithattack_002_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithattack_003_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithattack_004_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithattack_005_soundwave"
-    ]
-  },
-  "tower_wraith.attack_vocal": {
-    "subtitle": "subtitles.rpg.tower_wraith.attack_vocal",
-    "sounds": [
-      "rpg:tower_wraith/sfx_mob_towerwraithattackvocal_001_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithattackvocal_002_soundwave"
-    ]
-  },
-  "tower_wraith.death": {
-    "subtitle": "subtitles.rpg.tower_wraith.death",
-    "sounds": [
-      "rpg:tower_wraith/sfx_mob_towerwraithdeathvocal_001_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithdeathvocal_002_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithdeath_001_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithdeath_002_soundwave"
-    ]
-  },
-  "tower_wraith.ember": {
-    "subtitle": "subtitles.rpg.tower_wraith.ember",
-    "sounds": [
-      "rpg:tower_wraith/sfx_mob_towerwraithember_001_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithember_002_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithember_003_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithember_004_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithember_005_soundwave"
-    ]
-  },
-  "tower_wraith.fly": {
-    "subtitle": "subtitles.rpg.tower_wraith.fly",
-    "sounds": [
-      "rpg:tower_wraith/sfx_mob_towerwraithfly_001_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithfly_002_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithfly_003_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithfly_004_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithfly_005_soundwave"
-    ]
-  },
-  "tower_wraith.hurt": {
-    "subtitle": "subtitles.rpg.tower_wraith.hurt",
-    "sounds": [
-      "rpg:tower_wraith/sfx_mob_towerwraithhurtvocal_001_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithhurtvocal_002_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithhurtvocal_003_soundwave"
-    ]
-  },
-  "tower_wraith.idle": {
-    "subtitle": "subtitles.rpg.tower_wraith.idle",
-    "sounds": [
-      "rpg:tower_wraith/sfx_mob_towerwraithidle_001_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithidle_002_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithidle_003_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithidle_004_soundwave",
-      "rpg:tower_wraith/sfx_mob_towerwraithidle_005_soundwave"
-    ]
-  },
-  "usurper.attack": {
-    "subtitle": "subtitles.rpg.usurper.attack",
-    "sounds": [
-      "rpg:usurper/sfx_mob_enchanterattack_001_soundwave",
-      "rpg:usurper/sfx_mob_enchanterattack_002_soundwave",
-      "rpg:usurper/sfx_mob_enchanterattack_003_soundwave"
-    ]
-  },
-  "usurper.beam": {
-    "subtitle": "subtitles.rpg.usurper.beam",
-    "sounds": [
-      "rpg:usurper/sfx_mob_enchanterbeam_001_soundwave"
-    ]
-  },
-  "usurper.beam_loop": {
-    "subtitle": "subtitles.rpg.usurper.beam_loop",
-    "sounds": [
-      "rpg:usurper/sfx_mob_enchanterbeamloop_001_soundwave"
-    ]
-  },
-  "usurper.bladder": {
-    "subtitle": "subtitles.rpg.usurper.bladder",
-    "sounds": [
-      "rpg:usurper/sfx_ui_enchantbookbladder_001_soundwave",
-      "rpg:usurper/sfx_ui_enchantbookbladder_002_soundwave",
-      "rpg:usurper/sfx_ui_enchantbookbladder_003_soundwave",
-      "rpg:usurper/sfx_ui_enchantbookbladder_004_soundwave"
-    ]
-  },
-  "usurper.book": {
-    "subtitle": "subtitles.rpg.usurper.book",
-    "sounds": [
-      "rpg:usurper/sfx_ui_enchantbook_001_soundwave",
-      "rpg:usurper/sfx_ui_enchantbook_002_soundwave",
-      "rpg:usurper/sfx_ui_enchantbook_003_soundwave"
-    ]
-  },
-  "usurper.chime": {
-    "subtitle": "subtitles.rpg.usurper.chime",
-    "sounds": [
-      "rpg:usurper/sfx_ui_enchantchime_001_soundwave",
-      "rpg:usurper/sfx_ui_enchantchime_002_soundwave",
-      "rpg:usurper/sfx_ui_enchantchime_003_soundwave"
-    ]
-  },
-  "usurper.close": {
-    "subtitle": "subtitles.rpg.usurper.close",
-    "sounds": [
-      "rpg:usurper/sfx_ui_enchantbookclose_001_soundwave"
-    ]
-  },
-  "usurper.death": {
-    "subtitle": "subtitles.rpg.usurper.death",
-    "sounds": [
-      "rpg:usurper/sfx_mob_enchanterdeath_001_soundwave",
-      "rpg:usurper/sfx_mob_enchanterdeath_002_soundwave",
-      "rpg:usurper/sfx_mob_enchanterdeath_003_soundwave"
-    ]
-  },
-  "usurper.hurt": {
-    "subtitle": "subtitles.rpg.usurper.hurt",
-    "sounds": [
-      "rpg:usurper/sfx_mob_enchanterhurt_001_soundwave",
-      "rpg:usurper/sfx_mob_enchanterhurt_002_soundwave",
-      "rpg:usurper/sfx_mob_enchanterhurt_003_soundwave"
-    ]
-  },
-  "usurper.idle": {
-    "subtitle": "subtitles.rpg.usurper.idle",
-    "sounds": [
-      "rpg:usurper/sfx_mob_enchanteridle_001_soundwave",
-      "rpg:usurper/sfx_mob_enchanteridle_002_soundwave",
-      "rpg:usurper/sfx_mob_enchanteridle_003_soundwave"
-    ]
-  },
-  "usurper.prepare": {
-    "subtitle": "subtitles.rpg.usurper.prepare",
-    "sounds": [
-      "rpg:usurper/sfx_mob_enchanterpreattack_001_soundwave",
-      "rpg:usurper/sfx_mob_enchanterpreattack_002_soundwave",
-      "rpg:usurper/sfx_mob_enchanterpreattack_003_soundwave"
-    ]
-  },
-  "usurper.spell": {
-    "subtitle": "subtitles.rpg.usurper.spell",
-    "sounds": [
-      "rpg:usurper/sfx_mob_enchanterspell_001_soundwave",
-      "rpg:usurper/sfx_mob_enchanterspell_002_soundwave"
-    ]
-  },
-  "usurper.step": {
-    "subtitle": "subtitles.rpg.usurper.step",
-    "sounds": [
-      "rpg:usurper/sfx_player_stepgravel_001_soundwave",
-      "rpg:usurper/sfx_player_stepgravel_002_soundwave",
-      "rpg:usurper/sfx_player_stepgravel_003_soundwave",
-      "rpg:usurper/sfx_player_stepgravel_004_soundwave"
-    ]
-  },
-  "vanguard.death": {
-    "subtitle": "subtitles.rpg.vanguard.death",
-    "sounds": [
-      "rpg:vanguard/sfx_mob_vanguarddeath_001_soundwave",
-      "rpg:vanguard/sfx_mob_vanguarddeath_002_soundwave",
-      "rpg:vanguard/sfx_mob_vanguarddeath_003_soundwave"
-    ]
-  },
-  "vanguard.hurt": {
-    "subtitle": "subtitles.rpg.vanguard.hurt",
-    "sounds": [
-      "rpg:vanguard/sfx_mob_vanguardhurt_001_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardhurt_002_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardhurt_003_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardhurt_004_soundwave"
-    ]
-  },
-  "vanguard.idle": {
-    "subtitle": "subtitles.rpg.vanguard.idle",
-    "sounds": [
-      "rpg:vanguard/sfx_mob_vanguardidle_001_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardidle_002_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardidle_003_soundwave"
-    ]
-  },
-  "vanguard.shield_break": {
-    "subtitle": "subtitles.rpg.vanguard.shield_break",
-    "sounds": [
-      "rpg:vanguard/sfx_mob_vanguardshieldbreak_001_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardshieldbreak_002_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardshieldbreak_003_soundwave"
-    ]
-  },
-  "vanguard.spear": {
-    "subtitle": "subtitles.rpg.vanguard.spear",
-    "sounds": [
-      "rpg:vanguard/sfx_mob_vanguardspear_001_soundwave"
-    ]
-  },
-  "vanguard.step": {
-    "subtitle": "subtitles.rpg.vanguard.step",
-    "sounds": [
-      "rpg:vanguard/sfx_mob_vanguardstep_001_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardstep_002_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardstep_003_soundwave",
-      "rpg:vanguard/sfx_mob_vanguardstep_004_soundwave"
-    ]
-  },
-  "vo.daath.s01": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s01",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s02": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s02",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s03": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s03",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s04": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s04",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s05": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s05",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s06": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s06",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s07": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s07",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s08": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s08",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s09": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s09",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s10": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s10",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s11": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s11",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s12": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s12",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s13": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s13",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s14": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s14",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s15": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s15",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s16": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s16",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s17": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s17",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s18": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s18",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s19": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s19",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s20": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s20",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s21": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s21",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s22": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s22",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.daath.s23": {
-    "sounds": [
-      {
-        "name": "rpg:vo/daath/s23",
-        "attenuation_distance": 1024
-      }
-    ]
-  },
-  "vo.onboard.w01": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w01",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w01.en_full"
-  },
-  "vo.onboard.w02": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w02",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w02.en_full"
-  },
-  "vo.onboard.w03": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w03",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w03.en_full"
-  },
-  "vo.onboard.w04": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w04",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w04.en_full"
-  },
-  "vo.onboard.w05": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w05",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w05.en_full"
-  },
-  "vo.onboard.w06": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w06",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w06.en_full"
-  },
-  "vo.onboard.w07": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w07",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w07.en_full"
-  },
-  "vo.onboard.w08": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w08",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w08.en_full"
-  },
-  "vo.onboard.w09": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w09",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w09.en_full"
-  },
-  "vo.onboard.w10": {
-    "sounds": [
-      {
-        "name": "rpg:vo/onboard/w10",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.onboard.w10.en_full"
-  },
-  "vo.prologue.d01": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/d01",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.D01.en_full"
-  },
-  "vo.prologue.d02": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/d02",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.D02.en_full"
-  },
-  "vo.prologue.d03": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/d03",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.D03.en_full"
-  },
-  "vo.prologue.d04": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/d04",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.D04.en_full"
-  },
-  "vo.prologue.d05": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/d05",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.D05.en_full"
-  },
-  "vo.prologue.d06": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/d06",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.D06.en_full"
-  },
-  "vo.prologue.e01": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/e01",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.E01.en_full"
-  },
-  "vo.prologue.e02": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/e02",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.E02.en_full"
-  },
-  "vo.prologue.e03": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/e03",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.E03.en_full"
-  },
-  "vo.prologue.l01": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/l01",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.L01.en_full"
-  },
-  "vo.prologue.m01": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/m01",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.M01.en_full"
-  },
-  "vo.prologue.m02": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/m02",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.M02.en_full"
-  },
-  "vo.prologue.m03": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/m03",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.M03.en_full"
-  },
-  "vo.prologue.m04": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/m04",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.M04.en_full"
-  },
-  "vo.prologue.n01": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/n01",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.N01.en_full"
-  },
-  "vo.prologue.n02": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/n02",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.N02.en_full"
-  },
-  "vo.prologue.n03": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/n03",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.N03.en_full"
-  },
-  "vo.prologue.n04": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/n04",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.N04.en_full"
-  },
-  "vo.prologue.n05": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/n05",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.N05.en_full"
-  },
-  "vo.prologue.x01": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/x01",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.X01.en_full"
-  },
-  "vo.prologue.x02": {
-    "sounds": [
-      {
-        "name": "rpg:vo/prologue/x02",
-        "attenuation_distance": 1024
-      }
-    ],
-    "subtitle": "rpg.prologue.X02.en_full"
-  },
-  "watchling.death": {
-    "subtitle": "subtitles.rpg.watchling.death",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.enderman.death"
-      }
-    ]
-  },
-  "watchling.hurt": {
-    "subtitle": "subtitles.rpg.watchling.hurt",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.enderman.hurt"
-      }
-    ]
-  },
-  "watchling.swing": {
-    "subtitle": "subtitles.rpg.watchling.swing",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.enderman.scream"
-      }
-    ]
-  },
-  "watchling.tp": {
-    "subtitle": "subtitles.rpg.watchling.tp",
-    "sounds": [
-      {
-        "type": "event",
-        "name": "minecraft:entity.enderman.teleport"
-      }
-    ]
-  }
+ "abaddon.bolt": {
+  "subtitle": "subtitles.rpg.abaddon.bolt",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithprojectileattackfoley_001_soundwave",
+   "rpg:abaddon/wretchedwraithprojectileattackfoley_002_soundwave",
+   "rpg:abaddon/wretchedwraithprojectileattackfoley_003_soundwave"
+  ]
+ },
+ "abaddon.bolt_vocal": {
+  "subtitle": "subtitles.rpg.abaddon.bolt_vocal",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithprojectileattackvocal_001_soundwave",
+   "rpg:abaddon/wretchedwraithprojectileattackvocal_002_soundwave",
+   "rpg:abaddon/wretchedwraithprojectileattackvocal_003_soundwave"
+  ]
+ },
+ "abaddon.circle": {
+  "subtitle": "subtitles.rpg.abaddon.circle",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithprojectilecirclefoley_001_soundwave",
+   "rpg:abaddon/wretchedwraithprojectilecirclefoley_002_soundwave",
+   "rpg:abaddon/wretchedwraithprojectilecirclefoley_003_soundwave"
+  ]
+ },
+ "abaddon.circle_vocal": {
+  "subtitle": "subtitles.rpg.abaddon.circle_vocal",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithprojectilecirclevocal_001_soundwave",
+   "rpg:abaddon/wretchedwraithprojectilecirclevocal_002_soundwave",
+   "rpg:abaddon/wretchedwraithprojectilecirclevocal_003_soundwave"
+  ]
+ },
+ "abaddon.crown": {
+  "subtitle": "subtitles.rpg.abaddon.crown",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithstuncrown_001_soundwave",
+   "rpg:abaddon/wretchedwraithstuncrown_002_soundwave"
+  ]
+ },
+ "abaddon.death": {
+  "subtitle": "subtitles.rpg.abaddon.death",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithdeath_001_soundwave",
+   "rpg:abaddon/wretchedwraithdeath_002_soundwave"
+  ]
+ },
+ "abaddon.hurt": {
+  "subtitle": "subtitles.rpg.abaddon.hurt",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithhurt_001_soundwave",
+   "rpg:abaddon/wretchedwraithhurt_002_soundwave",
+   "rpg:abaddon/wretchedwraithhurt_003_soundwave"
+  ]
+ },
+ "abaddon.idle": {
+  "subtitle": "subtitles.rpg.abaddon.idle",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithidle_001_soundwave",
+   "rpg:abaddon/wretchedwraithidle_002_soundwave",
+   "rpg:abaddon/wretchedwraithidle_003_soundwave",
+   "rpg:abaddon/wretchedwraithidle_004_soundwave",
+   "rpg:abaddon/wretchedwraithidle_005_soundwave",
+   "rpg:abaddon/wretchedwraithidle_006_soundwave"
+  ]
+ },
+ "abaddon.intro": {
+  "subtitle": "subtitles.rpg.abaddon.intro",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithintrovocal_soundwave"
+  ]
+ },
+ "abaddon.intro_foley": {
+  "subtitle": "subtitles.rpg.abaddon.intro_foley",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithintrofoley_soundwave"
+  ]
+ },
+ "abaddon.step": {
+  "subtitle": "subtitles.rpg.abaddon.step",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithwalkice_001_soundwave",
+   "rpg:abaddon/wretchedwraithwalkice_002_soundwave",
+   "rpg:abaddon/wretchedwraithwalkice_003_soundwave"
+  ]
+ },
+ "abaddon.strike": {
+  "subtitle": "subtitles.rpg.abaddon.strike",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithbasicattackfoley_001_soundwave",
+   "rpg:abaddon/wretchedwraithbasicattackfoley_002_soundwave",
+   "rpg:abaddon/wretchedwraithbasicattackfoley_003_soundwave"
+  ]
+ },
+ "abaddon.strike_vocal": {
+  "subtitle": "subtitles.rpg.abaddon.strike_vocal",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithbasicattackvocal_001_soundwave",
+   "rpg:abaddon/wretchedwraithbasicattackvocal_002_soundwave",
+   "rpg:abaddon/wretchedwraithbasicattackvocal_003_soundwave"
+  ]
+ },
+ "abaddon.summon": {
+  "subtitle": "subtitles.rpg.abaddon.summon",
+  "sounds": [
+   "rpg:abaddon/wretchedwraithsummon_001_soundwave"
+  ]
+ },
+ "arch_visage.beam_attack": {
+  "subtitle": "subtitles.rpg.arch_visage.beam_attack",
+  "sounds": [
+   "rpg:arch_visage/sfx_boss_archvisagebeamattack_001",
+   "rpg:arch_visage/sfx_boss_archvisagebeamattack_002",
+   "rpg:arch_visage/sfx_boss_archvisagebeamattack_003"
+  ]
+ },
+ "arch_visage.beam_loop": {
+  "subtitle": "subtitles.rpg.arch_visage.beam_loop",
+  "sounds": [
+   "rpg:arch_visage/sfx_boss_archvisagebeamloop_001"
+  ]
+ },
+ "arch_visage.mortar": {
+  "subtitle": "subtitles.rpg.arch_visage.mortar",
+  "sounds": [
+   "rpg:arch_visage/sfx_boss_archvisagemortarshoot_001",
+   "rpg:arch_visage/sfx_boss_archvisagemortarshoot_002",
+   "rpg:arch_visage/sfx_boss_archvisagemortarshoot_003"
+  ]
+ },
+ "arch_visage.tele_in": {
+  "subtitle": "subtitles.rpg.arch_visage.tele_in",
+  "sounds": [
+   "rpg:arch_visage/sfx_boss_archvisagetelein"
+  ]
+ },
+ "arch_visage.tele_out": {
+  "subtitle": "subtitles.rpg.arch_visage.tele_out",
+  "sounds": [
+   "rpg:arch_visage/sfx_boss_archvisageteleout"
+  ]
+ },
+ "beelzebub.approach": {
+  "subtitle": "subtitles.rpg.beelzebub.approach",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelessapproach_001_soundwave"
+  ]
+ },
+ "beelzebub.cast": {
+  "subtitle": "subtitles.rpg.beelzebub.cast",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelesscast_001_soundwave",
+   "rpg:beelzebub/sfx_mob_namelesscast_002_soundwave",
+   "rpg:beelzebub/sfx_mob_namelesscast_003_soundwave"
+  ]
+ },
+ "beelzebub.death": {
+  "subtitle": "subtitles.rpg.beelzebub.death",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelessdeath_001_soundwave"
+  ]
+ },
+ "beelzebub.distant": {
+  "subtitle": "subtitles.rpg.beelzebub.distant",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelessdistant_001_soundwave",
+   "rpg:beelzebub/sfx_mob_namelessdistant_002_soundwave",
+   "rpg:beelzebub/sfx_mob_namelessdistant_003_soundwave",
+   "rpg:beelzebub/sfx_mob_namelessdistant_004_soundwave"
+  ]
+ },
+ "beelzebub.fly": {
+  "subtitle": "subtitles.rpg.beelzebub.fly",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelessfly_001_soundwave",
+   "rpg:beelzebub/sfx_mob_namelessfly_002_soundwave",
+   "rpg:beelzebub/sfx_mob_namelessfly_003_soundwave",
+   "rpg:beelzebub/sfx_mob_namelessfly_004_soundwave"
+  ]
+ },
+ "beelzebub.hurt": {
+  "subtitle": "subtitles.rpg.beelzebub.hurt",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelesshurt_001_soundwave",
+   "rpg:beelzebub/sfx_mob_namelesshurt_002_soundwave",
+   "rpg:beelzebub/sfx_mob_namelesshurt_003_soundwave",
+   "rpg:beelzebub/sfx_mob_namelesshurt_004_soundwave"
+  ]
+ },
+ "beelzebub.idle": {
+  "subtitle": "subtitles.rpg.beelzebub.idle",
+  "sounds": [
+   "rpg:beelzebub/sfx_multi_namelessidle_001_soundwave",
+   "rpg:beelzebub/sfx_multi_namelessidle_002_soundwave",
+   "rpg:beelzebub/sfx_multi_namelessidle_003_soundwave"
+  ]
+ },
+ "beelzebub.laugh": {
+  "subtitle": "subtitles.rpg.beelzebub.laugh",
+  "sounds": [
+   "rpg:beelzebub/sfx_multi_namelesslaughshort_001_soundwave",
+   "rpg:beelzebub/sfx_multi_namelesslaughshort_002_soundwave",
+   "rpg:beelzebub/sfx_multi_namelesslaughshort_003_soundwave"
+  ]
+ },
+ "beelzebub.laugh_long": {
+  "subtitle": "subtitles.rpg.beelzebub.laugh_long",
+  "sounds": [
+   "rpg:beelzebub/sfx_multi_namelesslaughlong_001_soundwave",
+   "rpg:beelzebub/sfx_multi_namelesslaughlong_002_soundwave",
+   "rpg:beelzebub/sfx_multi_namelesslaughlong_003_soundwave"
+  ]
+ },
+ "beelzebub.load": {
+  "subtitle": "subtitles.rpg.beelzebub.load",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelessload_001_soundwave",
+   "rpg:beelzebub/sfx_mob_namelessload_002_soundwave"
+  ]
+ },
+ "beelzebub.load_long": {
+  "subtitle": "subtitles.rpg.beelzebub.load_long",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelessloadlongspell_001_soundwave"
+  ]
+ },
+ "beelzebub.poff": {
+  "subtitle": "subtitles.rpg.beelzebub.poff",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelesspoff_001_soundwave"
+  ]
+ },
+ "beelzebub.spell": {
+  "subtitle": "subtitles.rpg.beelzebub.spell",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelessspellfat_001_soundwave"
+  ]
+ },
+ "beelzebub.teleport_in": {
+  "subtitle": "subtitles.rpg.beelzebub.teleport_in",
+  "sounds": [
+   "rpg:beelzebub/sfx_multi_namelessteleportin_001_soundwave",
+   "rpg:beelzebub/sfx_multi_namelessteleportin_002_soundwave",
+   "rpg:beelzebub/sfx_multi_namelessteleportin_003_soundwave",
+   "rpg:beelzebub/sfx_multi_namelessteleportin_004_soundwave"
+  ]
+ },
+ "beelzebub.teleport_out": {
+  "subtitle": "subtitles.rpg.beelzebub.teleport_out",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelessteleportout_001_soundwave",
+   "rpg:beelzebub/sfx_mob_namelessteleportout_002_soundwave"
+  ]
+ },
+ "beelzebub.wake": {
+  "subtitle": "subtitles.rpg.beelzebub.wake",
+  "sounds": [
+   "rpg:beelzebub/sfx_mob_namelesswakeup_001_soundwave",
+   "rpg:beelzebub/sfx_mob_namelesswakeup_002_soundwave",
+   "rpg:beelzebub/sfx_mob_namelesswakeup_003_soundwave"
+  ]
+ },
+ "belial_lord.brew": {
+  "subtitle": "subtitles.rpg.belial_lord.brew",
+  "sounds": [
+   "rpg:belial_lord/sfx_mob_bosscauldronswallowlightlayer_001_soundwave"
+  ]
+ },
+ "belial_lord.bubble": {
+  "subtitle": "subtitles.rpg.belial_lord.bubble",
+  "sounds": [
+   "rpg:belial_lord/sfx_mob_bosscauldronattackbubble_001_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronattackbubble_002_soundwave"
+  ]
+ },
+ "belial_lord.death": {
+  "subtitle": "subtitles.rpg.belial_lord.death",
+  "sounds": [
+   "rpg:belial_lord/sfx_mob_bosscauldrondeath_001_soundwave"
+  ]
+ },
+ "belial_lord.hop": {
+  "subtitle": "subtitles.rpg.belial_lord.hop",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.place"
+   }
+  ]
+ },
+ "belial_lord.hurt": {
+  "subtitle": "subtitles.rpg.belial_lord.hurt",
+  "sounds": [
+   "rpg:belial_lord/sfx_mob_bosscauldronhurt_001_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronhurt_002_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronhurt_003_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronhurt_004_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronhurt_005_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronhurt_006_soundwave"
+  ]
+ },
+ "belial_lord.idle": {
+  "subtitle": "subtitles.rpg.belial_lord.idle",
+  "sounds": [
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_001_soundwave",
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_002_soundwave",
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_003_soundwave",
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_004_soundwave",
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_005_soundwave",
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_006_soundwave",
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_007_soundwave",
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_008_soundwave",
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_009_soundwave",
+   "rpg:belial_lord/sfx_multi_bosscauldronidle_010_soundwave"
+  ]
+ },
+ "belial_lord.laugh": {
+  "subtitle": "subtitles.rpg.belial_lord.laugh",
+  "sounds": [
+   "rpg:belial_lord/sfx_mob_bosscauldronattackvoice_001_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronattackvoice_002_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronattackvoice_003_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronattackvoice_004_soundwave"
+  ]
+ },
+ "belial_lord.spin": {
+  "subtitle": "subtitles.rpg.belial_lord.spin",
+  "sounds": [
+   "rpg:belial_lord/sfx_mob_bosscauldronattackspin_001_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronattackspin_002_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronattackspin_003_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronvoicespin_001_soundwave"
+  ]
+ },
+ "belial_lord.splash": {
+  "subtitle": "subtitles.rpg.belial_lord.splash",
+  "sounds": [
+   "rpg:belial_lord/sfx_mob_bosscauldronswallowbass_001_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronswallowbass_002_soundwave",
+   "rpg:belial_lord/sfx_mob_bosscauldronswallowbass_003_soundwave"
+  ]
+ },
+ "belial_lord.wand": {
+  "subtitle": "subtitles.rpg.belial_lord.wand",
+  "sounds": [
+   "rpg:belial_lord/sfx_multi_bosscauldronwandspin_001_soundwave"
+  ]
+ },
+ "belial_servant.death": {
+  "subtitle": "subtitles.rpg.belial_servant.death",
+  "sounds": [
+   "rpg:belial_servant/sfx_mob_witchdeath_001_soundwave",
+   "rpg:belial_servant/sfx_mob_witchdeath_002_soundwave",
+   "rpg:belial_servant/sfx_mob_witchdeath_003_soundwave"
+  ]
+ },
+ "belial_servant.drink": {
+  "subtitle": "subtitles.rpg.belial_servant.drink",
+  "sounds": [
+   "rpg:belial_servant/sfx_mob_witchdrink_001_soundwave",
+   "rpg:belial_servant/sfx_mob_witchdrink_002_soundwave",
+   "rpg:belial_servant/sfx_mob_witchdrink_003_soundwave",
+   "rpg:belial_servant/sfx_mob_witchdrink_004_soundwave"
+  ]
+ },
+ "belial_servant.hurt": {
+  "subtitle": "subtitles.rpg.belial_servant.hurt",
+  "sounds": [
+   "rpg:belial_servant/sfx_mob_witchhurt_001_soundwave",
+   "rpg:belial_servant/sfx_mob_witchhurt_002_soundwave",
+   "rpg:belial_servant/sfx_mob_witchhurt_003_soundwave"
+  ]
+ },
+ "belial_servant.idle": {
+  "subtitle": "subtitles.rpg.belial_servant.idle",
+  "sounds": [
+   "rpg:belial_servant/sfx_mob_witchidle_001_soundwave",
+   "rpg:belial_servant/sfx_mob_witchidle_002_soundwave",
+   "rpg:belial_servant/sfx_mob_witchidle_003_soundwave",
+   "rpg:belial_servant/sfx_mob_witchidle_004_soundwave",
+   "rpg:belial_servant/sfx_mob_witchidle_005_soundwave"
+  ]
+ },
+ "belial_servant.throw": {
+  "subtitle": "subtitles.rpg.belial_servant.throw",
+  "sounds": [
+   "rpg:belial_servant/sfx_mob_witchthrow_001_soundwave",
+   "rpg:belial_servant/sfx_mob_witchthrow_002_soundwave",
+   "rpg:belial_servant/sfx_mob_witchthrow_003_soundwave"
+  ]
+ },
+ "bgm.daath1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/daath1",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.daath2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/daath2",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.jacques1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/jacques1",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.jacques2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/jacques2",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.lucifer1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/lucifer1",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.lucifer2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/lucifer2",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.michael1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/michael1",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.michael2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/michael2",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.onboard_flow": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/onboard_flow",
+    "stream": true,
+    "volume": 0.6
+   }
+  ]
+ },
+ "bgm.onboard_intro": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/onboard_intro",
+    "stream": true,
+    "volume": 0.45
+   }
+  ]
+ },
+ "bgm.ow_day1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_day1",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.29
+   }
+  ]
+ },
+ "bgm.ow_day2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_day2",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.65
+   }
+  ]
+ },
+ "bgm.ow_day3": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_day3",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.35
+   }
+  ]
+ },
+ "bgm.ow_night1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_night1",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.65
+   }
+  ]
+ },
+ "bgm.ow_night2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/ow_night2",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.53
+   }
+  ]
+ },
+ "bgm.pl_ash": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_ash",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.75
+   }
+  ]
+ },
+ "bgm.pl_court": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_court",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.65
+   }
+  ]
+ },
+ "bgm.pl_gate": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_gate",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.76
+   }
+  ]
+ },
+ "bgm.pl_hunt": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_hunt",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.51
+   }
+  ]
+ },
+ "bgm.pl_moon": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/pl_moon",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.61
+   }
+  ]
+ },
+ "bgm.prologue_end": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/prologue_end",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.55
+   }
+  ]
+ },
+ "bgm.prologue_intro": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/prologue_intro",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.85
+   }
+  ]
+ },
+ "bgm.prologue_michael": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/prologue_michael",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.55
+   }
+  ]
+ },
+ "bgm.prologue_waves": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/prologue_waves",
+    "stream": true,
+    "attenuation_distance": 1024,
+    "volume": 0.55
+   }
+  ]
+ },
+ "bgm.saul1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/saul1",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.saul2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/saul2",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.usurper1": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/usurper1",
+    "stream": true
+   }
+  ]
+ },
+ "bgm.usurper2": {
+  "sounds": [
+   {
+    "name": "rpg:bgm/usurper2",
+    "stream": true
+   }
+  ]
+ },
+ "daath.execute": {
+  "subtitle": "subtitles.rpg.daath.execute",
+  "sounds": [
+   "rpg:daath/d6_sfx_shadowfeastexecute_001",
+   "rpg:daath/d6_sfx_shadowfeastexecute_002",
+   "rpg:daath/d6_sfx_shadowfeastexecute_003",
+   "rpg:daath/d6_sfx_shadowfeastexecute_004",
+   "rpg:daath/d6_sfx_shadowfeastexecute_005"
+  ]
+ },
+ "daath.flash1": {
+  "subtitle": "subtitles.rpg.daath.flash1",
+  "sounds": [
+   "rpg:daath/d6_sfx_item_shadowflash_activate1_001",
+   "rpg:daath/d6_sfx_item_shadowflash_activate1_002",
+   "rpg:daath/d6_sfx_item_shadowflash_activate1_003"
+  ]
+ },
+ "daath.flash2": {
+  "subtitle": "subtitles.rpg.daath.flash2",
+  "sounds": [
+   "rpg:daath/d6_sfx_item_shadowflash_activate2_001",
+   "rpg:daath/d6_sfx_item_shadowflash_activate2_002",
+   "rpg:daath/d6_sfx_item_shadowflash_activate2_003"
+  ]
+ },
+ "daath.flash3": {
+  "subtitle": "subtitles.rpg.daath.flash3",
+  "sounds": [
+   "rpg:daath/d6_sfx_item_shadowflash_activate3_001",
+   "rpg:daath/d6_sfx_item_shadowflash_activate3_002",
+   "rpg:daath/d6_sfx_item_shadowflash_activate3_003"
+  ]
+ },
+ "daath.hurt": {
+  "subtitle": "subtitles.rpg.daath.hurt",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.glass.hit"
+   }
+  ]
+ },
+ "daath.impact": {
+  "subtitle": "subtitles.rpg.daath.impact",
+  "sounds": [
+   "rpg:daath/d6_sfx_wpn_shadowcbow_impact_001",
+   "rpg:daath/d6_sfx_wpn_shadowcbow_impact_002",
+   "rpg:daath/d6_sfx_wpn_shadowcbow_impact_003"
+  ]
+ },
+ "daath.mirror": {
+  "subtitle": "subtitles.rpg.daath.mirror",
+  "sounds": [
+   "rpg:daath/dlc_sfx_mob_illusionermirror_001",
+   "rpg:daath/dlc_sfx_mob_illusionermirror_002"
+  ]
+ },
+ "daath.shot": {
+  "subtitle": "subtitles.rpg.daath.shot",
+  "sounds": [
+   "rpg:daath/d6_sfx_wpn_shadowcbow_shot_001",
+   "rpg:daath/d6_sfx_wpn_shadowcbow_shot_002",
+   "rpg:daath/d6_sfx_wpn_shadowcbow_shot_003"
+  ]
+ },
+ "daath.splinter": {
+  "subtitle": "subtitles.rpg.daath.splinter",
+  "sounds": [
+   "rpg:daath/d6_sfx_shadowsplinteractivate_001",
+   "rpg:daath/d6_sfx_shadowsplinteractivate_002",
+   "rpg:daath/d6_sfx_shadowsplinteractivate_003"
+  ]
+ },
+ "daath.step": {
+  "subtitle": "subtitles.rpg.daath.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.generic.splash"
+   }
+  ]
+ },
+ "david.sling": {
+  "subtitle": "subtitles.rpg.david.sling",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:item.trident.throw"
+   }
+  ]
+ },
+ "end_illager.blink": {
+  "subtitle": "subtitles.rpg.end_illager.blink",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.enderman.teleport"
+   }
+  ]
+ },
+ "end_illager.cast": {
+  "subtitle": "subtitles.rpg.end_illager.cast",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.evoker.cast_spell"
+   }
+  ]
+ },
+ "end_illager.death": {
+  "subtitle": "subtitles.rpg.end_illager.death",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.evoker.death"
+   }
+  ]
+ },
+ "end_illager.heal": {
+  "subtitle": "subtitles.rpg.end_illager.heal",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.beacon.power_select"
+   }
+  ]
+ },
+ "end_illager.hurt": {
+  "subtitle": "subtitles.rpg.end_illager.hurt",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.evoker.hurt"
+   }
+  ]
+ },
+ "end_illager.idle": {
+  "subtitle": "subtitles.rpg.end_illager.idle",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.evoker.ambient"
+   }
+  ]
+ },
+ "end_illager.prepare": {
+  "subtitle": "subtitles.rpg.end_illager.prepare",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.evoker.prepare_attack"
+   }
+  ]
+ },
+ "heart_of_ender.death": {
+  "subtitle": "subtitles.rpg.heart_of_ender.death",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesseldeath"
+  ]
+ },
+ "heart_of_ender.fourside": {
+  "subtitle": "subtitles.rpg.heart_of_ender.fourside",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesselfourside_001",
+   "rpg:heart_of_ender/sfx_boss_archvesselfourside_002",
+   "rpg:heart_of_ender/sfx_boss_archvesselfourside_003",
+   "rpg:heart_of_ender/sfx_boss_archvesselfourside_004"
+  ]
+ },
+ "heart_of_ender.hurt": {
+  "subtitle": "subtitles.rpg.heart_of_ender.hurt",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesselhurt_001",
+   "rpg:heart_of_ender/sfx_boss_archvesselhurt_002",
+   "rpg:heart_of_ender/sfx_boss_archvesselhurt_003",
+   "rpg:heart_of_ender/sfx_boss_archvesselhurt_004",
+   "rpg:heart_of_ender/sfx_boss_archvesselhurt_005",
+   "rpg:heart_of_ender/sfx_boss_archvesselhurt_006",
+   "rpg:heart_of_ender/sfx_boss_archvesselhurt_007",
+   "rpg:heart_of_ender/sfx_boss_archvesselhurt_008"
+  ]
+ },
+ "heart_of_ender.inner_voice": {
+  "subtitle": "subtitles.rpg.heart_of_ender.inner_voice",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_001",
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_002",
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_003",
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_004",
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_005",
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_006",
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_007",
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_008",
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_009",
+   "rpg:heart_of_ender/sfx_boss_archvesselarchievoice_010"
+  ]
+ },
+ "heart_of_ender.mortar": {
+  "subtitle": "subtitles.rpg.heart_of_ender.mortar",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_001",
+   "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_002",
+   "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_003",
+   "rpg:heart_of_ender/sfx_boss_archvesselmortarbarrage_004"
+  ]
+ },
+ "heart_of_ender.mortar_explode": {
+  "subtitle": "subtitles.rpg.heart_of_ender.mortar_explode",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_mob_witchbottlebreak_001_soundwave",
+   "rpg:heart_of_ender/sfx_mob_witchbottlebreak_002_soundwave",
+   "rpg:heart_of_ender/sfx_mob_witchbottlebreak_003_soundwave"
+  ]
+ },
+ "heart_of_ender.mortar_land": {
+  "subtitle": "subtitles.rpg.heart_of_ender.mortar_land",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesselmortarland_001",
+   "rpg:heart_of_ender/sfx_boss_archvesselmortarland_002",
+   "rpg:heart_of_ender/sfx_boss_archvesselmortarland_003"
+  ]
+ },
+ "heart_of_ender.step": {
+  "subtitle": "subtitles.rpg.heart_of_ender.step",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesselstep_001",
+   "rpg:heart_of_ender/sfx_boss_archvesselstep_002",
+   "rpg:heart_of_ender/sfx_boss_archvesselstep_003",
+   "rpg:heart_of_ender/sfx_boss_archvesselstep_004"
+  ]
+ },
+ "heart_of_ender.tele_in": {
+  "subtitle": "subtitles.rpg.heart_of_ender.tele_in",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesseltelein"
+  ]
+ },
+ "heart_of_ender.tele_out": {
+  "subtitle": "subtitles.rpg.heart_of_ender.tele_out",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesselteleout"
+  ]
+ },
+ "heart_of_ender.vessel_voice": {
+  "subtitle": "subtitles.rpg.heart_of_ender.vessel_voice",
+  "sounds": [
+   "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_001",
+   "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_002",
+   "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_003",
+   "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_004",
+   "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_005",
+   "rpg:heart_of_ender/sfx_boss_archvesselvesselvoice_006"
+  ]
+ },
+ "jacques.arrow": {
+  "subtitle": "subtitles.rpg.jacques.arrow",
+  "sounds": [
+   "rpg:jacques/sfx_item_scattercrossbowunique1arrow_001"
+  ]
+ },
+ "jacques.death": {
+  "subtitle": "subtitles.rpg.jacques.death",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.death"
+   }
+  ]
+ },
+ "jacques.fire": {
+  "subtitle": "subtitles.rpg.jacques.fire",
+  "sounds": [
+   "rpg:jacques/sfx_item_scattercrossbowunique1shoot_001",
+   "rpg:jacques/sfx_item_scattercrossbowunique1shoot_002",
+   "rpg:jacques/sfx_item_scattercrossbowunique1shoot_003",
+   "rpg:jacques/sfx_item_scattercrossbowunique1shoot_004"
+  ]
+ },
+ "jacques.horn": {
+  "subtitle": "subtitles.rpg.jacques.horn",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:event.raid.horn"
+   }
+  ]
+ },
+ "jacques.hurt": {
+  "subtitle": "subtitles.rpg.jacques.hurt",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.hurt"
+   }
+  ]
+ },
+ "jacques.load": {
+  "subtitle": "subtitles.rpg.jacques.load",
+  "sounds": [
+   "rpg:jacques/sfx_item_scattercrossbowunique1place_001",
+   "rpg:jacques/sfx_item_scattercrossbowunique1place_002",
+   "rpg:jacques/sfx_item_scattercrossbowunique1place_003"
+  ]
+ },
+ "jacques.roll": {
+  "subtitle": "subtitles.rpg.jacques.roll",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.attack.nodamage"
+   }
+  ]
+ },
+ "jacques.step": {
+  "subtitle": "subtitles.rpg.jacques.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "jacques.swing1": {
+  "subtitle": "subtitles.rpg.jacques.swing1",
+  "sounds": [
+   "rpg:jacques/sfx_item_glaiveswing_001_soundwave",
+   "rpg:jacques/sfx_item_glaiveswing_002_soundwave",
+   "rpg:jacques/sfx_item_glaiveswing_003_soundwave",
+   "rpg:jacques/sfx_item_glaiveswing_004_soundwave",
+   "rpg:jacques/sfx_item_glaiveswing_005_soundwave"
+  ]
+ },
+ "jacques.swing2": {
+  "subtitle": "subtitles.rpg.jacques.swing2",
+  "sounds": [
+   "rpg:jacques/sfx_item_glaiveswing_001_soundwave",
+   "rpg:jacques/sfx_item_glaiveswing_002_soundwave",
+   "rpg:jacques/sfx_item_glaiveswing_003_soundwave",
+   "rpg:jacques/sfx_item_glaiveswing_004_soundwave",
+   "rpg:jacques/sfx_item_glaiveswing_005_soundwave"
+  ]
+ },
+ "jacques.swing3": {
+  "subtitle": "subtitles.rpg.jacques.swing3",
+  "sounds": [
+   "rpg:jacques/sfx_item_glaiveshing_001_soundwave",
+   "rpg:jacques/sfx_item_glaiveshing_002_soundwave",
+   "rpg:jacques/sfx_item_glaiveshing_003_soundwave",
+   "rpg:jacques/sfx_item_glaiveshing_004_soundwave"
+  ]
+ },
+ "leviathan.cast": {
+  "subtitle": "subtitles.rpg.leviathan.cast",
+  "sounds": [
+   "rpg:leviathan/sfx_multi_evokercastspell_001_soundwave",
+   "rpg:leviathan/sfx_multi_evokercastspell_002_soundwave"
+  ]
+ },
+ "leviathan.death": {
+  "subtitle": "subtitles.rpg.leviathan.death",
+  "sounds": [
+   "rpg:leviathan/sfx_mob_necromancerdeath_001_soundwave",
+   "rpg:leviathan/sfx_mob_necromancerdeath_002_soundwave"
+  ]
+ },
+ "leviathan.hurt": {
+  "subtitle": "subtitles.rpg.leviathan.hurt",
+  "sounds": [
+   "rpg:leviathan/sfx_mob_necromancerhurt_001_soundwave",
+   "rpg:leviathan/sfx_mob_necromancerhurt_002_soundwave",
+   "rpg:leviathan/sfx_mob_necromancerhurt_003_soundwave",
+   "rpg:leviathan/sfx_mob_necromancerhurt_004_soundwave"
+  ]
+ },
+ "leviathan.idle": {
+  "subtitle": "subtitles.rpg.leviathan.idle",
+  "sounds": [
+   "rpg:leviathan/sfx_mob_necromanceridle_001_soundwave",
+   "rpg:leviathan/sfx_mob_necromanceridle_002_soundwave",
+   "rpg:leviathan/sfx_mob_necromanceridle_003_soundwave"
+  ]
+ },
+ "leviathan.impact": {
+  "subtitle": "subtitles.rpg.leviathan.impact",
+  "sounds": [
+   "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_001",
+   "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_002",
+   "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_003",
+   "rpg:leviathan/sfx_item_necromancerarrowimpactnormal_004"
+  ]
+ },
+ "leviathan.laugh": {
+  "subtitle": "subtitles.rpg.leviathan.laugh",
+  "sounds": [
+   "rpg:leviathan/sfx_mob_necromancerboneylaugh_001_soundwave",
+   "rpg:leviathan/sfx_mob_necromancerboneylaugh_002_soundwave"
+  ]
+ },
+ "leviathan.prepare": {
+  "subtitle": "subtitles.rpg.leviathan.prepare",
+  "sounds": [
+   "rpg:leviathan/sfx_mob_necromancerpreparesummon_002_soundwave",
+   "rpg:leviathan/sfx_mob_evokerpreparesummon_001_soundwave"
+  ]
+ },
+ "leviathan.spell": {
+  "subtitle": "subtitles.rpg.leviathan.spell",
+  "sounds": [
+   "rpg:leviathan/sfx_mob_necromancerspell_001_soundwave",
+   "rpg:leviathan/sfx_mob_necromancerspell_002_soundwave"
+  ]
+ },
+ "leviathan.step": {
+  "subtitle": "subtitles.rpg.leviathan.step",
+  "sounds": [
+   "rpg:leviathan/sfx_mob_necromancerstep_001_soundwave",
+   "rpg:leviathan/sfx_mob_necromancerstep_002_soundwave",
+   "rpg:leviathan/sfx_mob_necromancerstep_003_soundwave",
+   "rpg:leviathan/sfx_mob_necromancerstep_004_soundwave"
+  ]
+ },
+ "leviathan.summoned": {
+  "subtitle": "subtitles.rpg.leviathan.summoned",
+  "sounds": [
+   "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_001_soundwave",
+   "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_002_soundwave",
+   "rpg:leviathan/sfx_mob_skeletonnecromancersummoned_003_soundwave"
+  ]
+ },
+ "lucifer_lord.arrowwhoosh": {
+  "sounds": [
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-001_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-002_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-003_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-004_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-005_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonarrowwhoosh-006_soundwave",
+    "stream": false
+   }
+  ]
+ },
+ "lucifer_lord.attack": {
+  "sounds": [
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonattack-001",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonattack-002",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonattack-003",
+    "stream": false
+   }
+  ]
+ },
+ "lucifer_lord.death": {
+  "sounds": [
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-001_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-002_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-003_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-004_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-005_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-006_soundwave",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletondeath-007_soundwave",
+    "stream": false
+   }
+  ]
+ },
+ "lucifer_lord.hurt": {
+  "sounds": [
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-001",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-002",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-003",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonhurt-004",
+    "stream": false
+   }
+  ]
+ },
+ "lucifer_lord.idle": {
+  "sounds": [
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonidle-001",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonidle-002",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonidle-003",
+    "stream": false
+   }
+  ]
+ },
+ "lucifer_lord.step": {
+  "sounds": [
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-001",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-002",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-003",
+    "stream": false
+   },
+   {
+    "name": "rpg:lucifer_lord/dlc_sfx_mob_mossyskeletonstep-004",
+    "stream": false
+   }
+  ]
+ },
+ "lucifer_p2.attack_boom": {
+  "subtitle": "subtitles.rpg.lucifer_p2.attack_boom",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_attack_boom_foley"
+  ]
+ },
+ "lucifer_p2.basic_attack_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.basic_attack_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_basicattack_foley"
+  ]
+ },
+ "lucifer_p2.basic_attack_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.basic_attack_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_basicattack_vocal",
+   "rpg:lucifer_p2/dlc_mob_abom_basicattack2_vocal",
+   "rpg:lucifer_p2/dlc_mob_abom_vineattack_vocal"
+  ]
+ },
+ "lucifer_p2.death_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.death_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_death_foley"
+  ]
+ },
+ "lucifer_p2.death_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.death_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_death_vocal"
+  ]
+ },
+ "lucifer_p2.fall_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.fall_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_fall_foley"
+  ]
+ },
+ "lucifer_p2.fall_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.fall_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_fall_vocal"
+  ]
+ },
+ "lucifer_p2.flower_close": {
+  "subtitle": "subtitles.rpg.lucifer_p2.flower_close",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_flowerclose"
+  ]
+ },
+ "lucifer_p2.flower_loop": {
+  "subtitle": "subtitles.rpg.lucifer_p2.flower_loop",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_flower_loop"
+  ]
+ },
+ "lucifer_p2.flower_open": {
+  "subtitle": "subtitles.rpg.lucifer_p2.flower_open",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_floweropen"
+  ]
+ },
+ "lucifer_p2.getup_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.getup_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_getup_foley"
+  ]
+ },
+ "lucifer_p2.getup_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.getup_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_getup_vocal"
+  ]
+ },
+ "lucifer_p2.hurt_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.hurt_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_gethit1_foley",
+   "rpg:lucifer_p2/dlc_mob_abom_gethit2_foley",
+   "rpg:lucifer_p2/dlc_mob_abom_gethit3_foley"
+  ]
+ },
+ "lucifer_p2.hurt_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.hurt_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_gethit1_vocal",
+   "rpg:lucifer_p2/dlc_mob_abom_gethit2_vocal",
+   "rpg:lucifer_p2/dlc_mob_abom_gethit3_vocal",
+   "rpg:lucifer_p2/dlc_mob_abom_gethit4_vocal"
+  ]
+ },
+ "lucifer_p2.idle_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.idle_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_idle_foley"
+  ]
+ },
+ "lucifer_p2.idle_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.idle_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_idle_vocal"
+  ]
+ },
+ "lucifer_p2.intro_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.intro_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_intro_foley_stereo"
+  ]
+ },
+ "lucifer_p2.intro_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.intro_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_intro_vocal_stereo"
+  ]
+ },
+ "lucifer_p2.land_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.land_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_land_foley"
+  ]
+ },
+ "lucifer_p2.land_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.land_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_land_vocal"
+  ]
+ },
+ "lucifer_p2.laugh_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.laugh_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_laugh_vocal_stereo"
+  ]
+ },
+ "lucifer_p2.music_end_preview": {
+  "subtitle": "subtitles.rpg.lucifer_p2.music_end_preview",
+  "sounds": [
+   {
+    "stream": true,
+    "name": "rpg:lucifer_p2/bgm_env_sosw2dbosscauldronend_001_soundwave"
+   }
+  ]
+ },
+ "lucifer_p2.music_loop_preview": {
+  "subtitle": "subtitles.rpg.lucifer_p2.music_loop_preview",
+  "sounds": [
+   {
+    "stream": true,
+    "name": "rpg:lucifer_p2/bgm_env_sosw2dbosscauldronloop_001_soundwave"
+   }
+  ]
+ },
+ "lucifer_p2.music_start_preview": {
+  "subtitle": "subtitles.rpg.lucifer_p2.music_start_preview",
+  "sounds": [
+   {
+    "stream": true,
+    "name": "rpg:lucifer_p2/bgm_env_sosw2dbosscauldronstart_001_soundwave"
+   }
+  ]
+ },
+ "lucifer_p2.summon_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.summon_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_summon_foley"
+  ]
+ },
+ "lucifer_p2.summon_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.summon_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_summon_vocal"
+  ]
+ },
+ "lucifer_p2.vine_attack_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.vine_attack_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_vineattack_foley"
+  ]
+ },
+ "lucifer_p2.vine_attack_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.vine_attack_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_vineattack_vocal",
+   "rpg:lucifer_p2/dlc_mob_abom_basicattack_vocal",
+   "rpg:lucifer_p2/dlc_mob_abom_basicattack2_vocal"
+  ]
+ },
+ "lucifer_p2.vine_burst_new": {
+  "subtitle": "subtitles.rpg.lucifer_p2.vine_burst_new",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abomvine_burst_f_new"
+  ]
+ },
+ "lucifer_p2.vine_burst_old": {
+  "subtitle": "subtitles.rpg.lucifer_p2.vine_burst_old",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abomvine_burst_f"
+  ]
+ },
+ "lucifer_p2.vine_fail_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.vine_fail_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_vineattackfail_foley"
+  ]
+ },
+ "lucifer_p2.vine_fail_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.vine_fail_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_vineattackfail_vocal"
+  ]
+ },
+ "lucifer_p2.vine_success_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.vine_success_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_vineattacksuccess_foley"
+  ]
+ },
+ "lucifer_p2.vine_success_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.vine_success_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_vineattacksuccess_vocal"
+  ]
+ },
+ "lucifer_p2.walk_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.walk_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_walk1_foley",
+   "rpg:lucifer_p2/dlc_mob_abom_walk2_foley"
+  ]
+ },
+ "lucifer_p2.walk_legacy_foley": {
+  "subtitle": "subtitles.rpg.lucifer_p2.walk_legacy_foley",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_walk_foley"
+  ]
+ },
+ "lucifer_p2.walk_legacy_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.walk_legacy_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_walk_vocal"
+  ]
+ },
+ "lucifer_p2.walk_voice": {
+  "subtitle": "subtitles.rpg.lucifer_p2.walk_voice",
+  "sounds": [
+   "rpg:lucifer_p2/dlc_mob_abom_walk1_vocal",
+   "rpg:lucifer_p2/dlc_mob_abom_walk2_vocal"
+  ]
+ },
+ "lucifer_servant.death": {
+  "subtitle": "subtitles.rpg.lucifer_servant.death",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.skeleton.death"
+   }
+  ]
+ },
+ "lucifer_servant.hurt": {
+  "subtitle": "subtitles.rpg.lucifer_servant.hurt",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.skeleton.hurt"
+   }
+  ]
+ },
+ "lucifer_servant.idle": {
+  "subtitle": "subtitles.rpg.lucifer_servant.idle",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.skeleton.ambient"
+   }
+  ]
+ },
+ "lucifer_servant.shoot": {
+  "subtitle": "subtitles.rpg.lucifer_servant.shoot",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.skeleton.shoot"
+   }
+  ]
+ },
+ "lucifer_servant.step": {
+  "subtitle": "subtitles.rpg.lucifer_servant.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.skeleton.step"
+   }
+  ]
+ },
+ "lucifer_servant.swing": {
+  "subtitle": "subtitles.rpg.lucifer_servant.swing",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.attack.sweep"
+   }
+  ]
+ },
+ "mammon_lord.admire": {
+  "subtitle": "subtitles.rpg.mammon_lord.admire",
+  "sounds": [
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantbuy_001",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantbuy_002",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantbuy_003"
+  ]
+ },
+ "mammon_lord.angry": {
+  "subtitle": "subtitles.rpg.mammon_lord.angry",
+  "sounds": [
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_001",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_002",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_003",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_004",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_005",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_006",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_007",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_008",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_009",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteattack_010"
+  ]
+ },
+ "mammon_lord.brute": {
+  "subtitle": "subtitles.rpg.mammon_lord.brute",
+  "sounds": [
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_001",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_002",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_003",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_004",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_005",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_006",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_007",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_008",
+   "rpg:mammon_lord/d4_sfx_mob_piglinbruteidle_009"
+  ]
+ },
+ "mammon_lord.celebrate": {
+  "subtitle": "subtitles.rpg.mammon_lord.celebrate",
+  "sounds": [
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantrestock_001",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantrestock_002",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantrestock_003"
+  ]
+ },
+ "mammon_lord.death": {
+  "subtitle": "subtitles.rpg.mammon_lord.death",
+  "sounds": [
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantdeath_001",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantdeath_002",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantdeath_003",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantdeath_004"
+  ]
+ },
+ "mammon_lord.hurt": {
+  "subtitle": "subtitles.rpg.mammon_lord.hurt",
+  "sounds": [
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchanthurt_001",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchanthurt_002",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchanthurt_003"
+  ]
+ },
+ "mammon_lord.idle": {
+  "subtitle": "subtitles.rpg.mammon_lord.idle",
+  "sounds": [
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_001",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_002",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_003",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_004",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantidle_005"
+  ]
+ },
+ "mammon_lord.jealous": {
+  "subtitle": "subtitles.rpg.mammon_lord.jealous",
+  "sounds": [
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantfree_001",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantfree_002",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantfree_003",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantfree_004"
+  ]
+ },
+ "mammon_lord.open": {
+  "subtitle": "subtitles.rpg.mammon_lord.open",
+  "sounds": [
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantopen_001",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantopen_002",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantopen_003"
+  ]
+ },
+ "mammon_lord.retreat": {
+  "subtitle": "subtitles.rpg.mammon_lord.retreat",
+  "sounds": [
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantclose_001",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantclose_002",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantclose_003",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantclose_004"
+  ]
+ },
+ "mammon_lord.step": {
+  "subtitle": "subtitles.rpg.mammon_lord.step",
+  "sounds": [
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_001",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_002",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_003",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_004",
+   "rpg:mammon_lord/p4_sfx_mob_merchantpiglinmerchantstep_005"
+  ]
+ },
+ "mammon_servant.angry": {
+  "subtitle": "subtitles.rpg.mammon_servant.angry",
+  "sounds": [
+   "rpg:mammon_servant/d4_sfx_mob_piglinattack_001",
+   "rpg:mammon_servant/d4_sfx_mob_piglinattack_002",
+   "rpg:mammon_servant/d4_sfx_mob_piglinattack_003"
+  ]
+ },
+ "mammon_servant.death": {
+  "subtitle": "subtitles.rpg.mammon_servant.death",
+  "sounds": [
+   "rpg:mammon_servant/d4_sfx_mob_piglindeath_001",
+   "rpg:mammon_servant/d4_sfx_mob_piglindeath_002",
+   "rpg:mammon_servant/d4_sfx_mob_piglindeath_003"
+  ]
+ },
+ "mammon_servant.hurt": {
+  "subtitle": "subtitles.rpg.mammon_servant.hurt",
+  "sounds": [
+   "rpg:mammon_servant/d4_sfx_mob_piglinhurt_001",
+   "rpg:mammon_servant/d4_sfx_mob_piglinhurt_002",
+   "rpg:mammon_servant/d4_sfx_mob_piglinhurt_003"
+  ]
+ },
+ "mammon_servant.idle": {
+  "subtitle": "subtitles.rpg.mammon_servant.idle",
+  "sounds": [
+   "rpg:mammon_servant/d4_sfx_mob_piglinidle_001",
+   "rpg:mammon_servant/d4_sfx_mob_piglinidle_002",
+   "rpg:mammon_servant/d4_sfx_mob_piglinidle_003",
+   "rpg:mammon_servant/d4_sfx_mob_piglinidle_004"
+  ]
+ },
+ "mammon_servant.step": {
+  "subtitle": "subtitles.rpg.mammon_servant.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.piglin.step"
+   }
+  ]
+ },
+ "michael.chime": {
+  "subtitle": "subtitles.rpg.michael.chime",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.amethyst_block.resonate"
+   }
+  ]
+ },
+ "michael.death": {
+  "subtitle": "subtitles.rpg.michael.death",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.beacon.deactivate"
+   }
+  ]
+ },
+ "michael.flap": {
+  "subtitle": "subtitles.rpg.michael.flap",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.phantom.flap"
+   }
+  ]
+ },
+ "michael.gong": {
+  "subtitle": "subtitles.rpg.michael.gong",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.bell.use"
+   }
+  ]
+ },
+ "michael.horn": {
+  "subtitle": "subtitles.rpg.michael.horn",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:item.goat_horn.sound.0"
+   }
+  ]
+ },
+ "michael.hurt": {
+  "subtitle": "subtitles.rpg.michael.hurt",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.amethyst_block.hit"
+   }
+  ]
+ },
+ "michael.slash": {
+  "subtitle": "subtitles.rpg.michael.slash",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.attack.sweep"
+   }
+  ]
+ },
+ "michael.swing": {
+  "subtitle": "subtitles.rpg.michael.swing",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:item.trident.throw"
+   }
+  ]
+ },
+ "pope.appear": {
+  "subtitle": "subtitles.rpg.pope.appear",
+  "sounds": [
+   "rpg:pope/sfx_mob_archillagerappear_001_soundwave"
+  ]
+ },
+ "pope.haha": {
+  "subtitle": "subtitles.rpg.pope.haha",
+  "sounds": [
+   "rpg:pope/sfx_mob_archillagerhaha_001_soundwave",
+   "rpg:pope/sfx_mob_archillagerhaha_002_soundwave"
+  ]
+ },
+ "pope.hargh": {
+  "subtitle": "subtitles.rpg.pope.hargh",
+  "sounds": [
+   "rpg:pope/sfx_mob_archillagerhargh_001_soundwave",
+   "rpg:pope/sfx_mob_archillagerhargh_002_soundwave",
+   "rpg:pope/sfx_mob_archillagerhargh_003_soundwave",
+   "rpg:pope/sfx_mob_archillagerhargh_004_soundwave"
+  ]
+ },
+ "pope.hurt": {
+  "subtitle": "subtitles.rpg.pope.hurt",
+  "sounds": [
+   "rpg:pope/sfx_boss_archillagerhurt_001",
+   "rpg:pope/sfx_boss_archillagerhurt_002",
+   "rpg:pope/sfx_boss_archillagerhurt_003",
+   "rpg:pope/sfx_boss_archillagerhurt_004",
+   "rpg:pope/sfx_boss_archillagerhurt_005",
+   "rpg:pope/sfx_boss_archillagerhurt_006"
+  ]
+ },
+ "pope.idle": {
+  "subtitle": "subtitles.rpg.pope.idle",
+  "sounds": [
+   "rpg:pope/sfx_boss_archillageridle_001",
+   "rpg:pope/sfx_boss_archillageridle_002",
+   "rpg:pope/sfx_boss_archillageridle_003",
+   "rpg:pope/sfx_boss_archillageridle_004",
+   "rpg:pope/sfx_boss_archillageridle_005",
+   "rpg:pope/sfx_boss_archillageridle_006",
+   "rpg:pope/sfx_boss_archillageridle_007",
+   "rpg:pope/sfx_boss_archillageridle_008",
+   "rpg:pope/sfx_boss_archillageridle_009",
+   "rpg:pope/sfx_boss_archillageridle_010",
+   "rpg:pope/sfx_boss_archillageridle_011",
+   "rpg:pope/sfx_boss_archillageridle_012",
+   "rpg:pope/sfx_boss_archillageridle_013"
+  ]
+ },
+ "pope.intro_final_blow": {
+  "subtitle": "subtitles.rpg.pope.intro_final_blow",
+  "sounds": [
+   "rpg:pope/sfx_boss_archillagerintrofinalblow"
+  ]
+ },
+ "pope.intro_greetings": {
+  "subtitle": "subtitles.rpg.pope.intro_greetings",
+  "sounds": [
+   "rpg:pope/sfx_boss_archillagerintrogreetings_001"
+  ]
+ },
+ "pope.intro_laugh": {
+  "subtitle": "subtitles.rpg.pope.intro_laugh",
+  "sounds": [
+   "rpg:pope/sfx_boss_archillagerintrolaugh_002"
+  ]
+ },
+ "pope.laugh": {
+  "subtitle": "subtitles.rpg.pope.laugh",
+  "sounds": [
+   "rpg:pope/sfx_mob_archillagerlaugh_001_soundwave"
+  ]
+ },
+ "pope.load_spell": {
+  "subtitle": "subtitles.rpg.pope.load_spell",
+  "sounds": [
+   "rpg:pope/sfx_mob_archillager_loadspell_001_soundwave"
+  ]
+ },
+ "pope.magic_impact": {
+  "subtitle": "subtitles.rpg.pope.magic_impact",
+  "sounds": [
+   "rpg:pope/sfx_boss_archillagermagicimpact_001"
+  ]
+ },
+ "pope.mirror_in": {
+  "subtitle": "subtitles.rpg.pope.mirror_in",
+  "sounds": [
+   "rpg:pope/sfx_mob_archillager_mirrorin_001_soundwave"
+  ]
+ },
+ "pope.mirror_out": {
+  "subtitle": "subtitles.rpg.pope.mirror_out",
+  "sounds": [
+   "rpg:pope/sfx_mob_archillager_mirrorout_001_soundwave"
+  ]
+ },
+ "pope.spell": {
+  "subtitle": "subtitles.rpg.pope.spell",
+  "sounds": [
+   "rpg:pope/sfx_mob_archillager_spell_001_soundwave"
+  ]
+ },
+ "pope.spell_disappear": {
+  "subtitle": "subtitles.rpg.pope.spell_disappear",
+  "sounds": [
+   "rpg:pope/sfx_mob_archillager_spelldissapear_001_soundwave"
+  ]
+ },
+ "pope.summon_mobs": {
+  "subtitle": "subtitles.rpg.pope.summon_mobs",
+  "sounds": [
+   "rpg:pope/sfx_boss_archillagersummonmobs_001",
+   "rpg:pope/sfx_boss_archillagersummonmobs_002"
+  ]
+ },
+ "pope.whirlwind": {
+  "subtitle": "subtitles.rpg.pope.whirlwind",
+  "sounds": [
+   "rpg:pope/sfx_boss_archillagerwhirlwind"
+  ]
+ },
+ "prologue_angel.step": {
+  "subtitle": "subtitles.rpg.prologue_angel.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_beelzebub.step": {
+  "subtitle": "subtitles.rpg.prologue_beelzebub.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_belial.step": {
+  "subtitle": "subtitles.rpg.prologue_belial.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_lucifer.step": {
+  "subtitle": "subtitles.rpg.prologue_lucifer.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_mammon.step": {
+  "subtitle": "subtitles.rpg.prologue_mammon.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_michael.step": {
+  "subtitle": "subtitles.rpg.prologue_michael.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "prologue_throne.step": {
+  "subtitle": "subtitles.rpg.prologue_throne.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "royal_guard.block": {
+  "subtitle": "subtitles.rpg.royal_guard.block",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:item.shield.block"
+   }
+  ]
+ },
+ "royal_guard.death": {
+  "subtitle": "subtitles.rpg.royal_guard.death",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.vindicator.death"
+   }
+  ]
+ },
+ "royal_guard.hurt": {
+  "subtitle": "subtitles.rpg.royal_guard.hurt",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.vindicator.hurt"
+   }
+  ]
+ },
+ "royal_guard.idle": {
+  "subtitle": "subtitles.rpg.royal_guard.idle",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.vindicator.ambient"
+   }
+  ]
+ },
+ "royal_guard.slam": {
+  "subtitle": "subtitles.rpg.royal_guard.slam",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:item.mace.smash_ground"
+   }
+  ]
+ },
+ "royal_guard.step": {
+  "subtitle": "subtitles.rpg.royal_guard.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.iron_golem.step"
+   }
+  ]
+ },
+ "samael_lord.arm": {
+  "subtitle": "subtitles.rpg.samael_lord.arm",
+  "sounds": [
+   "rpg:samael_lord/sfx_mob_rsmonstrosityarm_001_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityarm_002_soundwave"
+  ]
+ },
+ "samael_lord.attack": {
+  "subtitle": "subtitles.rpg.samael_lord.attack",
+  "sounds": [
+   "rpg:samael_lord/sfx_mob_rsmonstrosityshoot_001_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityshoot_002_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityshoot_003_soundwave"
+  ]
+ },
+ "samael_lord.awaken": {
+  "subtitle": "subtitles.rpg.samael_lord.awaken",
+  "sounds": [
+   "rpg:samael_lord/sfx_mob_rsmonstrosityawaken_001_soundwave"
+  ]
+ },
+ "samael_lord.charge": {
+  "subtitle": "subtitles.rpg.samael_lord.charge",
+  "sounds": [
+   "rpg:samael_lord/sfx_mob_rsmonstrosityvoicecharge_001_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityvoicecharge_002_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityvoicecharge_003_soundwave"
+  ]
+ },
+ "samael_lord.death": {
+  "subtitle": "subtitles.rpg.samael_lord.death",
+  "sounds": [
+   "rpg:samael_lord/sfx_mob_rsmonstrositydeath_001_soundwave"
+  ]
+ },
+ "samael_lord.hurt": {
+  "subtitle": "subtitles.rpg.samael_lord.hurt",
+  "sounds": [
+   "rpg:samael_lord/sfx_mob_rsmonstrosityhurt_001_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityhurt_002_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityhurt_003_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityhurt_004_soundwave"
+  ]
+ },
+ "samael_lord.idle": {
+  "subtitle": "subtitles.rpg.samael_lord.idle",
+  "sounds": [
+   "rpg:samael_lord/sfx_mob_rsmonstrosityidle_001_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityidle_002_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityidle_003_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityidle_004_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityidle_005_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityidle_006_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityidle_007_soundwave"
+  ]
+ },
+ "samael_lord.roar": {
+  "subtitle": "subtitles.rpg.samael_lord.roar",
+  "sounds": [
+   "rpg:samael_lord/sfx_mob_rsmonstrositygrowl_001_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrosityshortgrowl_001_soundwave"
+  ]
+ },
+ "samael_lord.slam": {
+  "subtitle": "subtitles.rpg.samael_lord.slam",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:item.mace.smash_ground_heavy"
+   }
+  ]
+ },
+ "samael_lord.step": {
+  "subtitle": "subtitles.rpg.samael_lord.step",
+  "sounds": [
+   "rpg:samael_lord/sfx_mob_rsmonstrositystep_001_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrositystep_002_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrositystep_003_soundwave",
+   "rpg:samael_lord/sfx_mob_rsmonstrositystep_004_soundwave"
+  ]
+ },
+ "samael_servant.brace": {
+  "subtitle": "subtitles.rpg.samael_servant.brace",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.vindicator.celebrate"
+   }
+  ]
+ },
+ "samael_servant.death": {
+  "subtitle": "subtitles.rpg.samael_servant.death",
+  "sounds": [
+   "rpg:samael_servant/d3_sfx_mob_mountaineerdeath_new_001",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerdeath_new_002",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerdeath_new_003",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerdeath_new_004"
+  ]
+ },
+ "samael_servant.hurt": {
+  "subtitle": "subtitles.rpg.samael_servant.hurt",
+  "sounds": [
+   "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_001",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_002",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_003",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_004",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerhurt_new_005"
+  ]
+ },
+ "samael_servant.idle": {
+  "subtitle": "subtitles.rpg.samael_servant.idle",
+  "sounds": [
+   "rpg:samael_servant/d3_sfx_mob_mountaineeridle_new_001",
+   "rpg:samael_servant/d3_sfx_mob_mountaineeridle_new_002",
+   "rpg:samael_servant/d3_sfx_mob_mountaineeridle_new_003",
+   "rpg:samael_servant/d3_sfx_mob_mountaineeridle_new_004"
+  ]
+ },
+ "samael_servant.swing": {
+  "subtitle": "subtitles.rpg.samael_servant.swing",
+  "sounds": [
+   "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_001",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_002",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_003",
+   "rpg:samael_servant/d3_sfx_mob_mountaineerattack_new_004"
+  ]
+ },
+ "saul.death": {
+  "subtitle": "subtitles.rpg.saul.death",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.death"
+   }
+  ]
+ },
+ "saul.final": {
+  "subtitle": "subtitles.rpg.saul.final",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.attack.knockback"
+   }
+  ]
+ },
+ "saul.hurt": {
+  "subtitle": "subtitles.rpg.saul.hurt",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.hurt"
+   }
+  ]
+ },
+ "saul.laugh": {
+  "subtitle": "subtitles.rpg.saul.laugh",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.witch.celebrate"
+   }
+  ]
+ },
+ "saul.roll": {
+  "subtitle": "subtitles.rpg.saul.roll",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.attack.nodamage"
+   }
+  ]
+ },
+ "saul.stab": {
+  "subtitle": "subtitles.rpg.saul.stab",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.attack.sweep"
+   }
+  ]
+ },
+ "saul.stab2": {
+  "subtitle": "subtitles.rpg.saul.stab2",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.attack.strong"
+   }
+  ]
+ },
+ "saul.step": {
+  "subtitle": "subtitles.rpg.saul.step",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:block.chain.step"
+   }
+  ]
+ },
+ "saul_ghost.swish": {
+  "subtitle": "subtitles.rpg.saul_ghost.swish",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.player.attack.sweep"
+   }
+  ]
+ },
+ "sunken_skeleton.death": {
+  "subtitle": "subtitles.rpg.sunken_skeleton.death",
+  "sounds": [
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletondeath_001",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletondeath_002",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletondeath_003"
+  ]
+ },
+ "sunken_skeleton.hurt": {
+  "subtitle": "subtitles.rpg.sunken_skeleton.hurt",
+  "sounds": [
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_001",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_002",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_003",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonhurt_004"
+  ]
+ },
+ "sunken_skeleton.idle": {
+  "subtitle": "subtitles.rpg.sunken_skeleton.idle",
+  "sounds": [
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonidle_001",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonidle_002",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonidle_003"
+  ]
+ },
+ "sunken_skeleton.impact": {
+  "subtitle": "subtitles.rpg.sunken_skeleton.impact",
+  "sounds": [
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_001",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_002",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_003",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowimpact_004"
+  ]
+ },
+ "sunken_skeleton.load": {
+  "subtitle": "subtitles.rpg.sunken_skeleton.load",
+  "sounds": [
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_001",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_002",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_003",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowload_004"
+  ]
+ },
+ "sunken_skeleton.novelty": {
+  "subtitle": "subtitles.rpg.sunken_skeleton.novelty",
+  "sounds": [
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonnovelty_001",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonnovelty_002"
+  ]
+ },
+ "sunken_skeleton.shoot": {
+  "subtitle": "subtitles.rpg.sunken_skeleton.shoot",
+  "sounds": [
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowshoot_001",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowshoot_002",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletoncrossbowshoot_003"
+  ]
+ },
+ "sunken_skeleton.step": {
+  "subtitle": "subtitles.rpg.sunken_skeleton.step",
+  "sounds": [
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_001",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_002",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_003",
+   "rpg:sunken_skeleton/d5_sfx_mob_sunkenskeletonstep_004"
+  ]
+ },
+ "tower_guard.armour": {
+  "subtitle": "subtitles.rpg.tower_guard.armour",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_basicattack_armour_01",
+   "rpg:tower_guard/s1_sfx_towerguard_basicattack_armour_02",
+   "rpg:tower_guard/s1_sfx_towerguard_basicattack_armour_03"
+  ]
+ },
+ "tower_guard.block": {
+  "subtitle": "subtitles.rpg.tower_guard.block",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_block_01",
+   "rpg:tower_guard/s1_sfx_towerguard_block_02",
+   "rpg:tower_guard/s1_sfx_towerguard_block_03",
+   "rpg:tower_guard/s1_sfx_towerguard_block_04",
+   "rpg:tower_guard/s1_sfx_towerguard_block_05"
+  ]
+ },
+ "tower_guard.charge": {
+  "subtitle": "subtitles.rpg.tower_guard.charge",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_start_01",
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_start_02",
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_start_03",
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_start_04"
+  ]
+ },
+ "tower_guard.collide": {
+  "subtitle": "subtitles.rpg.tower_guard.collide",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_collide_01",
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_collide_02",
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_collide_03",
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_collide_04"
+  ]
+ },
+ "tower_guard.death": {
+  "subtitle": "subtitles.rpg.tower_guard.death",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_death_01",
+   "rpg:tower_guard/s1_sfx_towerguard_death_02",
+   "rpg:tower_guard/s1_sfx_towerguard_death_03",
+   "rpg:tower_guard/s1_sfx_towerguard_death_04"
+  ]
+ },
+ "tower_guard.hurt": {
+  "subtitle": "subtitles.rpg.tower_guard.hurt",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_hurt_01",
+   "rpg:tower_guard/s1_sfx_towerguard_hurt_02",
+   "rpg:tower_guard/s1_sfx_towerguard_hurt_03",
+   "rpg:tower_guard/s1_sfx_towerguard_hurt_04"
+  ]
+ },
+ "tower_guard.idle": {
+  "subtitle": "subtitles.rpg.tower_guard.idle",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_idle_01",
+   "rpg:tower_guard/s1_sfx_towerguard_idle_02",
+   "rpg:tower_guard/s1_sfx_towerguard_idle_03",
+   "rpg:tower_guard/s1_sfx_towerguard_idle_04",
+   "rpg:tower_guard/s1_sfx_towerguard_idle_05",
+   "rpg:tower_guard/s1_sfx_towerguard_idle_06",
+   "rpg:tower_guard/s1_sfx_towerguard_idle_07"
+  ]
+ },
+ "tower_guard.shield_break": {
+  "subtitle": "subtitles.rpg.tower_guard.shield_break",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_001",
+   "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_002",
+   "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_003"
+  ]
+ },
+ "tower_guard.shield_break_vocal": {
+  "subtitle": "subtitles.rpg.tower_guard.shield_break_vocal",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_01",
+   "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_02",
+   "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_03",
+   "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_04",
+   "rpg:tower_guard/s1_sfx_towerguard_shieldbreak_vocal_05"
+  ]
+ },
+ "tower_guard.step": {
+  "subtitle": "subtitles.rpg.tower_guard.step",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_step_01",
+   "rpg:tower_guard/s1_sfx_towerguard_step_02",
+   "rpg:tower_guard/s1_sfx_towerguard_step_03",
+   "rpg:tower_guard/s1_sfx_towerguard_step_04",
+   "rpg:tower_guard/s1_sfx_towerguard_step_05",
+   "rpg:tower_guard/s1_sfx_towerguard_step_06",
+   "rpg:tower_guard/s1_sfx_towerguard_step_07",
+   "rpg:tower_guard/s1_sfx_towerguard_step_08"
+  ]
+ },
+ "tower_guard.stop": {
+  "subtitle": "subtitles.rpg.tower_guard.stop",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_normal_01",
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_normal_02",
+   "rpg:tower_guard/s1_sfx_towerguard_chargeattack_stop_normal_03"
+  ]
+ },
+ "tower_guard.stun": {
+  "subtitle": "subtitles.rpg.tower_guard.stun",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_stun_01",
+   "rpg:tower_guard/s1_sfx_towerguard_stun_02",
+   "rpg:tower_guard/s1_sfx_towerguard_stun_03"
+  ]
+ },
+ "tower_guard.swing": {
+  "subtitle": "subtitles.rpg.tower_guard.swing",
+  "sounds": [
+   "rpg:tower_guard/s1_sfx_towerguard_basicattack_swing_01",
+   "rpg:tower_guard/s1_sfx_towerguard_basicattack_swing_02",
+   "rpg:tower_guard/s1_sfx_towerguard_basicattack_swing_03"
+  ]
+ },
+ "tower_wraith.appear": {
+  "subtitle": "subtitles.rpg.tower_wraith.appear",
+  "sounds": [
+   "rpg:tower_wraith/sfx_mob_towerwraithteleportin_001_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithteleportin_002_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithteleportin_003_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithteleportin_004_soundwave"
+  ]
+ },
+ "tower_wraith.attack": {
+  "subtitle": "subtitles.rpg.tower_wraith.attack",
+  "sounds": [
+   "rpg:tower_wraith/sfx_mob_towerwraithattack_001_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithattack_002_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithattack_003_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithattack_004_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithattack_005_soundwave"
+  ]
+ },
+ "tower_wraith.attack_vocal": {
+  "subtitle": "subtitles.rpg.tower_wraith.attack_vocal",
+  "sounds": [
+   "rpg:tower_wraith/sfx_mob_towerwraithattackvocal_001_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithattackvocal_002_soundwave"
+  ]
+ },
+ "tower_wraith.death": {
+  "subtitle": "subtitles.rpg.tower_wraith.death",
+  "sounds": [
+   "rpg:tower_wraith/sfx_mob_towerwraithdeathvocal_001_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithdeathvocal_002_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithdeath_001_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithdeath_002_soundwave"
+  ]
+ },
+ "tower_wraith.ember": {
+  "subtitle": "subtitles.rpg.tower_wraith.ember",
+  "sounds": [
+   "rpg:tower_wraith/sfx_mob_towerwraithember_001_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithember_002_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithember_003_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithember_004_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithember_005_soundwave"
+  ]
+ },
+ "tower_wraith.fly": {
+  "subtitle": "subtitles.rpg.tower_wraith.fly",
+  "sounds": [
+   "rpg:tower_wraith/sfx_mob_towerwraithfly_001_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithfly_002_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithfly_003_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithfly_004_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithfly_005_soundwave"
+  ]
+ },
+ "tower_wraith.hurt": {
+  "subtitle": "subtitles.rpg.tower_wraith.hurt",
+  "sounds": [
+   "rpg:tower_wraith/sfx_mob_towerwraithhurtvocal_001_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithhurtvocal_002_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithhurtvocal_003_soundwave"
+  ]
+ },
+ "tower_wraith.idle": {
+  "subtitle": "subtitles.rpg.tower_wraith.idle",
+  "sounds": [
+   "rpg:tower_wraith/sfx_mob_towerwraithidle_001_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithidle_002_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithidle_003_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithidle_004_soundwave",
+   "rpg:tower_wraith/sfx_mob_towerwraithidle_005_soundwave"
+  ]
+ },
+ "usurper.attack": {
+  "subtitle": "subtitles.rpg.usurper.attack",
+  "sounds": [
+   "rpg:usurper/sfx_mob_enchanterattack_001_soundwave",
+   "rpg:usurper/sfx_mob_enchanterattack_002_soundwave",
+   "rpg:usurper/sfx_mob_enchanterattack_003_soundwave"
+  ]
+ },
+ "usurper.beam": {
+  "subtitle": "subtitles.rpg.usurper.beam",
+  "sounds": [
+   "rpg:usurper/sfx_mob_enchanterbeam_001_soundwave"
+  ]
+ },
+ "usurper.beam_loop": {
+  "subtitle": "subtitles.rpg.usurper.beam_loop",
+  "sounds": [
+   "rpg:usurper/sfx_mob_enchanterbeamloop_001_soundwave"
+  ]
+ },
+ "usurper.bladder": {
+  "subtitle": "subtitles.rpg.usurper.bladder",
+  "sounds": [
+   "rpg:usurper/sfx_ui_enchantbookbladder_001_soundwave",
+   "rpg:usurper/sfx_ui_enchantbookbladder_002_soundwave",
+   "rpg:usurper/sfx_ui_enchantbookbladder_003_soundwave",
+   "rpg:usurper/sfx_ui_enchantbookbladder_004_soundwave"
+  ]
+ },
+ "usurper.book": {
+  "subtitle": "subtitles.rpg.usurper.book",
+  "sounds": [
+   "rpg:usurper/sfx_ui_enchantbook_001_soundwave",
+   "rpg:usurper/sfx_ui_enchantbook_002_soundwave",
+   "rpg:usurper/sfx_ui_enchantbook_003_soundwave"
+  ]
+ },
+ "usurper.chime": {
+  "subtitle": "subtitles.rpg.usurper.chime",
+  "sounds": [
+   "rpg:usurper/sfx_ui_enchantchime_001_soundwave",
+   "rpg:usurper/sfx_ui_enchantchime_002_soundwave",
+   "rpg:usurper/sfx_ui_enchantchime_003_soundwave"
+  ]
+ },
+ "usurper.close": {
+  "subtitle": "subtitles.rpg.usurper.close",
+  "sounds": [
+   "rpg:usurper/sfx_ui_enchantbookclose_001_soundwave"
+  ]
+ },
+ "usurper.death": {
+  "subtitle": "subtitles.rpg.usurper.death",
+  "sounds": [
+   "rpg:usurper/sfx_mob_enchanterdeath_001_soundwave",
+   "rpg:usurper/sfx_mob_enchanterdeath_002_soundwave",
+   "rpg:usurper/sfx_mob_enchanterdeath_003_soundwave"
+  ]
+ },
+ "usurper.hurt": {
+  "subtitle": "subtitles.rpg.usurper.hurt",
+  "sounds": [
+   "rpg:usurper/sfx_mob_enchanterhurt_001_soundwave",
+   "rpg:usurper/sfx_mob_enchanterhurt_002_soundwave",
+   "rpg:usurper/sfx_mob_enchanterhurt_003_soundwave"
+  ]
+ },
+ "usurper.idle": {
+  "subtitle": "subtitles.rpg.usurper.idle",
+  "sounds": [
+   "rpg:usurper/sfx_mob_enchanteridle_001_soundwave",
+   "rpg:usurper/sfx_mob_enchanteridle_002_soundwave",
+   "rpg:usurper/sfx_mob_enchanteridle_003_soundwave"
+  ]
+ },
+ "usurper.prepare": {
+  "subtitle": "subtitles.rpg.usurper.prepare",
+  "sounds": [
+   "rpg:usurper/sfx_mob_enchanterpreattack_001_soundwave",
+   "rpg:usurper/sfx_mob_enchanterpreattack_002_soundwave",
+   "rpg:usurper/sfx_mob_enchanterpreattack_003_soundwave"
+  ]
+ },
+ "usurper.spell": {
+  "subtitle": "subtitles.rpg.usurper.spell",
+  "sounds": [
+   "rpg:usurper/sfx_mob_enchanterspell_001_soundwave",
+   "rpg:usurper/sfx_mob_enchanterspell_002_soundwave"
+  ]
+ },
+ "usurper.step": {
+  "subtitle": "subtitles.rpg.usurper.step",
+  "sounds": [
+   "rpg:usurper/sfx_player_stepgravel_001_soundwave",
+   "rpg:usurper/sfx_player_stepgravel_002_soundwave",
+   "rpg:usurper/sfx_player_stepgravel_003_soundwave",
+   "rpg:usurper/sfx_player_stepgravel_004_soundwave"
+  ]
+ },
+ "vanguard.death": {
+  "subtitle": "subtitles.rpg.vanguard.death",
+  "sounds": [
+   "rpg:vanguard/sfx_mob_vanguarddeath_001_soundwave",
+   "rpg:vanguard/sfx_mob_vanguarddeath_002_soundwave",
+   "rpg:vanguard/sfx_mob_vanguarddeath_003_soundwave"
+  ]
+ },
+ "vanguard.hurt": {
+  "subtitle": "subtitles.rpg.vanguard.hurt",
+  "sounds": [
+   "rpg:vanguard/sfx_mob_vanguardhurt_001_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardhurt_002_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardhurt_003_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardhurt_004_soundwave"
+  ]
+ },
+ "vanguard.idle": {
+  "subtitle": "subtitles.rpg.vanguard.idle",
+  "sounds": [
+   "rpg:vanguard/sfx_mob_vanguardidle_001_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardidle_002_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardidle_003_soundwave"
+  ]
+ },
+ "vanguard.shield_break": {
+  "subtitle": "subtitles.rpg.vanguard.shield_break",
+  "sounds": [
+   "rpg:vanguard/sfx_mob_vanguardshieldbreak_001_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardshieldbreak_002_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardshieldbreak_003_soundwave"
+  ]
+ },
+ "vanguard.spear": {
+  "subtitle": "subtitles.rpg.vanguard.spear",
+  "sounds": [
+   "rpg:vanguard/sfx_mob_vanguardspear_001_soundwave"
+  ]
+ },
+ "vanguard.step": {
+  "subtitle": "subtitles.rpg.vanguard.step",
+  "sounds": [
+   "rpg:vanguard/sfx_mob_vanguardstep_001_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardstep_002_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardstep_003_soundwave",
+   "rpg:vanguard/sfx_mob_vanguardstep_004_soundwave"
+  ]
+ },
+ "vo.daath.s01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s01",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s02",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s03",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s04": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s04",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s05": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s05",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s06": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s06",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s07": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s07",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s08": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s08",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s09": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s09",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s10": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s10",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s11": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s11",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s12": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s12",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s13": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s13",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s14": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s14",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s15": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s15",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s16": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s16",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s17": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s17",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s18": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s18",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s19": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s19",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s20": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s20",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s21": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s21",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s22": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s22",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.daath.s23": {
+  "sounds": [
+   {
+    "name": "rpg:vo/daath/s23",
+    "attenuation_distance": 1024
+   }
+  ]
+ },
+ "vo.onboard.w01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w01.en_full"
+ },
+ "vo.onboard.w02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w02.en_full"
+ },
+ "vo.onboard.w03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w03.en_full"
+ },
+ "vo.onboard.w04": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w04",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w04.en_full"
+ },
+ "vo.onboard.w05": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w05",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w05.en_full"
+ },
+ "vo.onboard.w06": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w06",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w06.en_full"
+ },
+ "vo.onboard.w07": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w07",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w07.en_full"
+ },
+ "vo.onboard.w08": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w08",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w08.en_full"
+ },
+ "vo.onboard.w09": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w09",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w09.en_full"
+ },
+ "vo.onboard.w10": {
+  "sounds": [
+   {
+    "name": "rpg:vo/onboard/w10",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.onboard.w10.en_full"
+ },
+ "vo.prologue.d01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D01.en_full"
+ },
+ "vo.prologue.d02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D02.en_full"
+ },
+ "vo.prologue.d03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D03.en_full"
+ },
+ "vo.prologue.d04": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d04",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D04.en_full"
+ },
+ "vo.prologue.d05": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d05",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D05.en_full"
+ },
+ "vo.prologue.d06": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/d06",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.D06.en_full"
+ },
+ "vo.prologue.e01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/e01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.E01.en_full"
+ },
+ "vo.prologue.e02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/e02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.E02.en_full"
+ },
+ "vo.prologue.e03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/e03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.E03.en_full"
+ },
+ "vo.prologue.l01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/l01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.L01.en_full"
+ },
+ "vo.prologue.m01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/m01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.M01.en_full"
+ },
+ "vo.prologue.m02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/m02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.M02.en_full"
+ },
+ "vo.prologue.m03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/m03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.M03.en_full"
+ },
+ "vo.prologue.m04": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/m04",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.M04.en_full"
+ },
+ "vo.prologue.n01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N01.en_full"
+ },
+ "vo.prologue.n02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N02.en_full"
+ },
+ "vo.prologue.n03": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n03",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N03.en_full"
+ },
+ "vo.prologue.n04": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n04",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N04.en_full"
+ },
+ "vo.prologue.n05": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/n05",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.N05.en_full"
+ },
+ "vo.prologue.x01": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/x01",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.X01.en_full"
+ },
+ "vo.prologue.x02": {
+  "sounds": [
+   {
+    "name": "rpg:vo/prologue/x02",
+    "attenuation_distance": 1024
+   }
+  ],
+  "subtitle": "rpg.prologue.X02.en_full"
+ },
+ "vo.town.bd01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/bd01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.bd02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/bd02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.bd03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/bd03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ch01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ch01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ch02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ch02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ch03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ch03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ch04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ch04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el05": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el05",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el06": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el06",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el07": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el07",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el08": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el08",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el09": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el09",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el10": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el10",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el11": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el11",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.el12": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/el12",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew05": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew05",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew06": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew06",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew07": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew07",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew08": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew08",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew09": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew09",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew10": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew10",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew11": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew11",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew12": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew12",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew13": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew13",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ew14": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ew14",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex05": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex05",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex06": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex06",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex07": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex07",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex08": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex08",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex09": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex09",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex10": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex10",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex11": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex11",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex12": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex12",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex13": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex13",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex14": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex14",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex15": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex15",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex16": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex16",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex17": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex17",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex18": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex18",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ex19": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ex19",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ho01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ho01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ho02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ho02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ho03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ho03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.ho04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/ho04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.iq01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/iq01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.iq02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/iq02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.iq03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/iq03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.iq04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/iq04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.iq05": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/iq05",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.iq06": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/iq06",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.iq07": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/iq07",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.iq08": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/iq08",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr05": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr05",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr06": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr06",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr07": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr07",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr08": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr08",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr09": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr09",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr10": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr10",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr11": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr11",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr12": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr12",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr13": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr13",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr14": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr14",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr15": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr15",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr16": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr16",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr17": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr17",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr18": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr18",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr19": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr19",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr20": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr20",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr21": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr21",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr22": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr22",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr23": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr23",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.pr24": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/pr24",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rb01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rb01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rb02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rb02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rb03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rb03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rb04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rb04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rh01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rh01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rh02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rh02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rh03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rh03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rh04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rh04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rw01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rw01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rw02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rw02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rw03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rw03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.rw04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/rw04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.sv01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/sv01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.sv02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/sv02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.sv03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/sv03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.sv04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/sv04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.sv05": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/sv05",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.sv06": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/sv06",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.th01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/th01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.th02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/th02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.th03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/th03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.th04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/th04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.th05": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/th05",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.th06": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/th06",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi04",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi05": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi05",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi06": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi06",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi07": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi07",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi08": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi08",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi09": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi09",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi10": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi10",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi11": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi11",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wi12": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wi12",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wt01": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wt01",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wt02": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wt02",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wt03": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wt03",
+    "stream": true
+   }
+  ]
+ },
+ "vo.town.wt04": {
+  "category": "voice",
+  "sounds": [
+   {
+    "name": "rpg:vo/town/wt04",
+    "stream": true
+   }
+  ]
+ },
+ "watchling.death": {
+  "subtitle": "subtitles.rpg.watchling.death",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.enderman.death"
+   }
+  ]
+ },
+ "watchling.hurt": {
+  "subtitle": "subtitles.rpg.watchling.hurt",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.enderman.hurt"
+   }
+  ]
+ },
+ "watchling.swing": {
+  "subtitle": "subtitles.rpg.watchling.swing",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.enderman.scream"
+   }
+  ]
+ },
+ "watchling.tp": {
+  "subtitle": "subtitles.rpg.watchling.tp",
+  "sounds": [
+   {
+    "type": "event",
+    "name": "minecraft:entity.enderman.teleport"
+   }
+  ]
+ }
 }

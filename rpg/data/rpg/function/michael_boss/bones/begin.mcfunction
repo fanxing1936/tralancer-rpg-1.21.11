@@ -8,7 +8,7 @@ execute rotated 90 0 positioned ^ ^ ^4 run function rpg:michael_boss/bones/orbit
 execute rotated -90 0 positioned ^ ^ ^4 run function rpg:michael_boss/bones/orbit {side:"b"}
 summon minecraft:marker ~ ~ ~9.17 {Tags:["rpg.mkb.fx","rpg.mkb.bp1"]}
 summon minecraft:marker ~ ~ ~-9.17 {Tags:["rpg.mkb.fx","rpg.mkb.bp2"]}
-scoreboard players set @e[tag=rpg.mkb.bp1] rpg_mk_life 164
-scoreboard players set @e[tag=rpg.mkb.bp2] rpg_mk_life 164
-scoreboard players set @e[tag=rpg.mkb.bp1] rpg_mk_kd 0
-scoreboard players set @e[tag=rpg.mkb.bp2] rpg_mk_kd 0
+scoreboard players set @e[tag=rpg.mkb.bp1,predicate=!rpg:in_prologue] rpg_mk_life 164
+scoreboard players set @e[tag=rpg.mkb.bp2,predicate=!rpg:in_prologue] rpg_mk_life 164
+scoreboard players set @e[tag=rpg.mkb.bp1,predicate=!rpg:in_prologue] rpg_mk_kd 0
+scoreboard players set @e[tag=rpg.mkb.bp2,predicate=!rpg:in_prologue] rpg_mk_kd 0

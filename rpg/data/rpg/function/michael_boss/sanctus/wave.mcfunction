@@ -1,23 +1,23 @@
 # 一道焰墙（as/at 他）：一个圆心标记，带波号；地上一圈往外长的火环
 summon minecraft:marker ~ ~ ~ {Tags:["rpg.mkb.fx","rpg.mkb.wave","rpg.mkb.wavenew"]}
-scoreboard players set @e[tag=rpg.mkb.wavenew] rpg_mk_life 61
-scoreboard players set @e[tag=rpg.mkb.wavenew] rpg_mk_kd 0
+scoreboard players set @e[tag=rpg.mkb.wavenew,predicate=!rpg:in_prologue] rpg_mk_life 61
+scoreboard players set @e[tag=rpg.mkb.wavenew,predicate=!rpg:in_prologue] rpg_mk_kd 0
 summon minecraft:item_display ~ ~0.08 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:michael_vfx/ring_t","minecraft:custom_model_data":{colors:[16777215]}}},brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:2f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[2f,1f,2f],right_rotation:[0f,0f,0f,1f]}}
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 60
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 19
-tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_life 60
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_kd 19
+tag @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] remove rpg.mkb.fxnew
 summon minecraft:item_display ~ ~0.07 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:michael_vfx/glow_f","minecraft:custom_model_data":{colors:[16777215]}}},brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:2f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[3f,1f,3f],right_rotation:[0f,0f,0f,1f]}}
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 12
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 17
-tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_life 12
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_kd 17
+tag @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] remove rpg.mkb.fxnew
 summon minecraft:text_display ~ ~1.5 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],text:{text:"",font:"rpg:michael_vfx",color:"white"},background:0,billboard:"center",brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:3f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[6.25f,6.25f,6.25f],right_rotation:[0f,0f,0f,1f]}}
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 16
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 4
-tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_life 16
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_kd 4
+tag @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] remove rpg.mkb.fxnew
 summon minecraft:text_display ~ ~1.5 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],text:{text:"",font:"rpg:michael_vfx",color:"white"},background:0,billboard:"center",brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:3f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[0.01f,0.01f,0.01f],right_rotation:[0f,0f,0f,1f]}}
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 10
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 7
-tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_life 10
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_kd 7
+tag @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] remove rpg.mkb.fxnew
 execute rotated 0 0 run function rpg:michael_boss/sanctus/flame
 execute rotated 12 0 run function rpg:michael_boss/sanctus/spoke
 execute rotated 24 0 run function rpg:michael_boss/sanctus/spoke

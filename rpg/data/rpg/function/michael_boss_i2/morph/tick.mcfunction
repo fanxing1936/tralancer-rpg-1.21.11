@@ -1,0 +1,9 @@
+scoreboard players add @s rpg_mk_c 1
+execute if score @s rpg_mk_c matches 14 run execute at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1,distance=0..] run function rpg:michael_boss_i2/pillar/plant
+execute if score @s rpg_mk_c matches 16 run execute unless score #pro rpg_mk_i2 matches 1 run tellraw @a[distance=..48] ["",{"text":"〖","color":"#FF805F","bold":true,"italic":false},{"text":"炽天使 ","color":"#FF805F","bold":true,"italic":false},{"text":"米迦勒","color":"#FF3300","bold":true,"italic":false},{"text":"〗","color":"#FF805F","bold":true,"italic":false},{"text":" 𝔗𝔥𝔢 𝔖𝔢𝔯𝔞𝔭𝔥","color":"#8F7430","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"……","color":"#9C9A94","bold":false,"italic":false}]
+execute if score @s rpg_mk_c matches 14..40 run particle minecraft:white_ash ~ ~1 ~ 0.5 0.6 0.5 0 3
+execute if score @s rpg_mk_c matches 40 run function rpg:michael/weapon/rib
+execute if score @s rpg_mk_c matches 40 run function rpg:michael/anim/enter/hero
+execute if score @s rpg_mk_c matches 40 run function rpg:michael_boss_i2/vfx/seraph
+execute if score @s rpg_mk_c matches 46 run execute unless score #pro rpg_mk_i2 matches 1 run tellraw @a[distance=..48] ["",{"text":"〖","color":"#FF805F","bold":true,"italic":false},{"text":"炽天使 ","color":"#FF805F","bold":true,"italic":false},{"text":"米迦勒","color":"#FF3300","bold":true,"italic":false},{"text":"〗","color":"#FF805F","bold":true,"italic":false},{"text":" 𝔊𝔢𝔫𝔢𝔰𝔦𝔰 2:23","color":"#8F7430","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"第二阶段 · ","color":"#E6DFCF","bold":false,"italic":false},{"text":"骨中之骨，肉中之肉。","color":"#9C9A94","bold":false,"italic":false}]
+execute if score @s rpg_mk_c matches 110 run function rpg:michael_boss_i2/stage/begin2

@@ -1,0 +1,26 @@
+scoreboard players set #init rpg_tw 1
+scoreboard players set #s1 rpg_tw 0
+scoreboard players set #s2 rpg_tw 0
+scoreboard players set #s3 rpg_tw 0
+scoreboard players set #s4 rpg_tw 0
+scoreboard players set #s5 rpg_tw 0
+scoreboard players set #s6 rpg_tw 0
+scoreboard players set #s7 rpg_tw 0
+scoreboard players set #s8 rpg_tw 0
+scoreboard players set #s9 rpg_tw 0
+scoreboard players set #s10 rpg_tw 0
+scoreboard players set #s11 rpg_tw 0
+scoreboard players set #s12 rpg_tw 0
+scoreboard players set #s13 rpg_tw 0
+scoreboard players set #s14 rpg_tw 0
+scoreboard players set #s15 rpg_tw 0
+scoreboard players set #s16 rpg_tw 0
+scoreboard players set #s17 rpg_tw 0
+scoreboard players set #s18 rpg_tw 0
+scoreboard players set #s19 rpg_tw 0
+scoreboard players set #s20 rpg_tw 0
+scoreboard players set #s21 rpg_tw 0
+scoreboard players set #s22 rpg_tw 0
+scoreboard players set #s23 rpg_tw 0
+scoreboard players set #s24 rpg_tw 0
+data modify storage rpg:town m set value {sfx:"",var:0,y:0,x:0,z:0}

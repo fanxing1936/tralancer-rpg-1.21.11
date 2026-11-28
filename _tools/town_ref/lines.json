@@ -1,0 +1,1109 @@
+{
+ "source": "城镇台词（2026-11-27，依据开局参与感策划书与 LORE.md）",
+ "speakers": {
+  "priest": {
+   "zh": "神父",
+   "en": "Father",
+   "voice": "echo",
+   "tone": "A village priest in his sixties: kind, patient, a little tired, speaks like he has buried many people and still believes."
+  },
+  "elder": {
+   "zh": "村长",
+   "en": "Elder",
+   "voice": "alloy",
+   "tone": "A plain-spoken village elder: practical, warm, a farmer's voice, worried about his people."
+  },
+  "inquisitor": {
+   "zh": "审判官",
+   "en": "Inquisitor",
+   "voice": "cedar",
+   "tone": "A Church inquisitor: cold, precise, never shouts; every sentence sounds like a verdict."
+  },
+  "edgewalker": {
+   "zh": "兜帽人",
+   "en": "Hooded Man",
+   "voice": "verse",
+   "tone": "A senior Edgewalker hiding in plain sight: low, quick, wry, a man used to running."
+  },
+  "witch": {
+   "zh": "女巫",
+   "en": "The Witch",
+   "voice": "shimmer",
+   "tone": "A wounded young woman the Church calls a witch: tired, clear, unafraid; quiet anger under it."
+  },
+  "farmwife": {
+   "zh": "农妇",
+   "en": "Farmwife",
+   "voice": "coral",
+   "tone": "A busy farm woman gossiping over a fence: fast, a bit nervous, lowers her voice for secrets."
+  },
+  "farmer": {
+   "zh": "农夫",
+   "en": "Farmer",
+   "voice": "ash",
+   "tone": "A gruff farmer: slow, few words, superstitious."
+  },
+  "youth": {
+   "zh": "少年",
+   "en": "Lad",
+   "voice": "nova",
+   "tone": "An excitable teenage boy who repeats rumours as if they were adventures."
+  },
+  "bard": {
+   "zh": "吟游诗人",
+   "en": "Bard",
+   "voice": "ballad",
+   "tone": "A wandering bard singing a fragment of an old song, unaccompanied, half-spoken, half-sung."
+  },
+  "watchman": {
+   "zh": "守夜人",
+   "en": "Watchman",
+   "voice": "onyx",
+   "tone": "An old night watchman: hoarse, steady, a lantern-carrier who has seen strange things."
+  },
+  "child": {
+   "zh": "孩子",
+   "en": "Child",
+   "voice": "marin",
+   "tone": "A lost child of about eight: small voice, shy, then brave."
+  },
+  "narrator": {
+   "zh": "旁白",
+   "en": "Narrator",
+   "voice": "fable",
+   "tone": "An old storyteller reading scripture aloud: slow, unhurried, reverent, close to the microphone (same narrator as the onboarding)."
+  },
+  "servant": {
+   "zh": "罪仆",
+   "en": "Sin-servant",
+   "voice": "sage",
+   "tone": "A minor demon of the Seventy-Two speaking through candle smoke: soft, courteous, tempting, never hurried."
+  }
+ },
+ "lines": [
+  {
+   "id": "PR01",
+   "speaker": "priest",
+   "zh": "孩子，你醒了。这里是你的故乡，你在这里出生，也在这里受洗。",
+   "en": "You're awake, child. This is your home; you were born here, and baptised here.",
+   "direction": "Gentle, welcoming, a hand on the shoulder.",
+   "voiced": true
+  },
+  {
+   "id": "PR02",
+   "speaker": "priest",
+   "zh": "镇子外面不太平。先拿着这些，够你撑过头几天。",
+   "en": "It isn't safe beyond the town. Take these; they'll see you through the first days.",
+   "direction": "Handing over a bundle, matter-of-fact.",
+   "voiced": true
+  },
+  {
+   "id": "PR03",
+   "speaker": "priest",
+   "zh": "教堂前的圣火会护着你，直到你站稳脚跟。",
+   "en": "The holy fire before the church will shelter you until you find your feet.",
+   "direction": "Reassuring.",
+   "voiced": true
+  },
+  {
+   "id": "PR04",
+   "speaker": "priest",
+   "zh": "每天来一趟，教堂总有一份口粮给你。",
+   "en": "Come by each day. The church always keeps a ration for you.",
+   "direction": "Kind, routine.",
+   "voiced": true
+  },
+  {
+   "id": "PR05",
+   "speaker": "priest",
+   "zh": "今天的口粮。别空着肚子出门。",
+   "en": "Today's ration. Don't go out on an empty stomach.",
+   "direction": "Brief, fatherly.",
+   "voiced": true
+  },
+  {
+   "id": "PR06",
+   "speaker": "priest",
+   "zh": "你今天已经领过了。明天再来吧。",
+   "en": "You've had yours today. Come back tomorrow.",
+   "direction": "Amused, patient.",
+   "voiced": true
+  },
+  {
+   "id": "PR07",
+   "speaker": "priest",
+   "zh": "要学驱魔，先学会看。恶魔留下的痕迹，比它本身好找。",
+   "en": "To learn exorcism, first learn to look. A demon's traces are easier to find than the demon.",
+   "direction": "Teaching, slow.",
+   "voiced": true
+  },
+  {
+   "id": "PR08",
+   "speaker": "priest",
+   "zh": "采三样东西来：清水、盐、圣火的灰。我教你炼一瓶圣水。",
+   "en": "Bring me three things: clean water, salt, and ash from the holy fire. I'll teach you to make holy water.",
+   "direction": "Practical, counting on fingers.",
+   "voiced": true
+  },
+  {
+   "id": "PR09",
+   "speaker": "priest",
+   "zh": "粮仓出事了。跟我来，别碰任何发黑的东西。",
+   "en": "Something's wrong in the granary. Follow me, and touch nothing that has gone black.",
+   "direction": "Urgent but controlled.",
+   "voiced": true
+  },
+  {
+   "id": "PR10",
+   "speaker": "priest",
+   "zh": "苍蝇不会无缘无故聚成团。记下来，这是第一处。",
+   "en": "Flies don't swarm for no reason. Note it; that's the first sign.",
+   "direction": "Quiet, crouching.",
+   "voiced": true
+  },
+  {
+   "id": "PR11",
+   "speaker": "priest",
+   "zh": "麦子从里面烂了，外面还是金的。贪吃的东西就是这样吃的。",
+   "en": "The grain rotted from the inside; the outside is still gold. That is how gluttony eats.",
+   "direction": "Disgusted, low.",
+   "voiced": true
+  },
+  {
+   "id": "PR12",
+   "speaker": "priest",
+   "zh": "这个印记……三道横，一只眼。我见过它。",
+   "en": "This mark... three bars and an eye. I've seen it before.",
+   "direction": "Recognition, a chill.",
+   "voiced": true
+  },
+  {
+   "id": "PR13",
+   "speaker": "priest",
+   "zh": "是蝇王。别西卜的一个化身。它不是全力，但足够吃空一个镇子。",
+   "en": "It's the Lord of Flies. An avatar of Beelzebub. Not his full strength, but enough to eat a town hollow.",
+   "direction": "Grave, certain.",
+   "voiced": true
+  },
+  {
+   "id": "PR14",
+   "speaker": "priest",
+   "zh": "图腾立在门口。用圣水点燃它，法阵才会亮。",
+   "en": "Set the totem at the door. Light it with holy water, or the circle won't wake.",
+   "direction": "Instructing quickly.",
+   "voiced": true
+  },
+  {
+   "id": "PR15",
+   "speaker": "priest",
+   "zh": "法阵亮了。守住它，别让蝇群扑灭圣火！",
+   "en": "The circle is lit. Hold it; don't let the swarm smother the fire!",
+   "direction": "Raised voice, rallying.",
+   "voiced": true
+  },
+  {
+   "id": "PR16",
+   "speaker": "priest",
+   "zh": "撑住，它在变弱！",
+   "en": "Hold on, it's weakening!",
+   "direction": "Shouted over noise.",
+   "voiced": true
+  },
+  {
+   "id": "PR17",
+   "speaker": "priest",
+   "zh": "它跪下了。由你来裁决：消灭、放逐，还是封印。",
+   "en": "It kneels. The verdict is yours: destroy, banish, or seal.",
+   "direction": "Solemn, handing over authority.",
+   "voiced": true
+  },
+  {
+   "id": "PR18",
+   "speaker": "priest",
+   "zh": "做得好。今晚镇上的人能睡个好觉了。",
+   "en": "Well done. The town will sleep tonight.",
+   "direction": "Relieved, warm.",
+   "voiced": true
+  },
+  {
+   "id": "PR19",
+   "speaker": "priest",
+   "zh": "火灭了……没关系，人都还活着。粮食的事，明天再想办法。",
+   "en": "The fire's out... never mind. Everyone's alive. We'll sort out the grain tomorrow.",
+   "direction": "Tired, consoling.",
+   "voiced": true
+  },
+  {
+   "id": "PR20",
+   "speaker": "priest",
+   "zh": "这瓶圣水是你自己炼的。比我给你的那瓶更管用。",
+   "en": "You made this holy water yourself. It'll serve you better than any I could give.",
+   "direction": "Proud.",
+   "voiced": true
+  },
+  {
+   "id": "PR21",
+   "speaker": "priest",
+   "zh": "新手的日子结束了。这枚徽章说明你是这个镇的人。",
+   "en": "Your first days are over. This badge says you belong to this town.",
+   "direction": "Ceremonial, pinning a badge.",
+   "voiced": true
+  },
+  {
+   "id": "PR22",
+   "speaker": "priest",
+   "zh": "还有这道通行符。去伊甸之门吧，但别一个人走得太深。",
+   "en": "And this pass. Go to the Gate of Eden, but don't walk too deep alone.",
+   "direction": "Serious, a warning.",
+   "voiced": true
+  },
+  {
+   "id": "PR23",
+   "speaker": "priest",
+   "zh": "你身上有烛烟的味道。我不问。但别让圣卫看见。",
+   "en": "You smell of candle smoke. I won't ask. But don't let the guards see.",
+   "direction": "Quiet, knowing, not judging.",
+   "voiced": true
+  },
+  {
+   "id": "PR24",
+   "speaker": "priest",
+   "zh": "愿圣火照着你回家。",
+   "en": "May the holy fire light your way home.",
+   "direction": "Blessing, soft.",
+   "voiced": true
+  },
+  {
+   "id": "EL01",
+   "speaker": "elder",
+   "zh": "回来就好。镇上的人都还记得你。",
+   "en": "Good to have you back. The town still remembers you.",
+   "direction": "Warm, gruff.",
+   "voiced": true
+  },
+  {
+   "id": "EL02",
+   "speaker": "elder",
+   "zh": "告示板上有活儿。镇上缺人手，你帮一把，大家都记着。",
+   "en": "There's work on the notice board. We're short of hands; help out and people will remember.",
+   "direction": "Pointing.",
+   "voiced": true
+  },
+  {
+   "id": "EL03",
+   "speaker": "elder",
+   "zh": "大家开始叫你的名字了。铁匠那边会给你便宜些。",
+   "en": "People are starting to say your name. The smith will give you a better price.",
+   "direction": "Pleased.",
+   "voiced": true
+  },
+  {
+   "id": "EL04",
+   "speaker": "elder",
+   "zh": "镇东头有间空屋。你要是愿意，租下来当个家吧。",
+   "en": "There's an empty house at the east end. Rent it as your home, if you like.",
+   "direction": "Offering.",
+   "voiced": true
+  },
+  {
+   "id": "EL05",
+   "speaker": "elder",
+   "zh": "这张图纸是镇上的老手艺，只给自己人。",
+   "en": "This pattern is the town's old craft. We only give it to our own.",
+   "direction": "Handing it over carefully.",
+   "voiced": true
+  },
+  {
+   "id": "EL06",
+   "speaker": "elder",
+   "zh": "从今天起，你就是这个镇的守护者。",
+   "en": "From today on, you are this town's guardian.",
+   "direction": "Moved, formal.",
+   "voiced": true
+  },
+  {
+   "id": "EL07",
+   "speaker": "elder",
+   "zh": "昨晚的事别往心里去。镇子挨过比这更糟的夜。",
+   "en": "Don't take last night to heart. This town has survived worse nights.",
+   "direction": "Consoling.",
+   "voiced": true
+  },
+  {
+   "id": "EL08",
+   "speaker": "elder",
+   "zh": "房子塌了还能盖，人没了就没了。你救下的比你想的多。",
+   "en": "Houses can be rebuilt; people can't. You saved more than you think.",
+   "direction": "Firm, kind.",
+   "voiced": true
+  },
+  {
+   "id": "EL09",
+   "speaker": "elder",
+   "zh": "这封信得送到邻镇去。路远，带上地图。",
+   "en": "This letter must reach the next town. It's a long road; take a map.",
+   "direction": "Handing a letter.",
+   "voiced": true
+  },
+  {
+   "id": "EL10",
+   "speaker": "elder",
+   "zh": "收税的又来了。你帮教廷收，还是帮我们藏？我不怪你。",
+   "en": "The tax-men are back. Will you collect for the Church, or help us hide the grain? I won't blame you either way.",
+   "direction": "Torn, honest.",
+   "voiced": true
+  },
+  {
+   "id": "EL11",
+   "speaker": "elder",
+   "zh": "粮价涨了一天。没事，熬过去就好。",
+   "en": "Grain's dear for a day. No matter; we'll get through it.",
+   "direction": "Sighing.",
+   "voiced": true
+  },
+  {
+   "id": "EL12",
+   "speaker": "elder",
+   "zh": "镇子不大，但它是你的。",
+   "en": "It's not a big town, but it's yours.",
+   "direction": "Proud, simple.",
+   "voiced": true
+  },
+  {
+   "id": "IQ01",
+   "speaker": "inquisitor",
+   "zh": "以教廷之名：此女与恶魔立约，明日日出，火刑。",
+   "en": "In the name of the Church: this woman has made a pact with demons. At sunrise, she burns.",
+   "direction": "Proclaiming to a crowd.",
+   "voiced": true
+  },
+  {
+   "id": "IQ02",
+   "speaker": "inquisitor",
+   "zh": "谁替她求情，谁就和她同罪。",
+   "en": "Whoever pleads for her shares her guilt.",
+   "direction": "Flat, threatening.",
+   "voiced": true
+  },
+  {
+   "id": "IQ03",
+   "speaker": "inquisitor",
+   "zh": "犯人跑了！封住镇口！",
+   "en": "The prisoner is loose! Seal the gates!",
+   "direction": "Sharp command, not panicked.",
+   "voiced": true
+  },
+  {
+   "id": "IQ04",
+   "speaker": "inquisitor",
+   "zh": "你们跑不远的。林子也是教廷的。",
+   "en": "You won't get far. The woods belong to the Church too.",
+   "direction": "Calling after them, calm.",
+   "voiced": true
+  },
+  {
+   "id": "IQ05",
+   "speaker": "inquisitor",
+   "zh": "放下她，我只记你一笔。",
+   "en": "Put her down, and I'll only write your name.",
+   "direction": "Offering a cold bargain.",
+   "voiced": true
+  },
+  {
+   "id": "IQ06",
+   "speaker": "inquisitor",
+   "zh": "孤堡的墙不是为挡恶魔造的，是为挡忘了神的人。",
+   "en": "The walls of the Lone Fort weren't built against demons. They were built against those who forget God.",
+   "direction": "Lecturing recruits.",
+   "voiced": true
+  },
+  {
+   "id": "IQ07",
+   "speaker": "inquisitor",
+   "zh": "每一份名单都有用。今天的邻居，明天的证人。",
+   "en": "Every list has its use. Today's neighbour is tomorrow's witness.",
+   "direction": "Cold, reasonable.",
+   "voiced": true
+  },
+  {
+   "id": "IQ08",
+   "speaker": "inquisitor",
+   "zh": "……这一次算你们赢。",
+   "en": "...You win this time.",
+   "direction": "Through clenched teeth, almost a whisper.",
+   "voiced": true
+  },
+  {
+   "id": "EW01",
+   "speaker": "edgewalker",
+   "zh": "嘘。别回头，听我说。",
+   "en": "Shh. Don't turn around. Listen.",
+   "direction": "Whispering from the shadows.",
+   "voiced": true
+  },
+  {
+   "id": "EW02",
+   "speaker": "edgewalker",
+   "zh": "明早要烧的那个人没做过他们说的事。我需要人手。",
+   "en": "The one they're burning at dawn didn't do what they say. I need hands.",
+   "direction": "Low, urgent.",
+   "voiced": true
+  },
+  {
+   "id": "EW03",
+   "speaker": "edgewalker",
+   "zh": "天黑以后，到刑台后面的巷子找我。",
+   "en": "After dark, find me in the alley behind the scaffold.",
+   "direction": "Leaving.",
+   "voiced": true
+  },
+  {
+   "id": "EW04",
+   "speaker": "edgewalker",
+   "zh": "听好：一个人点火引开圣卫，一个人割绳，一个人挡住审判官。",
+   "en": "Listen: one lights a fire to draw the guards, one cuts the ropes, one holds the inquisitor.",
+   "direction": "Planning, quick.",
+   "voiced": true
+  },
+  {
+   "id": "EW05",
+   "speaker": "edgewalker",
+   "zh": "只有你一个？那我去点火，绳子交给你。",
+   "en": "Just you? Then I'll light the fire. The ropes are yours.",
+   "direction": "Wry, adapting.",
+   "voiced": true
+  },
+  {
+   "id": "EW06",
+   "speaker": "edgewalker",
+   "zh": "圣卫只打晕，别杀。他们也是被派来的。",
+   "en": "Knock the guards out; don't kill them. They were sent too.",
+   "direction": "Firm.",
+   "voiced": true
+  },
+  {
+   "id": "EW07",
+   "speaker": "edgewalker",
+   "zh": "火起来了！现在！",
+   "en": "Fire's lit! Now!",
+   "direction": "Shouted.",
+   "voiced": true
+  },
+  {
+   "id": "EW08",
+   "speaker": "edgewalker",
+   "zh": "绳子断了，扶她走！",
+   "en": "The ropes are cut, get her up!",
+   "direction": "Urgent.",
+   "voiced": true
+  },
+  {
+   "id": "EW09",
+   "speaker": "edgewalker",
+   "zh": "她走不快。挡住后面的人！",
+   "en": "She can't move fast. Hold off the ones behind us!",
+   "direction": "Running, out of breath.",
+   "voiced": true
+  },
+  {
+   "id": "EW10",
+   "speaker": "edgewalker",
+   "zh": "再往前就是林子了，撑住。",
+   "en": "The woods are just ahead. Hold on.",
+   "direction": "Encouraging, panting.",
+   "voiced": true
+  },
+  {
+   "id": "EW11",
+   "speaker": "edgewalker",
+   "zh": "到了。这里他们找不到。",
+   "en": "We're here. They won't find us here.",
+   "direction": "Relief, catching breath.",
+   "voiced": true
+  },
+  {
+   "id": "EW12",
+   "speaker": "edgewalker",
+   "zh": "你救的不是女巫。她是我们的人，是边缘者。",
+   "en": "You didn't save a witch. She's one of us. An Edgewalker.",
+   "direction": "Revealing, steady.",
+   "voiced": true
+  },
+  {
+   "id": "EW13",
+   "speaker": "edgewalker",
+   "zh": "营地的门一直开着。想通了就来。",
+   "en": "The camp's door is always open. Come when you've made up your mind.",
+   "direction": "Calm invitation.",
+   "voiced": true
+  },
+  {
+   "id": "EW14",
+   "speaker": "edgewalker",
+   "zh": "教堂的蜡烛，教廷的圣水……总有人得让他们知道，不是所有人都怕。",
+   "en": "The church candles, the Church's holy water... someone has to show them not everyone is afraid.",
+   "direction": "Handing out a secret job, a half-smile.",
+   "voiced": true
+  },
+  {
+   "id": "WI01",
+   "speaker": "witch",
+   "zh": "谢谢你……我还以为今天就是最后一天。",
+   "en": "Thank you... I thought today was my last.",
+   "direction": "Weak, sincere.",
+   "voiced": true
+  },
+  {
+   "id": "WI02",
+   "speaker": "witch",
+   "zh": "你知道所罗门王吗？他是第一个被记下名字的边缘者。",
+   "en": "Do you know of King Solomon? He was the first Edgewalker whose name was written down.",
+   "direction": "Storytelling, quiet.",
+   "voiced": true
+  },
+  {
+   "id": "WI03",
+   "speaker": "witch",
+   "zh": "他和七十二位魔神立约，把它们封进柱子里。没有杀，也没有放。",
+   "en": "He made pacts with seventy-two demons and sealed them in pillars. He didn't kill them, and he didn't free them.",
+   "direction": "Measured.",
+   "voiced": true
+  },
+  {
+   "id": "WI04",
+   "speaker": "witch",
+   "zh": "后来教廷拿走了那些柱子，把它们当成军械库。",
+   "en": "Later the Church took those pillars and turned them into an armoury.",
+   "direction": "Bitter.",
+   "voiced": true
+  },
+  {
+   "id": "WI05",
+   "speaker": "witch",
+   "zh": "每个边缘者都分到一根柱、一位魔神。我们借它的力，它借我们的心。",
+   "en": "Every Edgewalker is given a pillar and a demon. We borrow its strength; it borrows our hearts.",
+   "direction": "Matter-of-fact, sad.",
+   "voiced": true
+  },
+  {
+   "id": "WI06",
+   "speaker": "witch",
+   "zh": "教廷需要我们去打仗。打完了，就叫我们女巫。",
+   "en": "The Church needs us for its wars. When the war's over, it calls us witches.",
+   "direction": "Quiet anger.",
+   "voiced": true
+  },
+  {
+   "id": "WI07",
+   "speaker": "witch",
+   "zh": "我没有杀过人。我只是不肯再替他们杀人。",
+   "en": "I never killed anyone. I only refused to kill for them any more.",
+   "direction": "Firm.",
+   "voiced": true
+  },
+  {
+   "id": "WI08",
+   "speaker": "witch",
+   "zh": "镇上的人不坏。他们只是怕，而怕最好用。",
+   "en": "The townsfolk aren't wicked. They're afraid, and fear is easy to use.",
+   "direction": "Thoughtful.",
+   "voiced": true
+  },
+  {
+   "id": "WI09",
+   "speaker": "witch",
+   "zh": "这是我身上唯一值钱的东西。拿着，别推辞。",
+   "en": "This is the only thing of value I have. Take it; don't refuse.",
+   "direction": "Pressing it into a hand.",
+   "voiced": true
+  },
+  {
+   "id": "WI10",
+   "speaker": "witch",
+   "zh": "如果有一天你也被教廷当成怪物，来林子里找我们。",
+   "en": "If the Church ever calls you a monster too, come find us in the woods.",
+   "direction": "Slow, the most important line; let it land.",
+   "voiced": true
+  },
+  {
+   "id": "WI11",
+   "speaker": "witch",
+   "zh": "你又来了。坐吧，火是暖的。",
+   "en": "You came back. Sit; the fire's warm.",
+   "direction": "Friendly, at ease.",
+   "voiced": true
+  },
+  {
+   "id": "WI12",
+   "speaker": "witch",
+   "zh": "祭坛在营地后面。想清楚了再点那支黑蜡烛。",
+   "en": "The altar is behind the camp. Think hard before you light the black candle.",
+   "direction": "Serious warning.",
+   "voiced": true
+  },
+  {
+   "id": "RB01",
+   "speaker": "farmwife",
+   "zh": "你闻到没有？粮仓那边一股酸味，麦子都发黑了。",
+   "en": "Can you smell it? Something sour by the granary. The grain's gone black.",
+   "direction": "Gossiping, wrinkling nose.",
+   "voiced": true
+  },
+  {
+   "id": "RB02",
+   "speaker": "farmer",
+   "zh": "苍蝇。成团成团的。冬天哪来的苍蝇。",
+   "en": "Flies. Swarms of them. Where do flies come from at this time of year?",
+   "direction": "Uneasy, slow.",
+   "voiced": true
+  },
+  {
+   "id": "RB03",
+   "speaker": "youth",
+   "zh": "老约拿家的人都在闹肚子，说是吃了新磨的面！",
+   "en": "Old Jonah's whole family is sick. They say it was the new flour!",
+   "direction": "Excited.",
+   "voiced": true
+  },
+  {
+   "id": "RB04",
+   "speaker": "farmwife",
+   "zh": "神父今天在粮仓门口站了好久，脸色可难看了。",
+   "en": "The priest stood at the granary door for ages today. He looked awful.",
+   "direction": "Lowering voice.",
+   "voiced": true
+  },
+  {
+   "id": "RH01",
+   "speaker": "farmer",
+   "zh": "墓地的土是松的。像是有人从里面往外挖。",
+   "en": "The graveyard soil is loose. As if someone dug their way out.",
+   "direction": "Superstitious, quiet.",
+   "voiced": true
+  },
+  {
+   "id": "RH02",
+   "speaker": "youth",
+   "zh": "我昨晚看见一个人站在路口，没有脸！真的，没有脸！",
+   "en": "Last night I saw someone standing at the crossroads with no face! Honest, no face!",
+   "direction": "Breathless.",
+   "voiced": true
+  },
+  {
+   "id": "RH03",
+   "speaker": "farmwife",
+   "zh": "你别盯着它看……可也别背过身去。我奶奶就是这么说的。",
+   "en": "Don't stare at it... but don't turn your back on it either. That's what my grandmother said.",
+   "direction": "Whispering, scared.",
+   "voiced": true
+  },
+  {
+   "id": "RH04",
+   "speaker": "farmer",
+   "zh": "今晚关好门。守夜人说狗叫了一整夜。",
+   "en": "Bar your door tonight. The watchman says the dogs barked all night.",
+   "direction": "Warning.",
+   "voiced": true
+  },
+  {
+   "id": "RW01",
+   "speaker": "youth",
+   "zh": "审判官进城了！带着一车柴火！",
+   "en": "The inquisitor's come to town! With a whole cart of firewood!",
+   "direction": "Running in, excited and scared.",
+   "voiced": true
+  },
+  {
+   "id": "RW02",
+   "speaker": "farmwife",
+   "zh": "广场上在搭刑台……明早要烧女巫。",
+   "en": "They're building a scaffold in the square... they'll burn a witch in the morning.",
+   "direction": "Uneasy.",
+   "voiced": true
+  },
+  {
+   "id": "RW03",
+   "speaker": "farmer",
+   "zh": "那姑娘给我家孩子看过病。我不信她是女巫。",
+   "en": "That girl once nursed my child. I don't believe she's a witch.",
+   "direction": "Quiet, troubled.",
+   "voiced": true
+  },
+  {
+   "id": "RW04",
+   "speaker": "farmwife",
+   "zh": "嘘，别乱说话。圣卫在听。",
+   "en": "Hush, watch your tongue. The guards are listening.",
+   "direction": "Hissing.",
+   "voiced": true
+  },
+  {
+   "id": "TH01",
+   "speaker": "farmwife",
+   "zh": "谢谢你，谢谢……我还以为再也见不到家了。",
+   "en": "Thank you, thank you... I thought I'd never see home again.",
+   "direction": "Crying with relief.",
+   "voiced": true
+  },
+  {
+   "id": "TH02",
+   "speaker": "farmer",
+   "zh": "欠你一条命。有事说一声。",
+   "en": "I owe you my life. Just say the word.",
+   "direction": "Gruff gratitude.",
+   "voiced": true
+  },
+  {
+   "id": "TH03",
+   "speaker": "youth",
+   "zh": "你是怎么做到的？教教我！",
+   "en": "How did you do that? Teach me!",
+   "direction": "Awestruck.",
+   "voiced": true
+  },
+  {
+   "id": "TH04",
+   "speaker": "farmwife",
+   "zh": "来，拿着，自家烤的。",
+   "en": "Here, take this. Baked it myself.",
+   "direction": "Pressing bread on you.",
+   "voiced": true
+  },
+  {
+   "id": "TH05",
+   "speaker": "farmer",
+   "zh": "镇子能撑到今天，多亏了你这样的人。",
+   "en": "This town's still standing because of people like you.",
+   "direction": "Sincere.",
+   "voiced": true
+  },
+  {
+   "id": "TH06",
+   "speaker": "youth",
+   "zh": "等我长大了，也要跟你一样！",
+   "en": "When I grow up, I'm going to be just like you!",
+   "direction": "Determined.",
+   "voiced": true
+  },
+  {
+   "id": "BD01",
+   "speaker": "bard",
+   "zh": "世界曾是一整块，神说要有光；后来权与力分了家，大地就碎成了七样。",
+   "en": "The world was whole when God said light; then Might and Authority parted, and the land broke into seven.",
+   "direction": "Sung slowly, a ballad fragment, unaccompanied.",
+   "voiced": true
+  },
+  {
+   "id": "BD02",
+   "speaker": "bard",
+   "zh": "七位领主坐王座下，傲慢、嫉妒、贪与饱；谁拿走他们的刀，谁就拿走他们的影。",
+   "en": "Seven lords beneath the throne: pride, envy, greed and gluttony; who takes their blades, takes their shadows too.",
+   "direction": "Sung, darker, slower.",
+   "voiced": true
+  },
+  {
+   "id": "BD03",
+   "speaker": "bard",
+   "zh": "所罗门戴冠走进深渊，七十二个名字带回人间；柱子立着，锁还在，钥匙在教廷的袖子里。",
+   "en": "Solomon wore his crown into the deep, and brought back seventy-two names; the pillars stand, the locks still hold, the key is in the Church's sleeve.",
+   "direction": "Sung, ending on a sly spoken note.",
+   "voiced": true
+  },
+  {
+   "id": "WT01",
+   "speaker": "watchman",
+   "zh": "夜里绕镇走一圈。看见什么都别出声，回来告诉我。",
+   "en": "Walk the town once tonight. Whatever you see, keep quiet and tell me.",
+   "direction": "Hoarse, serious.",
+   "voiced": true
+  },
+  {
+   "id": "WT02",
+   "speaker": "watchman",
+   "zh": "墓地那边的灯总是先灭。你去看看。",
+   "en": "The lamps by the graveyard always go out first. Go and look.",
+   "direction": "Uneasy.",
+   "voiced": true
+  },
+  {
+   "id": "WT03",
+   "speaker": "watchman",
+   "zh": "土松了？……那就是了。要出事了。",
+   "en": "The soil's loose?... Then that's it. Something's coming.",
+   "direction": "Grim.",
+   "voiced": true
+  },
+  {
+   "id": "WT04",
+   "speaker": "watchman",
+   "zh": "走完了？好。拿去，这是守夜的钱。",
+   "en": "All the way round? Good. Here, a watchman's wage.",
+   "direction": "Approving.",
+   "voiced": true
+  },
+  {
+   "id": "CH01",
+   "speaker": "child",
+   "zh": "你是来找我的吗？",
+   "en": "Have you come to find me?",
+   "direction": "Small, hopeful.",
+   "voiced": true
+  },
+  {
+   "id": "CH02",
+   "speaker": "child",
+   "zh": "我迷路了，是那个戴兜帽的叔叔给我饭吃。",
+   "en": "I got lost, and the man in the hood gave me food.",
+   "direction": "Shy.",
+   "voiced": true
+  },
+  {
+   "id": "CH03",
+   "speaker": "child",
+   "zh": "他说别告诉神父，可我觉得他是好人。",
+   "en": "He said not to tell the priest, but I think he's a good man.",
+   "direction": "Whispering a secret.",
+   "voiced": true
+  },
+  {
+   "id": "CH04",
+   "speaker": "child",
+   "zh": "我们回家吧。我不怕了。",
+   "en": "Let's go home. I'm not scared any more.",
+   "direction": "Brave.",
+   "voiced": true
+  },
+  {
+   "id": "SV01",
+   "speaker": "servant",
+   "zh": "是谁逆着画了圈，点了黑烛……啊，是你。",
+   "en": "Who drew the circle backwards and lit the black candle... ah. It's you.",
+   "direction": "Emerging from smoke, pleased.",
+   "voiced": true
+  },
+  {
+   "id": "SV02",
+   "speaker": "servant",
+   "zh": "教廷给你的是锁链和名单。我们给你的是名字。",
+   "en": "The Church gave you chains and lists. We give you a name.",
+   "direction": "Silky.",
+   "voiced": true
+  },
+  {
+   "id": "SV03",
+   "speaker": "servant",
+   "zh": "代价？一半的血，一枚印。很公道。",
+   "en": "The price? Half your blood, and one mark. Very fair.",
+   "direction": "Courteous, like a merchant.",
+   "voiced": true
+  },
+  {
+   "id": "SV04",
+   "speaker": "servant",
+   "zh": "签吧。从此教廷的火烧不到你，只会追着你。",
+   "en": "Sign. From now on the Church's fire can't burn you. It can only chase you.",
+   "direction": "Tempting, slow.",
+   "voiced": true
+  },
+  {
+   "id": "SV05",
+   "speaker": "servant",
+   "zh": "契成。欢迎回家。",
+   "en": "It is done. Welcome home.",
+   "direction": "Satisfied, almost tender.",
+   "voiced": true
+  },
+  {
+   "id": "SV06",
+   "speaker": "servant",
+   "zh": "犹豫了？没关系，蜡烛还会再亮。",
+   "en": "Hesitating? No matter. The candle will light again.",
+   "direction": "Patient, amused.",
+   "voiced": true
+  },
+  {
+   "id": "HO01",
+   "speaker": "watchman",
+   "zh": "它们从墓地出来了！看着它们，别让它们靠近镇口！",
+   "en": "They're coming out of the graveyard! Watch them; don't let them reach the gate!",
+   "direction": "Shouting, ringing a bell.",
+   "voiced": true
+  },
+  {
+   "id": "HO02",
+   "speaker": "watchman",
+   "zh": "有人被拖走了！快追！",
+   "en": "Someone's been dragged off! After them!",
+   "direction": "Alarm.",
+   "voiced": true
+  },
+  {
+   "id": "HO03",
+   "speaker": "priest",
+   "zh": "最后那个……它在显形。小心，它不再怕光了。",
+   "en": "That last one... it's taking shape. Careful. It doesn't fear the light any more.",
+   "direction": "Tense, warning.",
+   "voiced": true
+  },
+  {
+   "id": "HO04",
+   "speaker": "priest",
+   "zh": "天亮了。它们回到土里去了。",
+   "en": "Dawn. They've gone back into the earth.",
+   "direction": "Exhausted relief.",
+   "voiced": true
+  },
+  {
+   "id": "EX01",
+   "speaker": "narrator",
+   "zh": "平原上的风一直吹，像在数还有多少人没有回家。",
+   "en": "The wind on the plains never stops, as if counting who has not come home.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX02",
+   "speaker": "narrator",
+   "zh": "林子记得每一个走进来的人，也记得没走出去的。",
+   "en": "The forest remembers everyone who walks in, and everyone who never walked out.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX03",
+   "speaker": "narrator",
+   "zh": "原野的花开得很乱，好像没人告诉它们世界碎过。",
+   "en": "The wildflowers grow in disorder, as if no one told them the world had broken.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX04",
+   "speaker": "narrator",
+   "zh": "雾月花在白天也发着光，像替谁守着一盏灯。",
+   "en": "The mistmoon flowers glow even by day, like a lamp kept for someone.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX05",
+   "speaker": "narrator",
+   "zh": "这片林子金黄得像祭坛上的麦，丰饶是给活人的。",
+   "en": "This wood is gold like grain upon an altar. Plenty is for the living.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX06",
+   "speaker": "narrator",
+   "zh": "沙漠什么都不留，连脚印也只借给你一会儿。",
+   "en": "The desert keeps nothing. Even your footprints are only lent.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX07",
+   "speaker": "narrator",
+   "zh": "雪把一切都盖平了，好坏都一样白。",
+   "en": "The snow levels everything. Good and bad, all the same white.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX08",
+   "speaker": "narrator",
+   "zh": "云杉底下，地热在冒气，大地还没有睡着。",
+   "en": "Under the spruce the earth still steams. The land has not yet slept.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX09",
+   "speaker": "narrator",
+   "zh": "平顶的山像被一刀削过，那是神陨那天留下的。",
+   "en": "The flat-topped hills look cut by a single blade, a scar from the day God fell.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX10",
+   "speaker": "narrator",
+   "zh": "风把沙漠一层层剥开，底下是更老的颜色。",
+   "en": "The wind peels the desert layer by layer, down to older colours.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX11",
+   "speaker": "narrator",
+   "zh": "焦木还站着，只是不再长叶子了。",
+   "en": "The burnt trees still stand. They simply no longer grow leaves.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX12",
+   "speaker": "narrator",
+   "zh": "石头站成了林子，比树还耐心。",
+   "en": "Here the stones stand like a forest, more patient than trees.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX13",
+   "speaker": "narrator",
+   "zh": "高原上的颜色不对。这里的东西在等人犯错。",
+   "en": "The colours on this plateau are wrong. Things here wait for you to make a mistake.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX14",
+   "speaker": "narrator",
+   "zh": "冰原上的尖塔一年长一寸，没有人知道它们要去哪里。",
+   "en": "The ice spires grow an inch a year. No one knows where they are going.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX15",
+   "speaker": "narrator",
+   "zh": "山顶离天近，离人远。",
+   "en": "The summit is close to heaven, and far from people.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX16",
+   "speaker": "narrator",
+   "zh": "大地在这里流血，流成了火。",
+   "en": "Here the land bleeds, and the blood is fire.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX17",
+   "speaker": "narrator",
+   "zh": "这里打过的仗还没打完，只是人都死了。",
+   "en": "The war fought here has not ended. Only the people have.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX18",
+   "speaker": "narrator",
+   "zh": "海崖把大陆的边缘咬得参差不齐。",
+   "en": "The sea cliffs have gnawed the edge of the continent ragged.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  },
+  {
+   "id": "EX19",
+   "speaker": "narrator",
+   "zh": "水从碎裂的大地之间流过，把各国连在一起。",
+   "en": "Water runs between the broken lands and ties the nations together.",
+   "direction": "Quiet, first sight of a new land; leave a breath at the end.",
+   "voiced": true
+  }
+ ]
+}

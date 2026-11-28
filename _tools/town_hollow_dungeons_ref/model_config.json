@@ -1,0 +1,64 @@
+{
+ "model_scale": 8.360678867457635,
+ "height_blocks": 2,
+ "source_height_cm": 199.34585373848677,
+ "turn": 0,
+ "merge": {},
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Enemies/Zombie/SK_Zombie",
+  "export_root": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\actor_exports",
+  "texture": "_tools/town_ref/art/hollow_land.png"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Zombie_Idle",
+   "seconds": 3.3333333,
+   "loop": true,
+   "ticks": 67,
+   "max_bone_error_px": 4.735160025670567e-09,
+   "max_vertex_error_px": 5.208477485993272e-08,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Zombie_Walk",
+   "seconds": 1.6666666,
+   "loop": true,
+   "ticks": 34,
+   "max_bone_error_px": 0.00014967754523042247,
+   "max_vertex_error_px": 0.00024125938993724343,
+   "notifies": []
+  },
+  {
+   "clip": "attack",
+   "source": "Zombie_BasicAttack",
+   "seconds": 1.8333334,
+   "loop": false,
+   "ticks": 37,
+   "max_bone_error_px": 0.011193401060867837,
+   "max_vertex_error_px": 0.014740563654339976,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "town_hollow",
+  "source_mesh_sha256": "3037d8a82c20111d4bdec66e2f8edaa2f62c80ad14ce648a90797185bb75c323",
+  "triangles": 72,
+  "all_triangles_covered_once": true,
+  "bones": 22,
+  "plane_groups": 6,
+  "display_parts": 6,
+  "elements": 36,
+  "direct_uv_elements": 36,
+  "baked_elements": 0,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Zombie": 0
+  },
+  "atlas": [
+   64,
+   64
+  ]
+ }
+}

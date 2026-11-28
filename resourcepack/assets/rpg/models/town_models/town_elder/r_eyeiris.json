@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "0": "rpg:item/town_models/town_elder/atlas",
+    "particle": "rpg:item/town_models/town_elder/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.88,
+        8.0,
+        7.94
+      ],
+      "to": [
+        8.12,
+        8.0,
+        8.06
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            1.5,
+            1.75,
+            1.0,
+            2.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            1.5,
+            2.0,
+            1.0,
+            1.75
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [
+          7.76,
+          7.5139,
+          4.7
+        ],
+        "axis": "x",
+        "angle": -8.102847201931091e-06
+      }
+    }
+  ]
+}

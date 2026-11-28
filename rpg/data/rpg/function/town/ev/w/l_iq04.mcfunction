@@ -1,0 +1,2 @@
+tellraw @a[tag=rpg.tw.in] ["",{"text":"〖","color":"#B8902F","bold":true,"italic":false},{"text":"审判官","color":"#B8902F","bold":true,"italic":false},{"text":"〗","color":"#B8902F","bold":true,"italic":false},{"text":" ℑ𝔫𝔮𝔲𝔦𝔰𝔦𝔱𝔬𝔯","color":"#8F7430","italic":false},{"text":"  你们跑不远的。林子也是教廷的。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"You won't get far. The woods belong to the Church too.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.iq04 voice @a[tag=rpg.tw.in] ~ ~ ~ 1 1

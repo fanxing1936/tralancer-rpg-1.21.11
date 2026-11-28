@@ -1,0 +1,11 @@
+execute positioned ^ ^ ^2 run tag @e[tag=rpg.te.hol,distance=..1.6] add rpg.te.seen
+execute positioned ^ ^ ^5 run tag @e[tag=rpg.te.hol,distance=..1.6] add rpg.te.seen
+execute positioned ^ ^ ^8 run tag @e[tag=rpg.te.hol,distance=..1.6] add rpg.te.seen
+execute positioned ^ ^ ^11 run tag @e[tag=rpg.te.hol,distance=..2.6] add rpg.te.seen
+execute positioned ^ ^ ^14 run tag @e[tag=rpg.te.hol,distance=..2.6] add rpg.te.seen
+execute positioned ^ ^ ^17 run tag @e[tag=rpg.te.hol,distance=..2.6] add rpg.te.seen
+execute positioned ^ ^ ^20 run tag @e[tag=rpg.te.hol,distance=..2.6] add rpg.te.seen
+execute positioned ^ ^ ^23 run tag @e[tag=rpg.te.hol,distance=..2.6] add rpg.te.seen
+execute positioned ^ ^ ^26 run tag @e[tag=rpg.te.hol,distance=..2.6] add rpg.te.seen
+execute positioned ^ ^ ^29 run tag @e[tag=rpg.te.hol,distance=..2.6] add rpg.te.seen
+execute positioned ^ ^ ^32 run tag @e[tag=rpg.te.hol,distance=..2.6] add rpg.te.seen

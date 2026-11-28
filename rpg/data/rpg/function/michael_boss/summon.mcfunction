@@ -4,28 +4,28 @@ summon minecraft:marker ~ ~ ~ {Tags:["rpg.mkb.center"]}
 summon minecraft:marker ~ ~ ~ {Tags:["rpg.mkb.lag"]}
 summon minecraft:marker ~ ~ ~ {Tags:["rpg.mkb.last"]}
 summon minecraft:vindicator ~ ~ ~ {Tags:["rpg.mkb","rpg.mkwear","rpg.mkb.new"],Silent:1b,PersistenceRequired:1b,DeathLootTable:"minecraft:empty",CustomName:{"text":"米迦勒","color":"#FFD0BD","bold":true,"italic":false},Health:1200f,active_effects:[{id:"invisibility",duration:-1,amplifier:0,show_particles:0b}],attributes:[{id:"max_health",base:1200f},{id:"attack_damage",base:1f},{id:"armor",base:12f},{id:"follow_range",base:48f},{id:"knockback_resistance",base:1f},{id:"movement_speed",base:0.3f}],drop_chances:{mainhand:0f,offhand:0f}}
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk 1
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_h 1200
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_c 0
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_n 0
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_k 0
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_cb 0
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_sk 0
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_so 0
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_ur 0
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_b 40
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] rpg_mk_busy 40
-tag @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] add rpg.mkb.intro
-tag @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new] remove rpg.mkb.new
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk 1
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_h 1200
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_c 0
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_n 0
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_k 0
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_cb 0
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_sk 0
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_so 0
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_ur 0
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_b 40
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] rpg_mk_busy 40
+tag @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] add rpg.mkb.intro
+tag @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,tag=rpg.mkb.new,predicate=!rpg:in_prologue] remove rpg.mkb.new
 scoreboard players set #fight rpg_mk 1
 scoreboard players set #stage rpg_mk 1
 scoreboard players set #empty rpg_mk 0
 scoreboard players set #tick rpg_mk 0
 scoreboard players set #w rpg_mk 0
-execute as @e[tag=rpg.unit] run scoreboard players operation @s rpg_mk_dd0 = @s rpg_mk_dd
-scoreboard players reset @e[tag=rpg.unit] rpg_mk_fl
+execute as @e[tag=rpg.unit,predicate=!rpg:in_prologue] run scoreboard players operation @s rpg_mk_dd0 = @s rpg_mk_dd
+scoreboard players reset @e[tag=rpg.unit,predicate=!rpg:in_prologue] rpg_mk_fl
 bossbar set rpg:michael_boss name {"text":"\ue314\ue2f4\ue2f0\ue2f8","font":"rpg:michael_boss"}
-scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,limit=1,sort=nearest] rpg_mk_s 20
+scoreboard players set @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,limit=1,sort=nearest,predicate=!rpg:in_prologue] rpg_mk_s 20
 bossbar set rpg:michael_boss max 1200
 bossbar set rpg:michael_boss value 1200
 bossbar set rpg:michael_boss visible true

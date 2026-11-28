@@ -9,7 +9,7 @@ scoreboard players set @s rpg_ob_gm 0
 execute if entity @s[gamemode=creative] run scoreboard players set @s rpg_ob_gm 1
 execute if entity @s[gamemode=adventure] run scoreboard players set @s rpg_ob_gm 2
 # 老玩家身上的护甲、副手、主手先收起来，教学用的格子要空着；结束时原样还回去
-function rpg:onboard/stash/put with storage rpg:onboard tmp
+execute at @s run function rpg:onboard/stash/put with storage rpg:onboard tmp
 function rpg:onboard/hold/enter
 tag @s add rpg.ob.wait
 scoreboard players set @s rpg_ob_t 0

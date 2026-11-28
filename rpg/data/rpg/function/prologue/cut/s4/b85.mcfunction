@@ -1,2 +1,0 @@
-execute in rpg:armageddon run tp @e[type=minecraft:vindicator,tag=rpg.pr.a.belial] -10.39 81 1.55 -121.1 0
-execute in rpg:armageddon run tp @e[type=minecraft:vindicator,tag=rpg.pr.a.mammon] -5.98417 81 6.49833 -140.1 0

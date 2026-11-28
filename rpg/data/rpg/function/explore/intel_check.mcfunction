@@ -1,0 +1,27 @@
+# 情报解锁（as 玩家）
+execute if score @s rpg_kl_zombie matches 25.. unless entity @s[tag=rpg.in.zombie] run function rpg:explore/in/zombie
+execute if score @s rpg_kl_husk matches 25.. unless entity @s[tag=rpg.in.husk] run function rpg:explore/in/husk
+execute if score @s rpg_kl_drowned matches 25.. unless entity @s[tag=rpg.in.drowned] run function rpg:explore/in/drowned
+execute if score @s rpg_kl_skeleton matches 25.. unless entity @s[tag=rpg.in.skeleton] run function rpg:explore/in/skeleton
+execute if score @s rpg_kl_stray matches 25.. unless entity @s[tag=rpg.in.stray] run function rpg:explore/in/stray
+execute if score @s rpg_kl_bogged matches 25.. unless entity @s[tag=rpg.in.bogged] run function rpg:explore/in/bogged
+execute if score @s rpg_kl_spider matches 25.. unless entity @s[tag=rpg.in.spider] run function rpg:explore/in/spider
+execute if score @s rpg_kl_cave_spider matches 25.. unless entity @s[tag=rpg.in.cave_spider] run function rpg:explore/in/cave_spider
+execute if score @s rpg_kl_creeper matches 25.. unless entity @s[tag=rpg.in.creeper] run function rpg:explore/in/creeper
+execute if score @s rpg_kl_enderman matches 25.. unless entity @s[tag=rpg.in.enderman] run function rpg:explore/in/enderman
+execute if score @s rpg_kl_witch matches 25.. unless entity @s[tag=rpg.in.witch] run function rpg:explore/in/witch
+execute if score @s rpg_kl_pillager matches 25.. unless entity @s[tag=rpg.in.pillager] run function rpg:explore/in/pillager
+execute if score @s rpg_kl_vindicator matches 25.. unless entity @s[tag=rpg.in.vindicator] run function rpg:explore/in/vindicator
+execute if score @s rpg_kl_evoker matches 25.. unless entity @s[tag=rpg.in.evoker] run function rpg:explore/in/evoker
+execute if score @s rpg_kl_ravager matches 25.. unless entity @s[tag=rpg.in.ravager] run function rpg:explore/in/ravager
+execute if score @s rpg_kl_phantom matches 25.. unless entity @s[tag=rpg.in.phantom] run function rpg:explore/in/phantom
+execute if score @s rpg_kl_slime matches 25.. unless entity @s[tag=rpg.in.slime] run function rpg:explore/in/slime
+execute if score @s rpg_kl_silverfish matches 25.. unless entity @s[tag=rpg.in.silverfish] run function rpg:explore/in/silverfish
+execute if score @s rpg_kl_blaze matches 25.. unless entity @s[tag=rpg.in.blaze] run function rpg:explore/in/blaze
+execute if score @s rpg_kl_wither_skeleton matches 25.. unless entity @s[tag=rpg.in.wither_skeleton] run function rpg:explore/in/wither_skeleton
+execute if score @s rpg_kl_magma_cube matches 25.. unless entity @s[tag=rpg.in.magma_cube] run function rpg:explore/in/magma_cube
+execute if score @s rpg_kl_ghast matches 25.. unless entity @s[tag=rpg.in.ghast] run function rpg:explore/in/ghast
+execute if score @s rpg_kl_piglin_brute matches 25.. unless entity @s[tag=rpg.in.piglin_brute] run function rpg:explore/in/piglin_brute
+execute if score @s rpg_kl_hoglin matches 25.. unless entity @s[tag=rpg.in.hoglin] run function rpg:explore/in/hoglin
+execute if score @s rpg_kl_guardian matches 25.. unless entity @s[tag=rpg.in.guardian] run function rpg:explore/in/guardian
+execute if score @s rpg_kl_breeze matches 25.. unless entity @s[tag=rpg.in.breeze] run function rpg:explore/in/breeze

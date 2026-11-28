@@ -1,0 +1,76 @@
+{
+  "textures": {
+    "0": "rpg:item/town_prop_pyre/atlas",
+    "particle": "rpg:item/town_prop_pyre/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.82,
+        5.54,
+        7.88
+      ],
+      "to": [
+        8.18,
+        10.46,
+        7.88
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2.125,
+            0.125,
+            2.3125,
+            2.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            2.3125,
+            0.125,
+            2.125,
+            2.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        7.82,
+        5.54,
+        7.88
+      ],
+      "to": [
+        8.18,
+        5.54,
+        8.12
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            2.3125,
+            2.8125,
+            2.125,
+            2.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            2.3125,
+            2.6875,
+            2.125,
+            2.8125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

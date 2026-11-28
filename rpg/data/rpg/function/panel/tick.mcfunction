@@ -21,4 +21,6 @@ execute if score @s rpg_panel matches 20 run function rpg:paths/page/list
 execute if score @s rpg_panel matches 21 run function rpg:panel/v2/force
 execute if score @s rpg_panel matches 22 run function rpg:events/jr/open
 execute if score @s rpg_panel matches 23 run function rpg:quest/titles
+execute if score @s rpg_panel matches 24 run function rpg:explore/book
+execute if score @s rpg_panel matches 25 run function rpg:pl/enter_ok
 execute if score @s rpg_panel matches 1.. run scoreboard players set @s rpg_panel 0

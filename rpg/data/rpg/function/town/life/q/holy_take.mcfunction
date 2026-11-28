@@ -1,0 +1,4 @@
+tellraw @s ["",{"text":"〖","color":"#C9A646","bold":true,"italic":false},{"text":"神父","color":"#C9A646","bold":true,"italic":false},{"text":"〗","color":"#C9A646","bold":true,"italic":false},{"text":" 𝔉𝔞𝔱𝔥𝔢𝔯","color":"#8F7430","italic":false},{"text":"  采三样东西来：清水、盐、圣火的灰。我教你炼一瓶圣水。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Bring me three things: clean water, salt, and ash from the holy fire. I'll teach you to make holy water.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.pr08 voice @s ~ ~ ~ 1 1
+scoreboard players set @s rpg_tl_q2 1
+tellraw @s ["",{"text":"〖委托〗","color":"#C9A646","bold":true,"italic":false},{"text":"  神父的圣水","color":"#E6DFCF","bold":true,"italic":false},{"text":"　带来一瓶水、两份糖（海盐）、一块木炭（圣火的灰）","color":"#9C9A94","bold":false,"italic":false}]

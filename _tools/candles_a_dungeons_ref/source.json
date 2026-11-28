@@ -1,0 +1,114 @@
+{
+  "package": "Dungeons/Content/Decor/Prefabs/Candle/SM_EvilCandles_01",
+  "albedo_only_materials": [],
+  "mesh": "town_models_ref\\_work\\prop_sources\\assets\\Dungeons\\Content\\Decor\\Prefabs\\Candle\\SM_EvilCandles_01.glb",
+  "metadata": "town_models_ref\\_work\\prop_sources\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Candle\\SM_EvilCandles_01\\SM_EvilCandles_01.meta.json",
+  "blueprint_component": "town_models_ref\\_work\\prop_sources\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Candle\\BP_EvilCandles_01\\StaticMesh_GEN_VARIABLE.uobject.json",
+  "unit_scale": 0.0192,
+  "display_scale": 8.333333333333334,
+  "placement_component_transform": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'SM_EvilCandles_01'",
+      "ObjectPath": "Dungeons/Content/Decor/Prefabs/Candle/SM_EvilCandles_01.2"
+    },
+    "bGenerateOverlapEvents": false,
+    "BodyInstance": {
+      "ObjectType": "ECC_WorldStatic",
+      "CollisionEnabled": "ECollisionEnabled::NoCollision",
+      "CollisionProfileName": "NoCollision",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "WorldStatic",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "WorldDynamic",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Pawn",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Visibility",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Camera",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "PhysicsBody",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Vehicle",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Destructible",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel2",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel3",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel4",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel5",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel6",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "IgnoreTerrain",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "FromMob",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "IgnorePlayer",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "TargetSelect",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Projectile",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "PlayerPawn",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "GameTraceChannel17",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "GameTraceChannel18",
+            "Response": "ECR_Ignore"
+          }
+        ]
+      }
+    },
+    "Mobility": "EComponentMobility::Static",
+    "bCanEverAffectNavigation": false
+  },
+  "grounding_cm": 1.33945740402516e-14,
+  "placement": "lowest_vertex_at_execution_y",
+  "grave_b_scale_note": null
+}

@@ -59,6 +59,7 @@ SMALL = {  # 散在四周的小建筑
 VAULT = (7, 17)                        # 宝库在大建筑南边的露天处（宝物从天上落，上面要空着）
 ZONES = {1: ("泥沼", 0.5, 0.25, 2), 2: ("血泽", 1.0, 0.5, 3), 3: ("灰烬边境", 2.0, 1.0, 4)}  # 名, 生命加成, 伤害加成, 精英倍数
 ZONE_R = (240, 560)
+PORCH_R = 160                         # 伊甸门廊：0–160 格原版强度（泥沼外移到 160–240）
 BOSSES = {"warden": "Gate Warden", "cherub": "Cherub", "castellan": "Castellan"}
 TIER3 = ["wither_skeleton", "blaze", "enderman", "vindicator"]     # 泥沼里不留
 
@@ -463,10 +464,18 @@ def travel():
         "execute if entity @s[tag=rpg.pr] run return run " + say("序章还没结束。"),
         "execute store result storage rpg:paradise t.id int 1 run scoreboard players get @s rpg_fg_id",
         "function %s/save with storage rpg:paradise t" % P,
+        "execute unless score @s rpg_sef matches 2.. unless entity @s[tag=rpg.pl.ok] run return run function %s/warn" % P,
         "tag @s add rpg.pl.wait",
         "execute if score #built %s matches %d run return run function %s/go" % (O, BUILT, P),
         "execute unless score #built %s matches 1 run function %s/prepare" % (O, P),
         say("门正在打开……")])
+    fn("warn", ["# 没到第 2 阶：说明危险，确认后照样放行（rpg_panel 25 → rpg:pl/enter_ok，add_explore.py 接）",
+                "dialog show @s " + J(ui.darken({"type": "minecraft:multi_action", "title": ["", seg("失乐园 · ", COL, True), seg("进门之前", ui.BROADCAST_NAME, True), seg(" " + ui.fraktur("Paradise Lost"), ui.BROADCAST_GLOSS)],
+                                       "body": [{"type": "minecraft:plain_message", "width": 300, "contents": ["", seg("建议原质第 2 阶以后再来。\n\n", ui.WARN, True),
+                                                 seg("门外一圈是伊甸门廊（第 2–3 阶），往外依次是泥沼（4–5）、血泽（6–7）、灰烬边境（8 阶起）。\n神父给的失乐园通行符能让你第一次进门时少受两成伤害。", ui.BROADCAST_BODY)]}],
+                                       "actions": [{"label": seg("照样进去", COL, True), "action": {"type": "minecraft:run_command", "command": "/trigger rpg_panel set 25"}}],
+                                       "exit_action": {"label": seg("再等等", ui.BROADCAST_BODY)}, "columns": 1, "can_close_with_escape": True, "pause": False, "after_action": "close"}))])
+    fn("enter_ok", ["tag @s add rpg.pl.ok", "function %s/enter" % P])
     fn("save", ["$data modify storage rpg:paradise r.p$(id).dim set from entity @s Dimension",
                 "$execute store result storage rpg:paradise r.p$(id).x double 0.01 run data get entity @s Pos[0] 100",
                 "$execute store result storage rpg:paradise r.p$(id).y double 0.01 run data get entity @s Pos[1] 100",
@@ -483,7 +492,12 @@ def travel():
               "playsound minecraft:block.end_portal.spawn player @s ~ ~ ~ 0.5 0.6",
               "title @s times 10 50 20",
               "title @s title " + J(["", seg("失乐园", COL, True)]), "title @s subtitle " + J(["", seg(ui.fraktur("Paradise Lost"), ui.BROADCAST_GLOSS)]),
-              "function rpg:quest/start_7"])
+              "function rpg:quest/start_7",
+              "execute if items entity @s container.* minecraft:paper[minecraft:custom_data~{rpg_eden_pass:1b}] run function %s/pass" % P])
+    fn("pass", ["# 失乐园通行符：第一次进门给 20 分钟「伊甸余晖」（受到的伤害降低）",
+                "clear @s minecraft:paper[minecraft:custom_data~{rpg_eden_pass:1b}] 1",
+                "effect give @s minecraft:resistance 1200 0",
+                "tellraw @s " + J(["", seg("〖伊甸余晖〗", COL, True), seg(ui.GAP + "通行符化成一层薄光罩住你。二十分钟内受到的伤害降低。", ui.BROADCAST_BODY)])])
     fn("leave", [
         "execute unless data entity @s %s run return run %s" % (INDIM, say("你不在失乐园里。")),
         "execute in %s if entity @s[x=0,y=83,z=0,distance=..%d] run return run function %s/back" % (DIM, GATE_R, P),
@@ -604,10 +618,19 @@ def hunt():
     see = ["# 第一次见到这只怪（as/at 它）：本包召唤的（有名字或 NoAI）不动", "tag @s add rpg.pl.s",
            "execute if data entity @s CustomName run return 0",
            "execute if entity @e[type=minecraft:marker,tag=rpg.pl.court,distance=..22] run return 0"]
-    see += [IN + "if entity @s[distance=..%d] run return run function %s/mob/z1" % (ZONE_R[0], P),
+    # 组队缩放（开局参与感策划书「其他可以调的旋钮」）：附近每多一名玩家，怪物生命 +40%
+    see += ["execute store result score #np %s if entity @a[distance=..32,gamemode=!spectator]" % O] + [
+        "execute if score #np %s matches %d run attribute @s minecraft:max_health modifier add rpg:pl_party %.1f add_multiplied_base" % (O, n, 0.4 * (n - 1))
+        for n in range(2, 8)] + [
+        "execute if score #np %s matches 8.. run attribute @s minecraft:max_health modifier add rpg:pl_party 2.8 add_multiplied_base" % O,
+        "execute if score #np %s matches 2.. run data modify entity @s Health set value 1024f" % O]
+    # 伊甸门廊（开局参与感策划书，2026-11-27）：门外 160 格内是主世界的强度，第三档的怪也不来
+    see += [IN + "if entity @s[distance=..%d] run return run function %s/mob/z0" % (PORCH_R, P),
+            IN + "if entity @s[distance=..%d] run return run function %s/mob/z1" % (ZONE_R[0], P),
             IN + "if entity @s[distance=..%d] run return run function %s/mob/z2" % (ZONE_R[1], P),
             "function %s/mob/z3" % P]
     fn("mob/see", see)
+    fn("mob/z0", ["# 伊甸门廊：不加强"] + ["execute if entity @s[type=minecraft:%s] run return run tp @s ~ -200 ~" % m for m in TIER3] + ["tag @s add rpg.pl.z0"])
     for z, (name, hp, dmg, mul) in ZONES.items():
         pre = ["execute if entity @s[type=minecraft:%s] run return run tp @s ~ -200 ~" % m for m in TIER3] if z == 1 else []
         fn("mob/z%d" % z, ["# " + name] + pre + [

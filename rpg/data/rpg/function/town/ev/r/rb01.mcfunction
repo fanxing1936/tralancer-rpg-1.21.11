@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"农妇","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔉𝔞𝔯𝔪𝔴𝔦𝔣𝔢","color":"#8F7430","italic":false},{"text":"  你闻到没有？粮仓那边一股酸味，麦子都发黑了。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Can you smell it? Something sour by the granary. The grain's gone black.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rb01 voice @a[distance=..16] ~ ~ ~ 1 1

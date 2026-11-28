@@ -1,4 +1,4 @@
-tp @e[type=minecraft:marker,tag=rpg.mkb.last,limit=1] @s
+tp @e[type=minecraft:marker,tag=rpg.mkb.last,limit=1,predicate=!rpg:in_prologue] @s
 execute store result score @s rpg_mk_h run data get entity @s Health 1
 execute store result bossbar rpg:michael_boss value run scoreboard players get @s rpg_mk_h
 execute if entity @s[tag=rpg.mkb.morph] run return 0

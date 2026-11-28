@@ -1,0 +1,2 @@
+execute if score @s rpg_tw_m5_t matches 59 run return run function rpg:town_models/town_edgewalker/anim/idle/f58
+execute if score @s rpg_tw_m5_t matches 61 run return run function rpg:town_models/town_edgewalker/anim/idle/f60

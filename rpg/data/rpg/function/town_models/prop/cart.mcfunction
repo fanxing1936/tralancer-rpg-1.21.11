@@ -1,0 +1,16 @@
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/root
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_000
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_001
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_003
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_004
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_005
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_006
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_007
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_008
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_009
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_010
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_011
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_012
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_013
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_014
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cart/cart_root_015

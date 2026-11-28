@@ -1,0 +1,79 @@
+# 到故乡（as 玩家）：复活点设在天使像前
+execute if score @s rpg_tw_home matches 1 store result storage rpg:town h.x int 1 run scoreboard players get #sx1 rpg_tw
+execute if score @s rpg_tw_home matches 1 store result storage rpg:town h.y int 1 run scoreboard players get #sy1 rpg_tw
+execute if score @s rpg_tw_home matches 1 store result storage rpg:town h.z int 1 run scoreboard players get #sz1 rpg_tw
+execute if score @s rpg_tw_home matches 2 store result storage rpg:town h.x int 1 run scoreboard players get #sx2 rpg_tw
+execute if score @s rpg_tw_home matches 2 store result storage rpg:town h.y int 1 run scoreboard players get #sy2 rpg_tw
+execute if score @s rpg_tw_home matches 2 store result storage rpg:town h.z int 1 run scoreboard players get #sz2 rpg_tw
+execute if score @s rpg_tw_home matches 3 store result storage rpg:town h.x int 1 run scoreboard players get #sx3 rpg_tw
+execute if score @s rpg_tw_home matches 3 store result storage rpg:town h.y int 1 run scoreboard players get #sy3 rpg_tw
+execute if score @s rpg_tw_home matches 3 store result storage rpg:town h.z int 1 run scoreboard players get #sz3 rpg_tw
+execute if score @s rpg_tw_home matches 4 store result storage rpg:town h.x int 1 run scoreboard players get #sx4 rpg_tw
+execute if score @s rpg_tw_home matches 4 store result storage rpg:town h.y int 1 run scoreboard players get #sy4 rpg_tw
+execute if score @s rpg_tw_home matches 4 store result storage rpg:town h.z int 1 run scoreboard players get #sz4 rpg_tw
+execute if score @s rpg_tw_home matches 5 store result storage rpg:town h.x int 1 run scoreboard players get #sx5 rpg_tw
+execute if score @s rpg_tw_home matches 5 store result storage rpg:town h.y int 1 run scoreboard players get #sy5 rpg_tw
+execute if score @s rpg_tw_home matches 5 store result storage rpg:town h.z int 1 run scoreboard players get #sz5 rpg_tw
+execute if score @s rpg_tw_home matches 6 store result storage rpg:town h.x int 1 run scoreboard players get #sx6 rpg_tw
+execute if score @s rpg_tw_home matches 6 store result storage rpg:town h.y int 1 run scoreboard players get #sy6 rpg_tw
+execute if score @s rpg_tw_home matches 6 store result storage rpg:town h.z int 1 run scoreboard players get #sz6 rpg_tw
+execute if score @s rpg_tw_home matches 7 store result storage rpg:town h.x int 1 run scoreboard players get #sx7 rpg_tw
+execute if score @s rpg_tw_home matches 7 store result storage rpg:town h.y int 1 run scoreboard players get #sy7 rpg_tw
+execute if score @s rpg_tw_home matches 7 store result storage rpg:town h.z int 1 run scoreboard players get #sz7 rpg_tw
+execute if score @s rpg_tw_home matches 8 store result storage rpg:town h.x int 1 run scoreboard players get #sx8 rpg_tw
+execute if score @s rpg_tw_home matches 8 store result storage rpg:town h.y int 1 run scoreboard players get #sy8 rpg_tw
+execute if score @s rpg_tw_home matches 8 store result storage rpg:town h.z int 1 run scoreboard players get #sz8 rpg_tw
+execute if score @s rpg_tw_home matches 9 store result storage rpg:town h.x int 1 run scoreboard players get #sx9 rpg_tw
+execute if score @s rpg_tw_home matches 9 store result storage rpg:town h.y int 1 run scoreboard players get #sy9 rpg_tw
+execute if score @s rpg_tw_home matches 9 store result storage rpg:town h.z int 1 run scoreboard players get #sz9 rpg_tw
+execute if score @s rpg_tw_home matches 10 store result storage rpg:town h.x int 1 run scoreboard players get #sx10 rpg_tw
+execute if score @s rpg_tw_home matches 10 store result storage rpg:town h.y int 1 run scoreboard players get #sy10 rpg_tw
+execute if score @s rpg_tw_home matches 10 store result storage rpg:town h.z int 1 run scoreboard players get #sz10 rpg_tw
+execute if score @s rpg_tw_home matches 11 store result storage rpg:town h.x int 1 run scoreboard players get #sx11 rpg_tw
+execute if score @s rpg_tw_home matches 11 store result storage rpg:town h.y int 1 run scoreboard players get #sy11 rpg_tw
+execute if score @s rpg_tw_home matches 11 store result storage rpg:town h.z int 1 run scoreboard players get #sz11 rpg_tw
+execute if score @s rpg_tw_home matches 12 store result storage rpg:town h.x int 1 run scoreboard players get #sx12 rpg_tw
+execute if score @s rpg_tw_home matches 12 store result storage rpg:town h.y int 1 run scoreboard players get #sy12 rpg_tw
+execute if score @s rpg_tw_home matches 12 store result storage rpg:town h.z int 1 run scoreboard players get #sz12 rpg_tw
+execute if score @s rpg_tw_home matches 13 store result storage rpg:town h.x int 1 run scoreboard players get #sx13 rpg_tw
+execute if score @s rpg_tw_home matches 13 store result storage rpg:town h.y int 1 run scoreboard players get #sy13 rpg_tw
+execute if score @s rpg_tw_home matches 13 store result storage rpg:town h.z int 1 run scoreboard players get #sz13 rpg_tw
+execute if score @s rpg_tw_home matches 14 store result storage rpg:town h.x int 1 run scoreboard players get #sx14 rpg_tw
+execute if score @s rpg_tw_home matches 14 store result storage rpg:town h.y int 1 run scoreboard players get #sy14 rpg_tw
+execute if score @s rpg_tw_home matches 14 store result storage rpg:town h.z int 1 run scoreboard players get #sz14 rpg_tw
+execute if score @s rpg_tw_home matches 15 store result storage rpg:town h.x int 1 run scoreboard players get #sx15 rpg_tw
+execute if score @s rpg_tw_home matches 15 store result storage rpg:town h.y int 1 run scoreboard players get #sy15 rpg_tw
+execute if score @s rpg_tw_home matches 15 store result storage rpg:town h.z int 1 run scoreboard players get #sz15 rpg_tw
+execute if score @s rpg_tw_home matches 16 store result storage rpg:town h.x int 1 run scoreboard players get #sx16 rpg_tw
+execute if score @s rpg_tw_home matches 16 store result storage rpg:town h.y int 1 run scoreboard players get #sy16 rpg_tw
+execute if score @s rpg_tw_home matches 16 store result storage rpg:town h.z int 1 run scoreboard players get #sz16 rpg_tw
+execute if score @s rpg_tw_home matches 17 store result storage rpg:town h.x int 1 run scoreboard players get #sx17 rpg_tw
+execute if score @s rpg_tw_home matches 17 store result storage rpg:town h.y int 1 run scoreboard players get #sy17 rpg_tw
+execute if score @s rpg_tw_home matches 17 store result storage rpg:town h.z int 1 run scoreboard players get #sz17 rpg_tw
+execute if score @s rpg_tw_home matches 18 store result storage rpg:town h.x int 1 run scoreboard players get #sx18 rpg_tw
+execute if score @s rpg_tw_home matches 18 store result storage rpg:town h.y int 1 run scoreboard players get #sy18 rpg_tw
+execute if score @s rpg_tw_home matches 18 store result storage rpg:town h.z int 1 run scoreboard players get #sz18 rpg_tw
+execute if score @s rpg_tw_home matches 19 store result storage rpg:town h.x int 1 run scoreboard players get #sx19 rpg_tw
+execute if score @s rpg_tw_home matches 19 store result storage rpg:town h.y int 1 run scoreboard players get #sy19 rpg_tw
+execute if score @s rpg_tw_home matches 19 store result storage rpg:town h.z int 1 run scoreboard players get #sz19 rpg_tw
+execute if score @s rpg_tw_home matches 20 store result storage rpg:town h.x int 1 run scoreboard players get #sx20 rpg_tw
+execute if score @s rpg_tw_home matches 20 store result storage rpg:town h.y int 1 run scoreboard players get #sy20 rpg_tw
+execute if score @s rpg_tw_home matches 20 store result storage rpg:town h.z int 1 run scoreboard players get #sz20 rpg_tw
+execute if score @s rpg_tw_home matches 21 store result storage rpg:town h.x int 1 run scoreboard players get #sx21 rpg_tw
+execute if score @s rpg_tw_home matches 21 store result storage rpg:town h.y int 1 run scoreboard players get #sy21 rpg_tw
+execute if score @s rpg_tw_home matches 21 store result storage rpg:town h.z int 1 run scoreboard players get #sz21 rpg_tw
+execute if score @s rpg_tw_home matches 22 store result storage rpg:town h.x int 1 run scoreboard players get #sx22 rpg_tw
+execute if score @s rpg_tw_home matches 22 store result storage rpg:town h.y int 1 run scoreboard players get #sy22 rpg_tw
+execute if score @s rpg_tw_home matches 22 store result storage rpg:town h.z int 1 run scoreboard players get #sz22 rpg_tw
+execute if score @s rpg_tw_home matches 23 store result storage rpg:town h.x int 1 run scoreboard players get #sx23 rpg_tw
+execute if score @s rpg_tw_home matches 23 store result storage rpg:town h.y int 1 run scoreboard players get #sy23 rpg_tw
+execute if score @s rpg_tw_home matches 23 store result storage rpg:town h.z int 1 run scoreboard players get #sz23 rpg_tw
+execute if score @s rpg_tw_home matches 24 store result storage rpg:town h.x int 1 run scoreboard players get #sx24 rpg_tw
+execute if score @s rpg_tw_home matches 24 store result storage rpg:town h.y int 1 run scoreboard players get #sy24 rpg_tw
+execute if score @s rpg_tw_home matches 24 store result storage rpg:town h.z int 1 run scoreboard players get #sz24 rpg_tw
+function rpg:town/home/tp with storage rpg:town h
+execute if entity @s[tag=rpg.tw.wait] run function rpg:town/home/unhold
+scoreboard players operation @s rpg_tw_at = @s rpg_tw_home
+scoreboard players operation #w rpg_tw = @s rpg_tw_home
+function rpg:town/title_home
+function #rpg:town_arrive

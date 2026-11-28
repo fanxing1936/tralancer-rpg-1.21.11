@@ -3,10 +3,13 @@ data modify storage rpg:forge ui set value {}
 data modify storage rpg:forge e set from entity @e[type=minecraft:item_display,tag=rpg.fg.ws,limit=1] item.components."minecraft:custom_data".rpg_eq
 execute store result score #b rpg_fg run data get storage rpg:forge e.base
 execute store result score #q rpg_fg run data get storage rpg:forge e.q
+execute store result score #st rpg_fg run data get storage rpg:forge e.star
 execute store result score #lv rpg_fg run data get storage rpg:forge e.lv
 execute store result score #xp rpg_fg run data get storage rpg:forge e.xp
 # 系数 ×10000 = (100+q)(98+2lv)
 scoreboard players operation #f rpg_fg = #q rpg_fg
+scoreboard players operation #f rpg_fg += #st rpg_fg
+scoreboard players operation #f rpg_fg += #st rpg_fg
 scoreboard players operation #f rpg_fg += #100 rpg_fg
 scoreboard players operation #g rpg_fg = #lv rpg_fg
 scoreboard players operation #g rpg_fg *= #2 rpg_fg
@@ -26,6 +29,11 @@ execute if score #q rpg_fg matches -100..-6 run data modify storage rpg:forge ui
 execute if score #q rpg_fg matches -5..5 run data modify storage rpg:forge ui merge value {qn:"普通",qc:"#AAAAAA"}
 execute if score #q rpg_fg matches 6..10 run data modify storage rpg:forge ui merge value {qn:"精良",qc:"#00AAAA"}
 execute if score #q rpg_fg matches 11..15 run data modify storage rpg:forge ui merge value {qn:"完美",qc:"#FFAA00"}
+execute if score #st rpg_fg matches 1 run data modify storage rpg:forge ui.qn set value "完美★"
+execute if score #st rpg_fg matches 2 run data modify storage rpg:forge ui.qn set value "完美★★"
+execute if score #st rpg_fg matches 3 run data modify storage rpg:forge ui.qn set value "完美★★★"
+execute if score #st rpg_fg matches 4 run data modify storage rpg:forge ui.qn set value "完美★★★★"
+execute if score #st rpg_fg matches 5 run data modify storage rpg:forge ui.qn set value "完美★★★★★"
 function rpg:forge/render/qp with storage rpg:forge ui
 # 等级
 execute store result storage rpg:forge ui.lv int 1 run scoreboard players get #lv rpg_fg

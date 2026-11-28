@@ -1,3 +1,5 @@
+execute unless entity @s[tag=rpg.ow.s] if dimension minecraft:overworld run function rpg:explore/mob
+execute if entity @s[tag=rpg.ow.weak] run return 0
 # 第一次见到这只生物（as/at 它）
 tag @s add rpg.el.seen
 execute if data entity @s CustomName run return 0
@@ -11,6 +13,7 @@ execute if entity @s[tag=rpg.pl.z1] run scoreboard players remove #nt rpg_el 1
 execute if entity @s[tag=rpg.pl.z2] run scoreboard players remove #nt rpg_el 1
 execute if entity @s[tag=rpg.pl.z3] run scoreboard players remove #nt rpg_el 1
 execute if score #nt rpg_el matches 1.. run return 0
+execute if entity @s[tag=rpg.ow.deep] run scoreboard players operation #p rpg_el *= #2 rpg_el
 execute unless entity @a[distance=..64,gamemode=!spectator] run return 0
 execute store result score #near rpg_el if entity @e[tag=rpg.el,distance=..48]
 execute if score #near rpg_el matches 3.. run return 0

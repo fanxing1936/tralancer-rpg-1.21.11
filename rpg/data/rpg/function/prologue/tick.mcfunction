@@ -1,16 +1,12 @@
+# prologue_multi hub
 execute as @a[scores={rpg_pr_lv=1..}] run function rpg:prologue/rejoin
-execute unless score #state rpg_pr matches 1.. run return 0
-scoreboard players add #t rpg_pr 1
-execute if score #state rpg_pr matches 1 run function rpg:prologue/prep
-execute if score #state rpg_pr matches 2 run function rpg:prologue/lobby/tick
-execute if score #cut rpg_pr matches 1.. run function rpg:prologue/cut/tick
-execute if score #state rpg_pr matches 4 run function rpg:prologue/wave/tick
-execute if score #state rpg_pr matches 7 run function rpg:prologue/michael/tick
-execute if score #state rpg_pr matches 10 run function rpg:prologue/finish
-function rpg:prologue/sub/tick
-function rpg:prologue/music/tick
-# 场地上弹出来的红石粉（群系血迹是红石线，压平/踩碎石台时会掉）每秒清一次
-scoreboard players add #sweep rpg_pr 1
-execute if score #sweep rpg_pr matches 20.. run function rpg:prologue/arena/sweep
-execute as @a[tag=rpg.pr] at @s run function rpg:prologue/player/tick
-execute if score #state rpg_pr matches 2.. unless entity @a[tag=rpg.pr] run function rpg:prologue/cleanup
+execute in rpg:armageddon run function rpg:prologue_i1/tick
+execute if score #fight rpg_mk_i1 matches 1 in rpg:armageddon run function rpg:michael_boss_i1/tick
+execute in rpg:armageddon_2 run function rpg:prologue_i2/tick
+execute if score #fight rpg_mk_i2 matches 1 in rpg:armageddon_2 run function rpg:michael_boss_i2/tick
+execute in rpg:armageddon_3 run function rpg:prologue_i3/tick
+execute if score #fight rpg_mk_i3 matches 1 in rpg:armageddon_3 run function rpg:michael_boss_i3/tick
+execute in rpg:armageddon_4 run function rpg:prologue_i4/tick
+execute if score #fight rpg_mk_i4 matches 1 in rpg:armageddon_4 run function rpg:michael_boss_i4/tick
+scoreboard players add #sec rpg_prh 1
+execute if score #sec rpg_prh matches 20.. run function rpg:prologue/queue

@@ -1,0 +1,5 @@
+give @s minecraft:paper[minecraft:item_model="rpg:prologue_feather",minecraft:max_stack_size=1,minecraft:custom_data={rpg_pr_feather:1b},minecraft:rarity="epic",minecraft:enchantment_glint_override=true,minecraft:custom_name=["",{"text":"[序章]","color":"#FFD85A","bold":true,"italic":false},{"text":"米迦勒之羽","color":"#FFFFFF","bold":false,"italic":false}],minecraft:lore=[["",{"text":"+------------------+","color":"#FFFFFF","italic":false}],["",{"text":"[祂终将归来]","color":"#FFD85A","bold":true,"italic":false}],["",{"text":"He shall return.","color":"#797979","italic":false}],["",{"text":"虚幻的过往，并非云烟。","color":"gray","italic":false}],["",{"text":"A past like a dream, yet no passing smoke.","color":"#797979","italic":false}],["",{"text":"Feather of Michael","color":"#797979","italic":false}],["",{"text":"+------------------+","color":"#FFFFFF","italic":false}]]]
+title @s times 10 60 20
+title @s subtitle {"translate":"rpg.prologue.U15.en","fallback":"You received the Feather of Michael","color":"#BFB8A8"}
+title @s title {"translate":"rpg.prologue.U15.zh","fallback":"你得到了「米迦勒之羽」","color":"#FFD85A"}
+playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1

@@ -1,0 +1,76 @@
+{
+  "textures": {
+    "0": "rpg:item/town_models/town_inquisitor/atlas",
+    "particle": "rpg:item/town_models/town_inquisitor/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.4018,
+        7.64,
+        8.54
+      ],
+      "to": [
+        8.6018,
+        8.36,
+        8.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11.625,
+            4.0,
+            10.3125,
+            4.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            10.3125,
+            4.0,
+            11.625,
+            4.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        7.3982,
+        7.64,
+        7.46
+      ],
+      "to": [
+        8.5982,
+        8.36,
+        7.46
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            14.25,
+            4.0,
+            12.9375,
+            4.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            12.9375,
+            4.0,
+            14.25,
+            4.6875
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "package": "Dungeons/Content/Decor/Prefabs/Gravestone/SM_Gravestone1",
+  "albedo_only_materials": [],
+  "mesh": "town_models_ref\\_work\\prop_sources\\assets\\Dungeons\\Content\\Decor\\Prefabs\\Gravestone\\SM_Gravestone1.glb",
+  "metadata": "town_models_ref\\_work\\prop_sources\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Gravestone\\SM_Gravestone1\\SM_Gravestone1.meta.json",
+  "blueprint_component": "town_models_ref\\_work\\prop_sources\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Gravestone\\BP_Gravestone0\\StaticMesh_GEN_VARIABLE.uobject.json",
+  "unit_scale": 0.0192,
+  "display_scale": 8.333333333333334,
+  "placement_component_transform": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'SM_Gravestone0'",
+      "ObjectPath": "Dungeons/Content/Decor/Prefabs/Gravestone/SM_Gravestone0.2"
+    },
+    "OverrideMaterials": [
+      {
+        "ObjectName": "MaterialInstanceConstant'MI_Gravestone0'",
+        "ObjectPath": "Dungeons/Content/Decor/Prefabs/Gravestone/MI_Gravestone0.0"
+      }
+    ],
+    "BodyInstance": {
+      "ObjectType": "ECC_WorldStatic",
+      "CollisionEnabled": "ECollisionEnabled::NoCollision",
+      "CollisionProfileName": "NoCollision",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "WorldStatic",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "WorldDynamic",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Pawn",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Visibility",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Camera",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "PhysicsBody",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Vehicle",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Destructible",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel2",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel3",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel4",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel5",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "EngineTraceChannel6",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "IgnoreTerrain",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "FromMob",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "IgnorePlayer",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "TargetSelect",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "Projectile",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "PlayerPawn",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "GameTraceChannel17",
+            "Response": "ECR_Ignore"
+          },
+          {
+            "Channel": "GameTraceChannel18",
+            "Response": "ECR_Ignore"
+          }
+        ]
+      }
+    },
+    "RelativeRotation": {
+      "Pitch": 0.0,
+      "Yaw": 0.0,
+      "Roll": 90.00001
+    },
+    "RelativeScale3D": {
+      "X": 200.0,
+      "Y": 200.0,
+      "Z": 200.0
+    },
+    "Mobility": "EComponentMobility::Static"
+  },
+  "grounding_cm": 5.744507066693127e-06,
+  "placement": "lowest_vertex_at_execution_y",
+  "grave_b_scale_note": "与同目录同尺寸规范的 Gravestone0 蓝图统一使用 200 倍和 Roll90"
+}

@@ -1,0 +1,12 @@
+particle minecraft:end_rod ^ ^ ^1 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^3 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^5 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^7 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^9 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^11 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^13 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^15 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^17 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^19 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^21 0 0 0 0 1
+particle minecraft:end_rod ^ ^ ^23 0 0 0 0 1

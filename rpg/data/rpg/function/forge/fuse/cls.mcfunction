@@ -1,0 +1,11 @@
+# 主手是哪一类（as 玩家）
+data modify storage rpg:forge fu.cls set value ""
+execute if items entity @s weapon.mainhand #rpg:fuse/sword[minecraft:custom_data~{rpg_eq:{}}] run data modify storage rpg:forge fu.cls set value "sword"
+execute if items entity @s weapon.mainhand #rpg:fuse/axe[minecraft:custom_data~{rpg_eq:{}}] run data modify storage rpg:forge fu.cls set value "axe"
+execute if items entity @s weapon.mainhand #rpg:fuse/mace[minecraft:custom_data~{rpg_eq:{}}] run data modify storage rpg:forge fu.cls set value "mace"
+execute if items entity @s weapon.mainhand #rpg:fuse/bow[minecraft:custom_data~{rpg_eq:{}}] run data modify storage rpg:forge fu.cls set value "bow"
+execute if items entity @s weapon.mainhand #rpg:fuse/crossbow[minecraft:custom_data~{rpg_eq:{}}] run data modify storage rpg:forge fu.cls set value "crossbow"
+execute if items entity @s weapon.mainhand #rpg:fuse/head[minecraft:custom_data~{rpg_eq:{}}] run data modify storage rpg:forge fu.cls set value "head"
+execute if items entity @s weapon.mainhand #rpg:fuse/chest[minecraft:custom_data~{rpg_eq:{}}] run data modify storage rpg:forge fu.cls set value "chest"
+execute if items entity @s weapon.mainhand #rpg:fuse/legs[minecraft:custom_data~{rpg_eq:{}}] run data modify storage rpg:forge fu.cls set value "legs"
+execute if items entity @s weapon.mainhand #rpg:fuse/feet[minecraft:custom_data~{rpg_eq:{}}] run data modify storage rpg:forge fu.cls set value "feet"

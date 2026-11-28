@@ -276,6 +276,20 @@ python add_merchant_models.py ../resourcepack ../rpg
 python add_paths.py ../rpg ../resourcepack
 python add_panel_v2.py ../rpg ../resourcepack
 python add_bench.py ../rpg
+# 熔铸、拆解、淬炼星：工作台第六页签（add_fusion.py，用 add_bench 的卡片与页签）
+python add_fusion.py ../rpg
+# 城镇与新手村（开局参与感策划书，2026-11-27）：建筑 town_ref/struct（town_build.py 转换）；运行时选址建镇、故乡出生（改 onboard/finish）
+# 城镇里的人、空心人、道具的外观（Codex：地下城英雄网格 + 盔甲、村民换装、SK_Zombie / Necromancer、12 样道具）
+python add_town_models.py ../resourcepack ../rpg
+python add_towns.py ../rpg
+python add_town_life.py ../rpg
+python add_town_events.py ../rpg
+python add_demon.py ../rpg
+# 阵营对战：同阵营不伤友军、城镇与营地不能动手、抓通缉犯（add_pvp.py）
+python add_pvp.py ../rpg
+# 见闻录：初见演出、探索奖励、怪物情报、武器熟练（挂在锻造命中钩子、面板旅程页、城镇进镇上）
+python add_explore.py ../rpg
+python add_town_art.py ../resourcepack
 # 领取箱补齐（add_give_boxes.py）：make_boxes 之后才有的材料、图纸、圣徽与传承书；接在所有生成物品的步骤之后
 python add_give_boxes.py ../rpg
 # 世界掉落与锻造的新图标（Codex 交付，world_ref/art）
@@ -286,6 +300,9 @@ python add_relic_art.py ../resourcepack
 # 主世界重做（add_overworld.py → overworld_world.py / overworld_trees.py）：19 个群系的破碎大陆、
 # 无原版结构、无矿洞矿物、高度上限 1024、世界边界 12000；覆盖老存档的主世界（用户 2026-11-26 决定）
 python add_overworld.py ../rpg ../resourcepack
+# 序章多开（用户 2026-11-28）：序章与它借用的米迦勒战复制成 4 个战场（各占一个维度），原树换成调度。
+# 必须是最后一个改数据包的步骤：前面所有往序章、米迦勒战里接钩子的生成器（新手开局、原质、友军、特效收口……）都要先跑完。
+python prologue_multi.py ../rpg
 echo
 echo "== 3. validation =="
 python validate.py  ../rpg

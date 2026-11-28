@@ -59,6 +59,9 @@ TITLES = {  # key: (名, 来历)
     "summit": ("登顶者", "打完了失乐园四座河庭的二十层"),
     "sever": ("断影者", "在深渊里斩断了自己的影子"),
     "mirror": ("照见者", "在深渊里接纳了自己的影子"),
+    "guardian": ("城镇的守护者", "一座城镇的声望到了 100"),
+    "bard": ("三首歌的听者", "替吟游诗人拣齐了三首歌"),
+    "traveler": ("破碎大陆的旅人", "十九个群系都走到过"),
 }
 
 
@@ -174,7 +177,7 @@ def quests():
     for i, t in enumerate(TITLES):
         press.append("execute if score #do rpg_q_st matches %d run function %s/title/wear_%s" % (40 + i, P, t))
     press.append("execute if score #do rpg_q_st matches 20..%d run tag @s remove rpg.q1.pick" % (19 + len(epics)))
-    press.append("execute if score #do rpg_q_st matches 49 run function %s/title/off" % P)
+    press.append("execute if score #do rpg_q_st matches 60 run function %s/title/off" % P)
     fn("press", press)
     fn("q6_core", ["execute store result score #r rpg_q_st run random value 1..7"] +
        ["execute if score #r rpg_q_st matches %d run function rpg:inquest/give/core%d" % (n, n) for n in range(1, 8)])
@@ -244,7 +247,7 @@ def titles():
     for k, (name, how) in TITLES.items():
         body += [{"text": WA.TITLE_CHARS[k], "font": "rpg:world_titles", "color": "white"}, tt(" " + name, T_BODY, True),
                  tt("　" + how, T_MUTED), NL]
-    acts = [(name, ui.HOLY, 40 + i) for i, (k, (name, how)) in enumerate(TITLES.items())] + [("不戴", ui.MUTED, 49)]
+    acts = [(name, ui.HOLY, 40 + i) for i, (k, (name, how)) in enumerate(TITLES.items())] + [("不戴", ui.MUTED, 60)]
     d = dialog("称号", body, acts, exit_label="合上").replace("/trigger rpg_fg_do set", "/trigger rpg_q_do set")
     d = d.replace('"[锻造]"', '"[称号]"')
     fn("titles", [d])

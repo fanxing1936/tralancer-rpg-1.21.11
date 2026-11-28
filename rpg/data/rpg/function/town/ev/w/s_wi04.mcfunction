@@ -1,0 +1,2 @@
+tellraw @a[tag=rpg.tw.in] ["",{"text":"〖","color":"#B48AD8","bold":true,"italic":false},{"text":"女巫","color":"#B48AD8","bold":true,"italic":false},{"text":"〗","color":"#B48AD8","bold":true,"italic":false},{"text":" 𝔗𝔥𝔢 𝔚𝔦𝔱𝔠𝔥","color":"#8F7430","italic":false},{"text":"  后来教廷拿走了那些柱子，把它们当成军械库。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Later the Church took those pillars and turned them into an armoury.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.wi04 voice @a[tag=rpg.tw.in] ~ ~ ~ 1 1

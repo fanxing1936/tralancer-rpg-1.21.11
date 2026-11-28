@@ -1,0 +1,60 @@
+{
+ "model_scale": 4.671532889605201,
+ "height_blocks": 1.2,
+ "source_height_cm": 214.06249803466793,
+ "turn": 180,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [],
+ "numeric_angle_cleanup": [],
+ "material_slot_aliases": {},
+ "source_orientation": {
+  "native_java_forward": "-Z",
+  "normalized_forward": "+Z",
+  "static_group": "merchant_orientation",
+  "normalization_rotation_degrees": [
+   0,
+   180,
+   0
+  ],
+  "runtime_turn_degrees": 180
+ },
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Friendlies/Villager/SK_Villager",
+  "export_root": "D:\\agent\\dungeons_extract\\merchant_models_20261124",
+  "material": "MI_Villager_Blacksmith",
+  "texture": "_tools\\town_ref\\art\\villager_child.png"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Villager_Idle",
+   "seconds": 4.9583335,
+   "loop": true,
+   "ticks": 100,
+   "max_bone_error_px": 0.0007893659952023779,
+   "max_vertex_error_px": 0.0004081336923647043,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "town_child",
+  "source_mesh_sha256": "c86045819a1d9019af926d1ce8b668844f90a98b76df612c32363fcb791bb4bb",
+  "triangles": 134,
+  "all_triangles_covered_once": true,
+  "bones": 36,
+  "plane_groups": 17,
+  "display_parts": 17,
+  "elements": 67,
+  "direct_uv_elements": 67,
+  "baked_elements": 0,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Villager_Butcher": 0
+  },
+  "atlas": [
+   64,
+   64
+  ]
+ }
+}

@@ -2,7 +2,7 @@
 tag @s remove rpg.mk.solid
 tag @s remove rpg.mk.fade
 tag @s add rpg.mk.solid
-execute if score #pro rpg_mk matches 1 run return run function rpg:michael/look/prologue
+execute if predicate rpg:in_prologue run return run function rpg:michael/look/prologue
 execute on passengers if entity @s[tag=rpg.mkm.p.head] unless data entity @s {item:{components:{"minecraft:item_model":"rpg:empty"}}} run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_solid/head"
 execute on passengers if entity @s[tag=rpg.mkm.p.r_leg] unless data entity @s {item:{components:{"minecraft:item_model":"rpg:empty"}}} run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_solid/r_leg"
 execute on passengers if entity @s[tag=rpg.mkm.p.l_leg] unless data entity @s {item:{components:{"minecraft:item_model":"rpg:empty"}}} run data modify entity @s item.components."minecraft:item_model" set value "rpg:michael_solid/l_leg"

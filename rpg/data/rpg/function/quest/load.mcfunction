@@ -39,3 +39,9 @@ team add rpg_t_sever
 team modify rpg_t_sever prefix ["",{"text":"","font":"rpg:world_titles","color":"white"},{"text":" ","color":"white"}]
 team add rpg_t_mirror
 team modify rpg_t_mirror prefix ["",{"text":"","font":"rpg:world_titles","color":"white"},{"text":" ","color":"white"}]
+team add rpg_t_guardian
+team modify rpg_t_guardian prefix ["",{"text":"","font":"rpg:world_titles","color":"white"},{"text":" ","color":"white"}]
+team add rpg_t_bard
+team modify rpg_t_bard prefix ["",{"text":"","font":"rpg:world_titles","color":"white"},{"text":" ","color":"white"}]
+team add rpg_t_traveler
+team modify rpg_t_traveler prefix ["",{"text":"","font":"rpg:world_titles","color":"white"},{"text":" ","color":"white"}]

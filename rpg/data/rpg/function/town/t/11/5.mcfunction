@@ -1,0 +1,3 @@
+$execute positioned ~21 $(y) ~53 run function rpg:town/b/roadside_tavern/cw with storage rpg:town m
+$execute positioned ~-6 $(y) ~71 run summon minecraft:marker ~ ~1 ~ {Tags:["rpg.tw.a","rpg.tw.in.tavern","rpg.tw.new"]}
+execute positioned ~2 0 ~51 positioned over motion_blocking_no_leaves run summon minecraft:marker ~ ~ ~ {Tags:["rpg.tw.a","rpg.tw.at.tavern","rpg.tw.new"]}

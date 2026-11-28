@@ -1,1 +1,0 @@
-execute in rpg:armageddon run tp @e[type=minecraft:vindicator,tag=rpg.pr.a.michael] 2.22222 82.4444 0 90 0

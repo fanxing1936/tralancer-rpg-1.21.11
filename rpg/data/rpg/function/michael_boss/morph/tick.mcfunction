@@ -1,5 +1,5 @@
 scoreboard players add @s rpg_mk_c 1
-execute if score @s rpg_mk_c matches 14 run execute at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1] run function rpg:michael_boss/pillar/plant
+execute if score @s rpg_mk_c matches 14 run execute at @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1,predicate=!rpg:in_prologue] run function rpg:michael_boss/pillar/plant
 execute if score @s rpg_mk_c matches 16 run execute unless score #pro rpg_mk matches 1 run tellraw @a[distance=..48] ["",{"text":"〖","color":"#FF805F","bold":true,"italic":false},{"text":"炽天使 ","color":"#FF805F","bold":true,"italic":false},{"text":"米迦勒","color":"#FF3300","bold":true,"italic":false},{"text":"〗","color":"#FF805F","bold":true,"italic":false},{"text":" 𝔗𝔥𝔢 𝔖𝔢𝔯𝔞𝔭𝔥","color":"#8F7430","bold":false,"italic":false},{"text":"  ","color":"#9C9A94","bold":false,"italic":false},{"text":"……","color":"#9C9A94","bold":false,"italic":false}]
 execute if score @s rpg_mk_c matches 14..40 run particle minecraft:white_ash ~ ~1 ~ 0.5 0.6 0.5 0 3
 execute if score @s rpg_mk_c matches 40 run function rpg:michael/weapon/rib

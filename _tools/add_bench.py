@@ -29,7 +29,7 @@ from add_alchemy import C_ALC
 C_FORGE = FS.C_FORGE
 B = "rpg:bench"
 MAT = lambda k: '*[minecraft:custom_data~{rpg_mat:"%s"}]' % k
-TABS = [(80, "冶炼", "Smelt"), (81, "养成", "Temper"), (82, "锻造", "Forge"), (83, "转换", "Convert"), (84, "炼药与制器", "Alchemy")]
+TABS = [(80, "冶炼", "Smelt"), (81, "养成", "Temper"), (82, "锻造", "Forge"), (83, "转换", "Convert"), (84, "炼药与制器", "Alchemy"), (87, "熔铸", "Fuse")]   # 87：add_fusion.py
 COUNT = [0]
 
 
@@ -157,8 +157,9 @@ def build():
             card("rpg:forge/forge_stone", "养成", ["副手拿装备，主手拿锻石、洗炼钻、鎏金叶、源、符文或符石，对准营火右键", "身上　锻石 $(nf)　洗炼钻 $(nw)　鎏金叶 $(ng)"], C_FORGE),
             card("rpg:world/sin_shard", "锻造", ["罪印碎片锻造一柱的罪器；副手拿图纸锻造图纸武器", "身上　罪印碎片 $(nk)"], C_FORGE),
             card("rpg:world/blueprint_fragment", "转换", ["材料互换；10 片图纸碎片合一张自选图纸", "身上　图纸碎片 $(np)"], C_FORGE),
-            card("rpg:relic/empty_vial", "炼药与制器", ["空瓶加遗物炼药；空白圣具加遗物做驱魔器具", "身上　空瓶 $(nv)　空白圣具 $(nt)"], C_ALC)]
-    acts = [(name, GOLD if v != 84 else C_ALC, v) for v, name, _g in TABS[:4]] + [("炼药", C_ALC, 84), ("制器", C_ALC, 85)]
+            card("rpg:relic/empty_vial", "炼药与制器", ["空瓶加遗物炼药；空白圣具加遗物做驱魔器具", "身上　空瓶 $(nv)　空白圣具 $(nt)"], C_ALC),
+            card("rpg:town/tab_fuse", "熔铸与拆解", ["两把同类祭品熔进主件，品质升一档；完美再熔加淬炼星", "不要的装备拆掉，退回一半主材和镶嵌"], C_FORGE)]
+    acts = [(name, GOLD if v != 84 else C_ALC, v) for v, name, _g in TABS[:4]] + [("炼药", C_ALC, 84), ("制器", C_ALC, 85), ("熔铸", GOLD, 87)]
     write("bench/home_m", ["$dialog show @s " + dump(dialog(title("总台", "Workbench"), body, acts))])
 
     # 路由

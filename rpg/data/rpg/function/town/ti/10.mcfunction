@@ -1,0 +1,3 @@
+title @s times 10 50 20
+title @s subtitle ["",{"text":"圣城教廷领 · 小城","color":"#9C9A94","bold":false,"italic":false},{"text":"  𝔅𝔢𝔱𝔥𝔞𝔫𝔶","color":"#8F7430","bold":false,"italic":false}]
+title @s title ["",{"text":"伯大尼","color":"#E6DFCF","bold":true,"italic":false}]

@@ -1,0 +1,350 @@
+{
+  "pyre": {
+    "name": "pyre",
+    "source_mesh_sha256": "3bcfee15cc7a07ebfc7d66233a059f9ef0055fe02e6820d20db96a163a25b90f",
+    "triangles": 184,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 18,
+    "display_parts": 17,
+    "elements": 92,
+    "direct_uv_elements": 90,
+    "baked_elements": 2,
+    "glow_groups": 0,
+    "textures": {
+      "MI_Bonfire": 0
+    },
+    "atlas": [
+      256,
+      256
+    ],
+    "dimensions_blocks": [
+      3.0562,
+      2.7328,
+      2.6453
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/Bonfire/SM_Bonfire",
+    "grounding_cm": 1.4999999125821763e-05,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "cage": {
+    "name": "cage",
+    "source_mesh_sha256": "9cc7b5f6410f8fa4bc80afe7d839f6bc75b286aba88f2c0ab52226c9f85a65a0",
+    "triangles": 376,
+    "all_triangles_covered_once": true,
+    "bones": 5,
+    "plane_groups": 4,
+    "display_parts": 4,
+    "elements": 82,
+    "direct_uv_elements": 59,
+    "baked_elements": 23,
+    "glow_groups": 0,
+    "textures": {
+      "Mi_HangingVillagerCage": 0
+    },
+    "atlas": [
+      512,
+      512
+    ],
+    "dimensions_blocks": [
+      2.2496,
+      3.6227,
+      2.2464
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Content_DLC6/Decor/Prefabs/_End_Structures_/End_DesignObjects/HangingVillagerCage/SK_HangingVillagerCage",
+    "grounding_cm": 0,
+    "placement": "original_hanging_pivot"
+  },
+  "grave_a": {
+    "name": "grave_a",
+    "source_mesh_sha256": "e6c5756c7c2fc2f6582d14e62aef510e4e3f827cebb5eb7daea27c0f35d5bb0b",
+    "triangles": 86,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 5,
+    "display_parts": 1,
+    "elements": 13,
+    "direct_uv_elements": 0,
+    "baked_elements": 13,
+    "glow_groups": 0,
+    "textures": {
+      "M_Gravestone": 0
+    },
+    "atlas": [
+      256,
+      256
+    ],
+    "dimensions_blocks": [
+      1.4658,
+      1.3832,
+      1.0615
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/Gravestone/SM_Gravestone0",
+    "grounding_cm": 9.129223241474155e-06,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "grave_b": {
+    "name": "grave_b",
+    "source_mesh_sha256": "af9118adada305b7e1dabd63f5411e1dbf30af5a38dcbbadc4c791877d9af1a5",
+    "triangles": 38,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 5,
+    "display_parts": 1,
+    "elements": 13,
+    "direct_uv_elements": 4,
+    "baked_elements": 9,
+    "glow_groups": 0,
+    "textures": {
+      "M_GravestoneCyan_Inst": 0
+    },
+    "atlas": [
+      128,
+      128
+    ],
+    "dimensions_blocks": [
+      0.7101,
+      0.6768,
+      0.6349
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/Gravestone/SM_Gravestone1",
+    "grounding_cm": 5.744507066693127e-06,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "candles_a": {
+    "name": "candles_a",
+    "source_mesh_sha256": "e6174296ac157e1d97cb8bba38527ba76a2ee6d893a3c0f355efff0bfc3c91d1",
+    "triangles": 260,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 1,
+    "display_parts": 1,
+    "elements": 70,
+    "direct_uv_elements": 60,
+    "baked_elements": 10,
+    "glow_groups": 0,
+    "textures": {
+      "M_EvilCandle": 0
+    },
+    "atlas": [
+      32,
+      32
+    ],
+    "dimensions_blocks": [
+      1.4375,
+      1.125,
+      3.3125
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/Candle/SM_EvilCandles_01",
+    "grounding_cm": 1.33945740402516e-14,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "candles_b": {
+    "name": "candles_b",
+    "source_mesh_sha256": "1a0377db3fdca01a35737e2a344d0296f3a839a07ae10785f803590689be9d50",
+    "triangles": 130,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 1,
+    "display_parts": 1,
+    "elements": 35,
+    "direct_uv_elements": 30,
+    "baked_elements": 5,
+    "glow_groups": 0,
+    "textures": {
+      "M_EvilCandle": 0
+    },
+    "atlas": [
+      32,
+      32
+    ],
+    "dimensions_blocks": [
+      1.0075,
+      0.8125,
+      1.3976
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/Candle/SM_EvilCandles_02",
+    "grounding_cm": 5.221605740881814e-15,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "cauldron": {
+    "name": "cauldron",
+    "source_mesh_sha256": "f83e386c2962a137a3b39c6052cc285f6c7ca37d061f1b47cb9da477753b7873",
+    "triangles": 212,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 21,
+    "display_parts": 9,
+    "elements": 257,
+    "direct_uv_elements": 70,
+    "baked_elements": 32,
+    "glow_groups": 7,
+    "textures": {
+      "M_Cauldron_Witch": 0
+    },
+    "atlas": [
+      256,
+      256
+    ],
+    "dimensions_blocks": [
+      2.5,
+      2.1919,
+      1.5439
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/KitchenUtensils/SM_Cauldron_Witch",
+    "grounding_cm": 2.0000000040698967e-06,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "bell": {
+    "name": "bell",
+    "source_mesh_sha256": "a312d8bf3702bc9e022c79b2e62ca9c5bcc9457d02877250fd30ee1a11a7485d",
+    "triangles": 262,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 2,
+    "display_parts": 1,
+    "elements": 64,
+    "direct_uv_elements": 47,
+    "baked_elements": 17,
+    "glow_groups": 0,
+    "textures": {
+      "MI_Bell": 0
+    },
+    "atlas": [
+      256,
+      256
+    ],
+    "dimensions_blocks": [
+      3.0,
+      3.9375,
+      0.875
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/Bell/SM_Bell",
+    "grounding_cm": 8.343171298314412e-15,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "barrel": {
+    "name": "barrel",
+    "source_mesh_sha256": "fead09aa04a670885cc0d020999d4eda87615f61acec47e84172ca6e4731eec1",
+    "triangles": 24,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 1,
+    "display_parts": 1,
+    "elements": 12,
+    "direct_uv_elements": 12,
+    "baked_elements": 0,
+    "glow_groups": 0,
+    "textures": {
+      "MI_Barrel": 0
+    },
+    "atlas": [
+      128,
+      128
+    ],
+    "dimensions_blocks": [
+      1.0,
+      1.4375,
+      1.0
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/Barrel/SM_Barrel",
+    "grounding_cm": -0.12499990686772477,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "crate": {
+    "name": "crate",
+    "source_mesh_sha256": "5c856bd55bd5b0e1c714289b8a13cd87ee20387250ddfd671df57c8c589ceae5",
+    "triangles": 12,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 1,
+    "display_parts": 1,
+    "elements": 6,
+    "direct_uv_elements": 6,
+    "baked_elements": 0,
+    "glow_groups": 0,
+    "textures": {
+      "MI_Crate": 0
+    },
+    "atlas": [
+      32,
+      32
+    ],
+    "dimensions_blocks": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/Crate/SM_Crate",
+    "grounding_cm": 8.146033536604591e-06,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "crate_pile": {
+    "name": "crate_pile",
+    "source_mesh_sha256": "f2ec6c4627cba227128b5e65813e0c7c5f7d85f84b6f00c97de1edcc61006b4a",
+    "triangles": 72,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 2,
+    "display_parts": 1,
+    "elements": 36,
+    "direct_uv_elements": 33,
+    "baked_elements": 3,
+    "glow_groups": 0,
+    "textures": {
+      "M_SnowMineDecor_PF": 0
+    },
+    "atlas": [
+      128,
+      128
+    ],
+    "dimensions_blocks": [
+      1.4761,
+      2.0,
+      2.125
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/_Creepingwinter_Structures/_LostSettlement_Structures/MineStructures/SM_CratePile",
+    "grounding_cm": 7.864209692343138e-05,
+    "placement": "lowest_vertex_at_execution_y"
+  },
+  "cart": {
+    "name": "cart",
+    "source_mesh_sha256": "c2ef0e58c9945358b32fa71fa8f8603c70836cb60739bb52c5be8fc5d18f7afe",
+    "triangles": 120,
+    "all_triangles_covered_once": true,
+    "bones": 1,
+    "plane_groups": 16,
+    "display_parts": 16,
+    "elements": 64,
+    "direct_uv_elements": 45,
+    "baked_elements": 19,
+    "glow_groups": 0,
+    "textures": {
+      "MI_CartBroken": 0
+    },
+    "atlas": [
+      256,
+      256
+    ],
+    "dimensions_blocks": [
+      3.4164,
+      1.4662,
+      3.8564
+    ],
+    "dimensions_axes": "Java X width, Y height, Z depth",
+    "source_package": "Dungeons/Content/Decor/Prefabs/CartBroken/SM_CartBroken",
+    "grounding_cm": 8.252342045307133,
+    "placement": "lowest_vertex_at_execution_y"
+  }
+}

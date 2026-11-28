@@ -54,6 +54,9 @@ BOUNTIES = {
     13: ("通过试炼的层数", "trial", 5, None),
     14: ("在失乐园打倒怪物", "paradise", 30, None),
     15: ("在失乐园打倒首领", "paradise_champ", 2, None),
+    16: ("完成城镇委托", "town_quest", 2, None),          # 城镇支线（add_town_life.py）
+    17: ("发现新的群系、城镇或地标", "explore", 1, None),  # 见闻录（add_explore.py）
+    18: ("参与全村副本", "town_event", 1, None),          # 三场副本（add_town_events.py）
 }
 NB = len(BOUNTIES)
 
@@ -379,7 +382,7 @@ def bounty():
         fn("bt/kill_%s" % g, lines)
     el = [k for k, v in BOUNTIES.items() if v[1] == "elite"]
     fn("bt/elite", ["execute if score @s rpg_bt_t%d matches %d run scoreboard players add @s rpg_bt_p%d 1" % (s, k, s) for s in (1, 2, 3) for k in el])
-    for kind in ("trial", "paradise", "paradise_champ"):      # 失乐园（add_paradise.py）里调
+    for kind in ("trial", "paradise", "paradise_champ", "town_quest", "explore", "town_event"):      # 失乐园、城镇、见闻录里调
         ids = [k for k, v in BOUNTIES.items() if v[1] == kind]
         fn("bt/" + kind, ["execute if score @s rpg_bt_t%d matches %d run scoreboard players add @s rpg_bt_p%d 1" % (s, k, s) for s in (1, 2, 3) for k in ids])
     for g in W.GROUPS:

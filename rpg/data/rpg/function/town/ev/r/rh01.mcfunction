@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"农夫","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔉𝔞𝔯𝔪𝔢𝔯","color":"#8F7430","italic":false},{"text":"  墓地的土是松的。像是有人从里面往外挖。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The graveyard soil is loose. As if someone dug their way out.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rh01 voice @a[distance=..16] ~ ~ ~ 1 1

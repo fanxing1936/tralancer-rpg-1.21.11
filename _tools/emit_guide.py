@@ -10,6 +10,7 @@ import guide_tutorial
 import guide_world
 import guide_sephira
 import guide_paradise
+import guide_towns
 import guide_theme
 import rpg_ui_style as ui
 
@@ -833,6 +834,7 @@ def build():
     a(guide_world.section())
     a(guide_sephira.section())
     a(guide_paradise.section())
+    a(guide_towns.section())
     a('<footer><span class="seal">Eretz Ha-Shevarim</span>破碎大陆 · TRALANCER RPG　—　世界观设定：本作作者　·　叙事文案：ChatGPT（OpenAI）　·　迁移、优化与图鉴生成：Claude（Anthropic）<br>图鉴依据数据包 rpg 命名空间内的物品与实体数据生成 · Minecraft Java 1.21.11</footer>')
     a('</main></div></div>')
 

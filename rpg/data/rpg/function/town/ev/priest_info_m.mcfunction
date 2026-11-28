@@ -1,0 +1,1 @@
+$tellraw @s ["",{"text":"〖驱魔委托〗","color":"#C9A646","bold":true,"italic":false},{"text":"  今晚：","color":"#9C9A94","bold":false,"italic":false},{"text":"$(name)","color":"#E6DFCF","bold":true,"italic":false},{"text":"　$(hint)","color":"#9C9A94","bold":false,"italic":false}]

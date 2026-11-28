@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"少年","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔏𝔞𝔡","color":"#8F7430","italic":false},{"text":"  我昨晚看见一个人站在路口，没有脸！真的，没有脸！","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Last night I saw someone standing at the crossroads with no face! Honest, no face!","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rh02 voice @a[distance=..16] ~ ~ ~ 1 1

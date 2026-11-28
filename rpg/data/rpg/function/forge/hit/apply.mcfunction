@@ -1,3 +1,7 @@
+# 阵营（add_pvp.py）：同阵营、安全区里的玩家不吃额外伤害
+execute if entity @s[type=minecraft:player,tag=rpg.safe] run return 0
+execute if entity @s[type=minecraft:player,tag=rpg.ch] if entity @a[tag=rpg.fg.atk,tag=rpg.ch] run return 0
+execute if entity @s[type=minecraft:player,tag=rpg.dm] if entity @a[tag=rpg.fg.atk,tag=rpg.dm] run return 0
 scoreboard players set #mel rpg_fg 0
 scoreboard players set #rng rpg_fg 0
 execute if entity @a[tag=rpg.fg.atk,scores={rpg_fg_dd=1..}] run scoreboard players set #mel rpg_fg 1

@@ -442,7 +442,7 @@ VEG = {
     "mesa_valley": ["patch_grass_badlands", "patch_dead_bush_badlands", "patch_cactus_decorated"],
     "lavender_forest": ["rpg:ow/lav_flowers", "patch_grass_forest", "flower_default", "patch_sugar_cane", "patch_firefly_bush_near_water"],
     "golden_forest": ["rpg:ow/gold_wheat", "patch_grass_forest", "patch_berry_bush", "patch_pumpkin", "patch_leaf_litter"],
-    "warped_plateau": ["rpg:ow/warped_veg", "rpg:ow/twisting"],
+    "warped_plateau": ["rpg:ow/warped_veg"],          # 缠怨藤去掉（用户 2026-11-27）
     "geyser_taiga": ["patch_large_fern", "rpg:ow/geyser_snag", "patch_grass_taiga", "patch_berry_bush"],
     "glacier_spires": [],
     "stone_forest": ["rpg:ow/stone_bamboo", "patch_grass_forest", "patch_waterlily", "vines"],
@@ -456,7 +456,7 @@ VEG = {
     "ocean": ["seagrass_normal", "kelp_cold"], "deep_ocean": ["seagrass_deep", "kelp_cold"], "frozen_ocean": [],
 }
 VEG_ORDER = ["patch_tall_grass_2", "patch_bush", "flower_plains", "patch_grass_plain", "forest_flowers", "flower_default", "patch_grass_forest", "patch_grass_meadow", "flower_meadow", "wildflowers_meadow",
-             "rpg:ow/gold_wheat", "rpg:ow/lav_flowers", "rpg:ow/warped_veg", "rpg:ow/twisting", "patch_large_fern", "rpg:ow/geyser_snag",
+             "rpg:ow/gold_wheat", "rpg:ow/lav_flowers", "rpg:ow/warped_veg", "patch_large_fern", "rpg:ow/geyser_snag",
              "patch_grass_taiga", "patch_grass_badlands", "patch_dry_grass_desert", "patch_dead_bush_2", "patch_dead_bush_badlands",
              "patch_cactus_desert", "patch_cactus_decorated", "rpg:ow/eroded_cactus", "patch_sugar_cane_desert", "rpg:ow/stone_bamboo",
              "rpg:ow/ash_trunk", "rpg:ow/war_stump", "rpg:ow/war_web", "rpg:ow/war_skull", "patch_berry_bush", "brown_mushroom_normal", "red_mushroom_normal", "patch_pumpkin", "patch_leaf_litter", "wildflowers_birch_forest", "flower_cherry",
@@ -639,9 +639,11 @@ def surface(vanilla_rule):
         cond(bio("geyser_taiga"), seq(cond(nt(SPR, q(99), 9.0), b("water", level=0)), cond(nt(SPR, q(98.2), 9.0), calcite), cond(nt(SPR, q(97.4), 9.0), yterra), cond(nt(SPR, q(96.5), 9.0), oterra),
                                       cond(steep, seq(cond(yab(SEA + 10), cond(nt(A, 0.0, 9.0), wterra)), yterra)),
                                       cond(nt(A, 0.2, 9.0), coarse), cond(nt(Bn, 0.1, 9.0), podzol), grass)),
-        # 诡异高原：诡异菌岩 + 诡异疣块 + 少量蓝色草方块（去皮诡异木已去掉，用户 2026-11-26）
+        # 诡异高原：诡异菌岩 + 诡异疣块 + 少量蓝色草方块（去皮诡异木已去掉，用户 2026-11-26）；
+        # 一部分地块是泥巴和红树根泥巴混在一起（用户 2026-11-27）
         cond(bio("warped_plateau"), seq(cond(steep, seq(cond(nt(A, 0.1, 9.0), wart), b("deepslate", axis="y"))),
-                                        cond(nt(A, 0.42, 9.0), grass), cond(nt(Bn, 0.2, 9.0), wart), nylium)),
+                                        cond(nt(A, 0.42, 9.0), grass), cond(nt(M, 0.3, 9.0), xor(roots, mud)),
+                                        cond(nt(Bn, 0.2, 9.0), wart), nylium)),
         cond(bio("stone_forest"), seq(shore, cond(nt(A, 0.1, 9.0), moss), cond(nt(Bn, 0.15, 9.0), andesite), cond(nt(C, 0.3, 9.0), cobble), stone)),
         cond(bio("war_front"), seq(cond(nt(A, 0.38, 9.0), gravel), cond(nt(Bn, 0.45, 9.0), b("soul_soil")), muddy)),
         cond(bio("ashwood"), seq(cond(nt(A, 0.35, 9.0), coarse), cond(nt(Bn, 0.4, 9.0), b("soul_soil")), cond(nt(M, 0.3, 9.0), gravel), muddy)),

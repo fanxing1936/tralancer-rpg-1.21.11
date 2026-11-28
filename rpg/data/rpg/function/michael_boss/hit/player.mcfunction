@@ -1,3 +1,4 @@
+execute if entity @s[tag=rpg.pr] run return run advancement revoke @s only rpg:michael_boss/hit
 # 玩家打到了米迦勒（as 玩家）。原版在这之后才记伤害统计，所以这里只判定怎么算，下一刻再按增量结算。
 advancement revoke @s only rpg:michael_boss/hit
 scoreboard players set @s rpg_mk_v 0

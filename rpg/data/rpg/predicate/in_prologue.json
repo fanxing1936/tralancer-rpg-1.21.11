@@ -1,0 +1,41 @@
+{
+ "condition": "minecraft:any_of",
+ "terms": [
+  {
+   "condition": "minecraft:entity_properties",
+   "entity": "this",
+   "predicate": {
+    "location": {
+     "dimension": "rpg:armageddon"
+    }
+   }
+  },
+  {
+   "condition": "minecraft:entity_properties",
+   "entity": "this",
+   "predicate": {
+    "location": {
+     "dimension": "rpg:armageddon_2"
+    }
+   }
+  },
+  {
+   "condition": "minecraft:entity_properties",
+   "entity": "this",
+   "predicate": {
+    "location": {
+     "dimension": "rpg:armageddon_3"
+    }
+   }
+  },
+  {
+   "condition": "minecraft:entity_properties",
+   "entity": "this",
+   "predicate": {
+    "location": {
+     "dimension": "rpg:armageddon_4"
+    }
+   }
+  }
+ ]
+}

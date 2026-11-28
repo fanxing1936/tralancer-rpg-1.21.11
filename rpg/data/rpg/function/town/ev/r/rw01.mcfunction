@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"少年","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔏𝔞𝔡","color":"#8F7430","italic":false},{"text":"  审判官进城了！带着一车柴火！","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The inquisitor's come to town! With a whole cart of firewood!","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rw01 voice @a[distance=..16] ~ ~ ~ 1 1

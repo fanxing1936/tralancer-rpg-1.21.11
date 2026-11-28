@@ -1,0 +1,2 @@
+tellraw @a[tag=rpg.tw.in] ["",{"text":"〖","color":"#B8902F","bold":true,"italic":false},{"text":"审判官","color":"#B8902F","bold":true,"italic":false},{"text":"〗","color":"#B8902F","bold":true,"italic":false},{"text":" ℑ𝔫𝔮𝔲𝔦𝔰𝔦𝔱𝔬𝔯","color":"#8F7430","italic":false},{"text":"  ……这一次算你们赢。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"...You win this time.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.iq08 voice @a[tag=rpg.tw.in] ~ ~ ~ 1 1

@@ -1,0 +1,35 @@
+# green_house_small（旋转 180）：positioned 在落点、y = 结构原点；宏参数 sfx（材质版本）
+fill ~-17 ~-2 ~-22 ~2 ~27 ~2 minecraft:air replace #rpg:town_clear
+$place template rpg:town/green_house_small$(sfx) ~ ~ ~ 180
+fill ~-13 ~-1 ~-13 ~-12 ~-10 ~-13 minecraft:cobblestone replace #rpg:town_soft
+fill ~-13 ~-1 ~-14 ~-12 ~-10 ~-14 minecraft:dripstone_block replace #rpg:town_soft
+fill ~-11 ~-1 ~-16 ~-3 ~-10 ~-16 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-12 ~-1 ~-15 ~-12 ~-10 ~-15 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-2 ~-1 ~-15 ~-1 ~-10 ~-13 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-10 ~-1 ~-14 ~-4 ~-10 ~-6 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-12 ~-1 ~-12 ~-12 ~-10 ~-5 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-2 ~-1 ~-12 ~-2 ~-10 ~-5 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-11 ~-1 ~-4 ~-7 ~-10 ~-4 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-5 ~-1 ~-4 ~-3 ~-10 ~-2 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-12 ~0 ~-16 ~-12 ~-9 ~-16 minecraft:coarse_dirt replace #rpg:town_soft
+fill ~-2 ~0 ~-4 ~-2 ~-9 ~-4 minecraft:coarse_dirt replace #rpg:town_soft
+fill ~-2 ~0 ~-16 ~-2 ~-9 ~-16 minecraft:dirt replace #rpg:town_soft
+fill ~-12 ~0 ~-4 ~-12 ~-9 ~-4 minecraft:dirt replace #rpg:town_soft
+fill ~-6 ~0 ~-4 ~-6 ~-9 ~-4 minecraft:dirt replace #rpg:town_soft
+fill ~-10 ~0 ~-15 ~-9 ~-9 ~-15 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-7 ~0 ~-15 ~-3 ~-9 ~-15 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-11 ~0 ~-14 ~-11 ~-9 ~-13 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-3 ~0 ~-13 ~-3 ~-9 ~-10 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-11 ~0 ~-10 ~-11 ~-9 ~-8 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-11 ~0 ~-6 ~-11 ~-9 ~-5 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-3 ~0 ~-6 ~-3 ~-9 ~-6 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-9 ~0 ~-5 ~-8 ~-9 ~-5 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-4 ~0 ~-5 ~-4 ~-9 ~-5 minecraft:polished_diorite replace #rpg:town_soft
+fill ~-11 ~0 ~-15 ~-11 ~-9 ~-15 minecraft:smooth_stone replace #rpg:town_soft
+fill ~-8 ~0 ~-15 ~-8 ~-9 ~-15 minecraft:smooth_stone replace #rpg:town_soft
+fill ~-11 ~0 ~-12 ~-11 ~-9 ~-11 minecraft:smooth_stone replace #rpg:town_soft
+fill ~-3 ~0 ~-9 ~-3 ~-9 ~-7 minecraft:smooth_stone replace #rpg:town_soft
+fill ~-11 ~0 ~-7 ~-11 ~-9 ~-7 minecraft:smooth_stone replace #rpg:town_soft
+fill ~-10 ~0 ~-5 ~-10 ~-9 ~-5 minecraft:smooth_stone replace #rpg:town_soft
+fill ~-7 ~0 ~-5 ~-5 ~-9 ~-5 minecraft:smooth_stone replace #rpg:town_soft
+fill ~-3 ~0 ~-5 ~-3 ~-9 ~-5 minecraft:smooth_stone replace #rpg:town_soft

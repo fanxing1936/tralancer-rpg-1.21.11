@@ -1,0 +1,3 @@
+data merge entity @s {Tags:["rpg.tw.model.part","rpg.tw.model.bard.part","rpg.tw.model.bard.p.armor_r_shoulderpad_furarmor"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:town_models/town_bard/armor_r_shoulderpad_furarmor"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[-0.30361f,-0.98204f,-0.31514f],left_rotation:[0.8016f,-0.2594f,0.05812f,0.53551f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+rotate @s ~ 0
+ride @s mount @e[type=minecraft:villager,tag=rpg.tw.model.dressing,distance=..1,limit=1]

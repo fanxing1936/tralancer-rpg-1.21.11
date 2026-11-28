@@ -1,0 +1,3 @@
+data merge entity @s {Tags:["rpg.tw.model.part","rpg.tw.model.edgewalker.part","rpg.tw.model.edgewalker.p.armor_sm_magerobe_magerobe"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:town_models/town_edgewalker/armor_sm_magerobe_magerobe"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0.02763f,-1.09871f,-0.12822f],left_rotation:[0.73639f,-0.07947f,0.08786f,0.6661f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+rotate @s ~ 0
+ride @s mount @e[type=minecraft:villager,tag=rpg.tw.model.dressing,distance=..1,limit=1]

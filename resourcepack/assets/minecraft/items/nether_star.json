@@ -288,8 +288,888 @@
                                   "model": "rpg:relic/core_7"
                                  },
                                  "on_false": {
-                                  "type": "minecraft:model",
-                                  "model": "minecraft:item/nether_star"
+                                  "type": "minecraft:condition",
+                                  "property": "minecraft:component",
+                                  "predicate": "minecraft:custom_data",
+                                  "value": "{holy_weapon_tag:1b}",
+                                  "on_true": {
+                                   "type": "minecraft:model",
+                                   "model": "rpg:relic/rite_star"
+                                  },
+                                  "on_false": {
+                                   "type": "minecraft:condition",
+                                   "property": "minecraft:component",
+                                   "predicate": "minecraft:custom_data",
+                                   "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                   "on_true": {
+                                    "type": "minecraft:model",
+                                    "model": "rpg:relic/core_1"
+                                   },
+                                   "on_false": {
+                                    "type": "minecraft:condition",
+                                    "property": "minecraft:component",
+                                    "predicate": "minecraft:custom_data",
+                                    "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                    "on_true": {
+                                     "type": "minecraft:model",
+                                     "model": "rpg:relic/core_2"
+                                    },
+                                    "on_false": {
+                                     "type": "minecraft:condition",
+                                     "property": "minecraft:component",
+                                     "predicate": "minecraft:custom_data",
+                                     "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                     "on_true": {
+                                      "type": "minecraft:model",
+                                      "model": "rpg:relic/core_3"
+                                     },
+                                     "on_false": {
+                                      "type": "minecraft:condition",
+                                      "property": "minecraft:component",
+                                      "predicate": "minecraft:custom_data",
+                                      "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                      "on_true": {
+                                       "type": "minecraft:model",
+                                       "model": "rpg:relic/core_4"
+                                      },
+                                      "on_false": {
+                                       "type": "minecraft:condition",
+                                       "property": "minecraft:component",
+                                       "predicate": "minecraft:custom_data",
+                                       "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                       "on_true": {
+                                        "type": "minecraft:model",
+                                        "model": "rpg:relic/core_5"
+                                       },
+                                       "on_false": {
+                                        "type": "minecraft:condition",
+                                        "property": "minecraft:component",
+                                        "predicate": "minecraft:custom_data",
+                                        "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                        "on_true": {
+                                         "type": "minecraft:model",
+                                         "model": "rpg:relic/core_6"
+                                        },
+                                        "on_false": {
+                                         "type": "minecraft:condition",
+                                         "property": "minecraft:component",
+                                         "predicate": "minecraft:custom_data",
+                                         "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                         "on_true": {
+                                          "type": "minecraft:model",
+                                          "model": "rpg:relic/core_7"
+                                         },
+                                         "on_false": {
+                                          "type": "minecraft:condition",
+                                          "property": "minecraft:component",
+                                          "predicate": "minecraft:custom_data",
+                                          "value": "{holy_weapon_tag:1b}",
+                                          "on_true": {
+                                           "type": "minecraft:model",
+                                           "model": "rpg:relic/rite_star"
+                                          },
+                                          "on_false": {
+                                           "type": "minecraft:condition",
+                                           "property": "minecraft:component",
+                                           "predicate": "minecraft:custom_data",
+                                           "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                           "on_true": {
+                                            "type": "minecraft:model",
+                                            "model": "rpg:relic/core_1"
+                                           },
+                                           "on_false": {
+                                            "type": "minecraft:condition",
+                                            "property": "minecraft:component",
+                                            "predicate": "minecraft:custom_data",
+                                            "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                            "on_true": {
+                                             "type": "minecraft:model",
+                                             "model": "rpg:relic/core_2"
+                                            },
+                                            "on_false": {
+                                             "type": "minecraft:condition",
+                                             "property": "minecraft:component",
+                                             "predicate": "minecraft:custom_data",
+                                             "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                             "on_true": {
+                                              "type": "minecraft:model",
+                                              "model": "rpg:relic/core_3"
+                                             },
+                                             "on_false": {
+                                              "type": "minecraft:condition",
+                                              "property": "minecraft:component",
+                                              "predicate": "minecraft:custom_data",
+                                              "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                              "on_true": {
+                                               "type": "minecraft:model",
+                                               "model": "rpg:relic/core_4"
+                                              },
+                                              "on_false": {
+                                               "type": "minecraft:condition",
+                                               "property": "minecraft:component",
+                                               "predicate": "minecraft:custom_data",
+                                               "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                               "on_true": {
+                                                "type": "minecraft:model",
+                                                "model": "rpg:relic/core_5"
+                                               },
+                                               "on_false": {
+                                                "type": "minecraft:condition",
+                                                "property": "minecraft:component",
+                                                "predicate": "minecraft:custom_data",
+                                                "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                "on_true": {
+                                                 "type": "minecraft:model",
+                                                 "model": "rpg:relic/core_6"
+                                                },
+                                                "on_false": {
+                                                 "type": "minecraft:condition",
+                                                 "property": "minecraft:component",
+                                                 "predicate": "minecraft:custom_data",
+                                                 "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                 "on_true": {
+                                                  "type": "minecraft:model",
+                                                  "model": "rpg:relic/core_7"
+                                                 },
+                                                 "on_false": {
+                                                  "type": "minecraft:condition",
+                                                  "property": "minecraft:component",
+                                                  "predicate": "minecraft:custom_data",
+                                                  "value": "{holy_weapon_tag:1b}",
+                                                  "on_true": {
+                                                   "type": "minecraft:model",
+                                                   "model": "rpg:relic/rite_star"
+                                                  },
+                                                  "on_false": {
+                                                   "type": "minecraft:condition",
+                                                   "property": "minecraft:component",
+                                                   "predicate": "minecraft:custom_data",
+                                                   "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                                   "on_true": {
+                                                    "type": "minecraft:model",
+                                                    "model": "rpg:relic/core_1"
+                                                   },
+                                                   "on_false": {
+                                                    "type": "minecraft:condition",
+                                                    "property": "minecraft:component",
+                                                    "predicate": "minecraft:custom_data",
+                                                    "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                                    "on_true": {
+                                                     "type": "minecraft:model",
+                                                     "model": "rpg:relic/core_2"
+                                                    },
+                                                    "on_false": {
+                                                     "type": "minecraft:condition",
+                                                     "property": "minecraft:component",
+                                                     "predicate": "minecraft:custom_data",
+                                                     "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                                     "on_true": {
+                                                      "type": "minecraft:model",
+                                                      "model": "rpg:relic/core_3"
+                                                     },
+                                                     "on_false": {
+                                                      "type": "minecraft:condition",
+                                                      "property": "minecraft:component",
+                                                      "predicate": "minecraft:custom_data",
+                                                      "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                                      "on_true": {
+                                                       "type": "minecraft:model",
+                                                       "model": "rpg:relic/core_4"
+                                                      },
+                                                      "on_false": {
+                                                       "type": "minecraft:condition",
+                                                       "property": "minecraft:component",
+                                                       "predicate": "minecraft:custom_data",
+                                                       "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                                       "on_true": {
+                                                        "type": "minecraft:model",
+                                                        "model": "rpg:relic/core_5"
+                                                       },
+                                                       "on_false": {
+                                                        "type": "minecraft:condition",
+                                                        "property": "minecraft:component",
+                                                        "predicate": "minecraft:custom_data",
+                                                        "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                        "on_true": {
+                                                         "type": "minecraft:model",
+                                                         "model": "rpg:relic/core_6"
+                                                        },
+                                                        "on_false": {
+                                                         "type": "minecraft:condition",
+                                                         "property": "minecraft:component",
+                                                         "predicate": "minecraft:custom_data",
+                                                         "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                         "on_true": {
+                                                          "type": "minecraft:model",
+                                                          "model": "rpg:relic/core_7"
+                                                         },
+                                                         "on_false": {
+                                                          "type": "minecraft:condition",
+                                                          "property": "minecraft:component",
+                                                          "predicate": "minecraft:custom_data",
+                                                          "value": "{holy_weapon_tag:1b}",
+                                                          "on_true": {
+                                                           "type": "minecraft:model",
+                                                           "model": "rpg:relic/rite_star"
+                                                          },
+                                                          "on_false": {
+                                                           "type": "minecraft:condition",
+                                                           "property": "minecraft:component",
+                                                           "predicate": "minecraft:custom_data",
+                                                           "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                                           "on_true": {
+                                                            "type": "minecraft:model",
+                                                            "model": "rpg:relic/core_1"
+                                                           },
+                                                           "on_false": {
+                                                            "type": "minecraft:condition",
+                                                            "property": "minecraft:component",
+                                                            "predicate": "minecraft:custom_data",
+                                                            "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                                            "on_true": {
+                                                             "type": "minecraft:model",
+                                                             "model": "rpg:relic/core_2"
+                                                            },
+                                                            "on_false": {
+                                                             "type": "minecraft:condition",
+                                                             "property": "minecraft:component",
+                                                             "predicate": "minecraft:custom_data",
+                                                             "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                                             "on_true": {
+                                                              "type": "minecraft:model",
+                                                              "model": "rpg:relic/core_3"
+                                                             },
+                                                             "on_false": {
+                                                              "type": "minecraft:condition",
+                                                              "property": "minecraft:component",
+                                                              "predicate": "minecraft:custom_data",
+                                                              "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                                              "on_true": {
+                                                               "type": "minecraft:model",
+                                                               "model": "rpg:relic/core_4"
+                                                              },
+                                                              "on_false": {
+                                                               "type": "minecraft:condition",
+                                                               "property": "minecraft:component",
+                                                               "predicate": "minecraft:custom_data",
+                                                               "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                                               "on_true": {
+                                                                "type": "minecraft:model",
+                                                                "model": "rpg:relic/core_5"
+                                                               },
+                                                               "on_false": {
+                                                                "type": "minecraft:condition",
+                                                                "property": "minecraft:component",
+                                                                "predicate": "minecraft:custom_data",
+                                                                "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                                "on_true": {
+                                                                 "type": "minecraft:model",
+                                                                 "model": "rpg:relic/core_6"
+                                                                },
+                                                                "on_false": {
+                                                                 "type": "minecraft:condition",
+                                                                 "property": "minecraft:component",
+                                                                 "predicate": "minecraft:custom_data",
+                                                                 "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                                 "on_true": {
+                                                                  "type": "minecraft:model",
+                                                                  "model": "rpg:relic/core_7"
+                                                                 },
+                                                                 "on_false": {
+                                                                  "type": "minecraft:condition",
+                                                                  "property": "minecraft:component",
+                                                                  "predicate": "minecraft:custom_data",
+                                                                  "value": "{holy_weapon_tag:1b}",
+                                                                  "on_true": {
+                                                                   "type": "minecraft:model",
+                                                                   "model": "rpg:relic/rite_star"
+                                                                  },
+                                                                  "on_false": {
+                                                                   "type": "minecraft:condition",
+                                                                   "property": "minecraft:component",
+                                                                   "predicate": "minecraft:custom_data",
+                                                                   "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                                                   "on_true": {
+                                                                    "type": "minecraft:model",
+                                                                    "model": "rpg:relic/core_1"
+                                                                   },
+                                                                   "on_false": {
+                                                                    "type": "minecraft:condition",
+                                                                    "property": "minecraft:component",
+                                                                    "predicate": "minecraft:custom_data",
+                                                                    "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                                                    "on_true": {
+                                                                     "type": "minecraft:model",
+                                                                     "model": "rpg:relic/core_2"
+                                                                    },
+                                                                    "on_false": {
+                                                                     "type": "minecraft:condition",
+                                                                     "property": "minecraft:component",
+                                                                     "predicate": "minecraft:custom_data",
+                                                                     "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                                                     "on_true": {
+                                                                      "type": "minecraft:model",
+                                                                      "model": "rpg:relic/core_3"
+                                                                     },
+                                                                     "on_false": {
+                                                                      "type": "minecraft:condition",
+                                                                      "property": "minecraft:component",
+                                                                      "predicate": "minecraft:custom_data",
+                                                                      "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                                                      "on_true": {
+                                                                       "type": "minecraft:model",
+                                                                       "model": "rpg:relic/core_4"
+                                                                      },
+                                                                      "on_false": {
+                                                                       "type": "minecraft:condition",
+                                                                       "property": "minecraft:component",
+                                                                       "predicate": "minecraft:custom_data",
+                                                                       "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                                                       "on_true": {
+                                                                        "type": "minecraft:model",
+                                                                        "model": "rpg:relic/core_5"
+                                                                       },
+                                                                       "on_false": {
+                                                                        "type": "minecraft:condition",
+                                                                        "property": "minecraft:component",
+                                                                        "predicate": "minecraft:custom_data",
+                                                                        "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                                        "on_true": {
+                                                                         "type": "minecraft:model",
+                                                                         "model": "rpg:relic/core_6"
+                                                                        },
+                                                                        "on_false": {
+                                                                         "type": "minecraft:condition",
+                                                                         "property": "minecraft:component",
+                                                                         "predicate": "minecraft:custom_data",
+                                                                         "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                                         "on_true": {
+                                                                          "type": "minecraft:model",
+                                                                          "model": "rpg:relic/core_7"
+                                                                         },
+                                                                         "on_false": {
+                                                                          "type": "minecraft:condition",
+                                                                          "property": "minecraft:component",
+                                                                          "predicate": "minecraft:custom_data",
+                                                                          "value": "{holy_weapon_tag:1b}",
+                                                                          "on_true": {
+                                                                           "type": "minecraft:model",
+                                                                           "model": "rpg:relic/rite_star"
+                                                                          },
+                                                                          "on_false": {
+                                                                           "type": "minecraft:condition",
+                                                                           "property": "minecraft:component",
+                                                                           "predicate": "minecraft:custom_data",
+                                                                           "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                                                           "on_true": {
+                                                                            "type": "minecraft:model",
+                                                                            "model": "rpg:relic/core_1"
+                                                                           },
+                                                                           "on_false": {
+                                                                            "type": "minecraft:condition",
+                                                                            "property": "minecraft:component",
+                                                                            "predicate": "minecraft:custom_data",
+                                                                            "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                                                            "on_true": {
+                                                                             "type": "minecraft:model",
+                                                                             "model": "rpg:relic/core_2"
+                                                                            },
+                                                                            "on_false": {
+                                                                             "type": "minecraft:condition",
+                                                                             "property": "minecraft:component",
+                                                                             "predicate": "minecraft:custom_data",
+                                                                             "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                                                             "on_true": {
+                                                                              "type": "minecraft:model",
+                                                                              "model": "rpg:relic/core_3"
+                                                                             },
+                                                                             "on_false": {
+                                                                              "type": "minecraft:condition",
+                                                                              "property": "minecraft:component",
+                                                                              "predicate": "minecraft:custom_data",
+                                                                              "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                                                              "on_true": {
+                                                                               "type": "minecraft:model",
+                                                                               "model": "rpg:relic/core_4"
+                                                                              },
+                                                                              "on_false": {
+                                                                               "type": "minecraft:condition",
+                                                                               "property": "minecraft:component",
+                                                                               "predicate": "minecraft:custom_data",
+                                                                               "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                                                               "on_true": {
+                                                                                "type": "minecraft:model",
+                                                                                "model": "rpg:relic/core_5"
+                                                                               },
+                                                                               "on_false": {
+                                                                                "type": "minecraft:condition",
+                                                                                "property": "minecraft:component",
+                                                                                "predicate": "minecraft:custom_data",
+                                                                                "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                                                "on_true": {
+                                                                                 "type": "minecraft:model",
+                                                                                 "model": "rpg:relic/core_6"
+                                                                                },
+                                                                                "on_false": {
+                                                                                 "type": "minecraft:condition",
+                                                                                 "property": "minecraft:component",
+                                                                                 "predicate": "minecraft:custom_data",
+                                                                                 "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                                                 "on_true": {
+                                                                                  "type": "minecraft:model",
+                                                                                  "model": "rpg:relic/core_7"
+                                                                                 },
+                                                                                 "on_false": {
+                                                                                  "type": "minecraft:condition",
+                                                                                  "property": "minecraft:component",
+                                                                                  "predicate": "minecraft:custom_data",
+                                                                                  "value": "{holy_weapon_tag:1b}",
+                                                                                  "on_true": {
+                                                                                   "type": "minecraft:model",
+                                                                                   "model": "rpg:relic/rite_star"
+                                                                                  },
+                                                                                  "on_false": {
+                                                                                   "type": "minecraft:condition",
+                                                                                   "property": "minecraft:component",
+                                                                                   "predicate": "minecraft:custom_data",
+                                                                                   "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                                                                   "on_true": {
+                                                                                    "type": "minecraft:model",
+                                                                                    "model": "rpg:relic/core_1"
+                                                                                   },
+                                                                                   "on_false": {
+                                                                                    "type": "minecraft:condition",
+                                                                                    "property": "minecraft:component",
+                                                                                    "predicate": "minecraft:custom_data",
+                                                                                    "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                                                                    "on_true": {
+                                                                                     "type": "minecraft:model",
+                                                                                     "model": "rpg:relic/core_2"
+                                                                                    },
+                                                                                    "on_false": {
+                                                                                     "type": "minecraft:condition",
+                                                                                     "property": "minecraft:component",
+                                                                                     "predicate": "minecraft:custom_data",
+                                                                                     "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                                                                     "on_true": {
+                                                                                      "type": "minecraft:model",
+                                                                                      "model": "rpg:relic/core_3"
+                                                                                     },
+                                                                                     "on_false": {
+                                                                                      "type": "minecraft:condition",
+                                                                                      "property": "minecraft:component",
+                                                                                      "predicate": "minecraft:custom_data",
+                                                                                      "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                                                                      "on_true": {
+                                                                                       "type": "minecraft:model",
+                                                                                       "model": "rpg:relic/core_4"
+                                                                                      },
+                                                                                      "on_false": {
+                                                                                       "type": "minecraft:condition",
+                                                                                       "property": "minecraft:component",
+                                                                                       "predicate": "minecraft:custom_data",
+                                                                                       "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                                                                       "on_true": {
+                                                                                        "type": "minecraft:model",
+                                                                                        "model": "rpg:relic/core_5"
+                                                                                       },
+                                                                                       "on_false": {
+                                                                                        "type": "minecraft:condition",
+                                                                                        "property": "minecraft:component",
+                                                                                        "predicate": "minecraft:custom_data",
+                                                                                        "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                                                        "on_true": {
+                                                                                         "type": "minecraft:model",
+                                                                                         "model": "rpg:relic/core_6"
+                                                                                        },
+                                                                                        "on_false": {
+                                                                                         "type": "minecraft:condition",
+                                                                                         "property": "minecraft:component",
+                                                                                         "predicate": "minecraft:custom_data",
+                                                                                         "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                                                         "on_true": {
+                                                                                          "type": "minecraft:model",
+                                                                                          "model": "rpg:relic/core_7"
+                                                                                         },
+                                                                                         "on_false": {
+                                                                                          "type": "minecraft:condition",
+                                                                                          "property": "minecraft:component",
+                                                                                          "predicate": "minecraft:custom_data",
+                                                                                          "value": "{holy_weapon_tag:1b}",
+                                                                                          "on_true": {
+                                                                                           "type": "minecraft:model",
+                                                                                           "model": "rpg:relic/rite_star"
+                                                                                          },
+                                                                                          "on_false": {
+                                                                                           "type": "minecraft:condition",
+                                                                                           "property": "minecraft:component",
+                                                                                           "predicate": "minecraft:custom_data",
+                                                                                           "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                                                                           "on_true": {
+                                                                                            "type": "minecraft:model",
+                                                                                            "model": "rpg:relic/core_1"
+                                                                                           },
+                                                                                           "on_false": {
+                                                                                            "type": "minecraft:condition",
+                                                                                            "property": "minecraft:component",
+                                                                                            "predicate": "minecraft:custom_data",
+                                                                                            "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                                                                            "on_true": {
+                                                                                             "type": "minecraft:model",
+                                                                                             "model": "rpg:relic/core_2"
+                                                                                            },
+                                                                                            "on_false": {
+                                                                                             "type": "minecraft:condition",
+                                                                                             "property": "minecraft:component",
+                                                                                             "predicate": "minecraft:custom_data",
+                                                                                             "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                                                                             "on_true": {
+                                                                                              "type": "minecraft:model",
+                                                                                              "model": "rpg:relic/core_3"
+                                                                                             },
+                                                                                             "on_false": {
+                                                                                              "type": "minecraft:condition",
+                                                                                              "property": "minecraft:component",
+                                                                                              "predicate": "minecraft:custom_data",
+                                                                                              "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                                                                              "on_true": {
+                                                                                               "type": "minecraft:model",
+                                                                                               "model": "rpg:relic/core_4"
+                                                                                              },
+                                                                                              "on_false": {
+                                                                                               "type": "minecraft:condition",
+                                                                                               "property": "minecraft:component",
+                                                                                               "predicate": "minecraft:custom_data",
+                                                                                               "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                                                                               "on_true": {
+                                                                                                "type": "minecraft:model",
+                                                                                                "model": "rpg:relic/core_5"
+                                                                                               },
+                                                                                               "on_false": {
+                                                                                                "type": "minecraft:condition",
+                                                                                                "property": "minecraft:component",
+                                                                                                "predicate": "minecraft:custom_data",
+                                                                                                "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                                                                "on_true": {
+                                                                                                 "type": "minecraft:model",
+                                                                                                 "model": "rpg:relic/core_6"
+                                                                                                },
+                                                                                                "on_false": {
+                                                                                                 "type": "minecraft:condition",
+                                                                                                 "property": "minecraft:component",
+                                                                                                 "predicate": "minecraft:custom_data",
+                                                                                                 "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                                                                 "on_true": {
+                                                                                                  "type": "minecraft:model",
+                                                                                                  "model": "rpg:relic/core_7"
+                                                                                                 },
+                                                                                                 "on_false": {
+                                                                                                  "type": "minecraft:condition",
+                                                                                                  "property": "minecraft:component",
+                                                                                                  "predicate": "minecraft:custom_data",
+                                                                                                  "value": "{holy_weapon_tag:1b}",
+                                                                                                  "on_true": {
+                                                                                                   "type": "minecraft:model",
+                                                                                                   "model": "rpg:relic/rite_star"
+                                                                                                  },
+                                                                                                  "on_false": {
+                                                                                                   "type": "minecraft:condition",
+                                                                                                   "property": "minecraft:component",
+                                                                                                   "predicate": "minecraft:custom_data",
+                                                                                                   "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                                                                                   "on_true": {
+                                                                                                    "type": "minecraft:model",
+                                                                                                    "model": "rpg:relic/core_1"
+                                                                                                   },
+                                                                                                   "on_false": {
+                                                                                                    "type": "minecraft:condition",
+                                                                                                    "property": "minecraft:component",
+                                                                                                    "predicate": "minecraft:custom_data",
+                                                                                                    "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                                                                                    "on_true": {
+                                                                                                     "type": "minecraft:model",
+                                                                                                     "model": "rpg:relic/core_2"
+                                                                                                    },
+                                                                                                    "on_false": {
+                                                                                                     "type": "minecraft:condition",
+                                                                                                     "property": "minecraft:component",
+                                                                                                     "predicate": "minecraft:custom_data",
+                                                                                                     "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                                                                                     "on_true": {
+                                                                                                      "type": "minecraft:model",
+                                                                                                      "model": "rpg:relic/core_3"
+                                                                                                     },
+                                                                                                     "on_false": {
+                                                                                                      "type": "minecraft:condition",
+                                                                                                      "property": "minecraft:component",
+                                                                                                      "predicate": "minecraft:custom_data",
+                                                                                                      "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                                                                                      "on_true": {
+                                                                                                       "type": "minecraft:model",
+                                                                                                       "model": "rpg:relic/core_4"
+                                                                                                      },
+                                                                                                      "on_false": {
+                                                                                                       "type": "minecraft:condition",
+                                                                                                       "property": "minecraft:component",
+                                                                                                       "predicate": "minecraft:custom_data",
+                                                                                                       "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                                                                                       "on_true": {
+                                                                                                        "type": "minecraft:model",
+                                                                                                        "model": "rpg:relic/core_5"
+                                                                                                       },
+                                                                                                       "on_false": {
+                                                                                                        "type": "minecraft:condition",
+                                                                                                        "property": "minecraft:component",
+                                                                                                        "predicate": "minecraft:custom_data",
+                                                                                                        "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                                                                        "on_true": {
+                                                                                                         "type": "minecraft:model",
+                                                                                                         "model": "rpg:relic/core_6"
+                                                                                                        },
+                                                                                                        "on_false": {
+                                                                                                         "type": "minecraft:condition",
+                                                                                                         "property": "minecraft:component",
+                                                                                                         "predicate": "minecraft:custom_data",
+                                                                                                         "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                                                                         "on_true": {
+                                                                                                          "type": "minecraft:model",
+                                                                                                          "model": "rpg:relic/core_7"
+                                                                                                         },
+                                                                                                         "on_false": {
+                                                                                                          "type": "minecraft:condition",
+                                                                                                          "property": "minecraft:component",
+                                                                                                          "predicate": "minecraft:custom_data",
+                                                                                                          "value": "{holy_weapon_tag:1b}",
+                                                                                                          "on_true": {
+                                                                                                           "type": "minecraft:model",
+                                                                                                           "model": "rpg:relic/rite_star"
+                                                                                                          },
+                                                                                                          "on_false": {
+                                                                                                           "type": "minecraft:condition",
+                                                                                                           "property": "minecraft:component",
+                                                                                                           "predicate": "minecraft:custom_data",
+                                                                                                           "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                                                                                           "on_true": {
+                                                                                                            "type": "minecraft:model",
+                                                                                                            "model": "rpg:relic/core_1"
+                                                                                                           },
+                                                                                                           "on_false": {
+                                                                                                            "type": "minecraft:condition",
+                                                                                                            "property": "minecraft:component",
+                                                                                                            "predicate": "minecraft:custom_data",
+                                                                                                            "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                                                                                            "on_true": {
+                                                                                                             "type": "minecraft:model",
+                                                                                                             "model": "rpg:relic/core_2"
+                                                                                                            },
+                                                                                                            "on_false": {
+                                                                                                             "type": "minecraft:condition",
+                                                                                                             "property": "minecraft:component",
+                                                                                                             "predicate": "minecraft:custom_data",
+                                                                                                             "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                                                                                             "on_true": {
+                                                                                                              "type": "minecraft:model",
+                                                                                                              "model": "rpg:relic/core_3"
+                                                                                                             },
+                                                                                                             "on_false": {
+                                                                                                              "type": "minecraft:condition",
+                                                                                                              "property": "minecraft:component",
+                                                                                                              "predicate": "minecraft:custom_data",
+                                                                                                              "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                                                                                              "on_true": {
+                                                                                                               "type": "minecraft:model",
+                                                                                                               "model": "rpg:relic/core_4"
+                                                                                                              },
+                                                                                                              "on_false": {
+                                                                                                               "type": "minecraft:condition",
+                                                                                                               "property": "minecraft:component",
+                                                                                                               "predicate": "minecraft:custom_data",
+                                                                                                               "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                                                                                               "on_true": {
+                                                                                                                "type": "minecraft:model",
+                                                                                                                "model": "rpg:relic/core_5"
+                                                                                                               },
+                                                                                                               "on_false": {
+                                                                                                                "type": "minecraft:condition",
+                                                                                                                "property": "minecraft:component",
+                                                                                                                "predicate": "minecraft:custom_data",
+                                                                                                                "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                                                                                "on_true": {
+                                                                                                                 "type": "minecraft:model",
+                                                                                                                 "model": "rpg:relic/core_6"
+                                                                                                                },
+                                                                                                                "on_false": {
+                                                                                                                 "type": "minecraft:condition",
+                                                                                                                 "property": "minecraft:component",
+                                                                                                                 "predicate": "minecraft:custom_data",
+                                                                                                                 "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                                                                                 "on_true": {
+                                                                                                                  "type": "minecraft:model",
+                                                                                                                  "model": "rpg:relic/core_7"
+                                                                                                                 },
+                                                                                                                 "on_false": {
+                                                                                                                  "type": "minecraft:condition",
+                                                                                                                  "property": "minecraft:component",
+                                                                                                                  "predicate": "minecraft:custom_data",
+                                                                                                                  "value": "{holy_weapon_tag:1b}",
+                                                                                                                  "on_true": {
+                                                                                                                   "type": "minecraft:model",
+                                                                                                                   "model": "rpg:relic/rite_star"
+                                                                                                                  },
+                                                                                                                  "on_false": {
+                                                                                                                   "type": "minecraft:condition",
+                                                                                                                   "property": "minecraft:component",
+                                                                                                                   "predicate": "minecraft:custom_data",
+                                                                                                                   "value": "{rpg_weapon_core:1b,rpg_lord:1}",
+                                                                                                                   "on_true": {
+                                                                                                                    "type": "minecraft:model",
+                                                                                                                    "model": "rpg:relic/core_1"
+                                                                                                                   },
+                                                                                                                   "on_false": {
+                                                                                                                    "type": "minecraft:condition",
+                                                                                                                    "property": "minecraft:component",
+                                                                                                                    "predicate": "minecraft:custom_data",
+                                                                                                                    "value": "{rpg_weapon_core:1b,rpg_lord:2}",
+                                                                                                                    "on_true": {
+                                                                                                                     "type": "minecraft:model",
+                                                                                                                     "model": "rpg:relic/core_2"
+                                                                                                                    },
+                                                                                                                    "on_false": {
+                                                                                                                     "type": "minecraft:condition",
+                                                                                                                     "property": "minecraft:component",
+                                                                                                                     "predicate": "minecraft:custom_data",
+                                                                                                                     "value": "{rpg_weapon_core:1b,rpg_lord:3}",
+                                                                                                                     "on_true": {
+                                                                                                                      "type": "minecraft:model",
+                                                                                                                      "model": "rpg:relic/core_3"
+                                                                                                                     },
+                                                                                                                     "on_false": {
+                                                                                                                      "type": "minecraft:condition",
+                                                                                                                      "property": "minecraft:component",
+                                                                                                                      "predicate": "minecraft:custom_data",
+                                                                                                                      "value": "{rpg_weapon_core:1b,rpg_lord:4}",
+                                                                                                                      "on_true": {
+                                                                                                                       "type": "minecraft:model",
+                                                                                                                       "model": "rpg:relic/core_4"
+                                                                                                                      },
+                                                                                                                      "on_false": {
+                                                                                                                       "type": "minecraft:condition",
+                                                                                                                       "property": "minecraft:component",
+                                                                                                                       "predicate": "minecraft:custom_data",
+                                                                                                                       "value": "{rpg_weapon_core:1b,rpg_lord:5}",
+                                                                                                                       "on_true": {
+                                                                                                                        "type": "minecraft:model",
+                                                                                                                        "model": "rpg:relic/core_5"
+                                                                                                                       },
+                                                                                                                       "on_false": {
+                                                                                                                        "type": "minecraft:condition",
+                                                                                                                        "property": "minecraft:component",
+                                                                                                                        "predicate": "minecraft:custom_data",
+                                                                                                                        "value": "{rpg_weapon_core:1b,rpg_lord:6}",
+                                                                                                                        "on_true": {
+                                                                                                                         "type": "minecraft:model",
+                                                                                                                         "model": "rpg:relic/core_6"
+                                                                                                                        },
+                                                                                                                        "on_false": {
+                                                                                                                         "type": "minecraft:condition",
+                                                                                                                         "property": "minecraft:component",
+                                                                                                                         "predicate": "minecraft:custom_data",
+                                                                                                                         "value": "{rpg_weapon_core:1b,rpg_lord:7}",
+                                                                                                                         "on_true": {
+                                                                                                                          "type": "minecraft:model",
+                                                                                                                          "model": "rpg:relic/core_7"
+                                                                                                                         },
+                                                                                                                         "on_false": {
+                                                                                                                          "type": "minecraft:model",
+                                                                                                                          "model": "minecraft:item/nether_star"
+                                                                                                                         }
+                                                                                                                        }
+                                                                                                                       }
+                                                                                                                      }
+                                                                                                                     }
+                                                                                                                    }
+                                                                                                                   }
+                                                                                                                  }
+                                                                                                                 }
+                                                                                                                }
+                                                                                                               }
+                                                                                                              }
+                                                                                                             }
+                                                                                                            }
+                                                                                                           }
+                                                                                                          }
+                                                                                                         }
+                                                                                                        }
+                                                                                                       }
+                                                                                                      }
+                                                                                                     }
+                                                                                                    }
+                                                                                                   }
+                                                                                                  }
+                                                                                                 }
+                                                                                                }
+                                                                                               }
+                                                                                              }
+                                                                                             }
+                                                                                            }
+                                                                                           }
+                                                                                          }
+                                                                                         }
+                                                                                        }
+                                                                                       }
+                                                                                      }
+                                                                                     }
+                                                                                    }
+                                                                                   }
+                                                                                  }
+                                                                                 }
+                                                                                }
+                                                                               }
+                                                                              }
+                                                                             }
+                                                                            }
+                                                                           }
+                                                                          }
+                                                                         }
+                                                                        }
+                                                                       }
+                                                                      }
+                                                                     }
+                                                                    }
+                                                                   }
+                                                                  }
+                                                                 }
+                                                                }
+                                                               }
+                                                              }
+                                                             }
+                                                            }
+                                                           }
+                                                          }
+                                                         }
+                                                        }
+                                                       }
+                                                      }
+                                                     }
+                                                    }
+                                                   }
+                                                  }
+                                                 }
+                                                }
+                                               }
+                                              }
+                                             }
+                                            }
+                                           }
+                                          }
+                                         }
+                                        }
+                                       }
+                                      }
+                                     }
+                                    }
+                                   }
+                                  }
                                  }
                                 }
                                }

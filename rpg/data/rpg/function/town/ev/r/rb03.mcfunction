@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"少年","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔏𝔞𝔡","color":"#8F7430","italic":false},{"text":"  老约拿家的人都在闹肚子，说是吃了新磨的面！","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Old Jonah's whole family is sick. They say it was the new flour!","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rb03 voice @a[distance=..16] ~ ~ ~ 1 1

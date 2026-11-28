@@ -10,3 +10,4 @@ title @s times 10 50 20
 title @s title ["",{"text":"失乐园","color":"#E0483C","bold":true,"italic":false}]
 title @s subtitle ["",{"text":"𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢 𝔏𝔬𝔰𝔱","color":"#8F7430","bold":false,"italic":false}]
 function rpg:quest/start_7
+execute if items entity @s container.* minecraft:paper[minecraft:custom_data~{rpg_eden_pass:1b}] run function rpg:pl/pass

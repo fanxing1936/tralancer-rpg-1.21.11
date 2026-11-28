@@ -192,7 +192,8 @@ PLAN = {
     "wildfield":       ("mid", (1, 3), [("broad_small", "cherry", 2), ("broad_small", "birch", 2), ("broad_small", "as", 2), ("broad_small", "yellow", 2),
                                         ("oak_tall", "cherry", 1), ("oak_tall", "birch", 1), ("oak_tall", "as", 1), ("oak_tall", "yellow", 1)]),
     "stone_forest":    ("mid", (1, 3), [("broad_small", "as", 3), ("broad_jungle", "as", 1)]),
-    "warped_plateau":  ("mid", (1, 2), [("broad_small", "warped", 3), ("conifer_small", "warped", 1), ("oak_tall", "warped", 1)]),
+    # 诡异高原的树不特殊处理：原树叶，颜色随群系染（用户 2026-11-27）
+    "warped_plateau":  ("mid", (1, 2), [("broad_small", "as", 3), ("conifer_small", "as", 1), ("oak_tall", "as", 1)]),
     "alpine":          ("mid", (1, 2), [("conifer_small", "as", 3), ("conifer", "as", 2)]),
     "plains":          ("sparse", (1, 2), [("oak_wide", "as", 3), ("oak_tall", "as", 1), ("broad_small", "as", 2)]),
     "snowfield":       ("sparse", (1, 2), [("conifer", "as", 2), ("conifer_small", "as", 2)]),

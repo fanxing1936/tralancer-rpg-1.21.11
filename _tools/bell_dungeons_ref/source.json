@@ -1,0 +1,19 @@
+{
+  "package": "Dungeons/Content/Decor/Prefabs/Bell/SM_Bell",
+  "albedo_only_materials": [
+    "MI_Bell"
+  ],
+  "mesh": "town_models_ref\\_work\\prop_sources\\assets\\Dungeons\\Content\\Decor\\Prefabs\\Bell\\SM_Bell.glb",
+  "metadata": "town_models_ref\\_work\\prop_sources\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Bell\\SM_Bell\\SM_Bell.meta.json",
+  "blueprint_component": null,
+  "unit_scale": 0.0192,
+  "display_scale": 8.333333333333334,
+  "placement_component_transform": {
+    "RelativeRotation": {
+      "Roll": 90
+    }
+  },
+  "grounding_cm": 8.343171298314412e-15,
+  "placement": "lowest_vertex_at_execution_y",
+  "grave_b_scale_note": null
+}

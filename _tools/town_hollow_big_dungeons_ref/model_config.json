@@ -1,0 +1,81 @@
+{
+ "model_scale": 13.558953249678076,
+ "height_blocks": 3.6,
+ "source_height_cm": 221.25601768493652,
+ "turn": 0,
+ "merge": {},
+ "source": {
+  "mesh": "Dungeons/Content/Content_DLC5/Actors/Characters/Enemies/DrownedNecromancer/SK_DrownedNecromancer",
+  "export_root": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\actor_exports",
+  "texture": "DrownedNecromancer_02.png"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "DrownedNecromancer_Idle",
+   "seconds": 6.2,
+   "loop": true,
+   "ticks": 124,
+   "max_bone_error_px": 5.715990508463596e-05,
+   "max_vertex_error_px": 2.8897308796829373e-05,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "DrownedNecromancer_Walk",
+   "seconds": 1.6,
+   "loop": true,
+   "ticks": 32,
+   "max_bone_error_px": 6.1122165719786735e-06,
+   "max_vertex_error_px": 7.1767642271040855e-06,
+   "notifies": [
+    [
+     0.0001,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  },
+  {
+   "clip": "attack",
+   "source": "DrownedNecromancer_BasicAttack",
+   "seconds": 1.8333334,
+   "loop": false,
+   "ticks": 37,
+   "max_bone_error_px": 0.07342850059437969,
+   "max_vertex_error_px": 0.05740667471204563,
+   "notifies": [
+    [
+     0.0001,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ],
+    [
+     1.6737,
+     "DungeonsPlaySound",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "town_hollow_big",
+  "source_mesh_sha256": "de8af5c318fbc39af224a048c58bfe4dfd91c007cff8b745ce3cf75303faa0bd",
+  "triangles": 278,
+  "all_triangles_covered_once": true,
+  "bones": 35,
+  "plane_groups": 26,
+  "display_parts": 18,
+  "elements": 130,
+  "direct_uv_elements": 84,
+  "baked_elements": 46,
+  "glow_groups": 0,
+  "textures": {
+   "MI_DrownedNecromancer": 0
+  },
+  "atlas": [
+   128,
+   128
+  ]
+ }
+}

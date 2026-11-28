@@ -1,0 +1,17 @@
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/root
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_000
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_001
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_002
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_003
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_004
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_005
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_006
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_007
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_008
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_009
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_010
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_011
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_013
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_015
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_016
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/pyre/pyre_root_017

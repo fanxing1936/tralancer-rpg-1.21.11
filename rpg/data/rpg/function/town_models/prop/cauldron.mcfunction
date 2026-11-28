@@ -1,0 +1,9 @@
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cauldron/root
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cauldron/cauldron_root_007
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cauldron/cauldron_root_glow_008
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cauldron/cauldron_root_009
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cauldron/cauldron_root_glow_010
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cauldron/cauldron_root_011
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cauldron/cauldron_root_glow_012
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cauldron/cauldron_root_013
+execute summon minecraft:item_display run function rpg:town_models/prop/setup/cauldron/cauldron_root_glow_014

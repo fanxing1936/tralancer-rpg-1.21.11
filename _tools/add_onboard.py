@@ -170,6 +170,7 @@ def core():
         "execute as @a[scores={rpg_pro_go=1..}] run function %s/pro/req" % P,
         "execute as @a[tag=!rpg.ob,tag=!rpg.pr] unless score @s rpg_ob_v matches 1.. run function %s/check" % P,
         "execute as @a[tag=rpg.ob,tag=!rpg.pr] at @s run function %s/player" % P,
+        "execute as @a[tag=rpg.ob.retake] at @s if loaded ~ ~ ~ run function %s/stash/retake" % P,
     ])
     fn("check", [
         "# 新版本里第一次见到这名玩家（as 玩家）。用户 2026-11-23：所有人都要走一遍新手开局，老玩家也不例外。",
@@ -190,7 +191,7 @@ def core():
         "execute if entity @s[gamemode=creative] run scoreboard players set @s rpg_ob_gm 1",
         "execute if entity @s[gamemode=adventure] run scoreboard players set @s rpg_ob_gm 2",
         "# 老玩家身上的护甲、副手、主手先收起来，教学用的格子要空着；结束时原样还回去",
-        "function %s/stash/put with storage rpg:onboard tmp" % P,
+        "execute at @s run function %s/stash/put with storage rpg:onboard tmp" % P,
         "function %s/hold/enter" % P,
         "tag @s add rpg.ob.wait",
         "scoreboard players set @s rpg_ob_t 0",
@@ -207,10 +208,10 @@ def core():
         "scoreboard players add @s rpg_ob_t 1",
         "scoreboard players enable @s %s" % DO,
         "execute if score @s %s matches 1.. run function %s/press" % (DO, P),
-        "execute if score @s %s matches %d unless entity @s[tag=rpg.ob.pro] if score @s rpg_ob_t matches 100.. run function %s/pro/try" % (O, ST_PRO, P),
-        "execute as @s[tag=rpg.ob.queued] unless score @s %s matches %d run tag @s remove rpg.ob.queued" % (O, ST_PRO),
-        "# 序章在准备阶段就取消了（没把人接进去）：跳过序章",
-        "execute if entity @s[tag=rpg.ob.pro] if score @s rpg_ob_t matches 100.. unless score #state rpg_pr matches 1.. run function %s/pro/after" % P,
+        "# 停在序章这一步却没在排队、也没分到战场（比如老存档）：排进去",
+        "execute if score @s %s matches %d unless entity @s[tag=rpg.ob.fin] unless entity @s[tag=rpg.pr.q] unless score @s rpg_pr_g matches 1.. run function rpg:prologue/enqueue" % (O, ST_PRO),
+        "# 序章打完、回到原处：等一秒、脚下的区块载入了再进正式游戏（还装备要在这里召临时实体）",
+        "execute if entity @s[tag=rpg.ob.fin] if score @s rpg_ob_t matches 20.. if loaded ~ ~ ~ run function %s/pro/fin" % P,
         "execute if entity @s[tag=rpg.ob.wait] if score @s rpg_ob_t matches 60.. run function %s/show" % P,
         "execute if entity @s[tag=rpg.ob.intro] run function %s/intro/tick" % P,
         "execute if score @s rpg_ob_mi matches 1.. run function %s/music/tick" % P,
@@ -224,8 +225,7 @@ def core():
         "# 旁白听到一半退出：回来从头放（配乐也要重新起）",
         "execute if entity @s[tag=rpg.ob.intro] run function %s/intro/stop" % P,
         "scoreboard players set @s rpg_ob_mt 0",
-        "execute if score @s %s matches %d run tag @s remove rpg.ob.queued" % (O, ST_PRO),
-        "execute if score @s %s matches %d run return run scoreboard players set @s rpg_ob_t 0" % (O, ST_PRO),
+        "execute if score @s %s matches %d run return run function %s/hold/enter" % (O, ST_PRO, P),
         "function %s/hold/enter" % P,
         "tag @s add rpg.ob.wait",
         "scoreboard players set @s rpg_ob_t 0",
@@ -354,74 +354,42 @@ def music():
 
 # ---------------------------------------------------------------------------- 序章
 def prologue():
-    src = io.open(os.path.join(FUNC, "prologue", "start.mcfunction"), encoding="utf-8").read().split("\n")
-    sel = "tag @a[distance=..16,gamemode=!spectator,limit=4,sort=nearest] add rpg.pr.join"
-    assert sel in src, "prologue/start 改过了，序章入口要跟着改"
-    lines = ["# 只带这一名新人进序章（改自 rpg:prologue/start；忙的时候由 pro/try 排队）"]
-    for ln in src:
-        if not ln or ln.startswith("#") or "return run tellraw" in ln:
-            continue
-        lines.append("tag @s add rpg.pr.join" if ln == sel else ln)
-    fn("pro/go", lines)
-    fn("pro/try", [
-        "scoreboard players set @s rpg_ob_t 0",
-        "execute if score #state rpg_pr matches 1.. run return run function %s/pro/wait" % P,
-        "execute if score #fight rpg_mk matches 1 run return run function %s/pro/wait" % P,
-        "tag @s remove rpg.ob.hold",
-        "effect clear @s minecraft:blindness",
+    """用户 2026-11-28：「开局新手过场结束后直接进入序章，四人直接分配一组，序章结束再正式游戏」。
+    锻造教学的最后一页 → pro/enter（排队，四人一组，由 rpg:prologue/queue 分进空闲的战场）→ 序章 → iso/restore 末尾的 pro/after → finish。"""
+    fn("pro/enter", [
+        "# 开局走完（as 玩家，还在黑屏里）：排进序章的队",
+        "scoreboard players set @s %s %d" % (O, ST_PRO),
         "tag @s add rpg.ob.pro",
-        "function %s/pro/go" % P,
-    ])
-    fn("pro/wait", [
-        "execute unless entity @s[tag=rpg.ob.hold] run function %s/hold/enter" % P,
-        "execute unless entity @s[tag=rpg.ob.queued] run function %s/pro/busy" % P,
-        "tag @s add rpg.ob.queued",
-    ])
-    pro_body = [t("一千年前，路西法与他的领主们在这片大陆上同神的军队开战。", C_BODY), NL,
-                t("序章让你亲历那一战：过场、群战，最后是米迦勒。约十分钟。", C_BODY), NL, NL,
-                t("现在不看也可以：之后随时在玩家面板点「序章」进入。", C_MUTED)]
-    fn("pro/ask", [dialog("序章 · 一千年前", pro_body, [("进入序章", C_GOLD, 1), ("先跳过", C_BODY, 2)])])
-    fn("pro/ask_press", [
-        "execute if score #do %s matches 1 run scoreboard players set @s %s %d" % (O, O, ST_PRO),
-        "execute if score #do %s matches 1 run return run function %s/pro/try" % (O, P),
-        "execute unless score #do %s matches 2 run return 0" % O,
-        "scoreboard players set @s %s %d" % (O, ST_CARD),
-        "function %s/show" % P,
-    ])
-    fn("pro/busy", [dialog("序章 · 一千年前", [
-        t("序章正被其他人游玩（同一时间只能开一场）。", C_BODY), NL, NL,
-        t("可以在黑暗里等一会儿，空出来就自动进入；也可以先跳过，之后在玩家面板点「序章」进入。", C_MUTED)],
-        [("继续等待", C_BODY, 1), ("先跳过", C_GOLD, 2)])])
-    fn("pro/busy_press", [
-        "execute unless score #do %s matches 2 run return 0" % O,
-        "tag @s remove rpg.ob.queued",
-        "scoreboard players set @s %s %d" % (O, ST_CARD),
-        "function %s/show" % P,
+        "dialog clear @s",
+        "title @s times 10 70 20",
+        "title @s subtitle %s" % J(t("一千年前 · A Thousand Years Ago", C_MUTED, italic=True)),
+        "title @s title %s" % J(t("序章", C_GOLD, True)),
+        "function rpg:prologue/enqueue",
     ])
     fn("pro/req", [
-        "# 玩家面板「序章」按钮（trigger rpg_pro_go，任何人随时可以进；as 玩家）",
+        "# 玩家面板「序章」按钮（trigger rpg_pro_go，任何人随时可以再打一遍；as 玩家）",
         "scoreboard players set @s rpg_pro_go 0",
         "execute if entity @s[tag=rpg.ob] run return 0",
         "execute if entity @s[tag=rpg.pr] run return 0",
-        "execute if score #state rpg_pr matches 1.. run return run %s" % say("序章正被其他人游玩，同一时间只能开一场，稍后再试。"),
-        "execute if score #fight rpg_mk matches 1 run return run %s" % say("有一场米迦勒战正在进行，结束后再进入序章。"),
-        "function %s/pro/go" % P,
+        "execute if entity @s[tag=rpg.pr.q] run return run %s" % say("你已经在序章的队伍里了，凑齐同伴就会开始。"),
+        "function rpg:prologue/enqueue",
+        say("已排进序章的队伍：凑满四人，或稍等片刻没有别人，就会开始。"),
     ])
     fn("pro/after", [
-        "# 序章结束、被中止或中途掉线后还原（接在 rpg:prologue/iso/restore 末尾）：进黑屏，下一步",
+        "# 序章结束、被中止、场地没备好或中途掉线后还原（接在每个战场的 iso/restore 末尾）：进正式游戏",
         "tag @s remove rpg.ob.pro",
         "tag @s remove rpg.ob.queued",
+        "tag @s remove rpg.pr.q",
         "execute unless score @s %s matches %d run return 0" % (O, ST_PRO),
-        "scoreboard players set @s %s %d" % (O, ST_CARD),
-        "function %s/hold/enter" % P,
-        "tag @s add rpg.ob.wait",
+        "tag @s add rpg.ob.fin",
         "scoreboard players set @s rpg_ob_t 0",
     ])
+    fn("pro/fin", ["tag @s remove rpg.ob.fin", "function %s/finish" % P])
 
 
 # ---------------------------------------------------------------------------- 显示与按钮分派
 def show_and_press():
-    stages = [(ST_NAME, "name/show"), (ST_ASK, "pro/ask"), (ST_CARD, "card/show"), (ST_DRAW, "ident/ask"), (ST_IDENT, "ident/show"),
+    stages = [(ST_NAME, "name/show"), (ST_CARD, "card/show"), (ST_DRAW, "ident/ask"), (ST_IDENT, "ident/show"),
               (ST_WEAPON, "tut/weapon"), (ST_MADE, "tut/made_show"), (ST_WASH, "tut/wash"), (ST_WASH_PICK, "tut/wash_show"),
               (ST_GILD, "tut/gild"), (ST_GILD_DONE, "tut/gild_show"), (ST_INLAY, "tut/inlay"), (ST_RUNE, "tut/runes"),
               (ST_STONE, "tut/stones"), (ST_END, "tut/end")]
@@ -431,7 +399,8 @@ def show_and_press():
                  "execute if score @s %s matches %d run return run function %s/intro/start" % (O, ST_INTRO, P),
                  "# 旁白之后的流程都配同一首曲子",
                  "execute unless score @s rpg_ob_mi matches 2 run function %s/music/flow" % P,
-                 "execute if score @s %s matches %d if entity @s[tag=rpg.ob.queued] run return run function %s/pro/busy" % (O, ST_PRO, P)] +
+                 "# 序章排队中：没有对话框，等调度把人接走",
+                 "execute if score @s %s matches %d run return run dialog clear @s" % (O, ST_PRO)] +
        ["execute if score @s %s matches %d run return run function %s/%s" % (O, s, P, f) for s, f in stages])
     fn("press", [
         "scoreboard players operation #do %s = @s %s" % (O, DO),
@@ -442,8 +411,6 @@ def show_and_press():
         "execute if score #do %s matches 99 run return run function %s/show" % (O, P),
         CLICK,
         "execute if score @s %s matches %d run return run function %s/name/press" % (O, ST_NAME, P),
-        "execute if score @s %s matches %d run return run function %s/pro/ask_press" % (O, ST_ASK, P),
-        "execute if score @s %s matches %d run return run function %s/pro/busy_press" % (O, ST_PRO, P),
         "execute if score @s %s matches %d run return run function %s/card/press" % (O, ST_CARD, P),
         "execute if score @s %s matches %d run return run function %s/ident/draw" % (O, ST_DRAW, P),
         "execute if score @s %s matches %d run return run function %s/tut/start" % (O, ST_IDENT, P),
@@ -456,7 +423,7 @@ def show_and_press():
         "execute if score @s %s matches %d run return run function %s/tut/inlay_press" % (O, ST_INLAY, P),
         "execute if score @s %s matches %d run return run function %s/tut/rune_press" % (O, ST_RUNE, P),
         "execute if score @s %s matches %d run return run function %s/tut/stone_press" % (O, ST_STONE, P),
-        "execute if score @s %s matches %d run return run function %s/finish" % (O, ST_END, P),
+        "execute if score @s %s matches %d run return run function %s/pro/enter" % (O, ST_END, P),
     ])
 
 
@@ -836,7 +803,9 @@ def tutorial():
         t("以后要冶炼新装备，需要一堆", C_BODY), t("灵魂营火", C_GOLD, True),
         t("（普通营火不行）：主手拿器胚，对准灵魂营火右键，备好主材与残魂。", C_BODY), NL, NL,
         t("洗炼钻、镀金箔、符文、符石：副手拿装备，主手拿材料右键。", C_BODY), NL, NL,
-        t("器胚与残魂从怪物身上掉落。", C_MUTED)], [("进入破碎大陆", C_GOLD, 1)])])
+        t("器胚与残魂从怪物身上掉落。", C_MUTED), NL, NL,
+        t("接下来是序章：一千年前路西法与他的领主们同神的军队那一战。最多四人一组，打完就进入破碎大陆。", C_BODY)],
+        [("进入序章", C_GOLD, 1)])])
 
 
 # ---------------------------------------------------------------------------- 结束
@@ -854,9 +823,10 @@ def finish():
         "execute if score @s rpg_ob_gm matches 1 run gamemode creative @s",
         "execute if score @s rpg_ob_gm matches 2 run gamemode adventure @s",
         "scoreboard players set @s rpg_ob_v 1",
-        "function %s/back with storage rpg:onboard tmp" % P,
-        "# 教学装备：格子原来空着就留在身上（武器进主手）；原来有东西的，教学装备掉在脚边，原物还回格子",
+        "# 教学装备：格子原来空着就留在身上（武器进主手）；原来有东西的，教学装备掉在脚边，原物还回格子。",
+        "# 在原地还（下一行去故乡会传送，落点的区块不一定已经载入）",
         "execute at @s run function %s/stash/take with storage rpg:onboard tmp" % P,
+        "function %s/back with storage rpg:onboard tmp" % P,
         "function %s/welcome with storage rpg:onboard tmp" % P,
         "playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 0.8 1",
     ]))
@@ -880,28 +850,38 @@ TMP = "@e[type=minecraft:item_display,tag=rpg.ob.tmp,distance=..3,limit=1]"
 def stash():
     """所有人都要走教学（用户 2026-11-23），老玩家身上已经穿戴的东西先收进 storage，结束时还回去。"""
     put = ["# 开局（as/at 玩家，宏 id）：护甲四格、副手、主手有东西就收起来，格子清空",
-           "summon minecraft:item_display ~ ~ ~ {Tags:[\"rpg.ob.tmp\"]}"]
+           "summon minecraft:item_display ~ ~ ~ {Tags:[\"rpg.ob.tmp\"]}",
+           "# 区块没载入、召不出临时实体：什么都不动（不能先清格子再存，存不进去东西就没了）",
+           "execute unless entity %s run return 0" % TMP]
     for key, slot in STASH:
         put += ["execute if items entity @s %s * run item replace entity %s contents from entity @s %s" % (slot, TMP, slot),
                 "$execute if items entity @s %s * run data modify storage rpg:onboard p$(id).stash.%s set from entity %s item" % (slot, key, TMP),
-                "execute if items entity @s %s * run item replace entity @s %s with minecraft:air" % (slot, slot)]
+                "$execute if data storage rpg:onboard p$(id).stash.%s run item replace entity @s %s with minecraft:air" % (key, slot)]
     put.append("kill %s" % TMP)
     fn("stash/put", put)
     take = ["# 结束（as/at 玩家，宏 id）",
-            "summon minecraft:item_display ~ ~ ~ {Tags:[\"rpg.ob.tmp\"]}"]
+            "tag @s remove rpg.ob.retake",
+            "summon minecraft:item_display ~ ~ ~ {Tags:[\"rpg.ob.tmp\"]}",
+            "# 刚传送过来、区块还没载入：召不出临时实体，记录留着，等载入了再还（否则记录删了、东西也没还）",
+            "execute unless entity %s run return run tag @s add rpg.ob.retake" % TMP]
     for key, slot in STASH[:4]:
         take += ["$execute if data storage rpg:onboard p$(id).stash.%s if items entity @s %s * run function %s/stash/drop_%s" % (key, slot, P, key),
                  "$execute if data storage rpg:onboard p$(id).stash.%s run function %s/stash/back_%s with storage rpg:onboard tmp" % (key, P, key)]
     take += ["# 教学武器在副手：主手原来空着就交到主手，否则掉在脚边",
              "$execute if data storage rpg:onboard p$(id).stash.main if items entity @s weapon.offhand * run function %s/stash/drop_off" % P,
-             "$execute unless data storage rpg:onboard p$(id).stash.main run item replace entity @s weapon.mainhand from entity @s weapon.offhand",
-             "$execute unless data storage rpg:onboard p$(id).stash.main run item replace entity @s weapon.offhand with minecraft:air",
+             "# 序章之后手上选中的那一格可能已经有东西（序章还回来的背包）：主手不空就不覆盖，原物先掉在脚边再还",
+             "$execute unless data storage rpg:onboard p$(id).stash.main unless items entity @s weapon.mainhand * run function %s/stash/off_to_main" % P,
+             "$execute if data storage rpg:onboard p$(id).stash.main if items entity @s weapon.mainhand * run function %s/stash/drop_main" % P,
              "$execute if data storage rpg:onboard p$(id).stash.main run function %s/stash/back_main with storage rpg:onboard tmp" % P,
              "$execute if data storage rpg:onboard p$(id).stash.off if items entity @s weapon.offhand * run function %s/stash/drop_off" % P,
              "$execute if data storage rpg:onboard p$(id).stash.off run function %s/stash/back_off with storage rpg:onboard tmp" % P,
              "$data remove storage rpg:onboard p$(id).stash",
              "kill %s" % TMP]
     fn("stash/take", take)
+    fn("stash/retake", pid_macro(["function %s/stash/take with storage rpg:onboard tmp" % P]))
+    fn("stash/off_to_main", ["# 教学武器从副手交到（空着的）主手",
+                             "item replace entity @s weapon.mainhand from entity @s weapon.offhand",
+                             "item replace entity @s weapon.offhand with minecraft:air"])
     for key, slot in STASH:
         fn("stash/drop_" + key, [
             "summon minecraft:item ~ ~0.3 ~ {Item:{id:\"minecraft:stone\",count:1},PickupDelay:0,Tags:[\"rpg.ob.drop\"]}",

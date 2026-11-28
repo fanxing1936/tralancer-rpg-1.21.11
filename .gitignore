@@ -71,3 +71,6 @@ Dungeons GUI *.zip
 
 # 第三方建筑原文件（Boulevardier），不进仓库；仓库里只有转换后的结构
 /_tools/gate_ref/*.litematic
+
+# 城镇建筑原件（第三方作品，只提交转换后的结构；清单见 _tools/town_ref/SOURCES.md）
+/_tools/town_ref/raw/

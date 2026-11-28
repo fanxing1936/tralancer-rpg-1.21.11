@@ -1,0 +1,122 @@
+{
+ "model_scale": 7.496633670709872,
+ "height_blocks": 1.87,
+ "source_height_cm": 207.87107944488525,
+ "turn": 0,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [
+  {
+   "name": "armor_darkarmor_darkarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\DarkArmor\\DarkArmor_DarkArmor.glb",
+   "bone": "J_Shoulders",
+   "material": "TOWN_ARMOR",
+   "component": "DarkArmor_DarkArmor",
+   "attach": "J_ShouldersSocket"
+  },
+  {
+   "name": "armor_helmet_darkarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\DarkArmor\\Helmet_DarkArmor.glb",
+   "bone": "J_Head",
+   "material": "TOWN_ARMOR",
+   "component": "Helmet_DarkArmor",
+   "attach": "J_Head_Socket"
+  },
+  {
+   "name": "armor_l_shoulderpad_darkarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\DarkArmor\\L_Arm_DarkArmor.glb",
+   "bone": "J_L_Hand",
+   "material": "TOWN_ARMOR",
+   "component": "L_ShoulderPad_DarkArmor",
+   "attach": "J_L_Shoulder_Socket"
+  },
+  {
+   "name": "armor_r_shoulderpad_darkarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\DarkArmor\\R_Arm_DarkArmor.glb",
+   "bone": "J_R_Hand",
+   "material": "TOWN_ARMOR",
+   "component": "R_ShoulderPad_DarkArmor",
+   "attach": "J_R_Shoulder_Socket"
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\jacques",
+  "armor_blueprint": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\metadata\\Dungeons\\Content\\Actors\\Equipment\\Armor\\DarkArmor\\BP_DarkArmor"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Player_Master_Idle_Glaive",
+   "seconds": 3.3333333,
+   "loop": true,
+   "ticks": 67,
+   "max_bone_error_px": 6.913758202232877e-08,
+   "max_vertex_error_px": 2.1592365777853855e-07,
+   "notifies": []
+  },
+  {
+   "clip": "walk",
+   "source": "Player_Master_Walk_Glaive",
+   "seconds": 4.3333335,
+   "loop": true,
+   "ticks": 87,
+   "max_bone_error_px": 6.828624145520085e-05,
+   "max_vertex_error_px": 0.00011005184773152175,
+   "notifies": []
+  },
+  {
+   "clip": "attack",
+   "source": "Player_Master_GlaiveUnique1Combo_Attack1",
+   "seconds": 0.79999995,
+   "loop": false,
+   "ticks": 16,
+   "max_bone_error_px": 0.013103811318924425,
+   "max_vertex_error_px": 0.02980596274314393,
+   "notifies": [
+    [
+     0.2557,
+     "Play Particle Effect",
+     "AnimNotify_PlayParticleEffect"
+    ],
+    [
+     0.305,
+     "P_Slash",
+     null
+    ],
+    [
+     0.3412,
+     "glaive_swing_Cue",
+     "AnimNotify_DungeonsPlaySound"
+    ]
+   ]
+  }
+ ],
+ "conversion": {
+  "name": "town_inquisitor",
+  "source_mesh_sha256": "c69a08825b0f3a9acbef6e7b8588b0cdb78eee6d7a31deee2cc02bcb58ceb24d",
+  "triangles": 384,
+  "all_triangles_covered_once": true,
+  "bones": 38,
+  "plane_groups": 35,
+  "display_parts": 29,
+  "elements": 194,
+  "direct_uv_elements": 163,
+  "baked_elements": 31,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Valorie": 0,
+   "TOWN_ARMOR": 1
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ },
+ "recolor": {
+  "method": "source RGB palette and luminance mapping; alpha and pixel coordinates unchanged",
+  "source": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\DarkArmor\\T_DarkArmor.png",
+  "style": "inq"
+ },
+ "source_orientation": "-Z hostile native"
+}

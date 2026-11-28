@@ -1,0 +1,1 @@
+$tellraw @s ["",{"text":"〖声望〗","color":"#C9A646","bold":true,"italic":false},{"text":"  你在这座镇的声望：","color":"#9C9A94","bold":false,"italic":false},{"text":"$(v)","color":"#E6DFCF","bold":true,"italic":false},{"text":"　（20 口粮加份 · 40 租屋 · 70 镇上的图纸 · 100 守护者）","color":"#797979","bold":false,"italic":false}]

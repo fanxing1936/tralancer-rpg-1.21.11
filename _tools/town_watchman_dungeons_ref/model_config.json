@@ -1,0 +1,116 @@
+{
+ "model_scale": 7.496633670709872,
+ "height_blocks": 1.87,
+ "source_height_cm": 207.87107944488525,
+ "turn": 180,
+ "merge": {},
+ "held_bone": "J_R_Weapon",
+ "attachments": [
+  {
+   "name": "armor_reinforcedmailarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ReinforcedMail\\ReinforcedMailArmor_ReinforcedMail.glb",
+   "bone": "J_Shoulders",
+   "material": "TOWN_ARMOR",
+   "component": "ReinforcedMailArmor",
+   "attach": "J_ShouldersSocket",
+   "_stretch": [
+    [
+     0.9410360288810287,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.9410360288810287,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.1292432346572343
+    ]
+   ]
+  },
+  {
+   "name": "armor_helmet",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ReinforcedMail\\Helmet_ReinforcedMail.glb",
+   "bone": "J_Head",
+   "material": "TOWN_ARMOR",
+   "component": "Helmet",
+   "attach": "J_Head"
+  },
+  {
+   "name": "armor_l_leg_scalemail",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ReinforcedMail\\L_LegGuard_ReinforcedMail.glb",
+   "bone": "J_L_Foot",
+   "material": "TOWN_ARMOR",
+   "component": "L_Leg_ScaleMail",
+   "attach": "J_L_Leg_Socket"
+  },
+  {
+   "name": "armor_sm_l_shoulderpad_guardset",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ReinforcedMail\\L_ShoulderPad_ReinforcedMailSet.glb",
+   "bone": "J_L_Hand",
+   "material": "TOWN_ARMOR",
+   "component": "SM_L_ShoulderPad_GuardSet",
+   "attach": "J_L_Hand"
+  },
+  {
+   "name": "armor_r_leg_scalemail",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ReinforcedMail\\R_LegGuard_ReinforcedMail.glb",
+   "bone": "J_R_Foot",
+   "material": "TOWN_ARMOR",
+   "component": "R_Leg_ScaleMail",
+   "attach": "J_R_Leg_Socket"
+  },
+  {
+   "name": "armor_sm_r_shoulderpad_guardset",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ReinforcedMail\\R_ShoulderPad_ReinforcedMailSet.glb",
+   "bone": "J_R_Hand",
+   "material": "TOWN_ARMOR",
+   "component": "SM_R_ShoulderPad_GuardSet",
+   "attach": "J_R_Hand",
+   "_mirror_y": true
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\jacques",
+  "armor_blueprint": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\metadata\\Dungeons\\Content\\Actors\\Equipment\\Armor\\ReinforcedMail\\BP_ReinforcedMail"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Player_Master_Idle_Glaive",
+   "seconds": 3.3333333,
+   "loop": true,
+   "ticks": 67,
+   "max_bone_error_px": 6.913758202232877e-08,
+   "max_vertex_error_px": 2.1592365777853855e-07,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "town_watchman",
+  "source_mesh_sha256": "c69a08825b0f3a9acbef6e7b8588b0cdb78eee6d7a31deee2cc02bcb58ceb24d",
+  "triangles": 286,
+  "all_triangles_covered_once": true,
+  "bones": 38,
+  "plane_groups": 33,
+  "display_parts": 27,
+  "elements": 137,
+  "direct_uv_elements": 111,
+  "baked_elements": 26,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Valorie": 0,
+   "TOWN_ARMOR": 1
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ },
+ "recolor": null,
+ "source_orientation": "+Z friendly root normalization"
+}

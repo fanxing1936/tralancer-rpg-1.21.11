@@ -1,4 +1,0 @@
-scoreboard players set @s rpg_pr_role 1
-scoreboard players set #taken1 rpg_pr 1
-playsound minecraft:block.respawn_anchor.set_spawn master @s ~ ~ ~ 1 1.2
-particle minecraft:end_rod ~ ~1 ~ 0.3 0.8 0.3 0.05 30

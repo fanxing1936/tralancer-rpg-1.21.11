@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"农夫","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔉𝔞𝔯𝔪𝔢𝔯","color":"#8F7430","italic":false},{"text":"  镇子能撑到今天，多亏了你这样的人。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"This town's still standing because of people like you.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.th05 voice @a[distance=..16] ~ ~ ~ 1 1

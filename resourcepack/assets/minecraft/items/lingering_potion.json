@@ -108,14 +108,344 @@
               "model": "rpg:relic/holy_water"
              },
              "on_false": {
-              "type": "minecraft:model",
-              "model": "minecraft:item/lingering_potion",
-              "tints": [
-               {
-                "type": "minecraft:potion",
-                "default": -13083194
+              "type": "minecraft:condition",
+              "property": "minecraft:component",
+              "predicate": "minecraft:custom_data",
+              "value": "{rpg_potion:\"decay\"}",
+              "on_true": {
+               "type": "minecraft:model",
+               "model": "rpg:relic/potion_decay"
+              },
+              "on_false": {
+               "type": "minecraft:condition",
+               "property": "minecraft:component",
+               "predicate": "minecraft:custom_data",
+               "value": "{rpg_strong_water:1b}",
+               "on_true": {
+                "type": "minecraft:model",
+                "model": "rpg:relic/strong_water"
+               },
+               "on_false": {
+                "type": "minecraft:condition",
+                "property": "minecraft:component",
+                "predicate": "minecraft:custom_data",
+                "value": "{rite_tag:1b}",
+                "on_true": {
+                 "type": "minecraft:model",
+                 "model": "rpg:relic/holy_water"
+                },
+                "on_false": {
+                 "type": "minecraft:condition",
+                 "property": "minecraft:component",
+                 "predicate": "minecraft:custom_data",
+                 "value": "{rpg_potion:\"decay\"}",
+                 "on_true": {
+                  "type": "minecraft:model",
+                  "model": "rpg:relic/potion_decay"
+                 },
+                 "on_false": {
+                  "type": "minecraft:condition",
+                  "property": "minecraft:component",
+                  "predicate": "minecraft:custom_data",
+                  "value": "{rpg_strong_water:1b}",
+                  "on_true": {
+                   "type": "minecraft:model",
+                   "model": "rpg:relic/strong_water"
+                  },
+                  "on_false": {
+                   "type": "minecraft:condition",
+                   "property": "minecraft:component",
+                   "predicate": "minecraft:custom_data",
+                   "value": "{rite_tag:1b}",
+                   "on_true": {
+                    "type": "minecraft:model",
+                    "model": "rpg:relic/holy_water"
+                   },
+                   "on_false": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:component",
+                    "predicate": "minecraft:custom_data",
+                    "value": "{rpg_potion:\"decay\"}",
+                    "on_true": {
+                     "type": "minecraft:model",
+                     "model": "rpg:relic/potion_decay"
+                    },
+                    "on_false": {
+                     "type": "minecraft:condition",
+                     "property": "minecraft:component",
+                     "predicate": "minecraft:custom_data",
+                     "value": "{rpg_strong_water:1b}",
+                     "on_true": {
+                      "type": "minecraft:model",
+                      "model": "rpg:relic/strong_water"
+                     },
+                     "on_false": {
+                      "type": "minecraft:condition",
+                      "property": "minecraft:component",
+                      "predicate": "minecraft:custom_data",
+                      "value": "{rite_tag:1b}",
+                      "on_true": {
+                       "type": "minecraft:model",
+                       "model": "rpg:relic/holy_water"
+                      },
+                      "on_false": {
+                       "type": "minecraft:condition",
+                       "property": "minecraft:component",
+                       "predicate": "minecraft:custom_data",
+                       "value": "{rpg_potion:\"decay\"}",
+                       "on_true": {
+                        "type": "minecraft:model",
+                        "model": "rpg:relic/potion_decay"
+                       },
+                       "on_false": {
+                        "type": "minecraft:condition",
+                        "property": "minecraft:component",
+                        "predicate": "minecraft:custom_data",
+                        "value": "{rpg_strong_water:1b}",
+                        "on_true": {
+                         "type": "minecraft:model",
+                         "model": "rpg:relic/strong_water"
+                        },
+                        "on_false": {
+                         "type": "minecraft:condition",
+                         "property": "minecraft:component",
+                         "predicate": "minecraft:custom_data",
+                         "value": "{rite_tag:1b}",
+                         "on_true": {
+                          "type": "minecraft:model",
+                          "model": "rpg:relic/holy_water"
+                         },
+                         "on_false": {
+                          "type": "minecraft:condition",
+                          "property": "minecraft:component",
+                          "predicate": "minecraft:custom_data",
+                          "value": "{rpg_potion:\"decay\"}",
+                          "on_true": {
+                           "type": "minecraft:model",
+                           "model": "rpg:relic/potion_decay"
+                          },
+                          "on_false": {
+                           "type": "minecraft:condition",
+                           "property": "minecraft:component",
+                           "predicate": "minecraft:custom_data",
+                           "value": "{rpg_strong_water:1b}",
+                           "on_true": {
+                            "type": "minecraft:model",
+                            "model": "rpg:relic/strong_water"
+                           },
+                           "on_false": {
+                            "type": "minecraft:condition",
+                            "property": "minecraft:component",
+                            "predicate": "minecraft:custom_data",
+                            "value": "{rite_tag:1b}",
+                            "on_true": {
+                             "type": "minecraft:model",
+                             "model": "rpg:relic/holy_water"
+                            },
+                            "on_false": {
+                             "type": "minecraft:condition",
+                             "property": "minecraft:component",
+                             "predicate": "minecraft:custom_data",
+                             "value": "{rpg_potion:\"decay\"}",
+                             "on_true": {
+                              "type": "minecraft:model",
+                              "model": "rpg:relic/potion_decay"
+                             },
+                             "on_false": {
+                              "type": "minecraft:condition",
+                              "property": "minecraft:component",
+                              "predicate": "minecraft:custom_data",
+                              "value": "{rpg_strong_water:1b}",
+                              "on_true": {
+                               "type": "minecraft:model",
+                               "model": "rpg:relic/strong_water"
+                              },
+                              "on_false": {
+                               "type": "minecraft:condition",
+                               "property": "minecraft:component",
+                               "predicate": "minecraft:custom_data",
+                               "value": "{rite_tag:1b}",
+                               "on_true": {
+                                "type": "minecraft:model",
+                                "model": "rpg:relic/holy_water"
+                               },
+                               "on_false": {
+                                "type": "minecraft:condition",
+                                "property": "minecraft:component",
+                                "predicate": "minecraft:custom_data",
+                                "value": "{rpg_potion:\"decay\"}",
+                                "on_true": {
+                                 "type": "minecraft:model",
+                                 "model": "rpg:relic/potion_decay"
+                                },
+                                "on_false": {
+                                 "type": "minecraft:condition",
+                                 "property": "minecraft:component",
+                                 "predicate": "minecraft:custom_data",
+                                 "value": "{rpg_strong_water:1b}",
+                                 "on_true": {
+                                  "type": "minecraft:model",
+                                  "model": "rpg:relic/strong_water"
+                                 },
+                                 "on_false": {
+                                  "type": "minecraft:condition",
+                                  "property": "minecraft:component",
+                                  "predicate": "minecraft:custom_data",
+                                  "value": "{rite_tag:1b}",
+                                  "on_true": {
+                                   "type": "minecraft:model",
+                                   "model": "rpg:relic/holy_water"
+                                  },
+                                  "on_false": {
+                                   "type": "minecraft:condition",
+                                   "property": "minecraft:component",
+                                   "predicate": "minecraft:custom_data",
+                                   "value": "{rpg_potion:\"decay\"}",
+                                   "on_true": {
+                                    "type": "minecraft:model",
+                                    "model": "rpg:relic/potion_decay"
+                                   },
+                                   "on_false": {
+                                    "type": "minecraft:condition",
+                                    "property": "minecraft:component",
+                                    "predicate": "minecraft:custom_data",
+                                    "value": "{rpg_strong_water:1b}",
+                                    "on_true": {
+                                     "type": "minecraft:model",
+                                     "model": "rpg:relic/strong_water"
+                                    },
+                                    "on_false": {
+                                     "type": "minecraft:condition",
+                                     "property": "minecraft:component",
+                                     "predicate": "minecraft:custom_data",
+                                     "value": "{rite_tag:1b}",
+                                     "on_true": {
+                                      "type": "minecraft:model",
+                                      "model": "rpg:relic/holy_water"
+                                     },
+                                     "on_false": {
+                                      "type": "minecraft:condition",
+                                      "property": "minecraft:component",
+                                      "predicate": "minecraft:custom_data",
+                                      "value": "{rpg_potion:\"decay\"}",
+                                      "on_true": {
+                                       "type": "minecraft:model",
+                                       "model": "rpg:relic/potion_decay"
+                                      },
+                                      "on_false": {
+                                       "type": "minecraft:condition",
+                                       "property": "minecraft:component",
+                                       "predicate": "minecraft:custom_data",
+                                       "value": "{rpg_strong_water:1b}",
+                                       "on_true": {
+                                        "type": "minecraft:model",
+                                        "model": "rpg:relic/strong_water"
+                                       },
+                                       "on_false": {
+                                        "type": "minecraft:condition",
+                                        "property": "minecraft:component",
+                                        "predicate": "minecraft:custom_data",
+                                        "value": "{rite_tag:1b}",
+                                        "on_true": {
+                                         "type": "minecraft:model",
+                                         "model": "rpg:relic/holy_water"
+                                        },
+                                        "on_false": {
+                                         "type": "minecraft:condition",
+                                         "property": "minecraft:component",
+                                         "predicate": "minecraft:custom_data",
+                                         "value": "{rpg_potion:\"decay\"}",
+                                         "on_true": {
+                                          "type": "minecraft:model",
+                                          "model": "rpg:relic/potion_decay"
+                                         },
+                                         "on_false": {
+                                          "type": "minecraft:condition",
+                                          "property": "minecraft:component",
+                                          "predicate": "minecraft:custom_data",
+                                          "value": "{rpg_strong_water:1b}",
+                                          "on_true": {
+                                           "type": "minecraft:model",
+                                           "model": "rpg:relic/strong_water"
+                                          },
+                                          "on_false": {
+                                           "type": "minecraft:condition",
+                                           "property": "minecraft:component",
+                                           "predicate": "minecraft:custom_data",
+                                           "value": "{rite_tag:1b}",
+                                           "on_true": {
+                                            "type": "minecraft:model",
+                                            "model": "rpg:relic/holy_water"
+                                           },
+                                           "on_false": {
+                                            "type": "minecraft:condition",
+                                            "property": "minecraft:component",
+                                            "predicate": "minecraft:custom_data",
+                                            "value": "{rpg_potion:\"decay\"}",
+                                            "on_true": {
+                                             "type": "minecraft:model",
+                                             "model": "rpg:relic/potion_decay"
+                                            },
+                                            "on_false": {
+                                             "type": "minecraft:condition",
+                                             "property": "minecraft:component",
+                                             "predicate": "minecraft:custom_data",
+                                             "value": "{rpg_strong_water:1b}",
+                                             "on_true": {
+                                              "type": "minecraft:model",
+                                              "model": "rpg:relic/strong_water"
+                                             },
+                                             "on_false": {
+                                              "type": "minecraft:condition",
+                                              "property": "minecraft:component",
+                                              "predicate": "minecraft:custom_data",
+                                              "value": "{rite_tag:1b}",
+                                              "on_true": {
+                                               "type": "minecraft:model",
+                                               "model": "rpg:relic/holy_water"
+                                              },
+                                              "on_false": {
+                                               "type": "minecraft:model",
+                                               "model": "minecraft:item/lingering_potion",
+                                               "tints": [
+                                                {
+                                                 "type": "minecraft:potion",
+                                                 "default": -13083194
+                                                }
+                                               ]
+                                              }
+                                             }
+                                            }
+                                           }
+                                          }
+                                         }
+                                        }
+                                       }
+                                      }
+                                     }
+                                    }
+                                   }
+                                  }
+                                 }
+                                }
+                               }
+                              }
+                             }
+                            }
+                           }
+                          }
+                         }
+                        }
+                       }
+                      }
+                     }
+                    }
+                   }
+                  }
+                 }
+                }
                }
-              ]
+              }
              }
             }
            }

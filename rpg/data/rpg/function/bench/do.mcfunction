@@ -6,3 +6,4 @@ execute if score #do rpg_fg matches 82 run return run function rpg:bench/forge
 execute if score #do rpg_fg matches 83 run return run function rpg:bench/conv
 execute if score #do rpg_fg matches 84 run return run function rpg:bench/potion
 execute if score #do rpg_fg matches 85 run return run function rpg:bench/rite
+execute if score #do rpg_fg matches 87 run return run function rpg:forge/fuse/open

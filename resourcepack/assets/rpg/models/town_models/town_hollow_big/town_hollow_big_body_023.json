@@ -1,0 +1,44 @@
+{
+  "textures": {
+    "0": "rpg:item/town_models/town_hollow_big/atlas",
+    "particle": "rpg:item/town_models/town_hollow_big/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        8.0,
+        7.76,
+        7.28
+      ],
+      "to": [
+        8.0,
+        8.24,
+        8.72
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            10.625,
+            11.125,
+            9.5,
+            14.25
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            10.625,
+            14.25,
+            9.5,
+            11.125
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    }
+  ]
+}

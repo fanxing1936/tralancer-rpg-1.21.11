@@ -1,0 +1,2 @@
+tellraw @s ["",{"text":"〖","color":"#A276BE","bold":true,"italic":false},{"text":"罪仆","color":"#A276BE","bold":true,"italic":false},{"text":"〗","color":"#A276BE","bold":true,"italic":false},{"text":" 𝔖𝔦𝔫-𝔰𝔢𝔯𝔳𝔞𝔫𝔱","color":"#8F7430","italic":false},{"text":"  犹豫了？没关系，蜡烛还会再亮。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Hesitating? No matter. The candle will light again.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.sv06 voice @s ~ ~ ~ 1 1

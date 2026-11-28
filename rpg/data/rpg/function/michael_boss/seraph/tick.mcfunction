@@ -1,14 +1,14 @@
 scoreboard players operation #m rpg_mk = @s rpg_mk_t
 scoreboard players set #k rpg_mk 20
 scoreboard players operation #m rpg_mk %= #k rpg_mk
-execute if score #m rpg_mk matches 0 as @e[tag=rpg.unit.f,distance=6..44] run damage @s 6 minecraft:in_fire by @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,limit=1]
+execute if score #m rpg_mk matches 0 as @e[tag=rpg.unit.f,distance=6..44] run damage @s 6 minecraft:in_fire by @e[type=minecraft:vindicator,tag=rpg.mkb,tag=!rpg.mk.preview,limit=1,predicate=!rpg:in_prologue]
 scoreboard players operation #m rpg_mk = @s rpg_mk_t
 scoreboard players set #k rpg_mk 10
 scoreboard players operation #m rpg_mk %= #k rpg_mk
 execute if score #m rpg_mk matches 0 run summon minecraft:item_display ~ ~0.1 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:michael_vfx/ring_t","minecraft:custom_model_data":{colors:[16777215]}}},brightness:{sky:15,block:15},teleport_duration:1,interpolation_duration:3,view_range:2f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[12f,1f,12f],right_rotation:[0f,0f,0f,1f]}}
-execute if score #m rpg_mk matches 0 run scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 22
-execute if score #m rpg_mk matches 0 run scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 20
-execute if score #m rpg_mk matches 0 run tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
+execute if score #m rpg_mk matches 0 run scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_life 22
+execute if score #m rpg_mk matches 0 run scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_kd 20
+execute if score #m rpg_mk matches 0 run tag @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] remove rpg.mkb.fxnew
 execute if score #m rpg_mk matches 0 run particle minecraft:flame ~ ~0.4 ~ 16 0.3 16 0.02 80
 execute if score #m rpg_mk matches 5 run particle minecraft:dust_color_transition{from_color:[1.0,0.5,0.32],to_color:[1.0,0.2,0.0],scale:1.1} ~ ~0.8 ~ 14 0.4 14 0 40
 scoreboard players operation #m rpg_mk = @s rpg_mk_t

@@ -1,4 +1,0 @@
-bossbar set rpg:prologue_zh name [{"translate":"rpg.prologue.N07.zh","fallback":"留在坑里的身体，连同他的力，归了那与神对立的。","color":"#BFB8A8","italic":false}]
-bossbar set rpg:prologue_en name [{"translate":"rpg.prologue.N07.en","fallback":"The body left in the pit, and his Might with","color":"#BFB8A8","italic":true}]
-scoreboard players set #sub rpg_pr 122
-scoreboard players set #subn rpg_pr 107

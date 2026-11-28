@@ -1,0 +1,4 @@
+execute unless entity @s[tag=rpg.tl.camp] unless entity @s[tag=rpg.dm] run return run tellraw @s ["",{"text":"〖林中营地〗","color":"#A276BE","bold":true,"italic":false},{"text":"  营地里的人看了你一眼，没有说话。（先在镇上听说过这里）","color":"#797979","bold":false,"italic":false}]
+tellraw @s ["",{"text":"〖","color":"#D596F2","bold":true,"italic":false},{"text":"兜帽人","color":"#D596F2","bold":true,"italic":false},{"text":"〗","color":"#D596F2","bold":true,"italic":false},{"text":" ℌ𝔬𝔬𝔡𝔢𝔡 𝔐𝔞𝔫","color":"#8F7430","italic":false},{"text":"  营地的门一直开着。想通了就来。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The camp's door is always open. Come when you've made up your mind.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.ew13 voice @s ~ ~ ~ 1 1
+execute if entity @s[tag=rpg.dm] run function rpg:town/demon/secret

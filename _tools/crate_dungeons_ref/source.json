@@ -1,0 +1,31 @@
+{
+  "package": "Dungeons/Content/Decor/Prefabs/Crate/SM_Crate",
+  "albedo_only_materials": [
+    "MI_Crate"
+  ],
+  "mesh": "town_models_ref\\_work\\prop_sources\\assets\\Dungeons\\Content\\Decor\\Prefabs\\Crate\\SM_Crate.glb",
+  "metadata": "town_models_ref\\_work\\prop_sources\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Crate\\SM_Crate\\SM_Crate.meta.json",
+  "blueprint_component": "town_models_ref\\_work\\prop_sources\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Crate\\BP_CrateRopes\\SM_CrateRopes_GEN_VARIABLE.uobject.json",
+  "unit_scale": 0.0192,
+  "display_scale": 8.333333333333334,
+  "placement_component_transform": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'SM_Crate'",
+      "ObjectPath": "Dungeons/Content/Decor/Prefabs/Crate/SM_Crate.2"
+    },
+    "OverrideMaterials": [
+      {
+        "ObjectName": "MaterialInstanceConstant'MI_CratesRopes'",
+        "ObjectPath": "Dungeons/Content/Decor/Prefabs/Crate/MI_CratesRopes.0"
+      }
+    ],
+    "BodyInstance": {
+      "ObjectType": "ECC_WorldStatic",
+      "CollisionProfileName": "BlockAll"
+    },
+    "Mobility": "EComponentMobility::Static"
+  },
+  "grounding_cm": 8.146033536604591e-06,
+  "placement": "lowest_vertex_at_execution_y",
+  "grave_b_scale_note": null
+}

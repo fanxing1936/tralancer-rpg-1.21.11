@@ -1,0 +1,76 @@
+{
+  "textures": {
+    "0": "rpg:item/town_prop_cart/atlas",
+    "particle": "rpg:item/town_prop_cart/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.88,
+        7.6418,
+        6.191
+      ],
+      "to": [
+        7.88,
+        8.3582,
+        9.809
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            8.75,
+            0.0,
+            8.0,
+            3.8125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            8.75,
+            3.8125,
+            8.0,
+            0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        8.12,
+        7.6418,
+        6.191
+      ],
+      "to": [
+        8.12,
+        8.3582,
+        9.809
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            9.5,
+            0.0,
+            8.75,
+            3.8125
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "east": {
+          "uv": [
+            9.5,
+            3.8125,
+            8.75,
+            0.0
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+title @s times 10 50 20
+title @s subtitle ["",{"text":"以色列北国 · 渡口","color":"#9C9A94","bold":false,"italic":false},{"text":"  𝔖𝔥𝔢𝔠𝔥𝔢𝔪","color":"#8F7430","bold":false,"italic":false}]
+title @s title ["",{"text":"示剑","color":"#E6DFCF","bold":true,"italic":false}]

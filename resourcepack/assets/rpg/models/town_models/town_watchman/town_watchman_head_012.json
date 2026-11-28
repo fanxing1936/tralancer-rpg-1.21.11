@@ -1,0 +1,44 @@
+{
+  "textures": {
+    "0": "rpg:item/town_models/town_watchman/atlas",
+    "particle": "rpg:item/town_models/town_watchman/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        8.0,
+        7.52,
+        7.52
+      ],
+      "to": [
+        8.0,
+        8.48,
+        8.48
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            4.25,
+            4.0,
+            3.1875,
+            5.0625
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            4.25,
+            5.0625,
+            3.1875,
+            4.0
+          ],
+          "texture": "#0",
+          "tintindex": 0,
+          "rotation": 90
+        }
+      }
+    }
+  ]
+}

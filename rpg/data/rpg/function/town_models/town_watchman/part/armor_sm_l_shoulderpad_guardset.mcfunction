@@ -1,0 +1,3 @@
+data merge entity @s {Tags:["rpg.tw.model.part","rpg.tw.model.watchman.part","rpg.tw.model.watchman.p.armor_sm_l_shoulderpad_guardset"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:town_models/town_watchman/armor_sm_l_shoulderpad_guardset"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0.13308f,-0.73998f,0.25239f],left_rotation:[0.16111f,-0.611f,0.43355f,0.64246f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+rotate @s ~ 0
+ride @s mount @e[type=minecraft:villager,tag=rpg.tw.model.dressing,distance=..1,limit=1]

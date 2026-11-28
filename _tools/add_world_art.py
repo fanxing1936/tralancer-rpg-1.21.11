@@ -22,7 +22,7 @@ RP = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "resourcepac
 ITEMS = ["elite_badge", "sin_shard", "blueprint_epic", "blueprint_legend", "star_fragment", "wind_essence",
          "abyss_tear", "molten_core", "mountain_heart", "temple_bronze", "grave_soil"]
 TINTED = {"sin_shard"}
-TITLES = ["gate", "ledger", "waverer", "grandmaster", "meteor", "merchant", "summit", "sever", "mirror"]
+TITLES = ["gate", "ledger", "waverer", "grandmaster", "meteor", "merchant", "summit", "sever", "mirror", "guardian", "bard", "traveler"]
 TITLE_CHARS = dict((k, chr(0xE6A0 + i)) for i, k in enumerate(TITLES))
 # 精英词缀图标（名牌前缀，用户 2026-11-23「前缀也用图标烘焙」）：编号同 add_elites.AFFIX，0 = 首领
 AFFIX_ICONS = {1: "swift", 2: "iron", 3: "rage", 4: "leech", 5: "frost", 6: "venom", 7: "burst", 8: "summon",

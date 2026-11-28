@@ -6,8 +6,6 @@ execute if score #do rpg_ob matches 98 run return 0
 execute if score #do rpg_ob matches 99 run return run function rpg:onboard/show
 playsound minecraft:block.note_block.chime master @s ~ ~ ~ 0.55 1.2
 execute if score @s rpg_ob matches 2 run return run function rpg:onboard/name/press
-execute if score @s rpg_ob matches 16 run return run function rpg:onboard/pro/ask_press
-execute if score @s rpg_ob matches 1 run return run function rpg:onboard/pro/busy_press
 execute if score @s rpg_ob matches 3 run return run function rpg:onboard/card/press
 execute if score @s rpg_ob matches 4 run return run function rpg:onboard/ident/draw
 execute if score @s rpg_ob matches 5 run return run function rpg:onboard/tut/start
@@ -20,4 +18,4 @@ execute if score @s rpg_ob matches 11 run return run function rpg:onboard/tut/to
 execute if score @s rpg_ob matches 12 run return run function rpg:onboard/tut/inlay_press
 execute if score @s rpg_ob matches 13 run return run function rpg:onboard/tut/rune_press
 execute if score @s rpg_ob matches 14 run return run function rpg:onboard/tut/stone_press
-execute if score @s rpg_ob matches 15 run return run function rpg:onboard/finish
+execute if score @s rpg_ob matches 15 run return run function rpg:onboard/pro/enter

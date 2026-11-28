@@ -1,0 +1,3 @@
+tellraw @s ["",{"text":"〖","color":"#B48AD8","bold":true,"italic":false},{"text":"女巫","color":"#B48AD8","bold":true,"italic":false},{"text":"〗","color":"#B48AD8","bold":true,"italic":false},{"text":" 𝔗𝔥𝔢 𝔚𝔦𝔱𝔠𝔥","color":"#8F7430","italic":false},{"text":"  祭坛在营地后面。想清楚了再点那支黑蜡烛。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The altar is behind the camp. Think hard before you light the black candle.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.wi12 voice @s ~ ~ ~ 1 1
+tellraw @s ["",{"text":"〖林中营地〗","color":"#A276BE","bold":true,"italic":false},{"text":"  备齐罪印碎片 ×3、黑蜡烛 ×1，夜里拿着黑蜡烛右键祭坛。仪式要付一半的血。","color":"#A276BE","bold":false,"italic":false}]

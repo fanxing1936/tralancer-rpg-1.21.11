@@ -1,0 +1,11 @@
+{
+ "type": "rpg:armageddon",
+ "generator": {
+  "type": "minecraft:noise",
+  "settings": "rpg:armageddon",
+  "biome_source": {
+   "type": "minecraft:fixed",
+   "biome": "rpg:armageddon"
+  }
+ }
+}

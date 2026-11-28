@@ -1,0 +1,21 @@
+{
+ "criteria": {
+  "t": {
+   "trigger": "minecraft:player_interacted_with_entity",
+   "conditions": {
+    "entity": [
+     {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+       "nbt": "{Tags:[\"rpg.te.trace\"]}"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "rewards": {
+  "function": "rpg:town/ev/g/touch"
+ }
+}

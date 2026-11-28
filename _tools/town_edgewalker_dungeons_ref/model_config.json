@@ -1,0 +1,138 @@
+{
+ "model_scale": 7.496633670709872,
+ "height_blocks": 1.87,
+ "source_height_cm": 207.87107944488525,
+ "turn": 180,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [
+  {
+   "name": "armor_sm_magerobe_magerobe",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\EvocationRobe\\MageRobe_Evocation.glb",
+   "bone": "J_Shoulders",
+   "material": "TOWN_ARMOR",
+   "component": "SM_MageRobe_MageRobe",
+   "attach": "J_ShouldersSocket",
+   "_stretch": [
+    [
+     0.8652488082648558,
+     1.4075375543133754e-25,
+     2.085339125582003e-26
+    ],
+    [
+     1.676451166203454e-26,
+     0.8219863678516132,
+     -8.04384165253617e-18
+    ],
+    [
+     -7.663771239842617e-27,
+     -1.2836587889317753e-17,
+     1.4060293134303912
+    ]
+   ]
+  },
+  {
+   "name": "armor_sm_l_shoulderpad_magerobe",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\EvocationRobe\\R_Arm_EvocationRobe.glb",
+   "bone": "J_L_Hand",
+   "material": "TOWN_ARMOR",
+   "component": "SM_L_ShoulderPad_MageRobe",
+   "attach": "J_L_Hand",
+   "_stretch": [
+    [
+     1.1970515851708459,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.9421239327733508,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.8867048779043302
+    ]
+   ]
+  },
+  {
+   "name": "armor_sm_r_shoulderpad_magerobe",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\EvocationRobe\\R_Arm_EvocationRobe.glb",
+   "bone": "J_R_Hand",
+   "material": "TOWN_ARMOR",
+   "component": "SM_R_ShoulderPad_MageRobe",
+   "attach": "J_R_Hand",
+   "_stretch": [
+    [
+     1.1970515851708459,
+     -1.6548528415968248e-23,
+     -2.3499108298171246e-22
+    ],
+    [
+     -1.9733400880294244e-23,
+     0.9421239327733513,
+     2.4711006812012817e-16
+    ],
+    [
+     -4.3802183374901156e-23,
+     2.6042959708635644e-16,
+     0.8867048779043304
+    ]
+   ]
+  },
+  {
+   "name": "armor_soul_hood",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\SoulRobe\\Helmet_SpiritRobe.glb",
+   "bone": "J_Head",
+   "material": "TOWN_HOOD",
+   "component": "Helmet_FurArmor",
+   "attach": "J_Head_Socket"
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\jacques",
+  "armor_blueprint": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\metadata\\Dungeons\\Content\\Actors\\Equipment\\Armor\\EvocationRobe\\BP_EvocationRobe"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Player_Master_Idle_Glaive",
+   "seconds": 3.3333333,
+   "loop": true,
+   "ticks": 67,
+   "max_bone_error_px": 6.913758202232877e-08,
+   "max_vertex_error_px": 2.1592365777853855e-07,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "town_edgewalker",
+  "source_mesh_sha256": "c69a08825b0f3a9acbef6e7b8588b0cdb78eee6d7a31deee2cc02bcb58ceb24d",
+  "triangles": 220,
+  "all_triangles_covered_once": true,
+  "bones": 38,
+  "plane_groups": 33,
+  "display_parts": 25,
+  "elements": 112,
+  "direct_uv_elements": 89,
+  "baked_elements": 23,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Valorie": 0,
+   "TOWN_ARMOR": 1,
+   "TOWN_HOOD": 2
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ },
+ "recolor": {
+  "method": "source RGB palette and luminance mapping; alpha and pixel coordinates unchanged",
+  "source": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Actors\\Equipment\\Armor\\EvocationRobe\\T_EvocationRobe.png",
+  "style": "edge"
+ },
+ "source_orientation": "+Z friendly root normalization"
+}

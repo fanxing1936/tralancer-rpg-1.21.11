@@ -1,0 +1,31 @@
+# survival_2（旋转 none）：positioned 在落点、y = 结构原点；宏参数 sfx（材质版本）
+fill ~-2 ~-2 ~-2 ~18 ~36 ~22 minecraft:air replace #rpg:town_clear
+$place template rpg:town/survival_2$(sfx) ~ ~ ~ none
+fill ~4 ~-1 ~4 ~12 ~-10 ~16 minecraft:cobblestone replace #rpg:town_soft
+fill ~7 ~-1 ~17 ~9 ~-10 ~17 minecraft:cobblestone replace #rpg:town_soft
+fill ~0 ~-1 ~20 ~0 ~-10 ~20 minecraft:cobblestone replace #rpg:town_soft
+fill ~6 ~0 ~3 ~6 ~-9 ~3 minecraft:cobbled_deepslate replace #rpg:town_soft
+fill ~8 ~0 ~3 ~8 ~-9 ~3 minecraft:cobbled_deepslate replace #rpg:town_soft
+fill ~10 ~0 ~3 ~10 ~-9 ~3 minecraft:cobbled_deepslate replace #rpg:town_soft
+fill ~3 ~0 ~12 ~3 ~-9 ~13 minecraft:cobbled_deepslate replace #rpg:town_soft
+fill ~3 ~0 ~3 ~5 ~-9 ~3 minecraft:cobblestone replace #rpg:town_soft
+fill ~9 ~0 ~3 ~9 ~-9 ~3 minecraft:cobblestone replace #rpg:town_soft
+fill ~11 ~0 ~3 ~13 ~-9 ~3 minecraft:cobblestone replace #rpg:town_soft
+fill ~3 ~0 ~4 ~3 ~-9 ~4 minecraft:cobblestone replace #rpg:town_soft
+fill ~13 ~0 ~5 ~13 ~-9 ~6 minecraft:cobblestone replace #rpg:town_soft
+fill ~3 ~0 ~7 ~3 ~-9 ~11 minecraft:cobblestone replace #rpg:town_soft
+fill ~13 ~0 ~8 ~13 ~-9 ~8 minecraft:cobblestone replace #rpg:town_soft
+fill ~13 ~0 ~12 ~13 ~-9 ~12 minecraft:cobblestone replace #rpg:town_soft
+fill ~3 ~0 ~14 ~3 ~-9 ~15 minecraft:cobblestone replace #rpg:town_soft
+fill ~13 ~0 ~14 ~13 ~-9 ~17 minecraft:cobblestone replace #rpg:town_soft
+fill ~3 ~0 ~17 ~5 ~-9 ~17 minecraft:cobblestone replace #rpg:town_soft
+fill ~10 ~0 ~17 ~10 ~-9 ~17 minecraft:cobblestone replace #rpg:town_soft
+fill ~7 ~0 ~3 ~7 ~-9 ~3 minecraft:tuff replace #rpg:town_soft
+fill ~13 ~0 ~4 ~13 ~-9 ~4 minecraft:tuff replace #rpg:town_soft
+fill ~3 ~0 ~5 ~3 ~-9 ~6 minecraft:tuff replace #rpg:town_soft
+fill ~13 ~0 ~7 ~13 ~-9 ~7 minecraft:tuff replace #rpg:town_soft
+fill ~13 ~0 ~9 ~13 ~-9 ~11 minecraft:tuff replace #rpg:town_soft
+fill ~13 ~0 ~13 ~13 ~-9 ~13 minecraft:tuff replace #rpg:town_soft
+fill ~3 ~0 ~16 ~3 ~-9 ~16 minecraft:tuff replace #rpg:town_soft
+fill ~6 ~0 ~17 ~6 ~-9 ~17 minecraft:tuff replace #rpg:town_soft
+fill ~11 ~0 ~17 ~12 ~-9 ~17 minecraft:tuff replace #rpg:town_soft

@@ -181,6 +181,8 @@ python _tools/package.py --install
 ### 建筑、地形与音乐
 
 - **失乐园的建筑**：伊甸之门用 **Boulevardier** 的 *Boulevardier's Archway Pack*（Large Archway），四座河庭用同一作者的 *Boulevardier's Primitive Structures Pack*，均发布在 [Planet Minecraft](https://www.planetminecraft.com/)。建筑设计归作者所有；本包放进游戏时只转成结构文件，大门换了两处材质，河庭原样照搬。清单见 [`_tools/gate_ref/SOURCES.md`](_tools/gate_ref/SOURCES.md)。
+- **城镇的建筑**：二十座城镇用 **Boulevardier** 公开发布的 17 件作品与 *Survival Houses*（[Planet Minecraft](https://www.planetminecraft.com/)），以及 Glimmerhall Church、White Church、Small Gothic Church、Storage Barn、build1000、Orc Camp（作者待补）。建筑设计归原作者所有；本包只转成结构文件，去掉展示底板与原地形，雪原、沙漠版本只换木材与地面材质，造型不改。清单见 [`_tools/town_ref/SOURCES.md`](_tools/town_ref/SOURCES.md)。
+- **城镇的配音**：英语配音由本机 Qwen3-TTS 合成（AI 生成，不是真人），详见 [`_tools/town_ref/vo/SOURCES.md`](_tools/town_ref/vo/SOURCES.md)。
 - **失乐园的地形**：坡度与逐层侵蚀的思路来自 [Epic Terrain](https://github.com/wonderfulaichen/Epic-Terrain)（MIT，Copyright (c) 2025 wonderfulaichen），代码与数值自写，见 [`docs/TERRAIN-STUDY.md`](docs/TERRAIN-STUDY.md)。
 - **背景音乐**：CC0 与 CC-BY 曲子，作者与许可逐首列在 [`_tools/bgm_ref/SOURCES.md`](_tools/bgm_ref/SOURCES.md)。
 

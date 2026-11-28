@@ -1,0 +1,42 @@
+{
+  "textures": {
+    "0": "rpg:item/town_prop_cart/atlas",
+    "particle": "rpg:item/town_prop_cart/atlas"
+  },
+  "elements": [
+    {
+      "from": [
+        7.8758,
+        7.1594,
+        8.0
+      ],
+      "to": [
+        8.1242,
+        8.8406,
+        8.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.1875,
+            8.0,
+            7.875,
+            9.9375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            7.875,
+            8.0,
+            8.1875,
+            9.9375
+          ],
+          "texture": "#0",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

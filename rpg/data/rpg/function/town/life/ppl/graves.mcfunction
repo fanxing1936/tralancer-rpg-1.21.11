@@ -1,0 +1,10 @@
+execute positioned ~-6 0 ~-3 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_a"}
+execute positioned ~-3 0 ~-3 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_b"}
+execute positioned ~0 0 ~-3 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_a"}
+execute positioned ~3 0 ~-3 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_b"}
+execute positioned ~6 0 ~-3 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_a"}
+execute positioned ~-6 0 ~2 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_b"}
+execute positioned ~-3 0 ~2 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_a"}
+execute positioned ~0 0 ~2 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_b"}
+execute positioned ~3 0 ~2 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_a"}
+execute positioned ~6 0 ~2 positioned over motion_blocking_no_leaves run function rpg:town/prop {n:"grave_b"}

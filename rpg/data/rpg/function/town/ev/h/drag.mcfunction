@@ -1,0 +1,3 @@
+tellraw @a[tag=rpg.tw.in] ["",{"text":"〖","color":"#A8B4C0","bold":true,"italic":false},{"text":"守夜人","color":"#A8B4C0","bold":true,"italic":false},{"text":"〗","color":"#A8B4C0","bold":true,"italic":false},{"text":" 𝔚𝔞𝔱𝔠𝔥𝔪𝔞𝔫","color":"#8F7430","italic":false},{"text":"  有人被拖走了！快追！","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Someone's been dragged off! After them!","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.ho02 voice @a[tag=rpg.tw.in] ~ ~ ~ 1 1
+execute in minecraft:overworld as @e[type=minecraft:villager,tag=rpg.tnpc.folk,limit=1,sort=random] if score @s rpg_tw_id = #run rpg_te run function rpg:town/ev/h/taken

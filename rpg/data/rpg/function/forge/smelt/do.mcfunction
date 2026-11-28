@@ -1,4 +1,5 @@
 # 冶炼对话框的三步：20..28 选类型，30..32 选档次，40 开炉。50..59 罪器锻造、60..69 材料转换（add_forge_world.py）。
+execute if score #do rpg_fg matches 260..269 run return run function rpg:forge/fuse/do
 execute if score #do rpg_fg matches 200..259 run return run function rpg:alc/do
 execute if score #do rpg_fg matches 80..89 run return run function rpg:bench/do
 execute if score #do rpg_fg matches 50..59 run return run function rpg:forge/sin/do

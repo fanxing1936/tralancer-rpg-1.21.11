@@ -1,0 +1,2 @@
+tellraw @s ["",{"text":"〖","color":"#C9A646","bold":true,"italic":false},{"text":"神父","color":"#C9A646","bold":true,"italic":false},{"text":"〗","color":"#C9A646","bold":true,"italic":false},{"text":" 𝔉𝔞𝔱𝔥𝔢𝔯","color":"#8F7430","italic":false},{"text":"  你今天已经领过了。明天再来吧。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"You've had yours today. Come back tomorrow.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.pr06 voice @s ~ ~ ~ 1 1

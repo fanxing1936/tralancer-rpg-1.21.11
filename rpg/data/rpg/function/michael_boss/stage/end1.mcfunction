@@ -4,9 +4,9 @@ function rpg:michael_boss/sk/end
 function rpg:michael_boss/solid/off
 tag @s add rpg.mkb.morph
 scoreboard players set @s rpg_mk_c 0
-kill @e[tag=rpg.mkb.fx]
+kill @e[tag=rpg.mkb.fx,predicate=!rpg:in_prologue]
 data merge entity @s {NoAI:1b,Invulnerable:1b,NoGravity:0b}
-tp @s @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1]
+tp @s @e[type=minecraft:marker,tag=rpg.mkb.center,limit=1,predicate=!rpg:in_prologue]
 execute at @s run execute facing entity @e[tag=rpg.unit.f,distance=..40,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ 0
 execute at @s run tp @s ^ ^ ^2
 function rpg:michael/anim/enter/kneel

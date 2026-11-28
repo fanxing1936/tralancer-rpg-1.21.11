@@ -7,6 +7,6 @@ summon minecraft:text_display ~ ~2.4 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew","rpg.
 summon minecraft:text_display ~ ~2.4 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew","rpg.mkb.eye","rpg.mkb.eye1"],Rotation:[232.0f,0f],text:{text:"",font:"rpg:michael_vfx",color:"white"},background:0,billboard:"center",brightness:{sky:15,block:15},teleport_duration:10,view_range:4f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[2.6f,2.6f,2.6f],right_rotation:[0f,0f,0f,1f]}}
 summon minecraft:text_display ~ ~2.4 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew","rpg.mkb.eye","rpg.mkb.eye1"],Rotation:[277.0f,0f],text:{text:"",font:"rpg:michael_vfx",color:"white"},background:0,billboard:"center",brightness:{sky:15,block:15},teleport_duration:10,view_range:4f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[2.6f,2.6f,2.6f],right_rotation:[0f,0f,0f,1f]}}
 summon minecraft:text_display ~ ~2.4 ~ {Tags:["rpg.mkb.fx","rpg.mkb.fxnew","rpg.mkb.eye","rpg.mkb.eye1"],Rotation:[322.0f,0f],text:{text:"",font:"rpg:michael_vfx",color:"white"},background:0,billboard:"center",brightness:{sky:15,block:15},teleport_duration:10,view_range:4f,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[2.6f,2.6f,2.6f],right_rotation:[0f,0f,0f,1f]}}
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_life 86
-scoreboard players set @e[tag=rpg.mkb.fxnew] rpg_mk_kd 0
-tag @e[tag=rpg.mkb.fxnew] remove rpg.mkb.fxnew
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_life 86
+scoreboard players set @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] rpg_mk_kd 0
+tag @e[tag=rpg.mkb.fxnew,predicate=!rpg:in_prologue] remove rpg.mkb.fxnew

@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"农夫","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔉𝔞𝔯𝔪𝔢𝔯","color":"#8F7430","italic":false},{"text":"  今晚关好门。守夜人说狗叫了一整夜。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Bar your door tonight. The watchman says the dogs barked all night.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rh04 voice @a[distance=..16] ~ ~ ~ 1 1

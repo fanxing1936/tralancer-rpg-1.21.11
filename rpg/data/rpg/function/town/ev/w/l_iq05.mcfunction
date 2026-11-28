@@ -1,0 +1,2 @@
+tellraw @a[tag=rpg.tw.in] ["",{"text":"〖","color":"#B8902F","bold":true,"italic":false},{"text":"审判官","color":"#B8902F","bold":true,"italic":false},{"text":"〗","color":"#B8902F","bold":true,"italic":false},{"text":" ℑ𝔫𝔮𝔲𝔦𝔰𝔦𝔱𝔬𝔯","color":"#8F7430","italic":false},{"text":"  放下她，我只记你一笔。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Put her down, and I'll only write your name.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.iq05 voice @a[tag=rpg.tw.in] ~ ~ ~ 1 1

@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"农夫","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔉𝔞𝔯𝔪𝔢𝔯","color":"#8F7430","italic":false},{"text":"  苍蝇。成团成团的。冬天哪来的苍蝇。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"Flies. Swarms of them. Where do flies come from at this time of year?","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rb02 voice @a[distance=..16] ~ ~ ~ 1 1

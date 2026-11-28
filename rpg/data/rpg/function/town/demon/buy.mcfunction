@@ -1,0 +1,5 @@
+execute store result score #m rpg_dm run clear @s minecraft:raw_gold[minecraft:custom_data~{currency_tag:1b}] 0
+execute if score #m rpg_dm matches ..2 run return run tellraw @s ["",{"text":"〖林中营地〗","color":"#A276BE","bold":true,"italic":false},{"text":"  三枚货币一支。","color":"#FF6B5E","bold":false,"italic":false}]
+clear @s minecraft:raw_gold[minecraft:custom_data~{currency_tag:1b}] 3
+give @s minecraft:candle[minecraft:custom_name=["",{"text":"[恶魔]","color":"#A276BE","bold":true,"italic":false},{"text":"黑蜡烛","color":"#FFFFFF","bold":false,"italic":false}],minecraft:lore=[{"text":"+------------------+","color":"#FFFFFF","bold":false,"italic":false},{"text":"逆着画圈，点在林中祭坛上","color":"gray","bold":false,"italic":false},{"text":"召来七十二柱里的一位低阶罪仆","color":"gray","bold":false,"italic":false},{"text":"+------------------+","color":"#FFFFFF","bold":false,"italic":false}],minecraft:custom_data={rpg_black_candle:1b},minecraft:item_model="rpg:town/black_candle"]
+tellraw @s ["",{"text":"〖林中营地〗","color":"#A276BE","bold":true,"italic":false},{"text":"  黑蜡烛到手。","color":"#A276BE","bold":false,"italic":false}]

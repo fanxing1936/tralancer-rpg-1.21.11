@@ -1,0 +1,47 @@
+{
+  "package": "Dungeons/Content/Decor/Prefabs/Barrel/SM_Barrel",
+  "albedo_only_materials": [
+    "MI_Barrel"
+  ],
+  "mesh": "town_models_ref\\_work\\prop_sources\\assets\\Dungeons\\Content\\Decor\\Prefabs\\Barrel\\SM_Barrel.glb",
+  "metadata": "town_models_ref\\_work\\prop_sources\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Barrel\\SM_Barrel\\SM_Barrel.meta.json",
+  "blueprint_component": "town_models_ref\\_work\\prop_sources\\metadata\\Dungeons\\Content\\Decor\\Prefabs\\Barrel\\BP_Barrel\\SM_Barrel_GEN_VARIABLE.uobject.json",
+  "unit_scale": 0.0192,
+  "display_scale": 8.333333333333334,
+  "placement_component_transform": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'SM_Barrel'",
+      "ObjectPath": "Dungeons/Content/Decor/Prefabs/Barrel/SM_Barrel.2"
+    },
+    "OverrideMaterials": [
+      {
+        "ObjectName": "MaterialInstanceConstant'MI_Barrel'",
+        "ObjectPath": "Dungeons/Content/Decor/Prefabs/Barrel/MI_Barrel.0"
+      }
+    ],
+    "BodyInstance": {
+      "ObjectType": "ECC_WorldStatic",
+      "CollisionProfileName": "BlockAll"
+    },
+    "RelativeLocation": {
+      "X": 0.0,
+      "Y": 5.960465e-06,
+      "Z": 22.0
+    },
+    "RelativeRotation": {
+      "Pitch": 0.0,
+      "Yaw": 0.0,
+      "Roll": 90.0
+    },
+    "RelativeScale3D": {
+      "X": 100.0,
+      "Y": 100.0,
+      "Z": 100.0
+    },
+    "Mobility": "EComponentMobility::Static",
+    "bCanEverAffectNavigation": false
+  },
+  "grounding_cm": -0.12499990686772477,
+  "placement": "lowest_vertex_at_execution_y",
+  "grave_b_scale_note": null
+}

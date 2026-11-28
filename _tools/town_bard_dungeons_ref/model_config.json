@@ -1,0 +1,98 @@
+{
+ "model_scale": 7.496633670709872,
+ "height_blocks": 1.87,
+ "source_height_cm": 207.87107944488525,
+ "turn": 180,
+ "merge": {},
+ "held_bone": null,
+ "attachments": [
+  {
+   "name": "armor_furarmor_furarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Content_DLC6\\Actors\\Equipment\\Armor\\BardsGarb_Unique1\\SM_BardsGarb_Body_Unique1.glb",
+   "bone": "J_Shoulders",
+   "material": "TOWN_ARMOR",
+   "component": "FurArmor_FurArmor",
+   "attach": "J_ShouldersSocket"
+  },
+  {
+   "name": "armor_helmet_furarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Content_DLC6\\Actors\\Equipment\\Armor\\BardsGarb_Unique1\\SM_BardsGarb_Head_Unique1.glb",
+   "bone": "J_Head",
+   "material": "TOWN_ARMOR",
+   "component": "Helmet_FurArmor",
+   "attach": "J_Head_Socket"
+  },
+  {
+   "name": "armor_l_legguard_furarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Content_DLC6\\Actors\\Equipment\\Armor\\BardsGarb_Unique1\\SM_BardsGarb_Leg-R_Unique1.glb",
+   "bone": "J_R_Foot",
+   "material": "TOWN_ARMOR",
+   "component": "L_LegGuard_FurArmor",
+   "attach": "J_R_Leg_Socket"
+  },
+  {
+   "name": "armor_l_shoulderpad_furarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Content_DLC6\\Actors\\Equipment\\Armor\\BardsGarb_Unique1\\SM_BardsGarbor_Arm-L_Unique1.glb",
+   "bone": "J_L_Hand",
+   "material": "TOWN_ARMOR",
+   "component": "L_ShoulderPad_FurArmor",
+   "attach": "J_L_Shoulder_Socket"
+  },
+  {
+   "name": "armor_r_shoulderpad_furarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Content_DLC6\\Actors\\Equipment\\Armor\\BardsGarb_Unique1\\SM_BardsGarb_Arm-R_Unique1.glb",
+   "bone": "J_R_Hand",
+   "material": "TOWN_ARMOR",
+   "component": "R_ShoulderPad_FurArmor",
+   "attach": "J_R_Shoulder_Socket"
+  },
+  {
+   "name": "armor_r_leg_furarmor",
+   "mesh": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\assets\\Dungeons\\Content\\Content_DLC6\\Actors\\Equipment\\Armor\\BardsGarb_Unique1\\SM_BardsGarb_Leg-L_Unique1.glb",
+   "bone": "J_L_Foot",
+   "material": "TOWN_ARMOR",
+   "component": "R_Leg_FurArmor",
+   "attach": "J_L_Leg_Socket"
+  }
+ ],
+ "source": {
+  "mesh": "Dungeons/Content/Actors/Characters/Player/Master/SK_Player_Master",
+  "export_root": "D:\\agent\\dungeons_extract\\upgrade\\jacques",
+  "armor_blueprint": "D:\\agent\\claude\\github-create\\tralancer-rpg-1.21.11\\_tools\\town_models_ref\\_work\\hero_export\\metadata\\Dungeons\\Content\\Content_DLC6\\Actors\\Equipment\\Armor\\BardsGarb_Unique1\\BP_BardsGarb_Unique1"
+ },
+ "clips": [
+  {
+   "clip": "idle",
+   "source": "Player_Master_Idle_Glaive",
+   "seconds": 3.3333333,
+   "loop": true,
+   "ticks": 67,
+   "max_bone_error_px": 6.913758202232877e-08,
+   "max_vertex_error_px": 2.1592365777853855e-07,
+   "notifies": []
+  }
+ ],
+ "conversion": {
+  "name": "town_bard",
+  "source_mesh_sha256": "c69a08825b0f3a9acbef6e7b8588b0cdb78eee6d7a31deee2cc02bcb58ceb24d",
+  "triangles": 248,
+  "all_triangles_covered_once": true,
+  "bones": 38,
+  "plane_groups": 31,
+  "display_parts": 27,
+  "elements": 126,
+  "direct_uv_elements": 107,
+  "baked_elements": 19,
+  "glow_groups": 0,
+  "textures": {
+   "MI_Valorie": 0,
+   "TOWN_ARMOR": 1
+  },
+  "atlas": [
+   256,
+   256
+  ]
+ },
+ "recolor": null,
+ "source_orientation": "+Z friendly root normalization"
+}

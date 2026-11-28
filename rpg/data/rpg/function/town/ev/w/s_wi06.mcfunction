@@ -1,0 +1,2 @@
+tellraw @a[tag=rpg.tw.in] ["",{"text":"〖","color":"#B48AD8","bold":true,"italic":false},{"text":"女巫","color":"#B48AD8","bold":true,"italic":false},{"text":"〗","color":"#B48AD8","bold":true,"italic":false},{"text":" 𝔗𝔥𝔢 𝔚𝔦𝔱𝔠𝔥","color":"#8F7430","italic":false},{"text":"  教廷需要我们去打仗。打完了，就叫我们女巫。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The Church needs us for its wars. When the war's over, it calls us witches.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.wi06 voice @a[tag=rpg.tw.in] ~ ~ ~ 1 1

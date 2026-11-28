@@ -1,0 +1,2 @@
+tellraw @s ["",{"text":"〖","color":"#A8B4C0","bold":true,"italic":false},{"text":"守夜人","color":"#A8B4C0","bold":true,"italic":false},{"text":"〗","color":"#A8B4C0","bold":true,"italic":false},{"text":" 𝔚𝔞𝔱𝔠𝔥𝔪𝔞𝔫","color":"#8F7430","italic":false},{"text":"  土松了？……那就是了。要出事了。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The soil's loose?... Then that's it. Something's coming.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.wt03 voice @s ~ ~ ~ 1 1

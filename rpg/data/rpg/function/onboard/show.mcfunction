@@ -4,9 +4,9 @@ execute if score @s rpg_ob matches 16 run scoreboard players set @s rpg_ob 3
 execute if score @s rpg_ob matches 17 run return run function rpg:onboard/intro/start
 # 旁白之后的流程都配同一首曲子
 execute unless score @s rpg_ob_mi matches 2 run function rpg:onboard/music/flow
-execute if score @s rpg_ob matches 1 if entity @s[tag=rpg.ob.queued] run return run function rpg:onboard/pro/busy
+# 序章排队中：没有对话框，等调度把人接走
+execute if score @s rpg_ob matches 1 run return run dialog clear @s
 execute if score @s rpg_ob matches 2 run return run function rpg:onboard/name/show
-execute if score @s rpg_ob matches 16 run return run function rpg:onboard/pro/ask
 execute if score @s rpg_ob matches 3 run return run function rpg:onboard/card/show
 execute if score @s rpg_ob matches 4 run return run function rpg:onboard/ident/ask
 execute if score @s rpg_ob matches 5 run return run function rpg:onboard/ident/show

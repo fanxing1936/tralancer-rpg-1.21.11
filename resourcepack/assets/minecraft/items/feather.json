@@ -36,8 +36,118 @@
       "model": "rpg:relic/medium_1"
      },
      "on_false": {
-      "type": "minecraft:model",
-      "model": "minecraft:item/feather"
+      "type": "minecraft:condition",
+      "property": "minecraft:component",
+      "predicate": "minecraft:custom_data",
+      "value": "{rpg_medium:1b}",
+      "on_true": {
+       "type": "minecraft:model",
+       "model": "rpg:relic/medium_1"
+      },
+      "on_false": {
+       "type": "minecraft:condition",
+       "property": "minecraft:component",
+       "predicate": "minecraft:custom_data",
+       "value": "{rpg_medium:1b}",
+       "on_true": {
+        "type": "minecraft:model",
+        "model": "rpg:relic/medium_1"
+       },
+       "on_false": {
+        "type": "minecraft:condition",
+        "property": "minecraft:component",
+        "predicate": "minecraft:custom_data",
+        "value": "{rpg_medium:1b}",
+        "on_true": {
+         "type": "minecraft:model",
+         "model": "rpg:relic/medium_1"
+        },
+        "on_false": {
+         "type": "minecraft:condition",
+         "property": "minecraft:component",
+         "predicate": "minecraft:custom_data",
+         "value": "{rpg_medium:1b}",
+         "on_true": {
+          "type": "minecraft:model",
+          "model": "rpg:relic/medium_1"
+         },
+         "on_false": {
+          "type": "minecraft:condition",
+          "property": "minecraft:component",
+          "predicate": "minecraft:custom_data",
+          "value": "{rpg_medium:1b}",
+          "on_true": {
+           "type": "minecraft:model",
+           "model": "rpg:relic/medium_1"
+          },
+          "on_false": {
+           "type": "minecraft:condition",
+           "property": "minecraft:component",
+           "predicate": "minecraft:custom_data",
+           "value": "{rpg_medium:1b}",
+           "on_true": {
+            "type": "minecraft:model",
+            "model": "rpg:relic/medium_1"
+           },
+           "on_false": {
+            "type": "minecraft:condition",
+            "property": "minecraft:component",
+            "predicate": "minecraft:custom_data",
+            "value": "{rpg_medium:1b}",
+            "on_true": {
+             "type": "minecraft:model",
+             "model": "rpg:relic/medium_1"
+            },
+            "on_false": {
+             "type": "minecraft:condition",
+             "property": "minecraft:component",
+             "predicate": "minecraft:custom_data",
+             "value": "{rpg_medium:1b}",
+             "on_true": {
+              "type": "minecraft:model",
+              "model": "rpg:relic/medium_1"
+             },
+             "on_false": {
+              "type": "minecraft:condition",
+              "property": "minecraft:component",
+              "predicate": "minecraft:custom_data",
+              "value": "{rpg_medium:1b}",
+              "on_true": {
+               "type": "minecraft:model",
+               "model": "rpg:relic/medium_1"
+              },
+              "on_false": {
+               "type": "minecraft:condition",
+               "property": "minecraft:component",
+               "predicate": "minecraft:custom_data",
+               "value": "{rpg_medium:1b}",
+               "on_true": {
+                "type": "minecraft:model",
+                "model": "rpg:relic/medium_1"
+               },
+               "on_false": {
+                "type": "minecraft:condition",
+                "property": "minecraft:component",
+                "predicate": "minecraft:custom_data",
+                "value": "{rpg_medium:1b}",
+                "on_true": {
+                 "type": "minecraft:model",
+                 "model": "rpg:relic/medium_1"
+                },
+                "on_false": {
+                 "type": "minecraft:model",
+                 "model": "minecraft:item/feather"
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
      }
     }
    }

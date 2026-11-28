@@ -1698,6 +1698,87 @@
              "type": "minecraft:condition",
              "if_true": {
               "type": "minecraft:noise_threshold",
+              "noise": "rpg:ow/s_m",
+              "min_threshold": 0.3,
+              "max_threshold": 9.0
+             },
+             "then_run": {
+              "type": "minecraft:sequence",
+              "sequence": [
+               {
+                "type": "minecraft:condition",
+                "if_true": {
+                 "type": "minecraft:noise_threshold",
+                 "noise": "rpg:ow/s_c",
+                 "min_threshold": 0.0,
+                 "max_threshold": 9.0
+                },
+                "then_run": {
+                 "type": "minecraft:sequence",
+                 "sequence": [
+                  {
+                   "type": "minecraft:condition",
+                   "if_true": {
+                    "type": "minecraft:noise_threshold",
+                    "noise": "rpg:ow/s_b",
+                    "min_threshold": 0.0,
+                    "max_threshold": 9.0
+                   },
+                   "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                     "Name": "minecraft:muddy_mangrove_roots",
+                     "Properties": {
+                      "axis": "y"
+                     }
+                    }
+                   }
+                  },
+                  {
+                   "type": "minecraft:block",
+                   "result_state": {
+                    "Name": "minecraft:mud"
+                   }
+                  }
+                 ]
+                }
+               },
+               {
+                "type": "minecraft:sequence",
+                "sequence": [
+                 {
+                  "type": "minecraft:condition",
+                  "if_true": {
+                   "type": "minecraft:noise_threshold",
+                   "noise": "rpg:ow/s_b",
+                   "min_threshold": 0.0,
+                   "max_threshold": 9.0
+                  },
+                  "then_run": {
+                   "type": "minecraft:block",
+                   "result_state": {
+                    "Name": "minecraft:mud"
+                   }
+                  }
+                 },
+                 {
+                  "type": "minecraft:block",
+                  "result_state": {
+                   "Name": "minecraft:muddy_mangrove_roots",
+                   "Properties": {
+                    "axis": "y"
+                   }
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            },
+            {
+             "type": "minecraft:condition",
+             "if_true": {
+              "type": "minecraft:noise_threshold",
               "noise": "rpg:ow/s_b",
               "min_threshold": 0.2,
               "max_threshold": 9.0

@@ -1,1 +1,0 @@
-execute in rpg:armageddon run tp @e[type=minecraft:vindicator,tag=rpg.pr.a.beelzebub] -9.34194 81 -7.25806 -61.2 0

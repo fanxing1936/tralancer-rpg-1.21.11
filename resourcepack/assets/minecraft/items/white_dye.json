@@ -36,8 +36,118 @@
       "model": "rpg:relic/chalk_1"
      },
      "on_false": {
-      "type": "minecraft:model",
-      "model": "minecraft:item/white_dye"
+      "type": "minecraft:condition",
+      "property": "minecraft:component",
+      "predicate": "minecraft:custom_data",
+      "value": "{rpg_chalk:1b}",
+      "on_true": {
+       "type": "minecraft:model",
+       "model": "rpg:relic/chalk_1"
+      },
+      "on_false": {
+       "type": "minecraft:condition",
+       "property": "minecraft:component",
+       "predicate": "minecraft:custom_data",
+       "value": "{rpg_chalk:1b}",
+       "on_true": {
+        "type": "minecraft:model",
+        "model": "rpg:relic/chalk_1"
+       },
+       "on_false": {
+        "type": "minecraft:condition",
+        "property": "minecraft:component",
+        "predicate": "minecraft:custom_data",
+        "value": "{rpg_chalk:1b}",
+        "on_true": {
+         "type": "minecraft:model",
+         "model": "rpg:relic/chalk_1"
+        },
+        "on_false": {
+         "type": "minecraft:condition",
+         "property": "minecraft:component",
+         "predicate": "minecraft:custom_data",
+         "value": "{rpg_chalk:1b}",
+         "on_true": {
+          "type": "minecraft:model",
+          "model": "rpg:relic/chalk_1"
+         },
+         "on_false": {
+          "type": "minecraft:condition",
+          "property": "minecraft:component",
+          "predicate": "minecraft:custom_data",
+          "value": "{rpg_chalk:1b}",
+          "on_true": {
+           "type": "minecraft:model",
+           "model": "rpg:relic/chalk_1"
+          },
+          "on_false": {
+           "type": "minecraft:condition",
+           "property": "minecraft:component",
+           "predicate": "minecraft:custom_data",
+           "value": "{rpg_chalk:1b}",
+           "on_true": {
+            "type": "minecraft:model",
+            "model": "rpg:relic/chalk_1"
+           },
+           "on_false": {
+            "type": "minecraft:condition",
+            "property": "minecraft:component",
+            "predicate": "minecraft:custom_data",
+            "value": "{rpg_chalk:1b}",
+            "on_true": {
+             "type": "minecraft:model",
+             "model": "rpg:relic/chalk_1"
+            },
+            "on_false": {
+             "type": "minecraft:condition",
+             "property": "minecraft:component",
+             "predicate": "minecraft:custom_data",
+             "value": "{rpg_chalk:1b}",
+             "on_true": {
+              "type": "minecraft:model",
+              "model": "rpg:relic/chalk_1"
+             },
+             "on_false": {
+              "type": "minecraft:condition",
+              "property": "minecraft:component",
+              "predicate": "minecraft:custom_data",
+              "value": "{rpg_chalk:1b}",
+              "on_true": {
+               "type": "minecraft:model",
+               "model": "rpg:relic/chalk_1"
+              },
+              "on_false": {
+               "type": "minecraft:condition",
+               "property": "minecraft:component",
+               "predicate": "minecraft:custom_data",
+               "value": "{rpg_chalk:1b}",
+               "on_true": {
+                "type": "minecraft:model",
+                "model": "rpg:relic/chalk_1"
+               },
+               "on_false": {
+                "type": "minecraft:condition",
+                "property": "minecraft:component",
+                "predicate": "minecraft:custom_data",
+                "value": "{rpg_chalk:1b}",
+                "on_true": {
+                 "type": "minecraft:model",
+                 "model": "rpg:relic/chalk_1"
+                },
+                "on_false": {
+                 "type": "minecraft:model",
+                 "model": "minecraft:item/white_dye"
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
      }
     }
    }

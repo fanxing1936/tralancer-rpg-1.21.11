@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"农夫","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔉𝔞𝔯𝔪𝔢𝔯","color":"#8F7430","italic":false},{"text":"  那姑娘给我家孩子看过病。我不信她是女巫。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"That girl once nursed my child. I don't believe she's a witch.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rw03 voice @a[distance=..16] ~ ~ ~ 1 1

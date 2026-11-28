@@ -1,0 +1,35 @@
+# church_white（旋转 none）：positioned 在落点、y = 结构原点；宏参数 sfx（材质版本）
+fill ~-2 ~-2 ~-2 ~26 ~32 ~29 minecraft:air replace #rpg:town_clear
+fill ~-2 ~33 ~-2 ~26 ~67 ~29 minecraft:air replace #rpg:town_clear
+fill ~-2 ~68 ~-2 ~26 ~95 ~29 minecraft:air replace #rpg:town_clear
+fill ~-2 ~-2 ~30 ~26 ~95 ~35 minecraft:air replace #rpg:town_clear
+$place template rpg:town/church_white$(sfx) ~ ~ ~ none
+fill ~22 ~-1 ~4 ~22 ~-10 ~5 minecraft:black_concrete replace #rpg:town_soft
+fill ~22 ~-1 ~8 ~22 ~-10 ~9 minecraft:black_concrete replace #rpg:town_soft
+fill ~22 ~-1 ~12 ~22 ~-10 ~13 minecraft:black_concrete replace #rpg:town_soft
+fill ~13 ~-1 ~2 ~13 ~-10 ~2 minecraft:calcite replace #rpg:town_soft
+fill ~14 ~-1 ~2 ~16 ~-10 ~2 minecraft:cobblestone replace #rpg:town_soft
+fill ~17 ~-1 ~2 ~17 ~-10 ~2 minecraft:diorite replace #rpg:town_soft
+fill ~13 ~-1 ~1 ~13 ~-10 ~1 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~17 ~-1 ~1 ~17 ~-10 ~1 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~6 ~-1 ~2 ~12 ~-10 ~2 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~18 ~-1 ~2 ~24 ~-10 ~2 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~7 ~-1 ~3 ~7 ~-10 ~14 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~23 ~-1 ~3 ~23 ~-10 ~26 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~1 ~-1 ~15 ~6 ~-10 ~15 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~1 ~-1 ~16 ~1 ~-10 ~21 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~2 ~-1 ~21 ~6 ~-10 ~21 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~7 ~-1 ~22 ~7 ~-10 ~26 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~8 ~-1 ~27 ~8 ~-10 ~27 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~22 ~-1 ~27 ~22 ~-10 ~27 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~9 ~-1 ~28 ~9 ~-10 ~28 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~21 ~-1 ~28 ~21 ~-10 ~28 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~10 ~-1 ~29 ~10 ~-10 ~29 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~20 ~-1 ~29 ~20 ~-10 ~29 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~11 ~-1 ~30 ~11 ~-10 ~30 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~19 ~-1 ~30 ~19 ~-10 ~30 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~12 ~-1 ~31 ~12 ~-10 ~31 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~18 ~-1 ~31 ~18 ~-10 ~31 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~13 ~-1 ~32 ~17 ~-10 ~32 minecraft:tuff_bricks replace #rpg:town_soft
+fill ~7 ~-1 ~15 ~7 ~-10 ~15 minecraft:white_concrete_powder replace #rpg:town_soft
+fill ~7 ~-1 ~21 ~7 ~-10 ~21 minecraft:white_concrete_powder replace #rpg:town_soft

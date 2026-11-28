@@ -29,5 +29,8 @@ execute if score @s rpg_bt_t2 matches 12 run clear @s minecraft:ender_pearl 4
 execute if score @s rpg_bt_t2 matches 13 unless score @s rpg_bt_p2 matches 5.. run return run tellraw @s ["",{"text":"[悬赏]","color":"#D4AF37","bold":true,"italic":false},{"text":"　还没完成","color":"gray","bold":false,"italic":false}]
 execute if score @s rpg_bt_t2 matches 14 unless score @s rpg_bt_p2 matches 30.. run return run tellraw @s ["",{"text":"[悬赏]","color":"#D4AF37","bold":true,"italic":false},{"text":"　还没完成","color":"gray","bold":false,"italic":false}]
 execute if score @s rpg_bt_t2 matches 15 unless score @s rpg_bt_p2 matches 2.. run return run tellraw @s ["",{"text":"[悬赏]","color":"#D4AF37","bold":true,"italic":false},{"text":"　还没完成","color":"gray","bold":false,"italic":false}]
+execute if score @s rpg_bt_t2 matches 16 unless score @s rpg_bt_p2 matches 2.. run return run tellraw @s ["",{"text":"[悬赏]","color":"#D4AF37","bold":true,"italic":false},{"text":"　还没完成","color":"gray","bold":false,"italic":false}]
+execute if score @s rpg_bt_t2 matches 17 unless score @s rpg_bt_p2 matches 1.. run return run tellraw @s ["",{"text":"[悬赏]","color":"#D4AF37","bold":true,"italic":false},{"text":"　还没完成","color":"gray","bold":false,"italic":false}]
+execute if score @s rpg_bt_t2 matches 18 unless score @s rpg_bt_p2 matches 1.. run return run tellraw @s ["",{"text":"[悬赏]","color":"#D4AF37","bold":true,"italic":false},{"text":"　还没完成","color":"gray","bold":false,"italic":false}]
 scoreboard players set @s rpg_bt_c2 1
 function rpg:events/bt/reward

@@ -67,6 +67,9 @@ execute if score @s rpg_sef matches 10.. run data modify storage rpg:panel ui.bo
 execute if score @s rpg_sef matches 10 run data modify storage rpg:panel ui.body[-1].extra append value {"text":"","font":"rpg:tree","color":"white"}
 data modify storage rpg:panel ui.body[-1].extra append value {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
 data modify storage rpg:panel nx set value ""
+execute if score @s rpg_tw_home matches 1.. unless score @s rpg_tl_gift matches 1.. run data modify storage rpg:panel nx set value "回故乡的教堂，找神父报到，领新人的那份。"
+execute if score @s rpg_tl_gift matches 1.. if score @s rpg_xb_n matches ..2 run data modify storage rpg:panel nx set value "出门走走：第一次走进一个群系，见闻录都有奖励。"
+execute if score @s rpg_tl_gift matches 1.. unless score @s rpg_tl_fu matches 1.. run data modify storage rpg:panel nx set value "告示板上有委托；入夜后，镇上会有一场全村副本。"
 execute unless score @s rpg_sef matches 1.. run data modify storage rpg:panel nx set value "走完新手开局，就进入第 1 阶 · 王国。"
 execute if score @s rpg_sef matches 2.. unless score @s rpg_pillar matches 1..3 run data modify storage rpg:panel nx set value "选一根主柱（下面的按钮）。"
 execute if score @s rpg_sef matches 5.. if score @s rpg_force matches 0 run data modify storage rpg:panel nx set value "你可以觉醒了：圣力或魔力。"

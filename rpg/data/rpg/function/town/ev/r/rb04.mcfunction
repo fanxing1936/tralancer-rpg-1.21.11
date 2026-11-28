@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"农妇","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔉𝔞𝔯𝔪𝔴𝔦𝔣𝔢","color":"#8F7430","italic":false},{"text":"  神父今天在粮仓门口站了好久，脸色可难看了。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The priest stood at the granary door for ages today. He looked awful.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rb04 voice @a[distance=..16] ~ ~ ~ 1 1

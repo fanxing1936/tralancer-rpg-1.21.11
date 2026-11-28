@@ -1,0 +1,3 @@
+data merge entity @s {Tags:["rpg.tw.model.part","rpg.tw.model.inquisitor.part","rpg.tw.model.inquisitor.p.armor_l_shoulderpad_darkarmor"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"rpg:town_models/town_inquisitor/armor_l_shoulderpad_darkarmor"}},item_display:"none",teleport_duration:2,interpolation_duration:2,view_range:1.5f,transformation:{translation:[0.06812f,-0.81133f,0.36905f],left_rotation:[0.16111f,-0.611f,0.43355f,0.64246f],scale:[7.49663f,7.49663f,7.49663f],right_rotation:[0f,0f,0f,1f]}}
+rotate @s ~ 0
+ride @s mount @e[type=minecraft:vindicator,tag=rpg.tw.model.dressing,distance=..1,limit=1]

@@ -1,0 +1,2 @@
+tellraw @a[tag=rpg.tw.in] ["",{"text":"〖","color":"#B48AD8","bold":true,"italic":false},{"text":"女巫","color":"#B48AD8","bold":true,"italic":false},{"text":"〗","color":"#B48AD8","bold":true,"italic":false},{"text":" 𝔗𝔥𝔢 𝔚𝔦𝔱𝔠𝔥","color":"#8F7430","italic":false},{"text":"  镇上的人不坏。他们只是怕，而怕最好用。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"The townsfolk aren't wicked. They're afraid, and fear is easy to use.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.wi08 voice @a[tag=rpg.tw.in] ~ ~ ~ 1 1

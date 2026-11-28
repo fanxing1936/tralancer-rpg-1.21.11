@@ -1,0 +1,2 @@
+tellraw @a[distance=..16] ["",{"text":"〖","color":"#E6DFCF","bold":true,"italic":false},{"text":"农妇","color":"#E6DFCF","bold":true,"italic":false},{"text":"〗","color":"#E6DFCF","bold":true,"italic":false},{"text":" 𝔉𝔞𝔯𝔪𝔴𝔦𝔣𝔢","color":"#8F7430","italic":false},{"text":"  广场上在搭刑台……明早要烧女巫。","color":"#9C9A94","italic":false,"hover_event":{"action":"show_text","value":{"text":"They're building a scaffold in the square... they'll burn a witch in the morning.","color":"#8F7430","italic":false}}}]
+playsound rpg:vo.town.rw02 voice @a[distance=..16] ~ ~ ~ 1 1
